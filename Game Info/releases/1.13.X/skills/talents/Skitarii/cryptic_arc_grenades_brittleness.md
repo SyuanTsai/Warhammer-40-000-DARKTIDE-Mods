@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 天賦被動 cryptic_grenade_ability_arc_grenade_extra_arcs 將 arc_grenade_extra_arcs stat buff 設為2；爆炸開始時 player_grenade_explosion_templates.lua 會將 max_targets 設為 base_num_arcs(4)+num_extra_arcs(2)，故起始目標上限為6，並非延長單一電弧鏈的跳數。天賦的 special rule cryptic_arc_grenade_gives_brittleness 會被 arc_grenade_chain_lightning_source 的 _init_chain 讀取。每當鏈的節點加入時，目標取得8層 rending_debuff；模板每層撕裂倍率為0.025、持續5秒，max_stacks=16 並在加層時刷新時間，因此單次鏈命中新增20%，重複命中可累積至40%。
+- 天賦被動 cryptic_grenade_ability_arc_grenade_extra_arcs 將 arc_grenade_extra_arcs stat buff 設為2；爆炸開始時 player_grenade_explosion_templates.lua 會將 max_targets 設為 base_num_arcs(4)+num_extra_arcs(2)，故起始目標上限為6，並非延長單一電弧鏈的跳數。天賦的 special rule cryptic_arc_grenade_gives_brittleness 會被 arc_grenade_chain_lightning_source 的 _init_chain 讀取。每當鏈的節點加入時，目標取得8層 rending_debuff；模板每層撕裂倍率為0.025、持續5秒，max_stacks=16 並在加層時重新計時，因此單次鏈命中新增20%，重複命中可累積至40%。
 
 ## 原始碼依據
 

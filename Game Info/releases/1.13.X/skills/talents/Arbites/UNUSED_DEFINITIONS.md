@@ -56,6 +56,6 @@
 ## 判讀界線
 
 - 技能樹 共 86 個直接引用 ID，其中 81 個來自 `adamant_talents.lua`，5 個是 `base_talents.lua` 的共用屬性節點。
-- `adamant_archetype.lua` 的 5 個 `base_talents`（戰鬥技能、手榴彈、電子獒犬協同、電子獒犬等級傷害、標記命令）都能在 `adamant_talents.lua` 找到定義，且沒有和技能樹 ID 重複。
+- `adamant_archetype.lua` 的 5 個 `base_talents`（戰鬥技能、手雷、電子獒犬協同、電子獒犬等級傷害、標記命令）都能在 `adamant_talents.lua` 找到定義，且沒有和技能樹 ID 重複。
 - 差集只統計 talent ID 是否被技能樹或職業基礎清單直接引用；沒有把通用 `base_talents.lua` 的 141 個共享定義，或 buff、special rule、能力與武器資料當成法務官未使用天賦。未追完底層引用前，不推斷這 40 個定義可刪除或完全沒有執行時用途。
 - 這是固定 SHA 的靜態比較，不推論其他版本、測試模式或遊戲外工具的引用。

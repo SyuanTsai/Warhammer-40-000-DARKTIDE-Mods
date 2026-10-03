@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-on_kill過elite/special檢查，立即補0.1並新增獨立effect。effect沒有max_stacks或refresh_on_stack，各instance按dt補0.02共10秒，不能說再次觸發僅刷新。
+on_kill過elite/special檢查，立即補0.1並新增獨立effect。effect沒有max_stacks或refresh_on_stack，各instance按dt補0.02共10秒，不能說再次觸發僅重新計時。
 
 ## 原始碼依據
 

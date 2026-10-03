@@ -11,7 +11,7 @@
 
 - 天賦設定 combat_ability_1.stacks=5；不屈不撓的天賦被動掛載 ogryn_charge_bleed，衝鋒模板只為 damage_type=ogryn_lunge 的命中觸發。
 - ogryn_charge_bleed 在每次 lunge_start 清空 hit_units；存活目標第一次被命中時加入5層 bleed，之後將該目標記入集合。
-- 通用 bleed 為 interval_buff，duration=1.5、interval=0.5、interval_stack_removal=true、max_stacks=16；每跳以 n=current_stack_count 計算 power_level=500×(n/16)^2×(3−2n/16)，並呼叫 DamageProfileTemplates.bleeding。計時期滿後 interval_buff 仍執行傷害，且每個 interval 移除一層；疊層會刷新計時。
+- 通用 bleed 為 interval_buff，duration=1.5、interval=0.5、interval_stack_removal=true、max_stacks=16；每跳以 n=current_stack_count 計算 power_level=500×(n/16)^2×(3−2n/16)，並呼叫 DamageProfileTemplates.bleeding。計時期滿後 interval_buff 仍執行傷害，且每個 interval 移除一層；疊層會重設計時。
 - DamageProfileTemplates.bleeding 的 attack power_distribution=175，armor damage modifier依目標護甲類型變化，因此 power_level 不是固定實際傷害。
 - 單跳生命傷害例由power輸入再乘damage_output的0.002與profile attack、護甲倍率：流血175×.5=87.5，燃燒400×1.5=600；均再乘smoothstep(n/max)。不是直接把power_level當生命傷害。
 
@@ -40,14 +40,14 @@
 ## 算例條件與待確認事項
 
 - **傷害算例**：只計無護甲且沒有其他修正，5 層每次流血傷害為 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 點；8 層為 43.75 點。流血層數與傷害不是單純等比例增加。
-- 流血可由其他來源疊加，目標總層數最多16；中途再次施加會刷新1.5秒計時。
+- 流血可由其他來源疊加，目標總層數最多16；中途再次施加會重設1.5秒計時。
 - 約4秒的清空時間依0.5秒間隔與遊戲更新刻點計算；新流血會重設計時。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`5f1e4b89`。
-- 繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的文本與公開原始碼皆為1.13.1；差異待遊戲內核對。
+- 繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的文字與公開原始碼皆為1.13.1；差異待遊戲內核對。
 
 ## 圖示來源
 

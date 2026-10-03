@@ -12,7 +12,7 @@
 - Talent definition 的 format_values.radius 讀取 stat_buffs.explosion_radius_modifier_shock；buff 設定把該 stat 設為 0.5。
 - shock_grenade explosion template 的 radius=8、close_radius=2、min_radius=4、min_close_radius=2。Explosion.apply_stat_radius_modifier 以原值 + (stat_buff−1) 後乘半徑，故倍率為 1.5；最大半徑 12、近距半徑 3、最小半徑 6、最小近距半徑 3。
 - shock grenade 投射物引信為 1.5 秒並使用 shock_grenade explosion template；能力上限從 talent_settings_2.grenade.max_charges 讀取，設定值為 3。
-- 命中附加 shock_grenade_interval：duration=8、max_stacks=1、max_stacks_cap=1、刷新持續時間；interval 設定範圍為 0.3–0.8 秒，週期傷害為 electrocution。
+- 命中附加 shock_grenade_interval：duration=8、max_stacks=1、max_stacks_cap=1、重設持續時間；interval 設定範圍為 0.3–0.8 秒，週期傷害為 electrocution。
 - 電擊週期以 DEFAULT_POWER_LEVEL=500、attack=8，無護甲 ADM=.5，推得隔離傷害 20 × (500 × 8 / 10000) × .5=4；防彈 ADM=1 時為 8。impact=100 用於踉蹌計算，不能混入生命傷害。
 
 ## 原始碼依據

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_minion_death機率.1；check_proc_func先接受死亡時warpfire_burning任意來源標記，否則才查own attacker與damage_types.warpfire。沒有協同或距離判斷。proc adds1；非當前樹的increased_soul_generation特殊規則另可變2，不能列為基礎效果。
+- on_minion_death機率.1；check_proc_func先接受死亡時warpfire_burning任意來源標記，否則才查own attacker與damage_types.warpfire。沒有協同或距離判斷。proc adds1；非目前樹的increased_soul_generation特殊規則另可變2，不能列為基礎效果。
 
 ## 原始碼依據
 

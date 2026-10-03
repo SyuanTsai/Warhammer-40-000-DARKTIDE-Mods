@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-buff 將 ammo_reserve_capacity 設為 .25；該 stat 為以 1 為基底的 additive multiplier，故容量倍率1.25。PlayerUnitWeaponExtension 對 current 與 max ammunition reserve 分別 floor(base×capacity)，再 clamp 到 hard limit；clip 使用另一個 clip_size_modifier 欄位。例：max reserve 100→floor(100×1.25)=125。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2503-L2526) → [備彈 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1059-L1065) → [stat 型別與基底](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L693-L695) → [備彈套用、取整與上限](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1344)。
+buff 將 ammo_reserve_capacity 設為 .25；該 stat 為以 1 為基底的 additive multiplier，故容量倍率1.25。PlayerUnitWeaponExtension 對 current 與 max ammunition reserve 分別 floor(base×capacity)，再 clamp 到 hard limit；clip 使用另一個 clip_size_modifier 欄位。例：max reserve 100→floor(100×1.25)=125。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2503-L2526) → [備用彈藥 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1059-L1065) → [stat 型別與基底](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L693-L695) → [備用彈藥套用、取整與上限](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1344)。
 
 ## 原始碼依據
 
@@ -23,7 +23,7 @@ buff 將 ammo_reserve_capacity 設為 .25；該 stat 為以 1 為基底的 addit
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
-- 實際備彈數取決於各武器基礎值、整數取整及網路彈藥上限。
+- 實際備用彈藥數取決於各武器基礎值、整數取整及網路彈藥上限。
 
 ## 圖示來源
 

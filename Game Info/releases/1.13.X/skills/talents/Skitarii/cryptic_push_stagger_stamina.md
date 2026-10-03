@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- current/max>=0.5使push_impact_modifier=0.75有效；按當前耐力動態切換，不是常駐75%武器傷害。
+- current/max>=0.5使push_impact_modifier=0.75有效；按目前耐力動態切換，不是常駐75%武器傷害。
 
 ## 原始碼依據
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- helper要求wielded weapon+alternate_fire+stamina>0；sway .4乘算、spread -.2、recoil -.15加算；不存在的critical_strike_chance設定為nil，不提供額外爆擊。
+- helper要求wielded weapon+alternate_fire+stamina>0；sway .4乘算、spread -.2、recoil -.15加算；不存在的critical_strike_chance設定為nil，不提供額外暴擊。
 - update每dt Stamina.drain(.5×dt)，reload不drain；條件stat helper本身沒有reload判斷，不宣稱換彈必定失去操控stat。
 
 ## 原始碼依據

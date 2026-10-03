@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 修正的特殊規則會讓能量超載觸發時建立 cryptic_overload_keystone_debuff_explosion。爆炸使用半徑與最小半徑皆為8的模板，目標篩選為敵方 villains，並把 cryptic_overload_keystone_increase_damage_taken_debuff 附加給命中者。
-- 附加效果持續8秒、最多1層，帶有 electrocuted keyword，並把 damage_taken_multiplier 設為1.15；同一效果再次套用會刷新時間。
+- 附加效果持續8秒、最多1層，帶有 electrocuted keyword，並把 damage_taken_multiplier 設為1.15；同一效果再次套用會重新計時。
 - 此爆炸的 damage_type 是 buff；傷害設定的 attack/impact power_distribution 和各護甲傷害修正均為0。因此它不以爆炸本身造成傷害，功能是提供電擊視覺/狀態與承傷倍率。
 
 ## 原始碼依據

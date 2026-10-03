@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_hit限attack_type=melee且target_number==3，非每第三次揮擊，也不在第四/第五目標再刷新。proc_stat_buffs.melee_attack_speed=.1，持續3秒。
+- on_hit限attack_type=melee且target_number==3，非每第三次揮擊，也不在第四/第五目標再重新計時。proc_stat_buffs.melee_attack_speed=.1，持續3秒。
 
 ## 原始碼依據
 

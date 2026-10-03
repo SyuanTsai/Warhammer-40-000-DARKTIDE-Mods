@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md)｜[版本、日期與證據限制](../../../README.md)
 
-[遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於當前技能樹的定義](UNUSED_DEFINITIONS.md)
+[遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於目前技能樹的定義](UNUSED_DEFINITIONS.md)
 
 固定來源 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。

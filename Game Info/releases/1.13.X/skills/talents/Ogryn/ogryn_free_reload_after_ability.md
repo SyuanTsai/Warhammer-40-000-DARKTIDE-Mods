@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 現行被動是ogryn_passive_ammo_replenishment，不是name註解所稱能力後免費換彈。interval15、percent.01，server呼叫Ammo.add_to_all_slots。
-- 各武器槽amount=.01×max_reserve+carryover，floor轉整數後保存小數；備彈cap=max_reserve+missing_clip。
+- 各武器槽amount=.01×max_reserve+carryover，floor轉整數後保存小數；備用彈藥cap=max_reserve+missing_clip。
 
 ## 原始碼依據
 
@@ -23,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **整數算例**：最大備彈 200 時，每次補 200 × 1% = 2 發；最大備彈 75 時，每次累積 0.75 發，小數留到後續結算，前四次依序補 0、1、1、1 發，合計 3 發。
+- **整數算例**：最大備用彈藥 200 時，每次補 200 × 1% = 2 發；最大備用彈藥 75 時，每次累積 0.75 發，小數留到後續結算，前四次依序補 0、1、1、1 發，合計 3 發。
 - 結算依伺服器更新，首次間隔含小量初始化偏移；算例從零小數餘額、且有足夠缺彈開始。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

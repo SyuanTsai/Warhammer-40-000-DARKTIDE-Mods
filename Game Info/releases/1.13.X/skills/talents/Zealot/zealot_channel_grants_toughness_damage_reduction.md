@@ -11,7 +11,7 @@
 
 - 天賦節點以 special_rules.zealot_channel_grants_defensive_buff 標記能力；action_zealot_channel 在每次 tick 對 in_coherence_units 將 zealot_channel_toughness_damage_reduction 加一層，因此適用對象包括施術者（合唱協同集合也含本人）。
 - 防禦 buff 是 stepped_stat_buff，duration=10、max_stacks 取合唱 max_stacks=5，toughness_damage_taken_multiplier 每層依 1 - 0.08×層數遞減。這只修正韌性承受傷害的倍率，不能寫成生命傷害抗性或通用傷害抗性。
-- 合唱動作立即 tick，之後每 0.8 秒；總時長約 3.6667 秒，tick 時間約 0、0.8、1.6、2.4、3.2 秒。buff refresh_duration_on_stack=true，所以每次脈衝刷新同一效果的時間並堆層，最多 5 層。
+- 合唱動作立即 tick，之後每 0.8 秒；總時長約 3.6667 秒，tick 時間約 0、0.8、1.6、2.4、3.2 秒。buff refresh_duration_on_stack=true，所以每次脈衝重新計時同一效果的時間並堆層，最多 5 層。
 
 ## 原始碼依據
 

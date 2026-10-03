@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前一點節點使用tier1 toughness_damage_taken_modifier=-.1，這是加算的modifier，不是multiplier=.9。共用傷害把modifier階段合成，再乘上獨立toughness_damage_taken_multiplier。
+- 目前一點節點使用tier1 toughness_damage_taken_modifier=-.1，這是加算的modifier，不是multiplier=.9。共用傷害把modifier階段合成，再乘上獨立toughness_damage_taken_multiplier。
 
 ## 原始碼依據
 

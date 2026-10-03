@@ -11,9 +11,9 @@
 | <img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="32" height="32" alt="擊暈天賦圖示"> [擊暈](#broker_blitz_flash_grenade_improved)<br>- Blackout | <ul><li>快速投擲的擊退手雷，最多攜帶 5 顆；每 20 次近距離擊殺恢復 1 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="32" height="32" alt="炸彈使者天賦圖示"> [炸彈使者](#broker_blitz_missile_launcher)<br>- Boom Bringer | <ul><li>發射高威力飛彈，最多 2 枚；爆炸基礎半徑 7 公尺。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="32" height="32" alt="化學手榴彈天賦圖示"> [化學手榴彈](#broker_blitz_tox_grenade)<br>- Chem Grenade | <ul><li>投擲化學手榴彈，留下 15 秒毒區，最多攜帶 2 顆。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="精進神射手天賦圖示"> [精進神射手](#broker_aura_gunslinger_improved)<br>- Gunslinger Improved | <ul><li>協同中的成員拾取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="精進神射手天賦圖示"> [精進神射手](#broker_aura_gunslinger_improved)<br>- Gunslinger Improved | <ul><li>協同中的成員撿取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="32" height="32" alt="化學性依賴天賦圖示"> [化學性依賴](#broker_ability_stimm_field)<br>- Stimm Supply | <ul><li>部署 3 公尺範圍的興奮劑氣體場域，持續 20 秒；範圍內幹員每 0.25 秒治療 0.5 點腐敗，總計最多 40 點，並免疫腐敗。</li><li>若你攜帶興奮劑，場域也會讓範圍內隊友取得其效果。基礎冷卻 60 秒，場域存在時自然充能暫停。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="橫衝直撞！天賦圖示"> [橫衝直撞！](#broker_ability_punk_rage)<br>- Rampage! | <ul><li>啟動時恢復全部韌性並進入 10 秒怒火狀態；近戰威力等級加算 +35%、近戰攻擊速度加算 +20%，承受傷害乘以 0.75（只計此效果即減少 25%）。</li><li>近戰命中可延長狀態；前 20 秒每次延長 0.3 秒，之後每跨 20 秒延長量再減半。基礎冷卻 30 秒，狀態期間自然充能暫停。</li></ul> | 能力 |
@@ -22,32 +22,32 @@
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="沸騰之血天賦圖示"> [沸騰之血](#broker_ability_punk_rage_sub_3)<br>- Forge's Bellow | <ul><li>選用後，怒火開始與結束時各發動一次 4.5 公尺範圍怒吼；周遭敵人受到踉蹌。</li><li>每次怒吼使範圍內敵人的近戰攻擊速度加算 -50%，持續 5 秒；單計此減速時，原本 1 秒的攻擊間隔約成 2 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="碎骨打擊天賦圖示"> [碎骨打擊](#broker_ability_punk_rage_sub_4)<br>- Boiling Blood | <ul><li>近戰命中帶有精英、專家、怪物或隊長標籤的敵人時，怒火延長 1 秒；這類命中的延長量在 30 秒前不遞減，之後每跨 30 秒減半。</li><li>一般敵人的命中仍依基本規則延長 0.3 秒，並在 20 秒後遞減；30 秒提升只套用於上述特殊敵人標籤。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺重新計時。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次化學性依賴的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>新取得興奮劑或專用興奮劑恢復次數後，效果約在半秒內觸發。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794" width="32" height="32" alt="速效型興奮劑天賦圖示"> [速效型興奮劑](#broker_ability_stimm_field_sub_1)<br>- Fast Acting Stimms | <ul><li>場域持續時間縮短為 5 秒；離場或場域結束時，已取得的場域效果可再持續 15 秒。</li><li>場域結束後立即恢復 60 秒自然冷卻；15 秒效果延續期間不會讓場域冷卻繼續暫停。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="毒性陷阱天賦圖示"> [毒性陷阱](#broker_ability_stimm_field_sub_2)<br>- Booby Trap | <ul><li>場域持續時間正常結束時爆炸；3公尺範圍內受到爆炸傷害的敵人會附加 7 層毒素。</li><li>爆炸以破片傷害計算；遭提前取消或場域尚未到期時，不會觸發這次爆炸。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="靈巧天賦圖示"> [靈巧](#broker_passive_improved_dodges)<br>- Nimble | <ul><li>閃避移動速度提高 25%，閃避後仍被判定為閃避的時間增加 0.15 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="兀鷲印記天賦圖示"> [兀鷲印記](#broker_keystone_vultures_mark_on_kill)<br>- Vulture's Mark | <ul><li>遠程擊殺精英或專家可累積印記，持續 8 秒、最多 3 層；每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。</li><li>有 3 層時再以遠程攻擊擊殺精英或專家，回復自己與協同範圍內的隊友最大韌性的 15%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="兀鷲印記天賦圖示"> [兀鷲印記](#broker_keystone_vultures_mark_on_kill)<br>- Vulture's Mark | <ul><li>遠程擊殺精英或專家可累積印記，持續 8 秒、最多 3 層；每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。</li><li>有 3 層時再以遠程攻擊擊殺精英或專家，恢復自己與協同範圍內的隊友最大韌性的 15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="化學性依賴天賦圖示"> [化學性依賴](#broker_keystone_chemical_dependency)<br>- Chemical Dependency | <ul><li>使用興奮劑取得 1 層化學依賴性，每層提高戰鬥技能資源回充速度 10%。</li><li>最多 3 層，每層持續 90 秒；沒有新層時每 90 秒衰退 1 層。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="化學強化天賦圖示"> [化學強化](#broker_keystone_chemical_dependency_sub_1)<br>- Chem Enhanced | <ul><li>每層化學依賴性額外增加 5 個百分點的爆擊率。</li><li>3 層時共增加 15 個百分點；這是爆擊機率，不是爆擊傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="化學強化天賦圖示"> [化學強化](#broker_keystone_chemical_dependency_sub_1)<br>- Chem Enhanced | <ul><li>每層化學依賴性額外增加 5 個百分點的爆擊率。</li><li>3 層時共增加 15 個百分點；這是爆擊率，不是暴擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="化學增強天賦圖示"> [化學增強](#broker_keystone_chemical_dependency_sub_2)<br>- Chem Fortified | <ul><li>使用興奮劑時恢復最大韌性的 50%。</li><li>每層化學依賴性使承受的韌性傷害乘以 0.95；3 層合計使韌性傷害約降低 14.26%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="化學藥劑全開天賦圖示"> [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3)<br>- Maxed Out Chems | <ul><li>化學依賴性每層持續時間由 90 秒改為 60 秒，最多層數由 3 層增加至 4 層。</li><li>4 層時戰鬥技能資源回充倍率為 1.40；60 秒線性回充算例約縮至 42.86 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="兀鷲推擊天賦圖示"> [兀鷲推擊](#broker_keystone_vultures_mark_aoe_stagger)<br>- Vulture's Push | <ul><li>以遠程攻擊擊殺精英或專家時，在自己周圍 3 公尺觸發爆炸，造成中等踉蹌與擊退。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="堅毅獵手天賦圖示"> [堅毅獵手](#broker_keystone_vultures_mark_increased_duration)<br>- Patient Hunter | <ul><li>兀鷲印記的持續時間由 8 秒提高至 12 秒。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="兀鷲閃避天賦圖示"> [兀鷲閃避](#broker_keystone_vultures_mark_dodge_on_ranged_crit)<br>- Vulture's Dodge | <ul><li>遠程爆擊後 1 秒內，視為正在閃避近戰與遠程攻擊；再次爆擊刷新時間。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="兀鷲閃避天賦圖示"> [兀鷲閃避](#broker_keystone_vultures_mark_dodge_on_ranged_crit)<br>- Vulture's Dodge | <ul><li>遠程暴擊後 1 秒內，視為正在閃避近戰與遠程攻擊；再次暴擊重新計時。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>暴擊仍額外加 1 層，因此近戰弱點暴擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="失控攻擊天賦圖示"> [失控攻擊](#broker_keystone_adrenaline_junkie_sub_4)<br>- Uncontrolled Aggression | <ul><li>每層腎上腺素的持續時間由 2 秒提高至 4 秒。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="腎上腺素懲戒者天賦圖示"> [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2)<br>- Adrenaline Smiter | <ul><li>只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。</li><li>非擊殺的近戰命中不給層；爆擊擊殺仍保留核心的額外 1 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="腎上腺素懲戒者天賦圖示"> [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2)<br>- Adrenaline Smiter | <ul><li>只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。</li><li>非擊殺的近戰命中不給層；暴擊擊殺仍保留核心的額外 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="過街老鼠天賦圖示"> [過街老鼠](#broker_passive_longer_dodges)<br>- Alley Rat | <ul><li>閃避距離提高 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="精準暴力天賦圖示"> [精準暴力](#broker_passive_restore_toughness_on_weakspot_kill)<br>- Precision Violence | <ul><li>近戰命中恢復 4% 最大韌性；爆擊或弱點改為 8%，爆擊弱點為 12%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="精準暴力天賦圖示"> [精準暴力](#broker_passive_restore_toughness_on_weakspot_kill)<br>- Precision Violence | <ul><li>近戰命中恢復 4% 最大韌性；暴擊或弱點改為 8%，暴擊弱點為 12%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="32" height="32" alt="特提恩之聲天賦圖示"> [特提恩之聲](#broker_passive_restore_toughness_on_close_ranged_kill)<br>- Voice of Tertium | <ul><li>在 12.5 公尺內遠程擊殺恢復 8% 最大韌性；精英與專家改為 15%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="翩翩蝶舞天賦圖示"> [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance)<br>- Float Like a Butterfly | <ul><li>成功閃避或完美格擋後，爆擊機率增加 20 個百分點，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="翩翩蝶舞天賦圖示"> [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance)<br>- Float Like a Butterfly | <ul><li>成功閃避或完美格擋後，爆擊率增加 20 個百分點，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="32" height="32" alt="快速裝填天賦圖示"> [快速裝填](#broker_passive_reload_speed_on_close_kill)<br>- Speedloader | <ul><li>12.5 公尺內的遠程擊殺，使換彈速度提高 30%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="能量爆發天賦圖示"> [能量爆發](#broker_passive_stun_immunity_on_toughness_broken)<br>- Burst of Energy | <ul><li>自身韌性耗盡時恢復 50% 最大韌性，免疫眩暈 6 秒；效果結束後冷卻 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="韌性增幅天賦圖示"> [韌性增幅](#base_toughness_node_buff_medium_1)<br>- Toughness Boost | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
@@ -60,13 +60,13 @@
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="移動目標天賦圖示"> [移動目標](#broker_passive_increased_ranged_dodges)<br>- Moving Target | <ul><li>手持遠程武器時，有效閃避次數增加 1 次。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="樣本採集天賦圖示"> [樣本採集](#broker_passive_stimm_cd_on_kill)<br>- Sample Collector | <ul><li>每次擊殺縮短興奮劑冷卻 0.5 秒；目標受毒素感染時改為 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="神經質天賦圖示"> [神經質](#broker_passive_improved_dodges_at_full_stamina)<br>- Jittery | <ul><li>耐力至少 75% 時，有效閃避次數的恢復等待時間縮短 40%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="爆擊機率增幅天賦圖示"> [爆擊機率增幅](#base_crit_chance_node_buff_low_1)<br>- Critical Chance Boost | <ul><li>爆擊機率增加 5 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="爆擊機率增幅天賦圖示"> [爆擊機率增幅](#base_crit_chance_node_buff_low_1)<br>- Critical Chance Boost | <ul><li>爆擊率增加 5 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="強效毒藥天賦圖示"> [強效毒藥](#base_toxin_power_boost_1)<br>- Potent Tox | <ul><li>毒素威力增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="黏黏手天賦圖示"> [黏黏手](#broker_passive_reduce_swap_time)<br>- Sticky Hands | <ul><li>武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="請求暫停天賦圖示"> [請求暫停](#broker_passive_reduced_toughness_damage_during_reload)<br>- Calling for a Time Out | <ul><li>換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="街頭硬漢天賦圖示"> [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage)<br>- Street Tough | <ul><li>受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="猛烈劈擊天賦圖示"> [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill)<br>- Battering Strikes | <ul><li>近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="超暴力天賦圖示"> [超暴力](#broker_passive_melee_damage_carry_over)<br>- Hyper-Violence | <ul><li>擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="劇毒菌株天賦圖示"> [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage)<br>- Virulent Strain | <ul><li>你施加毒素時，使目標受到的傷害增加 10%，最多持續 5 秒。</li></ul> | 技能 |
@@ -74,7 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="連帶傷害天賦圖示"> [連帶傷害](#broker_passive_toxin_spread_on_kills)<br>- Splash Damage | <ul><li>近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="額外彈藥袋天賦圖示"> [額外彈藥袋](#broker_passive_increased_blitz_ammo)<br>- Extra Pouches | <ul><li>閃擊攜帶上限增加 1 次。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="塗讀武裝天賦圖示"> [塗讀武裝](#broker_passive_melee_attacks_apply_toxin)<br>- Coated Weaponry | <ul><li>近戰爆擊命中時，施加 1 層毒素。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="隨身毒素天賦圖示"> [隨身毒素](#broker_passive_blitz_inflicts_toxin)<br>- Pocket Toxin | <ul><li>閃擊爆炸額外施毒：擊暈手雷 3 層、飛彈 6 層、化學手雷 10 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="隨身毒素天賦圖示"> [隨身毒素](#broker_passive_blitz_inflicts_toxin)<br>- Pocket Toxin | <ul><li>閃擊爆炸額外施毒：擊暈手雷 3 層、飛彈 6 層、化學手榴彈 10 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="精準投毒天賦圖示"> [精準投毒](#broker_passive_reduced_damage_by_toxined)<br>- Targeted Toxin | <ul><li>你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="毒性再生天賦圖示"> [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity)<br>- Toxic Renewal | <ul><li>15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="軍火商天賦圖示"> [軍火商](#broker_passive_extended_mag)<br>- Ammo Jack | <ul><li>彈匣容量增加 15%，結果無條件進位。</li></ul> | 技能 |
@@ -92,31 +92,31 @@
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵 III天賦圖示"> [激勵 III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="激勵 IV天賦圖示"> [激勵 IV](#broker_stimm_celerity_4)<br>- Spur IV | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 20%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵 V天賦圖示"> [激勵 V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫暈眩與減速。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵 V天賦圖示"> [激勵 V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫眩暈與減速。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="反射天賦圖示"> [反射](#broker_stimm_celerity_5b)<br>- Reflex | <ul><li>換彈速度增加 30%，後座不穩定度累積降低 50%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="野火 I天賦圖示"> [野火 I](#broker_stimm_combat_1)<br>- Wildfire I | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="野火 II天賦圖示"> [野火 II](#broker_stimm_combat_2)<br>- Wildfire II | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="野火 III天賦圖示"> [野火 III](#broker_stimm_combat_3)<br>- Wildfire III | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火 IV天賦圖示"> [野火 IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與爆擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火 IV天賦圖示"> [野火 IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="32" height="32" alt="狂怒 I天賦圖示"> [狂怒 I](#broker_stimm_combat_4b)<br>- Fury I | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 5%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑 I天賦圖示"> [獵鷹蕈劑 I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊機率增加 5 個百分點。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="野火 V天賦圖示"> [野火 V](#broker_stimm_combat_5a)<br>- Wildfire V | <ul><li>威力增加 4%。</li><li>弱點與爆擊額外傷害增加 25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑 I天賦圖示"> [獵鷹蕈劑 I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊率增加 5 個百分點。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="野火 V天賦圖示"> [野火 V](#broker_stimm_combat_5a)<br>- Wildfire V | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="32" height="32" alt="狂怒 II天賦圖示"> [狂怒 II](#broker_stimm_combat_5b)<br>- Fury II | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 10%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑 II天賦圖示"> [獵鷹蕈劑 II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊機率增加 10 個百分點。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑 II天賦圖示"> [獵鷹蕈劑 II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊率增加 10 個百分點。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="32" height="32" alt="彈幕 I天賦圖示"> [彈幕 I](#broker_stimm_durability_1)<br>- Barrage I | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="彈幕 II天賦圖示"> [彈幕 II](#broker_stimm_durability_2)<br>- Barrage II | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="彈幕 III天賦圖示"> [彈幕 III](#broker_stimm_durability_3)<br>- Barrage III | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="彈幕 IV天賦圖示"> [彈幕 IV](#broker_stimm_durability_4)<br>- Barrage IV | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="32" height="32" alt="坦克天賦圖示"> [坦克](#broker_stimm_durability_5a)<br>- Tank | <ul><li>韌性恢復量額外增加 30%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="恢復天賦圖示"> [恢復](#broker_stimm_durability_5b)<br>- Regain | <ul><li>藥效期間每秒恢復最大韌性的 5%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="抗焦慮藥 I天賦圖示"> [抗焦慮藥 I](#broker_stimm_concentration_1)<br>- Kalma I | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="32" height="32" alt="抗焦慮藥 II天賦圖示"> [抗焦慮藥 II](#broker_stimm_concentration_2)<br>- Kalma II | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="32" height="32" alt="抗焦慮藥 III天賦圖示"> [抗焦慮藥 III](#broker_stimm_concentration_3)<br>- Kalma III | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="抗焦慮藥 IV天賦圖示"> [抗焦慮藥 IV](#broker_stimm_concentration_4)<br>- Kalma IV | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="抗焦慮藥 V天賦圖示"> [抗焦慮藥 V](#broker_stimm_concentration_5a)<br>- Kalma V | <ul><li>戰鬥能力恢復速度增加 25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/77f46379-3f89-4c81-8240-a0dc288fb868" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_concentration_5b)<br>- Hypex | <ul><li>藥效期間近戰擊殺後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="32" height="32" alt="集中藥天賦圖示"> [集中藥](#broker_stimm_concentration_5c)<br>- Klay | <ul><li>藥效期間遠程擊殺後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="抗焦慮藥 I天賦圖示"> [抗焦慮藥 I](#broker_stimm_concentration_1)<br>- Kalma I | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="32" height="32" alt="抗焦慮藥 II天賦圖示"> [抗焦慮藥 II](#broker_stimm_concentration_2)<br>- Kalma II | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="32" height="32" alt="抗焦慮藥 III天賦圖示"> [抗焦慮藥 III](#broker_stimm_concentration_3)<br>- Kalma III | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="抗焦慮藥 IV天賦圖示"> [抗焦慮藥 IV](#broker_stimm_concentration_4)<br>- Kalma IV | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="抗焦慮藥 V天賦圖示"> [抗焦慮藥 V](#broker_stimm_concentration_5a)<br>- Kalma V | <ul><li>戰鬥技能恢復速度增加 25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/77f46379-3f89-4c81-8240-a0dc288fb868" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_concentration_5b)<br>- Hypex | <ul><li>藥效期間近戰擊殺後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="32" height="32" alt="集中藥天賦圖示"> [集中藥](#broker_stimm_concentration_5c)<br>- Klay | <ul><li>藥效期間遠程擊殺後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
 
 ---
 
@@ -133,7 +133,7 @@
 
 - **補充算例**：目前有 2 顆、已累計 19 次，下一次符合距離的擊殺後變成 3 顆，進度歸零。搭配額外彈藥袋時，上限為 5 + 1 = 6 顆。
 
-- **毒針手槍例外**：先用毒針手槍命中並追蹤的敵人，若在近距離死於毒素，也可計入；一般遠距離毒殺不能直接套用此例外。
+- **毒針手槍例外**：先用毒針手槍命中並追蹤的敵人，若在近距離死於毒素，也可計入；一般遠程離毒殺不能直接套用此例外。
 
 #### 繁中原文勘誤
 
@@ -185,13 +185,13 @@
 
 <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="72" height="72" alt="精進神射手天賦圖示">
 
-- **分享方式**：你或具有此光環的協同隊友拾取彈藥時，向該拾取者協同中的成員分享補給；每人依自己的武器容量換算，不是把拾取者拿到的發數平均分配。
+- **分享方式**：你或具有此光環的協同隊友撿取彈藥時，向該撿取者協同中的成員分享補給；每人依自己的武器容量換算，不是把撿取者拿到的發數平均分配。
 
-- **小彈藥算例**：小彈藥原補 15% 備彈，分享量為個人備彈上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
+- **小彈藥算例**：小彈藥原補 15% 備用彈藥，分享量為個人備用彈藥上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
 
 - **大彈藥與彈藥箱**：大彈藥原補 50%，上限 200 時分享 10 發。一般部署彈藥箱則以「備彈上限 + 彈匣容量」的 10% 計；例如 200 + 30，分享 23 發，仍受實際缺額限制。
 
-- **疊加限制**：相同光環不因多名玩家而重複疊加；此改良版的 10% 取代基本版 5%，分享出來的彈藥也不會再次觸發連鎖分享。
+- **重複套用限制**：相同光環不因多名玩家而重複套用；此改良版的 10% 取代基本版 5%，分享出來的彈藥也不會再次觸發連鎖分享。
 
 [詳細資料](broker_aura_gunslinger_improved.md) · [返回目錄](#talent-index)
 
@@ -215,7 +215,7 @@
 
 <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="72" height="72" alt="無政府主義者天賦圖示">
 
-- **作用範圍**：你與協同中的隊友取得額外爆擊機率；同名光環不重複疊加。
+- **作用範圍**：你與協同中的隊友取得額外爆擊率；同名光環不重複套用。
 
 - **機率算例**：原本 10% 變成 10% + 5% = 15%，原本 25% 則變成 30%。
 
@@ -241,7 +241,7 @@
 
 - **針槍毒素例外**：狀態期間以針槍遠程命中並追蹤到的敵人，即使最後由毒素傷害擊殺，也可能延長狀態；還須符合近距離死亡條件。其他毒素擊殺不會一概觸發。
 
-- **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
+- **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備用彈藥重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](broker_ability_focus_improved.md) · [返回目錄](#talent-index)
 
@@ -365,7 +365,7 @@
 
 - **遠程撕裂**：專注狀態期間，遠程攻擊獲得 +15% 撕裂修正；這影響護甲穿透，不是直接增加 15% 傷害。
 
-- **擊殺疊層**：專注期間的近距離遠程擊殺增加 1 層，每層 3% 遠程傷害、最多 5 層。再次擊殺刷新時間；停止擊殺後每 3 秒掉 1 層，專注結束則全部移除。
+- **擊殺疊層**：專注期間的近距離遠程擊殺增加 1 層，每層 3% 遠程傷害、最多 5 層。再次擊殺重新計時；停止擊殺後每 3 秒掉 1 層，專注結束則全部移除。
 
 - **觸發範圍**：普通觸發要求在 12.5 公尺內遠程擊殺；先前用毒針手槍命中追蹤的敵人，也可在近距離毒素死亡時觸發。
 
@@ -447,11 +447,11 @@
 
 <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="72" height="72" alt="腎上腺素狂暴天賦圖示">
 
-- **觸發**：每次近戰命中獲得 1 層；爆擊在這 1 層之外再加 1 層，所以近戰爆擊一次共得 2 層。
+- **觸發**：每次近戰命中獲得 1 層；暴擊在這 1 層之外再加 1 層，所以近戰爆擊一次共得 2 層。
 
 - **層數與衰退**：最多 30 層。每次加層會重設 2 秒計時；若期間沒再加層，先失去 1 層，再從該次移除起重設計時，之後每 2 秒再失去 1 層。
 
-- **達上限**：第 30 層觸發狂暴，腎上腺素堆疊清除。狂暴持續 10 秒，重新觸發時會刷新時間。
+- **達上限**：第 30 層觸發狂暴，腎上腺素堆疊清除。狂暴持續 10 秒，重新觸發時會重新計時。
 
 - **狂暴速度**：近戰攻速加法倍率從 1 變成 1.1；原本 1 秒的受影響動作約為 1 ÷ 1.1 = 0.91 秒。
 
@@ -470,7 +470,7 @@
 
 - **每層加成**：每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。3 層時分別為 +15%、+15 個百分點、+15%。
 
-- **滿層回韌性**：3 層期間，每次再以遠程攻擊擊殺精英或專家，回復自己與協同範圍內的隊友最大韌性的 15%；實際回補不超過各自韌性缺額。
+- **滿層回韌性**：3 層期間，每次再以遠程攻擊擊殺精英或專家，恢復自己與協同範圍內的隊友最大韌性的 15%；實際回補不超過各自韌性缺額。
 
 - **武器例外**：以毒針手槍造成近距離 毒素擊殺取得印記：需先以遠程武器槽的毒針手槍 命中精英／專家並在其毒素效果仍有效時，由毒素在近距離造成死亡。
 
@@ -508,7 +508,7 @@
 
 - **最大層數算例**：巢都渣滓 基礎爆擊率 10%，3 層加成 3×5%=15 個百分點，未計武器額外機率時為 10%+15%=25%。
 
-- **爆擊效果**：此升級提高爆擊發生機率，不提高爆擊傷害；依賴層仍按核心規則每 90 秒逐層衰退，使用興奮劑會刷新計時。
+- **暴擊效果**：此升級提高爆擊率，不提高暴擊傷害；依賴層仍按核心規則每 90 秒逐層衰退，使用興奮劑會重設計時。
 
 [詳細資料](broker_keystone_chemical_dependency_sub_1.md) · [返回目錄](#talent-index)
 
@@ -523,7 +523,7 @@
 
 - **每層減傷**：每層把承受的韌性傷害乘以 0.95。3 層時為 0.95³=0.8574 倍，即韌性傷害約降低 14.26%，不是 15%。
 
-- **滿層時**：即使依賴層數已達上限，再次使用興奮劑仍能恢復韌性，並刷新層數時間。
+- **滿層時**：即使依賴層數已達上限，再次使用興奮劑仍能恢復韌性，並重新計時層數時間。
 
 [詳細資料](broker_keystone_chemical_dependency_sub_2.md) · [返回目錄](#talent-index)
 
@@ -538,7 +538,7 @@
 
 - **回充**：每層核心的 +10% 戰鬥技能資源回充仍有效；4 層倍率為 1+4×0.10=1.40。 原本 60 秒的連續冷卻恢復，變成 60 ÷ 1.4 ≈ 42.86 秒。
 
-- **刷新與衰退**：新使用興奮劑會重設共享計時；若沒有新層，60 秒後失去 1 層，再每 60 秒失去 1 層。達 4 層後再使用不會增加第 5 層，但會刷新時間。
+- **重新計時與衰退**：新使用興奮劑會重設共享計時；若沒有新層，60 秒後失去 1 層，再每 60 秒失去 1 層。達 4 層後再使用不會增加第 5 層，但會重新計時。
 
 [詳細資料](broker_keystone_chemical_dependency_sub_3.md) · [返回目錄](#talent-index)
 
@@ -566,7 +566,7 @@
 
 - **持續時間**：每次取得兀鷲印記後，層數共享的計時為 12 秒，比核心的 8 秒多 4 秒。
 
-- **刷新**：新的兀鷲印記會增加層數並把共享計時重設為 12 秒；即使已達 3 層，再次符合條件也會刷新時間。
+- **重新計時**：新的兀鷲印記會增加層數並把共享計時重設為 12 秒；即使已達 3 層，再次符合條件也會重新計時。
 
 - **衰退**：若沒有新印記，12 秒到期時現有印記層數一併消失。
 
@@ -581,15 +581,15 @@
 
 <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="72" height="72" alt="兀鷲閃避天賦圖示">
 
-- **觸發**：造成遠程爆擊時觸發；一般遠程命中或近戰爆擊不會觸發。
+- **觸發**：造成遠程暴擊時觸發；一般遠程命中或近戰爆擊不會觸發。
 
 - **效果**：持續 1 秒，即使沒有按下閃避，也會被視為正在閃避近戰與遠程攻擊。仍須依各種攻擊的閃避規則判定結果，並非所有傷害都無效。
 
-- **刷新**：1 秒內再次遠程爆擊會重設 1 秒計時，不會累積多層。
+- **重新計時**：1 秒內再次遠程暴擊會重設 1 秒計時，不會累積多層。
 
 - **適用範圍**：此效果直接改變閃避判定，不增加實際閃避距離或移動速度，也不要求玩家正在做閃避動作。
 
-- **時間算例**：第 0 秒觸發，第 0.6 秒再度遠程爆擊後，效果延續至第 1.6 秒。
+- **時間算例**：第 0 秒觸發，第 0.6 秒再度遠程暴擊後，效果延續至第 1.6 秒。
 
 [詳細資料](broker_keystone_vultures_mark_dodge_on_ranged_crit.md) · [返回目錄](#talent-index)
 
@@ -602,9 +602,9 @@
 
 - **弱點命中**：弱點近戰命中給原本的 1 層，再額外給 2 層，共 3 層。
 
-- **一般命中**：非弱點近戰命中不給層；爆擊檢查仍獨立執行，所以非弱點近戰爆擊仍額外得到 1 層。
+- **一般命中**：非弱點近戰命中不給層；暴擊檢查仍獨立執行，所以非弱點近戰爆擊仍額外得到 1 層。
 
-- **弱點爆擊**：弱點命中的 3 層再加爆擊額外 1 層，共 4 層；仍受核心的 30 層上限及層數計時規則限制。
+- **弱點暴擊**：弱點命中的 3 層再加暴擊額外 1 層，共 4 層；仍受核心的 30 層上限及層數計時規則限制。
 
 [詳細資料](broker_keystone_adrenaline_junkie_sub_1.md) · [返回目錄](#talent-index)
 
@@ -617,7 +617,7 @@
 
 - **持續時間**：觸發狂暴後持續 20 秒，比核心的 10 秒多 10 秒。
 
-- **刷新**：重新達到 30 層再觸發狂暴時，狂暴仍只有一份；新觸發會把持續時間重設為 20 秒。
+- **重新計時**：重新達到 30 層再觸發狂暴時，狂暴仍只有一份；新觸發會把持續時間重設為 20 秒。
 
 - **不變部分**：此升級不改變腎上腺素的 2 秒堆疊計時、30 層上限或狂暴的攻速與傷害倍率。
 
@@ -632,7 +632,7 @@
 
 - **恢復量**：每秒恢復最大韌性的 5%；最大韌性 100 時，每次恢復 為 100 × 0.05 = 5 點。
 
-- **恢復上限**：恢復量不超過當前韌性缺額；韌性已滿時，該次恢復 不會增加韌性。
+- **恢復上限**：恢復量不超過目前韌性缺額；韌性已滿時，該次恢復 不會增加韌性。
 
 - **計時**：只有狂暴期間才會恢復；首次恢復 可在 狂暴開始時立即執行，之後按 1 秒間隔。
 
@@ -660,11 +660,11 @@
 
 <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="72" height="72" alt="腎上腺素懲戒者天賦圖示">
 
-- **觸發**：近戰擊殺一般敵人時，核心命中層 1 層加此升級 4 層，共 5 層；若是近戰爆擊擊殺，再加核心爆擊層，共 6 層。
+- **觸發**：近戰擊殺一般敵人時，核心命中層 1 層加此升級 4 層，共 5 層；若是近戰爆擊擊殺，再加核心暴擊層，共 6 層。
 
-- **精英擊殺**：精英擊殺額外再給 10 層，因此一般精英擊殺共 15 層，精英爆擊擊殺共 16 層。
+- **精英擊殺**：精英擊殺額外再給 10 層，因此一般精英擊殺共 15 層，精英暴擊擊殺共 16 層。
 
-- **非擊殺命中**：近戰攻擊沒有擊殺目標時不獲得層數，即使該擊是爆擊也不會觸發核心的爆擊額外層。
+- **非擊殺命中**：近戰攻擊沒有擊殺目標時不獲得層數，即使該擊是暴擊也不會觸發核心的暴擊額外層。
 
 - **精英判定**：額外 10 層只看精英分類；只有專家分類的敵人不算此精英加成。
 
@@ -738,11 +738,11 @@
 
 <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="72" height="72" alt="精準暴力天賦圖示">
 
-- **恢復量**：近戰一般命中恢復最大韌性的 4%；爆擊或弱點命中改為 8%，同時爆擊且命中弱點為 12%。不要求擊殺，特殊處決的直接斬殺不觸發。
+- **恢復量**：近戰一般命中恢復最大韌性的 4%；暴擊或弱點命中改為 8%，同時暴擊且命中弱點為 12%。不要求擊殺，特殊處決的直接斬殺不觸發。
 
 - **同次揮擊**：後續目標只有在恢復比例高於本次已記錄比例時才再觸發；相同比例不會逐目標重複恢復。
 
-- **恢復算例**：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有爆擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
+- **恢復算例**：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有暴擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
 
 [詳細資料](broker_passive_restore_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
 
@@ -766,9 +766,9 @@
 
 <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="72" height="72" alt="翩翩蝶舞天賦圖示">
 
-- **觸發與刷新**：成功閃避或完美格擋後，爆擊機率增加 20 個百分點，持續 3 秒；再次觸發重設時間，不累加。
+- **觸發與重新計時**：成功閃避或完美格擋後，爆擊率增加 20 個百分點，持續 3 秒；再次觸發重設時間，不累加。
 
-- **機率算例**：原本 10% 爆擊機率變成 10% + 20% = 30%；原本 25% 則變成 45%。
+- **機率算例**：原本 10% 爆擊率變成 10% + 20% = 30%；原本 25% 則變成 45%。
 
 [詳細資料](broker_passive_ninja_grants_crit_chance.md) · [返回目錄](#talent-index)
 
@@ -779,7 +779,7 @@
 
 <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="72" height="72" alt="快速裝填天賦圖示">
 
-- **觸發與刷新**：遠程擊殺 12.5 公尺內的敵人，換彈速度提高 30%，持續 8 秒；再次觸發刷新時間，不疊加幅度。
+- **觸發與重新計時**：遠程擊殺 12.5 公尺內的敵人，換彈速度提高 30%，持續 8 秒；再次觸發重新計時，不累加幅度。
 
 - **時間算例**：原本可加速的換彈動作需 2 秒，單計此效果變成 2 ÷ 1.3 ≈ 1.54 秒；已有 20% 同階段換彈速度時，則為 2 ÷ (1 + 20% + 30%) ≈ 1.33 秒。
 
@@ -848,7 +848,7 @@
 
 - **觸發條件**：受到遠程傷害且韌性尚未耗盡時，開始持續恢復韌性。每秒恢復最大韌性的 10%，持續 3 秒。
 
-- **刷新與中止**：再次觸發重設 3 秒時間，恢復速度不疊加；韌性耗盡時停止。
+- **重新計時與中止**：再次觸發重設 3 秒時間，恢復速度不疊加；韌性耗盡時停止。
 
 - **恢復算例**：最大韌性 100 時，每秒恢復 10 點，完整 3 秒共 30 點。若第 2 秒再次觸發，恢復可延長到第 5 秒，合計最多 50 點，仍以缺額為限。
 
@@ -863,7 +863,7 @@
 
 - **運作方式**：換彈補入彈藥時，取得 7 秒增傷。起始增加 2% 遠程傷害，之後每累計消耗相當於彈匣容量 10% 的彈藥，再增加 2%；不足一段不計。
 
-- **重新換彈**：再次換彈會刷新持續時間，並把消耗量歸零，從 2% 重新累積。
+- **重新換彈**：再次換彈會重設持續時間，並把消耗量歸零，從 2% 重新累積。
 
 - **傷害算例**：彈匣容量 100 發，效果內已用 30 發，增傷為 2% + ⌊30 ÷ 10⌋ × 2% = 8%。基礎 100 點變成 108；若同階段已有 25%，則為 100 × (1 + 25% + 8%) = 133 點。
 
@@ -953,7 +953,7 @@
 
 <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="72" height="72" alt="爆擊機率增幅天賦圖示">
 
-- **機率算例**：原本 10% 爆擊機率變成 10% + 5% = 15%；原本 25% 則變成 30%。
+- **機率算例**：原本 10% 爆擊率變成 10% + 5% = 15%；原本 25% 則變成 30%。
 
 [詳細資料](base_crit_chance_node_buff_low_1.md) · [返回目錄](#talent-index)
 
@@ -992,7 +992,7 @@
 
 - **射擊控制**：腰射或架槍時，後座力修正為 0.9 倍、準星散佈為 0.7 倍；一般瞄準且未架槍時不取得這兩項加成。
 
-- **散佈算例**：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與回復，實際鏡頭位移還取決於武器曲線。
+- **散佈算例**：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與恢復，實際鏡頭位移還取決於武器曲線。
 
 [詳細資料](broker_passive_reduce_swap_time.md) · [返回目錄](#talent-index)
 
@@ -1003,7 +1003,7 @@
 
 <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="72" height="72" alt="請求暫停天賦圖示">
 
-- **持續方式**：開始換彈後生效；離開換彈狀態後再持續 4 秒。重新換彈仍維持同一幅度，不疊加減傷。
+- **持續方式**：開始換彈後生效；離開換彈狀態後再持續 4 秒。重新換彈仍維持同一幅度，不累加減傷。
 
 - **減傷算例**：原本承受 100 點韌性傷害，單計此效果變成 100 × 0.75 = 75 點；若同階段另有 20% 韌性減傷，則為 100 × (1 − 20% − 25%) = 55 點。
 
@@ -1033,11 +1033,11 @@
 
 <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="72" height="72" alt="蓄力殲滅天賦圖示">
 
-- **計算方式**：依目前爆擊機率，每完整 1 個百分點提供 0.5% 近戰傷害；最多計入 30 個百分點，合計 15%。不需要先打出爆擊，也不消耗爆擊機率。
+- **計算方式**：依目前爆擊率，每完整 1 個百分點提供 0.5% 近戰傷害；最多計入 30 個百分點，合計 15%。不需要先打出暴擊，也不消耗爆擊率。
 
-- **傷害算例**：爆擊機率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
+- **傷害算例**：爆擊率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
 
-- **動態變化**：武器、暫時加成或爆擊機率改變時，近戰增傷也會更新。
+- **動態變化**：武器、暫時加成或爆擊率改變時，近戰增傷也會更新。
 
 [詳細資料](broker_passive_crit_grants_damage.md) · [返回目錄](#talent-index)
 
@@ -1048,7 +1048,7 @@
 
 <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="72" height="72" alt="猛烈劈擊天賦圖示">
 
-- **疊層方式**：每次近戰擊殺增加 1 層，每層增加 10% 傷害順劈能力，最多 5 層。再次觸發會刷新 5 秒持續時間。
+- **疊層方式**：每次近戰擊殺增加 1 層，每層增加 10% 傷害順劈能力，最多 5 層。再次觸發會重設 5 秒持續時間。
 
 - **順劈算例**：5 層提供 50%。原本可穿過總質量 10 的目標，變成 10 × 1.5 = 15；能命中幾名敵人仍取決於各敵人的質量、護甲及武器限制。
 
@@ -1067,7 +1067,7 @@
 
 - **傷害算例**：造成 300 點傷害、敵人只剩 100 點生命，溢出 200，取得 200 × 25% = 50 點加傷；下一次近戰在此結算階段原為 100 點，變成 150 點。這是固定加傷，不是增加 50%。
 
-- **再次擊殺**：效果期間會先扣除目前加傷，再算新的 25%；只有新值更高才替換並刷新。已有 50 點加傷、下一次溢出 400 時，新值為 (400 − 50) × 25% = 87.5；若溢出僅 200，新值 37.5 較低，不會替換或刷新。
+- **再次擊殺**：效果期間會先扣除目前加傷，再算新的 25%；只有新值更高才替換並重新計時。已有 50 點加傷、下一次溢出 400 時，新值為 (400 − 50) × 25% = 87.5；若溢出僅 200，新值 37.5 較低，不會替換或重新計時。
 
 [詳細資料](broker_passive_melee_damage_carry_over.md) · [返回目錄](#talent-index)
 
@@ -1078,7 +1078,7 @@
 
 <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="72" height="72" alt="劇毒菌株天賦圖示">
 
-- **運作方式**：你對敵人新增毒素或增加毒素層數時，使其承受的各來源傷害增加 10%；重新觸發刷新 5 秒時間，不疊加幅度。
+- **運作方式**：你對敵人新增毒素或增加毒素層數時，使其承受的各來源傷害增加 10%；重新觸發重設 5 秒時間，不累加幅度。
 
 - **持續限制**：若毒素提前消失，易傷也會提前結束，並非保證持續完整 5 秒。
 
@@ -1108,7 +1108,7 @@
 
 - **觸發方式**：以近戰擊殺精英敵人，向其周圍 4 公尺擴散毒素，最多選取 10 名敵人；死者不必原先感染毒素。
 
-- **層數限制**：本技能最多把同類毒素補到 2 層。原本 0 層變成 2 層、1 層補到 2 層；已達 2 層或更高時，只刷新毒素時間，不繼續加層。
+- **層數限制**：本技能最多把同類毒素補到 2 層。原本 0 層變成 2 層、1 層補到 2 層；已達 2 層或更高時，只重設毒素持續時間，不繼續加層。
 
 - **毒素算例**：每 0.35 秒依目前毒素層數造成一次傷害。2 層的輸入威力為 500 × 2 ÷ 30 ≈ 33.33，再依毒素曲線與護甲算傷害；不是直接造成 33.33 點傷害。
 
@@ -1134,11 +1134,11 @@
 
 <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="72" height="72" alt="塗讀武裝天賦圖示">
 
-- **疊層方式**：每次近戰爆擊命中，對該敵人增加 1 層同類毒素，並刷新毒素時間；與其他施加相同毒素的手段共用 30 層上限。
+- **疊層方式**：每次近戰爆擊命中，對該敵人增加 1 層同類毒素，並重設毒素持續時間；與其他施加相同毒素的手段共用 30 層上限。
 
 - **傷害運作**：毒素每 0.35 秒結算一次。3 層的輸入威力為 500 × 3 ÷ 30 = 50，再依傷害曲線與敵人護甲換算。層數增加會提高威力，不能把威力直接當傷害。
 
-- **衰退方式**：停止補毒後，先等待基礎 2.6 秒，再隨毒素傷害週期逐層衰退；重新施毒會刷新等待時間。
+- **衰退方式**：停止補毒後，先等待基礎 2.6 秒，再隨毒素傷害週期逐層衰退；重新施毒會重新計時等待時間。
 
 [詳細資料](broker_passive_melee_attacks_apply_toxin.md) · [返回目錄](#talent-index)
 
@@ -1151,7 +1151,7 @@
 
 - **施加層數**：擊暈的爆炸增加 3 層；炸彈使者增加 6 層；化學手榴彈增加 10 層。必須由閃擊爆炸命中，不是所有爆炸都適用。
 
-- **疊層算例**：敵人已有 2 層相同毒素，再被提供 6 層的爆炸命中，變成 2 + 6 = 8 層；最多 30 層，重新施加會刷新時間。
+- **疊層算例**：敵人已有 2 層相同毒素，再被提供 6 層的爆炸命中，變成 2 + 6 = 8 層；最多 30 層，重新施加會重新計時。
 
 - **傷害運作**：相同毒素每 0.35 秒結算一次，8 層輸入威力為 500 × 8 ÷ 30 ≈ 133.33，再依毒素曲線與護甲計算。
 
@@ -1218,7 +1218,7 @@
 
 - **觸發條件**：近戰爆擊命中人類體型敵人後，若敵人仍活著，而且剩餘生命嚴格小於該次實際傷害，就會被直接處決。隊長類敵人不適用。
 
-- **生命門檻算例**：敵人原有 190 點生命，這次爆擊造成 100，命中後剩 90；90 < 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
+- **生命門檻算例**：敵人原有 190 點生命，這次暴擊造成 100，命中後剩 90；90 < 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
 
 - **兩倍傷害的意思**：在這次命中確實扣除相同傷害的前提下，等同命中前生命低於傷害的 2 倍；不是打完後剩餘生命低於 2 倍就處決。
 
@@ -1244,7 +1244,7 @@
 
 <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="72" height="72" alt="甜蜜點天賦圖示">
 
-- **計算方式**：命中弱點時，增加的是弱點／精準命中的額外傷害部分，不是整筆傷害再乘 1.25。武器、護甲、攻擊方式及是否爆擊都可能改變這部分占比。
+- **計算方式**：命中弱點時，增加的是弱點／精準命中的額外傷害部分，不是整筆傷害再乘 1.25。武器、護甲、攻擊方式及是否暴擊都可能改變這部分占比。
 
 - **傷害算例**：假設一般部分 100、弱點額外部分 100，原本合計 200；加成後為 100 + 100 × 1.25 = 225，總傷害增加 12.5%。
 
@@ -1334,7 +1334,7 @@
 
 ## 興奮劑配方
 
-配方共有 30 點可分配，各項效果在使用專用興奮劑後共同生效；詳細成本、持續時間與疊加算例列於各配方。
+配方共有 30 點可分配，各項效果在使用專用興奮劑後共同生效；詳細成本、持續時間與疊層算例列於各配方。
 
 <a id="broker_stimm_activation_talent"></a>
 ### 裝備財閥特殊裝備(Equip Cartel Special)
@@ -1444,7 +1444,7 @@
 
 - **攻速算例**：原本可加速的 1 秒攻擊動作，在整條激勵路線下為 1 ÷ 1.2 ≈ 0.833 秒。
 
-- **防護效果**：藥效期間免疫暈眩與減速；不等同解除已被擒抱或捕捉的狀態。
+- **防護效果**：藥效期間免疫眩暈與減速；不等同解除已被擒抱或捕捉的狀態。
 
 [詳細資料](broker_stimm_celerity_5a.md) · [返回目錄](#talent-index)
 
@@ -1540,7 +1540,7 @@
 
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
 
-- **弱點與爆擊**：額外傷害部分增加 10%；普通命中傷害不受這一項加成。
+- **弱點與暴擊**：額外傷害部分增加 10%；普通命中傷害不受這一項加成。
 
 - **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.1 = 210，整筆傷害提高 5%。野火 IV、V 的這項加成合計 35%，同例為 235。
 
@@ -1578,9 +1578,9 @@
 
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
 
-- **爆擊機率**：增加 5 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
+- **爆擊率**：增加 5 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
 
-- **爆擊算例**：原本 10%，僅本節點變成 10% + 5% = 15%；兩項合計為 25%，最終限制於 0%～100%。
+- **暴擊算例**：原本 10%，僅本節點變成 10% + 5% = 15%；兩項合計為 25%，最終限制於 0%～100%。
 
 [詳細資料](broker_stimm_combat_4c.md) · [返回目錄](#talent-index)
 
@@ -1597,7 +1597,7 @@
 
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 
-- **弱點與爆擊**：額外傷害部分增加 25%；普通命中傷害不受這一項加成。
+- **弱點與暴擊**：額外傷害部分增加 25%；普通命中傷害不受這一項加成。
 
 - **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.25 = 225，整筆傷害提高 12.5%。野火 IV、V 的這項加成合計 35%，同例為 235。
 
@@ -1635,9 +1635,9 @@
 
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 
-- **爆擊機率**：增加 10 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
+- **爆擊率**：增加 10 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
 
-- **爆擊算例**：原本 10%，僅本節點變成 10% + 10% = 20%；兩項合計為 25%，最終限制於 0%～100%。
+- **暴擊算例**：原本 10%，僅本節點變成 10% + 10% = 20%；兩項合計為 25%，最終限制於 0%～100%。
 
 [詳細資料](broker_stimm_combat_5c.md) · [返回目錄](#talent-index)
 
@@ -1728,7 +1728,7 @@
 
 - **恢復加成**：韌性恢復量增加 30%，與彈幕 I～IV 的 20% 相加，合計增加 50%。
 
-- **恢復算例**：原本回復 10 點的效果，合計變成 10 × (1 + 20% + 30%) = 15 點；最多補滿韌性。
+- **恢復算例**：原本恢復 10 點的效果，合計變成 10 × (1 + 20% + 30%) = 15 點；最多補滿韌性。
 
 - **注射算例**：最大韌性 100，彈幕 I～IV 共提供 25% 一次恢復，套用此路線 50% 恢復加成後為 100 × 25% × 1.5 = 37.5 點。
 
@@ -1745,9 +1745,9 @@
 
 - **持續恢復**：藥效期間每秒恢復最大韌性的 5%，受到韌性恢復加成影響；第一次恢復約在生效 1 秒後。
 
-- **恢復算例**：最大韌性 100，計入彈幕 I～IV 的 20% 恢復加成，每次回復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
+- **恢復算例**：最大韌性 100，計入彈幕 I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
 
-- **停止條件**：興奮劑效果結束後停止；倒地期間不提供這項回復。
+- **停止條件**：興奮劑效果結束後停止；倒地期間不提供這項恢復。
 
 [詳細資料](broker_stimm_durability_5b.md) · [返回目錄](#talent-index)
 
@@ -1760,13 +1760,13 @@
 
 - **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復速度**：戰鬥能力自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+- **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 6.25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.0625 秒；15 秒藥效內共恢復 15 × 1.0625 = 15.9375 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 15.9375 = 44.0625 秒；之後恢復原速。
 
-- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+- **暫停期間**：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](broker_stimm_concentration_1.md) · [返回目錄](#talent-index)
 
@@ -1779,13 +1779,13 @@
 
 - **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復速度**：戰鬥能力自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+- **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 12.5%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.125 秒；15 秒藥效內共恢復 15 × 1.125 = 16.875 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 16.875 = 43.125 秒；之後恢復原速。
 
-- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+- **暫停期間**：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](broker_stimm_concentration_2.md) · [返回目錄](#talent-index)
 
@@ -1798,13 +1798,13 @@
 
 - **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復速度**：戰鬥能力自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+- **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 18.75%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.1875 秒；15 秒藥效內共恢復 15 × 1.1875 = 17.8125 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 17.8125 = 42.1875 秒；之後恢復原速。
 
-- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+- **暫停期間**：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](broker_stimm_concentration_3.md) · [返回目錄](#talent-index)
 
@@ -1817,13 +1817,13 @@
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復速度**：戰鬥能力自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+- **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.25 秒；15 秒藥效內共恢復 15 × 1.25 = 18.75 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 18.75 = 41.25 秒；之後恢復原速。
 
-- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+- **暫停期間**：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](broker_stimm_concentration_4.md) · [返回目錄](#talent-index)
 
@@ -1836,13 +1836,13 @@
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復速度**：戰鬥能力自然恢復速度增加 25%；前置配方的加成保留，同階段相加。
+- **恢復速度**：戰鬥技能自然恢復速度增加 25%；前置配方的加成保留，同階段相加。
 
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 50%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.5 秒；15 秒藥效內共恢復 15 × 1.5 = 22.5 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 22.5 = 37.5 秒；之後恢復原速。
 
-- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+- **暫停期間**：戰鬥技能若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](broker_stimm_concentration_5a.md) · [返回目錄](#talent-index)
 
@@ -1855,13 +1855,13 @@
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **觸發方式**：興奮劑生效期間，以近戰攻擊擊殺敵人後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。
+- **觸發方式**：興奮劑生效期間，以近戰攻擊擊殺敵人後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。
 
-- **刷新方式**：再次合格擊殺會重新計時 1 秒，不會疊成兩份加成。
+- **重新計時方式**：再次合格擊殺會重設 1 秒倒數，不會疊成兩份加成。
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒回復 1 秒冷卻，現在該秒回復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 
-- **恢復範圍**：只加快戰鬥能力的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
+- **恢復範圍**：只加快戰鬥技能的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
 
 [詳細資料](broker_stimm_concentration_5b.md) · [返回目錄](#talent-index)
 
@@ -1874,13 +1874,13 @@
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **觸發方式**：興奮劑生效期間，以遠程攻擊擊殺敵人後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。
+- **觸發方式**：興奮劑生效期間，以遠程攻擊擊殺敵人後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。
 
-- **刷新方式**：再次合格擊殺會重新計時 1 秒，不會疊成兩份加成。
+- **重新計時方式**：再次合格擊殺會重設 1 秒倒數，不會疊成兩份加成。
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒回復 1 秒冷卻，現在該秒回復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 
-- **恢復範圍**：只加快戰鬥能力的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
+- **恢復範圍**：只加快戰鬥技能的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
 
 [詳細資料](broker_stimm_concentration_5c.md) · [返回目錄](#talent-index)
 

@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 | 技能 | 結論 |
@@ -94,14 +94,14 @@
 ## 動能撕裂者(Kinetic Flayer)
 
 - 描述鍵：`loc_talent_psyker_smite_on_hit_special_elite_desc`；hash：`63bc627a`。
-- 結論：文字與實作差異待遊戲內核對。本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。文本與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
+- 結論：文字與實作差異待遊戲內核對。本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。文字與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
 - [原始碼推導與限制](psyker_smite_on_hit.md)。
 
 <a id="psyker_brain_burst_improved"></a>
 ## 顱腦崩裂(Brain Rupture)
 
 - 描述鍵：`loc_talent_psyker_brain_burst_improved_description`；hash：`681e4980`。
-- 結論：未見已確認矛盾。核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見已確認矛盾。核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](psyker_brain_burst_improved.md)。
 
 <a id="psyker_grenade_throwing_knives"></a>
@@ -171,7 +171,7 @@
 ## 預兆(Prescience)
 
 - 描述鍵：`loc_ability_psyker_gunslinger_aura_description`；hash：`a2000c1d`。
-- 結論：未見已確認矛盾。本地繁中說明將此效果描述為本人與協同隊友增加暴擊機率，固定原始碼的光環值為 0.05，暴擊計算以加法套用。
+- 結論：未見已確認矛盾。本地繁中說明將此效果描述為本人與協同隊友增加爆擊率，固定原始碼的光環值為 0.05，暴擊計算以加法套用。
 - [原始碼推導與限制](psyker_aura_crit_chance_aura.md)。
 
 <a id="psyker_shout_vent_warp_charge"></a>
@@ -186,7 +186,7 @@
 
 - 描述鍵：`loc_talent_psyker_combat_ability_overcharge_stance_improved_description`；hash：`00d42220`。
 - 結論：明確翻譯錯誤。原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
-- 繁中原文短引：觸發占卜師的注視。進入占卜師的注視範圍後，平息{vent:%s}反噬並獲得{base_damage:%s}附加傷害、{crit_chance:%s}暴擊機率、{weakspot_damage:%s}弱點傷害、{tdr:%s}韌性減傷以及壓制免疫，同時每秒恢復{toughness:%s}韌性。
+- 繁中原文短引：觸發占卜師的注視。進入占卜師的注視範圍後，平息{vent:%s}反噬並獲得{base_damage:%s}附加傷害、{crit_chance:%s}爆擊率、{weakspot_damage:%s}弱點傷害、{tdr:%s}韌性減傷以及壓制免疫，同時每秒恢復{toughness:%s}韌性。
 - 同源英文：Triggers Scrier's Gaze. When entering Scrier's Gaze you Quell {vent:%s} Peril as well as gain {base_damage:%s} Damage, {crit_chance:%s} Critical Chance, {weakspot_damage:%s} Weakspot Damage, {tdr:%s} Toughness Damage Reduction, and Suppression Immunity. You also replenish {toughness:%s} Toughness each second.
 - [原始碼推導與限制](psyker_combat_ability_stance.md)。
 
@@ -294,7 +294,7 @@
 ## 擾動命運(Disrupt Destiny)
 
 - 描述鍵：`loc_talent_psyker_marked_enemies_passive_updated_desc`；hash：`cfa752d8`。
-- 結論：待遊戲內核對。現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。文本與程式來源皆為1.13.1；先保留差異待遊戲內核對。
+- 結論：待遊戲內核對。現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。文字與程式來源皆為1.13.1；先保留差異待遊戲內核對。
 - [原始碼推導與限制](psyker_new_mark_passive.md)。
 
 <a id="psyker_empowered_ability"></a>
@@ -560,7 +560,7 @@
 
 - 描述鍵：`loc_talent_psyker_cleave_from_peril_desc`；hash：`5de5fc01`。
 - 結論：繁中原文勘誤。繁中「順劈攻擊傷害」把順劈能力寫成傷害增幅；英文是 Cleave，實際提高能穿過的敵人質量上限，不是直接提高每次命中的傷害。
-- 繁中原文短引：根據當前反噬值，最多提高{max_cleave:%s}順劈攻擊傷害。
+- 繁中原文短引：根據目前反噬值，最多提高{max_cleave:%s}順劈攻擊傷害。
 - 同源英文：Up to {max_cleave:%s} Cleave, based on Peril.
 - [原始碼推導與限制](psyker_cleave_from_peril.md)。
 

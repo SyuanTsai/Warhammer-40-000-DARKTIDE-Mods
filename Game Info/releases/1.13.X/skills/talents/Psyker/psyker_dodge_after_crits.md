@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為暴擊旗標與 on_hit；共用 proc_buff 決定 active 時間刷新。
+- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為暴擊旗標與 on_hit；共用 proc_buff 決定 active 時間重新計時。
 
 ## 原始碼依據
 

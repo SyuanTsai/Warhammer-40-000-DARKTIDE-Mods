@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_push_hit觸發proc_stat max_melee_hit_mass_attack_modifier=0.5，active8並允許刷新；不是直接近戰傷害加50%。
+- on_push_hit觸發proc_stat max_melee_hit_mass_attack_modifier=0.5，active8並允許重新計時；不是直接近戰傷害加50%。
 
 ## 原始碼依據
 

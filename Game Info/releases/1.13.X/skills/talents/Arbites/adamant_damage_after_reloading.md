@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_reload啟動5秒proc_stat_buffs.ranged_damage=.15，allow_proc_while_active允許刷新。DamageCalculation將ranged_damage−1加到damage_stat_buffs，不獨立乘最終傷害。
+- on_reload啟動5秒proc_stat_buffs.ranged_damage=.15，allow_proc_while_active允許重新計時。DamageCalculation將ranged_damage−1加到damage_stat_buffs，不獨立乘最終傷害。
 
 ## 原始碼依據
 
@@ -28,7 +28,7 @@
 ## 原文核對
 
 - 對應 hash：`e68c7c57`。
-- 繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上刷新及加算並非勘誤。
+- 繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上重新計時及加算並非勘誤。
 
 ## 圖示來源
 

@@ -14,8 +14,8 @@
 
 ## 距離公式
 
-- 共用 damage_calculation 將 damage_near 與遠距加成依 sqrt(clamp((distance−12.5)/17.5,0,1)) 插值，再加到一般傷害倍率；damage_near 本身沒有 ranged-only 條件。此天賦的獨立貢獻為 .15×(1−sqrt(clamp((d−12.5)/17.5,0,1)))。
-- d≤12.5→.15；d=16.875→.075；d≥30→0。公式中的distance若呼叫端未提供，預設0。其他天賦的遠距加成另按同一插值合併。
+- 共用 damage_calculation 將 damage_near 與遠程加成依 sqrt(clamp((distance−12.5)/17.5,0,1)) 插值，再加到一般傷害倍率；damage_near 本身沒有 ranged-only 條件。此天賦的獨立貢獻為 .15×(1−sqrt(clamp((d−12.5)/17.5,0,1)))。
+- d≤12.5→.15；d=16.875→.075；d≥30→0。公式中的distance若呼叫端未提供，預設0。其他天賦的遠程加成另按同一插值合併。
 - 算例基礎100、沒有其他加成：100×1.15=115。已有同階段25%時100×1.40=140。
 
 ## 原始碼依據
@@ -37,11 +37,11 @@
 
 ## 遊戲本體繁中對照
 
-- 文本來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_ability_assault_desc`；hash：`1eb58318`；繁中entry_index：`2009`；英文entry_index：`2009`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「近戰傷害加成」；同版英文對照片段：`Close Damage`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
 - 判定：**明確繁中描述錯誤**。效果種類錯譯：Close Damage是依距離的damage_near，並非按近戰攻擊類型判斷的melee_damage。原文另稱離開潛行後才開始，與固定版本實作有差異，但此處只將近戰／近距離的同版語系差異列為勘誤。
-- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 
 - [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第2032–2047行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2032-L2047)

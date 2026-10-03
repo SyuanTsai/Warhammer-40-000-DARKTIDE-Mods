@@ -11,7 +11,7 @@
 
 - talent_settings 設 sub_2_kill_additional_grant=4、sub_2_kill_additional_elite_grant=10。啟用 extra_killing_blow_stacks special rule 後，on_hit handler 直接返回；on_kill handler先跑核心命中／暴擊給層，再加 4 層，若 CheckProcFunctions.on_elite_kill 為真再加 10 層。
 - 共用 proc check 要求 attack_type=melee，故此項只計近戰擊殺。on_elite_kill 同時要求 attack_result=died 及 params.tags.elite；它不把單有 special 標籤的擊殺視為精英。
-- 新增層仍加到核心的 broker_keystone_adrenaline_junkie_stack，遵守其 30 層上限、刷新計時、逐層衰退及達上限觸發狂暴規則。
+- 新增層仍加到核心的 broker_keystone_adrenaline_junkie_stack，遵守其 30 層上限、重設計時、逐層衰退及達上限觸發狂暴規則。
 
 ## 原始碼依據
 

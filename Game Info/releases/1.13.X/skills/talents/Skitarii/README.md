@@ -20,52 +20,52 @@
 | <img src="https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02" width="32" height="32" alt="心智網指令天賦圖示"> [心智網指令](#cryptic_servo_skull_improved_tagging)<br>- Noospheric Command | <ul><li>標記敵人並下令攻擊，可使伺服頭骨短暫大幅加快射擊。</li><li>完整2秒加速消耗0.3份電容量；沒有最低電容量時不能啟動，訓練場例外。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b" width="32" height="32" alt="電流抗性天賦圖示"> [電流抗性](#cryptic_force_field_arcs)<br>- Voltaic Resistance | <ul><li>艾曼納圖斯力場結束時，會按吸收的遠程攻擊次數向前方敵人發射1至4道電弧。</li><li>每道電弧都可連鎖攻擊附近敵人。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be" width="32" height="32" alt="復甦天賦圖示"> [復甦](#cryptic_coherency_regen_aura_improved)<br>- Resurgence | <ul><li>獲得25點韌性，且你與協同範圍內隊友在戰鬥中的協同韌性恢復至少為一般速率的50%。</li><li>協同恢復最低倍率可在附近有敵人時生效。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="彈藥存放天賦圖示"> [彈藥存放](#cryptic_ammo_aura)<br>- Ammunition Deposit | <ul><li>你獲得25點韌性，任務中的玩家獲得15%儲備彈藥容量。</li><li>備彈容量效果不受協同距離限制；多名隊友選用時不重複加成。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="彈藥存放天賦圖示"> [彈藥存放](#cryptic_ammo_aura)<br>- Ammunition Deposit | <ul><li>你獲得25點韌性，任務中的玩家獲得15%儲備用彈藥藥容量。</li><li>備用彈藥容量效果不受協同距離限制；多名隊友選用時不重複加成。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a48f1d74-488a-42d3-a59d-33d55135dad2" width="32" height="32" alt="碎敵信條天賦圖示"> [碎敵信條](#cryptic_aura_weapon_improved)<br>- Foe-Render Creed | <ul><li>你獲得25點韌性；你與協同範圍內隊友的順劈上限提高15%，撕裂提高7.5%。</li><li>協同鏈包含施放者本人，因此自身也取得順劈與撕裂加成。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="32" height="32" alt="弦爪重擊天賦圖示"> [弦爪重擊](#cryptic_chordclaw)<br>- Chordclaw Strike | <ul><li>弦爪重擊每次啟動消耗1份充能；弦爪重攻擊必定暴擊並有+50%撕裂。</li><li>啟動期間的弦爪效果另提供+30%近戰傷害及暈眩免疫；攻擊的實際生命傷害依敵人與傷害計算而變。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>進階戰鬥教範啟動時清除壓制；能力維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="32" height="32" alt="弦爪重擊天賦圖示"> [弦爪重擊](#cryptic_chordclaw)<br>- Chordclaw Strike | <ul><li>弦爪重擊每次啟動消耗1份充能；弦爪重攻擊必定暴擊並有+50%撕裂。</li><li>啟動期間的弦爪效果另提供+30%近戰傷害及眩暈免疫；攻擊的實際生命傷害依敵人與傷害計算而變。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>進階戰鬥教範啟動時清除壓制；能力維持期間每秒恢復最大韌性的10%。</li><li>恢復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>進階戰鬥教範啟動時提高遠程射速15%；能力連續維持滿4秒後提高至30%。</li><li>能力結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一份充能，額外釋放一道向前電弧；一次最多消耗3份，因此一般使用最多3道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電能發射器每消耗一份充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電能發射器每消耗一份充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過目前缺少的韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="32" height="32" alt="軸向斬擊天賦圖示"> [軸向斬擊](#cryptic_chordclaw_horizontal_swipe)<br>- Axial Slash | <ul><li>快速啟用弦爪時改為橫向掃擊，仍必定暴擊；按住蓄力仍使用原本重刺。</li><li>單次橫掃可命中多個目標，後續目標的傷害逐步降低。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/7d516cae-80f0-4d48-b562-b5a21f6ddcd1" width="32" height="32" alt="試探連擊天賦圖示"> [試探連擊](#cryptic_chordclaw_quick_stab_combo)<br>- Probing Strikes | <ul><li>試探連擊把弦爪的快速能力攻擊改為三段連續刺擊；按住輸入仍走一般重攻擊。</li><li>三段刺擊各自為必定爆擊，且每段造成生命傷害時對命中目標施加6層流血；流血最多18層。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="通量導管蓄積天賦圖示"> [通量導管蓄積](#cryptic_crits_grant_power)<br>- Flux Conduit Build-Up | <ul><li>暴擊後4秒內加快電容量恢復；基本速率下，額外恢復單份電容量的5%。</li><li>4秒內再次暴擊會刷新回復期間；回復倍率固定，不會因多次暴擊而疊高。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="反應爐線圈充能天賦圖示"> [反應爐線圈充能](#cryptic_weakspot_kills_grant_power)<br>- Reactor Coil Recharge | <ul><li>弱點擊殺恢復目前戰鬥能力單份充能成本的2%；以50點為一份時，每次恢復1點電容量。</li><li>恢復量會保留為小數進度；未達下一份完整充能前不會增加可用份數。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/7d516cae-80f0-4d48-b562-b5a21f6ddcd1" width="32" height="32" alt="試探連擊天賦圖示"> [試探連擊](#cryptic_chordclaw_quick_stab_combo)<br>- Probing Strikes | <ul><li>試探連擊把弦爪的快速能力攻擊改為三段連續刺擊；按住輸入仍走一般重攻擊。</li><li>三段刺擊各自為必定暴擊，且每段造成生命傷害時對命中目標施加6層流血；流血最多18層。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="通量導管蓄積天賦圖示"> [通量導管蓄積](#cryptic_crits_grant_power)<br>- Flux Conduit Build-Up | <ul><li>暴擊後4秒內加快電容量恢復；基本速率下，額外恢復單份電容量的5%。</li><li>4秒內再次暴擊會重設恢復期間；恢復倍率固定，不會因多次暴擊而疊高。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="反應爐線圈充能天賦圖示"> [反應爐線圈充能](#cryptic_weakspot_kills_grant_power)<br>- Reactor Coil Recharge | <ul><li>弱點擊殺恢復目前戰鬥技能單份充能成本的2%；以50點為一份時，每次恢復1點電容量。</li><li>恢復量會保留為小數進度；未達下一份完整充能前不會增加可用份數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>電容量自然恢復由每秒單份的2%提高至3%；每份50點時，每秒由1點提高至1.5點。</li><li>在沒有其他消耗或回充修正時，一份充能約33.3秒回滿，三份由空回滿約100秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="電容回收迴路天賦圖示"> [電容回收迴路](#cryptic_multi_hits_grant_power)<br>- Capacitor Reclamation Loop | <ul><li>單次攻擊命中至少3名敵人時，回復目前戰鬥能力單份成本的1%電容量。</li><li>按單份成本50點計，每次回復0.5點；觸發後至少間隔0.25秒才能再次觸發。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="電容回收迴路天賦圖示"> [電容回收迴路](#cryptic_multi_hits_grant_power)<br>- Capacitor Reclamation Loop | <ul><li>單次攻擊命中至少3名敵人時，恢復目前戰鬥技能單份成本的1%電容量。</li><li>按單份成本50點計，每次恢復0.5點；觸發後至少間隔0.25秒才能再次觸發。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="電能發射器天賦圖示"> [電能發射器](#cryptic_discharge)<br>- Voltaic Emitter | <ul><li>啟動時消耗1至3份已補滿的電容量，單次最多消耗3份；更多充能及下一份未滿進度保留。</li><li>主放電固定影響12公尺內敵人，觸電2秒並造成持續傷害。</li><li>消耗至少2份時，另使30公尺內符合條件的敵人武器故障；至少3份時，接下來15秒內攻擊命中會使敵人觸電2秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="32" height="32" alt="進階戰鬥教範天賦圖示"> [進階戰鬥教範](#cryptic_precision_stance)<br>- Advanced Combat Doctrines | <ul><li>切換至遠程武器並協助瞄準準星附近的敵人；散佈降低90%、後座力降低60%。</li><li>啟動扣除單份電容量進度的25%，之後每秒扣10%、每次射擊再扣1%；裝填時暫停每秒扣除。</li><li>重新裝填速度提高25%，結束後保留5秒；再次按下技能、切離遠程武器或耗盡電容量便結束。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="鋼鐵富足天賦圖示"> [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration)<br>- Satiated Steel | <ul><li>弦爪造成近戰擊殺後，在5秒內額外恢復目前戰鬥能力單份成本的25%。</li><li>單份電容量50點時，完整5秒額外恢復12.5點；期間再擊殺會刷新時間，不疊加恢復速率。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="鋼鐵富足天賦圖示"> [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration)<br>- Satiated Steel | <ul><li>弦爪造成近戰擊殺後，在5秒內額外恢復目前戰鬥技能單份成本的25%。</li><li>單份電容量50點時，完整5秒額外恢復12.5點；期間再擊殺會重新計時，不疊加恢復速率。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="千刀萬剮天賦圖示"> [千刀萬剮](#cryptic_chordclaw_consecutive_bonus)<br>- Slice and Dice | <ul><li>每次啟動弦爪技能增加一層弦爪傷害加成，每層20%，上限3層。</li><li>每層持續5秒；新層加入時更新持續時間，最多提供60%弦爪傷害修正。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="洞察之眼天賦圖示"> [洞察之眼](#cryptic_precision_stance_crit_cleave)<br>- Piercing Sight | <ul><li>進階戰鬥教範啟用時，遠程順劈增加30%、遠程暴擊率增加15個百分點。</li><li>持續4秒後提高至60%順劈與30個百分點暴擊率；關閉能力即失去加成。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="精算順序天賦圖示"> [精算順序](#cryptic_precision_stance_damage_on_elite_kill)<br>- Calculated Priority | <ul><li>進階戰鬥教範啟動期間，以遠程攻擊擊殺精英會增加一層傷害加成。</li><li>每層提高5%傷害、持續10秒，最多5層；達到上限時最多為25%，再次取得層數會刷新持續時間。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="洞察之眼天賦圖示"> [洞察之眼](#cryptic_precision_stance_crit_cleave)<br>- Piercing Sight | <ul><li>進階戰鬥教範啟用時，遠程順劈增加30%、遠程爆擊率增加15個百分點。</li><li>持續4秒後提高至60%順劈與30個百分點爆擊率；關閉能力即失去加成。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="精算順序天賦圖示"> [精算順序](#cryptic_precision_stance_damage_on_elite_kill)<br>- Calculated Priority | <ul><li>進階戰鬥教範啟動期間，以遠程攻擊擊殺精英會增加一層傷害加成。</li><li>每層提高5%傷害、持續10秒，最多5層；達到上限時最多為25%，再次取得層數會重設持續時間。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="削切協議天賦圖示"> [削切協議](#cryptic_dissector)<br>- Flensing Protocols | <ul><li>初始6層，每層傷害增加2.5%、韌性傷害減免2.5%；滿層各為15%。</li><li>受到生命或韌性傷害時失去1層，每秒最多一次；精英或專家擊殺補2層，並恢復最大韌性15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="爆擊能量過載天賦圖示"> [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion)<br>- Critical Power Overload | <ul><li>能量超載時，使周圍8公尺內命中的敵人遭電擊，承受傷害提高15%，持續8秒。</li><li>再次命中刷新時間；這次範圍效果本身不造成爆炸傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="爆擊能量過載天賦圖示"> [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion)<br>- Critical Power Overload | <ul><li>能量超載時，使周圍8公尺內命中的敵人遭電擊，承受傷害提高15%，持續8秒。</li><li>再次命中重新計時；這次範圍效果本身不造成爆炸傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="振奮過載天賦圖示"> [振奮過載](#cryptic_overload_keystone_toughness_stamina)<br>- Invigorating Overload | <ul><li>每次能量超載時，你與協同中的隊友各自恢復最大韌性的20%及最大耐力的20%。</li><li>恢復受韌性與耐力上限限制；韌性恢復也會套用已有的韌性恢復修正。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="靜電電容消耗天賦圖示"> [靜電電容消耗](#cryptic_overload_keystone_permastack)<br>- Static Capacitor Drain | <ul><li>累計超載8／16／24次，依序獲得傷害提高15%、韌性減傷20%、電容量自然恢復加快25%。</li><li>三項加成可以同時保留，各只取得一次，持續至死亡。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%爆擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點爆擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會重設10秒倒數；層數到達5層後不再增加，但後續觸發仍會重新計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="電容極限覆寫天賦圖示"> [電容極限覆寫](#cryptic_redline_rending)<br>- Capacitory Limit Override | <ul><li>極限電容層數達3層時啟用 +15% 撕裂；低於3層時不提供此效果。</li><li>達門檻後效果固定為15%，第4層起不再增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="資源最佳化聖歌天賦圖示"> [資源最佳化聖歌](#cryptic_redline_extra_max_stacks)<br>- Resource Optimisation Canticles | <ul><li>使戰鬥技能最大充能再增加1道，並將極限電容層數上限由4層提高至5層。</li><li>極限電容每層的韌性減傷仍依原本5%步進；5層時承受的韌性傷害為原始值的75%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥技能時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="動力驅動天賦圖示"> [動力驅動](#cryptic_overload_keystone_abilities)<br>- Powerdrive | <ul><li>每消耗完整1份戰鬥技能充能，增加5層能量超載；鎖定姿態在結束時結算。</li><li>弦爪連續出招期間，只有首次啟用計入；累積達30層便觸發超載並歸零。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="脈衝延伸天賦圖示"> [脈衝延伸](#cryptic_redline_toughness)<br>- Surge-Extension | <ul><li>每次補回或消耗戰鬥技能充能，在5秒內恢復最大韌性的25%。</li><li>再次觸發會刷新恢復期間，不提高每秒恢復速率；一次變動多份充能仍只觸發一次。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外恢復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%恢復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="脈衝延伸天賦圖示"> [脈衝延伸](#cryptic_redline_toughness)<br>- Surge-Extension | <ul><li>每次補回或消耗戰鬥技能充能，在5秒內恢復最大韌性的25%。</li><li>再次觸發會重設恢復期間，不提高每秒恢復速率；一次變動多份充能仍只觸發一次。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>暴擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="歐姆尼賽亞充能聖歌天賦圖示"> [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness)<br>- Omnissian Recharge Litany | <ul><li>單次攻擊命中至少 3 名敵人</li><li>3 秒內恢復 10% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="原初動力導流天賦圖示"> [原初動力導流](#cryptic_stamina_increases_damage)<br>- Channelled Motive Force | <ul><li>累計消耗 1 格耐力，傷害提高 15%、持續 4 秒</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="熵能轉移天賦圖示"> [熵能轉移](#cryptic_electrocution_toughness)<br>- Entropic Transfer | <ul><li>施加或刷新電擊後，4 秒內恢復 12% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="熵能轉移天賦圖示"> [熵能轉移](#cryptic_electrocution_toughness)<br>- Entropic Transfer | <ul><li>施加電擊或重設其持續時間後，4 秒內恢復 12% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="過載轉移晶格天賦圖示"> [過載轉移晶格](#cryptic_electrocution_defense)<br>- Overcharge Transfer Lattice | <ul><li>遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人</li><li>冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="32" height="32" alt="精準思算機同步天賦圖示"> [精準思算機同步](#cryptic_weakspot_damage)<br>- Sureshot Cogitator Sync | <ul><li>弱點額外傷害提高 25%</li><li>實際增幅隨武器與命中條件改變</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="電擊破壞協定天賦圖示"> [電擊破壞協定](#cryptic_pushing_grants_cleave)<br>- Shockline Breach Protocol | <ul><li>推中敵人後，近戰順劈提高 50%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="輻射槽天賦圖示"> [輻射槽](#cryptic_stacking_ranged_damage)<br>- Rad-Sink | <ul><li>停止射擊 1 秒獲得 10% 遠程增傷</li><li>2 秒達上限 20%，再次射擊後重算</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="漸進裝甲矩陣天賦圖示"> [漸進裝甲矩陣](#cryptic_stacking_tdr)<br>- Progressive Plating Matrix | <ul><li>命中疊加韌性減傷，每層 2.5%</li><li>最多 6 層，持續 5 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="漸進裝甲矩陣天賦圖示"> [漸進裝甲矩陣](#cryptic_stacking_tdr)<br>- Progressive Plating Matrix | <ul><li>命中後累積韌性減傷，每層 2.5%</li><li>最多 6 層，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="報應導管天賦圖示"> [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge)<br>- Retribution Conduit | <ul><li>對電擊目標提高 10% 傷害</li><li>每份完整電容量再增加 5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="電流標記陣列天賦圖示"> [電流標記陣列](#cryptic_elite_kills_damage)<br>- Galvanic Marking Array | <ul><li>以遠程攻擊擊殺精英，每次提高 5% 傷害</li><li>最多 4 層，每 15 秒衰減一層</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="32" height="32" alt="自我修復教義天賦圖示"> [自我修復教義](#cryptic_toughness_per_charge)<br>- Auto-Repair Doctrines | <ul><li>每秒恢復 3% 韌性</li><li>每份完整電容量再增加每秒 0.5%</li></ul> | 技能 |
@@ -73,7 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="弱點分析教義天賦圖示"> [弱點分析教義](#cryptic_afflicted_increased_damage)<br>- Weakness Analysis Doctrine | <ul><li>命中電擊、燃燒、靈魂之火、流血或中毒敵人</li><li>傷害提高 10%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="離格動作例程天賦圖示"> [離格動作例程](#cryptic_mobile_defense)<br>- Ablative Motion Routines | <ul><li>有耐力衝刺或滑行時，承受傷害降低 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="32" height="32" alt="能量溢流天賦圖示"> [能量溢流](#cryptic_shared_toughness)<br>- Power Overflow | <ul><li>韌性已滿時，將恢復量的 25% 分享給每位協同隊友</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="32" height="32" alt="目標殲滅回饋天賦圖示"> [目標殲滅回饋](#cryptic_stun_suppression_immune)<br>- Target-Neutralization Feedback | <ul><li>弱點擊殺後，5 秒內免疫一般硬直與壓制</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="32" height="32" alt="目標殲滅回饋天賦圖示"> [目標殲滅回饋](#cryptic_stun_suppression_immune)<br>- Target-Neutralization Feedback | <ul><li>弱點擊殺後，5 秒內免疫一般僵直與壓制</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="二元彈道協議天賦圖示"> [二元彈道協議](#cryptic_elite_kills_toughness)<br>- Binary Ballistics Protocol | <ul><li>擊殺精英後，3 秒內恢復 15% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6d7a17f5-be3e-4659-bc09-84cfb22bd20f" width="32" height="32" alt="力量分配致動器天賦圖示"> [力量分配致動器](#cryptic_push_stagger_stamina)<br>- Force Distribution Actuators | <ul><li>耐力至少 50% 時，推擊衝擊提高 75%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="卓越追蹤聖歌天賦圖示"> [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty)<br>- Superior Tracking Litanies | <ul><li>架槍／瞄準的移動速度懲罰減半</li><li>射擊散布降低 45%</li></ul> | 技能 |
@@ -82,22 +82,22 @@
 | <img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="32" height="32" alt="動能分配器天賦圖示"> [動能分配器](#cryptic_toughness_on_damage_taken)<br>- Kinetic Energy Distributors | <ul><li>受到生命傷害後，5 秒內恢復 25% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="無限抑制器天賦圖示"> [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed)<br>- Uncapped Arrestor | <ul><li>近戰攻擊命中後，每次增加 2.5% 近戰攻速</li><li>最多 5 層，持續 3 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="電擊打擊導管天賦圖示"> [電擊打擊導管](#cryptic_melee_crits_electrocute_first)<br>- Electro-Strike Conduit | <ul><li>近戰爆擊會電擊第一個命中目標</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="槍械技師天賦圖示"> [槍械技師](#cryptic_auto_reload)<br>- Gunsmith | <ul><li>裝填速度提高 15%</li><li>停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="槍械技師天賦圖示"> [槍械技師](#cryptic_auto_reload)<br>- Gunsmith | <ul><li>裝填速度提高 15%</li><li>停止射擊 5 秒後，每秒從備用彈藥填入彈匣容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="暗殺協議天賦圖示"> [暗殺協議](#cryptic_ranged_vs_bfg)<br>- Assassination Protocols | <ul><li>對歐格林、怪獸與隊長的遠程傷害提高 25%</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備彈藥上限增加 25%</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加電擊或重設其持續時間時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備用彈藥藥上限增加 25%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥技能，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="救贖教範天賦圖示"> [救贖教範](#cryptic_revive_speed_and_dr)<br>- Salvation Doctrine | <ul><li>援助隊友時減少 25% 承受傷害</li><li>援助速度提高 25%</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備彈藥上限的 1%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備用彈藥藥上限的 1%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="持續攻擊教義天賦圖示"> [持續攻擊教義](#cryptic_stacking_melee_damage)<br>- Sustained Assault Doctrine | <ul><li>近戰攻擊命中後，每次提高 3% 傷害</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="鍍鋅精密塗層天賦圖示"> [鍍鋅精密塗層](#cryptic_stun_dr_power)<br>- Galvanized Coating | <ul><li>常駐一般受擊硬直免疫與 15% 減傷</li><li>受到近戰傷害時消耗單份電容量的 7.5%</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="鍍鋅精密塗層天賦圖示"> [鍍鋅精密塗層](#cryptic_stun_dr_power)<br>- Galvanized Coating | <ul><li>常駐一般受擊僵直免疫與 15% 減傷</li><li>受到近戰傷害時消耗單份電容量的 7.5%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥技能後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="伺服核心充能引擎天賦圖示"> [伺服核心充能引擎](#cryptic_weakspot_kills_restore_toughness)<br>- Servo-Core Recharge Engine | <ul><li>弱點擊殺立即恢復 5% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="剩餘電流緩衝天賦圖示"> [剩餘電流緩衝](#cryptic_tdr_based_on_charge)<br>- Residual Current Buffer | <ul><li>常駐 10% 韌性減傷</li><li>每份完整電容量再增加 2.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="標記優先聖詩天賦圖示"> [標記優先聖詩](#cryptic_specials_marking)<br>- Target Prioritization Psalms | <ul><li>顯示 12.5 公尺內專家敵人的輪廓</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般僵直免疫</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="32" height="32" alt="序列充能天賦圖示"> [序列充能](#cryptic_strength_on_charge_gain)<br>- Sequenced Charge | <ul><li>獲得完整電容量時，威力提高 12.5%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="32" height="32" alt="屠殺協議天賦圖示"> [屠殺協議](#cryptic_toughness_replenishment_on_kill_bonus)<br>- Slaughter Protocol | <ul><li>近戰擊殺的原有韌性恢復量提高 25%</li><li>沒有完整電容量時提高至 50%</li></ul> | 技能 |
@@ -147,7 +147,7 @@
 
 - **運作方式**：救援會使隊友起身，之後5秒內所受韌性傷害降至原本的25%，並每秒恢復相當於最大韌性的20%。
 
-- **算例**：若隊友最大韌性為100，恢復期間每秒回復20韌性，最多可回復100；每次救援消耗1次閃擊使用次數，並與噴火伺服頭骨共用。
+- **算例**：若隊友最大韌性為100，恢復期間每秒恢復20韌性，最多可恢復100；每次救援消耗1次閃擊使用次數，並與噴火伺服頭骨共用。
 
 - **救援限制**：無法救起懸掛在邊緣的隊友。若救援失敗且你仍存活，會退回這次消耗的使用次數。
 
@@ -170,7 +170,7 @@
 
 - **擊殺回充**：電弧手榴彈或其電弧擊殺精英、專家時，每次恢復0.04份電容量。
 
-- **算例**：擊殺3名符合條件的敵人，共恢復3×0.04=0.12份電容量；手榴彈本身最多有3次使用次數。
+- **算例**：擊殺3名符合條件的敵人，共恢復3×0.04=0.12份電容量；手雷本身最多有3次使用次數。
 
 - **電容量算例**：單份50點時，每名合格擊殺額外恢復50 × 4% = 2點；擊殺3名合計6點。此為手雷額外效果，職業原有擊殺回充另計。
 
@@ -189,7 +189,7 @@
 
 - **運作方式**：基礎伺服頭骨強化改為常駐：頭骨射擊傷害提高25%，射擊冷卻縮短一半。
 
-- **算例**：以原本每發100傷害、3秒射擊冷卻為例，常駐加成後每發125傷害、冷卻1.5秒。頭骨射中敵人時，該敵人5秒內承受傷害提高15%，並增加1層燃燒；最多8層，達上限時刷新燃燒時間。
+- **算例**：以原本每發100傷害、3秒射擊冷卻為例，常駐加成後每發125傷害、冷卻1.5秒。頭骨射中敵人時，該敵人5秒內承受傷害提高15%，並增加1層燃燒；最多8層，達上限時重設燃燒的持續時間。
 
 [詳細資料](cryptic_servo_skull_improved.md) · [返回目錄](#talent-index)
 
@@ -223,7 +223,7 @@
 
 - **運作方式**：標準電弧手榴彈爆炸半徑為10公尺；是否造成武器故障還取決於目標是否支援此狀態。
 
-- **持續電擊限制**：後續反覆電擊不會再次觸發或延長武器故障；須由另一個合格的爆炸或電弧命中才能刷新。
+- **持續電擊限制**：後續反覆電擊不會再次觸發或延長武器故障；須由另一個合格的爆炸或電弧命中才能重新計時。
 
 [詳細資料](cryptic_arc_grenades_weapon_malfunction.md) · [返回目錄](#talent-index)
 
@@ -318,9 +318,9 @@
 
 <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="72" height="72" alt="彈藥存放天賦圖示">
 
-- **運作方式**：獲得25點韌性；儲備彈藥容量提高15%。
+- **運作方式**：獲得25點韌性；儲備用彈藥藥容量提高15%。
 
-- **算例**：原本最多攜帶101發儲備彈藥，增加15%後為101 × 1.15 = 116.15，向下取整為116發；目前儲備數也會隨容量變更調整。
+- **算例**：原本最多攜帶101發儲備用彈藥藥，增加15%後為101 × 1.15 = 116.15，向下取整為116發；目前儲備數也會隨容量變更調整。
 
 - **作用範圍**：彈藥容量加成提供給你與任務中由玩家操控的隊友，不要求待在協同範圍內；多名隊友選用這項天賦，容量加成仍為15%。
 
@@ -355,7 +355,7 @@
 
 - **運作方式**：啟動弦爪重擊消耗1份電容量，基礎上限3份，其他天賦可增加上限；弦爪重攻擊必定暴擊，並提高50%撕裂。
 
-- **運作方式**：啟動後弦爪效果還會提高近戰傷害30%並免疫暈眩。撕裂影響對防護的傷害計算；必定暴擊不代表對所有敵人造成固定生命傷害。
+- **運作方式**：啟動後弦爪效果還會提高近戰傷害30%並免疫眩暈。撕裂影響對防護的傷害計算；必定暴擊不代表對所有敵人造成固定生命傷害。
 
 - **傷害算例**：只比較30%近戰加成，固定護甲、暴擊與其他條件後，原100點變成100 × (1 + 30%) = 130點；若同階段已有20%加成，則是100 × (1 + 20% + 30%) = 150點。撕裂與暴擊另依目標計算。
 
@@ -434,7 +434,7 @@
 
 - **啟動恢復**：使用電能發射器時，每消耗一份完整電容量，恢復最大韌性的 25%。
 
-- **命中恢復**：放電命中一名仍存活的敵人，再恢復最大韌性的 1%；後續電弧或武器附加電擊不套用這個命中回復。
+- **命中恢復**：放電命中一名仍存活的敵人，再恢復最大韌性的 1%；後續電弧或武器附加電擊不套用這個命中恢復。
 
 - **恢復算例**：最大韌性 100、消耗 2 份並命中 5 名合格敵人時，100 × (2 × 25% + 5 × 1%) = 55 點；只缺 40 點就只補 40 點。
 
@@ -470,7 +470,7 @@
 
 - **運作方式**：按住輸入會改用一般重攻擊，不會選擇這組三段快速刺擊。
 
-- **持續時間**：流血持續9.5秒；再施加流血會刷新時間。三次都對同一敵人造成傷害時，新增層數為6 + 6 + 6 = 18層，達到上限。
+- **持續時間**：流血持續9.5秒；再施加流血會重新計時。三次都對同一敵人造成傷害時，新增層數為6 + 6 + 6 = 18層，達到上限。
 
 [詳細資料](cryptic_chordclaw_quick_stab_combo.md) · [返回目錄](#talent-index)
 
@@ -481,9 +481,9 @@
 
 <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="72" height="72" alt="通量導管蓄積天賦圖示">
 
-- **運作方式**：暴擊後的4秒內，電容量回復速度提高；按單份50點成本計，4秒額外回復2.5點，相當於5%。
+- **運作方式**：暴擊後的4秒內，電容量恢復速度提高；按單份50點成本計，4秒額外恢復2.5點，相當於5%。
 
-- **運作方式**：4秒內再次暴擊會重新計算這段期間，不會把每秒回復速度堆疊得更高。
+- **運作方式**：4秒內再次暴擊會重新計算這段期間，不會把每秒恢復速度堆疊得更高。
 
 - **恢復算例**：單份電容量為50點時，額外恢復50 × 5% = 2.5點，分4秒恢復；加上原本每秒1點，4秒共恢復4 × (1 + 2.5 ÷ 4) = 6.5點。再次暴擊會延長這段加速期間。
 
@@ -496,7 +496,7 @@
 
 <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="72" height="72" alt="反應爐線圈充能天賦圖示">
 
-- **運作方式**：以弱點命中並擊殺敵人時，恢復目前戰鬥能力單份成本的2%電容量；每份成本50點時，每次弱點擊殺恢復1點。
+- **運作方式**：以弱點命中並擊殺敵人時，恢復目前戰鬥技能單份成本的2%電容量；每份成本50點時，每次弱點擊殺恢復1點。
 
 - **運作方式**：電容量進度會累積；每50點形成一份完整充能，未滿50點前仍保留進度。
 
@@ -524,7 +524,7 @@
 
 <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="72" height="72" alt="電容回收迴路天賦圖示">
 
-- **運作方式**：同一次攻擊命中第3名敵人時，恢復目前戰鬥能力單份50點成本的1%，也就是0.5點電容量；命中更多敵人仍只因這次攻擊恢復一次。
+- **運作方式**：同一次攻擊命中第3名敵人時，恢復目前戰鬥技能單份50點成本的1%，也就是0.5點電容量；命中更多敵人仍只因這次攻擊恢復一次。
 
 - **運作方式**：每次恢復後至少等待0.25秒才可再次觸發；電容量小數會累積，50點才形成一份完整充能。
 
@@ -583,9 +583,9 @@
 
 <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="72" height="72" alt="鋼鐵富足天賦圖示">
 
-- **運作方式**：使用弦爪造成近戰擊殺後，接下來5秒額外恢復目前戰鬥能力單份50點成本的25%，共12.5點電容量。
+- **運作方式**：使用弦爪造成近戰擊殺後，接下來5秒額外恢復目前戰鬥技能單份50點成本的25%，共12.5點電容量。
 
-- **運作方式**：5秒內再次以弦爪造成近戰擊殺會重新計算回復期間，不會把每秒回復速率疊高；一般自然回復仍另行計算。
+- **運作方式**：5秒內再次以弦爪造成近戰擊殺會重新計算恢復期間，不會把每秒恢復速率疊高；一般自然恢復仍另行計算。
 
 - **恢復算例**：50 × 25% = 12.5點，分5秒恢復，因此每秒額外恢復12.5 ÷ 5 = 2.5點。若未再次觸發且未提前補滿，完整5秒會得到這12.5點。
 
@@ -611,11 +611,11 @@
 
 <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="72" height="72" alt="洞察之眼天賦圖示">
 
-- **運作方式**：進階戰鬥教範啟用時，遠程順劈增加30%，遠程暴擊率增加15個百分點；持續4秒後提高至60%與30個百分點。
+- **運作方式**：進階戰鬥教範啟用時，遠程順劈增加30%，遠程爆擊率增加15個百分點；持續4秒後提高至60%與30個百分點。
 
 - **順劈算例**：若攻擊原本有10點穿透質量額度，啟用後為10 × 1.3 = 13點，4秒後為10 × 1.6 = 16點。能穿過幾名敵人仍取決於目標質量與武器的停止穿透規則。
 
-- **暴擊算例**：若原本遠程暴擊率7.5%，啟用後為7.5% + 15% = 22.5%；4秒後為7.5% + 30% = 37.5%。
+- **暴擊算例**：若原本遠程爆擊率7.5%，啟用後為7.5% + 15% = 22.5%；4秒後為7.5% + 30% = 37.5%。
 
 - **持續條件**：能力關閉後失去兩項加成；再次啟用需重新等待4秒。
 
@@ -630,7 +630,7 @@
 
 - **運作方式**：進階戰鬥教範啟動時，以遠程攻擊擊殺精英敵人可獲得一層5%傷害加成，持續10秒。
 
-- **運作方式**：最多累積5層，也就是5×5%=25%傷害加成；再次取得層數會刷新這項加成的10秒持續時間。
+- **運作方式**：最多累積5層，也就是5×5%=25%傷害加成；再次取得層數會重設這項加成的10秒持續時間。
 
 - **傷害算例**：5層共增加5 × 5% = 25%。沒有其他加成時，100 × (1 + 25%) = 125點；若同階段原有20%，則為100 × (1 + 20% + 25%) = 145點。
 
@@ -656,7 +656,7 @@
 
 - **觸發方式**：受到生命或韌性傷害時移除1層；每1秒最多移除一次。沒有時間倒數，層數不會自行衰減。
 
-- **擊殺回復**：擊殺精英或專家敵人最多補回2層，並恢復相當於最大韌性15%的韌性。即使已達層數上限，擊殺仍會恢復韌性。
+- **擊殺恢復**：擊殺精英或專家敵人最多補回2層，並恢復相當於最大韌性15%的韌性。即使已達層數上限，擊殺仍會恢復韌性。
 
 - **算例**：6層時受到一筆傷害會降為5層；1秒內再受傷不會再掉層，至少等1秒後的另一筆傷害才可再次移除。滿6層時，100點基礎攻擊傷害增加至115點；若同時承受100點原始韌性傷害，0.85倍率使實際韌性傷害為85點。擊殺精英時若只缺1層，只補1層，但仍恢復最大韌性15%。
 
@@ -673,7 +673,7 @@
 
 - **每層效果**：電容量自然恢復速度每層提高5%，韌性傷害減免每層增加5%。滿4層時，原本每秒恢復單份電容量的2%，會變成2% × (1 + 20%) = 2.4%；原本100點韌性傷害變成100 × (1 − 20%) = 80點。
 
-- **持續時間**：每層效果維持12秒；新增加層會重設倒數。到達4層後再次觸發不會超過上限，但會刷新效果時間。沒有新觸發時，每12秒減少1層。
+- **持續時間**：每層效果維持12秒；新增加層會重設倒數。到達4層後再次觸發不會超過上限，但會重設效果時間。沒有新觸發時，每12秒減少1層。
 
 - **充能上限**：戰鬥技能充能上限由3份提高至4份。
 
@@ -709,7 +709,7 @@
 
 - **傷害算例**：對受影響敵人原本造成100點的攻擊，變成100 × 1.15 = 115點。這是敵人承傷提高，這次範圍效果本身不造成爆炸傷害。
 
-- **重複觸發**：同一效果最多1層，再次命中刷新8秒持續時間，不會變成30%。
+- **重複觸發**：同一效果最多1層，再次命中重設8秒持續時間，不會變成30%。
 
 [詳細資料](cryptic_overload_keystone_bigger_explosion.md) · [返回目錄](#talent-index)
 
@@ -754,13 +754,13 @@
 
 <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="72" height="72" alt="伺服肌腱湧動天賦圖示">
 
-- **觸發方式**：選用此修改器後，削切協議每有1層，就額外提供1.5%暴擊率與1.5%近戰攻擊速度。
+- **觸發方式**：選用此修改器後，削切協議每有1層，就額外提供1.5%爆擊率與1.5%近戰攻擊速度。
 
 - **層數變化**：削切協議失去或補回層數時，這兩項加成同步減少或增加；零層時不提供加成。
 
-- **算例**：6層時額外增加9個百分點暴擊率與9%近戰攻擊速度；8層時額外增加12個百分點暴擊率與12%近戰攻擊速度。
+- **算例**：6層時額外增加9個百分點爆擊率與9%近戰攻擊速度；8層時額外增加12個百分點爆擊率與12%近戰攻擊速度。
 
-- **實際計算**：若原本暴擊率為7.5%，6層後為7.5% + 6 × 1.5% = 16.5%；原本1秒完成的近戰攻擊，在沒有其他攻速加成時約需1 ÷ 1.09 = 0.917秒。
+- **實際計算**：若原本爆擊率為7.5%，6層後為7.5% + 6 × 1.5% = 16.5%；原本1秒完成的近戰攻擊，在沒有其他攻速加成時約需1 ÷ 1.09 = 0.917秒。
 
 [詳細資料](cryptic_dissector_crit_attack_speed.md) · [返回目錄](#talent-index)
 
@@ -786,7 +786,7 @@
 
 - **觸發方式**：使用戰鬥技能時，依使用前持有的充能數增加效果層數；每一份充能增加一層，最多5層。
 
-- **效果**：每層使威力提高5%，持續10秒；新增層數會刷新倒數，達到5層後再次觸發只刷新時間。
+- **效果**：每層使威力提高5%，持續10秒；新增層數會重設倒數，達到5層後再次觸發只重新計時。
 
 - **算例**：使用前有3份充能，會獲得3層、威力提高15%。若原本威力為500，修正後為575。這不代表最終傷害必定增加15%；最終傷害仍取決於攻擊類型、武器傷害設定與目標護甲等條件。
 
@@ -805,7 +805,7 @@
 
 - **效果**：獲得15%撕裂。第3、4層及額外層數時都是15%，不會按層數再累加。
 
-- **傷害算例**：只比較護甲階段，假設護甲前傷害100點、原護甲倍率0.5，且該類護甲的撕裂係數為1，原本100 × 0.5 = 50點，生效後為100 × (0.5 + 0.15) = 65點。此例增加30%傷害；不同護甲倍率會有不同收益，不能直接把所有傷害乘1.15。
+- **傷害算例**：只比較護甲階段，假設護甲前傷害100點、原護甲倍率0.5，且該類護甲的撕裂係數為1，原本100 × 0.5 = 50點，生效後為100 × (0.5 + 0.15) = 65點。此例增加30%傷害；不同護甲倍率會有不同增幅，不能直接把所有傷害乘1.15。
 
 #### 繁中原文勘誤
 
@@ -822,7 +822,7 @@
 
 - **效果**：戰鬥技能最大充能增加1道，極限電容的最大層數也增加1層，從4層變為5層。
 
-- **充能算例**：護教軍戰鬥能力基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。
+- **充能算例**：護教軍戰鬥技能基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。
 
 - **減傷算例**：極限電容達5層時，韌性承傷倍率為0.75；若一次攻擊原本會對韌性造成100點傷害，套用後承受75點。
 
@@ -837,7 +837,7 @@
 
 <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="72" height="72" alt="強化電容協議天賦圖示">
 
-- **觸發方式**：使用戰鬥能力時，將削切協議補至目前上限；搭配「熟練解剖者」時會補至8層。
+- **觸發方式**：使用戰鬥技能時，將削切協議補至目前上限；搭配「熟練解剖者」時會補至8層。
 
 - **算例**：基礎上限6層時，若剩3層，下一次能力使用會補回3層至6層；若已滿6層，使用能力不會超過上限。
 
@@ -867,9 +867,9 @@
 
 <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="72" height="72" alt="崇高意圖天賦圖示">
 
-- **觸發方式**：擊殺精英或專家敵人時，額外回復一份戰鬥技能充能成本的2.5%；加上職業原有4%回復後，該擊殺共回復6.5%。
+- **觸發方式**：擊殺精英或專家敵人時，額外恢復一份戰鬥技能充能成本的2.5%；加上職業原有4%恢復後，該擊殺共恢復6.5%。
 
-- **算例**：若單份充能成本為50點，額外2.5%是1.25點；原有4%為2點，合計回復3.25點。這些資源先累積進充能條，未必當場增加一整份可用充能。
+- **算例**：若單份充能成本為50點，額外2.5%是1.25點；原有4%為2點，合計恢復3.25點。這些資源先累積進充能條，未必當場增加一整份可用充能。
 
 - **例外**：「進階戰鬥教範」啟用期間，職業原本的擊殺回充與本天賦的額外回充都會暫停。
 
@@ -902,9 +902,9 @@
 
 <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="72" height="72" alt="能量載分配鏈路天賦圖示">
 
-- **觸發方式**：爆擊命中後，接下來 3 秒每秒恢復最大韌性的 2.5%，並獲得 15% 韌性傷害減免。
+- **觸發方式**：暴擊命中後，接下來 3 秒每秒恢復最大韌性的 2.5%，並獲得 15% 韌性傷害減免。
 
-- **刷新方式**：再次爆擊命中會重新計時；恢復速度與減傷幅度不疊加。
+- **重新計時方式**：再次暴擊命中會重新計時；恢復速度與減傷幅度不累加。
 
 - **恢復算例**：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，完整 3 秒恢復 7.5 點；沒有其他減傷時，原本 100 點韌性傷害變成 100 × 0.85 = 85 點。
 
@@ -947,7 +947,7 @@
 
 - **觸發方式**：同一次攻擊命中第 3 名敵人時，開始在 3 秒內恢復最大韌性的 10%。近戰與遠程命中都可觸發。
 
-- **刷新方式**：再次達標會重新計算 3 秒；每次觸發至少相隔 0.25 秒，命中第 4、5 名敵人不會額外增加層數。
+- **重新計時方式**：再次達標會重新計算 3 秒；每次觸發至少相隔 0.25 秒，命中第 4、5 名敵人不會額外增加層數。
 
 - **恢復算例**：最大韌性 150 時，每秒恢復 150 × 10% ÷ 3 = 5 點，完整效果共 15 點。
 
@@ -962,7 +962,7 @@
 
 - **觸發方式**：累計消耗 1 格耐力後，傷害提高 15%，持續 4 秒；不要求一次耗掉整格。
 
-- **累計與刷新**：耐力恢復不會扣掉已累計的消耗量；再次累計滿 1 格會重設 4 秒，增傷不疊層。
+- **累計與重新計時**：耐力恢復不會扣掉已累計的消耗量；再次累計滿 1 格會重設 4 秒，增傷不疊層。
 
 - **傷害算例**：消耗 0.4 格，再消耗 0.6 格即可觸發。假設基礎傷害 100、同階段原有 25% 加成，結果為 100 × (1 + 25% + 15%) = 140 點。
 
@@ -975,9 +975,9 @@
 
 <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="72" height="72" alt="熵能轉移天賦圖示">
 
-- **觸發方式**：對敵人施加電擊、增加電擊層數或刷新已達上限的電擊時，開始在 4 秒內恢復最大韌性的 12%。
+- **觸發方式**：對敵人施加電擊、增加電擊層數或重設已達上限的電擊持續時間時，開始在 4 秒內恢復最大韌性的 12%。
 
-- **刷新方式**：再次觸發會重設 4 秒，不會加快每秒恢復量。
+- **重新計時方式**：再次觸發會重設 4 秒，不會加快每秒恢復量。
 
 - **恢復算例**：最大韌性 100 時，每秒恢復 100 × 12% ÷ 4 = 3 點；第 2 秒再次觸發，效果延長至第 6 秒，期間共可恢復 18 點。
 
@@ -992,7 +992,7 @@
 
 - **觸發方式**：受到近戰攻擊傷害時，以攻擊者為中心，電擊 2.5 公尺內的存活敵人；單純格擋不觸發。
 
-- **電擊效果**：電擊狀態維持 3 秒，再次施加會刷新時間；對不同敵人的實際控制效果仍取決於其抗性。
+- **電擊效果**：電擊狀態維持 3 秒，再次施加會重新計時；對不同敵人的實際控制效果仍取決於其抗性。
 
 - **冷卻方式**：觸發後冷卻 15 秒。例如第 0 秒觸發，第 10 秒再被打不會重複發動，第 15 秒後再次受到符合條件的攻擊才會發動。
 
@@ -1009,7 +1009,7 @@
 
 - **傷害算例**：同一攻擊的基礎部分為 100、弱點額外部分為 100 時，原傷害 200 → 100 + 100 × 1.25 = 225，整筆增加 12.5%。若額外部分為 200，則 300 → 100 + 200 × 1.25 = 350，增加約 16.67%。
 
-- **武器差異**：弱點額外傷害占比越大，整筆傷害增幅越大；武器型號、蓄力、目標護甲、部位及爆擊都會改變結果。
+- **武器差異**：弱點額外傷害占比越大，整筆傷害增幅越大；武器型號、蓄力、目標護甲、部位及暴擊都會改變結果。
 
 - **其他加成**：若弱點額外部分已有 20% 同階段加成，則 100 + 100 × (1 + 20% + 25%) = 245；原本為 220，這次增加約 11.36%。
 
@@ -1022,7 +1022,7 @@
 
 <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="72" height="72" alt="電擊破壞協定天賦圖示">
 
-- **觸發方式**：推擊命中敵人後，近戰順劈能力提高 50%，持續 8 秒；再次推中會刷新時間，不疊層。
+- **觸發方式**：推擊命中敵人後，近戰順劈能力提高 50%，持續 8 秒；再次推中會重新計時，不疊層。
 
 - **順劈算例**：假設攻擊原本能處理 10 單位敵人質量，效果變成 10 × (1 + 50%) = 15。能多打中幾人仍取決於敵人質量與攻擊本身的限制。
 
@@ -1052,7 +1052,7 @@
 
 - **疊層方式**：一次攻擊命中首名目標後獲得 1 層，每層減少 2.5% 韌性傷害，最多 6 層；同一攻擊打中多人只加一層。
 
-- **持續時間**：每次觸發刷新 5 秒，期間未再觸發便失去效果。
+- **持續時間**：每次觸發重設 5 秒倒數，期間未再觸發便失去效果。
 
 - **減傷算例**：6 層提供 6 × 2.5% = 15% 減傷，原本 100 點韌性傷害變成 85；再配合另一項獨立 20% 減傷，則 100 × 0.85 × 0.80 = 68 點。
 
@@ -1082,7 +1082,7 @@
 
 - **觸發方式**：以遠程攻擊擊殺精英敵人，獲得 1 層增傷；不要求對方是持槍的遠程精英。
 
-- **疊層與時間**：每層增加 5% 傷害，最多 4 層。再次觸發會刷新 15 秒；沒有繼續擊殺時，每過 15 秒掉一層。
+- **疊層與時間**：每層增加 5% 傷害，最多 4 層。再次觸發會重設 15 秒倒數；沒有繼續擊殺時，每過 15 秒掉一層。
 
 - **傷害算例**：4 層為 20%，基礎 100 → 100 × 1.20 = 120。從滿層起不再觸發，15、30、45、60 秒後分別剩 3、2、1、0 層。
 
@@ -1131,7 +1131,7 @@
 
 - **觸發方式**：以近戰或遠程攻擊命中正在電擊、燃燒、靈魂之火、流血或中毒的敵人，獲得 10% 傷害加成，持續 8 秒。
 
-- **持續方式**：取得加成後可用來攻擊其他目標；再次命中符合條件的敵人會刷新 8 秒，不能疊層。
+- **持續方式**：取得加成後可用來攻擊其他目標；再次命中符合條件的敵人會重設 8 秒倒數，不能疊層。
 
 - **傷害算例**：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 10%) = 135 點。
 
@@ -1174,9 +1174,9 @@
 
 <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="72" height="72" alt="目標殲滅回饋天賦圖示">
 
-- **觸發方式**：以弱點命中擊殺敵人後，獲得 5 秒的一般受擊硬直與壓制免疫。
+- **觸發方式**：以弱點命中擊殺敵人後，獲得 5 秒的一般受擊僵直與壓制免疫。
 
-- **刷新方式**：期間再次弱點擊殺會重設 5 秒。例如第 0 秒觸發、第 3 秒再觸發，效果延至第 8 秒。
+- **重新計時方式**：期間再次弱點擊殺會重設 5 秒。例如第 0 秒觸發、第 3 秒再觸發，效果延至第 8 秒。
 
 - **效果範圍**：這項效果不提供減傷，也不能視為免疫捕網、撲倒等所有控制。
 
@@ -1191,7 +1191,7 @@
 
 - **觸發方式**：擊殺精英敵人後，3 秒內恢復最大韌性的 15%；近戰與遠程擊殺皆可。
 
-- **刷新方式**：期間再擊殺精英會刷新 3 秒，不疊加恢復速度。
+- **重新計時方式**：期間再擊殺精英會重設 3 秒倒數，不疊加恢復速度。
 
 - **恢復算例**：最大韌性 200，每秒 200 × 15% ÷ 3 = 10 點，完整 3 秒共 30 點；若第 2 秒再次觸發，連續 5 秒共可恢復 50 點。
 
@@ -1234,7 +1234,7 @@
 
 <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="72" height="72" alt="液壓衝擊天賦圖示">
 
-- **運作方式**：近戰蓄力期間免疫一般受擊硬直，並使近戰重擊傷害提高 15%。增傷適用於重擊，不要求蓄到最滿。
+- **運作方式**：近戰蓄力期間免疫一般受擊僵直，並使近戰重擊傷害提高 15%。增傷適用於重擊，不要求蓄到最滿。
 
 - **傷害算例**：基礎重擊 100、有 25% 同階段傷害加成時，100 × (1 + 25% + 15%) = 140。
 
@@ -1251,7 +1251,7 @@
 
 - **觸發方式**：近戰擊殺增加一層遠程增傷；遠程擊殺增加一層近戰增傷。兩種效果各自累積，每層 3%，各最多 5 層。
 
-- **持續方式**：取得某類加成的新層數時，刷新該類 8 秒倒數；停止觸發後，每 8 秒掉一層。切換武器不會直接清除已累積的效果。
+- **持續方式**：取得某類加成的新層數時，重新計時該類 8 秒倒數；停止觸發後，每 8 秒掉一層。切換武器不會直接清除已累積的效果。
 
 - **傷害算例**：5 層遠程增傷為 15%，基礎射擊 100 → 115。即使同時也有 5 層近戰增傷，這一發射擊仍只吃遠程的 15%。
 
@@ -1266,7 +1266,7 @@
 
 - **觸發方式**：自己受到正數生命傷害後，5 秒內恢復最大韌性的 25%；只有韌性被扣除時不會觸發。
 
-- **刷新方式**：再次受傷會刷新恢復效果，恢復速度不疊加。
+- **重新計時方式**：再次受傷會重新計時恢復效果，恢復速度不疊加。
 
 - **恢復算例**：最大韌性 100 時，每秒恢復 100 × 25% ÷ 5 = 5 點；第 2 秒再次受傷，恢復可延至第 7 秒，期間最多恢復 35 點。
 
@@ -1281,7 +1281,7 @@
 
 - **疊層方式**：一次近戰揮擊有打中敵人，就增加 1 層近戰攻速；打中多人仍只加 1 層。每層 2.5%，最多 5 層。
 
-- **持續時間**：每次觸發刷新 3 秒，超過 3 秒未再觸發便失去效果。
+- **持續時間**：每次觸發重設 3 秒倒數，超過 3 秒未再觸發便失去效果。
 
 - **攻速算例**：5 層提高 12.5% 攻速；若受攻速影響的攻擊動作原需 1 秒，則為 1 ÷ 1.125 ≈ 0.889 秒，實際整套連段還包含其他動作。
 
@@ -1296,7 +1296,7 @@
 
 - **觸發方式**：近戰爆擊命中時，對這次揮擊的第一個目標施加電擊；目標需在命中後仍存活。
 
-- **電擊方式**：電擊狀態維持 3 秒，再次施加會刷新時間，不會因同次順劈擊中 5 人就讓 5 人都電擊。
+- **電擊方式**：電擊狀態維持 3 秒，再次施加會重新計時，不會因同次順劈擊中 5 人就讓 5 人都電擊。
 
 - **例外**：沒有額外觸發冷卻；各敵人是否能被持續控住，仍取決於敵人自身的抗性。
 
@@ -1311,11 +1311,11 @@
 
 - **裝填速度**：裝填速度提高 15%。若受加速的裝填動作原需 2 秒，則為 2 ÷ 1.15 ≈ 1.74 秒。
 
-- **自動裝填**：停止射擊滿 5 秒後，再每過 1 秒從儲備彈藥補入彈匣；正常射擊後第一批在約第 6 秒，每批為彈匣容量的 7.5%，小數向上取整。
+- **自動裝填**：停止射擊滿 5 秒後，再每過 1 秒從儲備用彈藥藥補入彈匣；正常射擊後第一批在約第 6 秒，每批為彈匣容量的 7.5%，小數向上取整。
 
-- **彈藥算例**：彈匣容量 30 發，每批 30 × 7.5% = 2.25，向上取整為 3 發。彈匣缺 2 發就只補 2 發，備彈只有 1 發就只補 1 發。
+- **彈藥算例**：彈匣容量 30 發，每批 30 × 7.5% = 2.25，向上取整為 3 發。彈匣缺 2 發就只補 2 發，備用彈藥只有 1 發就只補 1 發。
 
-- **例外**：正在手動裝填、彈匣已滿或備彈用盡時不補；重新射擊會重設等待時間。這是把備彈搬進彈匣，不會生成新彈藥。
+- **例外**：正在手動裝填、彈匣已滿或備用彈藥用盡時不補；重新射擊會重設等待時間。這是把備用彈藥搬進彈匣，不會生成新彈藥。
 
 [詳細資料](cryptic_auto_reload.md) · [返回目錄](#talent-index)
 
@@ -1339,9 +1339,9 @@
 
 <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="72" height="72" alt="系統電擊天賦圖示">
 
-- **觸發方式**：對敵人施加、增加層數或刷新電擊時，附加 3 層脆弱，每層 2.5%，本次共增加 7.5%。
+- **觸發方式**：對敵人施加電擊、增加層數或重設持續時間時，附加 3 層脆弱，每層 2.5%，本次共增加 7.5%。
 
-- **疊層與時間**：脆弱持續 5 秒，再次施加會刷新時間；同類脆弱合計最多 16 層，即 40%。例如連續 6 次觸發會由 3、6、9、12、15 層升至上限 16 層。
+- **疊層與時間**：脆弱持續 5 秒，再次施加會重新計時；同類脆弱合計最多 16 層，即 40%。例如連續 6 次觸發會由 3、6、9、12、15 層升至上限 16 層。
 
 - **傷害算例**：脆弱提高攻擊對護甲的有效程度，不能直接當成整筆傷害增加 7.5%。假設一擊的無護甲基準為 100、原護甲倍率 0.5，加入 7.5% 脆弱後，該段為 100 × (0.5 + 0.075) = 57.5，原本是 50。
 
@@ -1356,7 +1356,7 @@
 
 <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="72" height="72" alt="彈藥預知天賦圖示">
 
-- **運作方式**：儲備彈藥容量增加 25%，不增加彈匣容量。
+- **運作方式**：儲備用彈藥藥容量增加 25%，不增加彈匣容量。
 
 - **容量算例**：原儲備上限 200 發，變成 200 × (1 + 25%) = 250 發；原本 203 發則計算 253.75，取整為 253 發。若另有 15% 同類容量加成，200 × (1 + 25% + 15%) = 280 發。
 
@@ -1369,7 +1369,7 @@
 
 <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="72" height="72" alt="電能修復天賦圖示">
 
-- **觸發方式**：啟動戰鬥能力時，你與協同範圍內的隊友各恢復自己最大韌性的 20%；使用閃擊不會觸發。
+- **觸發方式**：啟動戰鬥技能時，你與協同範圍內的隊友各恢復自己最大韌性的 20%；使用閃擊不會觸發。
 
 - **恢復算例**：你最大韌性 100，恢復 100 × 20% = 20 點；隊友最大韌性 200，恢復 200 × 20% = 40 點。
 
@@ -1399,11 +1399,11 @@
 
 <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="72" height="72" alt="彈藥補給艙天賦圖示">
 
-- **補彈方式**：每 15 秒補回最大儲備彈藥的 1%，加入備彈，不直接填進彈匣。
+- **補彈方式**：每 15 秒補回最大儲備用彈藥藥的 1%，加入備用彈藥，不直接填進彈匣。
 
 - **取整算例**：儲備上限 250 發，每次累計 250 × 1% = 2.5 發；先補 2 發並保留 0.5，下次合計補 3 發。連續四次共補 10 發。
 
-- **上限與例外**：備彈還會預留填滿空缺彈匣的量；整把武器已滿時不能無限累積。沒有彈藥儲備的武器不會因此獲得彈藥。
+- **上限與例外**：備用彈藥還會預留填滿空缺彈匣的量；整把武器已滿時不能無限累積。沒有彈藥儲備的武器不會因此獲得彈藥。
 
 [詳細資料](cryptic_passive_ammo_replenishment.md) · [返回目錄](#talent-index)
 
@@ -1416,7 +1416,7 @@
 
 - **疊層方式**：近戰揮擊至少命中一名敵人，便增加 1 層傷害加成；每次揮擊最多一層，每層 3%，最多 5 層。
 
-- **持續時間**：再次觸發刷新 8 秒；效果也能提高遠程傷害。
+- **持續時間**：再次觸發重設 8 秒倒數；效果也能提高遠程傷害。
 
 - **傷害算例**：5 層提供 15%，基礎傷害 100 → 115；若原有 25% 同階段加成，100 × (1 + 25% + 15%) = 140。
 
@@ -1429,7 +1429,7 @@
 
 <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="72" height="72" alt="鍍鋅精密塗層天賦圖示">
 
-- **防禦效果**：免疫一般受擊硬直，並減少 15% 承受傷害；即使電容量不足，這兩項防禦仍保留。
+- **防禦效果**：免疫一般受擊僵直，並減少 15% 承受傷害；即使電容量不足，這兩項防禦仍保留。
 
 - **資源代價**：受到近戰傷害時，消耗一份電容量的 7.5%；只扣現有資源，不會扣成負數。已被制伏時不再收取這筆代價。
 
@@ -1444,9 +1444,9 @@
 
 <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="72" height="72" alt="莫比亞導體天賦圖示">
 
-- **觸發方式**：啟動戰鬥能力後，傷害提高 15%，持續 10 秒；閃擊不觸發。
+- **觸發方式**：啟動戰鬥技能後，傷害提高 15%，持續 10 秒；閃擊不觸發。
 
-- **刷新方式**：再次啟動只刷新 10 秒，不疊層；一次消耗多份電容量也仍是 15%。
+- **重新計時方式**：再次啟動只重設 10 秒倒數，不疊層；一次消耗多份電容量也仍是 15%。
 
 - **傷害算例**：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140 點。
 
@@ -1504,7 +1504,7 @@
 
 - **疊層方式**：每次遠程擊殺獲得 1 層，最多 5 層；每層每秒恢復最大韌性的 1%。
 
-- **持續時間**：再次遠程擊殺會刷新 8 秒，達上限後仍可刷新。
+- **持續時間**：再次遠程擊殺會重設 8 秒倒數，達上限後仍可重新計時。
 
 - **恢復算例**：最大韌性 200、5 層時，每秒恢復 200 × 5 × 1% = 10 點；維持滿層 8 秒共可恢復 80 點，最多補到上限。
 
@@ -1534,7 +1534,7 @@
 
 - **保護方式**：協同範圍內需要援助的隊友受到的傷害降低 25%，直到脫離該狀態或失去協同效果。
 
-- **救援加成**：由你完成援助後，被救的隊友再獲得 6 秒的 25% 減傷與一般受擊硬直免疫；這段減傷不要求繼續留在協同範圍內。
+- **救援加成**：由你完成援助後，被救的隊友再獲得 6 秒的 25% 減傷與一般受擊僵直免疫；這段減傷不要求繼續留在協同範圍內。
 
 - **減傷算例**：單一效果下，原本 100 點傷害變成 100 × 0.75 = 75 點；另有獨立 20% 減傷時為 100 × 0.75 × 0.80 = 60 點。
 
@@ -1570,7 +1570,7 @@
 
 - **觸發方式**：補出至少 1 份完整電容量時，獲得 12.5% 威力，持續 10 秒；只有部分進度增加而沒有補滿一份時不觸發。
 
-- **刷新方式**：期間再次取得完整電容量，重設 10 秒；一次補出多份也不會把威力倍增。
+- **重新計時方式**：期間再次取得完整電容量，重設 10 秒；一次補出多份也不會把威力倍增。
 
 - **威力算例**：假設某項攻擊在套用威力加成前的威力值為 500，生效後為 500 × 1.125 = 562.5；若同階段另有 20%，則 500 × (1 + 20% + 12.5%) = 662.5。
 
@@ -1647,7 +1647,7 @@
 
 <img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="72" height="72" alt="威脅偵測指令天賦圖示">
 
-- **疊層方式**：遠程擊殺敵人獲得 1 層，每層提供 4% 韌性傷害減免，最多 5 層。再次觸發會刷新 8 秒。
+- **疊層方式**：遠程擊殺敵人獲得 1 層，每層提供 4% 韌性傷害減免，最多 5 層。再次觸發會重設 8 秒倒數。
 
 - **衰減方式**：沒有再擊殺時，每 8 秒少一層；從 5 層開始，8、16、24、32、40 秒後依序剩 4、3、2、1、0 層。
 

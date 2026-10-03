@@ -13,7 +13,7 @@
 - 近戰威力是威力等級修正，不是直接的傷害倍率。只有本技能修正時，35% 威力等級與 20% 攻擊速度分別寫入不同屬性；攻擊速度的時間例算採 1/(1+0.20)=0.833。
 - 能力動作以 refill_toughness=true 恢復韌性，1 秒動作時間內消耗一次充能。怒火狀態 buff 以 melee on_hit 事件延長；沒有擊殺條件。共用延長函式把每次基礎 0.3 秒除以 2^floor(距啟動時間/20)，所以在 20 秒及 40 秒階段分別為 0.15 秒及 0.075 秒。
 - 狀態 buff 目前掛 stun_immune 與 slowdown_immune，但未掛 suppression_immune；PlayerSuppressionExtension.add_suppression 僅在持有 suppression_immune 時跳過壓制累積。因此原文中英都寫的壓制免疫無法由此固定版本程式證實，這是程式與文字描述的落差，並非繁中與英文互相矛盾。
-- 怒火單次充能消耗 30 點資源、每秒自然回復 1；pause fulfilled 檢查在 broker_punk_rage_stance buff 消失後才恢復自然充能。
+- 怒火單次充能消耗 30 點資源、每秒自然恢復 1；pause fulfilled 檢查在 broker_punk_rage_stance buff 消失後才恢復自然充能。
 
 ## 原始碼依據
 

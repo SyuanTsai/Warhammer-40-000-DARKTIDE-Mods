@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 生成器allow_proc_while_active=true；本模板設定cooldown=10，但ProcBuff只讀cooldown_duration，本固定來源中10秒未進入冷卻判定。
-- on_damage_taken需要attacked_unit==self與damage_amount>0，刷新toughness_left_to_restore=0.25與active5秒。
+- on_damage_taken需要attacked_unit==self與damage_amount>0，重新計時toughness_left_to_restore=0.25與active5秒。
 - Damage.deal_damage把生命damage分量存為damage_amount；韌性另存toughness_damage_amount，本條件只看前者。
 
 ## 原始碼依據

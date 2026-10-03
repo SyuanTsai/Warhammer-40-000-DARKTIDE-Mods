@@ -5,7 +5,7 @@
 [返回玩家說明](README.md#veteran_increase_damage_vs_elites)｜[來源與限制](../../../README.md)
 
 - 名稱鍵：`loc_talent_veteran_increase_damage_vs_elites`；描述鍵：`loc_talent_veteran_increase_damage_vs_elites_desc`。沿用既有詞表 Superiority Complex 的「優越情節」，名稱與鍵的對應待使用者確認。
-- 當前節點為 `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`，類型 `default`，花費及上限均為 1。[節點定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1551-L1579)。
+- 目前節點為 `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`，類型 `default`，花費及上限均為 1。[節點定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1551-L1579)。
 
 **原始碼確認：引用與數值**。天賦安裝的是 `veteran_increase_elite_damage`，不能因識別碼不同而漏追此效果。其 `damage_vs_elites=0.15`，有效層數上限 1；未設事件觸發、距離條件、持續時間或冷卻。顯示參數也讀取同一屬性，未發現數值與執行設定不一致。[天賦引用及顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916)、[被動效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L736-L743)。
 

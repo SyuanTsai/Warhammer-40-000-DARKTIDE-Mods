@@ -8,7 +8,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前基礎天賦掛載ogryn_bigger_coherency_radius，讀ogryn_2.coop_1.coherency_aura_size_increase=.5；不要僅憑同名related_talents改掛舊模板。
+- 目前基礎天賦掛載ogryn_bigger_coherency_radius，讀ogryn_2.coop_1.coherency_aura_size_increase=.5；不要僅憑同名related_talents改掛舊模板。
 - UnitCoherencyExtension.current_radius將base_radius乘coherency_radius_modifier再乘獨立multiplier；stickiness_limit如存在也同倍率縮放。
 
 ## 原始碼依據

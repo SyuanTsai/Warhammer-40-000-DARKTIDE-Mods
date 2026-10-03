@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 雖talent ID叫on_block，實際on_hit使用on_ranged_hit，proc_stat_buffs.movement_speed=.15，duration3。無cooldown，ProcBuff._can_activate在無cooldown情況回true，可刷新。
+- 雖talent ID叫on_block，實際on_hit使用on_ranged_hit，proc_stat_buffs.movement_speed=.15，duration3。無cooldown，ProcBuff._can_activate在無cooldown情況回true，可重新計時。
 
 ## 原始碼依據
 

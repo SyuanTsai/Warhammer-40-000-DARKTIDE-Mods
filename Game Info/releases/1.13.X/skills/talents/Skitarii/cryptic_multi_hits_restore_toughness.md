@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 判定target_number>0則採target_number，否則target_index，需等於3；0.25秒multi_hit_window限制觸發，沒有damage type過濾。
-- update按0.1/3*dt呼叫replenish_percentage，allow_proc_while_active刷新active start。
+- update按0.1/3*dt呼叫replenish_percentage，allow_proc_while_active重新計時active start。
 
 ## 原始碼依據
 

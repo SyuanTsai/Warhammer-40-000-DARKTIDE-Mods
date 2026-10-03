@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- Forceful 父 proc 記錄是否選取 adamant_forceful_ability_strength。戰鬥技能事件先避免立即重新加層；stack buff 的 on_combat_ability 以當前 stack_count 建立 adamant_forceful_strength_stacks，並將原層數 buff finish。
+- Forceful 父 proc 記錄是否選取 adamant_forceful_ability_strength。戰鬥技能事件先避免立即重新加層；stack buff 的 on_combat_ability 以目前 stack_count 建立 adamant_forceful_strength_stacks，並將原層數 buff finish。
 - 轉換後 buff 的 max stacks=10、duration=12、每層 power_level_modifier=0.025；Buff stat stack aggregation 對 additive stat 逐層相加。
 
 ## 原始碼依據

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 目前talent載入zealot_more_power_when_low_on_stamina，lerp_t=1−current/max，melee_damage0至.2。identifier雖仍叫zealot_melee_damage_on_stamina_depleted，不代表使用另一個5秒proc模板；不能把舊5秒效果加到當前機制。
+- 目前talent載入zealot_more_power_when_low_on_stamina，lerp_t=1−current/max，melee_damage0至.2。identifier雖仍叫zealot_melee_damage_on_stamina_depleted，不代表使用另一個5秒proc模板；不能把舊5秒效果加到目前機制。
 
 ## 原始碼依據
 

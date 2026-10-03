@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 節點掛載 `zealot_martyrdom_toughness_modifier`，修改 `toughness_replenish_modifier`。Buff 最大值為設定每格0.05×5，並依殉道的失去傷口格數/5線性插值，因此0至5格分別由0%增至25%。
-- 此 stat 是韌性回復效率倍率，不是立即 `Toughness.replenish_percentage` 呼叫；不應翻成每疊直接恢復固定韌性。
+- 此 stat 是韌性恢復效率倍率，不是立即 `Toughness.replenish_percentage` 呼叫；不應翻成每疊直接恢復固定韌性。
 - 傷口格數與殉道共用：更新函式取 `damage_taken` 和 `permanent_damage_taken` 較大值，再用 Health helper 按最大生命/最大傷口換算完整已失去格數。
 
 ## 原始碼依據
@@ -28,14 +28,14 @@
 ## 算例條件與待確認事項
 
 - **恢復算例**：某效果原本補 10 點韌性，2 層時為 10 × (1 + 2 × 5%) = 11 點；5 層時為 12.5 點。若另有同階段 20% 恢復加成，滿層為 10 × (1 + 20% + 25%) = 14.5 點，仍受韌性缺額限制。
-- 示例說明加到回復效率的 modifier，不計入其他回復修正的最後合併公式。
+- 示例說明加到恢復效率的 modifier，不計入其他恢復修正的最後合併公式。
 - 每格的傷口格寬由實際最大生命值與最大傷口數決定；設定中的 `health_step=.15` 未被目前計算路徑讀取。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`d473a3ea`。
-- 繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接回復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
+- 繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接恢復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
 
 ## 圖示來源
 

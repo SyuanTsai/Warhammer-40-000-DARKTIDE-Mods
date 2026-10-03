@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者unit執行，for其coherency集合Ammo.add_to_all_slots(0.005)。cooldown5；check只驗tags，proc_func內才檢查attacking_unit==unit，ProcBuff會在proc_func返回後照樣設active_start_time，因此收到其他合資格死亡事件時可能消耗冷卻而未補彈；不是保證所有全圖精英死亡都給彈。Ammo只以max_ammo_reserve乘percent，floor並保留小數；上限受備彈+彈匣缺額。自身survivalist_passive另於本人擊殺專家／精英時補0.01。
+coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者unit執行，for其coherency集合Ammo.add_to_all_slots(0.005)。cooldown5；check只驗tags，proc_func內才檢查attacking_unit==unit，ProcBuff會在proc_func返回後照樣設active_start_time，因此收到其他合資格死亡事件時可能消耗冷卻而未補彈；不是保證所有全圖精英死亡都給彈。Ammo只以max_ammo_reserve乘percent，floor並保留小數；上限受備用彈藥+彈匣缺額。自身survivalist_passive另於本人擊殺專家／精英時補0.01。
 
 ## 原始碼依據
 
@@ -27,11 +27,11 @@ coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者un
 
 ## 遊戲本體繁中對照
 
-- 文本來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc`；hash：`c68ffc9a`；繁中entry_index：`12809`；英文entry_index：`12810`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「發彈藥」；同版英文對照片段：`Replenish {ammo_2:%s} Ammo`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
 - 判定：**明確繁中描述錯誤**。單位錯誤：ammo_2使用percentage，繁中卻接固定數量單位發。另少寫隊友擊殺也可觸發，屬不完整，不另外列為錯誤。
-- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 
 - [公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第677–688行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L677-L688)

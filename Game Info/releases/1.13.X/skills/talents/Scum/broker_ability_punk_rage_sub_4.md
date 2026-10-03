@@ -11,7 +11,7 @@
 
 - 此天賦掛 broker_rage_duration_extend。怒火的近戰 on_hit 事件先採基礎 max_duration=20、added_duration=0.3；只有此分支存在時，並且 params.tags 含 elite、special、monster 或 captain 任一標籤，才切換為 max_duration=30、added_duration=1。這比本地化文字列出的 Elite/Monstrosities 標籤範圍更廣，會納入專家及隊長標籤。
 - 兩種命中各自呼叫共用延長邏輯，按啟動後經過時間除以各自門檻取整，再把本次延長量除以 2 的相應次方。因此特殊標籤命中在 0–30 秒為1秒、30–60秒為0.5秒、60–90秒為0.25秒；其他近戰命中仍按20秒門檻和0.3秒基礎值計算。
-- 命中事件檢查攻擊類型為 melee，並未要求擊殺；每次仍受可延長起始時間上限與當前 buff 剩餘時間約束。
+- 命中事件檢查攻擊類型為 melee，並未要求擊殺；每次仍受可延長起始時間上限與目前 buff 剩餘時間約束。
 
 ## 原始碼依據
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前節點cost=max_points=1，使用tier1的melee_damage=.1，不採後續未能分配的tier2/3/4值。medium_4是medium_1模板clone，兩個talent identifier不同，可同階段加算。
+- 目前節點cost=max_points=1，使用tier1的melee_damage=.1，不採後續未能分配的tier2/3/4值。medium_4是medium_1模板clone，兩個talent identifier不同，可同階段加算。
 
 ## 原始碼依據
 

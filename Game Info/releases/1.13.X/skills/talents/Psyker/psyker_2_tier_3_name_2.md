@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 被動監聽 on_minion_death，僅 tags.elite 或 tags.special 通過；server端再要求 attacking_unit==template_context.unit，接著只在擁有者自己的 buff_extension 加 psyker_cooldown_buff。該buff持續3秒、max_stacks=1、再次套用會刷新；timer 初始固定時間+1，每次 t>timer 時 timer加1並呼叫 restore_ability_resource("combat_ability",0.5)。因此可直接確認每個tick恢復0.5個冷卻資源單位；按秒間隔推算三秒期間約三次、合計1.5秒冷卻資源，但第三tick與buff到期邊界需遊戲內確認。雖 start_func 保存 coherency_extension，該 proc 路徑沒有使用它來遍歷隊友。 已核對到期更新順序：Buff.update 先執行 duration 檢查，再執行模板的 update_func；即使 duration 檢查在該次更新把效果標為結束，BuffExtensionBase 也要等所有 Buff.update 完成後才移除。因此正常固定更新下，t 超過第三個一秒計時點時，第三次 0.5 秒恢復會先發生，再移除三秒效果。若單次更新時間跨過多個一秒計時點，模板使用單一 if 而非迴圈，不會在同一更新補做多次恢復。
+- 被動監聽 on_minion_death，僅 tags.elite 或 tags.special 通過；server端再要求 attacking_unit==template_context.unit，接著只在擁有者自己的 buff_extension 加 psyker_cooldown_buff。該buff持續3秒、max_stacks=1、再次套用會重新計時；timer 初始固定時間+1，每次 t>timer 時 timer加1並呼叫 restore_ability_resource("combat_ability",0.5)。因此可直接確認每個tick恢復0.5個冷卻資源單位；按秒間隔推算三秒期間約三次、合計1.5秒冷卻資源，但第三tick與buff到期邊界需遊戲內確認。雖 start_func 保存 coherency_extension，該 proc 路徑沒有使用它來遍歷隊友。 已核對到期更新順序：Buff.update 先執行 duration 檢查，再執行模板的 update_func；即使 duration 檢查在該次更新把效果標為結束，BuffExtensionBase 也要等所有 Buff.update 完成後才移除。因此正常固定更新下，t 超過第三個一秒計時點時，第三次 0.5 秒恢復會先發生，再移除三秒效果。若單次更新時間跨過多個一秒計時點，模板使用單一 if 而非迴圈，不會在同一更新補做多次恢復。
 
 ## 原始碼依據
 
@@ -30,7 +30,7 @@
 
 - **冷卻算例**：若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
 - 觸發條件仍是程式碼標記為 elite 或 special 的敵人，且擊殺者為持有者本人。
-- 公開原始碼的能力註解提到協同範圍內隊友，但這條恢復流程把資源還給觸發者本人；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 公開原始碼的能力註解提到協同範圍內隊友，但這條恢復流程把資源還給觸發者本人；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 若更新時間一次跨越多個一秒計時點，單次更新最多處理一次；正常固定更新下依據程式順序可推得三次恢復。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

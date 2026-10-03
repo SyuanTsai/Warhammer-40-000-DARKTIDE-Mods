@@ -11,7 +11,7 @@
 
 buff 每累積約 1 秒的 sprinting 或 sliding time 便加一層內部 damage buff；每層 damage = 0.0625，max stacks=4，duration=10，refresh on stack。以加算 damage multiplier 計算，四層為 1 + 4×.0625 = 1.25。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L943-L986) → [累積衝刺／滑行時間](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L744-L780) → [層數與傷害值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L799-L814)。
 
-非衝刺／滑行時累積器被設為 0.5，因此通常重新開始後約半秒即可取得第一層；初始化累積器為0。所有層共用刷新時間，沒有逐層獨立10秒倒數。
+非衝刺／滑行時累積器被設為 0.5，因此通常重新開始後約半秒即可取得第一層；初始化累積器為0。所有層共用重新計時，沒有逐層獨立10秒倒數。
 
 ## 原始碼依據
 

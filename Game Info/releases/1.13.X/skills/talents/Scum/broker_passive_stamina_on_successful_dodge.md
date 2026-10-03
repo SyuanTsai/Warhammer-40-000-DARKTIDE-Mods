@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_successful_dodge呼叫Stamina.add_stamina(percentage=.1)，依當前武器與屬性組成的最大耐力計算。
+- on_successful_dodge呼叫Stamina.add_stamina(percentage=.1)，依目前武器與屬性組成的最大耐力計算。
 
 ## 原始碼依據
 

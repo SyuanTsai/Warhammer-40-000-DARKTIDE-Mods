@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - ogryn_charge_trample proc 僅以 damage_type=ogryn_lunge 的 on_hit 觸發，每次事件加入一層 ogryn_charge_trample_buff。buff duration=10、max_stacks與max_stacks_cap=20、refresh_duration_on_stack=true，stat_buffs.damage=0.025。
-- 命中事件處理沒有 attacked_unit 去重集合；疊層以每次有效衝鋒命中事件計算。到20層後，buff extension 的上限刷新路徑重設持續時間。
+- 命中事件處理沒有 attacked_unit 去重集合；疊層以每次有效衝鋒命中事件計算。到20層後，buff extension 的上限重新計時路徑重設持續時間。
 
 ## 原始碼依據
 
@@ -32,7 +32,7 @@
 ## 原文核對
 
 - 對應 hash：`fd34bb5c`。
-- 繁中原文「命中的每個敵人都會使你獲得一層」與英文原文「for each enemy hit gain a stack」都按衝鋒命中敵人取得一層；兩種原文同樣列出每層傷害、10秒與20層上限，公式算例是將其轉成實際倍率，未發現明確矛盾。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文「命中的每個敵人都會使你獲得一層」與英文原文「for each enemy hit gain a stack」都按衝鋒命中敵人取得一層；兩種原文同樣列出每層傷害、10秒與20層上限，公式算例是將其轉成實際倍率，未發現明確矛盾。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

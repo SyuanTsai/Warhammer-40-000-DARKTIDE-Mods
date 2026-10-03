@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- adamant_forceful_stagger 記錄前一幀與當前 stack count。由正數降到 0 且 low timer 到期時爆炸並將 low timer 設為 t+5；由低於 10 升到至少 10 且 high timer 到期時觸發並將 high timer 設為 t+5。
+- adamant_forceful_stagger 記錄前一幀與目前 stack count。由正數降到 0 且 low timer 到期時爆炸並將 low timer 設為 t+5；由低於 10 升到至少 10 且 high timer 到期時觸發並將 high timer 設為 t+5。
 - local settings 以 low_stacks=0、high_stacks=10、internal_cd=5 填入天賦格式值；爆炸模板半徑 2.5，建立呼叫使用 power_level=750，並採 ogryn_charge_finish damage profile。
 
 ## 原始碼依據

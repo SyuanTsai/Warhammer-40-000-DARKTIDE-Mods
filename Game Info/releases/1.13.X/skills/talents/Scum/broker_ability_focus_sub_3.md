@@ -11,7 +11,7 @@
 
 - 此節點啟用 broker_focus_cooldown_regain；強化專注 buff 的 on_kill 與特定 on_minion_death 共用擊殺處理。一般 on_kill 檢查死亡結果、遠程攻擊（或武器設定視為遠程）及命中點至攻擊者位置在12.5公尺內；此檢查沒有另讀 outline/標記狀態。
 - 受害者 breed 標籤含 elite 或 special 時恢復1秒；其他合格擊殺恢復0.5秒。template_data.cooldown_restored 逐次累加，且每次先扣除已恢復量後再受 max_restore=5 限制，因此單次能力狀態總恢復不超過5秒。
-- 能力資源設定45點消耗、每秒自然補1點；buff 存續期間自然補充被暫停。restore_ability_resource 仍直接加回資源並受滿值上限約束，因此5點回復最多把充能需求從45減到40；停止狀態後自然補充再繼續。
+- 能力資源設定45點消耗、每秒自然補1點；buff 存續期間自然補充被暫停。restore_ability_resource 仍直接加回資源並受滿值上限約束，因此5點恢復最多把充能需求從45減到40；停止狀態後自然補充再繼續。
 - 特殊的間接擊殺來自針槍追蹤：狀態期間僅將指定針槍、遠程攻擊命中且仍存活的敵人記錄為已追蹤；後續 minion death 必須 damage_type=toxin，且死亡位置到 params.attacking_unit 目前位置不超過12.5公尺。這不是任何 toxin 死亡都觸發，攻擊者位置也不保證等於能力持有者的位置。
 
 ## 原始碼依據

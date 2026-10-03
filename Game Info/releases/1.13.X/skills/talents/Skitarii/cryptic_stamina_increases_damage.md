@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 每次update累計last-current正差，max_stamina變化時排除該次差值；>=1扣除1後新增單層刷新Buff，餘額保留。damage=0.15與同階段damage_stat_buffs加算。
+- 每次update累計last-current正差，max_stamina變化時排除該次差值；>=1扣除1後新增單層重新計時Buff，餘額保留。damage=0.15與同階段damage_stat_buffs加算。
 
 ## 原始碼依據
 

@@ -11,8 +11,8 @@
 
 - cryptic_tree.lua 的節點125–153把 cryptic_redline 掛為護教軍鑰石；cryptic_talents.lua 將被動模板指向 cryptic_redline。顯示參數取 talent_settings_cryptic.lua 的5%層級、12秒、4層與+1最大充能。
 - cryptic_redline 被動提供 ability_extra_charges=1，並監聽戰鬥技能充能補回及消耗事件。事件攜帶 num_charges_gained 或 num_charges_consumed；模板依事件數量逐次加入 cryptic_redline_stack。能力系統只在充能數實際增加或消耗時送出事件。
-- cryptic_redline_stack 的 max_stacks 和 max_stacks_cap 均為4、duration為12秒；每次加層刷新起始時間，達上限再觸發會刷新時間但不增層。到期移除時若尚有多層，只移除1層並重設時間，因此層數逐個、每次約隔12秒衰減。
-- 模板將 combat_ability_resource_regen_modifier 與 combat_ability_resource_restored_modifier 都設為每層0.05；Buff._calculate_stat_buffs 依層數重複套用，buff_settings 將兩者定為 additive_multiplier。能力系統自然回充公式會乘 regen modifier。直接回復只有在 restore_ability_resource 的 ignore_stat_buffs=false 時才乘 restored modifier；restore_ability_charge_percentage 會明確傳 ignore_stat_buffs=true，因此該路徑不受紅線回復倍率影響。
+- cryptic_redline_stack 的 max_stacks 和 max_stacks_cap 均為4、duration為12秒；每次加層重設起始時間，達上限再觸發會重新計時但不增層。到期移除時若尚有多層，只移除1層並重設時間，因此層數逐個、每次約隔12秒衰減。
+- 模板將 combat_ability_resource_regen_modifier 與 combat_ability_resource_restored_modifier 都設為每層0.05；Buff._calculate_stat_buffs 依層數重複套用，buff_settings 將兩者定為 additive_multiplier。能力系統自然回充公式會乘 regen modifier。直接恢復只有在 restore_ability_resource 的 ignore_stat_buffs=false 時才乘 restored modifier；restore_ability_charge_percentage 會明確傳 ignore_stat_buffs=true，因此該路徑不受紅線恢復倍率影響。
 - 韌性承傷採 stepped_stat_buffs 表，不是把0.95連乘4次。每一層的表值為1−0.05×層數，且該屬性類型是 multiplicative_multiplier；因此1至4層分別為0.95、0.90、0.85、0.80。
 - 額外充能由 ability_extra_charges 屬性加到能力最大充能數；實際可用上限仍依能力自身是否採用充能與其 max_charges/stat_buff 設定計算。
 
@@ -40,16 +40,16 @@
 
 - 靜態推演：4層下韌性傷害倍率為1−0.05×4=0.80；在沒有其他減傷、且100點傷害全由韌性承受時，實際承受80點。
 - 靜態推演：以2%/秒的自然回充速率為例，4層後為2.4%/秒；這是回充資源速度增加20%，不是冷卻秒數直接減少20%。
-- 靜態推演：3層時一次補回2個戰鬥技能充能，第1次到4層，第2次因達上限不增加層數，但刷新12秒計時。
-- 事件指向戰鬥技能充能，不應與閃擊充能或一般資源名稱混為一談；達上限的事件仍可刷新持續時間。
-- 回充速度+20%不等同冷卻時間直接減少20%；實際秒數還受技能基礎資源速率、其他增益、暫停條件及資源上限影響。直接回復是否受加成依回復路徑決定；例如 Higher Purpose 使用的 restore_ability_charge_percentage 會忽略 stat buffs。
+- 靜態推演：3層時一次補回2個戰鬥技能充能，第1次到4層，第2次因達上限不增加層數，但重設12秒計時。
+- 事件指向戰鬥技能充能，不應與閃擊充能或一般資源名稱混為一談；達上限的事件仍可重設持續時間。
+- 回充速度+20%不等同冷卻時間直接減少20%；實際秒數還受技能基礎資源速率、其他增益、暫停條件及資源上限影響。直接恢復是否受加成依恢復路徑決定；例如 Higher Purpose 使用的 restore_ability_charge_percentage 會忽略 stat buffs。
 - 以上是固定原始碼的靜態推演，未在遊戲內實測。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`22a7f709`。
-- inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接回復是否吃倍率由實際回復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
+- inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接恢復是否吃倍率由實際恢復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
 
 ## 圖示來源
 
