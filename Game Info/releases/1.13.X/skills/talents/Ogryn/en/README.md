@@ -92,6 +92,7 @@
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="Spray and Slay talent icon"> [Spray and Slay](#ogryn_ranged_improves_melee) | <ul><li>Emptying the current clip through ammunition consumption grants +15% melee damage and +7.5% melee Attack Speed for 6s; retriggers refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="Bash and Blast talent icon"> [Bash and Blast](#ogryn_melee_improves_ranged) | <ul><li>Melee kills build up to five +3% ranged damage stacks / 15% for 10s; further melee kills refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="Bruiser talent icon"> [Bruiser](#ogryn_ally_elite_kills_grant_cooldown) | <ul><li>Your or a Coherency ally's Elite kill grants about 0.5s extra cooldown recovery per second for 4s; refreshes without stacking.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="Strike True talent icon"> [Strike True](#ogryn_weakspot_damage) | <ul><li>Gain +10% Strength on melee Weakspot hits, additive with same-stage Strength modifiers; weapon curves determine final damage and Impact.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1474,3 +1475,19 @@
 - **Timing example**: Normal cooldown recovery restores 1s per second, with an additional 0.5s per tick. If all four extra ticks are received, 4s advances cooldown by `4 + 4 × 0.5 = 6s`, saving an additional 2s. Actual recovery depends on whether cooldown is already full and on update timing.
 
 [Details](ogryn_ally_elite_kills_grant_cooldown.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_weakspot_damage"></a>
+
+### Strike True
+
+<img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="72" height="72" alt="Strike True talent icon">
+
+- **Effect**: A melee hit on an enemy Weakspot increases that attack's Strength by 10%. It does not affect ranged Weakspot hits or melee hits that miss the Weakspot.
+
+- **Strength example**: Original Strength of 500 becomes `500 × 1.1 = 550` on a Weakspot hit. With an existing +20% Strength at the same stage, it becomes `500 × (1 + 20% + 10%) = 650`.
+
+- **Damage calculation**: The bonus applies to Strength before the weapon's damage, Impact and other curves. It differs from effects that only increase additional Weakspot damage; do not assume final damage is always multiplied by 1.1.
+
+[Details](ogryn_weakspot_damage.md) · [Back to index](#talent-index)

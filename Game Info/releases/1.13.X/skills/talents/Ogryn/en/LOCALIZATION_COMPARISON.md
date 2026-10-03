@@ -1105,6 +1105,18 @@ Full raw template and formatting: [source evidence](ogryn_ally_elite_kills_grant
 | Elite kill and cooldown regeneration | +50% Ability Cooldown Regeneration for 4s after you or an Ally in Coherency kill an Elite Enemy.; `ui / loc_talent_ogryn_cooldown_on_elite_kills_new_desc / d14f6cb0` | Elite on_minion_death with attacker in in_coherence_units adds a 4s child that restores 0.5s per approximately one-second tick. [Fixed source and line references](ogryn_ally_elite_kills_grant_cooldown.md#fixed-source-evidence) | Consistent | The independently read English describes increased regeneration, matching the accepted periodic recovery. |
 | Refresh, exclusions and tick timing | No stack behavior, exact tick ordering or immediate fractional cooldown reduction is stated.; `ui / loc_talent_ogryn_cooldown_on_elite_kills_new_desc / d14f6cb0` | The child has one stack and refreshes to 4s; Specialists qualify only if Elite. t >timer starts after t +1. With all four ticks, normal 4s plus 4 ×0.5s yields 6s recovery /2s extra; full cooldown and expiry/update ordering can limit actual recovery. [Fixed source and line references](ogryn_ally_elite_kills_grant_cooldown.md#fixed-source-evidence) | Not covered by the description | These accepted event and calculation details supplement the English; the four-tick example remains conditional. |
 
+
+<a id="ogryn_weakspot_damage"></a>
+
+## Strike True
+
+Full raw template and formatting: [source evidence](ogryn_weakspot_damage.md#original-english-template-and-reconstruction). Name hash `d427f84f`. Every row uses `ui / loc_talent_ogryn_weakspot_damage_desc / 658a5b8e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Weakspot Strength | +10% Melee Weakspot Strength; `ui / loc_talent_ogryn_weakspot_damage_desc / 658a5b8e` | melee_weakspot_power_modifier 0.1 applies only to melee Weakspot hits through PowerLevel. [Fixed source and line references](ogryn_weakspot_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the stat, condition and value. |
+| Addition and curve-based results | No final-damage multiplier or combined-Strength formula is stated.; `ui / loc_talent_ogryn_weakspot_damage_desc / 658a5b8e` | The modifier adds with general/melee power modifiers and excludes ranged or non-Weakspot hits. Strength 500 →550, or 650 with same-stage +20%; weapon damage/Impact curves then use this Strength, so final damage is not uniformly ×1.1. [Fixed source and line references](ogryn_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the English Strength wording. |
+
 ## Comparison totals
 
 The 254 listed rules comprise **109 Consistent**, **4 Explicit contradictions**, **134 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
