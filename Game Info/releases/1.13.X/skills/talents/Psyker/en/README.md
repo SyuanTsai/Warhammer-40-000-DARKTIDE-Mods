@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="Enfeeble talent icon"> [Enfeeble](#psyker_chain_lightning_improved_target_buff) | <ul><li>Enemies electrocuted by you take 10% more damage from all sources.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="Charged Strike talent icon"> [Charged Strike](#psyker_chain_lightning_heavy_attacks) | <ul><li>Melee heavy hits electrocute enemies for 2 seconds, dealing damage over that duration.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="Kinetic Presence talent icon"> [Kinetic Presence](#psyker_aura_damage_vs_elites) | <ul><li>You and Allies in Coherency deal 10% more damage against Elite enemies.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="Seer's Presence talent icon"> [Seer's Presence](#psyker_cooldown_aura_improved) | <ul><li>You and Allies in Coherency have 10% shorter Combat Ability cooldowns.</li></ul> | Aura |
 
 ---
 
@@ -171,3 +172,17 @@
 - **Damage example**: Isolating this stage with a baseline of 100 and no other bonuses, 100 × 1.1 = 110. With an existing 25% bonus at the same stage, damage rises from 125 to 100 × (1 + 25% + 10%) = 135. Non-Elite enemies do not receive this bonus.
 
 [Details](psyker_aura_damage_vs_elites.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_cooldown_aura_improved"></a>
+
+### Seer's Presence
+
+<img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="72" height="72" alt="Seer's Presence talent icon">
+
+- **Aura**: You and teammates in Coherency have 10% shorter Combat Ability cooldowns. The same aura does not stack multiple times.
+
+- **Cooldown example**: With fixed recovery speed and no other modifiers, an original 40 seconds becomes 40 × (1 − 10%) = 36 seconds; an original 60 seconds becomes 54.
+
+[Details](psyker_cooldown_aura_improved.md) · [Back to index](#talent-index)

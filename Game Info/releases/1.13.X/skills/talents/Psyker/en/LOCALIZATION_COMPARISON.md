@@ -128,6 +128,18 @@ Full raw template and formatting: [source evidence](psyker_aura_damage_vs_elites
 | Recipients, enemy category and damage value | `+10% Damage against Elite Enemies for you and Allies in Coherency`; `ui / loc_talent_psyker_base_3_description / 4fad8ca6` | Self-inclusive Coherency applies the aura to the player and teammates; `damage_vs_elites=0.1` enters attacker damage modifiers only for targets with the `elite` tag. [Fixed source and line references](psyker_aura_damage_vs_elites.md#fixed-source-evidence) | Consistent | Beneficiaries, Elite-only scope and reconstructed magnitude agree. |
 | Stack limit and additive calculation | No stacking cap or other-bonus formula stated; `ui / loc_talent_psyker_base_3_description / 4fad8ca6` | Maximum 1 aura stack; bonuses at the same stage add, so an existing +25% gives 100×(1+0.25+0.1)=135 rather than treating the aura as a separate universal final multiplier. [Fixed source and line references](psyker_aura_damage_vs_elites.md#fixed-source-evidence) | Not covered by the description | The stack rule and conditional example supplement the English. |
 
+
+<a id="psyker_cooldown_aura_improved"></a>
+
+## Seer's Presence
+
+Full raw template and formatting: [source evidence](psyker_cooldown_aura_improved.md#original-english-template-and-reconstruction). Name hash `bf9a6ebc`. Every row uses `ui / loc_talent_psyker_cooldown_aura_improved_description / 8daf59be`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients and cooldown reduction | `+10% Cooldown Reduction on Abilities for you and Allies in Coherency`; `ui / loc_talent_psyker_cooldown_aura_improved_description / 8daf59be` | Self-inclusive Coherency applies the aura; `combat_ability_resource_cost_per_use_modifier=−0.1` scales each use's resource cost to 0.9 at unchanged other modifiers. [Fixed source and line references](psyker_cooldown_aura_improved.md#fixed-source-evidence) | Consistent | Beneficiaries and the direction/magnitude of cooldown reduction agree. |
+| Stack cap and timing assumptions | No stack limit, application timing or resource/time formula stated; `ui / loc_talent_psyker_cooldown_aura_improved_description / 8daf59be` | Maximum 1 stack; at fixed recovery speed, an original 40/60-second charge becomes 36/54 seconds. Other cooldown modifiers, multi-charge behavior and recovery rules affect actual time. [Fixed source and line references](psyker_cooldown_aura_improved.md#fixed-source-evidence) | Not covered by the description | The calculation basis and limits supplement the English. |
+
 ## Comparison totals
 
 The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
