@@ -92,6 +92,18 @@ Full raw template and formatting: [source evidence](psyker_throwing_knives_cast_
 | Charge replenishment rate | `Assail charges Replenish {recharge%s} faster`; mapped value `30%`; `ui / loc_talent_psyker_throwing_knives_cast_speed_description / da103b93` | The current passive installs `psyker_reduced_throwing_knife_cooldown`, providing regeneration multiplier 1+0.3=1.3; it does not install the retained stacking-speed proc. [Fixed source and line references](psyker_throwing_knives_cast_speed.md#fixed-source-evidence) | Consistent | Charge replenishment and its mapped increase agree; static substitution does not claim observed game rendering. |
 | Time conversion, recovery limits and unused fields | No wait-time percentage reduction or stacking-speed benefit stated; `ui / loc_talent_psyker_throwing_knives_cast_speed_description / da103b93` | One use takes 3÷1.3≈2.31 seconds; a 30% rate increase reduces the wait by about 23.08%. Other modifiers/pauses apply; retained 8-second/5-stack/5%-per-stack speed definitions are inactive here. [Fixed source and line references](psyker_throwing_knives_cast_speed.md#fixed-source-evidence) | Not covered by the description | These omitted formulas, limits and unused definitions do not contradict the English. |
 
+
+<a id="psyker_chain_lightning_improved_target_buff"></a>
+
+## Enfeeble
+
+Full raw template and formatting: [source evidence](psyker_chain_lightning_improved_target_buff.md#original-english-template-and-reconstruction). Name hash `030a19d8`. Every row uses `ui / loc_talent_psyker_chain_lightning_improved_target_buff_alt_description / da40a0a2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Affected target, value and all-source scope | `Enemies Electrocuted by you take +10% increased Base Damage from all sources`; `ui / loc_talent_psyker_chain_lightning_improved_target_buff_alt_description / da40a0a2` | The improved target template sets `damage_taken_multiplier=1.1`; shared calculation multiplies base damage by the target multiplier, including attacks from teammates/other sources. [Fixed source and line references](psyker_chain_lightning_improved_target_buff.md#fixed-source-evidence) | Consistent | Target, affected calculation stage, magnitude and source scope agree. |
+| Removal and Charged Strike interaction | No removal rule or heavy-attack interaction stated; `ui / loc_talent_psyker_chain_lightning_improved_target_buff_alt_description / da40a0a2` | Smite removes the controlled electrocution effect when the target leaves the chain; Charged Strike can apply the improved 2-second version under this special rule. [Fixed source and line references](psyker_chain_lightning_improved_target_buff.md#fixed-source-evidence) | Not covered by the description | The omitted duration/removal and talent interaction supplement the wording. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
