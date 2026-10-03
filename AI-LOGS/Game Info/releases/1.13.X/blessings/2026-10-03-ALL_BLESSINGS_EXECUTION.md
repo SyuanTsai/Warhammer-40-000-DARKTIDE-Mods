@@ -93,3 +93,7 @@
 - 超級充能本機 Commit：`39e5307a4dd3451e9070113fcd490f4307caccd3`；該組釋出後續查穿透火焰，與破碎衝擊、開罐器維持最多三組。
 
 - [開罐器](2026-10-03-CAN-OPENER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 開罐器本機 Commit：`479e21da78b234d71b8290d89b665bfea451389e`。
+
+- [破碎衝擊](2026-10-03-SHATTERING-IMPACT_ACCEPTANCE.json)：新增4變體、6型號關聯；共4變體、6關聯。

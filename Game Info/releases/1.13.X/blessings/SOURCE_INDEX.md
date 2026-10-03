@@ -25,3 +25,4 @@
 | [機會主義者](entries/機會主義者/README.md) | [來源索引](entries/機會主義者/SOURCE_INDEX.md) |
 | [超級充能](entries/超級充能/README.md) | [來源索引](entries/超級充能/SOURCE_INDEX.md) |
 | [開罐器](entries/開罐器/README.md) | [來源索引](entries/開罐器/SOURCE_INDEX.md) |
+| [破碎衝擊](entries/破碎衝擊/README.md) | [來源索引](entries/破碎衝擊/SOURCE_INDEX.md) |

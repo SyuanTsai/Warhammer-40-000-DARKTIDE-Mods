@@ -20,7 +20,7 @@
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
-| [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 洛克Mk IIb矛頭爆矢槍、洛克Mk III矛頭爆矢槍 |
+| [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 矛頭爆矢槍 洛克 Mk IIb、矛頭爆矢槍 洛克 Mk III |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 撕裂槍 碎敵 Mk II、撕裂槍 碎敵 Mk V、撕裂槍 碎敵 Mk VI |
 | [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
@@ -51,3 +51,6 @@
 | [電擊錘](melee/電擊錘/README.md)<br>- Shock Maul | 近戰 | 電擊錘 阿格尼 Mk Ia、電擊錘 軍務部 Mk III |
 | [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
 | [機械神教動力劍](melee/機械神教動力劍/README.md)<br>- Mechanicus Power Sword | 近戰 | 機械神教動力劍 布蘭克斯 Mk VI |
+| [擲彈兵臂鎧](ranged/擲彈兵臂鎧/README.md)<br>- Grenadier Gauntlet | 遠程 | 擲彈兵臂鎧 布拉斯托姆 Mk III |
+| [震盪槍](ranged/震盪槍/README.md)<br>- Rumbler | 遠程 | 震盪槍 洛倫茲 Mk VI |
+| [電漿槍](ranged/電漿槍/README.md)<br>- Plasma Gun | 遠程 | 電漿槍 M35熔岩核心 Mk II、電漿槍 M35熔岩核心 Mk III |

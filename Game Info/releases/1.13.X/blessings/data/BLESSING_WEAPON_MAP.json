@@ -267,6 +267,19 @@
         "melee",
         "ranged"
       ]
+    },
+    {
+      "id": "shattering-impact",
+      "name_zh_tw": "破碎衝擊",
+      "name_en": "Shattering Impact",
+      "name_key": "loc_trait_bespoke_armor_rend_on_projectile_hit",
+      "description_key": "loc_trait_bespoke_armor_rend_on_projectile_hit_desc",
+      "name_hash": "36f31112",
+      "description_hash": "42048f77",
+      "page": "entries/破碎衝擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
     }
   ],
   "weapons": [
@@ -763,18 +776,28 @@
         {
           "id": "bolter_p1_m1",
           "item": "content/items/weapons/player/ranged/bolter_p1_m1",
-          "name": "洛克Mk IIb矛頭爆矢槍",
-          "name_en": "Locke Mk IIb Spearhead Boltgun",
+          "name": "矛頭爆矢槍 洛克 Mk IIb",
+          "name_en": "Spearhead Boltgun Locke Mk IIb",
           "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
-          "trait_category": "bespoke_bolter_p1"
+          "trait_category": "bespoke_bolter_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_bolter_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_bolter_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_bolter_p1_m1"
+          }
         },
         {
           "id": "bolter_p1_m2",
           "item": "content/items/weapons/player/ranged/bolter_p1_m2",
-          "name": "洛克Mk III矛頭爆矢槍",
-          "name_en": "Locke Mk III Spearhead Boltgun",
+          "name": "矛頭爆矢槍 洛克 Mk III",
+          "name_en": "Spearhead Boltgun Locke Mk III",
           "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
-          "trait_category": "bespoke_bolter_p1"
+          "trait_category": "bespoke_bolter_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_bolter_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_bolter_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_bolter_p1_m2"
+          }
         }
       ]
     },
@@ -1696,6 +1719,88 @@
             "weapon_family_display_name": "loc_weapon_family_powersword_p3_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p3_m1",
             "weapon_mark_display_name": "loc_weapon_mark_powersword_p3_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_gauntlet_p1",
+      "name_zh_tw": "擲彈兵臂鎧",
+      "name_en": "Grenadier Gauntlet",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_ogryn_gauntlet_p1_m1",
+      "page": "weapons/ranged/擲彈兵臂鎧/README.md",
+      "marks": [
+        {
+          "id": "ogryn_gauntlet_p1_m1",
+          "item": "content/items/weapons/player/ranged/ogryn_gauntlet_p1_m1",
+          "name": "擲彈兵臂鎧 布拉斯托姆 Mk III",
+          "name_en": "Grenadier Gauntlet Blastoom Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_gauntlet_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_gauntlet_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_gauntlet_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_gauntlet_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_thumper_p2",
+      "name_zh_tw": "震盪槍",
+      "name_en": "Rumbler",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_ogryn_thumper_p1_m2",
+      "page": "weapons/ranged/震盪槍/README.md",
+      "marks": [
+        {
+          "id": "ogryn_thumper_p1_m2",
+          "item": "content/items/weapons/player/ranged/ogryn_thumper_p1_m2",
+          "name": "震盪槍 洛倫茲 Mk VI",
+          "name_en": "Rumbler Lorenz Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+          "trait_category": "bespoke_thumper_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_thumper_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_thumper_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_thumper_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plasmagun_p1",
+      "name_zh_tw": "電漿槍",
+      "name_en": "Plasma Gun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_plasmagun_p1_m1",
+      "page": "weapons/ranged/電漿槍/README.md",
+      "marks": [
+        {
+          "id": "plasmagun_p1_m1",
+          "item": "content/items/weapons/player/ranged/plasmagun_p1_m1",
+          "name": "電漿槍 M35熔岩核心 Mk II",
+          "name_en": "Plasma Gun M35 Magnacore Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+          "trait_category": "bespoke_plasmagun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_plasmagun_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_plasmagun_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_plasmagun_p1_m1"
+          }
+        },
+        {
+          "id": "plasmagun_p1_m2",
+          "item": "content/items/weapons/player/ranged/plasmagun_p1_m2",
+          "name": "電漿槍 M35熔岩核心 Mk III",
+          "name_en": "Plasma Gun M35 Magnacore Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+          "trait_category": "bespoke_plasmagun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_plasmagun_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_plasmagun_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_plasmagun_p1_m2"
           }
         }
       ]
@@ -5085,6 +5190,202 @@
       "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
       "effect": "刺刀命中每次10／12／14／16層脆弱；每層2.5%，最高16層，刷新5秒；射擊不觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_targets_receive_rending_debuff",
+      "blessing_id": "shattering-impact",
+      "weapon_id": "bolter_p1",
+      "page": "entries/破碎衝擊/weapon_trait_bespoke_bolter_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc_by_tier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_target_stack": 0.025,
+        "target_debuff_duration_seconds": 5,
+        "target_debuff_max_stacks": 16,
+        "target_debuff_max_rending_from_this_buff": 0.4,
+        "refresh_duration_when_stacking": true,
+        "proc_condition": "matching trait item and (attack_type == ranged or damage_profile.count_as_ranged_attack == true); active for the wielded item",
+        "bound_weapon_routes": {
+          "bolter_p1_m1_m2": "direct hits qualify; bolt-shell stop/kill explosions fail the ranged gate",
+          "ogryn_gauntlet_p1_m1": "direct projectile impact, normal grenade explosion and special explosive-punch explosion qualify; direct melee/punch fails the ranged gate",
+          "ogryn_thumper_p1_m2": "direct impact and instant blast qualify; both explosion profiles set count_as_ranged_attack=true",
+          "plasmagun_p1_m1_m2": "direct hitscan qualifies; plasma overheat explosion fails the ranged gate"
+        },
+        "available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 10,
+        "end_line": 79
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_projectile_hit_desc",
+      "description_hash": "42048f77",
+      "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
+      "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_targets_receive_rending_debuff",
+      "blessing_id": "shattering-impact",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/破碎衝擊/weapon_trait_bespoke_ogryn_gauntlet_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc_by_tier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_target_stack": 0.025,
+        "target_debuff_duration_seconds": 5,
+        "target_debuff_max_stacks": 16,
+        "target_debuff_max_rending_from_this_buff": 0.4,
+        "refresh_duration_when_stacking": true,
+        "proc_condition": "matching trait item and (attack_type == ranged or damage_profile.count_as_ranged_attack == true); active for the wielded item",
+        "bound_weapon_routes": {
+          "bolter_p1_m1_m2": "direct hits qualify; bolt-shell stop/kill explosions fail the ranged gate",
+          "ogryn_gauntlet_p1_m1": "direct projectile impact, normal grenade explosion and special explosive-punch explosion qualify; direct melee/punch fails the ranged gate",
+          "ogryn_thumper_p1_m2": "direct impact and instant blast qualify; both explosion profiles set count_as_ranged_attack=true",
+          "plasmagun_p1_m1_m2": "direct hitscan qualifies; plasma overheat explosion fails the ranged gate"
+        },
+        "available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 120,
+        "end_line": 189
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_projectile_hit_desc",
+      "description_hash": "42048f77",
+      "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
+      "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff",
+      "blessing_id": "shattering-impact",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/破碎衝擊/weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc_by_tier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_target_stack": 0.025,
+        "target_debuff_duration_seconds": 5,
+        "target_debuff_max_stacks": 16,
+        "target_debuff_max_rending_from_this_buff": 0.4,
+        "refresh_duration_when_stacking": true,
+        "proc_condition": "matching trait item and (attack_type == ranged or damage_profile.count_as_ranged_attack == true); active for the wielded item",
+        "bound_weapon_routes": {
+          "bolter_p1_m1_m2": "direct hits qualify; bolt-shell stop/kill explosions fail the ranged gate",
+          "ogryn_gauntlet_p1_m1": "direct projectile impact, normal grenade explosion and special explosive-punch explosion qualify; direct melee/punch fails the ranged gate",
+          "ogryn_thumper_p1_m2": "direct impact and instant blast qualify; both explosion profiles set count_as_ranged_attack=true",
+          "plasmagun_p1_m1_m2": "direct hitscan qualifies; plasma overheat explosion fails the ranged gate"
+        },
+        "available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 222,
+        "end_line": 291
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_projectile_hit_desc",
+      "description_hash": "42048f77",
+      "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
+      "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff",
+      "blessing_id": "shattering-impact",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/破碎衝擊/weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc_by_tier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_target_stack": 0.025,
+        "target_debuff_duration_seconds": 5,
+        "target_debuff_max_stacks": 16,
+        "target_debuff_max_rending_from_this_buff": 0.4,
+        "refresh_duration_when_stacking": true,
+        "proc_condition": "matching trait item and (attack_type == ranged or damage_profile.count_as_ranged_attack == true); active for the wielded item",
+        "bound_weapon_routes": {
+          "bolter_p1_m1_m2": "direct hits qualify; bolt-shell stop/kill explosions fail the ranged gate",
+          "ogryn_gauntlet_p1_m1": "direct projectile impact, normal grenade explosion and special explosive-punch explosion qualify; direct melee/punch fails the ranged gate",
+          "ogryn_thumper_p1_m2": "direct impact and instant blast qualify; both explosion profiles set count_as_ranged_attack=true",
+          "plasmagun_p1_m1_m2": "direct hitscan qualifies; plasma overheat explosion fails the ranged gate"
+        },
+        "available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 41,
+        "end_line": 110
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_projectile_hit_desc",
+      "description_hash": "42048f77",
+      "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
+      "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
     }
   ],
   "bindings": [
@@ -7242,6 +7543,90 @@
         "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
         "import_line": 15,
         "append_line": 891
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "shattering-impact",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/armor_rend_on_projectile_hit",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
       }
     }
   ]

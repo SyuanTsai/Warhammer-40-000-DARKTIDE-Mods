@@ -27,5 +27,6 @@
 | <img src="https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004" width="32" height="32" alt="機會主義者祝福圖示"> [機會主義者](entries/機會主義者/README.md)<br>- Opportunist<br>[完整說明](entries/機會主義者/README.md) | <ul><li>對傷害結算前已踉蹌或被視為踉蹌的敵人，I–IV提供10%／15%／20%／25%近戰撕裂；本擊才造成踉蹌不回溯加成。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1" width="32" height="32" alt="超級充能祝福圖示"> [超級充能](entries/超級充能/README.md)<br>- Supercharge<br>[完整說明](entries/超級充能/README.md) | <ul><li>充能近戰命中後使目標疊加脆弱；動力劍每次1／2／3／4層，動力錘10／12／14／16層。每層2.5%，最高16層，刷新5秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659" width="32" height="32" alt="開罐器祝福圖示"> [開罐器](entries/開罐器/README.md)<br>- Can Opener<br>[完整說明](entries/開罐器/README.md) | <ul><li>撬棍次要模式命中每次1／2／3／4層，撕裂槍刺刀每次10／12／14／16層脆弱；每層2.5%，最高16層，合格命中刷新5秒。</li></ul> | 近戰／遠程 |
+| <img src="https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5" width="32" height="32" alt="破碎衝擊祝福圖示"> [破碎衝擊](entries/破碎衝擊/README.md)<br>- Shattering Impact<br>[完整說明](entries/破碎衝擊/README.md) | <ul><li>符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

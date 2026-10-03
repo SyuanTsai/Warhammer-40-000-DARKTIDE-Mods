@@ -430,6 +430,7 @@
 - Trickshooter - 狡猾射手
 - Hand-Cannon - 手銃
 - Shattering Impact - 破碎衝擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_projectile_hit`，hash `36f31112`；英文／繁中RAW配對確認。
 - Everlasting Flame - 永燃烈焰
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_spent_from_reserve_on_crit`，hash `fc0e6843`；英文／繁中RAW配對確認。
 - Quickflame - 迅捷火焰
