@@ -1204,6 +1204,18 @@ Full raw template and formatting: [source evidence](ogryn_dodge_stagger.md#origi
 | Dodge and target filters | Dodging staggers nearby Non Elite/Specialist, human-sized, enemies.; `ui / loc_talent_ogryn_dodge_stagger_desc / de464787` | dodge_update excludes elite/special and non-human_sized enemies. [Fixed source and line references](ogryn_dodge_stagger.md#fixed-source-evidence) | Consistent | The independently read English agrees with the trigger and target scope. |
 | Area, counting and impact formula | No sphere radius, per-dodge target cap, distance/count formula or direct-damage amount is stated.; `ui / loc_talent_ogryn_dodge_stagger_desc / de464787` | A radius-1.5m sphere at player position +dodge_direction processes each target once per dodge. Power is 500 /(consecutive_dodges ×2 −1) ×(4 −hit_distance); attack 0 /impact 0.5 then uses stagger curves and thresholds. Fixed 2m gives 1000 on dodge one and ≈333.3 on dodge two, not damage points or guaranteed knockdown. [Fixed source and line references](ogryn_dodge_stagger.md#fixed-source-evidence) | Not covered by the description | These accepted geometric and calculation details supplement the English. |
 
+
+<a id="ogryn_coherency_radius_increase"></a>
+
+## Towering Presence (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_coherency_radius_increase.md#original-english-template-and-reconstruction). Name hash `4835808d`. Every row uses `ui / loc_talent_ogryn_bigger_coherency_radius_desc / e8f86074`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Coherency radius | +50% Coherency radius.; `ui / loc_talent_ogryn_bigger_coherency_radius_desc / e8f86074` | The current base talent mounts ogryn_bigger_coherency_radius with coherency_aura_size_increase 0.5. [Fixed source and line references](ogryn_coherency_radius_increase.md#fixed-source-evidence) | Consistent | The independently read English matches the radius effect and value. |
+| Scaling and example baseline | No aura-strength increase, combined-radius formula or fixed base radius is stated.; `ui / loc_talent_ogryn_bigger_coherency_radius_desc / e8f86074` | current_radius scales base_radius by coherency_radius_modifier and an independent multiplier; stickiness_limit scales too if present. A fixed 15m baseline gives 22.5m, or 26.25m with same-stage +25%. Actual radius depends on scene settings, links and leaving grace; aura damage/replenishment percentages do not increase. [Fixed source and line references](ogryn_coherency_radius_increase.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 277 listed rules comprise **119 Consistent**, **6 Explicit contradictions**, **144 Not covered by the description**, **0 No corresponding implementation evidence found** and **8 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst, the single-attack restriction in Pacemaker, the heavy-only scope in Intimidating Presence and the additional dodge reduction in Thick Skin. These totals apply only to the listed rules.

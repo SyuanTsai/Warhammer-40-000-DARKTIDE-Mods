@@ -107,3 +107,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Loyal Protector](ogryn_helping_hand.md) / `ogryn_helping_hand` | Base effect |
 | [Thick Skin](ogryn_base_tank_passive.md) / `ogryn_base_tank_passive` | Base effect |
 | [Outta My Way!](ogryn_dodge_stagger.md) / `ogryn_dodge_stagger` | Base effect |
+| [Towering Presence](ogryn_coherency_radius_increase.md) / `ogryn_coherency_radius_increase` | Base effect |

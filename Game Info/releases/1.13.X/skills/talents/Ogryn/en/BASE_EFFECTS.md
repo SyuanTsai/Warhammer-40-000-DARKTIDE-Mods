@@ -89,3 +89,15 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Strength example**: At a fixed enemy distance of 2m, the first dodge's impact Strength is `500 × (4 − 2) ÷ (2 × 1 − 1) = 1000`. The second gives `1000 ÷ 3 ≈ 333.3`. This Strength enters the stagger formula; it is not damage.
 
 [Source evidence and example assumptions](ogryn_dodge_stagger.md)
+
+---
+
+<a id="ogryn_coherency_radius_increase"></a>
+
+## Towering Presence
+
+- **Coherency area**: Increase your Coherency radius by 50%. This does not increase the aura's damage or replenishment percentages.
+
+- **Radius example**: If the original radius is 15m, it becomes `15 × (1 + 50%) = 22.5m`. With another +25% at the same stage, it becomes `15 × (1 + 50% + 25%) = 26.25m`.
+
+[Source evidence and example assumptions](ogryn_coherency_radius_increase.md)
