@@ -116,5 +116,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/survivalist-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_gain_ammo_on_elite_kill_improved.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_gain_ammo_on_elite_kill_improved.md",
+  "commit": "04bddba0fc6e798c4d2948499d07943959fe64f4"
 }
