@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="Plasteel Plates talent icon"> [Plasteel Plates](#adamant_plasteel_plates) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/5df365c7-8213-4c06-acc5-2b00f0cda022" width="32" height="32" alt="Serrated Maw talent icon"> [Serrated Maw](#adamant_dog_applies_brittleness) | <ul><li>Cyber-Mastiff pounce applies 15% Brittleness for 5s; shared cap 40%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="Arbites Revelatum talent icon"> [Arbites Revelatum](#adamant_dodge_grants_damage) | <ul><li>After successfully dodging an enemy attack, gain 15% Damage for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="Soulguilt Scan talent icon"> [Soulguilt Scan](#adamant_stacking_weakspot_strength) | <ul><li>Weakspot Hits grant 2% Weakspot Strength per stack, up to 8 stacks, for 10s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -865,3 +866,17 @@
 - **Damage example**: With base damage 100 and no other modifiers, damage becomes 100 × (1 + 15%) = 115 points. With an existing same-stage 25% bonus, 125 points becomes 140.
 
 [Details](adamant_dodge_grants_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_stacking_weakspot_strength"></a>
+
+### Soulguilt Scan
+
+<img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="72" height="72" alt="Soulguilt Scan talent icon">
+
+- **Stacks and refresh**: A melee or ranged Weakspot Hit grants 1 stack of 2% Weakspot Strength, up to 8 stacks. Another Weakspot Hit resets the 10s duration of all stacks.
+
+- **Power example**: Isolating this power stage, an original 500 with the full-stack 16% bonus becomes 500 × (1 + 8 × 2%) = 580. With an existing same-stage 20% power bonus, 600 becomes 680.
+
+- **Damage distinction**: This increases the power used for subsequent calculations on a Weakspot Hit. It does not merely multiply additional weakspot damage by 1.16. Final damage still depends on the weapon's damage curve, armour, hit location and other bonuses.
+
+[Details](adamant_stacking_weakspot_strength.md) · [Back to index](#talent-index)
