@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="Becalming Eruption talent icon"> [Becalming Eruption](#psyker_shout_reduces_warp_charge_generation) | <ul><li>Venting Shriek hits grant Peril Generation reduction for 5 seconds, up to 25 stacks; in the 0.99-per-stack scenario, reductions multiply.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="Warp Rupture talent icon"> [Warp Rupture](#psyker_discharge_damage_debuff) | <ul><li>Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="32" height="32" alt="Creeping Flames talent icon"> [Creeping Flames](#psyker_warpfire_on_shout) | <ul><li>Venting Shriek applies 1–6 Soulblaze stacks based on Peril at activation; sleeping Daemonhosts are excluded.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="Precognition talent icon"> [Precognition](#psyker_overcharge_weakspot_kill_bonuses) | <ul><li>During Scrier's Gaze, gain 1% Finesse Damage per second up to 30%, lingering 10 seconds. Weakspot Kills advance damage and Finesse Damage progress by one stack.</li></ul> | Ability |
 
 ---
 
@@ -281,3 +282,19 @@
 - **Stack examples**: Multiply the Peril proportion by 6 and round up, with a minimum of 1 and maximum of 6 stacks. At 50%, `0.50 × 6 = 3` stacks; at 80%, `0.80 × 6 = 4.8` rounds up to 5. Even 0% Peril applies 1 stack.
 
 [Details](psyker_warpfire_on_shout.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_overcharge_weakspot_kill_bonuses"></a>
+
+### Precognition
+
+<img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="72" height="72" alt="Precognition talent icon">
+
+- **Ability modifier**: During Scrier's Gaze, also gain 1% Finesse Damage each second, up to 30%, remaining for 10 seconds after it ends. Weakspot Kills add one stack of progress to both damage and Finesse Damage.
+
+- **Stack example**: At 8 accumulated Gaze stacks, a Weakspot Kill gives `8 + 1 = 9` stacks. It does not extend the actual duration of Gaze.
+
+- **Damage example**: Finesse Damage affects the extra Weakspot or Critical damage. Isolating a 30% Finesse bonus, assume base damage 100 and extra damage 50. The original 150 becomes `100 + 50 × 1.30 = 165`, a 10% increase for the whole hit; Gaze's other bonuses are calculated separately.
+
+[Details](psyker_overcharge_weakspot_kill_bonuses.md) · [Back to index](#talent-index)

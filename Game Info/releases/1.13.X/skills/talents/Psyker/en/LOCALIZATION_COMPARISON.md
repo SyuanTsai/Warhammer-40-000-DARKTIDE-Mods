@@ -214,6 +214,18 @@ Full raw template and formatting: [source evidence](psyker_warpfire_on_shout.md#
 | Applied effect, range and Peril dependence | Venting Shriek applies 1–6 Soulblaze stacks to targets hit, based on current Peril; `ui / loc_talent_psyker_warpfire_on_shout_desc / 8ec3e5f7` | The activation Peril snapshot determines ceil(percentage × 6), clamped to 1–6, applied on eligible shout hits. [Fixed source and line references](psyker_warpfire_on_shout.md#fixed-source-evidence) | Consistent | The stated effect, range and dependence agree with the accepted calculation. |
 | Snapshot timing, rounding and target eligibility | No snapshot event order, rounding formula or specific target exclusions stated; `ui / loc_talent_psyker_warpfire_on_shout_desc / 8ec3e5f7` | on_combat_ability captures Peril before shout damage; living targets are required and sleeping Daemonhosts are excluded. Examples: 50% gives 3, 13% gives 1, 80% gives 5, and 0% still gives 1. [Fixed source and line references](psyker_warpfire_on_shout.md#fixed-source-evidence) | Not covered by the description | These timing, calculation and eligibility details supplement the English. |
 
+
+<a id="psyker_overcharge_weakspot_kill_bonuses"></a>
+
+## Precognition
+
+Full raw template and formatting: [source evidence](psyker_overcharge_weakspot_kill_bonuses.md#original-english-template-and-reconstruction). Name hash `17699256`. Every row uses `ui / loc_ability_psyker_overcharge_weakspot_description / 492219ab`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Credited time and Finesse bonus | Weakspot Kills count as 1s spent in Scrier's Gaze; +1% Finesse Damage per second, +30% maximum, lingering 10s; `ui / loc_ability_psyker_overcharge_weakspot_description / 492219ab` | Each eligible Weakspot Kill adds one bonus_stacks; total stacks advance damage and conditional Finesse lerps. Finesse field is 0.01 per stack, maximum 30, with a 10-second exit buff. [Fixed source and line references](psyker_overcharge_weakspot_kill_bonuses.md#fixed-source-evidence) | Consistent | Credited progress and the stated Finesse values/duration agree; counting time already spent does not promise longer active duration. |
+| Immediate progress, stop condition and damage calculation | No lerp formula, changed stop condition or whole-hit multiplier stated; `ui / loc_ability_psyker_overcharge_weakspot_description / 492219ab` | min(max_stacks, stacks+bonus_stacks)/max_stacks immediately advances both bonuses; 100% Peril still ends Gaze. At 8 stacks a Kill gives 9; isolated +30% Finesse makes 100+50×1.30=165 rather than multiplying the whole 150 by 1.30. [Fixed source and line references](psyker_overcharge_weakspot_kill_bonuses.md#fixed-source-evidence) | Not covered by the description | These progress and damage-calculation details supplement the English. |
+
 ## Comparison totals
 
 The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
