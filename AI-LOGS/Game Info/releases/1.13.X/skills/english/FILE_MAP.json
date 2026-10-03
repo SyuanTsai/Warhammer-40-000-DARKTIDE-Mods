@@ -5693,7 +5693,8 @@
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
-        "veteran_invisibility_on_combat_ability"
+        "veteran_invisibility_on_combat_ability",
+        "veteran_toughness_bonus_leaving_invisibility"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5727,7 +5728,8 @@
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
-        "veteran_invisibility_on_combat_ability"
+        "veteran_invisibility_on_combat_ability",
+        "veteran_toughness_bonus_leaving_invisibility"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5761,7 +5763,8 @@
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
-        "veteran_invisibility_on_combat_ability"
+        "veteran_invisibility_on_combat_ability",
+        "veteran_toughness_bonus_leaving_invisibility"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5795,7 +5798,8 @@
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
-        "veteran_invisibility_on_combat_ability"
+        "veteran_invisibility_on_combat_ability",
+        "veteran_toughness_bonus_leaving_invisibility"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6788,9 +6792,21 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cef0589630c969b406b8b3b687e316f5104afc48",
       "chinese_sha256": "8bbe034fff02bc8237034943de85d7f110332449cfe34946cc90905fbce9e593",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_toughness_bonus_leaving_invisibility"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_passive.md",
@@ -7884,7 +7900,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_invisibility_on_combat_ability.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_invisibility_on_combat_ability.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_invisibility_on_combat_ability.md",
+      "commit": "2a70756c5b7a0c4be74c0fed864853d01a043aa5"
+    },
+    {
+      "id": "veteran_toughness_bonus_leaving_invisibility",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_toughness_bonus_leaving_invisibility.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_toughness_bonus_leaving_invisibility.md"
     }
   ],
   "pending_chinese_corrections": [],
