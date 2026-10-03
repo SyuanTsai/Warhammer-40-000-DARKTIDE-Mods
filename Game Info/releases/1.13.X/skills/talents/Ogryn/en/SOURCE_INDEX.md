@@ -58,3 +58,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Batter](ogryn_heavy_bleeds.md) / `ogryn_heavy_bleeds` | Talent |
 | [Hard Knocks](ogryn_staggering_increases_damage.md) / `ogryn_staggering_increases_damage` | Talent |
 | [Unstoppable Momentum](ogryn_movement_speed_after_ranged_kills.md) / `ogryn_movement_speed_after_ranged_kills` | Talent |
+| [Ammo Stash](ogryn_increased_ammo_reserve.md) / `ogryn_increased_ammo_reserve` | Talent |

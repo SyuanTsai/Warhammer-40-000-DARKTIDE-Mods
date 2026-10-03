@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="Batter talent icon"> [Batter](#ogryn_heavy_bleeds) | <ul><li>Melee hits apply 1 Bleed stack; heavy hits apply 4, up to 16 stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="Hard Knocks talent icon"> [Hard Knocks](#ogryn_staggering_increases_damage) | <ul><li>Enemies staggered by melee attacks take +15% melee damage for 5s; teammates' melee attacks also benefit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="Unstoppable Momentum talent icon"> [Unstoppable Momentum](#ogryn_movement_speed_after_ranged_kills) | <ul><li>A ranged kill grants +20% Movement Speed for 3s; further ranged kills restart the duration.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="Ammo Stash talent icon"> [Ammo Stash](#ogryn_increased_ammo_reserve) | <ul><li>Increase maximum ammo reserve by 25%; magazine capacity is unchanged.</li></ul> | Talent |
 
 ## Blitz
 
@@ -856,3 +857,19 @@
 - **Speed example**: A base speed of 5m/s becomes `5 × 1.2 = 6m/s` with no other modifiers. With an existing +10% at the same stage, it becomes `5 × (1 + 10% + 20%) = 6.5m/s`.
 
 [Details](ogryn_movement_speed_after_ranged_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_increased_ammo_reserve"></a>
+
+### Ammo Stash
+
+<img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="72" height="72" alt="Ammo Stash talent icon">
+
+- **Effect**: Increase the weapon's maximum ammo reserve by 25%. This does not increase magazine capacity.
+
+- **Capacity example**: A base maximum reserve of 200 becomes `200 × (1 + 25%) = 250` rounds. For a base maximum of 101, `101 × 1.25 = 126.25`, rounded down to 126 rounds.
+
+- **Calculation**: Add other reserve-capacity bonuses at the same stage. Replenishment based on a percentage of maximum ammo reserve also uses the increased maximum.
+
+[Details](ogryn_increased_ammo_reserve.md) · [Back to index](#talent-index)

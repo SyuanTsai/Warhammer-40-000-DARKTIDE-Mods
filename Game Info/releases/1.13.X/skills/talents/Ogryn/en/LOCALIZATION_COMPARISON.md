@@ -671,6 +671,18 @@ Full raw template and formatting: [source evidence](ogryn_movement_speed_after_r
 | Ranged-kill speed bonus | +20% Movement Speed for 3s on Ranged Kill.; `ui / loc_talent_ogryn_ranged_kill_grant_movement_speed_desc / b22afedc` | on_ranged_kill activates movement_speed 0.2 for active_duration 3. [Fixed source and line references](ogryn_movement_speed_after_ranged_kills.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, stat and values. |
 | Refresh and speed calculation | No refresh rule, additive formula or movement-state limits are stated.; `ui / loc_talent_ogryn_ranged_kill_grant_movement_speed_desc / b22afedc` | No cooldown prevents another proc; it overwrites _active_start_time without stacking the bonus. Base 5m/s becomes 6m/s, or 6.5m/s with another same-stage +10%. Movement state, weapon and other limits still affect actual speed. [Fixed source and line references](ogryn_movement_speed_after_ranged_kills.md#fixed-source-evidence) | Not covered by the description | These accepted timing and calculation details supplement the English bonus. |
 
+
+<a id="ogryn_increased_ammo_reserve"></a>
+
+## Ammo Stash
+
+Full raw template and formatting: [source evidence](ogryn_increased_ammo_reserve.md#original-english-template-and-reconstruction). Name hash `4d649644`. Every row uses `ui / loc_talent_ogryn_increased_ammo_desc / 1a862478`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reserve capacity | Increase your ammo reserve by +25%.; `ui / loc_talent_ogryn_increased_ammo_desc / 1a862478` | ammo_reserve_capacity 0.25 increases maximum reserve; magazine capacity uses clip_size_modifier separately. [Fixed source and line references](ogryn_increased_ammo_reserve.md#fixed-source-evidence) | Consistent | The independently read English identifies the reserve and matches the accepted value. |
+| Rounding and related replenishment | No rounding, additive-capacity formula or replenishment base is stated.; `ui / loc_talent_ogryn_increased_ammo_desc / 1a862478` | Maximum reserve is floor(base_max_ammo × capacity_modifier). Base 200 becomes 250 rounds; base 101 gives 126.25, floored to 126. Other same-stage capacity bonuses add, and reserve-percentage replenishment uses the increased maximum. [Fixed source and line references](ogryn_increased_ammo_reserve.md#fixed-source-evidence) | Not covered by the description | These accepted calculations supplement the reserve-capacity increase. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **73 Consistent**, **3 Explicit contradictions**, **99 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.
