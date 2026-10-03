@@ -47,3 +47,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Impactful](ogryn_heavy_hitter_stagger.md) / `ogryn_heavy_hitter_stagger` | Keystone |
 | [Just Getting Started!](ogryn_heavy_hitter_max_stacks_improves_attack_speed.md) / `ogryn_heavy_hitter_max_stacks_improves_attack_speed` | Keystone |
 | [The Best Defence](ogryn_multi_heavy_toughness.md) / `ogryn_multi_heavy_toughness` | Talent |
+| [Smash 'Em!](ogryn_single_heavy_toughness.md) / `ogryn_single_heavy_toughness` | Talent |

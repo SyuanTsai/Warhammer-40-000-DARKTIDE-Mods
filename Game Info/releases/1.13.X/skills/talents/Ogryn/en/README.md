@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/e8883b71-72ad-4780-92e7-395f6a32ead8" width="32" height="32" alt="Impactful talent icon"> [Impactful](#ogryn_heavy_hitter_stagger) | <ul><li>Each Heavy Hitter stack adds 7.5% melee Impact.</li><li>Maximum 8 stacks; full stacks give +60% melee Impact.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="32" height="32" alt="Just Getting Started! talent icon"> [Just Getting Started!](#ogryn_heavy_hitter_max_stacks_improves_attack_speed) | <ul><li>At 8 Heavy Hitter stacks, Just Getting Started! grants +10% Attack Speed.</li><li>The bonus ends below 8 stacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="The Best Defence talent icon"> [The Best Defence](#ogryn_multi_heavy_toughness) | <ul><li>Hitting at least 2 enemies with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="Smash 'Em! talent icon"> [Smash 'Em!](#ogryn_single_heavy_toughness) | <ul><li>Hitting exactly 1 enemy with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
 
 ## Blitz
 
@@ -669,3 +670,19 @@
 - **Counting**: Each qualifying sweep restores Toughness once, rather than once per enemy hit. Other Toughness recovery modifiers apply separately.
 
 [Details](ogryn_multi_heavy_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_single_heavy_toughness"></a>
+
+### Smash 'Em!
+
+<img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="72" height="72" alt="Smash 'Em! talent icon">
+
+- **Trigger**: Hit exactly 1 enemy with one melee attack. At the end of that sweep, recover 5% of maximum Toughness, or 15% for a heavy attack. No kill is required.
+
+- **Example**: With maximum Toughness 100, an ordinary attack recovers `100 × 5% = 5` points and a heavy attack recovers `100 × 15% = 15`. If current Toughness is 95, either can restore only the 5 points missing.
+
+- **Counting**: Each qualifying sweep restores Toughness once, rather than once per enemy hit. Other Toughness recovery modifiers apply separately.
+
+[Details](ogryn_single_heavy_toughness.md) · [Back to index](#talent-index)
