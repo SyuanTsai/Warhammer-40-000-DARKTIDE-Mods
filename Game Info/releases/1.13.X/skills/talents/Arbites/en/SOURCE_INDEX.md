@@ -96,3 +96,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Retaliatory Force](adamant_perfect_block_damage_boost.md) / `adamant_perfect_block_damage_boost` | Passive talent |
 | [Arbites Grenade](adamant_grenade.md) / `adamant_grenade` | Base effect |
 | [Nuncio-Aquila](adamant_area_buff_drone.md) / `adamant_area_buff_drone` | Base effect |
+| [Cyber-Mastiff tag command](adamant_command_dog_with_tag.md) / `adamant_command_dog_with_tag` | Base effect |

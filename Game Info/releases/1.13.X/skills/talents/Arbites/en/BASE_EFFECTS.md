@@ -27,3 +27,15 @@ These effects come from the base character configuration. Combat abilities, Blit
 - **Enemy damage taken**: Enemies in range take 15% more damage. Isolating this multiplier, damage 100 becomes 115.
 
 [Source evidence and example assumptions](adamant_area_buff_drone.md)
+
+<a id="adamant_command_dog_with_tag"></a>
+
+## Cyber-Mastiff tag command
+
+- **Target command**: Tagging an enemy with the companion command makes your Cyber-Mastiff prioritize that target. Input settings can use a single tap or double tap. One command target is retained at a time, with a maximum tag lifetime of 25s.
+
+- **Priority**: If the owner is disabled, for example pinned by a Pox Hound or grabbed, rescue selection takes priority over the command target. Otherwise, the companion first tries a valid commanded target, then chooses targets automatically.
+
+- **Limits**: An unaggroed Daemonhost is not a valid new command target. Entering a moving platform cancels the command. Target survival, attack eligibility and pathing still limit the actual chase.
+
+[Source evidence and example assumptions](adamant_command_dog_with_tag.md)
