@@ -179,5 +179,6 @@
     "Repeated full power/damage/impact implementation analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/marksman-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_power_after_combat_ability.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_power_after_combat_ability.md",
+  "commit": "7adda4f96bf2464da782cb6b57c2259dd529617a"
 }

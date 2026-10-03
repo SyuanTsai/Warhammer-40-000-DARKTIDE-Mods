@@ -5697,7 +5697,8 @@
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
-        "veteran_increased_weakspot_power_after_combat_ability"
+        "veteran_increased_weakspot_power_after_combat_ability",
+        "veteran_combat_ability_stagger_nearby_enemies"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5735,7 +5736,8 @@
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
-        "veteran_increased_weakspot_power_after_combat_ability"
+        "veteran_increased_weakspot_power_after_combat_ability",
+        "veteran_combat_ability_stagger_nearby_enemies"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5773,7 +5775,8 @@
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
-        "veteran_increased_weakspot_power_after_combat_ability"
+        "veteran_increased_weakspot_power_after_combat_ability",
+        "veteran_combat_ability_stagger_nearby_enemies"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5811,7 +5814,8 @@
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
-        "veteran_increased_weakspot_power_after_combat_ability"
+        "veteran_increased_weakspot_power_after_combat_ability",
+        "veteran_combat_ability_stagger_nearby_enemies"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6121,9 +6125,21 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3b08626fa23ab35d9e9b1190a5ba2d6899b6f37f",
       "chinese_sha256": "7b1293aa2cfbea493588ee846aa3dcf57c5d220c86f4cb58b24c725e523a3a80",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_stagger_nearby_enemies"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_stance.md",
@@ -7986,7 +8002,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_power_after_combat_ability.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_power_after_combat_ability.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_power_after_combat_ability.md",
+      "commit": "7adda4f96bf2464da782cb6b57c2259dd529617a"
+    },
+    {
+      "id": "veteran_combat_ability_stagger_nearby_enemies",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stagger_nearby_enemies.md",
+      "scope": "Veteran",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stagger_nearby_enemies.json"
     }
   ],
   "pending_chinese_corrections": [
