@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="Focused Fighter talent icon"> [Focused Fighter](#ogryn_melee_attacks_give_mtdr) | <ul><li>Successful melee sweeps build up to five multiplicative 4% melee-damage reduction stacks; melee damage to you or an ally clears them.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="Brutish Strength talent icon"> [Brutish Strength](#ogryn_pushing_applies_brittleness) | <ul><li>Push hits apply four Brittleness stacks (10%) to a living enemy; maximum sixteen (40%) for 5s with refresh, benefiting allies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="Fire Away talent icon"> [Fire Away](#ogryn_explosions_burn) | <ul><li>Damaging explosions apply one Burn stack, or two total in the central area, up to eight; the specified Power Maul explosion is excluded.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="Unbreakable talent icon"> [Unbreakable](#ogryn_block_all_attacks) | <ul><li>Perfect Blocks can block otherwise unblockable melee attacks and grant +20% damage to the next melee sweep for at most 5s.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1257,3 +1258,19 @@
 - The Chinese wording adds 2 stacks at close range and can be read as a total of 3. The actual central-area hit instead applies 2 stacks total.
 
 [Details](ogryn_explosions_burn.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_block_all_attacks"></a>
+
+### Unbreakable
+
+<img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="72" height="72" alt="Unbreakable talent icon">
+
+- **Perfect Block**: Normally, the first approximately 0.3s after beginning a block is the Perfect Block window. During it, you can block melee attacks marked as unblockable; ordinary blocking requirements such as angle still apply.
+
+- **Damage bonus**: A successful Perfect Block grants +20% damage to the next melee sweep, retained for at most 5s. Completing the sweep consumes it, even if it misses. Further Perfect Blocks refresh the duration without adding percentages.
+
+- **Damage example**: Base damage of 100 becomes 120. With an existing +30% at the same stage, it becomes `100 × (1 + 30% + 20%) = 150`.
+
+[Details](ogryn_block_all_attacks.md) · [Back to index](#talent-index)

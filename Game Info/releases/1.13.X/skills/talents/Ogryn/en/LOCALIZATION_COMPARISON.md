@@ -949,6 +949,18 @@ Full raw template and formatting: [source evidence](ogryn_explosions_burn.md#ori
 | Burn application and cap | Your Explosions apply 1 Stack(s) of Burn. 2 Stack(s) if close range. Max Stacks 8.; `ui / loc_talent_ogryn_explosions_burn_close_desc / 2024bc9e` | close_explosion_hit selects close_stacks 2 instead of stacks 1; application cap is 8. [Fixed source and line references](ogryn_explosions_burn.md#fixed-source-evidence) | Consistent | The independently read English presents two as the close-hit stack total, without saying additional; the Chinese-only wording correction is not inherited. |
 | Target limits, timing and damage curve | No Power Maul exception, duration, tick interval or damage formula is stated.; `ui / loc_talent_ogryn_explosions_burn_close_desc / 2024bc9e` | Damaged targets must remain alive; powermaul_explosion is excluded. The shared flamer_assault curve uses cap 31, duration 4s with refresh even at eight, 0.5s intervals and progressive stack removal. Unarmoured isolated ticks use 600 × (stacks/31)² × [3 − 2 × (stacks/31)]: two ≈7.17, eight ≈99.25; armour/modifiers alter these, and one tick is not total damage. [Fixed source and line references](ogryn_explosions_burn.md#fixed-source-evidence) | Not covered by the description | These accepted explosion, timing and shared-curve details supplement the English application values. |
 
+
+<a id="ogryn_block_all_attacks"></a>
+
+## Unbreakable
+
+Full raw template and formatting: [source evidence](ogryn_block_all_attacks.md#original-english-template-and-reconstruction). Name hash `017d4d2d`. Every row uses `ui / loc_talent_ogryn_block_all_attacks_variant_desc / b565afeb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Perfect Block and next-attack bonus | Your Perfect Blocks can block all Melee Attacks. On Perfect Block gain +20% Melee Damage on next Attack.; `ui / loc_talent_ogryn_block_all_attacks_variant_desc / b565afeb` | is_perfect_blocking enables block_unblockable; on_perfect_block grants a one-stack damage_boost with melee_damage 0.2 for the next sweep. [Fixed source and line references](ogryn_block_all_attacks.md#fixed-source-evidence) | Consistent | The independently read English matches the Perfect Block capability and next-melee-attack bonus. |
+| Window, ordinary checks and consumption | No exact window, retention time, miss-consumption or stacking formula is stated.; `ui / loc_talent_ogryn_block_all_attacks_variant_desc / b565afeb` | Normally the window is about 0.3s after starting a block; angle and other ordinary requirements still apply. The bonus lasts at most 5s, refreshes without stacking and exits at sweep_finish even on a miss. Base 100 becomes 120, or 150 with same-stage +30%. [Fixed source and line references](ogryn_block_all_attacks.md#fixed-source-evidence) | Not covered by the description | These accepted timing, blocking and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 234 listed rules comprise **99 Consistent**, **4 Explicit contradictions**, **124 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
