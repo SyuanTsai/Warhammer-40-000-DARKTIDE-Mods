@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="Terminus Warrant talent icon"> [Terminus Warrant](#adamant_terminus_warrant) | <ul><li>Ranged attacks build Melee Justice for each enemy hit per shot, granting three stacks on a weakspot hit; melee hits build Ranged Justice, each capped at 20 stacks.</li><li>Wielding the corresponding weapon consumes those stacks to activate a fixed 12s buff.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="Forceful talent icon"> [Forceful](#adamant_forceful) | <ul><li>Staggering hits or blocks build up to 10 stacks, each granting 5% Impact and lowering the damage-taken multiplier.</li><li>Stacks share a 5s timer; taking damage removes at most one stack every 0.25s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="Lone Wolf talent icon"> [Lone Wolf](#adamant_disable_companion) | <ul><li>Removes your Cyber-Mastiff in exchange for +20% Damage, +10% Attack Speed, 15% Toughness Damage Reduction and +1 maximum Blitz charge.</li><li>While charges are missing, replenish one grenade every 45s, or one Voltaic Shock Mine every 90s.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="Will of the Lex talent icon"> [Will of the Lex](#adamant_forceful_toughness_regen_per_stack) | <ul><li>When selected, each Forceful stack replenishes 0.5% of maximum Toughness per second.</li><li>Recovery scales with the current Forceful stack count, up to the base cap of 10.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -352,3 +353,15 @@
 - **Replenishment example**: When at least one ordinary grenade charge is missing, the timer starts and restores one after 45s. A missing Voltaic Shock Mine charge instead waits 90s. After restoring a charge, the next charge waits through a new timer; no timer runs at full charges.
 
 [Details](adamant_disable_companion.md) · [Back to index](#talent-index)
+
+<a id="adamant_forceful_toughness_regen_per_stack"></a>
+
+### Will of the Lex
+
+<img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="72" height="72" alt="Will of the Lex talent icon">
+
+- **Condition and recovery**: Each Forceful stack replenishes 0.5% of maximum Toughness per second. This effect occurs only while you have Forceful stacks.
+
+- **Full-stack example**: At 10 stacks, replenish `10 × 0.5% = 5% of maximum Toughness per second`. With maximum Toughness 100, that is theoretically 5 points per second, but actual replenishment cannot exceed the current Toughness deficit.
+
+[Details](adamant_forceful_toughness_regen_per_stack.md) · [Back to index](#talent-index)

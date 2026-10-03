@@ -262,3 +262,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Forceful](arbites_adamant_forceful.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Lone Wolf](arbites_adamant_disable_companion.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Will of the Lex](arbites_adamant_forceful_toughness_regen_per_stack.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

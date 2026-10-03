@@ -85,7 +85,8 @@
         "adamant_execution_order",
         "adamant_terminus_warrant",
         "adamant_forceful",
-        "adamant_disable_companion"
+        "adamant_disable_companion",
+        "adamant_forceful_toughness_regen_per_stack"
       ],
       "checks": []
     },
@@ -119,7 +120,8 @@
         "adamant_execution_order",
         "adamant_terminus_warrant",
         "adamant_forceful",
-        "adamant_disable_companion"
+        "adamant_disable_companion",
+        "adamant_forceful_toughness_regen_per_stack"
       ],
       "checks": []
     },
@@ -153,7 +155,8 @@
         "adamant_execution_order",
         "adamant_terminus_warrant",
         "adamant_forceful",
-        "adamant_disable_companion"
+        "adamant_disable_companion",
+        "adamant_forceful_toughness_regen_per_stack"
       ],
       "checks": []
     },
@@ -187,7 +190,8 @@
         "adamant_execution_order",
         "adamant_terminus_warrant",
         "adamant_forceful",
-        "adamant_disable_companion"
+        "adamant_disable_companion",
+        "adamant_forceful_toughness_regen_per_stack"
       ],
       "checks": []
     },
@@ -806,9 +810,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f764d106d2cc799b3603660c6f3e90398732bdd0",
       "chinese_sha256": "9b4a1fcad3ae15f16740b1683962acd9c3bca20940201a5c5cd894f4a7ad3e92",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_forceful_toughness_regen_per_stack"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_toughness_regen_per_stack.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_grenade.md",
@@ -10268,6 +10279,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_disable_companion.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_disable_companion.md"
+    },
+    {
+      "id": "adamant_forceful_toughness_regen_per_stack",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_toughness_regen_per_stack.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_toughness_regen_per_stack.md"
     }
   ],
   "pending_chinese_corrections": [
