@@ -660,6 +660,70 @@
         "Verify own event chance, check_proc_func, conditional_proc_func, active_proc_func and child-add rule. The activation predicate is specific to the current blessing."
       ],
       "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "hitscan-shot-result-event",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua",
+      "start": 145,
+      "end": 220,
+      "content_sha256": "4a98b6a42036168af9677d9e92d8735651f05b918a09a321804e360b26ec6d6d",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua#L145-L220",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during Concentrated Fire or current Scattershot primary review",
+      "conclusion": "Hit scan captures the direct-shot critical flag, resolves targets, then emits one on_shoot with aggregate hit_weakspot and num_hit_units.",
+      "applicability": [
+        "Verify the actual bound action inherits this _shoot method and own normal/special fire configuration; projectile or pellet modes use different result paths."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "hitscan-aggregate-weakspot",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/hit_scan.lua",
+      "start": 215,
+      "end": 243,
+      "content_sha256": "efec1b2e15daf72fe5179a691ba43c7ab45f733195d35937b6ebf39fcdedfa67",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L215-L243",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during Concentrated Fire or current Scattershot primary review",
+      "conclusion": "Each processed target weakspot result is OR-combined into the shot result; a later body hit does not erase an earlier weakspot result.",
+      "applicability": [
+        "Verify current action uses this HitScan.process_hits and the relevant damage/collision paths; this is one boolean per shot, not a per-target proc count."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "server-buff-proc-event-delivery",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+      "start": 233,
+      "end": 271,
+      "content_sha256": "e9fccc515009952bd87d639835ce6d64f21a1415bfa5b47806ec96c8e48e4447",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L233-L271",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during Concentrated Fire or current Scattershot primary review",
+      "conclusion": "Server queued player proc events are delivered to each installed buff with update_proc_events; client delivery additionally requires prediction flags.",
+      "applicability": [
+        "Verify own buff remains installed through on_equip while switched and actual event emitter uses this player buff extension."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "activated-parent-explicit-clear",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua",
+      "start": 81,
+      "end": 93,
+      "content_sha256": "bdfeb74c63335091781a71e49316a9a2ba0eadb47211350291013476bf5ae9ab",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua#L81-L93",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during Concentrated Fire or current Scattershot primary review",
+      "conclusion": "Explicit clear_child_stacks_proc_events is evaluated outside the parent proc chance/conditional gate. It applies its own specific_check if present and retains one placeholder.",
+      "applicability": [
+        "Verify own explicit clear event and specific predicate; do not transfer held-slot gating from the separate activation branch into this clear branch."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",

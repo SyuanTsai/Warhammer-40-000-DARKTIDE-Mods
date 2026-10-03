@@ -215,3 +215,5 @@
 - 2026-10-04 Desperado commit repair: `65611cd38818c9db1ef4ca61116f79cce153f6f7` contained only acceptance metadata after a staging allowlist failure. The corrective Desperado-only content commit preserves history and completes the reviewed player pages, indices, RAW glossary and common-cache/workflow changes. The metadata-only commit is excluded from completed totals. Commit completeness guard was added; immediate full scan passed with no new errors.
 
 - [集中火力](2026-10-03-CONCENTRATED-FIRE_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
+
+- [散彈](2026-10-03-SCATTERSHOT_ACCEPTANCE.json)：新增5變體、9型號關聯；共5變體、9關聯。

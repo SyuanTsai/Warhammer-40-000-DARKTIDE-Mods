@@ -448,6 +448,7 @@
 - Man-Stopper - 大口徑彈藥
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_crit`，hash `69135934`；英文／繁中RAW配對確認。
 - Scattershot - 散彈
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot`，hash `83faa1f6`；英文／繁中RAW配對確認。
 - Full Bore - 全孔射擊
 - Both Barrels - 雙管齊發
 - Trickshooter - 狡猾射手

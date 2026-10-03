@@ -1,0 +1,371 @@
+{
+  "date": "2026-10-04",
+  "blessing": "scattershot",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/散彈/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+    "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+    "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+    "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+    "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot"
+  ],
+  "added_binding_count": 9,
+  "total_variants": 5,
+  "total_bindings": 9,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "reviewer_model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "verified_scope": {
+      "formal_pages": 11,
+      "variants": 5,
+      "bindings": 9,
+      "tiers": "玩家指定 I–IV；每有效層分別 +6/+8/+10/+12 個百分點，五層上限 +30/+40/+50/+60 個百分點。",
+      "event_and_order": "每發散彈依不同可受傷害目標數加層，同目標多顆彈丸/部位去重；初始射擊爆擊檢定先於 shoot_pellets action-start 清層，on_shoot 在完整散彈結算後加層。公式已明確將 S 定義為清層後、on_shoot 加層前的有效層數，本項 U=2 重得2層，U≤1為0。",
+      "lifecycle_and_modes": "on-equip buff 切出後仍安裝；持用槽只限制加層/stat。其他武器的 shoot_pellets 開始會清除保留層數；非散彈動作、切換/裝填/近戰不清層。九個綁定均為已核對的單發散彈動作；腰射、瞄準、裝填接續、特殊彈及格擋射擊依型號表說明，近戰/切換模式本身不觸發。",
+      "localization_and_errata": "RAW Scattershot／散彈；name hash 83faa1f6、description hash f8a4f721。最低兩個不同目標屬文件未涵蓋；明確勘誤只列 Enemy 範圍與程式 damageable-unit 計數可納入可受傷害危險物件的差異。",
+      "weapon_name_correction": "README、WEAPON_COMPATIBILITY、SOURCE_INDEX、DAMAGE_PERCENTAGE_REVIEW、map variant summary/effect、root config/draft 與雙管反向頁均已使用十字星 Mk XI；map 的五個 variant.mode_summary 均與 root config 對應值一致。",
+      "inventory_partition": "本次已涵蓋的 exact bound intersection 為5 variants/9 bindings；保留的 outside/unresolved 候選仍按配置和 inventory 收錄，沒有因 remaining-tasks 未命中而宣稱不存在 exact metadata 候選。",
+      "image": "icon 148 receipt 經主控驗收：公開回應200、hash與顯示核對；頁面圖示與receipt相符。"
+    },
+    "corrections_verified": [
+      "修正雙管霰彈槍 Mk XI 模式摘要中的舊型號名「鐵盔」為 RAW/UI 對應的「十字星」。",
+      "在兩個公式頁明確定義 S 的清除後時點，並說明舊五層先供本發初始爆擊判定、其後清零再按本發 U 加層。",
+      "同步 BLESSING_WEAPON_MAP 的 shotgun_p2 values.mode_summary 與 config/draft。"
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/散彈/README.md": "2c0347bc35d48cf12f71140903c9c2c3a974c189b2532cbddbc3c315ac10a07d",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/SOURCE_INDEX.md": "0a46f69176d6e46d93b07a6b234efd63e9f671013842b83b6a8844258419c23d",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/TIER_VALUES.md": "20b57fc0947a0c2a9ccc2e3fc421913b213614b6106e855ff9bc2d153b0e8be1",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/DAMAGE_PERCENTAGE_REVIEW.md": "2052ec5a527b671531aee14cf63e531143ad7127b89e97b78226b86c07fcc001",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/LOCALIZATION_COMPARISON.md": "6ccd98755d02c8730512f31d124c403053eea319db58e7a497a5fae1600ba263",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/WEAPON_COMPATIBILITY.md": "2622cc8374acb4cb89cb1d5d111cd38058da95ca78b76fb0a22784ef50569ecf",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot.md": "edf595e65a003243e60383b76e0c89fcec7757c9fc0edc2f114c79884bd5eb34",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot.md": "672a50bba438caa97e744cec3f2fa7fea4adfa166a61c0592a73d8d20ac95024",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot.md": "04ff163398382d09ce63d28b330cb1f976922738f92ad70ac05e78f09e64e042",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot.md": "ce22685dd2edfab5909fad377aba3a62775395355a41063e11a519b5a5606ad0",
+      "Game Info/releases/1.13.X/blessings/entries/散彈/weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot.md": "27a8a5ca1d0b561d0341ea6a2f85f4b867ab7957cf518b6f260512b1e2cdf780",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-config.json": "a56ddb3caaf808edf60735939f9b9d516c82d914b706e21a4fd2d43947dddc7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-extension-draft.json": "5ff612a674ff3c0f530841dfdb78f74d8a0a2803572b8845b1a7b47d12321054",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-agent-config.json": "29f077f8f69e250580ede9488fc40dcfc50729b4cb8520879a35e8d9629df9ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-agent-evidence.json": "5fe8407251a38d8f05cd0ee7f22f6d8c8bbacf56c161dd8483b032360e04bdeb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-initial-crit-mode-audit.json": "99ecc766f9a2afcc32b34e95e21f0f5877e8d765a1374030f39cbe0dbd704b5a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-full-tier-wrapper-review.json": "c36f3552d676dc4f0c987dd4adc07a5d9e7af8ec3bacae51a3f18f3d14fc9830",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-event-review.json": "d2560fd04c394de24d3a0af7136ce0abb86970cb35452adacb4351bae9d509bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-ui-review.json": "39a94f782662dd9eb03e1483871970bd2b288a7b97fa6494dc94e70e4694b6ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-ui-raw-verification.json": "3d30a4451b91a9fab79a38afc2cd5c8d82a9a719d23fafb13f3106fd2cc22a60",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-image.json": "df4c3edb709fa68ef38462ef324e3916fedcf4190ce9f6731f1af9f1f00610a0",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "8514ef221424cb1b3e75d6f021e1901859696e673a6221ec6db30fbb5e2fac7b",
+      "Game Info/releases/1.13.X/blessings/weapons/README.md": "5774e66bad898428e89735d77007fe943c40ef6c8794c152b6afd5159e9d5794",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "f3853b63a8578275ee6f48df0639fb7013c40ed61ca13b99ed15da4f2daa3332",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "558375a41ec64d06aca15cb30f1aa6700f04495d78b97c945a303cd57575cfcb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "6cad792bf81cce98ed742d645b8736b8ccb5b464e94c0287391875527454328b"
+    },
+    "model": "gpt-6-luna"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "scattershot",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_148.png",
+      "attachment": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5973150265",
+      "acquired_date": "2026-10-04",
+      "sha256": "32e56582217ed1448bb919577393da77837593b6e0f3d8e612e65de6c7bfda5c",
+      "content_type": "image/png",
+      "size": 4671,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "散彈祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "primary_visual_review": "Sol inspected the 128px original PNG through a dark-background QA enlargement: intact three skulls, horizontal bar and circular reticle, no clipping; original attachment unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 20,
+      "rows": 327,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 91,
+      "source_files": 38,
+      "bindings": 339,
+      "variants": 178,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 20,
+      "source_object_cache": {
+        "cache_hits": 38,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 23,
+      "local_references": 598,
+      "remote_references": 342,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 5,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-commit-completeness-guard-full-scan.json",
+        "sha256": "276ab672c4b14457cabc29592878ed271e6ba63e808bd5c736a3ee081a9af21b",
+        "trigger": "desperado-commit-completeness-guard"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 120,
+    "not_started_name_groups": 120,
+    "partial_name_groups": 0,
+    "remaining_variants": 427,
+    "remaining_bindings": 846,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6cad792bf81cce98ed742d645b8736b8ccb5b464e94c0287391875527454328b"
+  },
+  "previous_local_commit": "a905407a5e9bf585746e469d4cf3fadb5076b187",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "root_agent_input": {
+      "config_sha256": "29f077f8f69e250580ede9488fc40dcfc50729b4cb8520879a35e8d9629df9ce",
+      "evidence_sha256": "5fe8407251a38d8f05cd0ee7f22f6d8c8bbacf56c161dd8483b032360e04bdeb"
+    },
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-full-tier-wrapper-review.json",
+        "sha256": "c36f3552d676dc4f0c987dd4adc07a5d9e7af8ec3bacae51a3f18f3d14fc9830"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-event-review.json",
+        "sha256": "d2560fd04c394de24d3a0af7136ce0abb86970cb35452adacb4351bae9d509bc"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-ui-review.json",
+        "sha256": "39a94f782662dd9eb03e1483871970bd2b288a7b97fa6494dc94e70e4694b6ad"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-initial-crit-mode-audit.json",
+        "sha256": "99ecc766f9a2afcc32b34e95e21f0f5877e8d765a1374030f39cbe0dbd704b5a"
+      }
+    ],
+    "examples_verified": 7,
+    "own_complete_variant_count": 5,
+    "actual_bound_mark_count": 9,
+    "nonauto_pellet_actions_verified": 24,
+    "special_and_switch_scope": "Old layers are used by the initial shot critical check; queued pellet action start then clears, including events from another wielded weapon. Afterwards the new shell U>1 builds min(U,5) layers.",
+    "root_corrections": "Different targets count once; U1 adds0, not1. Old five layers do not carry into the next hit result. Exact RAW shotgunP2M1 is 十字星 Mk XI. RAW name is Scattershot, not the internal localization key.",
+    "final_peer_corrections": "Mode effect summary now uses exact RAW 十字星 Mk XI everywhere. Formula S explicitly means the count after the current action-start clear and before on_shoot adds the new count.",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-extension-draft.json",
+      "sha256": "5ff612a674ff3c0f530841dfdb78f74d8a0a2803572b8845b1a7b47d12321054"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 9,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/scattershot-primary-ui-review.json",
+      "sha256": "39a94f782662dd9eb03e1483871970bd2b288a7b97fa6494dc94e70e4694b6ad"
+    },
+    "bindings": [
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m1",
+          "loc_weapon_pattern_shotgun_p1_m1",
+          "loc_weapon_mark_shotgun_p1_m1"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+        "name_en": "Combat Shotgun Zarona Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 950,
+        "append_line": 952
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m2",
+          "loc_weapon_pattern_shotgun_p1_m2",
+          "loc_weapon_mark_shotgun_p1_m2"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 阿格里皮娜 Mk VII",
+        "name_en": "Combat Shotgun Agripinaa Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "ukeys_line": 962,
+        "append_line": 964
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m3",
+          "loc_weapon_pattern_shotgun_p1_m3",
+          "loc_weapon_mark_shotgun_p1_m3"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 奧克塔蘭 Mk IX",
+        "name_en": "Combat Shotgun Accatran Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "ukeys_line": 964,
+        "append_line": 966
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m1",
+          "loc_weapon_pattern_shotgun_p2_m1",
+          "loc_weapon_mark_shotgun_p2_m1"
+        ],
+        "name_zh_tw": "雙管霰彈槍 十字星 Mk XI",
+        "name_en": "Double-Barrelled Shotgun Crucis Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1110,
+        "append_line": 1112
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m3",
+          "loc_weapon_pattern_shotgun_p2_m3",
+          "loc_weapon_mark_shotgun_p2_m3"
+        ],
+        "name_zh_tw": "雙管霰彈槍 克魯克 Mk IV",
+        "name_en": "Double-Barrelled Shotgun Krourk Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1103,
+        "append_line": 1105
+      },
+      {
+        "weapon_id": "shotgun_p3",
+        "mark_id": "shotgun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p3_m1",
+          "loc_weapon_pattern_shotgun_p3_m1",
+          "loc_weapon_mark_shotgun_p3_m1"
+        ],
+        "name_zh_tw": "獵人霰彈槍 奧克塔蘭 Mk III",
+        "name_en": "Huntsman's Shotgun Accatran Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 986,
+        "append_line": 988
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m1",
+          "loc_weapon_pattern_shotgun_p4_m1",
+          "loc_weapon_mark_shotgun_p4_m1"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk III",
+        "name_en": "Exterminator Shotgun Exaction Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1076,
+        "append_line": 1078
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m2",
+          "loc_weapon_pattern_shotgun_p4_m2",
+          "loc_weapon_mark_shotgun_p4_m2"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk VIII",
+        "name_en": "Exterminator Shotgun Exaction Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1064,
+        "append_line": 1066
+      },
+      {
+        "weapon_id": "shotpistol_shield_p1",
+        "mark_id": "shotpistol_shield_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "loc_ids": [
+          "loc_weapon_family_shotpistol_shield_p1_m1",
+          "loc_weapon_pattern_shotpistol_shield_p1_m1",
+          "loc_weapon_mark_shotpistol_shield_p1_m1"
+        ],
+        "name_zh_tw": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+        "name_en": "Subductor Shotpistol and Riot Shield Judgement Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1533,
+        "append_line": 1535
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 5,
+    "bound_variants": 5,
+    "bound_bindings": 9,
+    "exact_metadata_outside": [],
+    "exact_unresolved_candidates": [],
+    "exact_unbound_definition_candidates": [],
+    "exact_outside_candidates": [],
+    "partition_basis": {
+      "exact_name_key_inventory_bindings": 9,
+      "remaining_state": "not_started",
+      "remaining_variants": 5,
+      "definitions_not_bound_dict_exact_id_or_suffix_matches": 0,
+      "unresolved_exact_key_or_id_matches": 0,
+      "definitions_outside_intersection_exact_id_or_key_matches": 0
+    },
+    "status": "Current exact bound intersection is 5 variants / 9 bindings; no exact outside or unresolved candidate was found in the queried local inventory partitions."
+  }
+}

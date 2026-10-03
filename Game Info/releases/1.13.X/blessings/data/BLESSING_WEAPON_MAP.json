@@ -623,6 +623,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
       "effect": "持用這把手槍連續命中遠程弱點時，每次射擊結果增加一層一般爆擊率；最高五層，下一次非弱點射擊結果立即重設。"
+    },
+    {
+      "id": "scattershot",
+      "name_zh_tw": "散彈",
+      "name_en": "Scattershot",
+      "name_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot",
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "name_hash": "83faa1f6",
+      "description_hash": "f8a4f721",
+      "page": "entries/散彈/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "effect": "單發散彈命中至少兩個不同可受傷目標後，按目標數增加遠程爆擊率層數，最多五層。"
     }
   ],
   "weapons": [
@@ -2768,6 +2781,42 @@
             "weapon_family_display_name": "loc_weapon_family_autogun_p3_m3",
             "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p3_m3",
             "weapon_mark_display_name": "loc_weapon_mark_autogun_p3_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shotgun_p4",
+      "name_zh_tw": "滅絕者霰彈槍",
+      "name_en": "Exterminator Shotgun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_shotgun_p4_m1",
+      "page": "weapons/ranged/滅絕者霰彈槍/README.md",
+      "marks": [
+        {
+          "id": "shotgun_p4_m1",
+          "item": "content/items/weapons/player/ranged/shotgun_p4_m1",
+          "name": "滅絕者霰彈槍 鐵腕 Mk III",
+          "name_en": "Exterminator Shotgun Exaction Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+          "trait_category": "bespoke_shotgun_p4",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p4_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p4_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p4_m1"
+          }
+        },
+        {
+          "id": "shotgun_p4_m2",
+          "item": "content/items/weapons/player/ranged/shotgun_p4_m2",
+          "name": "滅絕者霰彈槍 鐵腕 Mk VIII",
+          "name_en": "Exterminator Shotgun Exaction Mk VIII",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+          "trait_category": "bespoke_shotgun_p4",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p4_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p4_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p4_m2"
           }
         }
       ]
@@ -11596,6 +11645,415 @@
       "icon": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_110",
       "effect": "布蘭克斯 MkVI 與 MKII：普通、瞄準及化學模式射擊依每發弱點結果加一層，I–IV 每層 +2/+3/+4/+5 個百分點，最多五層。下一個非弱點射擊結果重設；無時間衰減。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/散彈/weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "tier_values_per_effective_stack": {
+          "I": 0.06,
+          "II": 0.08,
+          "III": 0.1,
+          "IV": 0.12
+        },
+        "percentage_points_per_stack": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "max_effective_stacks": 5,
+        "maximum_bonus": {
+          "I": 0.3,
+          "II": 0.4,
+          "III": 0.5,
+          "IV": 0.6
+        },
+        "mode_summary": "戰鬥霰彈槍 P1 腰射、裝填接續射擊與瞄準射擊皆為散彈命中；各 mark 特殊彈種沿用同一散彈事件。",
+        "marks": [
+          {
+            "mark_id": "shotgun_p1_m1",
+            "name_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+            "name_en": "Combat Shotgun Zarona Mk VI",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p1_m1",
+              "loc_weapon_pattern_shotgun_p1_m1",
+              "loc_weapon_mark_shotgun_p1_m1"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 14,
+            "ukeys_line": 950,
+            "append_line": 952
+          },
+          {
+            "mark_id": "shotgun_p1_m2",
+            "name_zh_tw": "戰鬥霰彈槍 阿格里皮娜 Mk VII",
+            "name_en": "Combat Shotgun Agripinaa Mk VII",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p1_m2",
+              "loc_weapon_pattern_shotgun_p1_m2",
+              "loc_weapon_mark_shotgun_p1_m2"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 14,
+            "ukeys_line": 962,
+            "append_line": 964
+          },
+          {
+            "mark_id": "shotgun_p1_m3",
+            "name_zh_tw": "戰鬥霰彈槍 奧克塔蘭 Mk IX",
+            "name_en": "Combat Shotgun Accatran Mk IX",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p1_m3",
+              "loc_weapon_pattern_shotgun_p1_m3",
+              "loc_weapon_mark_shotgun_p1_m3"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 14,
+            "ukeys_line": 964,
+            "append_line": 966
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 309,
+        "end_line": 358
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "description_hash": "f8a4f721",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "effect": "戰鬥霰彈槍 P1 腰射、裝填接續射擊與瞄準射擊皆為散彈命中；各 mark 特殊彈種沿用同一散彈事件。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/散彈/weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+        "tier_values_per_effective_stack": {
+          "I": 0.06,
+          "II": 0.08,
+          "III": 0.1,
+          "IV": 0.12
+        },
+        "percentage_points_per_stack": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "max_effective_stacks": 5,
+        "maximum_bonus": {
+          "I": 0.3,
+          "II": 0.4,
+          "III": 0.5,
+          "IV": 0.6
+        },
+        "mode_summary": "雙管霰彈槍 P2 射擊皆為散彈命中；十字星 Mk XI 瞄準模式可用特殊雙發殼，克魯克 Mk IV 腰射可選雙管殼、瞄準仍單發殼，一次射擊合併一次命中計數。兩種型號的槍托近戰不觸發。",
+        "marks": [
+          {
+            "mark_id": "shotgun_p2_m1",
+            "name_zh_tw": "雙管霰彈槍 十字星 Mk XI",
+            "name_en": "Double-Barrelled Shotgun Crucis Mk XI",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p2_m1",
+              "loc_weapon_pattern_shotgun_p2_m1",
+              "loc_weapon_mark_shotgun_p2_m1"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p2/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 17,
+            "ukeys_line": 1110,
+            "append_line": 1112
+          },
+          {
+            "mark_id": "shotgun_p2_m3",
+            "name_zh_tw": "雙管霰彈槍 克魯克 Mk IV",
+            "name_en": "Double-Barrelled Shotgun Krourk Mk IV",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p2_m3",
+              "loc_weapon_pattern_shotgun_p2_m3",
+              "loc_weapon_mark_shotgun_p2_m3"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p2/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 17,
+            "ukeys_line": 1103,
+            "append_line": 1105
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 348,
+        "end_line": 397
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "description_hash": "f8a4f721",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "effect": "雙管霰彈槍 P2 射擊皆為散彈命中；十字星 Mk XI 瞄準模式可用特殊雙發殼，克魯克 Mk IV 腰射可選雙管殼、瞄準仍單發殼，一次射擊合併一次命中計數。兩種型號的槍托近戰不觸發。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/散彈/weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+        "tier_values_per_effective_stack": {
+          "I": 0.06,
+          "II": 0.08,
+          "III": 0.1,
+          "IV": 0.12
+        },
+        "percentage_points_per_stack": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "max_effective_stacks": 5,
+        "maximum_bonus": {
+          "I": 0.3,
+          "II": 0.4,
+          "III": 0.5,
+          "IV": 0.6
+        },
+        "mode_summary": "獵人霰彈槍的腰射、裝填接續射擊、瞄準射擊為散彈命中；特殊功能是模式切換，不本身造成命中事件。",
+        "marks": [
+          {
+            "mark_id": "shotgun_p3_m1",
+            "name_zh_tw": "獵人霰彈槍 奧克塔蘭 Mk III",
+            "name_en": "Huntsman's Shotgun Accatran Mk III",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p3_m1",
+              "loc_weapon_pattern_shotgun_p3_m1",
+              "loc_weapon_mark_shotgun_p3_m1"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p3/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 14,
+            "ukeys_line": 986,
+            "append_line": 988
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 309,
+        "end_line": 358
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "description_hash": "f8a4f721",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "effect": "獵人霰彈槍的腰射、裝填接續射擊、瞄準射擊為散彈命中；特殊功能是模式切換，不本身造成命中事件。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/散彈/weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+        "tier_values_per_effective_stack": {
+          "I": 0.06,
+          "II": 0.08,
+          "III": 0.1,
+          "IV": 0.12
+        },
+        "percentage_points_per_stack": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "max_effective_stacks": 5,
+        "maximum_bonus": {
+          "I": 0.3,
+          "II": 0.4,
+          "III": 0.5,
+          "IV": 0.6
+        },
+        "mode_summary": "滅絕者霰彈槍 Mk III/Mk VIII 的腰射、裝填接續射擊、瞄準射擊都為散彈命中；特殊彈殼仍按一發射擊合併計數。",
+        "marks": [
+          {
+            "mark_id": "shotgun_p4_m1",
+            "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk III",
+            "name_en": "Exterminator Shotgun Exaction Mk III",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p4_m1",
+              "loc_weapon_pattern_shotgun_p4_m1",
+              "loc_weapon_mark_shotgun_p4_m1"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p4/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 15,
+            "ukeys_line": 1076,
+            "append_line": 1078
+          },
+          {
+            "mark_id": "shotgun_p4_m2",
+            "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk VIII",
+            "name_en": "Exterminator Shotgun Exaction Mk VIII",
+            "loc_ids": [
+              "loc_weapon_family_shotgun_p4_m2",
+              "loc_weapon_pattern_shotgun_p4_m2",
+              "loc_weapon_mark_shotgun_p4_m2"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+            "trait_item": "content/items/traits/bespoke_shotgun_p4/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 15,
+            "ukeys_line": 1064,
+            "append_line": 1066
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 309,
+        "end_line": 358
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "description_hash": "f8a4f721",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "effect": "滅絕者霰彈槍 Mk III/Mk VIII 的腰射、裝填接續射擊、瞄準射擊都為散彈命中；特殊彈殼仍按一發射擊合併計數。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "blessing_id": "scattershot",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/散彈/weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot",
+        "tier_values_per_effective_stack": {
+          "I": 0.06,
+          "II": 0.08,
+          "III": 0.1,
+          "IV": 0.12
+        },
+        "percentage_points_per_stack": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "max_effective_stacks": 5,
+        "maximum_bonus": {
+          "I": 0.3,
+          "II": 0.4,
+          "III": 0.5,
+          "IV": 0.6
+        },
+        "mode_summary": "衝覆者霰彈手槍和防暴盾牌的腰射與格擋中射擊都為散彈命中；盾牌近戰不是散彈事件，且加成只影響遠程暴擊率。",
+        "marks": [
+          {
+            "mark_id": "shotpistol_shield_p1_m1",
+            "name_zh_tw": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+            "name_en": "Subductor Shotpistol and Riot Shield Judgement Mk IV",
+            "loc_ids": [
+              "loc_weapon_family_shotpistol_shield_p1_m1",
+              "loc_weapon_pattern_shotpistol_shield_p1_m1",
+              "loc_weapon_mark_shotpistol_shield_p1_m1"
+            ],
+            "template_file": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+            "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/crit_chance_on_hitting_multiple_with_one_shot",
+            "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot",
+            "import_line": 16,
+            "ukeys_line": 1533,
+            "append_line": 1535
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 827,
+        "end_line": 876
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 38,
+        "end_line": 40
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot_desc",
+      "description_hash": "f8a4f721",
+      "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
+      "effect": "衝覆者霰彈手槍和防暴盾牌的腰射與格擋中射擊都為散彈命中；盾牌近戰不是散彈事件，且加成只影響遠程爆擊率。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
     }
   ],
   "bindings": [
@@ -16217,6 +16675,132 @@
         "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
         "import_line": 17,
         "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "scattershot",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/crit_chance_on_hitting_multiple_with_one_shot",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]

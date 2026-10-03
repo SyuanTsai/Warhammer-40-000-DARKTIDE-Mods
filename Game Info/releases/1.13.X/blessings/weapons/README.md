@@ -67,3 +67,4 @@
 | [電能步槍](ranged/電能步槍/README.md)<br>- Galvanic Rifle | 遠程 | 電能步槍 布蘭克斯 Mk CV |
 | [雷鎚](melee/雷鎚/README.md)<br>- Thunder Hammer | 近戰 | 雷鎚 十字星 Mk II、雷鎚 鐵盔 Mk IV |
 | [機動自動槍](ranged/機動自動槍/README.md)<br>- Vigilant Autogun | 遠程 | 機動自動槍 哥倫努 Mk III、機動自動槍 格拉亞 Mk VII、機動自動槍 阿格里皮娜 Mk IX |
+| [滅絕者霰彈槍](ranged/滅絕者霰彈槍/README.md)<br>- Exterminator Shotgun | 遠程 | 滅絕者霰彈槍 鐵腕 Mk III、滅絕者霰彈槍 鐵腕 Mk VIII |
