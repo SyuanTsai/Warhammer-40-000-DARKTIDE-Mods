@@ -74,6 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="Big Boom talent icon"> [Big Boom](#ogryn_increase_explosion_radius) | <ul><li>Increase explosion outer and central high-damage radii by 27.5%; damage values themselves are unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="No Pushover talent icon"> [No Pushover](#ogryn_blocking_reduces_push_cost) | <ul><li>A ready push gains +250% Impact; finishing it consumes the bonus and starts an 8s cooldown, even without an enemy hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="Attention Seeker talent icon"> [Attention Seeker](#ogryn_blocking_ranged_taunts) | <ul><li>Blocking or hitting with a push Taunts the enemy for 8s; Monsters and already-Taunted enemies are excluded.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="For the Lil'Uns talent icon"> [For the Lil'Uns](#ogryn_protect_allies) | <ul><li>Another ally's Toughness break grants +10% Power and 25% Toughness damage reduction for 10s; a downed ally separately grants Revive Speed and Stun immunity.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1166,3 +1167,21 @@
 - **Timing example**: If first Taunted at 0s, pushing the same still-Taunted enemy at 4s does not move the end to 12s. Taunt may end early if you die, become imperceptible to the enemy, or similar conditions apply.
 
 [Details](ogryn_blocking_ranged_taunts.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_protect_allies"></a>
+
+### For the Lil'Uns
+
+<img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="72" height="72" alt="For the Lil'Uns talent icon">
+
+- **Ally Toughness break**: When another ally's Toughness breaks, gain +10% Power and reduce Toughness damage taken by 25% for 10s. Your own Toughness break does not trigger it; there is no additional Coherency range requirement.
+
+- **Duration and cooldown**: Another ally Toughness break while active resets the 10s duration. The 20s cooldown begins after the effect ends. For example, a trigger at 0s without further refresh ends at 10s and can trigger again at 30s.
+
+- **Downed-ally rescue effect**: Another ally being knocked down independently grants +25% Revive Speed and Stun immunity for 10s. Further triggers refresh its duration; this effect is not limited by the 20s cooldown above.
+
+- **Calculation examples**: Power of 500 becomes 550; Toughness damage of 100 at this stage becomes 75. With only +25% Revive Speed, an original 5s revive becomes `5 ÷ 1.25 = 4s`. With another +25% Revive Speed at the same stage, it becomes `5 ÷ 1.5 ≈ 3.33s`.
+
+[Details](ogryn_protect_allies.md) · [Back to index](#talent-index)

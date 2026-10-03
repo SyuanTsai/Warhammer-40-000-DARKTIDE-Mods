@@ -889,6 +889,18 @@ Full raw template and formatting: [source evidence](ogryn_blocking_ranged_taunts
 | Block/push Taunt and duration | Blocking or Pushing Enemies Taunts them for 8s.; `ui / loc_talent_ranged_enemies_taunt_description / a01a7f7f` | on_block / on_push_hit applies taunted_short to attacking_unit / pushed_unit, with duration 8s. [Fixed source and line references](ogryn_blocking_ranged_taunts.md#fixed-source-evidence) | Consistent | The independently read English matches the two trigger categories and duration. |
 | Target exclusions and lifetime | No Monster exception, already-Taunted rule or early-exit condition is stated.; `ui / loc_talent_ranged_enemies_taunt_description / a01a7f7f` | Monsters and units with taunted are excluded. A second push at 4s after the first Taunt at 0s does not extend the end to 12s. Owner death, invisible/unperceivable status or disabling conditions can end Taunt early. [Fixed source and line references](ogryn_blocking_ranged_taunts.md#fixed-source-evidence) | Not covered by the description | These accepted targeting and lifetime details supplement the broad enemy wording. |
 
+
+<a id="ogryn_protect_allies"></a>
+
+## For the Lil'Uns
+
+Full raw template and formatting: [source evidence](ogryn_protect_allies.md#original-english-template-and-reconstruction). Name hash `9fd98f36`. Every row uses `ui / loc_talent_ogryn_protect_allies_desc / 67e1573d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Two ally-triggered effects | On Ally getting Toughness Broken: +10% Strength and +25% Toughness Damage Reduction for 10s, 20s Cooldown. On Ally getting Knocked Down: Stun Immunity and +25% Revive Speed for 10s.; `ui / loc_talent_ogryn_protect_allies_desc / 67e1573d` | Two independent procs exclude yourself and have no Coherency check. Toughness break grants the Power/reduction effect; knockdown grants the revive/immunity effect without that cooldown. [Fixed source and line references](ogryn_protect_allies.md#fixed-source-evidence) | Consistent | The independently read English distinguishes the effects, values and cooldown placement. |
+| Refresh, cooldown start and calculations | No refresh, cooldown-start or calculation formula is stated.; `ui / loc_talent_ogryn_protect_allies_desc / 67e1573d` | Active Toughness-break triggers reset 10s; 20s cooldown starts after expiry (0s trigger → 10s end → 30s ready). Knockdown triggers independently refresh. Power 500 → 550; Toughness damage 100 → 75. Revive 5s ÷ 1.25 = 4s, or ÷1.5 ≈ 3.33s with another same-stage +25%. [Fixed source and line references](ogryn_protect_allies.md#fixed-source-evidence) | Not covered by the description | These accepted timing and isolated calculation details supplement the two English effects. |
+
 ## Comparison totals
 
 The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
