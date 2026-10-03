@@ -1797,3 +1797,6 @@
 
 - Can Opener - 開罐器
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_bayonette`，hash `9011c283`；英文／繁中RAW配對確認。
+
+- Shrapnel - 破片四濺
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_close_explosion_applies_bleed`，hash `151b51b2`；英文／繁中RAW配對確認。

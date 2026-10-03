@@ -488,6 +488,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
       "effect": "持用時爆炸啟動距離降為0；裝備期間爆炸及近距離區半徑增加10%／15%／20%／25%。"
+    },
+    {
+      "id": "shrapnel",
+      "name_zh_tw": "破片四濺",
+      "name_en": "Shrapnel",
+      "name_key": "loc_trait_bespoke_close_explosion_applies_bleed",
+      "description_key": "loc_trait_bespoke_close_explosion_applies_bleed_desc",
+      "name_hash": "151b51b2",
+      "description_hash": "3e470a37",
+      "page": "entries/破片四濺/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
+      "effect": "持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。"
     }
   ],
   "weapons": [
@@ -9284,6 +9297,61 @@
       "icon": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_229",
       "effect": "I–IV爆炸半徑+10%／15%／20%／25%；Mk IV基礎3m／近距離0.75m，Mk VI基礎5m／近距離1.75m。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed",
+      "blessing_id": "shrapnel",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/破片四濺/weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc_by_tier": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "defined_tiers": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "is_item_slot_wielded",
+        "exact_close_damage_profile_gate": "ogryn_thumper_p1_m2_close_instant",
+        "trait_helper_max_stacks": 31,
+        "actual_bleed_max_stacks": 16,
+        "actual_bleed_max_stacks_cap": 16,
+        "bleed_duration_seconds": 1.5,
+        "bleed_tick_interval_seconds": 0.5,
+        "bleed_refresh_duration_on_stack": true,
+        "bleed_interval_stack_removal": true,
+        "bleed_power_by_stacks": {
+          "4": 78.125,
+          "16": 500
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 292,
+        "end_line": 330
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 70
+      },
+      "description_key": "loc_trait_bespoke_close_explosion_applies_bleed_desc",
+      "description_hash": "3e470a37",
+      "icon": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_219",
+      "effect": "持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。"
     }
   ],
   "bindings": [
@@ -12925,6 +12993,20 @@
         "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
         "import_line": 16,
         "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "shrapnel",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/close_explosion_applies_bleed",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
       }
     }
   ]

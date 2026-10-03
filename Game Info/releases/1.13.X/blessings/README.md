@@ -44,5 +44,6 @@
 | <img src="https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8" width="32" height="32" alt="大口徑彈藥祝福圖示"> [大口徑彈藥](entries/大口徑彈藥/README.md)<br>- Man-Stopper<br>[完整說明](entries/大口徑彈藥/README.md) | <ul><li>持用時遠程衝擊提高10%／15%／20%／25%；暴擊使該次傷害順劈預算為無限，仍受護甲與碰撞規則限制。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545" width="32" height="32" alt="激射祝福圖示"> [激射](entries/激射/README.md)<br>- Hot-Shot<br>[完整說明](entries/激射/README.md) | <ul><li>弱點命中減少順劈質量消耗：電能步槍20%／25%／30%／35%；冥潮鐳射槍與針彈手槍20%／30%／40%／50%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a" width="32" height="32" alt="致命零距離祝福圖示"> [致命零距離](entries/致命零距離/README.md)<br>- Lethal Proximity<br>[完整說明](entries/致命零距離/README.md) | <ul><li>持用時爆炸啟動距離降為0；裝備期間爆炸及近距離區半徑增加10%／15%／20%／25%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83" width="32" height="32" alt="破片四濺祝福圖示"> [破片四濺](entries/破片四濺/README.md)<br>- Shrapnel<br>[完整說明](entries/破片四濺/README.md) | <ul><li>持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

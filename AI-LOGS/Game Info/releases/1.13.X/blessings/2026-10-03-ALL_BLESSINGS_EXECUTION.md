@@ -161,3 +161,7 @@
 - 激射本機Commit：`4df05a74afc59f69307be3b91262f82d7688513c`。
 
 - [致命零距離](2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- 致命零距離本機Commit：`aaba01e09bf617bb9dd6b823709b1b73725ca2ee`。
+
+- [破片四濺](2026-10-03-SHRAPNEL_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
