@@ -516,6 +516,22 @@
         "Each own formatter find_value_type, full base wrapper and full tier override path must be independently checked; formatter type or suffix cannot be inferred from a similar trait."
       ],
       "reuse_rule": "Reuse same fixed-SHA helper only after checking own formatter configuration and relevant values."
+    },
+    {
+      "id": "explosion-arming-distance-multiplier",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/action/ranged_action.lua",
+      "start": 31,
+      "end": 43,
+      "content_sha256": "12ac6cbd55b96179f9605ef6c3b8ec859208d4eaa7d48a858ea3ec57a2930488",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L31-L43",
+      "review": "Sol directly reviewed arming-distance helper; supplementary delta peer accepted actual multiplication.",
+      "conclusion": "Configured distance is multiplied by explosion_arming_distance_multiplier, default1.",
+      "applicability": [
+        "Own hitscan damage_config must supply explosion_arming_distance; own consumers and actual explosion configurations still independently checked."
+      ],
+      "reuse_rule": "Reuse helper for same immutable SHA after checking own config/caller."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",

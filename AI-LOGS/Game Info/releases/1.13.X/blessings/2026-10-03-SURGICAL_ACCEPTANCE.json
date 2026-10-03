@@ -1235,6 +1235,123 @@
         "bindings": 325
       },
       "faster_enabled": false
+    },
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "d8a0dd3b5f2e5b6220b6762dbcc653907566f80a",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+        "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+        "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "只複核起爆距離倍率補充涉及的三頁差異與新增固定來源引用；未重審其他已接受 Surgical 內容。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+          "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+        },
+        "source_block": {
+          "path": "scripts/utilities/action/ranged_action.lua",
+          "start": 31,
+          "end": 43,
+          "sha256": "12ac6cbd55b96179f9605ef6c3b8ec859208d4eaa7d48a858ea3ec57a2930488",
+          "conclusion": "M1/M2的5/3公尺是基礎距離；實際距離乘上 stat_buffs.explosion_arming_distance_multiplier，未設定時預設1。"
+        },
+        "findings": [
+          "SOURCE_INDEX 新增的唯一精確引用指向固定SHA ranged_action.lua 31–43，與倍率計算區塊相符。",
+          "三頁均把 M1 5公尺與 M2 3公尺描述為基礎起爆距離，並明示實際值還會套用其他來源的倍率；未把5/3公尺誤寫成所有情況的固定最終距離。",
+          "既有直接射擊可爆擊、生成爆炸固定非爆擊的說明未改變；此次增量不影響非爆擊結論，也沒有新增穿透出口爆炸主張。"
+        ],
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/SOURCE_INDEX.md": "9d0ffa807ea57b5500f147c22bf09ba84c963d957e92832e07f6397cba739d87",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md": "ade9151d82039f49c3587fd7121aeaf663346098229956620df3465448d68c46",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md": "64d15000fe95518670cb7e5e3907e9e0448fc9218386a7b35cb42700ffca388a",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+        },
+        "receipt_sha256": "070f2fa80b4da766a4ab05117f57fec117fc8a53cb431d51bd5985a33f23ffea"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json",
+          "sha256": "3a254f5aeed15c3a35f46f0ab6f9f6a3aa71a7650bd2295892b66d05c467c2b4",
+          "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+          "original_file_sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json",
+          "sha256": "791e8107f488d5c0209fcb5c87bb62a6911715a0e6090024e1398b0a7674fd36",
+          "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+          "original_file_sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json",
+          "sha256": "dcb04e47ae4d7543f27cc5bad3f336a4e86cb9f4b2821a959098883fdab01725",
+          "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+          "original_file_sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json",
+          "sha256": "df81d2f99c506e54a507942ce71b0740f91e3054a4a484835fb6ee92533a84a5",
+          "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+          "original_file_sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json",
+          "sha256": "df36cd4fc96d2c182d341add82f3717baf31105658913304bbf4dfe47baabbf5",
+          "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+          "original_file_sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 115,
+          "source_files": 57,
+          "bindings": 326,
+          "variants": 170,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 3,
+          "source_object_cache": {
+            "cache_hits": 57,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 3,
+          "tables": 3,
+          "rows": 95,
+          "lists": 7,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 4,
+          "local_references": 71,
+          "remote_references": 131,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 44,
+        "variants": 170,
+        "bindings": 326
+      },
+      "faster_enabled": false
     }
   ]
 }

@@ -203,3 +203,5 @@
 - 第3輪三項已Commit後完整掃描通過：surgical (`b31ee4731a3170353d67e91f5224d6ec243af36f`)、crucian-roulette (`1435643a67cbd666ef552af0bc2c9f4c60b5e5a0`)、surgical (`d8b636e9211d16c724fc5fb90edbb720ca1a8933`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-003-full-scan.json`／SHA-256 `8fdd7aadb0d21118a5700ed71e4eac5973ffddd2518de31f8e8c688858df4c8c`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [粉碎（Pulverise）](2026-10-03-PULVERISE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 2026-10-04 精確打擊起爆距離補充：主控新查明基礎5／3公尺還乘其他來源倍率，Luna/max只複核3檔差異；直接射擊及生成爆炸的爆擊結論不變。已加入固定SHA共通證據快取，保留既有tier、RAW、UI與5圖驗收，來源／格式／全域170變體326綁定及精確分割通過，獨立本機Commit。主控與同儕收據見同項驗收的 supplemental_reviews。

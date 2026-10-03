@@ -37,6 +37,7 @@
 | bolter_hitscan_templates.lua 42–72 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_hitscan_templates.lua#L42-L72) |
 | boltpistol_hitscan_templates.lua 11–41 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L11-L41) |
 | boltpistol_hitscan_templates.lua 42–72 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L42-L72) |
+| 起爆距離基礎值與倍率 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L31-L43) |
 | 擊殺／停止爆炸條件與非爆擊參數 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L86-L139) |
 | hit_scan.lua 226–226 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L226) |
 | hit_scan.lua 245–248 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L245-L248) |
@@ -64,7 +65,7 @@
 
 - 一般爆擊判定將最終機率四捨五入到兩位小數，使用偽隨機分布；強制爆擊或禁止爆擊的攻擊按各自覆寫規則處理，自動連射可以沿用同一輪已判定的狀態。
 
-- 矛頭爆矢槍與爆彈手槍的實際 M1／M2 hitscan 各自設定擊殺／停止與穿透停止爆炸，沒有設定穿透出口爆炸。直接命中可沿用本次爆擊結果；另行生成的爆炸傳入 `is_critical_strike=false`。命中質量耗盡爆炸另受伺服器、起爆距離與耗盡條件控制，M1 起爆距離 5 公尺、M2 為 3 公尺。磷光手槍的 impact 背爆同樣固定傳入非爆擊參數。
+- 矛頭爆矢槍與爆彈手槍的實際 M1／M2 hitscan 各自設定擊殺／停止與穿透停止爆炸，沒有設定穿透出口爆炸。直接命中可沿用本次爆擊結果；另行生成的爆炸傳入 `is_critical_strike=false`。命中質量耗盡爆炸另受伺服器、起爆距離與耗盡條件控制，M1 基礎起爆距離 5 公尺、M2 為 3 公尺；實際起爆距離再乘上其他來源的起爆距離倍率。磷光手槍的 impact 背爆同樣固定傳入非爆擊參數。
 
 ## 圖示
 

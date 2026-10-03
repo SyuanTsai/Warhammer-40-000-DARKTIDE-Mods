@@ -17,7 +17,7 @@
 
 - **爆彈手槍 戈德溫–布蘭克斯 Mk VI**：[射擊](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L211)、[射擊](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L293)、[特殊近戰並退出瞄準](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L466)。
 
-- 直接射擊可爆擊；另行生成的擊殺／停止及穿透停止爆炸固定為非爆擊。M1 起爆距離為 5 公尺、M2 為 3 公尺；完整條件見[爆炸適用限制來源](SOURCE_INDEX.md#爆炸適用限制來源)。
+- 直接射擊可爆擊；另行生成的擊殺／停止及穿透停止爆炸固定為非爆擊。M1 基礎起爆距離為 5 公尺、M2 為 3 公尺，實際距離還會套用其他來源的倍率；完整條件見[爆炸適用限制來源](SOURCE_INDEX.md#爆炸適用限制來源)。
 
 - 實際射擊接線：[boltpistol_p1_m1 action_shoot_hip](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua#L254)、[boltpistol_p1_m1 action_shoot_zoomed](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua#L338)、[boltpistol_p1_m2 action_shoot_hip](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L254)、[boltpistol_p1_m2 action_shoot_zoomed](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L338)。
 
