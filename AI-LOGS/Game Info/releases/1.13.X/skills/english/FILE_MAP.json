@@ -5737,7 +5737,8 @@
         "veteran_hits_cause_bleed",
         "veteran_continous_hits_apply_rending",
         "veteran_replenish_toughness_outside_melee",
-        "veteran_bonus_crit_chance_on_ammo"
+        "veteran_bonus_crit_chance_on_ammo",
+        "veteran_ranged_power_out_of_melee"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5815,7 +5816,8 @@
         "veteran_hits_cause_bleed",
         "veteran_continous_hits_apply_rending",
         "veteran_replenish_toughness_outside_melee",
-        "veteran_bonus_crit_chance_on_ammo"
+        "veteran_bonus_crit_chance_on_ammo",
+        "veteran_ranged_power_out_of_melee"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5893,7 +5895,8 @@
         "veteran_hits_cause_bleed",
         "veteran_continous_hits_apply_rending",
         "veteran_replenish_toughness_outside_melee",
-        "veteran_bonus_crit_chance_on_ammo"
+        "veteran_bonus_crit_chance_on_ammo",
+        "veteran_ranged_power_out_of_melee"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5971,7 +5974,8 @@
         "veteran_hits_cause_bleed",
         "veteran_continous_hits_apply_rending",
         "veteran_replenish_toughness_outside_melee",
-        "veteran_bonus_crit_chance_on_ammo"
+        "veteran_bonus_crit_chance_on_ammo",
+        "veteran_ranged_power_out_of_melee"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7163,9 +7167,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0a3383f03d101d88049ead3d99dad8ae06cf70df",
       "chinese_sha256": "e505bc0fb04f137578b76ec691cb5ce9fed05fcca191859a55336979afeebaa4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_ranged_power_out_of_melee"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_reduce_swap_time.md",
@@ -9040,7 +9059,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_bonus_crit_chance_on_ammo.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_bonus_crit_chance_on_ammo.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_bonus_crit_chance_on_ammo.md",
+      "commit": "f6462c5bbf2533e1f02705cc555d248750bb0e6e"
+    },
+    {
+      "id": "veteran_ranged_power_out_of_melee",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ranged_power_out_of_melee.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ranged_power_out_of_melee.md"
     }
   ],
   "pending_chinese_corrections": [

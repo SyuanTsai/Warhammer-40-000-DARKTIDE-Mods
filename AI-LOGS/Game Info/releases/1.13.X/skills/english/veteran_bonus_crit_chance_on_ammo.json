@@ -111,5 +111,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/opening-salvo-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_bonus_crit_chance_on_ammo.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_bonus_crit_chance_on_ammo.md",
+  "commit": "f6462c5bbf2533e1f02705cc555d248750bb0e6e"
 }

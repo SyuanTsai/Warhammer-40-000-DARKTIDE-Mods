@@ -1,0 +1,130 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+15% Base Ranged Damage when you have avoided Melee Attacks for 8s.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Kill Zone dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:1530-1560, English placeholder display settings only"
+  ],
+  "reused_evidence": [
+    "Accepted received-melee-hit timer, strict >8-second threshold, persistence and reset behavior",
+    "Accepted shared event restrictions, no positive-damage requirement and unconfirmed blocking/dodging call paths",
+    "Accepted additive ranged damage stage, classifications and complete 100→115 / 125→140 examples",
+    "Accepted initialization and fixed update ordering",
+    "Accepted percentage/number formatting and buff lookup",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 4726 bytes, SHA256 52a9ca53b86c95279d44bb47d35df4ea94b268bee43bb59da8129e4e5661bc18",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only text draft checked exact English pairs, confirmed the eight-second phrase is the pre-activation wait and excluded the Chinese duration erratum. It also identified English entry 5056→5058 metadata follow-up. Primary checked missing display fields; final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "waiting_seconds": 8,
+    "ranged_damage_additive_stat": 0.15,
+    "base_damage": 100,
+    "isolated_active_damage": 115,
+    "existing_same_category_bonus": 0.25,
+    "existing_damage": 125,
+    "combined_damage": 140,
+    "relative_stage_gain_with_existing_bonus": 0.12,
+    "melee_hit_time": 100,
+    "equal_boundary_time": 108,
+    "equal_boundary_qualifies": false
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Universal blocked/dodged attack outcomes and exact zero-damage event cases.",
+    "Exact event-to-condition/frame timing, final damage and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/damage-pipeline analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game hit/block/dodge/damage/UI measurements"
+  ],
+  "chinese_metadata_followups": [
+    {
+      "field": "English entry_index in the existing Chinese dossier",
+      "existing": 5056,
+      "exact_export": 5058,
+      "key": "loc_talent_veteran_ranged_power_out_of_melee_new_desc",
+      "hash": "4da1db07",
+      "action": "Follow-up only; Chinese mechanism and metadata are unchanged in this translation commit."
+    }
+  ],
+  "id": "veteran_ranged_power_out_of_melee",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Kill Zone",
+  "name_key": "loc_talent_veteran_ranged_power_out_of_melee",
+  "name_hash": "bb890aa8",
+  "description_key": "loc_talent_veteran_ranged_power_out_of_melee_new_desc",
+  "description_hash": "4da1db07",
+  "raw_template": "{ranged_damage:%s} Base Ranged Damage when you have avoided Melee Attacks for {cooldown:%s}s.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 141,
+        "Explicit contradiction": 7,
+        "Not covered by the description": 182,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 5
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 403,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 54,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/kill-zone-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ranged_power_out_of_melee.md"
+}
