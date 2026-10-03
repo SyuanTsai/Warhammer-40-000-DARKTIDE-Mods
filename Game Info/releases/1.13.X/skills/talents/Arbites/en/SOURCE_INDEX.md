@@ -75,3 +75,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [No Escape](adamant_elite_special_kills_offensive_boost.md) / `adamant_elite_special_kills_offensive_boost` | Passive talent |
 | [Drive them Back](adamant_cleave_after_push.md) / `adamant_cleave_after_push` | Passive talent |
 | [Shield Plates](adamant_shield_plates.md) / `adamant_shield_plates` | Passive talent |
+| [Weight of the Lex](adamant_heavy_attacks_increase_damage.md) / `adamant_heavy_attacks_increase_damage` | Passive talent |
