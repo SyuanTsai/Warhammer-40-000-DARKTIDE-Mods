@@ -163,5 +163,6 @@
     ],
     "primary_verification": "The primary directly read both source ranges and added the citations.",
     "remaining_actionable_defects": 0
-  }
+  },
+  "commit": "77ab8bfc1da7656d92936d0c39afb9edb4c699f2"
 }

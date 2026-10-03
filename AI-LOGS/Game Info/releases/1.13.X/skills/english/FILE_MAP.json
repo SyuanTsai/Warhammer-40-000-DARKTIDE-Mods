@@ -5685,7 +5685,8 @@
       "chinese_sha256": "33bed185ee436c5b2c686c90c9c44161f1098e0ae9a48eec8702994612d1e4d9",
       "status": "partial",
       "accepted_skill_ids": [
-        "veteran_replenish_grenades"
+        "veteran_replenish_grenades",
+        "veteran_increased_weakspot_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5707,7 +5708,8 @@
       "chinese_sha256": "944715a4d73626118f82ea73467a381d47ad44524b7d690e72e2323620639222",
       "status": "partial",
       "accepted_skill_ids": [
-        "veteran_replenish_grenades"
+        "veteran_replenish_grenades",
+        "veteran_increased_weakspot_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5729,7 +5731,8 @@
       "chinese_sha256": "f002fadcbd8e3afb9b47d22ba8eb7ed62d9fe2bfdfdf3c9df0564f26f3592f06",
       "status": "partial",
       "accepted_skill_ids": [
-        "veteran_replenish_grenades"
+        "veteran_replenish_grenades",
+        "veteran_increased_weakspot_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5751,7 +5754,8 @@
       "chinese_sha256": "7ad7c268fe52386b44313061aa63bf865cfabda30d3b694c6adea2518ff6648b",
       "status": "partial",
       "accepted_skill_ids": [
-        "veteran_replenish_grenades"
+        "veteran_replenish_grenades",
+        "veteran_increased_weakspot_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6354,9 +6358,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "154483be8bbe3bebc564beb3d7b22078f3c341e2",
       "chinese_sha256": "5052ddfd798bddb723d7eb833906f77321e607c8264011145ea439d19f9146c1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted",
+      "accepted_skill_ids": [
+        "veteran_increased_weakspot_damage"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_weakspot_power_after_combat_ability.md",
@@ -7675,7 +7690,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_grenades.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_grenades.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_grenades.md",
+      "commit": "77ab8bfc1da7656d92936d0c39afb9edb4c699f2"
+    },
+    {
+      "id": "veteran_increased_weakspot_damage",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_damage.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_damage.md"
     }
   ],
   "pending_chinese_corrections": []

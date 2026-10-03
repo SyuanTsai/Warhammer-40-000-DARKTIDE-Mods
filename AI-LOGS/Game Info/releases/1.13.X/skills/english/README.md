@@ -34,4 +34,6 @@ For later Chinese updates, compare source paths and blobs against `FILE_MAP.json
 
 ## Per-skill records
 
-- [Demolition Stockpile](veteran_replenish_grenades.json): primary direct evidence, exact English template and static reconstruction, independent comparison, real Markdown parse/render, publicly readable existing icon; accepted with the recorded non-core caveats; locate its local commit through the file history.
+- [Demolition Stockpile](veteran_replenish_grenades.json): primary direct evidence, exact English template and static reconstruction, independent comparison, real Markdown parse/render, publicly readable existing icon; accepted with the recorded non-core caveats; local commit `77ab8bfc1da7656d92936d0c39afb9edb4c699f2`.
+
+- [Precision Strikes](veteran_increased_weakspot_damage.json): accepted after direct source reads, exact English comparison, static calculations, Markdown rendering, public icon verification and read-only review; local commit is recoverable through the record's file-history command.
