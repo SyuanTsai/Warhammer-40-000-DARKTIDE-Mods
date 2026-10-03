@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="32" height="32" alt="Serrated Blade talent icon"> [Serrated Blade](#veteran_hits_cause_bleed) | <ul><li>A damaging melee hit applies 2 Bleed stacks to a target that survives the hit.</li><li>Bleed caps at 16 stacks and ticks about every 0.5s; reapplication refreshes a 1.5s timer, after which ticks remove one stack if not reapplied.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="32" height="32" alt="Onslaught talent icon"> [Onslaught](#veteran_continous_hits_apply_rending) | <ul><li>Repeated eligible hits on the same living target add one Brittleness stack each, starting with the second hit.</li><li>Each stack adds 2.5% Rending, up to 16 stacks (40%); new stacks refresh a shared 5-second timer. Other attackers can benefit.</li><li>The final damage gain depends on armor and the attack; 40% Rending is not a universal 40% damage gain.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/19c86987-5e48-4eeb-9385-33697b9d99b0" width="32" height="32" alt="Catch a Breath talent icon"> [Catch a Breath](#veteran_replenish_toughness_outside_melee) | <ul><li>After more than 5 seconds without receiving a melee hit, regenerate 5% of maximum Toughness per second.</li><li>A received melee hit resets the wait; recovery is capped at missing Toughness.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="32" height="32" alt="Opening Salvo talent icon"> [Opening Salvo](#veteran_bonus_crit_chance_on_ammo) | <ul><li>While wielding a ranged weapon with at least 80% of its clip ammunition remaining, gain 10 percentage points of Ranged Critical Hit Chance.</li><li>Reserve ammunition does not affect the threshold; a 30-round clip qualifies at 24 rounds, but not 23.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1092,6 +1093,26 @@ These gains depend on the weapon, target armor and existing modifiers. A 40% Ren
 The percentage uses maximum Toughness, not the missing amount.
 
 [Detailed sources and formulas](veteran_replenish_toughness_outside_melee.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_replenish_toughness_outside_melee) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_bonus_crit_chance_on_ammo"></a>
+
+<img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="72" height="72" alt="Opening Salvo talent icon">
+
+### Opening Salvo
+
+- **With at least 80% of your clip ammunition remaining, gain 10 percentage points of Ranged Critical Hit Chance.**
+- You must be wielding the ranged weapon. Reserve ammunition does not affect the threshold.
+
+**Threshold and critical chance examples**
+
+- For a 30-round clip, `30 × 80% = 24 rounds`: the condition is active at 24 rounds and inactive at 23.
+- With an initial ranged critical chance of 10% and no other changes, the active bonus gives `10% + 10 percentage points = 20%`.
+
+The bonus increases critical chance; it does not guarantee critical hits or a fixed final damage gain. The clip-state example does not specify the order of ammunition consumption and the critical roll during a shot.
+
+[Detailed sources and formulas](veteran_bonus_crit_chance_on_ammo.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_bonus_crit_chance_on_ammo) | [Back to index](#talent-index)
 
 ---
 

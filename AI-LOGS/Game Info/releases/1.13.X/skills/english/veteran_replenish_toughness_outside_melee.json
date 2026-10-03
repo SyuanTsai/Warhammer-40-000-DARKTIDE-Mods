@@ -112,5 +112,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/catch-a-breath-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_outside_melee.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_outside_melee.md",
+  "commit": "3ffc927e1672777f5eb81d37baa976e2cc98dce7"
 }
