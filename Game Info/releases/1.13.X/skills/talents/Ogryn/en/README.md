@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="Heavyweight talent icon"> [Heavyweight](#ogryn_ogryn_killer) | <ul><li>Deal +30% damage to Bulwarks, Crushers, Reapers and Plague Ogryns.</li><li>Take 30% less damage from those enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="Slam talent icon"> [Slam](#ogryn_melee_stagger) | <ul><li>+25% melee Impact; staggering an enemy with a melee hit or push restores 5% Stamina.</li><li>Stamina recovery has a 0.75s cooldown.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="Soften Them Up talent icon"> [Soften Them Up](#ogryn_targets_recieve_damage_taken_increase_debuff) | <ul><li>After your melee attack damages an enemy that survives, it takes +15% damage for 5s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="Too Stubborn to Die talent icon"> [Too Stubborn to Die](#ogryn_toughness_on_low_health) | <ul><li>While below 50% Health, increase eligible Toughness replenishment amounts by 100%.</li></ul> | Talent |
 
 ## Blitz
 
@@ -788,3 +789,19 @@
 - **Damage example**: After the debuff is applied, damage of 100 becomes `100 × (1 + 15%) = 115`. With another +20% at the same damage-taken stage, it becomes 135. The first triggering hit is not recalculated retroactively.
 
 [Details](ogryn_targets_recieve_damage_taken_increase_debuff.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_toughness_on_low_health"></a>
+
+### Too Stubborn to Die
+
+<img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="72" height="72" alt="Too Stubborn to Die talent icon">
+
+- **Condition**: While Health is below 50% of its maximum, Toughness replenishment amounts increase by 100%. The bonus is inactive at exactly 50% and is lost when Health recovers above the threshold.
+
+- **Recovery example**: A base recovery of 15 becomes `15 × (1 + 100%) = 30` with no other modifiers. With an existing +20% at the same stage, recovery rises from 18 to 33. Actual recovery is still capped by missing Toughness.
+
+- **Scope**: Increases recovery amounts that use Toughness replenishment modifiers. It does not generate a recovery by itself or double all natural Coherency regeneration rates.
+
+[Details](ogryn_toughness_on_low_health.md) · [Back to index](#talent-index)
