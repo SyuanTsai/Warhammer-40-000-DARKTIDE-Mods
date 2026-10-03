@@ -105,3 +105,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Big Box of Hurt](ogryn_grenade_box.md) / `ogryn_grenade_box` | Base effect |
 | [Intimidating Presence](ogryn_melee_damage_coherency.md) / `ogryn_melee_damage_coherency` | Base effect |
 | [Loyal Protector](ogryn_helping_hand.md) / `ogryn_helping_hand` | Base effect |
+| [Thick Skin](ogryn_base_tank_passive.md) / `ogryn_base_tank_passive` | Base effect |

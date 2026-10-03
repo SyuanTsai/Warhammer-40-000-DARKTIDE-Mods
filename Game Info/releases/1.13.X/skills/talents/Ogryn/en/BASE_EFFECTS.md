@@ -59,3 +59,19 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Push example**: While rescuing, incoming push speed falls to 10% of its original value. With other conditions unchanged, speed 10 becomes `10 × (1 − 90%) = 1`. This does not grant damage immunity.
 
 [Source evidence and example assumptions](ogryn_helping_hand.md)
+
+---
+
+<a id="ogryn_base_tank_passive"></a>
+
+## Thick Skin
+
+- **Base reduction**: Reduce general damage by 20%, with a further 25% reduction to Toughness damage. Ignoring other modifiers, Health damage 100 becomes 80. Toughness damage passing through both stages becomes `100 × 0.8 × 0.75 = 60`.
+
+- **Dodge protection**: Gain an additional 50% damage reduction while dodging, retained for 0.25s after the dodge ends. Counting only the base 20% and this 50%, damage 100 becomes `100 × 0.8 × 0.5 = 40`.
+
+- **Consecutive dodges**: Starting another dodge within 0.25s of the previous dodge's end makes the two 50% reductions multiply during overlap. With the above base protection alone, general damage 100 becomes `100 × 0.8 × 0.5 × 0.5 = 20`; Toughness damage additionally multiplies by 0.75, giving 15.
+
+- **Movement limits**: Remove the weapon's fixed movement slowdown. Aiming, attack actions and slowdowns from other sources follow their respective effects.
+
+[Source evidence and example assumptions](ogryn_base_tank_passive.md)

@@ -1179,6 +1179,19 @@ Full raw template and formatting: [source evidence](ogryn_helping_hand.md#origin
 | Revive/assist interruption | Being damaged while Reviving or Assisting allies no longer interrupts you.; `ui / loc_talent_bonebreaker_revive_uninterruptible_desc / bdd83157` | ogryn_passive_revive grants uninterruptible during pull_up/remove_net/rescue/revive interactions. [Fixed source and line references](ogryn_helping_hand.md#fixed-source-evidence) | Consistent | The independently read English agrees with rescue-interaction protection. |
 | Push reduction and immunity limits | No push-speed percentage, rescue-speed bonus or damage immunity is stated.; `ui / loc_talent_bonebreaker_revive_uninterruptible_desc / bdd83157` | push_speed_modifier −0.9 reduces incoming push speed 10 →1; it does not speed up pushing enemies. The old +25% revive/assist template is absent. Uninterruptible is not damage immunity or guaranteed immunity to every special disable; those have not been individually tested. [Fixed source and line references](ogryn_helping_hand.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the English. |
 
+
+<a id="ogryn_base_tank_passive"></a>
+
+## Thick Skin (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_base_tank_passive.md#original-english-template-and-reconstruction). Name hash `277672aa`. Every row uses `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base reduction and linger | +25% Toughness Damage Reduction & +20% Damage Resistance; dodge protection persists 0.25s afterwards.; `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54` | damage_taken_multiplier 0.8, toughness_damage_taken_multiplier 0.75 and dodge_linger_duration 0.25. [Fixed source and line references](ogryn_base_tank_passive.md#fixed-source-evidence) | Consistent | The independently read English matches the base values and linger duration. |
+| Additional dodge reduction | While Dodging ... you have a further +40% Damage Resistance.; `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54` | The additional dodge multiplier is 0.5 /50% reduction; display dr instead uses 0.8 ×0.5 =0.4, the remaining general-damage fraction. [Fixed source and line references](ogryn_base_tank_passive.md#fixed-source-evidence) | Explicit contradiction | The English labels the displayed 40% as a further reduction, whereas the verified additional reduction is 50%; the displayed value is a remaining multiplier. |
+| Overlap, movement and calculations | No consecutive-dodge multiplication, weapon slowdown rule or stage-specific examples are stated.; `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54` | Conditional and active proc 0.5 multipliers overlap: general 100 ×0.8 ×0.5 ×0.5 =20, Toughness ×0.75 =15. Base Health 100 →80, Toughness →60; one dodge gives general 40. static_movement_reduction_multiplier 0 removes the fixed weapon slowdown delta, with action/alternate-fire effects independent. Examples isolate these stages. [Fixed source and line references](ogryn_base_tank_passive.md#fixed-source-evidence) | Not covered by the description | These accepted derived examples and movement limits supplement the English. |
+
 ## Comparison totals
 
 The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
