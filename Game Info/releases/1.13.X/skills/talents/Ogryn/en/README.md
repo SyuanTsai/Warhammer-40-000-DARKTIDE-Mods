@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="Pumped Up talent icon"> [Pumped Up](#ogryn_damage_reduction_on_high_stamina) | <ul><li>Gain 12.5% damage reduction while Stamina is strictly above 75% of maximum; no stacks or cooldown.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="Lucky Streak talent icon"> [Lucky Streak](#ogryn_crit_damage_increase) | <ul><li>Add 75% to the additional critical-damage component; the effect on total damage depends on weapon, armour and hit location.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="Frenzied Blows talent icon"> [Frenzied Blows](#ogryn_stacking_attack_speed) | <ul><li>Chained melee hits from the second successful sweep build up to five +2.5% melee Attack Speed stacks for 5s; a miss clears them.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="Beat Them Back talent icon"> [Beat Them Back](#ogryn_melee_damage_after_heavy) | <ul><li>A successful heavy melee sweep grants +15% melee damage for 5s after it finishes; further heavy hits refresh.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1323,3 +1324,19 @@
 - **Speed example**: At full stacks, an Attack-Speed-scaled 1s action becomes `1 ÷ (1 + 5 × 2.5%) ≈ 0.889s`, rather than a direct 12.5% duration reduction to 0.875s.
 
 [Details](ogryn_stacking_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_melee_damage_after_heavy"></a>
+
+### Beat Them Back
+
+<img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="72" height="72" alt="Beat Them Back talent icon">
+
+- **Trigger**: A heavy melee attack hitting at least one enemy grants +15% melee damage after its sweep finishes, lasting 5s. The triggering heavy attack does not retroactively receive the bonus.
+
+- **Stacks and refresh**: Another heavy hit refreshes the duration. Hitting multiple enemies does not increase the percentage; ordinary melee attacks during the active period also benefit.
+
+- **Damage example**: Base damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 15%) = 135`.
+
+[Details](ogryn_melee_damage_after_heavy.md) · [Back to index](#talent-index)

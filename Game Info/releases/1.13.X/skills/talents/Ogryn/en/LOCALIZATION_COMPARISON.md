@@ -997,6 +997,18 @@ Full raw template and formatting: [source evidence](ogryn_stacking_attack_speed.
 | Chained-hit speed bonus | +2.5% Melee Attack Speed on Chained Hit for 5s. Stacks 5 times.; `ui / loc_talent_ogryn_stacking_attack_speed_desc / 2909d3df` | The chain-dependent child grants melee_attack_speed 0.025 per stack, maximum five, duration 5s. [Fixed source and line references](ogryn_stacking_attack_speed.md#fixed-source-evidence) | Consistent | The independently read English matches the chain condition, value, duration and cap. |
 | Chain counting, miss removal and timing | No first-eligible-sweep, per-sweep count, refresh or reciprocal formula is stated.; `ui / loc_talent_ogryn_stacking_attack_speed_desc / 2909d3df` | Successful sweep_finish increments chained; chained >1 adds one stack per sweep even with multiple targets. A miss resets the chain and clears the child. Further hits refresh. Full stacks give 1 ÷ (1 + 5 × 2.5%) ≈0.889s for a scaled 1s action, not 0.875s. [Fixed source and line references](ogryn_stacking_attack_speed.md#fixed-source-evidence) | Not covered by the description | These accepted counting and timing details supplement the chained-hit wording. |
 
+
+<a id="ogryn_melee_damage_after_heavy"></a>
+
+## Beat Them Back
+
+Full raw template and formatting: [source evidence](ogryn_melee_damage_after_heavy.md#original-english-template-and-reconstruction). Name hash `438287c2`. Every row uses `ui / loc_talent_ogryn_melee_damage_after_heavy_desc / ee301680`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Heavy-hit damage bonus | +15% Melee Damage on Successful Heavy Melee Attack. Lasts 5s.; `ui / loc_talent_ogryn_melee_damage_after_heavy_desc / ee301680` | sweep_finish with num_hit_units >0 and is_heavy activates melee_damage 0.15 for 5s. [Fixed source and line references](ogryn_melee_damage_after_heavy.md#fixed-source-evidence) | Consistent | The independently read English matches the heavy-hit condition, bonus and duration. |
+| Activation, refresh and calculation | No retroactive application, multi-target stacking or formula is stated.; `ui / loc_talent_ogryn_melee_damage_after_heavy_desc / ee301680` | Activation follows sweep completion, so the triggering hit is not recalculated. Further heavy hits refresh rather than increase the percentage; ordinary melee attacks also benefit while active. Base 100 becomes 115, or 135 with same-stage +20%. [Fixed source and line references](ogryn_melee_damage_after_heavy.md#fixed-source-evidence) | Not covered by the description | These accepted timing, scope and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 234 listed rules comprise **99 Consistent**, **4 Explicit contradictions**, **124 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

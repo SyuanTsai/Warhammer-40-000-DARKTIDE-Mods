@@ -85,3 +85,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Pumped Up](ogryn_damage_reduction_on_high_stamina.md) / `ogryn_damage_reduction_on_high_stamina` | Talent |
 | [Lucky Streak](ogryn_crit_damage_increase.md) / `ogryn_crit_damage_increase` | Talent |
 | [Frenzied Blows](ogryn_stacking_attack_speed.md) / `ogryn_stacking_attack_speed` | Talent |
+| [Beat Them Back](ogryn_melee_damage_after_heavy.md) / `ogryn_melee_damage_after_heavy` | Talent |
