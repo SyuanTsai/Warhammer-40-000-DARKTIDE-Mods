@@ -7,3 +7,4 @@
 | 祝福 | 機制、公式及精確來源 |
 |---|---|
 | [屠戮者](entries/屠戮者/README.md) | [來源索引](entries/屠戮者/SOURCE_INDEX.md) |
+| [粉碎](entries/粉碎/README.md) | [來源索引](entries/粉碎/SOURCE_INDEX.md) |

@@ -20,6 +20,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80",
       "effect": "近戰揮擊命中敵人後取得一層，每層近戰威力增加2／3／4／5%，最多10層；命中刷新2秒，揮空清空。"
+    },
+    {
+      "id": "shred",
+      "name_zh_tw": "粉碎",
+      "name_en": "Shred",
+      "name_key": "loc_trait_bespoke_chained_hits_increases_crit_chance",
+      "description_key": "loc_trait_bespoke_chained_hits_increases_crit_chance_desc",
+      "name_hash": "39e910d6",
+      "description_hash": "2ba1113e",
+      "page": "entries/粉碎/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "effect": "近戰揮擊命中後每層增加2.5／3／3.5／4個百分點爆擊率，最多5層；命中刷新3.5秒，揮空清空。"
     }
   ],
   "weapons": [
@@ -160,6 +173,74 @@
         "start_line": 11,
         "end_line": 13
       }
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 64,
+        "end_line": 113
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 21
+      }
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p2",
+      "page": "entries/粉碎/weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p2.lua",
+        "start_line": 124,
+        "end_line": 173
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 16
+      }
     }
   ],
   "bindings": [
@@ -239,6 +320,90 @@
       "mark_id": "combataxe_p2_m3",
       "variant_id": "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_power",
       "trait_item": "content/items/traits/bespoke_combataxe_p2/chained_hits_increases_power",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "append_line": 1360
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1452
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "append_line": 1493
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/chained_hits_increases_crit_chance",
       "trait_category": "bespoke_combataxe_p2",
       "available_tiers": null,
       "source": {

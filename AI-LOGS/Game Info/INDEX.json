@@ -666,6 +666,15 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "2026-10-03-shred-acceptance",
+      "date": "2026-10-03",
+      "title": "粉碎逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "storage": "git",
+      "kind": "validation"
     }
   ],
   "pending": [
