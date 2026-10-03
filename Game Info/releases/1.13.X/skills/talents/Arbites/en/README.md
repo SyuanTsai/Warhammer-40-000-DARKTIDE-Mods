@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="Cower, Miscreants! talent icon"> [Cower, Miscreants!](#adamant_damage_vs_suppressed) | <ul><li>Damage against Suppressed enemies increases by 25%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="Justified Measures talent icon"> [Justified Measures](#adamant_stacking_damage) | <ul><li>After an attack hits its first target, gain 2% Damage per stack, up to 5 stacks, lasting 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="Suppression Force talent icon"> [Suppression Force](#adamant_staggered_enemies_deal_less_damage) | <ul><li>Hitting a Staggered enemy with a melee attack or push reduces its Damage by 20% for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="Concussive talent icon"> [Concussive](#adamant_melee_weakspot_hits_count_as_stagger) | <ul><li>Melee Weakspot Hits make the target count as Staggered for 4s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1163,3 +1164,15 @@
 - **Damage example**: With this debuff alone, an enemy's outgoing damage of 100 becomes 100 × (1 − 20%) = 80. This weakens the enemy's output; it does not deal extra damage to the enemy.
 
 [Details](adamant_staggered_enemies_deal_less_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_melee_weakspot_hits_count_as_stagger"></a>
+
+### Concussive
+
+<img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="72" height="72" alt="Concussive talent icon">
+
+- **Behavior**: Melee Weakspot Hits make the target count as Staggered for related talents for 4s; physically knocking it back is not required. Another qualifying hit extends the period in which it counts as Staggered.
+
+- **Synergy example**: With Breaking Dissent's 10% Damage against Staggered enemies, a later qualifying base-100 attack becomes 100 × 1.1 = 110. Concussive alone does not grant damage or force the enemy to recoil.
+
+[Details](adamant_melee_weakspot_hits_count_as_stagger.md) · [Back to index](#talent-index)
