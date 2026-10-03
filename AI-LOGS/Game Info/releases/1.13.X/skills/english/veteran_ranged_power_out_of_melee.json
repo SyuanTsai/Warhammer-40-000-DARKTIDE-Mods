@@ -126,5 +126,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/kill-zone-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ranged_power_out_of_melee.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ranged_power_out_of_melee.md",
+  "commit": "126f9ea284f4558434a22436d5f31a52c9b9bd95"
 }
