@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#veteran_increased_ranged_cleave) | <ul><li>Increase ranged attack cleave capacity by 50%.</li><li>Penetration still depends on the weapon and each target’s resistance; this does not directly increase single-target damage.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="32" height="32" alt="Born Leader talent icon"> [Born Leader](#veteran_allies_in_coherency_share_toughness_gain) | <ul><li>Increase your Coherency radius by 50%.</li><li>When you trigger Toughness recovery, other allies in Coherency each receive 20% of the amount originally requested, with their own modifiers and caps. Shared recovery does not share again.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="32" height="32" alt="Field Improvisation talent icon"> [Field Improvisation](#veteran_better_deployables) | <ul><li>Team Ammo Crates refill eligible Grenades.</li><li>Medi-Packs heal 100% faster, remove eligible Corruption and replenish 1% of maximum Toughness per second. Lost health segments remain lost.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="32" height="32" alt="Covering Fire talent icon"> [Covering Fire](#veteran_replenish_toughness_and_boost_allies) | <ul><li>A ranged kill can restore 15% of maximum Toughness and grant +15% base damage for 6 seconds to one other ally near the victim.</li><li>The initial search radius is 8 metres; a selection defect can choose an ally outside it. The buff refreshes without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1217,6 +1218,30 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - With maximum Toughness 150 and enough missing Toughness, recovery is `150 × 1% = 1.5 Toughness/s`, capped at your maximum. The medical crate must still have reserve and time remaining.
 
 [Detailed sources and formulas](veteran_better_deployables.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_better_deployables) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_replenish_toughness_and_boost_allies"></a>
+
+<img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="72" height="72" alt="Covering Fire talent icon">
+
+### Covering Fire
+
+- **A ranged kill can restore 15% of maximum Toughness to one ally near the victim and grant that ally +15% base damage for 6 seconds.** You cannot receive your own effect.
+- Reapplication refreshes the damage bonus’s duration without stacking.
+- The initial search radius is 8 metres. A selection defect means the final recipient is not guaranteed to be the closest ally or even inside that radius.
+
+**Recovery and damage examples**
+
+- If the only eligible ally is 5 metres from the victim and has maximum Toughness 200, the base recovery is `200 × 15% = 30 Toughness`. If they are missing only 10, actual recovery is capped at 10.
+- Isolating this damage bonus, a starting base-damage value of 100 becomes `100 × 1.15 = 115` for 6 seconds. Other bonuses and later damage calculations affect final hit damage.
+- If selection encounters an ally at 5 metres before an ally at 20 metres, the first squared distance is 25. The next test becomes `20² < 25²`, or `400 < 625`, so the more distant ally can be chosen. Actual traversal order has not been measured in game.
+
+**Game-description errata**
+
+- The stated 8-metre limit is not guaranteed for the final recipient because of the squared-distance selection defect.
+
+[Detailed sources and formulas](veteran_replenish_toughness_and_boost_allies.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_replenish_toughness_and_boost_allies) | [Back to index](#talent-index)
 
 ---
 

@@ -116,5 +116,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/field-improvisation-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_better_deployables.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_better_deployables.md",
+  "commit": "82ff04c11062f83576090ff39013ad3951c35177"
 }
