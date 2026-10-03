@@ -340,3 +340,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Ogryn skills 206–210](ogryn_skills_206_210.json): Don’t Feel a Thing, Great Cleaver, Unstoppable, Impactful and Just Getting Started!. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Ogryn skills 211–215](ogryn_skills_211_215.json): The Best Defence, Smash ’Em!, Lynchpin, Keep Shooting and Furious. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Local handoff](HANDOFF.md): 218 mechanisms committed; FILE_MAP checkpoint 215. Resume item 219, then finish and batch 216–220. No pending translation edits.
