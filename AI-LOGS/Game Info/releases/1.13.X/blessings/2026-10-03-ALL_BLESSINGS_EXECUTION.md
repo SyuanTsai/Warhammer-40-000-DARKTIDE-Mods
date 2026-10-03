@@ -117,3 +117,7 @@
 - 放血者本機 Commit：`8b5f4dd32542bda05b64b25a27b0a86765090c2e`。
 
 - [撕碎](2026-10-03-LACERATE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 撕碎本機 Commit：`2c62ad1f9fefe53d397e897ca8cba812209e1a06`。
+
+- [出血穿透](2026-10-03-PUNCTURE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

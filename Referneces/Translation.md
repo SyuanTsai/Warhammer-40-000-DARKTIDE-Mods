@@ -407,6 +407,7 @@
 - Pinning Fire - 鉗制射擊
 - Run 'n' Gun - Run and Gun - 連跑帶打
 - Puncture - 出血穿透
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_ranged`，hash `312743c2`；英文／繁中RAW配對確認。
 - Lethal Proximity - 致命零距離
 - Point Blank - 近身平射
 - Execution - 處決

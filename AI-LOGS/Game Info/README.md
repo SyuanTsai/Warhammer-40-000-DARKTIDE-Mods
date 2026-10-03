@@ -114,3 +114,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [放血者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLOODLETTER_ACCEPTANCE.json)
 
 - [撕碎全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LACERATE_ACCEPTANCE.json)
+
+- [出血穿透全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNCTURE_ACCEPTANCE.json)

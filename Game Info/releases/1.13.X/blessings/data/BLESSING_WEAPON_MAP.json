@@ -345,6 +345,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
       "effect": "符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。"
+    },
+    {
+      "id": "puncture",
+      "name_zh_tw": "出血穿透",
+      "name_en": "Puncture",
+      "name_key": "loc_trait_bespoke_bleed_on_ranged",
+      "description_key": "loc_trait_bespoke_bleed_on_ranged_desc",
+      "name_hash": "312743c2",
+      "description_hash": "49118e7c",
+      "page": "entries/出血穿透/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
+      "effect": "遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。"
     }
   ],
   "weapons": [
@@ -6305,6 +6318,100 @@
       "icon": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_193",
       "effect": "符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_bleed_on_ranged",
+      "blessing_id": "puncture",
+      "weapon_id": "bolter_p1",
+      "page": "entries/出血穿透/weapon_trait_bespoke_bolter_p1_bleed_on_ranged.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_hit",
+        "proc_condition": "matchingitem + damage>0 + ranged (or count_as_ranged_attack);held at queued processing",
+        "first_target_only": false,
+        "penetration_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 426,
+        "end_line": 466
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 33,
+        "end_line": 35
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_ranged_desc",
+      "description_hash": "49118e7c",
+      "icon": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_227",
+      "effect": "遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_bleed_on_ranged",
+      "blessing_id": "puncture",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/出血穿透/weapon_trait_bespoke_boltpistol_p1_bleed_on_ranged.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_hit",
+        "proc_condition": "matchingitem + damage>0 + ranged (or count_as_ranged_attack);held at queued processing",
+        "first_target_only": false,
+        "penetration_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 349,
+        "end_line": 387
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_ranged_desc",
+      "description_hash": "49118e7c",
+      "icon": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_227",
+      "effect": "遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。"
     }
   ],
   "bindings": [
@@ -8896,6 +9003,62 @@
         "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
         "import_line": 14,
         "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "puncture",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_bleed_on_ranged",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/bleed_on_ranged_hit",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "puncture",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_bleed_on_ranged",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/bleed_on_ranged_hit",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "puncture",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_bleed_on_ranged",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/bleed_on_ranged_hit",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "puncture",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_bleed_on_ranged",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/bleed_on_ranged_hit",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
       }
     }
   ]
