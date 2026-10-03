@@ -15,7 +15,8 @@
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="Ruthless Efficiency talent icon"> [Ruthless Efficiency](#adamant_reload_speed_aura) | <ul><li>You and Allies in Coherency gain an additional 12.5% Reload Speed.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="Breaking Dissent talent icon"> [Breaking Dissent](#adamant_damage_vs_staggered_aura) | <ul><li>You and Allies in Coherency deal 10% more damage to Staggered enemies.</li><li>Isolating this effect, 100 damage becomes 110; it gives no bonus against a target that is not Staggered.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="Break the Line talent icon"> [Break the Line](#adamant_charge) | <ul><li>Step forward and Bash; count as Blocking during the charge, then gain Damage and Impact bonuses for 6s.</li><li>Base cooldown 20s; one charge.</li></ul> | Ability |
-| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="Nuncio-Aquila talent icon"> [Nuncio-Aquila](#adamant_area_buff_drone_improved) | <ul><li>Deploy for 20s in a 7.5m radius; 60s cooldown, one charge.</li><li>The improved version restores 7.5% maximum Toughness per second increases Suppression and Impact, and reduces Recoil; it grants immunity to Stun, Slowdown and Suppression.</li><li>Enemies within range take 15% more damage.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="Nuncio-Aquila talent icon"> [Nuncio-Aquila](#adamant_area_buff_drone_improved) | <ul><li>Deploy for 20s in a 7.5m radius; 60s cooldown, one charge.</li><li>The improved version restores 7.5% maximum Toughness per second, increases Suppression and Impact, and reduces Recoil; it grants immunity to Stun, Slowdown and Suppression.</li><li>Enemies within range take 15% more damage.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="Castigator's Stance talent icon"> [Castigator's Stance](#adamant_stance) | <ul><li>Replenish all Toughness on activation. For 10s, gain 15% Movement Speed and 20% Strength (PowerLevel), and take 70% less damage; cannot Sprint.</li><li>50s cooldown, one charge; damage reduction continues for 2s after the stance ends.</li></ul> | Ability |
 
 ## Blitz
 
@@ -134,3 +135,19 @@
 - **Enemy vulnerability**: Enemies within range take 15% more damage. Isolating this effect with other conditions unchanged, 100 damage becomes `100 × 1.15 = 115 damage`.
 
 [Details](adamant_area_buff_drone_improved.md) · [Back to index](#talent-index)
+
+<a id="adamant_stance"></a>
+
+### Castigator's Stance
+
+<img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="72" height="72" alt="Castigator's Stance talent icon">
+
+- **Activation and replenishment**: Replenish all Toughness on activation. The stance lasts 10s and has a 50s base cooldown.
+
+- **Stance effects**: Gain 15% Movement Speed and 20% Strength (PowerLevel). Damage taken is multiplied by 0.3, a 70% reduction. Weapon-action movement penalties are reduced to zero, but you cannot Sprint.
+
+- **Replenishment and damage example**: Starting at 40/100 Toughness, activation restores `100 − 40 = 60`, bringing Toughness to 100/100. Isolating this ability's damage-taken multiplier, an incoming hit of 100 becomes `100 × 0.3 = 30 damage`. Damage reduction continues for another 2s after the stance ends.
+
+- **Power and movement example**: Isolating this effect, PowerLevel 500 becomes `500 × 1.2 = 600`, and movement speed 5m/s becomes `5 × 1.15 = 5.75m/s`. PowerLevel then enters the separate Damage, Impact and Cleave formulas; these outputs do not all simply increase by 20%.
+
+[Details](adamant_stance.md) · [Back to index](#talent-index)

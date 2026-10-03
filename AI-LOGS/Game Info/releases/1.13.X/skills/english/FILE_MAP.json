@@ -71,7 +71,8 @@
         "adamant_reload_speed_aura",
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
-        "adamant_area_buff_drone_improved"
+        "adamant_area_buff_drone_improved",
+        "adamant_stance"
       ],
       "checks": []
     },
@@ -91,7 +92,8 @@
         "adamant_reload_speed_aura",
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
-        "adamant_area_buff_drone_improved"
+        "adamant_area_buff_drone_improved",
+        "adamant_stance"
       ],
       "checks": []
     },
@@ -111,7 +113,8 @@
         "adamant_reload_speed_aura",
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
-        "adamant_area_buff_drone_improved"
+        "adamant_area_buff_drone_improved",
+        "adamant_stance"
       ],
       "checks": []
     },
@@ -131,7 +134,8 @@
         "adamant_reload_speed_aura",
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
-        "adamant_area_buff_drone_improved"
+        "adamant_area_buff_drone_improved",
+        "adamant_stance"
       ],
       "checks": []
     },
@@ -1038,9 +1042,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4de463d85416cb2a89685b329db5ce6f3519aa3b",
       "chinese_sha256": "fc42a5d1baf2c8f9f5f6fd2ffdd8d278920a4941482457e2a211c09ec1520536",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_dog_bloodlust.md",
@@ -10002,6 +10013,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_area_buff_drone_improved.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_area_buff_drone_improved.md"
+    },
+    {
+      "id": "adamant_stance",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -16,3 +16,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Breaking Dissent](adamant_damage_vs_staggered_aura.md) / `adamant_damage_vs_staggered_aura` | Aura |
 | [Break the Line](adamant_charge.md) / `adamant_charge` | Ability |
 | [Nuncio-Aquila](adamant_area_buff_drone_improved.md) / `adamant_area_buff_drone_improved` | Ability |
+| [Castigator's Stance](adamant_stance.md) / `adamant_stance` | Ability |
