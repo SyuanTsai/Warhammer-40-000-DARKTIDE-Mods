@@ -274,6 +274,18 @@ Full raw template and formatting: [source evidence](psyker_combat_ability_force_
 | Shield role, duration and cooldown | Forward psychic shield blocks Enemy Ranged Attacks; you and Allies can shoot through; duration 17.5s, base cooldown 40s; `ui / loc_talent_psyker_combat_ability_shield_description / 2d4c8bb1` | The accepted player description identifies the forward ranged barrier; wall duration is 17.5 seconds. One charge costs 40 resource and recovers at 1 per second without modifiers. [Fixed source and line references](psyker_combat_ability_force_field.md#fixed-source-evidence) | Consistent | The described role and base time values agree with the accepted account. |
 | Durability, accepted hits and early expiry | No unlimited durability, accepted-hit formula, global damage interval or player-Toughness link stated; `ui / loc_talent_psyker_combat_ability_shield_description / 2d4c8bb1` | Shield durability 20 decreases by 1 per accepted hit, with a global 0.33-second interval. It can exhaust before expiry; after 12 removals 8 remain. Idealized 20th hit at 19×0.33=6.27 seconds is not a measured lifespan. [Fixed source and line references](psyker_combat_ability_force_field.md#fixed-source-evidence) | Not covered by the description | These durability and timing rules supplement the stated barrier duration. |
 
+
+<a id="psyker_shield_extra_charge"></a>
+
+## Bolstered Shield
+
+Full raw template and formatting: [source evidence](psyker_shield_extra_charge.md#original-english-template-and-reconstruction). Name hash `dcc7895a`. Every row uses `ui / loc_talent_psyker_force_field_charges_description / 5d19ee30`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge maximum | Telekine Shield now holds up to 2 charges; `ui / loc_talent_psyker_force_field_charges_description / 5d19ee30` | Base max_charges=1 plus ability_extra_charges=1 gives a maximum of 2 on the improved ability. [Fixed source and line references](psyker_shield_extra_charge.md#fixed-source-evidence) | Consistent | The stated storage maximum agrees with the accepted values. |
+| Shared recovery and shield properties | No parallel recharge, resource formula, durability or duration increase stated; `ui / loc_talent_psyker_force_field_charges_description / 5d19ee30` | A shared resource pool retains partial progress; charges=floor(resource/cost_per_charge). Each charge costs 40 units at base recovery 1 per second: first at 40s, second at 80s from empty, without modifiers. Durability/duration per shield do not increase. [Fixed source and line references](psyker_shield_extra_charge.md#fixed-source-evidence) | Not covered by the description | These resource and timing details supplement the charge increase. |
+
 ## Comparison totals
 
 The 43 listed rules comprise **21 Consistent**, **0 Explicit contradictions**, **20 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

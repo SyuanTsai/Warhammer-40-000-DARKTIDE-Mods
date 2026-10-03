@@ -33,3 +33,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Psykinetic's Aura](psyker_2_tier_3_name_2.md) / `psyker_2_tier_3_name_2` | Ability |
 | [Reality Anchor](psyker_overcharge_reduced_warp_charge.md) / `psyker_overcharge_reduced_warp_charge` | Ability |
 | [Telekine Shield](psyker_combat_ability_force_field.md) / `psyker_combat_ability_force_field` | Ability |
+| [Bolstered Shield](psyker_shield_extra_charge.md) / `psyker_shield_extra_charge` | Ability |

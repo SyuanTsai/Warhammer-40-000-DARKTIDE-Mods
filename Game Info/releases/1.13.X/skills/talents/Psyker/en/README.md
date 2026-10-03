@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="Psykinetic's Aura talent icon"> [Psykinetic's Aura](#psyker_2_tier_3_name_2) | <ul><li>Your Elite or Specialist Kills grant an extra 0.5 seconds of Combat Ability cooldown recovery about once per second for 3 seconds; triggering again refreshes the duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="Reality Anchor talent icon"> [Reality Anchor](#psyker_overcharge_reduced_warp_charge) | <ul><li>While Scrier's Gaze is active, generate 20% less Peril and shorten the time to Quell the same amount by 30%.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="Telekine Shield talent icon"> [Telekine Shield](#psyker_combat_ability_force_field) | <ul><li>Deploy a forward shield that blocks Enemy Ranged Attacks while you and Allies can shoot through. Maximum duration 17.5 seconds; base cooldown 40 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="Bolstered Shield talent icon"> [Bolstered Shield](#psyker_shield_extra_charge) | <ul><li>Telekine Shield gains one extra charge, holding up to 2; charges share the same cooldown-resource pool.</li></ul> | Ability |
 
 ---
 
@@ -368,3 +369,17 @@
 - **Durability example**: After 12 accepted durability removals, `20 − 12 = 8` remain. This counts shield hits and is separate from your Health or Toughness.
 
 [Details](psyker_combat_ability_force_field.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_shield_extra_charge"></a>
+
+### Bolstered Shield
+
+<img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="72" height="72" alt="Bolstered Shield talent icon">
+
+- **Ability modifier**: Telekine Shield gains one extra charge, storing up to 2. The two uses share cooldown progress and restore one charge at a time.
+
+- **Cooldown example**: After both charges are exhausted, recover the first after 40 seconds and the second after another 40, for `40 × 2 = 80` seconds in total. Other cooldown bonuses are calculated separately.
+
+[Details](psyker_shield_extra_charge.md) · [Back to index](#talent-index)
