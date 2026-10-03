@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%; maximum Toughness and Health damage are unchanged by this stat.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="No Hurting Friends! talent icon"> [No Hurting Friends!](#ogryn_damage_taken_by_all_increases_strength_tdr) | <ul><li>Damage to you or Coherency allies builds up to five +2% Strength stacks for 10s; full stacks also grant 15% Toughness damage reduction.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="Get Stuck In talent icon"> [Get Stuck In](#ogryn_ally_movement_boost_on_ability) | <ul><li>Activating your Combat Ability grants you and current Coherency allies +20% Movement Speed and Stun/Suppression immunity for 6s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="Implacable talent icon"> [Implacable](#ogryn_windup_reduces_damage_taken) | <ul><li>Gain 15% damage reduction during melee windup; the bonus ends when charging ends.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1015,3 +1016,17 @@
 - **Speed example**: Starting at 5m/s, with only this bonus, speed becomes `5 × (1 + 20%) = 6m/s`.
 
 [Details](ogryn_ally_movement_boost_on_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_windup_reduces_damage_taken"></a>
+
+### Implacable
+
+<img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="72" height="72" alt="Implacable talent icon">
+
+- **Condition**: Gain 15% damage reduction while charging a heavy melee attack. The reduction ends when charging ends; it does not automatically continue throughout the subsequent swing.
+
+- **Damage-reduction example**: With only this effect, damage of 100 becomes `100 × 0.85 = 85`. With another independent 20% reduction, it becomes `100 × 0.85 × 0.8 = 68`.
+
+[Details](ogryn_windup_reduces_damage_taken.md) · [Back to index](#talent-index)
