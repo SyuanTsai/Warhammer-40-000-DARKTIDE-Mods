@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="Kinetic Flayer talent icon"> [Kinetic Flayer](#psyker_smite_on_hit) | <ul><li>Hits on living Elites, Specialists or Monstrosities trigger Brain Rupture; 12-second cooldown.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a" width="32" height="32" alt="Brain Rupture talent icon"> [Brain Rupture](#psyker_brain_burst_improved) | <ul><li>Charge a single-target attack with 50% more damage than the base Blitz.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="Assail talent icon"> [Assail](#psyker_grenade_throwing_knives) | <ul><li>Throw homing psychic shards, or aim to select a target; holds 10 uses and restores one every 3 seconds.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="Ethereal Shards talent icon"> [Ethereal Shards](#psyker_throwing_knives_piercing) | <ul><li>Assail's damage and impact penetration capacities increase by 50%.</li></ul> | Blitz |
 
 ---
 
@@ -62,3 +63,17 @@
 - **Peril cost**: A normal throw adds 10 percentage points of Peril; an aimed throw adds 25. For example, an existing 40% becomes 50% or 65% respectively. Other Peril-generation modifiers apply separately.
 
 [Details](psyker_grenade_throwing_knives.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_throwing_knives_piercing"></a>
+
+### Ethereal Shards
+
+<img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="72" height="72" alt="Ethereal Shards talent icon">
+
+- **How it works**: Assail's damage and impact penetration capacities increase by 50%, letting it pass through more enemies.
+
+- **Penetration example**: With no other penetration modifiers, a capacity of 2 mass units becomes 2 × 1.5 = 3 mass units. Enemy masses vary, so this does not guarantee one additional enemy hit.
+
+[Details](psyker_throwing_knives_piercing.md) · [Back to index](#talent-index)

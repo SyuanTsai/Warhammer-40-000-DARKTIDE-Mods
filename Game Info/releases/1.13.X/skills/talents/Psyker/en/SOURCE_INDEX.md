@@ -14,3 +14,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kinetic Flayer](psyker_smite_on_hit.md) / `psyker_smite_on_hit` | Blitz |
 | [Brain Rupture](psyker_brain_burst_improved.md) / `psyker_brain_burst_improved` | Blitz |
 | [Assail](psyker_grenade_throwing_knives.md) / `psyker_grenade_throwing_knives` | Blitz |
+| [Ethereal Shards](psyker_throwing_knives_piercing.md) / `psyker_throwing_knives_piercing` | Blitz |
