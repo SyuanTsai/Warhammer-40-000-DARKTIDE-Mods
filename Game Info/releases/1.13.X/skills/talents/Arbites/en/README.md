@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="Kill Order talent icon"> [Kill Order](#adamant_dog_damage_after_ability) | <ul><li>After using your Combat Ability, your Cyber-Mastiff gains 50% more damage for 12s; using the ability again while the effect is active refreshes its duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="Execution Order talent icon"> [Execution Order](#adamant_execution_order) | <ul><li>Automatically marks Elites, Specialists or Bosses within 40m in front of you.</li><li>You or your Cyber-Mastiff killing a marked target replenishes 15% of maximum Toughness and grants damage and attack-speed bonuses for 8s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="Terminus Warrant talent icon"> [Terminus Warrant](#adamant_terminus_warrant) | <ul><li>Ranged attacks build Melee Justice for each enemy hit per shot, granting three stacks on a weakspot hit; melee hits build Ranged Justice, each capped at 20 stacks.</li><li>Wielding the corresponding weapon consumes those stacks to activate a fixed 12s buff.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="Forceful talent icon"> [Forceful](#adamant_forceful) | <ul><li>Staggering hits or blocks build up to 10 stacks, each granting 5% Impact and lowering the damage-taken multiplier.</li><li>Stacks share a 5s timer; taking damage removes at most one stack every 0.25s.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -322,3 +323,17 @@
 - **Duration and PowerLevel examples**: Wielding the other weapon category ends the current buff early. Isolating this bonus, `PowerLevel 500 × 1.1 = 550`. With an existing same-stage 20% PowerLevel bonus, the value rises from 600 to 650. Both one stack and 20 stacks activate the same fixed core bonuses; the stack count separately affects selected upgrades.
 
 [Details](adamant_terminus_warrant.md) · [Back to index](#talent-index)
+
+<a id="adamant_forceful"></a>
+
+### Forceful
+
+<img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="72" height="72" alt="Forceful talent icon">
+
+- **Gaining stacks and refreshing**: A hit that Staggers its first target, or a successful block, grants one stack, up to 10. Cyber-Mastiff hits do not count. The stacks share a 5s timer, reset when stacks are added or reduced by taking damage.
+
+- **Removal on damage**: A positive damage or Toughness-absorbed damage event removes at most one stack every 0.25s. Blocked events do not remove stacks.
+
+- **Full-stack example**: Each stack grants +5% Impact, totaling +50% at 10 stacks. Each stack has a damage-taken multiplier of 0.975; the shared stacking rule gives `0.975^10 ≈ 0.776`, about 22.4% less than baseline damage. This is multiplicative, rather than a directly added 25% reduction. Base damage of 100 becomes `100 × 0.975¹⁰ ≈ 77.63 damage` at full stacks.
+
+[Details](adamant_forceful.md) · [Back to index](#talent-index)

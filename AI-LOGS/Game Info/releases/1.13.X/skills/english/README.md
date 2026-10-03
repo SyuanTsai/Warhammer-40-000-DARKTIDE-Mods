@@ -258,3 +258,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Execution Order](arbites_adamant_execution_order.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Terminus Warrant](arbites_adamant_terminus_warrant.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Forceful](arbites_adamant_forceful.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

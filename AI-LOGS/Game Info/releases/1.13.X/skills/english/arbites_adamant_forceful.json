@@ -1,0 +1,31 @@
+{
+  "id": "adamant_forceful",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Forceful",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful.md",
+  "name_key": "loc_talent_adamant_forceful",
+  "name_hash": "c9c8172f",
+  "description_key": "loc_talent_adamant_forceful_base_alt_desc",
+  "description_hash": "bcf0df40",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 5,
+      "Not covered by the description": 3
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L1495-L1530. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful.md"
+}

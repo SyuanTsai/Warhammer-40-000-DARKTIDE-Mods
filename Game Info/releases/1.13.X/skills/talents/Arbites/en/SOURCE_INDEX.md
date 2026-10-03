@@ -28,3 +28,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Kill Order](adamant_dog_damage_after_ability.md) / `adamant_dog_damage_after_ability` | Ability |
 | [Execution Order](adamant_execution_order.md) / `adamant_execution_order` | Keystone |
 | [Terminus Warrant](adamant_terminus_warrant.md) / `adamant_terminus_warrant` | Keystone |
+| [Forceful](adamant_forceful.md) / `adamant_forceful` | Keystone |

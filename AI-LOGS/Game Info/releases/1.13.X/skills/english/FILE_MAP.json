@@ -83,7 +83,8 @@
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
-        "adamant_terminus_warrant"
+        "adamant_terminus_warrant",
+        "adamant_forceful"
       ],
       "checks": []
     },
@@ -115,7 +116,8 @@
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
-        "adamant_terminus_warrant"
+        "adamant_terminus_warrant",
+        "adamant_forceful"
       ],
       "checks": []
     },
@@ -147,7 +149,8 @@
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
-        "adamant_terminus_warrant"
+        "adamant_terminus_warrant",
+        "adamant_forceful"
       ],
       "checks": []
     },
@@ -179,7 +182,8 @@
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
-        "adamant_terminus_warrant"
+        "adamant_terminus_warrant",
+        "adamant_forceful"
       ],
       "checks": []
     },
@@ -729,9 +733,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6db6d0137e1a08dcf4ba1f5a35d8fb4c6c552e3e",
       "chinese_sha256": "6aafb132d3853e5c1e0108a412bfc532cd25c60aa6726ad8cf92af7c18355b8c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_forceful"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_ability_damage.md",
@@ -10230,6 +10241,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant.md"
+    },
+    {
+      "id": "adamant_forceful",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful.md"
     }
   ],
   "pending_chinese_corrections": [
