@@ -31,3 +31,6 @@
 | [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 奧特米亞Mk III淨化噴火器 |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 碎敵Mk II撕裂槍、碎敵Mk V撕裂槍、碎敵Mk VI撕裂槍 |
+| [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
+| [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
+| [動力彎刀](melee/動力彎刀/README.md)<br>- Power Falchion | 近戰 | 動力彎刀 阿里丁 Mk I、動力彎刀 執法者 Mk IIb |

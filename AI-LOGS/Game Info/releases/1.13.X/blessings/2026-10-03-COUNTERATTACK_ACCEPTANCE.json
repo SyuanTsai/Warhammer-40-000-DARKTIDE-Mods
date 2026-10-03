@@ -1,0 +1,433 @@
+{
+  "date": "2026-10-03",
+  "blessing": "counterattack",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/反擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powermaul_shield_p1_attack_speed_on_perfect_block",
+    "weapon_trait_bespoke_powersword_2h_p1_attack_speed_on_perfect_block",
+    "weapon_trait_bespoke_powersword_p2_attack_speed_on_perfect_block"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "counterattack",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 3,
+    "reviewed_bindings": 6,
+    "findings": [
+      "All three trait overrides are 6/8/10/12 percent melee attack speed, six-second duration and zero cooldown.",
+      "All wrappers listen to on_block, including ordinary and perfect blocking. Block-broken is not filtered; shield ranged blocks can trigger.",
+      "Repeated blocking refreshes duration without stacking. Unwield pauses stat application while absolute duration continues.",
+      "Current player timing, existing +20-percent comparison, refresh and weapon-switch examples match the cited execution chain.",
+      "Exact name-key metadata includes three variants; no same-name outside-intersection candidate found."
+    ],
+    "corrections_resolved": [
+      "Clarified that weapon_template_restriction is empty while weapon_type_restriction identifies each weapon family.",
+      "Flagged duplicate shield display names; primary read Items.display_name and exact family/pattern/mark RAW. Luna independently confirmed Branx Mk VI/Mk XI and signed off the corrected shield names."
+    ],
+    "final_result": "Core mechanics, current examples and corrected shield names accepted."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/b67a8546-2e99-4ab7-aaf5-5af04f9ea255",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "counterattack",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_243",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_243.png",
+      "attachment": "https://github.com/user-attachments/assets/b67a8546-2e99-4ab7-aaf5-5af04f9ea255",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965152388",
+      "acquired_date": "2026-10-03",
+      "sha256": "85197bad3fb8622d194e9f30d90c3228c00352694828640f9be71c33f3be635e",
+      "content_type": "image/png",
+      "size": 5211,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "反擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 121,
+      "tables": 116,
+      "rows": 830,
+      "lists": 122
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 456,
+      "source_files": 191,
+      "bindings": 84,
+      "variants": 38,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 821,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 121,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 157,
+    "not_started_name_groups": 157,
+    "partial_name_groups": 0,
+    "remaining_variants": 550,
+    "remaining_bindings": 1084,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "054be9529c4f257b275b2b4c8d751d9af50fa85b9cdf4c3eb85e3f103fa50fea"
+  },
+  "previous_local_commit": "d00b1ec21551bfe47124e605038e1c51ec8196cf",
+  "current_blessing_formula_review": {
+    "source": "scripts/utilities/action/action_handler.lua#L356-L365,#L402-L429",
+    "assumption": "1-second baseline action; fixed other multipliers; below clamps",
+    "tier_action_seconds": [
+      0.9433962264150942,
+      0.9259259259259258,
+      0.9090909090909091,
+      0.8928571428571428
+    ],
+    "tier_iv_time_reduction": 0.10714285714285712,
+    "with_other_attack_speed": {
+      "before_multiplier": 1.2,
+      "after_multiplier": 1.32,
+      "before_seconds": 0.8333333333333334,
+      "after_seconds": 0.7575757575757576,
+      "relative_speed_gain": 0.10000000000000009
+    },
+    "refresh_example": {
+      "first_block_at": 0,
+      "second_block_at": 4,
+      "expire_at": 10,
+      "bonus": 0.12
+    },
+    "switch_example": {
+      "block_at": 0,
+      "unwield_at": 2,
+      "rewield_at": 5,
+      "expire_at": 6,
+      "remaining_at_rewield": 1
+    }
+  },
+  "ui_name_review": {
+    "records": [
+      {
+        "mark_id": "powermaul_shield_p1_m1",
+        "legacy_display_name": "法務官電擊鎚和鎮壓護盾",
+        "ui_display_name_zh_tw": "法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI",
+        "ui_display_name_en": "Shock Maul and Suppression Shield Branx Mk VI",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powermaul_shield_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_powermaul_shield_p1_m1"
+        }
+      },
+      {
+        "mark_id": "powermaul_shield_p1_m2",
+        "legacy_display_name": "法務官電擊鎚和鎮壓護盾",
+        "ui_display_name_zh_tw": "法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI",
+        "ui_display_name_en": "Shock Maul and Suppression Shield Branx Mk XI",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powermaul_shield_p1_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_powermaul_shield_p1_m2"
+        }
+      },
+      {
+        "mark_id": "powersword_2h_p1_m1",
+        "legacy_display_name": "斯卡勒斯Mk II動力巨劍",
+        "ui_display_name_zh_tw": "上古神刃 軍務部 Mk X",
+        "ui_display_name_en": "Relic Blade Munitorum Mk X",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powersword_2h_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powersword_2h_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_powersword_2h_p1_m1"
+        }
+      },
+      {
+        "mark_id": "powersword_2h_p1_m2",
+        "legacy_display_name": "怒火猛攻動力巨劍",
+        "ui_display_name_zh_tw": "上古神刃 軍務部 Mk II",
+        "ui_display_name_en": "Relic Blade Munitorum Mk II",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powersword_2h_p1_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powersword_2h_p1_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_powersword_2h_p1_m2"
+        }
+      },
+      {
+        "mark_id": "powersword_p2_m1",
+        "legacy_display_name": "Mk I阿里丁動力彎刀",
+        "ui_display_name_zh_tw": "動力彎刀 阿里丁 Mk I",
+        "ui_display_name_en": "Power Falchion Aridin Mk I",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powersword_p2_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p2_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_powersword_p2_m1"
+        }
+      },
+      {
+        "mark_id": "powersword_p2_m2",
+        "legacy_display_name": "Mk IIb執法者動力彎刀",
+        "ui_display_name_zh_tw": "動力彎刀 執法者 Mk IIb",
+        "ui_display_name_en": "Power Falchion Lawbringer Mk IIb",
+        "ui_name_keys": {
+          "weapon_family_display_name": "loc_weapon_family_powersword_p2_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p2_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_powersword_p2_m2"
+        }
+      }
+    ],
+    "raw_verification": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "records": [
+        {
+          "key": "loc_weapon_family_powermaul_shield_p1_m1",
+          "hash": "c1ee8aa6",
+          "locale": 0,
+          "text": "Shock Maul and Suppression Shield"
+        },
+        {
+          "key": "loc_weapon_family_powermaul_shield_p1_m1",
+          "hash": "c1ee8aa6",
+          "locale": 16,
+          "text": "法務官電擊鎚和鎮壓護盾"
+        },
+        {
+          "key": "loc_weapon_family_powermaul_shield_p1_m2",
+          "hash": "4f2444e1",
+          "locale": 0,
+          "text": "Shock Maul and Suppression Shield"
+        },
+        {
+          "key": "loc_weapon_family_powermaul_shield_p1_m2",
+          "hash": "4f2444e1",
+          "locale": 16,
+          "text": "法務官電擊鎚和鎮壓護盾"
+        },
+        {
+          "key": "loc_weapon_family_powersword_2h_p1_m1",
+          "hash": "8860addb",
+          "locale": 0,
+          "text": "Relic Blade"
+        },
+        {
+          "key": "loc_weapon_family_powersword_2h_p1_m1",
+          "hash": "8860addb",
+          "locale": 16,
+          "text": "上古神刃"
+        },
+        {
+          "key": "loc_weapon_family_powersword_2h_p1_m2",
+          "hash": "94af3a54",
+          "locale": 0,
+          "text": "Relic Blade"
+        },
+        {
+          "key": "loc_weapon_family_powersword_2h_p1_m2",
+          "hash": "94af3a54",
+          "locale": 16,
+          "text": "上古神刃"
+        },
+        {
+          "key": "loc_weapon_family_powersword_p2_m1",
+          "hash": "9a09069d",
+          "locale": 0,
+          "text": "Power Falchion"
+        },
+        {
+          "key": "loc_weapon_family_powersword_p2_m1",
+          "hash": "9a09069d",
+          "locale": 16,
+          "text": "動力彎刀"
+        },
+        {
+          "key": "loc_weapon_family_powersword_p2_m2",
+          "hash": "65427784",
+          "locale": 0,
+          "text": "Power Falchion"
+        },
+        {
+          "key": "loc_weapon_family_powersword_p2_m2",
+          "hash": "65427784",
+          "locale": 16,
+          "text": "動力彎刀"
+        },
+        {
+          "key": "loc_weapon_mark_powermaul_shield_p1_m1",
+          "hash": "e5e81ca4",
+          "locale": 0,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_powermaul_shield_p1_m1",
+          "hash": "e5e81ca4",
+          "locale": 16,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_powermaul_shield_p1_m2",
+          "hash": "11d72dd2",
+          "locale": 0,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_powermaul_shield_p1_m2",
+          "hash": "11d72dd2",
+          "locale": 16,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_2h_p1_m1",
+          "hash": "f55d76c5",
+          "locale": 0,
+          "text": "Mk X"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_2h_p1_m1",
+          "hash": "f55d76c5",
+          "locale": 16,
+          "text": "Mk X"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_2h_p1_m2",
+          "hash": "d697552d",
+          "locale": 0,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_2h_p1_m2",
+          "hash": "d697552d",
+          "locale": 16,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_p2_m1",
+          "hash": "1ee8d731",
+          "locale": 0,
+          "text": "Mk I"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_p2_m1",
+          "hash": "1ee8d731",
+          "locale": 16,
+          "text": "Mk I"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_p2_m2",
+          "hash": "8e7c222d",
+          "locale": 0,
+          "text": "Mk IIb"
+        },
+        {
+          "key": "loc_weapon_mark_powersword_p2_m2",
+          "hash": "8e7c222d",
+          "locale": 16,
+          "text": "Mk IIb"
+        },
+        {
+          "key": "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "hash": "33747910",
+          "locale": 0,
+          "text": "Branx"
+        },
+        {
+          "key": "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "hash": "33747910",
+          "locale": 16,
+          "text": "布蘭克斯"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_2h_p1_m1",
+          "hash": "44e515e3",
+          "locale": 0,
+          "text": "Munitorum"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_2h_p1_m1",
+          "hash": "44e515e3",
+          "locale": 16,
+          "text": "軍務部"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_2h_p1_m2",
+          "hash": "f95e21d5",
+          "locale": 0,
+          "text": "Munitorum"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_2h_p1_m2",
+          "hash": "f95e21d5",
+          "locale": 16,
+          "text": "軍務部"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_p2_m1",
+          "hash": "01f24352",
+          "locale": 0,
+          "text": "Aridin"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_p2_m1",
+          "hash": "01f24352",
+          "locale": 16,
+          "text": "阿里丁"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_p2_m2",
+          "hash": "c40ab8d5",
+          "locale": 0,
+          "text": "Lawbringer"
+        },
+        {
+          "key": "loc_weapon_pattern_powersword_p2_m2",
+          "hash": "c40ab8d5",
+          "locale": 16,
+          "text": "執法者"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 3,
+    "bound_variants": 3,
+    "status": "all exact name-key items included"
+  }
+}

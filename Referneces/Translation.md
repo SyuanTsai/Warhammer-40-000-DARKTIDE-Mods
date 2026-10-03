@@ -341,6 +341,7 @@
 - Falter - 踉蹌
 - Overwhelming Force - 壓倒性的武力
 - Counterattack - 反擊
+  - 本體1.13.1名稱鍵 `loc_attack_speed_on_perfect_block`，hash `26defa8a`；英文／繁中RAW配對確認。
 - Cranial Grounding - 顱骨落地
 - Overload - 超載
 - Energy Leakage - 能量洩漏

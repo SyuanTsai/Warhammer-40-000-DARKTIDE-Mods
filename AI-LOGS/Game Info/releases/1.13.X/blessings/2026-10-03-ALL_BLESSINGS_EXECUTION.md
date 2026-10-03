@@ -39,3 +39,7 @@
 - 魔力彈藥全部UI交集變體本機Commit：`99a43d8b1f520212f8b677d1b690da734f89f3d0`；重伐木槍P2保留來源候選。
 
 - [振奮彈幕](2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE.json)：新增8變體、15型號關聯；共9變體、18關聯。
+
+- 振奮彈幕全部UI交集變體本機Commit：`d00b1ec21551bfe47124e605038e1c51ec8196cf`。
+
+- [反擊](2026-10-03-COUNTERATTACK_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
