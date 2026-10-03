@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="Coward Culling talent icon"> [Coward Culling](#ogryn_damage_vs_suppressed_coherency) | <ul><li>You and allies in Coherency deal +20% Damage to Suppressed enemies; you also deal +25% Suppression.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="Stay Close! talent icon"> [Stay Close!](#ogryn_toughness_regen_aura) | <ul><li>You and allies in Coherency gain +20% to eligible Toughness replenishment amounts.</li><li>The effect increases each eligible restoration; it does not start restoration itself or raise natural regeneration speed by 20%.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="32" height="32" alt="Loyal Protector talent icon"> [Loyal Protector](#ogryn_taunt_shout) | <ul><li>Taunt enemies within 12m for 15s, repeating at 3s and 6s.</li><li>Only the initial cast Staggers; base cooldown 50s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="Indomitable talent icon"> [Indomitable](#ogryn_longer_charge) | <ul><li>Charge up to 24m, stopping on a Monstrosity; base cooldown 25s.</li><li>For 5s after the charge ends, gain +25% Melee Attack Speed and Movement Speed.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -175,3 +176,19 @@
 - **Timing example**: An enemy within range at 0s, 3s and 6s can remain taunted until 6 + 15 = 21s after the initial cast. Base ability cooldown is 50s, with one charge.
 
 [Details](ogryn_taunt_shout.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_longer_charge"></a>
+
+### Indomitable
+
+<img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="72" height="72" alt="Indomitable talent icon">
+
+- **Charge and cooldown**: Charge forward, increasing maximum distance from 12m to 12 × 2 = 24m and knocking aside enemies along the path. Colliding with a Monstrosity stops the charge; terrain can also limit distance. One charge, base cooldown 25s.
+
+- **After-charge bonuses**: When the charge ends, gain +25% Melee Attack Speed and +25% Movement Speed for 5s. A 1s action controlled by attack speed takes 1 ÷ 1.25 = 0.8s; movement of 5m/s becomes 6.25m/s.
+
+- **Charge protection**: Retain the base charge's 25% damage reduction while charging. Counting only this effect, 100 incoming damage becomes 75. Collision and the end impact do not directly deal Health damage; Bleed from Pulverise is calculated separately.
+
+[Details](ogryn_longer_charge.md) · [Back to index](#talent-index)

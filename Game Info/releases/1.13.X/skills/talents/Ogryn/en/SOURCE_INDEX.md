@@ -19,3 +19,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Coward Culling](ogryn_damage_vs_suppressed_coherency.md) / `ogryn_damage_vs_suppressed_coherency` | Aura |
 | [Stay Close!](ogryn_toughness_regen_aura.md) / `ogryn_toughness_regen_aura` | Aura |
 | [Loyal Protector](ogryn_taunt_shout.md) / `ogryn_taunt_shout` | Combat ability |
+| [Indomitable](ogryn_longer_charge.md) / `ogryn_longer_charge` | Combat ability |
