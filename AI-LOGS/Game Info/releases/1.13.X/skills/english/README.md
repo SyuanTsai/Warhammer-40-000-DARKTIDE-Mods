@@ -254,3 +254,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Kill Order](arbites_adamant_dog_damage_after_ability.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - Measured checkpoint (skills 96–100): commit interval 47337f5b → ad6b104a was 915s (15m 15s). At that checkpoint: 100 accepted skills; 584 mapped documents remained (546 mechanisms, 36 class support, 2 shared). The overall estimate remained approximately 40–60 hours of continuous execution; work continued with Kill Order.
+
+- [Execution Order](arbites_adamant_execution_order.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

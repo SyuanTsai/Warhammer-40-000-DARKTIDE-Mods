@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="Targeted Brutality talent icon"> [Targeted Brutality](#adamant_charge_cooldown_reduction) | <ul><li>Each effective charge hit on an ordinary enemy restores 0.5s of Combat Ability Cooldown; each hit on an Elite, Specialist or Monstrosity restores 1s.</li><li>One charge restores at most 5s of cooldown.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="Engage talent icon"> [Engage](#adamant_charge_longer_distance) | <ul><li>Adds 3.75m to the charge's base distance of 3.75m, raising the target distance limit to 7.5m.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="Kill Order talent icon"> [Kill Order](#adamant_dog_damage_after_ability) | <ul><li>After using your Combat Ability, your Cyber-Mastiff gains 50% more damage for 12s; using the ability again while the effect is active refreshes its duration.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="Execution Order talent icon"> [Execution Order](#adamant_execution_order) | <ul><li>Automatically marks Elites, Specialists or Bosses within 40m in front of you.</li><li>You or your Cyber-Mastiff killing a marked target replenishes 15% of maximum Toughness and grants damage and attack-speed bonuses for 8s.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -286,3 +287,21 @@
 - **Refresh and limits**: Using your Combat Ability again resets the 12s duration without stacking this upgrade's bonus with itself. Bleed damage does not receive this companion-damage bonus.
 
 [Details](adamant_dog_damage_after_ability.md) · [Back to index](#talent-index)
+
+## Keystones
+
+<a id="adamant_execution_order"></a>
+
+### Execution Order
+
+<img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="72" height="72" alt="Execution Order talent icon">
+
+- **Automatic marking**: Selects Elites, Specialists or Bosses within 40m in front of you and in line of sight for Mercy Sanction. After marking an ordinary Elite or Specialist, selection waits 3s; Monstrosities and Bosses bypass that waiting period. Multiple marks can remain at once.
+
+- **Marked-kill effect**: You or your own Cyber-Mastiff killing a marked target replenishes 15% of maximum Toughness and grants you +10% Damage and +10% Attack Speed, plus +150% direct Cyber-Mastiff Damage, for 8s. Retriggering refreshes the duration without increasing the magnitude. A kill by another teammate alone does not trigger this effect.
+
+- **Cyber-Mastiff pounce**: The Cyber-Mastiff's initial pounce hit on a marked target also grants the 8s +150% companion-damage bonus. Later pinning attacks against Ogryn enemies and Monstrosities can also refresh it. This companion-damage bonus excludes Bleed.
+
+- **Examples**: With maximum Toughness 100, replenish 15 points, capped at full Toughness. Isolating the damage bonuses, player base damage 100 becomes 110 and companion base damage 100 becomes 250. With an existing same-stage 25% player-damage bonus, `100 × (1 + 25% + 10%) = 135 damage`. An attack action with adjustable speed taking 1s instead takes `1 ÷ 1.1 ≈ 0.91s`.
+
+[Details](adamant_execution_order.md) · [Back to index](#talent-index)

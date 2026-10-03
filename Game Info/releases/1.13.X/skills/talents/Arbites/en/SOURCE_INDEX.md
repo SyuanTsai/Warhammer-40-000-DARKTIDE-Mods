@@ -26,3 +26,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Targeted Brutality](adamant_charge_cooldown_reduction.md) / `adamant_charge_cooldown_reduction` | Ability |
 | [Engage](adamant_charge_longer_distance.md) / `adamant_charge_longer_distance` | Ability |
 | [Kill Order](adamant_dog_damage_after_ability.md) / `adamant_dog_damage_after_ability` | Ability |
+| [Execution Order](adamant_execution_order.md) / `adamant_execution_order` | Keystone |

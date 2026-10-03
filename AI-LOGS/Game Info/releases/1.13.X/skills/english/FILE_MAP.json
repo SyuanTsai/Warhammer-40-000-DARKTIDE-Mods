@@ -81,7 +81,8 @@
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
-        "adamant_dog_damage_after_ability"
+        "adamant_dog_damage_after_ability",
+        "adamant_execution_order"
       ],
       "checks": []
     },
@@ -111,7 +112,8 @@
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
-        "adamant_dog_damage_after_ability"
+        "adamant_dog_damage_after_ability",
+        "adamant_execution_order"
       ],
       "checks": []
     },
@@ -141,7 +143,8 @@
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
-        "adamant_dog_damage_after_ability"
+        "adamant_dog_damage_after_ability",
+        "adamant_execution_order"
       ],
       "checks": []
     },
@@ -171,7 +174,8 @@
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
-        "adamant_dog_damage_after_ability"
+        "adamant_dog_damage_after_ability",
+        "adamant_execution_order"
       ],
       "checks": []
     },
@@ -648,9 +652,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d473ce0c21588ab2df2c4f4b20fb5883847c685f",
       "chinese_sha256": "35713465f819f70dca921bb16aff8794c60998f595d2a887fc21e97f44dd8e32",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_execution_order"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order_cdr.md",
@@ -10192,6 +10203,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_dog_damage_after_ability.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_damage_after_ability.md"
+    },
+    {
+      "id": "adamant_execution_order",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order.md"
     }
   ],
   "pending_chinese_corrections": [
