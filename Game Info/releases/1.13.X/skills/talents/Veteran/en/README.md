@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/980ba0fa-2a34-4f97-b592-05651671933b" width="32" height="32" alt="Reciprocity talent icon"> [Reciprocity](#veteran_dodging_grants_crit) | <ul><li>Each successful dodge adds 5 percentage points of Critical Hit Chance, up to 5 stacks.</li><li>An 8-second shared duration refreshes on another successful dodge; simply performing a dodge adds no stack.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="Agile Engagement talent icon"> [Agile Engagement](#veteran_kill_grants_damage_to_other_slot) | <ul><li>Melee kills grant +25% Ranged Damage; ranged kills grant +25% Melee Damage.</li><li>Each bonus lasts 6 seconds and can coexist with the other; same-type kills refresh the corresponding timer without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="32" height="32" alt="Serrated Blade talent icon"> [Serrated Blade](#veteran_hits_cause_bleed) | <ul><li>A damaging melee hit applies 2 Bleed stacks to a target that survives the hit.</li><li>Bleed caps at 16 stacks and ticks about every 0.5s; reapplication refreshes a 1.5s timer, after which ticks remove one stack if not reapplied.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="32" height="32" alt="Onslaught talent icon"> [Onslaught](#veteran_continous_hits_apply_rending) | <ul><li>Repeated eligible hits on the same living target add one Brittleness stack each, starting with the second hit.</li><li>Each stack adds 2.5% Rending, up to 16 stacks (40%); new stacks refresh a shared 5-second timer. Other attackers can benefit.</li><li>The final damage gain depends on armor and the attack; 40% Rending is not a universal 40% damage gain.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1047,6 +1048,29 @@ Each effect applies to its own damage type, so having both active does not apply
 Actual tick damage varies with armor, the damage profile and other modifiers. These examples do not give total damage over a decaying stack sequence.
 
 [Detailed sources and formulas](veteran_hits_cause_bleed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_hits_cause_bleed) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_continous_hits_apply_rending"></a>
+
+<img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="72" height="72" alt="Onslaught talent icon">
+
+### Onslaught
+
+- **Repeated eligible hits on the same living enemy apply one Brittleness stack each, starting with the second hit.**
+- Each stack adds **2.5% Rending**, up to **16 stacks (40%)**. Other teammates attacking the target can also benefit.
+- Both melee and ranged attacks qualify; each shot or swing processes at most its first eligible hit. Bleed and other damage-over-time ticks do not add stacks.
+- The effect lasts **5 seconds**; adding a stack refreshes the shared timer. Switching enemies restarts the hit sequence. A miss alone does not clear the tracked target.
+
+**Stack and damage examples**
+
+- Five separate eligible hits on one enemy, without expiry, build four stacks: the first starts tracking and the next four give `4 × 2.5% = 10% Rending`.
+- For the next hit with four stacks already present, assume a non-critical, non-weakspot hit, 100 damage before armor, an initial Carapace armor multiplier of 0.5 and no other Rending or later modifiers. Damage changes from `100 × 0.5 = 50` to `100 × (0.5 + 0.10) = 60`, a `(60 − 50) / 50 = 20%` increase.
+- With 16 stacks already present under the same assumptions, `100 × (0.5 + 0.40) = 90 damage`, an `(90 − 50) / 50 = 80%` increase.
+
+These gains depend on the weapon, target armor and existing modifiers. A 40% Rending stat does not give every attack 40% more final damage. The examples concern the next hit after buildup, not the hit that created a stack.
+
+[Detailed sources and formulas](veteran_continous_hits_apply_rending.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_continous_hits_apply_rending) | [Back to index](#talent-index)
 
 ---
 

@@ -115,5 +115,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/serrated-blade-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_hits_cause_bleed.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_hits_cause_bleed.md",
+  "commit": "408f24febf1b4bbb31e2b7e91a98465945f130bc"
 }
