@@ -346,6 +346,19 @@ Full raw template and formatting: [source evidence](psyker_passive_souls_from_el
 | Kills, stacks and ability benefit | Elite or Specialist kill; 25s; four stacks; +4% Base Damage and 7.5% cooldown reduction per Warp Charge; `ui / loc_talent_psyker_souls_new_desc / 9ea525d4` | Qualifying kill gives one stack; base cap four and duration 25; Damage is 0.24 / 6 per stack; ability event restores 0.075 × N of one charge and spends all stacks. [Fixed source and line references](psyker_passive_souls_from_elite_kills.md#fixed-source-evidence) | Consistent | The stated triggers, values and effect directions match the accepted evidence. |
 | Timer and resource details | Does not specify shared timer refresh, gradual decay, the Damage denominator or ability-resource overflow; `ui / loc_talent_psyker_souls_new_desc / 9ea525d4` | Stack events refresh the timer even at cap; expiry removes one and restarts it. Damage uses max_souls_talent = 6. Restoration is a proportion of one ability charge and can carry over to later charges. [Fixed source and line references](psyker_passive_souls_from_elite_kills.md#fixed-source-evidence) | Not covered by the description | These explain the verified examples and boundaries without contradicting the English. Two stacks per kill and the six-stack cap require other talents. |
 
+
+<a id="psyker_new_mark_passive"></a>
+
+## Disrupt Destiny
+
+Full raw template and formatting: [source evidence](psyker_new_mark_passive.md#original-english-template-and-reconstruction). Name hash `6a38907d`. Every row uses `ui / loc_talent_psyker_marked_enemies_passive_updated_desc / cfa752d8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Rewards and Precision decay | 25% Toughness over 2.5s; +20% Movement Speed for 2.5s; +1% / +2% / +2.5% per stack; 15 stacks, five-second duration and one-stack loss with refresh; `ui / loc_talent_psyker_marked_enemies_passive_updated_desc / cfa752d8` | Accepted buff values match; shared stack expiry removes one and resets the remaining stacks' start time. [Fixed source and line references](psyker_new_mark_passive.md#fixed-source-evidence) | Consistent | The stated values, hit-dependent Damage bonuses and decay direction agree. |
+| Meaning of the marking chance | Every second, enemies within 40m have a chance of being Marked; `ui / loc_talent_psyker_marked_enemies_passive_updated_desc / cfa752d8` | Selection requires an eligible living breed, horizontal view dot > 0.5 and line of sight; roughly one-second updates check visibility and reselection conditions rather than a marking probability. [Fixed source and line references](psyker_new_mark_passive.md#fixed-source-evidence) | Cannot confirm | The English's 'chance' can be read as a random roll or as an opportunity subject to eligibility. The concrete wording/selection difference remains pending in-game comparison. |
+| Eligibility, refresh and Damage stages | No forward-view/line-of-sight rule, personal/current-target check, hit refresh or finesse-stage formula specified; `ui / loc_talent_psyker_marked_enemies_passive_updated_desc / cfa752d8` | Personal current-target kills grant rewards; qualifying non-killing Marked/Boss hits refresh existing stacks. General Damage precedes finesse; simultaneous Critical/Weakspot increases add in the common finesse multiplier. The ranged-dodge keyword declaration remains unconfirmed. [Fixed source and line references](psyker_new_mark_passive.md#fixed-source-evidence) | Not covered by the description | The accepted conditions, formulas, variants and uncertainty supplement the English; it makes no ranged-dodge claim. |
+
 ## Comparison totals
 
 The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

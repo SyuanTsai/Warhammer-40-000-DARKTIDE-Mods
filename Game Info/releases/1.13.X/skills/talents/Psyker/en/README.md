@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="Enervating Threshold talent icon"> [Enervating Threshold](#psyker_shield_stun_passive) | <ul><li>Enemies passing through your Telekine Shield have a 20% Electrocution chance. Specialists and Monsters trigger with 100% chance; Specialists also damage the shield.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="Warp Unbound talent icon"> [Warp Unbound](#psyker_overcharge_stance_infinite_casting) | <ul><li>After Scrier's Gaze ends, gain protection from Peril overload for 11.5 seconds; Peril continues to accumulate normally.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="Warp Siphon talent icon"> [Warp Siphon](#psyker_passive_souls_from_elite_kills) | <ul><li>Personal Elite or Specialist kills grant Warp Charges: +4% Damage per charge, with all charges spent by a Combat Ability to restore 7.5% of one charge's cooldown per Warp Charge.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="Disrupt Destiny talent icon"> [Disrupt Destiny](#psyker_new_mark_passive) | <ul><li>Personal Marked Enemy kills grant Precision: per stack, +1% Damage, +2% Critical Damage and +2.5% Weakspot Damage; also restore 25% Toughness over 2.5 seconds and grant +20% Movement Speed for 2.5 seconds.</li></ul> | Keystone |
 
 ---
 
@@ -466,3 +467,23 @@
 - **Abilities with multiple charges:** Restoration first fills the charge currently counting down; any progress exceeding the amount required for that charge carries over to subsequent charges.
 
 [Details](psyker_passive_souls_from_elite_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_new_mark_passive"></a>
+
+### Disrupt Destiny
+
+<img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="72" height="72" alt="Disrupt Destiny talent icon">
+
+- **Marking and stacks:** Mark eligible enemies in front of you, within 40 metres and with line of sight. Personally kill the current Marked Enemy to gain one Precision stack, up to 15.
+
+- **Per-stack bonuses:** +1% general Damage, +2% additional Critical Damage and +2.5% additional Weakspot Damage. At 15 stacks these are +15%, +30% and +37.5%, respectively.
+
+- **Damage examples:** With only the general Damage bonus, `100 × (1 + 15%) = 115`. For the Weakspot bonus alone, suppose the same hit already includes the general Damage bonus and has a base portion of 100 plus an additional Weakspot portion of 50. Adding 37.5% Weakspot Damage gives `100 + 50 × 1.375 = 168.75`, a 12.5% increase over the original 150 at this stage. Weapons have different additional-Damage proportions, so the increase to the whole hit varies.
+
+- **Toughness and Movement Speed:** Killing the Marked target restores 25% of maximum Toughness over 2.5 seconds and grants +20% Movement Speed for 2.5 seconds. At 100 maximum Toughness, this restores 25 in total, or `25 ÷ 2.5 = 10` per second, capped by missing Toughness.
+
+- **Timer refresh and decay:** Precision shares a five-second timer. Gaining a stack, or hitting a still-living Marked target or a Boss while stacks already exist, resets it. Expiry removes one stack, then starts another five-second timer. With three stacks and no further refresh, the count falls to two, one and zero at about 5, 10 and 15 seconds.
+
+[Details](psyker_new_mark_passive.md) · [Back to index](#talent-index)
