@@ -17,6 +17,10 @@
 
 - **矛頭爆矢槍 洛克 Mk III**：[射擊](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua#L223)、[射擊](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua#L297)、[特殊近戰並退出瞄準](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua#L458)。
 
+- 直接射擊可爆擊；另行生成的擊殺／停止及穿透停止爆炸固定為非爆擊。M1 起爆距離為 5 公尺、M2 為 3 公尺；完整條件見[爆炸適用限制來源](SOURCE_INDEX.md#爆炸適用限制來源)。
+
+- 實際射擊接線：[bolter_p1_m1 action_shoot_hip](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua#L268)、[bolter_p1_m1 action_shoot_zoomed](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua#L344)、[bolter_p1_m2 action_shoot_hip](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua#L267)、[bolter_p1_m2 action_shoot_zoomed](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua#L342)。
+
 - 等級與數值：[集中等級表](TIER_VALUES.md)。
 - 結算與算例：[百分比檢核](DAMAGE_PERCENTAGE_REVIEW.md)。
 - 原文比較：[同一名稱與描述鍵](LOCALIZATION_COMPARISON.md)。

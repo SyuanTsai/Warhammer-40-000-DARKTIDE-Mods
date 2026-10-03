@@ -29,6 +29,21 @@
 | 實際UI型號組名 | [實際UI型號組名](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L315-L327) |
 | UI名稱欄位讀取 | [UI名稱欄位讀取](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L378-L426) |
 
+## 爆炸適用限制來源
+
+| 用途 | 固定原始碼 |
+|---|---|
+| bolter_hitscan_templates.lua 11–41 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_hitscan_templates.lua#L11-L41) |
+| bolter_hitscan_templates.lua 42–72 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolters/settings_templates/bolter_hitscan_templates.lua#L42-L72) |
+| boltpistol_hitscan_templates.lua 11–41 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L11-L41) |
+| boltpistol_hitscan_templates.lua 42–72 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L42-L72) |
+| 擊殺／停止爆炸條件與非爆擊參數 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L86-L139) |
+| hit_scan.lua 226–226 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L226) |
+| hit_scan.lua 245–248 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L245-L248) |
+| hit_scan.lua 290–301 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L290-L301) |
+| 爆炸參數對應 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/explosion.lua#L57) |
+| 磷光背爆接線 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/phosphor_pistol/settings_templates/phosphor_pistol_hitscan_templates.lua#L11-L35) |
+
 ## 執行與計算
 
 - `stepped_stat_buff` 在持用槽與 alternate-fire/ADS 條件成立時，以 `max(瞄準開始時間, 最近射擊時間)` 為基準，依變體的 Δ 計算有效步數並限制在 0–10；這不是命中後永久累加的層。
@@ -48,6 +63,8 @@
 - 10Δ 表示在持續瞄準且沒有新射擊時達上限所需時間；射擊後以新的 `fire_last_t` 重新計算。
 
 - 一般爆擊判定將最終機率四捨五入到兩位小數，使用偽隨機分布；強制爆擊或禁止爆擊的攻擊按各自覆寫規則處理，自動連射可以沿用同一輪已判定的狀態。
+
+- 矛頭爆矢槍與爆彈手槍的實際 M1／M2 hitscan 各自設定擊殺／停止與穿透停止爆炸，沒有設定穿透出口爆炸。直接命中可沿用本次爆擊結果；另行生成的爆炸傳入 `is_critical_strike=false`。命中質量耗盡爆炸另受伺服器、起爆距離與耗盡條件控制，M1 起爆距離 5 公尺、M2 為 3 公尺。磷光手槍的 impact 背爆同樣固定傳入非爆擊參數。
 
 ## 圖示
 

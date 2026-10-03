@@ -1108,5 +1108,133 @@
       }
     ]
   },
-  "execution_batch_started_on": "2026-10-03"
+  "execution_batch_started_on": "2026-10-03",
+  "supplemental_reviews": [
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "1435643a67cbd666ef552af0bc2c9f4c60b5e5a0",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json",
+        "sha256": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+        "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "corrections": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "唯讀複核 Surgical 新增爆炸適用限制相對 HEAD 的五檔差異；未重審既有 tiers、RAW、UI、圖示或完整共通機制。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json",
+          "sha256": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35"
+        },
+        "source_evidence_receipts": [
+          {
+            "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+            "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+          },
+          {
+            "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json",
+            "sha256": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179"
+          }
+        ],
+        "findings": [
+          "README 與三個變體頁均清楚區分可爆擊的直接射擊，以及固定以非爆擊參數生成的爆炸。",
+          "矛頭爆矢槍與爆彈手槍限定描述擊殺／停止及穿透停止爆炸；沒有聲稱存在穿透出口爆炸。兩類 M1/M2 起爆距離標為 5/3 公尺，與固定來源的型號設定相符。",
+          "磷光爆破手槍只將背向爆破列為非爆擊；SOURCE_INDEX 對應實際 impact 接線與 Explosion 參數。",
+          "SOURCE_INDEX 新增的固定 SHA 原始碼連結、hitscan 射擊接線連結均與本項適用差異相符；hitmass 條件保留在技術索引，玩家頁未誤寫成所有射擊爆炸一概不會爆擊。"
+        ],
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/README.md": "48fa8fb6d18d57e2fdad2a391c0e32a3a20fc67282fc67ea5a470f1fefcc8e6e",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/SOURCE_INDEX.md": "2885423ebc522415d8977dca2705f598ea1c0637f3a5c9ab6f4d1c3aff425e69",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md": "56e5b6133126f3ae7063e59c0560ec0e14287b1a79d8bb38a86c0c8c79ab22b9",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md": "5923b0965a02f87a5ffa1222670e52097bfe4497c28609638dce6260717f3c88",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time.md": "a39b1897e9e65ad9a3f5363a8329fe3f687ff6ae17e6f9922c1592697fa3a349",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179"
+        },
+        "receipt_sha256": "50edd403e8645cf0d43f4b475010ad96126f7ca08f132e85ef4b3f8a445ad5bc"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json",
+          "sha256": "3a254f5aeed15c3a35f46f0ab6f9f6a3aa71a7650bd2295892b66d05c467c2b4",
+          "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+          "original_file_sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json",
+          "sha256": "791e8107f488d5c0209fcb5c87bb62a6911715a0e6090024e1398b0a7674fd36",
+          "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+          "original_file_sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json",
+          "sha256": "dcb04e47ae4d7543f27cc5bad3f336a4e86cb9f4b2821a959098883fdab01725",
+          "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+          "original_file_sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json",
+          "sha256": "df81d2f99c506e54a507942ce71b0740f91e3054a4a484835fb6ee92533a84a5",
+          "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+          "original_file_sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json",
+          "sha256": "df36cd4fc96d2c182d341add82f3717baf31105658913304bbf4dfe47baabbf5",
+          "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+          "original_file_sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 122,
+          "source_files": 57,
+          "bindings": 325,
+          "variants": 169,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 5,
+          "source_object_cache": {
+            "cache_hits": 57,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 5,
+          "tables": 4,
+          "rows": 103,
+          "lists": 12,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 6,
+          "local_references": 94,
+          "remote_references": 146,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 43,
+        "variants": 169,
+        "bindings": 325
+      },
+      "faster_enabled": false
+    }
+  ]
 }
