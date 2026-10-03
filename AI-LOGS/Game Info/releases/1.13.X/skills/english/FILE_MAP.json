@@ -101,7 +101,11 @@
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
         "adamant_terminus_warrant_improved_combined",
-        "adamant_toughness_regen_near_companion"
+        "adamant_toughness_regen_near_companion",
+        "adamant_damage_after_reloading",
+        "adamant_multiple_hits_attack_speed",
+        "adamant_elite_special_kills_replenish_toughness",
+        "adamant_close_kills_restore_toughness"
       ],
       "checks": []
     },
@@ -151,7 +155,11 @@
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
         "adamant_terminus_warrant_improved_combined",
-        "adamant_toughness_regen_near_companion"
+        "adamant_toughness_regen_near_companion",
+        "adamant_damage_after_reloading",
+        "adamant_multiple_hits_attack_speed",
+        "adamant_elite_special_kills_replenish_toughness",
+        "adamant_close_kills_restore_toughness"
       ],
       "checks": []
     },
@@ -201,7 +209,11 @@
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
         "adamant_terminus_warrant_improved_combined",
-        "adamant_toughness_regen_near_companion"
+        "adamant_toughness_regen_near_companion",
+        "adamant_damage_after_reloading",
+        "adamant_multiple_hits_attack_speed",
+        "adamant_elite_special_kills_replenish_toughness",
+        "adamant_close_kills_restore_toughness"
       ],
       "checks": []
     },
@@ -251,7 +263,11 @@
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
         "adamant_terminus_warrant_improved_combined",
-        "adamant_toughness_regen_near_companion"
+        "adamant_toughness_regen_near_companion",
+        "adamant_damage_after_reloading",
+        "adamant_multiple_hits_attack_speed",
+        "adamant_elite_special_kills_replenish_toughness",
+        "adamant_close_kills_restore_toughness"
       ],
       "checks": []
     },
@@ -418,9 +434,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "eb11f8509da43dffb5103004934a0ed5d5ff2618",
       "chinese_sha256": "2f2c1b1593087dc06a7ebe607bbf0d584869d411aca9d6b9d8d4058e2bdc45a2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_close_kills_restore_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_command_dog_with_tag.md",
@@ -538,9 +561,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "debc1935319ef15db7791d7db712e62e5cc2f906",
       "chinese_sha256": "d3d63e3bbf835e9a0c4a0b9a9a7e1cdd21df6b34deb4e9b1cbb88d038cce680e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_damage_after_reloading"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_damage_reduction_after_elite_kill.md",
@@ -738,9 +768,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "790ad94332ea9472eb89c68586b5a0cfeb244dee",
       "chinese_sha256": "c07453ea304a5e5eeb7b275d3233c8547bcd737a1ca788e911bb4e6f8610660f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_elite_special_kills_replenish_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order.md",
@@ -1075,9 +1112,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5f304214431d3eb10720b9346baf049cb3c7d149",
       "chinese_sha256": "d74ccb663e2d3bd87e282c380f349044e6f252c36e32af9fe0b98782265b0e58",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_multiple_hits_attack_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_perfect_block_damage_boost.md",
@@ -10572,6 +10616,38 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_toughness_regen_near_companion.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_toughness_regen_near_companion.md"
+    },
+    {
+      "id": "adamant_damage_after_reloading",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_after_reloading.md"
+    },
+    {
+      "id": "adamant_multiple_hits_attack_speed",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_multiple_hits_attack_speed.md"
+    },
+    {
+      "id": "adamant_elite_special_kills_replenish_toughness",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_elite_special_kills_replenish_toughness.md"
+    },
+    {
+      "id": "adamant_close_kills_restore_toughness",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_close_kills_restore_toughness.md"
     }
   ],
   "pending_chinese_corrections": [
