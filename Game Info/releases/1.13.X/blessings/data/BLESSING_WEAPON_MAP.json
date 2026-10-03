@@ -579,6 +579,24 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
       "effect": "持用裝有此祝福的武器時，依彈匣消耗數提高通用爆擊機率；換彈期間或彈匣打空時加成歸零。"
+    },
+    {
+      "id": "pulverise",
+      "name_zh_tw": "粉碎（Pulverise）",
+      "name_en": "Pulverise",
+      "name_key": "loc_trait_bespoke_crit_chance_on_melee_kill",
+      "description_key": "loc_trait_bespoke_crit_chance_on_melee_kill_desc",
+      "name_hash": "2e6beae6",
+      "description_hash": "23668ce9",
+      "page": "entries/粉碎（Pulverise）/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750",
+      "effect": "持用擲彈兵臂鎧時，以這把臂鎧的近戰攻擊擊殺敵人後，爆擊率提高10／15／20／25個百分點，持續3秒。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "粉碎",
+        "reason": "本體 Shred 與 Pulverise 均譯為「粉碎」；文件用英文原名區分同名祝福，RAW名稱保持原樣。"
+      }
     }
   ],
   "weapons": [
@@ -11298,6 +11316,70 @@
       "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
       "effect": "每缺一發 I-IV +4.5/+5/+5.5/+6 個百分點；近戰推擊也走通用暴擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills",
+      "blessing_id": "pulverise",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/粉碎（Pulverise）/weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "global_critical_strike_chance_by_tier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "displayed_bonus_percentage_points_by_tier": [
+          10,
+          15,
+          20,
+          25
+        ],
+        "active_duration_seconds": 3,
+        "wrapper_default_active_duration_seconds": 2,
+        "wrapper_default_global_critical_strike_chance": 0.05,
+        "tier_overrides_replace_wrapper_defaults": true,
+        "proc_event": "on_kill",
+        "required_attack_result": "died",
+        "required_attack_type": "melee",
+        "matching_attacking_item_required": true,
+        "gauntlet_slot_must_be_wielded_to_proc_and_to_apply_stat": true,
+        "cooldown_seconds": null,
+        "single_active_timer_no_stacking": true,
+        "qualifying_kill_while_active_resets_full_duration": true,
+        "bonus_scope": "global critical_strike_chance stat, added to both melee and ranged critical chance calculations",
+        "eligible_melee_routes": [
+          "six ordinary light/heavy sweep actions",
+          "special melee-explosive direct hit if the hit itself kills"
+        ],
+        "ineligible_kill_routes": [
+          "ranged projectile impact",
+          "projectile explosion",
+          "special melee-explosive blast"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 248,
+        "end_line": 301
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 65,
+        "end_line": 77
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_melee_kill_desc",
+      "description_hash": "23668ce9",
+      "icon": "https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_146",
+      "effect": "持用擲彈兵臂鎧時，以這把臂鎧的近戰攻擊擊殺敵人後，爆擊率提高10／15／20／25個百分點，持續3秒。"
     }
   ],
   "bindings": [
@@ -15849,6 +15931,20 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "pulverise",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
       }
     }
   ]

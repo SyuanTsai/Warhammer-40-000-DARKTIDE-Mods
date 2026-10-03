@@ -49,3 +49,4 @@
 | [近身平射](entries/近身平射/README.md) | [來源索引](entries/近身平射/SOURCE_INDEX.md) |
 | [精確打擊](entries/精確打擊/README.md) | [來源索引](entries/精確打擊/SOURCE_INDEX.md) |
 | [克魯錫安輪盤](entries/克魯錫安輪盤/README.md) | [來源索引](entries/克魯錫安輪盤/SOURCE_INDEX.md) |
+| [粉碎（Pulverise）](entries/粉碎（Pulverise）/README.md) | [來源索引](entries/粉碎（Pulverise）/SOURCE_INDEX.md) |

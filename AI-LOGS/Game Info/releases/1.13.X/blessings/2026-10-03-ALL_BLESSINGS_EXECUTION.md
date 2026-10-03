@@ -199,3 +199,7 @@
 - [克魯錫安輪盤](2026-10-03-CRUCIAN-ROULETTE_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
 
 - 2026-10-04 精確打擊適用限制補充：Sol 主控直接核對新爆炸鏈與10段實際射擊接線，Luna/max只複核5檔差異。直接射擊可爆擊；三種實際配置生成爆炸固定非爆擊。既有tier、RAW、UI與5圖驗收保留，新增圖片0；全域169變體／325綁定及精確分割通過，獨立本機Commit後執行第3輪完整掃描。主控收據SHA-256 `93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35`；同儕收據SHA-256 `50edd403e8645cf0d43f4b475010ad96126f7ca08f132e85ef4b3f8a445ad5bc`。
+
+- 第3輪三項已Commit後完整掃描通過：surgical (`b31ee4731a3170353d67e91f5224d6ec243af36f`)、crucian-roulette (`1435643a67cbd666ef552af0bc2c9f4c60b5e5a0`)、surgical (`d8b636e9211d16c724fc5fb90edbb720ca1a8933`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-003-full-scan.json`／SHA-256 `8fdd7aadb0d21118a5700ed71e4eac5973ffddd2518de31f8e8c688858df4c8c`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [粉碎（Pulverise）](2026-10-03-PULVERISE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

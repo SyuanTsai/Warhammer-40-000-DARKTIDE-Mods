@@ -500,6 +500,22 @@
         "Own buff must capture actual item-slot inventory component; own special modes/clip flags/capacity modifiers must be checked."
       ],
       "reuse_rule": "Reuse same immutable block/hash only; inspect new own clip-selection conditions."
+    },
+    {
+      "id": "trait-description-value-selection",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/trait_value_parser.lua",
+      "start": 43,
+      "end": 56,
+      "content_sha256": "2c0669135f27afe15fff607cbf753dbe1c2dc99d1ae073baa2de2b3d7afc2635",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/trait_value_parser.lua#L43-L56",
+      "review": "Sol directly reviewed base lookup vs tier-specific lookup, own Pulverise format config and full tier/base values; immutable Point Blank own config applicability audit passed.",
+      "conclusion": "buff_template selects BuffTemplates base wrapper without merging runtime tier overrides; trait_override selects the requested tier override table.",
+      "applicability": [
+        "Each own formatter find_value_type, full base wrapper and full tier override path must be independently checked; formatter type or suffix cannot be inferred from a similar trait."
+      ],
+      "reuse_rule": "Reuse same fixed-SHA helper only after checking own formatter configuration and relevant values."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",
