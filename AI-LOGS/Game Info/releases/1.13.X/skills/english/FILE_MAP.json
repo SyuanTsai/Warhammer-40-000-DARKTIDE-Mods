@@ -5726,7 +5726,8 @@
         "veteran_tdr_on_high_toughness",
         "veteran_increase_damage_vs_elites",
         "veteran_big_game_hunter",
-        "veteran_increased_damage_when_flanking"
+        "veteran_increased_damage_when_flanking",
+        "veteran_increased_melee_crit_chance_and_melee_finesse"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5793,7 +5794,8 @@
         "veteran_tdr_on_high_toughness",
         "veteran_increase_damage_vs_elites",
         "veteran_big_game_hunter",
-        "veteran_increased_damage_when_flanking"
+        "veteran_increased_damage_when_flanking",
+        "veteran_increased_melee_crit_chance_and_melee_finesse"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5860,7 +5862,8 @@
         "veteran_tdr_on_high_toughness",
         "veteran_increase_damage_vs_elites",
         "veteran_big_game_hunter",
-        "veteran_increased_damage_when_flanking"
+        "veteran_increased_damage_when_flanking",
+        "veteran_increased_melee_crit_chance_and_melee_finesse"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5927,7 +5930,8 @@
         "veteran_tdr_on_high_toughness",
         "veteran_increase_damage_vs_elites",
         "veteran_big_game_hunter",
-        "veteran_increased_damage_when_flanking"
+        "veteran_increased_damage_when_flanking",
+        "veteran_increased_melee_crit_chance_and_melee_finesse"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6797,9 +6801,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "09cdc0db79188dfea5a6d9adbe5fd7df5d96c686",
       "chinese_sha256": "8a567d01277ec49dad07ba8cb5957568a7164c3ea4a66ddfbb8db4624f280527",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increased_melee_crit_chance_and_melee_finesse"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_ranged_cleave.md",
@@ -8732,7 +8751,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_when_flanking.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_when_flanking.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_when_flanking.md",
+      "commit": "8c16b4b642352008e1cb8c16d838bd11dedb88c5"
+    },
+    {
+      "id": "veteran_increased_melee_crit_chance_and_melee_finesse",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_melee_crit_chance_and_melee_finesse.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_melee_crit_chance_and_melee_finesse.md"
     }
   ],
   "pending_chinese_corrections": [
