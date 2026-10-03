@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="Soften Them Up talent icon"> [Soften Them Up](#ogryn_targets_recieve_damage_taken_increase_debuff) | <ul><li>After your melee attack damages an enemy that survives, it takes +15% damage for 5s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="Too Stubborn to Die talent icon"> [Too Stubborn to Die](#ogryn_toughness_on_low_health) | <ul><li>While below 50% Health, increase eligible Toughness replenishment amounts by 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="Batter talent icon"> [Batter](#ogryn_heavy_bleeds) | <ul><li>Melee hits apply 1 Bleed stack; heavy hits apply 4, up to 16 stacks.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="Hard Knocks talent icon"> [Hard Knocks](#ogryn_staggering_increases_damage) | <ul><li>Enemies staggered by melee attacks take +15% melee damage for 5s; teammates' melee attacks also benefit.</li></ul> | Talent |
 
 ## Blitz
 
@@ -824,3 +825,19 @@
 - **Damage example**: At 4 stacks, `87.5 × 0.25² × 2.5 ≈ 13.67` damage; 8 stacks deal 43.75 and 16 deal 87.5. Thus 8 stacks do not deal twice the damage of 4. Other armour types and damage bonuses change the result.
 
 [Details](ogryn_heavy_bleeds.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_staggering_increases_damage"></a>
+
+### Hard Knocks
+
+<img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="72" height="72" alt="Hard Knocks talent icon">
+
+- **Trigger**: Stagger an enemy that survives with a melee attack, or push an enemy that is currently staggered, to make it take 15% more melee damage for 5s. Teammates' melee attacks also benefit.
+
+- **Stacks and refresh**: Maximum 1 stack; triggering again restarts the duration. It adds at the same stage as Soften Them Up's 15% general damage-taken bonus.
+
+- **Damage example**: Base melee damage of 100 becomes 115 with this effect alone. With Soften Them Up also active, it becomes `100 × (1 + 15% + 15%) = 130`. Ranged damage does not receive this melee damage-taken bonus.
+
+[Details](ogryn_staggering_increases_damage.md) · [Back to index](#talent-index)

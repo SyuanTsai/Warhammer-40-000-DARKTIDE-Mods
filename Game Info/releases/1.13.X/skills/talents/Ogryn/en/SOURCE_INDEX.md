@@ -56,3 +56,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Soften Them Up](ogryn_targets_recieve_damage_taken_increase_debuff.md) / `ogryn_targets_recieve_damage_taken_increase_debuff` | Talent |
 | [Too Stubborn to Die](ogryn_toughness_on_low_health.md) / `ogryn_toughness_on_low_health` | Talent |
 | [Batter](ogryn_heavy_bleeds.md) / `ogryn_heavy_bleeds` | Talent |
+| [Hard Knocks](ogryn_staggering_increases_damage.md) / `ogryn_staggering_increases_damage` | Talent |
