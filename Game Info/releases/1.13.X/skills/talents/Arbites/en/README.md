@@ -73,6 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="Judicious Efficiency talent icon"> [Judicious Efficiency](#adamant_elite_special_kills_reload_speed) | <ul><li>After an Elite or Specialist Kill, gain 20% Reload Speed for the next reload.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="March talent icon"> [March](#adamant_movement_speed_on_block) | <ul><li>On a ranged hit, gain 15% Movement Speed for 3s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="No Escape talent icon"> [No Escape](#adamant_elite_special_kills_offensive_boost) | <ul><li>After an Elite or Specialist Kill, gain 10% Damage and Movement Speed for 4s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="Drive them Back talent icon"> [Drive them Back](#adamant_cleave_after_push) | <ul><li>A push hitting an enemy grants 75% more melee damage cleave capacity for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -919,3 +920,15 @@
 - **Effect examples**: Isolating this effect, 100 points of damage becomes 110, and movement at 5 metres per second becomes 5 × 1.1 = 5.5 metres per second. With an existing same-stage 25% damage bonus, damage is 100 × (1 + 25% + 10%) = 135 points.
 
 [Details](adamant_elite_special_kills_offensive_boost.md) · [Back to index](#talent-index)
+
+<a id="adamant_cleave_after_push"></a>
+
+### Drive them Back
+
+<img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="72" height="72" alt="Drive them Back talent icon">
+
+- **Trigger and refresh**: A push hitting at least one enemy grants 75% more melee damage cleave capacity for 5s. Another push hitting an enemy resets the duration.
+
+- **Cleave example**: Isolating this effect, an original capacity to pass through 10 units of enemy mass becomes 10 × 1.75 = 17.5 units. This increases damage penetration capacity without also increasing stagger penetration capacity.
+
+[Details](adamant_cleave_after_push.md) · [Back to index](#talent-index)

@@ -73,3 +73,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Judicious Efficiency](adamant_elite_special_kills_reload_speed.md) / `adamant_elite_special_kills_reload_speed` | Passive talent |
 | [March](adamant_movement_speed_on_block.md) / `adamant_movement_speed_on_block` | Passive talent |
 | [No Escape](adamant_elite_special_kills_offensive_boost.md) / `adamant_elite_special_kills_offensive_boost` | Passive talent |
+| [Drive them Back](adamant_cleave_after_push.md) / `adamant_cleave_after_push` | Passive talent |
