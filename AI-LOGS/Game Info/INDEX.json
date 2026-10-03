@@ -626,6 +626,22 @@
       "path": "AI-LOGS/Game Info/local/releases/1.13.X/skills/1.13.1-update/publication.json",
       "date": "2026-10-02",
       "storage": "local"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/README",
+      "kind": "translation",
+      "scope": "releases/1.13.X/skills/english",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/README.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/FILE_MAP",
+      "kind": "inventory",
+      "scope": "releases/1.13.X/skills/english",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/FILE_MAP.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

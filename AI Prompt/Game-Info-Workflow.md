@@ -231,3 +231,14 @@ Game Info/
 9. 搬移前建立可追溯清單；先更新所有受影響引用，確認內容完整再移除空目錄。保留人類理解技能所需的證據限制，不能把重要例外誤刪為工作紀錄。
 
 [紀錄索引與維護規則](../AI-LOGS/Game%20Info/README.md)｜[共用工具](../scripts/game-info/README.md)
+
+## 英文版本與獨立文本比較
+
+- 英文化既有技能文件時保留繁中路徑；各職業於 `en/` 完整對應主文、來源索引、分類文件及技術子目錄。技能層級共用文件使用同目錄 `.en.md`。先在 AI-LOGS 保存逐檔對應、中文 snapshot/blob 基準、固定來源 SHA 與驗收狀態；不複製共用原始碼、文本批次或附件。
+- 一次只處理一個技能及必要變體、共用結算與例外。協助代理只作唯讀查證及英文草稿；主控直接閱讀核心原文與程式，正式寫入、驗收及逐技能本機提交由主控完成。
+- 英文技能名稱與描述由同版本本體資源按 resource/key/hash 配對；不能把中文英譯當成遊戲英文原文。先核對行為，再獨立比對英文；繁中判定、錯誤清單、統計及通過狀態不得直接繼承。
+- 比較表使用 Rule | Original game English and resource/key/hash | Code behavior and fixed source/method/lines | Result | Reason。判定限定 Consistent、Explicit contradiction、Not covered by the description、No corresponding implementation evidence found、Cannot confirm。保留原始模板；補值結果明記 reconstructed，另核對 format_values 及格式化規則，不冒稱畫面實測。
+- 只有同版本英文明確矛盾才在英文玩家頁加描述勘誤。省略細節屬 Not covered by the description；繁中獨有錯譯不帶入英文。缺英文原文標 Cannot confirm；未找到實作不能推論不存在。已證實的中文機制錯誤保存後續待辦，英文不得照抄。
+- 英文正文、標題、欄名、alt 與導覽採英文；原文、程式與識別碼保持原樣。目錄欄位固定 Talent | Main effects | Category，效果採 HTML 條列，每筆 Markdown 表格單一來源行。圖示沿用已核實 Issue 附件，目錄 32×32、正文 72×72。保留技能 ID 錨點，中英文逐頁雙向切換，英文內部導覽優先指向英文。
+- 完整保留條件、對象、數值、單位、公式、冷卻、資源、疊層及例外。算例具備假設、代入、結果與玩家意義；百分比／百分點、威力／傷害、額外弱點傷害／整次命中、速率／時間、最大值／缺額分開核對。
+- 已存在的文件只新增完成內容與相應入口；不以空殼、檔案數或連結通過替代內容驗收。每項完成後同步 AI-LOGS README、INDEX、對應清單及驗收紀錄，精確 staging、檢查 staged diff 並本機提交；所有要求內容完成前不標整體完成。
