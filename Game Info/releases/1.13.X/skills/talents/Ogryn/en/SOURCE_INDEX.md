@@ -82,3 +82,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Brutish Strength](ogryn_pushing_applies_brittleness.md) / `ogryn_pushing_applies_brittleness` | Talent |
 | [Fire Away](ogryn_explosions_burn.md) / `ogryn_explosions_burn` | Talent |
 | [Unbreakable](ogryn_block_all_attacks.md) / `ogryn_block_all_attacks` | Talent |
+| [Pumped Up](ogryn_damage_reduction_on_high_stamina.md) / `ogryn_damage_reduction_on_high_stamina` | Talent |

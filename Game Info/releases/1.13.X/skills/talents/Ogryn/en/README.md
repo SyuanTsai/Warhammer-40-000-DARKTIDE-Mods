@@ -80,6 +80,7 @@
 | <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="Brutish Strength talent icon"> [Brutish Strength](#ogryn_pushing_applies_brittleness) | <ul><li>Push hits apply four Brittleness stacks (10%) to a living enemy; maximum sixteen (40%) for 5s with refresh, benefiting allies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="Fire Away talent icon"> [Fire Away](#ogryn_explosions_burn) | <ul><li>Damaging explosions apply one Burn stack, or two total in the central area, up to eight; the specified Power Maul explosion is excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="Unbreakable talent icon"> [Unbreakable](#ogryn_block_all_attacks) | <ul><li>Perfect Blocks can block otherwise unblockable melee attacks and grant +20% damage to the next melee sweep for at most 5s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="Pumped Up talent icon"> [Pumped Up](#ogryn_damage_reduction_on_high_stamina) | <ul><li>Gain 12.5% damage reduction while Stamina is strictly above 75% of maximum; no stacks or cooldown.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1274,3 +1275,17 @@
 - **Damage example**: Base damage of 100 becomes 120. With an existing +30% at the same stage, it becomes `100 × (1 + 30% + 20%) = 150`.
 
 [Details](ogryn_block_all_attacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_damage_reduction_on_high_stamina"></a>
+
+### Pumped Up
+
+<img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="72" height="72" alt="Pumped Up talent icon">
+
+- **Condition**: Active while current Stamina is above 75% of maximum. Exactly 75% does not qualify; spending Stamina below the threshold removes the reduction.
+
+- **Damage-reduction example**: Damage of 100 at this stage becomes `100 × 0.875 = 87.5`. With another independent 20% reduction, it becomes `100 × 0.875 × 0.8 = 70`.
+
+[Details](ogryn_damage_reduction_on_high_stamina.md) · [Back to index](#talent-index)

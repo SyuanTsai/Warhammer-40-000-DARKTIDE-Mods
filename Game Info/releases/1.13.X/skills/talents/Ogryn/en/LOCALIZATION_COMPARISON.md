@@ -961,6 +961,18 @@ Full raw template and formatting: [source evidence](ogryn_block_all_attacks.md#o
 | Perfect Block and next-attack bonus | Your Perfect Blocks can block all Melee Attacks. On Perfect Block gain +20% Melee Damage on next Attack.; `ui / loc_talent_ogryn_block_all_attacks_variant_desc / b565afeb` | is_perfect_blocking enables block_unblockable; on_perfect_block grants a one-stack damage_boost with melee_damage 0.2 for the next sweep. [Fixed source and line references](ogryn_block_all_attacks.md#fixed-source-evidence) | Consistent | The independently read English matches the Perfect Block capability and next-melee-attack bonus. |
 | Window, ordinary checks and consumption | No exact window, retention time, miss-consumption or stacking formula is stated.; `ui / loc_talent_ogryn_block_all_attacks_variant_desc / b565afeb` | Normally the window is about 0.3s after starting a block; angle and other ordinary requirements still apply. The bonus lasts at most 5s, refreshes without stacking and exits at sweep_finish even on a miss. Base 100 becomes 120, or 150 with same-stage +30%. [Fixed source and line references](ogryn_block_all_attacks.md#fixed-source-evidence) | Not covered by the description | These accepted timing, blocking and calculation details supplement the English. |
 
+
+<a id="ogryn_damage_reduction_on_high_stamina"></a>
+
+## Pumped Up
+
+Full raw template and formatting: [source evidence](ogryn_damage_reduction_on_high_stamina.md#original-english-template-and-reconstruction). Name hash `bd034d9a`. Every row uses `ui / loc_talent_ogryn_damage_reduction_on_high_stamina_desc / ab8d5e62`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stamina condition and reduction | +12.5% Damage Resistance while above 75% Stamina.; `ui / loc_talent_ogryn_damage_reduction_on_high_stamina_desc / ab8d5e62` | current_fraction > 0.75 enables damage_taken_multiplier 0.875. [Fixed source and line references](ogryn_damage_reduction_on_high_stamina.md#fixed-source-evidence) | Consistent | The independently read English matches the strict threshold and 12.5% reduction. |
+| Continuous condition and calculation | No stacks, cooldown or combined-reduction formula is stated.; `ui / loc_talent_ogryn_damage_reduction_on_high_stamina_desc / ab8d5e62` | Dropping below the threshold removes the effect; it has no stacks/cooldown. Damage 100 becomes 87.5, or 70 with another independent 20% reduction. [Fixed source and line references](ogryn_damage_reduction_on_high_stamina.md#fixed-source-evidence) | Not covered by the description | These accepted condition and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 234 listed rules comprise **99 Consistent**, **4 Explicit contradictions**, **124 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
