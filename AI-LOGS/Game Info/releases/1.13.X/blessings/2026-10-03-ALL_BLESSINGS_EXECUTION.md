@@ -185,3 +185,5 @@
 - 第1輪三項已Commit後完整掃描通過：trauma (`4081b7459d0ddba6b04647472d4a166792949e28`)、hit-and-run (`498ee3f6c3e86d22e64a60875eece8a4542fbf82`)、deflector (`dc1cc0ba75c8bc97f80f2056fde0834628101fe9`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-001-full-scan.json`／SHA-256 `7ebf2641e5b5d5eb9404c9440b8c3c78d886377b57a44d252d3907f0d541e5eb`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [掃射](2026-10-03-RAKING-FIRE_ACCEPTANCE.json)：新增1變體、1型號關聯；共4變體、5關聯。
+
+- [幽靈](2026-10-03-GHOST_ACCEPTANCE.json)：新增5變體、11型號關聯；共5變體、11關聯。

@@ -1,0 +1,17 @@
+# 機動自動槍(Vigilant Autogun)：對應祝福
+
+[武器索引](../../README.md)｜[全部祝福](../../../README.md)
+
+| 祝福 | 本武器主要效果 | 分類 |
+|---|---|---|
+| <img src="https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887" width="32" height="32" alt="幽靈祝福圖示"> [幽靈](../../../entries/幽靈/README.md)<br>- Ghost<br>[完整說明](../../../entries/幽靈/README.md) | <ul><li>持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。</li></ul> | 遠程 |
+
+## 逐型號對應
+
+| 型號 | 祝福實作 | 等級 |
+|---|---|---|
+| 機動自動槍 哥倫努 Mk III | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
+| 機動自動槍 格拉亞 Mk VII | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
+| 機動自動槍 阿格里皮娜 Mk IX | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
+
+表內依各型號列出對應祝福；各祝福的等級為I–IV。

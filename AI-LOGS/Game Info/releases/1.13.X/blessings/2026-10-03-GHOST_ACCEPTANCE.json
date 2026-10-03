@@ -1,0 +1,404 @@
+{
+  "date": "2026-10-03",
+  "blessing": "ghost",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/幽靈/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+    "weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot",
+    "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+    "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+    "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot"
+  ],
+  "added_binding_count": 11,
+  "total_variants": 5,
+  "total_bindings": 11,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "peer_review": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-agent-peer-review.json",
+    "peer_review_sha256": "16f497d3a459f62dc49b019fde48ade8a9c0ff5c2af2775adb08c4be625e6e62",
+    "review_scope": "Current 11 formal pages, five own variants/11 bindings and current source/RAW/image/math receipts; unchanged mechanism review retained after trigger-label-only correction.",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-agent-config.json": "a20a6c23b5f8424a0ee88ee86370da6452ff0fb21d5ef6a44542c7dfa3476fc8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-config.json": "edbda36296fefa85dedbc7aca77c424931de132a4e711bc27ec7f4c5975be6f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-extension-draft.json": "bd9d7dbe7b33ae2a5fecb54c2f32d0fe952abe3c359a8d6bf13f28b84dc1fbf4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-extension-raw-verification.json": "fc0559c2049629f2cc7cebb303a98c12bc86f1f6c4b2fc668f70c79e3a310a5d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-image-upload-journal.json": "bfeb46e5bdc698caba4f8874309d33307b1878082f1faa5225a5dec63482d0b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-image.json": "58ecfbe800b3e8ceab76f975dd2bc95d7ba057cf1ff65a4218f12b4a4817cc69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-explosion-profile-review.json": "af786e3ba0fb292bdd07be812ae364d151d54708b41d67c6bf447915f45b4464",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-gate-review.json": "ec0810b8f42f23a804a213791f68525107883d8a18a494327bf42ba50d6237da",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-mode-fields-review.json": "18c5cba5a981cd17cde4e67d4e0518a88b9cb1f3edc45ce06985355177203ddf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-source-item-review.json": "53088059cf17134879685f442e2e19c568c256eb06e9d05f25b226aa99bd07f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-special-gates-review.json": "2339217de1c1698d0f323db06b1177729d02f627594bec76e8a64c6499833950",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-traits-review.json": "1595e7e80a38a3d9bd554eb61e84aa41b16f3bfe273ea3e336557460ae5b1aa3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-ui-raw-verification.json": "fc0559c2049629f2cc7cebb303a98c12bc86f1f6c4b2fc668f70c79e3a310a5d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-ui-review.json": "1b49a211a88134a9ec0c12393cd8e69a47fd23e7d722357685f1194f53b072bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-raw-verification.json": "46a0015160ddb5d51a5833b3ce5602d8d5189225650f8fcd4a4d93d7a80013a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "6971c8e3b1531097f02186e186dc4625019f22b17964dbbc9c18558b7e5505f4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "2f709112089d05fdb6c5c3e20d3d0a044ef9ed5a938b1efff568e4491427f8a7",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json": "8f35c2194f20e2de1cc616c248f7e3781f5238d4720f8bc51bb111c763eb1932",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "f5bf7447e97457d847c206fc3a125d3980dc62fa783496ecb983b625ca63ab59",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/DAMAGE_PERCENTAGE_REVIEW.md": "f2ce1c7acbd143dbe7ba3b218bf093e08613297af0666c858f4ac52b3c04161b",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/LOCALIZATION_COMPARISON.md": "d82ff9defc1300ba43138983032dcd78c7ef46079005d0506f53327274125366",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/README.md": "a99de757a961a5ca44a6447ad817b92378c0f5bd8bd6a454acbef10b9b6153e9",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/SOURCE_INDEX.md": "acba7d29ba9be71d09ef15862efbe21c27b3e7950641bd6716bc0c7c0521de0d",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/TIER_VALUES.md": "a0996c125a03c25202cfa4c1bad50b45503c98db7ffe0ac0bcdbeea937b24256",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/WEAPON_COMPATIBILITY.md": "4ebbc25dabb405d427e703e7dc7929e67b1746e2c5cf965cb983bee3b0227b28",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md": "13679fe0f12f8c9a3a0ef840ca07b08ab98a1182fa093f9bf4c9d19c95bb2cf6",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot.md": "071d7d6be52c849b7ed094f7e1a44a752b9c3e7039e1a28a42e16625e5874e32",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot.md": "c92abfbfe06c129e03a02fb62496ce955ef979e4eac495398bba5dd854b66c81",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot.md": "a489b53911639f18db05dd9c4e43d4340fc52f5913c82b3e0ae96c13042516cd",
+      "Game Info/releases/1.13.X/blessings/entries/幽靈/weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot.md": "72a7b84b8c96e27625c11f35abdc3847d829de9a83e5b18daa2d29a95c16426e"
+    },
+    "corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "ghost",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_037.png",
+      "attachment": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5969371867",
+      "acquired_date": "2026-10-03",
+      "sha256": "1735a921897e7fa72a6a47c156a171f5bc7881ebdf764b49fbc8e3e754c0723c",
+      "content_type": "image/png",
+      "size": 3829,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "幽靈祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "primary_visual_review": "Sol directly viewed the downloaded public Issue14 attachment; 128×128 skull icon matches weapon_trait_037 metadata."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 20,
+      "rows": 301,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 120,
+      "source_files": 53,
+      "bindings": 295,
+      "variants": 154,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 20,
+      "source_object_cache": {
+        "cache_hits": 53,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 23,
+      "local_references": 537,
+      "remote_references": 393,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 2,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-001-full-scan.json",
+        "sha256": "7ebf2641e5b5d5eb9404c9440b8c3c78d886377b57a44d252d3907f0d541e5eb",
+        "trigger": "round-001"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 127,
+    "not_started_name_groups": 127,
+    "partial_name_groups": 0,
+    "remaining_variants": 451,
+    "remaining_bindings": 890,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6971c8e3b1531097f02186e186dc4625019f22b17964dbbc9c18558b7e5505f4"
+  },
+  "previous_local_commit": "a33a78b0d9685b39c3ac9a27d3989b0fd2f20e3d",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "scope": "all five exact tier/wrapper definitions, 11 RAW/UI/actual wiring bindings, 35 own action blocks, weakspot/item/held conditional chain, chemical profile, toxin original-context propagation and current timer examples",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-traits-review.json",
+        "sha256": "1595e7e80a38a3d9bd554eb61e84aa41b16f3bfe273ea3e336557460ae5b1aa3"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-gate-review.json",
+        "sha256": "ec0810b8f42f23a804a213791f68525107883d8a18a494327bf42ba50d6237da"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-mode-fields-review.json",
+        "sha256": "18c5cba5a981cd17cde4e67d4e0518a88b9cb1f3edc45ce06985355177203ddf"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-special-gates-review.json",
+        "sha256": "2339217de1c1698d0f323db06b1177729d02f627594bec76e8a64c6499833950"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-source-item-review.json",
+        "sha256": "53088059cf17134879685f442e2e19c568c256eb06e9d05f25b226aa99bd07f6"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-explosion-profile-review.json",
+        "sha256": "af786e3ba0fb292bdd07be812ae364d151d54708b41d67c6bf447915f45b4464"
+      }
+    ],
+    "agent_research_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-agent-config.json",
+      "sha256": "a20a6c23b5f8424a0ee88ee86370da6452ff0fb21d5ef6a44542c7dfa3476fc8"
+    },
+    "common_cache_reuse": {
+      "duration_override_and_retrigger": "proc-active-timer, proc-cooldown-retrigger, proc-event-refresh; same ProcBuff class, own base/wrapper verified",
+      "held_keyword": "proc-keyword-condition, held-slot-condition; own template conditional present",
+      "consumer": "ranged-dodge-keyword, hitscan-undodgeable; same keyword, consumer scope limitation applies"
+    },
+    "cache_receipt": {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "2f709112089d05fdb6c5c3e20d3d0a044ef9ed5a938b1efff568e4491427f8a7",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "applicability": "Own base and all wrappers confirmed unchanged common ProcBuff/event/item/held/ranged Dodge paths; only newly introduced special/profile/context conditions directly read."
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-extension-draft.json",
+      "sha256": "bd9d7dbe7b33ae2a5fecb54c2f32d0fe952abe3c359a8d6bf13f28b84dc1fbf4"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 11,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ghost-primary-ui-review.json",
+      "sha256": "1b49a211a88134a9ec0c12393cd8e69a47fd23e7d722357685f1194f53b072bc"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "name_en": "Vigilant Autogun Columnus Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "name_en": "Vigilant Autogun Graia Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "name_en": "Vigilant Autogun Agripinaa Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "galvanic_rifle_p1",
+        "mark_id": "galvanic_rifle_p1_m1",
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_galvanic_rifle_p1_m1",
+          "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "loc_weapon_mark_galvanic_rifle_p1_m1"
+        ],
+        "name_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+        "name_en": "Galvanic Rifle Branx Mk CV",
+        "template_file": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "name_en": "Infantry Lasgun Kantrael Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 714,
+        "append_line": 716
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 692,
+        "append_line": 694
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "name_en": "Infantry Lasgun Kantrael Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 693,
+        "append_line": 695
+      },
+      {
+        "weapon_id": "laspistol_p1",
+        "mark_id": "laspistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_laspistol_p1_m1",
+          "loc_weapon_pattern_laspistol_p1_m1",
+          "loc_weapon_mark_laspistol_p1_m1"
+        ],
+        "name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+        "name_en": "Heavy Laspistol Accatran MG Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860
+      },
+      {
+        "weapon_id": "laspistol_p1",
+        "mark_id": "laspistol_p1_m3",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_laspistol_p1_m3",
+          "loc_weapon_pattern_laspistol_p1_m3",
+          "loc_weapon_mark_laspistol_p1_m3"
+        ],
+        "name_zh_tw": "重型鐳射手槍 卡特雷爾 Mk X",
+        "name_en": "Heavy Laspistol Kantrael Mk X",
+        "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 862,
+        "append_line": 864
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m1",
+          "loc_weapon_pattern_needlepistol_p1_m1",
+          "loc_weapon_mark_needlepistol_p1_m1"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+        "name_en": "Needle Pistol Branx MkVI",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 791,
+        "append_line": 793
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m2",
+          "loc_weapon_pattern_needlepistol_p1_m2",
+          "loc_weapon_mark_needlepistol_p1_m2"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+        "name_en": "Needle Pistol Branx MKII",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 788,
+        "append_line": 790
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "status": "最新 mark-restriction 修正後的 inventory 已重查；Ghost key 無 exact outside/unresolved 候選。",
+    "inventory_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+    "restriction_correction_audit": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json",
+    "inventory_counts": {
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "definitions_not_bound": 88,
+      "unresolved": 58
+    },
+    "bound_variant_count": 5,
+    "bound_mark_binding_count": 11,
+    "exact_bound_metadata_item_count": 5,
+    "exact_outside_metadata_item_count": 0,
+    "exact_unresolved_candidate_count": 0,
+    "scope_note": "五筆 exact metadata 的 weapon_type_restriction 對應各 family，weapon_template_restriction 皆空；最新修正後沒有 Ghost exact mark restriction。outside/unresolved 比對使用修正後 inventory。候選出現不等於遊戲未使用。"
+  }
+}

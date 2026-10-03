@@ -66,3 +66,4 @@
 | [戴維爾戰鎬](melee/戴維爾戰鎬/README.md)<br>- Delver's Pickaxe | 近戰 | 戴維爾戰鎬 布蘭克斯 Mk Ia、戴維爾戰鎬 博羅維安 Mk III、戴維爾戰鎬 卡索拉斯 Mk II |
 | [電能步槍](ranged/電能步槍/README.md)<br>- Galvanic Rifle | 遠程 | 電能步槍 布蘭克斯 Mk CV |
 | [雷鎚](melee/雷鎚/README.md)<br>- Thunder Hammer | 近戰 | 雷鎚 十字星 Mk II、雷鎚 鐵盔 Mk IV |
+| [機動自動槍](ranged/機動自動槍/README.md)<br>- Vigilant Autogun | 遠程 | 機動自動槍 哥倫努 Mk III、機動自動槍 格拉亞 Mk VII、機動自動槍 阿格里皮娜 Mk IX |

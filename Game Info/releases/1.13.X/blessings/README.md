@@ -47,5 +47,6 @@
 | <img src="https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83" width="32" height="32" alt="破片四濺祝福圖示"> [破片四濺](entries/破片四濺/README.md)<br>- Shrapnel<br>[完整說明](entries/破片四濺/README.md) | <ul><li>持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee" width="32" height="32" alt="創傷祝福圖示"> [創傷](entries/創傷/README.md)<br>- Trauma<br>[完整說明](entries/創傷/README.md) | <ul><li>有效命中累積最多5層，每層近戰衝擊+14%／16%／18%／20%，期限2秒；每層另使一般踉蹌時間乘以1.1。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5" width="32" height="32" alt="遊擊祝福圖示"> [遊擊](entries/遊擊/README.md)<br>- Hit & Run<br>[完整說明](entries/遊擊/README.md) | <ul><li>使用此武器在12.5公尺內完成遠程擊殺，短暫獲得遠程閃避判定；I–IV持續0.7／0.8／0.9／1.0秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887" width="32" height="32" alt="幽靈祝福圖示"> [幽靈](entries/幽靈/README.md)<br>- Ghost<br>[完整說明](entries/幽靈/README.md) | <ul><li>持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

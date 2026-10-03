@@ -527,6 +527,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5",
       "effect": "使用此武器在12.5公尺內完成遠程擊殺，短暫獲得遠程閃避判定；I–IV持續0.7／0.8／0.9／1.0秒。"
+    },
+    {
+      "id": "ghost",
+      "name_zh_tw": "幽靈",
+      "name_en": "Ghost",
+      "name_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot",
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "name_hash": "b358bc4e",
+      "description_hash": "c9140fb8",
+      "page": "entries/幽靈/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
     }
   ],
   "weapons": [
@@ -2623,6 +2636,55 @@
             "weapon_family_display_name": "loc_weapon_family_thunderhammer_2h_p1_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_thunderhammer_2h_p1_m2",
             "weapon_mark_display_name": "loc_weapon_mark_thunderhammer_2h_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "autogun_p3",
+      "name_zh_tw": "機動自動槍",
+      "name_en": "Vigilant Autogun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_autogun_p3_m1",
+      "page": "weapons/ranged/機動自動槍/README.md",
+      "marks": [
+        {
+          "id": "autogun_p3_m1",
+          "item": "content/items/weapons/player/ranged/autogun_p3_m1",
+          "name": "機動自動槍 哥倫努 Mk III",
+          "name_en": "Vigilant Autogun Columnus Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+          "trait_category": "bespoke_autogun_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_autogun_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_autogun_p3_m1"
+          }
+        },
+        {
+          "id": "autogun_p3_m2",
+          "item": "content/items/weapons/player/ranged/autogun_p3_m2",
+          "name": "機動自動槍 格拉亞 Mk VII",
+          "name_en": "Vigilant Autogun Graia Mk VII",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+          "trait_category": "bespoke_autogun_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_autogun_p3_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p3_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_autogun_p3_m2"
+          }
+        },
+        {
+          "id": "autogun_p3_m3",
+          "item": "content/items/weapons/player/ranged/autogun_p3_m3",
+          "name": "機動自動槍 阿格里皮娜 Mk IX",
+          "name_en": "Vigilant Autogun Agripinaa Mk IX",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+          "trait_category": "bespoke_autogun_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_autogun_p3_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p3_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_autogun_p3_m3"
           }
         }
       ]
@@ -10144,6 +10206,231 @@
       "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
       "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+      "blessing_id": "ghost",
+      "weapon_id": "autogun_p3",
+      "page": "entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds_by_tier": [
+          0.6,
+          0.8,
+          1,
+          1.2
+        ],
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "trait item slot currently wielded",
+        "proc_keyword": "count_as_dodge_vs_ranged",
+        "reproc": "resets timer; no stack"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 134,
+        "end_line": 163
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "description_hash": "c9140fb8",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "blessing_id": "ghost",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/幽靈/weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds_by_tier": [
+          0.6,
+          0.8,
+          1,
+          1.2
+        ],
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "trait item slot currently wielded",
+        "proc_keyword": "count_as_dodge_vs_ranged",
+        "reproc": "resets timer; no stack"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 79,
+        "end_line": 108
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "description_hash": "c9140fb8",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "blessing_id": "ghost",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/幽靈/weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds_by_tier": [
+          0.6,
+          0.8,
+          1,
+          1.2
+        ],
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "trait item slot currently wielded",
+        "proc_keyword": "count_as_dodge_vs_ranged",
+        "reproc": "resets timer; no stack"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 180,
+        "end_line": 209
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 45,
+        "end_line": 45
+      },
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "description_hash": "c9140fb8",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "blessing_id": "ghost",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/幽靈/weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds_by_tier": [
+          0.6,
+          0.8,
+          1,
+          1.2
+        ],
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "trait item slot currently wielded",
+        "proc_keyword": "count_as_dodge_vs_ranged",
+        "reproc": "resets timer; no stack"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 260,
+        "end_line": 289
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "description_hash": "c9140fb8",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "blessing_id": "ghost",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/幽靈/weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds_by_tier": [
+          0.6,
+          0.8,
+          1,
+          1.2
+        ],
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "conditional": "trait item slot currently wielded",
+        "proc_keyword": "count_as_dodge_vs_ranged",
+        "reproc": "resets timer; no stack"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 114,
+        "end_line": 143
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot_desc",
+      "description_hash": "c9140fb8",
+      "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
+      "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
     }
   ],
   "bindings": [
@@ -14121,6 +14408,160 @@
         "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
         "import_line": 17,
         "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "ghost",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_count_as_dodge_vs_ranged_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/count_as_dodge_vs_ranged_on_weakspot",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
       }
     }
   ]

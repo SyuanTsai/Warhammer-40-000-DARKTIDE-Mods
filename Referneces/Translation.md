@@ -400,6 +400,7 @@
 - Inspiring Barrage - 振奮彈幕
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire`，hash `ee616ba9`；英文／繁中RAW配對確認。
 - Ghost - 幽靈
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot`，hash `b358bc4e`；英文／繁中RAW配對確認。
 - Surgical - 精確打擊
 - Crucian Roulette - 克魯錫安輪盤
 - Deadly Accurate - 致命精準
