@@ -206,3 +206,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Low Profile](veteran_cover_peeking.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
 
 - [Frag Grenade](veteran_frag_grenade.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
+
+- [Determined](veteran_supression_immunity.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.

@@ -49,3 +49,14 @@ These effects are provided by the class base configuration. The equipped Blitz a
 [Source evidence and example assumptions](veteran_frag_grenade.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_frag_grenade) | [Back to talents](README.md)
 
 ---
+
+<a id="veteran_supression_immunity"></a>
+
+## Determined
+
+- Enemy fire does not cause you to accumulate Suppression.
+- This immunity does not reduce damage from bullets that hit you or grant immunity to knockback, being knocked down or other control effects.
+
+[Source evidence and example assumptions](veteran_supression_immunity.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_supression_immunity) | [Back to talents](README.md)
+
+---

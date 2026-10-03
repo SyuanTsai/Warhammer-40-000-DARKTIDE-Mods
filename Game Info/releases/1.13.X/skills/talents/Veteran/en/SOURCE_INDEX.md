@@ -94,3 +94,4 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Guardsman](veteran_base_ranged_damage.md) / `veteran_base_ranged_damage` | Base passive |
 | [Low Profile](veteran_cover_peeking.md) / `veteran_cover_peeking` | Base cover-peeking rule |
 | [Frag Grenade](veteran_frag_grenade.md) / `veteran_frag_grenade` | Base Blitz |
+| [Determined](veteran_supression_immunity.md) / `veteran_supression_immunity` | Base suppression immunity |

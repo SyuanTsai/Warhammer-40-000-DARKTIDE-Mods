@@ -5677,7 +5677,8 @@
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
-        "veteran_frag_grenade"
+        "veteran_frag_grenade",
+        "veteran_supression_immunity"
       ],
       "checks": []
     },
@@ -5770,7 +5771,8 @@
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
-        "veteran_frag_grenade"
+        "veteran_frag_grenade",
+        "veteran_supression_immunity"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5876,7 +5878,8 @@
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
-        "veteran_frag_grenade"
+        "veteran_frag_grenade",
+        "veteran_supression_immunity"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6084,7 +6087,8 @@
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
-        "veteran_frag_grenade"
+        "veteran_frag_grenade",
+        "veteran_supression_immunity"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7941,9 +7945,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d680054055b3dc1cd0432dd4e861adce6438abf3",
       "chinese_sha256": "2b56042872edae894dba718608892dce15464454cab5e7118d067e4ad4979fd1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_supression_immunity"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_supression_immunity.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md",
@@ -9802,6 +9813,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_frag_grenade.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_frag_grenade.md"
+    },
+    {
+      "id": "veteran_supression_immunity",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_supression_immunity.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_supression_immunity.md"
     }
   ],
   "pending_chinese_corrections": [
