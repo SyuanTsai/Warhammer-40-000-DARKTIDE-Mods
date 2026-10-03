@@ -1765,3 +1765,6 @@
 - Kinetic Energy Distributors - 動能分配器（沿用本機繁中名稱，待使用者確認；`cryptic_toughness_on_damage_taken`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L2318-L2340)）
 
 - Motive Engine - 動力引擎（沿用本機繁中名稱，待使用者確認；`cryptic_passive_cooldown_regen`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L1-L17)）
+
+- Run 'n' Gun - 連跑帶打
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_allow_hipfire_while_sprinting`，hash `168636d5`；英文／繁中RAW配對確認。

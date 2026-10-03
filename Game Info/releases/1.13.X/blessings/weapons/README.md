@@ -32,5 +32,16 @@
 | [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
 | [動力彎刀](melee/動力彎刀/README.md)<br>- Power Falchion | 近戰 | 動力彎刀 阿里丁 Mk I、動力彎刀 執法者 Mk IIb |
 | [撕裂者自動手槍](ranged/撕裂者自動手槍/README.md)<br>- Shredder Autopistol | 遠程 | 撕裂者自動手槍 尤斯 Mk IV |
+| [爆彈手槍](ranged/爆彈手槍/README.md)<br>- Bolt Pistol | 遠程 | 爆彈手槍 戈德溫–布蘭克斯 Mk IV、爆彈手槍 戈德溫–布蘭克斯 Mk VI |
 | [雙持自動手槍](ranged/雙持自動手槍/README.md)<br>- Dual Autopistols | 遠程 | 雙持自動手槍 布蘭克斯 MkIII |
+| [虛空爆破力場法杖](ranged/虛空爆破力場法杖/README.md)<br>- Voidblast Force Staff | 遠程 | 虛空爆破力場法杖 陰陽 Mk III |
+| [烈焰力場法杖](ranged/烈焰力場法杖/README.md)<br>- Inferno Force Staff | 遠程 | 烈焰力場法杖 裂隙避難所 Mk II |
+| [電流力場法杖](ranged/電流力場法杖/README.md)<br>- Electrokinetic Force Staff | 遠程 | 電流力場法杖 諾瑪努斯 Mk VI |
+| [虛空打擊力場法杖](ranged/虛空打擊力場法杖/README.md)<br>- Voidstrike Force Staff | 遠程 | 虛空打擊力場法杖 陰陽 Mk IV |
 | [重型鐳射手槍](ranged/重型鐳射手槍/README.md)<br>- Heavy Laspistol | 遠程 | 重型鐳射手槍 奧克塔蘭MG Mk II、重型鐳射手槍 卡特雷爾 Mk X |
+| [針彈手槍](ranged/針彈手槍/README.md)<br>- Needle Pistol | 遠程 | 針彈手槍 布蘭克斯 MkVI、針彈手槍 布蘭克斯 MKII |
+| [反衝者](ranged/反衝者/README.md)<br>- Kickback | 遠程 | 反衝者 洛倫茲 Mk V |
+| [惡棍槍](ranged/惡棍槍/README.md)<br>- Thugshot | 遠程 | 惡棍槍 洛倫茲 Mk VII |
+| [雙管霰彈槍](ranged/雙管霰彈槍/README.md)<br>- Double-Barrelled Shotgun | 遠程 | 雙管霰彈槍 十字星 Mk XI、雙管霰彈槍 克魯克 Mk IV |
+| [衝覆者霰彈手槍和防暴盾牌](ranged/衝覆者霰彈手槍和防暴盾牌/README.md)<br>- Subductor Shotpistol and Riot Shield | 遠程 | 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV |
+| [快拔左輪手槍](ranged/快拔左輪手槍/README.md)<br>- Quickdraw Stub Revolver | 遠程 | 快拔左輪手槍 紮羅娜 Mk IIa、快拔左輪手槍 阿格里皮娜 Mk XIV |

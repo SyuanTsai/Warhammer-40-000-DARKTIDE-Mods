@@ -67,3 +67,7 @@
 - 能量轉換本機 Commit：`709fd9715e2a42e44f524c3151a41f5c26ce4fdc`；完成後才派工掃射。
 
 - [掃射](2026-10-03-RAKING-FIRE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。
+
+- 掃射本機 Commit：`f6e39490b107d95d288db4e9d47e7aaac32ce947`；完成後才派工連跑帶打。
+
+- [連跑帶打](2026-10-03-RUN-N-GUN_ACCEPTANCE.json)：新增14變體、19型號關聯；共14變體、19關聯。

@@ -176,6 +176,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
       "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
+    },
+    {
+      "id": "run-n-gun",
+      "name_zh_tw": "連跑帶打",
+      "name_en": "Run 'n' Gun",
+      "name_key": "loc_trait_bespoke_allow_hipfire_while_sprinting",
+      "description_key": "loc_trait_bespoke_allow_hipfire_while_sprinting_and_bonus_stats_desc",
+      "name_hash": "168636d5",
+      "description_hash": "5ae2e578",
+      "page": "entries/連跑帶打/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%，雙管霰彈槍為10%。"
     }
   ],
   "weapons": [
@@ -999,6 +1012,42 @@
       ]
     },
     {
+      "id": "boltpistol_p1",
+      "name_zh_tw": "爆彈手槍",
+      "name_en": "Bolt Pistol",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_boltpistol_p1_m1",
+      "page": "weapons/ranged/爆彈手槍/README.md",
+      "marks": [
+        {
+          "id": "boltpistol_p1_m1",
+          "item": "content/items/weapons/player/ranged/boltpistol_p1_m1",
+          "name": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+          "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+          "trait_category": "bespoke_boltpistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_boltpistol_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_boltpistol_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_boltpistol_p1_m1"
+          }
+        },
+        {
+          "id": "boltpistol_p1_m2",
+          "item": "content/items/weapons/player/ranged/boltpistol_p1_m2",
+          "name": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+          "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+          "trait_category": "bespoke_boltpistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_boltpistol_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_boltpistol_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_boltpistol_p1_m2"
+          }
+        }
+      ]
+    },
+    {
       "id": "dual_autopistols_p1",
       "name_zh_tw": "雙持自動手槍",
       "name_en": "Dual Autopistols",
@@ -1017,6 +1066,98 @@
             "weapon_family_display_name": "loc_weapon_family_dual_autopistols_p1_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_dual_autopistols_p1_m1",
             "weapon_mark_display_name": "loc_weapon_mark_dual_autopistols_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forcestaff_p1",
+      "name_zh_tw": "虛空爆破力場法杖",
+      "name_en": "Voidblast Force Staff",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_forcestaff_p1_m1",
+      "page": "weapons/ranged/虛空爆破力場法杖/README.md",
+      "marks": [
+        {
+          "id": "forcestaff_p1_m1",
+          "item": "content/items/weapons/player/ranged/forcestaff_p1_m1",
+          "name": "虛空爆破力場法杖 陰陽 Mk III",
+          "name_en": "Voidblast Force Staff Equinox Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+          "trait_category": "bespoke_forcestaff_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcestaff_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forcestaff_p2",
+      "name_zh_tw": "烈焰力場法杖",
+      "name_en": "Inferno Force Staff",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_forcestaff_p2_m1",
+      "page": "weapons/ranged/烈焰力場法杖/README.md",
+      "marks": [
+        {
+          "id": "forcestaff_p2_m1",
+          "item": "content/items/weapons/player/ranged/forcestaff_p2_m1",
+          "name": "烈焰力場法杖 裂隙避難所 Mk II",
+          "name_en": "Inferno Force Staff Rifthaven Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+          "trait_category": "bespoke_forcestaff_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcestaff_p2_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p2_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p2_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forcestaff_p3",
+      "name_zh_tw": "電流力場法杖",
+      "name_en": "Electrokinetic Force Staff",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_forcestaff_p3_m1",
+      "page": "weapons/ranged/電流力場法杖/README.md",
+      "marks": [
+        {
+          "id": "forcestaff_p3_m1",
+          "item": "content/items/weapons/player/ranged/forcestaff_p3_m1",
+          "name": "電流力場法杖 諾瑪努斯 Mk VI",
+          "name_en": "Electrokinetic Force Staff Nomanus Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+          "trait_category": "bespoke_forcestaff_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcestaff_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p3_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forcestaff_p4",
+      "name_zh_tw": "虛空打擊力場法杖",
+      "name_en": "Voidstrike Force Staff",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_forcestaff_p4_m1",
+      "page": "weapons/ranged/虛空打擊力場法杖/README.md",
+      "marks": [
+        {
+          "id": "forcestaff_p4_m1",
+          "item": "content/items/weapons/player/ranged/forcestaff_p4_m1",
+          "name": "虛空打擊力場法杖 陰陽 Mk IV",
+          "name_en": "Voidstrike Force Staff Equinox Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+          "trait_category": "bespoke_forcestaff_p4",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcestaff_p4_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p4_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p4_m1"
           }
         }
       ]
@@ -1053,6 +1194,183 @@
             "weapon_family_display_name": "loc_weapon_family_laspistol_p1_m3",
             "weapon_pattern_display_name": "loc_weapon_pattern_laspistol_p1_m3",
             "weapon_mark_display_name": "loc_weapon_mark_laspistol_p1_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "needlepistol_p1",
+      "name_zh_tw": "針彈手槍",
+      "name_en": "Needle Pistol",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_needlepistol_p1_m1",
+      "page": "weapons/ranged/針彈手槍/README.md",
+      "marks": [
+        {
+          "id": "needlepistol_p1_m1",
+          "item": "content/items/weapons/player/ranged/needlepistol_p1_m1",
+          "name": "針彈手槍 布蘭克斯 MkVI",
+          "name_en": "Needle Pistol Branx MkVI",
+          "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+          "trait_category": "bespoke_needlepistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_needlepistol_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_needlepistol_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_needlepistol_p1_m1"
+          }
+        },
+        {
+          "id": "needlepistol_p1_m2",
+          "item": "content/items/weapons/player/ranged/needlepistol_p1_m2",
+          "name": "針彈手槍 布蘭克斯 MKII",
+          "name_en": "Needle Pistol Branx MKII",
+          "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+          "trait_category": "bespoke_needlepistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_needlepistol_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_needlepistol_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_needlepistol_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_thumper_p1",
+      "name_zh_tw": "反衝者",
+      "name_en": "Kickback",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_ogryn_thumper_p1_m1",
+      "page": "weapons/ranged/反衝者/README.md",
+      "marks": [
+        {
+          "id": "ogryn_thumper_p1_m1",
+          "item": "content/items/weapons/player/ranged/ogryn_thumper_p1_m1",
+          "name": "反衝者 洛倫茲 Mk V",
+          "name_en": "Kickback Lorenz Mk V",
+          "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+          "trait_category": "bespoke_thumper_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_thumper_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_thumper_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_thumper_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_thumper_p3",
+      "name_zh_tw": "惡棍槍",
+      "name_en": "Thugshot",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_ogryn_thumper_p1_m3",
+      "page": "weapons/ranged/惡棍槍/README.md",
+      "marks": [
+        {
+          "id": "ogryn_thumper_p1_m3",
+          "item": "content/items/weapons/player/ranged/ogryn_thumper_p1_m3",
+          "name": "惡棍槍 洛倫茲 Mk VII",
+          "name_en": "Thugshot Lorenz Mk VII",
+          "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+          "trait_category": "bespoke_thumper_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_thumper_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_thumper_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_thumper_p1_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shotgun_p2",
+      "name_zh_tw": "雙管霰彈槍",
+      "name_en": "Double-Barrelled Shotgun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_shotgun_p2_m1",
+      "page": "weapons/ranged/雙管霰彈槍/README.md",
+      "marks": [
+        {
+          "id": "shotgun_p2_m1",
+          "item": "content/items/weapons/player/ranged/shotgun_p2_m1",
+          "name": "雙管霰彈槍 十字星 Mk XI",
+          "name_en": "Double-Barrelled Shotgun Crucis Mk XI",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+          "trait_category": "bespoke_shotgun_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p2_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p2_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p2_m1"
+          }
+        },
+        {
+          "id": "shotgun_p2_m3",
+          "item": "content/items/weapons/player/ranged/shotgun_p2_m3",
+          "name": "雙管霰彈槍 克魯克 Mk IV",
+          "name_en": "Double-Barrelled Shotgun Krourk Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+          "trait_category": "bespoke_shotgun_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p2_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p2_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p2_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shotpistol_shield_p1",
+      "name_zh_tw": "衝覆者霰彈手槍和防暴盾牌",
+      "name_en": "Subductor Shotpistol and Riot Shield",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_shotpistol_shield_p1_m1",
+      "page": "weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md",
+      "marks": [
+        {
+          "id": "shotpistol_shield_p1_m1",
+          "item": "content/items/weapons/player/ranged/shotpistol_shield_p1_m1",
+          "name": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+          "name_en": "Subductor Shotpistol and Riot Shield Judgement Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+          "trait_category": "bespoke_shotpistol_shield_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotpistol_shield_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotpistol_shield_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_shotpistol_shield_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stubrevolver_p1",
+      "name_zh_tw": "快拔左輪手槍",
+      "name_en": "Quickdraw Stub Revolver",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_stubrevolver_p1_m1",
+      "page": "weapons/ranged/快拔左輪手槍/README.md",
+      "marks": [
+        {
+          "id": "stubrevolver_p1_m1",
+          "item": "content/items/weapons/player/ranged/stubrevolver_p1_m1",
+          "name": "快拔左輪手槍 紮羅娜 Mk IIa",
+          "name_en": "Quickdraw Stub Revolver Zarona Mk IIa",
+          "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+          "trait_category": "bespoke_stubrevolver_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_stubrevolver_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_stubrevolver_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_stubrevolver_p1_m1"
+          }
+        },
+        {
+          "id": "stubrevolver_p1_m2",
+          "item": "content/items/weapons/player/ranged/stubrevolver_p1_m2",
+          "name": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+          "name_en": "Quickdraw Stub Revolver Agripinaa Mk XIV",
+          "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+          "trait_category": "bespoke_stubrevolver_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_stubrevolver_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_stubrevolver_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_stubrevolver_p1_m2"
           }
         }
       ]
@@ -3039,6 +3357,706 @@
       "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
       "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 466,
+        "end_line": 531
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 31
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_boltpistol_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 64,
+        "end_line": 127
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 466,
+        "end_line": 530
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 31
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 92,
+        "end_line": 155
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p2",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+        "start_line": 63,
+        "end_line": 126
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p3",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start_line": 62,
+        "end_line": 125
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_forcestaff_p4_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 92,
+        "end_line": 155
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_laspistol_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 10,
+        "end_line": 71
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 10,
+        "end_line": 71
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 9,
+        "end_line": 72
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p3_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 9,
+        "end_line": 72
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_shotgun_p2_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.1,
+            -0.1,
+            -0.1,
+            -0.1
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 512,
+        "end_line": 575
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 31
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_hipfire_while_sprinting",
+      "blessing_id": "run-n-gun",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/連跑帶打/weapon_trait_bespoke_stubrevolver_p1_hipfire_while_sprinting.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "spread_modifier": [
+            -0.3,
+            -0.3,
+            -0.3,
+            -0.3
+          ]
+        },
+        "conditional_stat_buffs": {
+          "damage_near": [
+            0.06,
+            0.09,
+            0.12,
+            0.15
+          ]
+        },
+        "constant_keyword": "allow_hipfire_during_sprint",
+        "damage_condition": "is_item_slot_wielded AND is_sprinting",
+        "close_range": 12.5,
+        "far_range": 30,
+        "stacking": "constant effect; spread and damage_near additive",
+        "duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 10,
+        "end_line": 10
+      },
+      "icon": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "effect": "可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。"
     }
   ],
   "bindings": [
@@ -4552,6 +5570,272 @@
         "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
         "import_line": 16,
         "append_line": 864
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p2",
+      "mark_id": "forcestaff_p2_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p2/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_forcestaff_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1225
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_forcestaff_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "append_line": 1301
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "run-n-gun",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_hipfire_while_sprinting",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/allow_hipfire_while_sprinting",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
       }
     }
   ]
