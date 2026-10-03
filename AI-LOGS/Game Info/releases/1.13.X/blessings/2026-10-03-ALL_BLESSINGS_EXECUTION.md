@@ -105,3 +105,7 @@
 - 穿透火焰本機 Commit：`2a1702183ce1ab36077d8488442a1987eb749f01`。
 
 - [血肉撕裂者](2026-10-03-FLESH-TEARER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 血肉撕裂者本機 Commit：`04dd325fc7f39c1a0329fb347ba9198932fa2adc`。
+
+- [飛鏢彈](2026-10-03-FLECHETTE_ACCEPTANCE.json)：新增4變體、9型號關聯；共4變體、9關聯。

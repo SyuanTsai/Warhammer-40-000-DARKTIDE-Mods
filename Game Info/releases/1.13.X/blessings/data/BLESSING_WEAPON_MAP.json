@@ -306,6 +306,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
       "effect": "近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。"
+    },
+    {
+      "id": "flechette",
+      "name_zh_tw": "飛鏢彈",
+      "name_en": "Flechette",
+      "name_key": "loc_trait_bespoke_bleed_on_crit_ranged",
+      "description_key": "loc_trait_bespoke_bleed_on_crit_ranged_desc",
+      "name_hash": "d1d03cff",
+      "description_hash": "9a66212b",
+      "page": "entries/飛鏢彈/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
     }
   ],
   "weapons": [
@@ -1899,6 +1912,78 @@
             "weapon_family_display_name": "loc_weapon_family_dual_shivs_p1_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_dual_shivs_p1_m2",
             "weapon_mark_display_name": "loc_weapon_mark_dual_shivs_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shotgun_p1",
+      "name_zh_tw": "戰鬥霰彈槍",
+      "name_en": "Combat Shotgun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_shotgun_p1_m1",
+      "page": "weapons/ranged/戰鬥霰彈槍/README.md",
+      "marks": [
+        {
+          "id": "shotgun_p1_m1",
+          "item": "content/items/weapons/player/ranged/shotgun_p1_m1",
+          "name": "戰鬥霰彈槍 紮羅娜 Mk VI",
+          "name_en": "Combat Shotgun Zarona Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+          "trait_category": "bespoke_shotgun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p1_m1"
+          }
+        },
+        {
+          "id": "shotgun_p1_m2",
+          "item": "content/items/weapons/player/ranged/shotgun_p1_m2",
+          "name": "戰鬥霰彈槍 阿格里皮娜 Mk VII",
+          "name_en": "Combat Shotgun Agripinaa Mk VII",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+          "trait_category": "bespoke_shotgun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p1_m2"
+          }
+        },
+        {
+          "id": "shotgun_p1_m3",
+          "item": "content/items/weapons/player/ranged/shotgun_p1_m3",
+          "name": "戰鬥霰彈槍 奧克塔蘭 Mk IX",
+          "name_en": "Combat Shotgun Accatran Mk IX",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+          "trait_category": "bespoke_shotgun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p1_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shotgun_p3",
+      "name_zh_tw": "獵人霰彈槍",
+      "name_en": "Huntsman's Shotgun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_shotgun_p3_m1",
+      "page": "weapons/ranged/獵人霰彈槍/README.md",
+      "marks": [
+        {
+          "id": "shotgun_p3_m1",
+          "item": "content/items/weapons/player/ranged/shotgun_p3_m1",
+          "name": "獵人霰彈槍 奧克塔蘭 Mk III",
+          "name_en": "Huntsman's Shotgun Accatran Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+          "trait_category": "bespoke_shotgun_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_shotgun_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_shotgun_p3_m1"
           }
         }
       ]
@@ -5698,6 +5783,202 @@
       "icon": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_194",
       "effect": "近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit",
+      "blessing_id": "flechette",
+      "weapon_id": "ogryn_rippergun_p1",
+      "page": "entries/飛鏢彈/weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_pellet_hits",
+        "proc_condition": "aggregated target damage>0 and critical flag; item slot wielded at processing",
+        "per_target_per_pellet_shooting_event": 1,
+        "stacks_scale_with_pellet_count": false,
+        "first_target_only": false,
+        "continuous_fire_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_rippergun_p1.lua",
+        "start_line": 361,
+        "end_line": 401
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_rippergun_p1_buff_templates.lua",
+        "start_line": 35,
+        "end_line": 37
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_ranged_desc",
+      "description_hash": "9a66212b",
+      "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
+      "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_bleed_on_crit",
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/飛鏢彈/weapon_trait_bespoke_shotgun_p1_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_pellet_hits",
+        "proc_condition": "aggregated target damage>0 and critical flag; item slot wielded at processing",
+        "per_target_per_pellet_shooting_event": 1,
+        "stacks_scale_with_pellet_count": false,
+        "first_target_only": false,
+        "continuous_fire_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 270,
+        "end_line": 308
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_ranged_desc",
+      "description_hash": "9a66212b",
+      "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
+      "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_bleed_on_crit",
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/飛鏢彈/weapon_trait_bespoke_shotgun_p2_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_pellet_hits",
+        "proc_condition": "aggregated target damage>0 and critical flag; item slot wielded at processing",
+        "per_target_per_pellet_shooting_event": 1,
+        "stacks_scale_with_pellet_count": false,
+        "first_target_only": false,
+        "continuous_fire_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 219,
+        "end_line": 257
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_ranged_desc",
+      "description_hash": "9a66212b",
+      "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
+      "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_bleed_on_crit",
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/飛鏢彈/weapon_trait_bespoke_shotgun_p3_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "event": "on_pellet_hits",
+        "proc_condition": "aggregated target damage>0 and critical flag; item slot wielded at processing",
+        "per_target_per_pellet_shooting_event": 1,
+        "stacks_scale_with_pellet_count": false,
+        "first_target_only": false,
+        "continuous_fire_required": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 270,
+        "end_line": 308
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_ranged_desc",
+      "description_hash": "9a66212b",
+      "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
+      "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
     }
   ],
   "bindings": [
@@ -8023,6 +8304,132 @@
         "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
         "import_line": 14,
         "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/bleed_on_crit",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 913
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/bleed_on_crit",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 908
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/bleed_on_crit",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 891
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "flechette",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/bleed_on_crit",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
       }
     }
   ]

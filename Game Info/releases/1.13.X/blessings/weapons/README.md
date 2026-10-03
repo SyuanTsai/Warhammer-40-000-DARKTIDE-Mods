@@ -56,3 +56,5 @@
 | [電漿槍](ranged/電漿槍/README.md)<br>- Plasma Gun | 遠程 | 電漿槍 M35熔岩核心 Mk II、電漿槍 M35熔岩核心 Mk III |
 | [戰刃](melee/戰刃/README.md)<br>- Combat Blade | 近戰 | 戰刃 卡塔昌 Mk III、戰刃 卡塔昌 Mk VI |
 | [短刀](melee/短刀/README.md)<br>- Shivs | 近戰 | 短刀 臨時拼湊 型號1、短刀 臨時拼湊 型號3 |
+| [戰鬥霰彈槍](ranged/戰鬥霰彈槍/README.md)<br>- Combat Shotgun | 遠程 | 戰鬥霰彈槍 紮羅娜 Mk VI、戰鬥霰彈槍 阿格里皮娜 Mk VII、戰鬥霰彈槍 奧克塔蘭 Mk IX |
+| [獵人霰彈槍](ranged/獵人霰彈槍/README.md)<br>- Huntsman's Shotgun | 遠程 | 獵人霰彈槍 奧克塔蘭 Mk III |
