@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 260 completed on 2026-10-04. [Receipt](ogryn_skills_256_260.json) and [FILE_MAP](FILE_MAP.json) now record 260 accepted mechanisms. Next item: **261, Bull Rush**, `ogryn_charge`. The full goal remains active and unfinished.
+Checkpoint 265 completed on 2026-10-04. [Receipt](ogryn_skills_261_265.json) and [FILE_MAP](FILE_MAP.json) now record 265 accepted mechanisms. Next item: **266, Outta My Way!**, `ogryn_dodge_stagger`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 386 mechanisms + 30 class-support files + 2 shared files = 418 mapped files. Ogryn has 7 mechanisms and six support files remaining. Ogryn comparison totals: 264 = 114 Consistent / 4 Explicit contradictions / 139 Not covered / 0 No implementation / 7 Cannot confirm. The added English contradiction concerns Pacemaker's single-attack restriction. Latest clean batch: 203s (3m 23s) between 4d6628117 and 228255c2f.
+Remaining: 381 mechanisms + 30 class-support files + 2 shared files = 413 mapped files. Ogryn has 2 mechanisms and six support files remaining. Ogryn comparison totals: 277 = 119 Consistent / 6 Explicit contradictions / 144 Not covered / 0 No implementation / 8 Cannot confirm. The latest English contradictions concern Intimidating Presence's heavy-only scope and Thick Skin's additional dodge reduction. Latest clean batch: 341s (5m 41s) between ea2b3856c and 236039eab.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

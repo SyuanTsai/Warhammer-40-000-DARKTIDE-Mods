@@ -2256,7 +2256,9 @@
         "ogryn_melee_improves_ranged",
         "ogryn_ally_elite_kills_grant_cooldown",
         "ogryn_weakspot_damage",
-        "ogryn_bracing_reduces_damage_taken"
+        "ogryn_bracing_reduces_damage_taken",
+        "ogryn_charge",
+        "ogryn_melee_damage_coherency"
       ],
       "checks": []
     },
@@ -2354,7 +2356,12 @@
         "ogryn_melee_improves_ranged",
         "ogryn_ally_elite_kills_grant_cooldown",
         "ogryn_weakspot_damage",
-        "ogryn_bracing_reduces_damage_taken"
+        "ogryn_bracing_reduces_damage_taken",
+        "ogryn_charge",
+        "ogryn_grenade_box",
+        "ogryn_melee_damage_coherency",
+        "ogryn_helping_hand",
+        "ogryn_base_tank_passive"
       ],
       "checks": []
     },
@@ -2452,7 +2459,9 @@
         "ogryn_melee_improves_ranged",
         "ogryn_ally_elite_kills_grant_cooldown",
         "ogryn_weakspot_damage",
-        "ogryn_bracing_reduces_damage_taken"
+        "ogryn_bracing_reduces_damage_taken",
+        "ogryn_charge",
+        "ogryn_melee_damage_coherency"
       ],
       "checks": []
     },
@@ -2550,7 +2559,12 @@
         "ogryn_melee_improves_ranged",
         "ogryn_ally_elite_kills_grant_cooldown",
         "ogryn_weakspot_damage",
-        "ogryn_bracing_reduces_damage_taken"
+        "ogryn_bracing_reduces_damage_taken",
+        "ogryn_charge",
+        "ogryn_grenade_box",
+        "ogryn_melee_damage_coherency",
+        "ogryn_helping_hand",
+        "ogryn_base_tank_passive"
       ],
       "checks": []
     },
@@ -2626,9 +2640,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "64e1c743c84c59e00d3d51b597cd0d3c3f236d28",
       "chinese_sha256": "e7511b69716d9b4922872231a5e9ec58b995564921cd6ee5a9764a016aacf681",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_base_tank_passive"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_big_box_of_hurt_more_bombs.md",
@@ -2871,9 +2892,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5c406a61ba0faff17377ff62b1ee925cd2d15156",
       "chinese_sha256": "e848c25e97a7c57c07667b62261b79b32aee240f30a77c0d4481b2fceab099c9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_applies_bleed.md",
@@ -3138,9 +3166,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "35688000473736acdd9012dd9cfd79afc3a1c7ab",
       "chinese_sha256": "5c82e7295bd04dc5b9e81ca376626d61d5397876656dee0d27721f53460af496",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_grenade_box"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_frag.md",
@@ -3293,9 +3328,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "55af6149c2f345bdd7bf3063cfc4a7d0a54c5162",
       "chinese_sha256": "d6da052bc7d35ba32d26ace5f3c6d424c97514f6aa37864fceec9468f60fc299",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_helping_hand"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_increase_explosion_radius.md",
@@ -3502,9 +3544,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b5afa340254219fc33cacc8817367139738d4300",
       "chinese_sha256": "b78b81afc5b28c0aca16176ff2816dc2eb8d1892e42b8b5848817023ba39f9ec",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_melee_damage_coherency"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_damage_coherency_improved.md",
@@ -13252,6 +13301,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_bracing_reduces_damage_taken.md"
+    },
+    {
+      "id": "ogryn_charge",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_charge.md"
+    },
+    {
+      "id": "ogryn_grenade_box",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_grenade_box.md"
+    },
+    {
+      "id": "ogryn_melee_damage_coherency",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_coherency.md"
+    },
+    {
+      "id": "ogryn_helping_hand",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_helping_hand.md"
+    },
+    {
+      "id": "ogryn_base_tank_passive",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_base_tank_passive.md"
     }
   ],
   "pending_chinese_corrections": [

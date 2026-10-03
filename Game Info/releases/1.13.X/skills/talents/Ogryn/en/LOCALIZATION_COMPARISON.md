@@ -1194,4 +1194,4 @@ Full raw template and formatting: [source evidence](ogryn_base_tank_passive.md#o
 
 ## Comparison totals
 
-The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
+The 277 listed rules comprise **119 Consistent**, **6 Explicit contradictions**, **144 Not covered by the description**, **0 No corresponding implementation evidence found** and **8 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst, the single-attack restriction in Pacemaker, the heavy-only scope in Intimidating Presence and the additional dodge reduction in Thick Skin. These totals apply only to the listed rules.
