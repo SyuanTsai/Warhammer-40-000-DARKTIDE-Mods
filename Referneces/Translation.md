@@ -349,6 +349,7 @@
 - Energy Leakage - 能量洩漏
   - 本體1.13.1名稱鍵 `loc_power_bonus_scaled_on_heat`，hash `b56e85e7`；英文／繁中RAW配對確認。
 - Heatsink - 散熱器
+  - 本體1.13.1名稱鍵 `loc_reduce_fixed_overheat_amount`，hash `1a699330`；英文／繁中RAW配對確認。
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換
 - Shock & Awe / Shock and Awe - 震懾

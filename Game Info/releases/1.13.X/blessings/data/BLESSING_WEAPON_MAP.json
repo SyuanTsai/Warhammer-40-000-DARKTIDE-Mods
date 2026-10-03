@@ -137,6 +137,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
       "effect": "依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。"
+    },
+    {
+      "id": "heatsink",
+      "name_zh_tw": "散熱器",
+      "name_en": "Heatsink",
+      "name_key": "loc_reduce_fixed_overheat_amount",
+      "description_key": "loc_reduce_fixed_overheat_amount_desc",
+      "name_hash": "1a699330",
+      "description_hash": "14cd4e99",
+      "page": "entries/散熱器/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
+      "effect": "攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。"
     }
   ],
   "weapons": [
@@ -2691,6 +2704,88 @@
       "icon": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_238",
       "effect": "依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_2h_p1_reduce_fixed_overheat_amount_parent",
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/散熱器/weapon_trait_bespoke_powersword_2h_p1_reduce_fixed_overheat_amount_parent.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "overheat_reduction": [
+          0.04,
+          0.06,
+          0.08,
+          0.1
+        ],
+        "duration": 3,
+        "child_duration": 3,
+        "max_effective_stacks": 1,
+        "tick_interval": 1,
+        "non_lockout_multiplier": 0.25,
+        "first_target_only": true,
+        "qualifying_kill": "weakspot or critical strike"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 54,
+        "end_line": 98
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 87,
+        "end_line": 107
+      },
+      "icon": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_237",
+      "effect": "攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent",
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_p2",
+      "page": "entries/散熱器/weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "overheat_reduction": [
+          0.04,
+          0.06,
+          0.08,
+          0.1
+        ],
+        "duration": 3,
+        "child_duration": 3,
+        "max_effective_stacks": 1,
+        "tick_interval": 1,
+        "non_lockout_multiplier": 0.25,
+        "first_target_only": true,
+        "qualifying_kill": "weakspot or critical strike"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 54,
+        "end_line": 98
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 87,
+        "end_line": 107
+      },
+      "icon": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_237",
+      "effect": "攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。"
     }
   ],
   "bindings": [
@@ -4030,6 +4125,62 @@
       "mark_id": "powersword_p2_m2",
       "variant_id": "weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat",
       "trait_item": "content/items/traits/bespoke_powersword_p2/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "import_line": 11,
+        "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_reduce_fixed_overheat_amount_parent",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/reduce_fixed_overheat_amount",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_reduce_fixed_overheat_amount_parent",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/reduce_fixed_overheat_amount",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/reduce_fixed_overheat_amount",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "import_line": 11,
+        "append_line": 1743
+      }
+    },
+    {
+      "blessing_id": "heatsink",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/reduce_fixed_overheat_amount",
       "trait_category": "bespoke_powersword_p2",
       "available_tiers": null,
       "source": {

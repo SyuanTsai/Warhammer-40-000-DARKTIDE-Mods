@@ -55,3 +55,7 @@
 - 超載本機Commit：`f565eb1a0b236d5db70580de37951f036ddb3e0a`；文件、Issue圖片及92條累積型號關聯驗收完成。
 
 - [能量洩漏](2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 能量洩漏本機Commit：`a67b24989c789adcd243a605b76329bb48b75989`；文件、Issue圖片及96條累積型號關聯驗收完成。
+
+- [散熱器](2026-10-03-HEATSINK_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
