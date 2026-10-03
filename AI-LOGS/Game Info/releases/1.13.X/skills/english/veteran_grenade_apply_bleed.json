@@ -194,5 +194,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/shredder-frag-grenade-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_grenade_apply_bleed.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_grenade_apply_bleed.md",
+  "commit": "97cfa50031291dbec8c6238829f356936a5efaac"
 }

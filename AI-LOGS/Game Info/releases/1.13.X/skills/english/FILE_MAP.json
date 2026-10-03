@@ -5713,7 +5713,8 @@
         "veteran_improved_grenades",
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
-        "veteran_grenade_apply_bleed"
+        "veteran_grenade_apply_bleed",
+        "veteran_increased_damage_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5767,7 +5768,8 @@
         "veteran_improved_grenades",
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
-        "veteran_grenade_apply_bleed"
+        "veteran_grenade_apply_bleed",
+        "veteran_increased_damage_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5821,7 +5823,8 @@
         "veteran_improved_grenades",
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
-        "veteran_grenade_apply_bleed"
+        "veteran_grenade_apply_bleed",
+        "veteran_increased_damage_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5875,7 +5878,8 @@
         "veteran_improved_grenades",
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
-        "veteran_grenade_apply_bleed"
+        "veteran_grenade_apply_bleed",
+        "veteran_increased_damage_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6607,9 +6611,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "511fba5efc8e981a65f8201243482f93a49d6632",
       "chinese_sha256": "be960d92b22dba5a64e689e6847d0ffe903e98b923b204785ddab169a196ed6f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increased_damage_coherency"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_damage_when_flanking.md",
@@ -8372,7 +8387,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_grenade_apply_bleed.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_grenade_apply_bleed.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_grenade_apply_bleed.md",
+      "commit": "97cfa50031291dbec8c6238829f356936a5efaac"
+    },
+    {
+      "id": "veteran_increased_damage_coherency",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_coherency.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md"
     }
   ],
   "pending_chinese_corrections": [
