@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="Valuable Distraction talent icon"> [Valuable Distraction](#ogryn_taunt_damage_taken_increase) | <ul><li>Enemies affected by Loyal Protector take 20% more damage for 15s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="Bullet Bravado talent icon"> [Bullet Bravado](#ogryn_ranged_stance_toughness_regen) | <ul><li>During Point-Blank Barrage, each shot restores 2.5% of maximum Toughness and each reload restores 15%.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="32" height="32" alt="No Pain! talent icon"> [No Pain!](#ogryn_taunt_restore_toughness) | <ul><li>Each taunt immediately restores 10% of maximum Toughness.</li><li>Each affected enemy adds 0.5% per second, up to 10% per second, for 3.25s; English displays 3s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="Trample talent icon"> [Trample](#ogryn_charge_trample) | <ul><li>Each charge hit adds 2.5% damage, up to 20 stacks / 50%, for 10s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -345,3 +346,19 @@
 - **English duration difference**: The same-build English displays 3s; the accepted buff duration is 3.25s. The examples use the buff duration.
 
 [Details](ogryn_taunt_restore_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_charge_trample"></a>
+
+### Trample
+
+<img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="72" height="72" alt="Trample talent icon">
+
+- **Stacking**: A charge hit adds one stack of Trample. Each stack grants 2.5% more damage, up to 20 stacks, for 10s. Further hits restart the duration. Both melee and ranged damage benefit.
+
+- **Damage example**: Four hits grant 10%, turning 100 base damage into 100 × (1 + 4 × 2.5%) = 110. At 20 stacks the result is 150. With another 20% increase at the same stage, the full-stack result is 170.
+
+- **Counting hits**: Each charge-hit event can add a stack. If the same enemy is hit separately during the charge and its ending impact, it may count for more than one stack.
+
+[Details](ogryn_charge_trample.md) · [Back to index](#talent-index)
