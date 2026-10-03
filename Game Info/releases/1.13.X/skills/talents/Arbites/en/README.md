@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="Canine Morale talent icon"> [Canine Morale](#adamant_pinning_dog_kills_buff_allies) | <ul><li>Killing an enemy pinned by your own Cyber-Mastiff grants you and allies in Coherency 20% Toughness Damage Reduction and 10% of maximum Toughness over 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="Rapid Movement talent icon"> [Rapid Movement](#adamant_sprinting_sliding) | <ul><li>After a slide ends, gain 5% Sprint Speed for 5s. Kills restore 5% of maximum Stamina, with a 0.75s cooldown.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="Final Warning talent icon"> [Final Warning](#adamant_ranged_damage_on_melee_stagger) | <ul><li>Staggering an enemy with a melee attack or push grants 15% Ranged Damage for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="Priority Endowment talent icon"> [Priority Endowment](#adamant_clip_size) | <ul><li>Clip Size increases by 15%, rounded up.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1111,3 +1112,15 @@
 - **Damage example**: Base ranged damage 100 becomes 115. With an existing same-stage 25% bonus, damage rises from 125 to 100 × (1 + 25% + 15%) = 140.
 
 [Details](adamant_ranged_damage_on_melee_stagger.md) · [Back to index](#talent-index)
+
+<a id="adamant_clip_size"></a>
+
+### Priority Endowment
+
+<img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="72" height="72" alt="Priority Endowment talent icon">
+
+- **Capacity examples**: A base 30-round magazine becomes 30 × 1.15 = 34.5, rounded up to 35 rounds. A base 5-round magazine becomes 5 × 1.15 = 5.75, rounded up to 6 rounds.
+
+- **Scope**: This increases the magazine capacity. Reserve ammunition capacity is determined by other effects.
+
+[Details](adamant_clip_size.md) · [Back to index](#talent-index)
