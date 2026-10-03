@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="Soulguilt Scan talent icon"> [Soulguilt Scan](#adamant_stacking_weakspot_strength) | <ul><li>Weakspot Hits grant 2% Weakspot Strength per stack, up to 8 stacks, for 10s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="Judicious Efficiency talent icon"> [Judicious Efficiency](#adamant_elite_special_kills_reload_speed) | <ul><li>After an Elite or Specialist Kill, gain 20% Reload Speed for the next reload.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="March talent icon"> [March](#adamant_movement_speed_on_block) | <ul><li>On a ranged hit, gain 15% Movement Speed for 3s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="No Escape talent icon"> [No Escape](#adamant_elite_special_kills_offensive_boost) | <ul><li>After an Elite or Specialist Kill, gain 10% Damage and Movement Speed for 4s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -906,3 +907,15 @@
 - **Movement-speed example**: Isolating this multiplier, an original 5 metres per second becomes 5 × 1.15 = 5.75 metres per second. Other action-related slowdowns still apply.
 
 [Details](adamant_movement_speed_on_block.md) · [Back to index](#talent-index)
+
+<a id="adamant_elite_special_kills_offensive_boost"></a>
+
+### No Escape
+
+<img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="72" height="72" alt="No Escape talent icon">
+
+- **Trigger and refresh**: Killing an Elite or Specialist grants 10% Damage and 10% Movement Speed for 4s. Another qualifying kill resets the duration.
+
+- **Effect examples**: Isolating this effect, 100 points of damage becomes 110, and movement at 5 metres per second becomes 5 × 1.1 = 5.5 metres per second. With an existing same-stage 25% damage bonus, damage is 100 × (1 + 25% + 10%) = 135 points.
+
+[Details](adamant_elite_special_kills_offensive_boost.md) · [Back to index](#talent-index)
