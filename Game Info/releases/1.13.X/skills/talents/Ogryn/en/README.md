@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="Great Cleaver talent icon"> [Great Cleaver](#ogryn_heavy_hitter_cleave) | <ul><li>Each Heavy Hitter stack grants +12.5% melee cleave capacity.</li><li>At 8 stacks, capacity doubles; this does not directly determine the number of enemies hit.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/82795688-8a0b-4db1-871c-1302a8f33299" width="32" height="32" alt="Unstoppable talent icon"> [Unstoppable](#ogryn_heavy_hitter_max_stacks_improves_toughness) | <ul><li>Each Heavy Hitter stack adds 15% to Toughness recovered from melee kills.</li><li>Maximum 8 stacks; full stacks give 2.2 times the base melee-kill recovery.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/e8883b71-72ad-4780-92e7-395f6a32ead8" width="32" height="32" alt="Impactful talent icon"> [Impactful](#ogryn_heavy_hitter_stagger) | <ul><li>Each Heavy Hitter stack adds 7.5% melee Impact.</li><li>Maximum 8 stacks; full stacks give +60% melee Impact.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="32" height="32" alt="Just Getting Started! talent icon"> [Just Getting Started!](#ogryn_heavy_hitter_max_stacks_improves_attack_speed) | <ul><li>At 8 Heavy Hitter stacks, Just Getting Started! grants +10% Attack Speed.</li><li>The bonus ends below 8 stacks.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -633,3 +634,19 @@
 - **Example**: At 4 stacks, the increase is 30%. If an attack has base Impact 100, at 8 stacks it becomes `100 × 1.6 = 160`.
 
 [Details](ogryn_heavy_hitter_stagger.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_max_stacks_improves_attack_speed"></a>
+
+### Just Getting Started!
+
+<img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="72" height="72" alt="Just Getting Started! talent icon">
+
+- **Requirement**: Select Just Getting Started! and reach 8 Heavy Hitter stacks to gain the effect.
+
+- **Effect**: At 8 stacks, gain 10% Attack Speed. The bonus is removed when the stack count falls below 8.
+
+- **Example**: If an attack originally occurs once per second, +10% Attack Speed reduces its interval to about `1 ÷ 1.10 = 0.91s`.
+
+[Details](ogryn_heavy_hitter_max_stacks_improves_attack_speed.md) · [Back to index](#talent-index)

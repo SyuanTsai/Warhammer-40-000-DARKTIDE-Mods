@@ -45,3 +45,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Great Cleaver](ogryn_heavy_hitter_cleave.md) / `ogryn_heavy_hitter_cleave` | Keystone |
 | [Unstoppable](ogryn_heavy_hitter_max_stacks_improves_toughness.md) / `ogryn_heavy_hitter_max_stacks_improves_toughness` | Keystone |
 | [Impactful](ogryn_heavy_hitter_stagger.md) / `ogryn_heavy_hitter_stagger` | Keystone |
+| [Just Getting Started!](ogryn_heavy_hitter_max_stacks_improves_attack_speed.md) / `ogryn_heavy_hitter_max_stacks_improves_attack_speed` | Keystone |
