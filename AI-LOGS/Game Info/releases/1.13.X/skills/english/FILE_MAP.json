@@ -4317,8 +4317,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "e50513148029b6f4106404bc90285d9de908fddd",
       "chinese_sha256": "949d56008837967913aa3fb141bf5b3e44c568265ed9b0715beb0c334c57fbd5",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "psyker_smite_on_hit",
+        "psyker_brain_burst_improved",
+        "psyker_grenade_throwing_knives",
+        "psyker_throwing_knives_piercing",
+        "psyker_grenade_chain_lightning"
+      ],
       "checks": []
     },
     {
@@ -4328,8 +4334,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "94bbfb476d1107983b9fff57c20fe2a5822a8be5",
       "chinese_sha256": "b84c088fb4bd2513a59a5d1c9a7a471d578f4439d7f9f48ee88cfa32d081f8e5",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "psyker_smite_on_hit",
+        "psyker_brain_burst_improved",
+        "psyker_grenade_throwing_knives",
+        "psyker_throwing_knives_piercing",
+        "psyker_grenade_chain_lightning"
+      ],
       "checks": []
     },
     {
@@ -4339,8 +4351,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "b4a485a2e1900f3ebea269808b8c6701d960a7dd",
       "chinese_sha256": "39246145bddc728adccab08b4cfeee81afbc5a4bb25839a95c52bf7f6e5a3a74",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "psyker_smite_on_hit",
+        "psyker_brain_burst_improved",
+        "psyker_grenade_throwing_knives",
+        "psyker_throwing_knives_piercing",
+        "psyker_grenade_chain_lightning"
+      ],
       "checks": []
     },
     {
@@ -4350,8 +4368,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "9543b1927bec0c96977a4996b8382ecb7b533c13",
       "chinese_sha256": "1b1ab04c333c3740409f95bc38bf40bcc24f4593fa2183d4d30de9e3ea660ce0",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "psyker_smite_on_hit",
+        "psyker_brain_burst_improved",
+        "psyker_grenade_throwing_knives",
+        "psyker_throwing_knives_piercing",
+        "psyker_grenade_chain_lightning"
+      ],
       "checks": []
     },
     {
@@ -4493,9 +4517,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cd8f44b0d6756f18c6de02dc28f7795fa3c378ad",
       "chinese_sha256": "b75ca4c4aa0086283b7c679994a37e67768a2f0f8fa9550bdd05a0f7b5820efc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_brain_burst_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_heavy_attacks.md",
@@ -4768,9 +4799,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fac20c94e9dbbbdc77a1df4898d5b79b897f0cde",
       "chinese_sha256": "1c7887ee6eed47064c6e922d1f2bf5625b78519cab7f1a58e79435ec78eef001",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_grenade_chain_lightning"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_throwing_knives.md",
@@ -4779,9 +4817,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "884552e6721bd9850f4d7f98c400e8db9fd149f7",
       "chinese_sha256": "8cab965a9a40f2491e03438193dfa8509d719f01f0499fbc1c693315211548a0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_grenade_throwing_knives"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_guaranteed_crit_on_multiple_weakspot_hits.md",
@@ -5076,9 +5121,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6d2316c171465ecbe5dbcc250e757e66fdf69c6b",
       "chinese_sha256": "463be324f651fbf435a8d085c8571e6085403e7c0acf185ebbb3e31b174f3480",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_smite_on_hit"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_sphere_shield.md",
@@ -5131,9 +5183,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "07aaf445603c70ee940dbfd8be0534e89699cbe8",
       "chinese_sha256": "94e7b741cdf6339ba12e129ccb4e06ab62392fbac8ea5bab740c04cddaffeb72",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_throwing_knives_piercing"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_melee.md",
@@ -13417,6 +13476,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_coherency_radius_increase.md"
+    },
+    {
+      "id": "psyker_smite_on_hit",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_smite_on_hit.md"
+    },
+    {
+      "id": "psyker_brain_burst_improved",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_brain_burst_improved.md"
+    },
+    {
+      "id": "psyker_grenade_throwing_knives",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_grenade_throwing_knives.md"
+    },
+    {
+      "id": "psyker_throwing_knives_piercing",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_throwing_knives_piercing.md"
+    },
+    {
+      "id": "psyker_grenade_chain_lightning",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_grenade_chain_lightning.md"
     }
   ],
   "pending_chinese_corrections": [

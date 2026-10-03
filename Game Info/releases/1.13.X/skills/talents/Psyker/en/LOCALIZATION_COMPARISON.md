@@ -70,4 +70,4 @@ Full raw template and formatting: [source evidence](psyker_grenade_chain_lightni
 
 ## Comparison totals
 
-Totals are updated at each batch checkpoint.
+The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

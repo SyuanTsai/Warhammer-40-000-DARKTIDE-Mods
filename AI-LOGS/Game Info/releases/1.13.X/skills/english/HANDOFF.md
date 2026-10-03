@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 267 completed on 2026-10-04. [Receipt](ogryn_skills_266_267.json) and [FILE_MAP](FILE_MAP.json) now record 267 accepted mechanisms. Next item: **268, Kinetic Flayer**, `psyker_smite_on_hit`. The full goal remains active and unfinished.
+Checkpoint 272 completed on 2026-10-04. [Receipt](psyker_skills_268_272.json) and [FILE_MAP](FILE_MAP.json) record 272 accepted mechanisms. Next item: **273, Kinetic Resonance**, `psyker_ability_increase_brain_burst_speed`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 379 mechanisms + 24 class-support files + 2 shared files = 405 mapped files. Ogryn complete: 93 mechanisms / 99 files; [class closeout](ogryn_class.json). Ogryn comparison totals: 281 = 121 Consistent / 6 Explicit contradictions / 146 Not covered / 0 No implementation / 8 Cannot confirm. Last two mechanisms: 38s between 4186c1ab8 and 26c87ec12; class closeout separately 378s through 5145900ac.
+Remaining: 374 mechanisms + 24 class-support files + 2 shared files = 400 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 5/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 11 = 5 Consistent / 0 Explicit contradictions / 5 Not covered / 0 No implementation / 1 Cannot confirm. Latest batch commit interval: 616s (10m 16s), d50672b50→11c18be35. No new confirmed English contradiction. Kinetic Flayer's critical-Peril discrepancy remains Cannot confirm; numerical omissions are supplementary. Includes Psyker entry/shared-header initialization.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
