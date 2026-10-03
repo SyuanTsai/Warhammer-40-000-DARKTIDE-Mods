@@ -89,7 +89,8 @@
         "adamant_forceful_toughness_regen_per_stack",
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
-        "adamant_forceful_ability_damage"
+        "adamant_forceful_ability_damage",
+        "adamant_forceful_stagger_on_low_high"
       ],
       "checks": []
     },
@@ -127,7 +128,8 @@
         "adamant_forceful_toughness_regen_per_stack",
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
-        "adamant_forceful_ability_damage"
+        "adamant_forceful_ability_damage",
+        "adamant_forceful_stagger_on_low_high"
       ],
       "checks": []
     },
@@ -165,7 +167,8 @@
         "adamant_forceful_toughness_regen_per_stack",
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
-        "adamant_forceful_ability_damage"
+        "adamant_forceful_ability_damage",
+        "adamant_forceful_stagger_on_low_high"
       ],
       "checks": []
     },
@@ -203,7 +206,8 @@
         "adamant_forceful_toughness_regen_per_stack",
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
-        "adamant_forceful_ability_damage"
+        "adamant_forceful_ability_damage",
+        "adamant_forceful_stagger_on_low_high"
       ],
       "checks": []
     },
@@ -814,9 +818,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d726d76252df62cfa9f6f82b3db7441517c9f2b7",
       "chinese_sha256": "680ce890e5c6eb6cf86de0d1402422eefb3b61a55d3027f232d870a11aa3b7cf",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_forceful_stagger_on_low_high"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stagger_on_low_high.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_stun_immune_and_block_all.md",
@@ -10344,6 +10355,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_ability_damage.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_ability_damage.md"
+    },
+    {
+      "id": "adamant_forceful_stagger_on_low_high",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stagger_on_low_high.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_stagger_on_low_high.md"
     }
   ],
   "pending_chinese_corrections": [

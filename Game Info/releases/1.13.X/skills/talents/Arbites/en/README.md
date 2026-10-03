@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="Adamant Will talent icon"> [Adamant Will](#adamant_forceful_stun_immune_and_block_all) | <ul><li>At maximum Forceful stacks, gain Stun and Slowdown Immunity.</li><li>The effects remain for 3s after leaving maximum stacks; perfect blocks additionally gain the ability to block normally unblockable attacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="Targets Acquired talent icon"> [Targets Acquired](#adamant_forceful_offensive) | <ul><li>At 10 Forceful stacks, gain Attack Speed and Cleave bonuses.</li><li>The bonuses remain for 3s after leaving maximum stacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="Arbites Vigilant talent icon"> [Arbites Vigilant](#adamant_forceful_ability_damage) | <ul><li>Using your Combat Ability converts current Forceful stacks into a 12s Strength bonus.</li><li>Up to 10 stacks grant +2.5% each; triggering this effect consumes the Forceful stacks.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="Judicial Force talent icon"> [Judicial Force](#adamant_forceful_stagger_on_low_high) | <ul><li>Cause an explosion that staggers nearby enemies when Forceful rises from below maximum to 10 stacks or falls from a positive count to zero.</li><li>The maximum-stack and zero-stack triggers each have a 5s cooldown.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -404,3 +405,15 @@
 - **Strength example**: Six stacks grant +15%, and 10 stacks grant +25%. With this effect alone, 500 PowerLevel at 10 stacks becomes 500 × 1.25 = 625. Damage, Impact and Cleave then use their respective formulas; their final results cannot all be multiplied directly by 1.25.
 
 [Details](adamant_forceful_ability_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_forceful_stagger_on_low_high"></a>
+
+### Judicial Force
+
+<img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="72" height="72" alt="Judicial Force talent icon">
+
+- **Triggers**: Stagger enemies within 2.5m when Forceful rises from below maximum to 10 stacks or falls from at least one stack to zero. Remaining continuously at zero or 10 stacks does not repeatedly trigger the effect.
+
+- **Cooldown example**: The maximum-stack and zero-stack triggers each have an independent 5s cooldown. If all stacks are lost 1s after the maximum-stack stagger, the zero-stack stagger can still trigger. The same trigger must wait a full 5s before triggering again.
+
+[Details](adamant_forceful_stagger_on_low_high.md) · [Back to index](#talent-index)
