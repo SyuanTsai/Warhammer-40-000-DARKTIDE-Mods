@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="Arbitrator Armour talent icon"> [Arbitrator Armour](#adamant_armor) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="32" height="32" alt="Ammo Belt talent icon"> [Ammo Belt](#adamant_ammo_belt) | <ul><li>Increase Reserve ammunition capacity by 25%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4232eef3-1499-4f4c-b2e3-d1416db2ec8e" width="32" height="32" alt="Rebreather talent icon"> [Rebreather](#adamant_rebreather) | <ul><li>Take 20% less Corruption and 75% less Toxic Gas damage.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="Suppression Protocols talent icon"> [Suppression Protocols](#adamant_hitting_multiple_gives_tdr) | <ul><li>Hit at least 3 enemies with one attack to gain 20% Toughness Damage Reduction for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -722,3 +723,15 @@
 - **Toxic-gas example**: Isolating Toxic Gas damage reduction, gas that originally deals 100 damage instead deals 100 × 0.25 = 25. These effects apply separately to the Corruption and damage stages.
 
 [Details](adamant_rebreather.md) · [Back to index](#talent-index)
+
+<a id="adamant_hitting_multiple_gives_tdr"></a>
+
+### Suppression Protocols
+
+<img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="72" height="72" alt="Suppression Protocols talent icon">
+
+- **Trigger and refresh**: Hitting the third enemy in one attack grants 20% Toughness Damage Reduction for 5s. Both melee and ranged attacks qualify; triggering again resets the duration.
+
+- **Damage-reduction example**: Isolating this effect, 100 points of Toughness damage becomes 100 × 0.8 = 80. With another independent 10% Toughness damage reduction, the result is 100 × 0.8 × 0.9 = 72.
+
+[Details](adamant_hitting_multiple_gives_tdr.md) · [Back to index](#talent-index)

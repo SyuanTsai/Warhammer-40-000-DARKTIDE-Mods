@@ -58,3 +58,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Arbitrator Armour](adamant_armor.md) / `adamant_armor` | Passive talent |
 | [Ammo Belt](adamant_ammo_belt.md) / `adamant_ammo_belt` | Passive talent |
 | [Rebreather](adamant_rebreather.md) / `adamant_rebreather` | Passive talent |
+| [Suppression Protocols](adamant_hitting_multiple_gives_tdr.md) / `adamant_hitting_multiple_gives_tdr` | Passive talent |
