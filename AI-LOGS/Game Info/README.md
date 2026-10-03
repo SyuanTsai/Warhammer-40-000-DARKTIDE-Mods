@@ -48,3 +48,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 每次維護完成，檢查引用、INDEX路徑、Git忽略與來源雜湊。文本包變更時另驗證從ZIP離線復原全部104份匯出，結果新增至audits/。既有Git暫存與使用者修改不納入自動操作。
 
 - [粉碎驗收](releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json)
+
+- [野蠻攻勢驗收](releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json)

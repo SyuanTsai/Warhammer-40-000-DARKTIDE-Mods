@@ -675,6 +675,15 @@
       "scope": "1.13.X/blessings",
       "storage": "git",
       "kind": "validation"
+    },
+    {
+      "id": "2026-10-03-brutal-momentum-acceptance",
+      "date": "2026-10-03",
+      "title": "野蠻攻勢逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "kind": "validation",
+      "storage": "git"
     }
   ],
   "pending": [

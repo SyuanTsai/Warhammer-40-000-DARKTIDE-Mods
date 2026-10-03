@@ -47,6 +47,7 @@
 - Empower - 強化
 - Toughness - 韌性
 - Hit Mass - 順劈目標
+  - 1.13.1機制說明暫用「命中質量」表示敵人消耗的順劈容量，待人工確認；保留原譯。來源：[ActionSweep](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_sweep.lua#L1356-L1367)
 - Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
@@ -301,6 +302,7 @@
 - Decimator - 屠戮者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_power`，hash `77cc5d18`；英文／繁中RAW配對確認。
 - Brutal Momentum - 野蠻攻勢
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_cleave_on_weakspot_kill`，hash `4ae27066`；英文／繁中RAW配對確認。
 - Limbsplitter - 斷肢者
 - All or Nothing - 孤注一擲
 - Decapitator - 斬首者
