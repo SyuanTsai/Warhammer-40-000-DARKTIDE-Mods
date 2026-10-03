@@ -901,6 +901,18 @@ Full raw template and formatting: [source evidence](ogryn_protect_allies.md#orig
 | Two ally-triggered effects | On Ally getting Toughness Broken: +10% Strength and +25% Toughness Damage Reduction for 10s, 20s Cooldown. On Ally getting Knocked Down: Stun Immunity and +25% Revive Speed for 10s.; `ui / loc_talent_ogryn_protect_allies_desc / 67e1573d` | Two independent procs exclude yourself and have no Coherency check. Toughness break grants the Power/reduction effect; knockdown grants the revive/immunity effect without that cooldown. [Fixed source and line references](ogryn_protect_allies.md#fixed-source-evidence) | Consistent | The independently read English distinguishes the effects, values and cooldown placement. |
 | Refresh, cooldown start and calculations | No refresh, cooldown-start or calculation formula is stated.; `ui / loc_talent_ogryn_protect_allies_desc / 67e1573d` | Active Toughness-break triggers reset 10s; 20s cooldown starts after expiry (0s trigger → 10s end → 30s ready). Knockdown triggers independently refresh. Power 500 → 550; Toughness damage 100 → 75. Revive 5s ÷ 1.25 = 4s, or ÷1.5 ≈ 3.33s with another same-stage +25%. [Fixed source and line references](ogryn_protect_allies.md#fixed-source-evidence) | Not covered by the description | These accepted timing and isolated calculation details supplement the two English effects. |
 
+
+<a id="ogryn_corruption_resistance"></a>
+
+## Simple Minded
+
+Full raw template and formatting: [source evidence](ogryn_corruption_resistance.md#original-english-template-and-reconstruction). Name hash `c147793d`. Every row uses `ui / loc_talent_ogryn_corruption_resistance_desc / ca230578`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Corruption resistance | +40% Corruption Resistance.; `ui / loc_talent_ogryn_corruption_resistance_desc / ca230578` | corruption_taken_multiplier 0.6 applies to permanent_damage in _calculate_health_damage_player, not ordinary health_damage. [Fixed source and line references](ogryn_corruption_resistance.md#fixed-source-evidence) | Consistent | The independently read English names the correct resistance and value. |
+| Path limits and calculation | No damage-path scope, cleansing effect or combined-reduction formula is stated.; `ui / loc_talent_ogryn_corruption_resistance_desc / ca230578` | Existing Corruption is not cleared. The example covers paths reading this modifier, without asserting all direct-script Corruption changes. Original Corruption 20 becomes 12, or 9.6 with another independent 20% reduction. [Fixed source and line references](ogryn_corruption_resistance.md#fixed-source-evidence) | Not covered by the description | These accepted scope limits and calculation details supplement the resistance wording. |
+
 ## Comparison totals
 
 The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

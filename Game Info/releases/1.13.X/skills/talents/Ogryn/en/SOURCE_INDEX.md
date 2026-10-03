@@ -77,3 +77,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [No Pushover](ogryn_blocking_reduces_push_cost.md) / `ogryn_blocking_reduces_push_cost` | Talent |
 | [Attention Seeker](ogryn_blocking_ranged_taunts.md) / `ogryn_blocking_ranged_taunts` | Talent |
 | [For the Lil'Uns](ogryn_protect_allies.md) / `ogryn_protect_allies` | Talent |
+| [Simple Minded](ogryn_corruption_resistance.md) / `ogryn_corruption_resistance` | Talent |

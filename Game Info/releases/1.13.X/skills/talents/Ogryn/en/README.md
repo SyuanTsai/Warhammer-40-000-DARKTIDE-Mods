@@ -75,6 +75,7 @@
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="No Pushover talent icon"> [No Pushover](#ogryn_blocking_reduces_push_cost) | <ul><li>A ready push gains +250% Impact; finishing it consumes the bonus and starts an 8s cooldown, even without an enemy hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="Attention Seeker talent icon"> [Attention Seeker](#ogryn_blocking_ranged_taunts) | <ul><li>Blocking or hitting with a push Taunts the enemy for 8s; Monsters and already-Taunted enemies are excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="For the Lil'Uns talent icon"> [For the Lil'Uns](#ogryn_protect_allies) | <ul><li>Another ally's Toughness break grants +10% Power and 25% Toughness damage reduction for 10s; a downed ally separately grants Revive Speed and Stun immunity.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="Simple Minded talent icon"> [Simple Minded](#ogryn_corruption_resistance) | <ul><li>Reduce damage-calculated Corruption taken by 40%; existing Corruption and ordinary damage are unaffected by this modifier.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1185,3 +1186,17 @@
 - **Calculation examples**: Power of 500 becomes 550; Toughness damage of 100 at this stage becomes 75. With only +25% Revive Speed, an original 5s revive becomes `5 ÷ 1.25 = 4s`. With another +25% Revive Speed at the same stage, it becomes `5 ÷ 1.5 ≈ 3.33s`.
 
 [Details](ogryn_protect_allies.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_corruption_resistance"></a>
+
+### Simple Minded
+
+<img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="72" height="72" alt="Simple Minded talent icon">
+
+- **Effect**: Reduce Corruption received through damage calculation by 40%. This does not clear existing Corruption or provide general damage reduction.
+
+- **Corruption example**: An original increase of 20 Corruption becomes `20 × 0.6 = 12`. With another independent 20% Corruption reduction, it becomes `20 × 0.6 × 0.8 = 9.6`.
+
+[Details](ogryn_corruption_resistance.md) · [Back to index](#talent-index)
