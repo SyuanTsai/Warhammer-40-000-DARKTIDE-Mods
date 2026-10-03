@@ -140,6 +140,18 @@ Full raw template and formatting: [source evidence](psyker_cooldown_aura_improve
 | Recipients and cooldown reduction | `+10% Cooldown Reduction on Abilities for you and Allies in Coherency`; `ui / loc_talent_psyker_cooldown_aura_improved_description / 8daf59be` | Self-inclusive Coherency applies the aura; `combat_ability_resource_cost_per_use_modifier=−0.1` scales each use's resource cost to 0.9 at unchanged other modifiers. [Fixed source and line references](psyker_cooldown_aura_improved.md#fixed-source-evidence) | Consistent | Beneficiaries and the direction/magnitude of cooldown reduction agree. |
 | Stack cap and timing assumptions | No stack limit, application timing or resource/time formula stated; `ui / loc_talent_psyker_cooldown_aura_improved_description / 8daf59be` | Maximum 1 stack; at fixed recovery speed, an original 40/60-second charge becomes 36/54 seconds. Other cooldown modifiers, multi-charge behavior and recovery rules affect actual time. [Fixed source and line references](psyker_cooldown_aura_improved.md#fixed-source-evidence) | Not covered by the description | The calculation basis and limits supplement the English. |
 
+
+<a id="psyker_aura_crit_chance_aura"></a>
+
+## Prescience
+
+Full raw template and formatting: [source evidence](psyker_aura_crit_chance_aura.md#original-english-template-and-reconstruction). Name hash `23f5f870`. Every row uses `ui / loc_ability_psyker_gunslinger_aura_description / a2000c1d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients, stat and value | `You and Allies in Coherency gain +5% Critical Hit Chance`; `ui / loc_ability_psyker_gunslinger_aura_description / a2000c1d` | Self-inclusive Coherency grants `critical_strike_chance=0.05`; shared calculation adds it to archetype base chance and relevant bonuses. [Fixed source and line references](psyker_aura_crit_chance_aura.md#fixed-source-evidence) | Consistent | Beneficiaries, affected stat and additive magnitude agree. |
+| Percentage points, caps and damage distinction | No stack cap, chance clamp, example or Critical Damage bonus stated; `ui / loc_ability_psyker_gunslinger_aura_description / a2000c1d` | Maximum 1 stack; chance clamps to 0–1. A 10% baseline becomes 15% rather than 10.5%; the effect increases chance, not Critical Damage. [Fixed source and line references](psyker_aura_crit_chance_aura.md#fixed-source-evidence) | Not covered by the description | These calculation/stack limits and the stat distinction supplement the English. |
+
 ## Comparison totals
 
 The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

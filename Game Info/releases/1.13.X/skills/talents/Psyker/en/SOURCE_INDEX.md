@@ -22,3 +22,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Charged Strike](psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | Blitz |
 | [Kinetic Presence](psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | Aura |
 | [Seer's Presence](psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | Aura |
+| [Prescience](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | Aura |

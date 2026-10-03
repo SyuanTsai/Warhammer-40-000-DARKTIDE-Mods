@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="Charged Strike talent icon"> [Charged Strike](#psyker_chain_lightning_heavy_attacks) | <ul><li>Melee heavy hits electrocute enemies for 2 seconds, dealing damage over that duration.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="Kinetic Presence talent icon"> [Kinetic Presence](#psyker_aura_damage_vs_elites) | <ul><li>You and Allies in Coherency deal 10% more damage against Elite enemies.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="Seer's Presence talent icon"> [Seer's Presence](#psyker_cooldown_aura_improved) | <ul><li>You and Allies in Coherency have 10% shorter Combat Ability cooldowns.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="Prescience talent icon"> [Prescience](#psyker_aura_crit_chance_aura) | <ul><li>You and Allies in Coherency gain 5 percentage points of Critical Hit Chance.</li></ul> | Aura |
 
 ---
 
@@ -186,3 +187,17 @@
 - **Cooldown example**: With fixed recovery speed and no other modifiers, an original 40 seconds becomes 40 × (1 − 10%) = 36 seconds; an original 60 seconds becomes 54.
 
 [Details](psyker_cooldown_aura_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_aura_crit_chance_aura"></a>
+
+### Prescience
+
+<img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="72" height="72" alt="Prescience talent icon">
+
+- **Aura**: You and teammates in Coherency gain 5 percentage points of Critical Hit Chance. The same aura does not stack multiple times.
+
+- **Chance example**: An original 10% Critical Hit Chance becomes 10% + 5% = 15%, rather than 10% × 1.05 = 10.5%.
+
+[Details](psyker_aura_crit_chance_aura.md) · [Back to index](#talent-index)
