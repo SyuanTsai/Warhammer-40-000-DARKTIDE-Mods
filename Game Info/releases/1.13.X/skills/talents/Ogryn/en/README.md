@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="Hail of Fire talent icon"> [Hail of Fire](#ogryn_special_ammo_armor_pen) | <ul><li>During Point-Blank Barrage, gain +15% ranged Damage and 15% Rending.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="Light 'em Up talent icon"> [Light 'em Up](#ogryn_special_ammo_fire_shots) | <ul><li>During Point-Blank Barrage, ranged hits apply 4 Burn stacks, adding up to 16 stacks.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="Valuable Distraction talent icon"> [Valuable Distraction](#ogryn_taunt_damage_taken_increase) | <ul><li>Enemies affected by Loyal Protector take 20% more damage for 15s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="Bullet Bravado talent icon"> [Bullet Bravado](#ogryn_ranged_stance_toughness_regen) | <ul><li>During Point-Blank Barrage, each shot restores 2.5% of maximum Toughness and each reload restores 15%.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -307,3 +308,19 @@
 - **Damage example**: With other conditions fixed, 100 damage becomes 100 × 1.2 = 120. If the enemy also has Soften Them Up's 15% damage-taken increase, the two act at different stages: 100 × 1.15 × 1.2 = 138.
 
 [Details](ogryn_taunt_damage_taken_increase.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ranged_stance_toughness_regen"></a>
+
+### Bullet Bravado
+
+<img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="72" height="72" alt="Bullet Bravado talent icon">
+
+- **Replenishment**: During Point-Blank Barrage's 12s effect, each shot restores 2.5% of maximum Toughness and each reload restores 15%. Shots do not have to hit enemies. The automatic reload on activation can also trigger the 15% restoration.
+
+- **Replenishment example**: At maximum Toughness 100 without other bonuses, four shots followed by one reload restore 100 × (4 × 2.5% + 15%) = 25. If only 10 is missing, only 10 can be restored.
+
+- **Counting triggers**: Replenishment follows shooting and reload actions, rather than restoring once per individual shotgun pellet. Automatic fire, bursts and special weapon firing methods affect the actual number of triggers.
+
+[Details](ogryn_ranged_stance_toughness_regen.md) · [Back to index](#talent-index)
