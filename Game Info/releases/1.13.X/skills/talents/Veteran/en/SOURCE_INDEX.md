@@ -16,6 +16,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Shredder Frag Grenade](veteran_grenade_apply_bleed.md) / `veteran_grenade_apply_bleed` | Blitz |
 | [Fire Team](veteran_increased_damage_coherency.md) / `veteran_increased_damage_coherency` | Aura |
 | [Close and Kill](veteran_movement_speed_coherency.md) / `veteran_movement_speed_coherency` | Aura |
+| [Survivalist](veteran_aura_gain_ammo_on_elite_kill_improved.md) / `veteran_aura_gain_ammo_on_elite_kill_improved` | Aura |
 | [Volley Fire](veteran_combat_ability_stance.md) / `veteran_combat_ability_stance` | Combat ability |
 | [Infiltrate](veteran_invisibility_on_combat_ability.md) / `veteran_invisibility_on_combat_ability` | Combat ability |
 | [Low Profile](veteran_reduced_threat_after_combat_ability.md) / `veteran_reduced_threat_after_combat_ability` | Ability modifier |

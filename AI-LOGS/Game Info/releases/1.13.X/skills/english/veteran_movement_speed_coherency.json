@@ -107,5 +107,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/close-and-kill-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_coherency.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_coherency.md",
+  "commit": "fd22aac60cc5b5ca4982e5ac70fc4b84c1dc7b7d"
 }

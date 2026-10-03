@@ -890,6 +890,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_coherency.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill_improved",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill_improved.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

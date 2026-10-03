@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="32" height="32" alt="Shredder Frag Grenade talent icon"> [Shredder Frag Grenade](#veteran_grenade_apply_bleed) | <ul><li>Damaging Frag explosions apply six Bleed stacks to surviving enemies.</li><li>Base capacity three; about 1.7s fuse, 2m inner blast and 10m outer blast with damage falloff.</li><li>Bleed caps at 16 stacks; ticks about every 0.5s, refreshes its 1.5s duration on reapplication and then loses stacks over successive ticks.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="32" height="32" alt="Fire Team talent icon"> [Fire Team](#veteran_increased_damage_coherency) | <ul><li>Gain +7.5% Damage for you and Allies in Coherency.</li><li>Identical Fire Team auras do not stack; replaces your Scavenger aura.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="32" height="32" alt="Close and Kill talent icon"> [Close and Kill](#veteran_movement_speed_coherency) | <ul><li>Gain +7.5% Movement Speed for you and Allies in Coherency.</li><li>Identical copies do not stack; replaces your Scavenger aura.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="32" height="32" alt="Survivalist talent icon"> [Survivalist](#veteran_aura_gain_ammo_on_elite_kill_improved) | <ul><li>Eligible Elite/Specialist kills by you or an aura-bearing ally can restore 0.5% of maximum reserve ammo to the killer and their Coherency allies.</li><li>Five-second aura cooldown; replaces your 0.25% Scavenger aura.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
@@ -217,6 +218,28 @@ The extra projectile has a slightly offset direction and a base-fuse override de
 - Two identical aura providers still give one effective copy: `5 × 1.075 = 5.375 m/s` under the same assumptions.
 
 [Detailed sources and formulas](veteran_movement_speed_coherency.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_movement_speed_coherency) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_aura_gain_ammo_on_elite_kill_improved"></a>
+
+<img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="72" height="72" alt="Survivalist talent icon">
+
+### Survivalist
+
+- When you or an ally with this aura kills an **Elite or Specialist**, a successful aura payout restores **0.5% of maximum reserve ammo** to the killer and their Allies in Coherency.
+- The aura has a **5-second cooldown** and replaces your **0.25% Scavenger** aura. It replenishes reserve ammo and does not reload the clip.
+- A qualifying kill can use the aura cooldown without replenishing ammo, so each kill is not guaranteed to produce a separate payout. Exact team timing has not been measured in game.
+- The Veteran's separate personal **1%** ammo passive is checked independently; its extra gain does not apply to every teammate.
+
+**Ammo examples**
+
+- With maximum reserve 400 and enough capacity, one successful aura payout gives `400 × 0.5% = 2 rounds`.
+- With maximum reserve 150, each raw grant is `150 × 0.5% = 0.75 round`. Starting with no saved fraction and no other grants, four successful payouts give **3 rounds** in total; fractions carry forward.
+- If the Veteran's 1% personal passive and 0.5% aura both succeed at maximum reserve 400, the Veteran gains `400 × (1% + 0.5%) = 6 rounds`; an ally receiving only this aura gains **2 rounds**.
+- Reserve may reach its maximum plus the clip's missing rounds. With maximum reserve 400, ten missing clip rounds and current reserve 409, a two-round grant stops at `min(409 + 2, 400 + 10) = 410 rounds`; it adds one round to reserve.
+
+[Detailed sources and formulas](veteran_aura_gain_ammo_on_elite_kill_improved.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_aura_gain_ammo_on_elite_kill_improved) | [Back to index](#talent-index)
 
 ---
 
