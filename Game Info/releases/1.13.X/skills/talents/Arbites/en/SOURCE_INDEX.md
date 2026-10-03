@@ -71,3 +71,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Arbites Revelatum](adamant_dodge_grants_damage.md) / `adamant_dodge_grants_damage` | Passive talent |
 | [Soulguilt Scan](adamant_stacking_weakspot_strength.md) / `adamant_stacking_weakspot_strength` | Passive talent |
 | [Judicious Efficiency](adamant_elite_special_kills_reload_speed.md) / `adamant_elite_special_kills_reload_speed` | Passive talent |
+| [March](adamant_movement_speed_on_block.md) / `adamant_movement_speed_on_block` | Passive talent |

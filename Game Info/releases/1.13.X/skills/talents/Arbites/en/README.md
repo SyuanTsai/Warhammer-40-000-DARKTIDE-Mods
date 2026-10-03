@@ -71,6 +71,7 @@
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="Arbites Revelatum talent icon"> [Arbites Revelatum](#adamant_dodge_grants_damage) | <ul><li>After successfully dodging an enemy attack, gain 15% Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="Soulguilt Scan talent icon"> [Soulguilt Scan](#adamant_stacking_weakspot_strength) | <ul><li>Weakspot Hits grant 2% Weakspot Strength per stack, up to 8 stacks, for 10s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="Judicious Efficiency talent icon"> [Judicious Efficiency](#adamant_elite_special_kills_reload_speed) | <ul><li>After an Elite or Specialist Kill, gain 20% Reload Speed for the next reload.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="March talent icon"> [March](#adamant_movement_speed_on_block) | <ul><li>On a ranged hit, gain 15% Movement Speed for 3s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -893,3 +894,15 @@
 - **Reload example**: Considering only action segments affected by Reload Speed, an original 3s becomes 3 ÷ 1.2 = 2.5s. A 20% speed increase is not a 20% reduction in time.
 
 [Details](adamant_elite_special_kills_reload_speed.md) · [Back to index](#talent-index)
+
+<a id="adamant_movement_speed_on_block"></a>
+
+### March
+
+<img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="72" height="72" alt="March talent icon">
+
+- **Trigger and refresh**: A ranged attack hitting an enemy grants 15% Movement Speed for 3s. Another ranged hit resets the duration.
+
+- **Movement-speed example**: Isolating this multiplier, an original 5 metres per second becomes 5 × 1.15 = 5.75 metres per second. Other action-related slowdowns still apply.
+
+[Details](adamant_movement_speed_on_block.md) · [Back to index](#talent-index)
