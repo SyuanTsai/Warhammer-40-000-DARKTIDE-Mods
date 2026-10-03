@@ -1,5 +1,7 @@
 # 歐格林天賦：Release 1.13.1
 
+[English](en/README.md)
+
 [來源、公式與技術索引](SOURCE_INDEX.md)｜[技能分類](../../README.md)｜[版本資訊](../../../README.md)
 [角色基礎效果](BASE_EFFECTS.md)
 
