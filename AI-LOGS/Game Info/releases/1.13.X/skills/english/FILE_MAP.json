@@ -4323,7 +4323,12 @@
         "psyker_brain_burst_improved",
         "psyker_grenade_throwing_knives",
         "psyker_throwing_knives_piercing",
-        "psyker_grenade_chain_lightning"
+        "psyker_grenade_chain_lightning",
+        "psyker_ability_increase_brain_burst_speed",
+        "psyker_throwing_knives_cast_speed",
+        "psyker_chain_lightning_improved_target_buff",
+        "psyker_chain_lightning_heavy_attacks",
+        "psyker_aura_damage_vs_elites"
       ],
       "checks": []
     },
@@ -4340,7 +4345,12 @@
         "psyker_brain_burst_improved",
         "psyker_grenade_throwing_knives",
         "psyker_throwing_knives_piercing",
-        "psyker_grenade_chain_lightning"
+        "psyker_grenade_chain_lightning",
+        "psyker_ability_increase_brain_burst_speed",
+        "psyker_throwing_knives_cast_speed",
+        "psyker_chain_lightning_improved_target_buff",
+        "psyker_chain_lightning_heavy_attacks",
+        "psyker_aura_damage_vs_elites"
       ],
       "checks": []
     },
@@ -4357,7 +4367,12 @@
         "psyker_brain_burst_improved",
         "psyker_grenade_throwing_knives",
         "psyker_throwing_knives_piercing",
-        "psyker_grenade_chain_lightning"
+        "psyker_grenade_chain_lightning",
+        "psyker_ability_increase_brain_burst_speed",
+        "psyker_throwing_knives_cast_speed",
+        "psyker_chain_lightning_improved_target_buff",
+        "psyker_chain_lightning_heavy_attacks",
+        "psyker_aura_damage_vs_elites"
       ],
       "checks": []
     },
@@ -4374,7 +4389,12 @@
         "psyker_brain_burst_improved",
         "psyker_grenade_throwing_knives",
         "psyker_throwing_knives_piercing",
-        "psyker_grenade_chain_lightning"
+        "psyker_grenade_chain_lightning",
+        "psyker_ability_increase_brain_burst_speed",
+        "psyker_throwing_knives_cast_speed",
+        "psyker_chain_lightning_improved_target_buff",
+        "psyker_chain_lightning_heavy_attacks",
+        "psyker_aura_damage_vs_elites"
       ],
       "checks": []
     },
@@ -4440,9 +4460,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "72ea6beacd5bfc1b0270e38996ea26aff766f650",
       "chinese_sha256": "e854db400f7b25f1d62032cfab9fe43f407cbdd0a94e4bd6e1f1579d78e28cef",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_ability_increase_brain_burst_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_alternative_peril_explosion.md",
@@ -4473,9 +4500,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9e24ea6b8d4f162b927551d7bb23efd1cca432c1",
       "chinese_sha256": "cc92333e20396b97e907a9855d063df1d3af93c698f3943862d34bb235e3fa9f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_aura_damage_vs_elites"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_souls_on_kill.md",
@@ -4535,9 +4569,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "292f9e45ea8665444d5c3fd4ffd46d6131b27ff6",
       "chinese_sha256": "1875e3b37a9437fbd1c6ece1da207120582ee74405e636d9e3588ba5f32be927",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_chain_lightning_heavy_attacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_improved_target_buff.md",
@@ -4546,9 +4587,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bf76f17c190ff30cac61555459c8e2c2ce10a6db",
       "chinese_sha256": "242ca6ac37987b4b284644a82db8e854852848f02081619c4f7772ba68a53af9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_chain_lightning_improved_target_buff"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chance_to_vent_on_kill.md",
@@ -5172,9 +5220,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1ad0bfb7295f3f3ae0fc6aac67c264125e7b66f3",
       "chinese_sha256": "c0e8b86a868897fa28ffeec65a8d37f3bc82635e3172709cda1445ebfad91ed6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_throwing_knives_cast_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_throwing_knives_piercing.md",
@@ -13516,6 +13571,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_grenade_chain_lightning.md"
+    },
+    {
+      "id": "psyker_ability_increase_brain_burst_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_ability_increase_brain_burst_speed.md"
+    },
+    {
+      "id": "psyker_throwing_knives_cast_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_throwing_knives_cast_speed.md"
+    },
+    {
+      "id": "psyker_chain_lightning_improved_target_buff",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chain_lightning_improved_target_buff.md"
+    },
+    {
+      "id": "psyker_chain_lightning_heavy_attacks",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chain_lightning_heavy_attacks.md"
+    },
+    {
+      "id": "psyker_aura_damage_vs_elites",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_damage_vs_elites.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -130,4 +130,4 @@ Full raw template and formatting: [source evidence](psyker_aura_damage_vs_elites
 
 ## Comparison totals
 
-The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
+The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
