@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="Lynchpin talent icon"> [Lynchpin](#ogryn_increased_coherency_toughness) | <ul><li>Your own Coherency Toughness regeneration rate increases by 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="Keep Shooting talent icon"> [Keep Shooting](#ogryn_reload_speed_on_empty) | <ul><li>Starting a reload with an empty clip grants +20% Reload Speed.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="Furious talent icon"> [Furious](#ogryn_more_hits_more_damage) | <ul><li>Each enemy hit by the previous melee attack adds 3% damage to the next melee attack, up to +30%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="Heavyweight talent icon"> [Heavyweight](#ogryn_ogryn_killer) | <ul><li>Deal +30% damage to Bulwarks, Crushers, Reapers and Plague Ogryns.</li><li>Take 30% less damage from those enemies.</li></ul> | Talent |
 
 ## Blitz
 
@@ -737,3 +738,19 @@
 - **Updates**: Each sweep replaces the previous bonus with its own hit count; counts do not accumulate. A miss resets it to zero. After hitting 4 enemies, hitting only 1 on the next sweep leaves +3% for the following attack.
 
 [Details](ogryn_more_hits_more_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ogryn_killer"></a>
+
+### Heavyweight
+
+<img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="72" height="72" alt="Heavyweight talent icon">
+
+- **Effect**: Deal 30% more damage to Bulwarks, Crushers, Reapers and Plague Ogryns, and take 30% less damage from them. Both melee and ranged damage qualify.
+
+- **Damage example**: Considering only the damage-bonus stage, `100 × (1 + 30%) = 130`. With an existing +20% bonus at the same stage, the result is 150. Incoming damage of 100 becomes `100 × 0.7 = 70`; other damage reductions apply separately.
+
+- **Targets**: This is not a general bonus against every large enemy or every Monstrosity.
+
+[Details](ogryn_ogryn_killer.md) · [Back to index](#talent-index)
