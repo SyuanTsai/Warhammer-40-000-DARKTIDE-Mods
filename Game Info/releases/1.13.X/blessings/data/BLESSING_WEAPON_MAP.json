@@ -59,6 +59,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
       "effect": "本武器連續命中累積近距離傷害，每層4.5／5／5.5／6%，最多5層；有效層期限2秒，12.5公尺內完整、到30公尺歸零。"
+    },
+    {
+      "id": "charmed-reload",
+      "name_zh_tw": "魔力彈藥",
+      "name_en": "Charmed Reload",
+      "name_key": "loc_trait_bespoke_ammo_refill_from_reserve_on_crit",
+      "description_key": "loc_trait_bespoke_ammo_refill_from_reserve_on_crit_desc",
+      "name_hash": "0c513155",
+      "description_hash": "d343e6d7",
+      "page": "entries/魔力彈藥/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92",
+      "effect": "新的暴擊判定成功時，從備彈轉入彈匣最多2／3／4／5發；不需命中，受彈匣缺額與備彈限制，延續暴擊不逐發觸發。"
     }
   ],
   "weapons": [
@@ -161,6 +174,40 @@
           "name_en": "Graia Mk VIII Infantry Autogun",
           "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
           "trait_category": "bespoke_autogun_p1"
+        }
+      ]
+    },
+    {
+      "id": "ogryn_heavystubber_p1",
+      "name_zh_tw": "雙鏈重型機槍",
+      "name_en": "Twin-Linked Heavy Stubber",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_ogryn_heavystubber_p1_m1",
+      "page": "weapons/ranged/雙鏈重型機槍/README.md",
+      "marks": [
+        {
+          "id": "ogryn_heavystubber_p1_m1",
+          "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m1",
+          "name": "克魯克Mk V二聯重機槍",
+          "name_en": "Krourk Mk V Twin-Linked Heavy Stubber",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_heavystubber_p1"
+        },
+        {
+          "id": "ogryn_heavystubber_p1_m2",
+          "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m2",
+          "name": "戈爾工Mk IV二聯重機槍",
+          "name_en": "Gorgonum Mk IV Twin-Linked Heavy Stubber",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+          "trait_category": "bespoke_ogryn_heavystubber_p1"
+        },
+        {
+          "id": "ogryn_heavystubber_p1_m3",
+          "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m3",
+          "name": "阿克利斯MK V二聯重機槍",
+          "name_en": "Achlys Mk VII Twin-Linked Heavy Stubber",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+          "trait_category": "bespoke_ogryn_heavystubber_p1"
         }
       ]
     }
@@ -411,6 +458,42 @@
         "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
         "start_line": 12,
         "end_line": 14
+      }
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
+      "blessing_id": "charmed-reload",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/魔力彈藥/weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每次新暴擊事件轉移發數",
+        "bullets": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "source": "reserve",
+        "destination": "total_active_clips",
+        "max_critical_shots": 6,
+        "cooldown_seconds": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 362,
+        "end_line": 391
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 41,
+        "end_line": 41
       }
     }
   ],
@@ -707,6 +790,48 @@
         "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
         "import_line": 16,
         "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "charmed-reload",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/ammo_refill_from_reserve_on_crit",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "charmed-reload",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/ammo_refill_from_reserve_on_crit",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "charmed-reload",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/ammo_refill_from_reserve_on_crit",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
       }
     }
   ]
