@@ -90,6 +90,7 @@
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="Can't Hit Me...Again talent icon"> [Can't Hit Me...Again](#ogryn_ranged_damage_immunity) | <ul><li>Taking ranged damage grants 20% ranged reduction for 2.5s; a 4s cooldown follows, without active-period refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="Dedicated Practice talent icon"> [Dedicated Practice](#ogryn_wield_speed_increase) | <ul><li>Increase Weapon Swap Speed by 35%; a scaled 1s weapon-draw action takes approximately 0.741s, without increasing Reload Speed.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="Spray and Slay talent icon"> [Spray and Slay](#ogryn_ranged_improves_melee) | <ul><li>Emptying the current clip through ammunition consumption grants +15% melee damage and +7.5% melee Attack Speed for 6s; retriggers refresh.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="Bash and Blast talent icon"> [Bash and Blast](#ogryn_melee_improves_ranged) | <ul><li>Melee kills build up to five +3% ranged damage stacks / 15% for 10s; further melee kills refresh.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1442,3 +1443,17 @@
 - **Calculation example**: Base melee damage of 100 becomes 115. An Attack-Speed-scaled 1s action becomes `1 ÷ 1.075 ≈ 0.930s`. Other same-stage damage and speed bonuses add within their respective stats.
 
 [Details](ogryn_ranged_improves_melee.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_melee_improves_ranged"></a>
+
+### Bash and Blast
+
+<img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="72" height="72" alt="Bash and Blast talent icon">
+
+- **Trigger and stacks**: Each melee kill grants one stack of +3% ranged damage, up to 5 stacks / 15%, lasting 10s. Another melee kill restarts the timer.
+
+- **Damage example**: At full stacks, base ranged damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 5 × 3%) = 135`.
+
+[Details](ogryn_melee_improves_ranged.md) · [Back to index](#talent-index)

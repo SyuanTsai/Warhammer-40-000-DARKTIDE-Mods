@@ -1081,6 +1081,18 @@ Full raw template and formatting: [source evidence](ogryn_ranged_improves_melee.
 | Empty-clip bonuses | +15% Melee Damage and +7.5% Melee Attack Speed for 6s after emptying your Clip.; `ui / loc_talent_ogryn_ranged_improves_melee_desc / 7ba7e606` | on_ammo_consumed with current_slot_clip_percentage ==0 activates melee_damage 0.15 and melee_attack_speed 0.075 for 6s. [Fixed source and line references](ogryn_ranged_improves_melee.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and bonuses. |
 | Event, refresh and calculation | No persistent-empty-clip trigger, stacking or calculation formula is stated.; `ui / loc_talent_ogryn_ranged_improves_melee_desc / 7ba7e606` | A qualifying ammunition-consumption event can refresh without cooldown or percentage stacking; holding an empty clip does not repeatedly trigger. Base melee damage 100 →115; a scaled 1s action becomes 1 ÷1.075 ≈0.930s. Same-stage modifiers add within their respective stats. [Fixed source and line references](ogryn_ranged_improves_melee.md#fixed-source-evidence) | Not covered by the description | These accepted event and calculation details supplement the English. |
 
+
+<a id="ogryn_melee_improves_ranged"></a>
+
+## Bash and Blast
+
+Full raw template and formatting: [source evidence](ogryn_melee_improves_ranged.md#original-english-template-and-reconstruction). Name hash `3a7fe3c8`. Every row uses `ui / loc_talent_ogryn_melee_improves_ranged_desc / 01fff66e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee-kill ranged stacks | +3% Ranged Damage on Melee Kill. Lasts 10s. Max Stacks 5.; `ui / loc_talent_ogryn_melee_improves_ranged_desc / 01fff66e` | on_melee_kill adds one child stack: ranged_damage 0.03, maximum five, duration 10s. [Fixed source and line references](ogryn_melee_improves_ranged.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, stat, duration and cap. |
+| Refresh and additive calculation | No refresh or combined-damage formula is stated.; `ui / loc_talent_ogryn_melee_improves_ranged_desc / 01fff66e` | Further melee kills refresh. Full stacks give 15%: base 100 →115, or 100 ×(1 +20% +5 ×3%) =135 with another same-stage +20%. [Fixed source and line references](ogryn_melee_improves_ranged.md#fixed-source-evidence) | Not covered by the description | These accepted refresh and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 254 listed rules comprise **109 Consistent**, **4 Explicit contradictions**, **134 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
