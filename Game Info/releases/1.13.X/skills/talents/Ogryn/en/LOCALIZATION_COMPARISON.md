@@ -1192,6 +1192,18 @@ Full raw template and formatting: [source evidence](ogryn_base_tank_passive.md#o
 | Additional dodge reduction | While Dodging ... you have a further +40% Damage Resistance.; `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54` | The additional dodge multiplier is 0.5 /50% reduction; display dr instead uses 0.8 ×0.5 =0.4, the remaining general-damage fraction. [Fixed source and line references](ogryn_base_tank_passive.md#fixed-source-evidence) | Explicit contradiction | The English labels the displayed 40% as a further reduction, whereas the verified additional reduction is 50%; the displayed value is a remaining multiplier. |
 | Overlap, movement and calculations | No consecutive-dodge multiplication, weapon slowdown rule or stage-specific examples are stated.; `ui / loc_talent_ogryn_tank_passive_desc / 70b7dd54` | Conditional and active proc 0.5 multipliers overlap: general 100 ×0.8 ×0.5 ×0.5 =20, Toughness ×0.75 =15. Base Health 100 →80, Toughness →60; one dodge gives general 40. static_movement_reduction_multiplier 0 removes the fixed weapon slowdown delta, with action/alternate-fire effects independent. Examples isolate these stages. [Fixed source and line references](ogryn_base_tank_passive.md#fixed-source-evidence) | Not covered by the description | These accepted derived examples and movement limits supplement the English. |
 
+
+<a id="ogryn_dodge_stagger"></a>
+
+## Outta My Way! (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_dodge_stagger.md#original-english-template-and-reconstruction). Name hash `7abf1c42`. Every row uses `ui / loc_talent_ogryn_dodge_stagger_desc / de464787`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Dodge and target filters | Dodging staggers nearby Non Elite/Specialist, human-sized, enemies.; `ui / loc_talent_ogryn_dodge_stagger_desc / de464787` | dodge_update excludes elite/special and non-human_sized enemies. [Fixed source and line references](ogryn_dodge_stagger.md#fixed-source-evidence) | Consistent | The independently read English agrees with the trigger and target scope. |
+| Area, counting and impact formula | No sphere radius, per-dodge target cap, distance/count formula or direct-damage amount is stated.; `ui / loc_talent_ogryn_dodge_stagger_desc / de464787` | A radius-1.5m sphere at player position +dodge_direction processes each target once per dodge. Power is 500 /(consecutive_dodges ×2 −1) ×(4 −hit_distance); attack 0 /impact 0.5 then uses stagger curves and thresholds. Fixed 2m gives 1000 on dodge one and ≈333.3 on dodge two, not damage points or guaranteed knockdown. [Fixed source and line references](ogryn_dodge_stagger.md#fixed-source-evidence) | Not covered by the description | These accepted geometric and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 277 listed rules comprise **119 Consistent**, **6 Explicit contradictions**, **144 Not covered by the description**, **0 No corresponding implementation evidence found** and **8 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst, the single-attack restriction in Pacemaker, the heavy-only scope in Intimidating Presence and the additional dodge reduction in Thick Skin. These totals apply only to the listed rules.

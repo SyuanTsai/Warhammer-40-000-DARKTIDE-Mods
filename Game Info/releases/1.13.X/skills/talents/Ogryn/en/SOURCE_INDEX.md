@@ -106,3 +106,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Intimidating Presence](ogryn_melee_damage_coherency.md) / `ogryn_melee_damage_coherency` | Base effect |
 | [Loyal Protector](ogryn_helping_hand.md) / `ogryn_helping_hand` | Base effect |
 | [Thick Skin](ogryn_base_tank_passive.md) / `ogryn_base_tank_passive` | Base effect |
+| [Outta My Way!](ogryn_dodge_stagger.md) / `ogryn_dodge_stagger` | Base effect |

@@ -75,3 +75,17 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Movement limits**: Remove the weapon's fixed movement slowdown. Aiming, attack actions and slowdowns from other sources follow their respective effects.
 
 [Source evidence and example assumptions](ogryn_base_tank_passive.md)
+
+---
+
+<a id="ogryn_dodge_stagger"></a>
+
+## Outta My Way!
+
+- **Trigger**: Dodging knocks aside ordinary human-sized enemies near the direction of movement. Elites, Specialists and large enemies are excluded. Each enemy is processed only once per dodge.
+
+- **Area and strength**: The checked area is ahead in the dodge direction, with radius 1.5m. Greater distance and more consecutive dodges weaken the impact. It does not directly deal Health damage.
+
+- **Strength example**: At a fixed enemy distance of 2m, the first dodge's impact Strength is `500 × (4 − 2) ÷ (2 × 1 − 1) = 1000`. The second gives `1000 ÷ 3 ≈ 333.3`. This Strength enters the stagger formula; it is not damage.
+
+[Source evidence and example assumptions](ogryn_dodge_stagger.md)
