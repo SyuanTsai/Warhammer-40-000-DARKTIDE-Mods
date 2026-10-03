@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="Man and Cyber-Mastiff talent icon"> [Man and Cyber-Mastiff](#adamant_toughness_regen_near_companion) | <ul><li>While within 8m of your Cyber-Mastiff, recover 5% of maximum Toughness per second.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#adamant_damage_after_reloading) | <ul><li>After reloading, gain 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="Hammer of Judgement talent icon"> [Hammer of Judgement](#adamant_multiple_hits_attack_speed) | <ul><li>Hit at least 3 enemies with one melee attack to gain 10% Melee Attack Speed for 3s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="Target Neutralised talent icon"> [Target Neutralised](#adamant_elite_special_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill instantly restores 10% of maximum Toughness, then another 10% over 4s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -590,3 +591,15 @@
 - **Attack-speed example**: For an action segment affected by Attack Speed alone, an original duration of 1s becomes 1 ÷ 1.1 ≈ 0.909s.
 
 [Details](adamant_multiple_hits_attack_speed.md) · [Back to index](#talent-index)
+
+<a id="adamant_elite_special_kills_replenish_toughness"></a>
+
+### Target Neutralised
+
+<img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="72" height="72" alt="Target Neutralised talent icon">
+
+- **Recovery**: Killing an Elite or Specialist instantly restores 10% of maximum Toughness, then restores another 2.5% per second for 4s. Consecutive kills each provide an independently timed recovery effect.
+
+- **Recovery example**: At maximum Toughness 100, with sufficient deficit and no other recovery bonus, one kill restores 100 × 10% + 100 × 2.5% × 4 = 20 points in total. While two kills' continuous effects overlap, recovery totals 5 points per second; actual restoration cannot exceed the deficit.
+
+[Details](adamant_elite_special_kills_replenish_toughness.md) · [Back to index](#talent-index)
