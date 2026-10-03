@@ -15,3 +15,14 @@ These effects are provided by the class base configuration. The equipped Blitz a
 [Source evidence and example assumptions](veteran_aura_gain_ammo_on_elite_kill.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_aura_gain_ammo_on_elite_kill) | [Back to talents](README.md)
 
 ---
+
+<a id="veteran_base_ranged_damage"></a>
+
+## Guardsman
+
+- Gain 25% Ranged Damage, added to other damage bonuses at the same calculation stage.
+- Assume stage base damage of 100, with other multipliers held at 1. With this effect alone, `100 × (1 + 25%) = 125 damage`. With another 15% ranged bonus at the same stage, `100 × (1 + 25% + 15%) = 140 damage`.
+
+[Source evidence and example assumptions](veteran_base_ranged_damage.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_base_ranged_damage) | [Back to talents](README.md)
+
+---

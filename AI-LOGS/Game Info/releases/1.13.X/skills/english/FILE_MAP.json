@@ -5674,7 +5674,8 @@
       "chinese_sha256": "7e5c5b9b054dac632cc2f6790b2c5bfd0d92d152bb3091d90514fb8ea32064bf",
       "status": "partial",
       "accepted_skill_ids": [
-        "veteran_aura_gain_ammo_on_elite_kill"
+        "veteran_aura_gain_ammo_on_elite_kill",
+        "veteran_base_ranged_damage"
       ],
       "checks": []
     },
@@ -5764,7 +5765,8 @@
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
-        "veteran_aura_gain_ammo_on_elite_kill"
+        "veteran_aura_gain_ammo_on_elite_kill",
+        "veteran_base_ranged_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5867,7 +5869,8 @@
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
-        "veteran_aura_gain_ammo_on_elite_kill"
+        "veteran_aura_gain_ammo_on_elite_kill",
+        "veteran_base_ranged_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6072,7 +6075,8 @@
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
-        "veteran_aura_gain_ammo_on_elite_kill"
+        "veteran_aura_gain_ammo_on_elite_kill",
+        "veteran_base_ranged_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6419,9 +6423,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "71c67b931cad4c94c16c5528fb7020a16b3e854b",
       "chinese_sha256": "4eb5584b74e9f76b45082aa184e95fe12855c638b758ed63ed67e02dba9ae0b1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_base_ranged_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_base_ranged_damage.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_better_deployables.md",
@@ -9745,6 +9756,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_gain_ammo_on_elite_kill.md"
+    },
+    {
+      "id": "veteran_base_ranged_damage",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_base_ranged_damage.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_base_ranged_damage.md"
     }
   ],
   "pending_chinese_corrections": [

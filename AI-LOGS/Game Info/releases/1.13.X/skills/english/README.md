@@ -200,3 +200,5 @@ For later Chinese updates, compare source paths and blobs against `FILE_MAP.json
 The latest user instruction supersedes earlier tracing and detailed-record requirements. Check changed translations, values, independent English verdicts, Markdown and links. Audit complete shared pages, images and layout at class completion. Code reads require missing necessary display values or a concrete unresolved English contradiction. Keep new records concise; preserve history; do not add validation frameworks or expand helper scripts. Review each full staged diff once and keep one local commit per skill.
 
 - [Scavenger](veteran_aura_gain_ammo_on_elite_kill.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
+
+- [Guardsman](veteran_base_ranged_damage.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
