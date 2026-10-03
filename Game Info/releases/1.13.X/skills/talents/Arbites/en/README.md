@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="Execution Order talent icon"> [Execution Order](#adamant_execution_order) | <ul><li>Automatically marks Elites, Specialists or Bosses within 40m in front of you.</li><li>You or your Cyber-Mastiff killing a marked target replenishes 15% of maximum Toughness and grants damage and attack-speed bonuses for 8s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="Terminus Warrant talent icon"> [Terminus Warrant](#adamant_terminus_warrant) | <ul><li>Ranged attacks build Melee Justice for each enemy hit per shot, granting three stacks on a weakspot hit; melee hits build Ranged Justice, each capped at 20 stacks.</li><li>Wielding the corresponding weapon consumes those stacks to activate a fixed 12s buff.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="Forceful talent icon"> [Forceful](#adamant_forceful) | <ul><li>Staggering hits or blocks build up to 10 stacks, each granting 5% Impact and lowering the damage-taken multiplier.</li><li>Stacks share a 5s timer; taking damage removes at most one stack every 0.25s.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="Lone Wolf talent icon"> [Lone Wolf](#adamant_disable_companion) | <ul><li>Removes your Cyber-Mastiff in exchange for +20% Damage, +10% Attack Speed, 15% Toughness Damage Reduction and +1 maximum Blitz charge.</li><li>While charges are missing, replenish one grenade every 45s, or one Voltaic Shock Mine every 90s.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -337,3 +338,17 @@
 - **Full-stack example**: Each stack grants +5% Impact, totaling +50% at 10 stacks. Each stack has a damage-taken multiplier of 0.975; the shared stacking rule gives `0.975^10 ≈ 0.776`, about 22.4% less than baseline damage. This is multiplicative, rather than a directly added 25% reduction. Base damage of 100 becomes `100 × 0.975¹⁰ ≈ 77.63 damage` at full stacks.
 
 [Details](adamant_forceful.md) · [Back to index](#talent-index)
+
+<a id="adamant_disable_companion"></a>
+
+### Lone Wolf
+
+<img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="72" height="72" alt="Lone Wolf talent icon">
+
+- **Replacement effect**: Selecting Lone Wolf removes your Cyber-Mastiff. You gain +20% Damage, +10% Attack Speed, +15% Toughness Damage Reduction and +1 maximum Blitz charge.
+
+- **Damage and speed examples**: Isolating this talent, base damage 100 becomes `100 × 1.2 = 120 damage`; with an existing same-stage 25% damage bonus, it becomes 145. An attack action with adjustable speed taking 1s instead takes `1 ÷ 1.1 ≈ 0.91s`. Toughness damage 100 becomes 85; with an existing same-stage 10% Toughness damage reduction, it becomes 75.
+
+- **Replenishment example**: When at least one ordinary grenade charge is missing, the timer starts and restores one after 45s. A missing Voltaic Shock Mine charge instead waits 90s. After restoring a charge, the next charge waits through a new timer; no timer runs at full charges.
+
+[Details](adamant_disable_companion.md) · [Back to index](#talent-index)

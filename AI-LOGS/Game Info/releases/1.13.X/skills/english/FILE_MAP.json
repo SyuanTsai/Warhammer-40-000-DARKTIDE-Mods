@@ -84,7 +84,8 @@
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
         "adamant_terminus_warrant",
-        "adamant_forceful"
+        "adamant_forceful",
+        "adamant_disable_companion"
       ],
       "checks": []
     },
@@ -117,7 +118,8 @@
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
         "adamant_terminus_warrant",
-        "adamant_forceful"
+        "adamant_forceful",
+        "adamant_disable_companion"
       ],
       "checks": []
     },
@@ -150,7 +152,8 @@
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
         "adamant_terminus_warrant",
-        "adamant_forceful"
+        "adamant_forceful",
+        "adamant_disable_companion"
       ],
       "checks": []
     },
@@ -183,7 +186,8 @@
         "adamant_dog_damage_after_ability",
         "adamant_execution_order",
         "adamant_terminus_warrant",
-        "adamant_forceful"
+        "adamant_forceful",
+        "adamant_disable_companion"
       ],
       "checks": []
     },
@@ -507,9 +511,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7af70750930185fcf523a9658590779e1c3d9720",
       "chinese_sha256": "b1c07e1350dbf945291a66ca67910ee3393bed2070a08fa2238958eaa1f25004",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_disable_companion"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_disable_companion.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dodge_grants_damage.md",
@@ -10249,6 +10260,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful.md"
+    },
+    {
+      "id": "adamant_disable_companion",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_disable_companion.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_disable_companion.md"
     }
   ],
   "pending_chinese_corrections": [
