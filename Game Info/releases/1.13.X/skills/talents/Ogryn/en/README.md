@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="32" height="32" alt="Just Getting Started! talent icon"> [Just Getting Started!](#ogryn_heavy_hitter_max_stacks_improves_attack_speed) | <ul><li>At 8 Heavy Hitter stacks, Just Getting Started! grants +10% Attack Speed.</li><li>The bonus ends below 8 stacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="The Best Defence talent icon"> [The Best Defence](#ogryn_multi_heavy_toughness) | <ul><li>Hitting at least 2 enemies with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="Smash 'Em! talent icon"> [Smash 'Em!](#ogryn_single_heavy_toughness) | <ul><li>Hitting exactly 1 enemy with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="Lynchpin talent icon"> [Lynchpin](#ogryn_increased_coherency_toughness) | <ul><li>Your own Coherency Toughness regeneration rate increases by 100%.</li></ul> | Talent |
 
 ## Blitz
 
@@ -686,3 +687,19 @@
 - **Counting**: Each qualifying sweep restores Toughness once, rather than once per enemy hit. Other Toughness recovery modifiers apply separately.
 
 [Details](ogryn_single_heavy_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_increased_coherency_toughness"></a>
+
+### Lynchpin
+
+<img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="72" height="72" alt="Lynchpin talent icon">
+
+- **Effect**: Increase your own Toughness regeneration rate through Coherency by 100%. This does not double Toughness recovered from attack hits.
+
+- **Example**: With all other conditions unchanged, an original rate of 5 points per second becomes `5 × (1 + 100%) = 10`. If the same modifier stage already has +20%, the rate changes from 6 to `5 × (1 + 20% + 100%) = 11` points per second.
+
+- **Requirement**: Coherency regeneration conditions and the waiting period still apply. This talent changes only the regeneration rate.
+
+[Details](ogryn_increased_coherency_toughness.md) · [Back to index](#talent-index)
