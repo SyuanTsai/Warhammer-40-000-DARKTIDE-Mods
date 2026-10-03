@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="Keep Shooting talent icon"> [Keep Shooting](#ogryn_reload_speed_on_empty) | <ul><li>Starting a reload with an empty clip grants +20% Reload Speed.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="Furious talent icon"> [Furious](#ogryn_more_hits_more_damage) | <ul><li>Each enemy hit by the previous melee attack adds 3% damage to the next melee attack, up to +30%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="Heavyweight talent icon"> [Heavyweight](#ogryn_ogryn_killer) | <ul><li>Deal +30% damage to Bulwarks, Crushers, Reapers and Plague Ogryns.</li><li>Take 30% less damage from those enemies.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="Slam talent icon"> [Slam](#ogryn_melee_stagger) | <ul><li>+25% melee Impact; staggering an enemy with a melee hit or push restores 5% Stamina.</li><li>Stamina recovery has a 0.75s cooldown.</li></ul> | Talent |
 
 ## Blitz
 
@@ -754,3 +755,19 @@
 - **Targets**: This is not a general bonus against every large enemy or every Monstrosity.
 
 [Details](ogryn_ogryn_killer.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_melee_stagger"></a>
+
+### Slam
+
+<img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="72" height="72" alt="Slam talent icon">
+
+- **Impact bonus**: Gain +25% melee Impact, improving stagger. This bonus does not directly increase Health damage.
+
+- **Stamina recovery**: A melee hit or push that successfully staggers an enemy restores 5% of maximum Stamina, with at least 0.75s between recoveries. A hit that causes no stagger restores nothing.
+
+- **Example**: With maximum Stamina 8, each recovery gives `8 × 5% = 0.4`; if only 0.2 is missing, only 0.2 is restored. Considering only the Impact stage, base 100 becomes `100 × 1.25 = 125`. Whether the target staggers still depends on the enemy and attack.
+
+[Details](ogryn_melee_stagger.md) · [Back to index](#talent-index)

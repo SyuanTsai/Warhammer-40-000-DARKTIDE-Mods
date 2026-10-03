@@ -52,3 +52,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Keep Shooting](ogryn_reload_speed_on_empty.md) / `ogryn_reload_speed_on_empty` | Talent |
 | [Furious](ogryn_more_hits_more_damage.md) / `ogryn_more_hits_more_damage` | Talent |
 | [Heavyweight](ogryn_ogryn_killer.md) / `ogryn_ogryn_killer` | Talent |
+| [Slam](ogryn_melee_stagger.md) / `ogryn_melee_stagger` | Talent |
