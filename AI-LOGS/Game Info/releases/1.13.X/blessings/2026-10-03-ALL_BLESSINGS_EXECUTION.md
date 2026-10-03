@@ -187,3 +187,7 @@
 - [掃射](2026-10-03-RAKING-FIRE_ACCEPTANCE.json)：新增1變體、1型號關聯；共4變體、5關聯。
 
 - [幽靈](2026-10-03-GHOST_ACCEPTANCE.json)：新增5變體、11型號關聯；共5變體、11關聯。
+
+- 2026-10-04：固定 SHA 共通定義盤點快取涵蓋70個 tier 檔案、693個唯一實作；605個已綁定，88個交集外定義（21個有 metadata、67個無精確 metadata），與既有 inventory 分割完全一致。快取回條：`AI-LOGS/Game Info/local/blessings/2026-10-03/source-definition-catalog.json`，SHA-256 `e9a3f21f70fdfce4347450eb1d4c51e1520ff49716f7092248cb4e1b1282c4d5`；未擴大已驗收範圍。
+
+- [近身平射](2026-10-03-POINT-BLANK_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。

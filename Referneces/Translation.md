@@ -418,6 +418,7 @@
 - Lethal Proximity - 致命零距離
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_close_explosion`，hash `9fbc423b`；英文／繁中RAW配對確認。
 - Point Blank - 近身平射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_bonus_on_melee_kills`，hash `92eda1aa`；英文／繁中RAW配對確認。
 - Execution - 處決
 - Gloryhunter - 榮耀獵手
 - Surge - 湧動

@@ -388,6 +388,102 @@
         "須實際sweep命中；profile.count_as_ranged_attack可以影響個別Buff gate，必須讀本項實際profile。"
       ],
       "reuse_rule": "Only reuse when the current actual action/profile satisfies all conditions; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "stepped-stat-count",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/stepped_stat_buff.lua",
+      "start": 32,
+      "end": 51,
+      "content_sha256": "c8920ba4f8ffc5ea86d5df00d3bd06f6cde9034e0027e3be14cd9d3ddfe45df1",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/stepped_stat_buff.lua#L32-L51",
+      "review": "Sol directly reviewed the exact fixed-SHA block for Surgical/Crucian Roulette; reuse requires verification of the new trait/template/action conditions.",
+      "conclusion": "SteppedStatBuff clamps the normal stack contribution plus bonus_step to the min/max supplied by this template.",
+      "applicability": [
+        "Only SteppedStatBuff templates with own bonus/min-max funcs verified; no inferred step gate or limit from other templates."
+      ],
+      "reuse_rule": "Reuse the same fixed-SHA and content hash; reread only changed or newly applicable conditions."
+    },
+    {
+      "id": "buff-stack-offset",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/buff.lua",
+      "start": 404,
+      "end": 410,
+      "content_sha256": "e4b5b60d5ee8a8b60be6135f73ea9e8d446a79795ff204356ade98a2b6158d83",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L404-L410",
+      "review": "Sol directly reviewed the exact fixed-SHA block for Surgical/Crucian Roulette; reuse requires verification of the new trait/template/action conditions.",
+      "conclusion": "Normal stat stack contribution is clamp(stack_count+stack_offset,0,max_stat_stacks or max_stacks or1).",
+      "applicability": [
+        "Own stack_offset/max_stack and bonus-step overrides must be verified."
+      ],
+      "reuse_rule": "Reuse the same fixed-SHA and content hash; reread only changed or newly applicable conditions."
+    },
+    {
+      "id": "critical-chance-consumer",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/critical_strike.lua",
+      "start": 13,
+      "end": 39,
+      "content_sha256": "2a3f6535827dc2bac4073694a642bf48115e81e3582bd70632a5b9040e7bb09c",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/critical_strike.lua#L13-L39",
+      "review": "Sol directly reviewed the exact fixed-SHA block for Surgical/Crucian Roulette; reuse requires verification of the new trait/template/action conditions.",
+      "conclusion": "Adds generic crit, corresponding attack-type crit and handling modifier to archetype base; clamps0..1 before optional crit-to-damage conversion.",
+      "applicability": [
+        "Only callers of CriticalStrike.chance; verify actual ranged/melee flags, handling template and conversion option."
+      ],
+      "reuse_rule": "Reuse the same fixed-SHA and content hash; reread only changed or newly applicable conditions."
+    },
+    {
+      "id": "critical-prd-rounding",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/critical_strike.lua",
+      "start": 5,
+      "end": 10,
+      "content_sha256": "e3454c2aac0e9d61db10cb9b287493543e060ae129e9334f1405e2ba3a84d610",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/critical_strike.lua#L5-L10",
+      "review": "Sol directly reviewed the exact fixed-SHA block for Surgical/Crucian Roulette; reuse requires verification of the new trait/template/action conditions.",
+      "conclusion": "Critical strike roll rounds chance to two decimal places then uses PRD flip_coin.",
+      "applicability": [
+        "Only actual CriticalStrike.is_critical_strike callers; auto-critical and preserved burst state need own review."
+      ],
+      "reuse_rule": "Reuse the same fixed-SHA and content hash; reread only changed or newly applicable conditions."
+    },
+    {
+      "id": "shoot-fire-time-report",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/actions/action_shoot.lua",
+      "start": 306,
+      "end": 328,
+      "content_sha256": "a9b051336aeabab5ae98e22406eb4ad8a4f4344dae1c355ef1b6969193f568ee",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L306-L328",
+      "review": "Sol directly reviewed the exact fixed-SHA block for Surgical/Crucian Roulette; reuse requires verification of the new trait/template/action conditions.",
+      "conclusion": "ActionShoot writes fire_last_t after _shoot in the same update.",
+      "applicability": [
+        "Only verified ActionShoot-derived modes; actual initial/automatic crit and current fire config must be checked."
+      ],
+      "reuse_rule": "Reuse the same fixed-SHA and content hash; reread only changed or newly applicable conditions."
+    },
+    {
+      "id": "proc-stat-override-table",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "start": 288,
+      "end": 300,
+      "content_sha256": "62dd2fa3cd6371894a2efac45f706d09d9d445bbea4b6de62aef8325846c7801",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L288-L300",
+      "review": "Sol directly reviewed this fixed-SHA block for Point Blank; exact own conditional absence was checked.",
+      "conclusion": "Active proc_stat_buffs use the trait override whole table if present and then normal Buff numeric aggregation.",
+      "applicability": [
+        "Actual ProcBuff caller and own proc_stat_buffs/conditional chain must be verified; a keyword-only trait is a different path."
+      ],
+      "reuse_rule": "Reuse unchanged fixed-SHA/hash; reread only own overrides and new conditions."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",

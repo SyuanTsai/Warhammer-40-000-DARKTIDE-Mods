@@ -540,6 +540,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
       "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "point-blank",
+      "name_zh_tw": "近身平射",
+      "name_en": "Point Blank",
+      "name_key": "loc_trait_bespoke_crit_chance_bonus_on_melee_kills",
+      "description_key": "loc_trait_bespoke_crit_chance_bonus_on_melee_kills_desc",
+      "name_hash": "92eda1aa",
+      "description_hash": "f399a447",
+      "page": "entries/近身平射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+      "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點；爆彈手槍與針彈手槍持續3.5秒，快拔左輪手槍持續2.5秒。"
     }
   ],
   "weapons": [
@@ -10431,6 +10444,120 @@
       "icon": "https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_037",
       "effect": "持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+      "blessing_id": "point-blank",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/近身平射/weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "ranged_critical_strike_chance_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 3.5,
+        "all_marks_share_values": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 10,
+        "end_line": 63
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_bonus_on_melee_kills_desc",
+      "description_hash": "f399a447",
+      "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
+      "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點，持續3.5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+      "blessing_id": "point-blank",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/近身平射/weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "ranged_critical_strike_chance_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 3.5,
+        "all_marks_share_values": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 520,
+        "end_line": 575
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_bonus_on_melee_kills_desc",
+      "description_hash": "f399a447",
+      "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
+      "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點，持續3.5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+      "blessing_id": "point-blank",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/近身平射/weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "ranged_critical_strike_chance_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 2.5,
+        "all_marks_share_values": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 356,
+        "end_line": 409
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_bonus_on_melee_kills_desc",
+      "description_hash": "f399a447",
+      "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
+      "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點，持續2.5秒。"
     }
   ],
   "bindings": [
@@ -14562,6 +14689,90 @@
         "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
         "import_line": 17,
         "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "point-blank",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
       }
     }
   ]
