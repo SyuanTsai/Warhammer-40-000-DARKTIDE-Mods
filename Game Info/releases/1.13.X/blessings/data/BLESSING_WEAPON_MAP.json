@@ -501,6 +501,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
       "effect": "持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。"
+    },
+    {
+      "id": "trauma",
+      "name_zh_tw": "創傷",
+      "name_en": "Trauma",
+      "name_key": "loc_trait_bespoke_consecutive_hits_increases_stagger",
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "name_hash": "af38ab6e",
+      "description_hash": "0d030801",
+      "page": "entries/創傷/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "effect": "有效命中累積最多5層，每層近戰衝擊+14%／16%／18%／20%，期限2秒；每層另使一般踉蹌時間乘以1.1。"
     }
   ],
   "weapons": [
@@ -651,26 +664,41 @@
         {
           "id": "combataxe_p3_m1",
           "item": "content/items/weapons/player/melee/combataxe_p3_m1",
-          "name": "軍務部標配工兵鏟",
-          "name_en": "Standard-issue Munitorum Sapper Shovel",
+          "name": "工兵鏟 軍務部 Mk I",
+          "name_en": "Sapper Shovel Munitorum Mk I",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
-          "trait_category": "bespoke_combataxe_p3"
+          "trait_category": "bespoke_combataxe_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combataxe_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combataxe_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_combataxe_p3_m1"
+          }
         },
         {
           "id": "combataxe_p3_m2",
           "item": "content/items/weapons/player/melee/combataxe_p3_m2",
-          "name": "軍務部Mk III工兵鏟",
-          "name_en": "Munitorum Mk III Sapper Shovel",
+          "name": "工兵鏟 軍務部 Mk III",
+          "name_en": "Sapper Shovel Munitorum Mk III",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
-          "trait_category": "bespoke_combataxe_p3"
+          "trait_category": "bespoke_combataxe_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combataxe_p3_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combataxe_p3_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_combataxe_p3_m2"
+          }
         },
         {
           "id": "combataxe_p3_m3",
           "item": "content/items/weapons/player/melee/combataxe_p3_m3",
-          "name": "軍務部Mk VII工兵鏟",
-          "name_en": "Munitorum Mk VII Sapper Shovel",
+          "name": "工兵鏟 軍務部 Mk VII",
+          "name_en": "Sapper Shovel Munitorum Mk VII",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
-          "trait_category": "bespoke_combataxe_p3"
+          "trait_category": "bespoke_combataxe_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combataxe_p3_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combataxe_p3_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_combataxe_p3_m3"
+          }
         }
       ]
     },
@@ -2501,6 +2529,42 @@
             "weapon_family_display_name": "loc_weapon_family_galvanic_rifle_p1_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_galvanic_rifle_p1_m1",
             "weapon_mark_display_name": "loc_weapon_mark_galvanic_rifle_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thunderhammer_2h_p1",
+      "name_zh_tw": "雷鎚",
+      "name_en": "Thunder Hammer",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_thunderhammer_2h_p1_m1",
+      "page": "weapons/melee/雷鎚/README.md",
+      "marks": [
+        {
+          "id": "thunderhammer_2h_p1_m1",
+          "item": "content/items/weapons/player/melee/thunderhammer_2h_p1_m1",
+          "name": "雷鎚 十字星 Mk II",
+          "name_en": "Thunder Hammer Crucis Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+          "trait_category": "bespoke_thunderhammer_2h_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_thunderhammer_2h_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_thunderhammer_2h_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_thunderhammer_2h_p1_m1"
+          }
+        },
+        {
+          "id": "thunderhammer_2h_p1_m2",
+          "item": "content/items/weapons/player/melee/thunderhammer_2h_p1_m2",
+          "name": "雷鎚 鐵盔 Mk IV",
+          "name_en": "Thunder Hammer Ironhelm Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+          "trait_category": "bespoke_thunderhammer_2h_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_thunderhammer_2h_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_thunderhammer_2h_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_thunderhammer_2h_p1_m2"
           }
         }
       ]
@@ -9352,6 +9416,251 @@
       "icon": "https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_219",
       "effect": "持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+      "blessing_id": "trauma",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/創傷/weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_impact_modifier_per_effective_stack": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "max_effective_stacks": 5,
+        "internal_child_max_stacks_including_placeholder": 6,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 2,
+        "initial_eligible_hits_for_first_effective_stack": 3,
+        "eligible_hits_after_timeout_reset_for_first_effective_stack": 2,
+        "timeout_rule": "last_hit_time + 2 < current_time",
+        "timeout_armed_only_after_stack_progression": true,
+        "refresh_at_max_stacks": true,
+        "stagger_duration_multiplier_per_effective_stack": 1.1,
+        "max_normal_branch_stagger_duration_multiplier": 1.61051,
+        "conditional": "is_item_slot_wielded",
+        "item_match": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 64,
+        "end_line": 123
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "description_hash": "0d030801",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "effect": "每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+      "blessing_id": "trauma",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/創傷/weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_impact_modifier_per_effective_stack": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "max_effective_stacks": 5,
+        "internal_child_max_stacks_including_placeholder": 6,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 2,
+        "initial_eligible_hits_for_first_effective_stack": 3,
+        "eligible_hits_after_timeout_reset_for_first_effective_stack": 2,
+        "timeout_rule": "last_hit_time + 2 < current_time",
+        "timeout_armed_only_after_stack_progression": true,
+        "refresh_at_max_stacks": true,
+        "stagger_duration_multiplier_per_effective_stack": 1.1,
+        "max_normal_branch_stagger_duration_multiplier": 1.61051,
+        "conditional": "is_item_slot_wielded",
+        "item_match": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 512,
+        "end_line": 573
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 76,
+        "end_line": 80
+      },
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "description_hash": "0d030801",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "effect": "每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger",
+      "blessing_id": "trauma",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/創傷/weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_impact_modifier_per_effective_stack": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "max_effective_stacks": 5,
+        "internal_child_max_stacks_including_placeholder": 6,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 2,
+        "initial_eligible_hits_for_first_effective_stack": 3,
+        "eligible_hits_after_timeout_reset_for_first_effective_stack": 2,
+        "timeout_rule": "last_hit_time + 2 < current_time",
+        "timeout_armed_only_after_stack_progression": true,
+        "refresh_at_max_stacks": true,
+        "stagger_duration_multiplier_per_effective_stack": 1.1,
+        "max_normal_branch_stagger_duration_multiplier": 1.61051,
+        "conditional": "is_item_slot_wielded",
+        "item_match": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 64,
+        "end_line": 123
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "description_hash": "0d030801",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "effect": "每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+      "blessing_id": "trauma",
+      "weapon_id": "powermaul_2h_p1",
+      "page": "entries/創傷/weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_impact_modifier_per_effective_stack": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "max_effective_stacks": 5,
+        "internal_child_max_stacks_including_placeholder": 6,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 2,
+        "initial_eligible_hits_for_first_effective_stack": 3,
+        "eligible_hits_after_timeout_reset_for_first_effective_stack": 2,
+        "timeout_rule": "last_hit_time + 2 < current_time",
+        "timeout_armed_only_after_stack_progression": true,
+        "refresh_at_max_stacks": true,
+        "stagger_duration_multiplier_per_effective_stack": 1.1,
+        "max_normal_branch_stagger_duration_multiplier": 1.61051,
+        "conditional": "is_item_slot_wielded",
+        "item_match": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        "start_line": 74,
+        "end_line": 133
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "description_hash": "0d030801",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "effect": "每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger",
+      "blessing_id": "trauma",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_impact_modifier_per_effective_stack": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "max_effective_stacks": 5,
+        "internal_child_max_stacks_including_placeholder": 6,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 2,
+        "initial_eligible_hits_for_first_effective_stack": 3,
+        "eligible_hits_after_timeout_reset_for_first_effective_stack": 2,
+        "timeout_rule": "last_hit_time + 2 < current_time",
+        "timeout_armed_only_after_stack_progression": true,
+        "refresh_at_max_stacks": true,
+        "stagger_duration_multiplier_per_effective_stack": 1.1,
+        "max_normal_branch_stagger_duration_multiplier": 1.61051,
+        "conditional": "is_item_slot_wielded",
+        "item_match": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 549,
+        "end_line": 610
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 47
+      },
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_stagger_desc",
+      "description_hash": "0d030801",
+      "icon": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "effect": "每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。"
     }
   ],
   "bindings": [
@@ -13007,6 +13316,160 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
         "import_line": 16,
         "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1661
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1919
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "trauma",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/consecutive_hits_increases_stagger",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
       }
     }
   ]

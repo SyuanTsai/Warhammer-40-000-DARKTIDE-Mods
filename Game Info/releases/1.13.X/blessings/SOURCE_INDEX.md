@@ -43,3 +43,4 @@
 | [激射](entries/激射/README.md) | [來源索引](entries/激射/SOURCE_INDEX.md) |
 | [致命零距離](entries/致命零距離/README.md) | [來源索引](entries/致命零距離/SOURCE_INDEX.md) |
 | [破片四濺](entries/破片四濺/README.md) | [來源索引](entries/破片四濺/SOURCE_INDEX.md) |
+| [創傷](entries/創傷/README.md) | [來源索引](entries/創傷/SOURCE_INDEX.md) |
