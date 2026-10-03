@@ -58,3 +58,4 @@
 | [短刀](melee/短刀/README.md)<br>- Shivs | 近戰 | 短刀 臨時拼湊 型號1、短刀 臨時拼湊 型號3 |
 | [戰鬥霰彈槍](ranged/戰鬥霰彈槍/README.md)<br>- Combat Shotgun | 遠程 | 戰鬥霰彈槍 紮羅娜 Mk VI、戰鬥霰彈槍 阿格里皮娜 Mk VII、戰鬥霰彈槍 奧克塔蘭 Mk IX |
 | [獵人霰彈槍](ranged/獵人霰彈槍/README.md)<br>- Huntsman's Shotgun | 遠程 | 獵人霰彈槍 奧克塔蘭 Mk III |
+| [法務官電擊鎚](melee/法務官電擊鎚/README.md)<br>- Arbites Shock Maul | 近戰 | 法務官電擊鎚 布蘭克斯 Mk III |

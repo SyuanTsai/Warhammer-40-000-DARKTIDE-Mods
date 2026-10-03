@@ -34,5 +34,6 @@
 | <img src="https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df" width="32" height="32" alt="放血者祝福圖示"> [放血者](entries/放血者/README.md)<br>- Bloodletter<br>[完整說明](entries/放血者/README.md) | <ul><li>啟動鏈鋸後造成傷害的斬擊與鋸擊可施加流血，層數依武器與I–IV等級分列；同一目標最多16層。重型開膛劍MkXV普通輕擊首段鋸擊也能觸發。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72" width="32" height="32" alt="撕碎祝福圖示"> [撕碎](entries/撕碎/README.md)<br>- Lacerate<br>[完整說明](entries/撕碎/README.md) | <ul><li>符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d" width="32" height="32" alt="出血穿透祝福圖示"> [出血穿透](entries/出血穿透/README.md)<br>- Puncture<br>[完整說明](entries/出血穿透/README.md) | <ul><li>遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f" width="32" height="32" alt="閃電反射祝福圖示"> [閃電反射](entries/閃電反射/README.md)<br>- Lightning Reflexes<br>[完整說明](entries/閃電反射/README.md) | <ul><li>格擋近戰後獲得+10%／15%／20%／25%近戰威力；電弧鎚持續5秒，其他武器3秒。完美格擋另對攻擊者施加3秒電擊，生效期間不再觸發。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

@@ -340,6 +340,7 @@
 - Exorcist - 驅魔者
 - Superiority - 優勢
 - Lightning Reflexes - 閃電反射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_block_has_chance_to_stun`，hash `c728ed68`；英文／繁中RAW配對確認。
 - High Voltage - 高壓電
 - Falter - 踉蹌
 - Overwhelming Force - 壓倒性的武力

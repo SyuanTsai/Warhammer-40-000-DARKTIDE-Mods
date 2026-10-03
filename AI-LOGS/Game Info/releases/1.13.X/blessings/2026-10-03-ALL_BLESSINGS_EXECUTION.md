@@ -121,3 +121,7 @@
 - 撕碎本機 Commit：`2c62ad1f9fefe53d397e897ca8cba812209e1a06`。
 
 - [出血穿透](2026-10-03-PUNCTURE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 出血穿透本機 Commit：`2b067e224b7731e02e8cf062ceb029a9ffefcd3b`。
+
+- [閃電反射](2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE.json)：新增4變體、6型號關聯；共4變體、6關聯。

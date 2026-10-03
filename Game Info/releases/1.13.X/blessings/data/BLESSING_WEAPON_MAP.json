@@ -358,6 +358,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
       "effect": "遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。"
+    },
+    {
+      "id": "lightning-reflexes",
+      "name_zh_tw": "閃電反射",
+      "name_en": "Lightning Reflexes",
+      "name_key": "loc_trait_bespoke_block_has_chance_to_stun",
+      "description_key": "loc_trait_bespoke_block_has_chance_to_stun_with_cd_alt_desc",
+      "name_hash": "c728ed68",
+      "description_hash": "060ccef7",
+      "page": "entries/閃電反射/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f",
+      "effect": "格擋近戰後獲得+10%／15%／20%／25%近戰威力；電弧鎚持續5秒，其他武器3秒。完美格擋另對攻擊者施加3秒電擊，生效期間不再觸發。"
     }
   ],
   "weapons": [
@@ -2033,6 +2046,29 @@
             "weapon_family_display_name": "loc_weapon_family_shotgun_p3_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p3_m1",
             "weapon_mark_display_name": "loc_weapon_mark_shotgun_p3_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "powermaul_p2",
+      "name_zh_tw": "法務官電擊鎚",
+      "name_en": "Arbites Shock Maul",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_powermaul_p2_m1",
+      "page": "weapons/melee/法務官電擊鎚/README.md",
+      "marks": [
+        {
+          "id": "powermaul_p2_m1",
+          "item": "content/items/weapons/player/melee/powermaul_p2_m1",
+          "name": "法務官電擊鎚 布蘭克斯 Mk III",
+          "name_en": "Arbites Shock Maul Branx Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+          "trait_category": "bespoke_powermaul_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_powermaul_p2_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_powermaul_p2_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_powermaul_p2_m1"
           }
         }
       ]
@@ -6412,6 +6448,206 @@
       "icon": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_227",
       "effect": "遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_block_has_chance_to_stun",
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/閃電反射/weapon_trait_bespoke_powermaul_p1_block_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "effective_active_stacks": 1,
+        "initial_hidden_stack_count": 1,
+        "active_hidden_stack_count": 2,
+        "stack_offset": -1,
+        "proc_chance": 1,
+        "enemy_stun_duration_seconds": 3,
+        "stun_interval_seconds_range": [
+          0.3,
+          0.8
+        ],
+        "stun_profile_attack_power_distribution": 8,
+        "stun_profile_impact_power_distribution": 100,
+        "base_perfect_block_window_seconds": 0.3,
+        "duration_and_retrigger_lockout_seconds": 3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 403,
+        "end_line": 462
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 66
+      },
+      "description_key": "loc_trait_bespoke_block_has_chance_to_stun_with_cd_alt_desc",
+      "description_hash": "060ccef7",
+      "icon": "https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_223",
+      "effect": "格擋近戰後獲得+10%／15%／20%／25%近戰威力，持續3秒；完美格擋另施加3秒電擊，生效期間不再觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_block_has_chance_to_stun",
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/閃電反射/weapon_trait_bespoke_powermaul_p2_block_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "effective_active_stacks": 1,
+        "initial_hidden_stack_count": 1,
+        "active_hidden_stack_count": 2,
+        "stack_offset": -1,
+        "proc_chance": 1,
+        "enemy_stun_duration_seconds": 3,
+        "stun_interval_seconds_range": [
+          0.3,
+          0.8
+        ],
+        "stun_profile_attack_power_distribution": 8,
+        "stun_profile_impact_power_distribution": 100,
+        "base_perfect_block_window_seconds": 0.3,
+        "duration_and_retrigger_lockout_seconds": 3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 540,
+        "end_line": 599
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 53,
+        "end_line": 89
+      },
+      "description_key": "loc_trait_bespoke_block_has_chance_to_stun_with_cd_alt_desc",
+      "description_hash": "060ccef7",
+      "icon": "https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_223",
+      "effect": "格擋近戰後獲得+10%／15%／20%／25%近戰威力，持續3秒；完美格擋另施加3秒電擊，生效期間不再觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_block_has_chance_to_stun",
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/閃電反射/weapon_trait_bespoke_powermaul_p3_block_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "effective_active_stacks": 1,
+        "initial_hidden_stack_count": 1,
+        "active_hidden_stack_count": 2,
+        "stack_offset": -1,
+        "proc_chance": 1,
+        "enemy_stun_duration_seconds": 3,
+        "stun_interval_seconds_range": [
+          0.3,
+          0.8
+        ],
+        "stun_profile_attack_power_distribution": 8,
+        "stun_profile_impact_power_distribution": 100,
+        "base_perfect_block_window_seconds": 0.3,
+        "duration_and_retrigger_lockout_seconds": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 11,
+        "end_line": 70
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 58
+      },
+      "description_key": "loc_trait_bespoke_block_has_chance_to_stun_with_cd_alt_desc",
+      "description_hash": "060ccef7",
+      "icon": "https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_223",
+      "effect": "格擋近戰後獲得+10%／15%／20%／25%近戰威力，持續5秒；完美格擋另施加3秒電擊，生效期間不再觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_shield_p1_block_has_chance_to_stun",
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_shield_p1",
+      "page": "entries/閃電反射/weapon_trait_bespoke_powermaul_shield_p1_block_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "effective_active_stacks": 1,
+        "initial_hidden_stack_count": 1,
+        "active_hidden_stack_count": 2,
+        "stack_offset": -1,
+        "proc_chance": 1,
+        "enemy_stun_duration_seconds": 3,
+        "stun_interval_seconds_range": [
+          0.3,
+          0.8
+        ],
+        "stun_profile_attack_power_distribution": 8,
+        "stun_profile_impact_power_distribution": 100,
+        "base_perfect_block_window_seconds": 0.3,
+        "duration_and_retrigger_lockout_seconds": 3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_shield_p1.lua",
+        "start_line": 384,
+        "end_line": 443
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_shield_p1_buff_templates.lua",
+        "start_line": 155,
+        "end_line": 191
+      },
+      "description_key": "loc_trait_bespoke_block_has_chance_to_stun_with_cd_alt_desc",
+      "description_hash": "060ccef7",
+      "icon": "https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_223",
+      "effect": "格擋近戰後獲得+10%／15%／20%／25%近戰威力，持續3秒；完美格擋另施加3秒電擊，生效期間不再觸發。"
     }
   ],
   "bindings": [
@@ -9059,6 +9295,90 @@
         "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
         "import_line": 16,
         "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1612
+      }
+    },
+    {
+      "blessing_id": "lightning-reflexes",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_block_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/block_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1830
       }
     }
   ]
