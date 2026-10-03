@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="Street Smarts talent icon"> [Street Smarts](#adamant_dodge_improvement) | <ul><li>Gain 1 additional Effective Dodge; extend the grace period after a melee dodge ends by 25%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="Monstrosity Hunter talent icon"> [Monstrosity Hunter](#adamant_monster_hunter) | <ul><li>Deal 20% more damage to Ogryns and Monstrosities.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="The Emperor's Fist talent icon"> [The Emperor's Fist](#adamant_first_melee_hit_increased_damage) | <ul><li>The first target hit by each melee sweep receives 15% more Melee Damage and 30% more Impact.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="Target Selection talent icon"> [Target Selection](#adamant_pinning_dog_elite_damage) | <ul><li>Killing an Elite or Specialist pinned by your own Cyber-Mastiff grants 15% Damage against Elites and Specialists for 8s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1042,3 +1043,17 @@
 - **Separate examples**: Isolating the damage bonus, 100 points of melee damage becomes 115. An original 100 units of stagger strength becomes 130. With an existing same-stage 25% damage bonus, damage is 100 × (1 + 25% + 15%) = 140 points.
 
 [Details](adamant_first_melee_hit_increased_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_pinning_dog_elite_damage"></a>
+
+### Target Selection
+
+<img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="72" height="72" alt="Target Selection talent icon">
+
+- **Trigger**: When you or your own Cyber-Mastiff kill an Elite or Specialist that it is currently pinning, gain 15% Damage against Elites and Specialists for the next 8s.
+
+- **Refresh and limits**: Another trigger resets the 8s duration without stacking the damage bonus. Ordinary enemies dying do not trigger it, and attacks against ordinary enemies receive no bonus.
+
+- **Damage example**: Against a qualifying target, base damage 100 becomes 115. With an existing same-stage 25% bonus, damage is 100 × (1 + 25% + 15%) = 140.
+
+[Details](adamant_pinning_dog_elite_damage.md) · [Back to index](#talent-index)
