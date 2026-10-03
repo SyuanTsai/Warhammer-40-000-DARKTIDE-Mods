@@ -181,5 +181,6 @@
     "Full independent acceptance of the three related modifier talents"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/focus-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md",
+  "commit": "b52a89064cbf95759d1f4ef1916b9ccd30225ae2"
 }

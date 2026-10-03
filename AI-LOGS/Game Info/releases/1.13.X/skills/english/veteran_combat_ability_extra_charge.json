@@ -1,0 +1,182 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "id": "veteran_combat_ability_extra_charge",
+  "class": "Veteran",
+  "name": "Overwatch",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name_key": "loc_talent_veteran_combat_ability_extra_charge",
+  "name_hash": "08974b61",
+  "description_key": "loc_talent_veteran_combat_ability_extra_charge_description",
+  "description_hash": "157c4806",
+  "raw_template": "Your Combat Ability gains {charges:%s} charge, but {ability_cooldown:%s} Cooldown.",
+  "static_reconstruction": "Your Combat Ability gains +1 charge, but +33% Cooldown.",
+  "additional_english_pairs": [
+    {
+      "key": "loc_talent_veteran_invisibility_on_combat_ability",
+      "hash": "9776b86d",
+      "text": "Infiltrate"
+    },
+    {
+      "key": "loc_ability_veteran_base_ability",
+      "hash": "b3697cc9",
+      "text": "Precision Fire!",
+      "usage": "Unused talent_name parameter; not substituted."
+    }
+  ],
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 5,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "scope_clarification": "The user clarified text-review depth during this skill. Preserve the direct source reads already performed; subsequent skills translate the existing Chinese results and revisit code only for specific text discrepancies/evidence gaps, without repeating full call-chain analysis.",
+  "primary_direct_reads": [
+    "Chinese mechanism dossier and player section:524-535",
+    "veteran_tree.lua:295-327,1333-1355",
+    "veteran_talents.lua:606-644,2032-2057,2094-2112",
+    "veteran_buff_templates.lua:358-366",
+    "veteran_abilities.lua:1-89 (complete file)",
+    "talent_settings_veteran.lua:5-8,78-85",
+    "buff_settings.lua:691-695,731-747",
+    "player_unit_ability_extension.lua:21-24,712-880,920-977,999-1027,1037-1078,1192-1229,1297-1348,1364-1461,1487-1511",
+    "veteran_stealth_combat_ability.lua:90-101",
+    "action_ability_base.lua:1-67 (complete file)",
+    "action_base.lua:118-125",
+    "action_veteran_combat_ability.lua:1-85",
+    "buff.lua:404-410,689-727 (shared prior reads)",
+    "talent_layout_parser.lua:379-426,482-499,613-651,690-713;localization_manager.lua:285-320 (shared formatting reads)"
+  ],
+  "checks": [
+    {
+      "check": "exact same-version UI export SHA256, four key/hash/text pairs and complete description template",
+      "result": "passed",
+      "pairs": 4
+    },
+    {
+      "check": "static +1 and +33% lookup/format reconstruction; unused name parameter excluded",
+      "result": "passed"
+    },
+    {
+      "check": "fixed-SHA citations in current Veteran English scope",
+      "result": "passed",
+      "references": 327,
+      "unique_source_ranges": 115,
+      "source_files": 29
+    },
+    {
+      "check": "resource/time example substitutions and independent comparison totals",
+      "result": "passed",
+      "seconds": [
+        53.2,
+        106.4,
+        33.2,
+        46.26,
+        45.2
+      ],
+      "regen_time_saved_percent": 13.04,
+      "modified_cost_baseline_increase_percent": 41.25
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 709,
+      "local_references": 6478,
+      "remote_references": 9189,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 5
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 7
+      },
+      "resource_examples_table": {
+        "columns": 3,
+        "rows": 5
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "player_icons": "32x32 and 72x72; all loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of player section, resource examples and template viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 5758,
+      "sha256": "53175748e3bd3e442f5a1d8a8af2958f1b718dfb95df8707f67b9d68adfb6edd",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese technical content preserved except language switch; English prose/alt and private-path exclusion",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI Prompt\"",
+      "result": "passed",
+      "markdown_files": 4,
+      "local_references": 3,
+      "remote_references": 6,
+      "errors": 0
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 7,
+      "errors": 0
+    },
+    {
+      "check": "690 unique mappings, five accepted samples, INDEX Git paths, privacy and ignored QA artifacts",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only",
+    "result": "one_wording_ambiguity_corrected",
+    "corrections": [
+      "Player cooldown wording now explicitly compares 40s to 53.2s without other cooldown/recovery effects, avoiding a universal 33% relative claim for modified builds."
+    ],
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact runtime threshold frames and quantization behavior.",
+    "Every respawn, respec or loadout-transition initialization state."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Full separate acceptance of Infiltrate stealth/threat/damage effects"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/overwatch-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md"
+}

@@ -9,6 +9,7 @@
 | Talent | Main effects | Category |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
@@ -48,6 +49,36 @@
 - **Full capacity**: if another supply fills your grenades halfway through a countdown, that progress is cleared when full capacity is observed. A later throw starts a fresh full interval.
 
 [Details and source evidence](veteran_replenish_grenades.md) · [Back to index](#talent-index)
+
+## Combat abilities
+
+<a id="veteran_combat_ability_extra_charge"></a>
+
+<img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="72" height="72" alt="Overwatch talent icon">
+
+### Overwatch
+
+- **Infiltrate gains one extra stored use**, raising its capacity from **one to two**.
+
+- **Without other cooldown or recovery effects, each fully missing use takes 33% longer to refill**: about **53.2 seconds**, compared with 40 seconds before this modifier.
+
+- Both uses share recharge progress and **refill one after the other**. Spending the second use preserves the progress already accumulated toward the next one.
+
+- Recovery begins after casting creates a deficit and continues during stealth under ordinary conditions.
+
+#### Recharge examples
+
+Assume no other cooldown effects, pauses or additional restoration, unchanged loadout, and normal one-charge usage.
+
+- **One full use missing**: `40 × (1 + 33%) = 53.2 seconds`.
+
+- **Two full uses missing, starting at zero progress**: the first returns near **53.2 seconds**; both return near `53.2 × 2 = 106.4 seconds`.
+
+- **Use the second charge 20 seconds after the first**: the accumulated 20 seconds remain. The next charge needs about `53.2 − 20 = 33.2 more seconds`.
+
+These times are resource-model calculations. Fixed updates and rounding can shift the precise moment a charge becomes available.
+
+[Details and source evidence](veteran_combat_ability_extra_charge.md) · [Back to index](#talent-index)
 
 ## Keystones
 

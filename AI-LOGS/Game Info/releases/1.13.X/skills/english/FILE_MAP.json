@@ -5688,7 +5688,8 @@
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
-        "veteran_snipers_focus"
+        "veteran_snipers_focus",
+        "veteran_combat_ability_extra_charge"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5713,7 +5714,8 @@
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
-        "veteran_snipers_focus"
+        "veteran_snipers_focus",
+        "veteran_combat_ability_extra_charge"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5738,7 +5740,8 @@
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
-        "veteran_snipers_focus"
+        "veteran_snipers_focus",
+        "veteran_combat_ability_extra_charge"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5763,7 +5766,8 @@
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
-        "veteran_snipers_focus"
+        "veteran_snipers_focus",
+        "veteran_combat_ability_extra_charge"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6003,9 +6007,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d737cf5dd75f2ce19d35c824ad1ebb53b91f7326",
       "chinese_sha256": "fa5ab63161e499a6ac9c70f9a9f631d2cc06a64beb5cd4e4982678cf28b065a2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_extra_charge"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md",
@@ -7747,8 +7762,18 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md",
+      "commit": "b52a89064cbf95759d1f4ef1916b9ccd30225ae2"
+    },
+    {
+      "id": "veteran_combat_ability_extra_charge",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_extra_charge.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md"
     }
   ],
-  "pending_chinese_corrections": []
+  "pending_chinese_corrections": [],
+  "review_mode": "Translate existing verified Chinese mechanisms and check exact English text; targeted fixed-source reads only for discrepancies or evidence gaps, per user clarification."
 }

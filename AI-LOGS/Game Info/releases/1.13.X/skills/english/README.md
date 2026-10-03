@@ -15,6 +15,10 @@
 - Sandbox process startup fails while applying deny-read ACLs; reviewed `require_escalated` commands are used for authorized local reads and writes.
 - User authorization covers exact-path staging and local documentation commits; push, PR creation and merge are outside this task. No Jira ticket or work duration is supplied or invented; commits use the applicable bilingual Conventional Commit structure without placeholder metadata.
 
+## Text-review scope clarification — 2026-10-03
+
+The user clarified that the task should translate the existing Chinese mechanism results and verify text descriptions, rather than reconstruct every implementation path again. Use the existing mechanism dossiers as the translation baseline; check exact same-version English text, terminology, values, conditions, units, examples and independent English comparison conclusions. Revisit fixed-SHA code only to resolve a specific discrepancy or evidence gap. Do not repeat complete call-chain analysis for every skill. Preserve the already performed source checks and honest evidence limits. Per-skill validation and local commits remain required.
+
 ## Completion and continuation
 
 The overall goal remains in progress until all seven classes, their technical subdirectories and required shared pages have accepted English counterparts and traceable local commits. `FILE_MAP.json` records every source Markdown path and blob hash, not only file counts. A page with one accepted skill remains partial until all mapped content is covered. Acceptance records cite actual commands and distinguish static reasoning, Markdown parsing, public image retrieval and unperformed in-game checks.
@@ -40,4 +44,6 @@ For later Chinese updates, compare source paths and blobs against `FILE_MAP.json
 
 - [Exhilarating Takedown](veteran_replenish_toughness_on_weakspot_kill.json): accepted with explicit non-core timing and special-weapon caveats; recovery, shared timer, effective-stack cap, multiplicative settlement, original English comparison, actual rendering and public icon were verified. One player-wording ambiguity was corrected after read-only review; local commit `7a8f9dbb3086a9f19336c99c7d5eedaa6798bfd1`.
 
-- [Marksman's Focus](veteran_snipers_focus.json): accepted with explicit timing, HUD and special-weapon caveats; five-second shared decay, effective 10/15 versus raw 31, hard-cap refresh, finesse-component damage and reload action timing were independently verified. Nine English comparison rules support no player erratum. Actual parsing/rendering and public icon retrieval passed; recover the local commit through file history.
+- [Marksman's Focus](veteran_snipers_focus.json): accepted with explicit timing, HUD and special-weapon caveats; five-second shared decay, effective 10/15 versus raw 31, hard-cap refresh, finesse-component damage and reload action timing were independently verified. Nine English comparison rules support no player erratum. Actual parsing/rendering and public icon retrieval passed; local commit `b52a89064cbf95759d1f4ef1916b9ccd30225ae2`.
+
+- [Overwatch](veteran_combat_ability_extra_charge.json): accepted with runtime timing and initialization caveats. Exact English values, translated capacity/recharge text, examples, independent comparison, references, actual Markdown layout and public icon passed. Player wording was limited to its no-other-effects baseline. The user clarified text-review depth; future skills use the existing Chinese results and targeted discrepancy checks. Recover the local commit through file history.
