@@ -169,5 +169,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/enhanced-target-priority-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_coherency_outlines.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_coherency_outlines.md",
+  "commit": "c7c4d2a26b0b5e9394838b0e16aead8f7f57c43e"
 }

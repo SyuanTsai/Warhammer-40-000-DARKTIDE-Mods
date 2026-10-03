@@ -5704,7 +5704,8 @@
         "veteran_elite_kills_reduce_cooldown",
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
-        "veteran_combat_ability_coherency_outlines"
+        "veteran_combat_ability_coherency_outlines",
+        "veteran_combat_ability_ranged_roamer_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5749,7 +5750,8 @@
         "veteran_elite_kills_reduce_cooldown",
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
-        "veteran_combat_ability_coherency_outlines"
+        "veteran_combat_ability_coherency_outlines",
+        "veteran_combat_ability_ranged_roamer_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5794,7 +5796,8 @@
         "veteran_elite_kills_reduce_cooldown",
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
-        "veteran_combat_ability_coherency_outlines"
+        "veteran_combat_ability_coherency_outlines",
+        "veteran_combat_ability_ranged_roamer_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5839,7 +5842,8 @@
         "veteran_elite_kills_reduce_cooldown",
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
-        "veteran_combat_ability_coherency_outlines"
+        "veteran_combat_ability_coherency_outlines",
+        "veteran_combat_ability_ranged_roamer_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6161,9 +6165,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "695ede8c14e7ad1aa7b2c3dfab9b9d1d80a4abf4",
       "chinese_sha256": "e7d0b00c9fec05ee195281d27d66510448e25da84a1199a02ad1deb510a3db5b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_ranged_roamer_outlines"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_revive_nearby_allies.md",
@@ -8156,7 +8171,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_coherency_outlines.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_coherency_outlines.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_coherency_outlines.md",
+      "commit": "c7c4d2a26b0b5e9394838b0e16aead8f7f57c43e"
+    },
+    {
+      "id": "veteran_combat_ability_ranged_roamer_outlines",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ranged_roamer_outlines.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ranged_roamer_outlines.md"
     }
   ],
   "pending_chinese_corrections": [

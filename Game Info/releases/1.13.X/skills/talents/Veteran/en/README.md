@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="Executioner's Stance talent icon"> [Executioner's Stance](#veteran_combat_ability_elite_and_special_outlines) | <ul><li>Upgrade base ranged damage and extra weakspot modifiers to 25% each, and ranged impact to 100%.</li><li>Six-second stance; replenish 10% of maximum Toughness per second. Outline eligible Elites and Specialists; qualifying kills refresh the stance.</li><li>30-second base cooldown; retained handling improvements.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="Enhanced Target Priority talent icon"> [Enhanced Target Priority](#veteran_combat_ability_coherency_outlines) | <ul><li>When the stance starts or refreshes, grant allies then in Coherency a five-second Elite/Specialist outline effect.</li><li>Recipient-relative Elite range is strictly less than 50m; Specialists bypass this limit. Additional shooter/large-enemy outlines are not shared.</li><li>Reapplication refreshes one instance; late entrants wait for the next grant.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="32" height="32" alt="Counter-Fire talent icon"> [Counter-Fire](#veteran_combat_ability_ranged_roamer_outlines) | <ul><li>Add eligible shooter and stalker types to Executioner's Stance outlines; ordinary candidates must be less than 50m away.</li><li>Owner kills of added eligible types also refresh the selected stance duration: normally 6s, or 9s with the large-enemy modifier.</li><li>No additional weakspot-damage bonus is supplied by this modifier.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="Tactical Awareness talent icon"> [Tactical Awareness](#veteran_elite_kills_reduce_cooldown) | <ul><li>Specialist Enemy kills grant 3 seconds of extra combat ability recovery: one additional baseline cooldown second per second.</li><li>Further qualifying kills refresh the duration while keeping the tick cadence; the recovery rate does not stack.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="32" height="32" alt="Voice of Command talent icon"> [Voice of Command](#veteran_combat_ability_stagger_nearby_enemies) | <ul><li>Shout to apply stagger to enemies within 9 metres and immediately replenish all of your missing Toughness.</li><li>Base cooldown: 40 seconds, starting on use. Individual enemy reactions can vary.</li></ul> | Combat ability |
@@ -177,6 +178,27 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - The English duration field statically reconstructs as **6 seconds**; the shared ally outline effect is configured for **5 seconds**.
 
 [Detailed sources and formulas](veteran_combat_ability_coherency_outlines.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_combat_ability_coherency_outlines) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_ranged_roamer_outlines"></a>
+
+<img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="72" height="72" alt="Counter-Fire talent icon">
+
+### Counter-Fire
+
+- Add eligible ordinary shooter and stalker types, such as **Scab Shooters** and **Dreg Stalkers**, to Executioner's Stance outlines. These non-Special candidates must be **less than 50 metres** away when the outline list is built or updated.
+- Your kills of these added eligible types also **refresh the selected stance duration**: normally **6 seconds**, or **9 seconds** with the large-enemy outline modifier.
+- The kill check does not require a ranged attack, a weakspot hit, an actual visible outline or another 50-metre distance check. This modifier supplies **no additional weakspot-damage bonus**.
+
+**Timing and range examples**
+
+- Activate the normal stance at time 0 and make a qualifying kill at 4s: `6 − 4 = 2s` remaining resets to six seconds, so expiry becomes about `4 + 6 = 10s`. With the nine-second master, `9 − 4 = 5s` remaining resets to nine, ending at about `4 + 9 = 13s`. Assume no later refresh and ignore frame/visual offsets.
+- An ordinary eligible shooter at 49m passes `49² / 50² = 0.9604 < 1`; exactly 50m gives `1` and fails the strict boundary. A target at 55m fails the outline test with a ratio of `1.21`, but a qualifying owner kill at 4s can still refresh the normal stance to about time 10s.
+
+The description's broad **all human-sized Ranged Enemies** wording has not been matched to a complete enemy set; the concrete eligibility and examples are detailed below.
+
+[Detailed sources and formulas](veteran_combat_ability_ranged_roamer_outlines.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_combat_ability_ranged_roamer_outlines) | [Back to index](#talent-index)
 
 ---
 
