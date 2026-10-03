@@ -81,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="Prosecution Blow talent icon"> [Prosecution Blow](#adamant_crits_rend) | <ul><li>Ranged Critical Strikes gain 20% Rending.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="Street Smarts talent icon"> [Street Smarts](#adamant_dodge_improvement) | <ul><li>Gain 1 additional Effective Dodge; extend the grace period after a melee dodge ends by 25%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="Monstrosity Hunter talent icon"> [Monstrosity Hunter](#adamant_monster_hunter) | <ul><li>Deal 20% more damage to Ogryns and Monstrosities.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="The Emperor's Fist talent icon"> [The Emperor's Fist](#adamant_first_melee_hit_increased_damage) | <ul><li>The first target hit by each melee sweep receives 15% more Melee Damage and 30% more Impact.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1029,3 +1030,15 @@
 - **Scope**: Both melee and ranged attacks qualify. A target matching both types receives the bonus only once.
 
 [Details](adamant_monster_hunter.md) · [Back to index](#talent-index)
+
+<a id="adamant_first_melee_hit_increased_damage"></a>
+
+### The Emperor's Fist
+
+<img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="72" height="72" alt="The Emperor's Fist talent icon">
+
+- **Trigger**: The first target hit by a melee sweep receives 15% more Melee Damage and 30% more Impact. The effect is consumed after that hit and becomes available again on the next sweep.
+
+- **Separate examples**: Isolating the damage bonus, 100 points of melee damage becomes 115. An original 100 units of stagger strength becomes 130. With an existing same-stage 25% damage bonus, damage is 100 × (1 + 25% + 15%) = 140 points.
+
+[Details](adamant_first_melee_hit_increased_damage.md) · [Back to index](#talent-index)

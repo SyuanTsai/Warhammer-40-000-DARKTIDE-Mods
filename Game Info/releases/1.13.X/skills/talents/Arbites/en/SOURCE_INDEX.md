@@ -81,3 +81,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Prosecution Blow](adamant_crits_rend.md) / `adamant_crits_rend` | Passive talent |
 | [Street Smarts](adamant_dodge_improvement.md) / `adamant_dodge_improvement` | Passive talent |
 | [Monstrosity Hunter](adamant_monster_hunter.md) / `adamant_monster_hunter` | Passive talent |
+| [The Emperor's Fist](adamant_first_melee_hit_increased_damage.md) / `adamant_first_melee_hit_increased_damage` | Passive talent |
