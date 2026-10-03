@@ -202,3 +202,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Scavenger](veteran_aura_gain_ammo_on_elite_kill.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
 
 - [Guardsman](veteran_base_ranged_damage.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
+
+- [Low Profile](veteran_cover_peeking.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.

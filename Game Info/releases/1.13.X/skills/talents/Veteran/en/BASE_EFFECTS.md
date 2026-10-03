@@ -26,3 +26,14 @@ These effects are provided by the class base configuration. The equipped Blitz a
 [Source evidence and example assumptions](veteran_base_ranged_damage.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_base_ranged_damage) | [Back to talents](README.md)
 
 ---
+
+<a id="veteran_cover_peeking"></a>
+
+## Low Profile
+
+- While crouched behind suitable cover, use Aim Down Sights with a weapon that supports peeking to raise your view over the cover.
+- Cover must be close enough and within the permitted height range. Peeking stops when you leave the cover, lose the required conditions or stop aiming.
+
+[Source evidence and example assumptions](veteran_cover_peeking.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_cover_peeking) | [Back to talents](README.md)
+
+---

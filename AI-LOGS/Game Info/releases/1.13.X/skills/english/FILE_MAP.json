@@ -5675,7 +5675,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "veteran_aura_gain_ammo_on_elite_kill",
-        "veteran_base_ranged_damage"
+        "veteran_base_ranged_damage",
+        "veteran_cover_peeking"
       ],
       "checks": []
     },
@@ -5766,7 +5767,8 @@
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
-        "veteran_base_ranged_damage"
+        "veteran_base_ranged_damage",
+        "veteran_cover_peeking"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5870,7 +5872,8 @@
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
-        "veteran_base_ranged_damage"
+        "veteran_base_ranged_damage",
+        "veteran_cover_peeking"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6076,7 +6079,8 @@
         "veteran_improved_tag_dead_bonus",
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
-        "veteran_base_ranged_damage"
+        "veteran_base_ranged_damage",
+        "veteran_cover_peeking"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6771,9 +6775,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8039d64dde91a83b494f7ff8c30c94274a41740e",
       "chinese_sha256": "11d83025e61e6e6c753db7b529d93c4c500c38bd5b202044bc2dfd7d11c8b437",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_cover_peeking"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_cover_peeking.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_crits_apply_rending.md",
@@ -9764,6 +9775,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_base_ranged_damage.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_base_ranged_damage.md"
+    },
+    {
+      "id": "veteran_cover_peeking",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_cover_peeking.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_cover_peeking.md"
     }
   ],
   "pending_chinese_corrections": [
