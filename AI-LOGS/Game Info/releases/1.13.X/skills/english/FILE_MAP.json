@@ -2246,7 +2246,12 @@
         "ogryn_damage_reduction_on_high_stamina",
         "ogryn_crit_damage_increase",
         "ogryn_stacking_attack_speed",
-        "ogryn_melee_damage_after_heavy"
+        "ogryn_melee_damage_after_heavy",
+        "ogryn_drain_stamina_for_handling",
+        "ogryn_damage_reduction_after_elite_kill",
+        "ogryn_toughness_while_bracing",
+        "ogryn_ranged_damage_immunity",
+        "ogryn_wield_speed_increase"
       ],
       "checks": []
     },
@@ -2334,7 +2339,12 @@
         "ogryn_damage_reduction_on_high_stamina",
         "ogryn_crit_damage_increase",
         "ogryn_stacking_attack_speed",
-        "ogryn_melee_damage_after_heavy"
+        "ogryn_melee_damage_after_heavy",
+        "ogryn_drain_stamina_for_handling",
+        "ogryn_damage_reduction_after_elite_kill",
+        "ogryn_toughness_while_bracing",
+        "ogryn_ranged_damage_immunity",
+        "ogryn_wield_speed_increase"
       ],
       "checks": []
     },
@@ -2422,7 +2432,12 @@
         "ogryn_damage_reduction_on_high_stamina",
         "ogryn_crit_damage_increase",
         "ogryn_stacking_attack_speed",
-        "ogryn_melee_damage_after_heavy"
+        "ogryn_melee_damage_after_heavy",
+        "ogryn_drain_stamina_for_handling",
+        "ogryn_damage_reduction_after_elite_kill",
+        "ogryn_toughness_while_bracing",
+        "ogryn_ranged_damage_immunity",
+        "ogryn_wield_speed_increase"
       ],
       "checks": []
     },
@@ -2510,7 +2525,12 @@
         "ogryn_damage_reduction_on_high_stamina",
         "ogryn_crit_damage_increase",
         "ogryn_stacking_attack_speed",
-        "ogryn_melee_damage_after_heavy"
+        "ogryn_melee_damage_after_heavy",
+        "ogryn_drain_stamina_for_handling",
+        "ogryn_damage_reduction_after_elite_kill",
+        "ogryn_toughness_while_bracing",
+        "ogryn_ranged_damage_immunity",
+        "ogryn_wield_speed_increase"
       ],
       "checks": []
     },
@@ -2929,9 +2949,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b394a60c880cc90ad7af9c102807d2d5fa8dc01a",
       "chinese_sha256": "5b0076652697598428f5d70396a49dbafa8733f81e2dfc3f78a9764f78001f0a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_damage_reduction_after_elite_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_reduction_on_high_stamina.md",
@@ -3005,9 +3032,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "74a5820292311ddf3ffcfaa9801e23846a405c5d",
       "chinese_sha256": "ebfe2aed63a8990d88df7f264642279110baa392952dba4d933b1fe61dc4066f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_drain_stamina_for_handling"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_explosions_burn.md",
@@ -3654,9 +3688,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "86cedd49119728baa7c0bb22ceb96e78d863871e",
       "chinese_sha256": "390ca6b08715c31fff189c7dd3c8fa002420ae612e16ce2cbbb58a0450ebe6e9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ranged_damage_immunity"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_improves_melee.md",
@@ -4018,9 +4059,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f154ed98d43c105c3d6e8c8cbf27b5349df28f3c",
       "chinese_sha256": "f1c1fbe4f1cb841c7f692213a9d0715c040eab9fee49f78406f786734d6dae1c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_toughness_while_bracing"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_weakspot_damage.md",
@@ -4040,9 +4088,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "becf7fda4eb325e6fbc8f14ecc93655ab5142e83",
       "chinese_sha256": "d4570878738d74a3346537d23f4fdd40aa03b563b0489b1ba9f799679fe63fa8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_wield_speed_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_windup_is_uninterruptible.md",
@@ -13062,6 +13117,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_246_250.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_after_heavy.md"
+    },
+    {
+      "id": "ogryn_drain_stamina_for_handling",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_drain_stamina_for_handling.md"
+    },
+    {
+      "id": "ogryn_damage_reduction_after_elite_kill",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_reduction_after_elite_kill.md"
+    },
+    {
+      "id": "ogryn_toughness_while_bracing",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_toughness_while_bracing.md"
+    },
+    {
+      "id": "ogryn_ranged_damage_immunity",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ranged_damage_immunity.md"
+    },
+    {
+      "id": "ogryn_wield_speed_increase",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_wield_speed_increase.md"
     }
   ],
   "pending_chinese_corrections": [
