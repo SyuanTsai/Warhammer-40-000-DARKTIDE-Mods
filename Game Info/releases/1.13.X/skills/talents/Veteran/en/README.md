@@ -8,6 +8,7 @@
 
 | Talent | Main effects | Category |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="Grenadier talent icon"> [Grenadier](#veteran_extra_grenade) | <ul><li>Carry one extra grenade: base capacity 3 → 4 without other capacity changes.</li><li>Each throw has a 20% chance to produce one additional grenade while consuming only one charge; applies to all three Veteran grenade types.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
@@ -36,6 +37,27 @@
 ---
 
 ## Blitz
+
+<a id="veteran_extra_grenade"></a>
+
+<img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="72" height="72" alt="Grenadier talent icon">
+
+### Grenadier
+
+- Carry **one extra grenade**.
+- Each throw has a **20% chance** to throw one additional grenade, while consuming only one inventory grenade. Applies to Shredder Frag Grenade, Krak Grenade and Smoke Grenade.
+
+**Capacity and probability examples**
+
+- With base capacity three and no other capacity modifiers: `3 + 1 = 4 grenades`.
+- Start with four charges and trigger the extra grenade on one throw: `4 − 1 = 3` charges remain while `1 + 1 = 2` projectiles are thrown.
+- Over ten throws, replenishing as needed, expect `10 × 20% = 2` additional grenades, or twelve projectiles for ten charges on average. Each throw makes its own roll; this does not guarantee one extra every five throws.
+
+The extra projectile has a slightly offset direction and a base-fuse override delayed by 0.3 seconds. Actual Krak collision-fuse timing follows its separate grenade rules.
+
+[Detailed sources and formulas](veteran_extra_grenade.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_extra_grenade) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_replenish_grenades"></a>
 

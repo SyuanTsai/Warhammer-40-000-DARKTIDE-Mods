@@ -5708,7 +5708,8 @@
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
-        "veteran_reduce_swap_time"
+        "veteran_reduce_swap_time",
+        "veteran_extra_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5757,7 +5758,8 @@
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
-        "veteran_reduce_swap_time"
+        "veteran_reduce_swap_time",
+        "veteran_extra_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5806,7 +5808,8 @@
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
-        "veteran_reduce_swap_time"
+        "veteran_reduce_swap_time",
+        "veteran_extra_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5855,7 +5858,8 @@
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
-        "veteran_reduce_swap_time"
+        "veteran_reduce_swap_time",
+        "veteran_extra_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6376,9 +6380,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c0f29cb94b0486c54dc8840b08d80c6ac964377d",
       "chinese_sha256": "ff133a9fb15b43afe7d6445e33382864f3642436af8bb40918bd26e8cb9ee956",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_extra_grenade"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_faster_reload_on_non_empty_clips.md",
@@ -8252,7 +8267,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduce_swap_time.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduce_swap_time.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduce_swap_time.md",
+      "commit": "6f2bd53e721eb0a0cc49a5c994d189646ca9ab9d"
+    },
+    {
+      "id": "veteran_extra_grenade",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_extra_grenade.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_extra_grenade.md"
     }
   ],
   "pending_chinese_corrections": [
