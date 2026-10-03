@@ -6,6 +6,14 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
+      "id": "changes/2026-10-03-WORKFLOW_SPLIT",
+      "kind": "record",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/2026-10-03-WORKFLOW_SPLIT.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
       "id": "audits/2026-10-02-OFFLINE_RESTORATION",
       "kind": "audit",
       "scope": "audits",
@@ -626,6 +634,46 @@
       "path": "AI-LOGS/Game Info/local/releases/1.13.X/skills/1.13.1-update/publication.json",
       "date": "2026-10-02",
       "storage": "local"
+    },
+    {
+      "id": "dialogues/2026-10-03-CHAT_LAYOUT",
+      "kind": "update",
+      "scope": "dialogues",
+      "path": "AI-LOGS/Game Info/dialogues/2026-10-03-CHAT_LAYOUT.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY",
+      "kind": "assessment",
+      "scope": "Game Info/publication",
+      "path": "AI-LOGS/Game Info/publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-03-DARKTIDE_PREVIEW",
+      "kind": "record",
+      "scope": "publication",
+      "path": "AI-LOGS/Game Info/publication/2026-10-03-DARKTIDE_PREVIEW.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-03-EVENT_TYPE_NAVIGATION",
+      "kind": "record",
+      "scope": "publication",
+      "path": "AI-LOGS/Game Info/publication/2026-10-03-EVENT_TYPE_NAVIGATION.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-03-PER_EVENT_PAGES",
+      "kind": "record",
+      "scope": "publication",
+      "path": "AI-LOGS/Game Info/publication/2026-10-03-PER_EVENT_PAGES.md",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

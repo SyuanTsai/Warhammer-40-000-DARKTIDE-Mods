@@ -1,6 +1,6 @@
 # 靈能者天賦：百分比描述盤點
 
-[返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Game-Info-Workflow.md)
+[返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Skill-Info-Workflow.md)
 
 - 固定來源 Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 範圍：81 個目前可選節點，核對主頁效果、算例與逐項來源。下表摘錄各項計算基準；完整觸發條件與限制見來源子文件。

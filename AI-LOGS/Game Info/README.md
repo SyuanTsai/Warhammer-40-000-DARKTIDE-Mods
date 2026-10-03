@@ -1,10 +1,22 @@
 # Game Info維護紀錄
 
-[維護提示詞](../../AI%20Prompt/Game-Info-Workflow.md)｜[共用工具](../../scripts/game-info/README.md)｜[機器索引](INDEX.json)
+[流程入口](../../AI%20Prompt/Game-Info-Workflow.md)｜[技能流程](../../AI%20Prompt/Skill-Info-Workflow.md)｜[對話流程](../../AI%20Prompt/Dialogue-Text-Workflow.md)｜[共用工具](../../scripts/game-info/README.md)｜[機器索引](INDEX.json)
 
 Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀錄描述當時狀態，不代表目前結論；目前技能效果請查閱Game Info。舊紀錄中的指令是歷史證據，實際維護以共用工具說明為準。
 
 ## 分類
+
+- [技能與對話流程分離](changes/2026-10-03-WORKFLOW_SPLIT.md)
+
+- [Pages 逐事件分檔架構](publication/2026-10-03-PER_EVENT_PAGES.md)
+
+- [對話事件類型導覽](publication/2026-10-03-EVENT_TYPE_NAVIGATION.md)
+
+- [Darktide Pages 預覽頁實作與驗收](publication/2026-10-03-DARKTIDE_PREVIEW.md)
+
+- [Darktide 分類與 Pages 可行性評估](publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md)
+
+- [10 組中英字幕深色聊天版型](dialogues/2026-10-03-CHAT_LAYOUT.md)
 
 - [1.13.1天賦更新](releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.md)
 

@@ -1,6 +1,6 @@
 # Game Info維護工具
 
-[維護提示詞](../../AI%20Prompt/Game-Info-Workflow.md)｜[紀錄索引與規則](../../AI-LOGS/Game%20Info/README.md)
+[流程入口](../../AI%20Prompt/Game-Info-Workflow.md)｜[技能流程](../../AI%20Prompt/Skill-Info-Workflow.md)｜[對話流程](../../AI%20Prompt/Dialogue-Text-Workflow.md)｜[紀錄索引與規則](../../AI-LOGS/Game%20Info/README.md)
 
 所有資料路徑由參數指定，工具不固定單一版本。原始文本在Game Info/releases/<系列>/source/，操作結果在AI-LOGS/Game Info/。
 
