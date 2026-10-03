@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="Pulverise talent icon"> [Pulverise](#ogryn_charge_applies_bleed) | <ul><li>A charge hit applies 5 Bleed stacks, once per enemy in the same charge.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="32" height="32" alt="Go Again! talent icon"> [Go Again!](#ogryn_taunt_staggers_reduce_cooldown) | <ul><li>A melee or push Stagger restores 1.5% ability charge, at most once every 0.1s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="Hail of Fire talent icon"> [Hail of Fire](#ogryn_special_ammo_armor_pen) | <ul><li>During Point-Blank Barrage, gain +15% ranged Damage and 15% Rending.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="Light 'em Up talent icon"> [Light 'em Up](#ogryn_special_ammo_fire_shots) | <ul><li>During Point-Blank Barrage, ranged hits apply 4 Burn stacks, adding up to 16 stacks.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -275,3 +276,19 @@
 - **Armour differences**: Rending improves a weapon's damage modifier against particular armour. Once the original modifier reaches 1, only one quarter of the excess is used. Rending is therefore not a uniform +15% final damage bonus.
 
 [Details](ogryn_special_ammo_armor_pen.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_special_ammo_fire_shots"></a>
+
+### Light 'em Up
+
+<img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="72" height="72" alt="Light 'em Up talent icon">
+
+- **Trigger**: While Point-Blank Barrage is active, ranged hits on a surviving enemy apply 4 Burn stacks per shot to that enemy. Multiple hits from the same shot do not apply stacks again.
+
+- **Stacks and timing**: This talent adds stacks up to 16. Four successive shots can produce 4, 8, 12 and 16 stacks; another hit resets the 4s retention timer. Damage occurs about every 0.5s, followed by gradual stack removal after retention expires.
+
+- **Damage example**: Against an Unarmoured target without other modifiers, each Burn tick deals 600 × (stacks ÷ 31)² × [3 − 2 × (stacks ÷ 31)]. Four stacks deal about 27.39, and 16 about 314.51. These are single-tick values, not total damage over the entire Burn.
+
+[Details](ogryn_special_ammo_fire_shots.md) · [Back to index](#talent-index)
