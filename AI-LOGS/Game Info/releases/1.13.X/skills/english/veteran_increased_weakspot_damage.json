@@ -144,5 +144,6 @@
     "Exhaustive downstream special-damage tracing"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/precision-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_damage.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_damage.md",
+  "commit": "9fba456a7f83e722626447fe95a3015be221ef97"
 }

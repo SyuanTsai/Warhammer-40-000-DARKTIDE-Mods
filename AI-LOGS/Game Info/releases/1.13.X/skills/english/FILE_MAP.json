@@ -5686,7 +5686,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
-        "veteran_increased_weakspot_damage"
+        "veteran_increased_weakspot_damage",
+        "veteran_replenish_toughness_on_weakspot_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5709,7 +5710,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
-        "veteran_increased_weakspot_damage"
+        "veteran_increased_weakspot_damage",
+        "veteran_replenish_toughness_on_weakspot_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5732,7 +5734,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
-        "veteran_increased_weakspot_damage"
+        "veteran_increased_weakspot_damage",
+        "veteran_replenish_toughness_on_weakspot_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5755,7 +5758,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
-        "veteran_increased_weakspot_damage"
+        "veteran_increased_weakspot_damage",
+        "veteran_replenish_toughness_on_weakspot_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6556,9 +6560,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "34d1f7c1ea2fa8d337443d607fc6d34aece86b64",
       "chinese_sha256": "cc6d27c223023fbb6f59cc573c04bd3194237dd2dfad0a2c74ebc4b241559259",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_replenish_toughness_on_weakspot_kill"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_toughness_outside_melee.md",
@@ -7699,7 +7714,16 @@
       "date": "2026-10-03",
       "status": "accepted",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_damage.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_damage.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_damage.md",
+      "commit": "9fba456a7f83e722626447fe95a3015be221ef97"
+    },
+    {
+      "id": "veteran_replenish_toughness_on_weakspot_kill",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_on_weakspot_kill.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_on_weakspot_kill.md"
     }
   ],
   "pending_chinese_corrections": []

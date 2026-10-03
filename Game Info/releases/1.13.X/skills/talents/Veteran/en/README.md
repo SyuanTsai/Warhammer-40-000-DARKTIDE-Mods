@@ -10,6 +10,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
 ---
 
@@ -74,3 +75,41 @@ These examples assume a noncritical weakspot hit, the same attack and target, no
 - For a weapon comparison, keep the weapon model, attack/charge, target, hit zone, distance and critical state fixed. Body-shot and headshot damage can use different armor and hit-zone modifiers, so their difference does not generally equal the extra component. These examples do not establish a fixed percentage for a particular weapon.
 
 [Details and source evidence](veteran_increased_weakspot_damage.md) · [Back to index](#talent-index)
+
+<a id="veteran_replenish_toughness_on_weakspot_kill"></a>
+
+<img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="72" height="72" alt="Exhilarating Takedown talent icon">
+
+### Exhilarating Takedown
+
+- **Ranged weakspot kills replenish 15% of maximum Toughness** and grant one stack of Toughness damage reduction, up to **three effective stacks**.
+
+- Each stack multiplies Toughness damage taken by `0.9`: **10% reduction at one stack, 19% at two, 27.1% at three**. This directly reduces Toughness damage; it does not grant the same percentage of health-damage reduction.
+
+- Each qualifying kill refreshes the **8-second shared timer**. Without another trigger, approximately every 8 seconds the effect loses one stack.
+
+- Full Toughness still allows the damage-reduction stack and timer refresh. Recovery bonuses can increase the amount restored; recovery restrictions can block Toughness recovery without blocking the damage-reduction stack.
+
+#### Toughness recovery examples
+
+Assume recovery is allowed, maximum Toughness is 100 and there are no other changes.
+
+- At **70/100 Toughness**, with no recovery bonus: `100 × 15% = 15` units; Toughness becomes `70 + 15 = 85`.
+
+- At **95/100**, only `100 − 95 = 5` units are missing, so the actual grant is 5 and Toughness reaches 100.
+
+- At **70/100**, with an applicable **20% recovery bonus**: `100 × 15% × 1.20 = 18` units; Toughness becomes 88.
+
+#### Reduction and decay examples
+
+Assume an attack would deal 100 Toughness-damage units before this effect, enough Toughness remains, all other modifiers are 1 and no damage cap applies.
+
+- **One stack**: `100 × 0.9 = 90` Toughness damage, preventing **10 units**.
+
+- **Two stacks**: `100 × 0.9² = 81`, preventing **19 units**.
+
+- **Three stacks**: `100 × 0.9³ = 72.9`, preventing **27.1 units**.
+
+- With exactly three stacks after the last qualifying kill and no further triggers or forced removal, approximately **8 seconds** later two stacks remain, **16 seconds** later one remains, and **24 seconds** later the effect ends. Update timing makes these approximate intervals.
+
+[Details and source evidence](veteran_replenish_toughness_on_weakspot_kill.md) · [Back to index](#talent-index)

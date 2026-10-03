@@ -36,4 +36,6 @@ For later Chinese updates, compare source paths and blobs against `FILE_MAP.json
 
 - [Demolition Stockpile](veteran_replenish_grenades.json): primary direct evidence, exact English template and static reconstruction, independent comparison, real Markdown parse/render, publicly readable existing icon; accepted with the recorded non-core caveats; local commit `77ab8bfc1da7656d92936d0c39afb9edb4c699f2`.
 
-- [Precision Strikes](veteran_increased_weakspot_damage.json): accepted after direct source reads, exact English comparison, static calculations, Markdown rendering, public icon verification and read-only review; local commit is recoverable through the record's file-history command.
+- [Precision Strikes](veteran_increased_weakspot_damage.json): accepted after direct source reads, exact English comparison, static calculations, Markdown rendering, public icon verification and read-only review; local commit `9fba456a7f83e722626447fe95a3015be221ef97`.
+
+- [Exhilarating Takedown](veteran_replenish_toughness_on_weakspot_kill.json): accepted with explicit non-core timing and special-weapon caveats; recovery, shared timer, effective-stack cap, multiplicative settlement, original English comparison, actual rendering and public icon were verified. One player-wording ambiguity was corrected after read-only review; recover the local commit through file history.
