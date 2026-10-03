@@ -1,5 +1,7 @@
 # 拾荒者(Scavenger)
 
+[English](en/veteran_aura_gain_ammo_on_elite_kill.md)
+
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 
 ## 運作方式

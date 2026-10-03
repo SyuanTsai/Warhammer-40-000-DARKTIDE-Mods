@@ -1,6 +1,6 @@
 # Veteran talents: Release 1.13.1
 
-[繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Skills](../../../README.en.md) | [Version information](../../../../README.md) | [Definitions without independent nodes](UNUSED_DEFINITIONS.md)
+[繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Skills](../../../README.en.md) | [Version information](../../../../README.md) | [Definitions without independent nodes](UNUSED_DEFINITIONS.md) | [Base effects](BASE_EFFECTS.md)
 
 <a id="talent-index"></a>
 

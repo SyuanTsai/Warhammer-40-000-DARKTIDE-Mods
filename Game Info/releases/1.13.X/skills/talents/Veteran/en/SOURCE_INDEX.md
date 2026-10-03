@@ -1,6 +1,6 @@
 # Veteran: sources and technical index
 
-[繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Version and evidence limits](../../../../README.md) | [Definitions without independent nodes](UNUSED_DEFINITIONS.md)
+[繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Version and evidence limits](../../../../README.md) | [Definitions without independent nodes](UNUSED_DEFINITIONS.md) | [Base effects](BASE_EFFECTS.md)
 
 [Original English description comparison](LOCALIZATION_COMPARISON.md) | [Percentage and calculation review](DAMAGE_PERCENTAGE_REVIEW.md)
 
@@ -85,3 +85,9 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |
 | [Exhilarating Takedown](veteran_replenish_toughness_on_weakspot_kill.md) / `veteran_replenish_toughness_on_weakspot_kill` | Passive talent |
+
+## Base effects
+
+| Talent / code identifier | Category |
+|---|---|
+| [Scavenger](veteran_aura_gain_ammo_on_elite_kill.md) / `veteran_aura_gain_ammo_on_elite_kill` | Base aura |

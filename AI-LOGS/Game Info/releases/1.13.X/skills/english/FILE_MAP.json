@@ -5672,8 +5672,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "85368832669f03c140bf3031417fe5ca64038573",
       "chinese_sha256": "7e5c5b9b054dac632cc2f6790b2c5bfd0d92d152bb3091d90514fb8ea32064bf",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_aura_gain_ammo_on_elite_kill"
+      ],
       "checks": []
     },
     {
@@ -5761,7 +5763,8 @@
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
-        "veteran_improved_tag_dead_coherency_bonus"
+        "veteran_improved_tag_dead_coherency_bonus",
+        "veteran_aura_gain_ammo_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5863,7 +5866,8 @@
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
-        "veteran_improved_tag_dead_coherency_bonus"
+        "veteran_improved_tag_dead_coherency_bonus",
+        "veteran_aura_gain_ammo_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6067,7 +6071,8 @@
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
         "veteran_improved_tag_dead_bonus",
-        "veteran_improved_tag_dead_coherency_bonus"
+        "veteran_improved_tag_dead_coherency_bonus",
+        "veteran_aura_gain_ammo_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6370,9 +6375,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "95daddc18d63c728d8f581bfad4b26e3087ee9b5",
       "chinese_sha256": "0b839dbce55a2c331c2d47fc62b4e5a8c00cafe18124f6c0b9c6646dad8d69d9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_aura_gain_ammo_on_elite_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_aura_gain_ammo_on_elite_kill_improved.md",
@@ -9725,6 +9737,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_dead_coherency_bonus.json",
       "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_coherency_bonus.md"
+    },
+    {
+      "id": "veteran_aura_gain_ammo_on_elite_kill",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_gain_ammo_on_elite_kill.md"
     }
   ],
   "pending_chinese_corrections": [
@@ -9741,5 +9761,5 @@
       "status": "pending_separate_chinese_revision"
     }
   ],
-  "review_mode": "Translate existing verified Chinese mechanisms and check exact English text; targeted fixed-source reads only for discrepancies or evidence gaps, per user clarification."
+  "review_mode": "Existing verified Chinese translation and independent English text judgement; code reads only for missing necessary display values or concrete English contradictions. Changed fragments per skill; shared audit at class completion; concise records; one full staged diff review."
 }
