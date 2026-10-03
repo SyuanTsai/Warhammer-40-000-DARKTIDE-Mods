@@ -1866,6 +1866,22 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_266_267",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

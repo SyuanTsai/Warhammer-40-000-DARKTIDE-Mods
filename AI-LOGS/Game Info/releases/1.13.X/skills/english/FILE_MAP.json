@@ -2159,9 +2159,22 @@
       "kind": "class_support",
       "chinese_blob_sha": "5dab573e8b404e8ff158f5fbe4c068688e23738b",
       "chinese_sha256": "c677bec24442c8914ec8e9411451fa6a6ce0547fa6722251d5b3f8b85e7ee505",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_charge",
+        "ogryn_grenade_box",
+        "ogryn_melee_damage_coherency",
+        "ogryn_helping_hand",
+        "ogryn_base_tank_passive",
+        "ogryn_dodge_stagger",
+        "ogryn_coherency_radius_increase"
+      ],
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/DAMAGE_PERCENTAGE_REVIEW.md",
@@ -2170,7 +2183,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "85d29593fabdff084f85887753d05f60e925d1e8",
       "chinese_sha256": "7149f8d42aa4aa461887c9d887718cf1ca7a3d2e92797ad21a3156293bc1f4f8",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "ogryn_box_explodes",
         "ogryn_grenade_frag",
@@ -2216,6 +2229,7 @@
         "ogryn_ogryn_killer",
         "ogryn_melee_stagger",
         "ogryn_targets_recieve_damage_taken_increase_debuff",
+        "ogryn_toughness_on_low_health",
         "ogryn_heavy_bleeds",
         "ogryn_staggering_increases_damage",
         "ogryn_movement_speed_after_ranged_kills",
@@ -2260,7 +2274,12 @@
         "ogryn_charge",
         "ogryn_melee_damage_coherency"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/LOCALIZATION_COMPARISON.md",
@@ -2269,7 +2288,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "4ea17af5fdf8d9aaf88b1038be2272d902e71336",
       "chinese_sha256": "2d535f903870ea52c13fafa2a603c9c2df18bf38d5472ac75461e115b4fc2777",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "ogryn_box_explodes",
         "ogryn_grenade_frag",
@@ -2361,9 +2380,16 @@
         "ogryn_grenade_box",
         "ogryn_melee_damage_coherency",
         "ogryn_helping_hand",
-        "ogryn_base_tank_passive"
+        "ogryn_base_tank_passive",
+        "ogryn_dodge_stagger",
+        "ogryn_coherency_radius_increase"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/README.md",
@@ -2372,7 +2398,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "2fa0e4fa11a3bed6c829b72f551b0092bbad55da",
       "chinese_sha256": "9f12b0409949bee000a7cb985bda7e0a484fd10c2333448d318920c8a34e3bb6",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "ogryn_box_explodes",
         "ogryn_grenade_frag",
@@ -2463,7 +2489,12 @@
         "ogryn_charge",
         "ogryn_melee_damage_coherency"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/SOURCE_INDEX.md",
@@ -2472,7 +2503,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "40952d8adbad40eec3b4a56a46c7bcf8886ae0e7",
       "chinese_sha256": "a0663320bc623b1bdb6131b9678713c54f9d491fc3faf9eb3e45d1ada4a640dd",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "ogryn_box_explodes",
         "ogryn_grenade_frag",
@@ -2564,9 +2595,16 @@
         "ogryn_grenade_box",
         "ogryn_melee_damage_coherency",
         "ogryn_helping_hand",
-        "ogryn_base_tank_passive"
+        "ogryn_base_tank_passive",
+        "ogryn_dodge_stagger",
+        "ogryn_coherency_radius_increase"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/UNUSED_DEFINITIONS.md",
@@ -2575,9 +2613,17 @@
       "kind": "class_support",
       "chinese_blob_sha": "21de593e860617c0802c5acc8f9b310523de9024",
       "chinese_sha256": "39423baead482730fa075988f092c7db755143a27e49672aeae8c32d824313b4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_special_ammo",
+        "ogryn_ranged_damage_immunity"
+      ],
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/base_toughness_damage_reduction_node_buff_medium_1.md",
@@ -2964,9 +3010,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8563eace8d1e73249d676c8068f4d1b6abc825e0",
       "chinese_sha256": "40e9435b8057c09e7d5d468da5402377b1504b3c2d303700ca0f7e84c8e449d8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_coherency_radius_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_corruption_resistance.md",
@@ -3083,9 +3136,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bbaf3cb86b950aabdd8151313cd7abac93ed06e7",
       "chinese_sha256": "22284b60759b21612f1415e9c799c5ca5acfc7ad533093ed2ceafc507baa2391",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_dodge_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_drain_stamina_for_handling.md",
@@ -13341,6 +13401,22 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_base_tank_passive.md"
+    },
+    {
+      "id": "ogryn_dodge_stagger",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_dodge_stagger.md"
+    },
+    {
+      "id": "ogryn_coherency_radius_increase",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_coherency_radius_increase.md"
     }
   ],
   "pending_chinese_corrections": [
