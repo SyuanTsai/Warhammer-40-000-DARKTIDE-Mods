@@ -153,3 +153,7 @@
 - 歎為觀止本機 Commit：`c09be8a8e1e483a15ab89d7d3d865188ce439694`。
 
 - [大口徑彈藥](2026-10-03-MANSTOPPER_ACCEPTANCE.json)：新增5變體、8型號關聯；共5變體、8關聯。
+
+- 大口徑彈藥本機Commit：`9acb022753af76b7cb1eb35608c9d7acb2efa620`。
+
+- [激射](2026-10-03-HOTSHOT_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。

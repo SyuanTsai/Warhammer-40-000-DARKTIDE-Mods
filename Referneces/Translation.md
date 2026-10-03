@@ -452,6 +452,7 @@
 - Fan the Flames - 煽風點火
 - Overpressure - 超壓
 - Hot-Shot - 激射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_weakspot_hits`，hash `83870716`；英文／繁中RAW配對確認。
 - Weight of Fire - 猛攻
 - Armourbane - 護甲之禍
 - Power Blast - 聚能爆發

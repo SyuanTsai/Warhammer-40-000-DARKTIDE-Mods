@@ -42,5 +42,6 @@
 | <img src="https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca" width="32" height="32" alt="行刑者祝福圖示"> [行刑者](entries/行刑者/README.md)<br>- Executor<br>[完整說明](entries/行刑者/README.md) | <ul><li>近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8" width="32" height="32" alt="歎為觀止祝福圖示"> [歎為觀止](entries/歎為觀止/README.md)<br>- Showstopper<br>[完整說明](entries/歎為觀止/README.md) | <ul><li>符合精英／專家與燃燒來源條件的擊殺，有14%／16%／18%／20%機率在死亡位置引發武器專屬爆炸；爆炸威力與範圍依武器而異。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8" width="32" height="32" alt="大口徑彈藥祝福圖示"> [大口徑彈藥](entries/大口徑彈藥/README.md)<br>- Man-Stopper<br>[完整說明](entries/大口徑彈藥/README.md) | <ul><li>持用時遠程衝擊提高10%／15%／20%／25%；暴擊使該次傷害順劈預算為無限，仍受護甲與碰撞規則限制。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545" width="32" height="32" alt="激射祝福圖示"> [激射](entries/激射/README.md)<br>- Hot-Shot<br>[完整說明](entries/激射/README.md) | <ul><li>弱點命中減少順劈質量消耗：電能步槍20%／25%／30%／35%；冥潮鐳射槍與針彈手槍20%／30%／40%／50%。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

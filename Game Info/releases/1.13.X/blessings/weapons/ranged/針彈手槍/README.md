@@ -5,12 +5,13 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](../../../entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](../../../entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545" width="32" height="32" alt="激射祝福圖示"> [激射](../../../entries/激射/README.md)<br>- Hot-Shot<br>[完整說明](../../../entries/激射/README.md) | <ul><li>弱點命中的順劈質量消耗減少20%／30%／40%／50%。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 針彈手槍 布蘭克斯 MkVI | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting.md) | I–IV |
-| 針彈手槍 布蘭克斯 MKII | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting.md) | I–IV |
+| 針彈手槍 布蘭克斯 MkVI | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting.md)、[激射](../../../entries/激射/weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits.md) | I–IV |
+| 針彈手槍 布蘭克斯 MKII | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting.md)、[激射](../../../entries/激射/weapon_trait_bespoke_needlepistol_p1_target_hit_mass_reduction_on_weakspot_hits.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
