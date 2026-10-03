@@ -566,6 +566,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
       "effect": "瞄準時依型號的間隔逐步增加爆擊率；每步+10個百分點，最多10步；射擊後依最近射擊時間重算。"
+    },
+    {
+      "id": "crucian-roulette",
+      "name_zh_tw": "克魯錫安輪盤",
+      "name_en": "Crucian Roulette",
+      "name_key": "loc_trait_bespoke_crit_chance_based_on_ammo_left",
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_ammo_left_desc",
+      "name_hash": "4b48aa5c",
+      "description_hash": "b19fe517",
+      "page": "entries/克魯錫安輪盤/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+      "effect": "持用裝有此祝福的武器時，依彈匣消耗數提高通用爆擊機率；換彈期間或彈匣打空時加成歸零。"
     }
   ],
   "weapons": [
@@ -11066,6 +11079,225 @@
       "icon": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
       "effect": "每步+10個百分點，最多10步；I–IV間隔 0.450/0.400/0.350/0.300 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "autogun_p3",
+      "page": "entries/克魯錫安輪盤/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+        "stat_per_missing_round": [
+          0.0045,
+          0.005,
+          0.0055,
+          0.006
+        ],
+        "percentage_points_per_missing_round": [
+          0.45,
+          0.5,
+          0.55,
+          0.6
+        ],
+        "marks": {
+          "autogun_p3_m1": {
+            "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+            "capacity": [
+              36,
+              49
+            ],
+            "name_en": "Vigilant Autogun Columnus Mk III",
+            "loc_ids": [
+              "loc_weapon_family_autogun_p3_m1",
+              "loc_weapon_pattern_autogun_p3_m1",
+              "loc_weapon_mark_autogun_p3_m1"
+            ],
+            "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left"
+          },
+          "autogun_p3_m2": {
+            "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+            "capacity": [
+              15,
+              21
+            ],
+            "name_en": "Vigilant Autogun Graia Mk VII",
+            "loc_ids": [
+              "loc_weapon_family_autogun_p3_m2",
+              "loc_weapon_pattern_autogun_p3_m2",
+              "loc_weapon_mark_autogun_p3_m2"
+            ],
+            "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left"
+          },
+          "autogun_p3_m3": {
+            "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+            "capacity": [
+              22,
+              35
+            ],
+            "name_en": "Vigilant Autogun Agripinaa Mk IX",
+            "loc_ids": [
+              "loc_weapon_family_autogun_p3_m3",
+              "loc_weapon_pattern_autogun_p3_m3",
+              "loc_weapon_mark_autogun_p3_m3"
+            ],
+            "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left"
+          }
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 10,
+        "end_line": 49
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_ammo_left_desc",
+      "description_hash": "b19fe517",
+      "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
+      "effect": "每缺一發 I-IV +0.45/+0.50/+0.55/+0.60 個百分點；槍托敲擊也走通用暴擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/克魯錫安輪盤/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+        "stat_per_missing_round": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "percentage_points_per_missing_round": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "marks": {
+          "phosphor_pistol_p1_m1": {
+            "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+            "capacity": [
+              6,
+              6
+            ],
+            "name_en": "Phosphor Blast Pistol Branx Mk XI",
+            "loc_ids": [
+              "loc_weapon_family_phosphor_pistol_p1_m1",
+              "loc_weapon_pattern_phosphor_pistol_p1_m1",
+              "loc_weapon_mark_phosphor_pistol_p1_m1"
+            ],
+            "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left"
+          }
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 10,
+        "end_line": 49
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_ammo_left_desc",
+      "description_hash": "b19fe517",
+      "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
+      "effect": "每缺一發 I-IV +4.5/+5/+5.5/+6 個百分點；近戰推擊可暴擊，背向爆破明確不暴擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/克魯錫安輪盤/weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+        "stat_per_missing_round": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "percentage_points_per_missing_round": [
+          4.5,
+          5,
+          5.5,
+          6.0
+        ],
+        "marks": {
+          "stubrevolver_p1_m1": {
+            "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+            "capacity": [
+              5,
+              5
+            ],
+            "name_en": "Quickdraw Stub Revolver Zarona Mk IIa",
+            "loc_ids": [
+              "loc_weapon_family_stubrevolver_p1_m1",
+              "loc_weapon_pattern_stubrevolver_p1_m1",
+              "loc_weapon_mark_stubrevolver_p1_m1"
+            ],
+            "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left"
+          },
+          "stubrevolver_p1_m2": {
+            "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+            "capacity": [
+              5,
+              5
+            ],
+            "name_en": "Quickdraw Stub Revolver Agripinaa Mk XIV",
+            "loc_ids": [
+              "loc_weapon_family_stubrevolver_p1_m2",
+              "loc_weapon_pattern_stubrevolver_p1_m2",
+              "loc_weapon_mark_stubrevolver_p1_m2"
+            ],
+            "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left"
+          }
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 248,
+        "end_line": 287
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_ammo_left_desc",
+      "description_hash": "b19fe517",
+      "icon": "https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_114",
+      "effect": "每缺一發 I-IV +4.5/+5/+5.5/+6 個百分點；近戰推擊也走通用暴擊。"
     }
   ],
   "bindings": [
@@ -15527,6 +15759,90 @@
       "mark_id": "stubrevolver_p1_m2",
       "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
       "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_ammo_left",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_ammo_left",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_ammo_left",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/crit_chance_based_on_ammo_left",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_based_on_ammo_left",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "crucian-roulette",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_ammo_left",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_based_on_ammo_left",
       "trait_category": "bespoke_stubrevolver_p1",
       "available_tiers": null,
       "source": {

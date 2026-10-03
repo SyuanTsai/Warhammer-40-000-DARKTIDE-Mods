@@ -50,5 +50,6 @@
 | <img src="https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887" width="32" height="32" alt="幽靈祝福圖示"> [幽靈](entries/幽靈/README.md)<br>- Ghost<br>[完整說明](entries/幽靈/README.md) | <ul><li>持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9" width="32" height="32" alt="近身平射祝福圖示"> [近身平射](entries/近身平射/README.md)<br>- Point Blank<br>[完整說明](entries/近身平射/README.md) | <ul><li>近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點；爆彈手槍與針彈手槍持續3.5秒，快拔左輪手槍持續2.5秒。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd" width="32" height="32" alt="精確打擊祝福圖示"> [精確打擊](entries/精確打擊/README.md)<br>- Surgical<br>[完整說明](entries/精確打擊/README.md) | <ul><li>瞄準時依型號的間隔逐步增加爆擊率；每步+10個百分點，最多10步；射擊後依最近射擊時間重算。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab" width="32" height="32" alt="克魯錫安輪盤祝福圖示"> [克魯錫安輪盤](entries/克魯錫安輪盤/README.md)<br>- Crucian Roulette<br>[完整說明](entries/克魯錫安輪盤/README.md) | <ul><li>持用裝有此祝福的武器時，依彈匣消耗數提高通用爆擊機率；換彈期間或彈匣打空時加成歸零。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

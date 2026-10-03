@@ -154,3 +154,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [近身平射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POINT-BLANK_ACCEPTANCE.json)
 
 - [精確打擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SURGICAL_ACCEPTANCE.json)
+
+- [克魯錫安輪盤全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CRUCIAN-ROULETTE_ACCEPTANCE.json)

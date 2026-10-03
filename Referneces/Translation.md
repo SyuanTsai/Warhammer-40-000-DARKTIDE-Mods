@@ -404,6 +404,7 @@
 - Surgical - 精確打擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_based_on_aim_time`，hash `6abd0dd5`；英文／繁中RAW配對確認。
 - Crucian Roulette - 克魯錫安輪盤
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_based_on_ammo_left`，hash `4b48aa5c`；英文／繁中RAW配對確認。
 - Deadly Accurate - 致命精準
 - No Respite - 刻不容緩
 - Opening Salvo - 開啟齊射

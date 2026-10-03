@@ -484,6 +484,22 @@
         "Actual ProcBuff caller and own proc_stat_buffs/conditional chain must be verified; a keyword-only trait is a different path."
       ],
       "reuse_rule": "Reuse unchanged fixed-SHA/hash; reread only own overrides and new conditions."
+    },
+    {
+      "id": "active-clip-current-and-capacity",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/ammo.lua",
+      "start": 180,
+      "end": 242,
+      "content_sha256": "82954565cf71e55c07d89edf7eac852918711fe82b42e9cec9cbea92f14a77a7",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L180-L242",
+      "review": "Sol directly reviewed fixed-SHA active-clip flags/current/capacity helper for Crucian Roulette.",
+      "conclusion": "Without optional_clip_index, current/max ammo sum only clip_in_use slots; reserve ammo is excluded.",
+      "applicability": [
+        "Own buff must capture actual item-slot inventory component; own special modes/clip flags/capacity modifiers must be checked."
+      ],
+      "reuse_rule": "Reuse same immutable block/hash only; inspect new own clip-selection conditions."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",
