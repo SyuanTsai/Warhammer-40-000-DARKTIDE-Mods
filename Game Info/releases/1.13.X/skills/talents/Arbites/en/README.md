@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="Remote Detonation talent icon"> [Remote Detonation](#adamant_whistle) | <ul><li>Trigger Electrocution and an explosion at your Cyber-Mastiff. Electrocuted enemies take 10% more damage for 2s.</li><li>Hold 2 charges; restore one every 50s, or both from empty in 100s.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="Arbites Grenade talent icon"> [Arbites Grenade](#adamant_grenade_improved) | <ul><li>Detonate on impact in a 10m blast, with a higher-damage 2.5m centre.</li><li>Carry 4 grenades, one more than the base version; this ability alone has no timed automatic refill.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="Voltaic Shock Mine talent icon"> [Voltaic Shock Mine](#adamant_shock_mine) | <ul><li>Arm about 1s after deployment; once an enemy is detected, apply Electrocution within 3m for a 15s active period.</li><li>Carry two mines; each applied Electrocution lasts 3s.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="Part of the Squad talent icon"> [Part of the Squad](#adamant_companion_coherency) | <ul><li>Your Cyber-Mastiff counts towards Coherency; you and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction.</li><li>Isolating this effect, 100 incoming Toughness damage becomes 92.5.</li></ul> | Aura |
 
 ## Blitz
 
@@ -59,3 +60,17 @@
 - **Capacity and replenishment**: Carry up to two mines, with no natural cooldown replenishment after use. With Lone Wolf, capacity is three and one missing mine replenishes every 90s.
 
 [Details](adamant_shock_mine.md) · [Back to index](#talent-index)
+
+## Aura
+
+<a id="adamant_companion_coherency"></a>
+
+### Part of the Squad
+
+<img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="72" height="72" alt="Part of the Squad talent icon">
+
+- **Cyber-Mastiff Coherency**: Your Cyber-Mastiff counts as a member of unit Coherency.
+
+- **Toughness protection**: You and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction. Isolating this effect, 100 incoming Toughness damage becomes `100 × (1 − 0.075) = 92.5 damage`. With an existing 10% reduction in the same stage, the result is `100 × (1 − 10% − 7.5%) = 82.5 damage`.
+
+[Details](adamant_companion_coherency.md) · [Back to index](#talent-index)

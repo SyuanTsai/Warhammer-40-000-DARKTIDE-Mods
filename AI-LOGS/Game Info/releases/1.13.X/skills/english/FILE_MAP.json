@@ -66,7 +66,8 @@
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
-        "adamant_shock_mine"
+        "adamant_shock_mine",
+        "adamant_companion_coherency"
       ],
       "checks": []
     },
@@ -81,7 +82,8 @@
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
-        "adamant_shock_mine"
+        "adamant_shock_mine",
+        "adamant_companion_coherency"
       ],
       "checks": []
     },
@@ -96,7 +98,8 @@
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
-        "adamant_shock_mine"
+        "adamant_shock_mine",
+        "adamant_companion_coherency"
       ],
       "checks": []
     },
@@ -111,7 +114,8 @@
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
-        "adamant_shock_mine"
+        "adamant_shock_mine",
+        "adamant_companion_coherency"
       ],
       "checks": []
     },
@@ -276,9 +280,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "165ecd0e3c24227b48c58c29c3fce8987bcd91ce",
       "chinese_sha256": "cb11517fec64490d58870c0f1ab7cfc8d585664626291b39b483600987b38553",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_companion_coherency"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_coherency.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_damage_per_level.md",
@@ -9907,6 +9918,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_shock_mine.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shock_mine.md"
+    },
+    {
+      "id": "adamant_companion_coherency",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_coherency.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_coherency.md"
     }
   ],
   "pending_chinese_corrections": [
