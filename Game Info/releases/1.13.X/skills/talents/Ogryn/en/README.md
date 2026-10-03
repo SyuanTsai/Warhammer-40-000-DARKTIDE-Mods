@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/641d8592-01cf-4120-ae26-b53ea1a58776" width="32" height="32" alt="Big Friendly Rock talent icon"> [Big Friendly Rock](#ogryn_grenade_friend_rock) | <ul><li>Throw a rock at one enemy; hold up to 4, normally recovering 1 every 45s.</li><li>Rocks use direct-hit damage without a blast area; effectiveness against Carapace Armour is reduced.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d" width="32" height="32" alt="That One Didn't Count talent icon"> [That One Didn't Count](#ogryn_replenish_rock_on_miss) | <ul><li>A weakspot hit or no damageable-target hit refunds 1 rock, at most once every 5s.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="32" height="32" alt="Bigger Box of Hurt talent icon"> [Bigger Box of Hurt](#ogryn_big_box_of_hurt_more_bombs) | <ul><li>Add 3 grenades to those released when Bombs Away! hits.</li><li>Base 6 + 3 = 9 released grenades; the number of box throw charges is unchanged.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="Bonebreaker's Aura talent icon"> [Bonebreaker's Aura](#ogryn_melee_damage_coherency_improved) | <ul><li>You and allies in Coherency gain +10% Melee Attack Damage.</li><li>This upgraded value replaces the base 7.5% melee aura; the two bonuses are not added.</li></ul> | Aura |
 
 ## Blitz
 
@@ -103,3 +104,21 @@
 - **Stacking and charges**: The talent supplies one effect and does not repeatedly accumulate from the same hit. The box still has at most 3 throw charges.
 
 [Details](ogryn_big_box_of_hurt_more_bombs.md) · [Back to index](#talent-index)
+
+---
+
+## Aura
+
+<a id="ogryn_melee_damage_coherency_improved"></a>
+
+### Bonebreaker's Aura
+
+<img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="72" height="72" alt="Bonebreaker's Aura talent icon">
+
+- **Activation**: You and allies receiving the aura in Coherency gain +10% Melee Attack Damage. The owner is included in the Coherency chain.
+
+- **Damage examples**: A melee hit normally dealing 100 damage becomes 100 × 1.10 = 110 without other modifiers. With another 20% bonus in the same stage, it becomes 100 × (1 + 20% + 10%) = 130.
+
+- **Stacking and cooldown**: The aura has at most 1 stack and no separate cooldown. Its upgraded 10% value replaces the base 7.5%; the two values are not added.
+
+[Details](ogryn_melee_damage_coherency_improved.md) · [Back to index](#talent-index)

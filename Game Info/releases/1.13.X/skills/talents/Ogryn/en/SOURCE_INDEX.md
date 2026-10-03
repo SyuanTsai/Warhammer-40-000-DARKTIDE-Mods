@@ -15,3 +15,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Big Friendly Rock](ogryn_grenade_friend_rock.md) / `ogryn_grenade_friend_rock` | Blitz |
 | [That One Didn't Count](ogryn_replenish_rock_on_miss.md) / `ogryn_replenish_rock_on_miss` | Blitz |
 | [Bigger Box of Hurt](ogryn_big_box_of_hurt_more_bombs.md) / `ogryn_big_box_of_hurt_more_bombs` | Blitz |
+| [Bonebreaker's Aura](ogryn_melee_damage_coherency_improved.md) / `ogryn_melee_damage_coherency_improved` | Aura |
