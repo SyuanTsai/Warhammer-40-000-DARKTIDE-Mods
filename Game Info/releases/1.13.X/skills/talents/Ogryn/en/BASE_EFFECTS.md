@@ -33,3 +33,17 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Upgrade difference**: Under the ordinary base configuration, the box does not release grenades. Selecting Bombs Away! replaces it with the version that releases child grenades after a hit.
 
 [Source evidence and example assumptions](ogryn_grenade_box.md)
+
+---
+
+<a id="ogryn_melee_damage_coherency"></a>
+
+## Intimidating Presence
+
+- **Aura effect**: You and allies in Coherency gain +7.5% melee damage.
+
+- **Damage example**: With this bonus alone, base damage 100 becomes `100 × (1 + 7.5%) = 107.5`. With another +20% at the same stage, it becomes 127.5.
+
+- **Replacement**: Selecting the upgraded melee aura changes the value to 10%; the two do not add to 17.5%. Other aura choices also replace this base aura.
+
+[Source evidence and example assumptions](ogryn_melee_damage_coherency.md)

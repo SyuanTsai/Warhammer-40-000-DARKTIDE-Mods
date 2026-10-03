@@ -1154,6 +1154,19 @@ Full raw template and formatting: [source evidence](ogryn_grenade_box.md#origina
 | Direct-hit box | Throw a box of grenades with great strength and enthusiasm for high Damage against a Single Enemy.; `ui / loc_ability_ogryn_grenade_box_description / 77e8d4ed` | ogryn_grenade_box uses ogryn_grenade_box_impact with attack 1850. [Fixed source and line references](ogryn_grenade_box.md#fixed-source-evidence) | Consistent | The independently read English describes the accepted direct-hit projectile without promising a cluster explosion. |
 | Capacity, damage and mode scope | No capacity, replenishment, armour formula or mode-specific cluster rule is stated.; `ui / loc_ability_ogryn_grenade_box_description / 77e8d4ed` | Carry three, use one per throw, and require supplies. Fixed direct hits give 1850 Unarmoured or 277.5 Carapace damage, excluding other modifiers. Ordinary base configuration lacks ogryn_basic_box_spawns_cluster; Bombs Away! supplies the upgraded version, and Hordes can separately grant the keyword to enable conditional_cluster. [Fixed source and line references](ogryn_grenade_box.md#fixed-source-evidence) | Not covered by the description | These accepted capacity, calculation and mode limits supplement the English. |
 
+
+<a id="ogryn_melee_damage_coherency"></a>
+
+## Intimidating Presence (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_melee_damage_coherency.md#original-english-template-and-reconstruction). Name hash `c99667f7`. Every row uses `ui / loc_talent_ogryn_2_base_4_description_new / 36195984`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Heavy-only wording | +7.5% Heavy Melee Attack Damage for you and Allies in Coherency.; `ui / loc_talent_ogryn_2_base_4_description_new / 36195984` | The base aura grants melee_damage 0.075, covering all melee attacks, not only heavy attacks. [Fixed source and line references](ogryn_melee_damage_coherency.md#fixed-source-evidence) | Explicit contradiction | The English explicitly names Heavy Melee Attack Damage, narrowing the accepted general melee scope. |
+| Value and recipients | +7.5% ... for you and Allies in Coherency.; `ui / loc_talent_ogryn_2_base_4_description_new / 36195984` | melee_damage 0.075; new_chain includes the owner and linked Coherency allies. [Fixed source and line references](ogryn_melee_damage_coherency.md#fixed-source-evidence) | Consistent | The independently read English agrees with the value and recipients. |
+| Replacement and additive calculation | No priority or combined-damage formula is stated.; `ui / loc_talent_ogryn_2_base_4_description_new / 36195984` | ogryn_aura priority 1/max_stacks 1 is replaced by the upgraded priority-2 10% version or other aura choices; it does not become 17.5%. Base 100 →107.5, or 127.5 with same-stage +20%. [Fixed source and line references](ogryn_melee_damage_coherency.md#fixed-source-evidence) | Not covered by the description | These accepted aura and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
