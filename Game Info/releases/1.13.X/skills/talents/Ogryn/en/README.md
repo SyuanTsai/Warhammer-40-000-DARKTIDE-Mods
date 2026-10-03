@@ -85,6 +85,7 @@
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="Frenzied Blows talent icon"> [Frenzied Blows](#ogryn_stacking_attack_speed) | <ul><li>Chained melee hits from the second successful sweep build up to five +2.5% melee Attack Speed stacks for 5s; a miss clears them.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="Beat Them Back talent icon"> [Beat Them Back](#ogryn_melee_damage_after_heavy) | <ul><li>A successful heavy melee sweep grants +15% melee damage for 5s after it finishes; further heavy hits refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="Concentrate talent icon"> [Concentrate](#ogryn_drain_stamina_for_handling) | <ul><li>While bracing with Stamina, reduce Sway by 60%, Spread by 20% and Recoil by 15%, draining 0.5 Stamina per second except while reloading.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="Strongman talent icon"> [Strongman](#ogryn_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 10% damage reduction for 5s; further qualifying kills refresh without stacking.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1357,3 +1358,17 @@
 - **Handling example**: Isolating other modifiers, Sway, Spread and Recoil parameters initially at 100 become 40, 80 and 85 respectively. These are handling parameters, not fixed percentage increases to accuracy.
 
 [Details](ogryn_drain_stamina_for_handling.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_damage_reduction_after_elite_kill"></a>
+
+### Strongman
+
+<img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="72" height="72" alt="Strongman talent icon">
+
+- **Trigger**: Killing an Elite or Specialist grants 10% damage reduction for 5s. Another qualifying kill restarts the timer without adding stacks.
+
+- **Damage-reduction example**: With this effect alone, damage of 100 becomes 90. With another independent 20% reduction, it becomes `100 × 0.9 × 0.8 = 72`.
+
+[Details](ogryn_damage_reduction_after_elite_kill.md) · [Back to index](#talent-index)

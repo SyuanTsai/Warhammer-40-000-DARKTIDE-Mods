@@ -1021,6 +1021,18 @@ Full raw template and formatting: [source evidence](ogryn_drain_stamina_for_hand
 | Braced handling and drain | +60% Sway Reduction, +20% Spread Reduction, and +15% Recoil Reduction while bracing your Ranged Weapon, but lose 0.5 Stamina per second.; `ui / loc_talent_ogryn_drain_stamina_for_handling_desc / 6c43172c` | The wielded-weapon/alternate_fire helper applies sway 0.4, spread −0.2 and recoil −0.15; update drains 0.5 × dt Stamina. [Fixed source and line references](ogryn_drain_stamina_for_handling.md#fixed-source-evidence) | Consistent | The independently read English matches the effects, values and braced condition. |
 | Gating, reload and parameter scope | No Stamina-exhaustion condition, reload exception or accuracy formula is stated.; `ui / loc_talent_ogryn_drain_stamina_for_handling_desc / 6c43172c` | Stamina >0 gates the stats; reload stops drain but the stat helper has no reload check. There is no additional Critical Chance. Five Stamina lasts at most 10s without other modifiers; isolated parameters 100 become 40/80/85, with weapon curves affecting actual handling. [Fixed source and line references](ogryn_drain_stamina_for_handling.md#fixed-source-evidence) | Not covered by the description | These accepted conditions and limits supplement the English; no fixed accuracy or angle increase is inferred. |
 
+
+<a id="ogryn_damage_reduction_after_elite_kill"></a>
+
+## Strongman
+
+Full raw template and formatting: [source evidence](ogryn_damage_reduction_after_elite_kill.md#original-english-template-and-reconstruction). Name hash `6839065a`. Every row uses `ui / loc_talent_ogryn_damage_reduction_after_elite_kill_desc / fb76eb37`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill-triggered reduction | +10% Damage Resistance on Elite Kill or Specialist Kill. Lasts 5s.; `ui / loc_talent_ogryn_damage_reduction_after_elite_kill_desc / fb76eb37` | on_elite_or_special_kill activates damage_taken_multiplier 0.9 for 5s. [Fixed source and line references](ogryn_damage_reduction_after_elite_kill.md#fixed-source-evidence) | Consistent | The independently read English matches the qualifying kills and values. |
+| Refresh and combined reduction | No stacking or combined-reduction formula is stated.; `ui / loc_talent_ogryn_damage_reduction_after_elite_kill_desc / fb76eb37` | allow_proc_while_active refreshes rather than stacking. Damage 100 becomes 90; with an independent 20% reduction, 100 ×0.9 ×0.8 =72. [Fixed source and line references](ogryn_damage_reduction_after_elite_kill.md#fixed-source-evidence) | Not covered by the description | These accepted duration and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 244 listed rules comprise **104 Consistent**, **4 Explicit contradictions**, **129 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
