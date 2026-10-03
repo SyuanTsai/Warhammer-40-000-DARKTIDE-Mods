@@ -9,6 +9,7 @@
 | Talent | Main effects | Category |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
@@ -54,6 +55,27 @@
 [Details and source evidence](veteran_replenish_grenades.md) · [Back to index](#talent-index)
 
 ## Combat abilities
+
+<a id="veteran_invisibility_on_combat_ability"></a>
+
+<img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="72" height="72" alt="Infiltrate talent icon">
+
+### Infiltrate
+
+- **Immediately replenish all your Toughness and enter Stealth for up to 8 seconds.** Base cooldown: **40 seconds**.
+- Gain **25% movement speed** during Stealth. Gain **30% damage** during Stealth and for **8 seconds after leaving it**.
+- Ordinary shooting, melee hits, throwing a grenade or completing a rescue interaction can end Stealth early. Existing bleeding/burning damage-over-time ticks do not end Stealth solely because of their damage ticks.
+- Leaving Stealth applies stagger and suppression to enemies within about **6 metres**; it does not guarantee knockback on every enemy. Cooldown starts on use and continues during Stealth.
+
+#### Recovery, damage and timing examples
+
+Assume one use, no other recovery/damage/cooldown modifiers, no overlapping ability bonuses, and normal successful recovery; times ignore frame boundaries.
+
+- **Toughness 30/100**: replenish to 100, restoring `100 − 30 = 70 points`.
+- **Isolated damage bonus**: a hypothetical 100-damage baseline becomes `100 × 1.3 = 130 damage units`, with no later modifiers.
+- **Leave Stealth at about 3 seconds**: the damage bonus lasts until about `3 + 8 = 11 seconds` after use. About `40 − 11 = 29 seconds` remain on the unmodified cooldown then.
+
+[Details, exit exceptions and source evidence](veteran_invisibility_on_combat_ability.md) · [Back to index](#talent-index)
 
 <a id="veteran_combat_ability_extra_charge"></a>
 

@@ -141,5 +141,6 @@
     "Repeated full implementation call-chain analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tunnel-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_toughness_bonus.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_toughness_bonus.md",
+  "commit": "687c7c6d41561ec396e2d9b461d25e42665e3594"
 }

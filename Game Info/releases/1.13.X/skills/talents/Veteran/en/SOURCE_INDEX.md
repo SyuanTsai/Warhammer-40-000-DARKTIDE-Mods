@@ -9,6 +9,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | Talent / code identifier | Category |
 |---|---|
 | [Demolition Stockpile](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | Blitz modifier |
+| [Infiltrate](veteran_invisibility_on_combat_ability.md) / `veteran_invisibility_on_combat_ability` | Combat ability |
 | [Overwatch](veteran_combat_ability_extra_charge.md) / `veteran_combat_ability_extra_charge` | Ability modifier |
 | [Marksman's Focus](veteran_snipers_focus.md) / `veteran_snipers_focus` | Keystone |
 | [Long Range Assassin](veteran_snipers_focus_increased_stacks.md) / `veteran_snipers_focus_increased_stacks` | Keystone modifier |

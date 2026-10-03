@@ -5692,7 +5692,8 @@
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
-        "veteran_snipers_focus_toughness_bonus"
+        "veteran_snipers_focus_toughness_bonus",
+        "veteran_invisibility_on_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5725,7 +5726,8 @@
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
-        "veteran_snipers_focus_toughness_bonus"
+        "veteran_snipers_focus_toughness_bonus",
+        "veteran_invisibility_on_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5758,7 +5760,8 @@
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
-        "veteran_snipers_focus_toughness_bonus"
+        "veteran_snipers_focus_toughness_bonus",
+        "veteran_invisibility_on_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5791,7 +5794,8 @@
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
         "veteran_snipers_focus_rending_bonus",
-        "veteran_snipers_focus_toughness_bonus"
+        "veteran_snipers_focus_toughness_bonus",
+        "veteran_invisibility_on_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6442,9 +6446,21 @@
       "kind": "mechanism",
       "chinese_blob_sha": "15e5575aa715a64aab969c745c74d8c94045754e",
       "chinese_sha256": "dcd815e9058f4dda51f5eccd7811499fdd6e313f8a8dadaa4ba969aafe19043b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_invisibility_on_combat_ability"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_kill_grants_damage_to_other_slot.md",
@@ -7859,7 +7875,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_toughness_bonus.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_toughness_bonus.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_toughness_bonus.md",
+      "commit": "687c7c6d41561ec396e2d9b461d25e42665e3594"
+    },
+    {
+      "id": "veteran_invisibility_on_combat_ability",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_invisibility_on_combat_ability.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_invisibility_on_combat_ability.md"
     }
   ],
   "pending_chinese_corrections": [],

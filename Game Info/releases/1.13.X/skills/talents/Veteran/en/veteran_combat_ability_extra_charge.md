@@ -8,7 +8,7 @@
 - Talent and passive buff: `veteran_combat_ability_extra_charge`. Name key `loc_talent_veteran_combat_ability_extra_charge`, hash `08974b61`: **Overwatch**.
 - Description key `loc_talent_veteran_combat_ability_extra_charge_description`, hash `157c4806`.
 - Original English: Steam Build `25606770`, extracted 2026-10-02, resource `content/localization/ui`, resource hash `63564edcb7c3c5ee`, locale `en` (code `0`). UI JSONL SHA-256: `fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668`.
-- The affected current-tree ability is **Infiltrate**: name key `loc_talent_veteran_invisibility_on_combat_ability`, hash `9776b86d`. Its talent equips `veteran_combat_ability_stealth`. [Infiltrate ability assignment](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2094-L2112).
+- The affected current-tree ability is **[Infiltrate](veteran_invisibility_on_combat_ability.md)**: name key `loc_talent_veteran_invisibility_on_combat_ability`, hash `9776b86d`. Its talent equips `veteran_combat_ability_stealth`. [Infiltrate ability assignment](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2094-L2112).
 
 ## Passive values and capacity
 
