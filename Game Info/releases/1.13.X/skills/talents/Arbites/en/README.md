@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="Malocator talent icon"> [Malocator](#adamant_execution_order_cdr) | <ul><li>After you or your Cyber-Mastiff kills a Marked target, restore an additional 0.5s of Combat Ability cooldown each second for 8s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 4s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="No Lenience talent icon"> [No Lenience](#adamant_execution_order_rending) | <ul><li>Killing a Marked enemy grants a Rending bonus for 8s.</li><li>The +10% Rending modifier feeds the shared armor-damage calculation.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="Keeping Protocol talent icon"> [Keeping Protocol](#adamant_execution_order_permastack) | <ul><li>Each Marked Kill permanently increases Damage and defense against Monstrosities, up to 30 stacks.</li><li>Each stack adds +1% Damage against Monstrosities; damage taken from them is reduced multiplicatively per stack.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="Not Far Behind talent icon"> [Not Far Behind](#adamant_pinning_dog_bonus_moving_towards) | <ul><li>Each Cyber-Mastiff Pounce grants the player Movement Speed and Damage bonuses for 5s.</li><li>Both bonuses are +10%; retriggering refreshes the single-stack duration.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -497,3 +498,15 @@
 - **Maximum-stack example**: At 30 stacks, gain +30% Damage against Monstrosities. Damage taken from them has multiplier 0.99^30 ≈ 0.740, about a 26.0% reduction with this effect alone. For example, base damage of 100 against a Monstrosity becomes 130; incoming damage of 100 from one becomes about 73.97.
 
 [Details](adamant_execution_order_permastack.md) · [Back to index](#talent-index)
+
+<a id="adamant_pinning_dog_bonus_moving_towards"></a>
+
+### Not Far Behind
+
+<img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="72" height="72" alt="Not Far Behind talent icon">
+
+- **Trigger and duration**: Each Cyber-Mastiff Pounce grants the player +10% Movement Speed and +10% Damage for 5s.
+
+- **Examples and refresh**: With this effect alone, base damage 100 becomes 110; with another +25% bonus in the same stage, it becomes 135. Base movement of 5m/s becomes 5 × 1.1 = 5.5m/s. Another Pounce resets the 5s countdown without increasing the bonus magnitude.
+
+[Details](adamant_pinning_dog_bonus_moving_towards.md) · [Back to index](#talent-index)

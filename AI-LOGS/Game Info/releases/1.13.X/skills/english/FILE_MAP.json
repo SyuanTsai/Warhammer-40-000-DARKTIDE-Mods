@@ -96,7 +96,8 @@
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
-        "adamant_execution_order_permastack"
+        "adamant_execution_order_permastack",
+        "adamant_pinning_dog_bonus_moving_towards"
       ],
       "checks": []
     },
@@ -141,7 +142,8 @@
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
-        "adamant_execution_order_permastack"
+        "adamant_execution_order_permastack",
+        "adamant_pinning_dog_bonus_moving_towards"
       ],
       "checks": []
     },
@@ -186,7 +188,8 @@
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
-        "adamant_execution_order_permastack"
+        "adamant_execution_order_permastack",
+        "adamant_pinning_dog_bonus_moving_towards"
       ],
       "checks": []
     },
@@ -231,7 +234,8 @@
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
-        "adamant_execution_order_permastack"
+        "adamant_execution_order_permastack",
+        "adamant_pinning_dog_bonus_moving_towards"
       ],
       "checks": []
     },
@@ -1063,9 +1067,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4868b906261c3f7bcac86f51aec1544f7447127e",
       "chinese_sha256": "ac791b6a1002a6865adf8a7161e63e3b07841eaba51faeb74f05d3fc2e043107",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_pinning_dog_bonus_moving_towards"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_pinning_dog_bonus_moving_towards.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_pinning_dog_elite_damage.md",
@@ -10477,6 +10488,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_permastack.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_permastack.md"
+    },
+    {
+      "id": "adamant_pinning_dog_bonus_moving_towards",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_pinning_dog_bonus_moving_towards.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_pinning_dog_bonus_moving_towards.md"
     }
   ],
   "pending_chinese_corrections": [

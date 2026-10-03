@@ -41,3 +41,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Malocator](adamant_execution_order_cdr.md) / `adamant_execution_order_cdr` | Keystone |
 | [No Lenience](adamant_execution_order_rending.md) / `adamant_execution_order_rending` | Keystone |
 | [Keeping Protocol](adamant_execution_order_permastack.md) / `adamant_execution_order_permastack` | Keystone |
+| [Not Far Behind](adamant_pinning_dog_bonus_moving_towards.md) / `adamant_pinning_dog_bonus_moving_towards` | Keystone |

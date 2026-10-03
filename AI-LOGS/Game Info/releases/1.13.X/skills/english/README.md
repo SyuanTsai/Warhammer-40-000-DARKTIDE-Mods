@@ -288,3 +288,5 @@ Five-item checkpoint (skills 108–112): 745 seconds (12m 25s), measured between
 - [No Lenience](arbites_adamant_execution_order_rending.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Keeping Protocol](arbites_adamant_execution_order_permastack.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Not Far Behind](arbites_adamant_pinning_dog_bonus_moving_towards.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
