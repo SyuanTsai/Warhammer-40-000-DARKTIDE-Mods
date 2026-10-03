@@ -28,3 +28,9 @@
 | # | 任務／分支 | 角色 | 對話 |
 |---:|---|---|---|
 | 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01 · 哈德隆 | 哈德隆歐米伽7-7 · 斯瓦格爾 | [閱讀](events/mission_core_elevator_conversation_01_hadron.html) |
+
+## 艦內閒談
+
+| # | 對話 | 參與角色 | 正文 |
+|---:|---|---|---|
+| 01 | 艦內閒談 42 | 哈德隆歐米伽7-7 · 飛行中尉馬索茲 · 愛麗絲·哈洛韋特 | [閱讀](events/hub_idle_2nd_phase_conversation_fortytwo.html) |

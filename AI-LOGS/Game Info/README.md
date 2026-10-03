@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [固定角色位置與三人群組對話](dialogues/2026-10-04-GROUP_DIALOGUE_LAYOUT.md)
+
 - [雙角色任務通訊整理與驗證](dialogues/2026-10-03-MULTI_SPEAKER_MISSION_VOX.md)
 
 - [技能與對話流程分離](changes/2026-10-03-WORKFLOW_SPLIT.md)

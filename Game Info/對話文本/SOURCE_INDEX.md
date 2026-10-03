@@ -22,3 +22,9 @@
 | 編號 | 任務與分支 | 整理 ID | 英文 | 繁中 | 來源 |
 |---:|---|---|---|---|---|
 | 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01（哈德隆） | `mission_core_elevator_conversation_01_hadron` | [閱讀](en/events/mission_core_elevator_conversation_01_hadron.html) | [閱讀](zh-tw/events/mission_core_elevator_conversation_01_hadron.html) | [來源](source/mission_core_elevator_conversation_01_hadron.md) |
+
+## 艦內閒談 / Hub conversations
+
+| 編號 | 閱讀標題 | 官方規則共用 ID | 英文 | 繁中 | 來源 |
+|---:|---|---|---|---|---|
+| 01 | 艦內閒談 42 | `hub_idle_2nd_phase_conversation_fortytwo` | [閱讀](en/events/hub_idle_2nd_phase_conversation_fortytwo.html) | [閱讀](zh-tw/events/hub_idle_2nd_phase_conversation_fortytwo.html) | [來源](source/hub_idle_2nd_phase_conversation_fortytwo.md) |

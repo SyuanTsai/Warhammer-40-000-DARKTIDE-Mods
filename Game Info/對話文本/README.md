@@ -1,6 +1,6 @@
 # Darktide 劇情對話
 
-目前整理 11 組對話：10 組官方任務結束簡報及 1 組雙角色任務通訊，呈現角色頭像、角色名稱與字幕。英文與繁中共用 Darktide 深色聊天版型、事件識別碼及對話順序。
+目前整理 12 組對話：10 組官方任務結束簡報、1 組雙角色任務通訊及 1 組三角色艦內閒談，呈現角色頭像、角色名稱與字幕。英文與繁中共用 Darktide 深色聊天版型、事件識別碼及對話順序。
 
 對話只保留本目錄一份，不按遊戲版本建立副本；來源版本與 Build 留在來源文件。
 
@@ -31,7 +31,15 @@
 |---:|---|---|---|
 | 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01（哈德隆分支） | [閱讀](en/events/mission_core_elevator_conversation_01_hadron.html) | [閱讀](zh-tw/events/mission_core_elevator_conversation_01_hadron.html) |
 
-此組共三句，哈德隆與斯瓦格爾交替發言；[條件、名稱與原文證據](source/mission_core_elevator_conversation_01_hadron.md)。兩語言目前各 11 頁、各 59 句，合計 118 句。
+此組共三句，哈德隆與斯瓦格爾交替發言；[條件、名稱與原文證據](source/mission_core_elevator_conversation_01_hadron.md)。兩語言目前各 12 頁、各 62 句，合計 124 句。
+
+### 艦內閒談 / Hub conversations
+
+| 編號 | 對話 | English | 繁體中文 |
+|---:|---|---|---|
+| 01 | 艦內閒談 42 / Hub conversation 42 | [閱讀](en/events/hub_idle_2nd_phase_conversation_fortytwo.html) | [閱讀](zh-tw/events/hub_idle_2nd_phase_conversation_fortytwo.html) |
+
+哈德隆、飛行中尉馬索茲與愛麗絲·哈洛韋特共三句，使用固定左右位置及參與角色列；[官方回應鏈、角色與原文證據](source/hub_idle_2nd_phase_conversation_fortytwo.md)。閱讀標題由官方規則 ID 整理，不代表官方 UI 事件名。
 
 ## 版本與來源
 

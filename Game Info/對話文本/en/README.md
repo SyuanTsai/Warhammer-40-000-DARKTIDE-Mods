@@ -28,3 +28,9 @@ Official event dialogue with character portraits and subtitles.
 | # | Mission / branch | Speakers | Dialogue |
 |---:|---|---|---|
 | 01 | Clandestium Gloriana: Elevator vox 01 · Hadron | Hadron Omega-7-7 · Swagger | [Read](events/mission_core_elevator_conversation_01_hadron.html) |
+
+## Hub conversations
+
+| # | Conversation | Participants | Dialogue |
+|---:|---|---|---|
+| 01 | Hub conversation 42 | Hadron Omega-7-7 · Flight Lieutenant Masozi · Alice Hallowette | [Read](events/hub_idle_2nd_phase_conversation_fortytwo.html) |
