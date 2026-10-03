@@ -10,6 +10,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
@@ -77,6 +78,26 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - **Leave Stealth at about 3 seconds**: the damage bonus lasts until about `3 + 8 = 11 seconds` after use. About `40 − 11 = 29 seconds` remain on the unmodified cooldown then.
 
 [Details, exit exceptions and source evidence](veteran_invisibility_on_combat_ability.md) · [Back to index](#talent-index)
+
+<a id="veteran_reduced_threat_after_combat_ability"></a>
+
+<img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="72" height="72" alt="Low Profile talent icon">
+
+### Low Profile
+
+- Combat ability use reduces the affected enemy target-selection weight by **90%**.
+- With [Infiltrate](#veteran_invisibility_on_combat_ability), the effect is active **during Stealth**, then remains for **10 seconds after leaving it**.
+- The effect does not stack. Once its ten-second countdown has begun, another application does not restart that countdown.
+- This changes target-selection weight. It does not mean you have only a 10% chance of being attacked; other conditions can still make an enemy choose you.
+
+#### Threat and timing examples
+
+- Holding other target-selection conditions constant, an original weight of 100 becomes `100 × (1 − 90%) = 10 weight units`. This is a score calculation, not an attack-probability calculation.
+- Leaving Infiltrate at about 3 seconds keeps the effect until about `3 + 10 = 13 seconds` after activation, ignoring update-frame boundaries.
+
+[Detailed sources and formulas](veteran_reduced_threat_after_combat_ability.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reduced_threat_after_combat_ability) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_toughness_bonus_leaving_invisibility"></a>
 

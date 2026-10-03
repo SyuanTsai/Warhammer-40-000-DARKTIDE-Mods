@@ -5694,7 +5694,8 @@
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
-        "veteran_toughness_bonus_leaving_invisibility"
+        "veteran_toughness_bonus_leaving_invisibility",
+        "veteran_reduced_threat_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5729,7 +5730,8 @@
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
-        "veteran_toughness_bonus_leaving_invisibility"
+        "veteran_toughness_bonus_leaving_invisibility",
+        "veteran_reduced_threat_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5764,7 +5766,8 @@
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
-        "veteran_toughness_bonus_leaving_invisibility"
+        "veteran_toughness_bonus_leaving_invisibility",
+        "veteran_reduced_threat_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5799,7 +5802,8 @@
         "veteran_snipers_focus_rending_bonus",
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
-        "veteran_toughness_bonus_leaving_invisibility"
+        "veteran_toughness_bonus_leaving_invisibility",
+        "veteran_reduced_threat_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6550,9 +6554,21 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ea41fa6f852ea6d4d888fbe06a4e350e1ed9e3db",
       "chinese_sha256": "c0a017d15c7df9f6f89c71b8648b89fc05f753a784968886380682678e56ee87",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_reduced_threat_after_combat_ability"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_reduced_toughness_damage_in_coherency.md",
@@ -7909,7 +7925,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_toughness_bonus_leaving_invisibility.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_toughness_bonus_leaving_invisibility.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_toughness_bonus_leaving_invisibility.md",
+      "commit": "c764fdf052d16242d33cfa9d039b7ca699b9cbee"
+    },
+    {
+      "id": "veteran_reduced_threat_after_combat_ability",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduced_threat_after_combat_ability.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md"
     }
   ],
   "pending_chinese_corrections": [],
