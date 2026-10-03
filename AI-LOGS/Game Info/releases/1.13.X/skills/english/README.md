@@ -220,3 +220,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Voltaic Shock Mine](arbites_adamant_shock_mine.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Part of the Squad](arbites_adamant_companion_coherency.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Ruthless Efficiency](arbites_adamant_reload_speed_aura.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

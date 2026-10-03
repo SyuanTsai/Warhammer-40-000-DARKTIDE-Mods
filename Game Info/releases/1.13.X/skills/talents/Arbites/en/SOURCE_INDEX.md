@@ -12,3 +12,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Arbites Grenade](adamant_grenade_improved.md) / `adamant_grenade_improved` | Blitz |
 | [Voltaic Shock Mine](adamant_shock_mine.md) / `adamant_shock_mine` | Blitz |
 | [Part of the Squad](adamant_companion_coherency.md) / `adamant_companion_coherency` | Aura |
+| [Ruthless Efficiency](adamant_reload_speed_aura.md) / `adamant_reload_speed_aura` | Aura |

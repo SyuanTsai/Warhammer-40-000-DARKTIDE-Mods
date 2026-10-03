@@ -67,7 +67,8 @@
         "adamant_whistle",
         "adamant_grenade_improved",
         "adamant_shock_mine",
-        "adamant_companion_coherency"
+        "adamant_companion_coherency",
+        "adamant_reload_speed_aura"
       ],
       "checks": []
     },
@@ -83,7 +84,8 @@
         "adamant_whistle",
         "adamant_grenade_improved",
         "adamant_shock_mine",
-        "adamant_companion_coherency"
+        "adamant_companion_coherency",
+        "adamant_reload_speed_aura"
       ],
       "checks": []
     },
@@ -99,7 +101,8 @@
         "adamant_whistle",
         "adamant_grenade_improved",
         "adamant_shock_mine",
-        "adamant_companion_coherency"
+        "adamant_companion_coherency",
+        "adamant_reload_speed_aura"
       ],
       "checks": []
     },
@@ -115,7 +118,8 @@
         "adamant_whistle",
         "adamant_grenade_improved",
         "adamant_shock_mine",
-        "adamant_companion_coherency"
+        "adamant_companion_coherency",
+        "adamant_reload_speed_aura"
       ],
       "checks": []
     },
@@ -866,9 +870,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4a2f8048a02817ef869a410fad87ab420a945387",
       "chinese_sha256": "545fcb191fd4a64a7752451cc78257588d6f35286fb67cc1fbbfd4c2396ab0a1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_reload_speed_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_reload_speed_aura.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_shield_plates.md",
@@ -9926,6 +9937,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_coherency.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_coherency.md"
+    },
+    {
+      "id": "adamant_reload_speed_aura",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_reload_speed_aura.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_reload_speed_aura.md"
     }
   ],
   "pending_chinese_corrections": [

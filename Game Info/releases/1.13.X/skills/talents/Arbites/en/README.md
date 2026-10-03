@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="Arbites Grenade talent icon"> [Arbites Grenade](#adamant_grenade_improved) | <ul><li>Detonate on impact in a 10m blast, with a higher-damage 2.5m centre.</li><li>Carry 4 grenades, one more than the base version; this ability alone has no timed automatic refill.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="Voltaic Shock Mine talent icon"> [Voltaic Shock Mine](#adamant_shock_mine) | <ul><li>Arm about 1s after deployment; once an enemy is detected, apply Electrocution within 3m for a 15s active period.</li><li>Carry two mines; each applied Electrocution lasts 3s.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="Part of the Squad talent icon"> [Part of the Squad](#adamant_companion_coherency) | <ul><li>Your Cyber-Mastiff counts towards Coherency; you and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction.</li><li>Isolating this effect, 100 incoming Toughness damage becomes 92.5.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="Ruthless Efficiency talent icon"> [Ruthless Efficiency](#adamant_reload_speed_aura) | <ul><li>You and Allies in Coherency gain an additional 12.5% Reload Speed.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 
 ## Blitz
 
@@ -74,3 +75,15 @@
 - **Toughness protection**: You and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction. Isolating this effect, 100 incoming Toughness damage becomes `100 × (1 − 0.075) = 92.5 damage`. With an existing 10% reduction in the same stage, the result is `100 × (1 − 10% − 7.5%) = 82.5 damage`.
 
 [Details](adamant_companion_coherency.md) · [Back to index](#talent-index)
+
+<a id="adamant_reload_speed_aura"></a>
+
+### Ruthless Efficiency
+
+<img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="72" height="72" alt="Ruthless Efficiency talent icon">
+
+- **Reload Speed**: You and Allies in Coherency gain an additional 12.5% Reload Speed. For a reload that normally takes 2s, isolating this effect gives `2 ÷ 1.125 ≈ 1.78s`.
+
+- **Coherency condition**: Selecting this aura means your Cyber-Mastiff no longer counts towards unit Coherency. Allies still need to satisfy the usual Coherency conditions to receive the reload bonus.
+
+[Details](adamant_reload_speed_aura.md) · [Back to index](#talent-index)
