@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-03",
+  "blessing": "bloodletter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/放血者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_bleed_on_activated_hit",
+    "weapon_trait_bespoke_chainsword_2h_p1_bleed_on_activated_hit",
+    "weapon_trait_bespoke_chainsword_p1_bleed_on_activated_hit"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_variants",
+    "scope": "all3variants/6bindings independent research and primary current config cross-review",
+    "findings": [
+      "tier differences10/12/14/16;3/4/5/6;11/12/13/14",
+      "MkIII1instance unflagged final, MkXV ordinary light first flagged second unflagged, P1inactive no entry",
+      "repeat qualifying saw instances, no first-target gate",
+      "shared bleed16cap/.5tick/1.5before decay;preserves phase"
+    ],
+    "draft_corrections": [
+      "Primary corrected4nonexistent source paths before generation",
+      "Primary rewrote player technical identifiers into Chinese bullets and kept runtime review in AI-LOGS",
+      "Primary expanded armor list with all8actual enum categories after optional Luna suggestion"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "bloodletter",
+        "lacerate",
+        "puncture"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted current primary config;optional complete armor list suggestion implemented",
+      "required_corrections": []
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "bloodletter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_199",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_199.png",
+      "attachment": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966823247",
+      "acquired_date": "2026-10-03",
+      "sha256": "cc22505985cbf181f214f6038da7403c5beeb7fc3a554214b41da4c6ac6d0cba",
+      "content_type": "image/png",
+      "size": 2397,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "放血者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 305,
+      "tables": 256,
+      "rows": 2142,
+      "lists": 405
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 934,
+      "source_files": 317,
+      "bindings": 181,
+      "variants": 96,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1005,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 305,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 140,
+    "not_started_name_groups": 140,
+    "partial_name_groups": 0,
+    "remaining_variants": 492,
+    "remaining_bindings": 987,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6c090ba6227daaeea4186767ec647a4c761f720f006ecbb72f5354f4365070b3"
+  },
+  "previous_local_commit": "0ad31fa097da2356cc6ef59e56eab9efc420749e",
+  "current_blessing_formula_review": {
+    "primary_read": "all3tiers and complete wrappers;all6metadata/UI/imports;actual6active damage wiring;ActionSweep sticky entry and last-instance choice;flagged and unflagged profiles;shared bleed memo",
+    "cases": [
+      "chainaxe10/12/14/16;2H3/4/5/6;P1chainsword11/12/13/14",
+      "MkIII ordinary heavy1instance uses unflagged last;MkXV ordinary light2instances only first flagged;P1inactive no stickyness entry",
+      "each qualifying saw-damage event applies q;target16 cap",
+      "P6=158.203125;T8=5–5.5,T16=9–9.5nominal plus update delay"
+    ],
+    "result": "accepted"
+  },
+  "ui_name_review": {
+    "binding_count": 6,
+    "current_ui_three_key_names_reconstructed": true,
+    "all_metadata_restrictions_imports_and_append_read": true,
+    "raw_name_hash": "08b71eb1",
+    "raw_description_hash": "09b1471a",
+    "legacy_MkII_replaced_by_current_MkIII": true
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 3,
+    "bound_variants": 3,
+    "bound_bindings": 6,
+    "same_name_candidates": [],
+    "unresolved_candidates": [],
+    "unbound_definition_candidates": [],
+    "status": "3 exact metadata records bind to 3 variants and 6 marks; no exact outside, unresolved, or unbound candidate."
+  }
+}

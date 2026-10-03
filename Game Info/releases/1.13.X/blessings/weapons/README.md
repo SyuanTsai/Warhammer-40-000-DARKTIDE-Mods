@@ -9,7 +9,7 @@
 | [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 阿格里皮娜Mk I步兵自動槍、哥倫努Mk V步兵自動槍、格拉亞Mk VIII步兵自動槍 |
 | [雙鏈重型機槍](ranged/雙鏈重型機槍/README.md)<br>- Twin-Linked Heavy Stubber | 遠程 | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 |
 | [工兵鏟](melee/工兵鏟/README.md)<br>- Sapper Shovel | 近戰 | 軍務部標配工兵鏟、軍務部Mk III工兵鏟、軍務部Mk VII工兵鏟 |
-| [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 卡迪亞Mk IV突擊鏈鋸劍、卡迪亞Mk XIIIg突擊鏈鋸劍 |
+| [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 突擊鏈鋸劍 卡迪亞 Mk IV、突擊鏈鋸劍 卡迪亞 Mk XIIIg |
 | [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 卡塔昌Mk I「惡魔之爪」戰鬥劍、卡塔昌Mk IV「惡魔之爪」戰鬥劍、卡塔昌Mk VII「惡魔之爪」戰鬥劍 |
 | [決鬥劍](melee/決鬥劍/README.md)<br>- Duelling Sword | 近戰 | 馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍 |
 | [烈焰力場巨劍](melee/烈焰力場巨劍/README.md)<br>- Blaze Force Greatsword | 近戰 | 誓約Mk VI烈焰力場巨劍、誓約Mk VIII烈焰力場巨劍 |

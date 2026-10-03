@@ -287,6 +287,7 @@
 
 - Opportunist - Оппортунист - 機會主義者
 - Bloodletter - 放血者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_activated_hit`，hash `08b71eb1`；英文／繁中RAW配對確認。
 - Bloodthirsty - 嗜血
 - Headtaker - 奪顱者
 - Slaughterer - 殺戮者

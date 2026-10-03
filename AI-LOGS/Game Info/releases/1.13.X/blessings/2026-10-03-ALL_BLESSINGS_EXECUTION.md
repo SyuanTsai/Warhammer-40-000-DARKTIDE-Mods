@@ -109,3 +109,7 @@
 - 血肉撕裂者本機 Commit：`04dd325fc7f39c1a0329fb347ba9198932fa2adc`。
 
 - [飛鏢彈](2026-10-03-FLECHETTE_ACCEPTANCE.json)：新增4變體、9型號關聯；共4變體、9關聯。
+
+- 飛鏢彈本機 Commit：`0ad31fa097da2356cc6ef59e56eab9efc420749e`。
+
+- [放血者](2026-10-03-BLOODLETTER_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。

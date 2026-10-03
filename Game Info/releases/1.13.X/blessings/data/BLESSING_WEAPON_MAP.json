@@ -319,6 +319,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
       "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
+    },
+    {
+      "id": "bloodletter",
+      "name_zh_tw": "放血者",
+      "name_en": "Bloodletter",
+      "name_key": "loc_trait_bespoke_bleed_on_activated_hit",
+      "description_key": "loc_trait_bespoke_bleed_on_activated_hit_desc",
+      "name_hash": "08b71eb1",
+      "description_hash": "09b1471a",
+      "page": "entries/放血者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+      "effect": "啟動鏈鋸後造成傷害的斬擊與鋸擊可施加流血，層數依武器與I–IV等級分列；同一目標最多16層。重型開膛劍MkXV普通輕擊首段鋸擊也能觸發。"
     }
   ],
   "weapons": [
@@ -503,18 +516,28 @@
         {
           "id": "chainsword_p1_m1",
           "item": "content/items/weapons/player/melee/chainsword_p1_m1",
-          "name": "卡迪亞Mk IV突擊鏈鋸劍",
-          "name_en": "Cadia Mk IV Assault Chainsword",
+          "name": "突擊鏈鋸劍 卡迪亞 Mk IV",
+          "name_en": "Assault Chainsword Cadia Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
-          "trait_category": "bespoke_chainsword_p1"
+          "trait_category": "bespoke_chainsword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_chainsword_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_chainsword_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_chainsword_p1_m1"
+          }
         },
         {
           "id": "chainsword_p1_m2",
           "item": "content/items/weapons/player/melee/chainsword_p1_m2",
-          "name": "卡迪亞Mk XIIIg突擊鏈鋸劍",
-          "name_en": "Cadia Mk XIIIg Assault Chainsword",
+          "name": "突擊鏈鋸劍 卡迪亞 Mk XIIIg",
+          "name_en": "Assault Chainsword Cadia Mk XIIIg",
           "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
-          "trait_category": "bespoke_chainsword_p1"
+          "trait_category": "bespoke_chainsword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_chainsword_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_chainsword_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_chainsword_p1_m2"
+          }
         }
       ]
     },
@@ -5979,6 +6002,210 @@
       "icon": "https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_107",
       "effect": "暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_bleed_on_activated_hit",
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/放血者/weapon_trait_bespoke_chainaxe_p1_bleed_on_activated_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "bleed",
+        "max_stacks": 16,
+        "interval_seconds": 0.5,
+        "duration_before_decay_seconds": 1.5,
+        "stacks_removed_per_interval": 1,
+        "refresh_duration_on_stack": true,
+        "refresh_at_cap": true,
+        "trait_default_max_stacks": 31,
+        "dot_power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "damage_type": "bleeding",
+        "attack_type": "buff",
+        "damage_profile": "bleeding",
+        "damage_profile_attack_power_distribution": 175,
+        "power_is_not_final_hp_damage": true,
+        "num_stacks_on_proc": [
+          10,
+          12,
+          14,
+          16
+        ],
+        "tiers": [
+          {
+            "tier": "I",
+            "stacks": 10
+          },
+          {
+            "tier": "II",
+            "stacks": 12
+          },
+          {
+            "tier": "III",
+            "stacks": 14
+          },
+          {
+            "tier": "IV",
+            "stacks": 16
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 53,
+        "end_line": 91
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_activated_hit_desc",
+      "description_hash": "09b1471a",
+      "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_199",
+      "effect": "啟動後每次符合條件的斬擊或鋸擊新增10／12／14／16層流血。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_bleed_on_activated_hit",
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/放血者/weapon_trait_bespoke_chainsword_2h_p1_bleed_on_activated_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "bleed",
+        "max_stacks": 16,
+        "interval_seconds": 0.5,
+        "duration_before_decay_seconds": 1.5,
+        "stacks_removed_per_interval": 1,
+        "refresh_duration_on_stack": true,
+        "refresh_at_cap": true,
+        "trait_default_max_stacks": 31,
+        "dot_power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "damage_type": "bleeding",
+        "attack_type": "buff",
+        "damage_profile": "bleeding",
+        "damage_profile_attack_power_distribution": 175,
+        "power_is_not_final_hp_damage": true,
+        "num_stacks_on_proc": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "tiers": [
+          {
+            "tier": "I",
+            "stacks": 3
+          },
+          {
+            "tier": "II",
+            "stacks": 4
+          },
+          {
+            "tier": "III",
+            "stacks": 5
+          },
+          {
+            "tier": "IV",
+            "stacks": 6
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 53,
+        "end_line": 91
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_activated_hit_desc",
+      "description_hash": "09b1471a",
+      "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_199",
+      "effect": "啟動後每次符合條件的斬擊或鋸擊新增3／4／5／6層；MkXV普通輕擊首段貼附鋸擊也能觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_bleed_on_activated_hit",
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/放血者/weapon_trait_bespoke_chainsword_p1_bleed_on_activated_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "bleed",
+        "max_stacks": 16,
+        "interval_seconds": 0.5,
+        "duration_before_decay_seconds": 1.5,
+        "stacks_removed_per_interval": 1,
+        "refresh_duration_on_stack": true,
+        "refresh_at_cap": true,
+        "trait_default_max_stacks": 31,
+        "dot_power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "damage_type": "bleeding",
+        "attack_type": "buff",
+        "damage_profile": "bleeding",
+        "damage_profile_attack_power_distribution": 175,
+        "power_is_not_final_hp_damage": true,
+        "num_stacks_on_proc": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "tiers": [
+          {
+            "tier": "I",
+            "stacks": 11
+          },
+          {
+            "tier": "II",
+            "stacks": 12
+          },
+          {
+            "tier": "III",
+            "stacks": 13
+          },
+          {
+            "tier": "IV",
+            "stacks": 14
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 329,
+        "end_line": 367
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_activated_hit_desc",
+      "description_hash": "09b1471a",
+      "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_199",
+      "effect": "啟動後每次符合條件的斬擊或鋸擊新增11／12／13／14層流血。"
     }
   ],
   "bindings": [
@@ -8430,6 +8657,90 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
         "import_line": 14,
         "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "bloodletter",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_bleed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/bleed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
       }
     }
   ]

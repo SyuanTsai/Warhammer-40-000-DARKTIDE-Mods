@@ -29,3 +29,4 @@
 | [穿透火焰](entries/穿透火焰/README.md) | [來源索引](entries/穿透火焰/SOURCE_INDEX.md) |
 | [血肉撕裂者](entries/血肉撕裂者/README.md) | [來源索引](entries/血肉撕裂者/SOURCE_INDEX.md) |
 | [飛鏢彈](entries/飛鏢彈/README.md) | [來源索引](entries/飛鏢彈/SOURCE_INDEX.md) |
+| [放血者](entries/放血者/README.md) | [來源索引](entries/放血者/SOURCE_INDEX.md) |
