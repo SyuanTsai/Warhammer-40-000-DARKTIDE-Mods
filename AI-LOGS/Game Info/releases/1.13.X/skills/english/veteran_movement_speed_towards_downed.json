@@ -122,5 +122,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/leave-no-one-behind-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_towards_downed.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_towards_downed.md",
+  "commit": "eb5e08fe3965b8b02dda763a24fe4b414f62103d"
 }

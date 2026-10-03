@@ -5731,7 +5731,8 @@
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
-        "veteran_movement_speed_towards_downed"
+        "veteran_movement_speed_towards_downed",
+        "veteran_dodging_grants_crit"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5803,7 +5804,8 @@
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
-        "veteran_movement_speed_towards_downed"
+        "veteran_movement_speed_towards_downed",
+        "veteran_dodging_grants_crit"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5875,7 +5877,8 @@
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
-        "veteran_movement_speed_towards_downed"
+        "veteran_movement_speed_towards_downed",
+        "veteran_dodging_grants_crit"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5947,7 +5950,8 @@
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
-        "veteran_movement_speed_towards_downed"
+        "veteran_movement_speed_towards_downed",
+        "veteran_dodging_grants_crit"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6503,9 +6507,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3d0c4679aa9e18ad6941a5da16e309fc55823340",
       "chinese_sha256": "7aeed6dd5a44791a037e9254cbb8e879a537c6f5b40d351f33c1d6ad417c120b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_dodging_grants_crit"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_dodging_grants_stamina.md",
@@ -8872,7 +8891,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_towards_downed.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_towards_downed.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_towards_downed.md",
+      "commit": "eb5e08fe3965b8b02dda763a24fe4b414f62103d"
+    },
+    {
+      "id": "veteran_dodging_grants_crit",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_dodging_grants_crit.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_crit.md"
     }
   ],
   "pending_chinese_corrections": [
