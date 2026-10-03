@@ -43,3 +43,7 @@
 - 振奮彈幕全部UI交集變體本機Commit：`d00b1ec21551bfe47124e605038e1c51ec8196cf`。
 
 - [反擊](2026-10-03-COUNTERATTACK_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- 反擊全部UI交集變體本機Commit：`4f618e421572b3573a178230cee738159e48a9ba`；型號名稱依當前UI組名與RAW修正。
+
+- [顱骨落地](2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

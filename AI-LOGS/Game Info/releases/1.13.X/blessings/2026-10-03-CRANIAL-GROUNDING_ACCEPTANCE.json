@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-03",
+  "blessing": "cranial-grounding",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/顱骨落地/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_2h_p1_chained_weakspot_hits_increase_finesse_and_reduce_overheat",
+    "weapon_trait_bespoke_powersword_p2_chained_weakspot_hits_increase_finesse_and_reduce_overheat"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "cranial-grounding",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 2,
+    "reviewed_bindings": 4,
+    "findings": [
+      "Both trait overrides provide 1/2/3/4 percent additive finesse modifier and 0.97/0.96/0.95/0.94 multiplicative heat amount per effective stack.",
+      "Only first-target weakspot hits add a stack after damage resolution; ordinary hits neither clear nor refresh. Maximum five effective stacks share a refreshed three-second expiry.",
+      "Unwield disables stats while absolute expiry continues.",
+      "Finesse applies to weakspot or critical extra damage; current 104, 110 and 105-to-109 examples are correct.",
+      "Charging overtime and sweep-start heat both use the heat amount multiplier; no existing heat removal. Five-stack reductions and 20-to-14.678 heat example are correct.",
+      "Exact name-key source has two variants with four bound weapon marks; no additional same-name candidate found."
+    ],
+    "format_note": "Formatter leaves value_manipulation output unscaled and applies prefix minus. Player prose expresses the positive magnitude of reduced generated heat; variant evidence preserves literal negative placeholder output.",
+    "corrections_resolved": [],
+    "final_result": "Current player bullets, formulas, two variants and four bindings accepted."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/70fe9149-f3f2-4e40-8c6c-062b858e1938",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "cranial-grounding",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_239",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_239.png",
+      "attachment": "https://github.com/user-attachments/assets/70fe9149-f3f2-4e40-8c6c-062b858e1938",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965298362",
+      "acquired_date": "2026-10-03",
+      "sha256": "b733b67758fbff594566efec68912d85cf30d67d5519a923e2a62b058329855c",
+      "content_type": "image/png",
+      "size": 3942,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "顱骨落地祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 129,
+      "tables": 121,
+      "rows": 888,
+      "lists": 135
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 486,
+      "source_files": 194,
+      "bindings": 88,
+      "variants": 40,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 829,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 129,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 156,
+    "not_started_name_groups": 156,
+    "partial_name_groups": 0,
+    "remaining_variants": 548,
+    "remaining_bindings": 1080,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0a3bea8dde5afacdb0fb70390e692ef6ff2adeb8d2bbe9f12a48f9a104e73e52"
+  },
+  "previous_local_commit": "4f618e421572b3573a178230cee738159e48a9ba",
+  "current_blessing_formula_review": {
+    "finesse_bonus_full_tiers": [
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "heat_multipliers_full_tiers": [
+      0.8587340256999999,
+      0.8153726975999999,
+      0.7737809374999998,
+      0.7339040223999997
+    ],
+    "damage_examples": {
+      "base80_extra20": {
+        "before": 100,
+        "after": 104.0,
+        "relative_gain": 0.04
+      },
+      "base50_extra50": {
+        "before": 100,
+        "after": 110.0,
+        "relative_gain": 0.1
+      },
+      "with_existing25percent": {
+        "before": 105.0,
+        "after": 109.0,
+        "relative_gain": 0.0380952380952381
+      }
+    },
+    "heat_example": {
+      "old_heat_percent": 50,
+      "baseline_increment_percentage_points": 20,
+      "modified_increment_percentage_points": 14.678080447999996,
+      "new_heat_percent": 64.678080448
+    },
+    "timing": {
+      "refresh_at": 10,
+      "unwield_at": 11,
+      "rewield_at": 12,
+      "expire_after": 13,
+      "remaining_at_rewield": 1
+    }
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "status": "all exact name-key items included"
+  }
+}
