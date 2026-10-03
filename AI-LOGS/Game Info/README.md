@@ -56,3 +56,6 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [魔力彈藥驗收](releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json)
 
 - [振奮彈幕驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_ACCEPTANCE.json)
+
+- [首批六項驗收與Commit](releases/1.13.X/blessings/2026-10-03-BATCH_ACCEPTANCE.md)
+- [祝福完整剩餘清單與續作邊界](releases/1.13.X/blessings/2026-10-03-REMAINING.md)
