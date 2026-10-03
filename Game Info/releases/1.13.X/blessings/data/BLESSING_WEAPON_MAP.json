@@ -280,6 +280,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
       "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
+    },
+    {
+      "id": "penetrating-flame",
+      "name_zh_tw": "穿透火焰",
+      "name_en": "Penetrating Flame",
+      "name_key": "loc_trait_bespoke_armor_rending_from_dot_burning",
+      "description_key": "loc_trait_bespoke_armor_rending_from_dot_burning_desc",
+      "name_hash": "e02d8784",
+      "description_hash": "c674072f",
+      "page": "entries/穿透火焰/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
+      "effect": "直接火焰命中施加1／2／3／4層脆弱；每層提供1個百分點撕裂，最多20層、持續5秒。再次命中刷新期限；燃燒跳傷不觸發。"
     }
   ],
   "weapons": [
@@ -5386,6 +5399,128 @@
       "icon": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
       "effect": "符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff",
+      "blessing_id": "penetrating-flame",
+      "weapon_id": "flamer_p1",
+      "page": "entries/穿透火焰/weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "rending_burn_debuff",
+        "target_stat_buff": "rending_multiplier",
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_stack": 0.01,
+        "rending_percent_per_stack": 1,
+        "target_rending_added_per_proc": [
+          0.01,
+          0.02,
+          0.03,
+          0.04
+        ],
+        "duration_seconds": 5,
+        "duration_refresh_on_stack": true,
+        "actual_target_stack_cap": 20,
+        "trait_target_buff_data_max_stacks": 31,
+        "proc_chance": 1,
+        "proc_cooldown_seconds": null,
+        "condition": {
+          "event": "proc_events.on_direct_flamer_hit",
+          "conditional_proc_func": "ConditionalFunctions.is_item_slot_wielded",
+          "check_proc_func": "CheckProcFunctions.attacked_unit_is_minion",
+          "requires_target_alive_and_buff_extension": true,
+          "requires_target_already_burning": false,
+          "requires_damage_over_time_tick": false,
+          "requires_charge": false
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_flamer_p1.lua",
+        "start_line": 309,
+        "end_line": 380
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+        "start_line": 61,
+        "end_line": 63
+      },
+      "description_key": "loc_trait_bespoke_armor_rending_from_dot_burning_desc",
+      "description_hash": "c674072f",
+      "icon": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_164",
+      "effect": "淨化噴火器的直接火焰命中使目標依等級疊加1／2／3／4層脆弱。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p2_burned_targets_receive_rending_debuff",
+      "blessing_id": "penetrating-flame",
+      "weapon_id": "forcestaff_p2",
+      "page": "entries/穿透火焰/weapon_trait_bespoke_forcestaff_p2_burned_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "rending_burn_debuff",
+        "target_stat_buff": "rending_multiplier",
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_stack": 0.01,
+        "rending_percent_per_stack": 1,
+        "target_rending_added_per_proc": [
+          0.01,
+          0.02,
+          0.03,
+          0.04
+        ],
+        "duration_seconds": 5,
+        "duration_refresh_on_stack": true,
+        "actual_target_stack_cap": 20,
+        "trait_target_buff_data_max_stacks": 31,
+        "proc_chance": 1,
+        "proc_cooldown_seconds": null,
+        "condition": {
+          "event": "proc_events.on_direct_flamer_hit",
+          "conditional_proc_func": "ConditionalFunctions.is_item_slot_wielded",
+          "check_proc_func": "CheckProcFunctions.attacked_unit_is_minion",
+          "requires_target_alive_and_buff_extension": true,
+          "requires_target_already_burning": false,
+          "requires_damage_over_time_tick": false,
+          "requires_charge": false
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+        "start_line": 273,
+        "end_line": 342
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 43
+      },
+      "description_key": "loc_trait_bespoke_armor_rending_from_dot_burning_desc",
+      "description_hash": "c674072f",
+      "icon": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_164",
+      "effect": "烈焰力場法杖的短按火焰爆發或蓄力火焰攻擊直接命中時，依等級疊加1／2／3／4層脆弱。"
     }
   ],
   "bindings": [
@@ -7627,6 +7762,34 @@
         "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
         "import_line": 18,
         "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "penetrating-flame",
+      "weapon_id": "flamer_p1",
+      "mark_id": "flamer_p1_m1",
+      "variant_id": "weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_flamer_p1/armor_rending_from_dot_burning",
+      "trait_category": "bespoke_flamer_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 747
+      }
+    },
+    {
+      "blessing_id": "penetrating-flame",
+      "weapon_id": "forcestaff_p2",
+      "mark_id": "forcestaff_p2_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p2_burned_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p2/armor_rending_from_dot_burning",
+      "trait_category": "bespoke_forcestaff_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1225
       }
     }
   ]

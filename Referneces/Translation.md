@@ -416,6 +416,7 @@
 - Focused Channelling - 專注引導
 - Blazing Spirit - 燃燒靈魂
 - Penetrating Flame - 穿透火焰
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_from_dot_burning`，hash `e02d8784`；英文／繁中RAW配對確認。
 - Showstopper - 嘆為觀止
 - Infernus - 煉獄
 - Efficiency - 效率

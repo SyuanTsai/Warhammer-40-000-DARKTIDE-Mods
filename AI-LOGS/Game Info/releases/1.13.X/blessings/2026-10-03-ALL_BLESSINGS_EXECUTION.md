@@ -97,3 +97,7 @@
 - 開罐器本機 Commit：`479e21da78b234d71b8290d89b665bfea451389e`。
 
 - [破碎衝擊](2026-10-03-SHATTERING-IMPACT_ACCEPTANCE.json)：新增4變體、6型號關聯；共4變體、6關聯。
+
+- 破碎衝擊本機 Commit：`02b990f5d6a6eec6888844570a075f62da326761`。
+
+- [穿透火焰](2026-10-03-PENETRATING-FLAME_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。

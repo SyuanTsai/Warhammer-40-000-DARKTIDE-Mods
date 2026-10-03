@@ -5,11 +5,12 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](../../../entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](../../../entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7" width="32" height="32" alt="穿透火焰祝福圖示"> [穿透火焰](../../../entries/穿透火焰/README.md)<br>- Penetrating Flame<br>[完整說明](../../../entries/穿透火焰/README.md) | <ul><li>烈焰力場法杖的短按火焰爆發或蓄力火焰攻擊直接命中時，依等級疊加1／2／3／4層脆弱。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 烈焰力場法杖 裂隙避難所 Mk II | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting.md) | I–IV |
+| 烈焰力場法杖 裂隙避難所 Mk II | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting.md)、[穿透火焰](../../../entries/穿透火焰/weapon_trait_bespoke_forcestaff_p2_burned_targets_receive_rending_debuff.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

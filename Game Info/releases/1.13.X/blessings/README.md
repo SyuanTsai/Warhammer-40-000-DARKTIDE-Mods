@@ -28,5 +28,6 @@
 | <img src="https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1" width="32" height="32" alt="超級充能祝福圖示"> [超級充能](entries/超級充能/README.md)<br>- Supercharge<br>[完整說明](entries/超級充能/README.md) | <ul><li>充能近戰命中後使目標疊加脆弱；動力劍每次1／2／3／4層，動力錘10／12／14／16層。每層2.5%，最高16層，刷新5秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659" width="32" height="32" alt="開罐器祝福圖示"> [開罐器](entries/開罐器/README.md)<br>- Can Opener<br>[完整說明](entries/開罐器/README.md) | <ul><li>撬棍次要模式命中每次1／2／3／4層，撕裂槍刺刀每次10／12／14／16層脆弱；每層2.5%，最高16層，合格命中刷新5秒。</li></ul> | 近戰／遠程 |
 | <img src="https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5" width="32" height="32" alt="破碎衝擊祝福圖示"> [破碎衝擊](entries/破碎衝擊/README.md)<br>- Shattering Impact<br>[完整說明](entries/破碎衝擊/README.md) | <ul><li>符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7" width="32" height="32" alt="穿透火焰祝福圖示"> [穿透火焰](entries/穿透火焰/README.md)<br>- Penetrating Flame<br>[完整說明](entries/穿透火焰/README.md) | <ul><li>直接火焰命中施加1／2／3／4層脆弱；每層提供1個百分點撕裂，最多20層、持續5秒。再次命中刷新期限；燃燒跳傷不觸發。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
