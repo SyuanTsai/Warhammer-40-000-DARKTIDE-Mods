@@ -160,5 +160,18 @@
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tactical-awareness-*",
   "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md",
-  "commit": "1bb86c71cc78fba81eb6213138bcd2816e51b2b2"
+  "commit": "1bb86c71cc78fba81eb6213138bcd2816e51b2b2",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Expanded the combined number/percentage/name formatter citation to lines 379-427, including the percentage function. Values, descriptions and comparison verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ],
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md"
+    }
+  ]
 }

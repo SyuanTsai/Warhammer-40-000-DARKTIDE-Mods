@@ -183,5 +183,18 @@
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/volley-fire-*",
   "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md",
-  "commit": "18ffc9554ecdd274d9e1b17c4b82146f57f6d50d"
+  "commit": "18ffc9554ecdd274d9e1b17c4b82146f57f6d50d",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Expanded the combined number/percentage/name formatter citation to lines 379-427, including the percentage function. Values, descriptions and comparison verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ],
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md"
+    }
+  ]
 }

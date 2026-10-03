@@ -169,5 +169,18 @@
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/the-bigger-they-are-*",
   "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md",
-  "commit": "93c7c476663d430005a5cd3b88c23af0d4bae170"
+  "commit": "93c7c476663d430005a5cd3b88c23af0d4bae170",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Expanded the combined number/percentage/name formatter citation to lines 379-427, including the percentage function. Values, descriptions and comparison verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ],
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md"
+    }
+  ]
 }
