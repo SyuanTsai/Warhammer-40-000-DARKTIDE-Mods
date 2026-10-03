@@ -84,12 +84,12 @@ item.icon `content/ui/textures/icons/traits/weapon_trait_169`；[原圖](https:/
 | 決鬥劍等級覆寫 | [決鬥劍等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua#L10-L59) |
 | 決鬥劍Buff接入 | [決鬥劍Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua#L10-L12) |
 | UI 決鬥劍 | [UI 決鬥劍](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L191) |
-| 馬卡比安Mk II決鬥劍匯入 | [馬卡比安Mk II決鬥劍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua#L15) |
-| 馬卡比安Mk II決鬥劍接入 | [馬卡比安Mk II決鬥劍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua#L1688-L1690) |
-| 馬卡比安Mk IV決鬥劍匯入 | [馬卡比安Mk IV決鬥劍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua#L15) |
-| 馬卡比安Mk IV決鬥劍接入 | [馬卡比安Mk IV決鬥劍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua#L1499-L1501) |
-| 馬卡比安Mk V決鬥劍匯入 | [馬卡比安Mk V決鬥劍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua#L14) |
-| 馬卡比安Mk V決鬥劍接入 | [馬卡比安Mk V決鬥劍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua#L1473-L1475) |
+| 決鬥劍 馬卡比安 Mk II匯入 | [決鬥劍 馬卡比安 Mk II匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua#L15) |
+| 決鬥劍 馬卡比安 Mk II接入 | [決鬥劍 馬卡比安 Mk II接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua#L1688-L1690) |
+| 決鬥劍 馬卡比安 Mk IV匯入 | [決鬥劍 馬卡比安 Mk IV匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua#L15) |
+| 決鬥劍 馬卡比安 Mk IV接入 | [決鬥劍 馬卡比安 Mk IV接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua#L1499-L1501) |
+| 決鬥劍 馬卡比安 Mk V匯入 | [決鬥劍 馬卡比安 Mk V匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua#L14) |
+| 決鬥劍 馬卡比安 Mk V接入 | [決鬥劍 馬卡比安 Mk V接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua#L1473-L1475) |
 | 烈焰力場巨劍等級覆寫 | [烈焰力場巨劍等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua#L547-L598) |
 | 烈焰力場巨劍Buff接入 | [烈焰力場巨劍Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua#L49-L51) |
 | UI 烈焰力場巨劍 | [UI 烈焰力場巨劍](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L245) |
@@ -114,8 +114,8 @@ item.icon `content/ui/textures/icons/traits/weapon_trait_169`；[原圖](https:/
 | 穿音速雙刀等級覆寫 | [穿音速雙刀等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua#L10-L59) |
 | 穿音速雙刀Buff接入 | [穿音速雙刀Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua#L13-L15) |
 | UI 穿音速雙刀 | [UI 穿音速雙刀](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L622) |
-| 西福爾穿音速刀刃匯入 | [西福爾穿音速刀刃匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua#L16) |
-| 西福爾穿音速刀刃接入 | [西福爾穿音速刀刃接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua#L3177-L3179) |
+| 穿音速雙刀 布蘭克斯 Mk XI匯入 | [穿音速雙刀 布蘭克斯 Mk XI匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua#L16) |
+| 穿音速雙刀 布蘭克斯 Mk XI接入 | [穿音速雙刀 布蘭克斯 Mk XI接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua#L3177-L3179) |
 
 
 ## 力場劍圖示

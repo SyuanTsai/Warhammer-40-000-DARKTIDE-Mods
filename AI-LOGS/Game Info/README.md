@@ -168,3 +168,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [祝福暫停交接：47項已Commit，還擊／猛撞／燃起來！待續作](plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md)
 
 - [還擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE.json)
+
+- [粉碎：實際UI型號名稱同步](releases/1.13.X/blessings/2026-10-04-SHRED_UI_NAME_CORRECTION.json)

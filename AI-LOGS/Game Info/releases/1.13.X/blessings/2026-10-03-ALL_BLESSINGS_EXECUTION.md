@@ -223,3 +223,5 @@
 - 2026-10-04明確續作：先核對暫停交接、HEAD、47項／178實作／339關聯、剩餘120項／427實作／846關聯及第005輪收據；恢復還擊、猛撞、燃起來！三組Luna／max。全部盤點完成是本輪目標，舊暫停不再適用；不執行production bootstrap，FASTER未確認啟用。接手核對收據：`AI-LOGS/Game Info/local/blessings/2026-10-03/2026-10-04-RESUME_AUDIT.json`。
 
 - [還擊](2026-10-03-RIPOSTE_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。
+
+- [粉碎型號名稱同步](2026-10-04-SHRED_UI_NAME_CORRECTION.json)：依已驗證 family／pattern／mark 更新五份文件中的四個型號標籤；機制、階級、關聯及圖片未變，不增加完成項數。

@@ -5,7 +5,7 @@
 - 實作：`weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance`。
 - 等級覆寫：[trait](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua#L10-L59)。
 - Buff接入：[繼承與覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua#L13-L15)。
-- 適用型號：西福爾穿音速刀刃。
+- 適用型號：穿音速雙刀 布蘭克斯 Mk XI。
 
 ## 機制與公式
 

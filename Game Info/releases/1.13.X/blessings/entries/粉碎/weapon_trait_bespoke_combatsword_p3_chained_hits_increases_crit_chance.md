@@ -5,7 +5,7 @@
 - 實作：`weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance`。
 - 等級覆寫：[trait](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua#L10-L59)。
 - Buff接入：[繼承與覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua#L10-L12)。
-- 適用型號：馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍。
+- 適用型號：決鬥劍 馬卡比安 Mk II、決鬥劍 馬卡比安 Mk IV、決鬥劍 馬卡比安 Mk V。
 
 ## 機制與公式
 
