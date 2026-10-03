@@ -970,6 +970,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_big_game_hunter.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_damage_when_flanking",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_when_flanking.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

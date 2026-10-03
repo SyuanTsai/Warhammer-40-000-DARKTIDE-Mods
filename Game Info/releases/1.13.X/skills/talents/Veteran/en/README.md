@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="32" height="32" alt="Iron Will talent icon"> [Iron Will](#veteran_tdr_on_high_toughness) | <ul><li>Take 50% less Toughness damage while current Toughness is above 75% of maximum.</li><li>Exactly 75% does not qualify; separate active reduction multipliers multiply.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="32" height="32" alt="Superiority Complex talent icon"> [Superiority Complex](#veteran_increase_damage_vs_elites) | <ul><li>Gain +15% damage against Elite enemies for eligible melee and ranged attacks.</li><li>Specialist-only targets do not qualify; the bonus adds to other same-stage damage bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="32" height="32" alt="Bring it Down! talent icon"> [Bring it Down!](#veteran_big_game_hunter) | <ul><li>Gain +20% damage against Ogryns and Monstrosities with melee and ranged attacks.</li><li>The bonus adds to other same-stage damage bonuses; enemy classification determines eligibility.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="32" height="32" alt="Covert Operative talent icon"> [Covert Operative](#veteran_increased_damage_when_flanking) | <ul><li>Gain +30% damage on ranged attacks from the enemy’s rear half-plane.</li><li>The exact side boundary and melee attacks do not qualify.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -841,6 +842,29 @@ Assume a qualifying target, 100 damage before this additive stage and no other o
 The bonus joins the existing damage stage; the complete hit’s increase can vary with other modifiers.
 
 [Detailed sources and formulas](veteran_big_game_hunter.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_big_game_hunter) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_increased_damage_when_flanking"></a>
+
+<img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="72" height="72" alt="Covert Operative talent icon">
+
+### Covert Operative
+
+- Gain **+30% damage on ranged attacks from the enemy’s rear half-plane**.
+- The exact side boundary does not count; melee attacks do not receive this bonus.
+
+**Damage examples**
+
+Assume the preceding damage calculation has produced 100 damage and there is no additional backstab damage or other flanking bonus.
+
+- A qualifying ranged hit: `100 + 100 × 0.30 = 130 damage`.
+- A ranged hit exactly on the side boundary or from the front gains no bonus from this talent; the prior 100 remains 100.
+- A melee hit from behind also gains no bonus from this talent; with no other backstab bonus, the prior 100 remains 100.
+
+This calculation adds the flanking contribution to the prior damage result; it is separate from general damage bonuses applied earlier.
+
+[Detailed sources and formulas](veteran_increased_damage_when_flanking.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_damage_when_flanking) | [Back to index](#talent-index)
 
 ---
 
