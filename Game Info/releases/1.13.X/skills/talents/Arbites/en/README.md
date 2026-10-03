@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="Hammer of Judgement talent icon"> [Hammer of Judgement](#adamant_multiple_hits_attack_speed) | <ul><li>Hit at least 3 enemies with one melee attack to gain 10% Melee Attack Speed for 3s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="Target Neutralised talent icon"> [Target Neutralised](#adamant_elite_special_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill instantly restores 10% of maximum Toughness, then another 10% over 4s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="Up Close talent icon"> [Up Close](#adamant_close_kills_restore_toughness) | <ul><li>Killing an enemy within 12.5m restores 5% of maximum Toughness.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="Force of Will talent icon"> [Force of Will](#adamant_staggers_replenish_toughness) | <ul><li>A melee attack that Staggers its first hit target restores 7.5% of maximum Toughness.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -616,3 +617,15 @@
 - **Recovery example**: At maximum Toughness 100 with no other recovery bonus, each kill restores 100 × 5% = 5 points. If current Toughness is 98, only 2 points can be restored.
 
 [Details](adamant_close_kills_restore_toughness.md) · [Back to index](#talent-index)
+
+<a id="adamant_staggers_replenish_toughness"></a>
+
+### Force of Will
+
+<img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="72" height="72" alt="Force of Will talent icon">
+
+- **Trigger**: A melee attack that Staggers its first hit target restores 7.5% of maximum Toughness. Hitting more enemies in the same attack does not increase the number of procs. With Concussive, qualifying melee Weakspot Hits can also trigger the recovery.
+
+- **Recovery example**: At maximum Toughness 100 with no other recovery bonus, each proc restores 100 × 7.5% = 7.5 points. An attack hitting 3 enemies still restores at most 7.5 points, capped by the deficit.
+
+[Details](adamant_staggers_replenish_toughness.md) · [Back to index](#talent-index)
