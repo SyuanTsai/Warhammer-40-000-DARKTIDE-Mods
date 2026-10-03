@@ -232,18 +232,6 @@ Game Info/
 
 [紀錄索引與維護規則](../AI-LOGS/Game%20Info/README.md)｜[共用工具](../scripts/game-info/README.md)
 
-## 武器祝福：共用說明與雙向查詢
+## 武器祝福專屬流程
 
-- 同一祝福名稱鍵、描述鍵與實際效果共同核對身分。同名不保證實作或數值相同；每個武器變體保留 trait ID 與來源，不複製完整正文到各武器。
-- 完整正文放在 `<版本>/blessings/entries/<繁中祝福名稱>/README.md`；沿用老兵提供 SOURCE_INDEX.md、TIER_VALUES.md、WEAPON_COMPATIBILITY.md、LOCALIZATION_COMPARISON.md、DAMAGE_PERCENTAGE_REVIEW.md 與實作 ID 子文件。
-- 祝福維持每項獨立詳細頁。主目錄、近戰／遠程分類與武器查詢的名稱儲存格，在 `[中文名稱](正文連結)<br>- English Name` 後加上 `<br>[完整說明](同一正文連結)`，讓完整玩家說明入口明確可見；技術來源另在詳細頁提供。不得以主要效果表取代正文，也不在各索引重複完整正文。
-- 武器查詢放在 `<版本>/blessings/weapons/<melee 或 ranged>/<繁中武器名稱>/README.md`。此處只列祝福；武器操作另在 weapons/。祝福頁列對應武器／型號，武器頁連到適用變體，不重複正文或勘誤。
-- `blessings/data/BLESSING_WEAPON_MAP.json` 保存穩定祝福 ID、中英名稱、名稱／描述 key、唯一頁面、武器、型號、實作變體、來源與逐型號 binding。兩方向索引由同一 binding 核對，不從系列聯集推定全部型號通用。
-- 追查玩家 UI 武器 → MasterItems → 類別／型號限制 → 武器模板實際匯入 → trait → Buff → 執行類別 → 共用結算。未找到入口不等於證實未使用。
-- Enhanced_descriptions 的 WEAPONS_Blessings_Perks.lua、NAMES_Talents_Blessings.lua 只作格式與線索。武器／祝福名稱先以本體 key/hash 精確配對，再對照既有詞表；新詞補進 Referneces/Translation.md 並列待確認。
-- 玩家正文與武器／等級表直接標示已核對的等級範圍，例如「等級I–IV」，各級稱「I級／II級／III級／IV級」；不用「程式定義」「第四組」「可取得等級待確認」作玩家用語。後端有效位元、available_tiers欄位與驗證範圍只在來源或AI-LOGS集中記錄；缺後端資料時JSON欄位仍保留null，不混淆等級範圍與後端狀態。
-- 玩家說明直接陳述已確認的效果及操作條件，不反覆加入「尚待遊戲內核對」「未實測」「固定程式」等執行或驗證用語。真正影響效果且缺證據的事項須具體說明；工作進度、工具輸出、驗收、Commit及測試是否執行放AI-LOGS，公開來源與公式推導放來源子文件。
-- 主目錄「祝福｜主要效果｜分類」，武器頁「祝福｜本武器主要效果｜分類」；分類最後。32×32 圖示在名称前，中文連結與英文使用 `<br>- English` 分行，效果使用 `<ul><li>...</li></ul>`。正文標題繁中名稱(English Name)、72×72圖示。只引用實際 Issue 附件，禁止圖檔入 Git 或把原圖網址宣稱附件。
-- 核對命中／攻擊／射擊計數、首次疊層、刷新、滿層、失效、武器／目標切換。分開追查威力、近距離傷害、爆擊機率、弱點額外傷害、彈匣／備彈、最大韌性／缺額與恢復倍率；每種計算提供數值與單位。
-- 原文比較使用同版本本體名稱／描述鍵。占位模板不是實際畫面；formatter 補值標為重建。條件、對象、資源、單位或數值错误才在正文加勘誤，少寫細節不當錯誤。
-- 過程與驗收記錄放 AI-LOGS；來源批次 ignored。使用者指定工作樹時以確認後的新工作樹分支取代舊分支預設，保留主要工作區。
+武器祝福分析、玩家詳細頁、多武器變體與雙向索引，使用[Blessings-Workflow](Blessings-Workflow.md)。祝福的獨立完整說明入口、I–IV玩家用詞、原文比較、圖片Issue附件與逐項Commit規則集中在該提示詞維護；本文件保留天賦及共通知識／紀錄分離原則。

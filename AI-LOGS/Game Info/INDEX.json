@@ -751,6 +751,14 @@
       "scope": "1.13.X/blessings",
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PLAYER_WORDING_REVIEW.md",
       "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-workflow",
+      "date": "2026-10-03",
+      "kind": "revision",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-03-BLESSINGS_WORKFLOW.md",
+      "storage": "git"
     }
   ],
   "pending": [
