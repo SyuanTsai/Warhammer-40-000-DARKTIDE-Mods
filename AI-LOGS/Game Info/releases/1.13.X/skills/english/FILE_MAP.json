@@ -2207,7 +2207,12 @@
         "ogryn_heavy_hitter_cleave",
         "ogryn_heavy_hitter_max_stacks_improves_toughness",
         "ogryn_heavy_hitter_stagger",
-        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+        "ogryn_multi_heavy_toughness",
+        "ogryn_single_heavy_toughness",
+        "ogryn_increased_coherency_toughness",
+        "ogryn_reload_speed_on_empty",
+        "ogryn_more_hits_more_damage"
       ],
       "checks": []
     },
@@ -2255,7 +2260,12 @@
         "ogryn_heavy_hitter_cleave",
         "ogryn_heavy_hitter_max_stacks_improves_toughness",
         "ogryn_heavy_hitter_stagger",
-        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+        "ogryn_multi_heavy_toughness",
+        "ogryn_single_heavy_toughness",
+        "ogryn_increased_coherency_toughness",
+        "ogryn_reload_speed_on_empty",
+        "ogryn_more_hits_more_damage"
       ],
       "checks": []
     },
@@ -2303,7 +2313,12 @@
         "ogryn_heavy_hitter_cleave",
         "ogryn_heavy_hitter_max_stacks_improves_toughness",
         "ogryn_heavy_hitter_stagger",
-        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+        "ogryn_multi_heavy_toughness",
+        "ogryn_single_heavy_toughness",
+        "ogryn_increased_coherency_toughness",
+        "ogryn_reload_speed_on_empty",
+        "ogryn_more_hits_more_damage"
       ],
       "checks": []
     },
@@ -2351,7 +2366,12 @@
         "ogryn_heavy_hitter_cleave",
         "ogryn_heavy_hitter_max_stacks_improves_toughness",
         "ogryn_heavy_hitter_stagger",
-        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+        "ogryn_multi_heavy_toughness",
+        "ogryn_single_heavy_toughness",
+        "ogryn_increased_coherency_toughness",
+        "ogryn_reload_speed_on_empty",
+        "ogryn_more_hits_more_damage"
       ],
       "checks": []
     },
@@ -3008,9 +3028,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3ee589e01b1b2ecf4a5e05db2737ba638217eb08",
       "chinese_sha256": "c513c296d315403592f0d283feedf7f57a795a0394ff339afe9c2d847233c3fb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_increased_coherency_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_kills_grant_crit_chance.md",
@@ -3186,9 +3213,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "385c738e2b0a6d653079a01493563433b33951ae",
       "chinese_sha256": "9a9364f8d84eea8c6aa946667f24ada50c99e55be3845f683ceaee9d9374fc11",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_more_hits_more_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_movement_speed_after_ranged_kills.md",
@@ -3208,9 +3242,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "098382cb8301033db112396e846cd178a8bb525d",
       "chinese_sha256": "d611181e38697987d5cfb804eadb35499edd3e7e6880c2f690da0933cd558d2c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_multi_heavy_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_multi_hits_grant_reload_speed.md",
@@ -3332,9 +3373,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6571d337f75c67ce9a6a574fd2ec09b5e272fee0",
       "chinese_sha256": "48f2c1b4c2b7e0e24092a92a0c715a4792dcbdc2f6e2d8ab9c1f2fbb03857aa3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_reload_speed_on_empty"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_reloading_grants_damage.md",
@@ -3394,9 +3442,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b41ad094eaae3e727a0ff137f9121985c9d62ba5",
       "chinese_sha256": "79efde4d32b70193c89aa5b3ff1967963f749f7aae93c31c179c1a99d37c0896",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_single_heavy_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo.md",
@@ -12303,6 +12358,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md"
+    },
+    {
+      "id": "ogryn_multi_heavy_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_multi_heavy_toughness.md"
+    },
+    {
+      "id": "ogryn_single_heavy_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_single_heavy_toughness.md"
+    },
+    {
+      "id": "ogryn_increased_coherency_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_increased_coherency_toughness.md"
+    },
+    {
+      "id": "ogryn_reload_speed_on_empty",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_reload_speed_on_empty.md"
+    },
+    {
+      "id": "ogryn_more_hits_more_damage",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_more_hits_more_damage.md"
     }
   ],
   "pending_chinese_corrections": [
