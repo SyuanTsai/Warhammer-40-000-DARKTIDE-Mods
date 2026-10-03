@@ -62,3 +62,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Pacemaker](ogryn_multi_hits_grant_reload_speed.md) / `ogryn_multi_hits_grant_reload_speed` | Talent |
 | [Found Some More](ogryn_free_reload_after_ability.md) / `ogryn_free_reload_after_ability` | Talent |
 | [Won't Give In](ogryn_knocked_allies_grant_damage_reduction.md) / `ogryn_knocked_allies_grant_damage_reduction` | Talent |
+| [Crunch!](ogryn_fully_charged_attacks_gain_damage_and_stagger.md) / `ogryn_fully_charged_attacks_gain_damage_and_stagger` | Talent |

@@ -60,6 +60,7 @@
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="Pacemaker talent icon"> [Pacemaker](#ogryn_multi_hits_grant_reload_speed) | <ul><li>Hit at least 3 different enemies within about 0.5s for +15% Reload Speed on the next reload. English instead says a single attack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="Found Some More talent icon"> [Found Some More](#ogryn_free_reload_after_ability) | <ul><li>Replenish 1% of maximum ammo reserve about every 15s; no ability use or reload required.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="Won't Give In talent icon"> [Won't Give In](#ogryn_knocked_allies_grant_damage_reduction) | <ul><li>Each ally needing help less than 20m away grants 20% damage reduction, up to three allies in a standard team.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="Crunch! talent icon"> [Crunch!](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | <ul><li>Charging a heavy attack builds up to +30% melee damage and Impact across four stacks; the bonus ends after that sweep.</li></ul> | Talent |
 
 ## Blitz
 
@@ -924,3 +925,21 @@
 - **Damage-reduction example**: With 1, 2 or 3 qualifying allies, damage of 100 at this stage becomes 80, 60 or 40. Three allies give `100 × (1 − 3 × 20%) = 40`.
 
 [Details](ogryn_knocked_allies_grant_damage_reduction.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_fully_charged_attacks_gain_damage_and_stagger"></a>
+
+### Crunch!
+
+<img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="72" height="72" alt="Crunch! talent icon">
+
+- **Charge bonus**: Charging a heavy attack builds up to 4 stacks, each granting +7.5% melee damage and Impact. Charging until the attack is automatically released fills the stacks.
+
+- **Duration**: The bonus applies to that sweep and is removed when it finishes. The first stack's timing depends on the weapon's windup action; subsequent stacks normally arrive every 0.25s. Timing does not start from the button press for every weapon.
+
+- **Damage example**: Four stacks grant `4 × 7.5% = 30%`. Base damage of 100 becomes 130 without other bonuses, or `100 × (1 + 20% + 30%) = 150` with an existing +20% at the same stage.
+
+- **Impact example**: Base Impact of 100 becomes 130 at full stacks. Whether the enemy staggers still depends on its threshold; Impact is not itself damage.
+
+[Details](ogryn_fully_charged_attacks_gain_damage_and_stagger.md) · [Back to index](#talent-index)

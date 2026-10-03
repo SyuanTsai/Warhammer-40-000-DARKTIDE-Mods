@@ -720,6 +720,18 @@ Full raw template and formatting: [source evidence](ogryn_knocked_allies_grant_d
 | Per-ally reduction and range | +20% Damage Reduction for each Knocked Down or Incapacitated Ally within 20 metres.; `ui / loc_talent_ogryn_tanky_with_downed_allies_desc / 3845cefa` | Other valid player units with PlayerUnitStatus.requires_help and squared distance < 20² each contribute 20% reduction. [Fixed source and line references](ogryn_knocked_allies_grant_damage_reduction.md#fixed-source-evidence) | Consistent | The independently read English matches the per-ally value and nearby-help condition; it does not limit the bonus to Coherency. |
 | Help states, updates and calculation | No exhaustive help-state list, strict boundary, update interval or stacking formula is stated.; `ui / loc_talent_ogryn_tanky_with_downed_allies_desc / 3845cefa` | Checks every 0.1s. count / 3 interpolates damage_taken_multiplier from 1 to 0.4, with up to three other players in a standard team. Downed, disabled and ledge-hanging allies qualify; rescue or leaving range removes their contribution. Base 100 becomes 80, 60 or 40 for one, two or three. [Fixed source and line references](ogryn_knocked_allies_grant_damage_reduction.md#fixed-source-evidence) | Not covered by the description | These accepted status, boundary and calculation details supplement the English conditions. |
 
+
+<a id="ogryn_fully_charged_attacks_gain_damage_and_stagger"></a>
+
+## Crunch!
+
+Full raw template and formatting: [source evidence](ogryn_fully_charged_attacks_gain_damage_and_stagger.md#original-english-template-and-reconstruction). Name hash `43e35dc2`. Every row uses `ui / loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc / d8632c1b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge-dependent damage and Impact | Up to +30% Damage bonus & +30% Impact bonus to your charged Melee Attack, based on charge time.; `ui / loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc / d8632c1b` | The active windup parent/child builds four stacks, each adding 0.075 melee_damage and melee_impact_modifier, for maxima of 30% each. [Fixed source and line references](ogryn_fully_charged_attacks_gain_damage_and_stagger.md#fixed-source-evidence) | Consistent | The independently read English matches the current gradual bonuses and their maxima. |
+| Stack timing, sweep lifetime and calculations | No first-trigger rule, stack interval, automatic completion or additive formula is stated.; `ui / loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc / d8632c1b` | ActionWindup uses latest_chain_time for the first trigger, then normally 0.25s intervals. auto_completed fills four stacks at sweep start; sweep_finish removes them. Base damage 100 becomes 130, or 150 with another same-stage +20%. Impact 100 becomes 130; enemy thresholds still determine stagger. [Fixed source and line references](ogryn_fully_charged_attacks_gain_damage_and_stagger.md#fixed-source-evidence) | Not covered by the description | These accepted timing and calculation details supplement the charge-time wording; Impact remains separate from damage. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **78 Consistent**, **4 Explicit contradictions**, **104 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
