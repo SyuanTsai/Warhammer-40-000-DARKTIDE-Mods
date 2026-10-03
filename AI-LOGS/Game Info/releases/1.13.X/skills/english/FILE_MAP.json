@@ -5676,7 +5676,8 @@
       "accepted_skill_ids": [
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
-        "veteran_cover_peeking"
+        "veteran_cover_peeking",
+        "veteran_frag_grenade"
       ],
       "checks": []
     },
@@ -5768,7 +5769,8 @@
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
-        "veteran_cover_peeking"
+        "veteran_cover_peeking",
+        "veteran_frag_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5873,7 +5875,8 @@
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
-        "veteran_cover_peeking"
+        "veteran_cover_peeking",
+        "veteran_frag_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6080,7 +6083,8 @@
         "veteran_improved_tag_dead_coherency_bonus",
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
-        "veteran_cover_peeking"
+        "veteran_cover_peeking",
+        "veteran_frag_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6967,9 +6971,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b64bcce254b5d2613010e10dea646783e651a025",
       "chinese_sha256": "3520f7436e1dfc2c6453f8343ac2e5d61c327d9c7086efce4c961f4f55625380",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_frag_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_frag_grenade.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_grenade_apply_bleed.md",
@@ -9783,6 +9794,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_cover_peeking.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_cover_peeking.md"
+    },
+    {
+      "id": "veteran_frag_grenade",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_frag_grenade.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_frag_grenade.md"
     }
   ],
   "pending_chinese_corrections": [

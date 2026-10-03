@@ -37,3 +37,15 @@ These effects are provided by the class base configuration. The equipped Blitz a
 [Source evidence and example assumptions](veteran_cover_peeking.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_cover_peeking) | [Back to talents](README.md)
 
 ---
+
+<a id="veteran_frag_grenade"></a>
+
+## Frag Grenade
+
+- Carry 3 Frag Grenades. A thrown grenade detonates after approximately 1.7s. The blast radius is 10m, with a 2m high-damage centre and damage falloff toward the edge.
+- With no other bonuses or hit-location modifiers, the central blast has 500 base damage against an Unarmoured target. Its Carapace Armour multiplier is 0.2, giving `500 × 0.2 = 100 damage`.
+- Shredder Frag Grenade adds Bleed to qualifying explosion hits. Krak Grenade or Smoke Grenade replaces the equipped grenade type. The base Frag Grenade has no built-in Bleed effect.
+
+[Source evidence and example assumptions](veteran_frag_grenade.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_frag_grenade) | [Back to talents](README.md)
+
+---

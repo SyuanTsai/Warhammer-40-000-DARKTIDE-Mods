@@ -93,3 +93,4 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Scavenger](veteran_aura_gain_ammo_on_elite_kill.md) / `veteran_aura_gain_ammo_on_elite_kill` | Base aura |
 | [Guardsman](veteran_base_ranged_damage.md) / `veteran_base_ranged_damage` | Base passive |
 | [Low Profile](veteran_cover_peeking.md) / `veteran_cover_peeking` | Base cover-peeking rule |
+| [Frag Grenade](veteran_frag_grenade.md) / `veteran_frag_grenade` | Base Blitz |

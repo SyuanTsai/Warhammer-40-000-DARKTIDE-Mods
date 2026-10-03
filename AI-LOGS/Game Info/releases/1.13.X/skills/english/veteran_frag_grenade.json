@@ -1,0 +1,33 @@
+{
+  "id": "veteran_frag_grenade",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name": "Frag Grenade",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_frag_grenade.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_frag_grenade.md",
+  "text_resource": "SteamBuild_25606770_1.13.1 / content/localization/ui / en",
+  "name_key": "loc_ability_frag_grenade",
+  "name_hash": "86bb6780",
+  "description_key": "loc_ability_frag_grenade_description",
+  "description_hash": "b3fb3c94",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_english_comparison": {
+      "Consistent": 1,
+      "Explicit contradiction": 0,
+      "Not covered by the description": 4,
+      "No corresponding implementation evidence found": 0,
+      "Cannot confirm": 0
+    },
+    "added_markdown_fragments": "parsed",
+    "added_local_references": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed"
+  },
+  "evidence_mode": "Reuse accepted mechanisms, citations and formatting; no call-chain retracing.",
+  "new_code_reads": [],
+  "questions": [],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_frag_grenade.md"
+}
