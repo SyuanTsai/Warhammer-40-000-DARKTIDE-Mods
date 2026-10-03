@@ -96,3 +96,9 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Bruiser](ogryn_ally_elite_kills_grant_cooldown.md) / `ogryn_ally_elite_kills_grant_cooldown` | Talent |
 | [Strike True](ogryn_weakspot_damage.md) / `ogryn_weakspot_damage` | Talent |
 | [Mobile Emplacement](ogryn_bracing_reduces_damage_taken.md) / `ogryn_bracing_reduces_damage_taken` | Talent |
+
+## Base effects
+
+| Base effect / identifier | Category |
+|---|---|
+| [Bull Rush](ogryn_charge.md) / `ogryn_charge` | Base effect |

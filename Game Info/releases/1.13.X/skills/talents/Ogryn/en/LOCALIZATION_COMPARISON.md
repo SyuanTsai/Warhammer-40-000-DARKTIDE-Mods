@@ -1129,6 +1129,19 @@ Full raw template and formatting: [source evidence](ogryn_bracing_reduces_damage
 | Conditional damage reduction | You take 25% reduced Damage while bracing or shooting a Ranged Weapon.; `ui / loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc / 7467e28d` | Conditional damage_taken_multiplier 0.75 applies while braced or shooting, without an incoming attack-type restriction. [Fixed source and line references](ogryn_bracing_reduces_damage_taken.md#fixed-source-evidence) | Consistent | The independently read English matches the conditions, scope and reduction. |
 | State retention and combined reduction | No shooting grace, stacks, cooldown or combined formula is stated.; `ui / loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc / 7467e28d` | The condition also accepts t <=end +0.5, without extra stacks or fixed cooldown. Damage 100 ×0.75 =75, or 60 with another independent 20% reduction. [Fixed source and line references](ogryn_bracing_reduces_damage_taken.md#fixed-source-evidence) | Not covered by the description | These accepted condition and calculation details supplement the English. |
 
+
+<a id="ogryn_charge"></a>
+
+## Bull Rush (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_charge.md#original-english-template-and-reconstruction). Name hash `80d4e4d1`. Every row uses `ui / loc_ability_ogryn_charge_description_new / 8e6bf564`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge and bonus values | Charge forward, knocking back and Staggering enemies; gain 25% Attack Speed and 25% Movement Speed for 5s. Base Cooldown: 25s.; `ui / loc_ability_ogryn_charge_description_new / 8e6bf564` | ogryn_charge has 25s cooldown; on_lunge_end grants melee_attack_speed 0.25 and movement_speed 0.25 for 5s. [Fixed source and line references](ogryn_charge.md#fixed-source-evidence) | Consistent | The independently read English agrees with the charge and bonus values; its unqualified Attack Speed wording does not explicitly promise a ranged bonus. |
+| Stop-category equivalence | Charge is stopped on collision with Carapace Armoured Enemies, Unyielding Enemies and Monstrosities.; `ui / loc_ability_ogryn_charge_description_new / 8e6bf564` | Accepted stopping armour types are super_armor /void_shield /resistant. [Fixed source and line references](ogryn_charge.md#fixed-source-evidence) | Cannot confirm | The documents establish identifiers but do not fully map the English enemy categories to every stopping target; no new mechanism tracing was performed. |
+| Distance, cancellation and protection | No exact distance, cancellation timing, direct-damage amount or charge-protection formula is stated.; `ui / loc_ability_ogryn_charge_description_new / 8e6bf564` | Maximum 12m, terrain-limited; cancel by block after 0.5s or backwards movement after 0.8s. Collision/finish damage is zero. While lunging, damage_taken_multiplier 0.75 and melee_heavy_damage 0.5 apply; that heavy stat is not collision damage. After the charge, 1s/1.25 =0.8s and 5m/s ×1.25 =6.25m/s; charge-only damage 100 ×0.75 =75. [Fixed source and line references](ogryn_charge.md#fixed-source-evidence) | Not covered by the description | These accepted conditions, scopes and examples supplement the English; is_dodging alone does not guarantee all dodge passives. |
+
 ## Comparison totals
 
 The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
