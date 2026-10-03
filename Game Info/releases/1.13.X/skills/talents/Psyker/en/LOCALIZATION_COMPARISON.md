@@ -152,6 +152,18 @@ Full raw template and formatting: [source evidence](psyker_aura_crit_chance_aura
 | Recipients, stat and value | `You and Allies in Coherency gain +5% Critical Hit Chance`; `ui / loc_ability_psyker_gunslinger_aura_description / a2000c1d` | Self-inclusive Coherency grants `critical_strike_chance=0.05`; shared calculation adds it to archetype base chance and relevant bonuses. [Fixed source and line references](psyker_aura_crit_chance_aura.md#fixed-source-evidence) | Consistent | Beneficiaries, affected stat and additive magnitude agree. |
 | Percentage points, caps and damage distinction | No stack cap, chance clamp, example or Critical Damage bonus stated; `ui / loc_ability_psyker_gunslinger_aura_description / a2000c1d` | Maximum 1 stack; chance clamps to 0–1. A 10% baseline becomes 15% rather than 10.5%; the effect increases chance, not Critical Damage. [Fixed source and line references](psyker_aura_crit_chance_aura.md#fixed-source-evidence) | Not covered by the description | These calculation/stack limits and the stat distinction supplement the English. |
 
+
+<a id="psyker_shout_vent_warp_charge"></a>
+
+## Venting Shriek
+
+Full raw template and formatting: [source evidence](psyker_shout_vent_warp_charge.md#original-english-template-and-reconstruction). Name hash `90f1bcf1`. Every row uses `ui / loc_talent_psyker_shout_vent_warp_charge_description / 7d4501be`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Effects, value and cooldown | Forward wave Staggers Enemies; `Quells 50% Peril`; `Base Cooldown: 30s`; augmented Psykinetic's Wrath; `ui / loc_talent_psyker_shout_vent_warp_charge_description / 7d4501be` | The improved shout immediately removes 0.5 from normalized Peril and uses a 30-second base cooldown; forward targets receive the shout effect. [Fixed source and line references](psyker_shout_vent_warp_charge.md#fixed-source-evidence) | Consistent | The stated effects and base values agree; the Quell wording does not claim multiplication of current Peril. |
+| Calculation, targeting and event order | No percentage-point examples, clamp, angle/range filter or event order stated; `ui / loc_talent_psyker_shout_vent_warp_charge_description / 7d4501be` | `current_percentage - 0.5` clamps to 0–1; 80% becomes 30%, 40% becomes 0%. Direction, angle and range filter targets, with a nearby exception; `on_combat_ability` precedes Quell. [Fixed source and line references](psyker_shout_vent_warp_charge.md#fixed-source-evidence) | Not covered by the description | These calculation and execution details supplement the English. |
+
 ## Comparison totals
 
 The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

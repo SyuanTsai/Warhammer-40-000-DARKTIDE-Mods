@@ -23,3 +23,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kinetic Presence](psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | Aura |
 | [Seer's Presence](psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | Aura |
 | [Prescience](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | Aura |
+| [Venting Shriek](psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | Ability |
