@@ -5705,7 +5705,8 @@
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
-        "veteran_combat_ability_ranged_roamer_outlines"
+        "veteran_combat_ability_ranged_roamer_outlines",
+        "veteran_combat_ability_ogryn_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5751,7 +5752,8 @@
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
-        "veteran_combat_ability_ranged_roamer_outlines"
+        "veteran_combat_ability_ranged_roamer_outlines",
+        "veteran_combat_ability_ogryn_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5797,7 +5799,8 @@
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
-        "veteran_combat_ability_ranged_roamer_outlines"
+        "veteran_combat_ability_ranged_roamer_outlines",
+        "veteran_combat_ability_ogryn_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5843,7 +5846,8 @@
         "veteran_combat_ability_stance",
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
-        "veteran_combat_ability_ranged_roamer_outlines"
+        "veteran_combat_ability_ranged_roamer_outlines",
+        "veteran_combat_ability_ogryn_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6154,9 +6158,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "57f75c3d2c6cb39c3a1217ecec8f546ae7c87248",
       "chinese_sha256": "5c0bde783a13353a2299f0c04be3f6c7583fa4f248ff7be3bb44d62d916692e5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_ogryn_outlines"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_ranged_roamer_outlines.md",
@@ -8180,7 +8195,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ranged_roamer_outlines.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ranged_roamer_outlines.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ranged_roamer_outlines.md",
+      "commit": "2a56660a69c57e25aa3e2d3047cb43875c68691f"
+    },
+    {
+      "id": "veteran_combat_ability_ogryn_outlines",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ogryn_outlines.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md"
     }
   ],
   "pending_chinese_corrections": [

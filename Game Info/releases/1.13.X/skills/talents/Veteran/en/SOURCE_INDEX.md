@@ -15,6 +15,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Executioner's Stance](veteran_combat_ability_elite_and_special_outlines.md) / `veteran_combat_ability_elite_and_special_outlines` | Combat ability |
 | [Enhanced Target Priority](veteran_combat_ability_coherency_outlines.md) / `veteran_combat_ability_coherency_outlines` | Ability modifier |
 | [Counter-Fire](veteran_combat_ability_ranged_roamer_outlines.md) / `veteran_combat_ability_ranged_roamer_outlines` | Ability modifier |
+| [The Bigger they Are ...](veteran_combat_ability_ogryn_outlines.md) / `veteran_combat_ability_ogryn_outlines` | Ability modifier |
 | [Hunter's Resolve](veteran_toughness_bonus_leaving_invisibility.md) / `veteran_toughness_bonus_leaving_invisibility` | Ability modifier |
 | [Tactical Awareness](veteran_elite_kills_reduce_cooldown.md) / `veteran_elite_kills_reduce_cooldown` | Ability modifier |
 | [Voice of Command](veteran_combat_ability_stagger_nearby_enemies.md) / `veteran_combat_ability_stagger_nearby_enemies` | Combat ability |

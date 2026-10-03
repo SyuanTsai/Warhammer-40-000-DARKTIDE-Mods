@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="Executioner's Stance talent icon"> [Executioner's Stance](#veteran_combat_ability_elite_and_special_outlines) | <ul><li>Upgrade base ranged damage and extra weakspot modifiers to 25% each, and ranged impact to 100%.</li><li>Six-second stance; replenish 10% of maximum Toughness per second. Outline eligible Elites and Specialists; qualifying kills refresh the stance.</li><li>30-second base cooldown; retained handling improvements.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="Enhanced Target Priority talent icon"> [Enhanced Target Priority](#veteran_combat_ability_coherency_outlines) | <ul><li>When the stance starts or refreshes, grant allies then in Coherency a five-second Elite/Specialist outline effect.</li><li>Recipient-relative Elite range is strictly less than 50m; Specialists bypass this limit. Additional shooter/large-enemy outlines are not shared.</li><li>Reapplication refreshes one instance; late entrants wait for the next grant.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="32" height="32" alt="Counter-Fire talent icon"> [Counter-Fire](#veteran_combat_ability_ranged_roamer_outlines) | <ul><li>Add eligible shooter and stalker types to Executioner's Stance outlines; ordinary candidates must be less than 50m away.</li><li>Owner kills of added eligible types also refresh the selected stance duration: normally 6s, or 9s with the large-enemy modifier.</li><li>No additional weakspot-damage bonus is supplied by this modifier.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="32" height="32" alt="The Bigger they Are ... talent icon"> [The Bigger they Are ...](#veteran_combat_ability_ogryn_outlines) | <ul><li>Increase each Executioner's Stance duration from 6s to 9s and add Ogryn, Captain and Monstrosity outline categories.</li><li>Qualifying owner kills refresh the full nine-second stance. Ordinary outline candidates remain strictly within 50m.</li><li>The modifier does not supply an additional species-damage bonus; shared ally outlines remain a separate effect.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="Tactical Awareness talent icon"> [Tactical Awareness](#veteran_elite_kills_reduce_cooldown) | <ul><li>Specialist Enemy kills grant 3 seconds of extra combat ability recovery: one additional baseline cooldown second per second.</li><li>Further qualifying kills refresh the duration while keeping the tick cadence; the recovery rate does not stack.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="32" height="32" alt="Voice of Command talent icon"> [Voice of Command](#veteran_combat_ability_stagger_nearby_enemies) | <ul><li>Shout to apply stagger to enemies within 9 metres and immediately replenish all of your missing Toughness.</li><li>Base cooldown: 40 seconds, starting on use. Individual enemy reactions can vary.</li></ul> | Combat ability |
@@ -346,6 +347,27 @@ These times are resource-model calculations. Fixed updates and rounding can shif
 [Details and source evidence](veteran_combat_ability_extra_charge.md) · [Back to index](#talent-index)
 
 ## Keystones
+
+<a id="veteran_combat_ability_ogryn_outlines"></a>
+
+<img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="72" height="72" alt="The Bigger they Are ... talent icon">
+
+### The Bigger they Are ...
+
+- Increase Executioner's Stance's full duration from **6 to 9 seconds**, and add **Ogryn, Captain and Monstrosity** outline categories, including Cultist Captains.
+- At activation or candidate refresh, ordinary non-Special targets must be **less than 50 metres** away. Specialists bypass this distance filter.
+- Your qualifying kills of the added eligible types **reset the stance to a full nine seconds**, without requiring an actual visible outline or another distance test.
+- This modifier does not supply an additional damage bonus against these enemy categories. Enhanced Target Priority's shared ally outlines still use their separate **five-second**, Elite/Special effect; the extra large-enemy categories are not shared by it.
+
+**Duration, refresh and range examples**
+
+- The nominal duration gains `9 − 6 = 3 seconds`, or `3 / 6 = 50%` more time. This is a duration comparison, not a damage increase.
+- Activate at time 0 and make a qualifying kill at 7s: the remaining `9 − 7 = 2s` resets to nine, so expiry becomes about `7 + 9 = 16s`. Assume no later refresh and ignore frame/visual offsets.
+- An ordinary eligible large enemy at 49m passes `49² / 50² = 0.9604 < 1`; exactly 50m gives `1` and fails the strict boundary. A Specialist bypasses this test.
+
+[Detailed sources and formulas](veteran_combat_ability_ogryn_outlines.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_combat_ability_ogryn_outlines) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_snipers_focus"></a>
 
