@@ -9,6 +9,7 @@
 | Talent | Main effects | Category |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="Grenadier talent icon"> [Grenadier](#veteran_extra_grenade) | <ul><li>Carry one extra grenade: base capacity 3 → 4 without other capacity changes.</li><li>Each throw has a 20% chance to produce one additional grenade while consuming only one charge; applies to all three Veteran grenade types.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="32" height="32" alt="Grenade Tinkerer talent icon"> [Grenade Tinkerer](#veteran_improved_grenades) | <ul><li>Shredder Frag Grenade: +25% explosion damage and radius; the bonus does not increase bleed damage.</li><li>Krak Grenade: +75% explosion damage.</li><li>Smoke Grenade: +100% smoke duration, normally 15s → 30s with this modifier alone.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
@@ -56,6 +57,27 @@
 The extra projectile has a slightly offset direction and a base-fuse override delayed by 0.3 seconds. Actual Krak collision-fuse timing follows its separate grenade rules.
 
 [Detailed sources and formulas](veteran_extra_grenade.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_extra_grenade) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_improved_grenades"></a>
+
+<img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="72" height="72" alt="Grenade Tinkerer talent icon">
+
+### Grenade Tinkerer
+
+- **Shredder Frag Grenade:** +25% explosion damage and explosion radius; its bleed damage does not receive this explosion bonus.
+- **Krak Grenade:** +75% explosion damage.
+- **Smoke Grenade:** +100% smoke duration.
+
+**Grenade upgrade examples**
+
+- Isolate this talent with armor, distance/falloff and other damage components fixed. At the affected damage stage, a 500-unit Frag explosion input becomes `500 × 1.25 = 625 damage units`; a 2,400-unit Krak input becomes `2,400 × 1.75 = 4,200 damage units`.
+- With no other radius modifiers, Frag inner and outer radii change from `2m → 2 × 1.25 = 2.5m` and `10m → 10 × 1.25 = 12.5m`.
+- With no other duration modifiers, Smoke lasts `15 × 2 = 30 seconds`; +100% means twice the duration.
+- Holding bleed stacks, armor and other modifiers fixed, a separate 100-unit bleed result remains 100 under this explosion modifier. Actual damage still depends on the enemy and other damage stages.
+
+[Detailed sources and formulas](veteran_improved_grenades.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_grenades) | [Back to index](#talent-index)
 
 ---
 

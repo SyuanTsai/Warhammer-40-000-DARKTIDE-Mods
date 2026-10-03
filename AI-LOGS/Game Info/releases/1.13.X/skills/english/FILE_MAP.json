@@ -5709,7 +5709,8 @@
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
         "veteran_reduce_swap_time",
-        "veteran_extra_grenade"
+        "veteran_extra_grenade",
+        "veteran_improved_grenades"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5759,7 +5760,8 @@
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
         "veteran_reduce_swap_time",
-        "veteran_extra_grenade"
+        "veteran_extra_grenade",
+        "veteran_improved_grenades"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5809,7 +5811,8 @@
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
         "veteran_reduce_swap_time",
-        "veteran_extra_grenade"
+        "veteran_extra_grenade",
+        "veteran_improved_grenades"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5859,7 +5862,8 @@
         "veteran_combat_ability_ogryn_outlines",
         "veteran_attack_speed",
         "veteran_reduce_swap_time",
-        "veteran_extra_grenade"
+        "veteran_extra_grenade",
+        "veteran_improved_grenades"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6446,9 +6450,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6cdbbfd3162fcef2615d8dd055f3887b9eaee537",
       "chinese_sha256": "e09298ff82de5a5e333b1111d21b73928235960057b4f6534ece978540bf4504",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_improved_grenades"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag.md",
@@ -8276,7 +8291,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_extra_grenade.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_extra_grenade.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_extra_grenade.md",
+      "commit": "6d57753f4b65053eb068a498e7dde6c3d139483f"
+    },
+    {
+      "id": "veteran_improved_grenades",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_grenades.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_grenades.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -167,5 +167,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/grenadier-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_extra_grenade.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_extra_grenade.md",
+  "commit": "6d57753f4b65053eb068a498e7dde6c3d139483f"
 }
