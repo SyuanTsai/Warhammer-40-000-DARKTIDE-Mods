@@ -169,3 +169,5 @@
 - 破片四濺本機Commit：`cd5cd1ed6539671b220904712ac50149b7ad676f`。
 
 - [精確型號restriction盤點修正](2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json)：新增17變體、17型號關聯，盤點改為167名稱／605變體／1185關聯；交集外定義88，原58缺口保留。偏轉、掃射火力新增變體需補驗收；各機制仍逐祝福完成。
+
+- 精確型號restriction盤點修正本機Commit：`55a743f4d4f3d1fb84af457dc4e646f0e8a800df`。

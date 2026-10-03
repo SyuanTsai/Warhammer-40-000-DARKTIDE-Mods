@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "purpose": "共通機制證據快取；不替代逐祝福完整tier、wrapper、觸發、接線、RAW與型號限制核對。",
+  "records": [
+    {
+      "id": "proc-active-timer",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "start": 78,
+      "end": 104,
+      "content_sha256": "cd064abe2aa603a11ffa3643156c1db0e858e4b810cb8b2ea4d5e2fcba1eeebd",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L78-L104",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "效果以t < active_start_time + active_duration判斷；trait active_duration覆寫替換模板預設。",
+      "applicability": [
+        "使用ProcBuff且沒有duration或active override函式改變分支；每項仍核對自己的覆寫。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "proc-cooldown-retrigger",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "start": 173,
+      "end": 195,
+      "content_sha256": "bda8b528460ba404a1fb5b73595a7e919174b39fad565fc838868e0c0e8b7059",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L173-L195",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "沒有cooldown_duration時_can_activate直接通過；有冷卻時受active/cooldown及allow旗標控制。",
+      "applicability": [
+        "確認完整template及override沒有冷卻或另行覆寫；不能只依同名base推定。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "proc-keyword-condition",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "start": 247,
+      "end": 267,
+      "content_sha256": "fc7b28a463f6b192fcb170f0528a70e83f739d85f943415b667d1cad7d8b7085",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L247-L267",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "proc keywords只在active且conditional_proc_func通過時加入。",
+      "applicability": [
+        "適用ProcBuff.update_keywords；需核對本項是否有conditional及其實際條件。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "proc-event-refresh",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "start": 304,
+      "end": 355,
+      "content_sha256": "67a3a02a390089a217fd2203c8885ab495730a0771d7a8de87ccadcfa5b2c108",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L304-L355",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "事件先通過chance、conditional、can_activate及check_proc_func；非local的合格事件把active_start_time設為事件更新時間。",
+      "applicability": [
+        "確認本项class、predicted/local事件及事件payload；custom proc/時間延長仍各別核對。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "exact-item-match",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+      "start": 721,
+      "end": 727,
+      "content_sha256": "b70e7bbb3170894f3aebc0e331139efcceef19a6d75242fe0a984e931ef739ea",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L721-L727",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "on_item_match比較attacking_item.name與context.item.name。",
+      "applicability": [
+        "只有本項check實際呼叫此函式才套用；函式identifier引用不等於呼叫。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "held-slot-condition",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+      "start": 43,
+      "end": 59,
+      "content_sha256": "23f24a9375da44b47b41c983d2b0b5668bda0930a595788aaf34ec50fc2644ff",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/conditional_functions.lua#L43-L59",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "is_item_slot_wielded依context item slot與目前wielded slot判斷。",
+      "applicability": [
+        "須驗證本項父/子Buff是否各有此conditional；不代表切出清除時間或已附加目標debuff。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "attack-on-hit-payload",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/attack.lua",
+      "start": 577,
+      "end": 623,
+      "content_sha256": "9fcf94200790c45b0c70b74a5394894c12c8e4a021edfc36b64ebdfd48cf8bcd",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L577-L623",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "合格on_hit事件附attacking item/unit、attack result/type、hit world position及目標序號；受skip_on_hit_proc與damage-type等共同gate限制。",
+      "applicability": [
+        "確認實際Attack.execute呼叫送入item、type、profile、target_number；未驗證特殊動作不外推。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "trait-equip-target",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+      "start": 168,
+      "end": 210,
+      "content_sha256": "f053898c6fdfb70b130c2c972f68fb3cc1be16874dc2b7831be982726cffb631",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua#L168-L210",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "trait buff指定on_equip target，加入template及override資料。",
+      "applicability": [
+        "每項先驗證trait/wrapper及實際武器接線；另有特例target時重查。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "weapon-equip-install",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+      "start": 633,
+      "end": 693,
+      "content_sha256": "eccc5821f3fd364185a6e369863a99753d8082ba0eabb3e55e893435f582b06e",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L633-L693",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "equip安裝on_equip buffs；wield另處理on_wield及on_unwield。",
+      "applicability": [
+        "適用player weapon extension正常裝備流程；本項自身conditional仍决定切换是否作用。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "weapon-unwield-lifecycle",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+      "start": 743,
+      "end": 785,
+      "content_sha256": "173da35e12aec0b9b5d2488d8cef7616463f54f42fd0b9fb17f790e8924764d6",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L743-L785",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "unwield移除on_wield buffs並加入on_unwield，不把on_equip直接移除。",
+      "applicability": [
+        "只能證明trait仍裝備；是否保留效果、計時或keyword須结合本項class/conditional。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "consecutive-hit-counter",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/settings/buff/buff_utils.lua",
+      "start": 92,
+      "end": 114,
+      "content_sha256": "5bb80bae4411f320f3a472da99d22dd2ab4e2eb60fbe22000dfb08e964bea966",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_utils.lua#L92-L114",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "consecutive_hits_proc_func略過target_number>1；nil計數初次設0，其後加1，>1才刷新last_hit_time及層數進度。",
+      "applicability": [
+        "只在本項實際使用此函式時適用；target數值來源、class重置及計數間隔仍核對。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "target-parent-timeout",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua",
+      "start": 7,
+      "end": 88,
+      "content_sha256": "7e0b1eebb1bd50bd9c0b3a89d2e7f511ed5b6828ad244d58a40330069ffd79b6",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua#L7-L88",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "target-number parent依last_hit_time與child_duration清除額外子層，把命中計數設0並保留占位層。",
+      "applicability": [
+        "需本項class為此類且child/template未改；target_number/stack_offset/child_duration依本項核對。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "effective-stack-offset",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/buff.lua",
+      "start": 397,
+      "end": 429,
+      "content_sha256": "ef0c7a3a096baf53354687c1ec97593fb9835e4393ac73e5d8cb94a4f558747a",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L397-L429",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "有效stat層數使用內部stack_count與stack_offset換算。",
+      "applicability": [
+        "各項核對max_stacks、offset、child creation；不能把內部層數直接當玩家層數。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "conditional-stat-override",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/buff.lua",
+      "start": 689,
+      "end": 747,
+      "content_sha256": "e4da07a8e7c149e095853eae5e9ca1261c137b431b9244eb864e0a99d46e75de",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L747",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "conditional stat讀trait override並依有效層數及該stat類型結算。",
+      "applicability": [
+        "stat名稱、override路徑及stat類型必須於本項核對；不等於所有百分比都是最終傷害。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "stagger-strength-impact",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/stagger_calculation.lua",
+      "start": 67,
+      "end": 92,
+      "content_sha256": "75706fe7668017e3fc13b9f189e83e4018362db41f5a8f39f9204856d018b6cd",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stagger_calculation.lua#L67-L92",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "impact power參與踉蹌強度，仍乘入其他階段的impact修正。",
+      "applicability": [
+        "僅用於踉蹌impact中間階段；不能宣稱HP damage或最終踉蹌結果同比。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "melee-impact-pool",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/stagger_calculation.lua",
+      "start": 190,
+      "end": 204,
+      "content_sha256": "1a7ebb53a7ab7a659a554c75e51e97a9d21049fddfe3e7fa809cb94f5369a3dd",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stagger_calculation.lua#L190-L204",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "近戰impact modifier加入近戰踉蹌運算的相應修正池。",
+      "applicability": [
+        "須攻擊走近戰分支；其他修正及目標端條件按算例明列。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "stagger-duration-branch",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/stagger.lua",
+      "start": 376,
+      "end": 408,
+      "content_sha256": "9985602645544a4f201872e2c170cb149a57dcb50a3bf4f20f55b6bce2badc0e",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stagger.lua#L376-L408",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "一般duration以breed基礎時間乘一般stat後加profile修正；opt_in旗標改讀另一stat。",
+      "applicability": [
+        "本項改一般duration時必須區分opt-in profile；時間算例明列其他倍率及profile modifier。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "ranged-dodge-keyword",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua",
+      "start": 100,
+      "end": 121,
+      "content_sha256": "c13bcc709714c05069499e52e5b7c1bbcd9daaa46471d81ae51311798efff384",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua#L100-L121",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "玩家Dodge判定對ranged與count_as_dodge_vs_ranged keyword回傳true。",
+      "applicability": [
+        "只適用使用這個ranged Dodge判定的consumer；不是所有遠程傷害免疫。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "hitscan-undodgeable",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/attack/hit_scan.lua",
+      "start": 143,
+      "end": 198,
+      "content_sha256": "5adef309266ef759a68787fbfea25d041cf52c40b887d281386ee0c4d158deeb",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L143-L198",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "server hitscan對非undodgeable profile檢查Dodge；成功閃避阻止該段命中，undodgeable略過Dodge檢查。",
+      "applicability": [
+        "適用此hitscan consumer；sniper、beam、net、explosion等consumer不能類推。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "ui-name-composition",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/items.lua",
+      "start": 315,
+      "end": 327,
+      "content_sha256": "7f3a49740b8b66748fad51bf0cde05b2882dc6d3e64c8eef91f869777a3d6f32",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L315-L327",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "UI武器名由family、pattern、mark三項組成。",
+      "applicability": [
+        "每個實際型號仍精確配對三個loc_id的同hash RAW，不能採legacy display_name猜型號。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "ui-name-fields",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/items.lua",
+      "start": 378,
+      "end": 426,
+      "content_sha256": "a0c3a1df4d806b918bd83217ad6401930a35709ea252bc960b86928d452912f1",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L378-L426",
+      "review": "Sol / xhigh directly reviewed these fixed-source blocks during accepted blessings or current primary review; no inference from names/suffixes",
+      "conclusion": "UI組名讀MasterItems的family/pattern/mark欄位。",
+      "applicability": [
+        "metadata快取版本與Steam Build歸屬另記；不能由日期推定同版。"
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    }
+  ],
+  "cache_status": "common blocks reviewed; no blessing completion asserted",
+  "source_repository_read_only": true
+}
