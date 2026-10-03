@@ -61,3 +61,4 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [祝福完整剩餘清單與續作邊界](releases/1.13.X/blessings/2026-10-03-REMAINING.md)
 - [祝福完整說明入口與玩家用詞修正](releases/1.13.X/blessings/2026-10-03-PLAYER_WORDING_REVIEW.md)
 - [祝福專屬提示詞建立紀錄](plans/2026-10-03-BLESSINGS_WORKFLOW.md)
+- [祝福提示詞與玩家正文條列格式修正](releases/1.13.X/blessings/2026-10-03-BULLET_FORMAT_REVIEW.md)
