@@ -318,6 +318,7 @@
 - Executor - 行刑者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_weakspot_hits_increases_power`，hash `dd9dc2c9`；英文／繁中RAW配對確認。
 - Riposte - 還擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_grants_crit_chance`，hash `ce5b71c4`；英文／繁中RAW配對確認。
 - Precognition - 未卜先知
 - Haymaker - 強力一擊
 - Smackdown - 擊倒

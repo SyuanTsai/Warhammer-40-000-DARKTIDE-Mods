@@ -217,3 +217,9 @@
 - [集中火力](2026-10-03-CONCENTRATED-FIRE_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
 
 - [散彈](2026-10-03-SCATTERSHOT_ACCEPTANCE.json)：新增5變體、9型號關聯；共5變體、9關聯。
+
+- 第5輪三項已Commit後完整掃描通過：desperado (`1f7aadc73ea3d3ed3f503bce34f12055157fd402`)、concentrated-fire (`a905407a5e9bf585746e469d4cf3fadb5076b187`)、scattershot (`95d2a1a996d3620865c013cf1a3fca7db1e50ac4`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-005-full-scan.json`／SHA-256 `825c144d36a52ac3335e21c7a7b30392856d6036cac6a7566d1c1992c9404cc0`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- 2026-10-04明確續作：先核對暫停交接、HEAD、47項／178實作／339關聯、剩餘120項／427實作／846關聯及第005輪收據；恢復還擊、猛撞、燃起來！三組Luna／max。全部盤點完成是本輪目標，舊暫停不再適用；不執行production bootstrap，FASTER未確認啟用。接手核對收據：`AI-LOGS/Game Info/local/blessings/2026-10-03/2026-10-04-RESUME_AUDIT.json`。
+
+- [還擊](2026-10-03-RIPOSTE_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。

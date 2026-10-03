@@ -1183,6 +1183,22 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SCATTERSHOT_ACCEPTANCE.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL",
+      "kind": "plan",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

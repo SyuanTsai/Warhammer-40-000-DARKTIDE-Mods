@@ -636,6 +636,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
       "effect": "單發散彈命中至少兩個不同可受傷目標後，按目標數增加遠程爆擊率層數，最多五層。"
+    },
+    {
+      "id": "riposte",
+      "name_zh_tw": "還擊",
+      "name_en": "Riposte",
+      "name_key": "loc_trait_bespoke_dodge_grants_crit_chance",
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "name_hash": "ce5b71c4",
+      "description_hash": "33383fc4",
+      "page": "entries/還擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "effect": "成功閃避敵方攻擊後，爆擊率提高；一般變體依 I–IV 增加 12.5／15／17.5／20 個百分點，持續 6 秒。穿音速雙刀變體增加 10／12／14／16 個百分點，持續 4 秒。"
     }
   ],
   "weapons": [
@@ -935,26 +948,41 @@
         {
           "id": "combatsword_p3_m1",
           "item": "content/items/weapons/player/melee/combatsword_p3_m1",
-          "name": "馬卡比安Mk II決鬥劍",
-          "name_en": "Maccabian Mk II Duelling Sword",
+          "name": "決鬥劍 馬卡比安 Mk II",
+          "name_en": "Duelling Sword Maccabian Mk II",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
-          "trait_category": "bespoke_combatsword_p3"
+          "trait_category": "bespoke_combatsword_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p3_m1"
+          }
         },
         {
           "id": "combatsword_p3_m2",
           "item": "content/items/weapons/player/melee/combatsword_p3_m2",
-          "name": "馬卡比安Mk IV決鬥劍",
-          "name_en": "Maccabian Mk IV Duelling Sword",
+          "name": "決鬥劍 馬卡比安 Mk IV",
+          "name_en": "Duelling Sword Maccabian Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
-          "trait_category": "bespoke_combatsword_p3"
+          "trait_category": "bespoke_combatsword_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p3_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p3_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p3_m2"
+          }
         },
         {
           "id": "combatsword_p3_m3",
           "item": "content/items/weapons/player/melee/combatsword_p3_m3",
-          "name": "馬卡比安Mk V決鬥劍",
-          "name_en": "Maccabian Mk V Duelling Sword",
+          "name": "決鬥劍 馬卡比安 Mk V",
+          "name_en": "Duelling Sword Maccabian Mk V",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
-          "trait_category": "bespoke_combatsword_p3"
+          "trait_category": "bespoke_combatsword_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p3_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p3_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p3_m3"
+          }
         }
       ]
     },
@@ -1077,10 +1105,15 @@
         {
           "id": "transonic_sword_transonic_knife_p1_m1",
           "item": "content/items/weapons/player/melee/transonic_sword_transonic_knife_p1_m1",
-          "name": "西福爾穿音速刀刃",
-          "name_en": "Xiphor Transonic Blades",
+          "name": "穿音速雙刀 布蘭克斯 Mk XI",
+          "name_en": "Paired Transonic Blades Branx Mk XI",
           "template_file": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
-          "trait_category": "bespoke_transonic_sword_transonic_knife_p1"
+          "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_transonic_sword_transonic_knife_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_transonic_sword_transonic_knife_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_transonic_sword_transonic_knife_p1_m1"
+          }
         }
       ]
     },
@@ -12054,6 +12087,379 @@
       "icon": "https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_148",
       "effect": "衝覆者霰彈手槍和防暴盾牌的腰射與格擋中射擊都為散彈命中；盾牌近戰不是散彈事件，且加成只影響遠程爆擊率。 I–IV每層+6/+8/+10/+12個百分點，最多五層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "combatknife_p1_m1",
+          "combatknife_p1_m2"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "combatknife_p1"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 244,
+        "end_line": 293
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/還擊/weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "combatsword_p3_m1",
+          "combatsword_p3_m2",
+          "combatsword_p3_m3"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "combatsword_p3"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 184,
+        "end_line": 233
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/還擊/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "dual_shivs_p1_m1",
+          "dual_shivs_p1_m2"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "dual_shivs_p1"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 244,
+        "end_line": 293
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/還擊/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "forcesword_2h_p1_m1",
+          "forcesword_2h_p1_m2"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "forcesword_2h_p1"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 400,
+        "end_line": 449
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/還擊/weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "forcesword_p1_m1",
+          "forcesword_p1_m2",
+          "forcesword_p1_m3"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "forcesword_p1"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 323,
+        "end_line": 372
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "riposte",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/還擊/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance",
+        "actual_mark_ids": [
+          "transonic_sword_transonic_knife_p1_m1"
+        ],
+        "tier_bonus_percentage_points": {
+          "I": 10,
+          "II": 12,
+          "III": 14,
+          "IV": 16
+        },
+        "tier_proc_stat_buffs_fraction": [
+          0.1,
+          0.12,
+          0.14,
+          0.16
+        ],
+        "active_duration_seconds_by_tier": {
+          "I": 4,
+          "II": 4,
+          "III": 4,
+          "IV": 4
+        },
+        "proc_event": "on_successful_dodge",
+        "proc_chance": 1,
+        "allow_proc_while_active": true,
+        "cooldown": "none",
+        "conditional_proc": "is_item_slot_wielded",
+        "metadata_weapon_type_restriction": [
+          "transonic_sword_transonic_knife_p1"
+        ],
+        "metadata_weapon_template_restriction": []
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 60,
+        "end_line": 109
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "effect": "成功閃避敵方攻擊後，提高10／12／14／16個百分點的爆擊率，持續4秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
     }
   ],
   "bindings": [
@@ -16801,6 +17207,188 @@
         "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
         "import_line": 16,
         "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "riposte",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/dodge_grants_crit_chance",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]
