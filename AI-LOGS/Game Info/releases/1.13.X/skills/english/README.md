@@ -236,3 +236,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Blessed Armament](arbites_adamant_stance_ranged_kills_transfer_ammo.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Writ of Execution](arbites_adamant_stance_elite_kills_stack_damage.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Bloodlust](arbites_adamant_stance_dog_bloodlust.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

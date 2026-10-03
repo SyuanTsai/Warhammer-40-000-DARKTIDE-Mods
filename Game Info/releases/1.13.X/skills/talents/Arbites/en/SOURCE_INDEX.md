@@ -19,3 +19,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Castigator's Stance](adamant_stance.md) / `adamant_stance` | Ability |
 | [Blessed Armament](adamant_stance_ranged_kills_transfer_ammo.md) / `adamant_stance_ranged_kills_transfer_ammo` | Ability |
 | [Writ of Execution](adamant_stance_elite_kills_stack_damage.md) / `adamant_stance_elite_kills_stack_damage` | Ability |
+| [Bloodlust](adamant_stance_dog_bloodlust.md) / `adamant_stance_dog_bloodlust` | Ability |

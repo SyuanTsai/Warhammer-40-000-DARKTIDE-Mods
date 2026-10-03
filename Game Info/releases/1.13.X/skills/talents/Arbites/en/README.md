@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="Castigator's Stance talent icon"> [Castigator's Stance](#adamant_stance) | <ul><li>Replenish all Toughness on activation. For 10s, gain 15% Movement Speed and 20% Strength (PowerLevel), and take 70% less damage; cannot Sprint.</li><li>50s cooldown, one charge; damage reduction continues for 2s after the stance ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="Blessed Armament talent icon"> [Blessed Armament](#adamant_stance_ranged_kills_transfer_ammo) | <ul><li>During Castigator's Stance, ranged kills transfer 10% of Clip capacity from Reserve, rounded upward and capped by missing Clip ammunition.</li><li>The base stance lasts 10s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="Writ of Execution talent icon"> [Writ of Execution](#adamant_stance_elite_kills_stack_damage) | <ul><li>During Castigator's Stance, each Elite or Specialist kill grants +7.5% Damage for 12s, up to six stacks.</li><li>Full stacks give +45% Damage; acquired stacks can continue counting down after the stance ends.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="Bloodlust talent icon"> [Bloodlust](#adamant_stance_dog_bloodlust) | <ul><li>Activating Castigator's Stance gives your Cyber-Mastiff 75% more damage for the base stance duration of 10s.</li></ul> | Ability |
 
 ## Blitz
 
@@ -181,3 +182,15 @@
 - **Example**: Six stacks give `6 × 7.5% = 45%`. With base damage 100 and an existing +25% bonus in the same damage stage, `100 × (1 + 45% + 25%) = 170 damage`.
 
 [Details](adamant_stance_elite_kills_stack_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_stance_dog_bloodlust"></a>
+
+### Bloodlust
+
+<img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="72" height="72" alt="Bloodlust talent icon">
+
+- **Cyber-Mastiff damage**: Activating Castigator's Stance gives your Cyber-Mastiff +75% Damage for 10s.
+
+- **Damage example**: Isolating this bonus, your Cyber-Mastiff's base direct damage of 100 becomes `100 × (1 + 75%) = 175 damage`. With another same-stage 25% bonus, the result is `100 × (1 + 75% + 25%) = 200 damage`. This companion-damage bonus does not apply to Bleed damage.
+
+[Details](adamant_stance_dog_bloodlust.md) · [Back to index](#talent-index)

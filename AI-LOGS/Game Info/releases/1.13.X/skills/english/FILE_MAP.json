@@ -74,7 +74,8 @@
         "adamant_area_buff_drone_improved",
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
-        "adamant_stance_elite_kills_stack_damage"
+        "adamant_stance_elite_kills_stack_damage",
+        "adamant_stance_dog_bloodlust"
       ],
       "checks": []
     },
@@ -97,7 +98,8 @@
         "adamant_area_buff_drone_improved",
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
-        "adamant_stance_elite_kills_stack_damage"
+        "adamant_stance_elite_kills_stack_damage",
+        "adamant_stance_dog_bloodlust"
       ],
       "checks": []
     },
@@ -120,7 +122,8 @@
         "adamant_area_buff_drone_improved",
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
-        "adamant_stance_elite_kills_stack_damage"
+        "adamant_stance_elite_kills_stack_damage",
+        "adamant_stance_dog_bloodlust"
       ],
       "checks": []
     },
@@ -143,7 +146,8 @@
         "adamant_area_buff_drone_improved",
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
-        "adamant_stance_elite_kills_stack_damage"
+        "adamant_stance_elite_kills_stack_damage",
+        "adamant_stance_dog_bloodlust"
       ],
       "checks": []
     },
@@ -1068,9 +1072,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4f58391d9fe78b21bb41aa29bb5858aec9cf83f6",
       "chinese_sha256": "bf036418acbebf9101a9cc7d8dfbe9f5260998c44ab063ef263be9279e15ddb1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stance_dog_bloodlust"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_dog_bloodlust.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_elite_kills_stack_damage.md",
@@ -10059,6 +10070,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_elite_kills_stack_damage.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_elite_kills_stack_damage.md"
+    },
+    {
+      "id": "adamant_stance_dog_bloodlust",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_dog_bloodlust.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_dog_bloodlust.md"
     }
   ],
   "pending_chinese_corrections": [
