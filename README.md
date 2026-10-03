@@ -59,20 +59,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 29 September 2026, 8:40PM
-- MOD 版本：2.2.6
-- MOD 檔案名稱：Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：2026-10-02T16:41:57Z（Nexus API 原文；Asia/Taipei：2026-10-03 00:41:57）
+- MOD 版本：2.2.7
+- MOD 檔案名稱：Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
+- 手動維護最後下載日期：2026-10-03
 - Nexus MOD ID: 510
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/510
-- Nexus page version: 2.2.6
-- Nexus last updated: 2026-09-29T12:40:00.0000000+00:00
-- Main file ID: 8529
-- Main file version: 2.2.6
-- Main file uploaded at UTC: 2026-09-29T12:40:00.0000000+00:00
-- Archive filename: Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
-- Archive size bytes: 40183
-- Archive SHA-256: 23d79c80f5bb27a1d41d2a0a10921ac4a815aaa6abb43b6ee36544dec4e7af97
+- Nexus page version: 2.2.7
+- Nexus last updated: 2026-10-02T16:41:57Z
+- Main file ID: 8705
+- Main file version: 2.2.7
+- Main file uploaded at UTC: 2026-10-02T16:41:57Z
+- Archive filename: Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
+- Archive size bytes: 41043
+- Archive SHA-256: 7ca6c80947a64085afc56bbe2e3375659b5eeeffb82cf1b00d7c4b84c3d9ac4a
 - Acquisition method: manual-queue
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
