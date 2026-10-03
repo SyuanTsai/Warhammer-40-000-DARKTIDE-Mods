@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="32" height="32" alt="Lock and Load talent icon"> [Lock and Load](#veteran_clip_size) | <ul><li>Increase magazine capacity by 25%; fractional rounds are rounded down.</li><li>Does not directly increase maximum reserve ammo.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="Tactical Reload talent icon"> [Tactical Reload](#veteran_faster_reload_on_non_empty_clips) | <ul><li>Start reloading with ammo in the magazine to gain +25% Reload Speed for that reload.</li><li>An empty-magazine start does not activate this bonus.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="Volley Adept talent icon"> [Volley Adept](#veteran_reload_speed_on_elite_kill) | <ul><li>Kill an Elite or Specialist enemy to gain +30% Reload Speed for the next reload.</li><li>Repeated kills do not bank extra reload uses; the bonus remains through the consuming reload.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/cc7841b0-9637-4d35-8bca-c2c418798875" width="32" height="32" alt="Rending Strikes talent icon"> [Rending Strikes](#veteran_rending_bonus) | <ul><li>Gain 10% Rending for all weapons.</li><li>Armor-dependent damage gains vary; unarmoured targets receive no Rending armor adjustment.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -722,6 +723,28 @@ Weapon-specific phases and interruptions can change the complete reload sequence
 These calculations isolate a speed-affected action; weapon-specific phases and the ammo-insertion point can change the complete reload sequence.
 
 [Detailed sources and formulas](veteran_reload_speed_on_elite_kill.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reload_speed_on_elite_kill) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_rending_bonus"></a>
+
+<img src="https://github.com/user-attachments/assets/cc7841b0-9637-4d35-8bca-c2c418798875" width="72" height="72" alt="Rending Strikes talent icon">
+
+### Rending Strikes
+
+- Your weapons gain **10% Rending**.
+- Rending improves damage against affected armor types. Unarmoured targets receive no adjustment from this Rending armor effect.
+- The gain depends on the weapon’s original armor damage modifier and existing Rending; it does not mean a fixed 10% increase to the whole hit.
+
+**Armor-stage damage examples**
+
+Assume a noncritical, non-weakspot hit with 100 damage before armor, a Carapace target, no existing Rending and no other bonuses or later multipliers.
+
+- At an original armor modifier of **0.50**: `100 × 0.50 = 50` becomes `100 × (0.50 + 0.10) = 60 damage`. The relative gain is **20%**.
+- At an original armor modifier of **1.00**, excess Rending contributes at one-quarter strength: `100 × (1 + 0.10 × 0.25) = 102.5 damage`, a **2.5%** gain.
+- Critical and weakspot hits add further damage components; these armor-only percentages do not give their complete hit increase.
+
+[Detailed sources and formulas](veteran_rending_bonus.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_rending_bonus) | [Back to index](#talent-index)
 
 ---
 
