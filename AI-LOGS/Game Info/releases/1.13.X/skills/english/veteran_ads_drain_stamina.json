@@ -119,5 +119,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/deadshot-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ads_drain_stamina.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ads_drain_stamina.md",
+  "commit": "fa36b0feb3f20b1b5062248e30baf34f1d2a819b"
 }

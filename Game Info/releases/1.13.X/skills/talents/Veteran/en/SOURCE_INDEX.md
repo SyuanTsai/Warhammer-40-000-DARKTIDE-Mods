@@ -67,6 +67,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Confirmed Kill](veteran_elite_kills_replenish_toughness.md) / `veteran_elite_kills_replenish_toughness` | Passive talent |
 | [Longshot](veteran_increased_damage_based_on_range.md) / `veteran_increased_damage_based_on_range` | Passive talent |
 | [Deadshot](veteran_ads_drain_stamina.md) / `veteran_ads_drain_stamina` | Passive talent |
+| [Duck and Dive](veteran_dodging_grants_stamina.md) / `veteran_dodging_grants_stamina` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |

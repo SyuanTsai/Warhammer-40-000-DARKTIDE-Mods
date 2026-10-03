@@ -67,6 +67,7 @@
 | <img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="32" height="32" alt="Confirmed Kill talent icon"> [Confirmed Kill](#veteran_elite_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill immediately restores 10% of maximum Toughness.</li><li>Each kill adds 2% of maximum Toughness per second for 10 seconds; independent effects can overlap.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="32" height="32" alt="Longshot talent icon"> [Longshot](#veteran_increased_damage_based_on_range) | <ul><li>Gain +10% ranged damage within 12.5 metres, rising to +25% total at 30 metres.</li><li>The middle-distance bonus follows a square-root curve; other damage bonuses affect the relative gain.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/e65e3909-4dac-413f-827d-f5db9138e5e2" width="32" height="32" alt="Deadshot talent icon"> [Deadshot](#veteran_ads_drain_stamina) | <ul><li>With Stamina remaining in ranged alternate fire: +25 percentage points critical chance, 60% less Sway, 19% less spread and 12% less recoil.</li><li>Spend 0.33 Stamina points per second and 0.1 per shooting event; bonuses end when Stamina is exhausted.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="32" height="32" alt="Duck and Dive talent icon"> [Duck and Dive](#veteran_dodging_grants_stamina) | <ul><li>Gain 5% movement speed continuously.</li><li>A successful ranged-attack dodge can restore 30% of maximum Stamina, at most once every 3 seconds; recovery is capped.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1324,6 +1325,25 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - A normalized Sway magnitude of 1 becomes `1 × 0.4 = 0.4`, a 60% reduction; this does not replace the separate 12% recoil reduction.
 
 [Detailed sources and formulas](veteran_ads_drain_stamina.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_ads_drain_stamina) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_dodging_grants_stamina"></a>
+
+<img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="72" height="72" alt="Duck and Dive talent icon">
+
+### Duck and Dive
+
+- **Gain 5% movement speed continuously.** This is not a temporary bonus after a dodge.
+- A successful ranged-attack dodge can restore **30% of maximum Stamina**, at most once every **3 seconds**. Simply starting a dodge does not itself restore Stamina.
+- Recovery cannot exceed your maximum Stamina.
+
+**Recovery and speed examples**
+
+- With maximum Stamina 6 and a qualifying dodge outside cooldown, the base recovery is `6 × 30% = 1.8 Stamina points`. If you already have 5, it restores only `6 − 5 = 1` point.
+- Assuming a starting movement speed of 5 metres/second and this talent alone, `5 × 1.05 = 5.25 metres/second`.
+
+[Detailed sources and formulas](veteran_dodging_grants_stamina.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_dodging_grants_stamina) | [Back to index](#talent-index)
 
 ---
 
