@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="Unleashed Brutality talent icon"> [Unleashed Brutality](#adamant_companion_focus_elite) | <ul><li>The Cyber-Mastiff favors Elite and Specialist Enemies and gains +25% Damage against them.</li><li>Target-selection scoring increases the priority of Elites and Specialists.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="32" height="32" alt="Writ of Judgement talent icon"> [Writ of Judgement](#adamant_terminus_warrant_improved_combined) | <ul><li>Spending a full 20 Melee Justice or Ranged Justice stacks grants +10% Melee and Ranged Attack Speed and +10 percentage points of Critical Hit Chance for 12s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="Man and Cyber-Mastiff talent icon"> [Man and Cyber-Mastiff](#adamant_toughness_regen_near_companion) | <ul><li>While within 8m of your Cyber-Mastiff, recover 5% of maximum Toughness per second.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#adamant_damage_after_reloading) | <ul><li>After reloading, gain 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -564,3 +565,15 @@
 - **Recovery example**: At maximum Toughness 100, no other recovery bonus and sufficient deficit, recover 100 × 5% = 5 points per second, or 15 points over 3s. If only 2 points are missing, only 2 can be restored.
 
 [Details](adamant_toughness_regen_near_companion.md) · [Back to index](#talent-index)
+
+<a id="adamant_damage_after_reloading"></a>
+
+### Withering Fire
+
+<img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="72" height="72" alt="Withering Fire talent icon">
+
+- **Trigger and refresh**: Completing a reload grants 15% Ranged Damage for 5s. Reloading again resets the duration; the damage bonus does not stack.
+
+- **Damage example**: Isolating this stage, base damage 100 becomes 100 × (1 + 15%) = 115. With an existing same-stage 25% bonus, 125 becomes 100 × (1 + 25% + 15%) = 140.
+
+[Details](adamant_damage_after_reloading.md) · [Back to index](#talent-index)
