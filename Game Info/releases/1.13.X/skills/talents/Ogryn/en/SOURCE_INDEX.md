@@ -20,3 +20,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Stay Close!](ogryn_toughness_regen_aura.md) / `ogryn_toughness_regen_aura` | Aura |
 | [Loyal Protector](ogryn_taunt_shout.md) / `ogryn_taunt_shout` | Combat ability |
 | [Indomitable](ogryn_longer_charge.md) / `ogryn_longer_charge` | Combat ability |
+| [Point-Blank Barrage](ogryn_special_ammo.md) / `ogryn_special_ammo` | Combat ability |

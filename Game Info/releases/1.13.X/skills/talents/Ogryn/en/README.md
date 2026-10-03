@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="Stay Close! talent icon"> [Stay Close!](#ogryn_toughness_regen_aura) | <ul><li>You and allies in Coherency gain +20% to eligible Toughness replenishment amounts.</li><li>The effect increases each eligible restoration; it does not start restoration itself or raise natural regeneration speed by 20%.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="32" height="32" alt="Loyal Protector talent icon"> [Loyal Protector](#ogryn_taunt_shout) | <ul><li>Taunt enemies within 12m for 15s, repeating at 3s and 6s.</li><li>Only the initial cast Staggers; base cooldown 50s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="Indomitable talent icon"> [Indomitable](#ogryn_longer_charge) | <ul><li>Charge up to 24m, stopping on a Monstrosity; base cooldown 25s.</li><li>For 5s after the charge ends, gain +25% Melee Attack Speed and Movement Speed.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="Point-Blank Barrage talent icon"> [Point-Blank Barrage](#ogryn_special_ammo) | <ul><li>Swap to and reload the ranged weapon; +25% Rate of Fire and +65% Reload Speed for 12s.</li><li>+15% Close Range Damage, halved braced slowdown, and 50% of counted ammunition returned at the end.</li><li>Base cooldown 60s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -192,3 +193,21 @@
 - **Charge protection**: Retain the base charge's 25% damage reduction while charging. Counting only this effect, 100 incoming damage becomes 75. Collision and the end impact do not directly deal Health damage; Bleed from Pulverise is calculated separately.
 
 [Details](ogryn_longer_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_special_ammo"></a>
+
+### Point-Blank Barrage
+
+<img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="72" height="72" alt="Point-Blank Barrage talent icon">
+
+- **Activation and cooldown**: Swap to your ranged weapon and immediately fill its magazine from reserve ammunition. If reserves are insufficient, load only the remaining ammunition. Duration 12s, base cooldown 60s, one charge.
+
+- **Rate of Fire and Reload Speed**: Gain +25% ranged Rate of Fire and +65% Reload Speed. A speed-controlled 1s firing interval becomes 1 ÷ 1.25 = 0.8s; a 3s reload becomes 3 ÷ 1.65 ≈ 1.82s.
+
+- **Close range and movement**: While holding a ranged weapon, gain +15% Close Range Damage and halve movement penalties from bracing and weapon actions. For example, a 40% slowdown becomes 20%; at base 5m/s, slowed movement rises from 3m/s to 4m/s.
+
+- **Ammunition return**: At effect end, restore 50% of the counted ammunition to reserves. For example, 20 counted rounds return 20 × 50% = 10. Ammunition saved by Lucky Bullets also counts; the returned amount remains limited by total ammunition capacity.
+
+[Details](ogryn_special_ammo.md) · [Back to index](#talent-index)
