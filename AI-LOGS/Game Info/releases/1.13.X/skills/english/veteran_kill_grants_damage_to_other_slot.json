@@ -1,0 +1,117 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "Killing an enemy with a Melee Attack grants +25% Ranged Damage and killing an enemy with a Ranged Attack grants +25% Melee Damage. Lasts 6s.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 2,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Agile Engagement dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:1828-1870, both passive links and display fields only"
+  ],
+  "reused_evidence": [
+    "Accepted separate melee-kill→ranged_damage = 0.25 and ranged-kill→melee_damage = 0.25 procs",
+    "Accepted independent six-second active periods, coexistence and non-stacking same-type refresh",
+    "Accepted additive melee/ranged damage stage and 100→125/4+6→10 examples",
+    "Accepted custom percentage conversion, default-value formatting and buff lookup",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5186 bytes, SHA256 f4260724c90c950f442e9e1d31b0a11b12e3b7b11dc0f203e77c0a7771919bc6",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only draft checked exact English pairs, both cross-type kill effects, six-second duration and overlap/refresh examples. Primary checked both links and display fields; final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "base_damage": 100,
+    "applicable_damage_bonus": 0.25,
+    "isolated_damage": 125,
+    "each_duration_seconds": 6,
+    "initial_melee_kill_seconds": 0,
+    "repeat_melee_kill_seconds": 4,
+    "refreshed_ranged_expiry_seconds": 10,
+    "ranged_bonus_after_refresh": 0.25,
+    "two_distinct_effects_can_coexist": true
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Individual special kill-event cases and exact game proc/expiry timing.",
+    "Final damage with other modifiers and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game kill/timing/damage/UI measurements"
+  ],
+  "id": "veteran_kill_grants_damage_to_other_slot",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Agile Engagement",
+  "name_key": "loc_talent_veteran_kill_grants_damage_to_other_slot",
+  "name_hash": "5c365733",
+  "description_key": "loc_talent_veteran_kill_grants_damage_to_other_slot_desc",
+  "description_hash": "27db301b",
+  "raw_template": "Killing an enemy with a Melee Attack grants {damage%s} Ranged Damage and killing an enemy with a Ranged Attack grants {damage%s} Melee Damage. Lasts {duration%s}s.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 130,
+        "Explicit contradiction": 7,
+        "Not covered by the description": 166,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 366,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 49,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/agile-engagement-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_kill_grants_damage_to_other_slot.md"
+}

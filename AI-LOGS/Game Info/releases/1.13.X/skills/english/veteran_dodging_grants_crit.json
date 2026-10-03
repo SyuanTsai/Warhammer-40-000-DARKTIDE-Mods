@@ -110,5 +110,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/reciprocity-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_crit.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_crit.md",
+  "commit": "bd3b17e3784e6e2fdacaebb40a352af85d4c144b"
 }

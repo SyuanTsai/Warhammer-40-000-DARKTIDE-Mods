@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="Exploit Weakness talent icon"> [Exploit Weakness](#veteran_crits_apply_rending) | <ul><li>Melee critical hits grant +20% Damage for 6 seconds; subsequent melee and ranged attacks can benefit.</li><li>Further melee critical hits refresh the duration without stacking the bonus.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="32" height="32" alt="Leave No One Behind talent icon"> [Leave No One Behind](#veteran_movement_speed_towards_downed) | <ul><li>Gain +20% Movement Speed and Stun Immunity while looking toward an ally who needs help, within about 60° either side.</li><li>Gain +20% speed for reviving, pulling up, removing a net and rescuing.</li><li>An ally you revive receives 33% Damage Reduction for 5 seconds.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/980ba0fa-2a34-4f97-b592-05651671933b" width="32" height="32" alt="Reciprocity talent icon"> [Reciprocity](#veteran_dodging_grants_crit) | <ul><li>Each successful dodge adds 5 percentage points of Critical Hit Chance, up to 5 stacks.</li><li>An 8-second shared duration refreshes on another successful dodge; simply performing a dodge adds no stack.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="Agile Engagement talent icon"> [Agile Engagement](#veteran_kill_grants_damage_to_other_slot) | <ul><li>Melee kills grant +25% Ranged Damage; ranged kills grant +25% Melee Damage.</li><li>Each bonus lasts 6 seconds and can coexist with the other; same-type kills refresh the corresponding timer without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1004,6 +1005,26 @@ Assume a starting critical hit chance of 10% and no other critical chance change
 These are additive percentage points, not a relative 5% increase per stack.
 
 [Detailed sources and formulas](veteran_dodging_grants_crit.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_dodging_grants_crit) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_kill_grants_damage_to_other_slot"></a>
+
+<img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="72" height="72" alt="Agile Engagement talent icon">
+
+### Agile Engagement
+
+- **Melee kills grant +25% Ranged Damage; ranged kills grant +25% Melee Damage.**
+- Each bonus lasts **6 seconds**. Both can be active together; a kill of the same type refreshes its corresponding timer without adding a stack.
+
+**Damage and duration examples**
+
+- Assume the applicable bonus is already active, base damage 100 and no other damage bonuses, armor or later modifiers: `100 × 1.25 = 125 damage`.
+- With melee kills at 0 and 4 seconds, and no intervening removal, the Ranged Damage bonus is refreshed until about `4 + 6 = 10 seconds`; it remains 25%.
+
+Each effect applies to its own damage type, so having both active does not apply two 25% multipliers to the same hit.
+
+[Detailed sources and formulas](veteran_kill_grants_damage_to_other_slot.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_kill_grants_damage_to_other_slot) | [Back to index](#talent-index)
 
 ---
 

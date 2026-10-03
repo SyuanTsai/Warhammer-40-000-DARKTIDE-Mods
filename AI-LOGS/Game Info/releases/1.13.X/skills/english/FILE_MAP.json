@@ -5732,7 +5732,8 @@
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
         "veteran_movement_speed_towards_downed",
-        "veteran_dodging_grants_crit"
+        "veteran_dodging_grants_crit",
+        "veteran_kill_grants_damage_to_other_slot"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5805,7 +5806,8 @@
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
         "veteran_movement_speed_towards_downed",
-        "veteran_dodging_grants_crit"
+        "veteran_dodging_grants_crit",
+        "veteran_kill_grants_damage_to_other_slot"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5878,7 +5880,8 @@
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
         "veteran_movement_speed_towards_downed",
-        "veteran_dodging_grants_crit"
+        "veteran_dodging_grants_crit",
+        "veteran_kill_grants_damage_to_other_slot"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5951,7 +5954,8 @@
         "veteran_increase_damage_after_sprinting",
         "veteran_crits_apply_rending",
         "veteran_movement_speed_towards_downed",
-        "veteran_dodging_grants_crit"
+        "veteran_dodging_grants_crit",
+        "veteran_kill_grants_damage_to_other_slot"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6987,9 +6991,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "095c843d797d2178f9a7ebc3e229f51e60ea0f92",
       "chinese_sha256": "c136a66a32f81dbfa70396042b88def25c737283cdff29bd89aa4b7ea7954e60",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_kill_grants_damage_to_other_slot"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_krak_grenade.md",
@@ -8900,7 +8919,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_dodging_grants_crit.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_crit.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_crit.md",
+      "commit": "bd3b17e3784e6e2fdacaebb40a352af85d4c144b"
+    },
+    {
+      "id": "veteran_kill_grants_damage_to_other_slot",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_kill_grants_damage_to_other_slot.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_kill_grants_damage_to_other_slot.md"
     }
   ],
   "pending_chinese_corrections": [
