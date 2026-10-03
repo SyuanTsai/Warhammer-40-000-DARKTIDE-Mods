@@ -178,5 +178,6 @@
     "Full separate acceptance of Infiltrate stealth/threat/damage effects"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/overwatch-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md",
+  "commit": "0ba984bd29cc4ce8952fde47bf3959605393e8d8"
 }

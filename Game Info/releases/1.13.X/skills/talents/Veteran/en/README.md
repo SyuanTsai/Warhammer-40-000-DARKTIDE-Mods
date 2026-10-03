@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
@@ -109,6 +110,30 @@ Assume the same ranged weakspot hit and target, no other bonuses or later damage
 - With exactly three stacks after the last refresh, no further weakspot hits or forced removal, two remain after approximately **5 seconds**, one after **10 seconds**, and the effect ends after **15 seconds**. Update timing makes these intervals approximate.
 
 [Details, optional branches and source evidence](veteran_snipers_focus.md) · [Back to index](#talent-index)
+
+<a id="veteran_snipers_focus_increased_stacks"></a>
+
+<img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="72" height="72" alt="Long Range Assassin talent icon">
+
+### Long Range Assassin
+
+- **Raise Marksman's Focus's effective cap from 10 to 15 stacks.**
+
+- Each stack's effects and timer rules stay the same. If you also select the related Rending modifier, its threshold remains **10 stacks**.
+
+- At 15 stacks, gain `15 × 7.5% = 112.5%` ranged finesse strength and `15 × 1% = 15%` reload speed. Finesse strengthens the extra component of ranged critical or weakspot hits; it does not make the entire hit deal 112.5% more damage.
+
+#### Full-stack examples
+
+Assume a noncritical ranged weakspot hit with base component 100 and unmodified extra component 40, no other bonuses or later damage changes.
+
+- **Compared with zero stacks**: `100 + 40 = 140` becomes `100 + 40 × 2.125 = 185` damage units. The entire hit gains `45 / 140 ≈ 32.14%`.
+
+- **Compared with the old 10-stack cap**: `100 + 40 × 1.75 = 170` becomes 185. The extra five stacks add `15 / 170 ≈ 8.82%` damage in this example.
+
+- **Reload time**: for an affected action with a hypothetical four-second baseline, no other speed factors and no binding limit, `4 / 1.15 ≈ 3.48 seconds`. This saves about **13.04% of the time**, not 15%.
+
+[Details and source evidence](veteran_snipers_focus_increased_stacks.md) · [Back to index](#talent-index)
 
 ## Passive talents
 

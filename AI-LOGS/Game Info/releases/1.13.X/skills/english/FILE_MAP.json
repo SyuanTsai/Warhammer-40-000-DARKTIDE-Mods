@@ -5689,7 +5689,8 @@
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
         "veteran_snipers_focus",
-        "veteran_combat_ability_extra_charge"
+        "veteran_combat_ability_extra_charge",
+        "veteran_snipers_focus_increased_stacks"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5699,7 +5700,11 @@
         "links_anchors",
         "marked_parse_render",
         "icon_public_read",
-        "read_only_review"
+        "read_only_review",
+        "existing_mechanism_translation",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "read_only_text_review"
       ]
     },
     {
@@ -5715,7 +5720,8 @@
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
         "veteran_snipers_focus",
-        "veteran_combat_ability_extra_charge"
+        "veteran_combat_ability_extra_charge",
+        "veteran_snipers_focus_increased_stacks"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5725,7 +5731,11 @@
         "links_anchors",
         "marked_parse_render",
         "icon_public_read",
-        "read_only_review"
+        "read_only_review",
+        "existing_mechanism_translation",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "read_only_text_review"
       ]
     },
     {
@@ -5741,7 +5751,8 @@
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
         "veteran_snipers_focus",
-        "veteran_combat_ability_extra_charge"
+        "veteran_combat_ability_extra_charge",
+        "veteran_snipers_focus_increased_stacks"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5751,7 +5762,11 @@
         "links_anchors",
         "marked_parse_render",
         "icon_public_read",
-        "read_only_review"
+        "read_only_review",
+        "existing_mechanism_translation",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "read_only_text_review"
       ]
     },
     {
@@ -5767,7 +5782,8 @@
         "veteran_increased_weakspot_damage",
         "veteran_replenish_toughness_on_weakspot_kill",
         "veteran_snipers_focus",
-        "veteran_combat_ability_extra_charge"
+        "veteran_combat_ability_extra_charge",
+        "veteran_snipers_focus_increased_stacks"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5777,7 +5793,11 @@
         "links_anchors",
         "marked_parse_render",
         "icon_public_read",
-        "read_only_review"
+        "read_only_review",
+        "existing_mechanism_translation",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "read_only_text_review"
       ]
     },
     {
@@ -6645,9 +6665,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5716d483862bcfb08307ab40ee1f9132b9a57fbc",
       "chinese_sha256": "ad86e633e74355ff87dc35f01cbff9ba302ee8c4807093c1df0a3b5e7b23c6d5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_snipers_focus_increased_stacks"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_snipers_focus_rending_bonus.md",
@@ -7771,7 +7802,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_extra_charge.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_extra_charge.md",
+      "commit": "0ba984bd29cc4ce8952fde47bf3959605393e8d8"
+    },
+    {
+      "id": "veteran_snipers_focus_increased_stacks",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_increased_stacks.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_increased_stacks.md"
     }
   ],
   "pending_chinese_corrections": [],

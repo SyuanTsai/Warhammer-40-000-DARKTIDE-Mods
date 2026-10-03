@@ -1,5 +1,7 @@
 # 遠程刺客(Long Range Assassin)：原始碼依據
 
+[English](en/veteran_snipers_focus_increased_stacks.md)
+
 [返回玩家說明](README.md#veteran_snipers_focus_increased_stacks)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
