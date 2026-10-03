@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="Suppression Protocols talent icon"> [Suppression Protocols](#adamant_hitting_multiple_gives_tdr) | <ul><li>Hit at least 3 enemies with one attack to gain 20% Toughness Damage Reduction for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="Ranged Damage Boost talent icon"> [Ranged Damage Boost](#base_ranged_damage_node_buff_medium_1) | <ul><li>Increase Ranged Damage by 10%.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Increase Melee Damage by 10%.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="Razor-Jaw Augment talent icon"> [Razor-Jaw Augment](#adamant_dog_pounces_bleed_nearby) | <ul><li>Your Cyber-Mastiff's surrounding pounce push and pinning attacks against Ogryns or Monsters can apply 6 stacks of Bleed.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -757,3 +758,17 @@
 - **Damage example**: With no other bonus, base melee damage 100 becomes 100 × (1 + 10%) = 110. With an existing same-stage 25% bonus, 125 becomes 100 × (1 + 25% + 10%) = 135.
 
 [Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+<a id="adamant_dog_pounces_bleed_nearby"></a>
+
+### Razor-Jaw Augment
+
+<img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="72" height="72" alt="Razor-Jaw Augment talent icon">
+
+- **Trigger and stacks**: Hits from your Cyber-Mastiff's surrounding pounce push, and its pinning attacks against Ogryns or Monsters, each apply 6 stacks of Bleed. Bleed shares a 16-stack cap; another application adds stacks and resets the maintenance duration.
+
+- **Duration and decay**: Damage ticks every 0.5s. After applications stop, stacks are maintained for 1.5s, then decrease one at a time on subsequent damage ticks.
+
+- **Damage example**: At the Unarmoured baseline with no other modifiers, let the stack fraction be n ÷ 16. Damage per tick is 87.5 × (n ÷ 16)² × [3 − 2 × (n ÷ 16)]. Six stacks give approximately 27.69 points, 12 give 73.83 and 16 give 87.5. Twelve stacks do not deal twice the damage of six.
+
+[Details](adamant_dog_pounces_bleed_nearby.md) · [Back to index](#talent-index)
