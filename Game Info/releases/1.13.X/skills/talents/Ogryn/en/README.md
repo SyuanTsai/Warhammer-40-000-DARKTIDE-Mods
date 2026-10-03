@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="Feel No Pain talent icon"> [Feel No Pain](#ogryn_carapace_armor) | <ul><li>Start with 10 stacks; each adds Toughness replenishment and multiplies Toughness damage by 0.97.</li><li>Eligible damage removes at most one stack per second; stacks restore at 2s intervals when the restoration conditions are met.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="Heavy Hitter talent icon"> [Heavy Hitter](#ogryn_passive_heavy_hitter) | <ul><li>Melee hits build Heavy Hitter: ordinary hits add 1 stack and heavy hits add 2.</li><li>Each stack grants 3% melee damage, maximum 8; adding stacks resets the 7.5s duration.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="Pained Outburst talent icon"> [Pained Outburst](#ogryn_carapace_armor_trigger_on_zero_stacks) | <ul><li>After Feel No Pain loses a stack and falls to 4 visible stacks or fewer, push back nearby enemies and restore 50% of maximum Toughness; English says 5 stacks or below.</li><li>At most once every 30s; the pushback burst deals no direct damage.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="Strongest! talent icon"> [Strongest!](#ogryn_carapace_armor_add_stack_on_push) | <ul><li>Pushing at least one enemy restores 1 Feel No Pain stack.</li><li>Maximum 10 visible stacks; pushing several enemies at once still restores only 1.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -440,3 +441,19 @@
 - **English threshold difference**: The same-build English says 5 stacks or below. The accepted internal threshold, after the stack offset, is 4 visible stacks or fewer.
 
 [Details](ogryn_carapace_armor_trigger_on_zero_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_carapace_armor_add_stack_on_push"></a>
+
+### Strongest!
+
+<img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="72" height="72" alt="Strongest! talent icon">
+
+- **Requirement**: With Strongest! selected, a push must actually hit at least one enemy to restore 1 Feel No Pain stack.
+
+- **Stack cap**: Feel No Pain has at most 10 visible stacks. Pushing at full stacks cannot exceed the cap. Restoring a stack through a push restarts the natural 2s stack-restoration interval.
+
+- **Example**: At 6 stacks, pushing either 1 or 3 enemies restores you to 7. At 10 stacks, another successful push leaves you at 10.
+
+[Details](ogryn_carapace_armor_add_stack_on_push.md) · [Back to index](#talent-index)
