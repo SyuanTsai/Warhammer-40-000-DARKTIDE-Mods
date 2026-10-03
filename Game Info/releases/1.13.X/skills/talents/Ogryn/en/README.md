@@ -81,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="Fire Away talent icon"> [Fire Away](#ogryn_explosions_burn) | <ul><li>Damaging explosions apply one Burn stack, or two total in the central area, up to eight; the specified Power Maul explosion is excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="Unbreakable talent icon"> [Unbreakable](#ogryn_block_all_attacks) | <ul><li>Perfect Blocks can block otherwise unblockable melee attacks and grant +20% damage to the next melee sweep for at most 5s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="Pumped Up talent icon"> [Pumped Up](#ogryn_damage_reduction_on_high_stamina) | <ul><li>Gain 12.5% damage reduction while Stamina is strictly above 75% of maximum; no stacks or cooldown.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="Lucky Streak talent icon"> [Lucky Streak](#ogryn_crit_damage_increase) | <ul><li>Add 75% to the additional critical-damage component; the effect on total damage depends on weapon, armour and hit location.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1289,3 +1290,19 @@
 - **Damage-reduction example**: Damage of 100 at this stage becomes `100 × 0.875 = 87.5`. With another independent 20% reduction, it becomes `100 × 0.875 × 0.8 = 70`.
 
 [Details](ogryn_damage_reduction_on_high_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_crit_damage_increase"></a>
+
+### Lucky Streak
+
+<img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="72" height="72" alt="Lucky Streak talent icon">
+
+- **Effect**: Increase the additional damage component of a critical hit by 75%. This does not increase Critical Chance or multiply the entire critical hit's damage by 1.75. The additional component's share varies with weapon, armour and hit location, so the actual increase varies too.
+
+- **Damage example**: Under fixed conditions, assume the original damage comprises 100 base damage and 50 additional critical damage, for 150 total. With this effect, `100 + 50 × 1.75 = 187.5`, a relative increase of 25%. If the additional component is only 20, the total rises from 120 to 135, an increase of only 12.5%.
+
+- **Critical Weakspot hits**: When a hit is both critical and on a Weakspot, the shared additional damage is calculated first, then the critical and Weakspot bonuses are applied. Do not multiply by separate critical and Weakspot multipliers once each.
+
+[Details](ogryn_crit_damage_increase.md) · [Back to index](#talent-index)

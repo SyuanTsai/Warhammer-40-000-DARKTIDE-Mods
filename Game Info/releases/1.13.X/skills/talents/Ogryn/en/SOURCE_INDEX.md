@@ -83,3 +83,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Fire Away](ogryn_explosions_burn.md) / `ogryn_explosions_burn` | Talent |
 | [Unbreakable](ogryn_block_all_attacks.md) / `ogryn_block_all_attacks` | Talent |
 | [Pumped Up](ogryn_damage_reduction_on_high_stamina.md) / `ogryn_damage_reduction_on_high_stamina` | Talent |
+| [Lucky Streak](ogryn_crit_damage_increase.md) / `ogryn_crit_damage_increase` | Talent |
