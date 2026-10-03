@@ -47,3 +47,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Writ of Judgement](adamant_terminus_warrant_improved_combined.md) / `adamant_terminus_warrant_improved_combined` | Keystone |
 | [Man and Cyber-Mastiff](adamant_toughness_regen_near_companion.md) / `adamant_toughness_regen_near_companion` | Passive talent |
 | [Withering Fire](adamant_damage_after_reloading.md) / `adamant_damage_after_reloading` | Passive talent |
+| [Hammer of Judgement](adamant_multiple_hits_attack_speed.md) / `adamant_multiple_hits_attack_speed` | Passive talent |

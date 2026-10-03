@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="32" height="32" alt="Writ of Judgement talent icon"> [Writ of Judgement](#adamant_terminus_warrant_improved_combined) | <ul><li>Spending a full 20 Melee Justice or Ranged Justice stacks grants +10% Melee and Ranged Attack Speed and +10 percentage points of Critical Hit Chance for 12s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="Man and Cyber-Mastiff talent icon"> [Man and Cyber-Mastiff](#adamant_toughness_regen_near_companion) | <ul><li>While within 8m of your Cyber-Mastiff, recover 5% of maximum Toughness per second.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#adamant_damage_after_reloading) | <ul><li>After reloading, gain 15% Ranged Damage for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="Hammer of Judgement talent icon"> [Hammer of Judgement](#adamant_multiple_hits_attack_speed) | <ul><li>Hit at least 3 enemies with one melee attack to gain 10% Melee Attack Speed for 3s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -577,3 +578,15 @@
 - **Damage example**: Isolating this stage, base damage 100 becomes 100 × (1 + 15%) = 115. With an existing same-stage 25% bonus, 125 becomes 100 × (1 + 25% + 15%) = 140.
 
 [Details](adamant_damage_after_reloading.md) · [Back to index](#talent-index)
+
+<a id="adamant_multiple_hits_attack_speed"></a>
+
+### Hammer of Judgement
+
+<img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="72" height="72" alt="Hammer of Judgement talent icon">
+
+- **Trigger and refresh**: Hitting the third enemy in the same melee attack grants 10% Melee Attack Speed for 3s. Meeting the condition again resets the duration; the multiplier does not stack.
+
+- **Attack-speed example**: For an action segment affected by Attack Speed alone, an original duration of 1s becomes 1 ÷ 1.1 ≈ 0.909s.
+
+[Details](adamant_multiple_hits_attack_speed.md) · [Back to index](#talent-index)
