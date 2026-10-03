@@ -5722,7 +5722,8 @@
         "veteran_faster_reload_on_non_empty_clips",
         "veteran_reload_speed_on_elite_kill",
         "veteran_rending_bonus",
-        "veteran_reduced_toughness_damage_in_coherency"
+        "veteran_reduced_toughness_damage_in_coherency",
+        "veteran_tdr_on_high_toughness"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5785,7 +5786,8 @@
         "veteran_faster_reload_on_non_empty_clips",
         "veteran_reload_speed_on_elite_kill",
         "veteran_rending_bonus",
-        "veteran_reduced_toughness_damage_in_coherency"
+        "veteran_reduced_toughness_damage_in_coherency",
+        "veteran_tdr_on_high_toughness"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5848,7 +5850,8 @@
         "veteran_faster_reload_on_non_empty_clips",
         "veteran_reload_speed_on_elite_kill",
         "veteran_rending_bonus",
-        "veteran_reduced_toughness_damage_in_coherency"
+        "veteran_reduced_toughness_damage_in_coherency",
+        "veteran_tdr_on_high_toughness"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5911,7 +5914,8 @@
         "veteran_faster_reload_on_non_empty_clips",
         "veteran_reload_speed_on_elite_kill",
         "veteran_rending_bonus",
-        "veteran_reduced_toughness_damage_in_coherency"
+        "veteran_reduced_toughness_damage_in_coherency",
+        "veteran_tdr_on_high_toughness"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7240,9 +7244,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2a7ebd98dea00a961e6eb40389e3d4dddd8799c1",
       "chinese_sha256": "8e0b465819c3c302dce57fd8d80078787cb0fdfdeb2c28e11dac3bd14beaef77",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_tdr_on_high_toughness"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_toughness_bonus_leaving_invisibility.md",
@@ -8620,7 +8639,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduced_toughness_damage_in_coherency.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_toughness_damage_in_coherency.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_toughness_damage_in_coherency.md",
+      "commit": "671901aafb12be0aff309ae83f81d359699247ab"
+    },
+    {
+      "id": "veteran_tdr_on_high_toughness",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_tdr_on_high_toughness.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_tdr_on_high_toughness.md"
     }
   ],
   "pending_chinese_corrections": [

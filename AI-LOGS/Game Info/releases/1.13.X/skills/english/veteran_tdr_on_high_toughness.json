@@ -1,0 +1,114 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+50% Reduced Toughness Damage if above 75% Toughness.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Iron Will dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:2245-2272, display field and internal annotation only"
+  ],
+  "reused_evidence": [
+    "Existing strict current/maximum Toughness >0.75 condition, 0.50 conditional multiplier and update timing limit",
+    "Accepted shared Toughness settlement, percentage formatting and buff-value lookup evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5620 bytes, SHA256 5d89176c3734e2f4278cac989d9609b47c4e89fcf1d74178513a4ce58ace46af",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "read-only draft checked exact pairs, strict boundary, current/max basis, reactivation/update timing and independent reductions; primary full staged text review"
+  },
+  "static_examples": {
+    "maximum_toughness": 200,
+    "threshold_toughness": 150,
+    "greater_than_threshold_example": 151,
+    "equal_threshold_qualifies": false,
+    "incoming_toughness_damage": 40,
+    "active_damage": 20,
+    "with_independent_10_percent_reduction_damage": 18,
+    "combined_reduction_percent": 55
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Exact threshold-crossing and conditional activation/reactivation frames.",
+    "In-game damage outcomes and final UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game threshold/damage/UI measurements"
+  ],
+  "id": "veteran_tdr_on_high_toughness",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Iron Will",
+  "name_key": "loc_talent_veteran_block_break_gives_tdr",
+  "name_hash": "0f2286e9",
+  "description_key": "loc_talent_veteran_tdr_on_high_toughness_desc",
+  "description_hash": "9702d945",
+  "raw_template": "{toughness_damage_reduction:%s} Reduced Toughness Damage if above {toughness_percent:%s} Toughness.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 103,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 143,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 296,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 39,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/iron-will-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_tdr_on_high_toughness.md"
+}

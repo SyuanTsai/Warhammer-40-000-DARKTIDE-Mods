@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="Volley Adept talent icon"> [Volley Adept](#veteran_reload_speed_on_elite_kill) | <ul><li>Kill an Elite or Specialist enemy to gain +30% Reload Speed for the next reload.</li><li>Repeated kills do not bank extra reload uses; the bonus remains through the consuming reload.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/cc7841b0-9637-4d35-8bca-c2c418798875" width="32" height="32" alt="Rending Strikes talent icon"> [Rending Strikes](#veteran_rending_bonus) | <ul><li>Gain 10% Rending for all weapons.</li><li>Armor-dependent damage gains vary; unarmoured targets receive no Rending armor adjustment.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49" width="32" height="32" alt="Close Order Drill talent icon"> [Close Order Drill](#veteran_reduced_toughness_damage_in_coherency) | <ul><li>Gain 11% Toughness Damage Reduction per Coherency teammate, up to 33% with three.</li><li>The effect follows the current teammate count and multiplies with separate active reductions.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="32" height="32" alt="Iron Will talent icon"> [Iron Will](#veteran_tdr_on_high_toughness) | <ul><li>Take 50% less Toughness damage while current Toughness is above 75% of maximum.</li><li>Exactly 75% does not qualify; separate active reduction multipliers multiply.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -770,6 +771,27 @@ Assume 100 incoming Toughness damage before these reductions and no other modifi
 The teammate benefits form one multiplier; separate active reductions multiply with it.
 
 [Detailed sources and formulas](veteran_reduced_toughness_damage_in_coherency.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reduced_toughness_damage_in_coherency) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_tdr_on_high_toughness"></a>
+
+<img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="72" height="72" alt="Iron Will talent icon">
+
+### Iron Will
+
+- While current Toughness is **above 75% of your maximum**, take **50% less Toughness damage**.
+- Exactly 75% does not satisfy the condition. Recovering above the threshold allows the effect to activate again.
+
+**Threshold and Toughness damage examples**
+
+- With **200 maximum Toughness**, the threshold is `200 × 0.75 = 150`: current Toughness must be **greater than 150**. Exactly 150 does not qualify.
+- Assume Iron Will is already active and no other reductions: `40 × 0.50 = 20 Toughness damage`.
+- With a separate **10% reduction** also active: `40 × 0.50 × 0.90 = 18 Toughness damage`. This is a 55% combined reduction from the stated 40-damage baseline.
+
+The exact activation frame when Toughness crosses the threshold has not been measured; these examples assume the effect has already activated.
+
+[Detailed sources and formulas](veteran_tdr_on_high_toughness.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_tdr_on_high_toughness) | [Back to index](#talent-index)
 
 ---
 

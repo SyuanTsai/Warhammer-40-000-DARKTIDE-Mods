@@ -134,5 +134,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/close-order-drill-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_toughness_damage_in_coherency.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_toughness_damage_in_coherency.md",
+  "commit": "671901aafb12be0aff309ae83f81d359699247ab"
 }
