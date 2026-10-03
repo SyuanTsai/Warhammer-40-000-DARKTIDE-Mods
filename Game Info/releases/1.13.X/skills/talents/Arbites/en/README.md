@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="Obstinate talent icon"> [Obstinate](#adamant_terminus_warrant_cdr) | <ul><li>After spending all 20 Justice stacks, restore an additional 0.33s of Combat Ability cooldown each second for 12s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 3.96s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="Terminal Decree talent icon"> [Terminal Decree](#adamant_terminus_warrant_support) | <ul><li>Whenever Terminus Warrant stacks are spent, restore Toughness to you and Allies in Coherency according to the actual count spent.</li><li>Each stack restores 1% of maximum Toughness; the base stack cap is 20.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="Efficient Killer talent icon"> [Efficient Killer](#adamant_execution_order_crit) | <ul><li>Killing a Marked enemy grants Critical Hit Chance and Critical Hit Damage bonuses for 8s.</li><li>The bonuses are +10 percentage points of Critical Hit Chance and +25% additional critical damage.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="Malocator talent icon"> [Malocator](#adamant_execution_order_cdr) | <ul><li>After you or your Cyber-Mastiff kills a Marked target, restore an additional 0.5s of Combat Ability cooldown each second for 8s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 4s.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -458,3 +459,15 @@
 - **Critical Hit Damage examples**: The +25% bonus affects the additional critical damage. If a normal hit deals 100 and a critical hit deals 150, the result is 100 + (150 − 100) × 1.25 = 162.5, about an 8.33% increase to the whole critical hit. If another weapon instead deals 200 on a critical hit, the result is 225, a 12.5% increase. Actual gains vary with the weapon and armor.
 
 [Details](adamant_execution_order_crit.md) · [Back to index](#talent-index)
+
+<a id="adamant_execution_order_cdr"></a>
+
+### Malocator
+
+<img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="72" height="72" alt="Malocator talent icon">
+
+- **Trigger and duration**: You or your Cyber-Mastiff killing a Marked target grants 8s of additional cooldown regeneration.
+
+- **Cooldown example**: Restore an additional 0.5s of Combat Ability cooldown each second, nominally 4s over 8s. Starting with 20s remaining, after 8s and eight restoration ticks the remainder is 20 − 8 − 8 × 0.5 = 8s. Restoration is limited to the unregenerated cooldown; expiry update order may result in one fewer tick. Retriggering refreshes the duration without increasing the restoration rate.
+
+[Details](adamant_execution_order_cdr.md) · [Back to index](#talent-index)

@@ -282,3 +282,5 @@ Five-item checkpoint (skills 103–107): 1350 seconds (22m 30s), measured betwee
 Five-item checkpoint (skills 108–112): 745 seconds (12m 25s), measured between commits 664a1312 and 9f19e233. 112 accepted skills; 572 mapped files pending (534 mechanisms, 36 class-support, 2 shared). Recent batches and remaining class/shared checks give a provisional 30–45h of continuous execution. Continued without awaiting confirmation.
 
 - [Efficient Killer](arbites_adamant_execution_order_crit.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Malocator](arbites_adamant_execution_order_cdr.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
