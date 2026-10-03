@@ -2236,7 +2236,12 @@
         "ogryn_reloading_grants_damage",
         "ogryn_increase_explosion_radius",
         "ogryn_blocking_reduces_push_cost",
-        "ogryn_blocking_ranged_taunts"
+        "ogryn_blocking_ranged_taunts",
+        "ogryn_protect_allies",
+        "ogryn_corruption_resistance",
+        "ogryn_melee_attacks_give_mtdr",
+        "ogryn_pushing_applies_brittleness",
+        "ogryn_explosions_burn"
       ],
       "checks": []
     },
@@ -2314,7 +2319,12 @@
         "ogryn_reloading_grants_damage",
         "ogryn_increase_explosion_radius",
         "ogryn_blocking_reduces_push_cost",
-        "ogryn_blocking_ranged_taunts"
+        "ogryn_blocking_ranged_taunts",
+        "ogryn_protect_allies",
+        "ogryn_corruption_resistance",
+        "ogryn_melee_attacks_give_mtdr",
+        "ogryn_pushing_applies_brittleness",
+        "ogryn_explosions_burn"
       ],
       "checks": []
     },
@@ -2392,7 +2402,12 @@
         "ogryn_reloading_grants_damage",
         "ogryn_increase_explosion_radius",
         "ogryn_blocking_reduces_push_cost",
-        "ogryn_blocking_ranged_taunts"
+        "ogryn_blocking_ranged_taunts",
+        "ogryn_protect_allies",
+        "ogryn_corruption_resistance",
+        "ogryn_melee_attacks_give_mtdr",
+        "ogryn_pushing_applies_brittleness",
+        "ogryn_explosions_burn"
       ],
       "checks": []
     },
@@ -2470,7 +2485,12 @@
         "ogryn_reloading_grants_damage",
         "ogryn_increase_explosion_radius",
         "ogryn_blocking_reduces_push_cost",
-        "ogryn_blocking_ranged_taunts"
+        "ogryn_blocking_ranged_taunts",
+        "ogryn_protect_allies",
+        "ogryn_corruption_resistance",
+        "ogryn_melee_attacks_give_mtdr",
+        "ogryn_pushing_applies_brittleness",
+        "ogryn_explosions_burn"
       ],
       "checks": []
     },
@@ -2846,9 +2866,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3b7f24bcc668b18dc01f44f523c90944809d00a3",
       "chinese_sha256": "063aa25abee71a8e848bb366cb799f3006c72f6a6b771600c7b80b7df56622fc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_corruption_resistance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_crit_damage_increase.md",
@@ -2948,9 +2975,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c8b573809335ee770395360d946ecf151f615fdd",
       "chinese_sha256": "aa54787727e4610d2618a7a9f2f7d4482ce09256becd2e53b90a6d0f2ec41828",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_explosions_burn"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md",
@@ -3323,9 +3357,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a09639b86f6f82981963eaa3fe15d5631396b48d",
       "chinese_sha256": "6f1e072c32d619e3b4aadcbdeac33729f8d841bc0b1b8767d086ef2d1cd87b5b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_melee_attacks_give_mtdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_damage_after_heavy.md",
@@ -3529,9 +3570,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "786915c2e3fc83d04f11361dc5db3d764ddbb664",
       "chinese_sha256": "0a413b7a3adb9736c8f5e559af5cf569dc2dd79bb530899869af345b498b4b1a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_protect_allies"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_pushing_applies_brittleness.md",
@@ -3540,9 +3588,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "84d52601ee3b3e9a64fc05167885828b2a690760",
       "chinese_sha256": "bf8854d472008aa47c4f46517b6ce38aaf96de80242a17b6761e2c52317c0061",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_pushing_applies_brittleness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_damage_immunity.md",
@@ -12872,6 +12927,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blocking_ranged_taunts.md"
+    },
+    {
+      "id": "ogryn_protect_allies",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_protect_allies.md"
+    },
+    {
+      "id": "ogryn_corruption_resistance",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_corruption_resistance.md"
+    },
+    {
+      "id": "ogryn_melee_attacks_give_mtdr",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_attacks_give_mtdr.md"
+    },
+    {
+      "id": "ogryn_pushing_applies_brittleness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_pushing_applies_brittleness.md"
+    },
+    {
+      "id": "ogryn_explosions_burn",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_explosions_burn.md"
     }
   ],
   "pending_chinese_corrections": [

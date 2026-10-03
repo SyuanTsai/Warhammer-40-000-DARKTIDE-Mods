@@ -951,4 +951,4 @@ Full raw template and formatting: [source evidence](ogryn_explosions_burn.md#ori
 
 ## Comparison totals
 
-The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
+The 234 listed rules comprise **99 Consistent**, **4 Explicit contradictions**, **124 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
