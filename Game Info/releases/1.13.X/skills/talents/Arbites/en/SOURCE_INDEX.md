@@ -67,3 +67,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Cleave Boost](base_cleave_node_buff_medium_1.md) / `base_cleave_node_buff_medium_1` | Stat node |
 | [Impact Boost](base_impact_node_buff_medium_1.md) / `base_impact_node_buff_medium_1` | Stat node |
 | [Plasteel Plates](adamant_plasteel_plates.md) / `adamant_plasteel_plates` | Passive talent |
+| [Serrated Maw](adamant_dog_applies_brittleness.md) / `adamant_dog_applies_brittleness` | Passive talent |
