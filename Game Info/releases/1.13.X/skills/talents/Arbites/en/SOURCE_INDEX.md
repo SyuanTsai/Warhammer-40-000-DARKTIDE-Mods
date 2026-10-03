@@ -10,3 +10,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 |---|---|
 | [Remote Detonation](adamant_whistle.md) / `adamant_whistle` | Blitz |
 | [Arbites Grenade](adamant_grenade_improved.md) / `adamant_grenade_improved` | Blitz |
+| [Voltaic Shock Mine](adamant_shock_mine.md) / `adamant_shock_mine` | Blitz |

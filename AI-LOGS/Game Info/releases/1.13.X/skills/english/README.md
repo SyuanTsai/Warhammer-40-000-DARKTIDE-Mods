@@ -216,3 +216,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Remote Detonation — Arbites](arbites_adamant_whistle.json): translated accepted evidence, independently judged English and checked changed Markdown/links. Commit is recoverable through the English file history.
 
 - [Arbites Grenade](arbites_adamant_grenade_improved.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Voltaic Shock Mine](arbites_adamant_shock_mine.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

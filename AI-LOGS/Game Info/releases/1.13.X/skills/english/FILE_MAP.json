@@ -65,7 +65,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "adamant_whistle",
-        "adamant_grenade_improved"
+        "adamant_grenade_improved",
+        "adamant_shock_mine"
       ],
       "checks": []
     },
@@ -79,7 +80,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "adamant_whistle",
-        "adamant_grenade_improved"
+        "adamant_grenade_improved",
+        "adamant_shock_mine"
       ],
       "checks": []
     },
@@ -93,7 +95,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "adamant_whistle",
-        "adamant_grenade_improved"
+        "adamant_grenade_improved",
+        "adamant_shock_mine"
       ],
       "checks": []
     },
@@ -107,7 +110,8 @@
       "status": "partial",
       "accepted_skill_ids": [
         "adamant_whistle",
-        "adamant_grenade_improved"
+        "adamant_grenade_improved",
+        "adamant_shock_mine"
       ],
       "checks": []
     },
@@ -873,9 +877,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f09108f443c4d071713eeba1a8686cd956477378",
       "chinese_sha256": "a2a5458b6cbfd8c0558857cab6124ad4712abd5a2675cdbfbdc761abc7803dc3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_shock_mine"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_shock_mine.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_sprinting_sliding.md",
@@ -9888,6 +9899,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_grenade_improved.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_grenade_improved.md"
+    },
+    {
+      "id": "adamant_shock_mine",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_shock_mine.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shock_mine.md"
     }
   ],
   "pending_chinese_corrections": [

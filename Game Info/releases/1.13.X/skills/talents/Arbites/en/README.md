@@ -10,6 +10,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="Remote Detonation talent icon"> [Remote Detonation](#adamant_whistle) | <ul><li>Trigger Electrocution and an explosion at your Cyber-Mastiff. Electrocuted enemies take 10% more damage for 2s.</li><li>Hold 2 charges; restore one every 50s, or both from empty in 100s.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="Arbites Grenade talent icon"> [Arbites Grenade](#adamant_grenade_improved) | <ul><li>Detonate on impact in a 10m blast, with a higher-damage 2.5m centre.</li><li>Carry 4 grenades, one more than the base version; this ability alone has no timed automatic refill.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="Voltaic Shock Mine talent icon"> [Voltaic Shock Mine](#adamant_shock_mine) | <ul><li>Arm about 1s after deployment; once an enemy is detected, apply Electrocution within 3m for a 15s active period.</li><li>Carry two mines; each applied Electrocution lasts 3s.</li></ul> | Blitz |
 
 ## Blitz
 
@@ -42,3 +43,19 @@
 - **Capacity and replenishment**: Carry up to 4 grenades, one more than the base version's 3. Throwing one consumes one; this ability alone has no timed automatic replenishment. With Lone Wolf, capacity becomes 5 and missing grenades replenish one every 45s.
 
 [Details](adamant_grenade_improved.md) · [Back to index](#talent-index)
+
+<a id="adamant_shock_mine"></a>
+
+### Voltaic Shock Mine
+
+<img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="72" height="72" alt="Voltaic Shock Mine talent icon">
+
+- **Deployment and waiting**: After landing and deployment, the mine arms in about 1s and detects enemies within 3m. With no enemy encountered, it can wait about 150s. The first detection of a living enemy starts its 15s active period.
+
+- **Electrocution**: Search again every 0.2s, skipping already electrocuted enemies. Each application lasts 3s. An applied effect continues until expiry after the target leaves the radius; a target that remains within range can be affected again once its Electrocution ends.
+
+- **Damage example**: Damage ticks occur at random intervals of 0.3–0.8s. Isolating armour with no other modifiers, the Unarmoured baseline is `8 × 0.5 = 4 damage`; Flak and Carapace Armour give `8 × 1 = 8 damage`. The tick count varies, so a fixed number of ticks cannot establish total damage.
+
+- **Capacity and replenishment**: Carry up to two mines, with no natural cooldown replenishment after use. With Lone Wolf, capacity is three and one missing mine replenishes every 90s.
+
+[Details](adamant_shock_mine.md) · [Back to index](#talent-index)
