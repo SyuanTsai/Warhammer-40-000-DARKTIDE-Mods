@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="Quick Shards talent icon"> [Quick Shards](#psyker_throwing_knives_cast_speed) | <ul><li>Assail uses replenish 30% faster; base recovery per use falls from 3 seconds to about 2.31.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="Enfeeble talent icon"> [Enfeeble](#psyker_chain_lightning_improved_target_buff) | <ul><li>Enemies electrocuted by you take 10% more damage from all sources.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="Charged Strike talent icon"> [Charged Strike](#psyker_chain_lightning_heavy_attacks) | <ul><li>Melee heavy hits electrocute enemies for 2 seconds, dealing damage over that duration.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="Kinetic Presence talent icon"> [Kinetic Presence](#psyker_aura_damage_vs_elites) | <ul><li>You and Allies in Coherency deal 10% more damage against Elite enemies.</li></ul> | Aura |
 
 ---
 
@@ -156,3 +157,17 @@
 - **With Enfeeble**: This 2-second electrocution also increases the target's damage taken by 10%. Isolating that damage-taken multiplier, original damage of 100 becomes 100 × 1.1 = 110.
 
 [Details](psyker_chain_lightning_heavy_attacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_aura_damage_vs_elites"></a>
+
+### Kinetic Presence
+
+<img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="72" height="72" alt="Kinetic Presence talent icon">
+
+- **Aura**: You and teammates in Coherency deal 10% more damage against Elite enemies. The same aura does not stack multiple times.
+
+- **Damage example**: Isolating this stage with a baseline of 100 and no other bonuses, 100 × 1.1 = 110. With an existing 25% bonus at the same stage, damage rises from 125 to 100 × (1 + 25% + 10%) = 135. Non-Elite enemies do not receive this bonus.
+
+[Details](psyker_aura_damage_vs_elites.md) · [Back to index](#talent-index)

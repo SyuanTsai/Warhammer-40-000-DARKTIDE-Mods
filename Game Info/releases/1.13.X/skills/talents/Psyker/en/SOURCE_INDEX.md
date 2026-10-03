@@ -20,3 +20,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Quick Shards](psyker_throwing_knives_cast_speed.md) / `psyker_throwing_knives_cast_speed` | Blitz |
 | [Enfeeble](psyker_chain_lightning_improved_target_buff.md) / `psyker_chain_lightning_improved_target_buff` | Blitz |
 | [Charged Strike](psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | Blitz |
+| [Kinetic Presence](psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | Aura |

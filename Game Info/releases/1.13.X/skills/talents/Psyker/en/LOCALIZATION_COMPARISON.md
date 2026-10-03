@@ -116,6 +116,18 @@ Full raw template and formatting: [source evidence](psyker_chain_lightning_heavy
 | Heavy melee hit and electrocution damage | `Your Heavy Melee Attacks electrocute enemies hit, damaging them`; `ui / loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc / e84d2a21` | `CheckProcFunctions.on_heavy_hit` filters the proc; the hit target receives `psyker_heavy_swings_shock`, which deals sustained electrocution damage. [Fixed source and line references](psyker_chain_lightning_heavy_attacks.md#fixed-source-evidence) | Consistent | The trigger and damage effect agree with the accepted evidence. |
 | Duration, stacking and Enfeeble | No duration, stack limit or Enfeeble interaction stated; `ui / loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc / e84d2a21` | Electrocution lasts 2 seconds with maximum 1 stack; Enfeeble selects the improved all-source 1.1 damage-taken variant. Damage is not a universal fixed melee bonus. [Fixed source and line references](psyker_chain_lightning_heavy_attacks.md#fixed-source-evidence) | Not covered by the description | Omitted duration, limits and interaction are supplementary. |
 
+
+<a id="psyker_aura_damage_vs_elites"></a>
+
+## Kinetic Presence
+
+Full raw template and formatting: [source evidence](psyker_aura_damage_vs_elites.md#original-english-template-and-reconstruction). Name hash `aa5cdd41`. Every row uses `ui / loc_talent_psyker_base_3_description / 4fad8ca6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients, enemy category and damage value | `+10% Damage against Elite Enemies for you and Allies in Coherency`; `ui / loc_talent_psyker_base_3_description / 4fad8ca6` | Self-inclusive Coherency applies the aura to the player and teammates; `damage_vs_elites=0.1` enters attacker damage modifiers only for targets with the `elite` tag. [Fixed source and line references](psyker_aura_damage_vs_elites.md#fixed-source-evidence) | Consistent | Beneficiaries, Elite-only scope and reconstructed magnitude agree. |
+| Stack limit and additive calculation | No stacking cap or other-bonus formula stated; `ui / loc_talent_psyker_base_3_description / 4fad8ca6` | Maximum 1 aura stack; bonuses at the same stage add, so an existing +25% gives 100×(1+0.25+0.1)=135 rather than treating the aura as a separate universal final multiplier. [Fixed source and line references](psyker_aura_damage_vs_elites.md#fixed-source-evidence) | Not covered by the description | The stack rule and conditional example supplement the English. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
