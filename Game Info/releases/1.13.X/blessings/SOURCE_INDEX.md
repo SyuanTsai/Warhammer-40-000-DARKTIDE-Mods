@@ -17,3 +17,4 @@
 | [超載](entries/超載/README.md) | [來源索引](entries/超載/SOURCE_INDEX.md) |
 | [能量洩漏](entries/能量洩漏/README.md) | [來源索引](entries/能量洩漏/SOURCE_INDEX.md) |
 | [散熱器](entries/散熱器/README.md) | [來源索引](entries/散熱器/SOURCE_INDEX.md) |
+| [能量轉換](entries/能量轉換/README.md) | [來源索引](entries/能量轉換/SOURCE_INDEX.md) |

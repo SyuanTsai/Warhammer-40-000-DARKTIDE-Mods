@@ -352,6 +352,7 @@
   - 本體1.13.1名稱鍵 `loc_reduce_fixed_overheat_amount`，hash `1a699330`；英文／繁中RAW配對確認。
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換
+  - 本體1.13.1名稱鍵 `loc_slower_heat_buildup_on_perfect_block`，hash `c5793ef5`；英文／繁中RAW配對確認。
 - Shock & Awe / Shock and Awe - 震懾
 - Take a Swing - 揮拳出擊
 - Supercharge - 超級充能

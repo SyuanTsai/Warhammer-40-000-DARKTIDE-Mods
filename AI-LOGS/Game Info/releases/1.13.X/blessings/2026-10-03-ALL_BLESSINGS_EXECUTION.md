@@ -59,3 +59,7 @@
 - 能量洩漏本機Commit：`a67b24989c789adcd243a605b76329bb48b75989`；文件、Issue圖片及96條累積型號關聯驗收完成。
 
 - [散熱器](2026-10-03-HEATSINK_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 散熱器本機Commit：`abb90df73bfac79d98fed9d7d1a721b63e280f4e`；文件、Issue圖片及100條累積型號關聯驗收完成。
+
+- [能量轉換](2026-10-03-ENERGY-TRANSFER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

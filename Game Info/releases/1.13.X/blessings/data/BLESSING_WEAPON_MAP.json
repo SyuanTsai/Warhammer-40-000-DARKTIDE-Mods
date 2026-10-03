@@ -150,6 +150,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
       "effect": "攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。"
+    },
+    {
+      "id": "energy-transfer",
+      "name_zh_tw": "能量轉換",
+      "name_en": "Energy Transfer",
+      "name_key": "loc_slower_heat_buildup_on_perfect_block",
+      "description_key": "loc_slower_heat_buildup_on_block_desc",
+      "name_hash": "c5793ef5",
+      "description_hash": "106a8d31",
+      "page": "entries/能量轉換/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
+      "effect": "一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。"
     }
   ],
   "weapons": [
@@ -2786,6 +2799,96 @@
       "icon": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_237",
       "effect": "攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_2h_p1_slower_heat_buildup_on_perfect_block",
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/能量轉換/weapon_trait_bespoke_powersword_2h_p1_slower_heat_buildup_on_perfect_block.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration": 5,
+        "cooldown_duration": 0,
+        "proc_stat_buffs": {
+          "overheat_over_time_amount": [
+            0.84,
+            0.82,
+            0.8,
+            0.78
+          ],
+          "overheat_dissipation_multiplier": [
+            1.03,
+            1.04,
+            1.05,
+            1.06
+          ]
+        },
+        "proc_event": "on_block"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 496,
+        "end_line": 575
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 368,
+        "end_line": 382
+      },
+      "icon": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_241",
+      "effect": "一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p2_slower_heat_buildup_on_perfect_block",
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_p2",
+      "page": "entries/能量轉換/weapon_trait_bespoke_powersword_p2_slower_heat_buildup_on_perfect_block.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration": 5,
+        "cooldown_duration": 0,
+        "proc_stat_buffs": {
+          "overheat_over_time_amount": [
+            0.84,
+            0.82,
+            0.8,
+            0.78
+          ],
+          "overheat_dissipation_multiplier": [
+            1.03,
+            1.04,
+            1.05,
+            1.06
+          ]
+        },
+        "proc_event": "on_block"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 370,
+        "end_line": 449
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 253,
+        "end_line": 267
+      },
+      "icon": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_241",
+      "effect": "一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。"
     }
   ],
   "bindings": [
@@ -4181,6 +4284,62 @@
       "mark_id": "powersword_p2_m2",
       "variant_id": "weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent",
       "trait_item": "content/items/traits/bespoke_powersword_p2/reduce_fixed_overheat_amount",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "import_line": 11,
+        "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_slower_heat_buildup_on_perfect_block",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/slower_heat_buildup_on_perfect_block",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_slower_heat_buildup_on_perfect_block",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/slower_heat_buildup_on_perfect_block",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_slower_heat_buildup_on_perfect_block",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/slower_heat_buildup_on_perfect_block",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "import_line": 11,
+        "append_line": 1743
+      }
+    },
+    {
+      "blessing_id": "energy-transfer",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_slower_heat_buildup_on_perfect_block",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/slower_heat_buildup_on_perfect_block",
       "trait_category": "bespoke_powersword_p2",
       "available_tiers": null,
       "source": {

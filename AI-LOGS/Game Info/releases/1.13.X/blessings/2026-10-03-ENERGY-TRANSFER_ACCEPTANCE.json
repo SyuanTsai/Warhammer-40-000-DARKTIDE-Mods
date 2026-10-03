@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-03",
+  "blessing": "energy-transfer",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/能量轉換/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_2h_p1_slower_heat_buildup_on_perfect_block",
+    "weapon_trait_bespoke_powersword_p2_slower_heat_buildup_on_perfect_block"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "energy-transfer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 2,
+    "reviewed_bindings": 4,
+    "findings": [
+      "Both trait overrides provide five-second duration and zero cooldown, overtime multipliers0.84/0.82/0.80/0.78 and dissipation1.03/1.04/1.05/1.06.",
+      "Actual event is on_block; perfect blocking is not required. Block-broken does not suppress the event.",
+      "Overtime field is consumed by continuous charging, while immediate swing-start heat uses a different field.",
+      "Natural dissipation multiplier applies after its normal idle/lockout and waiting gates.",
+      "All current heat, natural cooling, existing multiplier, refresh and unwield examples are correct.",
+      "Conditional proc also gates stat application; unwield preserves absolute duration while disabling bonus.",
+      "Two variants and four exact mark bindings match metadata; no same-name outside-intersection candidate found."
+    ],
+    "corrections_resolved": [
+      "Luna initially withheld final acceptance because successful-block wording could exclude block-broken. Primary removed successful, retained plain player blocking wording and explicit block-broken bullet. Luna reviewed only this correction and confirmed final acceptance."
+    ],
+    "final_result": "Corrected player trigger wording, all core mechanics, current examples, two variants and four bindings accepted."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "energy-transfer",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_241",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_241.png",
+      "attachment": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965671523",
+      "acquired_date": "2026-10-03",
+      "sha256": "34bdc02a16de17ee0a8bedfe69e7046eef1d7aa4cc4b789b583bf37a87addd50",
+      "content_type": "image/png",
+      "size": 3181,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "能量轉換祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 161,
+      "tables": 142,
+      "rows": 1092,
+      "lists": 188
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 541,
+      "source_files": 205,
+      "bindings": 104,
+      "variants": 48,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 861,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 161,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 152,
+    "not_started_name_groups": 152,
+    "partial_name_groups": 0,
+    "remaining_variants": 540,
+    "remaining_bindings": 1064,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "2abf347e19364519c5c3d21b75bc86b6f5a6926dcc281dc8f6e5b71599641a5f"
+  },
+  "previous_local_commit": "abb90df73bfac79d98fed9d7d1a721b63e280f4e",
+  "current_blessing_formula_review": {
+    "overtime_heat_multipliers": [
+      0.84,
+      0.82,
+      0.8,
+      0.78
+    ],
+    "natural_dissipation_multipliers": [
+      1.03,
+      1.04,
+      1.05,
+      1.06
+    ],
+    "IV_heat_base20": [
+      15.6,
+      65.6
+    ],
+    "IV_heat_with_other0_9": 14.04,
+    "IV_dissipation_base8": 8.48,
+    "IV_dissipation_with_other1_2": 10.176,
+    "refresh_deadline": [
+      15,
+      18
+    ],
+    "switch_remaining_at14": 1
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "status": "all exact name-key items included"
+  }
+}
