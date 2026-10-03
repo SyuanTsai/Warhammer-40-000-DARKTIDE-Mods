@@ -5698,7 +5698,8 @@
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
         "veteran_increased_weakspot_power_after_combat_ability",
-        "veteran_combat_ability_stagger_nearby_enemies"
+        "veteran_combat_ability_stagger_nearby_enemies",
+        "veteran_combat_ability_increase_and_restore_toughness_to_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5737,7 +5738,8 @@
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
         "veteran_increased_weakspot_power_after_combat_ability",
-        "veteran_combat_ability_stagger_nearby_enemies"
+        "veteran_combat_ability_stagger_nearby_enemies",
+        "veteran_combat_ability_increase_and_restore_toughness_to_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5776,7 +5778,8 @@
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
         "veteran_increased_weakspot_power_after_combat_ability",
-        "veteran_combat_ability_stagger_nearby_enemies"
+        "veteran_combat_ability_stagger_nearby_enemies",
+        "veteran_combat_ability_increase_and_restore_toughness_to_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5815,7 +5818,8 @@
         "veteran_reduced_threat_after_combat_ability",
         "veteran_increased_close_damage_after_combat_ability",
         "veteran_increased_weakspot_power_after_combat_ability",
-        "veteran_combat_ability_stagger_nearby_enemies"
+        "veteran_combat_ability_stagger_nearby_enemies",
+        "veteran_combat_ability_increase_and_restore_toughness_to_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6081,9 +6085,21 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2f3c337544d7fd32d3977254d04a6eb5ea879bc4",
       "chinese_sha256": "31dc4e5f5e8bff10e580571c64e0a45d5f649e46ed9f57a4d1b5083456bdc0f8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_increase_and_restore_toughness_to_coherency"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_ogryn_outlines.md",
@@ -8011,7 +8027,16 @@
       "status": "accepted_with_caveats",
       "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stagger_nearby_enemies.md",
       "scope": "Veteran",
-      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stagger_nearby_enemies.json"
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stagger_nearby_enemies.json",
+      "commit": "2b8f22e274136bb4a16af9705a7d93ef43e82327"
+    },
+    {
+      "id": "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_increase_and_restore_toughness_to_coherency.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1,0 +1,168 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for display parameters.",
+  "id": "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
+  "class": "Veteran",
+  "name": "Duty and Honour",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name_key": "loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency",
+  "name_hash": "0b0690e2",
+  "name_entry_index": 694,
+  "description_key": "loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description",
+  "description_hash": "b4e057ef",
+  "description_entry_index": 11667,
+  "raw_template": "{talent_name:%s} now also provides you and Allies in Coherency with {toughness:%s} Toughness for {duration:%s}s. This can exceed your maximum Toughness.",
+  "static_reconstruction": "Voice of Command now also provides you and Allies in Coherency with +75 Toughness for 10s. This can exceed your maximum Toughness.",
+  "additional_english_pairs": [
+    {
+      "key": "loc_talent_veteran_combat_ability_stagger_nearby_enemies",
+      "hash": "36c11826",
+      "text": "Voice of Command",
+      "usage": "talent_name display parameter"
+    }
+  ],
+  "comparison_rule_totals": {
+    "Consistent": 4,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name/description and Voice of Command display-name records",
+    "Existing Duty and Honour icon audit",
+    "veteran_talents.lua:480-517 (targeted display parameters only)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier for Coherency membership, flat maximum and current Toughness gain, grant-before-personal-recovery ordering, percentage placement, independent instances and expiry. Accepted number/name formatter evidence was reused. No full ability/Toughness/buff implementation analysis repeated.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and full raw template",
+      "result": "passed",
+      "pairs": 3
+    },
+    {
+      "check": "localized ability name, signed number and duration reconstruction",
+      "result": "passed",
+      "toughness_points": 75,
+      "duration_seconds": 10
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 809,
+      "unique_source_ranges": 196,
+      "source_files": 40
+    },
+    {
+      "check": "six static Toughness grant/expiry/overlap/percentage examples",
+      "result": "passed",
+      "ally_current_and_maximum": [
+        105,
+        175
+      ],
+      "caster_current_and_maximum": [
+        175,
+        175
+      ],
+      "expiry_current_values": [
+        100,
+        60
+      ],
+      "overlap_maximum": 250,
+      "percentage_then_flat_maximum": 195
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 719,
+      "local_references": 6616,
+      "remote_references": 9721,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge rendering of final five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 15
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 8
+      },
+      "example_table": {
+        "columns": 3,
+        "rows": 6
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "player_icons": "32x32 and 72x72; all 30 loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of final player section, Toughness examples and raw-template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 4332,
+      "sha256": "b07615d09818374928cc75c8d0995abf5abc6cbcd9e6469c3457ef21191d87e4",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 17,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, fifteen accepted skills, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "primary_wording_clarification": "Separated 30 + 75 = 105 points from the 105/175 current/maximum notation, then rendered and visually checked the final sentence.",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact runtime grant/expiry frames.",
+    "Repeated-use overlap measured in game."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full ability/Toughness/buff implementation analysis (outside clarified review scope)"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/duty-and-honour-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md"
+}

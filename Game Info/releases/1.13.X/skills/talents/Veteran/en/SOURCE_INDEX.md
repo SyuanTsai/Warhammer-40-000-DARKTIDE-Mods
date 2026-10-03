@@ -14,6 +14,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Hunter's Resolve](veteran_toughness_bonus_leaving_invisibility.md) / `veteran_toughness_bonus_leaving_invisibility` | Ability modifier |
 | [Voice of Command](veteran_combat_ability_stagger_nearby_enemies.md) / `veteran_combat_ability_stagger_nearby_enemies` | Combat ability |
 | [Marksman](veteran_increased_weakspot_power_after_combat_ability.md) / `veteran_increased_weakspot_power_after_combat_ability` | Ability modifier |
+| [Duty and Honour](veteran_combat_ability_increase_and_restore_toughness_to_coherency.md) / `veteran_combat_ability_increase_and_restore_toughness_to_coherency` | Ability modifier |
 | [Close Quarters Killzone](veteran_increased_close_damage_after_combat_ability.md) / `veteran_increased_close_damage_after_combat_ability` | Ability modifier |
 | [Overwatch](veteran_combat_ability_extra_charge.md) / `veteran_combat_ability_extra_charge` | Ability modifier |
 | [Marksman's Focus](veteran_snipers_focus.md) / `veteran_snipers_focus` | Keystone |

@@ -150,5 +150,6 @@
     "Repeated full shout/stagger and Toughness implementation analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/voice-of-command-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stagger_nearby_enemies.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stagger_nearby_enemies.md",
+  "commit": "2b8f22e274136bb4a16af9705a7d93ef43e82327"
 }
