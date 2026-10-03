@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="Blessed Armament talent icon"> [Blessed Armament](#adamant_stance_ranged_kills_transfer_ammo) | <ul><li>During Castigator's Stance, ranged kills transfer 10% of Clip capacity from Reserve, rounded upward and capped by missing Clip ammunition.</li><li>The base stance lasts 10s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="Writ of Execution talent icon"> [Writ of Execution](#adamant_stance_elite_kills_stack_damage) | <ul><li>During Castigator's Stance, each Elite or Specialist kill grants +7.5% Damage for 12s, up to six stacks.</li><li>Full stacks give +45% Damage; acquired stacks can continue counting down after the stance ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="Bloodlust talent icon"> [Bloodlust](#adamant_stance_dog_bloodlust) | <ul><li>Activating Castigator's Stance gives your Cyber-Mastiff 75% more damage for the base stance duration of 10s.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="Inspiring Recitation talent icon"> [Inspiring Recitation](#adamant_drone_buff_talent) | <ul><li>Allies affected within the Nuncio-Aquila's area additionally gain 30% Toughness Damage Reduction, 30% Revive Speed and 10% Attack Speed.</li></ul> | Ability |
 
 ## Blitz
 
@@ -194,3 +195,17 @@
 - **Damage example**: Isolating this bonus, your Cyber-Mastiff's base direct damage of 100 becomes `100 × (1 + 75%) = 175 damage`. With another same-stage 25% bonus, the result is `100 × (1 + 75% + 25%) = 200 damage`. This companion-damage bonus does not apply to Bleed damage.
 
 [Details](adamant_stance_dog_bloodlust.md) · [Back to index](#talent-index)
+
+<a id="adamant_drone_buff_talent"></a>
+
+### Inspiring Recitation
+
+<img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="72" height="72" alt="Inspiring Recitation talent icon">
+
+- **Ally bonuses**: Allies affected within the Nuncio-Aquila's area take 30% less Toughness damage, gain +30% Revive Speed and gain +10% Attack Speed.
+
+- **Damage example**: Isolating this upgrade, an attack that would deal 100 Toughness damage instead deals `100 × 0.7 = 70 Toughness damage`. Other Toughness damage reductions still participate in the actual calculation.
+
+- **Speed examples**: Isolating this effect, a revive taking 5s instead takes `5 ÷ 1.3 ≈ 3.85s`, and an attack action with adjustable speed taking 1s instead takes `1 ÷ 1.1 ≈ 0.91s`. Leaving the Nuncio-Aquila's area removes these bonuses.
+
+[Details](adamant_drone_buff_talent.md) · [Back to index](#talent-index)

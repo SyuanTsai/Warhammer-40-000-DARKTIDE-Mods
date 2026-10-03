@@ -75,7 +75,8 @@
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
-        "adamant_stance_dog_bloodlust"
+        "adamant_stance_dog_bloodlust",
+        "adamant_drone_buff_talent"
       ],
       "checks": []
     },
@@ -99,7 +100,8 @@
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
-        "adamant_stance_dog_bloodlust"
+        "adamant_stance_dog_bloodlust",
+        "adamant_drone_buff_talent"
       ],
       "checks": []
     },
@@ -123,7 +125,8 @@
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
-        "adamant_stance_dog_bloodlust"
+        "adamant_stance_dog_bloodlust",
+        "adamant_drone_buff_talent"
       ],
       "checks": []
     },
@@ -147,7 +150,8 @@
         "adamant_stance",
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
-        "adamant_stance_dog_bloodlust"
+        "adamant_stance_dog_bloodlust",
+        "adamant_drone_buff_talent"
       ],
       "checks": []
     },
@@ -527,9 +531,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cc31b75a3d6855c64d8265f9c499a752408dd38c",
       "chinese_sha256": "0ab90d860167f45a598d9a7942a82dd8f9af78133d492529757bbfb9bbcf5bc5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_drone_buff_talent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_buff_talent.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_drone_debuff_talent.md",
@@ -10078,6 +10089,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_dog_bloodlust.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_dog_bloodlust.md"
+    },
+    {
+      "id": "adamant_drone_buff_talent",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_buff_talent.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_drone_buff_talent.md"
     }
   ],
   "pending_chinese_corrections": [
