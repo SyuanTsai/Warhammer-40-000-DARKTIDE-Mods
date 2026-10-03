@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [全量對話 Pages 最終建置與交付](publication/2026-10-04-ALL_DIALOGUES_PAGES.md)
+
 - [全部官方對話與字幕目錄整理](dialogues/2026-10-04-ALL_DIALOGUES.md)
 
 - [固定角色位置與三人群組對話](dialogues/2026-10-04-GROUP_DIALOGUE_LAYOUT.md)

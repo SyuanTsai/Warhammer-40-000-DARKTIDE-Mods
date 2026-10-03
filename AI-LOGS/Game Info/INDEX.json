@@ -6,6 +6,14 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
+      "id": "publication/2026-10-04-ALL_DIALOGUES_PAGES",
+      "kind": "record",
+      "scope": "publication",
+      "path": "AI-LOGS/Game Info/publication/2026-10-04-ALL_DIALOGUES_PAGES.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
       "id": "dialogues/2026-10-04-ALL_DIALOGUES",
       "kind": "record",
       "scope": "dialogues",
