@@ -92,6 +92,7 @@
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="Justified Measures talent icon"> [Justified Measures](#adamant_stacking_damage) | <ul><li>After an attack hits its first target, gain 2% Damage per stack, up to 5 stacks, lasting 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="Suppression Force talent icon"> [Suppression Force](#adamant_staggered_enemies_deal_less_damage) | <ul><li>Hitting a Staggered enemy with a melee attack or push reduces its Damage by 20% for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="Concussive talent icon"> [Concussive](#adamant_melee_weakspot_hits_count_as_stagger) | <ul><li>Melee Weakspot Hits make the target count as Staggered for 4s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="32" height="32" alt="Target the Weak talent icon"> [Target the Weak](#adamant_staggering_enemies_take_more_damage) | <ul><li>Hitting a Staggered enemy with a melee attack or push makes it take 15% more Melee Damage for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1176,3 +1177,15 @@
 - **Synergy example**: With Breaking Dissent's 10% Damage against Staggered enemies, a later qualifying base-100 attack becomes 100 × 1.1 = 110. Concussive alone does not grant damage or force the enemy to recoil.
 
 [Details](adamant_melee_weakspot_hits_count_as_stagger.md) · [Back to index](#talent-index)
+
+<a id="adamant_staggering_enemies_take_more_damage"></a>
+
+### Target the Weak
+
+<img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="72" height="72" alt="Target the Weak talent icon">
+
+- **Behavior and refresh**: A melee attack or push hitting a Staggered enemy makes it take 15% more Melee Damage for the next 5s. You and teammates can benefit. Another trigger resets the duration without increasing the amount.
+
+- **Damage examples**: Isolating the target damage-taken stage, melee damage 100 becomes 115. With a separate 25% attacker damage bonus, the stages multiply: 100 × 1.25 × 1.15 = 143.75. If the target instead already has a same-stage 25% damage-taken increase, damage is 100 × (1 + 25% + 15%) = 140.
+
+[Details](adamant_staggering_enemies_take_more_damage.md) · [Back to index](#talent-index)
