@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="Scrier's Gaze talent icon"> [Scrier's Gaze](#psyker_combat_ability_stance) | <ul><li>Quell 50 percentage points of Peril on activation; gain damage, Critical Chance, Weakspot Damage, Toughness protection/recovery and Suppression Immunity. Damage builds while active and lingers for 10 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="Becalming Eruption talent icon"> [Becalming Eruption](#psyker_shout_reduces_warp_charge_generation) | <ul><li>Venting Shriek hits grant Peril Generation reduction for 5 seconds, up to 25 stacks; in the 0.99-per-stack scenario, reductions multiply.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="Warp Rupture talent icon"> [Warp Rupture](#psyker_discharge_damage_debuff) | <ul><li>Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="32" height="32" alt="Creeping Flames talent icon"> [Creeping Flames](#psyker_warpfire_on_shout) | <ul><li>Venting Shriek applies 1–6 Soulblaze stacks based on Peril at activation; sleeping Daemonhosts are excluded.</li></ul> | Ability |
 
 ---
 
@@ -266,3 +267,17 @@
 - **Damage example**: With no other bonuses, an Enemy originally dealing 100 damage now deals `100 × 0.9 = 90`; originally taking 100 damage, it now takes `100 × 1.1 = 110`.
 
 [Details](psyker_discharge_damage_debuff.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_warpfire_on_shout"></a>
+
+### Creeping Flames
+
+<img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="72" height="72" alt="Creeping Flames talent icon">
+
+- **Ability modifier**: Based on your Peril before casting Venting Shriek, apply 1–6 stacks of Soulblaze to hit Enemies. Sleeping Daemonhosts are not ignited by this effect.
+
+- **Stack examples**: Multiply the Peril proportion by 6 and round up, with a minimum of 1 and maximum of 6 stacks. At 50%, `0.50 × 6 = 3` stacks; at 80%, `0.80 × 6 = 4.8` rounds up to 5. Even 0% Peril applies 1 stack.
+
+[Details](psyker_warpfire_on_shout.md) · [Back to index](#talent-index)

@@ -202,6 +202,18 @@ Full raw template and formatting: [source evidence](psyker_discharge_damage_debu
 | Target, two effects, values and duration | Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8s; `ui / loc_talent_psyker_discharge_damage_debuff_description / c5561004` | Targets receive damage=−0.1 and damage_taken_multiplier=1.1 for 8 seconds. [Fixed source and line references](psyker_discharge_damage_debuff.md#fixed-source-evidence) | Consistent | The English preserves both offensive and defensive effects on the hit Enemy. |
 | Arithmetic and application limits | No isolated damage examples, stack cap or refresh boundary stated; `ui / loc_talent_psyker_discharge_damage_debuff_description / c5561004` | At an original 100, example Damage Dealt becomes 90 and Damage Taken becomes 110. Maximum 1 stack; exact reapplication timing remains untested, and other combat modifiers affect final results. [Fixed source and line references](psyker_discharge_damage_debuff.md#fixed-source-evidence) | Not covered by the description | These calculation and application limits supplement the stated debuff. |
 
+
+<a id="psyker_warpfire_on_shout"></a>
+
+## Creeping Flames
+
+Full raw template and formatting: [source evidence](psyker_warpfire_on_shout.md#original-english-template-and-reconstruction). Name hash `e809f338`. Every row uses `ui / loc_talent_psyker_warpfire_on_shout_desc / 8ec3e5f7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Applied effect, range and Peril dependence | Venting Shriek applies 1–6 Soulblaze stacks to targets hit, based on current Peril; `ui / loc_talent_psyker_warpfire_on_shout_desc / 8ec3e5f7` | The activation Peril snapshot determines ceil(percentage × 6), clamped to 1–6, applied on eligible shout hits. [Fixed source and line references](psyker_warpfire_on_shout.md#fixed-source-evidence) | Consistent | The stated effect, range and dependence agree with the accepted calculation. |
+| Snapshot timing, rounding and target eligibility | No snapshot event order, rounding formula or specific target exclusions stated; `ui / loc_talent_psyker_warpfire_on_shout_desc / 8ec3e5f7` | on_combat_ability captures Peril before shout damage; living targets are required and sleeping Daemonhosts are excluded. Examples: 50% gives 3, 13% gives 1, 80% gives 5, and 0% still gives 1. [Fixed source and line references](psyker_warpfire_on_shout.md#fixed-source-evidence) | Not covered by the description | These timing, calculation and eligibility details supplement the English. |
+
 ## Comparison totals
 
 The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

@@ -27,3 +27,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Scrier's Gaze](psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | Ability |
 | [Becalming Eruption](psyker_shout_reduces_warp_charge_generation.md) / `psyker_shout_reduces_warp_charge_generation` | Ability |
 | [Warp Rupture](psyker_discharge_damage_debuff.md) / `psyker_discharge_damage_debuff` | Ability |
+| [Creeping Flames](psyker_warpfire_on_shout.md) / `psyker_warpfire_on_shout` | Ability |
