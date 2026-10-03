@@ -1,7 +1,9 @@
-# 祝福資料：Release 1.13.X
+# 武器祝福：Release 1.13.1
 
-[版本資訊](../README.md)｜[技能](../skills/README.md)
+[來源索引](SOURCE_INDEX.md)｜[武器查詢](weapons/README.md)｜[共用關聯資料](data/BLESSING_WEAPON_MAP.json)
 
-目前 `Game Info` 沒有獨立祝福資料。此分類用於保存經來源核對的祝福說明與公式；有實際內容後依 `melee/`（近戰）與 `ranged/`（遠程）分類。
+| 祝福 | 主要效果 | 分類 |
+|---|---|---|
+| <img src="https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80" width="32" height="32" alt="屠戮者祝福圖示"> [屠戮者](entries/屠戮者/README.md)<br>- Decimator | <ul><li>近戰揮擊命中敵人後取得一層，每層近戰威力增加2／3／4／5%，最多10層；命中刷新2秒，揮空清空。</li></ul> | 近戰 |
 
-MOD 程式、遊戲原始文本，以及技能文件中的祝福算例不視為已完成的獨立祝福資料。
+[近戰祝福](melee/README.md)

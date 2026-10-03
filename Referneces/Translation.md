@@ -298,6 +298,7 @@
 - Rampage - 暴走
 - Devastating Strike - 毀滅打擊
 - Decimator - 屠戮者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_power`，hash `77cc5d18`；英文／繁中RAW配對確認。
 - Brutal Momentum - 野蠻攻勢
 - Limbsplitter - 斷肢者
 - All or Nothing - 孤注一擲

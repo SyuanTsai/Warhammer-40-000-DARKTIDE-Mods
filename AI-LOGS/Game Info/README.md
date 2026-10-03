@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [屠戮者文件與圖片驗收](releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json)
+
 - [祝福新對話交接：Sol／xhigh](plans/2026-10-03-BLESSINGS_HANDOFF_SOL.md)
 
 - [祝福執行範圍](plans/2026-10-03-BLESSINGS_EXECUTION.md)
