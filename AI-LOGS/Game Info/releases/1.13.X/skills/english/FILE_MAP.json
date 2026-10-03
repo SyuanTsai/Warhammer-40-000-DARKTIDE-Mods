@@ -4343,7 +4343,12 @@
         "psyker_combat_ability_force_field",
         "psyker_shield_extra_charge",
         "psyker_boost_allies_in_sphere",
-        "psyker_sphere_shield"
+        "psyker_sphere_shield",
+        "psyker_shield_stun_passive",
+        "psyker_overcharge_stance_infinite_casting",
+        "psyker_passive_souls_from_elite_kills",
+        "psyker_new_mark_passive",
+        "psyker_empowered_ability"
       ],
       "checks": []
     },
@@ -4380,7 +4385,12 @@
         "psyker_combat_ability_force_field",
         "psyker_shield_extra_charge",
         "psyker_boost_allies_in_sphere",
-        "psyker_sphere_shield"
+        "psyker_sphere_shield",
+        "psyker_shield_stun_passive",
+        "psyker_overcharge_stance_infinite_casting",
+        "psyker_passive_souls_from_elite_kills",
+        "psyker_new_mark_passive",
+        "psyker_empowered_ability"
       ],
       "checks": []
     },
@@ -4417,7 +4427,12 @@
         "psyker_combat_ability_force_field",
         "psyker_shield_extra_charge",
         "psyker_boost_allies_in_sphere",
-        "psyker_sphere_shield"
+        "psyker_sphere_shield",
+        "psyker_shield_stun_passive",
+        "psyker_overcharge_stance_infinite_casting",
+        "psyker_passive_souls_from_elite_kills",
+        "psyker_new_mark_passive",
+        "psyker_empowered_ability"
       ],
       "checks": []
     },
@@ -4454,7 +4469,12 @@
         "psyker_combat_ability_force_field",
         "psyker_shield_extra_charge",
         "psyker_boost_allies_in_sphere",
-        "psyker_sphere_shield"
+        "psyker_sphere_shield",
+        "psyker_shield_stun_passive",
+        "psyker_overcharge_stance_infinite_casting",
+        "psyker_passive_souls_from_elite_kills",
+        "psyker_new_mark_passive",
+        "psyker_empowered_ability"
       ],
       "checks": []
     },
@@ -4879,9 +4899,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "77d89e864cb51204ad68275fba3f7f114d108b9b",
       "chinese_sha256": "cd02a4eeb729714a01dc46e9c147a280b7ce1b2a99fc6884c323acd9df11b287",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_empowered_ability"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_ability_on_elite_kills.md",
@@ -5146,9 +5173,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9213cdf95d280f885369fdeb3a0e914b33d040a9",
       "chinese_sha256": "2149a22db66c32121c61b7030208c2102c7a2eb44843d91c5f54719d8162cd89",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_new_mark_passive"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_increased_movement_speed.md",
@@ -5193,9 +5227,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3c1825c7ceb90ed5ba7173ff9f8bb977ffc8ffea",
       "chinese_sha256": "3900a48a88e5693ddce7a655a21e208c82be3b6c0169db8bab3e55e90a15efac",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_overcharge_stance_infinite_casting"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_weakspot_kill_bonuses.md",
@@ -5222,9 +5263,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6eb10774a309772d253d8999bac93ee4ce5dcbe3",
       "chinese_sha256": "06426a2e4ce97429e828004d9f4b5b7c2b56eb4ca760e866b38fa967bfbac80d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_passive_souls_from_elite_kills"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_reduced_warp_charge_cost_and_venting_speed.md",
@@ -5273,9 +5321,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1bc2a7f5b64f0b02a16eaf387fe365b88569c0eb",
       "chinese_sha256": "b51304c1ff38113c9cc1d88eff84f6fea7752f4d6421573d2778fb0c5152af56",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_shield_stun_passive"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_reduces_warp_charge_generation.md",
@@ -13896,6 +13951,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_sphere_shield.md"
+    },
+    {
+      "id": "psyker_shield_stun_passive",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shield_stun_passive.md"
+    },
+    {
+      "id": "psyker_overcharge_stance_infinite_casting",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_stance_infinite_casting.md"
+    },
+    {
+      "id": "psyker_passive_souls_from_elite_kills",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_passive_souls_from_elite_kills.md"
+    },
+    {
+      "id": "psyker_new_mark_passive",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_new_mark_passive.md"
+    },
+    {
+      "id": "psyker_empowered_ability",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_ability.md"
     }
   ],
   "pending_chinese_corrections": [

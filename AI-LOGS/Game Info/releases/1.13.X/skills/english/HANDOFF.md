@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 292 completed on 2026-10-04. [Receipt](psyker_skills_288_292.json) and [FILE_MAP](FILE_MAP.json) record 292 accepted mechanisms. Next item: **293, Enervating Threshold**, `psyker_shield_stun_passive`. The full goal remains active and unfinished.
+Checkpoint 297 completed on 2026-10-04. [Receipt](psyker_skills_293_297.json) and [FILE_MAP](FILE_MAP.json) record 297 accepted mechanisms. Next item: **298, Inner Tranquility**, `psyker_reduced_warp_charge_cost_and_venting_speed`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 354 mechanisms + 24 class-support files + 2 shared files = 380 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 25/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 53 = 26 Consistent / 0 Explicit contradictions / 25 Not covered / 0 No implementation / 2 Cannot confirm. Latest batch commit interval: 395s (6m 35s), 146188dde→d43ae4aa6. No explicit English contradiction established. Reality Anchor's time/rate distinction and Chinese-only wording erratum remain; Sanctuary's omitted sphere prerequisite is supplementary. Shield durability, shared charge pool and early-expiry limits are retained.
+Remaining: 349 mechanisms + 24 class-support files + 2 shared files = 375 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 30/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 66 = 31 Consistent / 2 Explicit contradictions / 30 Not covered / 0 No implementation / 3 Cannot confirm. Latest batch commit interval: 770s (12m 50s), 3f91df566→518291395. Enervating Threshold and Warp Unbound values agree; omitted conditions are supplements. Disrupt Destiny marking wording is Cannot confirm. Empowered Psionics has two explicit English text/source contradictions; Blitz stock and empowerment remain distinct resources.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

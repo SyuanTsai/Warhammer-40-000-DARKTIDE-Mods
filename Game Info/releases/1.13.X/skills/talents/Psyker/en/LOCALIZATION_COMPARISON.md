@@ -375,4 +375,4 @@ Full raw template and formatting: [source evidence](psyker_empowered_ability.md#
 
 ## Comparison totals
 
-The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
+The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
