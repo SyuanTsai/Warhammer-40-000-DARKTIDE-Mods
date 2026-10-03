@@ -38,3 +38,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Toughest!](ogryn_carapace_armor_more_toughness.md) / `ogryn_carapace_armor_more_toughness` | Keystone |
 | [Maximum Firepower](ogryn_leadbelcher_cooldown_reduction.md) / `ogryn_leadbelcher_cooldown_reduction` | Keystone |
 | [Good Shootin'](ogryn_leadbelcher_crits.md) / `ogryn_leadbelcher_crits` | Keystone |
+| [Bulletstorm](ogryn_blo_ally_ranged_buffs.md) / `ogryn_blo_ally_ranged_buffs` | Keystone |

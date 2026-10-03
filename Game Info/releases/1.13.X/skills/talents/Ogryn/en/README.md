@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="Toughest! talent icon"> [Toughest!](#ogryn_carapace_armor_more_toughness) | <ul><li>Toughest! adds 2.5% Toughness replenishment per Feel No Pain stack.</li><li>Added to the base 3% per stack; 10 stacks give a total 55% increase.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="32" height="32" alt="Maximum Firepower talent icon"> [Maximum Firepower](#ogryn_leadbelcher_cooldown_reduction) | <ul><li>A Lucky Bullet proc grants about 1 extra second of combat-ability cooldown recovery per second for 2.5s.</li><li>Further procs refresh the duration without increasing the restoration per tick.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/048770ea-349f-42a0-b5a1-c582fbfde7f8" width="32" height="32" alt="Good Shootin' talent icon"> [Good Shootin'](#ogryn_leadbelcher_crits) | <ul><li>The shot that triggers Lucky Bullet is guaranteed critical if it hits.</li><li>A miss does not produce a critical hit; the effect does not change Lucky Bullet chance.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="Bulletstorm talent icon"> [Bulletstorm](#ogryn_blo_ally_ranged_buffs) | <ul><li>Lucky Bullet grants you and allies in Coherency +15% ranged damage for 8s.</li><li>Further procs restart the 8s duration.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -508,3 +509,21 @@
 - **Damage example**: For the same weapon, armour and hit location, assume ordinary damage 100 and an additional critical component of 50. A Lucky Bullet hit deals 100 + 50 = 150. Critical multipliers vary by weapon; they are not always double damage. A miss deals no damage.
 
 [Details](ogryn_leadbelcher_crits.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_blo_ally_ranged_buffs"></a>
+
+### Bulletstorm
+
+<img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="72" height="72" alt="Bulletstorm talent icon">
+
+- **Trigger**: Lucky Bullet triggering is enough; the shot does not have to hit an enemy.
+
+- **Recipients**: You and allies in Coherency gain +15% ranged damage for 8s. Further procs restart the duration.
+
+- **Timing example**: After a proc at 0s, another at 6s gives a fresh 8s duration, extending the buff to 14s.
+
+- **Damage example**: Base ranged damage 100 becomes 100 × (1 + 15%) = 115. Another 20% at the same stage gives 135. This damage buff does not accumulate stacks.
+
+[Details](ogryn_blo_ally_ranged_buffs.md) · [Back to index](#talent-index)
