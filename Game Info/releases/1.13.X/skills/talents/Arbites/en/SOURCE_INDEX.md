@@ -49,3 +49,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Withering Fire](adamant_damage_after_reloading.md) / `adamant_damage_after_reloading` | Passive talent |
 | [Hammer of Judgement](adamant_multiple_hits_attack_speed.md) / `adamant_multiple_hits_attack_speed` | Passive talent |
 | [Target Neutralised](adamant_elite_special_kills_replenish_toughness.md) / `adamant_elite_special_kills_replenish_toughness` | Passive talent |
+| [Up Close](adamant_close_kills_restore_toughness.md) / `adamant_close_kills_restore_toughness` | Passive talent |

@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#adamant_damage_after_reloading) | <ul><li>After reloading, gain 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="Hammer of Judgement talent icon"> [Hammer of Judgement](#adamant_multiple_hits_attack_speed) | <ul><li>Hit at least 3 enemies with one melee attack to gain 10% Melee Attack Speed for 3s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="Target Neutralised talent icon"> [Target Neutralised](#adamant_elite_special_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill instantly restores 10% of maximum Toughness, then another 10% over 4s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="Up Close talent icon"> [Up Close](#adamant_close_kills_restore_toughness) | <ul><li>Killing an enemy within 12.5m restores 5% of maximum Toughness.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -603,3 +604,15 @@
 - **Recovery example**: At maximum Toughness 100, with sufficient deficit and no other recovery bonus, one kill restores 100 × 10% + 100 × 2.5% × 4 = 20 points in total. While two kills' continuous effects overlap, recovery totals 5 points per second; actual restoration cannot exceed the deficit.
 
 [Details](adamant_elite_special_kills_replenish_toughness.md) · [Back to index](#talent-index)
+
+<a id="adamant_close_kills_restore_toughness"></a>
+
+### Up Close
+
+<img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="72" height="72" alt="Up Close talent icon">
+
+- **Trigger**: Killing an enemy within 12.5m of yourself restores 5% of maximum Toughness. Both melee and ranged kills qualify.
+
+- **Recovery example**: At maximum Toughness 100 with no other recovery bonus, each kill restores 100 × 5% = 5 points. If current Toughness is 98, only 2 points can be restored.
+
+[Details](adamant_close_kills_restore_toughness.md) · [Back to index](#talent-index)
