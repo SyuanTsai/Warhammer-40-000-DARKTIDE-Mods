@@ -79,7 +79,8 @@
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
-        "adamant_charge_cooldown_reduction"
+        "adamant_charge_cooldown_reduction",
+        "adamant_charge_longer_distance"
       ],
       "checks": []
     },
@@ -107,7 +108,8 @@
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
-        "adamant_charge_cooldown_reduction"
+        "adamant_charge_cooldown_reduction",
+        "adamant_charge_longer_distance"
       ],
       "checks": []
     },
@@ -135,7 +137,8 @@
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
-        "adamant_charge_cooldown_reduction"
+        "adamant_charge_cooldown_reduction",
+        "adamant_charge_longer_distance"
       ],
       "checks": []
     },
@@ -163,7 +166,8 @@
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
-        "adamant_charge_cooldown_reduction"
+        "adamant_charge_cooldown_reduction",
+        "adamant_charge_longer_distance"
       ],
       "checks": []
     },
@@ -272,9 +276,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5a6071a841154999ed89ed7124e48b3bd6dcd48a",
       "chinese_sha256": "fa346081ad93d34d6f79e581daeac7bb4d7ccfb4ff9a5f55653fa5445db0254f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_charge_longer_distance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_longer_distance.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_toughness.md",
@@ -10154,6 +10165,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_cooldown_reduction.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_cooldown_reduction.md"
+    },
+    {
+      "id": "adamant_charge_longer_distance",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_longer_distance.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_longer_distance.md"
     }
   ],
   "pending_chinese_corrections": [

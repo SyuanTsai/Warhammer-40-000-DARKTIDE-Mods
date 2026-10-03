@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="Fear of Justice talent icon"> [Fear of Justice](#adamant_drone_debuff_talent) | <ul><li>Enemies within the Nuncio-Aquila's area deal 25% less melee damage and have 25% lower melee attack speed.</li><li>Isolating this effect, an adjustable attack action taking 1s instead takes about 1.33s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="Commendation from Condemnation talent icon"> [Commendation from Condemnation](#adamant_charge_toughness) | <ul><li>Each distinct Elite, Specialist or Monstrosity hit by the charge replenishes 20% Toughness and 15% Stamina.</li><li>One charge replenishes at most 100% Toughness and 75% Stamina; the same enemy does not count twice.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="Targeted Brutality talent icon"> [Targeted Brutality](#adamant_charge_cooldown_reduction) | <ul><li>Each effective charge hit on an ordinary enemy restores 0.5s of Combat Ability Cooldown; each hit on an Elite, Specialist or Monstrosity restores 1s.</li><li>One charge restores at most 5s of cooldown.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="Engage talent icon"> [Engage](#adamant_charge_longer_distance) | <ul><li>Adds 3.75m to the charge's base distance of 3.75m, raising the target distance limit to 7.5m.</li></ul> | Ability |
 
 ## Blitz
 
@@ -258,3 +259,15 @@
 - **Example**: Six ordinary hits contribute `6 × 0.5 = 3s`; three higher-category target hits contribute `3 × 1 = 3s`. Their 6s total is limited to 5s at settlement. The base cooldown of 20s can therefore receive at most a 5s restoration from this upgrade.
 
 [Details](adamant_charge_cooldown_reduction.md) · [Back to index](#talent-index)
+
+<a id="adamant_charge_longer_distance"></a>
+
+### Engage
+
+<img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="72" height="72" alt="Engage talent icon">
+
+- **Charge distance**: This upgrade adds 3.75m to Break the Line's distance, raising its base 3.75m to 7.5m.
+
+- **Example**: `3.75m base distance + 3.75m increase = 7.5m`. Actual displacement may be shorter because of collisions along the path or cancellation before completion.
+
+[Details](adamant_charge_longer_distance.md) · [Back to index](#talent-index)

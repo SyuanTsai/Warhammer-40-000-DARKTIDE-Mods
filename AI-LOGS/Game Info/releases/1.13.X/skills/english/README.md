@@ -246,3 +246,7 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Commendation from Condemnation](arbites_adamant_charge_toughness.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Targeted Brutality](arbites_adamant_charge_cooldown_reduction.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Engage](arbites_adamant_charge_longer_distance.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- Measured checkpoint (skills 91–95): commit interval e416c091 → 47337f5b was 1,694s (28m 14s), including continuation from the existing draft. At that checkpoint: 95 accepted skills; 589 mapped documents remained (551 mechanisms, 36 class support, 2 shared). Current measured-rate estimate remained 40–60 hours of continuous execution. Work continued without awaiting confirmation.
