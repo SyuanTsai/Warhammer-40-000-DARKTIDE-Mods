@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="Out for Blood talent icon"> [Out for Blood](#veteran_all_kills_replenish_toughness) | <ul><li>Your melee and ranged kills restore an additional 5% of maximum Toughness.</li><li>Actual restoration is capped at the missing Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="Skirmisher talent icon"> [Skirmisher](#veteran_increase_damage_after_sprinting) | <ul><li>Sprinting or sliding builds +6.25% Base Damage per stack, up to 4 stacks (+25%).</li><li>Continuous movement builds about one stack per second; stacking applications refresh a shared 10-second duration, including at the cap.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="Exploit Weakness talent icon"> [Exploit Weakness](#veteran_crits_apply_rending) | <ul><li>Melee critical hits grant +20% Damage for 6 seconds; subsequent melee and ranged attacks can benefit.</li><li>Further melee critical hits refresh the duration without stacking the bonus.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="32" height="32" alt="Leave No One Behind talent icon"> [Leave No One Behind](#veteran_movement_speed_towards_downed) | <ul><li>Gain +20% Movement Speed and Stun Immunity while looking toward an ally who needs help, within about 60° either side.</li><li>Gain +20% speed for reviving, pulling up, removing a net and rescuing.</li><li>An ally you revive receives 33% Damage Reduction for 5 seconds.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -952,6 +953,33 @@ The stacks add into this damage multiplier. Actual final damage depends on the w
 - If a qualifying melee critical hit triggers at 0 seconds and another at 4 seconds, the refreshed period lasts until about `4 + 6 = 10 seconds`; it retains the 20% bonus.
 
 [Detailed sources and formulas](veteran_crits_apply_rending.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_crits_apply_rending) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_movement_speed_towards_downed"></a>
+
+<img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="72" height="72" alt="Leave No One Behind talent icon">
+
+### Leave No One Behind
+
+- **Looking toward an ally who needs help grants +20% Movement Speed and Stun Immunity.**
+- The ally must lie within approximately 60° either side of your look direction. You do not need to be moving toward them.
+- **Reviving, pulling up a hanging ally, removing a net and rescuing are 20% faster.**
+- **An ally you revive receives 33% Damage Reduction for 5 seconds.**
+
+**Speed and reduction examples**
+
+Assume the effects are eligible and there are no other relevant modifiers.
+
+- With the movement condition active, a base speed of 5 m/s becomes `5 × 1.20 = 6 m/s`.
+- An uninterrupted rescue interaction that originally takes 6 seconds becomes `6 / 1.20 = 5 seconds`—about 16.67% less time.
+- During the revived ally’s five-second reduction, 100 incoming damage becomes `100 × 0.67 = 67 damage`.
+
+**English description correction**
+
+The original English says “when moving towards” an ally. The verified condition is **looking toward an ally who requires help**; actual movement toward that ally is not required.
+
+[Detailed sources and formulas](veteran_movement_speed_towards_downed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_movement_speed_towards_downed) | [Back to index](#talent-index)
 
 ---
 

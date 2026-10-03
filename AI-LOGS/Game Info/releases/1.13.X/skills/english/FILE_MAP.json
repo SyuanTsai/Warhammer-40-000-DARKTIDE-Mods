@@ -5730,7 +5730,8 @@
         "veteran_increased_melee_crit_chance_and_melee_finesse",
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
-        "veteran_crits_apply_rending"
+        "veteran_crits_apply_rending",
+        "veteran_movement_speed_towards_downed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5801,7 +5802,8 @@
         "veteran_increased_melee_crit_chance_and_melee_finesse",
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
-        "veteran_crits_apply_rending"
+        "veteran_crits_apply_rending",
+        "veteran_movement_speed_towards_downed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5872,7 +5874,8 @@
         "veteran_increased_melee_crit_chance_and_melee_finesse",
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
-        "veteran_crits_apply_rending"
+        "veteran_crits_apply_rending",
+        "veteran_movement_speed_towards_downed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5943,7 +5946,8 @@
         "veteran_increased_melee_crit_chance_and_melee_finesse",
         "veteran_all_kills_replenish_toughness",
         "veteran_increase_damage_after_sprinting",
-        "veteran_crits_apply_rending"
+        "veteran_crits_apply_rending",
+        "veteran_movement_speed_towards_downed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7023,9 +7027,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4a13a401439426d1c85ee78021d6abb21dbfd00e",
       "chinese_sha256": "8e293aa21a056b99d34693df20074ba5609062a71437e7ca6c5bd0507f901cbc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_movement_speed_towards_downed"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_no_ammo_consumption_on_lasweapon_crit.md",
@@ -8844,7 +8863,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_crits_apply_rending.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_crits_apply_rending.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_crits_apply_rending.md",
+      "commit": "fde10a7e96a19adf1ef67b7a659599be60a9a4be"
+    },
+    {
+      "id": "veteran_movement_speed_towards_downed",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_towards_downed.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_towards_downed.md"
     }
   ],
   "pending_chinese_corrections": [

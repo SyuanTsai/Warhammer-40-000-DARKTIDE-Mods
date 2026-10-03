@@ -113,5 +113,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/exploit-weakness-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_crits_apply_rending.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_crits_apply_rending.md",
+  "commit": "fde10a7e96a19adf1ef67b7a659599be60a9a4be"
 }
