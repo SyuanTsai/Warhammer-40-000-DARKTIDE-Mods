@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="Voltaic Shock Mine talent icon"> [Voltaic Shock Mine](#adamant_shock_mine) | <ul><li>Arm about 1s after deployment; once an enemy is detected, apply Electrocution within 3m for a 15s active period.</li><li>Carry two mines; each applied Electrocution lasts 3s.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="Part of the Squad talent icon"> [Part of the Squad](#adamant_companion_coherency) | <ul><li>Your Cyber-Mastiff counts towards Coherency; you and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction.</li><li>Isolating this effect, 100 incoming Toughness damage becomes 92.5.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="Ruthless Efficiency talent icon"> [Ruthless Efficiency](#adamant_reload_speed_aura) | <ul><li>You and Allies in Coherency gain an additional 12.5% Reload Speed.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="Breaking Dissent talent icon"> [Breaking Dissent](#adamant_damage_vs_staggered_aura) | <ul><li>You and Allies in Coherency deal 10% more damage to Staggered enemies.</li><li>Isolating this effect, 100 damage becomes 110; it gives no bonus against a target that is not Staggered.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 
 ## Blitz
 
@@ -87,3 +88,17 @@
 - **Coherency condition**: Selecting this aura means your Cyber-Mastiff no longer counts towards unit Coherency. Allies still need to satisfy the usual Coherency conditions to receive the reload bonus.
 
 [Details](adamant_reload_speed_aura.md) · [Back to index](#talent-index)
+
+<a id="adamant_damage_vs_staggered_aura"></a>
+
+### Breaking Dissent
+
+<img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="72" height="72" alt="Breaking Dissent talent icon">
+
+- **Condition**: The target must be Staggered. You and Allies in Coherency deal an additional 10% damage to that target.
+
+- **Damage example**: Isolating this aura, a hit that normally deals 100 damage to a Staggered enemy becomes `100 × (1 + 0.10) = 110 damage`. Against an enemy that is not Staggered, it remains 100. With an existing 25% bonus in the same stage, a qualifying hit becomes `100 × (1 + 25% + 10%) = 135 damage`.
+
+- **Coherency condition**: Selecting this aura means your Cyber-Mastiff no longer counts towards unit Coherency. Allies still need to satisfy the usual Coherency conditions to receive the bonus.
+
+[Details](adamant_damage_vs_staggered_aura.md) · [Back to index](#talent-index)

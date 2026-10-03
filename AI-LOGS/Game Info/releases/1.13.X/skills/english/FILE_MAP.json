@@ -68,7 +68,8 @@
         "adamant_grenade_improved",
         "adamant_shock_mine",
         "adamant_companion_coherency",
-        "adamant_reload_speed_aura"
+        "adamant_reload_speed_aura",
+        "adamant_damage_vs_staggered_aura"
       ],
       "checks": []
     },
@@ -85,7 +86,8 @@
         "adamant_grenade_improved",
         "adamant_shock_mine",
         "adamant_companion_coherency",
-        "adamant_reload_speed_aura"
+        "adamant_reload_speed_aura",
+        "adamant_damage_vs_staggered_aura"
       ],
       "checks": []
     },
@@ -102,7 +104,8 @@
         "adamant_grenade_improved",
         "adamant_shock_mine",
         "adamant_companion_coherency",
-        "adamant_reload_speed_aura"
+        "adamant_reload_speed_aura",
+        "adamant_damage_vs_staggered_aura"
       ],
       "checks": []
     },
@@ -119,7 +122,8 @@
         "adamant_grenade_improved",
         "adamant_shock_mine",
         "adamant_companion_coherency",
-        "adamant_reload_speed_aura"
+        "adamant_reload_speed_aura",
+        "adamant_damage_vs_staggered_aura"
       ],
       "checks": []
     },
@@ -379,9 +383,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "586a8f3ccf52a48c2298b5faacdb8dae70ba71cd",
       "chinese_sha256": "aad642b566ed41f2ca4db8cc043c68eb7d4921c7e361b52b5bd9846ab222c840",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_damage_vs_staggered_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_damage_vs_suppressed.md",
@@ -9945,6 +9956,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_reload_speed_aura.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_reload_speed_aura.md"
+    },
+    {
+      "id": "adamant_damage_vs_staggered_aura",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_vs_staggered_aura.md"
     }
   ],
   "pending_chinese_corrections": [
