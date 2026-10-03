@@ -475,6 +475,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545",
       "effect": "弱點命中減少順劈質量消耗：電能步槍20%／25%／30%／35%；冥潮鐳射槍與針彈手槍20%／30%／40%／50%。"
+    },
+    {
+      "id": "lethal-proximity",
+      "name_zh_tw": "致命零距離",
+      "name_en": "Lethal Proximity",
+      "name_key": "loc_trait_bespoke_close_explosion",
+      "description_key": "loc_trait_bespoke_close_explosion_desc",
+      "name_hash": "9fbc423b",
+      "description_hash": "4823386b",
+      "page": "entries/致命零距離/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
+      "effect": "持用時爆炸啟動距離降為0；裝備期間爆炸及近距離區半徑增加10%／15%／20%／25%。"
     }
   ],
   "weapons": [
@@ -9145,6 +9158,132 @@
       "icon": "https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_147",
       "effect": "弱點命中的順劈質量消耗減少20%／30%／40%／50%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+      "blessing_id": "lethal-proximity",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/致命零距離/weapon_trait_bespoke_boltpistol_p1_close_explosion.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat": "explosion_radius_modifier",
+        "radius_bonus_by_tier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "radius_percent_by_tier": [
+          10,
+          15,
+          20,
+          25
+        ],
+        "radius_multiplier_by_tier": [
+          1.1,
+          1.15,
+          1.2,
+          1.25
+        ],
+        "wrapper_default_radius_bonus": 0.1,
+        "tier_value_overrides_wrapper": true,
+        "defined_tiers": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "generic_radius_stat_persists_while_equipped": true,
+        "zero_arming_distance_only_when_slot_wielded": true,
+        "explosion_arming_distance_multiplier_when_wielded": 0,
+        "values_by_mark": {
+          "boltpistol_p1_m1": {
+            "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+            "arming_distance_m": 5,
+            "base_explosion_radius_m": 3,
+            "base_close_radius_m": 0.75,
+            "radius_bonus_by_tier": [
+              10,
+              15,
+              20,
+              25
+            ],
+            "effective_explosion_radius_m": [
+              3.3,
+              3.45,
+              3.6,
+              3.75
+            ],
+            "effective_close_radius_m": [
+              0.825,
+              0.8625,
+              0.9,
+              0.9375
+            ],
+            "damage_falloff": true,
+            "scalable_radius": false,
+            "kill_profile": "boltpistol_kill_explosion",
+            "stop_profile": "boltpistol_stop_explosion",
+            "close_profile_equals_full_profile_per_template": true
+          },
+          "boltpistol_p1_m2": {
+            "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+            "arming_distance_m": 3,
+            "base_explosion_radius_m": 5,
+            "base_close_radius_m": 1.75,
+            "radius_bonus_by_tier": [
+              10,
+              15,
+              20,
+              25
+            ],
+            "effective_explosion_radius_m": [
+              5.5,
+              5.75,
+              6,
+              6.25
+            ],
+            "effective_close_radius_m": [
+              1.925,
+              2.0125,
+              2.1,
+              2.1875
+            ],
+            "damage_falloff": true,
+            "scalable_radius": false,
+            "kill_profile": "boltpistol_m2_kill_explosion",
+            "stop_profile": "boltpistol_m2_stop_explosion",
+            "close_profile_equals_full_profile_per_template": true
+          }
+        },
+        "shared_tier_radius_percent": [
+          10,
+          15,
+          20,
+          25
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 428,
+        "end_line": 469
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_close_explosion_desc",
+      "description_hash": "4823386b",
+      "icon": "https://github.com/user-attachments/assets/18053992-dda1-48a5-a975-6e9d2102c20a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_229",
+      "effect": "I–IV爆炸半徑+10%／15%／20%／25%；Mk IV基礎3m／近距離0.75m，Mk VI基礎5m／近距離1.75m。"
     }
   ],
   "bindings": [
@@ -12758,6 +12897,34 @@
         "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
         "import_line": 17,
         "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "lethal-proximity",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/close_explosion",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "lethal-proximity",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_close_explosion",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/close_explosion",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
       }
     }
   ]

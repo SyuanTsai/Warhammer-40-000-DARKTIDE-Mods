@@ -157,3 +157,7 @@
 - 大口徑彈藥本機Commit：`9acb022753af76b7cb1eb35608c9d7acb2efa620`。
 
 - [激射](2026-10-03-HOTSHOT_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- 激射本機Commit：`4df05a74afc59f69307be3b91262f82d7688513c`。
+
+- [致命零距離](2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。

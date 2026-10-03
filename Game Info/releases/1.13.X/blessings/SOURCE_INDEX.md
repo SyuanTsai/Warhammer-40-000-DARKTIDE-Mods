@@ -41,3 +41,4 @@
 | [歎為觀止](entries/歎為觀止/README.md) | [來源索引](entries/歎為觀止/SOURCE_INDEX.md) |
 | [大口徑彈藥](entries/大口徑彈藥/README.md) | [來源索引](entries/大口徑彈藥/SOURCE_INDEX.md) |
 | [激射](entries/激射/README.md) | [來源索引](entries/激射/SOURCE_INDEX.md) |
+| [致命零距離](entries/致命零距離/README.md) | [來源索引](entries/致命零距離/SOURCE_INDEX.md) |

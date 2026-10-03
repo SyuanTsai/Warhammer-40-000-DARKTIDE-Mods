@@ -134,3 +134,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [大口徑彈藥全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MANSTOPPER_ACCEPTANCE.json)
 
 - [激射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HOTSHOT_ACCEPTANCE.json)
+
+- [致命零距離全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json)
