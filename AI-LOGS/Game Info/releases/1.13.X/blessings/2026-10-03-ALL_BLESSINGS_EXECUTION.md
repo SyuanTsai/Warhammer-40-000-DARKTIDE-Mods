@@ -16,3 +16,7 @@
 
 
 - [屠戮者](2026-10-03-DECIMATOR_EXTENSION_ACCEPTANCE.json)：新增2變體、4型號關聯；共4變體、10關聯。
+
+- 屠戮者全部變體本機Commit：`bc0cf84f079705786a00df359983241b1319c7d0`。
+
+- [粉碎](2026-10-03-SHRED_EXTENSION_ACCEPTANCE.json)：新增8變體、17型號關聯；共10變體、23關聯。

@@ -259,6 +259,186 @@
       ]
     },
     {
+      "id": "chainsword_2h_p1",
+      "name_zh_tw": "重型開膛劍",
+      "name_en": "Heavy Eviscerator",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_chainsword_2h_p1_m1",
+      "page": "weapons/melee/重型開膛劍/README.md",
+      "marks": [
+        {
+          "id": "chainsword_2h_p1_m1",
+          "item": "content/items/weapons/player/melee/chainsword_2h_p1_m1",
+          "name": "提格魯斯Mk II重型開膛劍",
+          "name_en": "Tigrus Mk II Heavy Eviscerator",
+          "template_file": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+          "trait_category": "bespoke_chainsword_2h_p1"
+        },
+        {
+          "id": "chainsword_2h_p1_m2",
+          "item": "content/items/weapons/player/melee/chainsword_2h_p1_m2",
+          "name": "提格魯斯Mk XV重型開膛劍",
+          "name_en": "Tigrus Mk XV Heavy Eviscerator",
+          "template_file": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+          "trait_category": "bespoke_chainsword_2h_p1"
+        }
+      ]
+    },
+    {
+      "id": "chainsword_p1",
+      "name_zh_tw": "突擊鏈鋸劍",
+      "name_en": "Assault Chainsword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_chainsword_p1_m1",
+      "page": "weapons/melee/突擊鏈鋸劍/README.md",
+      "marks": [
+        {
+          "id": "chainsword_p1_m1",
+          "item": "content/items/weapons/player/melee/chainsword_p1_m1",
+          "name": "卡迪亞Mk IV突擊鏈鋸劍",
+          "name_en": "Cadia Mk IV Assault Chainsword",
+          "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+          "trait_category": "bespoke_chainsword_p1"
+        },
+        {
+          "id": "chainsword_p1_m2",
+          "item": "content/items/weapons/player/melee/chainsword_p1_m2",
+          "name": "卡迪亞Mk XIIIg突擊鏈鋸劍",
+          "name_en": "Cadia Mk XIIIg Assault Chainsword",
+          "template_file": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+          "trait_category": "bespoke_chainsword_p1"
+        }
+      ]
+    },
+    {
+      "id": "combatsword_p1",
+      "name_zh_tw": "「惡魔之爪」劍",
+      "name_en": "\"Devil's Claw\" Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_combatsword_p1_m1",
+      "page": "weapons/melee/「惡魔之爪」劍/README.md",
+      "marks": [
+        {
+          "id": "combatsword_p1_m1",
+          "item": "content/items/weapons/player/melee/combatsword_p1_m1",
+          "name": "卡塔昌Mk I「惡魔之爪」戰鬥劍",
+          "name_en": "Catachan Mk I \"Devil's Claw\" Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+          "trait_category": "bespoke_combatsword_p1"
+        },
+        {
+          "id": "combatsword_p1_m2",
+          "item": "content/items/weapons/player/melee/combatsword_p1_m2",
+          "name": "卡塔昌Mk IV「惡魔之爪」戰鬥劍",
+          "name_en": "Catachan Mk IV \"Devil's Claw\" Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+          "trait_category": "bespoke_combatsword_p1"
+        },
+        {
+          "id": "combatsword_p1_m3",
+          "item": "content/items/weapons/player/melee/combatsword_p1_m3",
+          "name": "卡塔昌Mk VII「惡魔之爪」戰鬥劍",
+          "name_en": "Catachan Mk VII \"Devil's Claw\" Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+          "trait_category": "bespoke_combatsword_p1"
+        }
+      ]
+    },
+    {
+      "id": "combatsword_p3",
+      "name_zh_tw": "決鬥劍",
+      "name_en": "Duelling Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_combatsword_p3_m1",
+      "page": "weapons/melee/決鬥劍/README.md",
+      "marks": [
+        {
+          "id": "combatsword_p3_m1",
+          "item": "content/items/weapons/player/melee/combatsword_p3_m1",
+          "name": "馬卡比安Mk II決鬥劍",
+          "name_en": "Maccabian Mk II Duelling Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+          "trait_category": "bespoke_combatsword_p3"
+        },
+        {
+          "id": "combatsword_p3_m2",
+          "item": "content/items/weapons/player/melee/combatsword_p3_m2",
+          "name": "馬卡比安Mk IV決鬥劍",
+          "name_en": "Maccabian Mk IV Duelling Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+          "trait_category": "bespoke_combatsword_p3"
+        },
+        {
+          "id": "combatsword_p3_m3",
+          "item": "content/items/weapons/player/melee/combatsword_p3_m3",
+          "name": "馬卡比安Mk V決鬥劍",
+          "name_en": "Maccabian Mk V Duelling Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+          "trait_category": "bespoke_combatsword_p3"
+        }
+      ]
+    },
+    {
+      "id": "forcesword_2h_p1",
+      "name_zh_tw": "烈焰力場巨劍",
+      "name_en": "Blaze Force Greatsword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_forcesword_2h_p1_m1",
+      "page": "weapons/melee/烈焰力場巨劍/README.md",
+      "marks": [
+        {
+          "id": "forcesword_2h_p1_m1",
+          "item": "content/items/weapons/player/melee/forcesword_2h_p1_m1",
+          "name": "誓約Mk VI烈焰力場巨劍",
+          "name_en": "Covenant Mk VI Blaze Force Greatsword",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+          "trait_category": "bespoke_forcesword_2h_p1"
+        },
+        {
+          "id": "forcesword_2h_p1_m2",
+          "item": "content/items/weapons/player/melee/forcesword_2h_p1_m2",
+          "name": "誓約Mk VIII烈焰力場巨劍",
+          "name_en": "Covenant Mk VIII Blaze Force Greatsword",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+          "trait_category": "bespoke_forcesword_2h_p1"
+        }
+      ]
+    },
+    {
+      "id": "forcesword_p1",
+      "name_zh_tw": "烈焰力場劍",
+      "name_en": "Blaze Force Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_forcesword_p1_m1",
+      "page": "weapons/melee/烈焰力場劍/README.md",
+      "marks": [
+        {
+          "id": "forcesword_p1_m1",
+          "item": "content/items/weapons/player/melee/forcesword_p1_m1",
+          "name": "朦朧Mk II烈焰力場劍",
+          "name_en": "Obscurus Mk II Blaze Force Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+          "trait_category": "bespoke_forcesword_p1"
+        },
+        {
+          "id": "forcesword_p1_m2",
+          "item": "content/items/weapons/player/melee/forcesword_p1_m2",
+          "name": "火衛二Mk IV烈焰力場劍",
+          "name_en": "Deimos Mk IV Blaze Force Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+          "trait_category": "bespoke_forcesword_p1"
+        },
+        {
+          "id": "forcesword_p1_m3",
+          "item": "content/items/weapons/player/melee/forcesword_p1_m3",
+          "name": "伊利斯Mk V烈焰力場劍",
+          "name_en": "Illisi Mk V Blaze Force Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+          "trait_category": "bespoke_forcesword_p1"
+        }
+      ]
+    },
+    {
       "id": "saw_p1",
       "name_zh_tw": "骨鋸",
       "name_en": "Bone Saw",
@@ -273,6 +453,24 @@
           "name_en": "Chirurgeon's Mk IV Bone Saw",
           "template_file": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
           "trait_category": "bespoke_saw_p1"
+        }
+      ]
+    },
+    {
+      "id": "transonic_sword_transonic_knife_p1",
+      "name_zh_tw": "穿音速雙刀",
+      "name_en": "Paired Transonic Blades",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_transonic_sword_transonic_knife_p1_m1",
+      "page": "weapons/melee/穿音速雙刀/README.md",
+      "marks": [
+        {
+          "id": "transonic_sword_transonic_knife_p1_m1",
+          "item": "content/items/weapons/player/melee/transonic_sword_transonic_knife_p1_m1",
+          "name": "西福爾穿音速刀刃",
+          "name_en": "Xiphor Transonic Blades",
+          "template_file": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+          "trait_category": "bespoke_transonic_sword_transonic_knife_p1"
         }
       ]
     }
@@ -664,6 +862,294 @@
         "start_line": 13,
         "end_line": 15
       }
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 377,
+        "end_line": 426
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 21
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 236,
+        "end_line": 285
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 21
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 60,
+        "end_line": 109
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/粉碎/weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 10,
+        "end_line": 12
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 547,
+        "end_line": 598
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 49,
+        "end_line": 51
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 433,
+        "end_line": 482
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 59,
+        "end_line": 61
+      },
+      "icon": "https://github.com/user-attachments/assets/7e29e9f4-bfe0-4550-8c11-71cc30d70b99",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_087"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "saw_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 64,
+        "end_line": 113
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance",
+      "blessing_id": "shred",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/粉碎/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層爆擊率百分點",
+        "per_stack_percentage_points": [
+          2.5,
+          3,
+          3.5,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 15
+      },
+      "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
     }
   ],
   "bindings": [
@@ -1099,6 +1585,244 @@
         "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
         "import_line": 14,
         "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_saw_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "shred",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/chained_hits_increases_crit_chance",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]
