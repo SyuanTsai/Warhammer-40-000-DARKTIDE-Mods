@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="Agile Engagement talent icon"> [Agile Engagement](#veteran_kill_grants_damage_to_other_slot) | <ul><li>Melee kills grant +25% Ranged Damage; ranged kills grant +25% Melee Damage.</li><li>Each bonus lasts 6 seconds and can coexist with the other; same-type kills refresh the corresponding timer without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="32" height="32" alt="Serrated Blade talent icon"> [Serrated Blade](#veteran_hits_cause_bleed) | <ul><li>A damaging melee hit applies 2 Bleed stacks to a target that survives the hit.</li><li>Bleed caps at 16 stacks and ticks about every 0.5s; reapplication refreshes a 1.5s timer, after which ticks remove one stack if not reapplied.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="32" height="32" alt="Onslaught talent icon"> [Onslaught](#veteran_continous_hits_apply_rending) | <ul><li>Repeated eligible hits on the same living target add one Brittleness stack each, starting with the second hit.</li><li>Each stack adds 2.5% Rending, up to 16 stacks (40%); new stacks refresh a shared 5-second timer. Other attackers can benefit.</li><li>The final damage gain depends on armor and the attack; 40% Rending is not a universal 40% damage gain.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/19c86987-5e48-4eeb-9385-33697b9d99b0" width="32" height="32" alt="Catch a Breath talent icon"> [Catch a Breath](#veteran_replenish_toughness_outside_melee) | <ul><li>After more than 5 seconds without receiving a melee hit, regenerate 5% of maximum Toughness per second.</li><li>A received melee hit resets the wait; recovery is capped at missing Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1071,6 +1072,26 @@ Actual tick damage varies with armor, the damage profile and other modifiers. Th
 These gains depend on the weapon, target armor and existing modifiers. A 40% Rending stat does not give every attack 40% more final damage. The examples concern the next hit after buildup, not the hit that created a stack.
 
 [Detailed sources and formulas](veteran_continous_hits_apply_rending.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_continous_hits_apply_rending) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_replenish_toughness_outside_melee"></a>
+
+<img src="https://github.com/user-attachments/assets/19c86987-5e48-4eeb-9385-33697b9d99b0" width="72" height="72" alt="Catch a Breath talent icon">
+
+### Catch a Breath
+
+- **After more than 5 seconds without receiving a melee hit, regenerate 5% of maximum Toughness per second.**
+- Receiving another melee hit interrupts recovery and restarts the wait. An enemy approaching, your own melee attack or a received ranged hit does not by itself interrupt this effect.
+
+**Recovery examples**
+
+- With maximum Toughness 100, enough missing Toughness and no other recovery modifiers, the rate is `100 × 5% = 5 Toughness per second`. Over two seconds of active regeneration, the requested recovery is about `5 × 2 = 10 Toughness`.
+- At 98/100 Toughness, recovery is capped at `100 − 98 = 2 Toughness`.
+
+The percentage uses maximum Toughness, not the missing amount.
+
+[Detailed sources and formulas](veteran_replenish_toughness_outside_melee.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_replenish_toughness_outside_melee) | [Back to index](#talent-index)
 
 ---
 

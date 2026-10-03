@@ -116,5 +116,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/onslaught-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_continous_hits_apply_rending.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_continous_hits_apply_rending.md",
+  "commit": "78986ab17527b246b057d5361f8cf5a80b144e19"
 }
