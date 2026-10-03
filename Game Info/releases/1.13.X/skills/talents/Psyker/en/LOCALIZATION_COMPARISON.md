@@ -322,6 +322,18 @@ Full raw template and formatting: [source evidence](psyker_shield_stun_passive.m
 | Contact trigger, chances and Specialist shield damage | Telekine Shield Electrocutes passing Enemies with 20% chance; Specialists have 100% and also damage the shield; `ui / loc_talent_psyker_force_field_stun_increased_new_description / 900d2430` | Owner's on_unit_touch_force_field uses proc_chance=0.2, or special_proc_chance=1 for special/monster. Successful special-tag triggers call shield add_damage(8). [Fixed source and line references](psyker_shield_stun_passive.md#fixed-source-evidence) | Consistent | The stated crossing trigger, ordinary/Specialist probabilities and Specialist damage effect agree. |
 | Monster exception, tags, durability and probability limits | No Monster exception, guaranteed interruption, eight-durability loss or periodic guaranteed trigger stated; `ui / loc_talent_psyker_force_field_stun_increased_new_description / 900d2430` | Monsters also use 100%; the extra damage branch checks special only. Shield HealthExtension removes 1 per permitted 0.33-second window. Expected ordinary triggers over 100 eligible crossings are 20, without guaranteeing one every five. [Fixed source and line references](psyker_shield_stun_passive.md#fixed-source-evidence) | Not covered by the description | These tag exceptions, damage-handling and probability details supplement the English. |
 
+
+<a id="psyker_overcharge_stance_infinite_casting"></a>
+
+## Warp Unbound
+
+Full raw template and formatting: [source evidence](psyker_overcharge_stance_infinite_casting.md#original-english-template-and-reconstruction). Name hash `e3743a11`. Every row uses `ui / loc_talent_psyker_overcharge_infinite_casting_desc / 10334171`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Post-Gaze overload protection | Scrier's Gaze prevents overloading from Perils of the Warp during its lingering effect; `ui / loc_talent_psyker_overcharge_infinite_casting_desc / 10334171` | On Gaze stop, the selected special rule applies the psychic_fortress protection buff instead of normal cool_off. [Fixed source and line references](psyker_overcharge_stance_infinite_casting.md#fixed-source-evidence) | Consistent | The protective effect and post-active-state timing agree. |
+| Protection duration and unchanged Peril behavior | No numeric protection duration, halted Peril Generation or extended active-state duration stated; `ui / loc_talent_psyker_overcharge_infinite_casting_desc / 10334171` | Protection lasts post_stance_duration 10 + cooloff_duration 1.5 = 11.5 seconds after stop. Peril still accumulates; active Gaze still ends at 100%. [Fixed source and line references](psyker_overcharge_stance_infinite_casting.md#fixed-source-evidence) | Not covered by the description | The total duration, buffer and Peril-state limits supplement the English. |
+
 ## Comparison totals
 
 The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="Sanctuary talent icon"> [Sanctuary](#psyker_boost_allies_in_sphere) | <ul><li>With Telekine Dome, you and Allies inside recover 10% of maximum Toughness per second. Players still inside when it dissipates gain 50% Toughness Damage Reduction for 5 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="Telekine Dome talent icon"> [Telekine Dome](#psyker_sphere_shield) | <ul><li>Telekine Shield becomes a spherical barrier of about 6 metres radius, lasting up to 25 seconds with a 60-second base cooldown; durability remains 20 accepted hits.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="Enervating Threshold talent icon"> [Enervating Threshold](#psyker_shield_stun_passive) | <ul><li>Enemies passing through your Telekine Shield have a 20% Electrocution chance. Specialists and Monsters trigger with 100% chance; Specialists also damage the shield.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="Warp Unbound talent icon"> [Warp Unbound](#psyker_overcharge_stance_infinite_casting) | <ul><li>After Scrier's Gaze ends, gain protection from Peril overload for 11.5 seconds; Peril continues to accumulate normally.</li></ul> | Ability |
 
 ---
 
@@ -432,3 +433,17 @@
 - **Chance example**: Each eligible ordinary-Enemy crossing has a 20% chance. Across 100 crossings, expected triggers are `100 × 20% = 20`, rather than a guaranteed trigger every five crossings.
 
 [Details](psyker_shield_stun_passive.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_overcharge_stance_infinite_casting"></a>
+
+### Warp Unbound
+
+<img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="72" height="72" alt="Warp Unbound talent icon">
+
+- **Ability modifier**: After Scrier's Gaze ends, retain protection from Peril overload; Peril still accumulates normally.
+
+- **Duration**: The 10-second post-Gaze effect plus a 1.5-second buffer gives `10 + 1.5 = 11.5` seconds. Gaze itself still ends at 100% Peril.
+
+[Details](psyker_overcharge_stance_infinite_casting.md) · [Back to index](#talent-index)

@@ -37,3 +37,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Sanctuary](psyker_boost_allies_in_sphere.md) / `psyker_boost_allies_in_sphere` | Ability |
 | [Telekine Dome](psyker_sphere_shield.md) / `psyker_sphere_shield` | Ability |
 | [Enervating Threshold](psyker_shield_stun_passive.md) / `psyker_shield_stun_passive` | Ability |
+| [Warp Unbound](psyker_overcharge_stance_infinite_casting.md) / `psyker_overcharge_stance_infinite_casting` | Ability |
