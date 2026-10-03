@@ -23,3 +23,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Inspiring Recitation](adamant_drone_buff_talent.md) / `adamant_drone_buff_talent` | Ability |
 | [Fear of Justice](adamant_drone_debuff_talent.md) / `adamant_drone_debuff_talent` | Ability |
 | [Commendation from Condemnation](adamant_charge_toughness.md) / `adamant_charge_toughness` | Ability |
+| [Targeted Brutality](adamant_charge_cooldown_reduction.md) / `adamant_charge_cooldown_reduction` | Ability |

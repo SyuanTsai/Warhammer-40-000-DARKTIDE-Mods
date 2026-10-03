@@ -244,3 +244,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Fear of Justice](arbites_adamant_drone_debuff_talent.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Commendation from Condemnation](arbites_adamant_charge_toughness.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Targeted Brutality](arbites_adamant_charge_cooldown_reduction.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="Inspiring Recitation talent icon"> [Inspiring Recitation](#adamant_drone_buff_talent) | <ul><li>Allies affected within the Nuncio-Aquila's area additionally gain 30% Toughness Damage Reduction, 30% Revive Speed and 10% Attack Speed.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="Fear of Justice talent icon"> [Fear of Justice](#adamant_drone_debuff_talent) | <ul><li>Enemies within the Nuncio-Aquila's area deal 25% less melee damage and have 25% lower melee attack speed.</li><li>Isolating this effect, an adjustable attack action taking 1s instead takes about 1.33s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="Commendation from Condemnation talent icon"> [Commendation from Condemnation](#adamant_charge_toughness) | <ul><li>Each distinct Elite, Specialist or Monstrosity hit by the charge replenishes 20% Toughness and 15% Stamina.</li><li>One charge replenishes at most 100% Toughness and 75% Stamina; the same enemy does not count twice.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="Targeted Brutality talent icon"> [Targeted Brutality](#adamant_charge_cooldown_reduction) | <ul><li>Each effective charge hit on an ordinary enemy restores 0.5s of Combat Ability Cooldown; each hit on an Elite, Specialist or Monstrosity restores 1s.</li><li>One charge restores at most 5s of cooldown.</li></ul> | Ability |
 
 ## Blitz
 
@@ -243,3 +244,17 @@
 - **Example**: Hitting three distinct eligible targets replenishes `3 × 20% = 60% Toughness` and `3 × 15% = 45% Stamina`. Hitting the same enemy again does not increase the recovery.
 
 [Details](adamant_charge_toughness.md) · [Back to index](#talent-index)
+
+<a id="adamant_charge_cooldown_reduction"></a>
+
+### Targeted Brutality
+
+<img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="72" height="72" alt="Targeted Brutality talent icon">
+
+- **Cooldown restoration**: Each effective charge hit on an ordinary enemy restores 0.5s of Combat Ability Cooldown. Each hit on an Elite, Specialist or Monstrosity restores 1s.
+
+- **Settlement and cap**: Restoration is applied when the charge ends, up to 5s per charge and limited by the remaining cooldown. This upgrade counts hit events and does not exclude repeated targets as the Toughness-recovery upgrade does.
+
+- **Example**: Six ordinary hits contribute `6 × 0.5 = 3s`; three higher-category target hits contribute `3 × 1 = 3s`. Their 6s total is limited to 5s at settlement. The base cooldown of 20s can therefore receive at most a 5s restoration from this upgrade.
+
+[Details](adamant_charge_cooldown_reduction.md) · [Back to index](#talent-index)

@@ -78,7 +78,8 @@
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
-        "adamant_charge_toughness"
+        "adamant_charge_toughness",
+        "adamant_charge_cooldown_reduction"
       ],
       "checks": []
     },
@@ -105,7 +106,8 @@
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
-        "adamant_charge_toughness"
+        "adamant_charge_toughness",
+        "adamant_charge_cooldown_reduction"
       ],
       "checks": []
     },
@@ -132,7 +134,8 @@
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
-        "adamant_charge_toughness"
+        "adamant_charge_toughness",
+        "adamant_charge_cooldown_reduction"
       ],
       "checks": []
     },
@@ -159,7 +162,8 @@
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
         "adamant_drone_debuff_talent",
-        "adamant_charge_toughness"
+        "adamant_charge_toughness",
+        "adamant_charge_cooldown_reduction"
       ],
       "checks": []
     },
@@ -250,9 +254,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9aa63be7294a1c70ce86392b76c2130430910892",
       "chinese_sha256": "e7245033e93b51546da264c133398fd60ef1d84dd65af146802566b9d54c908f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_charge_cooldown_reduction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_cooldown_reduction.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_longer_distance.md",
@@ -10135,6 +10146,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_toughness.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_toughness.md"
+    },
+    {
+      "id": "adamant_charge_cooldown_reduction",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_cooldown_reduction.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_cooldown_reduction.md"
     }
   ],
   "pending_chinese_corrections": [
