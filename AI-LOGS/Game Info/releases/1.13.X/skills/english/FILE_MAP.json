@@ -120,7 +120,12 @@
         "adamant_dog_pounces_bleed_nearby",
         "adamant_damage_reduction_after_elite_kill",
         "adamant_staggers_reduce_damage_taken",
-        "base_cleave_node_buff_medium_1"
+        "base_cleave_node_buff_medium_1",
+        "base_impact_node_buff_medium_1",
+        "adamant_plasteel_plates",
+        "adamant_dog_applies_brittleness",
+        "adamant_dodge_grants_damage",
+        "adamant_stacking_weakspot_strength"
       ],
       "checks": []
     },
@@ -189,7 +194,12 @@
         "adamant_dog_pounces_bleed_nearby",
         "adamant_damage_reduction_after_elite_kill",
         "adamant_staggers_reduce_damage_taken",
-        "base_cleave_node_buff_medium_1"
+        "base_cleave_node_buff_medium_1",
+        "base_impact_node_buff_medium_1",
+        "adamant_plasteel_plates",
+        "adamant_dog_applies_brittleness",
+        "adamant_dodge_grants_damage",
+        "adamant_stacking_weakspot_strength"
       ],
       "checks": []
     },
@@ -258,7 +268,12 @@
         "adamant_dog_pounces_bleed_nearby",
         "adamant_damage_reduction_after_elite_kill",
         "adamant_staggers_reduce_damage_taken",
-        "base_cleave_node_buff_medium_1"
+        "base_cleave_node_buff_medium_1",
+        "base_impact_node_buff_medium_1",
+        "adamant_plasteel_plates",
+        "adamant_dog_applies_brittleness",
+        "adamant_dodge_grants_damage",
+        "adamant_stacking_weakspot_strength"
       ],
       "checks": []
     },
@@ -327,7 +342,12 @@
         "adamant_dog_pounces_bleed_nearby",
         "adamant_damage_reduction_after_elite_kill",
         "adamant_staggers_reduce_damage_taken",
-        "base_cleave_node_buff_medium_1"
+        "base_cleave_node_buff_medium_1",
+        "base_impact_node_buff_medium_1",
+        "adamant_plasteel_plates",
+        "adamant_dog_applies_brittleness",
+        "adamant_dodge_grants_damage",
+        "adamant_stacking_weakspot_strength"
       ],
       "checks": []
     },
@@ -718,9 +738,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c0aa29256bc49f5e07d9aa3cf8ad8d2ed6d8ccef",
       "chinese_sha256": "dc3b640e6dbb7e9b875b25fa223a71aceb54a371d9f3c5da0489aa84be1082e0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dodge_grants_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dodge_improvement.md",
@@ -740,9 +767,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f1e5fc6e472156009fdd9fe6be4f8259f4241933",
       "chinese_sha256": "790b2dbd27a8753cd788044cc08b7a871e7c8c9c11e991d288be51847e0d4e89",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dog_applies_brittleness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_attacks_electrocute.md",
@@ -1290,9 +1324,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2b3897fb762da1c18b76c0cc4c94a2b884ac7c9f",
       "chinese_sha256": "7f609620405c899910d07e94686ce6d9d02d11b3992b70bf4226ae9398e2a4eb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_plasteel_plates"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_ranged_damage_on_melee_stagger.md",
@@ -1399,9 +1440,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "45b707504d21239077c95524fffd4a439856f01e",
       "chinese_sha256": "dede0e7ee8d622f6a389b31e330d8136764e08013969b97d7ac3b39e583e8b46",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stacking_weakspot_strength"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggered_enemies_deal_less_damage.md",
@@ -1684,9 +1732,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b7c1e9ecc41ae93c2754b70404a118af443c7f79",
       "chinese_sha256": "bb0fe11482171bf0800032302ed73024bff5c1e3811c09c4d743e049addde28a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_impact_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/base_melee_damage_node_buff_medium_1.md",
@@ -10933,6 +10988,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_cleave_node_buff_medium_1.md"
+    },
+    {
+      "id": "base_impact_node_buff_medium_1",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_impact_node_buff_medium_1.md"
+    },
+    {
+      "id": "adamant_plasteel_plates",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_plasteel_plates.md"
+    },
+    {
+      "id": "adamant_dog_applies_brittleness",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_applies_brittleness.md"
+    },
+    {
+      "id": "adamant_dodge_grants_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dodge_grants_damage.md"
+    },
+    {
+      "id": "adamant_stacking_weakspot_strength",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stacking_weakspot_strength.md"
     }
   ],
   "pending_chinese_corrections": [
