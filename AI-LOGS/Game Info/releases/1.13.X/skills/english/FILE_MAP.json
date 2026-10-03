@@ -90,7 +90,8 @@
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
-        "adamant_forceful_stagger_on_low_high"
+        "adamant_forceful_stagger_on_low_high",
+        "adamant_terminus_warrant_cdr"
       ],
       "checks": []
     },
@@ -129,7 +130,8 @@
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
-        "adamant_forceful_stagger_on_low_high"
+        "adamant_forceful_stagger_on_low_high",
+        "adamant_terminus_warrant_cdr"
       ],
       "checks": []
     },
@@ -168,7 +170,8 @@
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
-        "adamant_forceful_stagger_on_low_high"
+        "adamant_forceful_stagger_on_low_high",
+        "adamant_terminus_warrant_cdr"
       ],
       "checks": []
     },
@@ -207,7 +210,8 @@
         "adamant_forceful_stun_immune_and_block_all",
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
-        "adamant_forceful_stagger_on_low_high"
+        "adamant_forceful_stagger_on_low_high",
+        "adamant_terminus_warrant_cdr"
       ],
       "checks": []
     },
@@ -1302,9 +1306,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a1140280ad526e5ef25b416a32ab285b10a13354",
       "chinese_sha256": "d08abff31a942cac1656994e8fab665f54aeb3884277dfcb39dfb11c23e3dc72",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_terminus_warrant_cdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_cdr.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_improved_combined.md",
@@ -10363,6 +10374,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stagger_on_low_high.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_stagger_on_low_high.md"
+    },
+    {
+      "id": "adamant_terminus_warrant_cdr",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_cdr.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant_cdr.md"
     }
   ],
   "pending_chinese_corrections": [

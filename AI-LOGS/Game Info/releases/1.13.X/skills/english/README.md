@@ -274,3 +274,5 @@ Five-item checkpoint (skills 103–107): 1350 seconds (22m 30s), measured betwee
 - [Arbites Vigilant](arbites_adamant_forceful_ability_damage.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Judicial Force](arbites_adamant_forceful_stagger_on_low_high.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Obstinate](arbites_adamant_terminus_warrant_cdr.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
