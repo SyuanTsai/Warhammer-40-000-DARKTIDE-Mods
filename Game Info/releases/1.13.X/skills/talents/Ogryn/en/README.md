@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="Bonebreaker's Aura talent icon"> [Bonebreaker's Aura](#ogryn_melee_damage_coherency_improved) | <ul><li>You and allies in Coherency gain +10% Melee Attack Damage.</li><li>This upgraded value replaces the base 7.5% melee aura; the two bonuses are not added.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="Coward Culling talent icon"> [Coward Culling](#ogryn_damage_vs_suppressed_coherency) | <ul><li>You and allies in Coherency deal +20% Damage to Suppressed enemies; you also deal +25% Suppression.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="Stay Close! talent icon"> [Stay Close!](#ogryn_toughness_regen_aura) | <ul><li>You and allies in Coherency gain +20% to eligible Toughness replenishment amounts.</li><li>The effect increases each eligible restoration; it does not start restoration itself or raise natural regeneration speed by 20%.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="32" height="32" alt="Loyal Protector talent icon"> [Loyal Protector](#ogryn_taunt_shout) | <ul><li>Taunt enemies within 12m for 15s, repeating at 3s and 6s.</li><li>Only the initial cast Staggers; base cooldown 50s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -156,3 +157,21 @@
 - **Stacking and cooldown**: The aura has at most 1 stack and no separate cooldown. It increases eligible restoration amounts, does not create a restoration event by itself, and does not increase natural Coherency regeneration speed.
 
 [Details](ogryn_toughness_regen_aura.md) · [Back to index](#talent-index)
+
+---
+
+## Combat ability
+
+<a id="ogryn_taunt_shout"></a>
+
+### Loyal Protector
+
+<img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="72" height="72" alt="Loyal Protector talent icon">
+
+- **Taunt effect**: Taunt enemies within 12m, making them prioritize attacking you for 15s. The initial cast also Staggers enemies; excluded targets such as Daemonhosts are unaffected.
+
+- **Repeated casts**: At 3s and 6s, emit another taunt from your position at that time. These repeats do not Stagger. Affecting the same enemy again resets its 15s duration.
+
+- **Timing example**: An enemy within range at 0s, 3s and 6s can remain taunted until 6 + 15 = 21s after the initial cast. Base ability cooldown is 50s, with one charge.
+
+[Details](ogryn_taunt_shout.md) · [Back to index](#talent-index)
