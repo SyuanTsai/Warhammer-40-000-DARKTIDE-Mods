@@ -642,6 +642,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/FILE_MAP.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_replenish_grenades",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_grenades.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

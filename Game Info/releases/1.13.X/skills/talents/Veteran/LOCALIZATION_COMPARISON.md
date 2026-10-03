@@ -1,5 +1,7 @@
 # 老兵：遊戲本體繁中描述比對
 
+[English](en/LOCALIZATION_COMPARISON.md)
+
 [玩家技能說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
 ## 判定方式與範圍

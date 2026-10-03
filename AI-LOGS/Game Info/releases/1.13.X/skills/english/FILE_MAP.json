@@ -18,9 +18,20 @@
       "kind": "shared",
       "chinese_blob_sha": "681b32e042fcce0812bbe92813bed0f67ee67072",
       "chinese_sha256": "1e533eff387c45a91d4f2a418f2e0c3189599aa829baaf4d5a85eb60e9f989ba",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/TALENT_CHANGES_1.13.0_TO_1.13.1.md",
@@ -5672,9 +5683,20 @@
       "kind": "class_support",
       "chinese_blob_sha": "0d2ad90bfabdc97e5aae5e7a6ce775f629e6f409",
       "chinese_sha256": "33bed185ee436c5b2c686c90c9c44161f1098e0ae9a48eec8702994612d1e4d9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/LOCALIZATION_COMPARISON.md",
@@ -5683,9 +5705,20 @@
       "kind": "class_support",
       "chinese_blob_sha": "869fffb6f905b687839e79d621511769be6b4856",
       "chinese_sha256": "944715a4d73626118f82ea73467a381d47ad44524b7d690e72e2323620639222",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/README.md",
@@ -5694,9 +5727,20 @@
       "kind": "class_support",
       "chinese_blob_sha": "b5d6df2d5bf62e92a5a54e683b1e1b82d545faa9",
       "chinese_sha256": "f002fadcbd8e3afb9b47d22ba8eb7ed62d9fe2bfdfdf3c9df0564f26f3592f06",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/SOURCE_INDEX.md",
@@ -5705,9 +5749,20 @@
       "kind": "class_support",
       "chinese_blob_sha": "fbd47a042dc1498942486565673b16887c8516ab",
       "chinese_sha256": "7ad7c268fe52386b44313061aa63bf865cfabda30d3b694c6adea2518ff6648b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "partial",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/UNUSED_DEFINITIONS.md",
@@ -6453,9 +6508,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c938b1b65e84f2ae2acabcf17f343f3d2875573b",
       "chinese_sha256": "c3a9ebd9fb137c04d5c9dbce0d99cceba76d59a507afc0e85fa976eb2a1d0d0e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_replenish_grenades"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_toughness_and_boost_allies.md",
@@ -7602,6 +7668,15 @@
       "checks": []
     }
   ],
-  "accepted_skills": [],
+  "accepted_skills": [
+    {
+      "id": "veteran_replenish_grenades",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_grenades.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_grenades.md"
+    }
+  ],
   "pending_chinese_corrections": []
 }

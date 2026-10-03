@@ -31,3 +31,7 @@ For later Chinese updates, compare source paths and blobs against `FILE_MAP.json
 - `INDEX.json`: every `storage=git` path exists. Ignored `storage=local` historical records are not present in this new checkout.
 - The full AI-LOGS reference check exposes 13 existing references to ignored historical source batches/local inventory absent from a new checkout. The new maintenance-page link was corrected; these source batches remain shared in the primary workspace instead of being copied. This full-root check is not recorded as passed.
 - Git diff whitespace check: passed. The runtime bundles already contain `marked` for later Markdown parsing; no package was installed.
+
+## Per-skill records
+
+- [Demolition Stockpile](veteran_replenish_grenades.json): primary direct evidence, exact English template and static reconstruction, independent comparison, real Markdown parse/render, publicly readable existing icon; accepted with the recorded non-core caveats; locate its local commit through the file history.

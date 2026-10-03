@@ -1,5 +1,7 @@
 # 技能資料：Release 1.13.X
 
+[English](README.en.md)
+
 [版本資訊](../README.md)｜[所有版本](../../../README.md)
 
 [1.13.0 → 1.13.1天賦差異](TALENT_CHANGES_1.13.0_TO_1.13.1.md)

@@ -1,0 +1,167 @@
+{
+  "id": "veteran_replenish_grenades",
+  "class": "Veteran",
+  "name": "Demolition Stockpile",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "structure_commit": "78e9d6f32a5bffd650ed74bb0670a584fafb96cb",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "name_key": "loc_talent_ranger_replenish_grenade",
+  "name_hash": "4762b23c",
+  "description_key": "loc_talent_veteran_grenade_regeneration_per_grenade_desc",
+  "description_hash": "3b1bc587",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 1
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "veteran_tree.lua:1111-1141",
+    "veteran_talents.lua:33-42,1021-1039,1988-2030",
+    "talent_settings_veteran.lua:141-147",
+    "veteran_buff_templates.lua:33-38,1813-1911",
+    "veteran_abilities.lua:27-62",
+    "player_unit_talent_extension.lua:164-175",
+    "player_unit_ability_extension.lua:712-770,1105-1179,1323-1348,1437-1461",
+    "talent_layout_parser.lua:426-434,613-651,690-713",
+    "localization_manager.lua:285-320",
+    "player_unit_ability_extension.lua:1364-1380"
+  ],
+  "checks": [
+    {
+      "check": "exact English key/hash pairs and exported SHA256",
+      "result": "passed",
+      "pairs": 5
+    },
+    {
+      "check": "raw template exact text and static reconstruction",
+      "result": "passed"
+    },
+    {
+      "check": "fixed SHA citation paths and line bounds",
+      "result": "passed",
+      "references": 41,
+      "source_files": 9
+    },
+    {
+      "check": "example arithmetic",
+      "result": "passed",
+      "values": [
+        "60*2=120 seconds",
+        "90*2=180 seconds",
+        "60-30=30 seconds"
+      ]
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 705,
+      "local_references": 6433,
+      "remote_references": 8883,
+      "errors": 0
+    },
+    {
+      "check": "marked parsing of five English Markdown pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 1
+      },
+      "comparison_table": {
+        "columns": 5,
+        "rows": 6
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 7
+      }
+    },
+    {
+      "check": "headless Edge rendering and DOM layout",
+      "result": "passed",
+      "player_icons": [
+        {
+          "width": 32,
+          "height": 32,
+          "loaded": true
+        },
+        {
+          "width": 72,
+          "height": 72,
+          "loaded": true
+        }
+      ],
+      "document_horizontal_overflow": false,
+      "comparison_table_horizontal_scroll": true
+    },
+    {
+      "check": "visual inspection of rendered player page",
+      "result": "passed",
+      "note": "Table, English labels, HTML effect bullets, icon ordering, long-list spacing and example formatting inspected."
+    },
+    {
+      "check": "anonymous public Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 3502,
+      "sha256": "eb6b53cc5b461f6e26a97868f0b69c3f7b7317cf1bd4841b94ee3ea33c911a62",
+      "historical_source_match": true
+    },
+    {
+      "check": "Git whitespace diff",
+      "result": "passed"
+    },
+    {
+      "check": "full AI-LOGS reference check",
+      "result": "existing_missing_ignored_assets",
+      "errors": 13,
+      "note": "Ignored source batches and local inventory are shared in the primary workspace, absent from new checkout; no new unresolved English link."
+    },
+    {
+      "check": "Chinese content unchanged except language links",
+      "result": "passed"
+    },
+    {
+      "check": "English prose/alt excludes private paths, model/work history and node IDs",
+      "result": "passed"
+    },
+    {
+      "check": "INDEX unique IDs and all git paths exist",
+      "result": "passed"
+    }
+  ],
+  "unconfirmed": [
+    "Whether changing the equipped grenade while the buff persists reconstructs the buff or reselects its interval.",
+    "Whether initialization without an ability extension can occur in normal play."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english",
+  "commit_lookup": "git log --all --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_grenades.md",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only",
+    "result": "two_missing_source_links_corrected",
+    "corrections": [
+      "Grenade ability type constant at buff template lines 33-38.",
+      "Shared pool mapping at ability extension lines 1364-1380."
+    ],
+    "primary_verification": "The primary directly read both source ranges and added the citations.",
+    "remaining_actionable_defects": 0
+  }
+}
