@@ -14024,9 +14024,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e019b5101df62052c5170179e605aa09589f9ead",
       "chinese_sha256": "250fbed7d05d40308bd20c1e635533760f6c9015a6a7bb70653d6e4e5b8b2da4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_damage_vs_elites"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_damage_vs_nonthreat.md",
@@ -14082,9 +14089,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "636b9ef4d7d4b818462141a985f3c03dd90e7532",
       "chinese_sha256": "d3b900bd5a8e7d6deb9bfccb60175e9ae553e511afa6405ac62adebaf3797972",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_elite_kills_empowers"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fanatic_rage.md",
@@ -14410,9 +14424,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "43de91949c7f16262302bbc5d90139d725fd05ec",
       "chinese_sha256": "9c40ebc83175413af962534e953853f4a388ecd3b28c873f0a084422bd3a652e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_melee_crits_restore_stamina"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md",
@@ -14735,9 +14756,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e84a17239669ce119297e86d7400f2ce29114e09",
       "chinese_sha256": "e5c1fefe71f31dbb023e343f381a3afddbebdd5070a664f18c9e1991e6aa9b9f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_revive_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_shared_fanatic_rage.md",
@@ -15009,9 +15037,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "26743a0ac53f5887852fd279b111466a00cf362b",
       "chinese_sha256": "84cc6c52bb9ce95227b7dd3ed6041f7153227d368309e205da6481dc6d32059b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_weakspot_damage_reduction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md",
@@ -20133,6 +20168,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_625_629.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_more_damage_when_low_on_stamina.md"
+    },
+    {
+      "id": "zealot_melee_crits_restore_stamina",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_melee_crits_restore_stamina.md"
+    },
+    {
+      "id": "zealot_revive_speed",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_revive_speed.md"
+    },
+    {
+      "id": "zealot_damage_vs_elites",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_damage_vs_elites.md"
+    },
+    {
+      "id": "zealot_weakspot_damage_reduction",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_weakspot_damage_reduction.md"
+    },
+    {
+      "id": "zealot_elite_kills_empowers",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_elite_kills_empowers.md"
     }
   ],
   "pending_chinese_corrections": [

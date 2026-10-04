@@ -856,4 +856,4 @@ Full raw template and formatting: [source evidence](zealot_elite_kills_empowers.
 
 ## Comparison totals
 
-137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.
+147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.
