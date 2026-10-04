@@ -1094,6 +1094,18 @@ Full raw template and formatting: [source evidence](cryptic_disabled_allies_defe
 | Recipients, assistance and values | An incapacitated Ally in Coherency has Damage Resistance until freed; if you free them, they gain Stun Immunity and Damage Resistance for 6s; both +25%.; `ui / loc_talent_cryptic_disabled_allies_defense_post_boost_desc / 5bdd6b9d` | The requires_help Coherency effect uses 0.75. Assistance by self to a living ally grants a 6-second, 0.75 effect and stun_immune. [Fixed source and line references](cryptic_disabled_allies_defense.md#fixed-source-evidence) | Consistent | The recipient, conditional trigger, duration and reconstructed values match. |
 | Boundaries and refresh | The exact help-state boundary, loss of Coherency, refresh and later Coherency independence are not specified.; `ui / loc_talent_cryptic_disabled_allies_defense_post_boost_desc / 5bdd6b9d` | Initial protection ends when the help state or Coherency effect ends. The later one-stack buff refreshes, provides ordinary hit Stun immunity, and does not require continued Coherency. [Fixed source and line references](cryptic_disabled_allies_defense.md#fixed-source-evidence) | Not covered by the description | These details distinguish the two effects without changing the stated assistance condition. |
 
+
+<a id="cryptic_ally_coherency_defenses"></a>
+
+## Data Sensor Protocol
+
+Full raw template and formatting: [source evidence](cryptic_ally_coherency_defenses.md#original-english-template-and-reconstruction). Name hash `2dada14c`. Every row uses `ui / loc_talent_cryptic_ally_coherency_defenses_desc / 307b308a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Damage type, injured recipient and cooldowns | “When you or an Ally … take … damage, they restore …”; Toughness damage → 25% Stamina, Health damage → 25% Toughness, each 15s.; `ui / loc_talent_cryptic_ally_coherency_defenses_desc / 307b308a` | params.attacked_unit receives the recovery; the Coherency chain includes self. The two holder-side ProcBuffs use the corresponding positive damage component and separate 15-second cooldowns. [Fixed source and line references](cryptic_ally_coherency_defenses.md#fixed-source-evidence) | Consistent | The pronoun refers to the injured player, and the English explicitly includes the holder. |
+| Resource bases and shared limits | The maximum-resource bases, lethal exclusion and cross-ally cooldown sharing are not specified.; `ui / loc_talent_cryptic_ally_coherency_defenses_desc / 307b308a` | The injured player's maximum resources determine recovery; they must be alive and not will_die. Each effect shares the holder's cooldown across eligible injured players. [Fixed source and line references](cryptic_ally_coherency_defenses.md#fixed-source-evidence) | Not covered by the description | These conditions explain the recovery and cooldown boundaries without changing the stated recipient. |
+
 ## Comparison totals
 
 187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.

@@ -98,6 +98,7 @@
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="Superior Defence Engrams talent icon"> [Superior Defence Engrams](#cryptic_ranged_stacking_toughness) | <ul><li>Ranged kills grant up to 5 stacks, each restoring 1% of maximum Toughness per second; another kill refreshes the 8-second duration, even at the cap.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="Target Prioritization Psalms talent icon"> [Target Prioritization Psalms](#cryptic_specials_marking) | <ul><li>Shows outlines on living Specialists within 12.5 metres; no manual marking is required.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="Protectorate Protocol talent icon"> [Protectorate Protocol](#cryptic_disabled_allies_defense) | <ul><li>Allies requiring help in Coherency take 25% less damage. After you assist them, they gain a separate 6-second effect with 25% Damage Resistance and ordinary hit Stun immunity.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="Data Sensor Protocol talent icon"> [Data Sensor Protocol](#cryptic_ally_coherency_defenses) | <ul><li>When you or an ally in Coherency take Toughness damage, the injured player restores 25% Stamina; Health damage restores 25% Toughness. The two effects each have a 15-second cooldown.</li></ul> | Talent |
 
 ---
 
@@ -1402,3 +1403,22 @@
 - **Reduction example**: With one effect, incoming damage **100** becomes `100 × 0.75 = 75`. With another independent **20%** reduction, `100 × 0.75 × 0.80 = 60` damage remains.
 
 [Details](cryptic_disabled_allies_defense.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_ally_coherency_defenses"></a>
+
+### Data Sensor Protocol
+
+<img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="72" height="72" alt="Data Sensor Protocol talent icon">
+
+- **Stamina recovery**: When **you or an ally within Coherency** take Toughness damage, **the injured player** restores **25% of their maximum Stamina**.
+- **Toughness recovery**: When you or an ally within Coherency take Health damage, the injured player restores **25% of their maximum Toughness**. Lethal attacks do not trigger this effect.
+- **Cooldowns**: Each recovery type has its own **15-second** cooldown, but triggers of the same type share your cooldown. If ally A triggers Stamina recovery and ally B takes Toughness damage **5 seconds** later, that same effect cannot trigger again.
+- **Recovery example**: If the injured player's maximum Stamina is **6 bars** and maximum Toughness is **120**, the corresponding recovery is `6 × 25% = 1.5` Stamina bars or `120 × 25% = 30` Toughness points. The entire team does not recover simultaneously.
+
+#### Traditional Chinese localization note
+
+The verified Chinese document notes that its original wording says, in translation, “When you or … an ally take damage, allies restore …”. The beneficiary is the player who took that damage: your injury restores your own resource; an ally's injury restores that ally's resource. Recovery is not transferred to other allies.
+
+[Details](cryptic_ally_coherency_defenses.md) · [Back to index](#talent-index)
