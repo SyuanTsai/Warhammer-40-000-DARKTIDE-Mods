@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="Vulture's Mark talent icon"> [Vulture's Mark](#broker_keystone_vultures_mark_on_kill) | <ul><li>Ranged Elite or Specialist kills grant an 8-second Mark, up to 3 stacks; a new stack refreshes the shared timer, and all expire together without another gain.</li><li>Each stack gives +5% Ranged Damage, +5 percentage points Ranged Critical Chance and +5% Movement Speed. At maximum stacks, qualifying further kills restore 15% maximum Toughness to you and Allies in Coherency.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="Chemical Dependency talent icon"> [Chemical Dependency](#broker_keystone_chemical_dependency) | <ul><li>Stimm use grants a Dependency stack, up to 3. Each adds 10% to Combat Ability resource recovery; 3 stacks give a 1.30 recovery multiplier.</li><li>Gains refresh the shared 90-second timer; without another gain, stacks decay one at a time every 90 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="Chem Enhanced talent icon"> [Chem Enhanced](#broker_keystone_chemical_dependency_sub_1) | <ul><li>Each Dependency stack adds 5 percentage points of general Critical Chance, applying to Melee and Ranged calculations.</li><li>At 3 stacks, Scum's base 10% becomes 25% before weapon and other modifiers. This affects chance, rather than Critical Damage.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="Chem Fortified talent icon"> [Chem Fortified](#broker_keystone_chemical_dependency_sub_2) | <ul><li>Every Stimm use restores 50% of maximum Toughness, limited by missing Toughness, even at the Dependency stack cap.</li><li>Each Dependency stack multiplies Toughness Damage Taken by 0.95; 3 stacks reduce it by approximately 14.26%.</li></ul> | Keystone |
 
 ---
 
@@ -435,3 +436,19 @@
 - **Critical effect:** this upgrade increases Critical Chance, rather than Critical Damage. Dependency still decays one stack every 90 seconds under the core rules; Stimm use refreshes the timer.
 
 [Details](broker_keystone_chemical_dependency_sub_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency_sub_2"></a>
+
+### Chem Fortified
+
+<img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="72" height="72" alt="Chem Fortified talent icon">
+
+- **Stimm use:** each use restores 50% of maximum Toughness. With maximum Toughness 100 and at least 50 missing, it restores 50; with only 20 missing, it restores at most 20.
+
+- **Per-stack reduction:** each stack multiplies Toughness Damage Taken by 0.95. At 3 stacks, 0.95³ = 0.8574 of the original Damage is taken, approximately 14.26% less Toughness Damage.
+
+- **At the cap:** even when Dependency is already at maximum stacks, another Stimm use can restore Toughness and refresh the stack timer.
+
+[Details](broker_keystone_chemical_dependency_sub_2.md) · [Back to index](#talent-index)

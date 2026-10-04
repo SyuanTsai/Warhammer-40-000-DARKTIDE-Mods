@@ -289,6 +289,18 @@ Full raw template and formatting: [source evidence](broker_keystone_chemical_dep
 | Per-stack Critical Chance | Each Dependency stack additionally grants +5% Critical Hit Chance; `ui / loc_talent_broker_keystone_chemical_dependency_sub_1_desc / 3356ae07` | The enabled general critical_strike_chance value is 0.05 per stack and enters both Melee and Ranged chance calculations. [Fixed source and line references](broker_keystone_chemical_dependency_sub_1.md#fixed-source-evidence) | Consistent | The effect type and per-stack value agree. |
 | Additive chance, clamp and inherited timing | No base-chance calculation, final clamp or stack-timing details; `ui / loc_talent_broker_keystone_chemical_dependency_sub_1_desc / 3356ae07` | One/two/three stacks add 5/10/15 percentage points; base 10% + 15 points = 25% before other modifiers. Final chance clamps to 0%–100%; duration, cap, recovery and sequential decay follow the core buff. [Fixed source and line references](broker_keystone_chemical_dependency_sub_1.md#fixed-source-evidence) | Not covered by the description | These preserve the original chance examples and limits without treating missing formulas as English errors. |
 
+
+<a id="broker_keystone_chemical_dependency_sub_2"></a>
+
+## Chem Fortified
+
+Full raw template and formatting: [source evidence](broker_keystone_chemical_dependency_sub_2.md#original-english-template-and-reconstruction). Name hash `a78f9241`. Every row uses `ui / loc_talent_broker_keystone_chemical_dependency_sub_2_desc / bd5bf1c2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration and per-stack Toughness reduction | Stimm use replenishes 50% Toughness; each Dependency stack grants +5% Toughness Damage Reduction; `ui / loc_talent_broker_keystone_chemical_dependency_sub_2_desc / bd5bf1c2` | Each syringe event restores replenish_percentage(0.5); each enabled stack applies toughness_damage_taken_multiplier 0.95. [Fixed source and line references](broker_keystone_chemical_dependency_sub_2.md#fixed-source-evidence) | Consistent | The restoration amount and each individual stack's Toughness-specific reduction agree. |
+| Stack combination and restoration limits | No multiplicative combination, missing-Toughness limit or capped-use detail; `ui / loc_talent_broker_keystone_chemical_dependency_sub_2_desc / bd5bf1c2` | Three stacks multiply to 0.857375, approximately 14.26% less Toughness Damage. Restoration precedes stack addition, still executes at the cap and is limited by the deficit/other modifiers; Health Damage is not directly reduced. [Fixed source and line references](broker_keystone_chemical_dependency_sub_2.md#fixed-source-evidence) | Not covered by the description | The wording specifies each stack's effect without claiming additive total reduction. |
+
 ## Comparison totals
 
 The 45 listed rules comprise **21 Consistent**, **1 Explicit contradictions**, **20 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
