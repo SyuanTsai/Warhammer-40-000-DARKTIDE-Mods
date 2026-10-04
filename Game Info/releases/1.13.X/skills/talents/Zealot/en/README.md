@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="32" height="32" alt="Martyr's Purpose talent icon"> [Martyr's Purpose](#zealot_restore_stealth_cd_on_damage) | <ul><li>Lower current Health increases combat ability recharge. At 25% Health or less, gain up to 0.5 additional resource per second, equivalent to +50% regeneration when natural recharge is 1 resource/s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="Pious Cut-Throat talent icon"> [Pious Cut-Throat](#zealot_backstab_kills_restore_cd) | <ul><li>A Melee Backstab or Weakspot hit grants extra cooldown recovery for 2 seconds, without requiring a kill. Restore 0.75 additional combat ability resource per second; further hits refresh duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173" width="32" height="32" alt="Invocation of Death talent icon"> [Invocation of Death](#zealot_crits_grant_cd) | <ul><li>A Melee Critical Hit grants extra ability recharge for about 3.25 seconds, at most once per swing. Restore 1 additional resource per second; further swings can refresh duration without stacking the rate.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="Unrelenting Fury talent icon"> [Unrelenting Fury](#zealot_fotf_refund_cooldown) | <ul><li>Kill an Elite or Specialist within 5 seconds of Fury of the Faithful to refund 20% of one charge. Maximum once per use; a base 30-second charge refunds 6 seconds of progress.</li></ul> | Ability |
 
 ---
 
@@ -284,3 +285,17 @@
 - **Cooldown example**: Each second gives extra progress equivalent to 1 second of base cooldown. A complete single effect usually restores at about seconds 1, 2 and 3, giving 3 extra seconds. With natural recovery working normally, those 3 seconds advance about 6 seconds of cooldown in total.
 
 [Details](zealot_crits_grant_cd.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_fotf_refund_cooldown"></a>
+
+### Unrelenting Fury
+
+<img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="72" height="72" alt="Unrelenting Fury talent icon">
+
+- **Trigger**: Kill an Elite or Specialist within 5 seconds of using Fury of the Faithful to refund 20% of the cooldown resource required for one charge. Maximum one refund per use.
+- **Cooldown example**: With base cooldown 30 seconds, refund 30 × 20% = 6 seconds of natural recharge progress. If only 4 seconds remain to full, only the missing amount is restored. Double charges still use one charge's cost; the refund does not become 60 × 20% = 12 seconds.
+- **Chinese original-text erratum**: The Chinese text incorrectly adds “seconds” after the percentage refund. The correct value is 20% of one charge, equivalent to 6 seconds of progress for a base 30-second cooldown.
+
+[Details](zealot_fotf_refund_cooldown.md) · [Back to index](#talent-index)

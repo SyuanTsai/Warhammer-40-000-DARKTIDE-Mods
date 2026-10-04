@@ -214,6 +214,18 @@ Full raw template and formatting: [source evidence](zealot_crits_grant_cd.md#ori
 | Trigger, regeneration and displayed precision | “+100% Ability Cooldown Regeneration for 3s on Melee Critical Hits.”; `ui / loc_talent_maniac_cooldown_on_melee_crits_buff_desc / ec418944` | Melee crit proc gives 1 additional resource/s; duration 3.25s, explicitly formatted with zero decimals. [Fixed source and line references](zealot_crits_grant_cd.md#fixed-source-evidence) | Consistent | The hit type and rate agree. Display precision explains 3 versus internal 3.25 without claiming exact in-game timing. |
 | Sweep gate and refresh timing | No per-sweep gate, refresh or timer-phase description; `ui / loc_talent_maniac_cooldown_on_melee_crits_buff_desc / ec418944` | One trigger per sweep; later sweeps can refresh duration without stacking the per-second rate; custom timer phase and resource cap remain relevant. [Fixed source and line references](zealot_crits_grant_cd.md#fixed-source-evidence) | Not covered by the description | The accepted three-tick example and limits supplement the regeneration statement. |
 
+
+<a id="zealot_fotf_refund_cooldown"></a>
+
+## Unrelenting Fury
+
+Full raw template and formatting: [source evidence](zealot_fotf_refund_cooldown.md#original-english-template-and-reconstruction). Name hash `c6a43b9e`. Every row uses `ui / loc_talent_zealot_fotf_refund_cooldown_desc / 0dec8750`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill condition, window, refund and limit | Elite/Specialist kill within 5s of Fury restores +20% Ability Cooldown; maximum once per use.; `ui / loc_talent_zealot_fotf_refund_cooldown_desc / 0dec8750` | Kill-filtered refund window lasts 5s; restores 0.2 of one charge and removes the Buff after success. [Fixed source and line references](zealot_fotf_refund_cooldown.md#fixed-source-evidence) | Consistent | The English percentage and use limit agree; it has no fixed-seconds unit error. |
+| Charge basis and resource limits | No charge-pool denominator or cap example; `ui / loc_talent_zealot_fotf_refund_cooldown_desc / 0dec8750` | A 30-resource charge refunds 6; only 4 restores if 4 is missing. Two charges do not change the denominator to 60. [Fixed source and line references](zealot_fotf_refund_cooldown.md#fixed-source-evidence) | Not covered by the description | The one-charge basis and timing/tag limits supplement the percentage statement. |
+
 ## Comparison totals
 
 33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.
