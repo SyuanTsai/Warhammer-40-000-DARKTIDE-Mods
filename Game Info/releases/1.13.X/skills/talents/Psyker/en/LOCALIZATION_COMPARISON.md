@@ -578,6 +578,18 @@ Full raw template and formatting: [source evidence](psyker_crits_regen_toughness
 | Separate Critical Hit effects | 10% Toughness over 4s; +5% Movement Speed for 4s, stacking 3 times; `ui / loc_talent_psyker_crits_regen_toughness_speed_description / 0da7190a` | Critical Hit events apply the effect; speed stacks to +15%, while sustained restoration remains 10% over 4s. [Fixed source and line references](psyker_crits_regen_toughness_movement_speed.md#fixed-source-evidence) | Consistent | Stacking is attached to Movement Speed in the English, so it does not contradict the fixed Toughness rate. |
 | Restoration and timer details | No maximum-Toughness basis, per-second rate or refresh rule; `ui / loc_talent_psyker_crits_regen_toughness_speed_description / 0da7190a` | Restoration is 0.1 × dt / 4 of maximum Toughness, once per Buff instance; retriggering resets 4s. [Fixed source and line references](psyker_crits_regen_toughness_movement_speed.md#fixed-source-evidence) | Not covered by the description | These implementation details supplement the separate English effects. |
 
+
+<a id="psyker_elite_kills_add_warpfire"></a>
+
+## Perilous Combustion
+
+Full raw template and formatting: [source evidence](psyker_elite_kills_add_warpfire.md#original-english-template-and-reconstruction). Name hash `efe217b7`. Every row uses `ui / loc_talent_psyker_elite_and_special_kills_add_warpfire_desc / c4294372`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and stack amount | Elite or Specialist Kill applies 2 Soulblaze stacks nearby, causing Damage over time; `ui / loc_talent_psyker_elite_and_special_kills_add_warpfire_desc / c4294372` | The verified death event adds 2 warp_fire stacks to nearby enemies. [Fixed source and line references](psyker_elite_kills_add_warpfire.md#fixed-source-evidence) | Consistent | The enemy categories, amount and effect agree. |
+| Radius, exceptions and damage scaling | Nearby Enemies; no exact radius, exception or formula; `ui / loc_talent_psyker_elite_and_special_kills_add_warpfire_desc / c4294372` | The radius is 4m around the victim; sleeping Daemonhosts are excluded; warpfire without attack_type is excluded, and power scales nonlinearly with stacks. [Fixed source and line references](psyker_elite_kills_add_warpfire.md#fixed-source-evidence) | Not covered by the description | The English gives a broad effect without these implementation details. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

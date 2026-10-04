@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="Quietude talent icon"> [Quietude](#psyker_toughness_on_vent) | <ul><li>Both Peril Generation and Quelling restore Toughness: 4% of maximum Toughness per ten percentage points of actual Peril change.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="Warp Expenditure talent icon"> [Warp Expenditure](#psyker_toughness_on_melee) | <ul><li>First melee target hit: restore 2.5% maximum Toughness. Melee Weakspot Kill: restore 15% over 3s instead; refreshes without increasing the rate.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="Mettle talent icon"> [Mettle](#psyker_crits_regen_toughness_movement_speed) | <ul><li>Critical Hits restore 10% maximum Toughness over 4s and grant +5% Movement Speed, up to 3 stacks. Toughness restoration rate does not multiply with stacks.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="Perilous Combustion talent icon"> [Perilous Combustion](#psyker_elite_kills_add_warpfire) | <ul><li>Elite or Specialist Kill: apply 2 Soulblaze stacks to enemies within 4m of the victim. Sleeping Daemonhosts are excluded.</li></ul> | Talent |
 
 ---
 
@@ -777,3 +778,19 @@
 - **Restoration example**: with 100 maximum Toughness, a sufficient deficit and no other bonuses, the 4-second effect restores 100 × 10% = 10 points. At 3 stacks it still restores 2.5 points per second, while the movement multiplier is 1 + 3 × 5% = 1.15.
 
 [Details](psyker_crits_regen_toughness_movement_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_elite_kills_add_warpfire"></a>
+
+### Perilous Combustion
+
+<img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="72" height="72" alt="Perilous Combustion talent icon">
+
+- **Trigger**: killing an Elite or Specialist enemy applies 2 Soulblaze stacks to enemies within 4 metres of the victim.
+
+- **Stack example**: a nearby enemy with no Soulblaze receives 2 stacks; one with 3 stacks reaches 3 + 2 = 5 stacks. Damage grows nonlinearly with stacks; 5 stacks do not deal 5 times the damage of 1 stack.
+
+- **Exception**: a sleeping Daemonhost is not ignited by this effect.
+
+[Details](psyker_elite_kills_add_warpfire.md) · [Back to index](#talent-index)
