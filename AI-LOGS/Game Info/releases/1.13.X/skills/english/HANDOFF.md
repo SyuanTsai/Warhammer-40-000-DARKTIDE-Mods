@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 297 completed on 2026-10-04. [Receipt](psyker_skills_293_297.json) and [FILE_MAP](FILE_MAP.json) record 297 accepted mechanisms. Next item: **298, Inner Tranquility**, `psyker_reduced_warp_charge_cost_and_venting_speed`. The full goal remains active and unfinished.
+Checkpoint 302 completed on 2026-10-04. [Receipt](psyker_skills_298_302.json) and [FILE_MAP](FILE_MAP.json) record 302 accepted mechanisms. Next item: **303, Perfectionism**, `psyker_mark_increased_max_stacks`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 349 mechanisms + 24 class-support files + 2 shared files = 375 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 30/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 66 = 31 Consistent / 2 Explicit contradictions / 30 Not covered / 0 No implementation / 3 Cannot confirm. Latest batch commit interval: 770s (12m 50s), 3f91df566→518291395. Enervating Threshold and Warp Unbound values agree; omitted conditions are supplements. Disrupt Destiny marking wording is Cannot confirm. Empowered Psionics has two explicit English text/source contradictions; Blitz stock and empowerment remain distinct resources.
+Remaining: 344 mechanisms + 24 class-support files + 2 shared files = 370 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 35/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 76 = 36 Consistent / 2 Explicit contradictions / 35 Not covered / 0 No implementation / 3 Cannot confirm. Latest batch commit interval: 361s (6m 01s), cac583b0e→76e398cc4. All five English effects agree with the accepted evidence. Resource interpolation, Toughness rate/deficit limits, proc-cap interactions and Blitz restoration timings are retained as supplements. Narrative suffixes are export metadata.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

@@ -4348,7 +4348,12 @@
         "psyker_overcharge_stance_infinite_casting",
         "psyker_passive_souls_from_elite_kills",
         "psyker_new_mark_passive",
-        "psyker_empowered_ability"
+        "psyker_empowered_ability",
+        "psyker_reduced_warp_charge_cost_and_venting_speed",
+        "psyker_toughness_on_soul",
+        "psyker_empowered_grenades_passive_improved",
+        "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
+        "psyker_empowered_ability_on_elite_kills"
       ],
       "checks": []
     },
@@ -4390,7 +4395,12 @@
         "psyker_overcharge_stance_infinite_casting",
         "psyker_passive_souls_from_elite_kills",
         "psyker_new_mark_passive",
-        "psyker_empowered_ability"
+        "psyker_empowered_ability",
+        "psyker_reduced_warp_charge_cost_and_venting_speed",
+        "psyker_toughness_on_soul",
+        "psyker_empowered_grenades_passive_improved",
+        "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
+        "psyker_empowered_ability_on_elite_kills"
       ],
       "checks": []
     },
@@ -4432,7 +4442,12 @@
         "psyker_overcharge_stance_infinite_casting",
         "psyker_passive_souls_from_elite_kills",
         "psyker_new_mark_passive",
-        "psyker_empowered_ability"
+        "psyker_empowered_ability",
+        "psyker_reduced_warp_charge_cost_and_venting_speed",
+        "psyker_toughness_on_soul",
+        "psyker_empowered_grenades_passive_improved",
+        "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
+        "psyker_empowered_ability_on_elite_kills"
       ],
       "checks": []
     },
@@ -4474,7 +4489,12 @@
         "psyker_overcharge_stance_infinite_casting",
         "psyker_passive_souls_from_elite_kills",
         "psyker_new_mark_passive",
-        "psyker_empowered_ability"
+        "psyker_empowered_ability",
+        "psyker_reduced_warp_charge_cost_and_venting_speed",
+        "psyker_toughness_on_soul",
+        "psyker_empowered_grenades_passive_improved",
+        "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
+        "psyker_empowered_ability_on_elite_kills"
       ],
       "checks": []
     },
@@ -4917,9 +4937,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c10f12908f03f2666cf3700f1c75d80bba15e371",
       "chinese_sha256": "fd01f4f4b39499c842603ea551917cc1e79ecbc8372812a48d776244bf6f9ba3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_empowered_ability_on_elite_kills"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md",
@@ -4928,9 +4955,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c3fe283f103f8d757bec5e124d1bbbaf34243b3c",
       "chinese_sha256": "364c99b928c7862a26bce0562eda2927ba013c1ec6f2d458eea171f3fb9dce90",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_empowered_chain_lightnings_replenish_toughness_to_allies"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_grenades_increased_max_stacks.md",
@@ -4950,9 +4984,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2801d200f4c28c01046ca653186dba98348e9752",
       "chinese_sha256": "3a1f713456bb268b433803faf32666fbf6d074c87d230843c8d1117471a70f0f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_empowered_grenades_passive_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_force_staff_bonus.md",
@@ -5281,9 +5322,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "35999e14ceca79eb31a18a61c01ff07b45b1f577",
       "chinese_sha256": "78656fd8443ce2cf47f2e603b1c14e01992bc319069972d117cc3a59808a288b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_reduced_warp_charge_cost_and_venting_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_reload_speed_warp_charge.md",
@@ -5480,9 +5528,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bf58e55fe79a160b1c11892ae4759f2e798a9c0f",
       "chinese_sha256": "72d548ab28d08356e000cface98ac1d9fa18d8924492261cf8d9f74cc568220f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_toughness_on_soul"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_vent.md",
@@ -13991,6 +14046,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_ability.md"
+    },
+    {
+      "id": "psyker_reduced_warp_charge_cost_and_venting_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_reduced_warp_charge_cost_and_venting_speed.md"
+    },
+    {
+      "id": "psyker_toughness_on_soul",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_soul.md"
+    },
+    {
+      "id": "psyker_empowered_grenades_passive_improved",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_grenades_passive_improved.md"
+    },
+    {
+      "id": "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md"
+    },
+    {
+      "id": "psyker_empowered_ability_on_elite_kills",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_ability_on_elite_kills.md"
     }
   ],
   "pending_chinese_corrections": [
