@@ -991,6 +991,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
       "effect": "持用冥潮鐳射槍 盧修斯 MK IIIa、MK V 或 Mk IV，連續接續蓄力射擊時，每個有效連段步階使蓄力時間分別縮短 I–IV 的 6%／8%／10%／12%；最多五步，五步總縮短 30%／40%／50%／60%。"
+    },
+    {
+      "id": "slaughter-spree",
+      "name_zh_tw": "殺戮狂潮",
+      "name_en": "Slaughter Spree",
+      "name_key": "loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill",
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc",
+      "name_hash": "20186e73",
+      "description_hash": "33471ac0",
+      "page": "entries/殺戮狂潮/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8e6c5fe7-7b0f-4912-95bb-f139924250e7",
+      "effect": "持用戰術斧 埃托克斯 Mk II／Mk IV／Mk VII時，以近戰暴擊命中弱點並擊殺目標，可為近戰暴擊機率增加+40／+60／+80／+100個有效百分點；效果最長5秒，供下一次近戰揮擊使用。"
     }
   ],
   "weapons": [
@@ -16447,6 +16460,110 @@
       "icon": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_101",
       "effect": "三個已核對的冥潮鐳射槍盧修斯 Mark 共用相同 I–IV 數值；每步縮短 6%／8%／10%／12%，最多五步。蓄力模板基準時間依 Mark 不同。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill",
+      "blessing_id": "slaughter-spree",
+      "weapon_id": "combataxe_p2",
+      "page": "entries/殺戮狂潮/weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "combataxe_p2": {
+          "defined_tiers": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "available_tiers": null,
+          "stat_values": {
+            "num_stacks_on_proc": {
+              "I": 4,
+              "II": 6,
+              "III": 8,
+              "IV": 10
+            },
+            "melee_critical_strike_chance": {
+              "I": 0.4,
+              "II": 0.6,
+              "III": 0.8,
+              "IV": 1.0
+            }
+          },
+          "localized_values": {
+            "crit_chance": {
+              "I": "+40%",
+              "II": "+60%",
+              "III": "+80%",
+              "IV": "+100%"
+            },
+            "duration": {
+              "I": "5",
+              "II": "5",
+              "III": "5",
+              "IV": "5"
+            }
+          },
+          "effect": "近戰暴擊弱點擊殺後，下一次近戰揮擊可取得加算暴擊機率。"
+        },
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "num_stacks_on_proc": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "melee_critical_strike_chance": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          }
+        },
+        "localized_values": {
+          "crit_chance": {
+            "I": "+40%",
+            "II": "+60%",
+            "III": "+80%",
+            "IV": "+100%"
+          },
+          "duration": {
+            "I": "5",
+            "II": "5",
+            "III": "5",
+            "IV": "5"
+          }
+        },
+        "effect": "近戰暴擊弱點擊殺後，下一次近戰揮擊可取得加算暴擊機率。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p2.lua",
+        "start_line": 320,
+        "end_line": 362
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc",
+      "description_hash": "33471ac0",
+      "icon": "https://github.com/user-attachments/assets/8e6c5fe7-7b0f-4912-95bb-f139924250e7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_191",
+      "effect": "三個Atrox Mark共用同一tier與觸發條件；普通／蓄力／push-follow／特殊近戰揮擊沒有不同祝福數值，純推擊不符合近戰暴擊條件。"
     }
   ],
   "bindings": [
@@ -23112,6 +23229,48 @@
         "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
         "import_line": 15,
         "append_line": 1246
+      }
+    },
+    {
+      "blessing_id": "slaughter-spree",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1452
+      }
+    },
+    {
+      "blessing_id": "slaughter-spree",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "append_line": 1493
+      }
+    },
+    {
+      "blessing_id": "slaughter-spree",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/guaranteed_melee_crit_after_crit_weakspot_kill",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "append_line": 1360
       }
     }
   ]

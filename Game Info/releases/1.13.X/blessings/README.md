@@ -81,5 +81,6 @@
 | <img src="https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5" width="32" height="32" alt="持續射擊祝福圖示"> [持續射擊](entries/持續射擊/README.md)<br>- Sustained Fire<br>[完整說明](entries/持續射擊/README.md) | <ul><li>持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd" width="32" height="32" alt="擊倒祝福圖示"> [擊倒](entries/擊倒/README.md)<br>- Smackdown<br>[完整說明](entries/擊倒/README.md) | <ul><li>命中踉蹌小兵的合格特殊近戰攻擊後，持用來源武器時增加近戰暴擊機率，I–IV級+12.5／15／17.5／20個百分點，持續4.5秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b" width="32" height="32" alt="猛攻祝福圖示"> [猛攻](entries/猛攻/README.md)<br>- Weight of Fire<br>[完整說明](entries/猛攻/README.md) | <ul><li>持用冥潮鐳射槍 盧修斯 MK IIIa、MK V 或 Mk IV，連續接續蓄力射擊時，每個有效連段步階使蓄力時間分別縮短 I–IV 的 6%／8%／10%／12%；最多五步，五步總縮短 30%／40%／50%／60%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/8e6c5fe7-7b0f-4912-95bb-f139924250e7" width="32" height="32" alt="殺戮狂潮祝福圖示"> [殺戮狂潮](entries/殺戮狂潮/README.md)<br>- Slaughter Spree<br>[完整說明](entries/殺戮狂潮/README.md) | <ul><li>持用戰術斧 埃托克斯 Mk II／Mk IV／Mk VII時，以近戰暴擊命中弱點並擊殺目標，可為近戰暴擊機率增加+40／+60／+80／+100個有效百分點；效果最長5秒，供下一次近戰揮擊使用。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

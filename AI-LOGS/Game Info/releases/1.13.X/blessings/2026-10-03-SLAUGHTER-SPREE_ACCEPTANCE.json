@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-04",
+  "blessing": "slaughter-spree",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this formal peer review with the existing gpt-6-luna/max settings; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Single blessing7 formal pages, own1trait3bindings, related map/reverse/catalog/glossary; unrelated AI execution carry excluded.",
+    "scope_sha256": "c65f3af9b7945947c6b2171b447a403c520b8a4ea8abb88ad5866d38f79e6d72",
+    "findings": [
+      "All 26 frozen scope file hashes match; the frozen agent config/evidence/draft hashes remain unchanged.",
+      "The seven formal pages consistently identify the single combataxe_p2 trait and its three actual bindings: Tactical Axe Atrox Mk II, Mk IV, and Mk VII. The reverse weapon page, blessing catalogues, global map, and Translation index point to the same trait, tier values, page, and verified icon.",
+      "The player trigger is limited to a death from a melee critical weakspot hit while the source weapon is still held when the event is processed. Light/heavy, push-follow, and special sweeps are covered; pure push is separate and does not satisfy the melee-critical sweep gate.",
+      "Tier I–IV add 4/6/8/10 child stacks at .10 melee critical chance per effective stack: +40/+60/+80/+100 percentage points, with effective stat capped at 10. Raw internal stack count may continue above that cap; repeat kills do not refresh the original five-second start.",
+      "The selected child is the percentage child, not the similarly named guaranteed-critical keyword effect. It has no held gate and is independently internal, so switching or unequipping the source weapon stops new parent triggers but does not synchronously remove an existing child.",
+      "ActionSweep samples and stores the crit flag at action start; the triggering attack cannot be retroactively changed. The root player text accurately describes the existing-child same-batch collision: a qualifying kill can add stacks, but once the child is marked finished by a sweep-start event it is not guaranteed to re-arm; a child newly inserted while processing the kill does not process the older event snapshot.",
+      "The chance order and examples are consistent: prevent-crit takes priority, then guaranteed keyword/action-auto-crit, otherwise the clamped additive chance; conversion follows the clamp. The II example 15%→75% is +60 percentage points and +400% relative, not a damage increase or multiplicative +60%.",
+      "The localization comparison gives the exact name/description keys and four static tier reconstructions from the matched RAW placeholder and formatter. It correctly classifies duration, stacks, switching, and event-cleanup details as not covered by RAW rather than a proven contradiction."
+    ],
+    "resolved_findings": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-agent-config.json": "1a77d6b64116ecf04db4a03db55aaf206c06f3e21b98b7aaabfef26df0a0981a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-agent-draft.md": "8149a88aa1100e05f4babd9236cb12e296270e9f59b16313fb021cbf836218e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-agent-evidence.json": "889fcc7a820014175fd8ffa1cf467b6e35a82164cdc8156d687abbcebc5be5fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-config.json": "a1d46805c873dafa0bf437a204a8fca132ac051e154e2ec89724905570296288",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-extension-draft.json": "965613a742b1f4fba049aa8e141799cb1eafda759d00aaf568ca16d9648ca7d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-image.json": "239f43a804719e8162b6269c8ca89828b436599d4ae0d40165258dc4c4d1ef59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-focused-checks.json": "e838a548c2c1c28708129bbff69618b4d41c422da07698f142574be629eca8d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-frozen-source-verification.json": "4d811e55800711de7d34e1cd441640721eb298de32acab326124eed48ca94682",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-own-tier-diff.json": "31ff0d25c95b04d1690452db3ea1758747822d7066779d2b064376a0abff2793",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-resume-review.json": "65dbd99b749f0832d5363a9312239eac1ca8110152c67b13e7b0964bfb01c05a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-ui-raw-verification.json": "68a54a6ad58b9c0e83c170823de0085f00b6b61e7aa5e2eb4958275c3e58aa03",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughter-spree-primary-ui-review.json": "4660b02b16021978185bfdc5a77572d0107e1373c8ac6f9a939b9365f2a41be6",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "0a3ce36ada45aaba9917224921dc9f29c5233507aa2d83be32f4a3c425468194",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1e0c0c091a0cf115b2aeb1841eb862e2a12130220d5a89dc533f20d89878a837",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "09c00904b799900d5daf192196970d3e8763788f938ba567f93a4a622c3dc3a4",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/DAMAGE_PERCENTAGE_REVIEW.md": "bdd3d1e4b8a2465f07c4bba7ac899c24e1d1b6bfc4356793328ef34d366c306e",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/LOCALIZATION_COMPARISON.md": "6f2b47920d2526e59a00f9cacc9159f589ec191c34fea044d53a680e7f6bb109",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/README.md": "817424e8e93af30cb27b2fb4ef0fc1df87bbbe78cb35a4792fdc553543d9f184",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/SOURCE_INDEX.md": "3caea8029fc47ed5eaec93218ffd3059ab497e37d559134bf8247939b0643f69",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/TIER_VALUES.md": "26c1dcd5470e64f6d6eb474e9c618b90addce013d602a2addc085865ddb36e85",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/WEAPON_COMPATIBILITY.md": "de3fa0a2e5348146ae13afffc12b1fbe7fd7786d6e4cf2101d11fb49dea3641e",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮狂潮/weapon_trait_bespoke_combataxe_p2_guaranteed_melee_crit_after_crit_weakspot_kill.md": "355fe913e8defd3c56f8546de52049253b85011f17c2c5bb611579a6170b17c1",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "51a838445d329549d11186510c8a54e2df8e3d7e82d9c661c1353a042ad058d6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "a2472bb163c5be5b5d421554938afe70aa5dd42eab4e99053ce08cf464792f7f",
+      "Referneces/Translation.md": "9b84a2ed7f1efd434e5dce13d8e2abf2a65f8eadf1cafebbc487731624a7e031"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8e6c5fe7-7b0f-4912-95bb-f139924250e7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "slaughter-spree",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_191",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_191.png",
+      "attachment": "https://github.com/user-attachments/assets/8e6c5fe7-7b0f-4912-95bb-f139924250e7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5979469873",
+      "acquired_date": "2026-10-04",
+      "sha256": "93ca414d2dc154cc735a6f7e9e95f05ac9f88334976f61b23e28f9723392acc6",
+      "content_type": "image/png",
+      "size": 4640,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "殺戮狂潮祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Source and public PNG inspected at original resolution; identical. Alpha diagnostic shows two vertically aligned crosshairs connected by curved opposing arrows. Original asset unchanged; QA diagnostic not uploaded."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 265,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 60,
+      "source_files": 20,
+      "bindings": 479,
+      "variants": 247,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 631,
+      "remote_references": 314,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 15,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-014-full-scan.json",
+        "sha256": "f736c967d9fae24911319338a104bffdc7d6cb027646374bc13b7ae14f300122",
+        "trigger": "round-014"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 93,
+    "not_started_name_groups": 93,
+    "partial_name_groups": 0,
+    "remaining_variants": 358,
+    "remaining_bindings": 706,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "3d276ab77be6c3a90edbedb1874ffaec4cfce92ac650988b0ffb21864d1d90b9"
+  },
+  "previous_local_commit": "b7f2a925965b0616d33b4033b660deef08352be9",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-resume-review.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-own-tier-diff.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-frozen-source-verification.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-ui-review.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-ui-raw-verification.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-primary-focused-checks.json"
+  ],
+  "primary_review_method": "Exact own tier/wrapper+all3actual bindings+RAW formatter+focused lifetime/collision/stack refresh/chance priority differences with applicability checked reusable generic source cache.",
+  "canonical_config": {
+    "path": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-config.json",
+    "sha256": "a1d46805c873dafa0bf437a204a8fca132ac051e154e2ec89724905570296288"
+  },
+  "frozen_inputs": {
+    "config": "1a77d6b64116ecf04db4a03db55aaf206c06f3e21b98b7aaabfef26df0a0981a",
+    "evidence": "889fcc7a820014175fd8ffa1cf467b6e35a82164cdc8156d687abbcebc5be5fc",
+    "draft": "8149a88aa1100e05f4babd9236cb12e296270e9f59b16313fb021cbf836218e2"
+  },
+  "previous_approved_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slaughter-spree-formal-peer-scope.json",
+    "sha256": "c65f3af9b7945947c6b2171b447a403c520b8a4ea8abb88ad5866d38f79e6d72",
+    "files": 26
+  }
+}

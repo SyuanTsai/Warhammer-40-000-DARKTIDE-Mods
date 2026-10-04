@@ -293,3 +293,7 @@
 - [擊倒](2026-10-03-SMACKDOWN_ACCEPTANCE.json)：新增2變體、5型號關聯；共2變體、5關聯。
 
 - [猛攻](2026-10-03-WEIGHT-OF-FIRE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- 第14輪三項已Commit後完整掃描通過：sustained-fire (`ffedd5a0f292c3fabe2e4da53302a4557729fac0`)、smackdown (`fd9f824637cb5127f9246347c5f3b219d996d2f1`)、weight-of-fire (`b7f2a925965b0616d33b4033b660deef08352be9`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-014-full-scan.json`／SHA-256 `f736c967d9fae24911319338a104bffdc7d6cb027646374bc13b7ae14f300122`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [殺戮狂潮](2026-10-03-SLAUGHTER-SPREE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

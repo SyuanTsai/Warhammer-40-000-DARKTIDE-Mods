@@ -311,6 +311,7 @@
 - Agile - 敏捷
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_count_reset_on_weakspot_hit`，hash `c9f41884`；英文／繁中RAW配對確認。
 - Slaughter Spree - 殺戮狂潮
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill`，hash `20186e73`；英文／繁中RAW配對確認。
 - Relentless Strikes - 持續打擊
 - Flesh Tearer - 血肉撕裂者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_melee`，hash `6f0bf4f9`；英文／繁中RAW配對確認。
