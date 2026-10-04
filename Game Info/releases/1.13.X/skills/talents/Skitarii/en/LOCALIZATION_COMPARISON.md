@@ -1118,6 +1118,18 @@ Full raw template and formatting: [source evidence](cryptic_strength_on_charge_g
 | Charge gain, Strength and duration | “Gain … Strength on gaining a charge. Lasts …s”; +12.5%, 10s; `ui / loc_talent_cryptic_strength_on_charge_gain_desc / 9e3a3df6` | on_combat_ability_charge_replenished activates power_level_modifier = 0.125 for 10 seconds. [Fixed source and line references](cryptic_strength_on_charge_gain.md#fixed-source-evidence) | Consistent | The trigger, term, value and duration match the verified power effect. |
 | Full-charge threshold, refresh and power stage | The threshold, simultaneous multi-charge gain, refresh and final calculation are not specified.; `ui / loc_talent_cryptic_strength_on_charge_gain_desc / 9e3a3df6` | At least one full charge is required. Further qualifying gain refreshes one bonus; num_charges_gained does not multiply it. Power affects damage, Impact and Cleave through weapon/target-dependent calculations. [Fixed source and line references](cryptic_strength_on_charge_gain.md#fixed-source-evidence) | Not covered by the description | These details explain the charge and Strength terms without asserting a uniform final damage bonus. |
 
+
+<a id="cryptic_toughness_replenishment_on_kill_bonus"></a>
+
+## Slaughter Protocol
+
+Full raw template and formatting: [source evidence](cryptic_toughness_replenishment_on_kill_bonus.md#original-english-template-and-reconstruction). Name hash `70dde31f`. Every row uses `ui / loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc / 583f2cab`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee-kill bonus and zero charges | +25% Toughness Replenishment on Melee Kill; increased to +50% at 0 Charges.; `ui / loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc / 583f2cab` | toughness_melee_replenish is 0.25, with an additional 0.25 at remaining-charge count <= 0. [Fixed source and line references](cryptic_toughness_replenishment_on_kill_bonus.md#fixed-source-evidence) | Consistent | The trigger, values and zero-charge condition match. |
+| Recovery basis and combination | The description does not specify a maximum-Toughness basis or how recovery bonuses combine.; `ui / loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc / 583f2cab` | The bonus modifies existing melee-kill recovery, using class/weapon recovery and same-stage addition before total_replenish_multiplier. Only full charges count; recovery is capped at maximum. [Fixed source and line references](cryptic_toughness_replenishment_on_kill_bonus.md#fixed-source-evidence) | Not covered by the description | The English describes a replenishment bonus without explicitly asserting direct recovery of 25% or 50% of maximum Toughness. |
+
 ## Comparison totals
 
 187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.

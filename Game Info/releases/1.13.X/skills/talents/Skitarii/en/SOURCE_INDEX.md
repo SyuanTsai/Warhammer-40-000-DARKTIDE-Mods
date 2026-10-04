@@ -103,3 +103,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Protectorate Protocol](cryptic_disabled_allies_defense.md) / `cryptic_disabled_allies_defense` | Talent |
 | [Data Sensor Protocol](cryptic_ally_coherency_defenses.md) / `cryptic_ally_coherency_defenses` | Talent |
 | [Sequenced Charge](cryptic_strength_on_charge_gain.md) / `cryptic_strength_on_charge_gain` | Talent |
+| [Slaughter Protocol](cryptic_toughness_replenishment_on_kill_bonus.md) / `cryptic_toughness_replenishment_on_kill_bonus` | Talent |

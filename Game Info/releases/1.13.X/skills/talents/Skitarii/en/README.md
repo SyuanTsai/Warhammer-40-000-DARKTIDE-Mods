@@ -100,6 +100,7 @@
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="Protectorate Protocol talent icon"> [Protectorate Protocol](#cryptic_disabled_allies_defense) | <ul><li>Allies requiring help in Coherency take 25% less damage. After you assist them, they gain a separate 6-second effect with 25% Damage Resistance and ordinary hit Stun immunity.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="Data Sensor Protocol talent icon"> [Data Sensor Protocol](#cryptic_ally_coherency_defenses) | <ul><li>When you or an ally in Coherency take Toughness damage, the injured player restores 25% Stamina; Health damage restores 25% Toughness. The two effects each have a 15-second cooldown.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="32" height="32" alt="Sequenced Charge talent icon"> [Sequenced Charge](#cryptic_strength_on_charge_gain) | <ul><li>Gaining at least one full Capacitance charge grants 12.5% Strength for 10 seconds. Further gains refresh the duration; gaining multiple charges at once does not multiply the bonus.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="32" height="32" alt="Slaughter Protocol talent icon"> [Slaughter Protocol](#cryptic_toughness_replenishment_on_kill_bonus) | <ul><li>Increase the existing Toughness recovery from melee kills by 25%, or by 50% when no full Capacitance charge remains.</li></ul> | Talent |
 
 ---
 
@@ -1438,3 +1439,17 @@ The verified Chinese document notes that its original wording says, in translati
 - **Scope**: Strength affects the power used in damage, Impact and Cleave calculations. Actual results still depend on the weapon and target; this does not mean every final damage result increases by 12.5%.
 
 [Details](cryptic_strength_on_charge_gain.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_toughness_replenishment_on_kill_bonus"></a>
+
+### Slaughter Protocol
+
+<img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="72" height="72" alt="Slaughter Protocol talent icon">
+
+- **Operation**: Increase the Toughness amount a melee kill would normally restore by **25%**. With **no full Capacitance charges**, the increase becomes **50%**.
+- **Recovery example**: If a melee kill normally restores **5** Toughness points, the normal bonus gives `5 × 1.25 = 6.25` points; at **0 charges**, `5 × 1.50 = 7.5` points.
+- **Other bonuses**: With an existing **20%** Toughness recovery bonus at the same stage, the zero-charge result is `5 × (1 + 20% + 50%) = 8.5` points, capped at maximum Toughness.
+
+[Details](cryptic_toughness_replenishment_on_kill_bonus.md) · [Back to index](#talent-index)
