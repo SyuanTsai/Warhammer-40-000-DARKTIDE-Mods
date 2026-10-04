@@ -64,3 +64,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Wildfire](psyker_spread_warpfire_on_kill.md) / `psyker_spread_warpfire_on_kill` | Talent |
 | [Mind in Motion](psyker_venting_improvements.md) / `psyker_venting_improvements` | Talent |
 | [Malefic Momentum](psyker_kills_stack_other_weapon_damage.md) / `psyker_kills_stack_other_weapon_damage` | Talent |
+| [One with the Warp](psyker_warp_charge_reduces_toughness_damage_taken.md) / `psyker_warp_charge_reduces_toughness_damage_taken` | Talent |

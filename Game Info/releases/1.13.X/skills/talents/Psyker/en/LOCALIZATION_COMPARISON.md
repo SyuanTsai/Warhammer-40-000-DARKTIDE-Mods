@@ -650,6 +650,18 @@ Full raw template and formatting: [source evidence](psyker_kills_stack_other_wea
 | Opposite damage groups and stacks | Non-Warp Kill grants +5% to Warp Attacks; Warp Kill grants +5% to non-Warp Attacks; each lasts 10s and stacks 5 times; `ui / loc_talent_psyker_kills_stack_other_weapon_damage_both_description / ef213cd8` | The corresponding Buff grants the stated bonus to the opposite damage group, with each template capped at 5 stacks for 10s. [Fixed source and line references](psyker_kills_stack_other_weapon_damage.md#fixed-source-evidence) | Consistent | Both directions, quantities, durations and caps agree. |
 | Classification and damage-stage implementation | No held-weapon test, timer-refresh rule or damage-stage formula; `ui / loc_talent_psyker_kills_stack_other_weapon_damage_both_description / ef213cd8` | Kill damage_type membership in warp_damage_types chooses the Buff; timers are separate and refresh per group; +0.05 damage and −0.05 warp_damage cancel for Warp Attacks. [Fixed source and line references](psyker_kills_stack_other_weapon_damage.md#fixed-source-evidence) | Not covered by the description | These implementation details explain the stated attack categories without changing them. |
 
+
+<a id="psyker_warp_charge_reduces_toughness_damage_taken"></a>
+
+## One with the Warp
+
+Full raw template and formatting: [source evidence](psyker_warp_charge_reduces_toughness_damage_taken.md#original-english-template-and-reconstruction). Name hash `96a29f5e`. Every row uses `ui / loc_talent_psyker_toughness_damage_reduction_from_warp_charge_desc / 96e4cb7c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Range, resource and damage scope | Toughness Damage Reduction of +10% to +33% based on current Peril; `ui / loc_talent_psyker_toughness_damage_reduction_from_warp_charge_desc / 96e4cb7c` | Current Peril weights the Toughness damage-taken multiplier between 0.9 and 0.67; the effect does not reduce Health Damage. [Fixed source and line references](psyker_warp_charge_reduces_toughness_damage_taken.md#fixed-source-evidence) | Consistent | The endpoints, current resource and Toughness-only scope agree. |
+| Interpolation and combination | No interpolation or combination formula; `ui / loc_talent_psyker_toughness_damage_reduction_from_warp_charge_desc / 96e4cb7c` | The multiplier is linearly interpolated and multiplies with other reductions in the same multiplicative stage. [Fixed source and line references](psyker_warp_charge_reduces_toughness_damage_taken.md#fixed-source-evidence) | Not covered by the description | The formula and example explain how the stated range is applied. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
