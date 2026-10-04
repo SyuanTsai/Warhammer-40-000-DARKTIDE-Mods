@@ -731,6 +731,23 @@
         "melee",
         "ranged"
       ]
+    },
+    {
+      "id": "execution",
+      "name_zh_tw": "處決",
+      "name_en": "Execution",
+      "name_key": "loc_trait_bespoke_damage_vs_stagger",
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "name_hash": "2e42e848",
+      "description_hash": "ad2df920",
+      "page": "entries/處決/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "effect": "持用適用武器，對傷害計算時已有踉蹌或有效「視為踉蹌」狀態的目標，I–IV 級增加一般傷害加算池 +5%／+10%／+15%／+20%。",
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -2996,6 +3013,29 @@
             "weapon_family_display_name": "loc_weapon_family_ogryn_combatblade_p1_m3",
             "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_combatblade_p1_m3",
             "weapon_mark_display_name": "loc_weapon_mark_ogryn_combatblade_p1_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_hammer_2h_p1",
+      "name_zh_tw": "碎骨者",
+      "name_en": "Cruncher",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_hammer_2h_p1_m1",
+      "page": "weapons/melee/碎骨者/README.md",
+      "marks": [
+        {
+          "id": "ogryn_hammer_2h_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_hammer_2h_p1_m1",
+          "name": "碎骨者 克魯克 Mk IIa",
+          "name_en": "Cruncher Krourk Mk IIa",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_hammer_2h_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_hammer_2h_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_hammer_2h_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_hammer_2h_p1_m1"
           }
         }
       ]
@@ -13686,6 +13726,323 @@
       "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
       "effect": "射擊及盾擊不自行施加電擊；重盾擊傷害可對已有電擊目標受益。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+      "blessing_id": "execution",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/處決/weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+        "marks": [
+          "boltpistol_p1_m1",
+          "boltpistol_p1_m2"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.05,
+            "display_percent": 5
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.1,
+            "display_percent": 10
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.15,
+            "display_percent": 15
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.2,
+            "display_percent": 20
+          }
+        ],
+        "stat_path": "stat_buffs.damage_vs_staggered",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.2,
+        "tier_override_replaces_fallback": true,
+        "trigger": "target has num_triggered_staggers > 0 OR target keyword count_as_staggered",
+        "modifier_scope": "generic additive damage_stat_buffs stage; not a whole-hit multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 388,
+        "end_line": 427
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "description_hash": "ad2df920",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "腰射、瞄準、槍托與實際觸發的次生爆炸，各自檢查目標踉蹌狀態。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage",
+      "blessing_id": "execution",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/處決/weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage",
+        "marks": [
+          "ogryn_hammer_2h_p1_m1"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.05,
+            "display_percent": 5
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.1,
+            "display_percent": 10
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.15,
+            "display_percent": 15
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.2,
+            "display_percent": 20
+          }
+        ],
+        "stat_path": "stat_buffs.damage_vs_staggered",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.2,
+        "tier_override_replaces_fallback": true,
+        "trigger": "target has num_triggered_staggers > 0 OR target keyword count_as_staggered",
+        "modifier_scope": "generic additive damage_stat_buffs stage; not a whole-hit multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 73,
+        "end_line": 112
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "description_hash": "ad2df920",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "普通、蓄力、特殊重擊與追擊依傷害判定；純推擊不增加生命傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage",
+      "blessing_id": "execution",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/處決/weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage",
+        "marks": [
+          "powermaul_p2_m1"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.05,
+            "display_percent": 5
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.1,
+            "display_percent": 10
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.15,
+            "display_percent": 15
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.2,
+            "display_percent": 20
+          }
+        ],
+        "stat_path": "stat_buffs.damage_vs_staggered",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.2,
+        "tier_override_replaces_fallback": true,
+        "trigger": "target has num_triggered_staggers > 0 OR target keyword count_as_staggered",
+        "modifier_scope": "generic additive damage_stat_buffs stage; not a whole-hit multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 600,
+        "end_line": 641
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "description_hash": "ad2df920",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "特殊強化及實際間隔電擊傷害，各自按當時目標狀態與持用條件判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage",
+      "blessing_id": "execution",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/處決/weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage",
+        "marks": [
+          "powermaul_p3_m1"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.05,
+            "display_percent": 5
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.1,
+            "display_percent": 10
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.15,
+            "display_percent": 15
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.2,
+            "display_percent": 20
+          }
+        ],
+        "stat_path": "stat_buffs.damage_vs_staggered",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.2,
+        "tier_override_replaces_fallback": true,
+        "trigger": "target has num_triggered_staggers > 0 OR target keyword count_as_staggered",
+        "modifier_scope": "generic additive damage_stat_buffs stage; not a whole-hit multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 71,
+        "end_line": 110
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 70,
+        "end_line": 70
+      },
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "description_hash": "ad2df920",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "特殊強化與連鎖電弧逐目標檢查；純推擊與後續傷害分開。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+      "blessing_id": "execution",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/處決/weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+        "marks": [
+          "shotgun_p4_m1",
+          "shotgun_p4_m2"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.05,
+            "display_percent": 5
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.1,
+            "display_percent": 10
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.15,
+            "display_percent": 15
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.2,
+            "display_percent": 20
+          }
+        ],
+        "stat_path": "stat_buffs.damage_vs_staggered",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.2,
+        "tier_override_replaces_fallback": true,
+        "trigger": "target has num_triggered_staggers > 0 OR target keyword count_as_staggered",
+        "modifier_scope": "generic additive damage_stat_buffs stage; not a whole-hit multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 637,
+        "end_line": 676
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 36,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_damage_vs_stagger_desc",
+      "description_hash": "ad2df920",
+      "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "兩型號特殊彈分別施加電擊或破甲，各筆傷害仍須符合踉蹌判定。"
     }
   ],
   "bindings": [
@@ -19245,6 +19602,104 @@
         "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
         "import_line": 16,
         "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/damage_vs_stagger",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/damage_vs_stagger",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/damage_vs_stagger",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/damage_vs_stagger",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/damage_vs_stagger",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/damage_vs_stagger",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "execution",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/damage_vs_stagger",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
       }
     }
   ]

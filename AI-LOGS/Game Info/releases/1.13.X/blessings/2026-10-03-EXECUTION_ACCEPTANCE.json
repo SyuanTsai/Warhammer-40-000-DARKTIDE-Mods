@@ -1,0 +1,380 @@
+{
+  "date": "2026-10-04",
+  "blessing": "execution",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/處決/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage",
+    "weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage",
+    "weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage",
+    "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 5,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent confirms this peer agent was dispatched as gpt-6-luna/max; runtime self-inspection unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "target_commit": "6b84306efa00fbcb6f24dfb9072093652d87c2bd",
+    "scope": {
+      "entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/處決/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage.md"
+      ],
+      "reverse_weapon_pages": [
+        "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/爆彈手槍/README.md"
+      ],
+      "related_artifacts": [
+        "Game Info/releases/1.13.X/blessings/README.md",
+        "Game Info/releases/1.13.X/blessings/melee/README.md",
+        "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-ui-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-own-tier-diff.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-stat-consumer-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-interval-diff.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-resume-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-raw-verification.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-extension-raw-verification.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-existing-ui-delta.json"
+      ],
+      "counts": {
+        "formal_entry_pages": 11,
+        "variants": 5,
+        "weapon_bindings": 7,
+        "reverse_weapon_pages": 5,
+        "source_refs": 80,
+        "unique_source_ranges": 95,
+        "unique_source_files": 46,
+        "relative_links_checked": 431,
+        "source_links_checked": 140
+      }
+    },
+    "findings": [
+      "Player bullets, shared summary rows, and per-variant pages match the verified target predicate, held-slot condition, tier values, ordinary stagger reset, and the separate active count_as_staggered alternative; the same hit that first staggers a previously unstaggered target does not gain the bonus retroactively.",
+      "All five variants use I–IV +5%/+10%/+15%/+20% damage_vs_staggered; the bonus enters the additive damage-stat stage. The worked examples correctly show 100→120 and 130→150 for B=100, p=.20, q=0/.30, state assumptions, and do not present the result as a whole-hit multiplier or gameplay measurement.",
+      "The finalized map, config, extension draft, seven UI bindings, five variant pages, and five reverse weapon pages agree on the five actual variants and seven marks; melee/ranged mixed classification and actual family/pattern/mark display names are consistent.",
+      "Weapon action coverage distinguishes attack=0 pure melee pushes from damaging follow-ups; the Bolt Pistol variant page limits explosion claims to actual kill/stop/penetration-stop paths and explicitly excludes armor_explosion configuration; P4 Mk III special applies 3-second electrocuted while Mk VIII applies 8-second +0.25 rending; P2/P4 interval ticks require live owner stats and target-condition checks, with the documented P4 bomber skip.",
+      "RAW English and zh-TW name/description strings and hashes are preserved; formatter reconstruction correctly maps each tier override to +5% through +20%, keeps the static reconstruction caveat, and treats zh-TW RAW “硬直” versus glossary “踉蹌” as a terminology difference rather than a mechanism erratum.",
+      "The icon identity/path remains separate from the attachment URL, and its 128×128 image receipt has matching verified hash/display metadata.",
+      "All 431 reviewed relative Markdown links resolve. The entry contains 80 configured source refs and 95 unique fixed-SHA source ranges across 46 files; all 140 linked source anchors resolve to the pinned source SHA with in-range line numbers, and all 75 config source-block hashes revalidate against exact Git blob bytes."
+    ],
+    "resolved_findings": [],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/處決/DAMAGE_PERCENTAGE_REVIEW.md": "2a0fda3394ceab9ea1720f079d4368c0292964bd80762d9fa62c2963126d0077",
+      "Game Info/releases/1.13.X/blessings/entries/處決/LOCALIZATION_COMPARISON.md": "931129f00bc65190e3bf3879b1981fa2f87f4f1dc3c2ce8c93a6af9c3b2f6630",
+      "Game Info/releases/1.13.X/blessings/entries/處決/README.md": "624b73eaf09828ddfa17a3cda5f63d5fc5f761a80654183ef7c3e6f689a60d78",
+      "Game Info/releases/1.13.X/blessings/entries/處決/SOURCE_INDEX.md": "91a63ff7dcae91cd70593dc13acfaa8f7523885814cd74f98566a42453c73962",
+      "Game Info/releases/1.13.X/blessings/entries/處決/TIER_VALUES.md": "b286b67efa983ea0ce9d7e8a86f53284a8059d9bacc55347a4bf7f7d92896a59",
+      "Game Info/releases/1.13.X/blessings/entries/處決/WEAPON_COMPATIBILITY.md": "e59c68d479fe4c65d0e2cdc0335a5382c93240d0f3a443937c2bd4a7341820e9",
+      "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage.md": "515d2bf2c29fdb16e05c667218c5e4d35dfbd5982cb0f83e645508a93fd1f90c",
+      "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage.md": "0b015a5ab900f60b83fa19a5b141fa2019b194d4d1ef3b6abf3fac8c1df40b96",
+      "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage.md": "0cc28d680a54ad3bf585e61fbeadac0aeb15e5f0388321b516e5ccde040a6594",
+      "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage.md": "30f6bc88784df6e1b16618ae932b4e844e034005dab226392c441417e4a03c57",
+      "Game Info/releases/1.13.X/blessings/entries/處決/weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage.md": "dd658965327a18834f80e51d42f1f7ef040aaa86c3b23cc5a900a7637b0e9504",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "6c80b2e4f1a63b357ad4892e0fd3893e6d8d054606ae1246a3706d22b132a37d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "04c4c387e543dab628055bbf687f6b129644c12daba1f9688cb0adb2d1ebd74e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "0c63cf7b78bb88dd1b4bd53c8ee906f0c80d1fe6a1d09f9f0d97100d0c2a59d3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "bdd5b9e248f710674b356f0cec26caa7ab4891349b2ad7edb2d0f8c966cbb0cc",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/爆彈手槍/README.md": "b34d0cd79d1791097844eac33ecfe1e8d7f02c4c6ee58f2ad4e1c6b7d34e4d5b",
+      "Game Info/releases/1.13.X/blessings/README.md": "279060598fae6c5d5187fdfeaf7251410883edb73e2533dc8ee40d7e842f8ad0",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "780ff66a9deb44364225a121ee5e14f704fb0af60fa8db3326e6ce4e83de7db8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "e713c11c8c3d6f1775685827633ad2af851f6f6de2d3603c125c71cb3fc73d13",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9caf1d2d38b2832150e2b29bf0e144a49f7e1435bb8d10431328dbb2c78d4f34",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-config.json": "9b7804dc7f3dadaaa35e08aaa46f0690f2443fbef5c5287d3cea6319e1ea949a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-extension-draft.json": "e1e540b43668661caaa28b3c71fa398e52921777612ecbd9bfe7166a756e93d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-image.json": "b7b2f08e2726f3be21b4e95c71f9ed81bf7d9634592a79c100bc7bd3698e5d7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-ui-review.json": "ae09f746db9f8ddce6d2fa7bf6e4ebc081aac90c7e9720c49e3285ee8533e0d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-own-tier-diff.json": "1c1f3f8a17b22dd29dc5ae50077a101bdde7303dc6084fc23defc3280fb8fcbe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-stat-consumer-review.json": "f009f740b61206c27ad6f4578f175155efa1baf6f823d0c20323ae00459bce00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-interval-diff.json": "440238219bf32935ff8378bcc021a62de51be9ae4986c4e344c8481c3f1ef524",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-resume-review.json": "3fac6c09c2a30bec07c89fa6f4092b2791eb7509d1f4671cbdc5ee169301574a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-raw-verification.json": "7b4c793cc1461e8df21641a171720a3102feec1eb2137e4c87771a22163072e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-extension-raw-verification.json": "02527d2dbc05449a0a2d885acb99ad6ca7c784f94875e933a635bfd4e8b1c239",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-existing-ui-delta.json": "9a489ccdedc6acf0f99044bedb4e558bc5fd7eb1f0d2abb95454f301e9470e46"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "execution",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_174.png",
+      "attachment": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5975267988",
+      "acquired_date": "2026-10-04",
+      "sha256": "96fbe89c6dc91acf96edc0e52b4178e63ead8a85086aada6a1d55815f6bd0a93",
+      "content_type": "image/png",
+      "size": 6105,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "處決祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_validation": "Primary viewed original and publicly downloaded attachment at native128x128: matching light gray/white block, side diamond points and dark/transparent border; no crop, clipping or change."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 22,
+      "tables": 21,
+      "rows": 395,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 95,
+      "source_files": 46,
+      "bindings": 404,
+      "variants": 210,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 46,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 716,
+      "remote_references": 400,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 8,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-runtime-alias-tool-repair-full-scan.json",
+        "sha256": "c2e69be13f8f40f3ec2e7849b2e2229c523d05b1448f61d4d4764d6a0e0d98b3",
+        "trigger": "opening-salvo-runtime-alias-tool-repair"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "focused_global_uniqueness_and_exact_partition": true
+  },
+  "remaining_counts": {
+    "name_groups": 112,
+    "not_started_name_groups": 112,
+    "partial_name_groups": 0,
+    "remaining_variants": 395,
+    "remaining_bindings": 781,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dd84c1fe83cbc1dd799acb147863642722aa2fa74ca0bf7ed7eb6bcd5c131b39"
+  },
+  "previous_local_commit": "6b84306efa00fbcb6f24dfb9072093652d87c2bd",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 5,
+    "binding_count": 7,
+    "primary_receipt": "execution-primary-stat-consumer-review.json",
+    "additional_receipt": "execution-primary-interval-diff.json",
+    "conditional_override_replaces_fallback": true,
+    "first_stagger_not_retroactive": true,
+    "individual_secondary_target_predicate": true,
+    "actual_bolt_armor_explosion_absent": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-extension-draft.json",
+      "sha256": "e1e540b43668661caaa28b3c71fa398e52921777612ecbd9bfe7166a756e93d6"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 7,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-ui-review.json",
+      "sha256": "ae09f746db9f8ddce6d2fa7bf6e4ebc081aac90c7e9720c49e3285ee8533e0d2"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_hammer_2h_p1",
+        "mark_id": "ogryn_hammer_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_hammer_2h_p1_m1",
+          "loc_weapon_pattern_ogryn_hammer_2h_p1_m1",
+          "loc_weapon_mark_ogryn_hammer_2h_p1_m1"
+        ],
+        "name_zh_tw": "碎骨者 克魯克 Mk IIa",
+        "name_en": "Cruncher Krourk Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1973,
+        "append_line": 1975
+      },
+      {
+        "weapon_id": "powermaul_p2",
+        "mark_id": "powermaul_p2_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_p2_m1",
+          "loc_weapon_pattern_powermaul_p2_m1",
+          "loc_weapon_mark_powermaul_p2_m1"
+        ],
+        "name_zh_tw": "法務官電擊鎚 布蘭克斯 Mk III",
+        "name_en": "Arbites Shock Maul Branx Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 2125,
+        "append_line": 2127
+      },
+      {
+        "weapon_id": "powermaul_p3",
+        "mark_id": "powermaul_p3_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_p3_m1",
+          "loc_weapon_pattern_powermaul_p3_m1",
+          "loc_weapon_mark_powermaul_p3_m1"
+        ],
+        "name_zh_tw": "電弧鎚 布蘭克斯 Mk III",
+        "name_en": "Arc Maul Branx Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 2629,
+        "append_line": 2631
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m1",
+          "loc_weapon_pattern_shotgun_p4_m1",
+          "loc_weapon_mark_shotgun_p4_m1"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk III",
+        "name_en": "Exterminator Shotgun Exaction Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1076,
+        "append_line": 1078
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_stagger_bonus_damage",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m2",
+          "loc_weapon_pattern_shotgun_p4_m2",
+          "loc_weapon_mark_shotgun_p4_m2"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk VIII",
+        "name_en": "Exterminator Shotgun Exaction Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1064,
+        "append_line": 1066
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-resume-review.json",
+      "sha256": "3fac6c09c2a30bec07c89fa6f4092b2791eb7509d1f4671cbdc5ee169301574a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-own-tier-diff.json",
+      "sha256": "1c1f3f8a17b22dd29dc5ae50077a101bdde7303dc6084fc23defc3280fb8fcbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-stat-consumer-review.json",
+      "sha256": "f009f740b61206c27ad6f4578f175155efa1baf6f823d0c20323ae00459bce00"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-interval-diff.json",
+      "sha256": "440238219bf32935ff8378bcc021a62de51be9ae4986c4e344c8481c3f1ef524"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/execution-primary-ui-review.json",
+      "sha256": "ae09f746db9f8ddce6d2fa7bf6e4ebc081aac90c7e9720c49e3285ee8533e0d2"
+    }
+  ],
+  "primary_review_method": "Reuse unchanged fixed-SHA common mechanisms under actual applicable conditions; review own tiers/wrappers/model wiring/RAW, pre-hit stagger snapshot and exit resets, actual Bolt explosion settings, arc per-target dispatch and alive-owner interval stats. Original Git blob inclusive range hashes preserve BOM. Formal peer agrees with final approved content.",
+  "prior_reviewed_content_unchanged": {
+    "blessings": 54,
+    "variants": 205,
+    "bindings": 397,
+    "verified": true
+  }
+}

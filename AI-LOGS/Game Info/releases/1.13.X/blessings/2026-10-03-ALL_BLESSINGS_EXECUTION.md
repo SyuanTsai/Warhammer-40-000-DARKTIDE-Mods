@@ -243,3 +243,5 @@
 - 開啟齊射雷射槍實際選用自動槍 Buff 別名；僅在 ignored 產生器增加實際 Buff ID／來源的可選輸入，預設不變。修補後立即完整掃描通過：AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-runtime-alias-tool-repair-full-scan.json／SHA-256 `c2e69be13f8f40f3ec2e7849b2e2229c523d05b1448f61d4d4764d6a0e0d98b3`；2389段來源、437來源檔案、605份祝福文件，Game Info既有1、AI-LOGS既有8、新增0。
 
 - [高壓電](2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json)：新增5變體、8型號關聯；共5變體、8關聯。
+
+- [處決](2026-10-03-EXECUTION_ACCEPTANCE.json)：新增5變體、7型號關聯；共5變體、7關聯。

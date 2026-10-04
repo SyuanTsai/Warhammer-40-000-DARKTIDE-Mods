@@ -428,6 +428,7 @@
 - Point Blank - 近身平射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_bonus_on_melee_kills`，hash `92eda1aa`；英文／繁中RAW配對確認。
 - Execution - 處決
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_vs_stagger`，hash `2e42e848`；英文／繁中RAW配對確認。
 - Gloryhunter - 榮耀獵手
 - Surge - 湧動
 - Warp Flurry - 亞空間亂舞
