@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="Adrenaline Frenzy talent icon"> [Adrenaline Frenzy](#broker_keystone_adrenaline_junkie) | <ul><li>Melee hits grant 1 Adrenaline stack; Critical Melee hits grant 1 additional stack. Without another gain, one stack decays every 2 seconds.</li><li>Reaching 30 stacks clears Adrenaline and grants 10 seconds of +10% Melee Attack Speed and +25% additive Melee Damage; retriggering refreshes Frenzy.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="Vulture's Mark talent icon"> [Vulture's Mark](#broker_keystone_vultures_mark_on_kill) | <ul><li>Ranged Elite or Specialist kills grant an 8-second Mark, up to 3 stacks; a new stack refreshes the shared timer, and all expire together without another gain.</li><li>Each stack gives +5% Ranged Damage, +5 percentage points Ranged Critical Chance and +5% Movement Speed. At maximum stacks, qualifying further kills restore 15% maximum Toughness to you and Allies in Coherency.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="Chemical Dependency talent icon"> [Chemical Dependency](#broker_keystone_chemical_dependency) | <ul><li>Stimm use grants a Dependency stack, up to 3. Each adds 10% to Combat Ability resource recovery; 3 stacks give a 1.30 recovery multiplier.</li><li>Gains refresh the shared 90-second timer; without another gain, stacks decay one at a time every 90 seconds.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="Chem Enhanced talent icon"> [Chem Enhanced](#broker_keystone_chemical_dependency_sub_1) | <ul><li>Each Dependency stack adds 5 percentage points of general Critical Chance, applying to Melee and Ranged calculations.</li><li>At 3 stacks, Scum's base 10% becomes 25% before weapon and other modifiers. This affects chance, rather than Critical Damage.</li></ul> | Keystone |
 
 ---
 
@@ -418,3 +419,19 @@
 - **Recovery example:** if the same Combat Ability resource amount normally takes 60 seconds to recover, with uninterrupted recovery and no other modifiers, 3 stacks take approximately 60 ÷ 1.30 = 46.15 seconds.
 
 [Details](broker_keystone_chemical_dependency.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency_sub_1"></a>
+
+### Chem Enhanced
+
+<img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="72" height="72" alt="Chem Enhanced talent icon">
+
+- **Per-stack bonus:** each stack adds 5 percentage points of general Critical Chance, included in both Melee and Ranged Critical Chance calculations.
+
+- **Maximum-stack example:** Scum's base Critical Chance is 10%. At 3 stacks, 3 × 5% adds 15 percentage points, giving 10% + 15% = 25% before extra weapon chance.
+
+- **Critical effect:** this upgrade increases Critical Chance, rather than Critical Damage. Dependency still decays one stack every 90 seconds under the core rules; Stimm use refreshes the timer.
+
+[Details](broker_keystone_chemical_dependency_sub_1.md) · [Back to index](#talent-index)

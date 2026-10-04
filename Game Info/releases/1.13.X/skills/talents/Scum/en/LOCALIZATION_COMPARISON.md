@@ -277,6 +277,18 @@ Full raw template and formatting: [source evidence](broker_keystone_chemical_dep
 | Cooldown percentage terminology | Each stack grants +10% Ability Cooldown Reduction; `ui / loc_talent_broker_keystone_chemical_dependency_desc / e80edf15` | The mapped combat_ability_resource_regen_modifier adds 0.10 per stack to recovery rate; 3 stacks give 1.30, with isolated 60 ÷ 1.30 ≈ 46.15 s recovery. [Fixed source and line references](broker_keystone_chemical_dependency.md#fixed-source-evidence) | Cannot confirm | English does not define the percentage's measurement. The evidence confirms increased recovery rate, not an equal percentage directly subtracted from elapsed cooldown. |
 | Field events, timer refresh and assumptions | No field syringe event, capped-use refresh or recovery assumptions; `ui / loc_talent_broker_keystone_chemical_dependency_desc / e80edf15` | Field recipients also receive on_syringe_used; gains/capped uses refresh the shared timer. Natural recovery pauses and other modifiers can affect actual time; the Toughness upgrade can still restore 50% at the cap. [Fixed source and line references](broker_keystone_chemical_dependency.md#fixed-source-evidence) | Not covered by the description | These preserve the accepted trigger scope and limits without creating new recovery examples. |
 
+
+<a id="broker_keystone_chemical_dependency_sub_1"></a>
+
+## Chem Enhanced
+
+Full raw template and formatting: [source evidence](broker_keystone_chemical_dependency_sub_1.md#original-english-template-and-reconstruction). Name hash `6d979983`. Every row uses `ui / loc_talent_broker_keystone_chemical_dependency_sub_1_desc / 3356ae07`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack Critical Chance | Each Dependency stack additionally grants +5% Critical Hit Chance; `ui / loc_talent_broker_keystone_chemical_dependency_sub_1_desc / 3356ae07` | The enabled general critical_strike_chance value is 0.05 per stack and enters both Melee and Ranged chance calculations. [Fixed source and line references](broker_keystone_chemical_dependency_sub_1.md#fixed-source-evidence) | Consistent | The effect type and per-stack value agree. |
+| Additive chance, clamp and inherited timing | No base-chance calculation, final clamp or stack-timing details; `ui / loc_talent_broker_keystone_chemical_dependency_sub_1_desc / 3356ae07` | One/two/three stacks add 5/10/15 percentage points; base 10% + 15 points = 25% before other modifiers. Final chance clamps to 0%–100%; duration, cap, recovery and sequential decay follow the core buff. [Fixed source and line references](broker_keystone_chemical_dependency_sub_1.md#fixed-source-evidence) | Not covered by the description | These preserve the original chance examples and limits without treating missing formulas as English errors. |
+
 ## Comparison totals
 
 The 45 listed rules comprise **21 Consistent**, **1 Explicit contradictions**, **20 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
