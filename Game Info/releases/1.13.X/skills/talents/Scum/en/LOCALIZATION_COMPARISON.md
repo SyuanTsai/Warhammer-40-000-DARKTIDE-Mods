@@ -1292,6 +1292,18 @@ Full raw template and formatting: [source evidence](broker_stimm_concentration_4
 | Regeneration statistic | +6.25% Cooldown Regeneration; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | combat_ability_resource_regen_modifier = 0.0625, additive_multiplier [Fixed source and line references](broker_stimm_concentration_4.md#fixed-source-evidence) | Consistent | The accepted cooldown/resource mapping and regeneration-rate value agree. |
 | Stacking, pause and recipe limits | No stacking, base/flat formula, paused-state, cost or lifetime; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | Prerequisites give multiplier 1.25; (base_regen + flat_regen) × modifier, with base 0 while paused; cost 4, bought once, with shared lifetime [Fixed source and line references](broker_stimm_concentration_4.md#fixed-source-evidence) | Not covered by the description | The original 15-second regeneration and 60-second remaining-time examples assume normal regeneration and preserve the return to the original rate. |
 
+
+<a id="broker_stimm_concentration_5a"></a>
+
+## Kalma V
+
+Full raw template and formatting: [source evidence](broker_stimm_concentration_5a.md#original-english-template-and-reconstruction). Name hash `eab26b4f`. Every row uses `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Regeneration statistic | +25% Cooldown Regeneration; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | combat_ability_resource_regen_modifier = 0.25, additive_multiplier [Fixed source and line references](broker_stimm_concentration_5a.md#fixed-source-evidence) | Consistent | The accepted cooldown/resource mapping and regeneration-rate value agree. |
+| Stacking, pause and recipe limits | No stacking, base/flat formula, paused-state, cost or lifetime; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | Prerequisites give multiplier 1.5; (base_regen + flat_regen) × modifier, with base 0 while paused; cost 5, bought once, with shared lifetime [Fixed source and line references](broker_stimm_concentration_5a.md#fixed-source-evidence) | Not covered by the description | The original 15-second regeneration and 60-second remaining-time examples assume normal regeneration and preserve the return to the original rate. |
+
 ## Comparison totals
 
 The 223 listed rules comprise **104 Consistent**, **5 Explicit contradictions**, **104 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
