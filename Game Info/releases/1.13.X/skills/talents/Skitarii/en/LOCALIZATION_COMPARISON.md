@@ -697,6 +697,18 @@ Full raw template and formatting: [source evidence](cryptic_stacking_ranged_dama
 | First-stack timing wording | After not Shooting for 1s, each subsequent second spent not Shooting; `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e` | `min(floor((fixed_t - fire_last_t - (1 - 1)) / 1), 2)` gives first stack at 1 second and second at 2 [Fixed source and line references](cryptic_stacking_ranged_damage.md#fixed-source-evidence) | Cannot confirm | The wording can imply another full second after the initial wait, but its timing is not unambiguous enough to classify as an explicit contradiction; the verified source timing is retained. |
 | Reset, same-frame order and damage addition | Does not state the reset window, update order or same-stage damage calculation; `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e` | `time_lapsed <= 0.1` clears stacks; same-frame ordering depends on weapon updates. Base 100 gives 110/120, or 145 with same-stage 25% [Fixed source and line references](cryptic_stacking_ranged_damage.md#fixed-source-evidence) | Not covered by the description | The preserved calculations and timing limits supplement the English. |
 
+
+<a id="cryptic_stacking_tdr"></a>
+
+## Progressive Plating Matrix
+
+Full raw template and formatting: [source evidence](cryptic_stacking_tdr.md#original-english-template-and-reconstruction). Name hash `3d848475`. Every row uses `ui / loc_talent_cryptic_stacking_tdr_desc / 1e30d43e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Hit trigger, values and stack limit | Hits grant +2.5% Toughness Damage Reduction for 5s. Stacks 6 times. Max one per attack; `ui / loc_talent_cryptic_stacking_tdr_desc / 1e30d43e` | The first target hit gives one step; 2.5% reduction per step, cap 6, duration 5 seconds [Fixed source and line references](cryptic_stacking_tdr.md#fixed-source-evidence) | Consistent | The trigger, per-step value, duration, cap and per-attack limit agree. |
+| Shared expiry and damage calculation | Does not specify first-target selection, shared refreshing or stacking arithmetic; `ui / loc_talent_cryptic_stacking_tdr_desc / 1e30d43e` | `target_index == 1`; duration refreshes as a whole, with no individual stack expiry. Multiplier `1 − 0.025n`; at 6, `0.85`, multiplied by independent reductions [Fixed source and line references](cryptic_stacking_tdr.md#fixed-source-evidence) | Not covered by the description | The original 100→85 and 100 × 0.85 × 0.80 = 68 examples supplement the English. |
+
 ## Comparison totals
 
 115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.

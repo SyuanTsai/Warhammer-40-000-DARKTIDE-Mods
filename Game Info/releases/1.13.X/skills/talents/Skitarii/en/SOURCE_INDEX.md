@@ -68,3 +68,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Sureshot Cogitator Sync](cryptic_weakspot_damage.md) / `cryptic_weakspot_damage` | Talent |
 | [Shockline Breach Protocol](cryptic_pushing_grants_cleave.md) / `cryptic_pushing_grants_cleave` | Talent |
 | [Rad-Sink](cryptic_stacking_ranged_damage.md) / `cryptic_stacking_ranged_damage` | Talent |
+| [Progressive Plating Matrix](cryptic_stacking_tdr.md) / `cryptic_stacking_tdr` | Talent |

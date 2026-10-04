@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="32" height="32" alt="Sureshot Cogitator Sync talent icon"> [Sureshot Cogitator Sync](#cryptic_weakspot_damage) | <ul><li>Adds 25% to the extra damage component of weakspot hits, for both melee and ranged attacks. The increase to the complete hit depends on the weapon and hit conditions.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="Shockline Breach Protocol talent icon"> [Shockline Breach Protocol](#cryptic_pushing_grants_cleave) | <ul><li>Hitting an enemy with a push grants 50% increased melee cleave for 8 seconds. Further push hits refresh the duration without stacking. The bonus increases the attack's mass budget.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="Rad-Sink talent icon"> [Rad-Sink](#cryptic_stacking_ranged_damage) | <ul><li>Gain 10% Ranged Damage 1 second after the last shot, rising to 20% at 2 seconds, up to 2 stacks. Shooting again restarts the wait; sustained fire does not preserve the full bonus.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="Progressive Plating Matrix talent icon"> [Progressive Plating Matrix](#cryptic_stacking_tdr) | <ul><li>Hitting the first target of an attack grants one stack of 2.5% Toughness Damage Reduction, up to 6 stacks. Triggers refresh a shared 5-second duration; one attack hitting several enemies still adds only one stack.</li></ul> | Talent |
 
 ---
 
@@ -903,3 +904,17 @@
 - **Example**: At 100 base damage, one stack gives `100 × 1.10 = 110` and two give `100 × 1.20 = 120`. With an existing same-stage 25% bonus, two stacks give `100 × (1 + 25% + 20%) = 145`.
 
 [Details](cryptic_stacking_ranged_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_stacking_tdr"></a>
+
+### Progressive Plating Matrix
+
+<img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="72" height="72" alt="Progressive Plating Matrix talent icon">
+
+- **Stacks**: Hitting the first target of an attack grants **1 stack**, reducing Toughness damage by **2.5% per stack**, up to **6 stacks**. Hitting multiple enemies with the same attack adds only one stack.
+- **Duration**: Each trigger restarts the **5-second countdown**. If no further trigger occurs, the effect expires.
+- **Example**: Six stacks provide `6 × 2.5% = 15%` reduction, turning 100 points of Toughness damage into 85. With another independent 20% reduction, the result is `100 × 0.85 × 0.80 = 68` points.
+
+[Details](cryptic_stacking_tdr.md) · [Back to index](#talent-index)
