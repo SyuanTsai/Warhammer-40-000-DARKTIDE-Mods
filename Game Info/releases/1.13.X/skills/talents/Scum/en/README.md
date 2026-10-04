@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="Patient Hunter talent icon"> [Patient Hunter](#broker_keystone_vultures_mark_increased_duration) | <ul><li>Vulture's Mark's shared duration increases from 8 to 12 seconds.</li><li>New qualifying gains refresh 12 seconds even at 3 stacks; without another gain, all remaining stacks expire together. Vulture's Dodge stays at 1 second.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="Vulture's Dodge talent icon"> [Vulture's Dodge](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | <ul><li>Ranged Critical hits make you count as Dodging in the Melee, grab and Ranged checking branches for 1 second, without requiring a Dodge movement.</li><li>Retriggering refreshes 1 second without stacking; attacks still follow their own Dodge logic, and the effect does not make all Damage ineffective.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="Adrenaline Assassin talent icon"> [Adrenaline Assassin](#broker_keystone_adrenaline_junkie_sub_1) | <ul><li>Weakspot Melee hits grant the original 1 stack plus 2 additional stacks, for 3; ordinary non-Weakspot non-Critical hits grant none.</li><li>The independent Critical bonus remains: a non-Weakspot Critical hit grants 1, and a Critical Weakspot hit grants 4, subject to the core's 30-stack cap.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="Stoked Rage talent icon"> [Stoked Rage](#broker_keystone_adrenaline_junkie_sub_3) | <ul><li>Frenzy lasts 20 seconds, 10 seconds longer than the core.</li><li>Retriggering refreshes one Frenzy buff to 20 seconds; Adrenaline timing, stack cap and Frenzy's speed/Damage bonuses remain unchanged.</li></ul> | Keystone |
 
 ---
 
@@ -543,3 +544,19 @@
 - **Critical Weakspot hit:** the Weakspot hit's 3 stacks plus the additional Critical stack give 4 total, still subject to the core 30-stack cap and stack-timing rules.
 
 [Details](broker_keystone_adrenaline_junkie_sub_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_3"></a>
+
+### Stoked Rage
+
+<img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="72" height="72" alt="Stoked Rage talent icon">
+
+- **Duration:** triggered Frenzy lasts 20 seconds, 10 seconds longer than the core's 10.
+
+- **Refresh:** reaching 30 stacks again retriggers the same single Frenzy effect and resets its duration to 20 seconds.
+
+- **Other rules:** this upgrade leaves Adrenaline's 2-second stack timer, 30-stack cap, and Frenzy's Attack Speed and Damage multipliers unchanged.
+
+[Details](broker_keystone_adrenaline_junkie_sub_3.md) · [Back to index](#talent-index)

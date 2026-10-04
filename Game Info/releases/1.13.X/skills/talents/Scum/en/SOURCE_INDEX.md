@@ -41,3 +41,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Patient Hunter](broker_keystone_vultures_mark_increased_duration.md) / `broker_keystone_vultures_mark_increased_duration` | Keystone |
 | [Vulture's Dodge](broker_keystone_vultures_mark_dodge_on_ranged_crit.md) / `broker_keystone_vultures_mark_dodge_on_ranged_crit` | Keystone |
 | [Adrenaline Assassin](broker_keystone_adrenaline_junkie_sub_1.md) / `broker_keystone_adrenaline_junkie_sub_1` | Keystone |
+| [Stoked Rage](broker_keystone_adrenaline_junkie_sub_3.md) / `broker_keystone_adrenaline_junkie_sub_3` | Keystone |

@@ -362,6 +362,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Additional Weakspot and regular grants | Weakspot Hits grant +2 additional Adrenaline stacks; Regular Melee Hits grant none; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc / 02bab200` | Weakspot Melee hits use the original 1 plus 2 additional stacks; the ordinary non-Weakspot grant becomes 0. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_1.md#fixed-source-evidence) | Consistent | Additional identifies the bonus rather than the final Weakspot total; the regular grant is removed. |
 | Independent Critical grant and limits | No removal of the core Critical bonus, Ranged Weakspot eligibility or cap/timing detail; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc / 02bab200` | Critical grant 1 remains independent: non-Weakspot/non-Critical 0, non-Weakspot/Critical 1, Weakspot/non-Critical 3, Weakspot/Critical 4. Only Melee qualifies, with the core 30-stack cap, timing and Frenzy effects. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_1.md#fixed-source-evidence) | Not covered by the description | These preserve all four original cases without reading Regular as cancelling the separately defined Critical bonus. |
 
+
+<a id="broker_keystone_adrenaline_junkie_sub_3"></a>
+
+## Stoked Rage
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie_sub_3.md#original-english-template-and-reconstruction). Name hash `6d1091f8`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc / 95b51a39`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Final Frenzy duration | Increase duration of Adrenaline Frenzy to 20s; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc / 95b51a39` | The 10 s base gains add_duration(20 − 10), yielding 20 s total. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_3.md#fixed-source-evidence) | Consistent | To specifies the final duration, which agrees with accepted evidence. |
+| Retrigger refresh and unchanged core rules | No single-buff refresh or unchanged stacking/bonus details; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc / 95b51a39` | max_stacks 1 and refresh_duration_on_stack restart 20 s on retrigger; at 18 s another full 20 s begins. Adrenaline keeps its 2 s timer and 30-stack cap; Frenzy retains melee_attack_speed 0.10 and melee_damage 0.25. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_3.md#fixed-source-evidence) | Not covered by the description | These preserve the original timing example and scope of the duration-only upgrade. |
+
 ## Comparison totals
 
 The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.
