@@ -67,6 +67,7 @@
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="Calling for a Time Out talent icon"> [Calling for a Time Out](#broker_passive_reduced_toughness_damage_during_reload) | <ul><li>Reduce Toughness Damage taken by 25% while reloading and for 4s after leaving the reload state.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="Street Tough talent icon"> [Street Tough](#broker_passive_knockback_on_taking_melee_damage) | <ul><li>A qualifying Melee hit triggers nearby knockback and +10% Movement Speed for 3s; cooldown 8s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="Channelled Devastation talent icon"> [Channelled Devastation](#broker_passive_crit_grants_damage) | <ul><li>Each whole percentage point of current Critical Hit Chance grants 0.5% Melee Damage, up to 30 steps / 15%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="Battering Strikes talent icon"> [Battering Strikes](#broker_passive_melee_cleave_on_melee_kill) | <ul><li>Each Melee kill grants 10% Damage Cleave capacity for 5s, up to 5 stacks; retriggering refreshes the duration.</li></ul> | Talent |
 
 ---
 
@@ -998,3 +999,19 @@
 - **Dynamic updates**: Changes to your weapon, temporary bonuses or Critical Hit Chance also update the Melee Damage bonus.
 
 [Details](broker_passive_crit_grants_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_melee_cleave_on_melee_kill"></a>
+
+### Battering Strikes
+
+<img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="72" height="72" alt="Battering Strikes talent icon">
+
+- **Stacks**: Each Melee kill adds one stack, granting 10% Damage Cleave capacity per stack, up to 5 stacks. Triggering again resets the 5s duration.
+
+- **Cleave example**: Five stacks grant 50%. A starting capacity to pass through targets with total mass 10 becomes 10 × 1.5 = 15. The number of enemies hit still depends on each enemy's mass, armour and weapon limits.
+
+- **Scope**: This increases Damage Cleave capacity. It does not mean each enemy takes 50% more Damage, and it does not directly increase Stagger Cleave capacity.
+
+[Details](broker_passive_melee_cleave_on_melee_kill.md) · [Back to index](#talent-index)

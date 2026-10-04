@@ -71,3 +71,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Calling for a Time Out](broker_passive_reduced_toughness_damage_during_reload.md) / `broker_passive_reduced_toughness_damage_during_reload` | Talent |
 | [Street Tough](broker_passive_knockback_on_taking_melee_damage.md) / `broker_passive_knockback_on_taking_melee_damage` | Talent |
 | [Channelled Devastation](broker_passive_crit_grants_damage.md) / `broker_passive_crit_grants_damage` | Talent |
+| [Battering Strikes](broker_passive_melee_cleave_on_melee_kill.md) / `broker_passive_melee_cleave_on_melee_kill` | Talent |

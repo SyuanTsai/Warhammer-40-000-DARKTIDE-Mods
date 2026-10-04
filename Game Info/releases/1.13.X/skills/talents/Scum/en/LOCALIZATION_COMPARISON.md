@@ -723,6 +723,18 @@ Full raw template and formatting: [source evidence](broker_passive_crit_grants_d
 | Current chance, bonus and cap | Each 1% of current Critical Hit Chance grants +0.5% Melee Damage; 30 stacks, up to +15%; `ui / loc_talent_broker_passive_crit_grants_damage_desc / ef095720` | `floor(chance / 0.01)`, capped at 30, multiplied by `melee_damage_per_stack = 0.005` [Fixed source and line references](broker_passive_crit_grants_damage.md#fixed-source-evidence) | Consistent | The English refers to current chance rather than a Critical Hit event and states the correct bonus and cap. |
 | Rounding, updates and combination | No fractional-step rounding or weapon/update formula is stated; `ui / loc_talent_broker_passive_crit_grants_damage_desc / ef095720` | `update` obtains chance from the wielded weapon and handling template; whole steps count and Melee Damage adds at the general Damage stage [Fixed source and line references](broker_passive_crit_grants_damage.md#fixed-source-evidence) | Not covered by the description | This retains the original 12.8%→12 steps→6% and 100→106/131 examples, dynamic updates and non-consumption explanation. |
 
+
+<a id="broker_passive_melee_cleave_on_melee_kill"></a>
+
+## Battering Strikes
+
+Full raw template and formatting: [source evidence](broker_passive_melee_cleave_on_melee_kill.md#original-english-template-and-reconstruction). Name hash `496ac07d`. Every row uses `ui / loc_talent_broker_passive_melee_cleave_on_melee_kill_desc / 3e88fbf2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee kill stacks | Melee Kills grant +10% Melee Cleave for 5s; stacks 5 times; `ui / loc_talent_broker_passive_melee_cleave_on_melee_kill_desc / 3e88fbf2` | `on_melee_kill` adds a child with a 0.1 Damage hit-mass modifier, duration 5s and maximum 5 stacks [Fixed source and line references](broker_passive_melee_cleave_on_melee_kill.md#fixed-source-evidence) | Consistent | The trigger, per-stack magnitude, duration and cap match. |
+| Refresh and Cleave scope | No refresh rule or Cleave-capacity definition is stated; `ui / loc_talent_broker_passive_melee_cleave_on_melee_kill_desc / 3e88fbf2` | Retriggering refreshes duration; only `max_hit_mass_attack` is modified. Enemy mass, armour and weapon limits still determine targets hit [Fixed source and line references](broker_passive_melee_cleave_on_melee_kill.md#fixed-source-evidence) | Not covered by the description | The original 10→15 mass-capacity example and the distinctions from per-target Damage and Stagger Cleave clarify the statistic. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
