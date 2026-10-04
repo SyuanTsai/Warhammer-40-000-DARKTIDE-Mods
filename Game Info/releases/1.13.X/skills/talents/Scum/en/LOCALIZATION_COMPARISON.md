@@ -19,6 +19,18 @@ Full raw template and formatting: [source evidence](broker_blitz_flash_grenade_i
 | Grenade control and replenishment | Quick grenade that Staggers; every 20 Kills at Close Range generate 1; max 5; augmented Blinder; `ui / loc_talent_broker_blitz_flash_grenade_improved_desc / 44ce3a9a` | Improved PlayerAbility has 5 charges while base quick-grenade and close-kill replenishment remain; ordinary close kills do not require Melee. [Fixed source and line references](broker_blitz_flash_grenade_improved.md#fixed-source-evidence) | Consistent | The English distance condition includes Ranged kills and matches the existing evidence. |
 | Detailed control and counting limits | No radius, explosion-Damage, full-capacity or Needle Pistol detail; `ui / loc_talent_broker_blitz_flash_grenade_improved_desc / 44ce3a9a` | Explosion radius 3.5 m, stronger Stagger within 2.25 m, no explosion Health Damage; full capacity pauses progress; the tracked Needle Pistol exception has its own distance check. [Fixed source and line references](broker_blitz_flash_grenade_improved.md#fixed-source-evidence) | Not covered by the description | These are supplements, including the existing 2-grenade/19-kill example; no repeated error is inferred from omitted details. |
 
+
+<a id="broker_blitz_missile_launcher"></a>
+
+## Boom Bringer
+
+Full raw template and formatting: [source evidence](broker_blitz_missile_launcher.md#original-english-template-and-reconstruction). Name hash `a29ee6e4`. Every row uses `ui / loc_talent_broker_blitz_missile_launcher_desc / fad7e488`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Launcher and capacity | High powered missile launcher; 2 Max Missiles; `ui / loc_talent_broker_blitz_missile_launcher_desc / fad7e488` | Missile-launcher PlayerAbility uses charges only and has max 2. [Fixed source and line references](broker_blitz_missile_launcher.md#fixed-source-evidence) | Consistent | The stated weapon and capacity match the accepted evidence. |
+| Damage and replenishment detail | No radius, segmented Damage, armour or replenishment explanation; `ui / loc_talent_broker_blitz_missile_launcher_desc / fad7e488` | Explosion radii are 4/7 m; close/outer distributions are 2800/1300 at static Power 500, direct impact 1800 is separate; the talent removes the base grenade's kill-based replenishment. [Fixed source and line references](broker_blitz_missile_launcher.md#fixed-source-evidence) | Not covered by the description | The existing calculations and limits explain unspecified mechanics; they are not English errata. |
+
 ## Comparison totals
 
 Totals are updated at each batch checkpoint.

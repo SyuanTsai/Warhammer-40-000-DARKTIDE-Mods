@@ -13,3 +13,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | Talent / code identifier | Category |
 |---|---|
 | [Blackout](broker_blitz_flash_grenade_improved.md) / `broker_blitz_flash_grenade_improved` | Blitz |
+| [Boom Bringer](broker_blitz_missile_launcher.md) / `broker_blitz_missile_launcher` | Blitz |

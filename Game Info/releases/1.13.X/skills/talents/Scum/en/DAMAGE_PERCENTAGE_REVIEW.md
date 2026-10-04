@@ -7,3 +7,4 @@ The review covers Power, general Damage and additional Weakspot/Critical Damage,
 | Talent | Category | Review | Conclusion |
 |---|---|---|---|
 | [Blackout](broker_blitz_flash_grenade_improved.md) | Blitz | Static check | With 2 grenades and 19 kills, the next eligible kill gives 3 grenades and resets progress. Extra Pouches: 5 + 1 = 6 capacity. |
+| [Boom Bringer](broker_blitz_missile_launcher.md) | Blitz | Static check | Unmodified inner explosion without falloff: 20 × (500 × 2800 ÷ 10000) = 2800. Unarmoured ×1.25 → 3500; Carapace ×2.4 → 6720; excludes direct impact, hit-location modifiers, enemy reduction and other talents. |
