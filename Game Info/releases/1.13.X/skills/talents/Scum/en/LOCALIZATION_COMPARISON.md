@@ -1041,4 +1041,4 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_5a.md#
 
 ## Comparison totals
 
-The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
+The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.

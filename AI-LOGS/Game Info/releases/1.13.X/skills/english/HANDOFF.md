@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 428 completed on 2026-10-04. [Receipt](scum_skills_424_428.json) and [FILE_MAP](FILE_MAP.json) record 428 accepted mechanisms. Next item: **429, Spur I**, `broker_stimm_celerity_1`. The full goal remains active and unfinished.
+Checkpoint 433 completed on 2026-10-04. [Receipt](scum_skills_429_433.json) and [FILE_MAP](FILE_MAP.json) record 433 accepted mechanisms. Next item: **434, Reflex**, `broker_stimm_celerity_5b`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 218 mechanisms + 18 class-support files + 2 shared files = 238 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 80/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 172 = 79 Consistent / 5 Explicit contradictions / 79 Not covered / 1 No implementation / 8 Cannot confirm. Latest batch commit interval: 343s (5m 43s), e8949e939→4b2c0478b. Preserved original formulas, rounding, costs and all examples. Blessed Stimms has a boundary contradiction; Battering Momentum and Equip Cartel Special retain stated evidence limits. No mechanism retracing.
+Remaining: 213 mechanisms + 18 class-support files + 2 shared files = 233 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 85/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 182 = 84 Consistent / 5 Explicit contradictions / 84 Not covered / 1 No implementation / 8 Cannot confirm. Latest batch commit interval: 404s (6m 44s), 22da018e0→26763f7e9. No new English contradiction. Multiple description components paired by accepted hashes where JSONL omits keys; preserved all speed/Stamina examples and protection limits. Existing ephemeral writer minimally adapted for multi-template descriptions, Roman names and recipe costs; no persistent helper added.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
