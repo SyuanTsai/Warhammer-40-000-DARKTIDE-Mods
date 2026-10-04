@@ -29,3 +29,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Restoration Protocol](cryptic_precision_stance_toughness_suppression.md) / `cryptic_precision_stance_toughness_suppression` | Ability |
 | [Writ of Ammunition Enumeration](cryptic_precision_stance_fire_rate_increased.md) / `cryptic_precision_stance_fire_rate_increased` | Ability |
 | [Voltaic Arcs](cryptic_discharge_generates_arcs.md) / `cryptic_discharge_generates_arcs` | Ability |
+| [Voltaic Motivator](cryptic_discharge_attack_speed_increase.md) / `cryptic_discharge_attack_speed_increase` | Ability |

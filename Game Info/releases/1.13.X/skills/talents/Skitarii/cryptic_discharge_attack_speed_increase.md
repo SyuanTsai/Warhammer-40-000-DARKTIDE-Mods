@@ -1,5 +1,7 @@
 # 電能驅動(Voltaic Motivator)：原始碼依據
 
+[English](en/cryptic_discharge_attack_speed_increase.md)
+
 [返回玩家說明](README.md#cryptic_discharge_attack_speed_increase)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_discharge_attack_speed_increase)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

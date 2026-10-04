@@ -225,6 +225,18 @@ Full raw template and formatting: [source evidence](cryptic_discharge_generates_
 | Trigger, direction and arcs per charge | Using Voltaic Emitter releases 1 forward-facing Arcs per Charge spent; high damage and Impact; `ui / loc_talent_cryptic_discharge_arc_bonus_desc / b7638357` | Activation creates one forward arc per full charge consumed; link Impact and subsequent Electrocution use the accepted damage profiles [Fixed source and line references](cryptic_discharge_generates_arcs.md#fixed-source-evidence) | Consistent | The trigger, direction and count agree. High damage is qualitative, and link attack power 0 does not exclude subsequent Electrocution damage. |
 | Target, arc and chaining limits | No target checks, range, cap or linking limit; `ui / loc_talent_cryptic_discharge_arc_bonus_desc / b7638357` | Initial living/targetable enemies require flattened direction dot >0.5 within 12m; broadphase-order selection; template cap 5; each chain has 12m radius, one child/step and at most 4 links [Fixed source and line references](cryptic_discharge_generates_arcs.md#fixed-source-evidence) | Not covered by the description | Normal use consumes at most 3 charges and therefore yields at most 3 arcs; fewer valid targets reduce the actual count. Arc count cannot establish fixed Health damage. |
 
+
+<a id="cryptic_discharge_attack_speed_increase"></a>
+
+## Voltaic Motivator
+
+Full raw template and formatting: [source evidence](cryptic_discharge_attack_speed_increase.md#original-english-template-and-reconstruction). Name hash `3b37ff32`. Every row uses `ui / loc_talent_cryptic_discharge_attack_speed_bonus_desc / 204600f6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base bonus, charge scaling and duration | Using Voltaic Emitter gives +5% Attack Speed plus +5% per Charge spent for 15s; `ui / loc_talent_cryptic_discharge_attack_speed_bonus_desc / 204600f6` | Fixed attack_speed 0.05 plus interpolated 0.05 ×n, lasting 15s [Fixed source and line references](cryptic_discharge_attack_speed_increase.md#fixed-source-evidence) | Consistent | The total 0.05 +0.05n gives 10%, 15% or 20% for 1, 2 or 3 charges. No two-charge threshold appears in the English. |
+| Execution details and effective charge count | No non-base-version condition, full-charge counting, forced-charge treatment or action-time calculation; `ui / loc_talent_cryptic_discharge_attack_speed_bonus_desc / 204600f6` | Non-base action with the special rule adds the buff; num_charges_used_required =2 is not a trigger check; effects forcing 3 charges make the action use 3 for the bonus [Fixed source and line references](cryptic_discharge_attack_speed_increase.md#fixed-source-evidence) | Not covered by the description | The unused display field does not contradict the current template. An affected 1s action with +20% Attack Speed takes 1 ÷1.20 ≈0.833s under the stated assumptions. |
+
 ## Comparison totals
 
 32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
