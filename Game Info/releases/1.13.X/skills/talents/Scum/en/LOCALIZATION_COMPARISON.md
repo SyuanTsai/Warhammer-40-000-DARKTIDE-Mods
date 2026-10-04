@@ -1220,6 +1220,18 @@ Full raw template and formatting: [source evidence](broker_stimm_durability_4.md
 | Recipe effects | Replenish 6.25% Toughness; +5% Toughness Replenishment; +4% Damage Reduction (component reconstruction); `ui / loc_talent_buff_toughness_on_stimm / 75149821`; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`; `ui / loc_talent_stat_damage_taken_multiplier / 9a749a67` | One-time replenish_percentage(0.0625); toughness_replenish_modifier +0.05; damage_taken_multiplier ×0.96 [Fixed source and line references](broker_stimm_durability_4.md#fixed-source-evidence) | Consistent | The three effects and displayed values agree; Damage Reduction expresses the complement of the Damage Taken multiplier. |
 | Recovery timing, stacking and limits | No maximum-Toughness basis, stacking formula, update/field rules, cost or lifetime; `ui / loc_talent_buff_toughness_on_stimm / 75149821`; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`; `ui / loc_talent_stat_damage_taken_multiplier / 9a749a67` | Cost 4, bought once. Recovery modifiers add; Damage Taken modifiers multiply. Recovery is capped at the deficit, deferred while knocked down and not repeated on same-field re-entry; root/field lifetime applies. [Fixed source and line references](broker_stimm_durability_4.md#fixed-source-evidence) | Not covered by the description | The original examples retain the assumption that recovery modifiers are already applied. Actual synchronization/application order remains unobserved. |
 
+
+<a id="broker_stimm_durability_5a"></a>
+
+## Tank
+
+Full raw template and formatting: [source evidence](broker_stimm_durability_5a.md#original-english-template-and-reconstruction). Name hash `e3530c66`. Every row uses `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery modifier | +30% Toughness Replenishment; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71` | toughness_replenish_modifier = 0.3 [Fixed source and line references](broker_stimm_durability_5a.md#fixed-source-evidence) | Consistent | The recovery stat and value agree. |
+| Stacking, scope and recipe limits | No stacking formula, cap, stat-buff exception, cost or lifetime; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71` | Four prerequisite 0.05 bonuses add with 0.3 to give multiplier 1.5; no maximum-Toughness increase; capped by deficit; sources ignoring stat buffs are unaffected; cost 5 and shared lifetime [Fixed source and line references](broker_stimm_durability_5a.md#fixed-source-evidence) | Not covered by the description | The original 10 → 15 and 37.5 injection examples retain the already-active recovery-bonus assumption. |
+
 ## Comparison totals
 
 The 213 listed rules comprise **99 Consistent**, **5 Explicit contradictions**, **99 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

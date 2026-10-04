@@ -108,6 +108,7 @@
 | <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="Barrage II talent icon"> [Barrage II](#broker_stimm_durability_2) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="Barrage III talent icon"> [Barrage III](#broker_stimm_durability_3) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="Barrage IV talent icon"> [Barrage IV](#broker_stimm_durability_4) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="32" height="32" alt="Tank talent icon"> [Tank](#broker_stimm_durability_5a) | <ul><li>Gain an additional 30% Toughness Replenishment.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1753,3 +1754,21 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Recovery example**: With maximum Toughness 100 and recovery bonuses from this node and its prerequisites active, using the Stimm restores 100 × (4 × 6.25%) × (1 + 4 × 5%) = 30; actual recovery is limited by missing Toughness.
 
 [Details](broker_stimm_durability_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_durability_5a"></a>
+
+### Tank
+
+<img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="72" height="72" alt="Tank talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Recovery bonus**: Gain 30% Toughness Replenishment, additive with the 20% from Barrage I–IV for a total 50% bonus.
+
+- **Recovery example**: An effect normally restoring 10 becomes 10 × (1 + 20% + 30%) = 15, capped at maximum Toughness.
+
+- **Injection example**: With maximum Toughness 100, Barrage I–IV provide a total 25% one-time recovery. Applying this route's 50% recovery bonus gives 100 × 25% × 1.5 = 37.5.
+
+[Details](broker_stimm_durability_5a.md) · [Back to index](#talent-index)

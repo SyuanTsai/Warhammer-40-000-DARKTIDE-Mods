@@ -112,3 +112,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Barrage II](broker_stimm_durability_2.md) / `broker_stimm_durability_2` | Stimm recipe |
 | [Barrage III](broker_stimm_durability_3.md) / `broker_stimm_durability_3` | Stimm recipe |
 | [Barrage IV](broker_stimm_durability_4.md) / `broker_stimm_durability_4` | Stimm recipe |
+| [Tank](broker_stimm_durability_5a.md) / `broker_stimm_durability_5a` | Stimm recipe |
