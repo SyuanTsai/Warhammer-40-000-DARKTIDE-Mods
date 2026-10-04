@@ -602,6 +602,18 @@ Full raw template and formatting: [source evidence](broker_passive_ramping_backs
 | Backstab stacks and removal | Backstabs grant +10% Melee Strength, stacking 5 times; Regular Melee Hits remove all stacks; `ui / loc_talent_broker_passive_ramping_backstabs_desc / 2f7fcac8` | `on_melee_hit` with `is_backstab` adds a 0.1 Melee Power stack, capped at 5; other Melee hits finish all recorded stacks. [Fixed source and line references](broker_passive_ramping_backstabs.md#fixed-source-evidence) | Consistent | The Strength label, per-stack amount, cap, and non-Backstab removal agree with accepted evidence. |
 | Power combination, duration, and final Damage | No timer, Power-combination formula, or final-Damage equivalence is stated; `ui / loc_talent_broker_passive_ramping_backstabs_desc / 2f7fcac8` | The child buff has no duration. Five stacks add 50% Power at this stage; Damage, Stagger, and Cleave still follow weapon curves. [Fixed source and line references](broker_passive_ramping_backstabs.md#fixed-source-evidence) | Not covered by the description | These qualify Melee Strength and preserve the original Power examples without asserting universal final Damage. |
 
+
+<a id="broker_passive_increased_ranged_dodges"></a>
+
+## Moving Target
+
+Full raw template and formatting: [source evidence](broker_passive_increased_ranged_dodges.md#original-english-template-and-reconstruction). Name hash `0158f675`. Every row uses `ui / loc_talent_broker_passive_increased_ranged_dodges_desc / a7db2b5d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Effective Dodge count and wielded weapon | Gain +1 Effective Dodges while wielding your Ranged Weapon; `ui / loc_talent_broker_passive_increased_ranged_dodges_desc / a7db2b5d` | The secondary-slot condition enables `extra_consecutive_dodges = 1`. [Fixed source and line references](broker_passive_increased_ranged_dodges.md#fixed-source-evidence) | Consistent | The English names a Dodge count and correctly limits it to the wielded Ranged weapon. |
+| Threshold formula and unchanged movement properties | No threshold formula or distance/speed details are stated; `ui / loc_talent_broker_passive_increased_ranged_dodges_desc / a7db2b5d` | `consecutive_dodges_count` is the weapon's `diminishing_return_start` plus `round(extra)`. The bonus does not increase distance or speed and is lost on switching to Melee. [Fixed source and line references](broker_passive_increased_ranged_dodges.md#fixed-source-evidence) | Not covered by the description | These clarify what Effective Dodges means and support the original 3→4 example. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
