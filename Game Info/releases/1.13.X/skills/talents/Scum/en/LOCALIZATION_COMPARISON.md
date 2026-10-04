@@ -1172,6 +1172,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_5c.md#or
 | Recipe statistics | +4% Strength; +10% Critical Strike Chance (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | power_level_modifier = 0.04; critical_strike_chance = 0.1 [Fixed source and line references](broker_stimm_combat_5c.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. The Critical Strike Chance label and value match an additive percentage-point bonus; stacking and clamping supplement it. |
 | Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | One purchase at cost 5; prerequisite Power adds before weapon curves. `critical_strike_chance` is a `value` stat, added to the base and other Critical Strike Chance values before `clamp01`. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_5c.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
 
+
+<a id="broker_stimm_durability_1"></a>
+
+## Barrage I
+
+Full raw template and formatting: [source evidence](broker_stimm_durability_1.md#original-english-template-and-reconstruction). Name hash `6f8e5c73`. Every row uses `ui / loc_talent_buff_toughness_on_stimm / 75149821`; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`; `ui / loc_talent_stat_damage_taken_multiplier / 9a749a67`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe effects | Replenish 6.25% Toughness; +5% Toughness Replenishment; +4% Damage Reduction (component reconstruction); `ui / loc_talent_buff_toughness_on_stimm / 75149821`; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`; `ui / loc_talent_stat_damage_taken_multiplier / 9a749a67` | One-time replenish_percentage(0.0625); toughness_replenish_modifier +0.05; damage_taken_multiplier ×0.96 [Fixed source and line references](broker_stimm_durability_1.md#fixed-source-evidence) | Consistent | The three effects and displayed values agree; Damage Reduction expresses the complement of the Damage Taken multiplier. |
+| Recovery timing, stacking and limits | No maximum-Toughness basis, stacking formula, update/field rules, cost or lifetime; `ui / loc_talent_buff_toughness_on_stimm / 75149821`; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71`; `ui / loc_talent_stat_damage_taken_multiplier / 9a749a67` | Cost 1, bought once. Recovery modifiers add; Damage Taken modifiers multiply. Recovery is capped at the deficit, deferred while knocked down and not repeated on same-field re-entry; root/field lifetime applies. [Fixed source and line references](broker_stimm_durability_1.md#fixed-source-evidence) | Not covered by the description | The original examples retain the assumption that recovery modifiers are already applied. Actual synchronization/application order remains unobserved. |
+
 ## Comparison totals
 
 The 203 listed rules comprise **94 Consistent**, **5 Explicit contradictions**, **94 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
