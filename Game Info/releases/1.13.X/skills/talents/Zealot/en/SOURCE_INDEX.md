@@ -12,3 +12,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | Talent / code identifier | Category |
 |---|---|
 | [Immolation Grenade](zealot_flame_grenade.md) / `zealot_flame_grenade` | Blitz |
+| [Blades of Faith](zealot_throwing_knives.md) / `zealot_throwing_knives` | Blitz |

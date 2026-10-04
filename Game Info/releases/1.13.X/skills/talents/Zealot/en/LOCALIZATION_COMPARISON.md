@@ -20,6 +20,18 @@ Full raw template and formatting: [source evidence](zealot_flame_grenade.md#orig
 | Control and relative armour effectiveness | Staggering enemies, barring their path; most effective against Unarmoured Enemies.; `ui / loc_talent_ability_fire_grenade_desc / 5b720fa5` | Existing evidence supplies a fire navigation cost of 5 and differing armour multipliers; unconditional enemy stopping and comparative in-game armour performance remain unobserved. [Fixed source and line references](zealot_flame_grenade.md#fixed-source-evidence) | Cannot confirm | Keep the accepted qualitative-control and armour-test limits; no explicit numerical contradiction is established. |
 | Timing, charges and separate damage stages | No charge count, fuse, duration, random power or lingering-Burn calculation stated.; `ui / loc_talent_ability_fire_grenade_desc / 5b720fa5` | Capacity 3; fuse 1.7s; area 15s; damage every 0.5–1.25s with P × (0.5 + r), r=math.random(); explosion and 1s lingering Burn calculated separately. [Fixed source and line references](zealot_flame_grenade.md#fixed-source-evidence) | Not covered by the description | These details and the existing 100/75/5 and 50/150 examples supplement the wording. |
 
+
+<a id="zealot_throwing_knives"></a>
+
+## Blades of Faith
+
+Full raw template and formatting: [source evidence](zealot_throwing_knives.md#original-english-template-and-reconstruction). Name hash `7bb3e9eb`. Every row uses `ui / loc_ability_zealot_throwing_knifes_desc / 5c177ee2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee kills, Ammo recovery and armour wording | Elite & Special melee kills replenish 1 knife; Ammo boxes replenish knives; less effective versus Carapace Armour.; `ui / loc_ability_zealot_throwing_knifes_desc / 5c177ee2` | A qualifying melee kill restores 1; Ammo pickup functions replenish variable amounts; ordinary-hit super_armor has no_damage, with final result dependent on armour zone and other calculations. [Fixed source and line references](zealot_throwing_knives.md#fixed-source-evidence) | Consistent | The explicit trigger and quantity agree. No fixed Ammo amount or unconditional zero-damage claim is made. |
+| Capacity, action timing and calculation limits | No knife capacity, sprint condition, grenade-pickup exclusion, timing or exact damage/recovery formulas listed.; `ui / loc_ability_zealot_throwing_knifes_desc / 5c177ee2` | Capacity 12; sprint throwing; ordinary grenades do not replenish; launch 0.25s/total action 0.55s; baseline 585/468/0 with separate Finesse; m=1 pickups 2/6/12, capped. [Fixed source and line references](zealot_throwing_knives.md#fixed-source-evidence) | Not covered by the description | These details and existing 11+1=12 and 8→10/12 examples supplement the qualitative wording. |
+
 ## Comparison totals
 
 Updated at five-item checkpoints.
