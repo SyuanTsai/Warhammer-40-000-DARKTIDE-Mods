@@ -1836,3 +1836,6 @@
 
 - Deadly Frequencies - 致命頻率
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits`，hash `e03c3c69`；英文／繁中RAW配對確認。
+
+- Telescopic Sight - 千里眼
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_zoom`，hash `215f8d62`；英文／繁中RAW配對確認。

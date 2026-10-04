@@ -913,6 +913,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
       "effect": "持用戴維爾戰鎬布蘭克斯 Mk Ia、博羅維安 Mk III 或卡索拉斯 Mk II，以武器特殊攻擊命中後，近戰威力輸入依 I–IV 級提高 +12／16／20／24%，持續3.5秒；再次命中刷新時間，不疊高。"
+    },
+    {
+      "id": "telescopic-sight",
+      "name_zh_tw": "千里眼",
+      "name_en": "Telescopic Sight",
+      "name_key": "loc_trait_bespoke_increased_zoom",
+      "description_key": "loc_trait_bespoke_increased_zoom_desc",
+      "name_hash": "215f8d62",
+      "description_hash": "ecd1c7e6",
+      "page": "entries/千里眼/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
+      "effect": "持用步兵鐳射槍 卡特雷爾 Mk VII、Mk IIb 或 Mk IX 並進入替代瞄準時，I–IV 均提供 0.85 垂直視角乘數；實際 ADS 相機路徑前後各取樣一次，角度結果另受轉場與玩家視角設定影響。"
     }
   ],
   "weapons": [
@@ -15328,6 +15341,65 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_214",
       "effect": "三型號共用相同 I–IV tier；布蘭克斯使用上勾特殊攻擊，其餘兩型號使用勾拉特殊攻擊，成功命中皆可觸發。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+      "blessing_id": "telescopic-sight",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/千里眼/weapon_trait_bespoke_lasgun_p1_increased_zoom.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+        "actual_mark_ids": [
+          "lasgun_p1_m1",
+          "lasgun_p1_m2",
+          "lasgun_p1_m3"
+        ],
+        "tier_fov_multiplier": {
+          "I": 0.85,
+          "II": 0.85,
+          "III": 0.85,
+          "IV": 0.85
+        },
+        "wrapper_fallback_fov_multiplier": 0.95,
+        "tier_replaces_wrapper_value": true,
+        "active_gate": [
+          "wielded slot",
+          "alternate fire active"
+        ],
+        "ads_vertical_fov_degrees_by_mark": {
+          "lasgun_p1_m1": 45,
+          "lasgun_p1_m2": 45,
+          "lasgun_p1_m3": 45
+        },
+        "ordinary_hip_action": "shoot_hit_scan",
+        "aimed_shot_action": "shoot_hit_scan",
+        "hip_special": "toggle_special flashlight; does not start aim",
+        "zoom_special": "toggle_special; zoom action stays active",
+        "controlled_formula": "45 * r_prev * external * r_now * player_global_fov",
+        "controlled_example_degrees": 32.5125
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 11,
+        "end_line": 49
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_increased_zoom_desc",
+      "description_hash": "ecd1c7e6",
+      "icon": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_045",
+      "effect": "僅已核對 Mk VII／Mk IIb／Mk IX；三者 ADS 輸入垂直視角均為 45°，I–IV 的 fov_multiplier 均為 0.85。"
     }
   ],
   "bindings": [
@@ -21503,6 +21575,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
         "import_line": 16,
         "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "telescopic-sight",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/increased_zoom",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "telescopic-sight",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/increased_zoom",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "telescopic-sight",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_increased_zoom",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/increased_zoom",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
       }
     }
   ]
