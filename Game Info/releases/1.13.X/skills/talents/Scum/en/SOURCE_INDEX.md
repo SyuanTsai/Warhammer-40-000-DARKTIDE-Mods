@@ -88,3 +88,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [The Sweet Spot](broker_passive_increased_weakspot_damage.md) / `broker_passive_increased_weakspot_damage` | Talent |
 | [Long Lasting](broker_passive_stimm_increased_duration.md) / `broker_passive_stimm_increased_duration` | Talent |
 | [Blessed Stimms](broker_passive_stimm_cleanse_on_kill.md) / `broker_passive_stimm_cleanse_on_kill` | Talent |
+| [Hive City Brawler](broker_passive_dr_damage_tradeoff_on_stamina.md) / `broker_passive_dr_damage_tradeoff_on_stamina` | Talent |

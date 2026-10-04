@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="The Sweet Spot talent icon"> [The Sweet Spot](#broker_passive_increased_weakspot_damage) | <ul><li>Increase the additional Weakspot Damage component by 25%; the resulting total damage gain varies by weapon.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="Long Lasting talent icon"> [Long Lasting](#broker_passive_stimm_increased_duration) | <ul><li>Stimm effects last 5 seconds longer.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="Blessed Stimms talent icon"> [Blessed Stimms](#broker_passive_stimm_cleanse_on_kill) | <ul><li>While Stimmed, each Kill clears 1% of maximum Health as Corruption; 50% cleared per Stimm is the stopping threshold.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="Hive City Brawler talent icon"> [Hive City Brawler](#broker_passive_dr_damage_tradeoff_on_stamina) | <ul><li>More remaining Stamina gives more Damage Reduction; more spent Stamina gives more Melee Damage. Each reaches up to 20%.</li></ul> | Talent |
 
 ---
 
@@ -1273,3 +1274,21 @@
 - **Threshold exception**: Each Kill checks the 50% threshold before applying a full clear. If 99 has been cleared and this Kill clears 2, the total reaches 101 before stopping. The last clear can therefore slightly exceed the stated threshold.
 
 [Details](broker_passive_stimm_cleanse_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_dr_damage_tradeoff_on_stamina"></a>
+
+### Hive City Brawler
+
+<img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="72" height="72" alt="Hive City Brawler talent icon">
+
+- **Calculation**: Damage Reduction = 20% × current Stamina fraction; Melee Damage bonus = 20% × spent Stamina fraction. Both adjust as Stamina changes.
+
+- **Half-Stamina example**: At 50% Stamina remaining, both bonuses are 10%. Counting only this effect, incoming damage of 100 becomes 90, and Melee Damage of 100 becomes 110.
+
+- **Full/empty-Stamina example**: At full Stamina, incoming damage is 100 × 0.8 = 80, with no Melee Damage bonus. At empty Stamina, there is no Damage Reduction and Melee Damage is 100 × 1.2 = 120.
+
+- **Other bonuses**: Damage Reduction uses an independent damage-taken multiplier. With another independent 20% reduction at full Stamina, damage is 100 × 0.8 × 0.8 = 64. Melee Damage adds to other bonuses at the same stage.
+
+[Details](broker_passive_dr_damage_tradeoff_on_stamina.md) · [Back to index](#talent-index)

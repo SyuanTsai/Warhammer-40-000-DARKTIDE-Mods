@@ -929,6 +929,18 @@ Full raw template and formatting: [source evidence](broker_passive_stimm_cleanse
 | Per-Stimm maximum | Up to 50% per Stimm; `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8` | Checks accumulated clearing below `0.5 × max_health` before applying a full clear; the last clear may exceed 50% [Fixed source and line references](broker_passive_stimm_cleanse_on_kill.md#fixed-source-evidence) | Explicit contradiction | The stated maximum is a stopping threshold, not a strict cap. The preserved 99 + 2 = 101 example demonstrates the boundary difference. |
 | Recovery limits and reset | No Wound floor, actual-cleared accumulation or refresh details; `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8` | Protects `fixed_permanent_damage`, accumulates actual clearing and resets on start/refresh [Fixed source and line references](broker_passive_stimm_cleanse_on_kill.md#fixed-source-evidence) | Not covered by the description | These retain the existing recovery limits and example assumptions. |
 
+
+<a id="broker_passive_dr_damage_tradeoff_on_stamina"></a>
+
+## Hive City Brawler
+
+Full raw template and formatting: [source evidence](broker_passive_dr_damage_tradeoff_on_stamina.md#original-english-template-and-reconstruction). Name hash `514f1d9d`. Every row uses `ui / loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc / 2fe3c231`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stamina relationship and maxima | Up to 20% Damage Reduction from available Stamina; up to 20% Melee Damage from spent Stamina; `ui / loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc / 2fe3c231` | Reduction scales with remaining Stamina and Melee Damage with spent Stamina, each to 20% [Fixed source and line references](broker_passive_dr_damage_tradeoff_on_stamina.md#fixed-source-evidence) | Consistent | Both directions, damage categories and maximum values agree. |
+| Interpolation and combination | No interpolation or combination formula; `ui / loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc / 2fe3c231` | `lerp(1, 0.8, stamina_fraction)` for damage taken; `lerp(0, 0.2, 1 − stamina_fraction)` for additive Melee Damage [Fixed source and line references](broker_passive_dr_damage_tradeoff_on_stamina.md#fixed-source-evidence) | Not covered by the description | The half/full/empty examples and 100 × 0.8 × 0.8 = 64 combination explain the verified formulas. |
+
 ## Comparison totals
 
 The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.
