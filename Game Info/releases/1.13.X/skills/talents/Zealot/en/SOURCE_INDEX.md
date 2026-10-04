@@ -40,3 +40,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Holy Revenant](zealot_resist_death_heal.md) / `zealot_resist_death_heal` | Keystone |
 | [Blazing Piety](zealot_fanatic_rage.md) / `zealot_fanatic_rage` | Keystone |
 | [Stalwart](zealot_fanatic_rage_toughness_on_max.md) / `zealot_fanatic_rage_toughness_on_max` | Keystone |
+| [Righteous Warrior](zealot_fanatic_rage_improved.md) / `zealot_fanatic_rage_improved` | Keystone |

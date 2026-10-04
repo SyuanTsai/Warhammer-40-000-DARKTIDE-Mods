@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="Holy Revenant talent icon"> [Holy Revenant](#zealot_resist_death_heal) | <ul><li>Until Death's fatal-damage trigger knocks back nearby enemies. While Unkillable, damage adds to a reusable healing pool; Melee converts at 3 times the ordinary rate.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="Blazing Piety talent icon"> [Blazing Piety](#zealot_fanatic_rage) | <ul><li>Nearby enemy deaths and your Critical Hits build Fury. At 25 stacks, gain 15 percentage points of Critical Chance for 8 seconds; further qualifying events at full stacks refresh it.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="Stalwart talent icon"> [Stalwart](#zealot_fanatic_rage_toughness_on_max) | <ul><li>Entering Fury restores 50% of maximum Toughness once. At full Fury stacks, gain 25% Toughness Damage Reduction and restore 2% of maximum Toughness per second.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="Righteous Warrior talent icon"> [Righteous Warrior](#zealot_fanatic_rage_improved) | <ul><li>Blazing Piety grants another 10 percentage points of Critical Chance during Fury, for a total talent bonus of 25 points.</li></ul> | Keystone |
 
 ---
 
@@ -464,3 +465,16 @@
 - **Restoration and reduction example**: With maximum Toughness 100, activation restores at most 50. Maintaining full stacks for 8 seconds can restore another 100 × 2% × 8 = 16, limited by missing Toughness. An incoming 100 Toughness damage becomes 100 × 0.75 = 75.
 
 [Details](zealot_fanatic_rage_toughness_on_max.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_fanatic_rage_improved"></a>
+
+### Righteous Warrior
+
+<img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="72" height="72" alt="Righteous Warrior talent icon">
+
+- **Effect**: During Fury, gain another 10 percentage points of Critical Chance on top of Blazing Piety's 15, for a total talent bonus of 25 points.
+- **Critical Chance example**: An existing 5% becomes 5% + 15% + 10% = 30% when entering Fury with this upgrade. This adds probability; it does not multiply the original 5% by 1.25.
+
+[Details](zealot_fanatic_rage_improved.md) · [Back to index](#talent-index)

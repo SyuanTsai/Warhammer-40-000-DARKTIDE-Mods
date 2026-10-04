@@ -358,6 +358,18 @@ Full raw template and formatting: [source evidence](zealot_fanatic_rage_toughnes
 | Activation restoration and continuous values | Triggering Fury restores 50%; while active +25% Toughness Damage Reduction and 2% Toughness each second.; `ui / loc_talent_zealot_fanatic_rage_toughness_replenish_desc / efdfa530` | New Fury restores 0.5 of maximum Toughness; full-resource conditional multiplier 0.75 and restoration .02×dt apply. [Fixed source and line references](zealot_fanatic_rage_toughness_on_max.md#fixed-source-evidence) | Consistent | The three amounts, restoration direction and damage reduction match. |
 | Refresh, full-resource condition and calculation basis | No refresh exception, resource gate or maximum-Toughness basis stated.; `ui / loc_talent_zealot_fanatic_rage_toughness_replenish_desc / efdfa530` | Existing Fury refresh does not repeat 50%; both continuous effects require resource 25. Restoration uses maximum Toughness and missing-Toughness cap. [Fixed source and line references](zealot_fanatic_rage_toughness_on_max.md#fixed-source-evidence) | Not covered by the description | These limits and the preserved restoration/reduction example supplement the effects. |
 
+
+<a id="zealot_fanatic_rage_improved"></a>
+
+## Righteous Warrior
+
+Full raw template and formatting: [source evidence](zealot_fanatic_rage_improved.md#original-english-template-and-reconstruction). Name hash `4ae53808`. Every row uses `ui / loc_talent_zealot_fanatic_rage_improved_desc / cde6c5ff`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional Critical Chance | “+10% Critical Hit Chance from Blazing Piety.”; `ui / loc_talent_zealot_fanatic_rage_improved_desc / cde6c5ff` | Special rule adds conditional Critical Chance 0.10 on top of Fury's base 0.15. [Fixed source and line references](zealot_fanatic_rage_improved.md#fixed-source-evidence) | Consistent | The extra value and its source match. |
+| Fury condition and additive total | No explicit Fury-only condition or total chance example.; `ui / loc_talent_zealot_fanatic_rage_improved_desc / cde6c5ff` | Bonus applies only with Fury; 5%+15%+10%=30%, subject to other base values and modifiers; no extra stacks or cooldown. [Fixed source and line references](zealot_fanatic_rage_improved.md#fixed-source-evidence) | Not covered by the description | The probability calculation and duration condition explain the stated additional bonus. |
+
 ## Comparison totals
 
 53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.
