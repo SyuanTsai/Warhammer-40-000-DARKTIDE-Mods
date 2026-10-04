@@ -855,4 +855,4 @@ Full raw template and formatting: [source evidence](cryptic_better_heavies.md#or
 
 ## Comparison totals
 
-136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.
+146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

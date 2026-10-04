@@ -9002,9 +9002,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4ae30e578e2a17513833cbe155d047bc91385dc6",
       "chinese_sha256": "c82eab288ef63100673a0c7b8a4d5003e2e9b748394f27c4724fe090a1bfc0d4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_better_heavies"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw.md",
@@ -9526,9 +9533,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "017a3d8a9d3b6259c796db28050a4171b1992869",
       "chinese_sha256": "4017e443c2be19b277bc79b0429784bcfe663e0478c2b8b84b6d05d929fa817c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_elite_kills_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_flamethrower.md",
@@ -9761,9 +9775,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "de1980e9e1505b54f1f7d5d60d6f5140106e47e8",
       "chinese_sha256": "5086eeb65e45144f3b495cd45a58e4430413b9004821c7a9d4e236458f6aaea3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_no_braced_movement_penalty"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone.md",
@@ -9974,9 +9995,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b7a64bbbc8a701ec3fc7f9a00f86537c80d27b2c",
       "chinese_sha256": "dc909c136aa645ba64703b787dc615affc6216a386fb7f5a92e025b28be659e7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_push_stagger_stamina"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_pushing_grants_cleave.md",
@@ -10318,9 +10346,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "dd6aa7222ac66dac9d2f82e1eba1a72bb606bd46",
       "chinese_sha256": "6ee3e98673fe39ff6cd8e6bedb7d62906f4cc3abbfbedf749a9871679a10ec40",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_stun_suppression_immune"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_successful_dodge_stamina.md",
@@ -18179,6 +18214,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_524_528.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_shared_toughness.md"
+    },
+    {
+      "id": "cryptic_stun_suppression_immune",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stun_suppression_immune.md"
+    },
+    {
+      "id": "cryptic_elite_kills_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_elite_kills_toughness.md"
+    },
+    {
+      "id": "cryptic_push_stagger_stamina",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_push_stagger_stamina.md"
+    },
+    {
+      "id": "cryptic_no_braced_movement_penalty",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_no_braced_movement_penalty.md"
+    },
+    {
+      "id": "cryptic_better_heavies",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_better_heavies.md"
     }
   ],
   "pending_chinese_corrections": [
