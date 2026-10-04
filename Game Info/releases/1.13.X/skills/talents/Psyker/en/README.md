@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="Mettle talent icon"> [Mettle](#psyker_crits_regen_toughness_movement_speed) | <ul><li>Critical Hits restore 10% maximum Toughness over 4s and grant +5% Movement Speed, up to 3 stacks. Toughness restoration rate does not multiply with stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="Perilous Combustion talent icon"> [Perilous Combustion](#psyker_elite_kills_add_warpfire) | <ul><li>Elite or Specialist Kill: apply 2 Soulblaze stacks to enemies within 4m of the victim. Sleeping Daemonhosts are excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="Battle Meditation talent icon"> [Battle Meditation](#psyker_chance_to_vent_on_kill) | <ul><li>−10% Peril Generation. Each Kill has a 10% chance to remove 10 percentage points of Peril.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="Perfect Timing talent icon"> [Perfect Timing](#psyker_crits_empower_next_attack) | <ul><li>Critical Hit: gain +3% Damage for 10s, up to 5 stacks (+15%); retriggering refreshes duration.</li></ul> | Talent |
 
 ---
 
@@ -811,3 +812,19 @@
 - **Proc chance**: 10% is the chance on each Kill; it does not guarantee one proc for every 10 enemies killed.
 
 [Details](psyker_chance_to_vent_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_crits_empower_next_attack"></a>
+
+### Perfect Timing
+
+<img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="72" height="72" alt="Perfect Timing talent icon">
+
+- **Effect**: after a Critical Hit, gain 1 Damage stack. Each stack adds 3% Damage, up to 5 stacks.
+
+- **Stacks and refresh**: the effect lasts 10 seconds, and triggering it again resets the duration. At full stacks, Damage increases by 15%.
+
+- **Damage example**: compare only this damage-bonus stage, with all other multipliers fixed at 1. With a baseline of 100 points and no other bonus, 100 × (1 + 15%) = 115 points. With an existing 25% bonus in the same stage, Damage rises from 125 to 100 × (1 + 25% + 15%) = 140 points.
+
+[Details](psyker_crits_empower_next_attack.md) · [Back to index](#talent-index)

@@ -602,6 +602,18 @@ Full raw template and formatting: [source evidence](psyker_chance_to_vent_on_kil
 | Generation reduction and kill proc | −10% Peril Generation; 10% chance to Quell 10% Peril on Kill; `ui / loc_talent_psyker_quell_on_kill_and_reduction_desc / 2b245e8a` | Generation uses multiplier 0.9; a successful 0.1 kill proc removes 0.1 of the full Peril gauge. [Fixed source and line references](psyker_chance_to_vent_on_kill.md#fixed-source-evidence) | Consistent | The displayed values and trigger agree; the English does not specify multiplying current Peril by 0.9. |
 | Floor and update scheduling | No zero-floor or per-update aggregation rule; `ui / loc_talent_psyker_quell_on_kill_and_reduction_desc / 2b245e8a` | decrease_immediate(0.1) floors at zero; one Boolean flag coalesces multiple procs before an update. [Fixed source and line references](psyker_chance_to_vent_on_kill.md#fixed-source-evidence) | Not covered by the description | These details supplement the stated probability and removal amount. |
 
+
+<a id="psyker_crits_empower_next_attack"></a>
+
+## Perfect Timing
+
+Full raw template and formatting: [source evidence](psyker_crits_empower_next_attack.md#original-english-template-and-reconstruction). Name hash `dc8ee87d`. Every row uses `ui / loc_talent_psyker_damage_on_crit_stacking_desc / 62b2dfb3`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical trigger and damage stacks | +3% Damage for 10s on Critical Attack, stacking 5 times; `ui / loc_talent_psyker_damage_on_crit_stacking_desc / 62b2dfb3` | The verified Critical Hit path adds 0.03 damage per stack, with a 10s duration and maximum 5 stacks. [Fixed source and line references](psyker_crits_empower_next_attack.md#fixed-source-evidence) | Consistent | The stated amount, duration, cap and ordinary critical-hit trigger agree. |
+| Refresh, additive stage and special-hit limits | No refresh rule, damage-stage formula or per-projectile claim; `ui / loc_talent_psyker_damage_on_crit_stacking_desc / 62b2dfb3` | Retriggering refreshes the duration; damage bonuses add within the same stage; the proc checks crit flags, and special-hit event coverage remains untested. [Fixed source and line references](psyker_crits_empower_next_attack.md#fixed-source-evidence) | Not covered by the description | These details and existing test limits supplement the broad English wording. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
