@@ -309,6 +309,18 @@ Full raw template and formatting: [source evidence](cryptic_increased_passive_co
 | Per-second recovery | Generate 1% Capacitance each second; `ui / loc_talent_cryptic_increased_passive_cooldown_regen_desc / 34a7eed6` | cooldown_percent_regen_per_second 0.01 converts to +0.5 additive combat_ability_resource_regen_modifier, adding 0.5 points/s to the base 1/s for a 50-point charge [Fixed source and line references](cryptic_increased_passive_cooldown_regen.md#fixed-source-evidence) | Consistent | The extra recovery equals 1% of one charge per second. The English does not explicitly say it replaces base recovery. |
 | Cost basis, total rate, refill time and active ability | No one-charge basis, base contribution, fractional progress or ability-cost details; `ui / loc_talent_cryptic_increased_passive_cooldown_regen_desc / 34a7eed6` | Default recovery modifier 1 →1.5; 50-point charge and max 3 give 150-point pool, floor(resource /50) full charges; active stance upkeep costs 1/s, so this bonus leaves net 0.5/s before activation/shooting costs [Fixed source and line references](cryptic_increased_passive_cooldown_regen.md#fixed-source-evidence) | Not covered by the description | Natural 2%/s becomes 3%/s: one refill 100% ÷3% ≈33.33s, three 300% ÷3% =100s, assuming inactive ability and no other costs, pauses or modifiers. |
 
+
+<a id="cryptic_multi_hits_grant_power"></a>
+
+## Capacitor Reclamation Loop
+
+Full raw template and formatting: [source evidence](cryptic_multi_hits_grant_power.md#original-english-template-and-reconstruction). Name hash `6f438130`. Every row uses `ui / loc_talent_cryptic_multi_hits_grant_power_desc / 998c8ded`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Single-attack target condition and recovery | Hitting 3 or more enemies with an Attack restores 1% Capacitance; `ui / loc_talent_cryptic_multi_hits_grant_power_desc / 998c8ded` | Third target sequence number triggers once; restore_ability_charge_percentage receives 0.01 [Fixed source and line references](cryptic_multi_hits_grant_power.md#fixed-source-evidence) | Consistent | The target threshold, single attack and percentage agree. |
+| Proc interval, cost basis and progress | No 0.25s interval, third-target implementation, cost basis or fractional-progress detail; `ui / loc_talent_cryptic_multi_hits_grant_power_desc / 998c8ded` | Positive target_number or fallback target_index must equal 3; current time must reach multi_hit_window_end_t; next eligible time t +0.25; recovery 0.01 ×cost per charge [Fixed source and line references](cryptic_multi_hits_grant_power.md#fixed-source-evidence) | Not covered by the description | An attack hitting 4 restores 0.5 points at cost 50; the fourth adds none. Eight adequately spaced procs restore 4 points. The interval is not a window for collecting separate hits. |
+
 ## Comparison totals
 
 52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.
