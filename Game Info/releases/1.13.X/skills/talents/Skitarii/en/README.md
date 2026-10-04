@@ -68,6 +68,7 @@
 | <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="Progressive Plating Matrix talent icon"> [Progressive Plating Matrix](#cryptic_stacking_tdr) | <ul><li>Hitting the first target of an attack grants one stack of 2.5% Toughness Damage Reduction, up to 6 stacks. Triggers refresh a shared 5-second duration; one attack hitting several enemies still adds only one stack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="Retribution Conduit talent icon"> [Retribution Conduit](#cryptic_damage_vs_electrocuted_scaling_on_charge) | <ul><li>Gain 10% Damage against Electrocuted enemies, plus 5% for each full Combat Ability charge currently held. Partial charges do not count; the bonus follows the remaining charges and ends for targets no longer Electrocuted.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="Galvanic Marking Array talent icon"> [Galvanic Marking Array](#cryptic_elite_kills_damage) | <ul><li>Killing an Elite with a ranged attack grants one stack of 5% Damage, up to 4 stacks. Triggers refresh a 15-second timer; without further kills, one stack decays every 15 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="32" height="32" alt="Auto-Repair Doctrines talent icon"> [Auto-Repair Doctrines](#cryptic_toughness_per_charge) | <ul><li>Continuously restores 3% of maximum Toughness per second, plus 0.5% per second for each full charge currently held. Partial charges do not count; recovery is capped at maximum Toughness.</li></ul> | Talent |
 
 ---
 
@@ -952,3 +953,17 @@
 - The game Chinese says “擊殺遠程精英” (kill ranged Elites), which can suggest a restriction to gun-carrying Elites. This version requires **killing an Elite with a ranged attack**. Killing a gun-carrying Elite in melee does not satisfy that condition.
 
 [Details](cryptic_elite_kills_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_toughness_per_charge"></a>
+
+### Auto-Repair Doctrines
+
+<img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="72" height="72" alt="Auto-Repair Doctrines talent icon">
+
+- **Recovery**: Continuously restore **3% of maximum Toughness per second**, plus **0.5% of maximum Toughness per second for each full charge currently held**.
+- **Example**: At 200 maximum Toughness with 3 full charges, recover `200 × (3% + 3 × 0.5%) = 9` points per second. With 0 charges, still recover `200 × 3% = 6` points per second.
+- **Limits**: Incomplete charges do not count. Recovery cannot exceed maximum Toughness.
+
+[Details](cryptic_toughness_per_charge.md) · [Back to index](#talent-index)

@@ -733,6 +733,18 @@ Full raw template and formatting: [source evidence](cryptic_elite_kills_damage.m
 | Ranged killing method, bonus and decay | Ranged Elite Kills increase Damage by +5% for 15s. Stacks 4 times. Stacks decay one at a time; `ui / loc_talent_cryptic_elite_kills_damage_desc / 768f2807` | `all(on_ranged_kill, on_elite_kill)`; each stack adds `0.05`, cap 4, duration 15, one-stack decay [Fixed source and line references](cryptic_elite_kills_damage.md#fixed-source-evidence) | Consistent | Ranged can describe the kill method; the effect values and decay direction agree. The Chinese enemy-type correction remains separate. |
 | Refresh rules and calculation examples | Does not state both timer-refresh flags or same-stage damage addition; `ui / loc_talent_cryptic_elite_kills_damage_desc / 768f2807` | Adding and removing a stack refresh duration. Four stacks give 100→120; absent new kills, 3/2/1/0 remain at 15/30/45/60 seconds [Fixed source and line references](cryptic_elite_kills_damage.md#fixed-source-evidence) | Not covered by the description | The original damage and decay examples supplement the English. |
 
+
+<a id="cryptic_toughness_per_charge"></a>
+
+## Auto-Repair Doctrines
+
+Full raw template and formatting: [source evidence](cryptic_toughness_per_charge.md#original-english-template-and-reconstruction). Name hash `1af984d6`. Every row uses `ui / loc_talent_cryptic_toughness_per_charge_desc / 04db1c7b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base rate and charge scaling | Replenish +3% Toughness per second. Increased by +0.5% per Current Charge; `ui / loc_talent_cryptic_toughness_per_charge_desc / 04db1c7b` | Updates recover `(0.03 + 0.005n) × dt` through `replenish_percentage` [Fixed source and line references](cryptic_toughness_per_charge.md#fixed-source-evidence) | Consistent | The base rate and per-charge addition agree. |
+| Recovery basis and conditions | Does not specify integer charges, denominator, modifiers, cap or other trigger requirements; `ui / loc_talent_cryptic_toughness_per_charge_desc / 04db1c7b` | Full integer charges only; recovery uses maximum Toughness and applicable recovery bonuses, capped at full. No distance, kill or Coherency condition [Fixed source and line references](cryptic_toughness_per_charge.md#fixed-source-evidence) | Not covered by the description | The 200-Toughness examples giving 9 points with 3 charges and 6 with none supplement the English. |
+
 ## Comparison totals
 
 126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.
