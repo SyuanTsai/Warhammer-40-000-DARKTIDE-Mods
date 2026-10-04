@@ -322,6 +322,18 @@ Full raw template and formatting: [source evidence](zealot_quickness_passive_dod
 | Successful Dodge and stack count | “Gain 3 Stacks of Momentum on a successful Dodge.”; `ui / loc_talent_zealot_quickness_dodge_stacks_desc / 6a266b91` | Special rule permits the successful-Dodge event to add 3 counter stacks. [Fixed source and line references](zealot_quickness_passive_dodge_stacks.md#fixed-source-evidence) | Consistent | The event qualifier and count match. |
 | Shared cap and later consumption | No shared cap, overflow or active-bonus consumption rule; `ui / loc_talent_zealot_quickness_dodge_stacks_desc / 6a266b91` | Movement and Dodge share max 20; 18+3 caps at 20 without storing excess. Next pool requires a hit after the active bonus ends. [Fixed source and line references](zealot_quickness_passive_dodge_stacks.md#fixed-source-evidence) | Not covered by the description | The existing stack example and event limits supplement the gain statement. |
 
+
+<a id="zealot_resist_death_heal"></a>
+
+## Holy Revenant
+
+Full raw template and formatting: [source evidence](zealot_resist_death_heal.md#original-english-template-and-reconstruction). Name hash `3a3afbf8`. Every row uses `ui / loc_talent_zealot_resist_death_heal_desc / 7e66622d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, healing condition and Melee multiplier | Until Death knocks nearby enemies back; while Unkillable heal based on dealt damage; Melee heals for 3 times that amount.; `ui / loc_talent_zealot_resist_death_heal_desc / 7e66622d` | Fatal trigger enables 3.5m non-damaging knockback; `unkillable` gates damage-based pool additions of 0.007×damage, ×3 for Melee. [Fixed source and line references](zealot_resist_death_heal.md#fixed-source-evidence) | Consistent | The English multiplier refers to healing amount. The accepted Chinese wrong-target correction is separate. |
+| Health cap, reusable pool and limits | “up to a maximum of 25% Max Health”; no explicit cumulative-total, pool-reset or modifier order; `ui / loc_talent_zealot_resist_death_heal_desc / 7e66622d` | Heal request caps at `max_health×0.25−current_health` before healing modifiers; accumulated pool is not deducted and resets only at passive start. [Fixed source and line references](zealot_resist_death_heal.md#fixed-source-evidence) | Not covered by the description | The cap basis, pool reuse, any-source Unkillable, resistance and exclusivity qualify the stated effects. |
+
 ## Comparison totals
 
 53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.

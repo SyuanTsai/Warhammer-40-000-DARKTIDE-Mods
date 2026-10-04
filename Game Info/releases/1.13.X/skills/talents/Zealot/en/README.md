@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="Inexorable Judgement talent icon"> [Inexorable Judgement](#zealot_quickness_passive) | <ul><li>Movement grants 1 Momentum stack per 5 metres, maximum 20; Sprint distance counts double. A Melee or Ranged Hit spends current stacks for a 6-second bonus to damage, attack speeds and dodge stats.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="Retributor's Stance talent icon"> [Retributor's Stance](#zealot_momentum_toughness_replenish) | <ul><li>During Inexorable Judgement's active bonus, replenish 0.5% maximum Toughness per second for each spent Momentum stack.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="Inebriate's Poise talent icon"> [Inebriate's Poise](#zealot_quickness_passive_dodge_stacks) | <ul><li>A successful Dodge grants 3 additional Momentum stacks for Inexorable Judgement, sharing the 20-stack cap.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="Holy Revenant talent icon"> [Holy Revenant](#zealot_resist_death_heal) | <ul><li>Until Death's fatal-damage trigger knocks back nearby enemies. While Unkillable, damage adds to a reusable healing pool; Melee converts at 3 times the ordinary rate.</li></ul> | Keystone |
 
 ---
 
@@ -416,3 +417,19 @@
 - **Stack example**: Starting at 18, a successful Dodge gives min(18 + 3, 20) = 20 stacks; the excess stack is not stored. You can build the next pool during an active bonus, but it is spent only by a hit after the current bonus ends.
 
 [Details](zealot_quickness_passive_dodge_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_resist_death_heal"></a>
+
+### Holy Revenant
+
+<img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="72" height="72" alt="Holy Revenant talent icon">
+
+- **Trigger effect**: When fatal damage activates Until Death, knock back enemies within 3.5 metres. Actual Stagger still depends on enemy resistance.
+- **Health restoration**: While Unkillable, each damage event adds usable healing: 0.7% of ordinary damage, or 2.1% for Melee. Each qualifying damage event also heals again using the current accumulated pool; previously used amounts are not deducted.
+- **Restoration example**: Assume an initial pool of 0 and no other healing modifiers. Two consecutive Melee hits dealing 100 each: the first adds and heals 100 × 0.7% × 3 = 2.1 Health; the second raises the pool to 4.2 and heals 4.2 again, giving 6.3 in total.
+- **Cap**: Each requested heal can bring current Health only up to 25% of maximum before other healing multipliers. With maximum Health 100 and current Health 24, at most 1 is initially requested. Other healing multipliers apply afterwards; healing still cannot remove Corruption. This is not a whole-match limit of 25 Health.
+- **Chinese original-text erratum**: The Chinese “healing equals 3 times Melee Damage” can be read as 100 damage healing 300 Health. In fact, the Melee conversion rate is 3 times the ordinary rate: 0.7% × 3 = 2.1%, then the accumulated pool and cap apply.
+
+[Details](zealot_resist_death_heal.md) · [Back to index](#talent-index)

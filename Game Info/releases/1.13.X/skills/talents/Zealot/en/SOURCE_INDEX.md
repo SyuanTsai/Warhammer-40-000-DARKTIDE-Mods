@@ -37,3 +37,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Inexorable Judgement](zealot_quickness_passive.md) / `zealot_quickness_passive` | Keystone |
 | [Retributor's Stance](zealot_momentum_toughness_replenish.md) / `zealot_momentum_toughness_replenish` | Keystone |
 | [Inebriate's Poise](zealot_quickness_passive_dodge_stacks.md) / `zealot_quickness_passive_dodge_stacks` | Keystone |
+| [Holy Revenant](zealot_resist_death_heal.md) / `zealot_resist_death_heal` | Keystone |
