@@ -50,3 +50,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Purloin Providence](psyker_mark_kills_can_vent.md) / `psyker_mark_kills_can_vent` | Keystone |
 | [Lingering Influence](psyker_mark_increased_duration.md) / `psyker_mark_increased_duration` | Keystone |
 | [Charged Up](psyker_empowered_grenades_increased_max_stacks.md) / `psyker_empowered_grenades_increased_max_stacks` | Keystone |
+| [In Fire Reborn](psyker_warpfire_generate_souls.md) / `psyker_warpfire_generate_souls` | Keystone |

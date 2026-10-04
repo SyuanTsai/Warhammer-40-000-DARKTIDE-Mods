@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="Purloin Providence talent icon"> [Purloin Providence](#psyker_mark_kills_can_vent) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy Quells five percentage points of Peril.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="Lingering Influence talent icon"> [Lingering Influence](#psyker_mark_increased_duration) | <ul><li>Extends Disrupt Destiny's Precision timer before each one-stack decay from five to ten seconds; choose either this or Perfectionism.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="Charged Up talent icon"> [Charged Up](#psyker_empowered_grenades_increased_max_stacks) | <ul><li>Raises Empowered Psionics storage from one to three stacks; each empowered Blitz still spends one, with unchanged per-use strength.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="In Fire Reborn talent icon"> [In Fire Reborn](#psyker_warpfire_generate_souls) | <ul><li>A qualifying death with Soulblaze present, or caused by your Soulblaze, has a 10% chance to grant one Warp Charge; choose either this or Psychic Vampire.</li></ul> | Keystone |
 
 ---
 
@@ -647,3 +648,19 @@
 - **Stack example:** At two stacks, gaining one gives `2 + 1 = 3`. At three, another gain leaves the count at three.
 
 [Details](psyker_empowered_grenades_increased_max_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_warpfire_generate_souls"></a>
+
+### In Fire Reborn
+
+<img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="72" height="72" alt="In Fire Reborn talent icon">
+
+- **Trigger:** If an enemy still has Soulblaze when it dies, or your Soulblaze deals the killing Damage, there is a 10% chance to gain one Warp Charge. The first condition does not require you to land the last hit.
+
+- **Chance example:** Without truncation at the charge cap, 100 qualifying death events give an expected `100 × 10% = 10` stacks. Actual results depend on random rolls.
+
+- **Selection limit:** Choose either In Fire Reborn or Psychic Vampire.
+
+[Details](psyker_warpfire_generate_souls.md) · [Back to index](#talent-index)

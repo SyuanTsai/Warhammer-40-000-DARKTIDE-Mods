@@ -481,6 +481,19 @@ Full raw template and formatting: [source evidence](psyker_empowered_grenades_in
 | Usable storage cap | Hold up to three stacks of Empowered Psionics; `ui / loc_talent_psyker_increased_empowered_chain_lightning_stacks_description / 61957b58` | Actual charges are clamped from zero to max_stack_talent = 3. [Fixed source and line references](psyker_empowered_grenades_increased_max_stacks.md#fixed-source-evidence) | Consistent | The stated maximum is the accepted usable-charge cap. |
 | Visual stacks and per-use strength | No stronger individual empowerment or fourth usable charge stated; `ui / loc_talent_psyker_increased_empowered_chain_lightning_stacks_description / 61957b58` | Visual cap 3 + 1 supports event/visual handling; visual_stack_count returns min(stack_count, 3), max_stat_stacks is one. Each empowered Blitz still spends one, without scaling per-use strength by storage. [Fixed source and line references](psyker_empowered_grenades_increased_max_stacks.md#fixed-source-evidence) | Not covered by the description | These explain the accepted counter and example without turning internal visual bookkeeping into an extra charge. |
 
+
+<a id="psyker_warpfire_generate_souls"></a>
+
+## In Fire Reborn
+
+Full raw template and formatting: [source evidence](psyker_warpfire_generate_souls.md#original-english-template-and-reconstruction). Name hash `842629ba`. Every row uses `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Probability and gain | 10% chance to grant a Warp Charge; `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75` | on_minion_death probability 0.1; successful proc adds one charge. [Fixed source and line references](psyker_warpfire_generate_souls.md#fixed-source-evidence) | Consistent | The stated probability and base gain agree. |
+| Soulblaze kill wording | Killing an Enemy with Soulblaze; `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75` | check_proc_func accepts warpfire_burning at death from any source, or otherwise the player's own attacker with damage_types.warpfire; the marker path does not require the player's last hit. [Fixed source and line references](psyker_warpfire_generate_souls.md#fixed-source-evidence) | Cannot confirm | The English can describe Soulblaze killing Damage or a Soulblaze-bearing enemy. Accepted broader death coverage is retained as a text/source difference pending in-game comparison; no clear exclusive claim is established. |
+| Cap, range and selection | No charge-cap assumptions, range/Coherency restriction, separate gain modifier or choice boundary specified; `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75` | Expected gain assumes no truncation at the charge cap. No Coherency/distance check; increased_soul_generation outside this tree can separately add two. In Fire Reborn and Psychic Vampire are alternative choices. [Fixed source and line references](psyker_warpfire_generate_souls.md#fixed-source-evidence) | Not covered by the description | These accepted limits and scope details supplement the original wording. |
+
 ## Comparison totals
 
 The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
