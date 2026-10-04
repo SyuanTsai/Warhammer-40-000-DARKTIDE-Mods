@@ -853,6 +853,18 @@ Full raw template and formatting: [source evidence](cryptic_better_heavies.md#or
 | Windup protection and heavy damage | Uninterruptible while charging melee attacks; gain +15% Heavy Melee Damage; `ui / loc_talent_cryptic_better_heavies_desc / 668011b5` | Windup enables `uninterruptible` and `stun_immune`; melee heavy profiles receive the always-supplied `melee_heavy_damage = 0.15`. [Fixed source and line references](cryptic_better_heavies.md#fixed-source-evidence) | Consistent | The two sentences distinguish windup protection from the heavy-attack damage stat. |
 | Scope and calculation | Does not specify full-charge requirements, damage intake or other disabling actions; `ui / loc_talent_cryptic_better_heavies_desc / 668011b5` | No `auto_completed_action` requirement for damage; protection is limited to windup. Damage still applies and nets/pounces are not covered. Base 100 with same-stage 25% becomes 140. [Fixed source and line references](cryptic_better_heavies.md#fixed-source-evidence) | Not covered by the description | These are the existing condition, exception and calculation details; the English explicitly promises neither all-control immunity nor full-charge-only damage. |
 
+
+<a id="cryptic_hybrid_damage"></a>
+
+## Hybrid Combat Covenant
+
+Full raw template and formatting: [source evidence](cryptic_hybrid_damage.md#original-english-template-and-reconstruction). Name hash `4f8c78fb`. Every row uses `ui / loc_talent_cryptic_hybrid_damage_desc / dc9f61eb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Cross-type triggers, values and decay | Melee Kills increase Ranged Damage; Ranged Kills increase Melee Damage; +3%, 8s, 5 stacks each; stacks decay one at a time; `ui / loc_talent_cryptic_hybrid_damage_desc / dc9f61eb` | The two kill events grant the opposite damage buff, each with 3% per stack, a 5-stack cap and 8-second one-stack decay. [Fixed source and line references](cryptic_hybrid_damage.md#fixed-source-evidence) | Consistent | The stated trigger direction, values and sequential decay match. |
+| Separate timers and damage scope | Does not specify separate refresh timers or weapon switching; `ui / loc_talent_cryptic_hybrid_damage_desc / dc9f61eb` | New stacks refresh the corresponding timer; switching weapons does not directly clear them. Five ranged stacks take shooting damage 100→115 even with five melee stacks. [Fixed source and line references](cryptic_hybrid_damage.md#fixed-source-evidence) | Not covered by the description | These existing details explain separate accumulation and prevent combining different attack-type bonuses. |
+
 ## Comparison totals
 
 146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

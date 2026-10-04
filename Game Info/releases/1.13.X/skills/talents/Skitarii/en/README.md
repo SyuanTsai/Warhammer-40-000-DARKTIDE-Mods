@@ -78,6 +78,7 @@
 | <img src="https://github.com/user-attachments/assets/6d7a17f5-be3e-4659-bc09-84cfb22bd20f" width="32" height="32" alt="Force Distribution Actuators talent icon"> [Force Distribution Actuators](#cryptic_push_stagger_stamina) | <ul><li>At or above 50% Stamina, Pushes gain 75% Impact. Exactly 50% qualifies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="Superior Tracking Litanies talent icon"> [Superior Tracking Litanies](#cryptic_no_braced_movement_penalty) | <ul><li>Halves the movement-speed penalty while bracing or aiming down sights, and always reduces shooting Spread by 45%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="Hydraulic Impact talent icon"> [Hydraulic Impact](#cryptic_better_heavies) | <ul><li>Protects against ordinary hit interruption while charging melee attacks and grants 15% Heavy Melee Damage; full charge is not required for the damage bonus.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="Hybrid Combat Covenant talent icon"> [Hybrid Combat Covenant](#cryptic_hybrid_damage) | <ul><li>Melee kills grant Ranged Damage stacks and ranged kills grant Melee Damage stacks: 3% per stack, up to 5 of each, decaying one at a time every 8 seconds.</li></ul> | Talent |
 
 ---
 
@@ -1102,3 +1103,17 @@
 - **Exceptions**: Interruption protection applies only during the windup action. You still take damage, and this does not mean immunity to nets or pounces.
 
 [Details](cryptic_better_heavies.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_hybrid_damage"></a>
+
+### Hybrid Combat Covenant
+
+<img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="72" height="72" alt="Hybrid Combat Covenant talent icon">
+
+- **Triggers**: A melee kill adds one Ranged Damage stack; a ranged kill adds one Melee Damage stack. The two effects accumulate separately, each granting 3% per stack, up to 5 stacks.
+- **Duration**: Gaining a new stack of either type restarts that type's 8-second countdown. After you stop triggering it, one stack is lost every 8 seconds. Switching weapons does not directly remove accumulated effects.
+- **Damage example**: Five Ranged Damage stacks give 15%, taking base shooting damage from 100 to 115. Even if you also have five Melee Damage stacks, that shot still receives only the 15% Ranged Damage bonus.
+
+[Details](cryptic_hybrid_damage.md) · [Back to index](#talent-index)
