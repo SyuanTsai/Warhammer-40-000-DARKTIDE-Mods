@@ -102,3 +102,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Target Prioritization Psalms](cryptic_specials_marking.md) / `cryptic_specials_marking` | Talent |
 | [Protectorate Protocol](cryptic_disabled_allies_defense.md) / `cryptic_disabled_allies_defense` | Talent |
 | [Data Sensor Protocol](cryptic_ally_coherency_defenses.md) / `cryptic_ally_coherency_defenses` | Talent |
+| [Sequenced Charge](cryptic_strength_on_charge_gain.md) / `cryptic_strength_on_charge_gain` | Talent |

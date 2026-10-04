@@ -99,6 +99,7 @@
 | <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="Target Prioritization Psalms talent icon"> [Target Prioritization Psalms](#cryptic_specials_marking) | <ul><li>Shows outlines on living Specialists within 12.5 metres; no manual marking is required.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="Protectorate Protocol talent icon"> [Protectorate Protocol](#cryptic_disabled_allies_defense) | <ul><li>Allies requiring help in Coherency take 25% less damage. After you assist them, they gain a separate 6-second effect with 25% Damage Resistance and ordinary hit Stun immunity.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="Data Sensor Protocol talent icon"> [Data Sensor Protocol](#cryptic_ally_coherency_defenses) | <ul><li>When you or an ally in Coherency take Toughness damage, the injured player restores 25% Stamina; Health damage restores 25% Toughness. The two effects each have a 15-second cooldown.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="32" height="32" alt="Sequenced Charge talent icon"> [Sequenced Charge](#cryptic_strength_on_charge_gain) | <ul><li>Gaining at least one full Capacitance charge grants 12.5% Strength for 10 seconds. Further gains refresh the duration; gaining multiple charges at once does not multiply the bonus.</li></ul> | Talent |
 
 ---
 
@@ -1422,3 +1423,18 @@
 The verified Chinese document notes that its original wording says, in translation, “When you or … an ally take damage, allies restore …”. The beneficiary is the player who took that damage: your injury restores your own resource; an ally's injury restores that ally's resource. Recovery is not transferred to other allies.
 
 [Details](cryptic_ally_coherency_defenses.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_strength_on_charge_gain"></a>
+
+### Sequenced Charge
+
+<img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="72" height="72" alt="Sequenced Charge talent icon">
+
+- **Trigger**: Replenishing at least **1 full Capacitance charge** grants **12.5% Strength** for **10 seconds**. Adding only partial progress without completing a charge does not trigger it.
+- **Refresh**: Gaining another full charge during the effect resets the **10-second** duration. Gaining multiple charges at once does not multiply the Strength bonus.
+- **Power example**: Suppose an attack's power before the modifier is **500**. With this effect, `500 × 1.125 = 562.5`. With another **20%** modifier at the same stage, `500 × (1 + 20% + 12.5%) = 662.5`.
+- **Scope**: Strength affects the power used in damage, Impact and Cleave calculations. Actual results still depend on the weapon and target; this does not mean every final damage result increases by 12.5%.
+
+[Details](cryptic_strength_on_charge_gain.md) · [Back to index](#talent-index)

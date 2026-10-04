@@ -1106,6 +1106,18 @@ Full raw template and formatting: [source evidence](cryptic_ally_coherency_defen
 | Damage type, injured recipient and cooldowns | “When you or an Ally … take … damage, they restore …”; Toughness damage → 25% Stamina, Health damage → 25% Toughness, each 15s.; `ui / loc_talent_cryptic_ally_coherency_defenses_desc / 307b308a` | params.attacked_unit receives the recovery; the Coherency chain includes self. The two holder-side ProcBuffs use the corresponding positive damage component and separate 15-second cooldowns. [Fixed source and line references](cryptic_ally_coherency_defenses.md#fixed-source-evidence) | Consistent | The pronoun refers to the injured player, and the English explicitly includes the holder. |
 | Resource bases and shared limits | The maximum-resource bases, lethal exclusion and cross-ally cooldown sharing are not specified.; `ui / loc_talent_cryptic_ally_coherency_defenses_desc / 307b308a` | The injured player's maximum resources determine recovery; they must be alive and not will_die. Each effect shares the holder's cooldown across eligible injured players. [Fixed source and line references](cryptic_ally_coherency_defenses.md#fixed-source-evidence) | Not covered by the description | These conditions explain the recovery and cooldown boundaries without changing the stated recipient. |
 
+
+<a id="cryptic_strength_on_charge_gain"></a>
+
+## Sequenced Charge
+
+Full raw template and formatting: [source evidence](cryptic_strength_on_charge_gain.md#original-english-template-and-reconstruction). Name hash `6e7cd3d3`. Every row uses `ui / loc_talent_cryptic_strength_on_charge_gain_desc / 9e3a3df6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge gain, Strength and duration | “Gain … Strength on gaining a charge. Lasts …s”; +12.5%, 10s; `ui / loc_talent_cryptic_strength_on_charge_gain_desc / 9e3a3df6` | on_combat_ability_charge_replenished activates power_level_modifier = 0.125 for 10 seconds. [Fixed source and line references](cryptic_strength_on_charge_gain.md#fixed-source-evidence) | Consistent | The trigger, term, value and duration match the verified power effect. |
+| Full-charge threshold, refresh and power stage | The threshold, simultaneous multi-charge gain, refresh and final calculation are not specified.; `ui / loc_talent_cryptic_strength_on_charge_gain_desc / 9e3a3df6` | At least one full charge is required. Further qualifying gain refreshes one bonus; num_charges_gained does not multiply it. Power affects damage, Impact and Cleave through weapon/target-dependent calculations. [Fixed source and line references](cryptic_strength_on_charge_gain.md#fixed-source-evidence) | Not covered by the description | These details explain the charge and Strength terms without asserting a uniform final damage bonus. |
+
 ## Comparison totals
 
 187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.
