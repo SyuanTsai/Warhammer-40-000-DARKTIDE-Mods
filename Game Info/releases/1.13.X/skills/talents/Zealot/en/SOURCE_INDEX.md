@@ -15,3 +15,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Blades of Faith](zealot_throwing_knives.md) / `zealot_throwing_knives` | Blitz |
 | [Stunstorm Grenade](zealot_improved_stun_grenade.md) / `zealot_improved_stun_grenade` | Blitz |
 | [Benediction](zealot_toughness_damage_reduction_coherency_improved.md) / `zealot_toughness_damage_reduction_coherency_improved` | Aura |
+| [Beacon of Purity](zealot_corruption_healing_coherency_improved.md) / `zealot_corruption_healing_coherency_improved` | Aura |

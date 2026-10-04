@@ -57,6 +57,18 @@ Full raw template and formatting: [source evidence](zealot_toughness_damage_redu
 | Recipients and Toughness reduction |  +15% Toughness Damage Reduction for you and Allies in Coherency; augmented base Aura The Emperor's Will.; `ui / loc_talent_zealot_toughness_aura_efficiency_desc / 90d53110` | The chain includes self and Coherency allies; improved toughness_damage_taken_multiplier is 0.85, replacing the base 0.925 Aura. [Fixed source and line references](zealot_toughness_damage_reduction_coherency_improved.md#fixed-source-evidence) | Consistent | The named recipients, damage type and 15% reduction agree. The English does not promise direct Health reduction or additive base-Aura stacking. |
 | Priority, duplicates and recipient exception | No priority, duplicate-source rule, recipient keyword exception or independent-modifier calculation specified.; `ui / loc_talent_zealot_toughness_aura_efficiency_desc / 90d53110` | One winning Aura per coherency_id; improved priority 1 precedes base 2; max_stacks 1; prevent_coherency_buffs_from_other_players limits outside-player sources. [Fixed source and line references](zealot_toughness_damage_reduction_coherency_improved.md#fixed-source-evidence) | Not covered by the description | Retain 100→85 versus base92.5 and independent40%→51; these limits supplement the stated effect. |
 
+
+<a id="zealot_corruption_healing_coherency_improved"></a>
+
+## Beacon of Purity
+
+Full raw template and formatting: [source evidence](zealot_corruption_healing_coherency_improved.md#original-english-template-and-reconstruction). Name hash `f1ac826d`. Every row uses `ui / loc_talent_zealot_corruption_healing_coherency_improved_desc / afc49dc9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Fixed removal, current Wound and recipients | Heal 1.5 Corruption from the current Wound for you and Allies in Coherency every 1s.; `ui / loc_talent_zealot_corruption_healing_coherency_improved_desc / afc49dc9` | The Aura calls reduce_permanent_damage(1.5) at interval 1, bounded by the Wound floor and affecting the holder plus Coherency allies. [Fixed source and line references](zealot_corruption_healing_coherency_improved.md#fixed-source-evidence) | Consistent | The fixed amount, period, recipients and current-Wound restriction agree. |
+| Duplicates, floor details and tick phase | No unique-Aura priority, recipient keyword exception, first-tick phase or numeric floor formula stated.; `ui / loc_talent_zealot_corruption_healing_coherency_improved_desc / afc49dc9` | One Aura per coherency_id; improved priority1/base2; recipient keyword can reject others' Auras; floor51 at 200 Health/4 Wounds/one lost; first tick unobserved. [Fixed source and line references](zealot_corruption_healing_coherency_improved.md#fixed-source-evidence) | Not covered by the description | Existing 10→8.5→0 after seven recoveries and 60→51 examples supplement the correctly stated current-Wound limit. |
+
 ## Comparison totals
 
 Updated at five-item checkpoints.
