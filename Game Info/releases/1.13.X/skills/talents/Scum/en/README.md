@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="Enhanced Desperado talent icon"> [Enhanced Desperado](#broker_ability_focus_improved) | <ul><li>Activate to swap to and reload the Ranged Weapon for 10 seconds of focus: count as Dodging Ranged Attacks, Sprint without Stamina cost and gain an additive 20% Sprint Speed.</li><li>Highlight eligible enemies within 12.5 metres; Ranged kills of highlighted targets at Close Range extend the state, initially by 1 second per kill, with progressively smaller extensions after 20 seconds.</li><li>Base cooldown 45 seconds; natural replenishment pauses during the state and resumes when it ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="32" height="32" alt="Stimm Supply talent icon"> [Stimm Supply](#broker_ability_stimm_field) | <ul><li>Deploy a Stimm gas field with a 3-metre radius for 20 seconds. Operatives in it heal 0.5 Corruption every 0.25 seconds, up to 40 total, and become immune to Corruption.</li><li>If you carry a Stimm, the field also gives nearby allies its effects. Base cooldown 60 seconds; natural replenishment pauses while the field exists.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="Rampage! talent icon"> [Rampage!](#broker_ability_punk_rage) | <ul><li>Activate to refill Toughness and enter rage for 10 seconds: additive +35% Melee Power Level, additive +20% Melee Attack Speed and ×0.75 Damage taken (25% reduction from this effect alone).</li><li>Melee hits extend rage, initially by 0.3 seconds each; after every 20 seconds from activation the per-hit extension halves. Base cooldown 30 seconds, with natural replenishment paused during rage.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="Pulverising Strikes talent icon"> [Pulverising Strikes](#broker_ability_punk_rage_sub_2) | <ul><li>During rage, Cleave capacity gains an additive +50%. Gain a Melee Power stack for approximately every second rage persists: +2.5% each, up to 10 stacks (+25%).</li><li>With rage's base +35% Melee Power Level, these two effects give at most +60% Power Level, not a guaranteed +60% final Damage.</li></ul> | Ability |
 
 ---
 
@@ -177,3 +178,19 @@
 - **Immunity and cooldown:** rage grants Stun and Slowdown immunity. Natural replenishment for the base 30-second cooldown begins after rage ends.
 
 [Details](broker_ability_punk_rage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_2"></a>
+
+### Pulverising Strikes
+
+<img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="72" height="72" alt="Pulverising Strikes talent icon">
+
+- **Cleave example:** during rage, Damage and Stagger Cleave capacities each increase by 50%; an initial capacity of 10 becomes 15. Actual enemies Cleaved still depend on enemy mass and weapon limits.
+
+- **Gradually increasing Power:** gain one Melee Power stack for approximately every second rage persists. Each grants +2.5%, up to 10 stacks for a maximum +25%.
+
+- **Combined with rage:** if you have rage's own +35% Melee Power Level, counting only these effects at the stack cap gives 35% + (10 × 2.5%) = 60% Power Level modifier. This is not +60% final Damage. For example, Power 500 becomes 500 × 1.6 = 800.
+
+[Details](broker_ability_punk_rage_sub_2.md) · [Back to index](#talent-index)

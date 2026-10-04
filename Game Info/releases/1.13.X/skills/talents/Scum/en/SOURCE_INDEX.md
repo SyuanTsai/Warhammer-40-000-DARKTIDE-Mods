@@ -21,3 +21,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Enhanced Desperado](broker_ability_focus_improved.md) / `broker_ability_focus_improved` | Ability |
 | [Stimm Supply](broker_ability_stimm_field.md) / `broker_ability_stimm_field` | Ability |
 | [Rampage!](broker_ability_punk_rage.md) / `broker_ability_punk_rage` | Ability |
+| [Pulverising Strikes](broker_ability_punk_rage_sub_2.md) / `broker_ability_punk_rage_sub_2` | Ability |

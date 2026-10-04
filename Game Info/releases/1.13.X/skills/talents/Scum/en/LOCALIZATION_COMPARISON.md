@@ -118,6 +118,18 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage.md#
 | Suppression immunity | Suppression immune; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | The state includes stun_immune and slowdown_immune but no suppression_immune; the accepted suppression handler checks suppression_immune to skip accumulation. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | No corresponding implementation evidence found | Both original languages promise this effect, but the existing record does not establish it. The implementation/text gap remains unresolved without new tracing. |
 | Supplementary timing and immunity | No exact diminishing formula, Slowdown immunity, weapon swap or pause rule; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | Extension = 0.3/2^floor(elapsed/20); state has slowdown_immune; activation swaps to Melee; natural replenishment resumes after rage ends. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | Not covered by the description | These preserve original examples and limits; 20 seconds is an extension-diminution threshold, not a total duration cap. |
 
+
+<a id="broker_ability_punk_rage_sub_2"></a>
+
+## Pulverising Strikes
+
+Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub_2.md#original-english-template-and-reconstruction). Name hash `fb15cb7e`. Every row uses `ui / loc_talent_broker_ability_punk_rage_sub_2_desc / fb3a2cef`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Cleave and time-driven Power | +50% Cleave while Rampage! is active; +2.5% Melee Power per active second, up to 10 times; `ui / loc_talent_broker_ability_punk_rage_sub_2_desc / fb3a2cef` | rage_cleave adds 0.5 to attack/impact hit-mass capacities; time-based ramping stacks add melee_power_level_modifier 0.025, max 10. [Fixed source and line references](broker_ability_punk_rage_sub_2.md#fixed-source-evidence) | Consistent | The English active-state condition, per-second driver, amount and cap agree with accepted evidence. |
+| Calculation and timing limits | No separate mass-budget, additive base-Power or update/cleanup detail; `ui / loc_talent_broker_ability_punk_rage_sub_2_desc / fb3a2cef` | Damage/Stagger Cleave capacities 10→15; Power stacks add 25% to base rage 35% for 60%, giving Power 500→800 before curves; stacks stop with rage and timing can affect reaching the cap. [Fixed source and line references](broker_ability_punk_rage_sub_2.md#fixed-source-evidence) | Not covered by the description | Existing calculations and limits explain omitted details; no fixed final-Damage percentage or guaranteed cap is inferred. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
