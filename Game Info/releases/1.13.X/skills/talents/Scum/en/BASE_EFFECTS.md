@@ -67,3 +67,17 @@ These effects come from the character's base configuration. Combat Ability, Blit
 [Source evidence and example assumptions](broker_passive_improved_sprint_dodge.md)
 
 ---
+
+<a id="broker_stimm_description_talent"></a>
+
+## Cartel Special: dedicated stimm
+
+- **Brewing**: Choose effects from the dedicated Stimm recipes. Recipes have their own 30-point budget, separate from ordinary talents.
+
+- **Equipment condition**: Select at least one recipe to obtain the dedicated Stimm. Recipe effects apply after using it.
+
+- **Recipe contents**: Combine effects such as Attack Speed, Power, Toughness and Combat Ability Regeneration. See the [Stimm recipes](README.md#broker_stimm_activation_talent) for detailed values.
+
+[Source evidence and example assumptions](broker_stimm_description_talent.md)
+
+---
