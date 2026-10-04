@@ -350,6 +350,7 @@
 - Lightning Reflexes - 閃電反射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_block_has_chance_to_stun`，hash `c728ed68`；英文／繁中RAW配對確認。
 - High Voltage - 高壓電
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_bonus_vs_electrocuded`，hash `7c8a57a6`；英文／繁中RAW配對確認。
 - Falter - 踉蹌
 - Overwhelming Force - 壓倒性的武力
 - Counterattack - 反擊

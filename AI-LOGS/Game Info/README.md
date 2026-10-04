@@ -180,3 +180,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [敏捷全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-AGILE_ACCEPTANCE.json)
 
 - [致命精準全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DEADLY-ACCURATE_ACCEPTANCE.json)
+
+- [高壓電全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json)

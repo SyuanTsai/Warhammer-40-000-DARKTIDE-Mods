@@ -1,0 +1,457 @@
+{
+  "date": "2026-10-04",
+  "blessing": "high-voltage",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/高壓電/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+    "weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted",
+    "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+    "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+    "weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted"
+  ],
+  "added_binding_count": 8,
+  "total_variants": 5,
+  "total_bindings": 8,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": {
+      "entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted.md",
+        "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted.md"
+      ],
+      "related_artifacts": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-evidence.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-draft.md",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-ui-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-own-tier-diff.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-stat-consumer-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-math-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-resume-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-shout-and-duration-diff.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-extension-raw-verification.json"
+      ],
+      "shared_map": [
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json"
+      ],
+      "reverse_weapon_pages": [
+        "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md"
+      ],
+      "counts": {
+        "formal_entry_pages": 11,
+        "variants": 5,
+        "weapon_bindings": 8,
+        "reverse_weapon_pages": 5,
+        "hashed_files": 30
+      }
+    },
+    "source_and_inventory": {
+      "name_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded",
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "kind": "mixed",
+      "variant_ids": [
+        "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+        "weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted",
+        "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+        "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+        "weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted"
+      ],
+      "weapon_ids": [
+        "powermaul_p1",
+        "powermaul_p2",
+        "powermaul_shield_p1",
+        "shotgun_p4",
+        "shotpistol_shield_p1"
+      ],
+      "binding_marks": [
+        "powermaul_p1_m1",
+        "powermaul_p1_m2",
+        "powermaul_p2_m1",
+        "powermaul_shield_p1_m1",
+        "powermaul_shield_p1_m2",
+        "shotgun_p4_m1",
+        "shotgun_p4_m2",
+        "shotpistol_shield_p1_m1"
+      ],
+      "map_matches_config": true,
+      "reverse_page_links_match_bindings": true,
+      "source_citation_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "broken_local_markdown_links": 0,
+      "checked_local_links": 138,
+      "source_link_sha_mismatches": 0,
+      "tier_values": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "wrapper_summary": "Each of five independent wrappers has a held-slot gate and conditional same-key .5 fallback; the own-tier damage_vs_electrocuted override supplies +10/+15/+20/+25%, not an additive .5."
+    },
+    "findings": [
+      "Player trigger and common effect match the approved config/draft and map; five family-specific summaries match the formal README, compatibility table, map variants, and reverse weapon pages. Inventory is five variants and eight actual marks across five weapon families.",
+      "All five own trait tiers use +10/+15/+20/+25%; each formatter reads its weapon implementation’s own override. The live target condition is any of six electrocuted group keywords, without an owner/source-weapon gate, and the stat enters the general damage pool. Under stated assumptions, 100→125 and 120→145 correctly show +25 absolute damage and 20.83% relative increase in the latter case.",
+      "Powermaul P1 M1/M2 each use five damage instances; each resolves damage before adding sticky electrocuted. The first cannot use its own later status, and a later instance in the same update loop is not guaranteed to see the refreshed keyword. The target status lasts .7 seconds per stack up to five (3.5 seconds), shares one start time, and refreshes it on additions including at cap.",
+      "Powermaul P2 M1 resolves damage before its primer: an already-electrocuted target gets the 3.5-second keyword-bearing interval stun; an un-electrocuted target gets only the .1-second basic stun without that keyword. Shotgun P4 M1 applies its 3-second electrocuted stun after the pellet batch; its interval damage skips a staggered chaos_poxwalker_bomber while the keyword may remain. P4 M2 applies 8-second +.25 rending only, with no electrocuted keyword.",
+      "Powermaul-shield P1 shout applies no electrocuted status and has zero near/far armor attack modifiers. Player text limits no-life-damage to cases without another modifier change and makes no positive damage claim from Attack.execute alone.",
+      "Ordinary/charged attacks, push follow-ups, zero-damage pushes, weapon-specific special attacks, first application, refresh/removal, switching, and all eight model restrictions are covered without treating visual shock or rending as electrocuted.",
+      "English and zh-TW RAW pairs use the same localization resource/hash; the source key spelling electrocuded and trait-ID suffix spelling electrocuted are preserved. Icon path, ID, and attachment URL remain distinct and match the verified image receipt. FASTER remains unverified and is not claimed as enabled."
+    ],
+    "resolved_corrections_verified": [
+      "Shield-shout near/far armor attack modifiers are zero; no direct life damage is claimed absent another modifier change.",
+      "Powermaul sticky duration is .7 seconds per current stack, up to five, with a shared refreshed start time rather than independent timers.",
+      "Shotgun special-stun interval damage skips a staggered poxwalker bomber while electrocuted keyword may remain."
+    ],
+    "raw_localization": {
+      "resource": "content/localization/items",
+      "name_hash": "7c8a57a6",
+      "description_hash": "482e94a8",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "result": "Same-resource English/zh-TW name and description pairs match their recorded hashes; static formatter reconstruction agrees with five own-tier values."
+    },
+    "image": {
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "icon_id": "weapon_trait_222",
+      "attachment": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "sha256": "698238f88b87abddf6e3d6e8320feaab73b3b1b5dad1f70bfb761ac5d61573b3",
+      "verified": true
+    },
+    "faster_status": "unverified",
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/DAMAGE_PERCENTAGE_REVIEW.md": "c3aa1084a381567ff7c70d739be778b2d20b3721d0df306601fe74785f65a926",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/LOCALIZATION_COMPARISON.md": "6f34aafdc49b6dd4856a2ed6da618ace69923029330e6492ec83b0fefd5db60e",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/README.md": "93427d863aea6e756fff9159f1ad1ab9697847d0a476aaf66445fc9ed59f9a1b",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/SOURCE_INDEX.md": "d2c07d5f06ea54c6f8066c1f5cc71b895560c4c420f8a1d544b81028b92f6359",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/TIER_VALUES.md": "da55d4a0ff9426ac5070a4fade2e24e6dd483ddbe92105559a49900fce80c849",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/WEAPON_COMPATIBILITY.md": "17487aafa6be61be2c5a8ef16aa9243e89739f6c91f12abad23107ce4787cfa4",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted.md": "07e310325ab0ef66bbcb8a838f28f7692dd44ee9de5fe2f300ca77c5488ea27c",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted.md": "70d51c28645e0f378147803e754a0b1956e4450eb8dcb6a2039a523c1afe1879",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted.md": "a1f237212b20bb6ad9a99040a6bda5c5d1bcd5a87b58d156bc6eb3438c2c6ff8",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted.md": "4f3117638451a554219b7b70ddf2afdc904256aba908761090e09c16ffabedfe",
+      "Game Info/releases/1.13.X/blessings/entries/高壓電/weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted.md": "83c51afe31f5f40e304446d81774171e0946acf90833de4e6e0d763130d78b4e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "3f0d3fb5421f29fd06f5cded31127464ff55deaccc07bb256227196c2cb0b580",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "a71d1e47acee9348008d749ee53125cba94810fd183cb03f0a6b657116e5480a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "a6b95809bad4ee16743f12afea60d17f34fc6f0ec9d086864d8a8c2cbd36d36f",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "94a7da3774179295e3cb57701e7c8d7f2d88812a51e52b5989b0c8a9a333054e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "86ea649456781f7641b7f68c38a98b635b66ccd3c4fd597ee82ab10126e6cc30",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "66398e320b62c2b58c35f44b9c8749cf3348d55434b555ee76ce9040215e00c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-config.json": "22b1d0da62d478d871b8ac742415fbffc6ef409ed68bad56a5621237e05bdade",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-evidence.json": "9a6f0ffa5fb6bf073b947c835c1dfe398f39194fa419130ec63de1b2761ec2bf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-agent-draft.md": "ca789299aa764e5ab8bed75a0ab1dbd345782575fede0ca721a12a3e42bda89f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-config.json": "75661b178ba9b92671246d8599c43099544ebbee77bb5d4cae9cdfae16663681",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-extension-draft.json": "0294a74bd188ce0069717444ff86209b7ae3a20efc87dc63dafc179b17227ef9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-image.json": "916b9815e5a5a3c043f38bb76966de0dcdbaf5b85ce9753bd296ad1b133f7902",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-ui-review.json": "d53405a0d67081d47ef6ee6d60850915602dabaf398fb58fe0d3503d7e71962d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-own-tier-diff.json": "9828c108021068d13a9ab8dc31ffc797357595d1db8d43034b26c737e9341bf2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-stat-consumer-review.json": "84eb099b3def70ccc68062da1b1d419a8cec66a33504a3f3db455d60781606b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-math-review.json": "24c75969cdd264e5a8385b283a179070e3b2b38c057a9e584874d3b804c69eaa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-resume-review.json": "35625c6fbe1bffeec209283f1c13d9812cb25f877722de882680574c1f339dd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-shout-and-duration-diff.json": "228ebeeb606fe5b1e679af905cd8095d91e0975f3673768aeffb2f70dbcd2299",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-extension-raw-verification.json": "281494f4c25fd1759369dd3778b001c33e9109b1e0fc68b4400d39275c43e627"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "high-voltage",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_222.png",
+      "attachment": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5974955093",
+      "acquired_date": "2026-10-04",
+      "sha256": "698238f88b87abddf6e3d6e8320feaab73b3b1b5dad1f70bfb761ac5d61573b3",
+      "content_type": "image/png",
+      "size": 7187,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "高壓電祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Main visually compared original PNG and public issue14 attachment at original128x128; white/gray broad block with central stepped light and dark opposing wedges on transparent border matches exactly."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 22,
+      "tables": 20,
+      "rows": 329,
+      "lists": 98,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 92,
+      "source_files": 39,
+      "bindings": 397,
+      "variants": 205,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 20,
+      "source_object_cache": {
+        "cache_hits": 39,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 23,
+      "local_references": 632,
+      "remote_references": 401,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 8,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-runtime-alias-tool-repair-full-scan.json",
+        "sha256": "c2e69be13f8f40f3ec2e7849b2e2229c523d05b1448f61d4d4764d6a0e0d98b3",
+        "trigger": "opening-salvo-runtime-alias-tool-repair"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "focused_global_uniqueness_and_exact_partition": true
+  },
+  "remaining_counts": {
+    "name_groups": 113,
+    "not_started_name_groups": 113,
+    "partial_name_groups": 0,
+    "remaining_variants": 400,
+    "remaining_bindings": 788,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "ec0150688aeb80c1a8ad78323fe4a6bc2b606c94c3221406df57857c6644ab36"
+  },
+  "previous_local_commit": "35148d02bb9b8c56874d40876be7eec837f9dacd",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 5,
+    "binding_count": 8,
+    "primary_receipt": "high-voltage-primary-math-review.json",
+    "conditional_override_replaces_fallback": true,
+    "target_keyword_timing_reviewed": true,
+    "shield_shout_zero_adm_corrected": true,
+    "duration_per_stack_reviewed": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-extension-draft.json",
+      "sha256": "0294a74bd188ce0069717444ff86209b7ae3a20efc87dc63dafc179b17227ef9"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 8,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-ui-review.json",
+      "sha256": "d53405a0d67081d47ef6ee6d60850915602dabaf398fb58fe0d3503d7e71962d"
+    },
+    "bindings": [
+      {
+        "weapon_id": "powermaul_p1",
+        "mark_id": "powermaul_p1_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_p1_m1",
+          "loc_weapon_pattern_powermaul_p1_m1",
+          "loc_weapon_mark_powermaul_p1_m1"
+        ],
+        "name_zh_tw": "電擊錘 阿格尼 Mk Ia",
+        "name_en": "Shock Maul Agni Mk Ia",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1520,
+        "append_line": 1522
+      },
+      {
+        "weapon_id": "powermaul_p1",
+        "mark_id": "powermaul_p1_m2",
+        "trait_id": "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_p1_m2",
+          "loc_weapon_pattern_powermaul_p1_m2",
+          "loc_weapon_mark_powermaul_p1_m2"
+        ],
+        "name_zh_tw": "電擊錘 軍務部 Mk III",
+        "name_en": "Shock Maul Munitorum Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1607,
+        "append_line": 1609
+      },
+      {
+        "weapon_id": "powermaul_p2",
+        "mark_id": "powermaul_p2_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_p2_m1",
+          "loc_weapon_pattern_powermaul_p2_m1",
+          "loc_weapon_mark_powermaul_p2_m1"
+        ],
+        "name_zh_tw": "法務官電擊鎚 布蘭克斯 Mk III",
+        "name_en": "Arbites Shock Maul Branx Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 2125,
+        "append_line": 2127
+      },
+      {
+        "weapon_id": "powermaul_shield_p1",
+        "mark_id": "powermaul_shield_p1_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_shield_p1_m1",
+          "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "loc_weapon_mark_powermaul_shield_p1_m1"
+        ],
+        "name_zh_tw": "法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI",
+        "name_en": "Shock Maul and Suppression Shield Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1610,
+        "append_line": 1612
+      },
+      {
+        "weapon_id": "powermaul_shield_p1",
+        "mark_id": "powermaul_shield_p1_m2",
+        "trait_id": "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_shield_p1_m2",
+          "loc_weapon_pattern_powermaul_shield_p1_m1",
+          "loc_weapon_mark_powermaul_shield_p1_m2"
+        ],
+        "name_zh_tw": "法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI",
+        "name_en": "Shock Maul and Suppression Shield Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 1828,
+        "append_line": 1830
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m1",
+          "loc_weapon_pattern_shotgun_p4_m1",
+          "loc_weapon_mark_shotgun_p4_m1"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk III",
+        "name_en": "Exterminator Shotgun Exaction Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1076,
+        "append_line": 1078
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p4_m2",
+          "loc_weapon_pattern_shotgun_p4_m2",
+          "loc_weapon_mark_shotgun_p4_m2"
+        ],
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk VIII",
+        "name_en": "Exterminator Shotgun Exaction Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1064,
+        "append_line": 1066
+      },
+      {
+        "weapon_id": "shotpistol_shield_p1",
+        "mark_id": "shotpistol_shield_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted",
+        "loc_ids": [
+          "loc_weapon_family_shotpistol_shield_p1_m1",
+          "loc_weapon_pattern_shotpistol_shield_p1_m1",
+          "loc_weapon_mark_shotpistol_shield_p1_m1"
+        ],
+        "name_zh_tw": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+        "name_en": "Subductor Shotpistol and Riot Shield Judgement Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1533,
+        "append_line": 1535
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "status": "scoped_to_exact_name_group",
+    "name_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded",
+    "actual_variants": 5,
+    "actual_bindings": 8,
+    "note": "Only actual inventory bindings are claimed."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-resume-review.json",
+      "sha256": "35625c6fbe1bffeec209283f1c13d9812cb25f877722de882680574c1f339dd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-shout-and-duration-diff.json",
+      "sha256": "228ebeeb606fe5b1e679af905cd8095d91e0975f3673768aeffb2f70dbcd2299"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-own-tier-diff.json",
+      "sha256": "9828c108021068d13a9ab8dc31ffc797357595d1db8d43034b26c737e9341bf2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-stat-consumer-review.json",
+      "sha256": "84eb099b3def70ccc68062da1b1d419a8cec66a33504a3f3db455d60781606b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-math-review.json",
+      "sha256": "24c75969cdd264e5a8385b283a179070e3b2b38c057a9e584874d3b804c69eaa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/high-voltage-primary-ui-review.json",
+      "sha256": "d53405a0d67081d47ef6ee6d60850915602dabaf398fb58fe0d3503d7e71962d"
+    }
+  ],
+  "primary_review_method": "Reuse unchanged fixed-SHA common evidence under actual applicability conditions; independently review all own tiers/wrappers, actual model wiring, raw pairs, status consumers, weapon-specific state timing and normalized examples. Corrected zero-armor-damage shout and shared duration_per_stack timer before formal peer.",
+  "prior_reviewed_content_unchanged": {
+    "blessings": 53,
+    "variants": 200,
+    "bindings": 389,
+    "verified": true
+  }
+}

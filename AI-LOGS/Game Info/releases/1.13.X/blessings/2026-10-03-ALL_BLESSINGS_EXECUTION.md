@@ -239,3 +239,7 @@
 - 第7輪三項已Commit後完整掃描通過：gets-hot (`861b87660d4c638bd4e444fff0a9db8a45d3cd11`)、precognition (`b9d83d871e8165726b45349b99554b13de9bb328`)、agile (`16983ffe34399e8ad5b11166b5f5cad820af889e`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-007-full-scan.json`／SHA-256 `61a9d3451bbae4b425a544f95c5b3be7a9df9d326fefd777a9e2c3537b166fca`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [致命精準](2026-10-03-DEADLY-ACCURATE_ACCEPTANCE.json)：新增5變體、12型號關聯；共5變體、12關聯。
+
+- 開啟齊射雷射槍實際選用自動槍 Buff 別名；僅在 ignored 產生器增加實際 Buff ID／來源的可選輸入，預設不變。修補後立即完整掃描通過：AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-runtime-alias-tool-repair-full-scan.json／SHA-256 `c2e69be13f8f40f3ec2e7849b2e2229c523d05b1448f61d4d4764d6a0e0d98b3`；2389段來源、437來源檔案、605份祝福文件，Game Info既有1、AI-LOGS既有8、新增0。
+
+- [高壓電](2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json)：新增5變體、8型號關聯；共5變體、8關聯。

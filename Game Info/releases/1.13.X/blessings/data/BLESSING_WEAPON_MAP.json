@@ -714,6 +714,23 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
       "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加；I–IV：電能步槍30／40／50／60%，其餘四類70／80／90／100%。此值不乘整次命中傷害。"
+    },
+    {
+      "id": "high-voltage",
+      "name_zh_tw": "高壓電",
+      "name_en": "High Voltage",
+      "name_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded",
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "name_hash": "7c8a57a6",
+      "description_hash": "482e94a8",
+      "page": "entries/高壓電/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "effect": "持用適用武器攻擊已有電擊狀態的目標，I–IV 級增加一般傷害加算池 +10%／+15%／+20%／+25%；不限制電擊施加者。",
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -13469,6 +13486,206 @@
       "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
       "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加70／80／90／100%（I–IV）；不乘整次命中傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/高壓電/weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tiers": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "stat_key": "damage_vs_electrocuted",
+        "duration_seconds": null,
+        "cooldown_seconds": null,
+        "condition": "matching item slot held and live electrocuted group keyword at damage calculation"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 575,
+        "end_line": 616
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 103,
+        "end_line": 111
+      },
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "description_hash": "482e94a8",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "effect": "充能黏附特攻先結算傷害再施加電擊；目標層數延長電擊期限，不疊加祝福數值。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted",
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/高壓電/weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tiers": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "stat_key": "damage_vs_electrocuted",
+        "duration_seconds": null,
+        "cooldown_seconds": null,
+        "condition": "matching item slot held and live electrocuted group keyword at damage calculation"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 203,
+        "end_line": 242
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 90,
+        "end_line": 98
+      },
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "description_hash": "482e94a8",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "effect": "特攻命中已電擊目標可施加電擊間隔效果；未電擊目標只取得基本暈眩。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_shield_p1",
+      "page": "entries/高壓電/weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tiers": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "stat_key": "damage_vs_electrocuted",
+        "duration_seconds": null,
+        "cooldown_seconds": null,
+        "condition": "matching item slot held and live electrocuted group keyword at damage calculation"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_shield_p1.lua",
+        "start_line": 545,
+        "end_line": 586
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_shield_p1_buff_templates.lua",
+        "start_line": 206,
+        "end_line": 214
+      },
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "description_hash": "482e94a8",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "effect": "盾牌喊聲不施加電擊；未有其他倍率改變時不造成生命傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+      "blessing_id": "high-voltage",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/高壓電/weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tiers": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "stat_key": "damage_vs_electrocuted",
+        "duration_seconds": null,
+        "cooldown_seconds": null,
+        "condition": "matching item slot held and live electrocuted group keyword at damage calculation"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 677,
+        "end_line": 716
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 37,
+        "end_line": 45
+      },
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "description_hash": "482e94a8",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "effect": "鐵腕 Mk III 特殊彈在全輪傷害後施加電擊；Mk VIII 特殊彈施加破甲，沒有電擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted",
+      "blessing_id": "high-voltage",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/高壓電/weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tiers": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "stat_key": "damage_vs_electrocuted",
+        "duration_seconds": null,
+        "cooldown_seconds": null,
+        "condition": "matching item slot held and live electrocuted group keyword at damage calculation"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 957,
+        "end_line": 998
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 53
+      },
+      "description_key": "loc_trait_bespoke_damage_bonus_vs_electrocuded_desc",
+      "description_hash": "482e94a8",
+      "icon": "https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_222",
+      "effect": "射擊及盾擊不自行施加電擊；重盾擊傷害可對已有電擊目標受益。"
     }
   ],
   "bindings": [
@@ -18916,6 +19133,118 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
         "import_line": 15,
         "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1612
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1830
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "high-voltage",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/damage_bonus_vs_electrocuded",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]
