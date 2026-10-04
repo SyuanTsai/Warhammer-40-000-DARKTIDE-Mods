@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="Adrenaline Smiter talent icon"> [Adrenaline Smiter](#broker_keystone_adrenaline_junkie_sub_2) | <ul><li>Only Melee kills grant Adrenaline: ordinary kills grant 4 additional stacks, and Elite kills grant another 10.</li><li>Non-killing Melee hits grant no stacks; Critical kills retain the core's 1 additional stack.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="Alley Rat talent icon"> [Alley Rat](#broker_passive_longer_dodges) | <ul><li>Increase Dodge Distance by 50%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="Quick and Deadly talent icon"> [Quick and Deadly](#broker_passive_close_range_damage_on_dodge) | <ul><li>After a Successful Dodge, gain 15% Close Range Damage for 3 seconds; the bonus falls off with distance.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="A Tertium Welcome talent icon"> [A Tertium Welcome](#broker_passive_first_target_damage) | <ul><li>Each Melee attack deals 15% more Melee Damage to its first Enemy hit.</li></ul> | Talent |
 
 ---
 
@@ -636,3 +637,16 @@
 - **Close-range example**: with this effect alone, base Damage of 100 becomes 115. With an existing 25% Damage bonus at the same stage, the result is 100 × (1 + 25% + 15%) = 140.
 
 [Details](broker_passive_close_range_damage_on_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_first_target_damage"></a>
+
+### A Tertium Welcome
+
+<img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="72" height="72" alt="A Tertium Welcome talent icon">
+
+- **Affected target**: the first target hit by each Melee attack takes 15% more Damage. Later enemies cleaved by the same attack do not receive this bonus.
+- **Damage example**: if base Damage to the first target is 100, this effect alone gives 100 × 1.15 = 115. With an existing 25% Damage bonus at the same stage, it gives 100 × (1 + 25% + 15%) = 140.
+
+[Details](broker_passive_first_target_damage.md) · [Back to index](#talent-index)

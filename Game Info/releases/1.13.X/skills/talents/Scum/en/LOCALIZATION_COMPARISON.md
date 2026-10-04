@@ -434,6 +434,18 @@ Full raw template and formatting: [source evidence](broker_passive_close_range_d
 | Successful Dodge trigger, amount, and duration | +15% Close Range Damage for 3s after a Successful Dodge; `ui / loc_talent_broker_passive_close_range_damage_on_dodge_desc / 0410a6ec` | `on_successful_dodge` activates `damage_near = 0.15` for `active_duration = 3`; the Damage calculation is not restricted to Ranged attacks. [Fixed source and line references](broker_passive_close_range_damage_on_dodge.md#fixed-source-evidence) | Consistent | The English states the matching trigger, amount, and duration and does not claim Ranged-only scope. |
 | Distance falloff, combination, and refresh | No falloff formula, additive-stage, or retrigger details are stated; `ui / loc_talent_broker_passive_close_range_damage_on_dodge_desc / 0410a6ec` | The full 15% applies through 12.5 m, falls to zero at 30 m using the square-root interpolation, and adds to `damage_stat_buffs`. Retriggering resets the 3-second duration without stacking. [Fixed source and line references](broker_passive_close_range_damage_on_dodge.md#fixed-source-evidence) | Not covered by the description | These explain the verified examples and timer behavior without contradicting the short wording. |
 
+
+<a id="broker_passive_first_target_damage"></a>
+
+## A Tertium Welcome
+
+Full raw template and formatting: [source evidence](broker_passive_first_target_damage.md#original-english-template-and-reconstruction). Name hash `48e421bf`. Every row uses `ui / loc_talent_broker_passive_first_target_damage_desc / 4ebbdbb2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| First target of each Melee attack | +15% Melee Damage on first Enemy hit with each attack; `ui / loc_talent_broker_passive_first_target_damage_desc / 4ebbdbb2` | The permanent 0.15 modifier requires both `is_first_target` and `is_melee_attack`. [Fixed source and line references](broker_passive_first_target_damage.md#fixed-source-evidence) | Consistent | The English correctly identifies the amount, attack type, and first-target restriction. |
+| Damage combination and permanent effect | No additive-stage, stack, timer, or cooldown details are stated; `ui / loc_talent_broker_passive_first_target_damage_desc / 4ebbdbb2` | The modifier adds at the Damage-bonus stage and has no stacks, duration, or cooldown. [Fixed source and line references](broker_passive_first_target_damage.md#fixed-source-evidence) | Not covered by the description | These supplement the wording and support the original Damage example. |
+
 ## Comparison totals
 
 The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
