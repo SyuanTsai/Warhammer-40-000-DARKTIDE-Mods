@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="32" height="32" alt="Medicae Servo-Skull talent icon"> [Medicae Servo-Skull](#cryptic_servo_skull_inject_ally) | <ul><li>Summon an additional Medicae Servo-Skull to rescue allies who need assistance.</li><li>After rescue, grant 5 seconds of Toughness Damage Reduction and Toughness restoration.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc" width="32" height="32" alt="Arc Grenades talent icon"> [Arc Grenades](#cryptic_grenade_ability_arc_grenade) | <ul><li>After detonation, select up to 4 initial targets within 10m; arcs chain to nearby enemies and Electrocute them.</li><li>Each Elite or Specialist kill restores 0.04 charges of Capacitance.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152" width="32" height="32" alt="Artificer Servo-Skull talent icon"> [Artificer Servo-Skull](#cryptic_servo_skull_improved) | <ul><li>A Servo-Skull follows you permanently and can be ordered to shoot enemies or perform data interrogation.</li><li>The base Servo-Skull bonuses become permanent; hits also increase enemy Damage taken and build Burn stacks.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="32" height="32" alt="Kinetic Repulsion talent icon"> [Kinetic Repulsion](#cryptic_force_field_capacitance_restore) | <ul><li>Integrated Refraction Emitter restores Capacitance when it absorbs Ranged Attacks.</li><li>Each absorbed attack restores 0.025 charges, up to 0.75 per field.</li></ul> | Blitz |
 
 ---
 
@@ -94,3 +95,18 @@
 - **Example**: Starting with 100 damage per shot and a 3s shooting cooldown, the permanent bonus gives 125 damage per shot and a 1.5s cooldown. When the skull hits an enemy, that enemy takes 15% more damage for 5s and gains 1 Burn stack. Burn reaches at most 8 stacks; at the cap, further hits reset its duration.
 
 [Details](cryptic_servo_skull_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_force_field_capacitance_restore"></a>
+
+### Kinetic Repulsion
+
+<img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="72" height="72" alt="Kinetic Repulsion talent icon">
+
+- **How it works**: Each Ranged Attack absorbed by Integrated Refraction Emitter restores 0.025 charges of Capacitance, up to 0.75 charges per field.
+- **Example**: Absorbing 10 Ranged Attacks restores 0.25 charges. At 30 attacks, the 0.75-charge cap is reached; further attacks do not increase the total.
+- **How it works**: This restores Combat Ability Capacitance, without refilling force-field uses already spent.
+- **Point example**: At 50 points per Capacitance charge, each absorbed attack restores 50 × 2.5% = 1.25 points; 30 attacks restore at most 50 × 75% = 37.5 points. Recovery is based on attack count, so a higher-damage attack does not restore more.
+
+[Details](cryptic_force_field_capacitance_restore.md) · [Back to index](#talent-index)
