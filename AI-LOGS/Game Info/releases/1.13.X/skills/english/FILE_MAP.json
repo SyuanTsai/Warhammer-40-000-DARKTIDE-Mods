@@ -4368,7 +4368,12 @@
         "psyker_crits_regen_toughness_movement_speed",
         "psyker_elite_kills_add_warpfire",
         "psyker_chance_to_vent_on_kill",
-        "psyker_crits_empower_next_attack"
+        "psyker_crits_empower_next_attack",
+        "psyker_spread_warpfire_on_kill",
+        "psyker_venting_improvements",
+        "psyker_kills_stack_other_weapon_damage",
+        "psyker_warp_charge_reduces_toughness_damage_taken",
+        "psyker_improved_dodge"
       ],
       "checks": []
     },
@@ -4430,7 +4435,12 @@
         "psyker_crits_regen_toughness_movement_speed",
         "psyker_elite_kills_add_warpfire",
         "psyker_chance_to_vent_on_kill",
-        "psyker_crits_empower_next_attack"
+        "psyker_crits_empower_next_attack",
+        "psyker_spread_warpfire_on_kill",
+        "psyker_venting_improvements",
+        "psyker_kills_stack_other_weapon_damage",
+        "psyker_warp_charge_reduces_toughness_damage_taken",
+        "psyker_improved_dodge"
       ],
       "checks": []
     },
@@ -4492,7 +4502,12 @@
         "psyker_crits_regen_toughness_movement_speed",
         "psyker_elite_kills_add_warpfire",
         "psyker_chance_to_vent_on_kill",
-        "psyker_crits_empower_next_attack"
+        "psyker_crits_empower_next_attack",
+        "psyker_spread_warpfire_on_kill",
+        "psyker_venting_improvements",
+        "psyker_kills_stack_other_weapon_damage",
+        "psyker_warp_charge_reduces_toughness_damage_taken",
+        "psyker_improved_dodge"
       ],
       "checks": []
     },
@@ -4554,7 +4569,12 @@
         "psyker_crits_regen_toughness_movement_speed",
         "psyker_elite_kills_add_warpfire",
         "psyker_chance_to_vent_on_kill",
-        "psyker_crits_empower_next_attack"
+        "psyker_crits_empower_next_attack",
+        "psyker_spread_warpfire_on_kill",
+        "psyker_venting_improvements",
+        "psyker_kills_stack_other_weapon_damage",
+        "psyker_warp_charge_reduces_toughness_damage_taken",
+        "psyker_improved_dodge"
       ],
       "checks": []
     },
@@ -5173,9 +5193,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8a518c8eee2d84f77986922379952f54c2b94e04",
       "chinese_sha256": "36ab12eac6a443845e37fdf4fac51e63782a01637f9e84a9cc8e23c63febcec4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_improved_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md",
@@ -5246,9 +5273,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "dcf8652b0442d6a129b93c72552894304e51a1cb",
       "chinese_sha256": "5854360b2ad305dcbf58e81e2c441f42fbbc777de5fbb970e00712f46592e406",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_kills_stack_other_weapon_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_increased_duration.md",
@@ -5596,9 +5630,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "db8baaa28a8ba3bda695c41eb4670f7c960a44fe",
       "chinese_sha256": "3b20643725848bcdb07e771db417607bc366b741c75673a80e38759a838fb957",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_spread_warpfire_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_stat_mix.md",
@@ -5726,9 +5767,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "af522d56a66f35182c1d1739d6949a4cb8be0647",
       "chinese_sha256": "fa9e88a323259c55cd0f40f31edc1bdff68adfdde338764d67ff2559ae309c46",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_venting_improvements"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warp_attacks_rending.md",
@@ -5748,9 +5796,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a976d654cf47de9a354231f6b8af1110cc621e0d",
       "chinese_sha256": "7c1caf242090ad7cace1e5a444a2d9e296b39338e938ec638b927818296462b6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_warp_charge_reduces_toughness_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warp_glass_cannon.md",
@@ -14371,6 +14426,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_crits_empower_next_attack.md"
+    },
+    {
+      "id": "psyker_spread_warpfire_on_kill",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_spread_warpfire_on_kill.md"
+    },
+    {
+      "id": "psyker_venting_improvements",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_venting_improvements.md"
+    },
+    {
+      "id": "psyker_kills_stack_other_weapon_damage",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_kills_stack_other_weapon_damage.md"
+    },
+    {
+      "id": "psyker_warp_charge_reduces_toughness_damage_taken",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warp_charge_reduces_toughness_damage_taken.md"
+    },
+    {
+      "id": "psyker_improved_dodge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_improved_dodge.md"
     }
   ],
   "pending_chinese_corrections": [
