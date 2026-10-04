@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="Righteous Warrior talent icon"> [Righteous Warrior](#zealot_fanatic_rage_improved) | <ul><li>Blazing Piety grants another 10 percentage points of Critical Chance during Fury, for a total talent bonus of 25 points.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="Infectious Zeal talent icon"> [Infectious Zeal](#zealot_shared_fanatic_rage) | <ul><li>When Fury starts, other allies currently in Coherency gain 10 percentage points of Critical Chance for 8 seconds; refreshing your Fury does not extend their existing bonus.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="Restorative Verses talent icon"> [Restorative Verses](#zealot_martyrdom_toughness_modifier) | <ul><li>Each complete missing Wound counted by Martyrdom increases Toughness replenishment by 5%, up to 5 stacks and +25%; gaining stacks does not directly restore Toughness.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="Eternal talent icon"> [Eternal](#zealot_quickness_increased_duration) | <ul><li>Inexorable Judgement's active bonus lasts 10 seconds instead of 6.</li></ul> | Keystone |
 
 ---
 
@@ -508,3 +509,16 @@
 - **Chinese original-text erratum**: The Chinese says each stack restores Toughness, which can imply immediate restoration on gaining a stack. The actual effect increases restoration amount by 5% per stack and works through other restoration sources.
 
 [Details](zealot_martyrdom_toughness_modifier.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_quickness_increased_duration"></a>
+
+### Eternal
+
+<img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="72" height="72" alt="Eternal talent icon">
+
+- **Effect**: Inexorable Judgement's active bonus lasts 10 seconds.
+- **Duration example**: A hit activates it at second 0. It ordinarily ends around second 6, now around second 10. Hits during the bonus still do not reset that cycle's duration. The extension is 4 seconds; stacks and per-stack bonuses stay the same.
+
+[Details](zealot_quickness_increased_duration.md) · [Back to index](#talent-index)

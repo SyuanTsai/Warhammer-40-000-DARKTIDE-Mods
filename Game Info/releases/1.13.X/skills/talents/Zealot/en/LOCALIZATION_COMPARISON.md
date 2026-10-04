@@ -395,6 +395,18 @@ Full raw template and formatting: [source evidence](zealot_martyrdom_toughness_m
 | Per-stack replenishment bonus | “Martyrdom grants 5% Toughness Replenishment per stack.”; `ui / loc_talent_zealot_martyrdom_toughness_modifier_upd_desc / d473a3ea` | Missing-Wound interpolation adds 0.05 per stack to `toughness_replenish_modifier`. [Fixed source and line references](zealot_martyrdom_toughness_modifier.md#fixed-source-evidence) | Consistent | The English names the replenishment stat bonus and does not explicitly say gaining a stack immediately restores Toughness. |
 | Wound cap, restoration source and combination | No cap, Wound calculation, immediate-event distinction or combination formula.; `ui / loc_talent_zealot_martyrdom_toughness_modifier_upd_desc / d473a3ea` | Max 5/+25%; complete Wounds from max(damage, permanent damage). Requires another restoration source; 10→11/12.5 or 14.5 with same-stage 20%, capped by missing Toughness. [Fixed source and line references](zealot_martyrdom_toughness_modifier.md#fixed-source-evidence) | Not covered by the description | The accepted examples and limits clarify the modifier; the Chinese direct-restoration correction is separate. |
 
+
+<a id="zealot_quickness_increased_duration"></a>
+
+## Eternal
+
+Full raw template and formatting: [source evidence](zealot_quickness_increased_duration.md#original-english-template-and-reconstruction). Name hash `6f4e2bef`. Every row uses `ui / loc_talent_zealot_quickness_increased_duration_desc / ffd6bfbb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Duration increased to 10 seconds | “Increase the duration of Inexorable Judgement to 10s.”; `ui / loc_talent_zealot_quickness_increased_duration_desc / ffd6bfbb` | Special rule selects the same active effects with duration overridden from 6 to 10s. [Fixed source and line references](zealot_quickness_increased_duration.md#fixed-source-evidence) | Consistent | The English final duration agrees; it is not a +10s extension. |
+| Affected phase and unchanged mechanics | No stack collection, active-hit refresh or restoration-period details.; `ui / loc_talent_zealot_quickness_increased_duration_desc / ffd6bfbb` | Extension applies after hit activation; 20-stack cap/acquisition/per-stack stats remain unchanged, and active hits do not refresh that cycle. [Fixed source and line references](zealot_quickness_increased_duration.md#fixed-source-evidence) | Not covered by the description | The original timing example and conditional restoration extension explain the duration change. |
+
 ## Comparison totals
 
 63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.

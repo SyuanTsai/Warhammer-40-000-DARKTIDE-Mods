@@ -43,3 +43,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Righteous Warrior](zealot_fanatic_rage_improved.md) / `zealot_fanatic_rage_improved` | Keystone |
 | [Infectious Zeal](zealot_shared_fanatic_rage.md) / `zealot_shared_fanatic_rage` | Keystone |
 | [Restorative Verses](zealot_martyrdom_toughness_modifier.md) / `zealot_martyrdom_toughness_modifier` | Keystone |
+| [Eternal](zealot_quickness_increased_duration.md) / `zealot_quickness_increased_duration` | Keystone |
