@@ -68,6 +68,18 @@ Full raw template and formatting: [source evidence](broker_coherency_melee_damag
 | Melee Damage and recipients | +10% Melee Damage for you and Allies in Coherency; `ui / loc_talent_broker_aura_ruffian_desc / a241f5b9` | melee_damage 0.1 applies to self and Coherency allies. [Fixed source and line references](broker_coherency_melee_damage.md#fixed-source-evidence) | Consistent | The amount, Damage type and recipients match the accepted evidence. |
 | Duplicate and calculation limits | No stacking-stage or duplicate rule; `ui / loc_talent_broker_aura_ruffian_desc / a241f5b9` | max_stacks 1 and coherency_id prevent duplicate copies; general damage_stat_buffs add within the same stage. [Fixed source and line references](broker_coherency_melee_damage.md#fixed-source-evidence) | Not covered by the description | The existing 100→110 and 100×(1+25%+10%)=135 examples explain omitted calculation details. |
 
+
+<a id="broker_coherency_anarchist"></a>
+
+## Anarchist
+
+Full raw template and formatting: [source evidence](broker_coherency_anarchist.md#original-english-template-and-reconstruction). Name hash `9337fdef`. Every row uses `ui / loc_talent_broker_aura_anarchist_desc / d1ab227e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical Chance and recipients | +5% Critical Chance for you and allies in Coherency; `ui / loc_talent_broker_aura_anarchist_desc / d1ab227e` | critical_strike_chance 0.05 applies to self and Coherency allies. [Fixed source and line references](broker_coherency_anarchist.md#fixed-source-evidence) | Consistent | The amount, chance statistic and recipients match the accepted evidence. |
+| Addition and duplicate limits | No arithmetic or duplicate rule; `ui / loc_talent_broker_aura_anarchist_desc / d1ab227e` | Critical Chance adds; one stack and coherency_id prevent duplicate copies. [Fixed source and line references](broker_coherency_anarchist.md#fixed-source-evidence) | Not covered by the description | The existing 10%→15% and 25%→30% examples explain omitted calculations. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
