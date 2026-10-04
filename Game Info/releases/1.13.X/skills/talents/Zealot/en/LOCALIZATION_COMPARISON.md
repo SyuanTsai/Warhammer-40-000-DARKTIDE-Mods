@@ -310,6 +310,18 @@ Full raw template and formatting: [source evidence](zealot_momentum_toughness_re
 | Rate, spent stacks and active duration | “Replenish 0.5% Toughness per second per spent Stack of Momentum during its Duration.”; `ui / loc_talent_zealot_momentum_toughness_replenish_desc / 11690b77` | Active Buff updates restore `0.005×active stack_count×dt` of maximum Toughness, only during that Buff. [Fixed source and line references](zealot_momentum_toughness_replenish.md#fixed-source-evidence) | Consistent | The English explicitly ties the rate to spent stacks and their active duration. |
 | Integration, cap and restoration examples | No maximum-versus-missing basis, frame integration or total recovery amount; `ui / loc_talent_zealot_momentum_toughness_replenish_desc / 11690b77` | Maximum-Toughness rate, per-frame `dt`, limited by missing Toughness; 20 stacks/maximum 100 give 10/s, 60 over 6s or 100 over 10s before limits. [Fixed source and line references](zealot_momentum_toughness_replenish.md#fixed-source-evidence) | Not covered by the description | These calculations and assumptions supplement the stated rate. |
 
+
+<a id="zealot_quickness_passive_dodge_stacks"></a>
+
+## Inebriate's Poise
+
+Full raw template and formatting: [source evidence](zealot_quickness_passive_dodge_stacks.md#original-english-template-and-reconstruction). Name hash `8791f06d`. Every row uses `ui / loc_talent_zealot_quickness_dodge_stacks_desc / 6a266b91`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge and stack count | “Gain 3 Stacks of Momentum on a successful Dodge.”; `ui / loc_talent_zealot_quickness_dodge_stacks_desc / 6a266b91` | Special rule permits the successful-Dodge event to add 3 counter stacks. [Fixed source and line references](zealot_quickness_passive_dodge_stacks.md#fixed-source-evidence) | Consistent | The event qualifier and count match. |
+| Shared cap and later consumption | No shared cap, overflow or active-bonus consumption rule; `ui / loc_talent_zealot_quickness_dodge_stacks_desc / 6a266b91` | Movement and Dodge share max 20; 18+3 caps at 20 without storing excess. Next pool requires a hit after the active bonus ends. [Fixed source and line references](zealot_quickness_passive_dodge_stacks.md#fixed-source-evidence) | Not covered by the description | The existing stack example and event limits supplement the gain statement. |
+
 ## Comparison totals
 
 53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.

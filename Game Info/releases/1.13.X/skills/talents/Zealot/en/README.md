@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="Maniac talent icon"> [Maniac](#zealot_martyrdom_grants_attack_speed) | <ul><li>Each fully missing Wound counted by Martyrdom grants 6% Melee Attack Speed, up to 5 Wounds / 30%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="Inexorable Judgement talent icon"> [Inexorable Judgement](#zealot_quickness_passive) | <ul><li>Movement grants 1 Momentum stack per 5 metres, maximum 20; Sprint distance counts double. A Melee or Ranged Hit spends current stacks for a 6-second bonus to damage, attack speeds and dodge stats.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="Retributor's Stance talent icon"> [Retributor's Stance](#zealot_momentum_toughness_replenish) | <ul><li>During Inexorable Judgement's active bonus, replenish 0.5% maximum Toughness per second for each spent Momentum stack.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="Inebriate's Poise talent icon"> [Inebriate's Poise](#zealot_quickness_passive_dodge_stacks) | <ul><li>A successful Dodge grants 3 additional Momentum stacks for Inexorable Judgement, sharing the 20-stack cap.</li></ul> | Keystone |
 
 ---
 
@@ -402,3 +403,16 @@
 - **Restoration example**: With maximum Toughness 100 and 20 stacks on activation, restore 100 × 20 × 0.5% = 10 per second, at most 60 over a full 6 seconds. With duration extended to 10 seconds, the theoretical maximum is 100. Restoration bonuses and the current missing amount still apply.
 
 [Details](zealot_momentum_toughness_replenish.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_quickness_passive_dodge_stacks"></a>
+
+### Inebriate's Poise
+
+<img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="72" height="72" alt="Inebriate's Poise talent icon">
+
+- **Trigger**: Each successful Dodge grants 3 additional Inexorable Judgement Momentum stacks, still subject to the 20-stack cap.
+- **Stack example**: Starting at 18, a successful Dodge gives min(18 + 3, 20) = 20 stacks; the excess stack is not stored. You can build the next pool during an active bonus, but it is spent only by a hit after the current bonus ends.
+
+[Details](zealot_quickness_passive_dodge_stacks.md) · [Back to index](#talent-index)
