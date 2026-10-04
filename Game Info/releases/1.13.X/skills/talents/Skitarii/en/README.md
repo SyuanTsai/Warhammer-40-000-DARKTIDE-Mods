@@ -90,6 +90,7 @@
 | <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="Salvation Doctrine talent icon"> [Salvation Doctrine](#cryptic_revive_speed_and_dr) | <ul><li>While reviving, pulling up, freeing from a net or rescuing an ally, take 25% less damage and perform the assistance action 25% faster.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="Ammunition-Restoration Pod talent icon"> [Ammunition-Restoration Pod](#cryptic_passive_ammo_replenishment) | <ul><li>Every 15 seconds replenishes 1% of maximum Ammo Reserve into reserves. Fractional rounds carry over; it does not directly reload the clip.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="Sustained Assault Doctrine talent icon"> [Sustained Assault Doctrine](#cryptic_stacking_melee_damage) | <ul><li>Each melee swing that hits an enemy grants one 3% Damage stack, up to 5, refreshing 8 seconds. The bonus also increases ranged damage.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="Galvanized Coating talent icon"> [Galvanized Coating](#cryptic_stun_dr_power) | <ul><li>Always grants ordinary hit Stun immunity and 15% Damage Resistance. Qualifying melee damage events spend 7.5% of one Capacitance charge; defence remains with insufficient Capacitance.</li></ul> | Talent |
 
 ---
 
@@ -1282,3 +1283,17 @@
 - **Damage example**: Five stacks give 15%, taking base damage 100 to 115. With an existing 25% bonus in the same stage, `100 × (1 + 25% + 15%) = 140`.
 
 [Details](cryptic_stacking_melee_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_stun_dr_power"></a>
+
+### Galvanized Coating
+
+<img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="72" height="72" alt="Galvanized Coating talent icon">
+
+- **Defence**: Gain immunity to ordinary hit Stun and take 15% less damage. Both defensive effects remain even with insufficient Capacitance.
+- **Resource cost**: Taking melee damage spends 7.5% of one Capacitance charge. Only existing resources are spent; they cannot go negative. This cost is not charged while you are already disabled.
+- **Calculation example**: With a base natural recovery time of 50 seconds per charge, 7.5% equals `50 × 7.5% = 3.75` seconds of natural recovery. An original 100 damage becomes `100 × 0.85 = 85`.
+
+[Details](cryptic_stun_dr_power.md) · [Back to index](#talent-index)

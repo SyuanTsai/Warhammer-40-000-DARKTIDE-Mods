@@ -93,3 +93,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Salvation Doctrine](cryptic_revive_speed_and_dr.md) / `cryptic_revive_speed_and_dr` | Talent |
 | [Ammunition-Restoration Pod](cryptic_passive_ammo_replenishment.md) / `cryptic_passive_ammo_replenishment` | Talent |
 | [Sustained Assault Doctrine](cryptic_stacking_melee_damage.md) / `cryptic_stacking_melee_damage` | Talent |
+| [Galvanized Coating](cryptic_stun_dr_power.md) / `cryptic_stun_dr_power` | Talent |

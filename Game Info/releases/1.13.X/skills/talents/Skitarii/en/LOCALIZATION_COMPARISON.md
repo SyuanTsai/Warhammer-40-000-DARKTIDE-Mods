@@ -998,6 +998,18 @@ Full raw template and formatting: [source evidence](cryptic_stacking_melee_damag
 | Melee trigger and general damage |  +3% Damage on successful Melee Attack for 8s; stacks 5 times; `ui / loc_talent_cryptic_stacking_melee_damage_desc / 32d4da44` | A successful melee sweep grants `damage = 0.03` per stack, maximum 5, for 8 seconds; ranged damage can also benefit. [Fixed source and line references](cryptic_stacking_melee_damage.md#fixed-source-evidence) | Consistent | Melee qualifies the trigger, while the stated bonus is general Damage, matching the stat. |
 | Counting, refresh and calculation | Does not specify per-swing counting or duration refresh/expiry; `ui / loc_talent_cryptic_stacking_melee_damage_desc / 32d4da44` | One stack per successful swing; retriggering refreshes 8 seconds, without sequential stack decay. Five stacks give 15%: 100→115, or 140 with existing same-stage 25%. [Fixed source and line references](cryptic_stacking_melee_damage.md#fixed-source-evidence) | Not covered by the description | These original examples and timer details supplement the numerical stat description. |
 
+
+<a id="cryptic_stun_dr_power"></a>
+
+## Galvanized Coating
+
+Full raw template and formatting: [source evidence](cryptic_stun_dr_power.md#original-english-template-and-reconstruction). Name hash `e854ba74`. Every row uses `ui / loc_talent_cryptic_stun_dr_power_desc / bb527abc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Defence and melee-event cost | Stun Immune; +15% Damage Resistance; Taking Melee Damage spends 7.5% Capacitance; `ui / loc_talent_cryptic_stun_dr_power_desc / bb527abc` | Unconditional `stun_immune` and 0.85 damage-taken multiplier; qualifying melee damage events consume 0.075 of one charge. [Fixed source and line references](cryptic_stun_dr_power.md#fixed-source-evidence) | Consistent | The named defensive effects, reduction magnitude and resource percentage match. |
+| Keyword scope, spending basis and exceptions | Does not specify insufficient resources, disabled state, Toughness-only events or one-charge basis; `ui / loc_talent_cryptic_stun_dr_power_desc / bb527abc` | Defence persists without enough Capacitance; spending clamps to available resources and excludes disabled state. No positive Health-damage check, so Toughness-only melee events may incur cost. [Fixed source and line references](cryptic_stun_dr_power.md#fixed-source-evidence) | Not covered by the description | The existing 50×7.5%=3.75-second recovery-equivalent and 100→85 damage examples clarify the values and omitted limits. |
+
 ## Comparison totals
 
 167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.
