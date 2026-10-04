@@ -79,3 +79,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [No Respite](zealot_melee_crits_restore_stamina.md) / `zealot_melee_crits_restore_stamina` | Skill |
 | [Providence](zealot_revive_speed.md) / `zealot_revive_speed` | Skill |
 | [Abolish Blasphemers](zealot_damage_vs_elites.md) / `zealot_damage_vs_elites` | Skill |
+| [Hubris](zealot_weakspot_damage_reduction.md) / `zealot_weakspot_damage_reduction` | Skill |

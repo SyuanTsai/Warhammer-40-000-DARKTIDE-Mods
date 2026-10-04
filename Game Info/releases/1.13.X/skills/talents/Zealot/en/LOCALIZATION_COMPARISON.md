@@ -830,6 +830,18 @@ Full raw template and formatting: [source evidence](zealot_damage_vs_elites.md#o
 | Elite damage | Damage vs Elites +15%; `ui / loc_talent_zealot_damage_vs_elites_desc / 43f97b1b` | `damage_vs_elites` +0.15 applies when the target breed is classified `elite` [Fixed source and line references](zealot_damage_vs_elites.md#fixed-source-evidence) | Consistent | Value and target condition agree. |
 | Attack scope and calculation | No attack restriction or stacking formula; `ui / loc_talent_zealot_damage_vs_elites_desc / 43f97b1b` | Melee and Ranged apply; not every Specialist or boss qualifies. The original examples are 100→115, or 135 with another same-stage 20% [Fixed source and line references](zealot_damage_vs_elites.md#fixed-source-evidence) | Not covered by the description | These scope and calculation details supplement the wording. |
 
+
+<a id="zealot_weakspot_damage_reduction"></a>
+
+## Hubris
+
+Full raw template and formatting: [source evidence](zealot_weakspot_damage_reduction.md#original-english-template-and-reconstruction). Name hash `d2297aa1`. Every row uses `ui / loc_talent_zealot_weakspot_damage_reduction_desc / b3615f2a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weakspot Kill and resistance | Damage Resistance +15% after Weakspot Kill; lasts 4s; `ui / loc_talent_zealot_weakspot_damage_reduction_desc / b3615f2a` | `on_kill` / `on_weakspot_kill`, damage multiplier 0.85, duration 4 seconds [Fixed source and line references](zealot_weakspot_damage_reduction.md#fixed-source-evidence) | Consistent | Trigger, reduction and duration agree. |
+| Refresh and calculation | No stack, attack-type or combination details; `ui / loc_talent_zealot_weakspot_damage_reduction_desc / b3615f2a` | One refreshing stack; Melee and Ranged kills qualify, a hit alone does not. Original examples: 100 × 0.85 = 85, with independent 25% reduction 63.75 [Fixed source and line references](zealot_weakspot_damage_reduction.md#fixed-source-evidence) | Not covered by the description | These limits and calculation details supplement the wording. |
+
 ## Comparison totals
 
 137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.

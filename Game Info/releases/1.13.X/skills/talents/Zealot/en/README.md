@@ -76,6 +76,7 @@
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="No Respite talent icon"> [No Respite](#zealot_melee_crits_restore_stamina) | <ul><li>Melee Critical Hits restore 10% of maximum Stamina, with a 1-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="Providence talent icon"> [Providence](#zealot_revive_speed) | <ul><li>Revive speed increases by 25%; assisted allies gain Movement Speed and Toughness Damage Reduction.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="Abolish Blasphemers talent icon"> [Abolish Blasphemers](#zealot_damage_vs_elites) | <ul><li>Deal 15% more damage to Elite enemies.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="Hubris talent icon"> [Hubris](#zealot_weakspot_damage_reduction) | <ul><li>Weakspot Kills reduce damage taken by 15% for 4 seconds.</li></ul> | Skill |
 
 ---
 
@@ -1034,3 +1035,16 @@
 - **Damage example:** 100 × 1.15 = 115 points. With an existing 20% damage bonus in the same stage, the result is 100 × (1 + 20% + 15%) = 135 points.
 
 [Details](zealot_damage_vs_elites.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_weakspot_damage_reduction"></a>
+
+### Hubris
+
+<img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="72" height="72" alt="Hubris talent icon">
+
+- **Trigger:** killing an enemy with a Weakspot Hit reduces damage taken by 15% for 4 seconds. Melee and Ranged attacks both qualify; a Weakspot Hit alone does not trigger it.
+- **Duration and example:** the effect does not gain stacks, and another trigger restarts the timer. This talent alone gives 100 × 0.85 = 85 points of damage. With a separate 25% reduction, the result is 100 × 0.85 × 0.75 = 63.75 points.
+
+[Details](zealot_weakspot_damage_reduction.md) · [Back to index](#talent-index)
