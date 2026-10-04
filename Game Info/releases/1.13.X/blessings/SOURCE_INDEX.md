@@ -76,3 +76,4 @@
 | [千里眼](entries/千里眼/README.md) | [來源索引](entries/千里眼/SOURCE_INDEX.md) |
 | [突然襲擊](entries/突然襲擊/README.md) | [來源索引](entries/突然襲擊/SOURCE_INDEX.md) |
 | [開溜](entries/開溜/README.md) | [來源索引](entries/開溜/SOURCE_INDEX.md) |
+| [持續射擊](entries/持續射擊/README.md) | [來源索引](entries/持續射擊/SOURCE_INDEX.md) |

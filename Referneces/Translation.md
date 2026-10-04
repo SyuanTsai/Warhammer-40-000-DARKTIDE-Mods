@@ -397,6 +397,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_close_damage`，hash `ad18b72c`；英文／繁中RAW配對確認。
 - Hit & Run /  Hit and Run - 游擊
 - Sustained Fire - 持續射擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_damage`，hash `a4047175`；英文／繁中RAW配對確認。
 - Punishing Salvo - 懲罰齊射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_weakspot_damage`，hash `dbf6f0e3`；英文／繁中RAW配對確認。
 - Fire Frenzy - 烈火熱焰
