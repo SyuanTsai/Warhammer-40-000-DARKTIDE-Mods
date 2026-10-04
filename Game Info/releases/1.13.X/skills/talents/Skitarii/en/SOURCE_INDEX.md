@@ -32,3 +32,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Motivator](cryptic_discharge_attack_speed_increase.md) / `cryptic_discharge_attack_speed_increase` | Ability |
 | [Voltaic Overcharge](cryptic_discharge_toughness.md) / `cryptic_discharge_toughness` | Ability |
 | [Axial Slash](cryptic_chordclaw_horizontal_swipe.md) / `cryptic_chordclaw_horizontal_swipe` | Ability |
+| [Probing Strikes](cryptic_chordclaw_quick_stab_combo.md) / `cryptic_chordclaw_quick_stab_combo` | Ability |

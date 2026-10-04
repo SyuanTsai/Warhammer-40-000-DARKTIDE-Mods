@@ -261,6 +261,18 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw_horizontal
 | Horizontal sweep | Your Chordclaw now executes a Horizontal Sweep attack; `ui / loc_talent_cryptic_chordclaw_horizontal_swipe_desc / 262d64b6` | cryptic_chordclaw_do_horizontal_swipe selects action_horizontal_attack_1 for quick activation [Fixed source and line references](cryptic_chordclaw_horizontal_swipe.md#fixed-source-evidence) | Consistent | The selected attack action agrees with the English. |
 | Charged attack, Critical Strike and target distribution | No charged-branch exception, Critical Strike, power table, cost or target-count detail; `ui / loc_talent_cryptic_chordclaw_horizontal_swipe_desc / 262d64b6` | from_charge retains action_heavy_sticky_attack_1; horizontal Heavy sweep guarantees crit and uses chordclaw_horizontal; attack/Impact powers decrease by target order; no new talent charge cost [Fixed source and line references](cryptic_chordclaw_horizontal_swipe.md#fixed-source-evidence) | Not covered by the description | Preserve the same-condition second-target 480 ÷500 =96% and fifth-target 360 ÷500 =72% examples; profile power is not universal Health damage and listed targets are not guaranteed hits. |
 
+
+<a id="cryptic_chordclaw_quick_stab_combo"></a>
+
+## Probing Strikes
+
+Full raw template and formatting: [source evidence](cryptic_chordclaw_quick_stab_combo.md#original-english-template-and-reconstruction). Name hash `65665761`. Every row uses `ui / loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc / e0d3d43f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Quick stabs, Bleed value and held input | 3 Quick Stab attacks applying 6 stack(s) of Bleed; holding performs the regular attack; `ui / loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc / e0d3d43f` | Quick branch selects action_stab_1/2/3 and chordclaw_stab_bleed with bleed_long 6; from_charge retains action_heavy_sticky_attack_1 [Fixed source and line references](cryptic_chordclaw_quick_stab_combo.md#fixed-source-evidence) | Consistent | The attack count, Bleed value and held-input branch agree; the wording does not explicitly state that 6 is a whole-combo total. |
+| Per-stab application, Critical Strikes and Bleed limits | No per-damaging-stab condition, guaranteed crit, stack cap, duration or tick detail; `ui / loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc / e0d3d43f` | Each guaranteed-crit stab adds 6 stacks with damage >0 and a target buff extension; bleed_long cap 18, duration 9.5s, interval 0.375; added stacks restart the timer [Fixed source and line references](cryptic_chordclaw_quick_stab_combo.md#fixed-source-evidence) | Not covered by the description | Three damaging stabs add 18 stacks; two add 12; misses add none. Existing stacks/cap and target/armour/modifiers limit actual Bleed and Health damage. |
+
 ## Comparison totals
 
 42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.
