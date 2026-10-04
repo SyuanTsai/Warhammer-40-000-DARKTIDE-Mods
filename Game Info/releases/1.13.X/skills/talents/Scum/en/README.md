@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="Pick Your Targets talent icon"> [Pick Your Targets](#broker_ability_focus_sub_2) | <ul><li>During focus, Ranged Attacks gain +15% Rending.</li><li>Eligible Close Range Ranged kills add +3% Ranged Damage per stack, up to 5 stacks. New kills refresh the 3-second duration; stacks then decay one at a time, and all end when focus ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="Practiced Deployment talent icon"> [Practiced Deployment](#broker_ability_stimm_field_sub_3) | <ul><li>Acquiring a usable Stimm or recovering a dedicated Stimm charge fills one Stimm Supply ability charge.</li><li>The effect polls every 0.5 seconds and respects the one-charge cap; an already-held Stimm does not trigger it when first selecting the talent.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794" width="32" height="32" alt="Fast Acting Stimms talent icon"> [Fast Acting Stimms](#broker_ability_stimm_field_sub_1) | <ul><li>Stimm Supply's field lasts 5 seconds; effects already received can linger for 15 seconds after leaving the area or when the field ends.</li><li>Natural cooldown resumes when the field ends. Lingering effects do not extend the cooldown pause: 5 + 60 = 65 seconds from deployment to full natural recovery.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="Booby Trap talent icon"> [Booby Trap](#broker_ability_stimm_field_sub_2) | <ul><li>When Stimm Supply's field completes its lifetime, it causes one frag explosion within 3 metres.</li><li>Enemies taking positive explosion Damage and having a buff extension receive 7 Toxin stacks. The explosion does not extend the cooldown pause.</li></ul> | Ability |
 
 ---
 
@@ -319,3 +320,21 @@
 - **Cooldown:** the 60-second natural cooldown starts when the field ends, even while some allies' effects may linger for 15 seconds. Counting only this ability's duration and recovery, deployment to the next natural charge takes approximately 5 + 60 = 65 seconds.
 
 [Details](broker_ability_stimm_field_sub_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_stimm_field_sub_2"></a>
+
+### Booby Trap
+
+<img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="72" height="72" alt="Booby Trap talent icon">
+
+- **Trigger:** the field explodes when its duration ends. The base field ends after 20 seconds; if a duration-shortening effect also applies, the explosion occurs at the end of the actual field duration.
+
+- **Explosion effect:** enemies hit and damaged by the 3-metre frag explosion receive 7 Toxin stacks. This is one explosion, rather than 7 stacks applied on every field pulse.
+
+- **Cooldown:** the 60-second natural cooldown resumes after the field ends and explodes. The explosion itself does not extend the cooldown pause.
+
+- **Damage example:** excluding other bonuses and special Damage Reduction, an Unarmoured target within 0.5 metres of the centre takes 20 × 500 × 300 ÷ 10000 = 300 explosion Damage. With the corresponding armour multiplier of 0.25, this becomes 300 × 0.25 = 75. Subsequent Toxin Damage is calculated separately.
+
+[Details](broker_ability_stimm_field_sub_2.md) · [Back to index](#talent-index)

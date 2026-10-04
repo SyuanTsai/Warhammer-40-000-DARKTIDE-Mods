@@ -216,6 +216,18 @@ Full raw template and formatting: [source evidence](broker_ability_stimm_field_s
 | Field and effect durations | Stimm Supply lasts 5s; its effects linger 15s after leaving; `ui / loc_talent_broker_ability_stimm_field_sub_1_desc / 8022348e` | The field lifetime becomes 5 seconds, and applied buffs receive 15 seconds of linger on leaving. [Fixed source and line references](broker_ability_stimm_field_sub_1.md#fixed-source-evidence) | Consistent | The field and retained effects have the stated separate durations. |
 | Field expiry, re-entry and cooldown | No field-expiry linger, re-entry or cooldown-resumption details; `ui / loc_talent_broker_ability_stimm_field_sub_1_desc / 8022348e` | Expiry also makes existing buffs linger; re-entry reconnects them. The job ends after 5 seconds and natural 60-second recovery resumes, independently of lingering buffs. [Fixed source and line references](broker_ability_stimm_field_sub_1.md#fixed-source-evidence) | Not covered by the description | These conditions retain the original 5 + 60 = 65 second example without treating the 15-second effect as extra field life. |
 
+
+<a id="broker_ability_stimm_field_sub_2"></a>
+
+## Booby Trap
+
+Full raw template and formatting: [source evidence](broker_ability_stimm_field_sub_2.md#original-english-template-and-reconstruction). Name hash `33d4173c`. Every row uses `ui / loc_talent_broker_ability_stimm_field_sub_2_desc / 59a6d46b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Expiry and stack amount | Once its duration ends, Stimm Supply explodes; 7 stacks of Chem Toxin; `ui / loc_talent_broker_ability_stimm_field_sub_2_desc / 59a6d46b` | Normal lifetime completion creates one field explosion; an eligible damaged target receives exactly 7 neurotoxin_interval_buff3 stacks. [Fixed source and line references](broker_ability_stimm_field_sub_2.md#fixed-source-evidence) | Consistent | The stated expiry and status amount agree with the accepted evidence. |
+| Radius, target conditions and recovery | Nearby Enemies; no radius, positive-Damage requirement, Toxin timing or recovery details; `ui / loc_talent_broker_ability_stimm_field_sub_2_desc / 59a6d46b` | The radius is 3 m. Positive explosion Damage and a target buff extension are required. Toxin has 2.6 s base duration, 0.35 s interval and 30-stack maximum. Ending the field resumes natural recovery; later Toxin Damage is separate. [Fixed source and line references](broker_ability_stimm_field_sub_2.md#fixed-source-evidence) | Not covered by the description | These clarify the nearby-target scope and status behavior without converting stacks into a fixed total Damage claim. |
+
 ## Comparison totals
 
 The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.

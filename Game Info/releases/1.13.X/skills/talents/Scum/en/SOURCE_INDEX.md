@@ -29,3 +29,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Pick Your Targets](broker_ability_focus_sub_2.md) / `broker_ability_focus_sub_2` | Ability |
 | [Practiced Deployment](broker_ability_stimm_field_sub_3.md) / `broker_ability_stimm_field_sub_3` | Ability |
 | [Fast Acting Stimms](broker_ability_stimm_field_sub_1.md) / `broker_ability_stimm_field_sub_1` | Ability |
+| [Booby Trap](broker_ability_stimm_field_sub_2.md) / `broker_ability_stimm_field_sub_2` | Ability |
