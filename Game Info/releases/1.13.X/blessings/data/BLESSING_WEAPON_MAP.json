@@ -1252,6 +1252,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
       "effect": "合格弱點命中觸發 3 秒單份換彈速度加值，I–IV 為 15%／20%／25%／30%；不限定投射物或來源武器，切換武器仍保留。裝填動作開始時採樣速度，速度加值不是時間減幅。"
+    },
+    {
+      "id": "mercy-killer",
+      "name_zh_tw": "仁慈殺手",
+      "name_en": "Mercy Killer",
+      "name_key": "loc_trait_bespoke_increased_weakspot_damage_on_bleeding",
+      "description_key": "loc_trait_bespoke_increased_weakspot_damage_on_bleeding_desc",
+      "name_hash": "5214e0db",
+      "description_hash": "37dccfa0",
+      "page": "entries/仁慈殺手/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
+      "effect": "持用時對已有流血狀態的目標造成近戰弱點命中，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；流血層數不縮放這個加值，最終傷害增幅另按公式計算。"
     }
   ],
   "weapons": [
@@ -18866,6 +18879,122 @@
       "icon": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_234",
       "effect": "合格弱點命中觸發 3 秒單份換彈速度加值，I–IV 為 15%／20%／25%／30%；不限定投射物或來源武器，切換武器仍保留。裝填動作開始時採樣速度，速度加值不是時間減幅。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding",
+      "blessing_id": "mercy-killer",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/仁慈殺手/weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_weakspot_damage_vs_bleeding",
+        "tier_values_by_level": {
+          "I": 0.525,
+          "II": 0.55,
+          "III": 0.575,
+          "IV": 0.6
+        },
+        "value_unit": "additive fraction in the weakspot/finesse multiplier when target has bleeding keyword",
+        "wrapper_fallback": 1.0,
+        "tier_overrides_replace_fallback": true,
+        "attack_type_required": "melee",
+        "requires_weakspot": true,
+        "requires_target_keyword": "bleeding",
+        "stack_count_scales_bonus": false,
+        "proc_duration_or_stacks": false,
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding",
+        "mark_ids": [
+          "combatknife_p1_m1",
+          "combatknife_p1_m2"
+        ],
+        "weapon_type_restriction": "combatknife_p1",
+        "own_tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 412,
+        "end_line": 451
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_increased_weakspot_damage_on_bleeding_desc",
+      "description_hash": "37dccfa0",
+      "icon": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_196",
+      "effect": "持用時對已有流血狀態的目標造成近戰弱點命中，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；流血層數不縮放這個加值，最終傷害增幅另按公式計算。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding",
+      "blessing_id": "mercy-killer",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/仁慈殺手/weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_weakspot_damage_vs_bleeding",
+        "tier_values_by_level": {
+          "I": 0.525,
+          "II": 0.55,
+          "III": 0.575,
+          "IV": 0.6
+        },
+        "value_unit": "additive fraction in the weakspot/finesse multiplier when target has bleeding keyword",
+        "wrapper_fallback": 1.0,
+        "tier_overrides_replace_fallback": true,
+        "attack_type_required": "melee",
+        "requires_weakspot": true,
+        "requires_target_keyword": "bleeding",
+        "stack_count_scales_bonus": false,
+        "proc_duration_or_stacks": false,
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding",
+        "mark_ids": [
+          "dual_shivs_p1_m1",
+          "dual_shivs_p1_m2"
+        ],
+        "weapon_type_restriction": "dual_shivs_p1",
+        "own_tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 412,
+        "end_line": 453
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_increased_weakspot_damage_on_bleeding_desc",
+      "description_hash": "37dccfa0",
+      "icon": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_196",
+      "effect": "持用時對已有流血狀態的目標造成近戰弱點命中，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；流血層數不縮放這個加值，最終傷害增幅另按公式計算。"
     }
   ],
   "bindings": [
@@ -26469,6 +26598,62 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
         "import_line": 16,
         "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "mercy-killer",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/increased_weakspot_damage_against_bleeding",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "mercy-killer",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_increased_weakspot_damage_against_bleeding",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/increased_weakspot_damage_against_bleeding",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "mercy-killer",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/increased_weakspot_damage_against_bleeding",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "mercy-killer",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_increased_weakspot_damage_against_bleeding",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/increased_weakspot_damage_against_bleeding",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
       }
     }
   ]

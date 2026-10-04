@@ -328,6 +328,7 @@
 - Smackdown - 擊倒
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy`，hash `90a360d3`；英文／繁中RAW配對確認。
 - Mercy Killer - 仁慈殺手
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_weakspot_damage_on_bleeding`，hash `5214e0db`；英文／繁中RAW配對確認。
 - Ruthless Backstab - 無情背刺
 - Uncanny Strike - 詭異打擊
 - Trauma - 創傷

@@ -347,3 +347,5 @@
 - [精煉殺意](2026-10-03-REFINED-LETHALITY_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
 
 - [迅雷反射](2026-10-03-MARKSMAN-REFLEX_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [仁慈殺手](2026-10-03-MERCY-KILLER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
