@@ -233,3 +233,5 @@
 - [燃起來！](2026-10-03-GETS-HOT_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [未卜先知](2026-10-03-PRECOGNITION_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。
+
+- [敏捷](2026-10-03-AGILE_ACCEPTANCE.json)：新增2變體、6型號關聯；共2變體、6關聯。

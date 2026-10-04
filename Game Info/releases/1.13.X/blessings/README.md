@@ -59,5 +59,6 @@
 | <img src="https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a" width="32" height="32" alt="猛撞祝福圖示"> [猛撞](entries/猛撞/README.md)<br>- Bash<br>[完整說明](entries/猛撞/README.md) | <ul><li>推擊處理到至少一個合格目標後，撬棍 I–IV 的近戰爆擊率增加 5／7.5／10／12.5 個百分點，砍刀增加 7.5／10／12.5／15 個百分點；均持續 3 秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db" width="32" height="32" alt="燃起來！祝福圖示"> [燃起來！](entries/燃起來！/README.md)<br>- Gets Hot!<br>[完整說明](entries/燃起來！/README.md) | <ul><li>持用電漿槍時，依目前熱能階數提高一般爆擊機率與遠程爆擊傷害；最多五階，散熱／裝填或切換離手時停用。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6" width="32" height="32" alt="未卜先知祝福圖示"> [未卜先知](entries/未卜先知/README.md)<br>- Precognition<br>[完整說明](entries/未卜先知/README.md) | <ul><li>成功閃避後，2秒內提高暴擊或弱點命中的靈巧額外傷害：戰刃、決鬥劍、烈焰力場巨劍與烈焰力場劍 I–IV 為45／50／55／60%；短刀與穿音速雙刀為30／35／40／45%。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d" width="32" height="32" alt="敏捷祝福圖示"> [敏捷](entries/敏捷/README.md)<br>- Agile<br>[完整說明](entries/敏捷/README.md) | <ul><li>持用時，該武器的近戰弱點命中將連續閃避次數歸零；I–IV 另常駐提供2.5／5／7.5／10%的近戰弱點靈巧額外傷害加成，不需先命中啟動。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
