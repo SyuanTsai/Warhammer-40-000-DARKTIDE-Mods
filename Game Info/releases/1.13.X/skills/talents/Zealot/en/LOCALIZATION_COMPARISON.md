@@ -951,6 +951,18 @@ Full raw template and formatting: [source evidence](zealot_dmg_vs_burning_electr
 | Listed enemy states and value | +15% increased damage against Burning and Electrocuted Enemies; `ui / loc_talent_zealot_dmg_vs_burning_electrocuted_desc / 34bfb2f6` | damage_vs_burning +0.15 and damage_vs_electrocuted +0.15 [Fixed source and line references](zealot_dmg_vs_burning_electrocuted.md#fixed-source-evidence) | Consistent | The wording can list both eligible groups; it does not explicitly require the two states simultaneously. |
 | Separate checks and simultaneous addition | No rule for an enemy with both states; `ui / loc_talent_zealot_dmg_vs_burning_electrocuted_desc / 34bfb2f6` | Two independent checks add to damage_stat_buffs; one condition gives original 100→115, both 100→130; other same-stage bonuses add [Fixed source and line references](zealot_dmg_vs_burning_electrocuted.md#fixed-source-evidence) | Not covered by the description | The combined outcome and calculation supplement the wording. |
 
+
+<a id="zealot_improved_weapon_handling_after_dodge"></a>
+
+## Dance of Death
+
+Full raw template and formatting: [source evidence](zealot_improved_weapon_handling_after_dodge.md#original-english-template-and-reconstruction). Name hash `3be70e6b`. Every row uses `ui / loc_talent_zealot_improved_spread_post_dodge_desc / b7d4f75a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge and modifiers | Successful Dodge; -75% Spread and -50% Recoil for 3s; `ui / loc_talent_zealot_improved_spread_post_dodge_desc / b7d4f75a` | on_successful_dodge; spread_modifier −0.75, recoil_modifier −0.5, active_duration 3 [Fixed source and line references](zealot_improved_weapon_handling_after_dodge.md#fixed-source-evidence) | Consistent | Trigger, modifier values and duration agree. |
+| Refresh and affected measurements | No detailed measurement or refresh rule; `ui / loc_talent_zealot_improved_spread_post_dodge_desc / b7d4f75a` | Refresh restarts 3 seconds; Spread pitch/yaw use combined modifier; Recoil unsteadiness buildup ×0.5 and decay ×2, with weapon-dependent final curve. Original examples: 4°→1°, buildup 0.2→0.1 [Fixed source and line references](zealot_improved_weapon_handling_after_dodge.md#fixed-source-evidence) | Not covered by the description | These measurements and limits supplement general Spread/Recoil wording. |
+
 ## Comparison totals
 
 158 rules: 74 Consistent / 6 Explicit contradiction / 74 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 639.

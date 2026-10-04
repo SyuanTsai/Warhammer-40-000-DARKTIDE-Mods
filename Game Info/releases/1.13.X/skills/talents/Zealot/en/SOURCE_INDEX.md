@@ -89,3 +89,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Holy Tools](zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | Skill |
 | [Got Your Back](zealot_melee_kills_restore_toughness_to_target.md) / `zealot_melee_kills_restore_toughness_to_target` | Skill |
 | [Purifying Hatred](zealot_dmg_vs_burning_electrocuted.md) / `zealot_dmg_vs_burning_electrocuted` | Skill |
+| [Dance of Death](zealot_improved_weapon_handling_after_dodge.md) / `zealot_improved_weapon_handling_after_dodge` | Skill |

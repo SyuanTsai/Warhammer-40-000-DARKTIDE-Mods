@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="Holy Tools talent icon"> [Holy Tools](#zealot_weapon_special_damage) | <ul><li>Activating a Melee Weapon Special grants +20% damage to the next Melee attack within 5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="Got Your Back talent icon"> [Got Your Back](#zealot_melee_kills_restore_toughness_to_target) | <ul><li>Melee Kills against enemies targeting an ally restore 7.5% of that ally's maximum Toughness and an extra 5% of yours.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="Purifying Hatred talent icon"> [Purifying Hatred](#zealot_dmg_vs_burning_electrocuted) | <ul><li>Deal +15% damage to Burning enemies and another +15% to Electrocuted enemies; both conditions give +30%.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="Dance of Death talent icon"> [Dance of Death](#zealot_improved_weapon_handling_after_dodge) | <ul><li>Successful Dodges reduce Spread by 75% and Recoil unsteadiness buildup by 50% for 3 seconds.</li></ul> | Skill |
 
 ---
 
@@ -1184,3 +1185,17 @@
 - **Damage example:** base damage 100 with one qualifying condition becomes 100 × 1.15 = 115. Both conditions give 100 × (1 + 15% + 15%) = 130. Other same-stage damage bonuses are added first.
 
 [Details](zealot_dmg_vs_burning_electrocuted.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_improved_weapon_handling_after_dodge"></a>
+
+### Dance of Death
+
+<img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="72" height="72" alt="Dance of Death talent icon">
+
+- **How it works:** after successfully Dodging an attack, bullet Spread is reduced by 75% and Recoil unsteadiness buildup by 50% for 3 seconds. Another successful Dodge restarts the timer.
+- **Spread example:** with this effect alone, an affected Spread angle of 4 degrees becomes 4 × 0.25 = 1 degree. This does not mean hit rate increases by a fixed 75%.
+- **Recoil example:** an original unsteadiness increase of 0.2 per event becomes 0.2 × 0.5 = 0.1. Its decay rate during recovery is multiplied by 1 ÷ 0.5 = 2. Actual crosshair displacement still follows the weapon's Recoil curve; this does not guarantee that all visible camera movement is halved.
+
+[Details](zealot_improved_weapon_handling_after_dodge.md) · [Back to index](#talent-index)
