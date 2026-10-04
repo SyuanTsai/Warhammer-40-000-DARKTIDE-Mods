@@ -590,6 +590,18 @@ Full raw template and formatting: [source evidence](broker_passive_stamina_grant
 | Current-Stamina Melee Attack Speed | +2% increased Melee Attack Speed for each current Stamina; `ui / loc_talent_broker_passive_stamina_grants_atk_speed_desc / 15f411fc` | Each step based on current Stamina contributes `melee_attack_speed = 0.02`. [Fixed source and line references](broker_passive_stamina_grants_atk_speed.md#fixed-source-evidence) | Consistent | The English identifies current Stamina, the per-point amount, and Melee Attack Speed. |
 | Whole-point rounding, cap, and action time | No rounding, implemented cap, or speed-to-time formula is stated; `ui / loc_talent_broker_passive_stamina_grants_atk_speed_desc / 15f411fc` | `floor(current_stamina)` supplies bonus stacks; `stack_offset = -1` removes the base stack contribution. The cap is 2 × 15 = 30 steps, or 60%, subject to available Stamina. Accelerable action time divides by the speed factor. [Fixed source and line references](broker_passive_stamina_grants_atk_speed.md#fixed-source-evidence) | Not covered by the description | These qualify the per-point wording and preserve the original timing example. |
 
+
+<a id="broker_passive_ramping_backstabs"></a>
+
+## Ramping Backstabs
+
+Full raw template and formatting: [source evidence](broker_passive_ramping_backstabs.md#original-english-template-and-reconstruction). Name hash `d0970afd`. Every row uses `ui / loc_talent_broker_passive_ramping_backstabs_desc / 2f7fcac8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Backstab stacks and removal | Backstabs grant +10% Melee Strength, stacking 5 times; Regular Melee Hits remove all stacks; `ui / loc_talent_broker_passive_ramping_backstabs_desc / 2f7fcac8` | `on_melee_hit` with `is_backstab` adds a 0.1 Melee Power stack, capped at 5; other Melee hits finish all recorded stacks. [Fixed source and line references](broker_passive_ramping_backstabs.md#fixed-source-evidence) | Consistent | The Strength label, per-stack amount, cap, and non-Backstab removal agree with accepted evidence. |
+| Power combination, duration, and final Damage | No timer, Power-combination formula, or final-Damage equivalence is stated; `ui / loc_talent_broker_passive_ramping_backstabs_desc / 2f7fcac8` | The child buff has no duration. Five stacks add 50% Power at this stage; Damage, Stagger, and Cleave still follow weapon curves. [Fixed source and line references](broker_passive_ramping_backstabs.md#fixed-source-evidence) | Not covered by the description | These qualify Melee Strength and preserve the original Power examples without asserting universal final Damage. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

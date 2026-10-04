@@ -60,3 +60,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Tis but a Scratch](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) / `broker_passive_replenish_toughness_on_ranged_toughness_damage` | Talent |
 | [Unload](broker_passive_damage_on_reload.md) / `broker_passive_damage_on_reload` | Talent |
 | [Swift Endurance](broker_passive_stamina_grants_atk_speed.md) / `broker_passive_stamina_grants_atk_speed` | Talent |
+| [Ramping Backstabs](broker_passive_ramping_backstabs.md) / `broker_passive_ramping_backstabs` | Talent |

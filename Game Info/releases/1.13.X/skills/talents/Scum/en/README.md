@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="32" height="32" alt="Tis but a Scratch talent icon"> [Tis but a Scratch](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | <ul><li>Taking Ranged Damage while Toughness remains restores 30% of maximum Toughness over 3 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6849ad32-3ebc-4d11-b980-612b4d23fd94" width="32" height="32" alt="Unload talent icon"> [Unload](#broker_passive_damage_on_reload) | <ul><li>After reloading, gain 2% Ranged Damage for 7 seconds; each amount of ammunition spent equal to 10% of magazine capacity adds another 2%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/13f03cfd-6e09-41fe-920e-ad116f1a1548" width="32" height="32" alt="Swift Endurance talent icon"> [Swift Endurance](#broker_passive_stamina_grants_atk_speed) | <ul><li>Each whole point of current Stamina grants 2% Melee Attack Speed; fractional points are rounded down.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="32" height="32" alt="Ramping Backstabs talent icon"> [Ramping Backstabs](#broker_passive_ramping_backstabs) | <ul><li>Each Melee Backstab adds 10% Melee Power, up to 5 stacks; a non-Backstab Melee hit clears them.</li></ul> | Talent |
 
 ---
 
@@ -824,3 +825,17 @@
 - **Cap**: at most 30 points of current Stamina count, giving 60% Attack Speed. Your actual attainable bonus is still limited by your maximum Stamina.
 
 [Details](broker_passive_stamina_grants_atk_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_ramping_backstabs"></a>
+
+### Ramping Backstabs
+
+<img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="72" height="72" alt="Ramping Backstabs talent icon">
+
+- **Gain and removal**: a Melee Backstab adds 1 stack, granting 10% Melee Power per stack, up to 5. There is no fixed countdown. A Melee hit on a target from outside its back clears all stacks.
+- **Power example**: 5 stacks grant 50%. If Power entering this bonus stage is 500, the result is 500 × 1.5 = 750. With another 20% Power bonus at the same stage, it is 500 × (1 + 20% + 50%) = 850.
+- **Damage limit**: Power still passes through the weapon's Damage, Stagger, and Cleave curves. A 50% Power increase must not be described as 50% more final Damage for every weapon.
+
+[Details](broker_passive_ramping_backstabs.md) · [Back to index](#talent-index)
