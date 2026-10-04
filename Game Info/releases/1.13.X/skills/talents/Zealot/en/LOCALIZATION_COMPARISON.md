@@ -722,6 +722,18 @@ Full raw template and formatting: [source evidence](zealot_uninterruptible_no_sl
 | Charging protection and movement penalty | “Become Uninterruptible while charging Melee Attacks. Remove +100% of Heavy Melee Attack Movement Speed penalties.”; `ui / loc_talent_zealot_uninterruptible_no_slow_heavies_desc / 9e2ba609` | Windup grants uninterruptible/stun_immune and weapon_action_movespeed_reduction_multiplier 0. [Fixed source and line references](zealot_uninterruptible_no_slow_heavies.md#fixed-source-evidence) | Consistent | Charging protection and full removal of that action's penalty agree. |
 | Action condition and exceptions | No action.kind test, movement formula or control/bypass exceptions.; `ui / loc_talent_zealot_uninterruptible_no_slow_heavies_desc / 9e2ba609` | Only windup passes; (1−movement_mod)×reduction_multiplier removes the action slowdown. Original 5m/s→2.5m/s windup retains 5m/s with talent before other modifiers. Swing, external modifiers and exceptional control remain separate. [Fixed source and line references](zealot_uninterruptible_no_slow_heavies.md#fixed-source-evidence) | Not covered by the description | These limits and calculations supplement the charging effect. |
 
+
+<a id="zealot_stacking_melee_damage_after_dodge"></a>
+
+## Riposte
+
+Full raw template and formatting: [source evidence](zealot_stacking_melee_damage_after_dodge.md#original-english-template-and-reconstruction). Name hash `65e38fc5`. Every row uses `ui / loc_talent_zealot_stacking_melee_damage_after_dodge_desc / b421dbe6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge, stacking and duration | “+5% Melee Damage after Successful Dodge. Stacking 3 times. Lasts 8s.”; `ui / loc_talent_zealot_stacking_melee_damage_after_dodge_desc / b421dbe6` | Each successful Dodge adds melee_damage 0.05 effect, max_stacks 3 and duration 8. [Fixed source and line references](zealot_stacking_melee_damage_after_dodge.md#fixed-source-evidence) | Consistent | Trigger, per-stack value, cap and duration agree. |
+| Refresh and additive damage | No refresh or same-stage damage formula.; `ui / loc_talent_zealot_stacking_melee_damage_after_dodge_desc / b421dbe6` | refresh_duration_on_stack true; original base-100 example gives 115 at 3 stacks, or 135 with another same-stage 20%. [Fixed source and line references](zealot_stacking_melee_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | These timer and damage calculations supplement the stated stacks. |
+
 ## Comparison totals
 
 117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.
