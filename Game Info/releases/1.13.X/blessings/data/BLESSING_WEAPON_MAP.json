@@ -1134,6 +1134,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
       "effect": "符合遠程擊殺條件，且擊殺事件處理時雙發起始狀態仍有效，下一次實際補彈的換彈動作可加快40%–70%（依 I–IV 級）。十字星 Mk XI 的雙管模式為舉鏡射擊；克魯克 Mk IV 為腰射。"
+    },
+    {
+      "id": "gauntlet-momentum",
+      "name_zh_tw": "交叉動量",
+      "name_en": "Gauntlet Momentum",
+      "name_key": "loc_trait_bespoke_power_bonus_on_chained_melee",
+      "description_key": "loc_trait_bespoke_power_bonus_on_chained_melee_desc",
+      "name_hash": "b3541eaf",
+      "description_hash": "8180ce02",
+      "page": "entries/交叉動量/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/388f4d79-d16b-41b8-8280-51ee892743ca",
+      "effect": "持用擲彈兵臂鎧布拉斯托姆 Mk III，以近戰命中首個目標時每次增加一層；每層實際提高近戰威力 5%，最多 10 層。切出時效果不提供近戰威力，但閒置計時仍繼續；每次合格命中會重新計時。"
     }
   ],
   "weapons": [
@@ -17671,6 +17684,60 @@
       "icon": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_216",
       "effect": "- 十字星 Mk XI（shotgun_p2_m1）：舉鏡雙發為特殊模式，腰射為普通單發。\n- 克魯克 Mk IV（shotgun_p2_m3）：腰射雙發為特殊模式，舉鏡為普通單發；四級數值相同。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power",
+      "blessing_id": "gauntlet-momentum",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/交叉動量/weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "actual_stat_key": "melee_power_level_modifier",
+        "actual_bonus_per_effective_stack": 0.05,
+        "actual_bonus_percent_per_effective_stack": 5,
+        "effective_max_stacks": 10,
+        "effective_max_bonus": 0.5,
+        "shared_idle_decay_interval_seconds": 1.5,
+        "raw_formatter_stat_key": "power_level_modifier",
+        "raw_formatter_percent_by_tier": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "actual_effective_percent_by_tier": {
+          "I": 0.05,
+          "II": 0.05,
+          "III": 0.05,
+          "IV": 0.05
+        },
+        "stat_key_mismatch": "power_level_modifier != melee_power_level_modifier",
+        "maximum_effective_melee_power_modifier": 0.5,
+        "child_duration_seconds": 1.5,
+        "timer_model": "shared inactivity timer; remove one effective layer per elapsed interval; each accepted proc refreshes, including when capped"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 302,
+        "end_line": 361
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 78,
+        "end_line": 94
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_chained_melee_desc",
+      "description_hash": "8180ce02",
+      "icon": "https://github.com/user-attachments/assets/388f4d79-d16b-41b8-8280-51ee892743ca",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_145",
+      "effect": "- 擲彈兵臂鎧 布拉斯托姆 Mk III（ogryn_gauntlet_p1_m1）：四級實際每層均為 +5% 近戰威力，最多 10 層；RAW I–III 顯示數值較低，IV 顯示值相符。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power_parent"
     }
   ],
   "bindings": [
@@ -24742,6 +24809,20 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
         "import_line": 17,
         "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "gauntlet-momentum",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/chained_melee_hits_increases_power",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
       }
     }
   ]

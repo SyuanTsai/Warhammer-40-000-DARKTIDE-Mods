@@ -90,3 +90,4 @@
 | [超壓](entries/超壓/README.md) | [來源索引](entries/超壓/SOURCE_INDEX.md) |
 | [虹吸](entries/虹吸/README.md) | [來源索引](entries/虹吸/SOURCE_INDEX.md) |
 | [雙管齊發](entries/雙管齊發/README.md) | [來源索引](entries/雙管齊發/SOURCE_INDEX.md) |
+| [交叉動量](entries/交叉動量/README.md) | [來源索引](entries/交叉動量/SOURCE_INDEX.md) |

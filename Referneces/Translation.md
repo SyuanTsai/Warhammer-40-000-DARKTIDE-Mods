@@ -502,6 +502,7 @@
 - Focused Cooling - 專注冷卻
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reduced_overheat_on_crits`，hash `cf4040c3`；英文／繁中RAW配對確認。
 - Gauntlet Momentum - 交叉動量
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_melee`，hash `b3541eaf`；英文／繁中RAW配對確認。
 - Pulverise - 粉碎
 - Disruptive - 顛覆性力量
 - Explosive Offensive - 爆炸使我強大

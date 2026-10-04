@@ -323,3 +323,5 @@
 - [虹吸](2026-10-03-SYPHON_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [雙管齊發](2026-10-03-BOTH-BARRELS_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [交叉動量](2026-10-03-GAUNTLET-MOMENTUM_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
