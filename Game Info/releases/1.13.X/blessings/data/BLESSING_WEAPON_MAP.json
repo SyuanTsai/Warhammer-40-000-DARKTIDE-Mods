@@ -804,6 +804,24 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2",
       "effect": "持用淨化噴火器且彈匣打空、尚未進入裝填動作時，裝填速度增加 I–IV +24／28／32／36%；只影響後續裝填動作，不增加射擊或火焰傷害。"
+    },
+    {
+      "id": "adhesive-charge",
+      "name_zh_tw": "黏著炸藥",
+      "name_en": "Adhesive Charge",
+      "name_key": "loc_trait_bespoke_grenades_stick_to_monsters",
+      "description_key": "loc_trait_bespoke_grenades_stick_to_monsters_and_damage_desc",
+      "name_hash": "d10e33b3",
+      "description_hash": "b09ff9d4",
+      "page": "entries/黏著炸藥/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816",
+      "effect": "震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "粘性炸藥",
+        "reason": "沿用已確認詞表 Referneces/Translation.md:503「Adhesive Charge - 黏著炸藥」作文件用名；RAW 繁中「粘性炸藥」及原 hash 完整保留。這是文件翻譯用詞一致化，並非修正 RAW。"
+      }
     }
   ],
   "weapons": [
@@ -14593,6 +14611,61 @@
       "icon": "https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_165",
       "effect": "奧特米亞 Mk III 為唯一適用型號；點放與持續噴射可用於打空彈匣後的裝填。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters",
+      "blessing_id": "adhesive-charge",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/黏著炸藥/weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters",
+        "actual_mark_ids": [
+          "ogryn_thumper_p1_m2"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.06,
+          "II": 0.09,
+          "III": 0.12,
+          "IV": 0.15
+        },
+        "display_percent_by_level": {
+          "I": 6,
+          "II": 9,
+          "III": 12,
+          "IV": 15
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "wrapper_conditional_fallback": 1.5,
+        "tier_replaces_fallback": true,
+        "target_tags": [
+          "ogryn",
+          "monster"
+        ],
+        "stat_type": "additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 331,
+        "end_line": 372
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_grenades_stick_to_monsters_and_damage_desc",
+      "description_hash": "b09ff9d4",
+      "icon": "https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_137",
+      "effect": "震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。"
     }
   ],
   "bindings": [
@@ -20474,6 +20547,20 @@
         "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
         "import_line": 14,
         "append_line": 747
+      }
+    },
+    {
+      "blessing_id": "adhesive-charge",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/grenades_stick_to_monsters",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
       }
     }
   ]

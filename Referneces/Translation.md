@@ -501,6 +501,7 @@
 - Blast Zone - 狂轟猛炸
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire`，hash `d72f3677`；英文／繁中RAW配對確認。
 - Adhesive Charge - 黏著炸藥
+  - 文件譯名；本體1.13.1繁中仍為「粘性炸藥」。名稱鍵 `loc_trait_bespoke_grenades_stick_to_monsters`，hash `d10e33b3`；保留同hash中英RAW原文與文件翻譯分層。
 - Marksman's Reflex - 迅雷反射
 
 ## 裝備屬性

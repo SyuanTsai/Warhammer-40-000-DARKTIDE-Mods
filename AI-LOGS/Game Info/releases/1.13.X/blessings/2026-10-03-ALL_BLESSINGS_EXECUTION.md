@@ -257,3 +257,5 @@
 - 第9輪三項已Commit後完整掃描通過：surge (`b73f1d6286d0254778d52321d847677abc628ad8`)、blast-zone (`4f59d234363b452930ffe497866b7f1f6434e622`)、opening-salvo (`639cdf3551020d10d2ce892e218e38279c34aaaa`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-009-full-scan.json`／SHA-256 `9480b3465b6d2b5f7f942ccda418b160560e8ed6fa746fc8f6a603e666c69f52`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [迅捷火焰](2026-10-03-QUICKFLAME_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [黏著炸藥](2026-10-03-ADHESIVE-CHARGE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
