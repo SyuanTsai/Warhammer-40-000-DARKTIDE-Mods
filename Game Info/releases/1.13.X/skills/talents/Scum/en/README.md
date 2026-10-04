@@ -103,6 +103,7 @@
 | <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="Vultoprene I talent icon"> [Vultoprene I](#broker_stimm_combat_4c) | <ul><li>Gain 4% Power.</li><li>Gain 5 percentage points of Critical Strike Chance.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="Wildfire V talent icon"> [Wildfire V](#broker_stimm_combat_5a) | <ul><li>Gain 4% Power.</li><li>Gain 25% additional Weakspot and Critical Damage.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="32" height="32" alt="Fury II talent icon"> [Fury II](#broker_stimm_combat_5b) | <ul><li>Gain 4% Power.</li><li>Gain 10% Rending.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="Vultoprene II talent icon"> [Vultoprene II](#broker_stimm_combat_5c) | <ul><li>Gain 4% Power.</li><li>Gain 10 percentage points of Critical Strike Chance.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1648,3 +1649,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Armour example**: With other conditions fixed, 100 Damage before armour and an original armour modifier of 0.5 give 100 × (0.5 + 0.1) = 60 with this node alone. Both Fury nodes together give 100 × (0.5 + 0.15) = 65.
 
 [Details](broker_stimm_combat_5b.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_5c"></a>
+
+### Vultoprene II
+
+<img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="72" height="72" alt="Vultoprene II talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Power**: Gain 4%, additive with prerequisite recipes and other Power bonuses at the same stage. Power then contributes to weapon Damage, Stagger and Cleave calculations.
+
+- **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives five Power nodes: 500 × (1 + 5 × 4%) = 600.
+
+- **Critical Strike Chance**: Gain 10 percentage points; Vultoprene I and II together add 15 percentage points.
+
+- **Critical example**: An original 10% becomes 10% + 10% = 20% with this node alone; both Vultoprene nodes together give 25%, with the final result clamped to 0%–100%.
+
+[Details](broker_stimm_combat_5c.md) · [Back to index](#talent-index)

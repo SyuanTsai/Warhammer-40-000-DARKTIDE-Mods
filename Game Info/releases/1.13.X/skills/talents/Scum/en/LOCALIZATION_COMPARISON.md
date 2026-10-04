@@ -1160,6 +1160,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_5b.md#or
 | Recipe statistics | +4% Strength; +10% Rending (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_rending_multiplier / 0dd2df4e` | power_level_modifier = 0.04; rending_multiplier = 0.1 [Fixed source and line references](broker_stimm_combat_5b.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. Rending does not state a universal final Damage multiplier; the armour-modifier rules supplement it. |
 | Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_rending_multiplier / 0dd2df4e` | One purchase at cost 5; prerequisite Power adds before weapon curves. `rending_multiplier` increases the effective armour modifier when it is below 1. Crossing 1 and special profiles follow separate Rending rules; the example is limited to values that do not cross 1. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_5b.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
 
+
+<a id="broker_stimm_combat_5c"></a>
+
+## Vultoprene II
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_5c.md#original-english-template-and-reconstruction). Name hash `0f81fa53`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Strength; +10% Critical Strike Chance (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | power_level_modifier = 0.04; critical_strike_chance = 0.1 [Fixed source and line references](broker_stimm_combat_5c.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. The Critical Strike Chance label and value match an additive percentage-point bonus; stacking and clamping supplement it. |
+| Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | One purchase at cost 5; prerequisite Power adds before weapon curves. `critical_strike_chance` is a `value` stat, added to the base and other Critical Strike Chance values before `clamp01`. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_5c.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
+
 ## Comparison totals
 
 The 203 listed rules comprise **94 Consistent**, **5 Explicit contradictions**, **94 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

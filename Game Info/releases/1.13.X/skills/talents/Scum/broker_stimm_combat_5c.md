@@ -1,5 +1,7 @@
 # 獵鷹蕈劑 II(Vultoprene II)：原始碼依據
 
+[English](en/broker_stimm_combat_5c.md)
+
 [返回玩家說明](README.md#broker_stimm_combat_5c)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_stimm_combat_5c)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
