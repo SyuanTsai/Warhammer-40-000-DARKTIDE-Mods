@@ -2010,6 +2010,22 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_343_347.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_348",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_348.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_class",
+      "kind": "class_acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

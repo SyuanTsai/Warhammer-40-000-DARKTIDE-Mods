@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 347 completed on 2026-10-04. [Receipt](psyker_skills_343_347.json) and [FILE_MAP](FILE_MAP.json) record 347 accepted mechanisms. Next item: **348, Psykinetic Grip**, `psyker_increased_blitz_damage`. The full goal remains active and unfinished.
+Psyker closeout completed on 2026-10-04. [Item 348 receipt](psyker_skills_348.json), [class receipt](psyker_class.json) and [FILE_MAP](FILE_MAP.json) record **348 accepted mechanisms / 372 accepted files**. Next item: **349, Scum Blackout**, `broker_blitz_flash_grenade_improved`. The full goal remains active and unfinished.
 
-The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
+The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 299 mechanisms + 24 class-support files + 2 shared files = 325 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 80/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 172 = 80 Consistent / 4 Explicit contradictions / 80 Not covered / 0 No implementation / 8 Cannot confirm. Latest batch commit interval: 219s (3m 39s), e152bb6fa→d7d8dce51. Just a Dream has one English conversion wording ambiguity; no new explicit English contradiction. Unconditional Immaterial Focus reduction, modifier eligibility, Warp Ghost's lowest-band exception and both armour-dependent Rending examples are retained.
+Remaining: 298 mechanisms + 18 class-support files + 2 shared files = 318 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Psyker totals: 184 = 85 Consistent / 5 Explicit contradictions / 85 Not covered / 0 No implementation / 9 Cannot confirm. Item 348 interval: 93s; class-support interval: 568s, counted separately. Class check passed all six shared pages (705 local references, 162 existing images). Base Peril English has a sufficient-condition contradiction; its full active-Quell input/movement clause remains unresolved under existing evidence.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
