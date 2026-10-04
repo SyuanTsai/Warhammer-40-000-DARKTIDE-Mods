@@ -71,6 +71,7 @@
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="Hyper-Violence talent icon"> [Hyper-Violence](#broker_passive_melee_damage_carry_over) | <ul><li>Kills grant 25% of overkill Damage as flat Melee Damage for 1s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="Virulent Strain talent icon"> [Virulent Strain](#broker_passive_toxin_infected_enemies_take_increased_damage) | <ul><li>Adding Chem Toxin or a stack to an enemy makes it take 10% more Damage from all sources for up to 5s; retriggering refreshes.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="Toxin Mania talent icon"> [Toxin Mania](#broker_passive_damage_after_toxined_enemies) | <ul><li>Each Chem Toxin infected enemy within 12.5m grants 5% Damage, up to 15% at three enemies.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="Splash Damage talent icon"> [Splash Damage](#broker_passive_toxin_spread_on_kills) | <ul><li>A Melee Elite kill spreads Chem Toxin within 4m to up to 10 selected enemies, filling this talent's contribution to 2 stacks.</li></ul> | Talent |
 
 ---
 
@@ -1064,3 +1065,19 @@
 - **Damage example**: Two infected enemies nearby grant 10% Damage, taking base 100 to 110. With another 25% bonus at the same stage, 100 × (1 + 25% + 10%) = 135.
 
 [Details](broker_passive_damage_after_toxined_enemies.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_toxin_spread_on_kills"></a>
+
+### Splash Damage
+
+<img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="72" height="72" alt="Splash Damage talent icon">
+
+- **Trigger**: Killing an Elite enemy with Melee spreads Chem Toxin within 4m of that enemy, selecting at most 10 enemies. The killed enemy does not need to have been infected already.
+
+- **Stack limit**: This talent only fills this Toxin type up to 2 stacks. An initial 0 becomes 2, and 1 is filled to 2. At 2 or more, it only resets Toxin duration without adding further stacks.
+
+- **Toxin example**: Damage occurs every 0.35s based on current Toxin stacks. At 2 stacks, input Power is 500 × 2 ÷ 30 ≈ 33.33, then the Toxin curve and armour determine Damage. This does not directly deal 33.33 Damage.
+
+[Details](broker_passive_toxin_spread_on_kills.md) · [Back to index](#talent-index)
