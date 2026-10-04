@@ -31,7 +31,7 @@ const classes = [
   ['Scum', '巢都渣滓'], ['Skitarii', '護教軍'], ['Veteran', '老兵'], ['Zealot', '狂信徒']
 ];
 const selectedClasses = options.classes?.split(',') ?? classes.map(([name]) => name);
-const git = (...args) => execFileSync('git', ['-C', modsRoot, ...args], {
+const git = (...args) => execFileSync('git', ['-c', 'core.longpaths=true', '-C', modsRoot, ...args], {
   encoding: 'utf8', maxBuffer: 64 * 1024 * 1024
 });
 const tracked = new Set(git('ls-tree', '-r', '--name-only', knowledgeSha).trim().split('\n'));
@@ -171,6 +171,108 @@ function formatFragment(html, spaces = 12) {
   }).join('\n').replace(/CODEBLOCKPLACEHOLDER(\d+)/g, (_, index) => preservedCode[Number(index)]);
 }
 
+function directory(url) {
+  const current = groups.find(group => url.startsWith(`/darktide/skills/${group.classSlug}/`));
+  const active = current?.skills.find(skill => url === skill.url || url === skill.url + 'mechanics/');
+  const link = (href, label, english = '') => `<a href="${escape(href)}"${href === url ? ' aria-current="page"' : ''}>${escape(label)}${english ? `<small lang="en">${escape(english)}</small>` : ''}</a>`;
+  const tree = (current ? [current] : groups).map(group => {
+    const root = `/darktide/skills/${group.classSlug}/`;
+    if (group !== current) return link(root, group.classZh, group.className);
+    const categories = [...new Set(group.skills.map(skill => skill.category))];
+    const branches = categories.map((category, i) => {
+      const selected = active?.category === category;
+      const entries = group.skills.filter(skill => skill.category === category && (!active?.recipeBranch || skill.recipeBranch === active.recipeBranch));
+      const index = entries.indexOf(active);
+      // A bounded neighborhood keeps large talent categories out of every page.
+      const nearby = selected ? entries.slice(Math.max(0, index - 3), index + 4) : [];
+      const recipeLinks = category === '興奮劑配方' ? ['celerity', 'combat', 'concentration', 'durability'].map(branch => link(root + '#recipe-' + branch, branch[0].toUpperCase() + branch.slice(1))).join('\n') : '';
+      return `              <details${selected ? ' open' : ''}>
+                <summary>${escape(category)}</summary>
+                <div class="dt-level">
+                  ${link(root + '#category-' + i, '完整分類目錄 →')}
+${recipeLinks}
+${nearby.map(skill => `                  ${link(skill.url, skill.zh, skill.en)}${skill === active ? `\n                  <div class="dt-level">${link(skill.url + 'mechanics/', '機制與原始碼依據')}</div>` : ''}`).join('\n')}
+                </div>
+              </details>`;
+    }).join('\n');
+    const supplements = Object.entries(supplementNames).map(([file, [title]]) => link(documents.get(`${group.folder}/${file}`), title)).join('\n');
+    const isSupplement = Object.keys(supplementNames).some(file => documents.get(`${group.folder}/${file}`) === url);
+    return `          <details open>
+            <summary>${escape(group.classZh)} <small lang="en">${group.className}</small></summary>
+            <div class="dt-level">
+              ${link(root, '職業目錄')}
+${branches}
+              <details${isSupplement ? ' open' : ''}>
+                <summary>基礎效果與技術補充</summary>
+                <div class="dt-level">
+${supplements}
+                </div>
+              </details>
+            </div>
+          </details>`;
+  }).join('\n');
+  const otherClasses = current ? `                <details>
+                  <summary>其他職業</summary>
+                  <div class="dt-level">
+${groups.filter(group => group !== current).map(group => link(`/darktide/skills/${group.classSlug}/`, group.classZh, group.className)).join('\n')}
+                  </div>
+                </details>` : '';
+  const html = `        <details class="dt-directory">
+          <summary>瀏覽目錄</summary>
+          <nav aria-label="Darktide 階層目錄">
+            <a class="dt-brand" href="/darktide/">DARKTIDE</a>
+            <details open>
+              <summary>技能與天賦</summary>
+              <div class="dt-level">
+                ${link('/darktide/skills/', '七職業目錄')}
+${tree}
+${otherClasses}
+              </div>
+            </details>
+            <a href="/darktide/">對話與字幕目錄 →</a>
+            <p class="dt-directory-note">Release 1.13.1 · 繁中<br>技能與天賦 → 職業 → 分類 → 技能</p>
+          </nav>
+        </details>`;
+  let depth = 0;
+  return html.split('\n').map(line => {
+    const content = line.trim();
+    if (!content) return '';
+    if (/^<\/(?:details|nav|div)>/.test(content)) depth -= 1;
+    const result = ' '.repeat(8 + depth * 2) + content;
+    if (/^<(?:details|nav|div)(?:\s[^>]*)?>$/.test(content)) depth += 1;
+    return result;
+  }).join('\n');
+}
+
+function stripReader(html) {
+  return html
+    .replace(/<!-- reader:start -->[\s\S]*?<!-- reader:body -->\n/g, '')
+    .replace(/<!-- reader:end -->[\s\S]*?<!-- \/reader:end -->\n/g, '')
+    .replace(/^[ \t]*<!-- reader:crumb -->[\s\S]*?<!-- \/reader:crumb -->[ \t]*\n?/gm, '')
+    .replace(/(<nav class="skill-breadcrumb"[\s\S]*?<\/nav>)/, block => block.replace(/\n[ \t]*\n/g, '\n'));
+}
+
+function readerFrame(html, url) {
+  html = stripReader(html);
+  if (!html.includes('href="/assets/css/darktide-reader.css"')) {
+    html = html.replace('  </head>', '    <link rel="stylesheet" href="/assets/css/darktide-reader.css">\n  </head>');
+  }
+  if (!html.includes('class="skill-page-toc"')) {
+    html = html.replace(/(<nav class="skill-sidebar"[\s\S]*?<\/nav>)/, '<details class="skill-page-toc" open>\n          <summary>本頁內容</summary>\n        $1\n        </details>');
+  }
+  const group = groups.find(group => url.startsWith(`/darktide/skills/${group.classSlug}/`));
+  const skill = group?.skills.find(skill => url === skill.url || url === skill.url + 'mechanics/');
+  html = html.replace(/(<nav class="skill-breadcrumb"[\s\S]*?<ol>)/, '$1\n            <!-- reader:crumb --><li><a href="/darktide/">Darktide</a></li><!-- /reader:crumb -->');
+  if (skill) {
+    const categories = [...new Set(group.skills.map(entry => entry.category))];
+    const root = `/darktide/skills/${group.classSlug}/`;
+    const parent = url.endsWith('/mechanics/') ? `<li><a href="${skill.url}">${escape(skill.zh)}</a></li>` : '';
+    html = html.replace('<li aria-current="page">', `<!-- reader:crumb --><li><a href="${root}#category-${categories.indexOf(skill.category)}">${escape(skill.category)}</a></li>${parent}<!-- /reader:crumb -->\n            <li aria-current="page">`);
+  }
+  html = html.replace('<div class="skill-shell">', `<div class="skill-shell">\n<!-- reader:start -->\n      <div class="dt-layout">\n${directory(url)}\n        <div class="dt-reading">\n<!-- reader:body -->`);
+  return html.replace('    </div>\n  </body>', '<!-- reader:end -->\n        </div>\n      </div>\n<!-- /reader:end -->\n    </div>\n  </body>');
+}
+
 function shell({ title, english = '', category, url, classZh = '', classSlug = '', icon = '', body, sidebar = [], footer = '' }) {
   const crumbs = `${url !== '/darktide/skills/' ? '<li><a href="/darktide/skills/">技能與天賦</a></li>' : ''}${classSlug && url !== `/darktide/skills/${classSlug}/` ? `\n            <li><a href="/darktide/skills/${classSlug}/">${classZh}</a></li>` : ''}\n            <li aria-current="page">${escape(title)}</li>`.trimStart();
   return `<!doctype html>
@@ -241,7 +343,7 @@ function write(url, html) {
   const target = path.join(pagesRoot, url.slice(1), 'index.html');
   if (!target.startsWith(pagesRoot + path.sep)) throw new Error('Output escaped Pages root.');
   fs.mkdirSync(path.dirname(target), { recursive: true });
-  fs.writeFileSync(target, html, 'utf8');
+  fs.writeFileSync(target, readerFrame(html, url), 'utf8');
 }
 const section = (id, title, content) => `          <section class="skill-section" id="${id}" aria-labelledby="${id}-title">\n            <h2 id="${id}-title">${escape(title)}</h2>\n${formatFragment(content)}\n          </section>`;
 
@@ -255,7 +357,7 @@ for (const group of groups) {
     if (skill.id === 'veteran_replenish_grenades') {
       // Keep the established player layout, values and examples; add the generated mechanics entry.
       const target = path.join(pagesRoot, skill.url, 'index.html');
-      let template = fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n');
+      let template = stripReader(fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n'));
       template = template.replace(/\n          <section class="skill-section" id="git-player-details"[\s\S]*?(?=\n        <\/article>)/, '');
       template = template.replace('<span>05</span>完整玩家說明', '<span>05</span>詳細資料');
       template = template.replace(/\n        <\/article>/, '\n' + section('git-player-details', '機制與原始碼依據', links) + '\n        </article>');
