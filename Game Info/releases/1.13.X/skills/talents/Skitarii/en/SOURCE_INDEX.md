@@ -42,3 +42,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Satiated Steel](cryptic_chordclaw_capacitance_restoration.md) / `cryptic_chordclaw_capacitance_restoration` | Ability |
 | [Slice and Dice](cryptic_chordclaw_consecutive_bonus.md) / `cryptic_chordclaw_consecutive_bonus` | Ability |
 | [Piercing Sight](cryptic_precision_stance_crit_cleave.md) / `cryptic_precision_stance_crit_cleave` | Ability |
+| [Calculated Priority](cryptic_precision_stance_damage_on_elite_kill.md) / `cryptic_precision_stance_damage_on_elite_kill` | Ability |

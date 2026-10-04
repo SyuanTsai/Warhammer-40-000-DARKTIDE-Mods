@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="Satiated Steel talent icon"> [Satiated Steel](#cryptic_chordclaw_capacitance_restoration) | <ul><li>A Chordclaw melee kill restores an additional 25% of the current Combat Ability's cost per charge over 5s.</li><li>At 50 points per charge, the full 5s gives 12.5 extra points. Another kill during the effect resets the timer without stacking the recovery rate.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="Slice and Dice talent icon"> [Slice and Dice](#cryptic_chordclaw_consecutive_bonus) | <ul><li>Each Chordclaw ability activation adds one Chordclaw damage stack, +20% per stack, up to 3.</li><li>Duration is 5s; adding a stack refreshes the duration. At 3 stacks, the Chordclaw damage modifier totals +60%.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="Piercing Sight talent icon"> [Piercing Sight](#cryptic_precision_stance_crit_cleave) | <ul><li>While Advanced Combat Doctrines is active, gain 30% Ranged Cleave and 15 percentage points of Ranged Critical Strike Chance; after 4 continuous seconds, these rise to 60% and 30 percentage points. Both bonuses end with the ability.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="Calculated Priority talent icon"> [Calculated Priority](#cryptic_precision_stance_damage_on_elite_kill) | <ul><li>While Advanced Combat Doctrines is active, ranged Elite kills grant +5% Damage per stack for 10 seconds, up to 5 stacks (+25%). New stacks refresh the duration; existing stacks can outlast the ability.</li></ul> | Ability |
 
 ---
 
@@ -500,3 +501,18 @@
 - Ending the ability removes both bonuses. Activating it again requires another 4 seconds to reach the increased values.
 
 [Details](cryptic_precision_stance_crit_cleave.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_precision_stance_damage_on_elite_kill"></a>
+
+### Calculated Priority
+
+<img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="72" height="72" alt="Calculated Priority talent icon">
+
+- **Trigger**: While Advanced Combat Doctrines is active, a **ranged Elite kill** adds one stack of **+5% Damage for 10 seconds**.
+- **Stacking**: Up to **5 stacks**, for **+25% Damage**. Adding another stack refreshes the 10-second duration.
+- **How it works**: With illustrative base damage of `100` and no other modifiers at this stage, 5 stacks give `100 × (1 + 25%) = 125`. With an existing +20% modifier at the same stage, the result is `100 × (1 + 20% + 25%) = 145`.
+- **After the ability ends**: Existing stacks remain until their own 10-second duration expires. Kills while the ability is inactive cannot add new stacks.
+
+[Details](cryptic_precision_stance_damage_on_elite_kill.md) · [Back to index](#talent-index)

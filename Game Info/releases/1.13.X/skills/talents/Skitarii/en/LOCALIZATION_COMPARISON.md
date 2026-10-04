@@ -381,6 +381,18 @@ Full raw template and formatting: [source evidence](cryptic_precision_stance_cri
 | Initial and increased bonuses | While the ability is active: 30% Ranged Cleave and 15% Ranged Critical Strike Chance, rising to 60% and 30% after 4s; `ui / loc_talent_cryptic_precision_stance_crit_cleave_desc / f7e91cd6` | Base modifiers `0.3` / `0.15`, plus delayed differences `0.3` / `0.15`, give totals `0.6` / `0.30` after 4 continuous seconds [Fixed source and line references](cryptic_precision_stance_crit_cleave.md#fixed-source-evidence) | Consistent | The condition, values and delay match. |
 | Calculation and reset details | Names Ranged Cleave and Critical Strike Chance; does not describe their calculation or restarting the delay; `ui / loc_talent_cryptic_precision_stance_crit_cleave_desc / f7e91cd6` | Cleave modifies hit-mass capacity; Critical Strike Chance adds percentage points. Ending the ability removes the bonuses and clears the delay; reactivation starts a new 4-second wait [Fixed source and line references](cryptic_precision_stance_crit_cleave.md#fixed-source-evidence) | Not covered by the description | The examples and reset behavior explain omitted details without contradicting the English. |
 
+
+<a id="cryptic_precision_stance_damage_on_elite_kill"></a>
+
+## Calculated Priority
+
+Full raw template and formatting: [source evidence](cryptic_precision_stance_damage_on_elite_kill.md#original-english-template-and-reconstruction). Name hash `1194be75`. Every row uses `ui / loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc / 0da94924`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Active ability, Elite kills and stack values | While Advanced Combat Doctrines is active, Elite Kills grant +5% Damage for 10s, stacking 5 times; `ui / loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc / 0da94924` | A qualifying kill during the ability adds a `damage = 0.05` stack; duration 10 seconds and maximum 5 stacks [Fixed source and line references](cryptic_precision_stance_damage_on_elite_kill.md#fixed-source-evidence) | Consistent | The stated condition and all displayed values agree. |
+| Ranged requirement and stack lifecycle | Does not specify ranged kills, refreshing the duration or retaining stacks after the ability; `ui / loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc / 0da94924` | Both `on_ranged_kill` and `on_elite_kill` are required. New stacks refresh the duration; the independent stack buff survives ending the stance until expiry. Damage adds at the same calculation stage [Fixed source and line references](cryptic_precision_stance_damage_on_elite_kill.md#fixed-source-evidence) | Not covered by the description | The omitted condition and lifecycle details do not explicitly contradict the English; retain the verified 125 / 145 examples. |
+
 ## Comparison totals
 
 62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.
