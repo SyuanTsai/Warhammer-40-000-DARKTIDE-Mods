@@ -140,7 +140,7 @@ Full raw template and formatting: [source evidence](zealot_additional_charge_of_
 | Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
 |---|---|---|---|---|
 | Charge limit | “now has {charges:%s} charges” → 2; `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb` | `PlayerAbilities.zealot_targeted_dash_improved_double` sets `max_charges=2`. [Fixed source and line references](zealot_additional_charge_of_ability.md#fixed-source-evidence) | Consistent | The named ability and charge count match. |
-| Recharge details | The template specifies a count but no recharge schedule.; `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb` | One resource pool recharges at 1 resource/s; each charge costs 30. Two empty charges take about 30/60 seconds for one/both under the stated assumptions. [Fixed source and line references](zealot_additional_charge_of_ability.md#fixed-source-evidence) | Not mentioned | Shared recharge, the cap, and interactions supplement the count without contradicting it. |
+| Recharge details | The template specifies a count but no recharge schedule.; `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb` | One resource pool recharges at 1 resource/s; each charge costs 30. Two empty charges take about 30/60 seconds for one/both under the stated assumptions. [Fixed source and line references](zealot_additional_charge_of_ability.md#fixed-source-evidence) | Not covered by the description | Shared recharge, the cap, and interactions supplement the count without contradicting it. |
 
 
 <a id="zealot_stealth"></a>
@@ -192,4 +192,4 @@ Full raw template and formatting: [source evidence](zealot_restore_stealth_cd_on
 
 ## Comparison totals
 
-23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.
+33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.
