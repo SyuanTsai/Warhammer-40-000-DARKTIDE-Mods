@@ -662,6 +662,18 @@ Full raw template and formatting: [source evidence](psyker_warp_charge_reduces_t
 | Range, resource and damage scope | Toughness Damage Reduction of +10% to +33% based on current Peril; `ui / loc_talent_psyker_toughness_damage_reduction_from_warp_charge_desc / 96e4cb7c` | Current Peril weights the Toughness damage-taken multiplier between 0.9 and 0.67; the effect does not reduce Health Damage. [Fixed source and line references](psyker_warp_charge_reduces_toughness_damage_taken.md#fixed-source-evidence) | Consistent | The endpoints, current resource and Toughness-only scope agree. |
 | Interpolation and combination | No interpolation or combination formula; `ui / loc_talent_psyker_toughness_damage_reduction_from_warp_charge_desc / 96e4cb7c` | The multiplier is linearly interpolated and multiplies with other reductions in the same multiplicative stage. [Fixed source and line references](psyker_warp_charge_reduces_toughness_damage_taken.md#fixed-source-evidence) | Not covered by the description | The formula and example explain how the stated range is applied. |
 
+
+<a id="psyker_improved_dodge"></a>
+
+## Anticipation
+
+Full raw template and formatting: [source evidence](psyker_improved_dodge.md#original-english-template-and-reconstruction). Name hash `3a1d92bc`. Every row uses `ui / loc_talent_psyker_improved_dodge_description / b7dff1d2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional Effective Dodge | Increase Effective Dodges by 1; `ui / loc_talent_psyker_improved_dodge_description / b7dff1d2` | extra_consecutive_dodges = 1 adds to diminishing_return_start. [Fixed source and line references](psyker_improved_dodge.md#fixed-source-evidence) | Consistent | “By” denotes an addition, consistent with the verified total of 3 + 1 = 4 in the existing example. |
+| Protection timing | Time considered Dodging increased by +50%; no exact phase specified; `ui / loc_talent_psyker_improved_dodge_description / b7dff1d2` | dodge_linger_time_modifier = 0.5 scales the protection linger after the action; it does not extend the whole dodge action by 50%. [Fixed source and line references](psyker_improved_dodge.md#fixed-source-evidence) | Not covered by the description | The amount agrees, but the English leaves the specific protected phase implicit. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="Mind in Motion talent icon"> [Mind in Motion](#psyker_venting_improvements) | <ul><li>+5% Movement Speed; removes Quelling and Reloading movement penalties. Other slowing sources still apply.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="Malefic Momentum talent icon"> [Malefic Momentum](#psyker_kills_stack_other_weapon_damage) | <ul><li>Non-Warp Kill: +5% Warp Damage. Warp Kill: +5% non-Warp Damage. Each group lasts 10s and stacks separately up to 5 times.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="32" height="32" alt="One with the Warp talent icon"> [One with the Warp](#psyker_warp_charge_reduces_toughness_damage_taken) | <ul><li>Toughness Damage Reduction scales linearly with current Peril: 10% at 0% Peril, 33% at 100%. Does not reduce Health Damage.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="Anticipation talent icon"> [Anticipation](#psyker_improved_dodge) | <ul><li>+1 Effective Dodge and +50% dodge protection linger time; the entire dodge animation is not extended by 50%.</li></ul> | Talent |
 
 ---
 
@@ -896,3 +897,21 @@
 - **Reduction example**: at 50% Peril, the reduction is 10% + (33% − 10%) × 50% = 21.5%. An original 100 points of Toughness Damage becomes 100 × 0.785 = 78.5 points; with another independent 20% reduction it becomes 78.5 × 0.8 = 62.8 points. This effect does not reduce Health Damage.
 
 [Details](psyker_warp_charge_reduces_toughness_damage_taken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_improved_dodge"></a>
+
+### Anticipation
+
+<img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="72" height="72" alt="Anticipation talent icon">
+
+- **Effect**: gain 1 additional Effective Dodge and increase the protection linger time after the dodge action ends by 50%.
+
+- **Example**: a weapon with 3 consecutive Effective Dodges gains 3 + 1 = 4. If the original linger time was 0.2 seconds, it becomes 0.2 × 1.5 = 0.3 seconds; this does not mean the entire dodge action lasts 50% longer.
+
+#### Existing Traditional Chinese text correction
+
+- The Traditional Chinese wording says the Effective Dodge count increases to the specified number, treating the bonus as a new total. The English says to increase the count by that number; the verified effect adds 1 to the existing count, rather than allowing only 1 dodge in total.
+
+[Details](psyker_improved_dodge.md) · [Back to index](#talent-index)
