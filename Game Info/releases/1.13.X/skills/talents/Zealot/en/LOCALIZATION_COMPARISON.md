@@ -636,6 +636,18 @@ Full raw template and formatting: [source evidence](zealot_damage_boosts_movemen
 | Stun protection and timed speed | “Enemy Melee Attacks cannot Stun you. On taking Damage, gain +15% Movement Speed for 2s.”; `ui / loc_talent_zealot_movement_speed_on_damaged_desc / bdaf3ea6` | Permanent stun_immune; holder's damage event grants movement_speed 0.15 for 2 seconds. [Fixed source and line references](zealot_damage_boosts_movement.md#fixed-source-evidence) | Consistent | Permanent protection and timed speed are separated correctly. |
 | Immunity limits, damage scope and refresh | No slowdown immunity, Health-damage test, refresh or immunity-bypass detail.; `ui / loc_talent_zealot_movement_speed_on_damaged_desc / bdaf3ea6` | slowdown_immune is permanent; attacked_unit==holder needs no positive Health damage; further damage refreshes. Stun can ignore immunity; no universal control/Push immunity. Original 5→5.75m/s example retained. [Fixed source and line references](zealot_damage_boosts_movement.md#fixed-source-evidence) | Not covered by the description | The narrower Melee statement does not assert that all other protections or bypass limits are absent. |
 
+
+<a id="zealot_stamina_on_block_break"></a>
+
+## Retaliatory Defence
+
+Full raw template and formatting: [source evidence](zealot_stamina_on_block_break.md#original-english-template-and-reconstruction). Name hash `2db26b4b`. Every row uses `ui / loc_talent_zealot_stamina_on_block_break_alt_desc / 2fb38d1a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Block Break restoration and protection | “On Block Break, you are no longer Stunned and instead restore 50% Stamina. 12s Cooldown.”; `ui / loc_talent_zealot_stamina_on_block_break_alt_desc / 2fb38d1a` | Available proc restores 0.5 of maximum Stamina, prevents Block Break stun and starts 12-second cooldown. [Fixed source and line references](zealot_stamina_on_block_break.md#fixed-source-evidence) | Consistent | Condition, restoration proportion, protection and cooldown agree. |
+| Availability and event order | No maximum-Stamina basis or active-state/event-order detail.; `ui / loc_talent_zealot_stamina_on_block_break_alt_desc / 2fb38d1a` | on_block/on_block_broken; conditional keyword checks template_context.active, meaning not on cooldown. Block checks immunity before event. Original maximum-6 example restores 3, with no repeat during cooldown. [Fixed source and line references](zealot_stamina_on_block_break.md#fixed-source-evidence) | Not covered by the description | These availability and calculation details explain the stated cooldown effect. |
+
 ## Comparison totals
 
 105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

@@ -60,6 +60,7 @@
 | <img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="32" height="32" alt="Shield of Contempt talent icon"> [Shield of Contempt](#zealot_ally_damage_taken_reduced) | <ul><li>After you or an ally takes Health damage, the injured player gains 60% damage reduction for 4 seconds; each holder shares an 8-second trigger cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="32" height="32" alt="Punish Impiety talent icon"> [Punish Impiety](#zealot_push_attacks_attack_speed) | <ul><li>A hit from the attack following a push grants +10% Melee Attack Speed for 5 seconds; another trigger restarts the timer.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/52db08a6-3729-466e-ac16-d02a1a7ebecb" width="32" height="32" alt="Thy Wrath be Swift talent icon"> [Thy Wrath be Swift](#zealot_damage_boosts_movement) | <ul><li>Taking damage grants +15% Movement Speed for 2 seconds; ordinary hit slowdown and stun immunity are always active.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/607612bf-67ee-475e-9a16-0b5541c7b4ea" width="32" height="32" alt="Retaliatory Defence talent icon"> [Retaliatory Defence](#zealot_stamina_on_block_break) | <ul><li>When available, a Block Break restores 50% of maximum Stamina and prevents that Block Break's stun; 12-second cooldown.</li></ul> | Skill |
 
 ---
 
@@ -805,3 +806,16 @@
 - **Speed example**: With base Movement Speed 5 metres/second and no other modifiers, the speed becomes 5 × 1.15 = 5.75 metres/second.
 
 [Details](zealot_damage_boosts_movement.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_stamina_on_block_break"></a>
+
+### Retaliatory Defence
+
+<img src="https://github.com/user-attachments/assets/607612bf-67ee-475e-9a16-0b5541c7b4ea" width="72" height="72" alt="Retaliatory Defence talent icon">
+
+- **Operation**: When the effect is available, a Block Break restores 50% of maximum Stamina and prevents the stun from that Block Break. Triggering it starts a 12-second cooldown.
+- **Restoration example**: With maximum Stamina 6, a Block Break exhausting it to 0 restores 6 × 50% = 3. Another Block Break during the cooldown gives no further restoration.
+
+[Details](zealot_stamina_on_block_break.md) · [Back to index](#talent-index)
