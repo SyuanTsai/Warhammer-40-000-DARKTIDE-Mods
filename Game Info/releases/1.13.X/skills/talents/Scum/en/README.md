@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="Hyper-Critical talent icon"> [Hyper-Critical](#broker_passive_melee_crit_instakill) | <ul><li>After a Critical Melee Hit, execute a living human-sized enemy whose remaining Health is below the hit's actual Damage; Captains are excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="Punching Above One's Weight talent icon"> [Punching Above One's Weight](#broker_passive_damage_vs_elites_monsters) | <ul><li>Deal 15% more Damage to Elites and Monstrosities.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="The Sweet Spot talent icon"> [The Sweet Spot](#broker_passive_increased_weakspot_damage) | <ul><li>Increase the additional Weakspot Damage component by 25%; the resulting total damage gain varies by weapon.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="Long Lasting talent icon"> [Long Lasting](#broker_passive_stimm_increased_duration) | <ul><li>Stimm effects last 5 seconds longer.</li></ul> | Talent |
 
 ---
 
@@ -1239,3 +1240,19 @@
 - **Weapon difference example**: Another weapon with a normal component of 100 and additional component of 300 starts at 400. The bonus gives 100 + 300 × 1.25 = 475, a total increase of 18.75%. The same 25% Weakspot bonus therefore does not give every weapon the same total damage percentage increase.
 
 [Details](broker_passive_increased_weakspot_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stimm_increased_duration"></a>
+
+### Long Lasting
+
+<img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="72" height="72" alt="Long Lasting talent icon">
+
+- **Duration example**: A Stimm normally lasting 15 seconds lasts 15 + 5 = 20 seconds. This adds a fixed 5 seconds, not 5%.
+
+- **Cooldown effect**: The Scum's dedicated Stimm pauses natural cooldown recovery while its effects are active. Extending those effects also delays the start of natural cooldown recovery.
+
+- **Applicability**: Extends Stimms with a timed effect. Instant healing itself does not become five more seconds of healing.
+
+[Details](broker_passive_stimm_increased_duration.md) · [Back to index](#talent-index)

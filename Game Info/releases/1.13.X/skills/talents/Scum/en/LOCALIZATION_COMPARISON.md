@@ -904,6 +904,18 @@ Full raw template and formatting: [source evidence](broker_passive_increased_wea
 | Weakspot statistic and value | +25% Weakspot Damage; `ui / loc_talent_broker_passive_increased_weakspot_damage_desc / 54b98b85` | Adds 0.25 to `finesse_buff_damage_multiplier` on `hit_weakspot` [Fixed source and line references](broker_passive_increased_weakspot_damage.md#fixed-source-evidence) | Consistent | The named statistic, Weakspot condition and value agree. |
 | Component scope and total gain | No component formula or fixed total-damage claim; `ui / loc_talent_broker_passive_increased_weakspot_damage_desc / 54b98b85` | Applies to `base_finesse_damage`; the normal component remains separate, so weapon and hit properties affect the total gain [Fixed source and line references](broker_passive_increased_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | Both existing examples clarify the formula without treating the abbreviated statistic label as an error. |
 
+
+<a id="broker_passive_stimm_increased_duration"></a>
+
+## Long Lasting
+
+Full raw template and formatting: [source evidence](broker_passive_stimm_increased_duration.md#original-english-template-and-reconstruction). Name hash `e452d69c`. Every row uses `ui / loc_talent_broker_passive_stimm_increased_duration_desc / 905ad5d9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Duration bonus | +5s Stimm Duration; `ui / loc_talent_broker_passive_stimm_increased_duration_desc / 905ad5d9` | Adds `syringe_duration = 5` through the applicable syringe start function [Fixed source and line references](broker_passive_stimm_increased_duration.md#fixed-source-evidence) | Consistent | The statistic, fixed seconds and value agree. |
+| Cooldown and applicability | No cooldown interaction or durationless-effect details; `ui / loc_talent_broker_passive_stimm_increased_duration_desc / 905ad5d9` | Timed effects receive `add_duration`; durationless effects are skipped, and longer Scum Stimm effects delay natural cooldown recovery [Fixed source and line references](broker_passive_stimm_increased_duration.md#fixed-source-evidence) | Not covered by the description | These retain the verified limitations and the 15 + 5 = 20 second example. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
