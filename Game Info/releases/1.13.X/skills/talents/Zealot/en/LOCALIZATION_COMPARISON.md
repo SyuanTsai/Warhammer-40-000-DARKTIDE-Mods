@@ -758,6 +758,18 @@ Full raw template and formatting: [source evidence](zealot_damage_vs_nonthreat.m
 | Target condition and damage | “+20% Damage vs Enemies not targeting you.”; `ui / loc_talent_zealot_damage_vs_nonthreat_desc / 9ca32fdb` | target_unit differs from attacking_unit; damage_vs_nonthreat 0.2 adds to damage_stat_buffs. [Fixed source and line references](zealot_damage_vs_nonthreat.md#fixed-source-evidence) | Consistent | Target condition and bonus agree. |
 | Nil target and same-stage calculation | No other-player requirement, attack-type restriction or additive formula.; `ui / loc_talent_zealot_damage_vs_nonthreat_desc / 9ca32fdb` | nil also differs from the player; Melee/Ranged apply. Original base-100 examples give 120 alone or 145 with same-stage 25%; condition fails once enemy targets holder. [Fixed source and line references](zealot_damage_vs_nonthreat.md#fixed-source-evidence) | Not covered by the description | These target and calculation details supplement the general damage statement. |
 
+
+<a id="zealot_defensive_knockback"></a>
+
+## The Master's Retribution
+
+Full raw template and formatting: [source evidence](zealot_defensive_knockback.md#original-english-template-and-reconstruction). Name hash `8fb484ca`. Every row uses `ui / loc_talent_zealot_3_tier_3_ability_1_description / f3ca681a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Retaliatory direction and cooldown | “Knock back the Attacker on taking a Melee Hit. 8s Cooldown.”; `ui / loc_talent_zealot_3_tier_3_ability_1_description / f3ca681a` | Melee-hit proc pushes toward the attacker with cooldown 8. [Fixed source and line references](zealot_defensive_knockback.md#fixed-source-evidence) | Consistent | Trigger direction and cooldown agree. |
+| Hit eligibility and push limits | No damage-result, living-attacker, disabled-state or geometry details.; `ui / loc_talent_zealot_3_tier_3_ability_1_description / f3ca681a` | on_player_hit_received checks Melee/is_damaging_result/alive attacker/not disabled. Server push uses radius 2.75, angles π×0.125/π×0.25, power_level 2000 and push_test; not 2000 damage. Original t0/t3/t8 example retained, triggering damage not undone. [Fixed source and line references](zealot_defensive_knockback.md#fixed-source-evidence) | Not covered by the description | These eligibility, push-resistance and timing limits supplement the knockback statement. |
+
 ## Comparison totals
 
 127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.

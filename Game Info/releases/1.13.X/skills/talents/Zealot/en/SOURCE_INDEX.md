@@ -73,3 +73,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Riposte](zealot_stacking_melee_damage_after_dodge.md) / `zealot_stacking_melee_damage_after_dodge` | Skill |
 | [Relentless Fervor](zealot_sprint_improvements.md) / `zealot_sprint_improvements` | Skill |
 | [Unseen Blade](zealot_damage_vs_nonthreat.md) / `zealot_damage_vs_nonthreat` | Skill |
+| [The Master's Retribution](zealot_defensive_knockback.md) / `zealot_defensive_knockback` | Skill |

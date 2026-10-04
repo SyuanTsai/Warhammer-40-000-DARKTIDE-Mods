@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="Riposte talent icon"> [Riposte](#zealot_stacking_melee_damage_after_dodge) | <ul><li>Each successful Dodge grants +5% Melee Damage per stack, up to 3 stacks; triggering again restarts the 8-second duration.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="Relentless Fervor talent icon"> [Relentless Fervor](#zealot_sprint_improvements) | <ul><li>Grants +10% Sprint Speed and −10% Sprint Cost; continuous Sprinting for 1 second grants Slowdown Immunity until Sprinting stops.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="Unseen Blade talent icon"> [Unseen Blade](#zealot_damage_vs_nonthreat) | <ul><li>Deals +20% damage to enemies that are not currently targeting you; applies to Melee and Ranged damage.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="The Master's Retribution talent icon"> [The Master's Retribution](#zealot_defensive_knockback) | <ul><li>A damaging Melee hit triggers a retaliatory push toward the attacker, with an 8-second cooldown; disabled state or a dead attacker prevents it.</li></ul> | Skill |
 
 ---
 
@@ -948,3 +949,17 @@
 - **Damage example**: Counting only this talent, 100 × 1.2 = 120. With an existing 25% same-stage damage bonus, the result is 100 × (1 + 25% + 20%) = 145. If the enemy starts targeting you, this conditional bonus no longer applies.
 
 [Details](zealot_damage_vs_nonthreat.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_defensive_knockback"></a>
+
+### The Master's Retribution
+
+<img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="72" height="72" alt="The Master's Retribution talent icon">
+
+- **Trigger**: A Melee hit that deals damage produces a retaliatory push toward the attacker, with an 8-second cooldown. It does not trigger while you are disabled and unable to act or when the attacker is already dead.
+- **Area**: The push has a 2.75-metre radius and faces the attacker. Enemy Stagger resistance affects the result, so it does not guarantee knocking down every enemy.
+- **Cooldown example**: After triggering at second 0, another hit at second 3 produces no push; it can trigger again around second 8. It does not undo the triggering hit's damage.
+
+[Details](zealot_defensive_knockback.md) · [Back to index](#talent-index)
