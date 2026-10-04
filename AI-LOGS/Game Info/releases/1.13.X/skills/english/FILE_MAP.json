@@ -9247,9 +9247,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1b88899855cd524a12f13c810b5ce5b89e4c2bc5",
       "chinese_sha256": "420d19a19cd89fc3a22307d8620f9804e919269dcc3cd1b76e1c4f2edf4d89af",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_damage_on_ability"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_damage_vs_electrocuted_scaling_on_charge.md",
@@ -9932,9 +9939,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "02bb830ab1e25e689429c464d9d17046178322ed",
       "chinese_sha256": "11e824a04ad11afd5dab4768d2da63639b7a7abd5a9bcbb76fdbdb46d5b306f7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_passive_ammo_replenishment"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md",
@@ -10322,9 +10336,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fd8228c5058c2c0ada3011b390b5d48ece3a7675",
       "chinese_sha256": "82aee9635a4ef4ab8084acf402d3965f997b0f2e33859872939b17b4e04db52e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_stacking_melee_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stacking_ranged_damage.md",
@@ -10398,9 +10419,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c7ad6fbfc7d9733fe4e478f253dabf1167cce44a",
       "chinese_sha256": "28a29022def2b1787ce508ea58acfe12df2213d03c0206ce981181f3c66b6e24",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_stun_dr_power"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stun_suppression_immune.md",
@@ -10539,9 +10567,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "549a986e82f204eac461077f4c670e71bf93d140",
       "chinese_sha256": "924a938219e1d0c0122e0e39c6158cc8b96b2d4ab85ba5478ceafca01109887a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_weakspot_kills_restore_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/BASE_EFFECTS.md",
@@ -18404,6 +18439,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_539_543.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_revive_speed_and_dr.md"
+    },
+    {
+      "id": "cryptic_passive_ammo_replenishment",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_passive_ammo_replenishment.md"
+    },
+    {
+      "id": "cryptic_stacking_melee_damage",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stacking_melee_damage.md"
+    },
+    {
+      "id": "cryptic_stun_dr_power",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stun_dr_power.md"
+    },
+    {
+      "id": "cryptic_damage_on_ability",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_damage_on_ability.md"
+    },
+    {
+      "id": "cryptic_weakspot_kills_restore_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_kills_restore_toughness.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1036,4 +1036,4 @@ Full raw template and formatting: [source evidence](cryptic_weakspot_kills_resto
 
 ## Comparison totals
 
-167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.
+177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.
