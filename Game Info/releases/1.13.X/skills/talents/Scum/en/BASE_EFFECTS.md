@@ -35,3 +35,19 @@ These effects come from the character's base configuration. Combat Ability, Blit
 [Source evidence and example assumptions](broker_blitz_flash_grenade.md)
 
 ---
+
+<a id="broker_aura_gunslinger"></a>
+
+## Gunslinger: base aura
+
+- **Sharing**: When you or a teammate with this Aura in Coherency picks up Ammo, supply is shared with members in the picker's Coherency. Each member's own weapon capacity determines their amount; the picked-up rounds are not divided equally among them.
+
+- **Small Ammo example**: Each member's maximum Ammo Reserve × 15% × 5%, rounded up. A maximum of 200 rounds receives ⌈1.5⌉ = 2 rounds; a maximum of 100 receives ⌈0.75⌉ = 1 round.
+
+- **Large Ammo and Ammo Crates**: Large Ammo normally restores 50%; with a 200-round maximum, sharing gives 200 × 50% × 5% = 5 rounds. A standard deployed Ammo Crate uses maximum Ammo Reserve plus magazine capacity: with 200 + 30, sharing gives ⌈230 × 5%⌉ = 12 rounds, still capped by the deficit.
+
+- **Duplicate effects**: Identical Auras do not stack. Gunslinger Improved replaces the base 5% with 10%. Shared supply does not trigger another sharing chain.
+
+[Source evidence and example assumptions](broker_aura_gunslinger.md)
+
+---

@@ -123,3 +123,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Klay](broker_stimm_concentration_5c.md) / `broker_stimm_concentration_5c` | Stimm recipe |
 | [Desperado](broker_ability_focus.md) / `broker_ability_focus` | Base Combat Ability |
 | [Blinder](broker_blitz_flash_grenade.md) / `broker_blitz_flash_grenade` | Base Blitz |
+| [Gunslinger](broker_aura_gunslinger.md) / `broker_aura_gunslinger` | Base Aura |

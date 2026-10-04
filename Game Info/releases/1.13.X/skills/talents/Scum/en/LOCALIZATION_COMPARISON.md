@@ -1354,6 +1354,19 @@ Full raw template and formatting: [source evidence](broker_blitz_flash_grenade.m
 | Grenade and replenishment | Quick Grenade Staggers enemies; every 20 Close Range Kills generate 1 Grenade; maximum 3; `ui / loc_talent_broker_blitz_flash_grenade_desc / 9cb00aee` | quick_flash_grenade; flash Stagger profile; on_close_kill counter resets at 20 and adds 1 below max_charges = 3 [Fixed source and line references](broker_blitz_flash_grenade.md#fixed-source-evidence) | Consistent | The listed effects, trigger and values match the accepted base Blitz. |
 | Throw, damage and counting limits | No throw timing, collision/radii, Health Damage, full-charge counter or delayed-kill details; `ui / loc_talent_broker_blitz_flash_grenade_desc / 9cb00aee` | 0.55-second action, projectile at 0.25s; collision detonation; radii 3.5m/2.25m; explosion no Health Damage; counter retained while full; specific tracked needle-pistol toxin death with attacking_unit distance check [Fixed source and line references](broker_blitz_flash_grenade.md#fixed-source-evidence) | Not covered by the description | These details supplement the text; the achievement tracker adds no player Damage or charge bonus. Original counter examples retain their qualifying-kill and below-maximum conditions. |
 
+
+<a id="broker_aura_gunslinger"></a>
+
+## Gunslinger: base aura
+
+Full raw template and formatting: [source evidence](broker_aura_gunslinger.md#original-english-template-and-reconstruction). Name hash `24295b77`. Every row uses `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Pickup trigger and share | Ammo pickup collected by you or allies in Coherency; each replenish 5% of that pickup; `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe` | on_ammo_pickup; in_coherence_units; copied pickup data modifier = 0.05 [Fixed source and line references](broker_aura_gunslinger.md#fixed-source-evidence) | Consistent | The trigger, recipients and share value agree for the documented ordinary pickups. |
+| Per-member calculation and sharing limits | No weapon capacity, rounding, deficit, duplicate Aura or recursion details; `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe` | Each slot's pickup_amount_func; only max_ammunition_reserve > 0; cap at reserve plus magazine deficit; improved 10% replaces base 5%; skip_proc = true [Fixed source and line references](broker_aura_gunslinger.md#fixed-source-evidence) | Not covered by the description | Original ordinary pickup examples retain their per-member capacities and available-room assumptions; these details supplement the text. |
+| Special mission large Ammo Crate | When an Ammo pickup is collected; `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe` | The existing evidence does not establish the special mission crate's event or actual sharing [Fixed source and line references](broker_aura_gunslinger.md#fixed-source-evidence) | Cannot confirm | The text is broad, but this unverified case cannot be asserted as an English contradiction. |
+
 ## Comparison totals
 
 The 235 listed rules comprise **109 Consistent**, **7 Explicit contradictions**, **109 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
