@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="Anticipation talent icon"> [Anticipation](#psyker_improved_dodge) | <ul><li>+1 Effective Dodge and +50% dodge protection linger time; the entire dodge animation is not extended by 50%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="Empathic Evasion talent icon"> [Empathic Evasion](#psyker_dodge_after_crits) | <ul><li>Critical Hit: count as Dodging against Ranged Attacks for 1s; triggering it again resets the timer.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="Solidity talent icon"> [Solidity](#psyker_increased_vent_speed) | <ul><li>Active Quelling time and interval ×0.7: 30% shorter time, equivalent to approximately 42.9% higher processing rate.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="Warp Rider talent icon"> [Warp Rider](#psyker_damage_based_on_warp_charge) | <ul><li>Damage bonus scales linearly with current Peril: +0% / +10% / +20% at 0% / 50% / 100% Peril.</li></ul> | Talent |
 
 ---
 
@@ -947,3 +948,17 @@
 - **Timing example**: with the same weapon, starting Peril and other conditions, a Quelling process that took 4 seconds becomes approximately 4 × 0.7 = 2.8 seconds. The processing rate per second is 1 ÷ 0.7 ≈ 1.429 times the original, approximately 42.9% faster.
 
 [Details](psyker_increased_vent_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_damage_based_on_warp_charge"></a>
+
+### Warp Rider
+
+<img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="72" height="72" alt="Warp Rider talent icon">
+
+- **Effect**: the Damage bonus rises proportionally with current Peril. At 0% / 50% / 100% Peril, it grants 0% / 10% / 20% Damage respectively.
+
+- **Damage example**: at 50% Peril, with a baseline Damage of 100 at this stage and all other multipliers fixed at 1, 100 × (1 + 20% × 50%) = 110 points. With an existing 25% bonus in the same stage, Damage rises from 125 to 135 points.
+
+[Details](psyker_damage_based_on_warp_charge.md) · [Back to index](#talent-index)

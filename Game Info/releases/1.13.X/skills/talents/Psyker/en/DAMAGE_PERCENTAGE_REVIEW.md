@@ -81,3 +81,4 @@
 | [Anticipation](psyker_improved_dodge.md) | +1 Effective Dodge; +50% linger modifier: 0.2 × 1.5 = 0.3s. | The bonus adds to the existing dodge count and scales the protection linger, not the entire dodge action. |
 | [Empathic Evasion](psyker_dodge_after_crits.md) | 1s active time; procs at 0s and 0.6s extend coverage to approximately 1.6s. | Retriggering resets the timer; count_as_dodge_vs_ranged is an attack-specific check, not universal immunity. |
 | [Solidity](psyker_increased_vent_speed.md) | Quelling time and interval ×0.7: 4s→2.8s; processing rate 1 / 0.7 ≈ 1.429 (+42.9%). | The English +30% Quell Speed labels a time reduction as a rate increase; excludes entry/exit animations and discrete-frame error. |
+| [Warp Rider](psyker_damage_based_on_warp_charge.md) | Damage bonus = 20% × current Peril; at 50% Peril, +10% gives 100→110 or 125→135 with an existing same-stage +25%. | Actual Buff range 0–20%; the Lua development name's 10–25% string is obsolete. |

@@ -698,6 +698,18 @@ Full raw template and formatting: [source evidence](psyker_increased_vent_speed.
 | Quell Speed percentage | Increases Quell Speed by 30%; `ui / loc_talent_psyker_increased_vent_speed_description / 479e9713` | Time and interval multiply by 0.7; the per-tick amount is unchanged, so the processing-rate multiplier is 1 / 0.7 ≈ 1.429. [Fixed source and line references](psyker_increased_vent_speed.md#fixed-source-evidence) | Explicit contradiction | A 30% time reduction gives approximately 42.9% more processing per second; the English labels 30% as a speed increase. |
 | Animation and scheduling limits | No animation or update-frame qualification; `ui / loc_talent_psyker_increased_vent_speed_description / 479e9713` | The existing 4s→2.8s example excludes entry/exit animations and is subject to discrete scheduling error. [Fixed source and line references](psyker_increased_vent_speed.md#fixed-source-evidence) | Not covered by the description | These limits qualify the static example and do not resolve the speed-versus-time percentage mismatch. |
 
+
+<a id="psyker_damage_based_on_warp_charge"></a>
+
+## Warp Rider
+
+Full raw template and formatting: [source evidence](psyker_damage_based_on_warp_charge.md#original-english-template-and-reconstruction). Name hash `02e8b371`. Every row uses `ui / loc_talent_psyker_damage_based_on_warp_charge_desc / bfd23655`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Peril scaling and maximum bonus | Up to +20% Damage, increasing as Peril increases; `ui / loc_talent_psyker_damage_based_on_warp_charge_desc / bfd23655` | The actual damage stat interpolates from 0 to 0.2 using current_percentage. [Fixed source and line references](psyker_damage_based_on_warp_charge.md#fixed-source-evidence) | Consistent | The maximum bonus and resource direction agree; the old development name is not localized text. |
+| Interpolation and additive stage | No zero endpoint, interpolation rule or combination formula; `ui / loc_talent_psyker_damage_based_on_warp_charge_desc / bfd23655` | At 50% Peril the bonus is 10%; it adds to other bonuses in the same stage, as in the existing 125→135 example. [Fixed source and line references](psyker_damage_based_on_warp_charge.md#fixed-source-evidence) | Not covered by the description | The formula and examples supplement the broad scaling description. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **56 Consistent**, **2 Explicit contradictions**, **55 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
