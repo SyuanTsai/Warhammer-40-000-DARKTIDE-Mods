@@ -72,3 +72,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Unfaltering](zealot_uninterruptible_no_slow_heavies.md) / `zealot_uninterruptible_no_slow_heavies` | Skill |
 | [Riposte](zealot_stacking_melee_damage_after_dodge.md) / `zealot_stacking_melee_damage_after_dodge` | Skill |
 | [Relentless Fervor](zealot_sprint_improvements.md) / `zealot_sprint_improvements` | Skill |
+| [Unseen Blade](zealot_damage_vs_nonthreat.md) / `zealot_damage_vs_nonthreat` | Skill |

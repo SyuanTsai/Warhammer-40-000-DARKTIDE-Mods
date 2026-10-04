@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="Unfaltering talent icon"> [Unfaltering](#zealot_uninterruptible_no_slow_heavies) | <ul><li>During Heavy Attack windup, prevents ordinary hit stun/interruption and removes the windup action's own movement slowdown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="Riposte talent icon"> [Riposte](#zealot_stacking_melee_damage_after_dodge) | <ul><li>Each successful Dodge grants +5% Melee Damage per stack, up to 3 stacks; triggering again restarts the 8-second duration.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="Relentless Fervor talent icon"> [Relentless Fervor](#zealot_sprint_improvements) | <ul><li>Grants +10% Sprint Speed and −10% Sprint Cost; continuous Sprinting for 1 second grants Slowdown Immunity until Sprinting stops.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="Unseen Blade talent icon"> [Unseen Blade](#zealot_damage_vs_nonthreat) | <ul><li>Deals +20% damage to enemies that are not currently targeting you; applies to Melee and Ranged damage.</li></ul> | Skill |
 
 ---
 
@@ -934,3 +935,16 @@
 - **Speed and cost example**: If Sprint Speed is originally 6 metres/second and cost is 2 Stamina/second, counting only this talent gives 6 × 1.1 = 6.6 metres/second and 2 × 0.9 = 1.8 Stamina/second.
 
 [Details](zealot_sprint_improvements.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_damage_vs_nonthreat"></a>
+
+### Unseen Blade
+
+<img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="72" height="72" alt="Unseen Blade talent icon">
+
+- **Operation**: Deals +20% damage to enemies that are not currently targeting you. Both Melee and Ranged damage can apply it.
+- **Damage example**: Counting only this talent, 100 × 1.2 = 120. With an existing 25% same-stage damage bonus, the result is 100 × (1 + 25% + 20%) = 145. If the enemy starts targeting you, this conditional bonus no longer applies.
+
+[Details](zealot_damage_vs_nonthreat.md) · [Back to index](#talent-index)
