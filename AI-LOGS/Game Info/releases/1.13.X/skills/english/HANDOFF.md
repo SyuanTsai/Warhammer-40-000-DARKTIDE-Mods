@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 383 completed on 2026-10-04. [Receipt](scum_skills_379_383.json) and [FILE_MAP](FILE_MAP.json) record 383 accepted mechanisms. Next item: **384, A Tertium Welcome**, `broker_passive_first_target_damage`. The full goal remains active and unfinished.
+Checkpoint 388 completed on 2026-10-04. [Receipt](scum_skills_384_388.json) and [FILE_MAP](FILE_MAP.json) record 388 accepted mechanisms. Next item: **389, Speedloader**, `broker_passive_reload_speed_on_close_kill`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 263 mechanisms + 18 class-support files + 2 shared files = 283 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 35/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 77 = 36 Consistent / 2 Explicit contradictions / 34 Not covered / 1 No implementation / 4 Cannot confirm. Latest batch commit interval: 287s (4m 47s), bbdaac469→e19d84249. All five English descriptions agree with the accepted conditions and values. Missing recovery basis, shared stack timing, Melee/tag restrictions and distance formulas are supplements. Original examples and source links are retained.
+Remaining: 258 mechanisms + 18 class-support files + 2 shared files = 278 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 40/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 87 = 41 Consistent / 2 Explicit contradictions / 39 Not covered / 1 No implementation / 4 Cannot confirm. Latest batch commit interval: 255s (4m 15s), 03dc5778c→6775bc179. No new explicit English contradiction. In Your Face's wielded-slot condition, Precision Violence's full higher-percentage recovery and ordering, Voice of Tertium's omitted 12.5 m limit, and chance addition/refresh are supplements. All original formulas, examples and limits retained.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

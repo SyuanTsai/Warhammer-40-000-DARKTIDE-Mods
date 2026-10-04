@@ -496,4 +496,4 @@ Full raw template and formatting: [source evidence](broker_passive_ninja_grants_
 
 ## Comparison totals
 
-The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
