@@ -648,6 +648,19 @@ Full raw template and formatting: [source evidence](zealot_stamina_on_block_brea
 | Block Break restoration and protection | “On Block Break, you are no longer Stunned and instead restore 50% Stamina. 12s Cooldown.”; `ui / loc_talent_zealot_stamina_on_block_break_alt_desc / 2fb38d1a` | Available proc restores 0.5 of maximum Stamina, prevents Block Break stun and starts 12-second cooldown. [Fixed source and line references](zealot_stamina_on_block_break.md#fixed-source-evidence) | Consistent | Condition, restoration proportion, protection and cooldown agree. |
 | Availability and event order | No maximum-Stamina basis or active-state/event-order detail.; `ui / loc_talent_zealot_stamina_on_block_break_alt_desc / 2fb38d1a` | on_block/on_block_broken; conditional keyword checks template_context.active, meaning not on cooldown. Block checks immunity before event. Original maximum-6 example restores 3, with no repeat during cooldown. [Fixed source and line references](zealot_stamina_on_block_break.md#fixed-source-evidence) | Not covered by the description | These availability and calculation details explain the stated cooldown effect. |
 
+
+<a id="zealot_reduced_damage_after_dodge"></a>
+
+## Good Balance
+
+Full raw template and formatting: [source evidence](zealot_reduced_damage_after_dodge.md#original-english-template-and-reconstruction). Name hash `027aafc6`. Every row uses `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge and damage reduction | “A successful Dodge grants … Damage Reduction”; damage reconstructs +25%.; `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7` | on_successful_dodge applies damage_taken_multiplier 0.75. [Fixed source and line references](zealot_reduced_damage_after_dodge.md#fixed-source-evidence) | Consistent | Trigger, effect direction and reduction amount agree. |
+| Duration formatting | Raw {duration:%s}s; fixed mapping reconstructs −150s.; `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7` | Accepted active_duration is 2.5; duration manipulation round((1−value)×100) gives −150. [Fixed source and line references](zealot_reduced_damage_after_dodge.md#fixed-source-evidence) | Cannot confirm | The static mapping discrepancy is established; actual English game display has not been observed. |
+| Refresh and independent reduction | No refresh or independent-multiplier formula.; `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7` | Another successful Dodge restarts the timer. Original damage 100→75, or 100×0.75×0.6=45 with independent 40% reduction. [Fixed source and line references](zealot_reduced_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | These timing and calculation details supplement the effect. |
+
 ## Comparison totals
 
 105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

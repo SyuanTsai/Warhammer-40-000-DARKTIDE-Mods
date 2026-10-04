@@ -64,3 +64,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Punish Impiety](zealot_push_attacks_attack_speed.md) / `zealot_push_attacks_attack_speed` | Skill |
 | [Thy Wrath be Swift](zealot_damage_boosts_movement.md) / `zealot_damage_boosts_movement` | Skill |
 | [Retaliatory Defence](zealot_stamina_on_block_break.md) / `zealot_stamina_on_block_break` | Skill |
+| [Good Balance](zealot_reduced_damage_after_dodge.md) / `zealot_reduced_damage_after_dodge` | Skill |
