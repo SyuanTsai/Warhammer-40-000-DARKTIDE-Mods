@@ -796,4 +796,4 @@ Full raw template and formatting: [source evidence](zealot_more_damage_when_low_
 
 ## Comparison totals
 
-127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.
+137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.
