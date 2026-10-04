@@ -291,3 +291,5 @@
 - [持續射擊](2026-10-03-SUSTAINED-FIRE_ACCEPTANCE.json)：新增10變體、18型號關聯；共10變體、18關聯。
 
 - [擊倒](2026-10-03-SMACKDOWN_ACCEPTANCE.json)：新增2變體、5型號關聯；共2變體、5關聯。
+
+- [猛攻](2026-10-03-WEIGHT-OF-FIRE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

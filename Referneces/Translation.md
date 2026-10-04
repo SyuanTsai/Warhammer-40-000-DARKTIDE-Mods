@@ -481,6 +481,7 @@
 - Hot-Shot - 激射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_weakspot_hits`，hash `83870716`；英文／繁中RAW配對確認。
 - Weight of Fire - 猛攻
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_charge_on_chained_attacks`，hash `85a809fe`；英文／繁中RAW配對確認。
 - Armourbane - 護甲之禍
 - Power Blast - 聚能爆發
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time`，hash `3d2ff140`；英文／繁中RAW配對確認。

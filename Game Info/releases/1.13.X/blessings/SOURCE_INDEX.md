@@ -78,3 +78,4 @@
 | [開溜](entries/開溜/README.md) | [來源索引](entries/開溜/SOURCE_INDEX.md) |
 | [持續射擊](entries/持續射擊/README.md) | [來源索引](entries/持續射擊/SOURCE_INDEX.md) |
 | [擊倒](entries/擊倒/README.md) | [來源索引](entries/擊倒/SOURCE_INDEX.md) |
+| [猛攻](entries/猛攻/README.md) | [來源索引](entries/猛攻/SOURCE_INDEX.md) |

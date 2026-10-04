@@ -978,6 +978,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
       "effect": "命中踉蹌小兵的合格特殊近戰攻擊後，持用來源武器時增加近戰暴擊機率，I–IV級+12.5／15／17.5／20個百分點，持續4.5秒。"
+    },
+    {
+      "id": "weight-of-fire",
+      "name_zh_tw": "猛攻",
+      "name_en": "Weight of Fire",
+      "name_key": "loc_trait_bespoke_faster_charge_on_chained_attacks",
+      "description_key": "loc_trait_bespoke_faster_charge_on_chained_attacks_desc",
+      "name_hash": "85a809fe",
+      "description_hash": "54890a6d",
+      "page": "entries/猛攻/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
+      "effect": "持用冥潮鐳射槍 盧修斯 MK IIIa、MK V 或 Mk IV，連續接續蓄力射擊時，每個有效連段步階使蓄力時間分別縮短 I–IV 的 6%／8%／10%／12%；最多五步，五步總縮短 30%／40%／50%／60%。"
     }
   ],
   "weapons": [
@@ -16353,6 +16366,87 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_211",
       "effect": "三型號的特殊拍擊符合；Mk II 特殊後續拳擊也符合，Mk IIIb 同名一般拳擊不觸發。數值與期限見完整玩家說明。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+      "blessing_id": "weight-of-fire",
+      "weapon_id": "lasgun_p2",
+      "page": "entries/猛攻/weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+        "actual_mark_ids": [
+          "lasgun_p2_m1",
+          "lasgun_p2_m2",
+          "lasgun_p2_m3"
+        ],
+        "same_tier_values_for_all_marks": true,
+        "stat_key": "charge_up_time",
+        "tier_negative_fraction": [
+          -0.06,
+          -0.08,
+          -0.1,
+          -0.12
+        ],
+        "duration_reduction_percent_per_step": [
+          6,
+          8,
+          10,
+          12
+        ],
+        "max_five_step_reduction_percent": [
+          30,
+          40,
+          50,
+          60
+        ],
+        "base_charge_seconds_by_mark": {
+          "lasgun_p2_m1": {
+            "basic": 0.8,
+            "perfect": 0.4
+          },
+          "lasgun_p2_m2": {
+            "basic": 0.65,
+            "perfect": 0.25
+          },
+          "lasgun_p2_m3": {
+            "basic": 1.0,
+            "perfect": 0.5
+          }
+        },
+        "wrapper_max_steps": 5,
+        "reset_paths": [
+          "fresh manual shoot from idle",
+          "hip/ADS mode transitions",
+          "reload/reload-to-fire",
+          "special-to-fire",
+          "weapon switch via generic unwield action"
+        ],
+        "held_gate": "current item slot must be wielded",
+        "actual_buff_template_id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua",
+        "start_line": 258,
+        "end_line": 300
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 58
+      },
+      "description_key": "loc_trait_bespoke_faster_charge_on_chained_attacks_desc",
+      "description_hash": "54890a6d",
+      "icon": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_101",
+      "effect": "三個已核對的冥潮鐳射槍盧修斯 Mark 共用相同 I–IV 數值；每步縮短 6%／8%／10%／12%，最多五步。蓄力模板基準時間依 Mark 不同。"
     }
   ],
   "bindings": [
@@ -22976,6 +23070,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
         "import_line": 15,
         "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "weight-of-fire",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/faster_charge_on_chained_attacks",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1335
+      }
+    },
+    {
+      "blessing_id": "weight-of-fire",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/faster_charge_on_chained_attacks",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1329
+      }
+    },
+    {
+      "blessing_id": "weight-of-fire",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/faster_charge_on_chained_attacks",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1246
       }
     }
   ]
