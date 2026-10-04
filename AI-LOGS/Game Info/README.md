@@ -238,3 +238,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [專注冷卻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json)
 
 - [超壓全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERPRESSURE_ACCEPTANCE.json)
+
+- [虹吸全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SYPHON_ACCEPTANCE.json)

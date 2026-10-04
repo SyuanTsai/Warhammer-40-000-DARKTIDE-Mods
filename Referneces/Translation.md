@@ -366,6 +366,7 @@
 - Heatsink - 散熱器
   - 本體1.13.1名稱鍵 `loc_reduce_fixed_overheat_amount`，hash `1a699330`；英文／繁中RAW配對確認。
 - Syphon - 虹吸
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_regain_toughness_on_multiple_hits_by_weapon_special`，hash `bcf9c4be`；英文／繁中RAW配對確認。
 - Energy Transfer - 能量轉換
   - 本體1.13.1名稱鍵 `loc_slower_heat_buildup_on_perfect_block`，hash `c5793ef5`；英文／繁中RAW配對確認。
 - Shock & Awe / Shock and Awe - 震懾

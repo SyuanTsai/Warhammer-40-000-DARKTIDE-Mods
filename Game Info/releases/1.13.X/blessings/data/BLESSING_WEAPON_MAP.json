@@ -1108,6 +1108,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
       "effect": "持用淨化噴火器 奧特米亞 Mk III 時，依目前可用彈匣內彈量比例計算 0–5 階；I–IV 每階增加 +2%／+3%／+4%／+5% 通用威力修正，五階上限為 +10%／+15%／+20%／+25%。這是威力修正，不等於最終傷害同比增加。"
+    },
+    {
+      "id": "syphon",
+      "name_zh_tw": "虹吸",
+      "name_en": "Syphon",
+      "name_key": "loc_trait_bespoke_regain_toughness_on_multiple_hits_by_weapon_special",
+      "description_key": "loc_trait_bespoke_regain_toughness_on_multiple_hits_by_weapon_special_desc",
+      "name_hash": "bcf9c4be",
+      "description_hash": "48405bf1",
+      "page": "entries/虹吸/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
+      "effect": "在武器特殊能力啟用的近戰橫掃中，當前合格近戰命中事件的目標序號達到3或以上時，嘗試恢復最大韌性的10%／12%／14%／16%；每次橫掃至多嘗試一次，實際恢復受當前韌性缺額與恢復狀態限制。"
     }
   ],
   "weapons": [
@@ -17539,6 +17552,66 @@
       "icon": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_163",
       "effect": "持用淨化噴火器 奧特米亞 Mk III 時，依可用彈量計算 0–5 階；I–IV 每階增加 +2%／+3%／+4%／+5%，最多五階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special",
+      "blessing_id": "syphon",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/虹吸/weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "toughness_fixed_percentage",
+        "stat_type": "fixed_fraction_of_max_toughness",
+        "tier_values_by_level": {
+          "I": 0.1,
+          "II": 0.12,
+          "III": 0.14,
+          "IV": 0.16
+        },
+        "wrapper_fallback": 0.15,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "recovery_requested_amount_formula": "max_toughness * tier_fixed_percentage",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": true,
+        "one_proc_per_sweep": true,
+        "proc_again_on_later_eligible_sweep": true,
+        "trait_id": "weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special",
+        "mark_ids": [
+          "powersword_2h_p1_m1",
+          "powersword_2h_p1_m2"
+        ],
+        "value_unit": "fraction of maximum toughness requested; actual recovery is capped at missing toughness",
+        "base_wrapper_fallback": 0.15,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 423,
+        "end_line": 464
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 252,
+        "end_line": 312
+      },
+      "description_key": "loc_trait_bespoke_regain_toughness_on_multiple_hits_by_weapon_special_desc",
+      "description_hash": "48405bf1",
+      "icon": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_240",
+      "effect": "在武器特殊能力啟用的近戰橫掃中，當前合格近戰命中事件的目標序號達到3或以上時，嘗試恢復最大韌性的10%／12%／14%／16%；每次橫掃至多嘗試一次，實際恢復受當前韌性缺額與恢復狀態限制。"
     }
   ],
   "bindings": [
@@ -24554,6 +24627,34 @@
         "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
         "import_line": 14,
         "append_line": 747
+      }
+    },
+    {
+      "blessing_id": "syphon",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/regain_toughness_on_multiple_hits_by_weapon_special",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "syphon",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bespoke_powersword_2h_p1_regain_toughness_on_multiple_hits_by_weapon_special",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/regain_toughness_on_multiple_hits_by_weapon_special",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
       }
     }
   ]

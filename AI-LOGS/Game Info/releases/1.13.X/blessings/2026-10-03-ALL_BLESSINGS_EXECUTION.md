@@ -317,3 +317,7 @@
 - [專注冷卻](2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [超壓](2026-10-03-OVERPRESSURE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 第17輪三項已Commit後完整掃描通過：optimised-cooling (`12160e363b9b1d0ac53fd95b1747776d52935751`)、focused-cooling (`73e813c8d76ccad5a22eaa16ed0fefae81bbbc3b`)、overpressure (`24b3992ea910ce8375975be87fdbb843e4dad117`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-017-full-scan.json`／SHA-256 `7148f9b0ed9552ef6bdd029dfe4ba2a99f8e75c0803187373a5205e323d8c1b5`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [虹吸](2026-10-03-SYPHON_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
