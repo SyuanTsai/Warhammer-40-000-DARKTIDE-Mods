@@ -59,4 +59,6 @@ node scripts/game-info/render_skill_pages.mjs `
 
 `--classes` 僅寫指定職業的 HTML 與 TSV，不寫根入口、CSS、其他職業或對話；因此可在主控完成共用版型後按職業分工。每職業只由一位代理寫入，共用修改由主控統一處理。Git 讀取只在命令列啟用 Windows 長路徑，不更改全域設定。
 
+全站整合後，技能左側另有可收合的對話分類；標籤與網址讀取網站首頁現有 `category-link`，不另維護分類副本。網站的對話外框由 `scripts/apply_darktide_reader.py` 套用，內容與技能匯出流程分離。先套用最新容量分類成果，再匯出技能並套用對話外框；兩者可重複產生，來源Markdown、字幕及用途TSV仍各有唯一維護處。
+
 完整驗收與例外見 [全量轉移紀錄](../../AI-LOGS/Game%20Info/publication/2026-10-04-ALL_SKILLS_PAGES.md)、[階層版型紀錄](../../AI-LOGS/Game%20Info/publication/2026-10-04-TREE_READER.md) 與 [展示流程](../../AI%20Prompt/Skill-Pages-Workflow.md)。本次沒有新增技能測試檔、verifier 或 CI，使用既有引用檢查、來源回讀與瀏覽器驗收。

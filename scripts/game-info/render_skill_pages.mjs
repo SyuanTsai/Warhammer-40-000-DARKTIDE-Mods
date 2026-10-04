@@ -171,6 +171,18 @@ function formatFragment(html, spaces = 12) {
   }).join('\n').replace(/CODEBLOCKPLACEHOLDER(\d+)/g, (_, index) => preservedCode[Number(index)]);
 }
 
+function dialogueCategories() {
+  // The website home owns the dialogue taxonomy; read labels and links only.
+  const home = fs.readFileSync(path.join(pagesRoot, 'darktide/index.html'), 'utf8');
+  return [...home.matchAll(/<a\b[^>]*class="category-link"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)].filter(match => !match[1].startsWith('/darktide/skills/')).map(match => {
+    const title = match[2].match(/<span class="category-title">([^<]+)<\/span>/)?.[1];
+    if (!title || !match[1].startsWith('/darktide/')) throw new Error('Missing dialogue category metadata');
+    return [match[1], title.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")];
+  });
+}
+const dialogueLinks = dialogueCategories();
+if (!dialogueLinks.length) throw new Error('The website home needs its dialogue category catalog');
+
 function directory(url) {
   const current = groups.find(group => url.startsWith(`/darktide/skills/${group.classSlug}/`));
   const active = current?.skills.find(skill => url === skill.url || url === skill.url + 'mechanics/');
@@ -229,7 +241,13 @@ ${tree}
 ${otherClasses}
               </div>
             </details>
-            <a href="/darktide/">對話與字幕目錄 →</a>
+            <details>
+              <summary>對話與字幕</summary>
+              <div class="dt-level">
+                <a href="/darktide/">資料區首頁</a>
+${dialogueLinks.map(([href, label]) => link(href, label)).join('\n')}
+              </div>
+            </details>
             <p class="dt-directory-note">Release 1.13.1 · 繁中<br>技能與天賦 → 職業 → 分類 → 技能</p>
           </nav>
         </details>`;

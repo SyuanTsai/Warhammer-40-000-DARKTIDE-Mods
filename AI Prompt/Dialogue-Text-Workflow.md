@@ -185,10 +185,13 @@ darktide/
 ├─ en/<event type>/<event ID>/index.html     英文正文或回應索引
 └─ zh-tw/<event type>/<event ID>/index.html  繁中正文或回應索引
 assets/
-└─ css/darktide.css                          共用深色聊天版型
+├─ css/darktide.css                          中英共用深色聊天版型
+└─ css/darktide-reader.css                   共用階層目錄與閱讀外框
 ```
 
-- 同步時依事件 ID、類型、語系與編號產生配對網址及前後連結，字幕只出現在自己的正文語言頁。網站完整 HTML 不加 front matter，避免 Liquid 解讀字幕中的原始格式標記；共享 CSS 維持統一版型。正式路徑為 `/darktide/`，舊 `/preview/darktide/` 不保留或建立相容轉址。正式 HTML 使用 index/follow 與 `/darktide/` canonical；Darktide 沿用獨立 sitemap，Jekyll 設 `sitemap: false` 只為避免混入文章 sitemap。分類與基本閱讀、語系切換均不依賴 JavaScript。
+- 同步時依事件 ID、類型、語系與編號產生配對網址及前後連結，字幕只出現在自己的正文語言頁。網站完整 HTML 不加 front matter，避免 Liquid 解讀字幕中的原始格式標記；共享 CSS 維持統一版型。正式頁使用 index/follow 與 `/darktide/` canonical，Darktide 使用獨立分拆 sitemap，Jekyll 的 `sitemap: false` 只避免混入文章 sitemap；分類、閱讀與語系切換不依賴 JavaScript，不恢復舊預覽、hash 轉址或集中字幕 JSON。
+- 網站來源同步後套用 `scripts/apply_darktide_reader.py`；用途字幕產生器完成分類與 sitemap 後也呼叫相同外框。此工具只增加共用目錄、麵包屑與閱讀外框，完整聊天正文保持原樣；技能正文仍由獨立 Markdown 匯出流程維護。桌面左側250px，手機目錄預設收合，保持右上角語言切換。
+- 網站用途待確認字幕沿用容量交付的每語系最多25筆分頁、獨立區塊及hash錨點；已確認的性格介紹與回應觸發條件引用依權威用途TSV分類，不自行重分、猜測發話者或把候選串成劇情。依賴與固定提交見 [階層版型紀錄](../AI-LOGS/Game%20Info/publication/2026-10-04-TREE_READER.md)。
 - 網站修改後，驗證正式 Jekyll 產物中的單頁字幕、標題編號、語言與前後事件連結，以及入口／索引零字幕。以實際建置產物檢查桌面及 390px 手機，標題可用鍵盤進入，右上角語言按鈕只有一個，關閉 JavaScript 仍能閱讀與切換；逐句保留原文及尾端空白，不以來源檔大小冒稱實際建置大小。
 - 版型確認、提交、Draft PR、合併及公開發布依當次授權與目標 Repository 規範辦理。建置及驗收證據保留於對話或網站交付紀錄；不將工作紀錄寫入玩家正文。
 - [網站定位紀錄](../AI-LOGS/Game%20Info/publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md)｜[已確認分頁版型與驗收](../AI-LOGS/Game%20Info/publication/2026-10-03-PER_EVENT_PAGES.md)。

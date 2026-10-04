@@ -6,7 +6,7 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
-- [階層導覽與七職業版型](publication/2026-10-04-TREE_READER.md)
+- [七職業與中英對話階層導覽](publication/2026-10-04-TREE_READER.md)
 
 - [13筆本機來源引用的狀態更正](publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md)
 

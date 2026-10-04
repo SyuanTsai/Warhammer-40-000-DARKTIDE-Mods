@@ -24,4 +24,18 @@
 
 本機Jekyll執行檔不可用，沒有安裝／升級環境；真正建置與未壓縮產物容量以網站既有CI補入。公開基準CI run `37165370815` 的輸入 `58cd2e185579d6022c46d03a3624eacc22193d07` 與公開基準source tree相同；未壓縮全站53,767檔、626,308,578 bytes，技能HTML 1,335檔、11,880,334 bytes。
 
-容量依賴與首頁／對話整合仍未交付。本紀錄不代表全站整合已完成；精確提交、Draft PR、CI與容量結果在各階段驗證後補入。
+匯出器提交 `d4fe489a4ba03ee8cf7604ce07e2f614d52ccd5d` 為 [Draft PR #193](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/193)，網站提交 `0f15bdd24cd2a47d376747013277ec752fc2dd07` 為 [Pages Draft PR #53](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/53)。公開祖先排除本機 instructions remediation。
+
+[網站既有 CI run 37180456216](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/37180456216) 全部成功；實際 Jekyll artifact `11294068589` 中，全部 1,335 個技能 article 與基準逐檔 byte 相同。第一階段未壓縮全站為 53,768 檔、633,936,541 bytes；技能 HTML 為 1,335 檔、19,505,467 bytes。技能目錄增量 7,625,133 bytes，包含 CSS 的總增量 7,627,963 bytes，不混用 ZIP 或 Git 壓縮。最後限定 Veteran 再生成的 172 檔 SHA-256 完全相同，包含炸藥儲備特殊範本。
+
+以上為第一階段交付快照；後續整合另記如下。
+
+## 共用導覽整合
+
+容量網站來源 `f4db2525353dbb176f8855cc65842e49aa610a08`（[Pages PR #54](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/54)），分類來源 `619e0e36bdca5da302d658e6c60f1bf67150a34f`（[Mods PR #194](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/194)）。兩份容量PR與技能匯出器PR #193已由其他交付流程合併；本任務沒有執行GitHub合併。最後整合使用網站公開基準 `ca9023512191d1de33e9cfd5f67d78d32f8f8622` 及 Mods `6660e776647c4a1d310243bfb0dc1875d4af1bbb`，另開新Draft，不向已合併工作分支追加。
+
+技能匯出器從網站首頁既有分類連結讀取對話導覽；網站的 `scripts/apply_darktide_reader.py` 從技能根入口讀七職業名稱與URL。共用的只有階層外框、CSS與導航metadata，技能Markdown、字幕正文及用途TSV的維護流程分開。對話來源重生後再套相同外框，用途字幕產生器最後自動呼叫外框；不人工維護第二份正文或新增集中JSON。
+
+全站25,899頁包含1,335技能頁與24,564對話／首頁。原技能article、681份機制／補充來源及圖示列表保持原樣；整合後85,628個技能本機連結／錨點通過。對話原閱讀區保留角色列、固定左右位置、順序、原文空白、語言切換及前後頁；首頁原完整分類內容收在可展開清單。左側只放目前分支、有限鄰近入口及其他分類，停用JS仍可導覽。
+
+容量本身的同方法Jekyll artifact為25,952檔、555,099,057 bytes，比公開基準減少27,815檔、71,209,521 bytes；用途待確認1,136檔、35,358,479 bytes，新用途頁124檔、548,523 bytes。[容量CI run 37181281886](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/37181281886)全部成功，artifact `11295247047`對應精確容量head。導覽增量與最終CI在實際交付後另記，沒有恢復全面HTML精簡或自行翻譯技能英文。
