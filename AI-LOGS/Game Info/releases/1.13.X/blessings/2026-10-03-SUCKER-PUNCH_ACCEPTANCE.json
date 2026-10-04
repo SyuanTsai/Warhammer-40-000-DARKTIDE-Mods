@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-04",
+  "blessing": "sucker-punch",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/突然襲擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "sucker-punch",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "source_version": "Release 1.13.1",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-formal-peer-scope.json",
+    "scope_sha256": "513f40d06bbebb7ae1ceb84cdd45120f6266f8c5695ccc61cf8b8a43174f09d7",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-agent-config.json": "8948f53a089a3badd920905728f909395005131c1fca4af92c9d53f54f51ed9e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-agent-draft.md": "bac6fbe12d40c64bce51828fb7c963c6eeaaca72096c9ff97d4cda97d48f395d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-agent-evidence.json": "1e628e08e4f0b2fb6b9bb68f0441869d504ab5cd05a570bd6deb82c1b3bc1ac7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-config.json": "7a6e579143b7da93980bd37eaf4790f2c243a5ed131b2314e3bbbb0352df25d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-extension-draft.json": "cbcc6eb4f264337a8b98d151002639ff78a419f35f46ada414a371a134edc87b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-image.json": "9e6cb79f7da917de72279bd94c97aefb0686631a4d83f0c4d4e15c26465d257e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-own-tier-diff.json": "19d5e3aeb371a6b369ab5c3a5ea1335cd7e04fdbce7dab4e6506b762e7724146",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-resume-review.json": "b0deb5df454d36200930b187dd07196bff2c0f0887126e1eb07d7b5ee1e3e0db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-ui-raw-verification.json": "8b83134ef4a96c9dd58764eab0e66e53f05672bad05604234bca9cc6342729be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-ui-review.json": "20fdb3f5f300fe0c01e23c335b5ea20758d40ed3c6c1d6e69e211438d5f1652b",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "64497c3f9f097392c6dabb0fc19adac13e5c8619c16d0252216d39c1498f6de4",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "17aca0330f4157d09cb55ad8709ef2fc8b3749a9793bbb26e258e48f5ffec6b6",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b107a0d43b1c9d176e1e4ce1c4ab8d9b506cdb676e090c68ba2a6c736ace9cbc",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/DAMAGE_PERCENTAGE_REVIEW.md": "d192150e81628323f42ca94532916caef6aa6ac73d6df31baf07d5c814a042bc",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/LOCALIZATION_COMPARISON.md": "a3e908178f2f64954efcfbbb8f18f1bb489dc7d228c016ac70dc25c6c284f8e9",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/README.md": "245a4c2e2fdbfc427fd8728d0ed20a9a6789f2c9f794bb0c9c5edf379d80bde5",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/SOURCE_INDEX.md": "394c8e301d0f930f0488b75b34523b755a65cafd8540878d23f84bed189b5167",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/TIER_VALUES.md": "5a807df6d2b5cf13d968e8637934a30f86a50e6fb946929904c80b930522dcad",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/WEAPON_COMPATIBILITY.md": "35ef89cdf132adaa26d6d2081f0b994cf847e930667832b6b74d0cbdd9191695",
+      "Game Info/releases/1.13.X/blessings/entries/突然襲擊/weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit.md": "56de2901aaa3867f72f19083b828d3b3d2e2a9cfb0d809fe8dff2ed149cb408c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "645a16860bd4c50f2071bddd844eb148d3123f8181bf0d314aedf0bb1357ac1d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "a911ac1e12378eaecd88aa0c909b79cae753d37819c9a66232d76245a13a3dbd",
+      "Referneces/Translation.md": "4542d4353a1167115d09986fad55b7bbea762a9ae4e70a59ff54227d1632a5d9"
+    },
+    "frozen_agent_trio_preserved": true,
+    "reviewed_findings": [
+      "All 24 entries in the fixed formal scope match their declared SHA-256; all seven blessing pages and the config/draft/image/primary receipts are covered.",
+      "The actual shared-map record is one melee blessing and one trait variant for ogryn_club_p1, bound to Mk I / Mk II / Mk III mark IDs; the reverse shovel page, weapon README, blessing catalog, melee catalog, glossary, and links point to the same entry and icon.",
+      "The UI/RAW receipt supports Latrine Shovel Brute-Brainer Mk III, Mk XIX, and Mk V. The formal text distinguishes Mk III special uppercut from folded-mode special light/heavy hits on Mk XIX/V; folding alone does not hit, and a folded special hit unfolds the shovel so another folded trigger requires toggling again.",
+      "Tier values are additive melee critical-chance inputs of +7.5 / +10 / +12.5 / +15 percentage points for 3 seconds. The own map replaces the generic fallback rather than adding to it. The held-slot gate also controls the ongoing stat; switching slots stops its contribution while the timer continues, and removal of the equipped blessing removes its instance.",
+      "The action-start critical flag is fixed before its hit events. The new proc cannot retroactively change the triggering action; later actions can use it after the buff/stat cache update. An already active, unexpired window can benefit an action that starts before it expires.",
+      "A qualifying hit restarts the 3-second window when its blessing proc event is processed, not at an assumed raw-hit timestamp; expiry is strict, refresh does not stack, and the updated README/config/draft/resume wording agrees.",
+      "Normal attacks, charged attacks, and push-follow attacks do not trigger the blessing; qualifying melee special profiles do. Push-follow can use an active melee critical chance input; pure push is a push attack and has no melee crit roll.",
+      "The two IV-tier examples correctly treat +15 percentage points as additive chance: 5% to 20% (a 300% relative increase over the assumed 5% input), and 15% to 30% when another 10-point input exists (a 100% relative increase); neither claims a final-damage increase. Clamp and chance-to-damage conversion order match the cited crit consumer.",
+      "The localization page gives exact EN and zh-TW four-tier placeholder substitutions for chance and duration; the RAW wording is not presented as a contradiction. Icon path and attachment URL are distinct and agree with the image receipt."
+    ],
+    "verification": {
+      "scope_file_count": 24,
+      "scope_hashes_all_match": true,
+      "formal_player_pages": 7,
+      "shared_variant_count": 1,
+      "shared_binding_count": 3,
+      "previous_shared_objects_unchanged": true,
+      "reviewed_updated_event_timer_wording": true
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "sucker-punch",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_209",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_209.png",
+      "attachment": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5978427500",
+      "acquired_date": "2026-10-04",
+      "sha256": "00f9634394207f40c6d00792c158f45f49af46c3c7a4a8c7f1d9fd54aa20feff",
+      "content_type": "image/png",
+      "size": 5067,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "突然襲擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public128x128 PNG visually inspected and byte hashes match. Transparent alpha inspected: closed fist centered in segmented circular sight with four inward indicators; no alteration to original or attachment."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 266,
+      "lists": 86,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 77,
+      "source_files": 21,
+      "bindings": 447,
+      "variants": 232,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 21,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 587,
+      "remote_references": 320,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 13,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-012-full-scan.json",
+        "sha256": "a96353e9bfb29a878ed953616c92b0964acdd1ddf97c055b600a57f0c6f68163",
+        "trigger": "round-012"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 98,
+    "not_started_name_groups": 98,
+    "partial_name_groups": 0,
+    "remaining_variants": 373,
+    "remaining_bindings": 738,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0aa6bd5b356b29b69e2218a847c3fcbb86b4cfcfed196d53e24090c6d331bb17"
+  },
+  "previous_local_commit": "ee8fb53d4453ae035f457c2452d8fa20946b11b7",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-own-tier-diff.json",
+      "sha256": "19d5e3aeb371a6b369ab5c3a5ea1335cd7e04fdbce7dab4e6506b762e7724146"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-ui-review.json",
+      "sha256": "20fdb3f5f300fe0c01e23c335b5ea20758d40ed3c6c1d6e69e211438d5f1652b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-primary-ui-raw-verification.json",
+      "sha256": "8b83134ef4a96c9dd58764eab0e66e53f05672bad05604234bca9cc6342729be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-image.json",
+      "sha256": "9e6cb79f7da917de72279bd94c97aefb0686631a4d83f0c4d4e15c26465d257e"
+    }
+  ],
+  "primary_review_method": "Reviewed full own tier/clone and exact3 UI/RAW bindings. Reused unchanged ProcBuff whole-map override, held gate, slot lifecycle after confirming own class/predicate. Expanded source-item match, three actual special/normal/push routes, folded-mode deactivation and action-start crit sampling; reviewed chance addition/clamp/conversion and first/no-retroactive effect.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-config.json",
+    "sha256": "7a6e579143b7da93980bd37eaf4790f2c243a5ed131b2314e3bbbb0352df25d1"
+  },
+  "frozen_agent_inputs": {
+    "config": "8948f53a089a3badd920905728f909395005131c1fca4af92c9d53f54f51ed9e",
+    "evidence": "1e628e08e4f0b2fb6b9bb68f0441869d504ab5cd05a570bd6deb82c1b3bc1ac7",
+    "draft": "bac6fbe12d40c64bce51828fb7c963c6eeaaca72096c9ff97d4cda97d48f395d"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 68,
+    "variants": 231,
+    "bindings": 444
+  },
+  "previous_weapons_unchanged": 66,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sucker-punch-formal-peer-scope.json",
+    "sha256": "513f40d06bbebb7ae1ceb84cdd45120f6266f8c5695ccc61cf8b8a43174f09d7"
+  }
+}

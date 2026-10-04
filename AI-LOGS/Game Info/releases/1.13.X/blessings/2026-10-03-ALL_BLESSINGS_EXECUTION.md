@@ -281,3 +281,5 @@
 - 第12輪三項已Commit後完整掃描通過：efficiency (`c525e4b4b88b81a161b3f15081552b94b7973624`)、tenderiser (`f4d380055f443715e890f9d27b839a3559dd98fb`)、torment (`5a4587b6f6fb30c96fe29d4f07caf0233be44719`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-012-full-scan.json`／SHA-256 `a96353e9bfb29a878ed953616c92b0964acdd1ddf97c055b600a57f0c6f68163`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [千里眼](2026-10-03-TELESCOPIC-SIGHT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [突然襲擊](2026-10-03-SUCKER-PUNCH_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

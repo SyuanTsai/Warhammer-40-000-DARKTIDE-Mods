@@ -926,6 +926,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
       "effect": "持用步兵鐳射槍 卡特雷爾 Mk VII、Mk IIb 或 Mk IX 並進入替代瞄準時，I–IV 均提供 0.85 垂直視角乘數；實際 ADS 相機路徑前後各取樣一次，角度結果另受轉場與玩家視角設定影響。"
+    },
+    {
+      "id": "sucker-punch",
+      "name_zh_tw": "突然襲擊",
+      "name_en": "Sucker Punch",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_after_punch",
+      "description_key": "loc_trait_bespoke_increased_crit_chance_after_punch_desc",
+      "name_hash": "e6773a0a",
+      "description_hash": "788e95ac",
+      "page": "entries/突然襲擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
+      "effect": "持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。"
     }
   ],
   "weapons": [
@@ -15400,6 +15413,66 @@
       "icon": "https://github.com/user-attachments/assets/4dbeb712-e6a5-4bd9-8798-a5e3a93cd4ea",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_045",
       "effect": "僅已核對 Mk VII／Mk IIb／Mk IX；三者 ADS 輸入垂直視角均為 45°，I–IV 的 fov_multiplier 均為 0.85。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit",
+      "blessing_id": "sucker-punch",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/突然襲擊/weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "melee_critical_strike_chance": {
+            "I": 0.075,
+            "II": 0.1,
+            "III": 0.125,
+            "IV": 0.15
+          }
+        },
+        "localized_values": {
+          "crit_chance": {
+            "I": "+7.5%",
+            "II": "+10%",
+            "III": "+12.5%",
+            "IV": "+15%"
+          },
+          "time": {
+            "I": "3",
+            "II": "3",
+            "III": "3",
+            "IV": "3"
+          }
+        },
+        "effect": "持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 342,
+        "end_line": 397
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_after_punch_desc",
+      "description_hash": "788e95ac",
+      "icon": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_209",
+      "effect": "持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。"
     }
   ],
   "bindings": [
@@ -21617,6 +21690,48 @@
         "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
         "import_line": 15,
         "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "sucker-punch",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/increased_crit_chance_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "sucker-punch",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/increased_crit_chance_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "sucker-punch",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_increased_crit_chance_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/increased_crit_chance_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
       }
     }
   ]

@@ -373,6 +373,7 @@
 - Power Cycler - 能量循環
 - Sunder - 破甲
 - Sucker Punch - 突然襲擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punch`，hash `e6773a0a`；英文／繁中RAW配對確認。
 - Confident Strike - 堅定打擊
 - No Guts, No Glory - 不入虎穴，焉得虎子
 - Bash - 猛撞
