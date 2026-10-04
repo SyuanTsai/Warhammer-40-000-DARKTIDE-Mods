@@ -204,6 +204,18 @@ Full raw template and formatting: [source evidence](broker_ability_stimm_field_s
 | Availability and readiness | Once a Stimm becomes available to use (collected or otherwise), Stimm Supply becomes ready; `ui / loc_talent_broker_ability_stimm_field_sub_3_desc / 88b27852` | A newly occupied syringe slot or increased dedicated Stimm charge count restores one full ability charge. [Fixed source and line references](broker_ability_stimm_field_sub_3.md#fixed-source-evidence) | Consistent | Both recorded availability transitions fit collected or otherwise, and restoration fills the one-charge ability. |
 | Polling and capacity | Instantly; no polling, initialization or extra-charge storage details; `ui / loc_talent_broker_ability_stimm_field_sub_3_desc / 88b27852` | The server checks every 0.5 seconds; initial availability is only recorded. Restoration is capped at one charge, with independent checks sharing the same cap. [Fixed source and line references](broker_ability_stimm_field_sub_3.md#fixed-source-evidence) | Not covered by the description | The short readiness wording leaves these timing and capacity limits unstated. |
 
+
+<a id="broker_ability_stimm_field_sub_1"></a>
+
+## Fast Acting Stimms
+
+Full raw template and formatting: [source evidence](broker_ability_stimm_field_sub_1.md#original-english-template-and-reconstruction). Name hash `52cafac2`. Every row uses `ui / loc_talent_broker_ability_stimm_field_sub_1_desc / 8022348e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Field and effect durations | Stimm Supply lasts 5s; its effects linger 15s after leaving; `ui / loc_talent_broker_ability_stimm_field_sub_1_desc / 8022348e` | The field lifetime becomes 5 seconds, and applied buffs receive 15 seconds of linger on leaving. [Fixed source and line references](broker_ability_stimm_field_sub_1.md#fixed-source-evidence) | Consistent | The field and retained effects have the stated separate durations. |
+| Field expiry, re-entry and cooldown | No field-expiry linger, re-entry or cooldown-resumption details; `ui / loc_talent_broker_ability_stimm_field_sub_1_desc / 8022348e` | Expiry also makes existing buffs linger; re-entry reconnects them. The job ends after 5 seconds and natural 60-second recovery resumes, independently of lingering buffs. [Fixed source and line references](broker_ability_stimm_field_sub_1.md#fixed-source-evidence) | Not covered by the description | These conditions retain the original 5 + 60 = 65 second example without treating the 15-second effect as extra field life. |
+
 ## Comparison totals
 
 The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
