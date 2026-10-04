@@ -118,6 +118,18 @@ Name and missing description: [source evidence](zealot_channel_grants_toughness_
 |---|---|---|---|---|
 | Exact description pairing | Exact description unavailable; candidate key contains duplicate zealot and a trailing space.; `ui / candidate key loc_talent_zealot_zealot_channel_defensive_desc  / no exact hash` | Accepted special rule, pulse application and stepped Buff confirm 8% per stack, max5, duration10s for self and Coherency allies. [Fixed source and line references](zealot_channel_grants_toughness_damage_reduction.md#fixed-source-evidence) | Cannot confirm | The absence of an exact description match prevents semantic comparison or reconstruction; no similar-key replacement is made. |
 
+
+<a id="zealot_channel_grants_damage"></a>
+
+## Ecclesiarch's Call
+
+Full raw template and formatting: [source evidence](zealot_channel_grants_damage.md#original-english-template-and-reconstruction). Name hash `1627f378`. Every row uses `ui / loc_talent_zealot_zealot_channel_offensive_desc / af1e14c2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Pulse amount, stacks, duration and recipients | Each pulse grants +6% Damage to you and Allies in Coherency; stacks 5 times; lasts 10s.; `ui / loc_talent_zealot_zealot_channel_offensive_desc / af1e14c2` | Each tick adds one damage stat stack of 0.06 to self and Coherency allies; max 5, duration 10s. [Fixed source and line references](zealot_channel_grants_damage.md#fixed-source-evidence) | Consistent | The English uses the correct stacks placeholder and agrees on recipients and quantities. |
+| Refresh, interruption and damage calculation | No duration refresh, early-interruption limit or additive damage-stage calculation specified.; `ui / loc_talent_zealot_zealot_channel_offensive_desc / af1e14c2` | Further pulses refresh the stacked Buff; full channel gives about 5 pulses; damage is a global stat with same-stage addition and weapon-dependent calculations. [Fixed source and line references](zealot_channel_grants_damage.md#fixed-source-evidence) | Not covered by the description | Retain 100→130 and existing same-stage 25%→155; these are supplements rather than repeated English errors. |
+
 ## Comparison totals
 
 12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.
