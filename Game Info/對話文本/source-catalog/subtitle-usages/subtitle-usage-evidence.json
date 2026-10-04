@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "id": "SYP-249-fixed-source-classification-evidence",
+  "authority": {
+    "modsRepository": "SyuanTsai/Warhammer-40-000-DARKTIDE-Mods",
+    "modsCommit": "6660e776647c4a1d310243bfb0dc1875d4af1bbb",
+    "modsTargetFiles": [
+      "Game Info/對話文本/source-catalog/subtitle-usages/subtitle-usages-audit.tsv",
+      "Game Info/對話文本/source-catalog/subtitle-usages/subtitle-usage-evidence.json",
+      "Game Info/對話文本/COVERAGE.md"
+    ],
+    "gameSourceRepository": "Aussiemon/Darktide-Source-Code",
+    "gameSourceCommit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "steamBuild": "25606770"
+  },
+  "sourceIntegrity": {
+    "gitTreeBlobCount": 10554,
+    "gitBlobBytes": 173722689,
+    "localWindowsCheckoutBytes": 184307661,
+    "localCheckoutLfBytes": 173722689,
+    "localFilesCompared": 10554,
+    "missingFiles": 0,
+    "blobMismatches": 0,
+    "rawAndLfDigestInventoryMismatches": 0,
+    "normalization": "Only game Source checkout bytes were converted from CRLF to LF in memory for Git blob comparison. Subtitle bodies were not normalized.",
+    "fixedSourceManifestSha256": "a6502284cdf8362e17fb94a7e60429766cb40c1fe441b8675aeb7533653da00b"
+  },
+  "inventory": {
+    "inputPath": "remaining-reference-inventory-prior.tsv",
+    "inputSha256": "c43c50911cc69c1fa38fc72770baec1365d0b99fc0bbb1adacf146c8dfdb7eb6",
+    "inputRows": 14255,
+    "uniqueHashes": 14251,
+    "repeatedRowsPreserved": 4,
+    "outputRows": 14255,
+    "outputUniqueHashes": 14251,
+    "stableNumberField": "number",
+    "originalColumnsPreserved": [
+      "source_commit",
+      "number",
+      "hash",
+      "en_entry_index",
+      "zh_tw_entry_index",
+      "en_raw_key",
+      "zh_tw_raw_key",
+      "matched_key",
+      "match_type",
+      "source_path",
+      "line",
+      "remaining_gap"
+    ]
+  },
+  "localeAndCatalog": {
+    "catalogHashes": 14251,
+    "catalogNumberRange": [
+      1,
+      14251
+    ],
+    "catalogPagesVerified": 286,
+    "perHashSourcePagesVerified": 14251,
+    "officialEnAndZhTwPageBlobsVerified": 28502,
+    "remainingEnglishEntryRows": 14191,
+    "remainingZhTwEntryRows": 14161,
+    "remainingZhTwMissingRows": 30,
+    "subtitleBodyHandling": "Only page Git blob hashes and source-page entry_index metadata were read. No subtitle body is included in the TSV or evidence document.",
+    "pageManifestSha256": "6a1934cbc9c38746978fec86ce90ebcf78ce3039d6ad42e50d3887913c4c57b8"
+  },
+  "classification": {
+    "tablePath": "Game Info/對話文本/source-catalog/subtitle-usages/subtitle-usages-audit.tsv",
+    "tableRows": 14255,
+    "tableSha256": "243c3f614db9b939fca0003ec4c0b80b20fcbdc381fae2ba1df468690146a3ed",
+    "rowCounts": {
+      "usage_unconfirmed": 14191,
+      "personality_introduction": 38,
+      "response_condition_reference": 26
+    },
+    "uniqueHashCounts": {
+      "personality_introduction": 38,
+      "response_condition_reference": 22,
+      "usage_unconfirmed": 14191
+    },
+    "personalitySourceTable": {
+      "path": "Game Info/對話文本/source-catalog/subtitle-usages/personality-introductions.tsv",
+      "gitBlobSha": "d0699128e5be5a126a3b1fe6205b502e009f6190",
+      "localGitBlobSha": "d0699128e5be5a126a3b1fe6205b502e009f6190",
+      "rows": 38,
+      "relation": "Explicit localization-key reference in personality description; character-creation UI reads/displays it.",
+      "sourceLocations": [
+        "scripts/settings/character/personalities.lua",
+        "scripts/settings/character/personalities_cryptic.lua"
+      ],
+      "uiLocations": [
+        "scripts/ui/views/character_appearance_view/character_appearance_view.lua:3971",
+        "scripts/ui/views/character_appearance_view/character_appearance_view.lua:4038"
+      ],
+      "playbackEligibility": "unconfirmed",
+      "speakerEvidence": "Display identity is known; separate sample audio does not prove subtitle/audio equivalence."
+    },
+    "responseConditionSourceTable": {
+      "path": "Game Info/對話文本/source-catalog/subtitle-usages/response-trigger-references.tsv",
+      "gitBlobSha": "e8b172b1e74ea694df64052e94065e1180188d59",
+      "localGitBlobSha": "e8b172b1e74ea694df64052e94065e1180188d59",
+      "rows": 26,
+      "uniqueHashes": 22,
+      "relation": "heard_speak query_context.sound_event / OP.SET_INCLUDES condition only.",
+      "inputPath": "scripts/extension_systems/dialogue/dialogue_system.lua:474-486",
+      "playbackPath": "scripts/extension_systems/dialogue/dialogue_extension.lua:648-655",
+      "playbackEligibility": "conditional-reference-only",
+      "speakerEvidence": "The condition identifies a prior sound event, not the original speaker; do not infer speaker from the response voice template."
+    },
+    "unconfirmed": {
+      "evidenceRef": "E-FIXED-SOURCE-UNCONFIRMED-001",
+      "rows": 14191,
+      "uniqueHashes": 14191,
+      "rawLocaleKeyFieldsAvailable": 0,
+      "matchedKeyFieldsAvailable": 0,
+      "identifierCandidateHashMatches": 0,
+      "standaloneHexHashMatches": 0,
+      "unsignedDecimalHashMatches": 0,
+      "signedDecimalHashMatches": 0,
+      "playbackEligibility": "unconfirmed",
+      "speakerEvidence": "No speaker mapping was found in this fixed Source scope.",
+      "interpretation": "No hit is not proof that a subtitle is unused."
+    }
+  },
+  "sharedEvidence": {
+    "E-FIXED-SOURCE-UNCONFIRMED-001": {
+      "appliesTo": "Rows whose usage_classification is usage_unconfirmed.",
+      "relation": "No static source reference was found under the exact scan rules below.",
+      "scanScope": {
+        "files": "All 10,554 blob paths in game Source commit 7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "gitBlobBytes": 173722689,
+        "quotedCandidatePattern": "(?<!\\\\)(['\\\"])([^'\\\"\\\\\\r\\n]{1,256})\\1",
+        "quotedValueAcceptedOnlyIf": "[A-Za-z_][A-Za-z0-9_]*\\Z",
+        "unquotedLocalizationCandidatePattern": "\\bloc_[A-Za-z0-9_]+\\b",
+        "identifierCandidateCount": 211230,
+        "hashFunction": "MurmurHash64A over exact UTF-8 candidate bytes, seed 0; compare high 32 bits to the 8-hex inventory hash.",
+        "directHashPattern": "(?<![A-Za-z0-9_])(?:0[xX])?([0-9A-Fa-f]{8})(?![A-Za-z0-9_])",
+        "decimalPattern": "(?<![A-Za-z0-9_])([+-]?[0-9]{1,10})(?![A-Za-z0-9_])",
+        "decimalChecks": "Unsigned and signed 32-bit integer spellings of each target hash.",
+        "candidateKeyContext": "Every candidate hit was associated with its fixed Source path; a hash match is a candidate only and requires usage-context review.",
+        "notParsed": [
+          "Lua string concatenation or runtime string construction",
+          "dynamic aliases or computed localization IDs",
+          "external Flow, VO, or other shipped game asset instances",
+          "compiled/runtime behavior beyond the static Source tree"
+        ]
+      },
+      "results": {
+        "rows": 14191,
+        "rawLocaleKeys": 0,
+        "matchedKeys": 0,
+        "identifierCandidateHashMatches": 0,
+        "standaloneHexReferences": 0,
+        "unsignedDecimalReferences": 0,
+        "signedDecimalReferences": 0
+      },
+      "gapCode": "raw_key_missing;hash_to_key_vo_event_flow_asset_mapping_unavailable",
+      "evidenceGap": "The prior inventory contains only hash and locale entry indexes for these rows. The fixed Source tree supplies no key-to-hash, hash-to-VO-event, or hash-to-Flow-node relation. Flow IDs may arrive from external runtime/asset parameters. Speaker, event, and playback remain unconfirmed.",
+      "runtimeEntrypoints": [
+        {
+          "path": "scripts/script_flow_nodes/flow_callbacks.lua",
+          "lines": "1908-1912",
+          "identifier": "vo_line_id",
+          "sourceUrl": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L1908"
+        },
+        {
+          "path": "scripts/script_flow_nodes/flow_callbacks.lua",
+          "lines": "2020-2023",
+          "identifier": "subtitle_id",
+          "sourceUrl": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L2020"
+        }
+      ],
+      "coverageCountNote": {
+        "historicalCoverageCount": 228036,
+        "thisAuditCount": 211230,
+        "note": "The historical COVERAGE count uses an earlier, broader candidate selector. This audit records the exact quoted-value and loc_ rules above; the two aggregate counts are not the same metric. The per-hash unconfirmed result is based on each available raw key and all stated direct hash forms, not on comparing these totals."
+      }
+    },
+    "E-PERSONALITY-DESCRIPTION-001": {
+      "appliesTo": "Rows whose usage_classification is personality_introduction.",
+      "sourceTable": "Game Info/對話文本/source-catalog/subtitle-usages/personality-introductions.tsv",
+      "gitBlobSha": "d0699128e5be5a126a3b1fe6205b502e009f6190",
+      "rows": 38,
+      "uniqueHashes": 38,
+      "relation": "Explicit localization key in the character creation personality description.",
+      "playbackEligibility": "unconfirmed",
+      "speakerEvidence": "UI display identity is known; there is no evidence that the separate sample audio contains this subtitle."
+    },
+    "E-HEARD-SPEAK-CONDITION-001": {
+      "appliesTo": "Rows whose usage_classification is response_condition_reference.",
+      "sourceTable": "Game Info/對話文本/source-catalog/subtitle-usages/response-trigger-references.tsv",
+      "gitBlobSha": "e8b172b1e74ea694df64052e94065e1180188d59",
+      "rows": 26,
+      "uniqueHashes": 22,
+      "relation": "A prior sound event is checked as a heard_speak query_context condition with OP.SET_INCLUDES.",
+      "playbackEligibility": "conditional-reference-only",
+      "speakerEvidence": "The condition does not establish playback of the indexed subtitle and does not identify the original speaker.",
+      "runtimeSourcePath": "scripts/extension_systems/dialogue/dialogue_system.lua:474-486",
+      "playbackSourcePath": "scripts/extension_systems/dialogue/dialogue_extension.lua:648-655"
+    }
+  },
+  "legacyCountNote": "The older COVERAGE candidate count (228,036) is retained as a historical result and explicitly distinguished from this audit's narrower 211,230 candidate extraction."
+}
