@@ -1840,3 +1840,6 @@
 
 - Telescopic Sight - 千里眼
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_zoom`，hash `215f8d62`；英文／繁中RAW配對確認。
+
+- Bug Out - 開溜
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_improved_sprint_dodge`，hash `f1dfd8b7`；英文／繁中RAW配對確認。

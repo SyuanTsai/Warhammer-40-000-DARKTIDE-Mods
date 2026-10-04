@@ -939,6 +939,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
       "effect": "持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。"
+    },
+    {
+      "id": "bug-out",
+      "name_zh_tw": "開溜",
+      "name_en": "Bug Out",
+      "name_key": "loc_trait_bespoke_improved_sprint_dodge",
+      "description_key": "loc_trait_bespoke_improved_sprint_dodge_desc",
+      "name_hash": "f1dfd8b7",
+      "description_hash": "5b7c2d2f",
+      "page": "entries/開溜/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/d330a7e8-a3da-46cc-ab78-44445b228c71",
+      "effect": "持用步兵自動槍並成功衝刺閃避合格敵方射線攻擊後，I–IV 提供衝刺速度加算係數 +10%／+12.5%／+15%／+15%，持續1秒；III／IV 持用時另降低側向衝刺閃避角度門檻10°。"
     }
   ],
   "weapons": [
@@ -15473,6 +15486,78 @@
       "icon": "https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_209",
       "effect": "持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+      "blessing_id": "bug-out",
+      "weapon_id": "autogun_p1",
+      "page": "entries/開溜/weapon_trait_bespoke_autogun_p1_improved_sprint_dodge.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "sprint_movement_speed",
+        "speed_additive_multiplier_by_tier": {
+          "I": 0.1,
+          "II": 0.125,
+          "III": 0.15,
+          "IV": 0.15
+        },
+        "active_duration_seconds": 1,
+        "duration_check": "t < active_start_time + active_duration",
+        "trigger_event": "on_sprint_dodge",
+        "proc_chance": 1,
+        "cooldown_seconds": null,
+        "stacking": "nonstacking; an accepted repeat on the normal player non-local queue resets start time",
+        "held_slot_gate": true,
+        "angle_stat_key": "sprint_dodge_reduce_angle_threshold_rad",
+        "angle_reduction_degrees_by_tier": {
+          "I": 0,
+          "II": 0,
+          "III": 10,
+          "IV": 10
+        },
+        "angle_stat_gate": "conditional tier map while the autogun_p1 item slot is wielded; independent of timed proc",
+        "angle_stat_type": "max_value",
+        "speed_stat_type": "additive_multiplier",
+        "proc_stat_dispatch": "ProcBuff _is_proc_active and held gate; active_time_offset_proc_buff._is_active is not used by this consumer",
+        "event_source": "server-side dodgeable incoming ranged hit-scan; actual sprint-dodge classification only",
+        "local_marker_scope": "normal PlayerUnitBuffExtension queue, not MinionBuffExtension local-event override"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 656,
+        "end_line": 712
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 47,
+        "end_line": 59
+      },
+      "description_key": "loc_trait_bespoke_improved_sprint_dodge_desc",
+      "description_hash": "5b7c2d2f",
+      "icon": "https://github.com/user-attachments/assets/d330a7e8-a3da-46cc-ab78-44445b228c71",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_unknown",
+      "effect": "持用步兵自動槍並成功衝刺閃避合格敵方射線攻擊後，I–IV 提供衝刺速度加算係數 +10%／+12.5%／+15%／+15%，持續1秒；III／IV 持用時另降低側向衝刺閃避角度門檻10°。",
+      "raw_item_icon": "",
+      "raw_icon_small": "",
+      "icon_source_resolution": {
+        "method": "Items.trait_textures explicit empty-icon fallback",
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "source": {
+          "path": "scripts/utilities/items.lua",
+          "start_line": 429,
+          "end_line": 434
+        },
+        "receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bug-out-primary-icon-fallback-review.json",
+          "sha256": "4fd94625ce2f1f245a2baa5537f10760eb45d5c53809fe265783d400b14ad19d"
+        }
+      }
     }
   ],
   "bindings": [
@@ -21732,6 +21817,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
         "import_line": 17,
         "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "bug-out",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/improved_sprint_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "bug-out",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/improved_sprint_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "bug-out",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_improved_sprint_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/improved_sprint_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
       }
     }
   ]

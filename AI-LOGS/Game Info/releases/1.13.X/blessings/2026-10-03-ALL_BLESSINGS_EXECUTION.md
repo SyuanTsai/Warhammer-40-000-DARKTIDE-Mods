@@ -283,3 +283,5 @@
 - [千里眼](2026-10-03-TELESCOPIC-SIGHT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
 
 - [突然襲擊](2026-10-03-SUCKER-PUNCH_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [開溜](2026-10-03-BUG-OUT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
