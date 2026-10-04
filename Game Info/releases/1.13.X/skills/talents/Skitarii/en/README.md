@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="Power Overload talent icon"> [Power Overload](#cryptic_overload_keystone) | <ul><li>Kills by you or allies in Coherency give 1 stack, or 2 for Elites and Specialists. Reaching 30 triggers an overload and resets to zero. You and allies in Coherency gain +15% Damage and 15% Toughness Damage Reduction for 8 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="Critical Power Overload talent icon"> [Critical Power Overload](#cryptic_overload_keystone_bigger_explosion) | <ul><li>On Power Overload, enemies hit within 8 metres are Electrocuted and take 15% more damage for 8 seconds. Reapplication refreshes the duration; the area effect itself deals no explosion damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="Invigorating Overload talent icon"> [Invigorating Overload](#cryptic_overload_keystone_toughness_stamina) | <ul><li>Each Power Overload restores 20% of maximum Toughness and 20% of maximum Stamina to you and allies in Coherency. Resource caps apply; Toughness recovery also uses existing replenishment modifiers.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="Static Capacitor Drain talent icon"> [Static Capacitor Drain](#cryptic_overload_keystone_permastack) | <ul><li>After 8 /16 /24 overloads, gain +15% Damage /20% Toughness Damage Reduction /25% faster natural Capacitance generation, respectively. All three can remain together, each awarded once; the description says they last until death.</li></ul> | Keystone |
 
 ---
 
@@ -596,3 +597,19 @@
 - **Other bonuses**: Toughness recovery still uses your Toughness Replenishment bonuses. With only a +25% replenishment bonus, `20 × 1.25 = 25` points; recovery cannot exceed maximum Toughness.
 
 [Details](cryptic_overload_keystone_toughness_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_permastack"></a>
+
+### Static Capacitor Drain
+
+<img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="72" height="72" alt="Static Capacitor Drain talent icon">
+
+- **Counting overloads**: Each Power Overload counts once. At **8**, gain **+15% Damage**; at **16**, also gain **20% Toughness Damage Reduction**; at **24**, also gain **25% faster natural Capacitance recovery**. All three can remain together, with the description stating that they last until death.
+- **Damage examples**: With base damage `100`, the 15% bonus gives `100 × (1 + 15%) = 115`. With an existing +20% bonus at the same calculation stage, it gives `100 × (1 + 20% + 15%) = 135`.
+- **Toughness damage examples**: Incoming Toughness damage `100` becomes `100 × (1 − 20%) = 80`. Together with the overload's own 15% Toughness Damage Reduction, it becomes `100 × 0.8 × 0.85 = 68`.
+- **Charge examples**: One charge requires 50 Capacitance points, normally recovered at 1 point/s. With this bonus, the rate is `1 × (1 + 25%) = 1.25` points/s, so one charge takes `50 ÷ 1.25 = 40` seconds. With another +50% natural recovery bonus, the rate is `1 × (1 + 50% + 25%) = 1.75` points/s.
+- **Restoration exception**: Effects that directly restore a percentage of one charge do not universally restore 25% more. An ordinary kill that normally restores 1 point still restores 1 point.
+
+[Details](cryptic_overload_keystone_permastack.md) · [Back to index](#talent-index)

@@ -48,3 +48,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Power Overload](cryptic_overload_keystone.md) / `cryptic_overload_keystone` | Keystone |
 | [Critical Power Overload](cryptic_overload_keystone_bigger_explosion.md) / `cryptic_overload_keystone_bigger_explosion` | Keystone |
 | [Invigorating Overload](cryptic_overload_keystone_toughness_stamina.md) / `cryptic_overload_keystone_toughness_stamina` | Keystone |
+| [Static Capacitor Drain](cryptic_overload_keystone_permastack.md) / `cryptic_overload_keystone_permastack` | Keystone |
