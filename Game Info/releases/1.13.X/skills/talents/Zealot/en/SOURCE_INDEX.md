@@ -32,3 +32,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Perfectionist](zealot_stealth_cooldown_regeneration.md) / `zealot_stealth_cooldown_regeneration` | Ability |
 | [Until Death](zealot_resist_death.md) / `zealot_resist_death` | Keystone |
 | [Martyrdom](zealot_martyrdom.md) / `zealot_martyrdom` | Keystone |
+| [I Shall Not Fall](zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | Keystone |

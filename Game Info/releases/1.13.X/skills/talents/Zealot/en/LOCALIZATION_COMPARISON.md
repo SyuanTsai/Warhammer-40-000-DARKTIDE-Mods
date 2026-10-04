@@ -262,6 +262,18 @@ Full raw template and formatting: [source evidence](zealot_martyrdom.md#original
 | Melee Damage, missing Wounds and cap | “+10% Melee Damage for each missing Wound, up to a maximum of 5 missing Wounds.”; `ui / loc_talent_zealot_martyrdom_desc / b90da3ce` | `melee_damage` scales by fully missing segments, +10% each, capped at 5. [Fixed source and line references](zealot_martyrdom.md#fixed-source-evidence) | Consistent | The English scope and unit are Wounds, not a fixed missing-Health percentage. |
 | Segment calculation and damage combination | No Corruption, healing, segment-width or same-stage formula; `ui / loc_talent_zealot_martyrdom_desc / b90da3ce` | Uses the greater of damage and permanent damage, segment width `max_health/max_wounds`; unused `health_step=0.15` does not define stacks. [Fixed source and line references](zealot_martyrdom.md#fixed-source-evidence) | Not covered by the description | Retain all original 49/100-loss and 120/145-damage examples as supplements. |
 
+
+<a id="zealot_martyrdom_grants_toughness"></a>
+
+## I Shall Not Fall
+
+Full raw template and formatting: [source evidence](zealot_martyrdom_grants_toughness.md#original-english-template-and-reconstruction). Name hash `92244e63`. Every row uses `ui / loc_talent_zealot_martyrdom_grants_toughness_upd_desc / 15546289`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack amount and Toughness scope | “Martyrdom grants +7.5% Toughness Damage Reduction per stack.”; `ui / loc_talent_zealot_martyrdom_grants_toughness_upd_desc / 15546289` | `toughness_damage_taken_modifier` scales by missing Martyrdom segments, −0.075 each. [Fixed source and line references](zealot_martyrdom_grants_toughness.md#fixed-source-evidence) | Consistent | The signed display describes reduction of the correct damage target. |
+| Cap, segment scaling and combinations | No segment cap, timer behavior or combination formula; `ui / loc_talent_zealot_martyrdom_grants_toughness_upd_desc / 15546289` | Same segment algorithm as Martyrdom, at most 5; no independent trigger/timer; same-stage reductions add and independent reductions multiply. [Fixed source and line references](zealot_martyrdom_grants_toughness.md#fixed-source-evidence) | Not covered by the description | The 77.5/62.5/52.5 examples and limits supplement the per-stack effect. |
+
 ## Comparison totals
 
 43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.
