@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="System Shock talent icon"> [System Shock](#cryptic_electrocution_applies_brittleness) | <ul><li>Applying, stacking or refreshing Electrocution adds 3 Brittleness stacks at 2.5% each. Brittleness lasts 5 seconds and shares a 16-stack / 40% cap.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="Ammo-Cell Augury talent icon"> [Ammo-Cell Augury](#cryptic_ammo_reserve) | <ul><li>Increases reserve-ammo capacity by 25%, leaving clip capacity unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="Voltaic Restoration talent icon"> [Voltaic Restoration](#cryptic_coherency_toughness_on_ability) | <ul><li>Activating a Combat Ability restores 20% of each recipient's maximum Toughness to you and allies in Coherency, once per activation.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="Salvation Doctrine talent icon"> [Salvation Doctrine](#cryptic_revive_speed_and_dr) | <ul><li>While reviving, pulling up, freeing from a net or rescuing an ally, take 25% less damage and perform the assistance action 25% faster.</li></ul> | Talent |
 
 ---
 
@@ -1237,3 +1238,17 @@
 - **Counting**: Recovery is per ability activation. Spending 3 Capacitance charges in one activation does not change it to 60%.
 
 [Details](cryptic_coherency_toughness_on_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_revive_speed_and_dr"></a>
+
+### Salvation Doctrine
+
+<img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="72" height="72" alt="Salvation Doctrine talent icon">
+
+- **Effect**: While reviving a downed ally, pulling up a hanging ally, removing a net or rescuing a captured ally, take 25% less damage and perform the assistance action 25% faster.
+- **Time example**: An assistance action that originally takes 4 seconds becomes `4 ÷ 1.25 = 3.2` seconds with no other speed bonuses.
+- **Damage-reduction example**: During assistance, an original 100 damage becomes `100 × 0.75 = 75`. Once you stop assisting, this damage reduction ends.
+
+[Details](cryptic_revive_speed_and_dr.md) · [Back to index](#talent-index)

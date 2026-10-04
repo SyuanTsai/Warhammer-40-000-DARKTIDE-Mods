@@ -962,6 +962,18 @@ Full raw template and formatting: [source evidence](cryptic_coherency_toughness_
 | Recovery value and recipients | Restore 20% Toughness to you and Allies in Coherency on Ability Use; `ui / loc_talent_cryptic_coherency_toughness_on_ability_desc / 5c2bb368` | `on_combat_ability` applies 20% recovery to each `in_coherence_units` member, including self. [Fixed source and line references](cryptic_coherency_toughness_on_ability.md#fixed-source-evidence) | Consistent | The recovery value and stated recipients match the verified ability trigger. |
 | Ability category, basis and counting | Does not specify Blitz eligibility, percentage basis or counting charges; `ui / loc_talent_cryptic_coherency_toughness_on_ability_desc / 5c2bb368` | Blitz does not trigger it; each recipient uses their own maximum Toughness. One activation spending 3 charges still gives 20%, not 60%. [Fixed source and line references](cryptic_coherency_toughness_on_ability.md#fixed-source-evidence) | Not covered by the description | The existing 100→20 and 200→40 recovery examples and charge-count exception explain omitted details. |
 
+
+<a id="cryptic_revive_speed_and_dr"></a>
+
+## Salvation Doctrine
+
+Full raw template and formatting: [source evidence](cryptic_revive_speed_and_dr.md#original-english-template-and-reconstruction). Name hash `06f7094a`. Every row uses `ui / loc_talent_cryptic_revive_speed_and_dr_desc / 16a4ff53`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Revive resistance and speed | Gain +25% Damage Resistance while Reviving an Ally; +25% Revive Speed; `ui / loc_talent_cryptic_revive_speed_and_dr_desc / 16a4ff53` | A qualifying active assistance interaction enables a 0.75 damage-taken multiplier; the revive-speed stat is +25%. [Fixed source and line references](cryptic_revive_speed_and_dr.md#fixed-source-evidence) | Consistent | Reviving is a qualifying interaction, and both stated values match. |
+| Other assistance types and calculation | Does not enumerate pulling up, net removal or rescue, or explain the calculations; `ui / loc_talent_cryptic_revive_speed_and_dr_desc / 16a4ff53` | All four `valid_help_interactions` map to `revive_speed_modifier`; reduction requires `interactor:is_interacting`. A 4-second action becomes 3.2 seconds, and 100 damage becomes 75 during assistance only. [Fixed source and line references](cryptic_revive_speed_and_dr.md#fixed-source-evidence) | Not covered by the description | The broader supported interactions and original examples supplement the revive wording; it does not explicitly limit the effect to reviving alone. |
+
 ## Comparison totals
 
 157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.

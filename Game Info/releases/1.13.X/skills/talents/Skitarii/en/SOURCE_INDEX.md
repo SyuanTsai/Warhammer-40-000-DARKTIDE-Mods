@@ -90,3 +90,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [System Shock](cryptic_electrocution_applies_brittleness.md) / `cryptic_electrocution_applies_brittleness` | Talent |
 | [Ammo-Cell Augury](cryptic_ammo_reserve.md) / `cryptic_ammo_reserve` | Talent |
 | [Voltaic Restoration](cryptic_coherency_toughness_on_ability.md) / `cryptic_coherency_toughness_on_ability` | Talent |
+| [Salvation Doctrine](cryptic_revive_speed_and_dr.md) / `cryptic_revive_speed_and_dr` | Talent |
