@@ -325,6 +325,18 @@ Full raw template and formatting: [source evidence](broker_keystone_vultures_mar
 | Ranged kill trigger and player-centred effect | Killing Elite or Special enemies with Ranged Attacks; enemies around you; `ui / loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc / d98831c7` | The on_kill check requires died, elite/special and Ranged classification; the explosion is centred at player position + 0.65 m. [Fixed source and line references](broker_keystone_vultures_mark_aoe_stagger.md#fixed-source-evidence) | Consistent | The trigger and location agree with the accepted evidence. |
 | Universal knockback result | Knocks all enemies around you backwards; `ui / loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc / d98831c7` | The 3 m villains-filtered explosion requests medium Stagger, with Impact 0.55 modified by armour and resistance/state; attack Power is 0. Actual displacement is target-dependent, and the separate Toxin Mark event does not automatically trigger this handler. [Fixed source and line references](broker_keystone_vultures_mark_aoe_stagger.md#fixed-source-evidence) | Cannot confirm | The accepted evidence does not guarantee the stated backwards displacement for every enemy and state. Other omitted area/handler limits remain supplements. |
 
+
+<a id="broker_keystone_vultures_mark_increased_duration"></a>
+
+## Patient Hunter
+
+Full raw template and formatting: [source evidence](broker_keystone_vultures_mark_increased_duration.md#original-english-template-and-reconstruction). Name hash `2c5bc480`. Every row uses `ui / loc_talent_broker_keystone_vultures_mark_increased_duration_desc / 2a61076a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Final Mark duration | Duration of Vulture's Mark extended to 12s; `ui / loc_talent_broker_keystone_vultures_mark_increased_duration_desc / 2a61076a` | The core 8 s gains the 12 − 8 = 4 s difference, for 12 s total. [Fixed source and line references](broker_keystone_vultures_mark_increased_duration.md#fixed-source-evidence) | Consistent | The stated final duration matches the accepted setting. |
+| Shared refresh, expiry and separate effects | No capped-use refresh, shared expiry or separate Dodge duration details; `ui / loc_talent_broker_keystone_vultures_mark_increased_duration_desc / 2a61076a` | Gain or capped qualifying kill refreshes one 12 s timer; all remaining Marks expire together. The cap stays at 3, other bonuses/restoration checks remain unchanged, and Vulture's Dodge stays at 1 s. [Fixed source and line references](broker_keystone_vultures_mark_increased_duration.md#fixed-source-evidence) | Not covered by the description | These preserve the original 0/6/18-second timing and fourth-kill cap examples. |
+
 ## Comparison totals
 
 The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.

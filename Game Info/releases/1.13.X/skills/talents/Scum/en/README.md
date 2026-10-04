@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="Chem Fortified talent icon"> [Chem Fortified](#broker_keystone_chemical_dependency_sub_2) | <ul><li>Every Stimm use restores 50% of maximum Toughness, limited by missing Toughness, even at the Dependency stack cap.</li><li>Each Dependency stack multiplies Toughness Damage Taken by 0.95; 3 stacks reduce it by approximately 14.26%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="Maxed Out Chems talent icon"> [Maxed Out Chems](#broker_keystone_chemical_dependency_sub_3) | <ul><li>Dependency's shared stack timer becomes 60 seconds and its cap becomes 4, one more stack with a timer 30 seconds shorter than the core.</li><li>The unchanged +10% recovery per stack gives a 1.40 rate at 4 stacks; uninterrupted isolated 60-second recovery takes approximately 42.86 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="Vulture's Push talent icon"> [Vulture's Push](#broker_keystone_vultures_mark_aoe_stagger) | <ul><li>Ranged Elite or Specialist kills trigger a Stagger explosion around the player, without requiring existing Mark stacks.</li><li>Its radius is 3 metres and it deals no direct Damage; actual displacement depends on each target's Stagger resistance, armour and current state.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="Patient Hunter talent icon"> [Patient Hunter](#broker_keystone_vultures_mark_increased_duration) | <ul><li>Vulture's Mark's shared duration increases from 8 to 12 seconds.</li><li>New qualifying gains refresh 12 seconds even at 3 stacks; without another gain, all remaining stacks expire together. Vulture's Dodge stays at 1 second.</li></ul> | Keystone |
 
 ---
 
@@ -486,3 +487,21 @@
 - **Target differences:** whether an enemy is actually moved depends on Stagger resistance, armour and its current state. It cannot guarantee interrupting every enemy's action.
 
 [Details](broker_keystone_vultures_mark_aoe_stagger.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_increased_duration"></a>
+
+### Patient Hunter
+
+<img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="72" height="72" alt="Patient Hunter talent icon">
+
+- **Duration:** after gaining a Vulture's Mark, the stacks' shared timer is 12 seconds, 4 seconds longer than the core's 8.
+
+- **Refresh:** a new Mark adds a stack and resets the shared timer to 12 seconds. At the 3-stack cap, another qualifying event still refreshes the timer.
+
+- **Expiry:** without another Mark, existing stacks disappear together when the 12-second timer expires.
+
+- **Timing example:** gain the first stack at 0 seconds and a second at 6 seconds. The second gain restarts 12 seconds; without further gains, the current stacks expire at 18 seconds.
+
+[Details](broker_keystone_vultures_mark_increased_duration.md) · [Back to index](#talent-index)
