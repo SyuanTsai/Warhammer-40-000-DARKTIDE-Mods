@@ -407,6 +407,18 @@ Full raw template and formatting: [source evidence](zealot_quickness_increased_d
 | Duration increased to 10 seconds | “Increase the duration of Inexorable Judgement to 10s.”; `ui / loc_talent_zealot_quickness_increased_duration_desc / ffd6bfbb` | Special rule selects the same active effects with duration overridden from 6 to 10s. [Fixed source and line references](zealot_quickness_increased_duration.md#fixed-source-evidence) | Consistent | The English final duration agrees; it is not a +10s extension. |
 | Affected phase and unchanged mechanics | No stack collection, active-hit refresh or restoration-period details.; `ui / loc_talent_zealot_quickness_increased_duration_desc / ffd6bfbb` | Extension applies after hit activation; 20-stack cap/acquisition/per-stack stats remain unchanged, and active hits do not refresh that cycle. [Fixed source and line references](zealot_quickness_increased_duration.md#fixed-source-evidence) | Not covered by the description | The original timing example and conditional restoration extension explain the duration change. |
 
+
+<a id="zealot_corruption_resistance_stacking"></a>
+
+## On the Brink
+
+Full raw template and formatting: [source evidence](zealot_corruption_resistance_stacking.md#original-english-template-and-reconstruction). Name hash `26f3f7c2`. Every row uses `ui / loc_talent_zealot_corruption_resistance_stacking_desc / 892c3a6b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack Corruption Resistance | “Martyrdom grants +10% Corruption Resistance per stack.”; `ui / loc_talent_zealot_corruption_resistance_stacking_desc / 892c3a6b` | `corruption_taken_multiplier` decreases by .1 per counted Wound. [Fixed source and line references](zealot_corruption_resistance_stacking.md#fixed-source-evidence) | Consistent | Resistance direction and per-stack value agree. |
+| Cap, multiplier and limits | No full-Wound cap or multiplier-combination details.; `ui / loc_talent_zealot_corruption_resistance_stacking_desc / 892c3a6b` | Max 5/50%; 20→14 at 3 or 10 at 5; other multipliers multiply separately. Does not remove existing Corruption, add Health/Wounds or grant immunity. [Fixed source and line references](zealot_corruption_resistance_stacking.md#fixed-source-evidence) | Not covered by the description | The accepted example and limitations clarify how the Resistance stat works. |
+
 ## Comparison totals
 
 63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.

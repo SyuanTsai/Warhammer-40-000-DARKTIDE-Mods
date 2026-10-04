@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="Infectious Zeal talent icon"> [Infectious Zeal](#zealot_shared_fanatic_rage) | <ul><li>When Fury starts, other allies currently in Coherency gain 10 percentage points of Critical Chance for 8 seconds; refreshing your Fury does not extend their existing bonus.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="Restorative Verses talent icon"> [Restorative Verses](#zealot_martyrdom_toughness_modifier) | <ul><li>Each complete missing Wound counted by Martyrdom increases Toughness replenishment by 5%, up to 5 stacks and +25%; gaining stacks does not directly restore Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="Eternal talent icon"> [Eternal](#zealot_quickness_increased_duration) | <ul><li>Inexorable Judgement's active bonus lasts 10 seconds instead of 6.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="On the Brink talent icon"> [On the Brink](#zealot_corruption_resistance_stacking) | <ul><li>Each complete missing Wound counted by Martyrdom reduces Corruption damage taken by 10%, up to 5 Wounds and 50%.</li></ul> | Keystone |
 
 ---
 
@@ -522,3 +523,16 @@
 - **Duration example**: A hit activates it at second 0. It ordinarily ends around second 6, now around second 10. Hits during the bonus still do not reset that cycle's duration. The extension is 4 seconds; stacks and per-stack bonuses stay the same.
 
 [Details](zealot_quickness_increased_duration.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_corruption_resistance_stacking"></a>
+
+### On the Brink
+
+<img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="72" height="72" alt="On the Brink talent icon">
+
+- **Operation**: Each complete missing Wound reduces Corruption damage taken by 10%, up to 5 stacks and 50%. It does not clear already accumulated Corruption.
+- **Corruption example**: An event normally granting 20 Corruption grants 20 × (1 − 3 × 10%) = 14 at 3 stacks, or 10 at 5. Other Corruption multipliers multiply separately; this does not grant immunity to all Corruption sources.
+
+[Details](zealot_corruption_resistance_stacking.md) · [Back to index](#talent-index)
