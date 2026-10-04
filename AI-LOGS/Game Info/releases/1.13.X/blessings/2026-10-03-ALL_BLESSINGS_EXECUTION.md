@@ -259,3 +259,5 @@
 - [迅捷火焰](2026-10-03-QUICKFLAME_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
 
 - [黏著炸藥](2026-10-03-ADHESIVE-CHARGE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [煽風點火](2026-10-03-FAN-THE-FLAMES_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

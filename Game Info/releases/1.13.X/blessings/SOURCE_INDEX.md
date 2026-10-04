@@ -66,3 +66,4 @@
 | [開啟齊射](entries/開啟齊射/README.md) | [來源索引](entries/開啟齊射/SOURCE_INDEX.md) |
 | [迅捷火焰](entries/迅捷火焰/README.md) | [來源索引](entries/迅捷火焰/SOURCE_INDEX.md) |
 | [黏著炸藥](entries/黏著炸藥/README.md) | [來源索引](entries/黏著炸藥/SOURCE_INDEX.md) |
+| [煽風點火](entries/煽風點火/README.md) | [來源索引](entries/煽風點火/SOURCE_INDEX.md) |

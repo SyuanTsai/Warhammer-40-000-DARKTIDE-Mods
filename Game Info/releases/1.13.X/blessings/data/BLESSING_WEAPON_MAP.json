@@ -822,6 +822,19 @@
         "raw_zh_tw": "粘性炸藥",
         "reason": "沿用已確認詞表 Referneces/Translation.md:503「Adhesive Charge - 黏著炸藥」作文件用名；RAW 繁中「粘性炸藥」及原 hash 完整保留。這是文件翻譯用詞一致化，並非修正 RAW。"
       }
+    },
+    {
+      "id": "fan-the-flames",
+      "name_zh_tw": "煽風點火",
+      "name_en": "Fan the Flames",
+      "name_key": "loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning",
+      "description_key": "loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning_desc",
+      "name_hash": "0037e44e",
+      "description_hash": "ed2f3a74",
+      "page": "entries/煽風點火/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
+      "effect": "未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。"
     }
   ],
   "weapons": [
@@ -14666,6 +14679,72 @@
       "icon": "https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_137",
       "effect": "震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning",
+      "blessing_id": "fan-the-flames",
+      "weapon_id": "flamer_p1",
+      "page": "entries/煽風點火/weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "stagger_burning_reduction_modifier": {
+            "I": 0.6,
+            "II": 0.5,
+            "III": 0.4,
+            "IV": 0.3
+          },
+          "ranged_impact_modifier": {
+            "I": 0.3,
+            "II": 0.35,
+            "III": 0.4,
+            "IV": 0.45
+          }
+        },
+        "localized_values": {
+          "stagger_reduction_ignored": {
+            "I": "40%",
+            "II": "50%",
+            "III": "60%",
+            "IV": "70%"
+          },
+          "impact": {
+            "I": "+30%",
+            "II": "+35%",
+            "III": "+40%",
+            "IV": "+45%"
+          }
+        },
+        "effect": "持用淨化噴火器並使用未架槍主要攻擊時，遠程踉蹌 Impact 提高；目標已燃燒時，另依等級降低其原生踉蹌減免。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_flamer_p1.lua",
+        "start_line": 182,
+        "end_line": 239
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 50
+      },
+      "description_key": "loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning_desc",
+      "description_hash": "ed2f3a74",
+      "icon": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_162",
+      "effect": "未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。"
     }
   ],
   "bindings": [
@@ -20561,6 +20640,20 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
         "import_line": 16,
         "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "fan-the-flames",
+      "weapon_id": "flamer_p1",
+      "mark_id": "flamer_p1_m1",
+      "variant_id": "weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning",
+      "trait_item": "content/items/traits/bespoke_flamer_p1/ignore_stagger_reduction_with_primary_on_burning",
+      "trait_category": "bespoke_flamer_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 747
       }
     }
   ]
