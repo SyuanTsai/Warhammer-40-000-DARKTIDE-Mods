@@ -530,6 +530,18 @@ Full raw template and formatting: [source evidence](psyker_mark_weakspot_kills.m
 | Additional versus total stacks | Weakspot Kills grant two additional stacks of Disrupt Destiny; `ui / loc_talent_psyker_mark_weakspot_stacks_description / 40c93869` | weakspot_stacks = 3 is the total grant; the display maps weakspot_stacks − 1 = 2 additional. [Fixed source and line references](psyker_mark_weakspot_kills.md#fixed-source-evidence) | Consistent | The English's additional count agrees with three total rather than granting three extra. |
 | Current target and cap | Does not restate current-Marked-target eligibility or the cap; `ui / loc_talent_psyker_mark_weakspot_stacks_description / 40c93869` | on_hit requires a personal kill of current_target and passes hit_weakspot to give_stack; unmarked kills do not qualify. Four→seven; 14 at cap 15→15. all_weakspot_kills_grant_buff is an internal name, not broader eligibility. [Fixed source and line references](psyker_mark_weakspot_kills.md#fixed-source-evidence) | Not covered by the description | The accepted base-trigger requirement and capped examples supplement the English; it does not explicitly state unmarked enemies are eligible. |
 
+
+<a id="psyker_toughness_on_warp_kill"></a>
+
+## Soulstealer
+
+Full raw template and formatting: [source evidence](psyker_toughness_on_warp_kill.md#original-english-template-and-reconstruction). Name hash `f5eac803`. Every row uses `ui / loc_talent_psyker_toughness_on_warp_kill_desc / ffb1d758`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Warp kill and base restoration | Replenish 7.5% Toughness on Warp Attack Kill; `ui / loc_talent_psyker_toughness_on_warp_kill_desc / ffb1d758` | on_hit checks on_warp_kill for Warp Damage type and death, then calls replenish_percentage(0.075, false). [Fixed source and line references](psyker_toughness_on_warp_kill.md#fixed-source-evidence) | Consistent | The stated kill requirement and base value agree. |
+| Restoration calculation and cap | No maximum-Toughness basis, modifier ordering or missing-Toughness limit specified; `ui / loc_talent_psyker_toughness_on_warp_kill_desc / ffb1d758` | Restoration uses maximum Toughness, then toughness_replenish_modifier and toughness_replenish_multiplier, capped by the deficit. Maximum 100 gives 7.5 without other bonuses; current 96 permits only four. [Fixed source and line references](psyker_toughness_on_warp_kill.md#fixed-source-evidence) | Not covered by the description | The retained formula and example explain the percentage and effective restoration limit. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

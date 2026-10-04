@@ -54,3 +54,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Psychic Vampire](psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | Keystone |
 | [Warp Battery](psyker_increased_max_souls.md) / `psyker_increased_max_souls` | Keystone |
 | [Cruel Fortune](psyker_mark_weakspot_kills.md) / `psyker_mark_weakspot_kills` | Keystone |
+| [Soulstealer](psyker_toughness_on_warp_kill.md) / `psyker_toughness_on_warp_kill` | Talent |

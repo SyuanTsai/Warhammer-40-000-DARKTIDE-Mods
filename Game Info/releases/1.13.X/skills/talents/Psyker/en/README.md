@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="32" height="32" alt="Psychic Vampire talent icon"> [Psychic Vampire](#psyker_aura_souls_on_kill) | <ul><li>You or an Ally in Coherency killing an enemy gives you a 4% chance to gain one Warp Charge; choose either this or In Fire Reborn.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="32" height="32" alt="Warp Battery talent icon"> [Warp Battery](#psyker_increased_max_souls) | <ul><li>Raises Warp Charge storage from four to six; Damage and cooldown restoration per charge remain unchanged.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a3deac9c-bddd-441f-a916-e41eecf9b23e" width="32" height="32" alt="Cruel Fortune talent icon"> [Cruel Fortune](#psyker_mark_weakspot_kills) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy with a Weakspot hit grants two extra Precision stacks, three in total, subject to the cap.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="Soulstealer talent icon"> [Soulstealer](#psyker_toughness_on_warp_kill) | <ul><li>A Warp Attack Kill restores 7.5% of maximum Toughness, subject to restoration modifiers and missing Toughness.</li></ul> | Talent |
 
 ---
 
@@ -713,3 +714,17 @@
 - **Stack example:** At four stacks, gain `4 + 3 = 7`. At 14 with a cap of 15, the count stops at 15.
 
 [Details](psyker_mark_weakspot_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_toughness_on_warp_kill"></a>
+
+### Soulstealer
+
+<img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="72" height="72" alt="Soulstealer talent icon">
+
+- **Trigger:** Kill an enemy with a Warp Attack to restore 7.5% of maximum Toughness.
+
+- **Restoration example:** At 100 maximum Toughness with no other restoration bonuses, each proc restores `100 × 7.5% = 7.5`. If current Toughness is 96, effective restoration is `100 − 96 = 4`.
+
+[Details](psyker_toughness_on_warp_kill.md) · [Back to index](#talent-index)
