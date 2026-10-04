@@ -97,3 +97,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Spur III](broker_stimm_celerity_3.md) / `broker_stimm_celerity_3` | Stimm recipe |
 | [Spur IV](broker_stimm_celerity_4.md) / `broker_stimm_celerity_4` | Stimm recipe |
 | [Spur V](broker_stimm_celerity_5a.md) / `broker_stimm_celerity_5a` | Stimm recipe |
+| [Reflex](broker_stimm_celerity_5b.md) / `broker_stimm_celerity_5b` | Stimm recipe |

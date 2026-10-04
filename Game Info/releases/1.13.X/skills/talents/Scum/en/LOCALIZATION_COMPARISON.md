@@ -1039,6 +1039,18 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_5a.md#
 | Recipe statistics and protection | +4% Attack Speed; Grants Stun Immunity; Grants Slowdown Immunity; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_keyword_stun_immune / a6fe7bf4`; `ui / loc_talent_keyword_slowdown_immune / 5936af23` | `attack_speed = 0.04`; child `broker_syringe_slow_and_stun_immune` supplies the two matching keywords [Fixed source and line references](broker_stimm_celerity_5a.md#fixed-source-evidence) | Consistent | The stat value and both immunity types agree. |
 | Cost, lifetime and immunity limits | No purchase, full-route formula, existing-disabled release or attack keyword-check details; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_keyword_stun_immune / a6fe7bf4`; `ui / loc_talent_keyword_slowdown_immune / 5936af23` | One purchase at cost 5; prerequisites remain active; immunity follows the root lifetime and requires attack keyword checks; no call releases an existing disabled state [Fixed source and line references](broker_stimm_celerity_5a.md#fixed-source-evidence) | Not covered by the description | These preserve the 20% total/0.833-second example and the original protection limits. |
 
+
+<a id="broker_stimm_celerity_5b"></a>
+
+## Reflex
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_5b.md#original-english-template-and-reconstruction). Name hash `d33a89f3`. Every row uses `ui / loc_talent_stat_reload_speed / 9020f1a1`; `ui / loc_talent_stat_recoil_modifier / 302c7f95`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +30% Reload Speed; −50% Recoil (component reconstruction); `ui / loc_talent_stat_reload_speed / 9020f1a1`; `ui / loc_talent_stat_recoil_modifier / 302c7f95` | `reload_speed = 0.3`; additive `recoil_modifier = −0.5` changes the base 1 to 0.5 [Fixed source and line references](broker_stimm_celerity_5b.md#fixed-source-evidence) | Consistent | Both named stats and numerical changes agree. |
+| Recoil scope, cost and duration | No unsteadiness/decay formula, recipe cost or shared lifetime; `ui / loc_talent_stat_reload_speed / 9020f1a1`; `ui / loc_talent_stat_recoil_modifier / 302c7f95` | Recoil gain uses the modifier and decay its reciprocal; displacement follows the weapon curve; one purchase at cost 5, with root/field lifetime [Fixed source and line references](broker_stimm_celerity_5b.md#fixed-source-evidence) | Not covered by the description | The 1.538-second reload and 0.1 gain/0.4 decay examples explain the verified effects. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
