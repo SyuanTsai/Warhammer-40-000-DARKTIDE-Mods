@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="Hubris talent icon"> [Hubris](#zealot_weakspot_damage_reduction) | <ul><li>Weakspot Kills reduce damage taken by 15% for 4 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="Prime Target talent icon"> [Prime Target](#zealot_elite_kills_empowers) | <ul><li>Elite Kills grant +10% damage and restore 15% of maximum Toughness over 5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="Behind the Lines talent icon"> [Behind the Lines](#zealot_suppress_on_backstab_kill) | <ul><li>Heavy Melee Backstab Kills suppress enemies within 8 metres of you, with a 5-second cooldown.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="Time to Kill talent icon"> [Time to Kill](#zealot_backstab_periodic_damage) | <ul><li>The next valid Melee Backstab deals +50% damage, then starts an 8-second cooldown.</li></ul> | Skill |
 
 ---
 
@@ -1078,3 +1079,17 @@
 - **Cooldown example:** after triggering at 0 seconds, another Heavy Melee Backstab Kill at 2 seconds does not trigger it again. It can trigger again from about 5 seconds.
 
 [Details](zealot_suppress_on_backstab_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_backstab_periodic_damage"></a>
+
+### Time to Kill
+
+<img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="72" height="72" alt="Time to Kill talent icon">
+
+- **How it works:** while available, the effect grants +50% Melee Backstab damage. A damaging Backstab Hit starts an 8-second cooldown; a kill is not required.
+- **Damage example:** with other conditions fixed and a baseline of 100 in this stage, no other Backstab bonus gives 100 × 1.5 = 150. An existing same-stage 20% Backstab bonus changes from 120 to 100 × (1 + 20% + 50%) = 170.
+- **Direction limit:** the Melee hit must land within the valid angle behind the enemy. Shooting from behind does not count as this Melee Backstab.
+
+[Details](zealot_backstab_periodic_damage.md) · [Back to index](#talent-index)

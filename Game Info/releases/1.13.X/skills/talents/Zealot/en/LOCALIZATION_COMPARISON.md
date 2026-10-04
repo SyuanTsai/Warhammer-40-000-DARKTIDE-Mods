@@ -866,6 +866,18 @@ Full raw template and formatting: [source evidence](zealot_suppress_on_backstab_
 | Trigger, suppression and cooldown | Heavy Melee Backstab Kills; suppress enemies within 8m; 5s Cooldown; `ui / loc_talent_zealot_suppress_on_backstab_kill_desc / 2ae92ad1` | Kill plus Heavy Hit and Backstab requirements; area suppression, radius 8, cooldown 5 seconds [Fixed source and line references](zealot_suppress_on_backstab_kill.md#fixed-source-evidence) | Consistent | Trigger, effect, radius and cooldown agree. |
 | Area and resistance limits | No area centre, falloff or resistance details; `ui / loc_talent_zealot_suppress_on_backstab_kill_desc / 2ae92ad1` | Holder-centred `Suppression.apply_area_minion_suppression`, suppression 200000, falloff true; not extra damage or a guarantee that every enemy stops attacking [Fixed source and line references](zealot_suppress_on_backstab_kill.md#fixed-source-evidence) | Not covered by the description | These application limits supplement the wording. |
 
+
+<a id="zealot_backstab_periodic_damage"></a>
+
+## Time to Kill
+
+Full raw template and formatting: [source evidence](zealot_backstab_periodic_damage.md#original-english-template-and-reconstruction). Name hash `24b50209`. Every row uses `ui / loc_talent_zealot_backstab_periodic_damage_desc / f5f63199`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Bonus and cooldown | Melee Backstab Damage +50%; 8s Cooldown; `ui / loc_talent_zealot_backstab_periodic_damage_desc / f5f63199` | Conditional backstab_damage +0.5 while not on cooldown; cooldown 8 seconds [Fixed source and line references](zealot_backstab_periodic_damage.md#fixed-source-evidence) | Consistent | Stat and cooldown agree. |
+| Trigger, direction and calculation | No damaging-hit trigger or calculation details; `ui / loc_talent_zealot_backstab_periodic_damage_desc / f5f63199` | `on_hit` / `is_damaging_backstab` consumes availability without requiring a kill; valid rear Melee angle, not rear shooting; permanent allow_backstabbing; separate from Finesse extra damage; original 100→150 or same-stage 120→170 [Fixed source and line references](zealot_backstab_periodic_damage.md#fixed-source-evidence) | Not covered by the description | These trigger and calculation details supplement the wording. |
+
 ## Comparison totals
 
 147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.
