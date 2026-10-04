@@ -369,6 +369,18 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw_consecutiv
 | Ability use, Chordclaw scope, value and cap | Using the Chordclaw Ability increases damage dealt by the Chordclaw by 20% for 5s; stacking 3 times; `ui / loc_talent_cryptic_chordclaw_consecutive_bonus_desc / 0ec90e2e` | Ability activation adds cryptic_chordclaw_damage 0.2 per stack; duration 5, max_stacks/max_stacks_cap 3; Chordclaw profiles use this stat [Fixed source and line references](cryptic_chordclaw_consecutive_bonus.md#fixed-source-evidence) | Consistent | The English explicitly states the Chordclaw damage scope; the trigger, amount, duration and cap agree. |
 | Stack addition, refresh and damage calculation | No consumed-charge independence, duration-refresh or additive-calculation detail; `ui / loc_talent_cryptic_chordclaw_consecutive_bonus_desc / 0ec90e2e` | add_internally_controlled_buff on activation, not each hit; no charge-count scaling; refresh_duration_on_stack true; additive_multiplier [Fixed source and line references](cryptic_chordclaw_consecutive_bonus.md#fixed-source-evidence) | Not covered by the description | Preserve baseline 100 →120/140/160 and three-stack +60%, with target/protection/hit/modifiers still determining actual Health damage. |
 
+
+<a id="cryptic_precision_stance_crit_cleave"></a>
+
+## Piercing Sight
+
+Full raw template and formatting: [source evidence](cryptic_precision_stance_crit_cleave.md#original-english-template-and-reconstruction). Name hash `64749e8f`. Every row uses `ui / loc_talent_cryptic_precision_stance_crit_cleave_desc / f7e91cd6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Initial and increased bonuses | While the ability is active: 30% Ranged Cleave and 15% Ranged Critical Strike Chance, rising to 60% and 30% after 4s; `ui / loc_talent_cryptic_precision_stance_crit_cleave_desc / f7e91cd6` | Base modifiers `0.3` / `0.15`, plus delayed differences `0.3` / `0.15`, give totals `0.6` / `0.30` after 4 continuous seconds [Fixed source and line references](cryptic_precision_stance_crit_cleave.md#fixed-source-evidence) | Consistent | The condition, values and delay match. |
+| Calculation and reset details | Names Ranged Cleave and Critical Strike Chance; does not describe their calculation or restarting the delay; `ui / loc_talent_cryptic_precision_stance_crit_cleave_desc / f7e91cd6` | Cleave modifies hit-mass capacity; Critical Strike Chance adds percentage points. Ending the ability removes the bonuses and clears the delay; reactivation starts a new 4-second wait [Fixed source and line references](cryptic_precision_stance_crit_cleave.md#fixed-source-evidence) | Not covered by the description | The examples and reset behavior explain omitted details without contradicting the English. |
+
 ## Comparison totals
 
 62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.
