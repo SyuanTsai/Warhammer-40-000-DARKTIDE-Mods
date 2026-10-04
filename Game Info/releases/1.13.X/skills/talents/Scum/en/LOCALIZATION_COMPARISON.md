@@ -1076,6 +1076,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_1.md#ori
 | Power statistic and value | +4% Strength; `ui / loc_talent_stat_power_level / f8a49d31` | `power_level_modifier = 0.04`, using the accepted `loc_talent_stat_power_level` mapping [Fixed source and line references](broker_stimm_combat_1.md#fixed-source-evidence) | Consistent | Strength is the same-build English label for the mapped Power statistic, not a separate final-Damage claim. |
 | Cost, stacking and Power scope | No cost, shared lifetime, stacking or final-Damage formula; `ui / loc_talent_stat_power_level / f8a49d31` | One purchase at cost 1; prerequisite Power adds at the same stage; `PowerLevel` precedes weapon Damage/Stagger/Cleave curves; field lifetime is externally controlled [Fixed source and line references](broker_stimm_combat_1.md#fixed-source-evidence) | Not covered by the description | The original 500 → 520 examples and Power scope explain the mapped statistic. |
 
+
+<a id="broker_stimm_combat_2"></a>
+
+## Wildfire II
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_2.md#original-english-template-and-reconstruction). Name hash `fe5e6f12`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Power statistic and value | +4% Strength; `ui / loc_talent_stat_power_level / f8a49d31` | `power_level_modifier = 0.04`, using the accepted `loc_talent_stat_power_level` mapping [Fixed source and line references](broker_stimm_combat_2.md#fixed-source-evidence) | Consistent | Strength is the same-build English label for the mapped Power statistic, not a separate final-Damage claim. |
+| Cost, stacking and Power scope | No cost, shared lifetime, stacking or final-Damage formula; `ui / loc_talent_stat_power_level / f8a49d31` | One purchase at cost 2; prerequisite Power adds at the same stage; `PowerLevel` precedes weapon Damage/Stagger/Cleave curves; field lifetime is externally controlled [Fixed source and line references](broker_stimm_combat_2.md#fixed-source-evidence) | Not covered by the description | The original 500 → 520 with this node alone and 500 → 540 across I–II explain the accepted formula. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
