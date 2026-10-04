@@ -74,6 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="Lightning Speed talent icon"> [Lightning Speed](#psyker_melee_attack_speed) | <ul><li>+10% Melee Attack Speed; affected action segments take time ÷1.1 with no other speed bonuses.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="Warp Splitting talent icon"> [Warp Splitting](#psyker_cleave_from_peril) | <ul><li>Peril increases damage Cleave capacity by up to 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="Souldrinker talent icon"> [Souldrinker](#psyker_killing_enemy_with_warpfire_boosts) | <ul><li>A Soulblaze-related enemy death restores 15% maximum Toughness over 5 seconds and grants +5 percentage points Critical Hit Chance.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="By Crack of Bone talent icon"> [By Crack of Bone](#psyker_melee_weaving) | <ul><li>Melee Weakspot Kills remove 10 percentage points of Peril and reduce Peril generation by 20% for 4 seconds.</li></ul> | Talent |
 
 ---
 
@@ -1111,3 +1112,17 @@
 - **Restoration and chance example**: With 100 maximum Toughness, enough missing Toughness and no other modifiers, restore 100 × 15% ÷ 5 = 3 points per second. An initial 10% Critical Hit Chance becomes 10% + 5% = 15%.
 
 [Details](psyker_killing_enemy_with_warpfire_boosts.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_melee_weaving"></a>
+
+### By Crack of Bone
+
+<img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="72" height="72" alt="By Crack of Bone talent icon">
+
+- **Trigger**: Kill an enemy with a melee Weakspot hit to remove 10 percentage points of Peril. Peril generation is reduced by 20% for the next 4 seconds. Another trigger refreshes the duration.
+
+- **Peril example**: A trigger at 60% Peril lowers it to 50%. During the effect, an attack that would generate 20 percentage points generates 20 × 0.8 = 16 percentage points.
+
+[Details](psyker_melee_weaving.md) · [Back to index](#talent-index)

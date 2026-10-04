@@ -819,6 +819,18 @@ Full raw template and formatting: [source evidence](psyker_killing_enemy_with_wa
 | Soulblaze death condition | Killing an Enemy with Soulblaze; `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226` | The death event accepts a `warpfire_burning` marker without owner restriction, with a fallback for your own `warpfire` kill. [Fixed source and line references](psyker_killing_enemy_with_warpfire_boosts.md#fixed-source-evidence) | Cannot confirm | The phrase is ambiguous about the killing blow; it does not explicitly restrict the effect to Soulblaze dealing the final damage. |
 | Ownership, range and refresh | Killing an Enemy with Soulblaze… for the duration.; `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226` | Events reach `valid_enemy_player_units` without a radius check; a one-stack buff refreshes without stacking the restoration rate or chance. [Fixed source and line references](psyker_killing_enemy_with_warpfire_boosts.md#fixed-source-evidence) | Not covered by the description | These eligibility and repeat-trigger details are omitted rather than expressly contradicted. |
 
+
+<a id="psyker_melee_weaving"></a>
+
+## By Crack of Bone
+
+Full raw template and formatting: [source evidence](psyker_melee_weaving.md#original-english-template-and-reconstruction). Name hash `09e1a8bc`. Every row uses `ui / loc_talent_psyker_melee_weaving_desc / 9a0cbda1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and Peril effects | Melee Weakspot Kills Quell 10% Peril and Reduce further Peril Generation by 20% for 4s.; `ui / loc_talent_psyker_melee_weaving_desc / 9a0cbda1` | `on_melee_weakspot_kills` removes 0.1 of the gauge and enables `warp_charge_amount = 0.8` for 4 seconds. [Fixed source and line references](psyker_melee_weaving.md#fixed-source-evidence) | Consistent | The named trigger and displayed values agree; the English does not explicitly describe a fraction of current Peril. |
+| Refresh and deferred reduction | Melee Weakspot Kills… for 4s.; `ui / loc_talent_psyker_melee_weaving_desc / 9a0cbda1` | Retriggering refreshes the duration; `decrease_immediate(0.1)` runs next update through one Boolean flag, potentially combining same-frame triggers. [Fixed source and line references](psyker_melee_weaving.md#fixed-source-evidence) | Not covered by the description | The text omits repeat-trigger and update scheduling details. |
+
 ## Comparison totals
 
 The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.
