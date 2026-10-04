@@ -98,6 +98,7 @@
 | <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="Wildfire I talent icon"> [Wildfire I](#broker_stimm_combat_1) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="Wildfire II talent icon"> [Wildfire II](#broker_stimm_combat_2) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="Wildfire III talent icon"> [Wildfire III](#broker_stimm_combat_3) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="Wildfire IV talent icon"> [Wildfire IV](#broker_stimm_combat_4a) | <ul><li>Gain 4% Power.</li><li>Gain 10% additional Weakspot and Critical Damage.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1543,3 +1544,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives three Power nodes: 500 × (1 + 3 × 4%) = 560.
 
 [Details](broker_stimm_combat_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_4a"></a>
+
+### Wildfire IV
+
+<img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="72" height="72" alt="Wildfire IV talent icon">
+
+- **Recipe cost**: 4 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Power**: Gain 4%, additive with prerequisite recipes and other Power bonuses at the same stage. Power then contributes to weapon Damage, Stagger and Cleave calculations.
+
+- **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives four Power nodes: 500 × (1 + 4 × 4%) = 580.
+
+- **Weakspot and Critical Damage**: The additional Damage component gains 10%; normal-hit Damage does not receive this bonus.
+
+- **Additional Damage example**: With Power and other conditions fixed, normal Damage 100 and original Weakspot Damage 200 become 100 + (200 − 100) × 1.1 = 210, a 5% increase to total Damage. Wildfire IV and V together add 35% to this component, giving 235 in the same example.
+
+[Details](broker_stimm_combat_4a.md) · [Back to index](#talent-index)

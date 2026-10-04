@@ -1100,6 +1100,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_3.md#ori
 | Power statistic and value | +4% Strength; `ui / loc_talent_stat_power_level / f8a49d31` | `power_level_modifier = 0.04`, using the accepted `loc_talent_stat_power_level` mapping [Fixed source and line references](broker_stimm_combat_3.md#fixed-source-evidence) | Consistent | Strength is the same-build English label for the mapped Power statistic, not a separate final-Damage claim. |
 | Cost, stacking and Power scope | No cost, shared lifetime, stacking or final-Damage formula; `ui / loc_talent_stat_power_level / f8a49d31` | One purchase at cost 3; prerequisite Power adds at the same stage; `PowerLevel` precedes weapon Damage/Stagger/Cleave curves; field lifetime is externally controlled [Fixed source and line references](broker_stimm_combat_3.md#fixed-source-evidence) | Not covered by the description | The original 500 → 520 with this node alone and 500 → 560 across I–III explain the accepted formula. |
 
+
+<a id="broker_stimm_combat_4a"></a>
+
+## Wildfire IV
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_4a.md#original-english-template-and-reconstruction). Name hash `fe5e6f12`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Strength; +10% Finesse (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | power_level_modifier = 0.04; finesse_modifier_bonus = 0.1 [Fixed source and line references](broker_stimm_combat_4a.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. Finesse is an abbreviated label for the additional Weakspot/Critical Damage component and does not state that the whole hit gains this percentage. |
+| Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | One purchase at cost 4; prerequisite Power adds before weapon curves. `finesse_modifier_bonus` adds to the additional Finesse component, rather than the whole Weakspot/Critical Damage amount. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_4a.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **89 Consistent**, **5 Explicit contradictions**, **89 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
