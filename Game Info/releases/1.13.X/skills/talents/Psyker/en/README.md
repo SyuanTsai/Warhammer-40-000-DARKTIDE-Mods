@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="32" height="32" alt="Warp Battery talent icon"> [Warp Battery](#psyker_increased_max_souls) | <ul><li>Raises Warp Charge storage from four to six; Damage and cooldown restoration per charge remain unchanged.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a3deac9c-bddd-441f-a916-e41eecf9b23e" width="32" height="32" alt="Cruel Fortune talent icon"> [Cruel Fortune](#psyker_mark_weakspot_kills) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy with a Weakspot hit grants two extra Precision stacks, three in total, subject to the cap.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="Soulstealer talent icon"> [Soulstealer](#psyker_toughness_on_warp_kill) | <ul><li>A Warp Attack Kill restores 7.5% of maximum Toughness, subject to restoration modifiers and missing Toughness.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="Quietude talent icon"> [Quietude](#psyker_toughness_on_vent) | <ul><li>Both Peril Generation and Quelling restore Toughness: 4% of maximum Toughness per ten percentage points of actual Peril change.</li></ul> | Talent |
 
 ---
 
@@ -728,3 +729,17 @@
 - **Restoration example:** At 100 maximum Toughness with no other restoration bonuses, each proc restores `100 × 7.5% = 7.5`. If current Toughness is 96, effective restoration is `100 − 96 = 4`.
 
 [Details](psyker_toughness_on_warp_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_toughness_on_vent"></a>
+
+### Quietude
+
+<img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="72" height="72" alt="Quietude talent icon">
+
+- **How it works:** Both rising and falling Peril restore Toughness. Each ten-percentage-point change restores 4% of maximum Toughness, proportional to the actual change.
+
+- **Restoration example:** At 100 maximum Toughness with no other restoration bonuses, increasing Peril from 40% to 60% restores `100 × 20% × 0.4 = 8`. Subsequently reducing it from 60% to 50% restores another `100 × 10% × 0.4 = 4`. Full Toughness cannot be overfilled.
+
+[Details](psyker_toughness_on_vent.md) · [Back to index](#talent-index)

@@ -542,6 +542,18 @@ Full raw template and formatting: [source evidence](psyker_toughness_on_warp_kil
 | Warp kill and base restoration | Replenish 7.5% Toughness on Warp Attack Kill; `ui / loc_talent_psyker_toughness_on_warp_kill_desc / ffb1d758` | on_hit checks on_warp_kill for Warp Damage type and death, then calls replenish_percentage(0.075, false). [Fixed source and line references](psyker_toughness_on_warp_kill.md#fixed-source-evidence) | Consistent | The stated kill requirement and base value agree. |
 | Restoration calculation and cap | No maximum-Toughness basis, modifier ordering or missing-Toughness limit specified; `ui / loc_talent_psyker_toughness_on_warp_kill_desc / ffb1d758` | Restoration uses maximum Toughness, then toughness_replenish_modifier and toughness_replenish_multiplier, capped by the deficit. Maximum 100 gives 7.5 without other bonuses; current 96 permits only four. [Fixed source and line references](psyker_toughness_on_warp_kill.md#fixed-source-evidence) | Not covered by the description | The retained formula and example explain the percentage and effective restoration limit. |
 
+
+<a id="psyker_toughness_on_vent"></a>
+
+## Quietude
+
+Full raw template and formatting: [source evidence](psyker_toughness_on_vent.md#original-english-template-and-reconstruction). Name hash `742e490a`. Every row uses `ui / loc_talent_psyker_toughness_from_vent_and_gen_desc / 50f8f0f2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Generation and Quelling ratio | Replenish 4% Toughness for each 10% of Peril Quelled or Generated; `ui / loc_talent_psyker_toughness_from_vent_and_gen_desc / 50f8f0f2` | Generation and vent templates cover opposite signs; restoration is abs(old − new) × 0.4. Display manipulation returns 0.4 × 10 = 4 and replaces default percentage scaling. [Fixed source and line references](psyker_toughness_on_vent.md#fixed-source-evidence) | Consistent | Both directions and the displayed ratio match the accepted formula. |
+| Actual change and cap | No current-gauge formula, ten-point threshold or missing-Toughness limit specified; `ui / loc_talent_psyker_toughness_from_vent_and_gen_desc / 50f8f0f2` | Uses actual Peril change, not current Peril × 0.4. Maximum Toughness 100 gives eight for 40%→60% and four for 60%→50%, without other restoration bonuses and capped by missing Toughness. [Fixed source and line references](psyker_toughness_on_vent.md#fixed-source-evidence) | Not covered by the description | The accepted formula and examples clarify proportional restoration without asserting discrete ten-point triggers. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
