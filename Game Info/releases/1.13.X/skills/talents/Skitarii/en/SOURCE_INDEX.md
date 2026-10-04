@@ -20,3 +20,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Noospheric Command](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | Blitz |
 | [Overcharged Arc Grenades](cryptic_arc_grenades_brittleness.md) / `cryptic_arc_grenades_brittleness` | Blitz |
 | [Enhanced Arc Grenades](cryptic_arc_grenades_weapon_malfunction.md) / `cryptic_arc_grenades_weapon_malfunction` | Blitz |
+| [Overcharged Refraction Emitter](cryptic_force_field_duration_increase.md) / `cryptic_force_field_duration_increase` | Blitz |
