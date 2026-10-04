@@ -8991,9 +8991,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "613900de17e9bef8a54962fad107044d6b2087dd",
       "chinese_sha256": "5ecc75d66bfd593719f94034b723eeae9b3b57d96288eabbd93b633db215a1dd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_auto_reload"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_better_heavies.md",
@@ -9659,9 +9666,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5befca48c93dd8826496516b9217953b5eb0449c",
       "chinese_sha256": "5473b8263ba043600da7a5e65c884bdaaccc7d2135241762e1160ea4444bd7a5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_hybrid_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_increased_passive_cooldown_regen.md",
@@ -9688,9 +9702,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "59e431fe7b87efe44085ace51e20ec1b6a7ef43b",
       "chinese_sha256": "45a668fe7dcbbc04771262d88f086c8127d936fad7a360851f4163eef6cc461b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_melee_attacks_give_melee_attack_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_melee_crits_electrocute_first.md",
@@ -9699,9 +9720,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e4a1de45c381cb2934b2b42fd9ae08d641f0342c",
       "chinese_sha256": "c295b79b7a5356bd1636831b12883f13b1f0d3057a120eadf61d5f5397dfd54f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_melee_crits_electrocute_first"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_mobile_defense.md",
@@ -10393,9 +10421,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "865ea3636697da11d5e67f06a3764e4b8371cdc2",
       "chinese_sha256": "443600c59018cce36b438bd3ace690b6ff91f6bdc05cbaaaea8458f96426962f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_toughness_on_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_per_charge.md",
@@ -18254,6 +18289,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_better_heavies.md"
+    },
+    {
+      "id": "cryptic_hybrid_damage",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_hybrid_damage.md"
+    },
+    {
+      "id": "cryptic_toughness_on_damage_taken",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_toughness_on_damage_taken.md"
+    },
+    {
+      "id": "cryptic_melee_attacks_give_melee_attack_speed",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_melee_attacks_give_melee_attack_speed.md"
+    },
+    {
+      "id": "cryptic_melee_crits_electrocute_first",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_melee_crits_electrocute_first.md"
+    },
+    {
+      "id": "cryptic_auto_reload",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_auto_reload.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -916,4 +916,4 @@ Full raw template and formatting: [source evidence](cryptic_auto_reload.md#origi
 
 ## Comparison totals
 
-146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.
+157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
