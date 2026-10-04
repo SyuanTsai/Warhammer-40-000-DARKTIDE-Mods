@@ -88,3 +88,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Gunsmith](cryptic_auto_reload.md) / `cryptic_auto_reload` | Talent |
 | [Assassination Protocols](cryptic_ranged_vs_bfg.md) / `cryptic_ranged_vs_bfg` | Talent |
 | [System Shock](cryptic_electrocution_applies_brittleness.md) / `cryptic_electrocution_applies_brittleness` | Talent |
+| [Ammo-Cell Augury](cryptic_ammo_reserve.md) / `cryptic_ammo_reserve` | Talent |

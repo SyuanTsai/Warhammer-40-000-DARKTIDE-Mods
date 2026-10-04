@@ -938,6 +938,18 @@ Full raw template and formatting: [source evidence](cryptic_electrocution_applie
 | Target and stacks | Electrocuting an enemy applies 3 Stacks of 2.5% Brittleness to them; `ui / loc_talent_cryptic_electrocution_applies_brittleness_desc / 47a5f3d9` | Electrocution Buff events apply 3 `rending_debuff` stacks to that enemy, at 2.5% each. [Fixed source and line references](cryptic_electrocution_applies_brittleness.md#fixed-source-evidence) | Consistent | The target, number of stacks and per-stack value match. |
 | Events, cap, duration and armour calculation | Does not specify refresh events, cap, duration or damage calculation; `ui / loc_talent_cryptic_electrocution_applies_brittleness_desc / 47a5f3d9` | Added/stack/refresh events qualify; Brittleness refreshes 5 seconds and caps at 16 stacks / 40%. Rending and Brittleness combine in armour penetration; teammates can benefit. [Fixed source and line references](cryptic_electrocution_applies_brittleness.md#fixed-source-evidence) | Not covered by the description | The original 3→6→9→12→15→16 sequence and 50→57.5 armour example, with all stated assumptions, explain omitted details rather than a flat total-damage increase. |
 
+
+<a id="cryptic_ammo_reserve"></a>
+
+## Ammo-Cell Augury
+
+Full raw template and formatting: [source evidence](cryptic_ammo_reserve.md#original-english-template-and-reconstruction). Name hash `848fe38c`. Every row uses `ui / loc_talent_cryptic_ammo_reserve_desc / bf4067b1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stat and value | +25% Ammo Reserve; `ui / loc_talent_cryptic_ammo_reserve_desc / bf4067b1` | `ammo_reserve_capacity = 0.25` increases reserve capacity; clip size is separate. [Fixed source and line references](cryptic_ammo_reserve.md#fixed-source-evidence) | Consistent | The named stat and bonus match the verified implementation. |
+| Capacity calculation and rounding | Does not specify capacity rounding or addition with other bonuses; `ui / loc_talent_cryptic_ammo_reserve_desc / bf4067b1` | Weapon initialization uses an additive multiplier and `floor`: 200→250, 203→253 after a 253.75 calculation, or 200→280 with another same-type 15%. [Fixed source and line references](cryptic_ammo_reserve.md#fixed-source-evidence) | Not covered by the description | These original examples explain the omitted calculation and distinguish reserve capacity from clip capacity. |
+
 ## Comparison totals
 
 157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
