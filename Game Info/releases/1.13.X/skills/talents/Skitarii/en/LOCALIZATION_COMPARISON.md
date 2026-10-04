@@ -431,4 +431,4 @@ Full raw template and formatting: [source evidence](cryptic_overload_keystone.md
 
 ## Comparison totals
 
-62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.
+72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.
