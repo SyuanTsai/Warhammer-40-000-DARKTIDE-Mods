@@ -69,5 +69,6 @@
 | <img src="https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2" width="32" height="32" alt="迅捷火焰祝福圖示"> [迅捷火焰](entries/迅捷火焰/README.md)<br>- Quickflame<br>[完整說明](entries/迅捷火焰/README.md) | <ul><li>持用淨化噴火器且彈匣打空、尚未進入裝填動作時，裝填速度增加 I–IV +24／28／32／36%；只影響後續裝填動作，不增加射擊或火焰傷害。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816" width="32" height="32" alt="黏著炸藥祝福圖示"> [黏著炸藥](entries/黏著炸藥/README.md)<br>- Adhesive Charge<br>[完整說明](entries/黏著炸藥/README.md) | <ul><li>震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040" width="32" height="32" alt="煽風點火祝福圖示"> [煽風點火](entries/煽風點火/README.md)<br>- Fan the Flames<br>[完整說明](entries/煽風點火/README.md) | <ul><li>未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8" width="32" height="32" alt="聚能爆發祝福圖示"> [聚能爆發](entries/聚能爆發/README.md)<br>- Power Blast<br>[完整說明](entries/聚能爆發/README.md) | <ul><li>持握電漿槍射擊時，每充能階增加爆擊機率 I–IV 為 +2／+3／+4／+5 個百分點，0–5 階最高 +10／+15／+20／+25 個百分點；未蓄力的普通首發可實際增加 0 個百分點。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

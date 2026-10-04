@@ -476,6 +476,7 @@
 - Weight of Fire - 猛攻
 - Armourbane - 護甲之禍
 - Power Blast - 聚能爆發
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time`，hash `3d2ff140`；英文／繁中RAW配對確認。
 - Gets Hot! - 燃起來！
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_scaled_on_heat`，hash `0ecf6094`；英文／繁中RAW配對確認。
 - Volatile - 熱力震盪

@@ -835,6 +835,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
       "effect": "未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。"
+    },
+    {
+      "id": "power-blast",
+      "name_zh_tw": "聚能爆發",
+      "name_en": "Power Blast",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time",
+      "description_key": "loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time_desc",
+      "name_hash": "3d2ff140",
+      "description_hash": "57a7d806",
+      "page": "entries/聚能爆發/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8",
+      "effect": "持握電漿槍射擊時，每充能階增加爆擊機率 I–IV 為 +2／+3／+4／+5 個百分點，0–5 階最高 +10／+15／+20／+25 個百分點；未蓄力的普通首發可實際增加 0 個百分點。"
     }
   ],
   "weapons": [
@@ -14745,6 +14758,67 @@
       "icon": "https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_162",
       "effect": "未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+      "blessing_id": "power-blast",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/聚能爆發/weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+        "actual_mark_ids": [
+          "plasmagun_p1_m1"
+        ],
+        "stat_key": "critical_strike_chance",
+        "tier_fraction_by_level": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "percentage_points_per_step_by_level": {
+          "I": 2,
+          "II": 3,
+          "III": 4,
+          "IV": 5
+        },
+        "max_five_step_percentage_points_by_level": {
+          "I": 10,
+          "II": 15,
+          "III": 20,
+          "IV": 25
+        },
+        "step_formula": "clamp(floor(charge_level / 0.2), 0, 5)",
+        "maximum_charge_by_mode": {
+          "ordinary_direct_charge": 0.525,
+          "braced_alternate_full_charge": 1.0
+        },
+        "wrapper_fallback_is_replaced_by_tier": true,
+        "actual_buff_template_id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 390,
+        "end_line": 444
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 159,
+        "end_line": 161
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time_desc",
+      "description_hash": "57a7d806",
+      "icon": "https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_158",
+      "effect": "射擊開始按當時有效充能階數增加 +2／+3／+4／+5 個百分點／階；普通直蓄最多2階，架槍滿蓄最多5階。"
     }
   ],
   "bindings": [
@@ -20654,6 +20728,20 @@
         "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
         "import_line": 14,
         "append_line": 747
+      }
+    },
+    {
+      "blessing_id": "power-blast",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/crit_chance_bonus_based_on_charge_time",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
       }
     }
   ]
