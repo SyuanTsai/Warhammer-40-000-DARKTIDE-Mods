@@ -85,6 +85,7 @@
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="Wait in Line talent icon"> [Wait in Line](#zealot_reduced_damage_from_ranged) | <ul><li>Take 20% less damage from Ranged attacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="Holy Tools talent icon"> [Holy Tools](#zealot_weapon_special_damage) | <ul><li>Activating a Melee Weapon Special grants +20% damage to the next Melee attack within 5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="Got Your Back talent icon"> [Got Your Back](#zealot_melee_kills_restore_toughness_to_target) | <ul><li>Melee Kills against enemies targeting an ally restore 7.5% of that ally's maximum Toughness and an extra 5% of yours.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="Purifying Hatred talent icon"> [Purifying Hatred](#zealot_dmg_vs_burning_electrocuted) | <ul><li>Deal +15% damage to Burning enemies and another +15% to Electrocuted enemies; both conditions give +30%.</li></ul> | Skill |
 
 ---
 
@@ -1170,3 +1171,16 @@
 - **Distance condition:** the talent adds no Coherency range requirement. What matters is the killed enemy's target at that moment.
 
 [Details](zealot_melee_kills_restore_toughness_to_target.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_dmg_vs_burning_electrocuted"></a>
+
+### Purifying Hatred
+
+<img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="72" height="72" alt="Purifying Hatred talent icon">
+
+- **How it works:** gain +15% damage if the enemy is Burning and another +15% if it is Electrocuted. Each condition is checked separately; both states are not required for either bonus to apply.
+- **Damage example:** base damage 100 with one qualifying condition becomes 100 × 1.15 = 115. Both conditions give 100 × (1 + 15% + 15%) = 130. Other same-stage damage bonuses are added first.
+
+[Details](zealot_dmg_vs_burning_electrocuted.md) · [Back to index](#talent-index)

@@ -939,6 +939,18 @@ Full raw template and formatting: [source evidence](zealot_melee_kills_restore_t
 | Trigger and recipients | Melee Kills vs enemies targeting an ally; 7.5% Toughness to ally and additional 5% to you; `ui / loc_talent_zealot_melee_kills_restore_toughness_to_target_desc / 185f78b2` | on_melee_kill with existing non-self target; target restores 0.075 and holder 0.05 of their own maximum Toughness [Fixed source and line references](zealot_melee_kills_restore_toughness_to_target.md#fixed-source-evidence) | Consistent | The ordinary ally case, recipients and values agree. |
 | Target-test and restoration limits | No distance, cooldown, maximum-resource or extension details; `ui / loc_talent_zealot_melee_kills_restore_toughness_to_target_desc / 185f78b2` | No Coherency/distance test or cooldown; only excludes self/nil without an extra player test, so non-Toughness targets do not guarantee restoration. Each recipient uses their own modifiers/cap; normal kill restoration is separate [Fixed source and line references](zealot_melee_kills_restore_toughness_to_target.md#fixed-source-evidence) | Not covered by the description | These implementation and resource limits supplement the wording. |
 
+
+<a id="zealot_dmg_vs_burning_electrocuted"></a>
+
+## Purifying Hatred
+
+Full raw template and formatting: [source evidence](zealot_dmg_vs_burning_electrocuted.md#original-english-template-and-reconstruction). Name hash `9b5165a8`. Every row uses `ui / loc_talent_zealot_dmg_vs_burning_electrocuted_desc / 34bfb2f6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Listed enemy states and value | +15% increased damage against Burning and Electrocuted Enemies; `ui / loc_talent_zealot_dmg_vs_burning_electrocuted_desc / 34bfb2f6` | damage_vs_burning +0.15 and damage_vs_electrocuted +0.15 [Fixed source and line references](zealot_dmg_vs_burning_electrocuted.md#fixed-source-evidence) | Consistent | The wording can list both eligible groups; it does not explicitly require the two states simultaneously. |
+| Separate checks and simultaneous addition | No rule for an enemy with both states; `ui / loc_talent_zealot_dmg_vs_burning_electrocuted_desc / 34bfb2f6` | Two independent checks add to damage_stat_buffs; one condition gives original 100→115, both 100→130; other same-stage bonuses add [Fixed source and line references](zealot_dmg_vs_burning_electrocuted.md#fixed-source-evidence) | Not covered by the description | The combined outcome and calculation supplement the wording. |
+
 ## Comparison totals
 
 158 rules: 74 Consistent / 6 Explicit contradiction / 74 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 639.
