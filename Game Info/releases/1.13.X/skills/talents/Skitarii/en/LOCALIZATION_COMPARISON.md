@@ -587,6 +587,19 @@ Full raw template and formatting: [source evidence](cryptic_crits_grant_tdr.md#o
 | Trigger, total recovery and reduction | Critical hits restore 7.5% Toughness and grant +15% Toughness Damage Reduction over 3s; `ui / loc_talent_cryptic_crits_grant_tdr_desc / 12420803` | Critical hits activate a 3-second effect restoring 7.5% in total and applying Toughness damage multiplier `0.85` [Fixed source and line references](cryptic_crits_grant_tdr.md#fixed-source-evidence) | Consistent | The wording and verified values agree; it does not explicitly say restoration is instantaneous. |
 | Rate, refreshing and calculation limits | Does not state the per-second rate, denominator, refresh behavior or interaction with other modifiers; `ui / loc_talent_cryptic_crits_grant_tdr_desc / 12420803` | Recover 2.5% of maximum Toughness per second; retriggering restarts without stacking. Recovery bonuses and the maximum apply; independent reductions multiply [Fixed source and line references](cryptic_crits_grant_tdr.md#fixed-source-evidence) | Not covered by the description | The preserved examples and calculation restrictions supplement the English. |
 
+
+<a id="cryptic_dr_on_toughness_break"></a>
+
+## Adaptive Combat Engram
+
+Full raw template and formatting: [source evidence](cryptic_dr_on_toughness_break.md#original-english-template-and-reconstruction). Name hash `971612d9`. Every row uses `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and protection | On Toughness break gain +30% Damage Resistance for 5s; `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1` | The owner's Toughness-break event activates multiplier `0.70` for 5 seconds [Fixed source and line references](cryptic_dr_on_toughness_break.md#fixed-source-evidence) | Consistent | The stated protection and active duration match. |
+| Interval between activations | Can only occur once every 15s; `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1` | Cooldown test is `active_start + active_duration + cooldown_duration`: 5 + 15 = 20 seconds between triggers [Fixed source and line references](cryptic_dr_on_toughness_break.md#fixed-source-evidence) | Explicit contradiction | The English states a 15-second activation interval; the verified minimum is 20 seconds. |
+| Event ownership, damage timing and stacking | Does not specify event ownership, retroactive damage handling or other reductions; `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1` | Only the owner's break triggers it; protection applies afterwards. Independent 25% reduction gives `100 × 0.70 × 0.75 = 52.5` [Fixed source and line references](cryptic_dr_on_toughness_break.md#fixed-source-evidence) | Not covered by the description | These conditions and examples supplement the English. |
+
 ## Comparison totals
 
 94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.
