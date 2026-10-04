@@ -14,3 +14,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Integrated Refraction Emitter](cryptic_grenade_ability_force_field.md) / `cryptic_grenade_ability_force_field` | Blitz |
 | [Purgator Servo-Skull](cryptic_flamethrower.md) / `cryptic_flamethrower` | Blitz |
 | [Medicae Servo-Skull](cryptic_servo_skull_inject_ally.md) / `cryptic_servo_skull_inject_ally` | Blitz |
+| [Arc Grenades](cryptic_grenade_ability_arc_grenade.md) / `cryptic_grenade_ability_arc_grenade` | Blitz |
