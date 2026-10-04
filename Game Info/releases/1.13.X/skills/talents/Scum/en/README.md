@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="Punching Above One's Weight talent icon"> [Punching Above One's Weight](#broker_passive_damage_vs_elites_monsters) | <ul><li>Deal 15% more Damage to Elites and Monstrosities.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="The Sweet Spot talent icon"> [The Sweet Spot](#broker_passive_increased_weakspot_damage) | <ul><li>Increase the additional Weakspot Damage component by 25%; the resulting total damage gain varies by weapon.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="Long Lasting talent icon"> [Long Lasting](#broker_passive_stimm_increased_duration) | <ul><li>Stimm effects last 5 seconds longer.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="Blessed Stimms talent icon"> [Blessed Stimms](#broker_passive_stimm_cleanse_on_kill) | <ul><li>While Stimmed, each Kill clears 1% of maximum Health as Corruption; 50% cleared per Stimm is the stopping threshold.</li></ul> | Talent |
 
 ---
 
@@ -1256,3 +1257,19 @@
 - **Applicability**: Extends Stimms with a timed effect. Instant healing itself does not become five more seconds of healing.
 
 [Details](broker_passive_stimm_increased_duration.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stimm_cleanse_on_kill"></a>
+
+### Blessed Stimms
+
+<img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="72" height="72" alt="Blessed Stimms talent icon">
+
+- **Recovery**: After using a Stimm, each Kill while its effects remain clears Corruption equal to 1% of maximum Health. Corruption that has consumed an entire Health segment cannot be cleared.
+
+- **Recovery example**: At maximum Health 200, each Kill clears at most 2. Clearing stops once the accumulated amount reaches 100. Using another Stimm resets the accumulated amount for that use.
+
+- **Threshold exception**: Each Kill checks the 50% threshold before applying a full clear. If 99 has been cleared and this Kill clears 2, the total reaches 101 before stopping. The last clear can therefore slightly exceed the stated threshold.
+
+[Details](broker_passive_stimm_cleanse_on_kill.md) · [Back to index](#talent-index)

@@ -87,3 +87,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Punching Above One's Weight](broker_passive_damage_vs_elites_monsters.md) / `broker_passive_damage_vs_elites_monsters` | Talent |
 | [The Sweet Spot](broker_passive_increased_weakspot_damage.md) / `broker_passive_increased_weakspot_damage` | Talent |
 | [Long Lasting](broker_passive_stimm_increased_duration.md) / `broker_passive_stimm_increased_duration` | Talent |
+| [Blessed Stimms](broker_passive_stimm_cleanse_on_kill.md) / `broker_passive_stimm_cleanse_on_kill` | Talent |

@@ -916,6 +916,19 @@ Full raw template and formatting: [source evidence](broker_passive_stimm_increas
 | Duration bonus | +5s Stimm Duration; `ui / loc_talent_broker_passive_stimm_increased_duration_desc / 905ad5d9` | Adds `syringe_duration = 5` through the applicable syringe start function [Fixed source and line references](broker_passive_stimm_increased_duration.md#fixed-source-evidence) | Consistent | The statistic, fixed seconds and value agree. |
 | Cooldown and applicability | No cooldown interaction or durationless-effect details; `ui / loc_talent_broker_passive_stimm_increased_duration_desc / 905ad5d9` | Timed effects receive `add_duration`; durationless effects are skipped, and longer Scum Stimm effects delay natural cooldown recovery [Fixed source and line references](broker_passive_stimm_increased_duration.md#fixed-source-evidence) | Not covered by the description | These retain the verified limitations and the 15 + 5 = 20 second example. |
 
+
+<a id="broker_passive_stimm_cleanse_on_kill"></a>
+
+## Blessed Stimms
+
+Full raw template and formatting: [source evidence](broker_passive_stimm_cleanse_on_kill.md#original-english-template-and-reconstruction). Name hash `df6da11d`. Every row uses `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill recovery | While Stimmed, Kills clear 1% Corruption; `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8` | After Stimm use, each Kill clears up to `0.01 × max_health` while the syringe keyword remains [Fixed source and line references](broker_passive_stimm_cleanse_on_kill.md#fixed-source-evidence) | Consistent | The active-effect condition and per-Kill amount agree. |
+| Per-Stimm maximum | Up to 50% per Stimm; `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8` | Checks accumulated clearing below `0.5 × max_health` before applying a full clear; the last clear may exceed 50% [Fixed source and line references](broker_passive_stimm_cleanse_on_kill.md#fixed-source-evidence) | Explicit contradiction | The stated maximum is a stopping threshold, not a strict cap. The preserved 99 + 2 = 101 example demonstrates the boundary difference. |
+| Recovery limits and reset | No Wound floor, actual-cleared accumulation or refresh details; `ui / loc_talent_broker_passive_stimm_cleanse_on_kill_desc / 565482d8` | Protects `fixed_permanent_damage`, accumulates actual clearing and resets on start/refresh [Fixed source and line references](broker_passive_stimm_cleanse_on_kill.md#fixed-source-evidence) | Not covered by the description | These retain the existing recovery limits and example assumptions. |
+
 ## Comparison totals
 
 The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.
