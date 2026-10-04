@@ -89,3 +89,4 @@
 | [專注冷卻](entries/專注冷卻/README.md) | [來源索引](entries/專注冷卻/SOURCE_INDEX.md) |
 | [超壓](entries/超壓/README.md) | [來源索引](entries/超壓/SOURCE_INDEX.md) |
 | [虹吸](entries/虹吸/README.md) | [來源索引](entries/虹吸/SOURCE_INDEX.md) |
+| [雙管齊發](entries/雙管齊發/README.md) | [來源索引](entries/雙管齊發/SOURCE_INDEX.md) |

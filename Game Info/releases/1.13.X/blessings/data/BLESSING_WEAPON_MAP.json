@@ -1121,6 +1121,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
       "effect": "在武器特殊能力啟用的近戰橫掃中，當前合格近戰命中事件的目標序號達到3或以上時，嘗試恢復最大韌性的10%／12%／14%／16%；每次橫掃至多嘗試一次，實際恢復受當前韌性缺額與恢復狀態限制。"
+    },
+    {
+      "id": "both-barrels",
+      "name_zh_tw": "雙管齊發",
+      "name_en": "Both Barrels",
+      "name_key": "loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill",
+      "description_key": "loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill_desc",
+      "name_hash": "5ea2e09a",
+      "description_hash": "8c79e8c3",
+      "page": "entries/雙管齊發/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
+      "effect": "符合遠程擊殺條件，且擊殺事件處理時雙發起始狀態仍有效，下一次實際補彈的換彈動作可加快40%–70%（依 I–IV 級）。十字星 Mk XI 的雙管模式為舉鏡射擊；克魯克 Mk IV 為腰射。"
     }
   ],
   "weapons": [
@@ -17612,6 +17625,52 @@
       "icon": "https://github.com/user-attachments/assets/167e264e-36c8-4869-bf55-23dc1b42e6d7",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_240",
       "effect": "在武器特殊能力啟用的近戰橫掃中，當前合格近戰命中事件的目標序號達到3或以上時，嘗試恢復最大韌性的10%／12%／14%／16%；每次橫掃至多嘗試一次，實際恢復受當前韌性缺額與恢復狀態限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill",
+      "blessing_id": "both-barrels",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/雙管齊發/weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "reload_speed",
+        "stat_type": "additive_multiplier",
+        "base_value": 1,
+        "tier_bonus_by_level": {
+          "I": 0.4,
+          "II": 0.5,
+          "III": 0.6,
+          "IV": 0.7
+        },
+        "display_percent_by_level": {
+          "I": 40,
+          "II": 50,
+          "III": 60,
+          "IV": 70
+        },
+        "reload_time_formula": "threshold / (1 + existing_bonus + this_tier_bonus)"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 576,
+        "end_line": 617
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 45,
+        "end_line": 117
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill_desc",
+      "description_hash": "8c79e8c3",
+      "icon": "https://github.com/user-attachments/assets/6d2d415f-b370-43ef-a384-3c4da0f579f3",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_216",
+      "effect": "- 十字星 Mk XI（shotgun_p2_m1）：舉鏡雙發為特殊模式，腰射為普通單發。\n- 克魯克 Mk IV（shotgun_p2_m3）：腰射雙發為特殊模式，舉鏡為普通單發；四級數值相同。"
     }
   ],
   "bindings": [
@@ -24655,6 +24714,34 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
         "import_line": 14,
         "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "both-barrels",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/reload_speed_on_ranged_weapon_special_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "both-barrels",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_ranged_weapon_special_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/reload_speed_on_ranged_weapon_special_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
       }
     }
   ]
