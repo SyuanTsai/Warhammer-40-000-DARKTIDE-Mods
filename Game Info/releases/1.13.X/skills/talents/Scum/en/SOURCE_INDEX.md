@@ -124,3 +124,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Desperado](broker_ability_focus.md) / `broker_ability_focus` | Base Combat Ability |
 | [Blinder](broker_blitz_flash_grenade.md) / `broker_blitz_flash_grenade` | Base Blitz |
 | [Gunslinger](broker_aura_gunslinger.md) / `broker_aura_gunslinger` | Base Aura |
+| [Like the Wind](broker_passive_improved_sprint_dodge.md) / `broker_passive_improved_sprint_dodge` | Base passive |

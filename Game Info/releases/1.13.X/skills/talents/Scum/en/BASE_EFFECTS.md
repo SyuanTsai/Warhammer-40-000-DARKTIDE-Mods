@@ -51,3 +51,19 @@ These effects come from the character's base configuration. Combat Ability, Blit
 [Source evidence and example assumptions](broker_aura_gunslinger.md)
 
 ---
+
+<a id="broker_passive_improved_sprint_dodge"></a>
+
+## Like the Wind: base passive
+
+- **Sprint Dodge**: The angle threshold falls from 70° to 55°. Attacks from somewhat more sideward directions can more easily count as having been Dodged by Sprinting.
+
+- **After Stamina runs out**: Sprint Dodge can still trigger during Sprint overtime.
+
+- **Consecutive Dodges**: Gain 1 additional Effective Consecutive Dodge before Dodge Distance starts to decay. The total depends on the weapon's Dodge settings.
+
+- **Angle example**: When the smaller angle between the incoming direction and the forward/backward facing is 60°, it does not exceed the original 70° threshold. It exceeds the new 70° − 15° = 55° threshold, satisfying the sideward Sprint Dodge condition.
+
+[Source evidence and example assumptions](broker_passive_improved_sprint_dodge.md)
+
+---

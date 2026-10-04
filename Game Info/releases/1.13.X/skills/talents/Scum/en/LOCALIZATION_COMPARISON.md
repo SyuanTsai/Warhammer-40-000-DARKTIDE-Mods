@@ -1367,6 +1367,18 @@ Full raw template and formatting: [source evidence](broker_aura_gunslinger.md#or
 | Per-member calculation and sharing limits | No weapon capacity, rounding, deficit, duplicate Aura or recursion details; `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe` | Each slot's pickup_amount_func; only max_ammunition_reserve > 0; cap at reserve plus magazine deficit; improved 10% replaces base 5%; skip_proc = true [Fixed source and line references](broker_aura_gunslinger.md#fixed-source-evidence) | Not covered by the description | Original ordinary pickup examples retain their per-member capacities and available-room assumptions; these details supplement the text. |
 | Special mission large Ammo Crate | When an Ammo pickup is collected; `ui / loc_talent_broker_aura_gunslinger_desc / 3df231fe` | The existing evidence does not establish the special mission crate's event or actual sharing [Fixed source and line references](broker_aura_gunslinger.md#fixed-source-evidence) | Cannot confirm | The text is broad, but this unverified case cannot be asserted as an English contradiction. |
 
+
+<a id="broker_passive_improved_sprint_dodge"></a>
+
+## Like the Wind: base passive
+
+Full raw template and formatting: [source evidence](broker_passive_improved_sprint_dodge.md#original-english-template-and-reconstruction). Name hash `9ac70c19`. Every row uses `ui / loc_talent_broker_iconic_improved_dodges_desc / 993a0d69`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Sprint Dodge and additional Dodge | Dodge while Sprinting with depleted Stamina; +15 degree Dodge Angle; +1 Effective Dodges; `ui / loc_talent_broker_iconic_improved_dodges_desc / 993a0d69` | sprint_dodge_in_overtime; threshold 70° − 15° = 55°; extra_consecutive_dodges = 1 [Fixed source and line references](broker_passive_improved_sprint_dodge.md#fixed-source-evidence) | Consistent | The depleted-Stamina permission, wider Sprint Dodge angle and additional Effective Dodge agree. |
+| Angle and weapon limits | No strict comparison, Ranged Attack scope or weapon-dependent decay formula; `ui / loc_talent_broker_iconic_improved_dodges_desc / 993a0d69` | look_away_angle > threshold; Sprint Dodge against Ranged Attacks; diminishing_return_start (default 2) + 1, with weapon-specific decay [Fixed source and line references](broker_passive_improved_sprint_dodge.md#fixed-source-evidence) | Not covered by the description | Original 60° angle and 2 + 1 = 3 decay-start examples retain their assumptions. The passive does not increase every Dodge duration or distance. |
+
 ## Comparison totals
 
 The 235 listed rules comprise **109 Consistent**, **7 Explicit contradictions**, **109 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
