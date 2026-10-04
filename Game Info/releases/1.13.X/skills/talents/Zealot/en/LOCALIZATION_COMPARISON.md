@@ -915,6 +915,18 @@ Full raw template and formatting: [source evidence](zealot_reduced_damage_from_r
 | Enemy category versus attack type | vs Ranged Enemies; `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42` | Eligibility is `is_ranged_attack`, not `breed.ranged`; the same gunner's Melee attack is not reduced [Fixed source and line references](zealot_reduced_damage_from_ranged.md#fixed-source-evidence) | Explicit contradiction | The stated enemy-category condition differs from the accepted attack-type condition. Both languages sharing the wording does not resolve the English source discrepancy. |
 | Combination | No formula for other reductions; `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42` | Original Ranged damage 100→80; with independent general 25% reduction, 100 × 0.8 × 0.75 = 60 [Fixed source and line references](zealot_reduced_damage_from_ranged.md#fixed-source-evidence) | Not covered by the description | The combination formula supplements the wording. |
 
+
+<a id="zealot_weapon_special_damage"></a>
+
+## Holy Tools
+
+Full raw template and formatting: [source evidence](zealot_weapon_special_damage.md#original-english-template-and-reconstruction). Name hash `af1ee73d`. Every row uses `ui / loc_talent_zealot_weapon_special_damage_desc / 21bf1b41`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Next attack bonus and window | Next Melee Attack within 5s after activating Weapon Special; +20% Damage; `ui / loc_talent_zealot_weapon_special_damage_desc / 21bf1b41` | Primary-slot on_weapon_special_activate adds one 5-second effect with melee_damage +0.2 [Fixed source and line references](zealot_weapon_special_damage.md#fixed-source-evidence) | Consistent | Activation, next-attack bonus and time window agree. |
+| Activation and consumption limits | No event, stacking or miss details; `ui / loc_talent_zealot_weapon_special_damage_desc / 21bf1b41` | Weapon action must send the activation event; one refreshing stack; on_sweep_finish force-finishes without a hit check, after the whole sweep; no swing means expiry [Fixed source and line references](zealot_weapon_special_damage.md#fixed-source-evidence) | Not covered by the description | These action and consumption details supplement the wording. |
+
 ## Comparison totals
 
 158 rules: 74 Consistent / 6 Explicit contradiction / 74 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 639.

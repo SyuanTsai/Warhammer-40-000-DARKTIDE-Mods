@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="Against the Odds talent icon"> [Against the Odds](#zealot_offensive_vs_many) | <ul><li>Every 2 enemies within 5 metres grant +2% damage and +10% Cleave, up to 5 stacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="Out of Pocket talent icon"> [Out of Pocket](#zealot_reload_from_melee) | <ul><li>Melee Kills transfer 10% of the magazine's missing ammunition from reserves.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="Wait in Line talent icon"> [Wait in Line](#zealot_reduced_damage_from_ranged) | <ul><li>Take 20% less damage from Ranged attacks.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="Holy Tools talent icon"> [Holy Tools](#zealot_weapon_special_damage) | <ul><li>Activating a Melee Weapon Special grants +20% damage to the next Melee attack within 5 seconds.</li></ul> | Skill |
 
 ---
 
@@ -1141,3 +1142,16 @@
 - **Reduction example:** this talent alone changes incoming Ranged damage 100 to 100 × 0.8 = 80. With a separate 25% general reduction, the result is 100 × 0.8 × 0.75 = 60.
 
 [Details](zealot_reduced_damage_from_ranged.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_weapon_special_damage"></a>
+
+### Holy Tools
+
+<img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="72" height="72" alt="Holy Tools talent icon">
+
+- **Trigger:** activating a Melee Weapon Special grants +20% damage to the next Melee attack within 5 seconds. The effect is consumed when that attack ends, including a missed swing. If you do not swing before the deadline, it expires.
+- **Damage example:** base damage 100 becomes 100 × 1.2 = 120. With an existing same-stage 25% Melee damage bonus, the result is 100 × (1 + 25% + 20%) = 145. For one sweep, the effect lasts until that swing ends.
+
+[Details](zealot_weapon_special_damage.md) · [Back to index](#talent-index)

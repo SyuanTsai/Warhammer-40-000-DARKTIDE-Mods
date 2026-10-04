@@ -86,3 +86,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Against the Odds](zealot_offensive_vs_many.md) / `zealot_offensive_vs_many` | Skill |
 | [Out of Pocket](zealot_reload_from_melee.md) / `zealot_reload_from_melee` | Skill |
 | [Wait in Line](zealot_reduced_damage_from_ranged.md) / `zealot_reduced_damage_from_ranged` | Skill |
+| [Holy Tools](zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | Skill |
