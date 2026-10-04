@@ -831,6 +831,18 @@ Full raw template and formatting: [source evidence](psyker_melee_weaving.md#orig
 | Trigger and Peril effects | Melee Weakspot Kills Quell 10% Peril and Reduce further Peril Generation by 20% for 4s.; `ui / loc_talent_psyker_melee_weaving_desc / 9a0cbda1` | `on_melee_weakspot_kills` removes 0.1 of the gauge and enables `warp_charge_amount = 0.8` for 4 seconds. [Fixed source and line references](psyker_melee_weaving.md#fixed-source-evidence) | Consistent | The named trigger and displayed values agree; the English does not explicitly describe a fraction of current Peril. |
 | Refresh and deferred reduction | Melee Weakspot Kills… for 4s.; `ui / loc_talent_psyker_melee_weaving_desc / 9a0cbda1` | Retriggering refreshes the duration; `decrease_immediate(0.1)` runs next update through one Boolean flag, potentially combining same-frame triggers. [Fixed source and line references](psyker_melee_weaving.md#fixed-source-evidence) | Not covered by the description | The text omits repeat-trigger and update scheduling details. |
 
+
+<a id="psyker_damage_vs_ogryns_and_monsters"></a>
+
+## Vulnerable Minds
+
+Full raw template and formatting: [source evidence](psyker_damage_vs_ogryns_and_monsters.md#original-english-template-and-reconstruction). Name hash `7b6a6e65`. Every row uses `ui / loc_talent_psyker_damage_vs_ogryns_and_monsters_desc / 454bae2f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Amount and targets | +20% Damage vs Ogryns and Monstrosities.; `ui / loc_talent_psyker_damage_vs_ogryns_and_monsters_desc / 454bae2f` | `damage_vs_ogryn_and_monsters = 0.2` applies to the matching breed tags. [Fixed source and line references](psyker_damage_vs_ogryns_and_monsters.md#fixed-source-evidence) | Consistent | The named categories and bonus agree. |
+| Eligibility and calculation stage | +20% Damage vs Ogryns and Monstrosities.; `ui / loc_talent_psyker_damage_vs_ogryns_and_monsters_desc / 454bae2f` | The bonus joins `damage_stat_buffs`; visual size does not establish eligibility. [Fixed source and line references](psyker_damage_vs_ogryns_and_monsters.md#fixed-source-evidence) | Not covered by the description | The concise text omits breed-tag checks and the additive stage. |
+
 ## Comparison totals
 
 The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

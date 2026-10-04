@@ -75,6 +75,7 @@
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="Warp Splitting talent icon"> [Warp Splitting](#psyker_cleave_from_peril) | <ul><li>Peril increases damage Cleave capacity by up to 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="Souldrinker talent icon"> [Souldrinker](#psyker_killing_enemy_with_warpfire_boosts) | <ul><li>A Soulblaze-related enemy death restores 15% maximum Toughness over 5 seconds and grants +5 percentage points Critical Hit Chance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="By Crack of Bone talent icon"> [By Crack of Bone](#psyker_melee_weaving) | <ul><li>Melee Weakspot Kills remove 10 percentage points of Peril and reduce Peril generation by 20% for 4 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="Vulnerable Minds talent icon"> [Vulnerable Minds](#psyker_damage_vs_ogryns_and_monsters) | <ul><li>+20% Damage against Ogryns and Monstrosities.</li></ul> | Talent |
 
 ---
 
@@ -1126,3 +1127,17 @@
 - **Peril example**: A trigger at 60% Peril lowers it to 50%. During the effect, an attack that would generate 20 percentage points generates 20 × 0.8 = 16 percentage points.
 
 [Details](psyker_melee_weaving.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_damage_vs_ogryns_and_monsters"></a>
+
+### Vulnerable Minds
+
+<img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="72" height="72" alt="Vulnerable Minds talent icon">
+
+- **How it works**: Deal 20% more Damage to Ogryns and Monstrosities.
+
+- **Damage example**: Compare only this Damage stage, with all other multipliers fixed at 1. With a baseline of 100 and no other bonuses, 100 × (1 + 20%) = 120. With an existing 25% bonus in the same stage, 125 becomes 100 × (1 + 25% + 20%) = 145.
+
+[Details](psyker_damage_vs_ogryns_and_monsters.md) · [Back to index](#talent-index)
