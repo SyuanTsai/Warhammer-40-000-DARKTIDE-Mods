@@ -20,14 +20,31 @@
 
 所有字幕 key 以原始 key 的 UTF-8 bytes 計算 Murmur hash，按 hash 對照同一 Build 的 locale entry；不靠 `loc_` 前綴判斷台詞、事件或說話者。合計 **158,881 次 Source 字幕引用、135,055 個不同 Source hash**。這包括 158,525 個 generated pool event references、355 個固定字幕槽及 1 筆手動字幕。
 
-| 語系 | 原始 entries | hash 命中 Source 的 entries | 未連結 Source 的 entries | 不同 raw hashes |
+| 語系 | 原始 entries | 既有播放池／固定字幕命中 entries | 既有播放索引未收錄 entries | 不同 raw hashes |
 |---|---:|---:|---:|---:|
 | 英文 `en` | 146,916 | 132,665 | 14,251 | 146,915 |
 | 繁中 `zh-tw` | 146,886 | 132,665 | 14,221 | 146,885 |
 
-未連結列中有 14,221 組 hash 同時存在於兩語，另有 30 組僅英文存在、僅繁中存在為 0。另一方面，有 **2,391 個 Source hash** 在兩份 raw 文本都沒有 entry：2,389 個來自 generated pools，另 2 個來自固定字幕。未連結列不指派到特定事件或角色，避免僅憑 hash 或文字猜測來源。
+既有播放索引未收錄的列中有 14,221 組 hash 同時存在於兩語，另有 30 組僅英文存在、僅繁中存在為 0。這不等於整份 Source 沒有引用；重新分類見下節。另一方面，有 **2,391 個 Source hash** 在兩份 raw 文本都沒有 entry：2,389 個來自 generated pools，另 2 個來自固定字幕。
 
 唯一發現的同 hash 多列歧義為 **`c9cb9708`**。Source 有一個候選 key `loc_psyker_female_b__cryptic_d_psyker_bonding_conversation_20_b_01`，但英文與繁中各有兩筆不同文字，合計四筆 raw rows；原始列沒有明文 key，不能判定哪一句與 Source 行一對一相符。這四筆都必須保留原始 entry_index 與文字，並標成 ambiguous collision，不把其中任一列當成確定配對。
+
+## 原未對應字幕的重新分類
+
+對固定 SHA 的整棵 Git 樹 10,554 檔（184,307,661 bytes）重新掃描，包含 `dialogues/generated`、角色／UI 設定、runtime 與 773 個 `content/levels` Lua 檔。228,036 個不同 quoted／`loc_` identifier 候選依 `MurmurHash64A(seed=0) >> 32` 比對；原資源 387 個已知明文 key 全部吻合，60 個新增分類 hash 沒有候選碰撞。未以文字相似、key 尾綴或檔名推造事件。
+
+| 實際用途 | 不同 hash | 英文原文 | 繁中原文 | Source 引用位置 |
+|---|---:|---:|---:|---:|
+| 角色建立的性格介紹 | 38 | 38 | 38 | 38 |
+| 回應觸發條件引用 | 22 | 22 | 22 | 26 |
+| 用途待確認 | 14,191 | 14,191 | 14,161 | 尚未找到 |
+| 合計 | 14,251 | 14,251 | 14,221 | 64 個已確認位置 |
+
+38 筆由 `personalities.lua`（34）與 `personalities_cryptic.lua`（4）的 `description` 明確引用；UI 在 [character_appearance_view.lua 第 3971 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/character_appearance_view/character_appearance_view.lua#L3971)讀取，於[第 4038 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/character_appearance_view/character_appearance_view.lua#L4038)顯示。職業、性格名稱、明確性別與職業圖示的逐筆依據在 [personality-introductions.tsv](source-catalog/subtitle-usages/personality-introductions.tsv)。試聽使用另設的音訊事件，未驗證其內容與介紹文字完全一致；不同性格選項不是連續對話。
+
+22 筆在 `heard_speak` 規則的 `query_context.sound_event / OP.SET_INCLUDES` 條件出現，共 26 處、14 個官方回應規則；完整條件位置及既有回應閱讀入口見 [response-trigger-references.tsv](source-catalog/subtitle-usages/response-trigger-references.tsv)。[dialogue_system.lua 第 474–486 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/dialogue/dialogue_system.lua#L474-L486)把上一句的 sound event 傳入 `heard_speak`；真正的播放選擇則讀 [rule.sound_events](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/dialogue/dialogue_extension.lua#L648-L655)。這 22 個 key 沒有在固定版本的播放候選池找到，不能把條件所屬的 response voice template 當作原始說話者，也不保證目前會播放。
+
+其餘 14,191 個 hash 尚無可證的 literal／identifier 或直接 hash 引用；不是「確定未使用」。例如 Flow 的 [vo_line_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L1908)與 [subtitle_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L2020)由外部資產參數提供，而此 Source 樹不含所有資產實體。原始未對應索引與正文位置保留作為穩定編號；上述 TSV 與逐筆來源 MD 是用途覆蓋層，網站據此分類，不另維護字幕副本。用途待確認字幕的網站閱讀頁採每頁最多 25 筆。
 
 ## 字幕顯示資格缺口
 

@@ -59,7 +59,7 @@
 6. A／B 戰役節點不能僅依名稱推定互斥、先後或每名玩家必經。由 backend 提供且未取得的解鎖拓樸不得補寫。
 7. 既有 10 組任務結束簡報各只有一位 NPC 發言；新增多角色事件逐句依真實 voice profile 顯示角色及頭像。所有台詞忠實呈現該角色，不為了聊天感新增玩家回覆或交替左右分配說話者。
 8. 未確定的事件名、角色、台詞或分支記錄缺口。已知官方繁中缺漏時不得自行補譯成官方字幕；另有翻譯授權才建立明確標示的譯稿。
-9. 全量整理須逐列涵蓋原始中英 `subtitles`，沒有 Source 引用的 hash 放入「未對應事件字幕」分類；不由 key 前綴猜角色或事件。只有一種語言也保留另一語頁與缺失說明。相同 hash 的不同 payload 全部保留並標示配對歧義，不能選第一列當唯一答案；未能確認文本身分時不套用推測頭像或姓名。
+9. 全量整理須逐列涵蓋原始中英 `subtitles`，未命中播放候選池不等於沒有 Source 引用。另查角色／UI 設定、generated 規則的條件引用與 runtime；只有精確 key／hash 與實際使用行為能建立用途。`personalities.description` 配合畫面讀取／顯示歸為「角色性格介紹」，試聽音訊是否相同另行確認；僅存在 `heard_speak / sound_event` 條件則歸為「回應觸發條件引用」，保留所有相關規則與回應連結，不冒稱原始播放事件或把回應者當原發話者。其餘列為「用途待確認字幕」，每頁最多 25 筆，不由 key 前綴、文字或名稱尾綴猜分類。只有一種語言也保留另一語頁與缺失說明。相同 hash 的不同 payload 全部保留並標示配對歧義，不能選第一列當唯一答案；未能確認文本身分時不套用推測頭像或姓名。原來源編號與正文位置保留；用途 metadata 存於 `source-catalog/subtitle-usages/` 的 TSV，僅含 key、hash、官方名稱、規則及固定 SHA/path/line，不另存字幕正文。
 10. 玩家聲線依官方 personality 的 archetype visibility 顯示職業圖示及性格名稱，不能冒稱固定人物肖像；性別僅用明確設定。相同 NPC 的 alias 若官方姓名及非空 icon 一致，維持同一側與一份角色列。敵方與未解綁定的聲線不按名稱字尾猜身分。
 11. 角色條件符合只代表該條件成立，不代表所有 runtime 資格、party、時間、載入或觸發條件已通過。沒有對應規則、角色條件不符／未解與明確停用字幕的資源候選如實標示，完整條件放來源 MD。
 
@@ -164,6 +164,7 @@ AI-LOGS/Game Info/
 
 - 本 Repository 為對話、來源與維護紀錄的唯一編輯處；公開呈現使用 `SyuanTsai/SyuanTsai.github.io` 的 Darktide 資料區，沿用其既有 Jekyll 與 Pages 發布流程。
 - 網站保存由已確認來源修訂產生的發布內容，記錄來源 SHA 與網址映射；不在兩邊各自手工改字幕，不另建立對話版本副本，也不匯出 AI-LOGS、提示詞或完整原始文本包。
+- 網站分類由本 Repository 的用途 TSV 與逐筆來源 MD 維護；性格介紹各有獨立頁，條件引用各有獨立說明及相關候選連結，待確認字幕每頁最多 25 筆。每筆原文從原始語系資源讀取，禁止 trim、改寫或正規化原始換行；來源編號不當作劇情順序。此展示例外不改變已確認官方事件的獨立網址及候選語意。
 - 頭像沿用本流程第六節的 Media-Assets Issue 附件，保留 Asset ID、SHA-256 與完整附件網址；角色已有有效附件可直接重用，不因跨 Repository 展示另存 Git 圖片。
 - 網站依「事件類型入口 → 分頁類型索引 → 每事件／語言獨立頁」呈現，正文不得集中到單一 HTML、JSON 或 YAML。入口及索引只有名稱、metadata 與閱讀連結；每頁最多 50 筆。全量發布先產生共用版型的完整靜態 HTML，Jekyll 直接複製，不在每個事件 render 時反覆掃描全站 `site.pages`。各頁以普通連結切換語言、來源、前後頁與回應分支，載入時只含自己的字幕或段落索引；保留展開格式、原文空白與既有網址。來源記錄留主 Repository，網站僅為同步產物。正式發布範圍依本次授權。
 - 網站入口、分類清單及對話頁的右上角各只有一個語言切換按鈕，直接連到同一頁的另一語言，不在每張卡片或正文列出兩個語言選項。分類卡的中英文名稱整體可點入目前語言正文；事件卡、閱讀標題及前後事件連結顯示同一組順序編號。配對、分類分頁與返回連結保持目前語言。
@@ -174,7 +175,7 @@ AI-LOGS/Game Info/
 網站 Repository 的展示結構如下；事件及語言正文各自分檔，類型依實際已整理內容擴充。
 
 ```text
-preview/darktide/
+darktide/
 ├─ index.html                               繁中類型入口
 ├─ en/index.html                            英文類型入口
 ├─ <event type>/index.html                   繁中類型首頁
@@ -184,11 +185,10 @@ preview/darktide/
 ├─ en/<event type>/<event ID>/index.html     英文正文或回應索引
 └─ zh-tw/<event type>/<event ID>/index.html  繁中正文或回應索引
 assets/
-├─ css/darktide-preview.css                  共用深色聊天版型
-└─ js/darktide-preview.js                    只在入口處理舊 hash 轉址
+└─ css/darktide.css                          共用深色聊天版型
 ```
 
-- 同步時依事件 ID、類型、語系與編號產生配對網址及前後連結，字幕只出現在自己的正文語言頁。網站完整 HTML 不加 front matter，避免 Liquid 解讀字幕中的原始格式標記；共享 CSS 維持統一版型。預覽使用 noindex／nofollow／noarchive，Jekyll preview scope 設 `sitemap: false`，不混入文章導覽或正式 sitemap。
+- 同步時依事件 ID、類型、語系與編號產生配對網址及前後連結，字幕只出現在自己的正文語言頁。網站完整 HTML 不加 front matter，避免 Liquid 解讀字幕中的原始格式標記；共享 CSS 維持統一版型。正式路徑為 `/darktide/`，舊 `/preview/darktide/` 不保留或建立相容轉址。正式 HTML 使用 index/follow 與 `/darktide/` canonical；Darktide 沿用獨立 sitemap，Jekyll 設 `sitemap: false` 只為避免混入文章 sitemap。分類與基本閱讀、語系切換均不依賴 JavaScript。
 - 網站修改後，驗證正式 Jekyll 產物中的單頁字幕、標題編號、語言與前後事件連結，以及入口／索引零字幕。以實際建置產物檢查桌面及 390px 手機，標題可用鍵盤進入，右上角語言按鈕只有一個，關閉 JavaScript 仍能閱讀與切換；逐句保留原文及尾端空白，不以來源檔大小冒稱實際建置大小。
 - 版型確認、提交、Draft PR、合併及公開發布依當次授權與目標 Repository 規範辦理。建置及驗收證據保留於對話或網站交付紀錄；不將工作紀錄寫入玩家正文。
 - [網站定位紀錄](../AI-LOGS/Game%20Info/publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md)｜[已確認分頁版型與驗收](../AI-LOGS/Game%20Info/publication/2026-10-03-PER_EVENT_PAGES.md)。
