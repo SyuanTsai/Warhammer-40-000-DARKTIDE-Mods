@@ -1304,6 +1304,19 @@ Full raw template and formatting: [source evidence](broker_stimm_concentration_5
 | Regeneration statistic | +25% Cooldown Regeneration; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | combat_ability_resource_regen_modifier = 0.25, additive_multiplier [Fixed source and line references](broker_stimm_concentration_5a.md#fixed-source-evidence) | Consistent | The accepted cooldown/resource mapping and regeneration-rate value agree. |
 | Stacking, pause and recipe limits | No stacking, base/flat formula, paused-state, cost or lifetime; `ui / loc_talent_stat_combat_ability_cooldown_regen_modifier / 04d3484f` | Prerequisites give multiplier 1.5; (base_regen + flat_regen) × modifier, with base 0 while paused; cost 5, bought once, with shared lifetime [Fixed source and line references](broker_stimm_concentration_5a.md#fixed-source-evidence) | Not covered by the description | The original 15-second regeneration and 60-second remaining-time examples assume normal regeneration and preserve the return to the original rate. |
 
+
+<a id="broker_stimm_concentration_5b"></a>
+
+## Hypex
+
+Full raw template and formatting: [source evidence](broker_stimm_concentration_5b.md#original-english-template-and-reconstruction). Name hash `99e5c538`. Every row uses `ui / loc_talent_buff_cooldown_on_melee_kills / 9c1a429b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and duration | While active, Melee Kills grant Ability Cooldown Regeneration for 1s; `ui / loc_talent_buff_cooldown_on_melee_kills / 9c1a429b` | on_kill with CheckProcFunctions.on_melee_kill; child duration = 1 [Fixed source and line references](broker_stimm_concentration_5b.md#fixed-source-evidence) | Consistent | The active condition, Melee Kill trigger and one-second duration agree. |
+| Regeneration value | +75% Ability Cooldown Regeneration; `ui / loc_talent_buff_cooldown_on_melee_kills / 9c1a429b` | Base modifier 0.75 × recipe multiplier 0.75 = 0.5625, or 56.25% [Fixed source and line references](broker_stimm_concentration_5b.md#fixed-source-evidence) | Explicit contradiction | The English explicitly gives 75%, while the accepted fixed implementation gives 56.25%. Both languages use the same 75% display parameter; actual behavior remains unobserved in game. |
+| Refresh, scope and recipe limits | No stacking, regeneration scope, pause, cost or end-of-effect details; `ui / loc_talent_buff_cooldown_on_melee_kills / 9c1a429b` | max_stacks = 1; refresh_duration_on_stack = true; Combat Ability only; natural regeneration may pause; cost 5, bought once; trigger removed at Stimm end while child expires on its own timer [Fixed source and line references](broker_stimm_concentration_5b.md#fixed-source-evidence) | Not covered by the description | These omissions supplement the description. The original Kalma I–IV example preserves the combined 1.8125 multiplier; field sharing follows the provider's recipes and external lifetime. |
+
 ## Comparison totals
 
 The 223 listed rules comprise **104 Consistent**, **5 Explicit contradictions**, **104 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
