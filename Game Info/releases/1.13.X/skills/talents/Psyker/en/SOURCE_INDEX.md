@@ -85,3 +85,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Surety of Arms](psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | Talent |
 | [Crystalline Will](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | Talent |
 | [Channeled Force](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | Talent |
+| [Empyric Shock](psyker_force_staff_quick_attack_bonus.md) / `psyker_force_staff_quick_attack_bonus` | Talent |

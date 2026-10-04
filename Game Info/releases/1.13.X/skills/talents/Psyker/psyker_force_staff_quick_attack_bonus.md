@@ -1,5 +1,7 @@
 # 亞空間震波(Empyric Shock)：原始碼依據
 
+[English](en/psyker_force_staff_quick_attack_bonus.md)
+
 [返回玩家說明](README.md#psyker_force_staff_quick_attack_bonus)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_force_staff_quick_attack_bonus)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

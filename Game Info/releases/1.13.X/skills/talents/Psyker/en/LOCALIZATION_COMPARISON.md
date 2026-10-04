@@ -906,6 +906,18 @@ Full raw template and formatting: [source evidence](psyker_force_staff_bonus.md#
 | Alternating bonuses and durations | +20% Primary Attack Damage after Fully Charged Secondary Attacks; +10% Secondary Attack Damage after a Primary Attack; both last 5s.; `ui / loc_talent_psyker_force_staff_both_bonus_desc / 44883ede` | The two one-stack buffs grant 0.2 Primary and 0.1 Secondary Damage for 5 seconds each. [Fixed source and line references](psyker_force_staff_bonus.md#fixed-source-evidence) | Consistent | The separate attack targets, amounts and durations agree. |
 | Charge cutoff and event details | After Fully Charged… Secondary Attacks; after… Primary Attack.; `ui / loc_talent_psyker_force_staff_both_bonus_desc / 44883ede` | The cutoff is charge >0.95 in action-finished events, with staff-specific actions and no successful-hit requirement; separate timers refresh. [Fixed source and line references](psyker_force_staff_bonus.md#fixed-source-evidence) | Not covered by the description | The English gives no exact charge percentage, hit requirement or repeat-trigger behavior; precise cancellation and chaining timing remains unobserved. |
 
+
+<a id="psyker_force_staff_quick_attack_bonus"></a>
+
+## Empyric Shock
+
+Full raw template and formatting: [source evidence](psyker_force_staff_quick_attack_bonus.md#original-english-template-and-reconstruction). Name hash `94dc0150`. Every row uses `ui / loc_talent_psyker_force_staff_quick_attack_bonus_desc / c4f73f93`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Target, amount and stack limit | 6% Warp-Damage Taken by victims of your Force Staff's Primary Attack. Max Stacks 5. Lasts 10s.; `ui / loc_talent_psyker_force_staff_quick_attack_bonus_desc / c4f73f93` | `force_staff_primary` hits apply a target debuff with `warp_damage_taken_multiplier = 1.06`, maximum 5 stacks and duration 10 seconds. [Fixed source and line references](psyker_force_staff_quick_attack_bonus.md#fixed-source-evidence) | Consistent | The effect's target, per-stack amount, limit and duration agree. |
+| Multiplication, Allies and refresh | 6% Warp-Damage Taken… Max Stacks 5. Lasts 10s.; `ui / loc_talent_psyker_force_staff_quick_attack_bonus_desc / c4f73f93` | Stacks multiply as 1.06ⁿ in the target's Warp Damage-taken stage; both your and Allies' Warp Attacks benefit, and hits refresh at maximum stacks. [Fixed source and line references](psyker_force_staff_quick_attack_bonus.md#fixed-source-evidence) | Not covered by the description | The text does not specify the stacking formula, beneficiary scope or refresh behavior. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.
