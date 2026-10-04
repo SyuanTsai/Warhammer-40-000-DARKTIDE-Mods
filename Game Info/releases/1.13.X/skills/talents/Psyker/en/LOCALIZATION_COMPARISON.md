@@ -806,6 +806,19 @@ Full raw template and formatting: [source evidence](psyker_cleave_from_peril.md#
 | Cleave bonus and Peril | Up to +100% Cleave, based on Peril.; `ui / loc_talent_psyker_cleave_from_peril_desc / 5de5fc01` | `max_hit_mass_attack_modifier` scales from 0 to 1 with Peril, increasing damage Cleave capacity. [Fixed source and line references](psyker_cleave_from_peril.md#fixed-source-evidence) | Consistent | Cleave describes how much enemy mass an attack can pass through, without promising additional damage per target. |
 | Scaling and impact limit | Up to +100% Cleave, based on Peril.; `ui / loc_talent_psyker_cleave_from_peril_desc / 5de5fc01` | Linear scaling modifies `attack_modifier`, not `impact_modifier`. [Fixed source and line references](psyker_cleave_from_peril.md#fixed-source-evidence) | Not covered by the description | The concise English does not specify the interpolation or separate impact capacity. |
 
+
+<a id="psyker_killing_enemy_with_warpfire_boosts"></a>
+
+## Souldrinker
+
+Full raw template and formatting: [source evidence](psyker_killing_enemy_with_warpfire_boosts.md#original-english-template-and-reconstruction). Name hash `fce15218`. Every row uses `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration and Critical Hit Chance | Restores 15% Toughness over 5s and grants 5% Critical Hit Chance for the duration.; `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226` | The buff restores 0.15 of maximum Toughness over 5 seconds and adds 0.05 Critical Hit Chance. [Fixed source and line references](psyker_killing_enemy_with_warpfire_boosts.md#fixed-source-evidence) | Consistent | The amounts and common duration agree. |
+| Soulblaze death condition | Killing an Enemy with Soulblaze; `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226` | The death event accepts a `warpfire_burning` marker without owner restriction, with a fallback for your own `warpfire` kill. [Fixed source and line references](psyker_killing_enemy_with_warpfire_boosts.md#fixed-source-evidence) | Cannot confirm | The phrase is ambiguous about the killing blow; it does not explicitly restrict the effect to Soulblaze dealing the final damage. |
+| Ownership, range and refresh | Killing an Enemy with Soulblaze… for the duration.; `ui / loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc / 3db8d226` | Events reach `valid_enemy_player_units` without a radius check; a one-stack buff refreshes without stacking the restoration rate or chance. [Fixed source and line references](psyker_killing_enemy_with_warpfire_boosts.md#fixed-source-evidence) | Not covered by the description | These eligibility and repeat-trigger details are omitted rather than expressly contradicted. |
+
 ## Comparison totals
 
 The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

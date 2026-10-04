@@ -73,6 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>10% Toughness Damage Reduction in this additive stage; no Health Damage reduction.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="Lightning Speed talent icon"> [Lightning Speed](#psyker_melee_attack_speed) | <ul><li>+10% Melee Attack Speed; affected action segments take time ÷1.1 with no other speed bonuses.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="Warp Splitting talent icon"> [Warp Splitting](#psyker_cleave_from_peril) | <ul><li>Peril increases damage Cleave capacity by up to 100%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="Souldrinker talent icon"> [Souldrinker](#psyker_killing_enemy_with_warpfire_boosts) | <ul><li>A Soulblaze-related enemy death restores 15% maximum Toughness over 5 seconds and grants +5 percentage points Critical Hit Chance.</li></ul> | Talent |
 
 ---
 
@@ -1094,3 +1095,19 @@
 - The Chinese phrase meaning “Cleave attack damage” presents Cleave capacity as a damage increase. The English says Cleave; the effect raises the enemy mass limit an attack can pass through, rather than directly increasing damage per hit.
 
 [Details](psyker_cleave_from_peril.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_killing_enemy_with_warpfire_boosts"></a>
+
+### Souldrinker
+
+<img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="72" height="72" alt="Souldrinker talent icon">
+
+- **Trigger**: When an enemy affected by Soulblaze dies, or you kill an enemy with Soulblaze, restore 15% of maximum Toughness over 5 seconds and gain 5 percentage points of Critical Hit Chance.
+
+- **Refresh**: Another trigger resets the 5-second duration. The restoration rate and Critical Hit Chance bonus do not stack.
+
+- **Restoration and chance example**: With 100 maximum Toughness, enough missing Toughness and no other modifiers, restore 100 × 15% ÷ 5 = 3 points per second. An initial 10% Critical Hit Chance becomes 10% + 5% = 15%.
+
+[Details](psyker_killing_enemy_with_warpfire_boosts.md) · [Back to index](#talent-index)
