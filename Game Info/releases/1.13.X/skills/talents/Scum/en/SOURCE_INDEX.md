@@ -15,3 +15,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Blackout](broker_blitz_flash_grenade_improved.md) / `broker_blitz_flash_grenade_improved` | Blitz |
 | [Boom Bringer](broker_blitz_missile_launcher.md) / `broker_blitz_missile_launcher` | Blitz |
 | [Chem Grenade](broker_blitz_tox_grenade.md) / `broker_blitz_tox_grenade` | Blitz |
+| [Gunslinger Improved](broker_aura_gunslinger_improved.md) / `broker_aura_gunslinger_improved` | Aura |

@@ -43,6 +43,19 @@ Full raw template and formatting: [source evidence](broker_blitz_tox_grenade.md#
 | Toxic area, stacks and capacity | Area for 15s; enemies standing in it receive up to 6 Chem Toxin stacks over time and explode upon death; 2 Max Grenades; `ui / loc_talent_broker_blitz_tox_grenade_desc_02 / cbe2dc42` | Liquid lasts 15 seconds and contributes stacks up to 6; active death mark triggers an explosion; ability carries 2. [Fixed source and line references](broker_blitz_tox_grenade.md#fixed-source-evidence) | Consistent | The English quantities and area-scoped stack wording match the accepted behavior. |
 | Detailed application and residual effects | No terrain shape, interval, Cleave, residual-mark or replenishment rule; `ui / loc_talent_broker_blitz_tox_grenade_desc_02 / cbe2dc42` | Liquid flows; checks each effect every 0.35 s; Toxin can reach 30 stacks from other sources; hit-mass reduction 0.5 lasts 1 s; death mark lasts 12 s with a 2.5 m explosion and does not require a Toxin killing blow; base kill replenishment is removed. [Fixed source and line references](broker_blitz_tox_grenade.md#fixed-source-evidence) | Not covered by the description | These explain the existing Power example and effects after leaving the area; omitted details are supplements. |
 
+
+<a id="broker_aura_gunslinger_improved"></a>
+
+## Gunslinger Improved
+
+Full raw template and formatting: [source evidence](broker_aura_gunslinger_improved.md#original-english-template-and-reconstruction). Name hash `9826063e`. Every row uses `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ordinary pickup sharing | Ammo collected by you or allies in Coherency replenishes each with 10% of that pickup; augmented Gunslinger; `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c` | The improved Aura uses ammo_share 0.1 and shares the pickup in the collector's Coherency. [Fixed source and line references](broker_aura_gunslinger_improved.md#fixed-source-evidence) | Consistent | The ordinary pickup trigger, recipients and amount match the accepted evidence. |
+| Calculation and duplicate limits | No individual-capacity, rounding, priority or recursion detail; `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c` | Each ammo_amount_func recalculates the member's capacity; small and large pickups round up; priority 1 replaces base priority 2; final true prevents recursive sharing. [Fixed source and line references](broker_aura_gunslinger_improved.md#fixed-source-evidence) | Not covered by the description | The existing small/large/deployed-crate examples and limits explain how sharing is calculated. |
+| Special mission large Ammo Crate | The description does not qualify the 10% rule by pickup type; `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c` | large_ammunition_crate_pickup ignores modifier and would use full capacity if it emitted the same event; that event route and actual scene behavior are unresolved. [Fixed source and line references](broker_aura_gunslinger_improved.md#fixed-source-evidence) | Cannot confirm | The conditional exception is retained without promoting an unverified event route into an explicit English contradiction. |
+
 ## Comparison totals
 
 Totals are updated at each batch checkpoint.
