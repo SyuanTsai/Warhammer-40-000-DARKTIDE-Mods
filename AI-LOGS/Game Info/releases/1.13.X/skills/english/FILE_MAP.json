@@ -6232,7 +6232,12 @@
         "broker_passive_close_ranged_damage",
         "broker_passive_restore_toughness_on_weakspot_kill",
         "broker_passive_restore_toughness_on_close_ranged_kill",
-        "broker_passive_ninja_grants_crit_chance"
+        "broker_passive_ninja_grants_crit_chance",
+        "broker_passive_reload_speed_on_close_kill",
+        "broker_passive_stun_immunity_on_toughness_broken",
+        "base_toughness_node_buff_medium_1",
+        "broker_passive_stamina_on_successful_dodge",
+        "broker_passive_dodge_melee_on_slide"
       ],
       "checks": []
     },
@@ -6284,7 +6289,12 @@
         "broker_passive_close_ranged_damage",
         "broker_passive_restore_toughness_on_weakspot_kill",
         "broker_passive_restore_toughness_on_close_ranged_kill",
-        "broker_passive_ninja_grants_crit_chance"
+        "broker_passive_ninja_grants_crit_chance",
+        "broker_passive_reload_speed_on_close_kill",
+        "broker_passive_stun_immunity_on_toughness_broken",
+        "base_toughness_node_buff_medium_1",
+        "broker_passive_stamina_on_successful_dodge",
+        "broker_passive_dodge_melee_on_slide"
       ],
       "checks": []
     },
@@ -6336,7 +6346,12 @@
         "broker_passive_close_ranged_damage",
         "broker_passive_restore_toughness_on_weakspot_kill",
         "broker_passive_restore_toughness_on_close_ranged_kill",
-        "broker_passive_ninja_grants_crit_chance"
+        "broker_passive_ninja_grants_crit_chance",
+        "broker_passive_reload_speed_on_close_kill",
+        "broker_passive_stun_immunity_on_toughness_broken",
+        "base_toughness_node_buff_medium_1",
+        "broker_passive_stamina_on_successful_dodge",
+        "broker_passive_dodge_melee_on_slide"
       ],
       "checks": []
     },
@@ -6388,7 +6403,12 @@
         "broker_passive_close_ranged_damage",
         "broker_passive_restore_toughness_on_weakspot_kill",
         "broker_passive_restore_toughness_on_close_ranged_kill",
-        "broker_passive_ninja_grants_crit_chance"
+        "broker_passive_ninja_grants_crit_chance",
+        "broker_passive_reload_speed_on_close_kill",
+        "broker_passive_stun_immunity_on_toughness_broken",
+        "base_toughness_node_buff_medium_1",
+        "broker_passive_stamina_on_successful_dodge",
+        "broker_passive_dodge_melee_on_slide"
       ],
       "checks": []
     },
@@ -6432,9 +6452,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4d624b96a1f27fdd81612b598bb49729660ab6e9",
       "chinese_sha256": "f5ff9b6dd9f7ca59665f1654b16465c2157b12166d8785697a298620eb997426",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toughness_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md",
@@ -7176,9 +7203,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1b7a388a34b27f10421bdb1393c73243783db39b",
       "chinese_sha256": "286e8b76faba27a6249644ddb91b79770faf2a043e7e65051fd1b5656f05b264",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_dodge_melee_on_slide"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_dr_damage_tradeoff_on_stamina.md",
@@ -7446,9 +7480,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a48c0492594559efb14c0425d2611c7427097de3",
       "chinese_sha256": "c39f9c148acac92d9018f844e3489b3acc0704a3b56d0a3c87a39ab450c6eb09",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_reload_speed_on_close_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_replenish_toughness_on_ranged_toughness_damage.md",
@@ -7526,9 +7567,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "43c1d2a27158541c785501be6043a327e43e6778",
       "chinese_sha256": "7e60dbd32c386625c6f31dc713dacd605adc168ef97070398b0f99a13d560f0f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_stamina_on_successful_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_cd_on_kill.md",
@@ -7570,9 +7618,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "26b4d865f39fb5e844b5d7956b1702fd7f79d3aa",
       "chinese_sha256": "3a985c7acc190df43d20d5420fbeb4fe402e3a1c2057ea59bd50c13fe1d5db27",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_stun_immunity_on_toughness_broken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_toxin_infected_enemies_take_increased_damage.md",
@@ -15746,6 +15801,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_384_388.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_ninja_grants_crit_chance.md"
+    },
+    {
+      "id": "broker_passive_reload_speed_on_close_kill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reload_speed_on_close_kill.md"
+    },
+    {
+      "id": "broker_passive_stun_immunity_on_toughness_broken",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stun_immunity_on_toughness_broken.md"
+    },
+    {
+      "id": "base_toughness_node_buff_medium_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_toughness_node_buff_medium_1.md"
+    },
+    {
+      "id": "broker_passive_stamina_on_successful_dodge",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stamina_on_successful_dodge.md"
+    },
+    {
+      "id": "broker_passive_dodge_melee_on_slide",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_dodge_melee_on_slide.md"
     }
   ],
   "pending_chinese_corrections": [
