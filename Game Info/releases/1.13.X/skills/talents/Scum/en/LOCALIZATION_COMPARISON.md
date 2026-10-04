@@ -1112,6 +1112,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_4a.md#or
 | Recipe statistics | +4% Strength; +10% Finesse (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | power_level_modifier = 0.04; finesse_modifier_bonus = 0.1 [Fixed source and line references](broker_stimm_combat_4a.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. Finesse is an abbreviated label for the additional Weakspot/Critical Damage component and does not state that the whole hit gains this percentage. |
 | Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | One purchase at cost 4; prerequisite Power adds before weapon curves. `finesse_modifier_bonus` adds to the additional Finesse component, rather than the whole Weakspot/Critical Damage amount. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_4a.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
 
+
+<a id="broker_stimm_combat_4b"></a>
+
+## Fury I
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_4b.md#original-english-template-and-reconstruction). Name hash `ea57fba3`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_rending_multiplier / 0dd2df4e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Strength; +5% Rending (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_rending_multiplier / 0dd2df4e` | power_level_modifier = 0.04; rending_multiplier = 0.05 [Fixed source and line references](broker_stimm_combat_4b.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. Rending does not state a universal final Damage multiplier; the armour-modifier rules supplement it. |
+| Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_rending_multiplier / 0dd2df4e` | One purchase at cost 4; prerequisite Power adds before weapon curves. `rending_multiplier` increases the effective armour modifier when it is below 1. Crossing 1 and special profiles follow separate Rending rules; the example is limited to values that do not cross 1. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_4b.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **89 Consistent**, **5 Explicit contradictions**, **89 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

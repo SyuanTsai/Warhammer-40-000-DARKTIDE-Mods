@@ -99,6 +99,7 @@
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="Wildfire II talent icon"> [Wildfire II](#broker_stimm_combat_2) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="Wildfire III talent icon"> [Wildfire III](#broker_stimm_combat_3) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="Wildfire IV talent icon"> [Wildfire IV](#broker_stimm_combat_4a) | <ul><li>Gain 4% Power.</li><li>Gain 10% additional Weakspot and Critical Damage.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="32" height="32" alt="Fury I talent icon"> [Fury I](#broker_stimm_combat_4b) | <ul><li>Gain 4% Power.</li><li>Gain 5% Rending.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1564,3 +1565,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Additional Damage example**: With Power and other conditions fixed, normal Damage 100 and original Weakspot Damage 200 become 100 + (200 − 100) × 1.1 = 210, a 5% increase to total Damage. Wildfire IV and V together add 35% to this component, giving 235 in the same example.
 
 [Details](broker_stimm_combat_4a.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_4b"></a>
+
+### Fury I
+
+<img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="72" height="72" alt="Fury I talent icon">
+
+- **Recipe cost**: 4 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Power**: Gain 4%, additive with prerequisite recipes and other Power bonuses at the same stage. Power then contributes to weapon Damage, Stagger and Cleave calculations.
+
+- **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives four Power nodes: 500 × (1 + 4 × 4%) = 580.
+
+- **Rending**: Gain 5% Rending; Fury I and II together give 15%.
+
+- **Armour example**: With other conditions fixed, 100 Damage before armour and an original armour modifier of 0.5 give 100 × (0.5 + 0.05) = 55 with this node alone. Both Fury nodes together give 100 × (0.5 + 0.15) = 65.
+
+[Details](broker_stimm_combat_4b.md) · [Back to index](#talent-index)
