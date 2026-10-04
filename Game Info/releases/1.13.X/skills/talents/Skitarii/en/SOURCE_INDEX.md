@@ -92,3 +92,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Restoration](cryptic_coherency_toughness_on_ability.md) / `cryptic_coherency_toughness_on_ability` | Talent |
 | [Salvation Doctrine](cryptic_revive_speed_and_dr.md) / `cryptic_revive_speed_and_dr` | Talent |
 | [Ammunition-Restoration Pod](cryptic_passive_ammo_replenishment.md) / `cryptic_passive_ammo_replenishment` | Talent |
+| [Sustained Assault Doctrine](cryptic_stacking_melee_damage.md) / `cryptic_stacking_melee_damage` | Talent |

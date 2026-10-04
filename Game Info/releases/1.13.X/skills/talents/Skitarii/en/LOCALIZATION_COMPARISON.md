@@ -986,6 +986,18 @@ Full raw template and formatting: [source evidence](cryptic_passive_ammo_repleni
 | Interval and reserve basis | Every 15s, replenish 1% of your Max Ammo Reserve; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Every 15 seconds, `Ammo.add_to_all_slots(0.01)` replenishes reserve ammo using the maximum reserve basis. [Fixed source and line references](cryptic_passive_ammo_replenishment.md#fixed-source-evidence) | Consistent | Both the interval and percentage basis match. |
 | Rounding and capacity limits | Does not specify fractional carryover, slot eligibility or the full-weapon cap; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Uses `floor` with carryover and requires `max_reserve > 0`; cap is `max_reserve + missing_clip`. At reserve cap 250, 2.5 rounds/interval produces 2 then 3, total 10 across four intervals. [Fixed source and line references](cryptic_passive_ammo_replenishment.md#fixed-source-evidence) | Not covered by the description | The original example and exceptions explain how whole rounds and clip deficits affect reserve recovery. |
 
+
+<a id="cryptic_stacking_melee_damage"></a>
+
+## Sustained Assault Doctrine
+
+Full raw template and formatting: [source evidence](cryptic_stacking_melee_damage.md#original-english-template-and-reconstruction). Name hash `062af30d`. Every row uses `ui / loc_talent_cryptic_stacking_melee_damage_desc / 32d4da44`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee trigger and general damage |  +3% Damage on successful Melee Attack for 8s; stacks 5 times; `ui / loc_talent_cryptic_stacking_melee_damage_desc / 32d4da44` | A successful melee sweep grants `damage = 0.03` per stack, maximum 5, for 8 seconds; ranged damage can also benefit. [Fixed source and line references](cryptic_stacking_melee_damage.md#fixed-source-evidence) | Consistent | Melee qualifies the trigger, while the stated bonus is general Damage, matching the stat. |
+| Counting, refresh and calculation | Does not specify per-swing counting or duration refresh/expiry; `ui / loc_talent_cryptic_stacking_melee_damage_desc / 32d4da44` | One stack per successful swing; retriggering refreshes 8 seconds, without sequential stack decay. Five stacks give 15%: 100→115, or 140 with existing same-stage 25%. [Fixed source and line references](cryptic_stacking_melee_damage.md#fixed-source-evidence) | Not covered by the description | These original examples and timer details supplement the numerical stat description. |
+
 ## Comparison totals
 
 167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.
