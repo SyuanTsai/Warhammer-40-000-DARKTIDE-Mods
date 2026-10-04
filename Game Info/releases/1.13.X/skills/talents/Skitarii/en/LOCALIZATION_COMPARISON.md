@@ -405,6 +405,18 @@ Full raw template and formatting: [source evidence](cryptic_dissector.md#origina
 | Stack values, damage loss and kill recovery | Up to 6 stacks, each +2.5% Damage and +2.5% Toughness Damage Reduction; damage removes 1 once per 1s; Elite and Specialist kills restore 2 stacks and 15% Toughness; `ui / loc_talent_cryptic_dissector_desc / 3e2c62db` | Base cap 6; Damage `0.025` per stack and stepped Toughness multiplier `1 − 0.025 × i`; loss 1 with a 1-second interval; qualifying kills restore up to 2 and 15% maximum Toughness [Fixed source and line references](cryptic_dissector.md#fixed-source-evidence) | Consistent | The stated amounts and conditions agree with the verified behavior. |
 | Initialization, checks and recovery limits | Does not specify starting stacks, positive Health/Toughness damage, passive decay or recovery limits; `ui / loc_talent_cryptic_dissector_desc / 3e2c62db` | Starts at full visible stacks above a hidden base stack; no passive expiry. Loss requires positive damage. Restoration is capped by missing stacks and Toughness, with Toughness recovery even at full stacks; Honed Dissector raises the cap to 8 [Fixed source and line references](cryptic_dissector.md#fixed-source-evidence) | Not covered by the description | These omitted details and the verified 115 / 120 / 85 examples supplement the text. |
 
+
+<a id="cryptic_redline"></a>
+
+## Redline Capacitors
+
+Full raw template and formatting: [source evidence](cryptic_redline.md#original-english-template-and-reconstruction). Name hash `765c4c20`. Every row uses `ui / loc_talent_cryptic_redline_charge_stacking_clarified_desc / 22a7f709`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge trigger, bonuses, duration and cap | Spending or gaining a Charge grants +5% Toughness Damage Reduction and +5% Capacitance generation for 12s, up to 4 stacks; stacks decay one at a time; +1 Max Ability Charges; `ui / loc_talent_cryptic_redline_charge_stacking_clarified_desc / 22a7f709` | Combat Ability charge events add one stack per actual charge gained/spent; 5% per-stack modifiers, duration 12, cap 4, individual decay and `ability_extra_charges = 1` [Fixed source and line references](cryptic_redline.md#fixed-source-evidence) | Consistent | The stated trigger, amounts, duration, decay and extra charge agree. |
+| Event quantities, refresh and restoration paths | Does not specify quantities per event, cap refresh or the direct-restoration calculation; `ui / loc_talent_cryptic_redline_charge_stacking_clarified_desc / 22a7f709` | Multiple charges add multiple stacks. New additions refresh the 12-second timer, including at the cap. Toughness multiplier is `1 − 0.05 × stacks`; `restore_ability_charge_percentage` ignores stat buffs [Fixed source and line references](cryptic_redline.md#fixed-source-evidence) | Not covered by the description | The 2.4%/s and 80-damage examples and restoration exceptions explain the verified calculation without changing the English claim. |
+
 ## Comparison totals
 
 62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.

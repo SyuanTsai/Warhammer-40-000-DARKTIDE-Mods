@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="Piercing Sight talent icon"> [Piercing Sight](#cryptic_precision_stance_crit_cleave) | <ul><li>While Advanced Combat Doctrines is active, gain 30% Ranged Cleave and 15 percentage points of Ranged Critical Strike Chance; after 4 continuous seconds, these rise to 60% and 30 percentage points. Both bonuses end with the ability.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="Calculated Priority talent icon"> [Calculated Priority](#cryptic_precision_stance_damage_on_elite_kill) | <ul><li>While Advanced Combat Doctrines is active, ranged Elite kills grant +5% Damage per stack for 10 seconds, up to 5 stacks (+25%). New stacks refresh the duration; existing stacks can outlast the ability.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="Flensing Protocols talent icon"> [Flensing Protocols](#cryptic_dissector) | <ul><li>Start with 6 stacks; each grants +2.5% Damage and 2.5% Toughness Damage Reduction. Taking Health or Toughness damage removes one stack at most once per second. Elite or Specialist kills restore up to 2 stacks and 15% of maximum Toughness.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="Redline Capacitors talent icon"> [Redline Capacitors](#cryptic_redline) | <ul><li>Each Combat Ability charge actually gained or spent adds one stack: +5% natural Capacitance generation and 5% Toughness Damage Reduction per stack, up to 4. New stacks refresh 12 seconds; stacks then decay one at a time. Maximum Combat Ability charges increase by 1.</li></ul> | Keystone |
 
 ---
 
@@ -533,3 +534,19 @@
 - **Examples**: Taking damage at 6 stacks leaves 5. Further damage within that second removes no additional stack; the next eligible hit at or after 1 second can remove one. At a full 6 stacks, illustrative damage `100` becomes `100 × 1.15 = 115`, and incoming Toughness damage `100` becomes `100 × 0.85 = 85`. If only one stack is missing, a qualifying kill restores that one stack and still restores 15% of maximum Toughness.
 
 [Details](cryptic_dissector.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_redline"></a>
+
+### Redline Capacitors
+
+<img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="72" height="72" alt="Redline Capacitors talent icon">
+
+- **Trigger**: Each Combat Ability charge actually spent or restored adds **one stack**. Spending 2 charges at once adds 2 stacks, up to **4**.
+- **Per-stack effects**: Natural Capacitance recovery is increased by **5% per stack**, and Toughness Damage Reduction by **5% per stack**. At 4 stacks, a natural rate of 2% of one charge per second becomes `2% × (1 + 20%) = 2.4%` per second. Incoming Toughness damage of `100` becomes `100 × (1 − 20%) = 80`.
+- **Duration**: The stack effect lasts **12 seconds**; adding a stack restarts the timer. Another trigger at 4 stacks refreshes the timer without exceeding the cap. With no new trigger, one stack is lost every 12 seconds.
+- **Charge cap**: Maximum Combat Ability charges increase from **3 to 4**.
+- **Restoration exceptions**: Kill restoration, weakspot-kill restoration and Higher Purpose's direct restoration are not increased by this modifier.
+
+[Details](cryptic_redline.md) · [Back to index](#talent-index)

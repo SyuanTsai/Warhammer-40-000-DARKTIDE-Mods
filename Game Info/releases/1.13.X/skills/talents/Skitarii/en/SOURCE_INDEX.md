@@ -44,3 +44,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Piercing Sight](cryptic_precision_stance_crit_cleave.md) / `cryptic_precision_stance_crit_cleave` | Ability |
 | [Calculated Priority](cryptic_precision_stance_damage_on_elite_kill.md) / `cryptic_precision_stance_damage_on_elite_kill` | Ability |
 | [Flensing Protocols](cryptic_dissector.md) / `cryptic_dissector` | Keystone |
+| [Redline Capacitors](cryptic_redline.md) / `cryptic_redline` | Keystone |
