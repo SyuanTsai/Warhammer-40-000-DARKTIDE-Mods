@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="Unseen Blade talent icon"> [Unseen Blade](#zealot_damage_vs_nonthreat) | <ul><li>Deals +20% damage to enemies that are not currently targeting you; applies to Melee and Ranged damage.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="The Master's Retribution talent icon"> [The Master's Retribution](#zealot_defensive_knockback) | <ul><li>A damaging Melee hit triggers a retaliatory push toward the attacker, with an 8-second cooldown; disabled state or a dead attacker prevents it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/4b9e6b94-1960-44a0-aca5-40446806c270" width="32" height="32" alt="Blinded by Blood talent icon"> [Blinded by Blood](#zealot_bled_enemies_take_more_damage) | <ul><li>Your Bleed application, added stack or duration refresh makes that enemy take 15% more damage for 5 seconds; allies also benefit.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="Desperation talent icon"> [Desperation](#zealot_more_damage_when_low_on_stamina) | <ul><li>Melee damage increases with the proportion of missing Stamina, from zero at full Stamina to +20% when empty.</li></ul> | Skill |
 
 ---
 
@@ -978,3 +979,16 @@
 - **Damage example**: An enemy taking 100 damage instead takes 100 × 1.15 = 115. With your separate-stage 20% damage bonus first, the result is 100 × 1.2 × 1.15 = 138.
 
 [Details](zealot_bled_enemies_take_more_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_more_damage_when_low_on_stamina"></a>
+
+### Desperation
+
+<img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="72" height="72" alt="Desperation talent icon">
+
+- **Operation**: Melee damage bonus = 20% × the proportion of Stamina spent. Full Stamina gives no bonus, half Stamina gives +10%, and empty Stamina gives +20%. As Stamina recovers, the bonus decreases.
+- **Damage example**: Maximum Stamina 6 with 2 remaining means 4 ÷ 6 spent. The bonus is 20% × 4 ÷ 6 ≈ 13.33%, so base damage 100 becomes about 113.33. Other same-stage Melee damage bonuses are added first.
+
+[Details](zealot_more_damage_when_low_on_stamina.md) · [Back to index](#talent-index)

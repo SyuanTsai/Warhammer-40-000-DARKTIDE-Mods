@@ -782,6 +782,18 @@ Full raw template and formatting: [source evidence](zealot_bled_enemies_take_mor
 | Target vulnerability and duration | “Bleeding enemies increase their damage taken by +15% for 5s.”; `ui / loc_talent_zealot_bled_enemies_take_more_damage_desc / fb00baf2` | Enemy effect damage_taken_multiplier 1.15, duration 5. [Fixed source and line references](zealot_bled_enemies_take_more_damage.md#fixed-source-evidence) | Consistent | Recipient, stat stage, value and duration agree. |
 | Event owner, refresh and shared benefit | No explicit ownership, application-event or stacking rule.; `ui / loc_talent_zealot_bled_enemies_take_more_damage_desc / fb00baf2` | Bleed application/stack/max-stack-refresh events check enemy, reach owner_unit, and refresh one 5s effect. Allies benefit from target vulnerability. Original 100→115 and separate-stage 100×1.2×1.15=138 examples retained. [Fixed source and line references](zealot_bled_enemies_take_more_damage.md#fixed-source-evidence) | Not covered by the description | The text does not explicitly promise automatic vulnerability from every source; these event and calculation details supplement it. |
 
+
+<a id="zealot_more_damage_when_low_on_stamina"></a>
+
+## Desperation
+
+Full raw template and formatting: [source evidence](zealot_more_damage_when_low_on_stamina.md#original-english-template-and-reconstruction). Name hash `00b548f8`. Every row uses `ui / loc_talent_zealot_damage_based_on_stamina_desc / 3a2192a6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Missing Stamina and maximum bonus | “Up to +20% Melee Damage based on missing Stamina.”; `ui / loc_talent_zealot_damage_based_on_stamina_desc / 3a2192a6` | Current template interpolates melee_damage from 0 to 0.2 with lerp_t=1−current/max. [Fixed source and line references](zealot_more_damage_when_low_on_stamina.md#fixed-source-evidence) | Consistent | Stat, missing-resource condition and maximum agree. |
+| Interpolation and old identifier | No exact linear formula or timer.; `ui / loc_talent_zealot_damage_based_on_stamina_desc / 3a2192a6` | Full/half/empty Stamina gives 0/10/20%; recovery lowers bonus. Original maximum-6/current-2 example gives 13.33%, base100→113.33. Old identifier and unused duration mapping do not select the separate 5s proc. [Fixed source and line references](zealot_more_damage_when_low_on_stamina.md#fixed-source-evidence) | Not covered by the description | These calculation and template distinctions supplement the continuous resource-based effect. |
+
 ## Comparison totals
 
 127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.

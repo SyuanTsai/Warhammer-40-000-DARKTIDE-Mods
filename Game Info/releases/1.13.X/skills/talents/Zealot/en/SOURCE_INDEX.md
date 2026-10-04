@@ -75,3 +75,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Unseen Blade](zealot_damage_vs_nonthreat.md) / `zealot_damage_vs_nonthreat` | Skill |
 | [The Master's Retribution](zealot_defensive_knockback.md) / `zealot_defensive_knockback` | Skill |
 | [Blinded by Blood](zealot_bled_enemies_take_more_damage.md) / `zealot_bled_enemies_take_more_damage` | Skill |
+| [Desperation](zealot_more_damage_when_low_on_stamina.md) / `zealot_more_damage_when_low_on_stamina` | Skill |
