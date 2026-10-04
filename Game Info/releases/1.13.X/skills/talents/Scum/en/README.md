@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain 10% Melee Damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="Potent Tox talent icon"> [Potent Tox](#base_toxin_power_boost_1) | <ul><li>Gain 10% Toxin Power.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="Sticky Hands talent icon"> [Sticky Hands](#broker_passive_reduce_swap_time) | <ul><li>Gain 40% Weapon Swap Speed; while hip-firing or bracing, reduce Recoil by 10% and Spread by 30%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="Calling for a Time Out talent icon"> [Calling for a Time Out](#broker_passive_reduced_toughness_damage_during_reload) | <ul><li>Reduce Toughness Damage taken by 25% while reloading and for 4s after leaving the reload state.</li></ul> | Talent |
 
 ---
 
@@ -947,3 +948,19 @@
 - **Spread example**: With this effect alone, a 2-degree Spread angle becomes 2 × 0.7 = 1.4 degrees. The Recoil modifier affects unsteadiness accumulation and recovery; actual camera displacement also depends on weapon curves.
 
 [Details](broker_passive_reduce_swap_time.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_reduced_toughness_damage_during_reload"></a>
+
+### Calling for a Time Out
+
+<img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="72" height="72" alt="Calling for a Time Out talent icon">
+
+- **Duration**: Takes effect when reloading starts and lasts another 4s after leaving the reload state. Reloading again maintains the same reduction rather than adding another reduction.
+
+- **Damage-reduction example**: An incoming 100 Toughness Damage becomes 100 × 0.75 = 75 with this effect alone. With another 20% Toughness Damage reduction at the same stage, it becomes 100 × (1 − 20% − 25%) = 55.
+
+- **Scope**: Only reduces Damage taken by Toughness; it does not directly reduce Health Damage by 25% as well.
+
+[Details](broker_passive_reduced_toughness_damage_during_reload.md) · [Back to index](#talent-index)

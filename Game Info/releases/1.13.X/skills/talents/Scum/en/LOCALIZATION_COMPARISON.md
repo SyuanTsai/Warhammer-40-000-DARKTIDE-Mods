@@ -686,6 +686,18 @@ Full raw template and formatting: [source evidence](broker_passive_reduce_swap_t
 | Swap and firing-control bonuses | +40% Weapon Swap Speed; -10% Recoil and -30% Spread while firing from the hip or bracing; `ui / loc_talent_broker_passive_reduce_swap_time_desc / dd6f6b11` | Permanent `wield_speed = 0.4`; conditional `recoil_modifier = -0.1` and `spread_modifier = -0.3` [Fixed source and line references](broker_passive_reduce_swap_time.md#fixed-source-evidence) | Consistent | The values and the hip-fire/bracing restriction match. |
 | Timing and modifier behavior | No time formula or Recoil/Spread calculation is stated; `ui / loc_talent_broker_passive_reduce_swap_time_desc / dd6f6b11` | Swap time uses the speed divisor; Recoil modifies unsteadiness gain/decay, Spread multiplies pitch/yaw [Fixed source and line references](broker_passive_reduce_swap_time.md#fixed-source-evidence) | Not covered by the description | These support the original 1s→0.71s and 2°→1.4° examples and the camera-displacement caveat. |
 
+
+<a id="broker_passive_reduced_toughness_damage_during_reload"></a>
+
+## Calling for a Time Out
+
+Full raw template and formatting: [source evidence](broker_passive_reduced_toughness_damage_during_reload.md#original-english-template-and-reconstruction). Name hash `dcbae74b`. Every row uses `ui / loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc / b4e891ca`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reduction scope and duration | -25% Toughness Damage taken while reloading, and for 4s afterwards; `ui / loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc / b4e891ca` | `toughness_damage_taken_modifier = -0.25`; reload start activates it, and leaving the reload state starts the 4s tail [Fixed source and line references](broker_passive_reduced_toughness_damage_during_reload.md#fixed-source-evidence) | Consistent | The English specifies the correct statistic and duration. |
+| State handling and combination | No reactivation or combination formula is stated; `ui / loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc / b4e891ca` | Reloading again keeps the same reduction; another 20% at the same stage yields 100 × (1 − 20% − 25%) = 55 [Fixed source and line references](broker_passive_reduced_toughness_damage_during_reload.md#fixed-source-evidence) | Not covered by the description | These are supplementary timing and calculation details; the wording makes no separate Health Damage claim. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
