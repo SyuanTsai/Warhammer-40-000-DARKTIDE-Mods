@@ -1,0 +1,46 @@
+{
+  "id": "zealot_skills_645_646",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "No additional code read. Second Melee node display mapping was read with the prior batch; Toughness node mapping and common formatter reused from the accepted Ogryn page."
+  ],
+  "questions": [
+    "No new English contradiction; tier eligibility and additive versus independent-multiplier stages remain supplements."
+  ],
+  "skills": [
+    {
+      "id": "base_melee_damage_node_buff_medium_4",
+      "name": "Melee Damage Boost",
+      "name_hash": "cb9e7b48",
+      "description_hash": "7b5da013",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/base_melee_damage_node_buff_medium_4.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_melee_damage_node_buff_medium_4.md",
+      "commit": "dd79ff313"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "name": "Toughness Damage Reduction",
+      "name_hash": "4cf5defc",
+      "description_hash": "1272bcc0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "commit": "7e9c0137b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 75,
+    "from_commit": "d96eeee1f",
+    "to_commit": "7e9c0137b",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

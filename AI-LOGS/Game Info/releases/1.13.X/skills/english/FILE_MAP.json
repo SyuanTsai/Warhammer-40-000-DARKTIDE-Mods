@@ -13692,9 +13692,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0f0c7d1676750c34b9b0107b625122bdf044d938",
       "chinese_sha256": "f1213a4a80d4a57cd094afc31f13096fbcc5562caf52cc23254422241b81e522",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_melee_damage_node_buff_medium_4"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/base_toughness_damage_reduction_node_buff_medium_1.md",
@@ -13703,9 +13710,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "668c9450bbee1eab933270ae36537e6aca0e0b89",
       "chinese_sha256": "bf1f33a6a6d8ae1bb77c3c86599f757a9989d6cc89ee758a223b8c1b2fa4354a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toughness_damage_reduction_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_additional_charge_of_ability.md",
@@ -20358,6 +20372,22 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_melee_damage_node_buff_medium_1.md"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_4",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_melee_damage_node_buff_medium_4.md"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_toughness_damage_reduction_node_buff_medium_1.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1001,4 +1001,4 @@ Full raw template and formatting: [source evidence](base_toughness_damage_reduct
 
 ## Comparison totals
 
-168 rules: 79 Consistent / 6 Explicit contradiction / 79 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 644.
+172 rules: 81 Consistent / 6 Explicit contradiction / 81 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 646.
