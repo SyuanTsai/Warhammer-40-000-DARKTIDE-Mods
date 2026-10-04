@@ -6292,7 +6292,12 @@
         "broker_stimm_durability_1",
         "broker_stimm_durability_2",
         "broker_stimm_durability_3",
-        "broker_stimm_durability_4"
+        "broker_stimm_durability_4",
+        "broker_stimm_durability_5a",
+        "broker_stimm_durability_5b",
+        "broker_stimm_concentration_1",
+        "broker_stimm_concentration_2",
+        "broker_stimm_concentration_3"
       ],
       "checks": []
     },
@@ -6404,7 +6409,12 @@
         "broker_stimm_durability_1",
         "broker_stimm_durability_2",
         "broker_stimm_durability_3",
-        "broker_stimm_durability_4"
+        "broker_stimm_durability_4",
+        "broker_stimm_durability_5a",
+        "broker_stimm_durability_5b",
+        "broker_stimm_concentration_1",
+        "broker_stimm_concentration_2",
+        "broker_stimm_concentration_3"
       ],
       "checks": []
     },
@@ -6516,7 +6526,12 @@
         "broker_stimm_durability_1",
         "broker_stimm_durability_2",
         "broker_stimm_durability_3",
-        "broker_stimm_durability_4"
+        "broker_stimm_durability_4",
+        "broker_stimm_durability_5a",
+        "broker_stimm_durability_5b",
+        "broker_stimm_concentration_1",
+        "broker_stimm_concentration_2",
+        "broker_stimm_concentration_3"
       ],
       "checks": []
     },
@@ -6628,7 +6643,12 @@
         "broker_stimm_durability_1",
         "broker_stimm_durability_2",
         "broker_stimm_durability_3",
-        "broker_stimm_durability_4"
+        "broker_stimm_durability_4",
+        "broker_stimm_durability_5a",
+        "broker_stimm_durability_5b",
+        "broker_stimm_concentration_1",
+        "broker_stimm_concentration_2",
+        "broker_stimm_concentration_3"
       ],
       "checks": []
     },
@@ -8422,9 +8442,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "aacfe375ebbf36ac9fa32d721498fe76402a2c32",
       "chinese_sha256": "b314f93e239f4e0237b6538768055a87eebe25c6b4a1f355d1857bb16bfdcf5e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_concentration_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md",
@@ -8433,9 +8460,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "221cfd19b01038266af52bed3c6d77a2250e95d5",
       "chinese_sha256": "94584fd6db8e8ce4945275c76f3cee698a6e524cdb20fd493239cf3a6ed16065",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_concentration_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md",
@@ -8444,9 +8478,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ceb42aa00d10966cf9a41bb28533f6560b37879c",
       "chinese_sha256": "8a9cdcbb0c1991d39ea8d4987c46e273b34eca43cecdadbdf93637faa6acd89d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_concentration_3"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md",
@@ -8582,9 +8623,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c21881fde61e243d500300b20d6b3541cff3bdbe",
       "chinese_sha256": "bc0ea92fbcb7119868e49aa463d10b6733be636859031517b2584c5e6f4addc3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_durability_5a"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md",
@@ -8593,9 +8641,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "467c392506dfc938a3774ce26de1d14bc85393cf",
       "chinese_sha256": "962dbefd46e4690882581c9c3b179e9bf8c9942758f119bc0a2bbd1fb2c4f563",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_durability_5b"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_syringe.md",
@@ -16886,6 +16941,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_444_448.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_4.md"
+    },
+    {
+      "id": "broker_stimm_durability_5a",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_5a.md"
+    },
+    {
+      "id": "broker_stimm_durability_5b",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_5b.md"
+    },
+    {
+      "id": "broker_stimm_concentration_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_1.md"
+    },
+    {
+      "id": "broker_stimm_concentration_2",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_2.md"
+    },
+    {
+      "id": "broker_stimm_concentration_3",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_3.md"
     }
   ],
   "pending_chinese_corrections": [
