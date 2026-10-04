@@ -9332,9 +9332,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "351f5e20a6aac89d66bf08a545cbb0776770e126",
       "chinese_sha256": "35ee28e22019a45d1145603df4f3ae6b8763597731076f0ab97a45fb087179d7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_dissector_ability_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_crit_attack_speed.md",
@@ -9706,9 +9713,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a0e4611df9de5d2403a0de282a35247bca44d2f8",
       "chinese_sha256": "ed0c1b3cda8f61c98eb04cbf7ad8881058a260557f94bac3d2eacb1f272d30bf",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_overload_keystone_abilities"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_bigger_explosion.md",
@@ -9956,9 +9970,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "85d8c013fd61957a7cb9cbf23a48a0812100ba51",
       "chinese_sha256": "e99715b743a9445b8eaf3cf1cf8b630bf272c286648f92f18b523d6dc212531a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_redline_extra_max_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_rending.md",
@@ -9967,9 +9988,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a01182b107ddf8f808e8aa6de1a3cfc0f48adb9a",
       "chinese_sha256": "2401a1c292ab0edbaa2710cd81666d605b5415ff56f44848421712480d2488e0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_redline_rending"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_strength.md",
@@ -9978,9 +10006,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "83158a93c4230b69219947a596b4bdfc4037cf20",
       "chinese_sha256": "03a452045a7646b5157d2077b693ead52b493fe5184864fe8f2193187e593d57",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_redline_strength"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_toughness.md",
@@ -17804,6 +17839,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_max_stacks.md"
+    },
+    {
+      "id": "cryptic_redline_strength",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_strength.md"
+    },
+    {
+      "id": "cryptic_redline_rending",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_rending.md"
+    },
+    {
+      "id": "cryptic_redline_extra_max_stacks",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_extra_max_stacks.md"
+    },
+    {
+      "id": "cryptic_dissector_ability_stacks",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_ability_stacks.md"
+    },
+    {
+      "id": "cryptic_overload_keystone_abilities",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_abilities.md"
     }
   ],
   "pending_chinese_corrections": [
