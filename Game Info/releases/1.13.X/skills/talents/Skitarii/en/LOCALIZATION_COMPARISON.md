@@ -660,6 +660,18 @@ Full raw template and formatting: [source evidence](cryptic_electrocution_defens
 | Melee attacker, area centre and cooldown | If an Enemy hits you with a Melee Attack, they and enemies within 2.5m of them are Electrocuted. 15s Cooldown; `ui / loc_talent_cryptic_electrocution_defense_desc / b02129e2` | A damaging melee hit triggers an enemy-faction query centred on the attacker with radius 2.5; cooldown is 15 seconds [Fixed source and line references](cryptic_electrocution_defense.md#fixed-source-evidence) | Consistent | The attack type, centre, radius and cooldown agree. |
 | Damage filtering, status and target limits | Does not specify damage-result filtering, status duration, refreshing or resistance; `ui / loc_talent_cryptic_electrocution_defense_desc / b02129e2` | `AttackSettings.is_damaging_result` excludes simple blocks; living targets with buff extensions receive the Electrocution status for 3 seconds, refreshed on reapplication. Enemy resistance affects control. Cooldown starts at the trigger [Fixed source and line references](cryptic_electrocution_defense.md#fixed-source-evidence) | Not covered by the description | These conditions and the 0/10/15-second example supplement the English. |
 
+
+<a id="cryptic_weakspot_damage"></a>
+
+## Sureshot Cogitator Sync
+
+Full raw template and formatting: [source evidence](cryptic_weakspot_damage.md#original-english-template-and-reconstruction). Name hash `b4767d95`. Every row uses `ui / loc_talent_cryptic_weakspot_damage_desc / 6cd677cf`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weakspot stat and value | +25% Weakspot Damage; `ui / loc_talent_cryptic_weakspot_damage_desc / 6cd677cf` | `weakspot_damage = 0.25` joins the finesse multiplier on `hit_weakspot` [Fixed source and line references](cryptic_weakspot_damage.md#fixed-source-evidence) | Consistent | The English names the correct stat and value without explicitly claiming a 25% increase to the complete hit. |
+| Component formula and varying total increase | Does not state the component split, weapon conditions or existing same-stage bonuses; `ui / loc_talent_cryptic_weakspot_damage_desc / 6cd677cf` | `B + F × (1 + s + 0.25)`; relative increase `0.25F / [B + F × (1 + s)]`. Profiles, armour finesse, boost curve, critical hits and hit zones affect F; body/head subtraction alone cannot recover it [Fixed source and line references](cryptic_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | The original 200→225, 300→350 and 220→245 examples and non-critical, subsequent-multiplier-1 assumptions supplement the stat wording. |
+
 ## Comparison totals
 
 105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.

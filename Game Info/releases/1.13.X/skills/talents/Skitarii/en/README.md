@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="Channelled Motive Force talent icon"> [Channelled Motive Force](#cryptic_stamina_increases_damage) | <ul><li>Every accumulated Stamina bar spent grants 15% Damage for 4 seconds. Spending can be split across actions; recovery does not erase accumulated spending. Further triggers refresh the duration without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="Entropic Transfer talent icon"> [Entropic Transfer](#cryptic_electrocution_toughness) | <ul><li>Applying Electrocution, adding an Electrocution stack or refreshing it at the stack cap starts 4 seconds of recovery totaling 12% of maximum Toughness. Further triggers restart the duration without increasing the recovery rate.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="Overcharge Transfer Lattice talent icon"> [Overcharge Transfer Lattice](#cryptic_electrocution_defense) | <ul><li>Receiving melee damage Electrocutes living enemies within 2.5 metres of the attacker. Blocking alone does not trigger it. Electrocution lasts 3 seconds and refreshes when reapplied; the talent has a 15-second cooldown from activation.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="32" height="32" alt="Sureshot Cogitator Sync talent icon"> [Sureshot Cogitator Sync](#cryptic_weakspot_damage) | <ul><li>Adds 25% to the extra damage component of weakspot hits, for both melee and ranged attacks. The increase to the complete hit depends on the weapon and hit conditions.</li></ul> | Talent |
 
 ---
 
@@ -858,3 +859,18 @@
 - **Cooldown**: Cooldown is **15 seconds from activation**. For example, after triggering at 0 seconds, another hit at 10 seconds does not activate it again; a qualifying hit after 15 seconds can.
 
 [Details](cryptic_electrocution_defense.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_damage"></a>
+
+### Sureshot Cogitator Sync
+
+<img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="72" height="72" alt="Sureshot Cogitator Sync talent icon">
+
+- **Effect**: Increases the **extra damage component of weakspot hits by 25%**, for both melee and ranged attacks.
+- **Examples**: With a base component of 100 and an extra weakspot component of 100 for the same attack, damage goes from `200` to `100 + 100 × 1.25 = 225`, a 12.5% increase to the whole hit. If the extra component is 200, damage goes from `300` to `100 + 200 × 1.25 = 350`, an increase of approximately 16.67%.
+- **Weapon differences**: The larger the extra weakspot component's share of damage, the larger the increase to the whole hit. Weapon model, charge level, target armour, hit zone and critical hits all affect the result.
+- **Other bonuses**: If the extra weakspot component already has a 20% bonus in the same stage, damage becomes `100 + 100 × (1 + 20% + 25%) = 245`. It was 220 before this talent, so the increase is approximately 11.36%.
+
+[Details](cryptic_weakspot_damage.md) · [Back to index](#talent-index)

@@ -65,3 +65,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Channelled Motive Force](cryptic_stamina_increases_damage.md) / `cryptic_stamina_increases_damage` | Talent |
 | [Entropic Transfer](cryptic_electrocution_toughness.md) / `cryptic_electrocution_toughness` | Talent |
 | [Overcharge Transfer Lattice](cryptic_electrocution_defense.md) / `cryptic_electrocution_defense` | Talent |
+| [Sureshot Cogitator Sync](cryptic_weakspot_damage.md) / `cryptic_weakspot_damage` | Talent |
