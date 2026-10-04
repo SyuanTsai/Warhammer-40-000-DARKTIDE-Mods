@@ -782,6 +782,18 @@ Full raw template and formatting: [source evidence](base_toughness_damage_reduct
 | Amount and damage scope | +10% Toughness Damage Reduction; `ui / loc_talent_toughness_damage_reduction_medium_desc / 1272bcc0` | The verified toughness_damage_taken_modifier is −0.1 and affects Toughness Damage only. [Fixed source and line references](base_toughness_damage_reduction_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The reduction amount and Toughness scope agree. |
 | Combination stage | No formula for combining reductions; `ui / loc_talent_toughness_damage_reduction_medium_desc / 1272bcc0` | The modifier is additive within its stage, while other independent multiplicative reductions apply separately. [Fixed source and line references](base_toughness_damage_reduction_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The existing 100→90 and same-stage 5% plus 10%→85 examples explain the omitted stage rules. |
 
+
+<a id="psyker_melee_attack_speed"></a>
+
+## Lightning Speed
+
+Full raw template and formatting: [source evidence](psyker_melee_attack_speed.md#original-english-template-and-reconstruction). Name hash `a84b3095`. Every row uses `ui / loc_talent_psyker_melee_attack_speed_desc / 10f28165`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack Speed amount | 10% Melee Attack Speed; `ui / loc_talent_psyker_melee_attack_speed_desc / 10f28165` | melee_attack_speed = 0.1 adds to the melee action playback rate. [Fixed source and line references](psyker_melee_attack_speed.md#fixed-source-evidence) | Consistent | The displayed amount and melee stat agree. |
+| Affected segments and time conversion | No whole-combo duration or affected-segment formula; `ui / loc_talent_psyker_melee_attack_speed_desc / 10f28165` | Affected segments use time / 1.1 without other bonuses; waits outside the coefficient remain separate. [Fixed source and line references](psyker_melee_attack_speed.md#fixed-source-evidence) | Not covered by the description | The existing 1s→approximately 0.909s example clarifies the rate without treating an omitted time formula as an error. |
+
 ## Comparison totals
 
 The 127 listed rules comprise **59 Consistent**, **3 Explicit contradictions**, **60 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

@@ -71,6 +71,7 @@
 | <img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_5) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/92db3e61-eb2d-4af5-b9a7-3a1bab73234a" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_4) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>10% Toughness Damage Reduction in this additive stage; no Health Damage reduction.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="Lightning Speed talent icon"> [Lightning Speed](#psyker_melee_attack_speed) | <ul><li>+10% Melee Attack Speed; affected action segments take time ÷1.1 with no other speed bonuses.</li></ul> | Talent |
 
 ---
 
@@ -1060,3 +1061,17 @@
 - **Reduction example**: with an original 100 points of Toughness Damage and no other reduction in this stage, 100 × (1 − 10%) = 90 points. With an existing 5% reduction in the same stage, 100 × (1 − 5% − 10%) = 85 points. Other independent multiplicative reductions apply separately.
 
 [Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_melee_attack_speed"></a>
+
+### Lightning Speed
+
+<img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="72" height="72" alt="Lightning Speed talent icon">
+
+- **Effect**: increase Melee Attack Speed by 10%.
+
+- **Timing example**: comparing only the action segment affected by Attack Speed, a segment that originally takes 1 second with no other Attack Speed bonuses becomes 1 ÷ 1.1 ≈ 0.909 seconds. This does not mean the entire combo always takes 10% less time.
+
+[Details](psyker_melee_attack_speed.md) · [Back to index](#talent-index)
