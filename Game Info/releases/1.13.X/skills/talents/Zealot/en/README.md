@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="Inebriate's Poise talent icon"> [Inebriate's Poise](#zealot_quickness_passive_dodge_stacks) | <ul><li>A successful Dodge grants 3 additional Momentum stacks for Inexorable Judgement, sharing the 20-stack cap.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="Holy Revenant talent icon"> [Holy Revenant](#zealot_resist_death_heal) | <ul><li>Until Death's fatal-damage trigger knocks back nearby enemies. While Unkillable, damage adds to a reusable healing pool; Melee converts at 3 times the ordinary rate.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="Blazing Piety talent icon"> [Blazing Piety](#zealot_fanatic_rage) | <ul><li>Nearby enemy deaths and your Critical Hits build Fury. At 25 stacks, gain 15 percentage points of Critical Chance for 8 seconds; further qualifying events at full stacks refresh it.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="Stalwart talent icon"> [Stalwart](#zealot_fanatic_rage_toughness_on_max) | <ul><li>Entering Fury restores 50% of maximum Toughness once. At full Fury stacks, gain 25% Toughness Damage Reduction and restore 2% of maximum Toughness per second.</li></ul> | Keystone |
 
 ---
 
@@ -449,3 +450,17 @@
 - **Stack decay**: Before Fury, 8 seconds without a new trigger starts one-by-one stack decay. A new trigger resets the waiting period. Fury ending clears the count so it must be rebuilt.
 
 [Details](zealot_fanatic_rage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_fanatic_rage_toughness_on_max"></a>
+
+### Stalwart
+
+<img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="72" height="72" alt="Stalwart talent icon">
+
+- **Activation**: Entering Fury restores 50% of maximum Toughness. Refreshing existing Fury does not grant another 50%.
+- **Continuous effects**: While Fury's counter is at 25, gain 25% Toughness Damage Reduction and restore 2% of maximum Toughness per second. Both effects stop applying below full stacks.
+- **Restoration and reduction example**: With maximum Toughness 100, activation restores at most 50. Maintaining full stacks for 8 seconds can restore another 100 × 2% × 8 = 16, limited by missing Toughness. An incoming 100 Toughness damage becomes 100 × 0.75 = 75.
+
+[Details](zealot_fanatic_rage_toughness_on_max.md) · [Back to index](#talent-index)

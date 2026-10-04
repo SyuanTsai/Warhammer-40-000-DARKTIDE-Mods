@@ -39,3 +39,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Inebriate's Poise](zealot_quickness_passive_dodge_stacks.md) / `zealot_quickness_passive_dodge_stacks` | Keystone |
 | [Holy Revenant](zealot_resist_death_heal.md) / `zealot_resist_death_heal` | Keystone |
 | [Blazing Piety](zealot_fanatic_rage.md) / `zealot_fanatic_rage` | Keystone |
+| [Stalwart](zealot_fanatic_rage_toughness_on_max.md) / `zealot_fanatic_rage_toughness_on_max` | Keystone |

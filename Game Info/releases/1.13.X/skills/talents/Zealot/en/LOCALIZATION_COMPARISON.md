@@ -346,6 +346,18 @@ Full raw template and formatting: [source evidence](zealot_fanatic_rage.md#origi
 | Fury threshold, radius, chance and duration | “+15% Critical Hit Chance for 8s”; 25 enemy deaths within 25m; Critical Hits also count.; `ui / loc_talent_zealot_fanatic_rage_crit_desc / c80efade` | Nearby opposing minion deaths and own crit hits add shared resource up to 25; Fury adds 0.15 Critical Chance for 8s. [Fixed source and line references](zealot_fanatic_rage.md#fixed-source-evidence) | Consistent | Both event sources, threshold and bonus values agree when the English sentences are read together. |
 | Event scope, refresh and decay | No killer requirement, shared timer, decay formula or expiry reset specified; `ui / loc_talent_zealot_fanatic_rage_crit_desc / c80efade` | Killer is not checked; own Melee/Ranged crits count. Events reset 8s timer, including at cap; sequential decay and Fury stop clearing resource apply. [Fixed source and line references](zealot_fanatic_rage.md#fixed-source-evidence) | Not covered by the description | These details and the additive Critical Chance example supplement the stated Fury behavior. |
 
+
+<a id="zealot_fanatic_rage_toughness_on_max"></a>
+
+## Stalwart
+
+Full raw template and formatting: [source evidence](zealot_fanatic_rage_toughness_on_max.md#original-english-template-and-reconstruction). Name hash `b8850d7c`. Every row uses `ui / loc_talent_zealot_fanatic_rage_toughness_replenish_desc / efdfa530`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Activation restoration and continuous values | Triggering Fury restores 50%; while active +25% Toughness Damage Reduction and 2% Toughness each second.; `ui / loc_talent_zealot_fanatic_rage_toughness_replenish_desc / efdfa530` | New Fury restores 0.5 of maximum Toughness; full-resource conditional multiplier 0.75 and restoration .02×dt apply. [Fixed source and line references](zealot_fanatic_rage_toughness_on_max.md#fixed-source-evidence) | Consistent | The three amounts, restoration direction and damage reduction match. |
+| Refresh, full-resource condition and calculation basis | No refresh exception, resource gate or maximum-Toughness basis stated.; `ui / loc_talent_zealot_fanatic_rage_toughness_replenish_desc / efdfa530` | Existing Fury refresh does not repeat 50%; both continuous effects require resource 25. Restoration uses maximum Toughness and missing-Toughness cap. [Fixed source and line references](zealot_fanatic_rage_toughness_on_max.md#fixed-source-evidence) | Not covered by the description | These limits and the preserved restoration/reduction example supplement the effects. |
+
 ## Comparison totals
 
 53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.
