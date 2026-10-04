@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="Assassination Protocols talent icon"> [Assassination Protocols](#cryptic_ranged_vs_bfg) | <ul><li>Grants 25% Ranged Damage against Ogryns, Monstrosities and Captains; melee attacks do not benefit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="System Shock talent icon"> [System Shock](#cryptic_electrocution_applies_brittleness) | <ul><li>Applying, stacking or refreshing Electrocution adds 3 Brittleness stacks at 2.5% each. Brittleness lasts 5 seconds and shares a 16-stack / 40% cap.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="Ammo-Cell Augury talent icon"> [Ammo-Cell Augury](#cryptic_ammo_reserve) | <ul><li>Increases reserve-ammo capacity by 25%, leaving clip capacity unchanged.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="Voltaic Restoration talent icon"> [Voltaic Restoration](#cryptic_coherency_toughness_on_ability) | <ul><li>Activating a Combat Ability restores 20% of each recipient's maximum Toughness to you and allies in Coherency, once per activation.</li></ul> | Talent |
 
 ---
 
@@ -1222,3 +1223,17 @@
 - **Capacity example**: An original reserve cap of 200 rounds becomes `200 × (1 + 25%) = 250` rounds. At an original 203 rounds, the calculation gives 253.75, rounded down to 253 rounds. With another 15% bonus of the same capacity type, `200 × (1 + 25% + 15%) = 280` rounds.
 
 [Details](cryptic_ammo_reserve.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_coherency_toughness_on_ability"></a>
+
+### Voltaic Restoration
+
+<img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="72" height="72" alt="Voltaic Restoration talent icon">
+
+- **Trigger**: Activating your Combat Ability restores 20% of each recipient's own maximum Toughness to you and allies in Coherency. Using your Blitz does not trigger it.
+- **Recovery example**: At your maximum Toughness of 100, you recover `100 × 20% = 20` points. A teammate with maximum Toughness 200 recovers `200 × 20% = 40` points.
+- **Counting**: Recovery is per ability activation. Spending 3 Capacitance charges in one activation does not change it to 60%.
+
+[Details](cryptic_coherency_toughness_on_ability.md) · [Back to index](#talent-index)

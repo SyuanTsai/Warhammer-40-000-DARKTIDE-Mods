@@ -950,6 +950,18 @@ Full raw template and formatting: [source evidence](cryptic_ammo_reserve.md#orig
 | Stat and value | +25% Ammo Reserve; `ui / loc_talent_cryptic_ammo_reserve_desc / bf4067b1` | `ammo_reserve_capacity = 0.25` increases reserve capacity; clip size is separate. [Fixed source and line references](cryptic_ammo_reserve.md#fixed-source-evidence) | Consistent | The named stat and bonus match the verified implementation. |
 | Capacity calculation and rounding | Does not specify capacity rounding or addition with other bonuses; `ui / loc_talent_cryptic_ammo_reserve_desc / bf4067b1` | Weapon initialization uses an additive multiplier and `floor`: 200→250, 203→253 after a 253.75 calculation, or 200→280 with another same-type 15%. [Fixed source and line references](cryptic_ammo_reserve.md#fixed-source-evidence) | Not covered by the description | These original examples explain the omitted calculation and distinguish reserve capacity from clip capacity. |
 
+
+<a id="cryptic_coherency_toughness_on_ability"></a>
+
+## Voltaic Restoration
+
+Full raw template and formatting: [source evidence](cryptic_coherency_toughness_on_ability.md#original-english-template-and-reconstruction). Name hash `9e27f37f`. Every row uses `ui / loc_talent_cryptic_coherency_toughness_on_ability_desc / 5c2bb368`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery value and recipients | Restore 20% Toughness to you and Allies in Coherency on Ability Use; `ui / loc_talent_cryptic_coherency_toughness_on_ability_desc / 5c2bb368` | `on_combat_ability` applies 20% recovery to each `in_coherence_units` member, including self. [Fixed source and line references](cryptic_coherency_toughness_on_ability.md#fixed-source-evidence) | Consistent | The recovery value and stated recipients match the verified ability trigger. |
+| Ability category, basis and counting | Does not specify Blitz eligibility, percentage basis or counting charges; `ui / loc_talent_cryptic_coherency_toughness_on_ability_desc / 5c2bb368` | Blitz does not trigger it; each recipient uses their own maximum Toughness. One activation spending 3 charges still gives 20%, not 60%. [Fixed source and line references](cryptic_coherency_toughness_on_ability.md#fixed-source-evidence) | Not covered by the description | The existing 100→20 and 200→40 recovery examples and charge-count exception explain omitted details. |
+
 ## Comparison totals
 
 157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
