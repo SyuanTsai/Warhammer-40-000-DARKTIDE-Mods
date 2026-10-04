@@ -91,3 +91,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ammo-Cell Augury](cryptic_ammo_reserve.md) / `cryptic_ammo_reserve` | Talent |
 | [Voltaic Restoration](cryptic_coherency_toughness_on_ability.md) / `cryptic_coherency_toughness_on_ability` | Talent |
 | [Salvation Doctrine](cryptic_revive_speed_and_dr.md) / `cryptic_revive_speed_and_dr` | Talent |
+| [Ammunition-Restoration Pod](cryptic_passive_ammo_replenishment.md) / `cryptic_passive_ammo_replenishment` | Talent |

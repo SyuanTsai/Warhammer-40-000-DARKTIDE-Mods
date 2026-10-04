@@ -974,6 +974,18 @@ Full raw template and formatting: [source evidence](cryptic_revive_speed_and_dr.
 | Revive resistance and speed | Gain +25% Damage Resistance while Reviving an Ally; +25% Revive Speed; `ui / loc_talent_cryptic_revive_speed_and_dr_desc / 16a4ff53` | A qualifying active assistance interaction enables a 0.75 damage-taken multiplier; the revive-speed stat is +25%. [Fixed source and line references](cryptic_revive_speed_and_dr.md#fixed-source-evidence) | Consistent | Reviving is a qualifying interaction, and both stated values match. |
 | Other assistance types and calculation | Does not enumerate pulling up, net removal or rescue, or explain the calculations; `ui / loc_talent_cryptic_revive_speed_and_dr_desc / 16a4ff53` | All four `valid_help_interactions` map to `revive_speed_modifier`; reduction requires `interactor:is_interacting`. A 4-second action becomes 3.2 seconds, and 100 damage becomes 75 during assistance only. [Fixed source and line references](cryptic_revive_speed_and_dr.md#fixed-source-evidence) | Not covered by the description | The broader supported interactions and original examples supplement the revive wording; it does not explicitly limit the effect to reviving alone. |
 
+
+<a id="cryptic_passive_ammo_replenishment"></a>
+
+## Ammunition-Restoration Pod
+
+Full raw template and formatting: [source evidence](cryptic_passive_ammo_replenishment.md#original-english-template-and-reconstruction). Name hash `dc9bf3b0`. Every row uses `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Interval and reserve basis | Every 15s, replenish 1% of your Max Ammo Reserve; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Every 15 seconds, `Ammo.add_to_all_slots(0.01)` replenishes reserve ammo using the maximum reserve basis. [Fixed source and line references](cryptic_passive_ammo_replenishment.md#fixed-source-evidence) | Consistent | Both the interval and percentage basis match. |
+| Rounding and capacity limits | Does not specify fractional carryover, slot eligibility or the full-weapon cap; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Uses `floor` with carryover and requires `max_reserve > 0`; cap is `max_reserve + missing_clip`. At reserve cap 250, 2.5 rounds/interval produces 2 then 3, total 10 across four intervals. [Fixed source and line references](cryptic_passive_ammo_replenishment.md#fixed-source-evidence) | Not covered by the description | The original example and exceptions explain how whole rounds and clip deficits affect reserve recovery. |
+
 ## Comparison totals
 
 167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.

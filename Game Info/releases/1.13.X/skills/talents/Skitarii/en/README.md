@@ -88,6 +88,7 @@
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="Ammo-Cell Augury talent icon"> [Ammo-Cell Augury](#cryptic_ammo_reserve) | <ul><li>Increases reserve-ammo capacity by 25%, leaving clip capacity unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="Voltaic Restoration talent icon"> [Voltaic Restoration](#cryptic_coherency_toughness_on_ability) | <ul><li>Activating a Combat Ability restores 20% of each recipient's maximum Toughness to you and allies in Coherency, once per activation.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="Salvation Doctrine talent icon"> [Salvation Doctrine](#cryptic_revive_speed_and_dr) | <ul><li>While reviving, pulling up, freeing from a net or rescuing an ally, take 25% less damage and perform the assistance action 25% faster.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="Ammunition-Restoration Pod talent icon"> [Ammunition-Restoration Pod](#cryptic_passive_ammo_replenishment) | <ul><li>Every 15 seconds replenishes 1% of maximum Ammo Reserve into reserves. Fractional rounds carry over; it does not directly reload the clip.</li></ul> | Talent |
 
 ---
 
@@ -1252,3 +1253,17 @@
 - **Damage-reduction example**: During assistance, an original 100 damage becomes `100 × 0.75 = 75`. Once you stop assisting, this damage reduction ends.
 
 [Details](cryptic_revive_speed_and_dr.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_passive_ammo_replenishment"></a>
+
+### Ammunition-Restoration Pod
+
+<img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="72" height="72" alt="Ammunition-Restoration Pod talent icon">
+
+- **Ammo recovery**: Every 15 seconds, replenish 1% of maximum reserve ammo into your reserves, rather than directly into the clip.
+- **Rounding example**: With a reserve cap of 250 rounds, each interval accrues `250 × 1% = 2.5` rounds. First gain 2 and retain 0.5; the next interval then grants 3. Four consecutive intervals grant 10 rounds in total.
+- **Cap and exceptions**: Reserves can also include the ammo needed to fill the missing part of the clip. A fully supplied weapon cannot accumulate ammo indefinitely. Weapons without an ammo reserve do not gain ammo from this effect.
+
+[Details](cryptic_passive_ammo_replenishment.md) · [Back to index](#talent-index)
