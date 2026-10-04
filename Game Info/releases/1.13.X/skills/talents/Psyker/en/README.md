@@ -67,6 +67,7 @@
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="Warp Rider talent icon"> [Warp Rider](#psyker_damage_based_on_warp_charge) | <ul><li>Damage bonus scales linearly with current Peril: +0% / +10% / +20% at 0% / 50% / 100% Peril.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="True Aim talent icon"> [True Aim](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | <ul><li>After 5 valid damaging Weakspot Hits, the next Ranged Attack is guaranteed Critical; repeat hits and cleaved later targets are restricted.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="Puppet Master talent icon"> [Puppet Master](#psyker_coherency_aura_size_increase) | <ul><li>Coherency Aura radius +75%, giving 1.75 times the original radius with other modifiers unchanged.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="32" height="32" alt="Kinetic Deflection talent icon"> [Kinetic Deflection](#psyker_block_costs_warp_charge) | <ul><li>Below 97% Peril, Blocking converts Stamina cost to Peril at 25% of the cost's fraction of maximum Stamina; overflow is paid with Stamina.</li></ul> | Talent |
 
 ---
 
@@ -998,3 +999,19 @@
 - The Traditional Chinese wording says the Aura range becomes {radius_modifier} times the original, mixing a multiplier with a bonus amount. The verified effect increases radius by 75%, making it 1.75 times the original.
 
 [Details](psyker_coherency_aura_size_increase.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_block_costs_warp_charge"></a>
+
+### Kinetic Deflection
+
+<img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="72" height="72" alt="Kinetic Deflection talent icon">
+
+- **Effect**: below 97% Peril, Blocking first generates Peril. The conversion is 25% of the original Stamina cost as a fraction of maximum Stamina. Once Peril reaches 97%, the remaining Block cost is paid with Stamina.
+
+- **Block example**: with 4 maximum Stamina, a Block that originally costs 2, and no other Peril modifiers, gain 2 ÷ 4 × 25% = 12.5 percentage points of Peril. Starting at 50% gives 62.5%, with no Stamina spent on this Block.
+
+- **Near the cap**: if the same Block starts at 90%, only 7 percentage points fit. The remaining 12.5 − 7 = 5.5 percentage points convert back to 5.5% ÷ 25% × 4 = 0.88 Stamina.
+
+[Details](psyker_block_costs_warp_charge.md) · [Back to index](#talent-index)

@@ -734,6 +734,18 @@ Full raw template and formatting: [source evidence](psyker_coherency_aura_size_i
 | Bonus versus final radius wording | 75% Radius for your Coherency Aura; no increase verb or plus sign; `ui / loc_talent_psyker_coherency_size_increase_description / 5556945e` | The 0.75 additive modifier has base 1, giving 1.75 times radius. [Fixed source and line references](psyker_coherency_aura_size_increase.md#fixed-source-evidence) | Cannot confirm | The terse English does not explicitly identify 75% as either a bonus or the resulting total; an English numerical contradiction is not established. |
 | Radius formula and area | Radius is specified; no combination or area formula; `ui / loc_talent_psyker_coherency_size_increase_description / 5556945e` | current_radius uses radius × modifier × multiplier; 8m becomes 14m with other modifiers unchanged, and flat-circle area scales by 1.75². [Fixed source and line references](psyker_coherency_aura_size_increase.md#fixed-source-evidence) | Not covered by the description | The verified radius calculation and existing geometric example supplement the wording. |
 
+
+<a id="psyker_block_costs_warp_charge"></a>
+
+## Kinetic Deflection
+
+Full raw template and formatting: [source evidence](psyker_block_costs_warp_charge.md#original-english-template-and-reconstruction). Name hash `bb19c517`. Every row uses `ui / loc_talent_psyker_block_costs_warp_charge_desc / 136ee48b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Block conversion and displayed parameter | Below critical Peril, Blocking generates Peril instead of Stamina loss; 25% of the blocked attack's Stamina cost; `ui / loc_talent_psyker_block_costs_warp_charge_desc / 136ee48b` | The accepted Block formula converts normalized Stamina cost using warp_charge_block_cost = 0.25. [Fixed source and line references](psyker_block_costs_warp_charge.md#fixed-source-evidence) | Consistent | The resource conversion and mapped parameter agree. |
+| Cap, normalization and overflow | No numerical threshold, maximum-Stamina denominator or overflow rule; `ui / loc_talent_psyker_block_costs_warp_charge_desc / 136ee48b` | Peril caps at 0.97; cost is normalized by max_stamina and modified by warp_charge_amount. Excess converts back without dividing by warp_charge_amount. [Fixed source and line references](psyker_block_costs_warp_charge.md#fixed-source-evidence) | Not covered by the description | The exact formulas explain how a Block can use Peril and then Stamina when the cap is reached. |
+
 ## Comparison totals
 
 The 127 listed rules comprise **59 Consistent**, **3 Explicit contradictions**, **60 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

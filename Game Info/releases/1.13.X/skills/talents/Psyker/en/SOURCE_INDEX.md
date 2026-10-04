@@ -71,3 +71,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Warp Rider](psyker_damage_based_on_warp_charge.md) / `psyker_damage_based_on_warp_charge` | Talent |
 | [True Aim](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) / `psyker_guaranteed_crit_on_multiple_weakspot_hits` | Talent |
 | [Puppet Master](psyker_coherency_aura_size_increase.md) / `psyker_coherency_aura_size_increase` | Talent |
+| [Kinetic Deflection](psyker_block_costs_warp_charge.md) / `psyker_block_costs_warp_charge` | Talent |
