@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="Honed Dissector talent icon"> [Honed Dissector](#cryptic_dissector_max_stacks) | <ul><li>Raises the Flensing Protocols cap from 6 to 8 stacks and starts at 8. Per-stack values remain unchanged: full stacks give +20% Damage and a Toughness damage taken multiplier of 0.80.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="Advanced Power Management talent icon"> [Advanced Power Management](#cryptic_redline_strength) | <ul><li>On Combat Ability use, gain one stack per charge held before use, each granting 5% Power for 10 seconds, up to 5 stacks. New stacks refresh the duration; repeated Chordclaw actions during the same activation do not trigger it again.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="Capacitory Limit Override talent icon"> [Capacitory Limit Override](#cryptic_redline_rending) | <ul><li>At 3 or more Redline Capacitors stacks, gain +15% Rending. The bonus turns off at 2 or fewer stacks; stacks above the threshold do not increase its value.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="Resource Optimisation Canticles talent icon"> [Resource Optimisation Canticles](#cryptic_redline_extra_max_stacks) | <ul><li>Adds another maximum Combat Ability charge and raises the Redline Capacitors stack cap from 4 to 5. At 5 stacks, Toughness damage taken is multiplied by 0.75 and natural Capacitance recovery is 25% faster.</li></ul> | Keystone |
 
 ---
 
@@ -678,3 +679,18 @@
 - The Traditional Chinese template swaps the stack count and talent name. After substitution, its condition is equivalent to “while 3 reaches Redline Capacitors stacks or above.” The correct condition is “at 3 or more Redline Capacitors stacks, gain 15% Rending.” The corresponding English puts the stack count and name in the correct positions.
 
 [Details](cryptic_redline_rending.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_redline_extra_max_stacks"></a>
+
+### Resource Optimisation Canticles
+
+<img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="72" height="72" alt="Resource Optimisation Canticles talent icon">
+
+- **Effect**: Adds **1 maximum Combat Ability charge** and **1 maximum Redline Capacitors stack**, raising the stack cap from **4 to 5**.
+- **Charge example**: The Skitarii Combat Ability base cap is 3 charges, Redline Capacitors adds 1, and this talent adds another 1: `3 + 1 + 1 = 5` charges. Voltaic Emitter still consumes at most 3 charges per use.
+- **Toughness damage example**: At 5 Redline stacks, the Toughness damage taken multiplier is `0.75`. An attack that would deal 100 Toughness damage instead deals `75`.
+- **Recovery example**: At 5 Redline stacks, natural recovery is increased by 25%. With no other modifiers, the rate rises from 2% of one charge per second to `2% × 1.25 = 2.5%` per second.
+
+[Details](cryptic_redline_extra_max_stacks.md) · [Back to index](#talent-index)

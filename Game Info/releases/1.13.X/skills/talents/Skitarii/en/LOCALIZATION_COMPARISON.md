@@ -514,6 +514,18 @@ Full raw template and formatting: [source evidence](cryptic_redline_rending.md#o
 | Threshold, amount and placeholder meaning | +15% Rending while at 3 Redline Capacitors stacks or above; `ui / loc_talent_cryptic_redline_rending_clarified_desc / 477f3a77` | Selected modifier enables fixed `rending_multiplier =0.15` while the current Redline stack count is at least 3 [Fixed source and line references](cryptic_redline_rending.md#fixed-source-evidence) | Consistent | The condition and value match. Unlike the Traditional Chinese template, the English places the stack count and talent name correctly. |
 | Fixed bonus and armour calculation | Does not describe the fixed value above the threshold or the armour calculation; `ui / loc_talent_cryptic_redline_rending_clarified_desc / 477f3a77` | The root conditional modifier is not applied per stack. With pre-armour damage 100, multiplier 0.5 and Rending coefficient 1, armour-stage damage 50 becomes 65; actual increase depends on armour [Fixed source and line references](cryptic_redline_rending.md#fixed-source-evidence) | Not covered by the description | The verified example and inactive-at-2 limit supplement the English, without treating Rending as a universal final-damage multiplier. |
 
+
+<a id="cryptic_redline_extra_max_stacks"></a>
+
+## Resource Optimisation Canticles
+
+Full raw template and formatting: [source evidence](cryptic_redline_extra_max_stacks.md#original-english-template-and-reconstruction). Name hash `47a760ec`. Every row uses `ui / loc_talent_cryptic_redline_stacks_clarified_desc / b176ca53`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional charge and stack cap | +1 Max Ability Charges and +1 Redline Capacitors Max Stacks; `ui / loc_talent_cryptic_redline_stacks_clarified_desc / b176ca53` | Separate passive adds `ability_extra_charges = 1`; the special rule adds 1 to both Redline stack caps, from 4 to 5 [Fixed source and line references](cryptic_redline_extra_max_stacks.md#fixed-source-evidence) | Consistent | The two increments agree with the English. |
+| Resulting caps, calculations and limits | Does not repeat the root extra charge or calculate the resulting bonuses; `ui / loc_talent_cryptic_redline_stacks_clarified_desc / b176ca53` | Base 3 + root 1 + modifier 1 = 5 maximum charges; Voltaic Emitter still spends at most 3 per use. At 5 Redline stacks: Toughness multiplier 0.75 and natural recovery `2% × 1.25 = 2.5%/s` [Fixed source and line references](cryptic_redline_extra_max_stacks.md#fixed-source-evidence) | Not covered by the description | The original charge, Toughness and recovery examples supplement the English. This concerns Combat Ability charge systems and Toughness damage, not all Health damage. |
+
 ## Comparison totals
 
 83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
