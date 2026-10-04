@@ -1,4 +1,4 @@
-# 爆擊機率增幅(Critical Chance Boost)：原始碼依據
+# 暴擊幾率增幅(Critical Chance Boost)：原始碼依據
 
 [返回玩家說明](README.md#base_crit_chance_node_buff_low_1)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_crit_chance_node_buff_low_1)
 

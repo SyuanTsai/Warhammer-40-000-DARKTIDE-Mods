@@ -62,7 +62,7 @@
 | [移動目標](#broker_passive_increased_ranged_dodges) | 未見明確矛盾 |
 | [樣本採集](#broker_passive_stimm_cd_on_kill) | 繁中原文誤譯 |
 | [神經質](#broker_passive_improved_dodges_at_full_stamina) | 未見明確矛盾 |
-| [爆擊機率增幅](#base_crit_chance_node_buff_low_1) | 未見明確矛盾 |
+| [暴擊幾率增幅](#base_crit_chance_node_buff_low_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [強效毒藥](#base_toxin_power_boost_1) | 未見明確矛盾 |
 | [黏黏手](#broker_passive_reduce_swap_time) | 未見明確矛盾 |
@@ -90,31 +90,31 @@
 | [順手牽羊](#broker_passive_low_ammo_regen) | 未見明確矛盾 |
 | [趁勝追擊](#broker_passive_cleave_on_cleave) | 未見明確矛盾 |
 | [裝備財閥特殊裝備](#broker_stimm_activation_talent) | 未見明確中英矛盾 |
-| [野火 I](#broker_stimm_combat_1) | 未見明確中英矛盾 |
-| [野火 IV](#broker_stimm_combat_4a) | 未見明確中英矛盾 |
-| [野火 II](#broker_stimm_combat_2) | 未見明確中英矛盾 |
-| [野火 III](#broker_stimm_combat_3) | 未見明確中英矛盾 |
-| [狂怒 I](#broker_stimm_combat_4b) | 未見明確中英矛盾 |
-| [狂怒 II](#broker_stimm_combat_5b) | 未見明確中英矛盾 |
-| [野火 V](#broker_stimm_combat_5a) | 未見明確中英矛盾 |
-| [獵鷹蕈劑 I](#broker_stimm_combat_4c) | 未見明確中英矛盾 |
-| [獵鷹蕈劑 II](#broker_stimm_combat_5c) | 未見明確中英矛盾 |
-| [抗焦慮藥 I](#broker_stimm_concentration_1) | 未見明確中英矛盾 |
-| [抗焦慮藥 II](#broker_stimm_concentration_2) | 未見明確中英矛盾 |
-| [抗焦慮藥 III](#broker_stimm_concentration_3) | 未見明確中英矛盾 |
-| [抗焦慮藥 IV](#broker_stimm_concentration_4) | 未見明確中英矛盾 |
-| [抗焦慮藥 V](#broker_stimm_concentration_5a) | 未見明確中英矛盾 |
-| [彈幕 I](#broker_stimm_durability_1) | 未見明確中英矛盾 |
-| [彈幕 II](#broker_stimm_durability_2) | 未見明確中英矛盾 |
-| [彈幕 III](#broker_stimm_durability_3) | 未見明確中英矛盾 |
-| [彈幕 IV](#broker_stimm_durability_4) | 未見明確中英矛盾 |
+| [野火I](#broker_stimm_combat_1) | 未見明確中英矛盾 |
+| [野火IV](#broker_stimm_combat_4a) | 未見明確中英矛盾 |
+| [野火II](#broker_stimm_combat_2) | 未見明確中英矛盾 |
+| [野火III](#broker_stimm_combat_3) | 未見明確中英矛盾 |
+| [狂怒I](#broker_stimm_combat_4b) | 未見明確中英矛盾 |
+| [狂怒II](#broker_stimm_combat_5b) | 未見明確中英矛盾 |
+| [野火V](#broker_stimm_combat_5a) | 未見明確中英矛盾 |
+| [獵鷹蕈劑I](#broker_stimm_combat_4c) | 未見明確中英矛盾 |
+| [獵鷹蕈劑II](#broker_stimm_combat_5c) | 未見明確中英矛盾 |
+| [抗焦慮藥I](#broker_stimm_concentration_1) | 未見明確中英矛盾 |
+| [抗焦慮藥II](#broker_stimm_concentration_2) | 未見明確中英矛盾 |
+| [抗焦慮藥III](#broker_stimm_concentration_3) | 未見明確中英矛盾 |
+| [抗焦慮藥IV](#broker_stimm_concentration_4) | 未見明確中英矛盾 |
+| [抗焦慮藥V](#broker_stimm_concentration_5a) | 未見明確中英矛盾 |
+| [彈幕I](#broker_stimm_durability_1) | 未見明確中英矛盾 |
+| [彈幕II](#broker_stimm_durability_2) | 未見明確中英矛盾 |
+| [彈幕III](#broker_stimm_durability_3) | 未見明確中英矛盾 |
+| [彈幕IV](#broker_stimm_durability_4) | 未見明確中英矛盾 |
 | [坦克](#broker_stimm_durability_5a) | 未見明確中英矛盾 |
-| [激勵 I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
+| [激勵I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
 | [狂熱](#broker_stimm_celerity_5c) | 未見明確中英矛盾 |
-| [激勵 II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
-| [激勵 III](#broker_stimm_celerity_3) | 未見明確中英矛盾 |
-| [激勵 IV](#broker_stimm_celerity_4) | 未見明確中英矛盾 |
-| [激勵 V](#broker_stimm_celerity_5a) | 未見明確中英矛盾 |
+| [激勵II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
+| [激勵III](#broker_stimm_celerity_3) | 未見明確中英矛盾 |
+| [激勵IV](#broker_stimm_celerity_4) | 未見明確中英矛盾 |
+| [激勵V](#broker_stimm_celerity_5a) | 未見明確中英矛盾 |
 | [恢復](#broker_stimm_durability_5b) | 未見明確中英矛盾 |
 | [狂熱](#broker_stimm_concentration_5b) | 待遊戲內核對：文字75%，固定實作56.25% |
 | [集中藥](#broker_stimm_concentration_5c) | 待遊戲內核對：文字75%，固定實作56.25% |
@@ -489,7 +489,7 @@
 - [原始碼推導與限制](broker_passive_improved_dodges_at_full_stamina.md)。
 
 <a id="base_crit_chance_node_buff_low_1"></a>
-## 爆擊機率增幅(Critical Chance Boost)
+## 暴擊幾率增幅(Critical Chance Boost)
 
 - 描述鍵：`loc_talent_crit_chance_low_desc`；hash：`3019333a`。
 - 結論：未見明確矛盾。兩語皆描述增加爆擊率，未見矛盾。
@@ -685,7 +685,7 @@
 - [原始碼推導與限制](broker_stimm_activation_talent.md)。
 
 <a id="broker_stimm_combat_1"></a>
-## 野火 I(Wildfire I)
+## 野火I(Wildfire I)
 
 - 描述鍵：`loc_talent_stat_power_level`；hash：`f8a49d31`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -696,7 +696,7 @@
 | `loc_talent_stat_power_level` / `f8a49d31` | {power_level:%s}力量。 | {power_level:%s} Strength. |
 
 <a id="broker_stimm_combat_4a"></a>
-## 野火 IV(Wildfire IV)
+## 野火IV(Wildfire IV)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_finesse_modifier_bonus`；hash：`f8a49d31 / b004d6a5`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -708,7 +708,7 @@
 | `loc_talent_stat_finesse_modifier_bonus` / `b004d6a5` | {finesse_modifier_bonus:%s}靈巧。 | {finesse_modifier_bonus:%s} Finesse. |
 
 <a id="broker_stimm_combat_2"></a>
-## 野火 II(Wildfire II)
+## 野火II(Wildfire II)
 
 - 描述鍵：`loc_talent_stat_power_level`；hash：`f8a49d31`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -719,7 +719,7 @@
 | `loc_talent_stat_power_level` / `f8a49d31` | {power_level:%s}力量。 | {power_level:%s} Strength. |
 
 <a id="broker_stimm_combat_3"></a>
-## 野火 III(Wildfire III)
+## 野火III(Wildfire III)
 
 - 描述鍵：`loc_talent_stat_power_level`；hash：`f8a49d31`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -730,7 +730,7 @@
 | `loc_talent_stat_power_level` / `f8a49d31` | {power_level:%s}力量。 | {power_level:%s} Strength. |
 
 <a id="broker_stimm_combat_4b"></a>
-## 狂怒 I(Fury I)
+## 狂怒I(Fury I)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_rending_multiplier`；hash：`f8a49d31 / 0dd2df4e`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -742,7 +742,7 @@
 | `loc_talent_stat_rending_multiplier` / `0dd2df4e` | {rending_multiplier:%s}撕裂。 | {rending_multiplier:%s} Rending. |
 
 <a id="broker_stimm_combat_5b"></a>
-## 狂怒 II(Fury II)
+## 狂怒II(Fury II)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_rending_multiplier`；hash：`f8a49d31 / 0dd2df4e`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -754,7 +754,7 @@
 | `loc_talent_stat_rending_multiplier` / `0dd2df4e` | {rending_multiplier:%s}撕裂。 | {rending_multiplier:%s} Rending. |
 
 <a id="broker_stimm_combat_5a"></a>
-## 野火 V(Wildfire V)
+## 野火V(Wildfire V)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_finesse_modifier_bonus`；hash：`f8a49d31 / b004d6a5`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -766,7 +766,7 @@
 | `loc_talent_stat_finesse_modifier_bonus` / `b004d6a5` | {finesse_modifier_bonus:%s}靈巧。 | {finesse_modifier_bonus:%s} Finesse. |
 
 <a id="broker_stimm_combat_4c"></a>
-## 獵鷹蕈劑 I(Vultoprene I)
+## 獵鷹蕈劑I(Vultoprene I)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_critical_strike_chance`；hash：`f8a49d31 / a4e46663`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -778,7 +778,7 @@
 | `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}爆擊率。 | {critical_strike_chance:%s} Critical Strike Chance. |
 
 <a id="broker_stimm_combat_5c"></a>
-## 獵鷹蕈劑 II(Vultoprene II)
+## 獵鷹蕈劑II(Vultoprene II)
 
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_critical_strike_chance`；hash：`f8a49d31 / a4e46663`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -790,7 +790,7 @@
 | `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}爆擊率。 | {critical_strike_chance:%s} Critical Strike Chance. |
 
 <a id="broker_stimm_concentration_1"></a>
-## 抗焦慮藥 I(Kalma I)
+## 抗焦慮藥I(Kalma I)
 
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -801,7 +801,7 @@
 | `loc_talent_stat_combat_ability_cooldown_regen_modifier` / `04d3484f` | {combat_ability_cooldown_regen_modifier:%s}冷卻恢復。 | {combat_ability_cooldown_regen_modifier:%s} Cooldown Regeneration. |
 
 <a id="broker_stimm_concentration_2"></a>
-## 抗焦慮藥 II(Kalma II)
+## 抗焦慮藥II(Kalma II)
 
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -812,7 +812,7 @@
 | `loc_talent_stat_combat_ability_cooldown_regen_modifier` / `04d3484f` | {combat_ability_cooldown_regen_modifier:%s}冷卻恢復。 | {combat_ability_cooldown_regen_modifier:%s} Cooldown Regeneration. |
 
 <a id="broker_stimm_concentration_3"></a>
-## 抗焦慮藥 III(Kalma III)
+## 抗焦慮藥III(Kalma III)
 
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -823,7 +823,7 @@
 | `loc_talent_stat_combat_ability_cooldown_regen_modifier` / `04d3484f` | {combat_ability_cooldown_regen_modifier:%s}冷卻恢復。 | {combat_ability_cooldown_regen_modifier:%s} Cooldown Regeneration. |
 
 <a id="broker_stimm_concentration_4"></a>
-## 抗焦慮藥 IV(Kalma IV)
+## 抗焦慮藥IV(Kalma IV)
 
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -834,7 +834,7 @@
 | `loc_talent_stat_combat_ability_cooldown_regen_modifier` / `04d3484f` | {combat_ability_cooldown_regen_modifier:%s}冷卻恢復。 | {combat_ability_cooldown_regen_modifier:%s} Cooldown Regeneration. |
 
 <a id="broker_stimm_concentration_5a"></a>
-## 抗焦慮藥 V(Kalma V)
+## 抗焦慮藥V(Kalma V)
 
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -845,7 +845,7 @@
 | `loc_talent_stat_combat_ability_cooldown_regen_modifier` / `04d3484f` | {combat_ability_cooldown_regen_modifier:%s}冷卻恢復。 | {combat_ability_cooldown_regen_modifier:%s} Cooldown Regeneration. |
 
 <a id="broker_stimm_durability_1"></a>
-## 彈幕 I(Barrage I)
+## 彈幕I(Barrage I)
 
 - 描述鍵：`loc_talent_stat_toughness_replenish_modifier / loc_talent_stat_damage_taken_multiplier / loc_talent_buff_toughness_on_stimm`；hash：`805fdb71 / 9a749a67 / 75149821`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -858,7 +858,7 @@
 | `loc_talent_buff_toughness_on_stimm` / `75149821` | 恢復{toughness_amount:%s}韌性。 | Replenish {toughness_amount:%s} Toughness. |
 
 <a id="broker_stimm_durability_2"></a>
-## 彈幕 II(Barrage II)
+## 彈幕II(Barrage II)
 
 - 描述鍵：`loc_talent_stat_toughness_replenish_modifier / loc_talent_stat_damage_taken_multiplier / loc_talent_buff_toughness_on_stimm`；hash：`805fdb71 / 9a749a67 / 75149821`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -871,7 +871,7 @@
 | `loc_talent_buff_toughness_on_stimm` / `75149821` | 恢復{toughness_amount:%s}韌性。 | Replenish {toughness_amount:%s} Toughness. |
 
 <a id="broker_stimm_durability_3"></a>
-## 彈幕 III(Barrage III)
+## 彈幕III(Barrage III)
 
 - 描述鍵：`loc_talent_stat_toughness_replenish_modifier / loc_talent_stat_damage_taken_multiplier / loc_talent_buff_toughness_on_stimm`；hash：`805fdb71 / 9a749a67 / 75149821`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -884,7 +884,7 @@
 | `loc_talent_buff_toughness_on_stimm` / `75149821` | 恢復{toughness_amount:%s}韌性。 | Replenish {toughness_amount:%s} Toughness. |
 
 <a id="broker_stimm_durability_4"></a>
-## 彈幕 IV(Barrage IV)
+## 彈幕IV(Barrage IV)
 
 - 描述鍵：`loc_talent_stat_toughness_replenish_modifier / loc_talent_stat_damage_taken_multiplier / loc_talent_buff_toughness_on_stimm`；hash：`805fdb71 / 9a749a67 / 75149821`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -908,7 +908,7 @@
 | `loc_talent_stat_toughness_replenish_modifier` / `805fdb71` | 恢復{toughness_replenish_modifier:%s}韌性。 | {toughness_replenish_modifier:%s} Toughness Replenishment. |
 
 <a id="broker_stimm_celerity_1"></a>
-## 激勵 I(Spur I)
+## 激勵I(Spur I)
 
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_wield_speed`；hash：`a2530496 / d0347040`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -934,7 +934,7 @@
 | `loc_talent_stat_dodge_cooldown_reset_modifier` / `1863559c` | {dodge_cooldown_reset_modifier:%s}閃避恢復速度。 | {dodge_cooldown_reset_modifier:%s} Dodge Recovery Speed. |
 
 <a id="broker_stimm_celerity_2"></a>
-## 激勵 II(Spur II)
+## 激勵II(Spur II)
 
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_wield_speed / loc_talent_stat_stamina_cost_multiplier`；hash：`a2530496 / d0347040 / 26fbf08f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -947,7 +947,7 @@
 | `loc_talent_stat_stamina_cost_multiplier` / `26fbf08f` | {stamina_cost_multiplier:%s}體力消耗。 | {stamina_cost_multiplier:%s} Stamina Cost. |
 
 <a id="broker_stimm_celerity_3"></a>
-## 激勵 III(Spur III)
+## 激勵III(Spur III)
 
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_stamina_cost_multiplier`；hash：`a2530496 / 26fbf08f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -959,7 +959,7 @@
 | `loc_talent_stat_stamina_cost_multiplier` / `26fbf08f` | {stamina_cost_multiplier:%s}體力消耗。 | {stamina_cost_multiplier:%s} Stamina Cost. |
 
 <a id="broker_stimm_celerity_4"></a>
-## 激勵 IV(Spur IV)
+## 激勵IV(Spur IV)
 
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_stamina_cost_multiplier`；hash：`a2530496 / 26fbf08f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
@@ -971,7 +971,7 @@
 | `loc_talent_stat_stamina_cost_multiplier` / `26fbf08f` | {stamina_cost_multiplier:%s}體力消耗。 | {stamina_cost_multiplier:%s} Stamina Cost. |
 
 <a id="broker_stimm_celerity_5a"></a>
-## 激勵 V(Spur V)
+## 激勵V(Spur V)
 
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_keyword_stun_immune / loc_talent_keyword_slowdown_immune`；hash：`a2530496 / a6fe7bf4 / 5936af23`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。

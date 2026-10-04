@@ -66,7 +66,7 @@
 | [移動目標](broker_passive_increased_ranged_dodges.md) / `broker_passive_increased_ranged_dodges` | 技能 |
 | [樣本採集](broker_passive_stimm_cd_on_kill.md) / `broker_passive_stimm_cd_on_kill` | 技能 |
 | [神經質](broker_passive_improved_dodges_at_full_stamina.md) / `broker_passive_improved_dodges_at_full_stamina` | 技能 |
-| [爆擊機率增幅](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | 技能 |
+| [暴擊幾率增幅](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | 技能 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | 技能 |
 | [強效毒藥](base_toxin_power_boost_1.md) / `base_toxin_power_boost_1` | 技能 |
 | [黏黏手](broker_passive_reduce_swap_time.md) / `broker_passive_reduce_swap_time` | 技能 |
@@ -94,31 +94,31 @@
 | [順手牽羊](broker_passive_low_ammo_regen.md) / `broker_passive_low_ammo_regen` | 技能 |
 | [趁勝追擊](broker_passive_cleave_on_cleave.md) / `broker_passive_cleave_on_cleave` | 技能 |
 | [裝備財閥特殊裝備](broker_stimm_activation_talent.md) / `broker_stimm_activation_talent` | 興奮劑配方 |
-| [野火 I](broker_stimm_combat_1.md) / `broker_stimm_combat_1` | 興奮劑配方 |
-| [野火 IV](broker_stimm_combat_4a.md) / `broker_stimm_combat_4a` | 興奮劑配方 |
-| [野火 II](broker_stimm_combat_2.md) / `broker_stimm_combat_2` | 興奮劑配方 |
-| [野火 III](broker_stimm_combat_3.md) / `broker_stimm_combat_3` | 興奮劑配方 |
-| [狂怒 I](broker_stimm_combat_4b.md) / `broker_stimm_combat_4b` | 興奮劑配方 |
-| [狂怒 II](broker_stimm_combat_5b.md) / `broker_stimm_combat_5b` | 興奮劑配方 |
-| [野火 V](broker_stimm_combat_5a.md) / `broker_stimm_combat_5a` | 興奮劑配方 |
-| [獵鷹蕈劑 I](broker_stimm_combat_4c.md) / `broker_stimm_combat_4c` | 興奮劑配方 |
-| [獵鷹蕈劑 II](broker_stimm_combat_5c.md) / `broker_stimm_combat_5c` | 興奮劑配方 |
-| [抗焦慮藥 I](broker_stimm_concentration_1.md) / `broker_stimm_concentration_1` | 興奮劑配方 |
-| [抗焦慮藥 II](broker_stimm_concentration_2.md) / `broker_stimm_concentration_2` | 興奮劑配方 |
-| [抗焦慮藥 III](broker_stimm_concentration_3.md) / `broker_stimm_concentration_3` | 興奮劑配方 |
-| [抗焦慮藥 IV](broker_stimm_concentration_4.md) / `broker_stimm_concentration_4` | 興奮劑配方 |
-| [抗焦慮藥 V](broker_stimm_concentration_5a.md) / `broker_stimm_concentration_5a` | 興奮劑配方 |
-| [彈幕 I](broker_stimm_durability_1.md) / `broker_stimm_durability_1` | 興奮劑配方 |
-| [彈幕 II](broker_stimm_durability_2.md) / `broker_stimm_durability_2` | 興奮劑配方 |
-| [彈幕 III](broker_stimm_durability_3.md) / `broker_stimm_durability_3` | 興奮劑配方 |
-| [彈幕 IV](broker_stimm_durability_4.md) / `broker_stimm_durability_4` | 興奮劑配方 |
+| [野火I](broker_stimm_combat_1.md) / `broker_stimm_combat_1` | 興奮劑配方 |
+| [野火IV](broker_stimm_combat_4a.md) / `broker_stimm_combat_4a` | 興奮劑配方 |
+| [野火II](broker_stimm_combat_2.md) / `broker_stimm_combat_2` | 興奮劑配方 |
+| [野火III](broker_stimm_combat_3.md) / `broker_stimm_combat_3` | 興奮劑配方 |
+| [狂怒I](broker_stimm_combat_4b.md) / `broker_stimm_combat_4b` | 興奮劑配方 |
+| [狂怒II](broker_stimm_combat_5b.md) / `broker_stimm_combat_5b` | 興奮劑配方 |
+| [野火V](broker_stimm_combat_5a.md) / `broker_stimm_combat_5a` | 興奮劑配方 |
+| [獵鷹蕈劑I](broker_stimm_combat_4c.md) / `broker_stimm_combat_4c` | 興奮劑配方 |
+| [獵鷹蕈劑II](broker_stimm_combat_5c.md) / `broker_stimm_combat_5c` | 興奮劑配方 |
+| [抗焦慮藥I](broker_stimm_concentration_1.md) / `broker_stimm_concentration_1` | 興奮劑配方 |
+| [抗焦慮藥II](broker_stimm_concentration_2.md) / `broker_stimm_concentration_2` | 興奮劑配方 |
+| [抗焦慮藥III](broker_stimm_concentration_3.md) / `broker_stimm_concentration_3` | 興奮劑配方 |
+| [抗焦慮藥IV](broker_stimm_concentration_4.md) / `broker_stimm_concentration_4` | 興奮劑配方 |
+| [抗焦慮藥V](broker_stimm_concentration_5a.md) / `broker_stimm_concentration_5a` | 興奮劑配方 |
+| [彈幕I](broker_stimm_durability_1.md) / `broker_stimm_durability_1` | 興奮劑配方 |
+| [彈幕II](broker_stimm_durability_2.md) / `broker_stimm_durability_2` | 興奮劑配方 |
+| [彈幕III](broker_stimm_durability_3.md) / `broker_stimm_durability_3` | 興奮劑配方 |
+| [彈幕IV](broker_stimm_durability_4.md) / `broker_stimm_durability_4` | 興奮劑配方 |
 | [坦克](broker_stimm_durability_5a.md) / `broker_stimm_durability_5a` | 興奮劑配方 |
-| [激勵 I](broker_stimm_celerity_1.md) / `broker_stimm_celerity_1` | 興奮劑配方 |
+| [激勵I](broker_stimm_celerity_1.md) / `broker_stimm_celerity_1` | 興奮劑配方 |
 | [狂熱](broker_stimm_celerity_5c.md) / `broker_stimm_celerity_5c` | 興奮劑配方 |
-| [激勵 II](broker_stimm_celerity_2.md) / `broker_stimm_celerity_2` | 興奮劑配方 |
-| [激勵 III](broker_stimm_celerity_3.md) / `broker_stimm_celerity_3` | 興奮劑配方 |
-| [激勵 IV](broker_stimm_celerity_4.md) / `broker_stimm_celerity_4` | 興奮劑配方 |
-| [激勵 V](broker_stimm_celerity_5a.md) / `broker_stimm_celerity_5a` | 興奮劑配方 |
+| [激勵II](broker_stimm_celerity_2.md) / `broker_stimm_celerity_2` | 興奮劑配方 |
+| [激勵III](broker_stimm_celerity_3.md) / `broker_stimm_celerity_3` | 興奮劑配方 |
+| [激勵IV](broker_stimm_celerity_4.md) / `broker_stimm_celerity_4` | 興奮劑配方 |
+| [激勵V](broker_stimm_celerity_5a.md) / `broker_stimm_celerity_5a` | 興奮劑配方 |
 | [恢復](broker_stimm_durability_5b.md) / `broker_stimm_durability_5b` | 興奮劑配方 |
 | [狂熱](broker_stimm_concentration_5b.md) / `broker_stimm_concentration_5b` | 興奮劑配方 |
 | [集中藥](broker_stimm_concentration_5c.md) / `broker_stimm_concentration_5c` | 興奮劑配方 |

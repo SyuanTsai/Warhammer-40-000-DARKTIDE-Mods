@@ -1,4 +1,4 @@
-# 壓制免疫(Suppression Immunity)
+# 堅定不移(Determined)
 
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 

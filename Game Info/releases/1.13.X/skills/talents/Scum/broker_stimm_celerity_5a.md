@@ -1,4 +1,4 @@
-# 激勵 V(Spur V)：原始碼依據
+# 激勵V(Spur V)：原始碼依據
 
 [返回玩家說明](README.md#broker_stimm_celerity_5a)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_stimm_celerity_5a)
 

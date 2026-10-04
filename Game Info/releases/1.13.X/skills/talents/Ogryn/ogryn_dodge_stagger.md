@@ -1,4 +1,4 @@
-# 閃避撞擊：原始碼依據
+# 滾吧你！(Outta My Way!)：原始碼依據
 
 [返回基礎效果](BASE_EFFECTS.md#ogryn_dodge_stagger)｜[技術索引](SOURCE_INDEX.md)
 
