@@ -27,3 +27,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Invigorating Revelation](zealot_leaving_stealth_restores_toughness.md) / `zealot_leaving_stealth_restores_toughness` | Ability |
 | [Martyr's Purpose](zealot_restore_stealth_cd_on_damage.md) / `zealot_restore_stealth_cd_on_damage` | Ability |
 | [Pious Cut-Throat](zealot_backstab_kills_restore_cd.md) / `zealot_backstab_kills_restore_cd` | Ability |
+| [Invocation of Death](zealot_crits_grant_cd.md) / `zealot_crits_grant_cd` | Ability |

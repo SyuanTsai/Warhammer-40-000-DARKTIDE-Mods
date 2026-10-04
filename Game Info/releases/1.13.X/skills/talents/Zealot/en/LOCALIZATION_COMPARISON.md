@@ -202,6 +202,18 @@ Full raw template and formatting: [source evidence](zealot_backstab_kills_restor
 | Trigger and recharge bonus | “+75% Ability Cooldown Regeneration for 2s after a Melee Backstab or Melee Weakspot hit.”; `ui / loc_talent_zealot_cooldown_on_backstab_weakspot_desc / 169457dc` | Melee hit plus Backstab OR Weakspot; extra 0.75 resource/s, duration 2s. [Fixed source and line references](zealot_backstab_kills_restore_cd.md#fixed-source-evidence) | Consistent | The current English describes hits, not the legacy internal name's kill requirement. |
 | Refresh, timer and resource cap | No stacking, custom timer phase or resource-cap details; `ui / loc_talent_zealot_cooldown_on_backstab_weakspot_desc / 169457dc` | Max 1; repeated hits refresh duration without necessarily resetting the timer. Two settlements add about 1.5 resource under the stated assumptions. [Fixed source and line references](zealot_backstab_kills_restore_cd.md#fixed-source-evidence) | Not covered by the description | These qualify recharge timing; they do not contradict the hit-based bonus. |
 
+
+<a id="zealot_crits_grant_cd"></a>
+
+## Invocation of Death
+
+Full raw template and formatting: [source evidence](zealot_crits_grant_cd.md#original-english-template-and-reconstruction). Name hash `c907a59f`. Every row uses `ui / loc_talent_maniac_cooldown_on_melee_crits_buff_desc / ec418944`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, regeneration and displayed precision | “+100% Ability Cooldown Regeneration for 3s on Melee Critical Hits.”; `ui / loc_talent_maniac_cooldown_on_melee_crits_buff_desc / ec418944` | Melee crit proc gives 1 additional resource/s; duration 3.25s, explicitly formatted with zero decimals. [Fixed source and line references](zealot_crits_grant_cd.md#fixed-source-evidence) | Consistent | The hit type and rate agree. Display precision explains 3 versus internal 3.25 without claiming exact in-game timing. |
+| Sweep gate and refresh timing | No per-sweep gate, refresh or timer-phase description; `ui / loc_talent_maniac_cooldown_on_melee_crits_buff_desc / ec418944` | One trigger per sweep; later sweeps can refresh duration without stacking the per-second rate; custom timer phase and resource cap remain relevant. [Fixed source and line references](zealot_crits_grant_cd.md#fixed-source-evidence) | Not covered by the description | The accepted three-tick example and limits supplement the regeneration statement. |
+
 ## Comparison totals
 
 33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.
