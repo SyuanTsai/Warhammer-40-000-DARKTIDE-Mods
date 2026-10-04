@@ -469,6 +469,18 @@ Full raw template and formatting: [source evidence](psyker_mark_increased_durati
 | Duration increase | Disrupt Destiny duration increases from 5s to 10s; `ui / loc_talent_psyker_mark_increased_duration_description / cacfbe0c` | The increased_duration clone sets duration = 10 rather than the base 5. [Fixed source and line references](psyker_mark_increased_duration.md#fixed-source-evidence) | Consistent | The stated values agree with the accepted Precision timer. |
 | Decay, refresh and exclusive variant | No changed cap, refresh removal or combined variant stated; `ui / loc_talent_psyker_mark_increased_duration_description / cacfbe0c` | Retains max_stacks 15 and both refresh flags; gained stacks or qualifying hits refresh. Three unrefreshed stacks decay at about 10/20/30s. increased_stacks takes priority over increased_duration, and the choices are mutually exclusive. [Fixed source and line references](psyker_mark_increased_duration.md#fixed-source-evidence) | Not covered by the description | The timer example and selection boundaries supplement the duration statement; the English does not claim all stacks expire together at ten seconds. |
 
+
+<a id="psyker_empowered_grenades_increased_max_stacks"></a>
+
+## Charged Up
+
+Full raw template and formatting: [source evidence](psyker_empowered_grenades_increased_max_stacks.md#original-english-template-and-reconstruction). Name hash `ae374526`. Every row uses `ui / loc_talent_psyker_increased_empowered_chain_lightning_stacks_description / 61957b58`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Usable storage cap | Hold up to three stacks of Empowered Psionics; `ui / loc_talent_psyker_increased_empowered_chain_lightning_stacks_description / 61957b58` | Actual charges are clamped from zero to max_stack_talent = 3. [Fixed source and line references](psyker_empowered_grenades_increased_max_stacks.md#fixed-source-evidence) | Consistent | The stated maximum is the accepted usable-charge cap. |
+| Visual stacks and per-use strength | No stronger individual empowerment or fourth usable charge stated; `ui / loc_talent_psyker_increased_empowered_chain_lightning_stacks_description / 61957b58` | Visual cap 3 + 1 supports event/visual handling; visual_stack_count returns min(stack_count, 3), max_stat_stacks is one. Each empowered Blitz still spends one, without scaling per-use strength by storage. [Fixed source and line references](psyker_empowered_grenades_increased_max_stacks.md#fixed-source-evidence) | Not covered by the description | These explain the accepted counter and example without turning internal visual bookkeeping into an extra charge. |
+
 ## Comparison totals
 
 The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.

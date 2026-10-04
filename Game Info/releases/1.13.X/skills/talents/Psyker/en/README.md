@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/d2ef8713-7c0b-4dec-b13a-7f9e6a294435" width="32" height="32" alt="Perfectionism talent icon"> [Perfectionism](#psyker_mark_increased_max_stacks) | <ul><li>Raises Disrupt Destiny's Precision cap from 15 to 25 stacks; per-stack effects and five-second one-stack decay remain unchanged. Choose either this or Lingering Influence.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="Purloin Providence talent icon"> [Purloin Providence](#psyker_mark_kills_can_vent) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy Quells five percentage points of Peril.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="Lingering Influence talent icon"> [Lingering Influence](#psyker_mark_increased_duration) | <ul><li>Extends Disrupt Destiny's Precision timer before each one-stack decay from five to ten seconds; choose either this or Perfectionism.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="Charged Up talent icon"> [Charged Up](#psyker_empowered_grenades_increased_max_stacks) | <ul><li>Raises Empowered Psionics storage from one to three stacks; each empowered Blitz still spends one, with unchanged per-use strength.</li></ul> | Keystone |
 
 ---
 
@@ -632,3 +633,17 @@
 - **Selection limit:** Choose either Lingering Influence or Perfectionism.
 
 [Details](psyker_mark_increased_duration.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_empowered_grenades_increased_max_stacks"></a>
+
+### Charged Up
+
+<img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="72" height="72" alt="Charged Up talent icon">
+
+- **How it works:** Empowered Psionics' storage cap rises from one to three stacks. Each empowered Blitz still spends one; storing more stacks does not increase a single empowerment's multiplier.
+
+- **Stack example:** At two stacks, gaining one gives `2 + 1 = 3`. At three, another gain leaves the count at three.
+
+[Details](psyker_empowered_grenades_increased_max_stacks.md) · [Back to index](#talent-index)
