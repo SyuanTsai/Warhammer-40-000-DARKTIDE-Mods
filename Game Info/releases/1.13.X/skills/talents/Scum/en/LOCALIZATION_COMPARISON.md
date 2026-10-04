@@ -458,6 +458,18 @@ Full raw template and formatting: [source evidence](broker_passive_close_ranged_
 | Near/far amounts and distances | +25% Ranged Damage within 12.5 m, scaling down to a minimum of +10% at 30 m and beyond; `ui / loc_talent_broker_passive_close_ranged_damage_desc / be48df80` | The conditional stats supply near 0.25 and far 0.1, with the accepted range endpoints 12.5 m and 30 m. [Fixed source and line references](broker_passive_close_ranged_damage.md#fixed-source-evidence) | Consistent | The English correctly states both endpoints and the minimum beyond the far range. |
 | Wielded-slot condition and interpolation | No separate wielded-slot condition, square-root formula, or additive stage is stated; `ui / loc_talent_broker_passive_close_ranged_damage_desc / be48df80` | `wielded_slot == slot_secondary` enables both stats; `distance_damage_buff` uses square-root interpolation and adds to general `damage_stat_buffs`. [Fixed source and line references](broker_passive_close_ranged_damage.md#fixed-source-evidence) | Not covered by the description | Ranged Damage does not explicitly define an exclusive attack-type check. The accepted condition and formula complete the description. |
 
+
+<a id="broker_passive_restore_toughness_on_weakspot_kill"></a>
+
+## Precision Violence
+
+Full raw template and formatting: [source evidence](broker_passive_restore_toughness_on_weakspot_kill.md#original-english-template-and-reconstruction). Name hash `f58949f3`. Every row uses `ui / loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc / d91c10cd`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee hit types and recovery values | Melee Hits replenish 4%; Critical Strikes or Weakspot Hits instead replenish 8%; Critical Weakspot Strikes replenish 12%; `ui / loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc / d91c10cd` | Eligible Melee hits use the corresponding full recovery percentage, without requiring a kill. [Fixed source and line references](broker_passive_restore_toughness_on_weakspot_kill.md#fixed-source-evidence) | Consistent | The English's hit conditions and replacement values match the accepted mechanism. |
+| Same-attack gate and recovery limits | No same-attack tracking, instakill exclusion, or recovery-basis details are stated; `ui / loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc / d91c10cd` | Only a higher percentage triggers again in the same attack, but it restores the full value: 4→8→12 can total 24%, whereas 12→8/4 adds nothing. Recovery excludes `is_instakill`, uses maximum Toughness and recovery modifiers, and caps at the deficit. [Fixed source and line references](broker_passive_restore_toughness_on_weakspot_kill.md#fixed-source-evidence) | Not covered by the description | The English does not promise a 12% per-swing cap or recovery from every cleaved target. These are supplementary constraints. |
+
 ## Comparison totals
 
 The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

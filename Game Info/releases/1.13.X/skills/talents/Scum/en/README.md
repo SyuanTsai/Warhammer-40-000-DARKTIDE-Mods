@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="Quick and Deadly talent icon"> [Quick and Deadly](#broker_passive_close_range_damage_on_dodge) | <ul><li>After a Successful Dodge, gain 15% Close Range Damage for 3 seconds; the bonus falls off with distance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="A Tertium Welcome talent icon"> [A Tertium Welcome](#broker_passive_first_target_damage) | <ul><li>Each Melee attack deals 15% more Melee Damage to its first Enemy hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="In Your Face talent icon"> [In Your Face](#broker_passive_close_ranged_damage) | <ul><li>While wielding a Ranged weapon, gain 25% Damage within 12.5 metres, falling off to 10% at 30 metres and beyond.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="Precision Violence talent icon"> [Precision Violence](#broker_passive_restore_toughness_on_weakspot_kill) | <ul><li>Melee hits restore 4% of maximum Toughness; Critical or Weakspot hits instead restore 8%, and Critical Weakspot hits restore 12%.</li></ul> | Talent |
 
 ---
 
@@ -664,3 +665,17 @@
 - **Damage example**: at 16.875 metres, the falloff factor is √((16.875 − 12.5) ÷ 17.5) = 0.5. The bonus is 25% + (10% − 25%) × 0.5 = 17.5%. Base Damage of 100 becomes 117.5; with an existing 25% bonus at the same stage, the result is 100 × (1 + 25% + 17.5%) = 142.5.
 
 [Details](broker_passive_close_ranged_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_restore_toughness_on_weakspot_kill"></a>
+
+### Precision Violence
+
+<img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="72" height="72" alt="Precision Violence talent icon">
+
+- **Recovery amount**: ordinary Melee hits restore 4% of maximum Toughness; Critical or Weakspot hits instead restore 8%, and hits that are both Critical and on a Weakspot restore 12%. A kill is not required. Direct instakills from special executions do not trigger this effect.
+- **Same swing**: a later target triggers recovery again only when its recovery percentage exceeds the percentage already recorded for this attack. Equal percentages do not repeat recovery for every target.
+- **Recovery example**: with 100 maximum Toughness, hitting an ordinary target and then a Weakspot restores 4 points followed by 8, for 12 total. A subsequent Critical Weakspot hit in the same attack can restore another 12 points. Each recovery is capped by the deficit; if only 5 points are missing, it restores at most 5.
+
+[Details](broker_passive_restore_toughness_on_weakspot_kill.md) · [Back to index](#talent-index)
