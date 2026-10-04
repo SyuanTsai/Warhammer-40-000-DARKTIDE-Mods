@@ -624,6 +624,18 @@ Full raw template and formatting: [source evidence](cryptic_multi_hits_restore_t
 | Attack threshold, amount and duration | Hitting 3 or more enemies with an Attack restores 10% Toughness over 3s; `ui / loc_talent_cryptic_multi_hits_restore_toughness_desc / 6db4bbd5` | The third valid target triggers `0.1` recovery over 3 seconds [Fixed source and line references](cryptic_multi_hits_restore_toughness.md#fixed-source-evidence) | Consistent | Reaching the third target satisfies 3 or more; later targets do not imply additional stacks. |
 | Hit counting, refresh and recovery limits | Does not specify the counter, damage-type filter, trigger interval, denominator or refreshing; `ui / loc_talent_cryptic_multi_hits_restore_toughness_desc / 6db4bbd5` | Use positive `target_number`, otherwise `target_index`, equal to 3; no damage-type filter. Minimum interval 0.25 seconds, duration refreshed without parallel effects; maximum-Toughness recovery respects bonuses and the cap [Fixed source and line references](cryptic_multi_hits_restore_toughness.md#fixed-source-evidence) | Not covered by the description | These conditions and the 150-Toughness example supplement the English. |
 
+
+<a id="cryptic_stamina_increases_damage"></a>
+
+## Channelled Motive Force
+
+Full raw template and formatting: [source evidence](cryptic_stamina_increases_damage.md#original-english-template-and-reconstruction). Name hash `a201b166`. Every row uses `ui / loc_talent_cryptic_stamina_increases_damage_desc / 0a1fb7eb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Spending threshold, bonus and duration | Spending 1 Stamina grants +15% Damage for 4s; `ui / loc_talent_cryptic_stamina_increases_damage_desc / 0a1fb7eb` | Each accumulated Stamina bar spent activates `damage = 0.15` for 4 seconds [Fixed source and line references](cryptic_stamina_increases_damage.md#fixed-source-evidence) | Consistent | The threshold and effect values agree; the wording does not require one uninterrupted expenditure. |
+| Accumulation and damage calculation | Does not state the bar unit, recovery handling, maximum changes, remainder or refreshing; `ui / loc_talent_cryptic_stamina_increases_damage_desc / 0a1fb7eb` | Positive differences accumulate; maximum-Stamina changes are excluded. Subtract 1 on activation and retain the remainder. Recovery does not erase spending; one stack refreshes. Same-stage bonuses add [Fixed source and line references](cryptic_stamina_increases_damage.md#fixed-source-evidence) | Not covered by the description | The preserved 0.4 + 0.6 trigger and 100 × (1 + 25% + 15%) = 140 example supplement the English. |
+
 ## Comparison totals
 
 105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.
