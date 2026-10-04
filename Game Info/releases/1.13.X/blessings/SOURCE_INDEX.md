@@ -64,3 +64,4 @@
 | [湧動](entries/湧動/README.md) | [來源索引](entries/湧動/SOURCE_INDEX.md) |
 | [狂轟猛炸](entries/狂轟猛炸/README.md) | [來源索引](entries/狂轟猛炸/SOURCE_INDEX.md) |
 | [開啟齊射](entries/開啟齊射/README.md) | [來源索引](entries/開啟齊射/SOURCE_INDEX.md) |
+| [迅捷火焰](entries/迅捷火焰/README.md) | [來源索引](entries/迅捷火焰/SOURCE_INDEX.md) |

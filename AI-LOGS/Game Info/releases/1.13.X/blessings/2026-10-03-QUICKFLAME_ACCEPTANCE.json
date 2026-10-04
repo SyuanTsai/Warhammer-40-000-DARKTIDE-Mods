@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-04",
+  "blessing": "quickflame",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "quickflame",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-formal-peer-scope.json",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file_count": 20,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-config.json": "4559ee534629cf3443070d0cad0af7d0757c7032b4d7cf91e84236402d088eb9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-extension-draft.json": "f578f47d67ef3c4b4b797cfa0879b1dc708e541b03d2fb2921293f2fcc915bee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-image.json": "a5816b07bfb74690032cca573942878192f0434d9b473e40e159eafe8593e35a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-own-tier-diff.json": "20be98fd5859047df6fa43d28d0e8169bb206f7675ee654ef4f51c00b2b40ce3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-resume-review.json": "9d3d2d37faf148ccb691e466cf41b89e03f16b3e9a7b52a1ee11f6ed8c4c41d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-start-scale-review.json": "e30e26b0ad331d3438c6aad32d75fe56df2b8ac5e42446d76993f304a7885bcc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-ui-review.json": "ac1610e1706c2134495f98c5e2904f2464217d8013bc4cad2aad6dc31c2c4130",
+      "Game Info/releases/1.13.X/blessings/README.md": "64a5203bbf0e3da9b9765b9251649f0c6963395569fbcb1894c273d9f195143f",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bb90ae1e8febfcce601fe79796219519d62a2ba148d8f4f16bc07b9ae79a03c9",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "fd07e92a470339e15c592dbb3a8cd0456e2274583fa89930df2d89a29bce30e4",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/DAMAGE_PERCENTAGE_REVIEW.md": "ec776131ef6d78d7aa93b6b118044a1f2540f040018010c656a93f941a8da0f6",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/LOCALIZATION_COMPARISON.md": "e8812ecbdf07d7c2e844340e21c919ce2a56b481e7fed162b46ddcd875092741",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/README.md": "274834efad31ee9f59f8baf5bccf739cbcd11c7afcc7f45deb910a495558d7ca",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/SOURCE_INDEX.md": "69b2296ef53bdc9b30f0decdfa551e655b31ba7fba6428a4ac1987dea708bea3",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/TIER_VALUES.md": "f3ee0b9847359d6b9e8ef77e16a2b4987afab3ddb5422984e85898ffe50e0358",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/WEAPON_COMPATIBILITY.md": "fc233f001931b3b0e28599b3a7f04219cb7c66be641d9903d67550c9ee2ce1b3",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip.md": "38f0097f015da35d06320345a4e6c4522805a3c6e6a4a461f01aba7213d2fb1c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "63b69dd90d5d6fc65ed328cb99a40e5ba3966a45de30e0ac7d057ead1e04d04b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/淨化噴火器/README.md": "82ccb90492e4753eb8e120ea37499bd139081575e0ff1d142918d23d819054d3",
+      "Referneces/Translation.md": "038ccdb371e98a761cd238c4d9590e2ecb56f1cf33317bb4c28d6c31ba961e2b"
+    },
+    "content_review": [
+      {
+        "topic": "inventory and kind",
+        "result": "pass",
+        "finding": "One actual variant, weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip, and one binding flamer_p1/flamer_p1_m1; kind ranged. The weapon map and reverse page point to the same entry and model."
+      },
+      {
+        "topic": "UI, metadata, binding and icon identity",
+        "result": "pass",
+        "finding": "Actual UI name is 淨化噴火器 奧特米亞 Mk III / Purgation Flamer Artemia Mk III; family/pattern/mark RAW fields and actual import/append agree. Icon ID weapon_trait_165, resource path content/ui/textures/icons/traits/weapon_trait_165, and attachment URL are kept as distinct fields."
+      },
+      {
+        "topic": "tier, wrapper and trigger",
+        "result": "pass",
+        "finding": "Own I–IV reload_speed modifiers are .24/.28/.32/.36 and the wrapper clones the empty-clip base. The same-key own modifier replaces the conditional 1.5 fallback. The predicate requires the bound weapon held, clip ammo <= 0, and current action not reloading."
+      },
+      {
+        "topic": "actual firing and last-round ordering",
+        "result": "pass",
+        "finding": "Both actual Flamer action classes derive from ActionShoot and their own fixed_update overrides call the superclass. The reviewed system order means the final round is spent later in the weapon update; the next fixed update refreshes the empty/non-reloading stat cache before the actual clip_empty reload chain reads it. The prose is limited to this bound weapon path and does not claim same-update reload start."
+      },
+      {
+        "topic": "ammo and special-action limits",
+        "result": "pass",
+        "finding": "Ordinary reserve-ammo eligibility remains required and the blessing grants no ammunition. Unbraced burst and braced continuous firing can empty the clip and chain into reload; push itself does not consume the bonus, while a subsequent eligible reload may. The no-ammo transition condition is bounded to the reviewed mark."
+      },
+      {
+        "topic": "saved reload scale, phases and interruption",
+        "result": "pass",
+        "finding": "The reload action samples the current cached reload-speed contribution when it starts and retains that action time_scale for phase thresholds and interruption/finish handling; later condition removal does not recompute this action. Switching/restarting is described as a new action using then-current conditions."
+      },
+      {
+        "topic": "speed-versus-duration examples",
+        "result": "pass",
+        "finding": "With neutral handling/other modifiers/caps, +36% speed yields 4/1.36 ≈ 2.94 seconds, a 26.47% time reduction. With existing +20%, additive speed yields 4/1.56 ≈ 2.56 seconds, 23.08% less time than 4/1.20; it is not multiplicative stacking."
+      },
+      {
+        "topic": "RAW, formatter and rules",
+        "result": "pass",
+        "finding": "English and zh-TW description share the verified d39317a1 key/hash. The static reconstruction preserves the exact RAW word 彈夾; player-facing text uses 彈匣. Tier formatter values and trigger are consistent; omitted implementation detail is classified 文件未涵蓋 and no unsupported erratum is asserted."
+      },
+      {
+        "topic": "formal-page and shared-index consistency",
+        "result": "pass",
+        "finding": "All seven formal pages agree with the approved config/draft on effect, tiers, weapon restriction, player wording, and examples. Global/ranged/reverse weapon indexes link to the same Quickflame entry and matching effect/icon; map has one variant and one actual binding. The reviewed image receipt confirms the published icon asset."
+      },
+      {
+        "topic": "review status",
+        "result": "pass",
+        "finding": "The requested model is gpt-6-luna at max reasoning effort. FASTER remains unconfirmed and is not claimed enabled."
+      }
+    ],
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/迅捷火焰/weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip.md"
+    ],
+    "review_basis": "Fixed Release 1.13.1 source SHA and the 20-file scope manifest; current file hashes were recomputed with Python and matched exactly. Formal pages were checked against the approved config/draft and the scoped UI, tier, resume, start-scale, and image receipts."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "quickflame",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_165",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_165.png",
+      "attachment": "https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976088617",
+      "acquired_date": "2026-10-04",
+      "sha256": "1c8c8680629bd7e9bb2017e5b1f3c813e4ecd8822584ef67a2890c2be677bee7",
+      "content_type": "image/png",
+      "size": 4800,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "迅捷火焰祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "original_and_public_visually_identical": true,
+      "alpha_inspection_verified": true,
+      "visual_description": "原圖與公開下載一致：罐體與向下箭形，白色灰階圖案；另檢視兩份alpha通道診斷圖，未變更原圖或附件。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 226,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 53,
+      "source_files": 23,
+      "bindings": 420,
+      "variants": 220,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 23,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 529,
+      "remote_references": 290,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 10,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-009-full-scan.json",
+        "sha256": "9480b3465b6d2b5f7f942ccda418b160560e8ed6fa746fc8f6a603e666c69f52",
+        "trigger": "round-009"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 108,
+    "not_started_name_groups": 108,
+    "partial_name_groups": 0,
+    "remaining_variants": 385,
+    "remaining_bindings": 765,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "9794efbe4227bf1a694d7a226e6776fc35a3457dd248face040c8bf959c014d4"
+  },
+  "previous_local_commit": "639cdf3551020d10d2ce892e218e38279c34aaaa",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "own_tier_override_replaces_conditional_fallback": true,
+    "speed_additive_not_duration_percentage": true,
+    "time_scale_saved_at_action_start": true,
+    "auto_empty_clip_chain_after_cache_refresh": true,
+    "flamer_gas_classes_delegate_super_fixed_update": true,
+    "phase_threshold_and_finish_interruption_reviewed": true,
+    "examples_reviewed": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-extension-draft.json",
+      "sha256": "f578f47d67ef3c4b4b797cfa0879b1dc708e541b03d2fb2921293f2fcc915bee"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-ui-review.json",
+      "sha256": "ac1610e1706c2134495f98c5e2904f2464217d8013bc4cad2aad6dc31c2c4130"
+    },
+    "bindings": [
+      {
+        "weapon_id": "flamer_p1",
+        "mark_id": "flamer_p1_m1",
+        "trait_id": "weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_flamer_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_flamer_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_flamer_p1_m1"
+        },
+        "name_zh_tw": "淨化噴火器 奧特米亞 Mk III",
+        "name_en": "Purgation Flamer Artemia Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 745,
+        "append_line": 747
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-resume-review.json",
+      "sha256": "9d3d2d37faf148ccb691e466cf41b89e03f16b3e9a7b52a1ee11f6ed8c4c41d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-own-tier-diff.json",
+      "sha256": "20be98fd5859047df6fa43d28d0e8169bb206f7675ee654ef4f51c00b2b40ce3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-start-scale-review.json",
+      "sha256": "e30e26b0ad331d3438c6aad32d75fe56df2b8ac5e42446d76993f304a7885bcc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickflame-primary-ui-review.json",
+      "sha256": "ac1610e1706c2134495f98c5e2904f2464217d8013bc4cad2aad6dc31c2c4130"
+    }
+  ],
+  "primary_review_method": "Reuse fixed-SHA common mechanisms where applicable; directly review own tier versus conditional fallback, empty/nonreload predicate, actual Flamer superclass delegation, ordered Buff/character/weapon last-shot automatic reload cache, saved reload time_scale and phase/interruption thresholds, RAW formatter and speed-versus-time examples. Fixed final peer scope unchanged.",
+  "previous_objects_unchanged": {
+    "blessings": 58,
+    "variants": 219,
+    "bindings": 419,
+    "all_previous_weapon_records": true
+  },
+  "shared_execution_log_carry": "Includes previously successful round009 full-scan receipt only; unrelated audit record excluded from fixed gameplay peer scope."
+}

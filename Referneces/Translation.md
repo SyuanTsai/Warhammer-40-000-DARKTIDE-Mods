@@ -467,6 +467,7 @@
 - Everlasting Flame - 永燃烈焰
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_spent_from_reserve_on_crit`，hash `fc0e6843`；英文／繁中RAW配對確認。
 - Quickflame - 迅捷火焰
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_reload_on_empty_clip`，hash `13547a5e`；英文／繁中RAW配對確認。
 - Fan the Flames - 煽風點火
 - Overpressure - 超壓
 - Hot-Shot - 激射
