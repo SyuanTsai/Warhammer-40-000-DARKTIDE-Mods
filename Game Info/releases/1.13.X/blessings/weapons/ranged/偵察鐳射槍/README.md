@@ -6,13 +6,14 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120" width="32" height="32" alt="達姆彈祝福圖示"> [達姆彈](../../../entries/達姆彈/README.md)<br>- Dumdum<br>[完整說明](../../../entries/達姆彈/README.md) | <ul><li>每層4.5／5／5.5／6%，5層，距離衰減相同</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5" width="32" height="32" alt="遊擊祝福圖示"> [遊擊](../../../entries/遊擊/README.md)<br>- Hit & Run<br>[完整說明](../../../entries/遊擊/README.md) | <ul><li>使用此武器在12.5公尺內完成遠程擊殺，短暫獲得遠程閃避判定；I–IV持續0.7／0.8／0.9／1.0秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6" width="32" height="32" alt="懲罰齊射祝福圖示"> [懲罰齊射](../../../entries/懲罰齊射/README.md)<br>- Punishing Salvo<br>[完整說明](../../../entries/懲罰齊射/README.md) | <ul><li>弱點命中且計數1–3時，額外弱點傷害部分提高35–50%。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 偵察鐳射槍 奧克塔蘭 Mk VIc | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
-| 偵察鐳射槍 奧克塔蘭 Mk XII | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
-| 偵察鐳射槍 奧克塔蘭 Mk XIV | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
+| 偵察鐳射槍 奧克塔蘭 Mk VIc | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md)、[懲罰齊射](../../../entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md) | I–IV |
+| 偵察鐳射槍 奧克塔蘭 Mk XII | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md)、[懲罰齊射](../../../entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md) | I–IV |
+| 偵察鐳射槍 奧克塔蘭 Mk XIV | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md)、[懲罰齊射](../../../entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

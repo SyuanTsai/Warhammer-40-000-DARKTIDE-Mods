@@ -861,6 +861,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57",
       "effect": "以穿音速雙刀的特殊啟動或解除斬擊命中後，I–IV 級近戰威力輸入增加 +15%／+20%／+25%／+30%；依掃掠完成次數扣除，通常觸發掃掠結束後尚可作用於 3 次掃掠。推擊不適用。"
+    },
+    {
+      "id": "punishing-salvo",
+      "name_zh_tw": "懲罰齊射",
+      "name_en": "Punishing Salvo",
+      "name_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage",
+      "description_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage_desc",
+      "name_hash": "dbf6f0e3",
+      "description_hash": "2542f790",
+      "page": "entries/懲罰齊射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+      "effect": "命中弱點且符合齊射計數時，I–IV級提高35／40／45／50%弱點加成部分；不是整筆遠程傷害。"
     }
   ],
   "weapons": [
@@ -14886,6 +14899,164 @@
       "icon": "https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_248",
       "effect": "以穿音速雙刀的特殊啟動或解除斬擊命中後，I–IV 級近戰威力輸入增加 +15%／+20%／+25%／+30%；依掃掠完成次數扣除，通常觸發掃掠結束後尚可作用於 3 次掃掠。推擊不適用。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "autogun_p1",
+      "page": "entries/懲罰齊射/weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "actual_mark_ids": [
+          "autogun_p1_m1",
+          "autogun_p1_m2",
+          "autogun_p1_m3"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.35,
+          "II": 0.4,
+          "III": 0.45,
+          "IV": 0.5
+        },
+        "display_percent_by_level": {
+          "I": 35,
+          "II": 40,
+          "III": 45,
+          "IV": 50
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "wrapper_fallback": 0.2,
+        "tier_replaces_fallback": true,
+        "use_combo": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 616,
+        "end_line": 655
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 46,
+        "end_line": 46
+      },
+      "description_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage_desc",
+      "description_hash": "2542f790",
+      "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "弱點命中且計數1–3時，額外弱點傷害部分提高35–50%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "actual_mark_ids": [
+          "lasgun_p3_m1",
+          "lasgun_p3_m2",
+          "lasgun_p3_m3"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.35,
+          "II": 0.4,
+          "III": 0.45,
+          "IV": 0.5
+        },
+        "display_percent_by_level": {
+          "I": 35,
+          "II": 40,
+          "III": 45,
+          "IV": 50
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "wrapper_fallback": 0.2,
+        "tier_replaces_fallback": true,
+        "use_combo": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 238,
+        "end_line": 277
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage_desc",
+      "description_hash": "2542f790",
+      "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "弱點命中且計數1–3時，額外弱點傷害部分提高35–50%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/懲罰齊射/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+        "actual_mark_ids": [
+          "shotgun_p4_m1",
+          "shotgun_p4_m2"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.35,
+          "II": 0.4,
+          "III": 0.45,
+          "IV": 0.5
+        },
+        "display_percent_by_level": {
+          "I": 35,
+          "II": 40,
+          "III": 45,
+          "IV": 50
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "wrapper_fallback": 0.2,
+        "tier_replaces_fallback": true,
+        "use_combo": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 788,
+        "end_line": 827
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 47,
+        "end_line": 48
+      },
+      "description_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage_desc",
+      "description_hash": "2542f790",
+      "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "弱點命中且combo_count為1–3時，額外弱點傷害部分提高35–50%；分批結算可使轉場首殼符合。"
     }
   ],
   "bindings": [
@@ -20823,6 +20994,118 @@
         "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
         "import_line": 16,
         "append_line": 3179
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "punishing-salvo",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/followup_shots_ranged_weakspot_damage",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
       }
     }
   ]

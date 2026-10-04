@@ -1,0 +1,528 @@
+{
+  "date": "2026-10-04",
+  "blessing": "punishing-salvo",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+    "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+    "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage"
+  ],
+  "added_binding_count": 8,
+  "total_variants": 3,
+  "total_bindings": 8,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "punishing-salvo-formal-agent-review",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 29,
+      "formal_markdown_count": 16,
+      "scope_manifest_sha256": "07e321ba9298bfc324bd52a8abc32bc0aea7ccf6bf427d3de391a373fe72f2a2",
+      "description": "Fixed one blessing formal pages, actual map/reverse/index/translation relations and root canonical/own proofs. Accepted unchanged common mechanisms reused by applicability; no unrelated execution logs.",
+      "formal_entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md",
+        "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage.md"
+      ],
+      "reverse_weapon_pages": [
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md"
+      ]
+    },
+    "reviewed_associations": {
+      "name_key": "loc_trait_bespoke_followup_shots_ranged_weakspot_damage",
+      "variant_ids": [
+        "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage"
+      ],
+      "weapon_ids": [
+        "autogun_p1",
+        "lasgun_p3",
+        "shotgun_p4"
+      ],
+      "binding_count": 8,
+      "actual_mark_ids": [
+        "autogun_p1_m1",
+        "autogun_p1_m2",
+        "autogun_p1_m3",
+        "lasgun_p3_m1",
+        "lasgun_p3_m2",
+        "lasgun_p3_m3",
+        "shotgun_p4_m1",
+        "shotgun_p4_m2"
+      ],
+      "actual_names_zh_tw": [
+        "步兵自動槍 阿格里皮娜 Mk I",
+        "步兵自動槍 弗拉克斯 Mk V",
+        "步兵自動槍 哥倫努 Mk VIII",
+        "偵察鐳射槍 奧克塔蘭 Mk VIc",
+        "偵察鐳射槍 奧克塔蘭 Mk XII",
+        "偵察鐳射槍 奧克塔蘭 Mk XIV",
+        "滅絕者霰彈槍 鐵腕 Mk III",
+        "滅絕者霰彈槍 鐵腕 Mk VIII"
+      ],
+      "image": {
+        "icon_id": "weapon_trait_030",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+        "attachment": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6"
+      },
+      "config_draft_equal": true
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "Counter and cache timing",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/README.md:9-27",
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage.md",
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md",
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage.md"
+        ],
+        "conclusion": "Accepted. Auto/Las use num_shots 1–3 with cache timing stated separately: after a settled clear, the first shot is count 0 and shots 2–4 qualify; a body hit or miss still consumes the shot count. P4 clones the weakspot wrapper and sets use_combo=true; ordinary idle-start count 0 differs from reload/special-load/aim transition first-shell count 1. Its final pellet batch reads then-current live stats, so the transition-shell exception is conditional on crossing the Buff update; post-action combo clearing is strict >0.2 seconds and distinct from the shotgun spread timer."
+      },
+      {
+        "topic": "Damage formula",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/DAMAGE_PERCENTAGE_REVIEW.md:5",
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/README.md:31-37"
+        ],
+        "conclusion": "Accepted. Tier IV adds 0.50 to the ranged_weakspot_damage coefficient on the merged weakspot-plus-critical base_finesse_damage extra portion W: W_after=W×(1+q+r). Same-class coefficients add; the example 100×(1+0.20+0.50)=170 is consistent with a 120 baseline extra portion, and the basic damage B/final whole hit is not multiplied by this coefficient."
+      },
+      {
+        "topic": "Own tiers and RAW reconstruction",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/TIER_VALUES.md",
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/LOCALIZATION_COMPARISON.md"
+        ],
+        "conclusion": "Accepted. All three variants use I–IV 35/40/45/50%; the own tier conditional values and P4 use_combo override are represented. English and Traditional Chinese keys/hashes match the fixed source; each tier reconstruction states the exact Second, Third and Fourth shots wording and its localized counterpart. The documented P4 transition first-shell case is narrowly stated as the implementation exception to RAW ordinals."
+      },
+      {
+        "topic": "Actual bindings, reverse pages and image",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/WEAPON_COMPATIBILITY.md",
+          "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+          "Referneces/Translation.md"
+        ],
+        "conclusion": "Accepted. Three full trait IDs resolve to the eight UI-reviewed marks (3 Autogun, 3 Recon Lasgun, 2 Exterminator Shotgun); model names, import/ukey/append paths and map/reverse/index relations agree. The config and generated extension configuration are byte-structure equivalent as JSON. The icon ID/path and verified image attachment are separate fields."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-config.json",
+      "extension_configuration": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-extension-draft.json#configuration",
+      "equal": true,
+      "complete_trait_ids": true
+    },
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/README.md": "b297cba2cc2ad2a62c2f7acea092cdd184fe902b4f1d9d149028d7b9e29707b5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6e6799648e9c5afb65ebe2ea5b11ccba5d61719b515ad0bce1b5ec4594df6ff7",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "28446a2ee025ee5502be9299f3e188e4182570775a177a1c7ff81e90ce13e18f",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "44dbe45c663a8ef08121ff775fd727f09475e5e1287fc873c3ca6eb080943729",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "297330a630c155fac111e803a7dba4f6b2384e081b3ea078c7b9654b635a89c3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "4ba588e184b8740627f84ca85a5080280c04cbbe230b57888d7c10cb5a126d73",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "6934fa79e3e5402a4d0af7cfa61e2188dc2eff5aef5cd3795711b03c5bb4d253",
+      "Referneces/Translation.md": "fcf9e8968b610801083c03c8769d0357b4dd1fcd1cebc6e5a6d48d89b130903a",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/DAMAGE_PERCENTAGE_REVIEW.md": "d0715c63dd0f3b328f7c5d965939766e754c7a7eda189e5c97646468d9ca6b15",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/LOCALIZATION_COMPARISON.md": "a96b1d4194ff6c7a94c3900e9c00572252c39ec0ea5c8eeca1472dec4ceb35ca",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/README.md": "a84ef27527a5bfafbca30eddb3434e61635ba3c633cbf13e447aa89eacb84afc",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/SOURCE_INDEX.md": "ccd0309be23c3ffee1bc057e5bd0a214ceb17f4790461a53985bc6e767e57c43",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/TIER_VALUES.md": "da5c249581a1ab433ec5c272ea8f7d7453b36a593381bbfce5e0d159f34aebcf",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/WEAPON_COMPATIBILITY.md": "c772e8fdabdb1f25b3ffe08e1696e4a5ef05a5bd2cef1320830ad77fd557a2da",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage.md": "cf596b53919c7ad79bb601b2d76006366ddf06ac68f694b63450855e84aaf113",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage.md": "b3674d1c1446d5cde8913c6306dc93739d94679e3427cb66cc82272d1191b908",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰齊射/weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage.md": "80470db2bc83233cb59f61ce0d736a8fa01fee3b40e6e47feceb539a2d733b42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-config.json": "fd873422d3ceab8bb0249970d29a2bb545e1c16a2a68b161ea21ebbf673c5857",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-extension-draft.json": "42d7453b28caefd5e1dbd85d4b4b285e97a372ced664929044b6d2a549f8d810",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-resume-review.json": "f645ec2f33acc813ea539cd9e1f99e9239dfcbe045b6abd436de3c1146de81fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-own-tier-diff.json": "799a728fffbeb1e504e0f2051f80d717cff5f20239a64d687d40d955c55b7599",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-ui-review.json": "a15d70fe8f5fb8e2c669c66f32ee5e0d95755219da6f9a5d242eb8b8720235c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-consumer-review.json": "cc32c54d1367ab4ca07f8b7fb68e6f66283d2e344c968b70ed5b6e1c120dd19d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-pellet-review.json": "cfa5a1e40cfa9087aa67889b97a04bf9d5ffc16d36446b2ebcf7d4f49b582e0c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-counter-diff-review.json": "8c09057419d3dc8f284759b41c5155f635ab26905568ae1f6164083bc12fd981",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-image.json": "46c704bbb5ac5bcd8b6a86b25fb94091c0f113c25ea337a235474d9912ef15e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-agent-config.json": "7d9c227dfe8c767ba49d7858cb251859baa28eca0f5eb3899520c760364f1430",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-agent-evidence.json": "43181724f4eb1a33fc234dc5af230cbf512b9a690e9dafd366daa04864928578",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-agent-draft.md": "60e1de5c08d22e3c8d583b93439e7c9bf6c70420a739d8d68f6b0cc26fc0842b"
+    },
+    "scope_file_sha256": "07e321ba9298bfc324bd52a8abc32bc0aea7ccf6bf427d3de391a373fe72f2a2"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "punishing-salvo",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_030.png",
+      "attachment": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976538146",
+      "acquired_date": "2026-10-04",
+      "sha256": "28aee042845c7be6e3300f0bde1b5d80cdd49f5fd1033d2cbc649cc8b4a24598",
+      "content_type": "image/png",
+      "size": 5121,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "懲罰齊射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_validation": "Original and public128x128 PNG visually matched; central skull surrounded by directional projectiles/arrows, alpha diagnostic confirms identical shapes; original assets unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 15,
+      "rows": 310,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 99,
+      "source_files": 38,
+      "bindings": 432,
+      "variants": 227,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 38,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 629,
+      "remote_references": 373,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 11,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-010-full-scan.json",
+        "sha256": "de5d8373fa4cade0e0cdc498eede92f70774d095a9a5aa7dfd4e42d57b4f991f",
+        "trigger": "round-010"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 103,
+    "not_started_name_groups": 103,
+    "partial_name_groups": 0,
+    "remaining_variants": 378,
+    "remaining_bindings": 753,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b7f01e267a1d7107b1d78746d2e375ef2eb87d00b2325c4f7a59d80a2e3dbd33"
+  },
+  "previous_local_commit": "311de37faaa929d679bc1924f61fc8b35a9baebf",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "method": "Root own tiers/wrappers/actual UI and delta content review; cache evidence reused under verified prerequisites",
+    "formula": "W*(1+q+r), W is merged critical+weakspot finesse extra, not finalhit",
+    "tiers": [
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "fallback_replaced_not_added": true,
+    "own_counter_differences": {
+      "autogun_p1": "num_shots1–3; hip.1 ADS.25",
+      "lasgun_p3": "num_shots1–3; hip.5 ADS1",
+      "shotgun_p4": "combo1–3, postaction strict>.2; transition first shell exceptions and live final pellet batch"
+    },
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-own-tier-diff.json",
+        "sha256": "799a728fffbeb1e504e0f2051f80d717cff5f20239a64d687d40d955c55b7599"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-ui-review.json",
+        "sha256": "a15d70fe8f5fb8e2c669c66f32ee5e0d95755219da6f9a5d242eb8b8720235c9"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-consumer-review.json",
+        "sha256": "cc32c54d1367ab4ca07f8b7fb68e6f66283d2e344c968b70ed5b6e1c120dd19d"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-pellet-review.json",
+        "sha256": "cfa5a1e40cfa9087aa67889b97a04bf9d5ffc16d36446b2ebcf7d4f49b582e0c"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-counter-diff-review.json",
+        "sha256": "8c09057419d3dc8f284759b41c5155f635ab26905568ae1f6164083bc12fd981"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-image.json",
+        "sha256": "46c704bbb5ac5bcd8b6a86b25fb94091c0f113c25ea337a235474d9912ef15e8"
+      }
+    ],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-extension-draft.json",
+      "sha256": "42d7453b28caefd5e1dbd85d4b4b285e97a372ced664929044b6d2a549f8d810"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 8,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-ui-review.json",
+      "sha256": "a15d70fe8f5fb8e2c669c66f32ee5e0d95755219da6f9a5d242eb8b8720235c9"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_autogun_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_autogun_p1_m1"
+        },
+        "name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+        "name_en": "Infantry Autogun Agripinaa Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      },
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_autogun_p1_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p1_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_autogun_p1_m2"
+        },
+        "name_zh_tw": "步兵自動槍 弗拉克斯 Mk V",
+        "name_en": "Infantry Autogun Vraks Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 764,
+        "append_line": 766
+      },
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_autogun_p1_m3",
+          "weapon_pattern_display_name": "loc_weapon_pattern_autogun_p1_m3",
+          "weapon_mark_display_name": "loc_weapon_mark_autogun_p1_m3"
+        },
+        "name_zh_tw": "步兵自動槍 哥倫努 Mk VIII",
+        "name_en": "Infantry Autogun Columnus Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 765,
+        "append_line": 767
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_lasgun_p3_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_lasgun_p3_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_lasgun_p3_m1"
+        },
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk VIc",
+        "name_en": "Recon Lasgun Accatran Mk VIc",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 730,
+        "append_line": 732
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_lasgun_p3_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_lasgun_p3_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_lasgun_p3_m2"
+        },
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk XII",
+        "name_en": "Recon Lasgun Accatran Mk XII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 740,
+        "append_line": 742
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_lasgun_p3_m3",
+          "weapon_pattern_display_name": "loc_weapon_pattern_lasgun_p3_m3",
+          "weapon_mark_display_name": "loc_weapon_mark_lasgun_p3_m3"
+        },
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk XIV",
+        "name_en": "Recon Lasgun Accatran Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 726,
+        "append_line": 728
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_shotgun_p4_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p4_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_shotgun_p4_m1"
+        },
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk III",
+        "name_en": "Exterminator Shotgun Exaction Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1076,
+        "append_line": 1078
+      },
+      {
+        "weapon_id": "shotgun_p4",
+        "mark_id": "shotgun_p4_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_followup_shots_ranged_weakspot_damage",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_shotgun_p4_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p4_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_shotgun_p4_m2"
+        },
+        "name_zh_tw": "滅絕者霰彈槍 鐵腕 Mk VIII",
+        "name_en": "Exterminator Shotgun Exaction Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1064,
+        "append_line": 1066
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-own-tier-diff.json",
+      "sha256": "799a728fffbeb1e504e0f2051f80d717cff5f20239a64d687d40d955c55b7599"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-ui-review.json",
+      "sha256": "a15d70fe8f5fb8e2c669c66f32ee5e0d95755219da6f9a5d242eb8b8720235c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-consumer-review.json",
+      "sha256": "cc32c54d1367ab4ca07f8b7fb68e6f66283d2e344c968b70ed5b6e1c120dd19d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-pellet-review.json",
+      "sha256": "cfa5a1e40cfa9087aa67889b97a04bf9d5ffc16d36446b2ebcf7d4f49b582e0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-counter-diff-review.json",
+      "sha256": "8c09057419d3dc8f284759b41c5155f635ab26905568ae1f6164083bc12fd981"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-image.json",
+      "sha256": "46c704bbb5ac5bcd8b6a86b25fb94091c0f113c25ea337a235474d9912ef15e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-primary-resume-review.json",
+      "sha256": "f645ec2f33acc813ea539cd9e1f99e9239dfcbe045b6abd436de3c1146de81fa"
+    }
+  ],
+  "primary_review_method": "Own full tiers/wrappers/UI directly reviewed; P4 clone/use_combo and final pellet batch live stat, merged finesse scope, six actual spread bindings, .2 post-action combo reset and exact RAW tier reconstruction reviewed. Applicable accepted Buff/stat/formatter/cache evidence reused; no unrelated accepted blessing re-research.",
+  "previous_objects_unchanged": {
+    "blessings": 63,
+    "variants": 224,
+    "bindings": 424
+  },
+  "previous_weapons_unchanged": true,
+  "frozen_agent_trio_sha256": {
+    "config": "7d9c227dfe8c767ba49d7858cb251859baa28eca0f5eb3899520c760364f1430",
+    "evidence": "43181724f4eb1a33fc234dc5af230cbf512b9a690e9dafd366daa04864928578",
+    "draft": "60e1de5c08d22e3c8d583b93439e7c9bf6c70420a739d8d68f6b0cc26fc0842b"
+  },
+  "canonical_approved_data": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-salvo-config.json",
+    "sha256": "fd873422d3ceab8bb0249970d29a2bb545e1c16a2a68b161ea21ebbf673c5857"
+  },
+  "common_evidence_reuse": {
+    "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+    "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+    "reused_record_ids": [
+      "held-slot-condition",
+      "trait-equip-target",
+      "weapon-equip-install",
+      "weapon-unwield-lifecycle",
+      "conditional-stat-override",
+      "ranged-action-dispatch",
+      "pellet-attack-dispatch",
+      "trait-description-value-selection",
+      "trait-description-numeric-precision",
+      "trait-description-percentage-format"
+    ],
+    "applicability": "僅重用未變的通用cache、ranged dispatch與formatter；own tiers、兩種計數、各型號timer及P4轉場末批讀值以本項來源收據為準。"
+  },
+  "accepted_ordering_reuse": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+    "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+    "record_ids": [
+      "gameplay-extension-config",
+      "buff-system-order",
+      "weapon-system-order",
+      "extension-systems-build-order",
+      "extension-systems-fixed-update-dispatch",
+      "player-buff-fixed-update",
+      "buff-stat-cache-rebuild",
+      "player-weapon-fixed-update",
+      "action-handler-fixed-update",
+      "action-shoot-fixed-update",
+      "action-shoot-counter-and-order",
+      "action-current-spread-selection",
+      "movement-state-translation",
+      "movement-state-enum",
+      "spread-inheritance-resolution",
+      "spread-lerp-resolution"
+    ],
+    "hash_convention": "Original accepted ranges validated against normalized LF or exact Git blob bytes including BOM. No source changed.",
+    "applicability": "Global fixed update/cache/order and spread inheritance unchanged; own six single-mode hitscan actual wiring and own timers verified; P4 final multi-frame batch differs explicitly."
+  }
+}

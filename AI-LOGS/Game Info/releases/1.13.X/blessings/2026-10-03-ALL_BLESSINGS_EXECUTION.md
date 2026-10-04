@@ -267,3 +267,5 @@
 - [聚能爆發](2026-10-03-POWER-BLAST_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
 
 - [致命頻率](2026-10-03-DEADLY-FREQUENCIES_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [懲罰齊射](2026-10-03-PUNISHING-SALVO_ACCEPTANCE.json)：新增3變體、8型號關聯；共3變體、8關聯。

@@ -69,3 +69,4 @@
 | [煽風點火](entries/煽風點火/README.md) | [來源索引](entries/煽風點火/SOURCE_INDEX.md) |
 | [聚能爆發](entries/聚能爆發/README.md) | [來源索引](entries/聚能爆發/SOURCE_INDEX.md) |
 | [致命頻率](entries/致命頻率/README.md) | [來源索引](entries/致命頻率/SOURCE_INDEX.md) |
+| [懲罰齊射](entries/懲罰齊射/README.md) | [來源索引](entries/懲罰齊射/SOURCE_INDEX.md) |
