@@ -890,6 +890,18 @@ Full raw template and formatting: [source evidence](cryptic_melee_attacks_give_m
 | Trigger, speed, duration and cap | Successful Melee Attacks grants +2.5% Melee Attack Speed for 3s; stacking 5 times; `ui / loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc / ff4edf3b` | A completed melee swing with `num_hit_units > 0` adds a 2.5% stack, maximum 5, duration 3 seconds. [Fixed source and line references](cryptic_melee_attacks_give_melee_attack_speed.md#fixed-source-evidence) | Consistent | The trigger and numerical effect match; the text specifies attacks rather than each hit target. |
 | Per-swing count, refresh and action time | Does not explain multiple targets, refreshing or the speed-to-time formula; `ui / loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc / ff4edf3b` | Multiple targets still grant one stack per swing; retriggering refreshes 3 seconds. Five stacks give 12.5%; a 1-second affected action becomes `1 ÷ 1.125 ≈ 0.889` seconds. [Fixed source and line references](cryptic_melee_attacks_give_melee_attack_speed.md#fixed-source-evidence) | Not covered by the description | The original example and full-combo limitation clarify the stat without promising a corresponding reduction in all combo time. |
 
+
+<a id="cryptic_melee_crits_electrocute_first"></a>
+
+## Electro-Strike Conduit
+
+Full raw template and formatting: [source evidence](cryptic_melee_crits_electrocute_first.md#original-english-template-and-reconstruction). Name hash `0ba02e89`. Every row uses `ui / loc_talent_cryptic_melee_crits_electrocute_first_desc / 3fc35e67`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical melee hit and first target | Melee Critical hits Electrocute the first target hit; `ui / loc_talent_cryptic_melee_crits_electrocute_first_desc / 3fc35e67` | `on_crit_melee` plus `on_first_target_melee_hit` applies Electrocution to the first qualifying target. [Fixed source and line references](cryptic_melee_crits_electrocute_first.md#fixed-source-evidence) | Consistent | Both the attack condition and target ordering match. |
+| Target eligibility, duration and limits | Does not specify survival, duration, refresh, cooldown or resistances; `ui / loc_talent_cryptic_melee_crits_electrocute_first_desc / 3fc35e67` | The target must survive and have a `buff_system`; `cryptic_electrocution_default` lasts 3 seconds with 1 stack and refresh. No extra trigger cooldown; enemy resistances still apply. [Fixed source and line references](cryptic_melee_crits_electrocute_first.md#fixed-source-evidence) | Not covered by the description | These details preserve the existing 5-target cleave limitation and explain why the status does not guarantee continuous control. |
+
 ## Comparison totals
 
 146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

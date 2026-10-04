@@ -81,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="Hybrid Combat Covenant talent icon"> [Hybrid Combat Covenant](#cryptic_hybrid_damage) | <ul><li>Melee kills grant Ranged Damage stacks and ranged kills grant Melee Damage stacks: 3% per stack, up to 5 of each, decaying one at a time every 8 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="32" height="32" alt="Kinetic Energy Distributors talent icon"> [Kinetic Energy Distributors](#cryptic_toughness_on_damage_taken) | <ul><li>Taking positive Health damage restores 25% of maximum Toughness over 5 seconds. Taking only Toughness damage does not trigger it; retriggering refreshes recovery.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="Uncapped Arrestor talent icon"> [Uncapped Arrestor](#cryptic_melee_attacks_give_melee_attack_speed) | <ul><li>A melee swing that hits an enemy grants one 2.5% Melee Attack Speed stack, up to 5. Each trigger refreshes the 3-second duration.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="Electro-Strike Conduit talent icon"> [Electro-Strike Conduit](#cryptic_melee_crits_electrocute_first) | <ul><li>Melee Critical Hits Electrocute the first target of the swing, provided it survives the hit.</li></ul> | Talent |
 
 ---
 
@@ -1147,3 +1148,17 @@
 - **Attack-speed example**: Five stacks give 12.5% Attack Speed. An attack action affected by Attack Speed that originally takes 1 second becomes `1 ÷ 1.125 ≈ 0.889` seconds. An actual full combo also contains other actions.
 
 [Details](cryptic_melee_attacks_give_melee_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_melee_crits_electrocute_first"></a>
+
+### Electro-Strike Conduit
+
+<img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="72" height="72" alt="Electro-Strike Conduit talent icon">
+
+- **Trigger**: A melee Critical Hit applies Electrocution to the first target of that swing. The target must still be alive after the hit.
+- **Electrocution**: The status lasts 3 seconds, and applying it again refreshes the duration. Cleaving through 5 enemies in one swing does not Electrocute all 5.
+- **Exception**: There is no additional trigger cooldown. Whether an enemy can be kept under continuous control still depends on its own resistances.
+
+[Details](cryptic_melee_crits_electrocute_first.md) · [Back to index](#talent-index)
