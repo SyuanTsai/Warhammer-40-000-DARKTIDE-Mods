@@ -95,6 +95,7 @@
 | <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="Spur V talent icon"> [Spur V](#broker_stimm_celerity_5a) | <ul><li>Gain another 4% Attack Speed, plus Stun and Slowdown Immunity.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="Reflex talent icon"> [Reflex](#broker_stimm_celerity_5b) | <ul><li>Gain 30% Reload Speed and reduce recoil unsteadiness gain by 50%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="Fervor talent icon"> [Fervor](#broker_stimm_celerity_5c) | <ul><li>Gain 10% Movement Speed and Dodge Distance, multiply Dodge Speed by 1.1, and reduce effective-dodge recovery wait by 10%.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="Wildfire I talent icon"> [Wildfire I](#broker_stimm_combat_1) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1492,3 +1493,19 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Effective-dodge recovery**: After consecutive dodging stops, the wait to recover effective dodges is 10% shorter. A 1-second wait becomes 1 × (1 − 10%) = 0.9 seconds. This does not change the basic interval between two dodges.
 
 [Details](broker_stimm_celerity_5c.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_1"></a>
+
+### Wildfire I
+
+<img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="72" height="72" alt="Wildfire I talent icon">
+
+- **Recipe cost**: 1 point. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Power**: Gain 4%, additive with prerequisite recipes and other Power bonuses at the same stage. Power then contributes to weapon Damage, Stagger and Cleave calculations.
+
+- **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives one Power node: 500 × (1 + 1 × 4%) = 520.
+
+[Details](broker_stimm_combat_1.md) · [Back to index](#talent-index)

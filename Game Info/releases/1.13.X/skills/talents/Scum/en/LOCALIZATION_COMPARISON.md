@@ -1064,6 +1064,18 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_5c.md#
 | Recovery wording | +10% Dodge Recovery Speed; `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c` | `dodge_cooldown_reset_modifier = −0.1` shortens `consecutive_dodges_cooldown` wait to 0.9 of its base [Fixed source and line references](broker_stimm_celerity_5c.md#fixed-source-evidence) | Cannot confirm | The label does not define whether Speed is a literal rate or shorthand for the wait modifier. The verified 1 → 0.9 second effect is retained. |
 | Cost, lifetime and movement limits | No recipe cost, sharing lifetime, total-duration or basic-interval formula; `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c` | One purchase at cost 5; provider recipes share with externally controlled field lifetime; Dodge duration also depends on distance, curves and fixed steps; basic Dodge interval is unchanged [Fixed source and line references](broker_stimm_celerity_5c.md#fixed-source-evidence) | Not covered by the description | The movement/distance examples and existing timing limits supplement the stat labels. |
 
+
+<a id="broker_stimm_combat_1"></a>
+
+## Wildfire I
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_1.md#original-english-template-and-reconstruction). Name hash `fe5e6f12`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Power statistic and value | +4% Strength; `ui / loc_talent_stat_power_level / f8a49d31` | `power_level_modifier = 0.04`, using the accepted `loc_talent_stat_power_level` mapping [Fixed source and line references](broker_stimm_combat_1.md#fixed-source-evidence) | Consistent | Strength is the same-build English label for the mapped Power statistic, not a separate final-Damage claim. |
+| Cost, stacking and Power scope | No cost, shared lifetime, stacking or final-Damage formula; `ui / loc_talent_stat_power_level / f8a49d31` | One purchase at cost 1; prerequisite Power adds at the same stage; `PowerLevel` precedes weapon Damage/Stagger/Cleave curves; field lifetime is externally controlled [Fixed source and line references](broker_stimm_combat_1.md#fixed-source-evidence) | Not covered by the description | The original 500 → 520 examples and Power scope explain the mapped statistic. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
