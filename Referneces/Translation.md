@@ -414,6 +414,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_weakspot_finesse`，hash `6b6877ef`；英文／繁中RAW配對確認。
 - No Respite - 刻不容緩
 - Opening Salvo - 開啟齊射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_first_shot`，hash `ea6a5633`；英文／繁中RAW配對確認。
 - Headhunter - 獵頭者
 - Between the Eyes - 正中眉心
 - Blaze Away - 連續發射

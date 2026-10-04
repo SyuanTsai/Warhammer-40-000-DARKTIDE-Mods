@@ -778,6 +778,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
       "effect": "持用並接續射擊時，I–IV 每層增加 3／4／5／6% 爆炸半徑，最多五層；依引爆時已計算的連擊與持用加成修正外圈及近距離半徑。"
+    },
+    {
+      "id": "opening-salvo",
+      "name_zh_tw": "開啟齊射",
+      "name_en": "Opening Salvo",
+      "name_key": "loc_trait_bespoke_power_bonus_on_first_shot",
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "name_hash": "ea6a5633",
+      "description_hash": "ee0f215b",
+      "page": "entries/開啟齊射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "effect": "持用且共用射擊計數為 0 時，I–IV 提供 +14／+16／+18／+20% 遠程力量修正；停火清除計數後可再次生效。"
     }
   ],
   "weapons": [
@@ -14265,6 +14278,263 @@
       "icon": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_235",
       "effect": "一般與瞄準射擊的榴彈引信或撞擊爆炸均適用；直擊傷害與槍托打擊不屬半徑加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+      "blessing_id": "opening-salvo",
+      "weapon_id": "autogun_p3",
+      "page": "entries/開啟齊射/weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "actual_mark_ids": [
+          "autogun_p3_m1",
+          "autogun_p3_m2",
+          "autogun_p3_m3"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "display_percent_by_level": {
+          "I": 14,
+          "II": 16,
+          "III": 18,
+          "IV": 20
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "wrapper_fallback": 0.02,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 358,
+        "end_line": 399
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "description_hash": "ee0f215b",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "effect": "一般與瞄準射擊適用；槍托打擊不適用。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+      "blessing_id": "opening-salvo",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/開啟齊射/weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+        "actual_mark_ids": [
+          "galvanic_rifle_p1_m1"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "display_percent_by_level": {
+          "I": 14,
+          "II": 16,
+          "III": 18,
+          "IV": 20
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "wrapper_fallback": 0.02,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 245,
+        "end_line": 287
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "description_hash": "ee0f215b",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "effect": "一般與瞄準射擊適用；槍托打擊不適用，電流光束為視覺效果。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+      "blessing_id": "opening-salvo",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/開啟齊射/weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+        "actual_mark_ids": [
+          "lasgun_p1_m1",
+          "lasgun_p1_m2",
+          "lasgun_p1_m3"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "display_percent_by_level": {
+          "I": 14,
+          "II": 16,
+          "III": 18,
+          "IV": 20
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "wrapper_fallback": 0.02,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 400,
+        "end_line": 441
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "description_hash": "ee0f215b",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "effect": "一般與瞄準射擊適用；特殊動作是手電筒切換。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+      "blessing_id": "opening-salvo",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/開啟齊射/weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "actual_mark_ids": [
+          "ogryn_heavystubber_p2_m1",
+          "ogryn_heavystubber_p2_m2",
+          "ogryn_heavystubber_p2_m3"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "display_percent_by_level": {
+          "I": 14,
+          "II": 16,
+          "III": 18,
+          "IV": 20
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "wrapper_fallback": 0.02,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 913,
+        "end_line": 952
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 74,
+        "end_line": 74
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "description_hash": "ee0f215b",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "effect": "一般與瞄準射擊適用；特殊動作是手電筒切換。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot",
+      "blessing_id": "opening-salvo",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/開啟齊射/weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot",
+        "actual_mark_ids": [
+          "phosphor_pistol_p1_m1"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "display_percent_by_level": {
+          "I": 14,
+          "II": 16,
+          "III": 18,
+          "IV": 20
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "wrapper_fallback": 0.02,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 215,
+        "end_line": 257
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_shot_desc",
+      "description_hash": "ee0f215b",
+      "icon": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "effect": "直接命中適用；一般射擊的命中爆炸與燃燒不適用，瞄準射擊無命中爆炸。"
     }
   ],
   "bindings": [
@@ -19978,6 +20248,160 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
         "import_line": 16,
         "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/power_bonus_on_first_shot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/power_bonus_on_first_shot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/power_bonus_on_first_shot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/power_bonus_on_first_shot",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/power_bonus_on_first_shot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/power_bonus_on_first_shot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/power_bonus_on_first_shot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_first_shot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_first_shot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_first_shot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "opening-salvo",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/power_bonus_on_first_shot",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
       }
     }
   ]

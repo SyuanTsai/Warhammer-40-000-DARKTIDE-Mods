@@ -251,3 +251,5 @@
 - [湧動](2026-10-03-SURGE_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
 
 - [狂轟猛炸](2026-10-03-BLAST-ZONE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [開啟齊射](2026-10-03-OPENING-SALVO_ACCEPTANCE.json)：新增5變體、11型號關聯；共5變體、11關聯。
