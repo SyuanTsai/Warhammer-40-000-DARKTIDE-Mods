@@ -9343,9 +9343,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5a13c2c71594eccd73d78a55f247451d96577425",
       "chinese_sha256": "75f78599b9cba15f76347a87ddc977887cea2ac7d45d3103c217d88293e0a876",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_dissector_crit_attack_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_max_stacks.md",
@@ -9354,9 +9361,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7b7217803b6034917cc67b3740dc9141a7492bbf",
       "chinese_sha256": "12f3033f9d91327053d59ada12f1a729766e8daa6e422e2a0fb3f5019a610c79",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_dissector_max_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_power.md",
@@ -9703,9 +9717,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "533e0c5729d9c467b688f1c3765ed29f5bee779c",
       "chinese_sha256": "c8e35812ee37b12a5dff673a5abd7d6383b568bf92f680f2da2916ad5f933ceb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_overload_keystone_bigger_explosion"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_permastack.md",
@@ -9714,9 +9735,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "eef23b7ec5c84fede7aea756c1699df94f25e2d4",
       "chinese_sha256": "1376e9fbeebaad7f0a1f68d48e1db99565ec853e4e1c0bfce18cb717bc559b4d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_overload_keystone_permastack"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_toughness_stamina.md",
@@ -9725,9 +9753,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fa5c3c5a79335230d390ce4dba33d27f9c4184ca",
       "chinese_sha256": "4e5c307d67f08db693b87b2872db46578c3236642bff1cf7efa0541964367044",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_overload_keystone_toughness_stamina"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_ammo_replenishment.md",
@@ -17729,6 +17764,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_494_498.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone.md"
+    },
+    {
+      "id": "cryptic_overload_keystone_bigger_explosion",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_bigger_explosion.md"
+    },
+    {
+      "id": "cryptic_overload_keystone_toughness_stamina",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_toughness_stamina.md"
+    },
+    {
+      "id": "cryptic_overload_keystone_permastack",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_permastack.md"
+    },
+    {
+      "id": "cryptic_dissector_crit_attack_speed",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_crit_attack_speed.md"
+    },
+    {
+      "id": "cryptic_dissector_max_stacks",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_max_stacks.md"
     }
   ],
   "pending_chinese_corrections": [

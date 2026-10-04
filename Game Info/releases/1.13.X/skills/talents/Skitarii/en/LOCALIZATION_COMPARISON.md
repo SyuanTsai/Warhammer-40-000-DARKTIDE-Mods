@@ -492,4 +492,4 @@ Full raw template and formatting: [source evidence](cryptic_dissector_max_stacks
 
 ## Comparison totals
 
-72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.
+83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
