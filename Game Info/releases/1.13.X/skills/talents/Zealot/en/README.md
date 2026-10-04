@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/41e85f89-6787-4fe4-9fd7-a2382f2aa025" width="32" height="32" alt="Good Balance talent icon"> [Good Balance](#zealot_reduced_damage_after_dodge) | <ul><li>A successful Dodge reduces damage taken by 25% for 2.5 seconds; another successful Dodge restarts the timer.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="Enemies Within, Enemies Without talent icon"> [Enemies Within, Enemies Without](#zealot_toughness_in_melee) | <ul><li>Enemies within 5 metres grant ongoing Toughness restoration, from 2.5% up to 7.5% of maximum Toughness per second.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="Faithful Frenzy talent icon"> [Faithful Frenzy](#zealot_attack_speed) | <ul><li>Permanently grants +10% Melee Attack Speed and +5% Movement Speed.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="Faith's Fortitude talent icon"> [Faith's Fortitude](#zealot_additional_wounds) | <ul><li>Adds 2 Wounds while leaving maximum Health unchanged.</li></ul> | Skill |
 
 ---
 
@@ -862,3 +863,16 @@
 - **Speed example**: Counting only this talent, an affected 1-second Melee action becomes 1 ÷ 1.1 ≈ 0.909 seconds; base Movement Speed 5 metres/second becomes 5 × 1.05 = 5.25 metres/second. Other same-stage attack-speed bonuses are added first, then action time is calculated from the total speed multiplier.
 
 [Details](zealot_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_additional_wounds"></a>
+
+### Faith's Fortitude
+
+<img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="72" height="72" alt="Faith's Fortitude talent icon">
+
+- **Operation**: Adds 2 to maximum Wounds while leaving maximum Health unchanged; the same Health is divided into more segments.
+- **Wound example**: With maximum Health 200 and originally 2 Wounds, each segment has 200 ÷ 2 = 100 Health. Taking the talent gives 4 Wounds, each with 200 ÷ 4 = 50 Health. It does not increase Health to 400.
+
+[Details](zealot_additional_wounds.md) · [Back to index](#talent-index)

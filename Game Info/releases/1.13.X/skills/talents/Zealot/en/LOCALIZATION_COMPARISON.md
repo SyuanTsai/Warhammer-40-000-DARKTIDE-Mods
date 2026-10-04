@@ -686,6 +686,18 @@ Full raw template and formatting: [source evidence](zealot_attack_speed.md#origi
 | Permanent speed stats | “+10% Melee Attack Speed. +5% Movement Speed.”; `ui / loc_talent_zealot_speed_desc / 6513bf51` | Permanent melee_attack_speed 0.1 and movement_speed 0.05. [Fixed source and line references](zealot_attack_speed.md#fixed-source-evidence) | Consistent | Stats, values and unconditional presentation agree. |
 | Affected actions and time conversion | No affected-action list or action-time formula.; `ui / loc_talent_zealot_speed_desc / 6513bf51` | ActionHandler adds time_scale_stat_buffs then divides time by speed. Original 1s→0.909s and 5→5.25m/s examples retained; no whole-combo guarantee. [Fixed source and line references](zealot_attack_speed.md#fixed-source-evidence) | Not covered by the description | Attack speed is not a claim of equal percentage action-time reduction; these calculations supplement it. |
 
+
+<a id="zealot_additional_wounds"></a>
+
+## Faith's Fortitude
+
+Full raw template and formatting: [source evidence](zealot_additional_wounds.md#original-english-template-and-reconstruction). Name hash `6f7a7374`. Every row uses `ui / loc_talent_zealot_3_tier_1_ability_3_description / 029afb2e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Extra Wound count | “+2 Wounds.”; `ui / loc_talent_zealot_3_tier_1_ability_3_description / 029afb2e` | extra_max_amount_of_wounds 2 is added by max_wounds. [Fixed source and line references](zealot_additional_wounds.md#fixed-source-evidence) | Consistent | Count and additive direction agree. |
+| Health segmentation and other conditions | No maximum-Health or segment-size formula.; `ui / loc_talent_zealot_3_tier_1_ability_3_description / 029afb2e` | No max_health bonus; max_health/max_wounds. Original Health-200 example changes 2 segments of 100 to 4 of 50, not Health 400; other Wound-based conditions also change. [Fixed source and line references](zealot_additional_wounds.md#fixed-source-evidence) | Not covered by the description | These consequences supplement the extra Wound count. |
+
 ## Comparison totals
 
 117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.
