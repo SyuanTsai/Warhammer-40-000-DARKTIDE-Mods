@@ -91,3 +91,4 @@ The review covers Power, general Damage and additional Weakspot/Critical Damage,
 | [Fervor](broker_stimm_celerity_5c.md) | Stimm recipe | Static check | With no other bonuses, 4m/s × 1.1 = 4.4m/s and Dodge Distance 2.5m × 1.1 = 2.75m. After consecutive dodging stops, effective-dodge recovery wait is reduced by 10%: 1 × (1 − 10%) = 0.9 seconds. The basic interval between dodges is unchanged. |
 | [Wildfire I](broker_stimm_combat_1.md) | Stimm recipe | Static check | This node alone: 500 × (1 + 4%) = 520. Wildfire I through this tier gives one Power node: 500 × (1 + 1 × 4%) = 520. |
 | [Wildfire II](broker_stimm_combat_2.md) | Stimm recipe | Static check | This node alone: 500 × (1 + 4%) = 520. Wildfire I through II gives two Power nodes: 500 × (1 + 2 × 4%) = 540. |
+| [Wildfire III](broker_stimm_combat_3.md) | Stimm recipe | Static check | This node alone: 500 × (1 + 4%) = 520. Wildfire I through III gives three Power nodes: 500 × (1 + 3 × 4%) = 560. |

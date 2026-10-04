@@ -97,6 +97,7 @@
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="Fervor talent icon"> [Fervor](#broker_stimm_celerity_5c) | <ul><li>Gain 10% Movement Speed and Dodge Distance, multiply Dodge Speed by 1.1, and reduce effective-dodge recovery wait by 10%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="Wildfire I talent icon"> [Wildfire I](#broker_stimm_combat_1) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="Wildfire II talent icon"> [Wildfire II](#broker_stimm_combat_2) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="Wildfire III talent icon"> [Wildfire III](#broker_stimm_combat_3) | <ul><li>Gain 4% Power.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1526,3 +1527,19 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives two Power nodes: 500 × (1 + 2 × 4%) = 540.
 
 [Details](broker_stimm_combat_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_3"></a>
+
+### Wildfire III
+
+<img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="72" height="72" alt="Wildfire III talent icon">
+
+- **Recipe cost**: 3 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Power**: Gain 4%, additive with prerequisite recipes and other Power bonuses at the same stage. Power then contributes to weapon Damage, Stagger and Cleave calculations.
+
+- **Power example**: With this node alone, 500 × (1 + 4%) = 520. Selecting from Wildfire I through this tier gives three Power nodes: 500 × (1 + 3 × 4%) = 560.
+
+[Details](broker_stimm_combat_3.md) · [Back to index](#talent-index)
