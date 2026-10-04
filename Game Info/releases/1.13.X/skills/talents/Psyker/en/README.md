@@ -68,6 +68,7 @@
 | <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="True Aim talent icon"> [True Aim](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | <ul><li>After 5 valid damaging Weakspot Hits, the next Ranged Attack is guaranteed Critical; repeat hits and cleaved later targets are restricted.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="Puppet Master talent icon"> [Puppet Master](#psyker_coherency_aura_size_increase) | <ul><li>Coherency Aura radius +75%, giving 1.75 times the original radius with other modifiers unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="32" height="32" alt="Kinetic Deflection talent icon"> [Kinetic Deflection](#psyker_block_costs_warp_charge) | <ul><li>Below 97% Peril, Blocking converts Stamina cost to Peril at 25% of the cost's fraction of maximum Stamina; overflow is paid with Stamina.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_5) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
 
 ---
 
@@ -1015,3 +1016,17 @@
 - **Near the cap**: if the same Block starts at 90%, only 7 percentage points fit. The remaining 12.5 − 7 = 5.5 percentage points convert back to 5.5% ÷ 25% × 4 = 0.88 Stamina.
 
 [Details](psyker_block_costs_warp_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_node_buff_medium_5"></a>
+
+### Toughness Boost
+
+<img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="72" height="72" alt="Toughness Boost talent icon">
+
+- **Effect**: increase maximum Toughness by 15 points.
+
+- **Toughness example**: with no other modifiers, 100 maximum Toughness becomes 100 + 15 = 115 points; selecting another node with the same effect gives 130 points. This increases the maximum rather than restoring Toughness over time.
+
+[Details](base_toughness_node_buff_medium_5.md) · [Back to index](#talent-index)

@@ -746,6 +746,18 @@ Full raw template and formatting: [source evidence](psyker_block_costs_warp_char
 | Block conversion and displayed parameter | Below critical Peril, Blocking generates Peril instead of Stamina loss; 25% of the blocked attack's Stamina cost; `ui / loc_talent_psyker_block_costs_warp_charge_desc / 136ee48b` | The accepted Block formula converts normalized Stamina cost using warp_charge_block_cost = 0.25. [Fixed source and line references](psyker_block_costs_warp_charge.md#fixed-source-evidence) | Consistent | The resource conversion and mapped parameter agree. |
 | Cap, normalization and overflow | No numerical threshold, maximum-Stamina denominator or overflow rule; `ui / loc_talent_psyker_block_costs_warp_charge_desc / 136ee48b` | Peril caps at 0.97; cost is normalized by max_stamina and modified by warp_charge_amount. Excess converts back without dividing by warp_charge_amount. [Fixed source and line references](psyker_block_costs_warp_charge.md#fixed-source-evidence) | Not covered by the description | The exact formulas explain how a Block can use Peril and then Stamina when the cap is reached. |
 
+
+<a id="base_toughness_node_buff_medium_5"></a>
+
+## Toughness Boost
+
+Full raw template and formatting: [source evidence](base_toughness_node_buff_medium_5.md#original-english-template-and-reconstruction). Name hash `65a72c01`. Every row uses `ui / loc_talent_toughness_boost_medium_desc / 329702b6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Flat Toughness bonus | +15 Toughness; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | The accepted node adds 15 flat maximum Toughness. [Fixed source and line references](base_toughness_node_buff_medium_5.md#fixed-source-evidence) | Consistent | The mapped number matches the verified flat bonus; it is not a percentage. |
+| Maximum capacity and modifier order | No maximum/current distinction, recovery effect or modifier formula; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | Maximum Toughness adds flat toughness first, then multiplies by toughness_bonus and rounds up. [Fixed source and line references](base_toughness_node_buff_medium_5.md#fixed-source-evidence) | Not covered by the description | The capacity basis, combination order and absence of sustained restoration are supplementary explanations. |
+
 ## Comparison totals
 
 The 127 listed rules comprise **59 Consistent**, **3 Explicit contradictions**, **60 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.
