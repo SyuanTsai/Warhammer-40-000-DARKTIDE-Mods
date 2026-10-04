@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 342 completed on 2026-10-04. [Receipt](psyker_skills_338_342.json) and [FILE_MAP](FILE_MAP.json) record 342 accepted mechanisms. Next item: **343, Just a Dream**, `psyker_damage_to_peril_conversion`. The full goal remains active and unfinished.
+Checkpoint 347 completed on 2026-10-04. [Receipt](psyker_skills_343_347.json) and [FILE_MAP](FILE_MAP.json) record 347 accepted mechanisms. Next item: **348, Psykinetic Grip**, `psyker_increased_blitz_damage`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 304 mechanisms + 24 class-support files + 2 shared files = 330 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 75/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 161 = 75 Consistent / 4 Explicit contradictions / 75 Not covered / 0 No implementation / 7 Cannot confirm. Latest batch commit interval: 234s (3m 54s), 0ce078bce→79c008204. Surety of Arms has one explicit English boundary contradiction: below 80% versus the verified <=0.8. Crystalline Will cost terminology remains Cannot confirm. All existing calculations, timing limits and multiplicative Empyric Shock stacking are preserved.
+Remaining: 299 mechanisms + 24 class-support files + 2 shared files = 325 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 80/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 172 = 80 Consistent / 4 Explicit contradictions / 80 Not covered / 0 No implementation / 8 Cannot confirm. Latest batch commit interval: 219s (3m 39s), e152bb6fa→d7d8dce51. Just a Dream has one English conversion wording ambiguity; no new explicit English contradiction. Unconditional Immaterial Focus reduction, modifier eligibility, Warp Ghost's lowest-band exception and both armour-dependent Rending examples are retained.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

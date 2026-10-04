@@ -1,0 +1,74 @@
+{
+  "id": "psyker_skills_343_347",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L2595–2600, L2704–2717, L2394–2425, L2726–2742 and L2373–2383.",
+    "Existing verified values and shared formatter behavior reused; no mechanism or event-chain retracing."
+  ],
+  "questions": [
+    "Just a Dream: literal transfer implied by '25% of Damage Taken is converted into Peril' remains Cannot confirm. The accepted 0.75 Damage multiplier and separate reported-Damage ×0.0025 Peril formula are preserved with separate fixed-input examples."
+  ],
+  "skills": [
+    {
+      "id": "psyker_damage_to_peril_conversion",
+      "name": "Just a Dream",
+      "name_hash": "68abed2f",
+      "description_hash": "832ffb7a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_to_peril_conversion.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_to_peril_conversion.md",
+      "commit": "2778c0083"
+    },
+    {
+      "id": "psyker_damage_resistance_stun_immunity",
+      "name": "Immaterial Focus",
+      "name_hash": "b08dfe13",
+      "description_hash": "c5294daa",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_resistance_stun_immunity.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_resistance_stun_immunity.md",
+      "commit": "adfb7e874"
+    },
+    {
+      "id": "psyker_warp_glass_cannon",
+      "name": "Empyric Resolve",
+      "name_hash": "81e0c6d7",
+      "description_hash": "3e435c7d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warp_glass_cannon.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warp_glass_cannon.md",
+      "commit": "23851b851"
+    },
+    {
+      "id": "psyker_stat_mix",
+      "name": "Warp Ghost",
+      "name_hash": "126c6a5f",
+      "description_hash": "df89fc40",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_stat_mix.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_stat_mix.md",
+      "commit": "14981535d"
+    },
+    {
+      "id": "psyker_warp_attacks_rending",
+      "name": "Penetration of the Soul",
+      "name_hash": "5437d8c9",
+      "description_hash": "35bc88f1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warp_attacks_rending.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warp_attacks_rending.md",
+      "commit": "d7d8dce51"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 219,
+    "from_commit": "e152bb6fa",
+    "to_commit": "d7d8dce51",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}
