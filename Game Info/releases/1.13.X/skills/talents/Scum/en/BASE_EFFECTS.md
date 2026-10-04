@@ -81,3 +81,19 @@ These effects come from the character's base configuration. Combat Ability, Blit
 [Source evidence and example assumptions](broker_stimm_description_talent.md)
 
 ---
+
+<a id="broker_syringe"></a>
+
+## Dedicated Stimm charge
+
+- **Equipment condition**: Selecting any dedicated Stimm recipe grants it, with capacity for 1 use. Using it consumes that charge.
+
+- **Effect duration**: The selected recipes last 15 seconds after injection. Long Lasting adds 5 seconds. This Stimm's natural regeneration pauses while its effect is active.
+
+- **Recovery time**: Total recipe cost determines a recovery time from 15 to 75 seconds, starting after the effect ends. At 15 points, recovery is ⌈15 + 60 × (15 − 1) ÷ 29⌉ = 44 seconds; including the 15-second effect gives a total of 59 seconds.
+
+- **Combat Ability combination**: Chemical Dependency shares the dedicated Stimm's recipe effects with teammates in its area. Duration depends on that ability's field and lingering effects.
+
+[Source evidence and example assumptions](broker_syringe.md)
+
+---

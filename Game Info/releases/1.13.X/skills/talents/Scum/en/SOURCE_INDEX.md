@@ -126,3 +126,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Gunslinger](broker_aura_gunslinger.md) / `broker_aura_gunslinger` | Base Aura |
 | [Like the Wind](broker_passive_improved_sprint_dodge.md) / `broker_passive_improved_sprint_dodge` | Base passive |
 | [Cartel Special](broker_stimm_description_talent.md) / `broker_stimm_description_talent` | Dedicated Stimm |
+| [Dedicated Stimm charge](broker_syringe.md) / `broker_syringe` | Conditional base ability |
