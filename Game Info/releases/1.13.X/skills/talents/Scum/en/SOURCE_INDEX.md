@@ -54,3 +54,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Float Like a Butterfly](broker_passive_ninja_grants_crit_chance.md) / `broker_passive_ninja_grants_crit_chance` | Talent |
 | [Speedloader](broker_passive_reload_speed_on_close_kill.md) / `broker_passive_reload_speed_on_close_kill` | Talent |
 | [Burst of Energy](broker_passive_stun_immunity_on_toughness_broken.md) / `broker_passive_stun_immunity_on_toughness_broken` | Talent |
+| [Toughness Boost](base_toughness_node_buff_medium_1.md) / `base_toughness_node_buff_medium_1` | Talent |

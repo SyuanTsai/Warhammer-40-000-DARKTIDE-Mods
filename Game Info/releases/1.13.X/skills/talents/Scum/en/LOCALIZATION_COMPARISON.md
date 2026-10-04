@@ -518,6 +518,18 @@ Full raw template and formatting: [source evidence](broker_passive_stun_immunity
 | Toughness-break effect and configured values | Gain Stun Immunity for 6s and restore +50% Toughness when Toughness is broken; 10s Cooldown; `ui / loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc / 261ee901` | The self Toughness-break event enables `stun_immune` for 6 seconds and replenishes 0.5; the configured cooldown is 10 seconds. [Fixed source and line references](broker_passive_stun_immunity_on_toughness_broken.md#fixed-source-evidence) | Consistent | The trigger, recovery value, active duration, and cooldown value match. |
 | Cooldown start and recovery basis | No cooldown start point or maximum-Toughness basis is stated; `ui / loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc / 261ee901` | The cooldown check uses `active_start + active_duration + cooldown`; it begins after the active 6 seconds. The recovery uses maximum Toughness, and the event must refer to the talent owner. [Fixed source and line references](broker_passive_stun_immunity_on_toughness_broken.md#fixed-source-evidence) | Not covered by the description | The wording does not promise a 10-second total trigger interval; these details supplement it. |
 
+
+<a id="base_toughness_node_buff_medium_1"></a>
+
+## Toughness Boost
+
+Full raw template and formatting: [source evidence](base_toughness_node_buff_medium_1.md#original-english-template-and-reconstruction). Name hash `65a72c01`. Every row uses `ui / loc_talent_toughness_boost_medium_desc / 329702b6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Fixed Toughness increase | +25 Toughness; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | The one-tier node uses `talent_overrides[1]` with `toughness = 25`, rather than the template default 15. [Fixed source and line references](base_toughness_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The reconstructed English value matches the accepted tier override. |
+| Maximum-Toughness calculation | No maximum-stat wording or calculation order is stated; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | `max_toughness` adds the breed base and `stat_buffs.toughness`, multiplies by `toughness_bonus`, applies `ceil`, then adds the flat value. [Fixed source and line references](base_toughness_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The short stat label leaves the maximum-stat basis and combination order implicit. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

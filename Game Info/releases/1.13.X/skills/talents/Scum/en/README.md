@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="Float Like a Butterfly talent icon"> [Float Like a Butterfly](#broker_passive_ninja_grants_crit_chance) | <ul><li>After a Successful Dodge or Perfect Block, gain 20 percentage points of Critical Strike Chance for 3 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="32" height="32" alt="Speedloader talent icon"> [Speedloader](#broker_passive_reload_speed_on_close_kill) | <ul><li>Ranged kills within 12.5 metres grant 30% Reload Speed for 8 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="Burst of Energy talent icon"> [Burst of Energy](#broker_passive_stun_immunity_on_toughness_broken) | <ul><li>When your Toughness breaks, restore 50% of maximum Toughness and gain Stun Immunity for 6 seconds; a 10-second cooldown follows the effect.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_1) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Talent |
 
 ---
 
@@ -736,3 +737,16 @@
 - **Recovery and cooldown example**: at 100 maximum Toughness, this talent alone restores Toughness from 0 to 50. The trigger first gives 6 seconds of Stun Immunity, followed by a 10-second cooldown. With no other changes, eligible triggers are at least 6 + 10 = 16 seconds apart.
 
 [Details](broker_passive_stun_immunity_on_toughness_broken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_node_buff_medium_1"></a>
+
+### Toughness Boost
+
+<img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="72" height="72" alt="Toughness Boost talent icon">
+
+- **How it adds**: increase maximum Toughness by 25 points. This adds to other fixed Toughness bonuses before applying percentage modifiers to maximum Toughness.
+- **Examples**: an initial 100 points becomes 125. With another 20% maximum-Toughness bonus, the result is (100 + 25) × 1.2 = 150.
+
+[Details](base_toughness_node_buff_medium_1.md) · [Back to index](#talent-index)
