@@ -53,10 +53,11 @@ mod.get_aupm_value = function (uuid)
 	if not Managers or not Managers.time then
 		return "N/A"
 	end
-	local mission_timer = Managers.time:time("gameplay") / 60.0
-	if not mission_timer or mission_timer <= 0 then
+	local gameplay_time = Managers.time:time("gameplay")
+	if not gameplay_time or gameplay_time <= 0 then
 		return "N/A"
 	end
+	local mission_timer = gameplay_time / 60.0
 	if mod.record_ability_used == nil then
 		return "N/A"
 	end
@@ -118,7 +119,8 @@ local ability_hook_function = function (self, unit, dt, t)
 			mod.record_ability_used[player_uuid] = mod.record_ability_used[player_uuid] - charge_delta
 		end
 	end
-	mod.record_ability_cd[player_uuid] = self:max_ability_cooldown("combat_ability") or 0
+	local max_ability_cooldown = self.max_regen_time_for_ability_charge or self.max_ability_cooldown
+	mod.record_ability_cd[player_uuid] = max_ability_cooldown(self, "combat_ability") or 0
 	mod.record_ability_previous[player_uuid] = current_num_charges
 	mod.record_ability_name[player_uuid] = name
 end
