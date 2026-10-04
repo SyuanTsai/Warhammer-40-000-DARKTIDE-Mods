@@ -75,6 +75,7 @@
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="Desperation talent icon"> [Desperation](#zealot_more_damage_when_low_on_stamina) | <ul><li>Melee damage increases with the proportion of missing Stamina, from zero at full Stamina to +20% when empty.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="No Respite talent icon"> [No Respite](#zealot_melee_crits_restore_stamina) | <ul><li>Melee Critical Hits restore 10% of maximum Stamina, with a 1-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="Providence talent icon"> [Providence](#zealot_revive_speed) | <ul><li>Revive speed increases by 25%; assisted allies gain Movement Speed and Toughness Damage Reduction.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="Abolish Blasphemers talent icon"> [Abolish Blasphemers](#zealot_damage_vs_elites) | <ul><li>Deal 15% more damage to Elite enemies.</li></ul> | Skill |
 
 ---
 
@@ -1020,3 +1021,16 @@
 - **Effect example:** if the assisted ally normally moves at 5 m/s, this bonus alone gives 5 × 1.1 = 5.5 m/s. An incoming 100 points of Toughness damage becomes 100 × 0.85 = 85. The assisted ally receives the effect, not you.
 
 [Details](zealot_revive_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_damage_vs_elites"></a>
+
+### Abolish Blasphemers
+
+<img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="72" height="72" alt="Abolish Blasphemers talent icon">
+
+- **How it works:** deal 15% more damage to Elite enemies, with both Melee and Ranged attacks. This condition does not include every Specialist or boss.
+- **Damage example:** 100 × 1.15 = 115 points. With an existing 20% damage bonus in the same stage, the result is 100 × (1 + 20% + 15%) = 135 points.
+
+[Details](zealot_damage_vs_elites.md) · [Back to index](#talent-index)
