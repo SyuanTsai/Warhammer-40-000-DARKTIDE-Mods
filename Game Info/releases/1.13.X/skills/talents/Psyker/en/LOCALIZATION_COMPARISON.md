@@ -894,6 +894,18 @@ Full raw template and formatting: [source evidence](psyker_alternative_peril_exp
 | Cost terminology | You still take the appropriate Corruption Damage.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | The accepted evidence establishes `remove_wounds(1)` or `instakill` when `current_wounds <= 1`, without resolving all Health/Medicae interactions. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish full equivalence between the English Corruption Damage wording and the Wound-removal operation. |
 | Final Wound and update limits | No numeric Wound cost, final-Wound exception or update timing.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | The cost removes one Wound or kills at the final Wound; the delayed condition is `t <= damage_t`, with timing and retained-flag questions untested. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Not covered by the description | These conditions and existing uncertainties are absent from the English. |
 
+
+<a id="psyker_force_staff_bonus"></a>
+
+## Channeled Force
+
+Full raw template and formatting: [source evidence](psyker_force_staff_bonus.md#original-english-template-and-reconstruction). Name hash `4df98799`. Every row uses `ui / loc_talent_psyker_force_staff_both_bonus_desc / 44883ede`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Alternating bonuses and durations | +20% Primary Attack Damage after Fully Charged Secondary Attacks; +10% Secondary Attack Damage after a Primary Attack; both last 5s.; `ui / loc_talent_psyker_force_staff_both_bonus_desc / 44883ede` | The two one-stack buffs grant 0.2 Primary and 0.1 Secondary Damage for 5 seconds each. [Fixed source and line references](psyker_force_staff_bonus.md#fixed-source-evidence) | Consistent | The separate attack targets, amounts and durations agree. |
+| Charge cutoff and event details | After Fully Charged… Secondary Attacks; after… Primary Attack.; `ui / loc_talent_psyker_force_staff_both_bonus_desc / 44883ede` | The cutoff is charge >0.95 in action-finished events, with staff-specific actions and no successful-hit requirement; separate timers refresh. [Fixed source and line references](psyker_force_staff_bonus.md#fixed-source-evidence) | Not covered by the description | The English gives no exact charge percentage, hit requirement or repeat-trigger behavior; precise cancellation and chaining timing remains unobserved. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.

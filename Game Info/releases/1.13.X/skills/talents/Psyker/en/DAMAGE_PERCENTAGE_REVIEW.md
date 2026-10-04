@@ -93,3 +93,4 @@
 | [Focused Warp](psyker_increased_warp_damage.md) | `warp_damage = 0.15` joins the additive Damage stage after a `warp_damage_types` check. | Other multipliers fixed at 1: 100→115; an existing 25% in the same stage gives 125→140. |
 | [Surety of Arms](psyker_reload_speed_warp_charge.md) | Conditional `reload_speed = 0.3` at Peril ≤0.8; affected 3s segment becomes 3 / 1.3 ≈ 2.31s. | Restoring 20/40 rounds without other Peril modifiers adds 7.5 percentage points; a full clip adds 15. |
 | [Crystalline Will](psyker_alternative_peril_explosion.md) | Overload Explosion Damage ×2; radius ×1.25. | Only these modifiers compared: 100→200 Damage and 10m→12.5m radius; distance falloff and armour still apply. |
+| [Channeled Force](psyker_force_staff_bonus.md) | Separate Primary +20% and Secondary +10% Damage bonuses, each lasting 5s. | Without other bonuses, separate 100-Damage attacks become 120 and 110; these are not a combined 30% bonus on one attack. |

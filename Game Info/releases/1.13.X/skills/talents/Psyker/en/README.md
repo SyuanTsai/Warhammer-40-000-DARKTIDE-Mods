@@ -80,6 +80,7 @@
 | <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="Peril Equilibrium talent icon"> [Peril Equilibrium](#psyker_weapon_attacks_peril_equilibrium) | <ul><li>Damaging non-Warp melee or ranged hits add 2 percentage points of Peril, up to 75%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="32" height="32" alt="Surety of Arms talent icon"> [Surety of Arms](#psyker_reload_speed_warp_charge) | <ul><li>+30% Reload Speed at Peril ≤80%; eligible completed reloads generate up to 15 percentage points of Peril according to the clip fraction restored.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="Crystalline Will talent icon"> [Crystalline Will](#psyker_alternative_peril_explosion) | <ul><li>+100% Overload Explosion Damage and +25% radius; ordinarily lose one Wound afterward, waived if the explosion kills an Elite.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="Channeled Force talent icon"> [Channeled Force](#psyker_force_staff_bonus) | <ul><li>Finishing a staff charge above 95% grants +20% Primary Damage for 5 seconds; finishing a Primary action grants +10% Secondary Damage for 5 seconds.</li></ul> | Talent |
 
 ---
 
@@ -1209,3 +1210,19 @@
 - **Damage and radius example**: Compare only these two modifiers. An original 100 explosion Damage becomes 100 × 2 = 200; an original 10-metre explosion radius becomes 10 × 1.25 = 12.5 metres. Actual Damage remains subject to distance falloff and enemy armour.
 
 [Details](psyker_alternative_peril_explosion.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_force_staff_bonus"></a>
+
+### Channeled Force
+
+<img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="72" height="72" alt="Channeled Force talent icon">
+
+- **Alternating attacks**: After a Force Staff charge exceeds 95% and the charge action finishes, Primary Attack Damage increases by 20% for 5 seconds. After a Primary Attack action finishes, Secondary Attack Damage increases by 10% for 5 seconds.
+
+- **Refresh**: The bonuses have separate timers and can coexist. Repeated triggers reset the corresponding 5-second timer without stacking the same bonus.
+
+- **Damage example**: Compare each bonus's own Damage stage, with both attacks originally dealing 100 and no other bonuses. Primary Attacks deal 100 × 1.2 = 120; Secondary Attacks deal 100 × 1.1 = 110. The bonuses affect different attacks and cannot be combined into a 30% increase on one hit.
+
+[Details](psyker_force_staff_bonus.md) · [Back to index](#talent-index)

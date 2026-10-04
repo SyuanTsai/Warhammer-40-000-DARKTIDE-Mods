@@ -84,3 +84,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Peril Equilibrium](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | Talent |
 | [Surety of Arms](psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | Talent |
 | [Crystalline Will](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | Talent |
+| [Channeled Force](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | Talent |
