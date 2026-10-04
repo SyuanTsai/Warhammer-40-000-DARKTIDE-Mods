@@ -238,6 +238,18 @@ Full raw template and formatting: [source evidence](zealot_stealth_cooldown_rege
 | Stealth kill and target-dependent refund | “Restore Ability Cooldown on Stealth Kill”; Monstrosities 50%, Ogryns 30%, others 15%.; `ui / loc_talent_zealot_stealth_cooldown_regeneration_desc / d641c97c` | The active invisibility special-rule hook refunds 0.5/0.3/0.15 of one charge by killed breed tags. [Fixed source and line references](zealot_stealth_cooldown_regeneration.md#fixed-source-evidence) | Consistent | The English percentages and target categories match and contain no seconds-unit error. |
 | Qualifying event, success lock and cap | No exit-attack filter, once-per-Stealth limit or resource-cap example; `ui / loc_talent_zealot_stealth_cooldown_regeneration_desc / d641c97c` | Qualifying effective exit attack kill; existing DoT kills excluded; successful refund sets `got_cooldown=true`. One-charge cost and missing resource limit apply. [Fixed source and line references](zealot_stealth_cooldown_regeneration.md#fixed-source-evidence) | Not covered by the description | These restrictions and the 15/9/4.5-resource examples supplement the percentage description. |
 
+
+<a id="zealot_resist_death"></a>
+
+## Until Death
+
+Full raw template and formatting: [source evidence](zealot_resist_death.md#original-english-template-and-reconstruction). Name hash `72493f76`. Every row uses `ui / loc_talent_zealot_resist_death_base_desc / 0da0b898`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Fatal trigger, effect and cooldown field | “Fatal damage instead grants you Unkillable for 8s. 120s Cooldown.”; `ui / loc_talent_zealot_resist_death_base_desc / 0da0b898` | Fatal damage proc provides `unkillable`; `active_duration=8`, `cooldown_duration=120`. [Fixed source and line references](zealot_resist_death.md#fixed-source-evidence) | Consistent | The condition, keyword and two field values match. |
+| Cooldown starting point and exclusions | No cooldown starting point, other-Unkillable exclusion or Keystone selection rule; `ui / loc_talent_zealot_resist_death_base_desc / 0da0b898` | Cooldown follows the active 8s effect: about 128s trigger-to-next availability; another Unkillable effect returns early; exclusive Keystone group. [Fixed source and line references](zealot_resist_death.md#fixed-source-evidence) | Not covered by the description | The English does not explicitly place cooldown at activation; retain the accepted timeline as a supplement. |
+
 ## Comparison totals
 
 33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.

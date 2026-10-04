@@ -30,3 +30,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Invocation of Death](zealot_crits_grant_cd.md) / `zealot_crits_grant_cd` | Ability |
 | [Unrelenting Fury](zealot_fotf_refund_cooldown.md) / `zealot_fotf_refund_cooldown` | Ability |
 | [Perfectionist](zealot_stealth_cooldown_regeneration.md) / `zealot_stealth_cooldown_regeneration` | Ability |
+| [Until Death](zealot_resist_death.md) / `zealot_resist_death` | Keystone |
