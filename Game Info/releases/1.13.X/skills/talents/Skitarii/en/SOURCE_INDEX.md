@@ -35,3 +35,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Probing Strikes](cryptic_chordclaw_quick_stab_combo.md) / `cryptic_chordclaw_quick_stab_combo` | Ability |
 | [Flux Conduit Build-Up](cryptic_crits_grant_power.md) / `cryptic_crits_grant_power` | Ability |
 | [Reactor Coil Recharge](cryptic_weakspot_kills_grant_power.md) / `cryptic_weakspot_kills_grant_power` | Ability |
+| [Augmented Power-Cycle](cryptic_increased_passive_cooldown_regen.md) / `cryptic_increased_passive_cooldown_regen` | Ability |

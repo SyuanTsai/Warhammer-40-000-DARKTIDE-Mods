@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/7d516cae-80f0-4d48-b562-b5a21f6ddcd1" width="32" height="32" alt="Probing Strikes talent icon"> [Probing Strikes](#cryptic_chordclaw_quick_stab_combo) | <ul><li>Quick Chordclaw activation becomes three successive stabs; holding the input still uses the regular Heavy Attack.</li><li>Each stab is a guaranteed Critical Strike and applies 6 Bleed stacks to its target when it deals Health damage. Bleed is capped at 18 stacks.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="Flux Conduit Build-Up talent icon"> [Flux Conduit Build-Up](#cryptic_crits_grant_power) | <ul><li>Critical hits accelerate Capacitance recovery for 4s. At the base recovery rate, the extra amount is 5% of one charge.</li><li>Another Critical hit within 4s resets the recovery window; the recovery bonus stays fixed and does not stack with repeated Critical hits.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="Reactor Coil Recharge talent icon"> [Reactor Coil Recharge](#cryptic_weakspot_kills_grant_power) | <ul><li>Weakspot Kills restore 2% of the current Combat Ability's cost per charge. At 50 points per charge, each restores 1 point of Capacitance.</li><li>Recovery is retained as fractional progress; usable charge count increases only upon reaching another full charge.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="Augmented Power-Cycle talent icon"> [Augmented Power-Cycle](#cryptic_increased_passive_cooldown_regen) | <ul><li>Natural Capacitance recovery increases from 2% to 3% of one charge per second. At 50 points per charge, recovery rises from 1 to 1.5 points/s.</li><li>With no other costs or recovery modifiers, one charge refills in about 33.3s and three charges from empty in about 100s.</li></ul> | Ability |
 
 ---
 
@@ -388,3 +389,17 @@
 - **How it works**: Capacitance progress accumulates. Every 50 points forms one full charge, and progress below 50 points is retained.
 
 [Details](cryptic_weakspot_kills_grant_power.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_increased_passive_cooldown_regen"></a>
+
+### Augmented Power-Cycle
+
+<img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="72" height="72" alt="Augmented Power-Cycle talent icon">
+
+- **Recovery**: Restores an additional 1% of one Capacitance charge per second, increasing base natural recovery from 2% to 3% per second.
+- **Time example**: With no other bonuses or ongoing costs, refilling one charge from empty takes 100% ÷ 3% ≈ 33.33s. Refilling three empty charges takes 300% ÷ 3% = 100s.
+- **Ability interaction**: Advanced Combat Doctrines has separate activation, upkeep and shooting costs. The refill times above cannot be used to estimate how long the stance can be maintained.
+
+[Details](cryptic_increased_passive_cooldown_regen.md) · [Back to index](#talent-index)

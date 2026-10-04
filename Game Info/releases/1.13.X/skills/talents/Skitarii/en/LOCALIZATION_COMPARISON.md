@@ -297,6 +297,18 @@ Full raw template and formatting: [source evidence](cryptic_weakspot_kills_grant
 | Weakspot Kill trigger and amount | Weakspot Kills generate 2% Capacitance; `ui / loc_talent_cryptic_weakspot_kills_grant_power_desc / 7e092f5a` | on_kill requires attack_result died and hit_weakspot true; restore_ability_charge_percentage receives 0.02 [Fixed source and line references](cryptic_weakspot_kills_grant_power.md#fixed-source-evidence) | Consistent | The trigger and amount agree. English states no conflicting percentage basis. |
 | Cost basis, progress and cap | No one-charge cost basis, weapon restriction, fractional-progress or pool-cap detail; `ui / loc_talent_cryptic_weakspot_kills_grant_power_desc / 7e092f5a` | Recovery =single-use/per-charge cost ×0.02; no weapon-type requirement; fixed-precision resource capped at pool maximum; usable charges =floor(resource /cost per charge) [Fixed source and line references](cryptic_weakspot_kills_grant_power.md#fixed-source-evidence) | Not covered by the description | At a 50-point cost, one kill adds 1 point and 50 kills add one charge; the three-charge pool caps at 150. Increasing charge count does not increase the per-kill amount. |
 
+
+<a id="cryptic_increased_passive_cooldown_regen"></a>
+
+## Augmented Power-Cycle
+
+Full raw template and formatting: [source evidence](cryptic_increased_passive_cooldown_regen.md#original-english-template-and-reconstruction). Name hash `2995a918`. Every row uses `ui / loc_talent_cryptic_increased_passive_cooldown_regen_desc / 34a7eed6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-second recovery | Generate 1% Capacitance each second; `ui / loc_talent_cryptic_increased_passive_cooldown_regen_desc / 34a7eed6` | cooldown_percent_regen_per_second 0.01 converts to +0.5 additive combat_ability_resource_regen_modifier, adding 0.5 points/s to the base 1/s for a 50-point charge [Fixed source and line references](cryptic_increased_passive_cooldown_regen.md#fixed-source-evidence) | Consistent | The extra recovery equals 1% of one charge per second. The English does not explicitly say it replaces base recovery. |
+| Cost basis, total rate, refill time and active ability | No one-charge basis, base contribution, fractional progress or ability-cost details; `ui / loc_talent_cryptic_increased_passive_cooldown_regen_desc / 34a7eed6` | Default recovery modifier 1 →1.5; 50-point charge and max 3 give 150-point pool, floor(resource /50) full charges; active stance upkeep costs 1/s, so this bonus leaves net 0.5/s before activation/shooting costs [Fixed source and line references](cryptic_increased_passive_cooldown_regen.md#fixed-source-evidence) | Not covered by the description | Natural 2%/s becomes 3%/s: one refill 100% ÷3% ≈33.33s, three 300% ÷3% =100s, assuming inactive ability and no other costs, pauses or modifiers. |
+
 ## Comparison totals
 
 42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.
