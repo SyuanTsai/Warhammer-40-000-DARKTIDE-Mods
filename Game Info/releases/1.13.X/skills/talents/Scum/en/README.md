@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="Ruffian talent icon"> [Ruffian](#broker_coherency_melee_damage) | <ul><li>You and allies in Coherency gain 10% Melee Damage.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="Anarchist talent icon"> [Anarchist](#broker_coherency_anarchist) | <ul><li>You and allies in Coherency gain 5 percentage points of Critical Chance.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="Enhanced Desperado talent icon"> [Enhanced Desperado](#broker_ability_focus_improved) | <ul><li>Activate to swap to and reload the Ranged Weapon for 10 seconds of focus: count as Dodging Ranged Attacks, Sprint without Stamina cost and gain an additive 20% Sprint Speed.</li><li>Highlight eligible enemies within 12.5 metres; Ranged kills of highlighted targets at Close Range extend the state, initially by 1 second per kill, with progressively smaller extensions after 20 seconds.</li><li>Base cooldown 45 seconds; natural replenishment pauses during the state and resumes when it ends.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="32" height="32" alt="Stimm Supply talent icon"> [Stimm Supply](#broker_ability_stimm_field) | <ul><li>Deploy a Stimm gas field with a 3-metre radius for 20 seconds. Operatives in it heal 0.5 Corruption every 0.25 seconds, up to 40 total, and become immune to Corruption.</li><li>If you carry a Stimm, the field also gives nearby allies its effects. Base cooldown 60 seconds; natural replenishment pauses while the field exists.</li></ul> | Ability |
 
 ---
 
@@ -137,3 +138,21 @@
 - **Ammo and cooldown:** reloading during focus does not consume reserve Ammo. Natural replenishment for the base 45-second cooldown starts only after focus ends; extending focus delays that start. At the end, the magazine is recalculated against remaining reserve Ammo, so a whole magazine of free rounds from the state is not retained.
 
 [Details](broker_ability_focus_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_stimm_field"></a>
+
+### Stimm Supply
+
+<img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="72" height="72" alt="Stimm Supply talent icon">
+
+- **Deployment and range:** place a refitted Medi-Pack on the ground to form a gas field with a 3-metre radius, lasting 20 seconds by default. You and allies breathing the gas gain its effects.
+
+- **Corruption healing:** remove up to 0.5 Corruption every 0.25 seconds. The displayed total is at most 20 ÷ 0.25 × 0.5 = 40; Corruption taken is zero while the field effect applies. It cannot clear Corruption that has consumed a complete Health segment. Leaving the field removes the base effect.
+
+- **Stimm sharing:** if you carry a Stimm, the field gives its corresponding effects to allies in range. Deployment consumes or removes the corresponding Stimm use.
+
+- **Cooldown:** base cooldown 60 seconds. Natural replenishment pauses while the field operates and starts after it ends.
+
+[Details](broker_ability_stimm_field.md) · [Back to index](#talent-index)

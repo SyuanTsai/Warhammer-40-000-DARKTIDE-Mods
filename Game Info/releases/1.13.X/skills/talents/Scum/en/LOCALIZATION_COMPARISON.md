@@ -92,6 +92,18 @@ Full raw template and formatting: [source evidence](broker_ability_focus_improve
 | Focus and extension description | 10s focus, Ranged Dodging, no Sprint Stamina cost, +20% Sprint Speed, reloads do not reduce Ammo Reserve; close-target highlights and 1s extensions diminishing after 20s; base cooldown 45s; `ui / loc_talent_broker_ability_focus_improved_desc / a1148a57` | The improved focus buff and ability use the stated values and free transfers; close Ranged kills extend focus under the accepted event conditions. [Fixed source and line references](broker_ability_focus_improved.md#fixed-source-evidence) | Consistent | The English effects, amounts and initial timing match the verified evidence; Base Cooldown does not promise replenishment during the state. |
 | Geometry, immunity and timing limits | No numeric close radius, exact later extensions, tracked Toxin exception, Ammo cleanup or pause rule; `ui / loc_talent_broker_ability_focus_improved_desc / a1148a57` | 12.5 m checks; suppression_immune; extensions 1/5^floor(elapsed/20), remaining duration capped at 10 s; tracked Needle Pistol death conditions; Ammo reconciliation on stop; natural replenishment paused during focus. [Fixed source and line references](broker_ability_focus_improved.md#fixed-source-evidence) | Not covered by the description | These retain existing conditions and calculations, including 100→120 speed and the player 5→6 m/s example, without treating omissions as errors. |
 
+
+<a id="broker_ability_stimm_field"></a>
+
+## Stimm Supply
+
+Full raw template and formatting: [source evidence](broker_ability_stimm_field.md#original-english-template-and-reconstruction). Name hash `56107528`. Every row uses `ui / loc_talent_broker_ability_stimm_field_desc_3 / 81b45839`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Field, healing and Stimm sharing | 20s gas field; heal up to 40 Corruption over time and become immune; copy equipped Stimm effects to nearby allies; base cooldown 60s; `ui / loc_talent_broker_ability_stimm_field_desc_3 / 81b45839` | Field life_time 20; server removes 0.5 Corruption every 0.25 s, capped by removable Corruption; Corruption taken multiplier 0; equipped usable Stimm effects are copied. [Fixed source and line references](broker_ability_stimm_field.md#fixed-source-evidence) | Consistent | The upper-bound wording, immunity, sharing and base values agree with the accepted evidence. |
+| Range, consumption and cooldown limits | No radius, tick interval, full-segment restriction, use consumption or pause rule; `ui / loc_talent_broker_ability_stimm_field_desc_3 / 81b45839` | Radius 3 m; 0.25 s ticks; cannot clear Corruption consuming a complete Health segment; ordinary Stimm item or pocket charge is consumed/removed; base effects end on exit; natural replenishment pauses while the field works. [Fixed source and line references](broker_ability_stimm_field.md#fixed-source-evidence) | Not covered by the description | These preserve existing conditions and the 20/0.25×0.5=40 derivation; Base Cooldown does not specify an uninterrupted countdown. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

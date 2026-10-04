@@ -19,3 +19,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ruffian](broker_coherency_melee_damage.md) / `broker_coherency_melee_damage` | Aura |
 | [Anarchist](broker_coherency_anarchist.md) / `broker_coherency_anarchist` | Aura |
 | [Enhanced Desperado](broker_ability_focus_improved.md) / `broker_ability_focus_improved` | Ability |
+| [Stimm Supply](broker_ability_stimm_field.md) / `broker_ability_stimm_field` | Ability |
