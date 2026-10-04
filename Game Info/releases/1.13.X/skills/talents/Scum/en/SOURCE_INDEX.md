@@ -120,3 +120,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kalma IV](broker_stimm_concentration_4.md) / `broker_stimm_concentration_4` | Stimm recipe |
 | [Kalma V](broker_stimm_concentration_5a.md) / `broker_stimm_concentration_5a` | Stimm recipe |
 | [Hypex](broker_stimm_concentration_5b.md) / `broker_stimm_concentration_5b` | Stimm recipe |
+| [Klay](broker_stimm_concentration_5c.md) / `broker_stimm_concentration_5c` | Stimm recipe |

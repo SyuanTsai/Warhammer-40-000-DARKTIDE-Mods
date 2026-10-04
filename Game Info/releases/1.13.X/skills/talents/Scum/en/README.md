@@ -116,6 +116,7 @@
 | <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="Kalma IV talent icon"> [Kalma IV](#broker_stimm_concentration_4) | <ul><li>Gain 6.25% Combat Ability Regeneration.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="Kalma V talent icon"> [Kalma V](#broker_stimm_concentration_5a) | <ul><li>Gain 25% Combat Ability Regeneration.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/77f46379-3f89-4c81-8240-a0dc288fb868" width="32" height="32" alt="Hypex talent icon"> [Hypex](#broker_stimm_concentration_5b) | <ul><li>While the Stimm is active, Melee Kills grant 56.25% Combat Ability Regeneration for 1 second; further kills refresh the countdown.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="32" height="32" alt="Klay talent icon"> [Klay](#broker_stimm_concentration_5c) | <ul><li>While the Stimm is active, Ranged Kills grant 56.25% Combat Ability Regeneration for 1 second; further kills refresh the countdown.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1917,3 +1918,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Scope**: This speeds up Combat Ability Regeneration only, without speeding up the dedicated Stimm's own recovery. It does not start the countdown while natural ability regeneration is paused.
 
 [Details](broker_stimm_concentration_5b.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_concentration_5c"></a>
+
+### Klay
+
+<img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="72" height="72" alt="Klay talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Trigger**: While the Stimm is active, killing an enemy with a Ranged Attack grants an additional 56.25% Combat Ability Regeneration for 1 second.
+
+- **Refreshing**: Another qualifying kill resets the 1-second countdown; it does not stack a second copy of the bonus.
+
+- **Regeneration example**: Prerequisite Kalma I–IV provide 25%. Adding this 56.25% gives a multiplier of 1 + 25% + 56.25% = 1.8125 for that second. A base recovery of 1 second of cooldown per second becomes 1.8125 seconds for that second.
+
+- **Scope**: This speeds up Combat Ability Regeneration only, without speeding up the dedicated Stimm's own recovery. It does not start the countdown while natural ability regeneration is paused.
+
+[Details](broker_stimm_concentration_5c.md) · [Back to index](#talent-index)
