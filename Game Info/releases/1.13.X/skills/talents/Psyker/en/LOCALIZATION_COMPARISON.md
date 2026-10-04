@@ -385,6 +385,18 @@ Full raw template and formatting: [source evidence](psyker_reduced_warp_charge_c
 | Reduction per Warp Charge | -8% Peril Generation Reduction for each Warp Charge; `ui / loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc / e3048a81` | warp_charge_amount interpolates 1→0.52 over zero to six souls, giving a 0.08 reduction per soul. [Fixed source and line references](psyker_reduced_warp_charge_cost_and_venting_speed.md#fixed-source-evidence) | Consistent | The mapped magnitude and reduction direction agree with the accepted evidence; the original prefix/wording is retained. |
 | Resource, cap and scope | No resource prerequisite, cap variant, interpolation formula or Quelling Speed effect specified; `ui / loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc / e3048a81` | Reads talent_resource.current_resource from Warp Siphon; four charges give 0.68, six give 0.52. Warp Battery changes the cap, not the per-charge reduction. This source sets only warp_charge_amount. [Fixed source and line references](psyker_reduced_warp_charge_cost_and_venting_speed.md#fixed-source-evidence) | Not covered by the description | The resource dependency, formulas and identifier caveat are supplements; English does not promise a separate Quelling effect. |
 
+
+<a id="psyker_toughness_on_soul"></a>
+
+## Essence Harvest
+
+Full raw template and formatting: [source evidence](psyker_toughness_on_soul.md#original-english-template-and-reconstruction). Name hash `15a3a4d2`. Every row uses `ui / loc_talent_psyker_toughness_regen_on_soul_desc / fc9f3c0b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration and refresh | Replenish 30% Toughness over 5s on gaining Warp Charge; a new charge resets the timer; `ui / loc_talent_psyker_toughness_regen_on_soul_desc / fc9f3c0b` | percent_toughness 0.06 per second × duration 5 = 0.30; refresh_duration_on_stack resets the duration. [Fixed source and line references](psyker_toughness_on_soul.md#fixed-source-evidence) | Consistent | The total, duration, over-time delivery and explicit refresh rule agree. |
+| Rate cap, deficit and soul-cap trigger | No maximum-Toughness basis, missing-Toughness cap, rate stacking or capped-soul event detail specified; `ui / loc_talent_psyker_toughness_regen_on_soul_desc / fc9f3c0b` | Buff cap is one, so refresh does not stack the rate. Restoration is capped by the deficit; a successful soul-add/update event can refresh the effect at the soul cap. [Fixed source and line references](psyker_toughness_on_soul.md#fixed-source-evidence) | Not covered by the description | These are accepted boundaries and formula details; English makes no contrary instant-restoration or rate-stacking claim. |
+
 ## Comparison totals
 
 The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.

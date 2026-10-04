@@ -42,3 +42,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Disrupt Destiny](psyker_new_mark_passive.md) / `psyker_new_mark_passive` | Keystone |
 | [Empowered Psionics](psyker_empowered_ability.md) / `psyker_empowered_ability` | Keystone |
 | [Inner Tranquility](psyker_reduced_warp_charge_cost_and_venting_speed.md) / `psyker_reduced_warp_charge_cost_and_venting_speed` | Keystone |
+| [Essence Harvest](psyker_toughness_on_soul.md) / `psyker_toughness_on_soul` | Keystone |

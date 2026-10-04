@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="Disrupt Destiny talent icon"> [Disrupt Destiny](#psyker_new_mark_passive) | <ul><li>Personal Marked Enemy kills grant Precision: per stack, +1% Damage, +2% Critical Damage and +2.5% Weakspot Damage; also restore 25% Toughness over 2.5 seconds and grant +20% Movement Speed for 2.5 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="32" height="32" alt="Empowered Psionics talent icon"> [Empowered Psionics](#psyker_empowered_ability) | <ul><li>Kills have a 10% chance to empower the next Blitz; base storage is one. Empowered Brain Rupture and Smite gain Damage, while Assail avoids Peril and Blitz-stock payment and gains Damage/cleave.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="Inner Tranquility talent icon"> [Inner Tranquility](#psyker_reduced_warp_charge_cost_and_venting_speed) | <ul><li>Each Warp Charge reduces Peril Generation by 8%; four charges give 32% reduction, or 48% at six with Warp Battery.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="Essence Harvest talent icon"> [Essence Harvest](#psyker_toughness_on_soul) | <ul><li>Gaining a Warp Charge restores 30% of maximum Toughness over five seconds; further gains refresh the duration without stacking the restoration rate.</li></ul> | Keystone |
 
 ---
 
@@ -523,3 +524,17 @@
 - **Peril example:** An attack that originally generates 10 percentage points of Peril generates `10 × (1 − 8% × 4) = 6.8` at four stacks, or 5.2 at six. Other Generation modifiers apply separately.
 
 [Details](psyker_reduced_warp_charge_cost_and_venting_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_toughness_on_soul"></a>
+
+### Essence Harvest
+
+<img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="72" height="72" alt="Essence Harvest talent icon">
+
+- **How it works:** Gaining a Warp Charge restores 30% of maximum Toughness over five seconds. Gaining another during the effect resets the five-second timer; the restoration rate does not stack.
+
+- **Restoration example:** With 100 maximum Toughness, restore `100 × 30% ÷ 5 = 6` per second, or 30 over a full five seconds. If only 12 is missing, at most 12 can actually be restored.
+
+[Details](psyker_toughness_on_soul.md) · [Back to index](#talent-index)
