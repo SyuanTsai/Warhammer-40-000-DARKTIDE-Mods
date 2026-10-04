@@ -865,6 +865,19 @@ Full raw template and formatting: [source evidence](cryptic_hybrid_damage.md#ori
 | Cross-type triggers, values and decay | Melee Kills increase Ranged Damage; Ranged Kills increase Melee Damage; +3%, 8s, 5 stacks each; stacks decay one at a time; `ui / loc_talent_cryptic_hybrid_damage_desc / dc9f61eb` | The two kill events grant the opposite damage buff, each with 3% per stack, a 5-stack cap and 8-second one-stack decay. [Fixed source and line references](cryptic_hybrid_damage.md#fixed-source-evidence) | Consistent | The stated trigger direction, values and sequential decay match. |
 | Separate timers and damage scope | Does not specify separate refresh timers or weapon switching; `ui / loc_talent_cryptic_hybrid_damage_desc / dc9f61eb` | New stacks refresh the corresponding timer; switching weapons does not directly clear them. Five ranged stacks take shooting damage 100→115 even with five melee stacks. [Fixed source and line references](cryptic_hybrid_damage.md#fixed-source-evidence) | Not covered by the description | These existing details explain separate accumulation and prevent combining different attack-type bonuses. |
 
+
+<a id="cryptic_toughness_on_damage_taken"></a>
+
+## Kinetic Energy Distributors
+
+Full raw template and formatting: [source evidence](cryptic_toughness_on_damage_taken.md#original-english-template-and-reconstruction). Name hash `8db3fdfa`. Every row uses `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery fraction and duration | Taking damage restores 25% Toughness over 5s; `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c` | Positive Health damage to the player triggers 25% of maximum Toughness recovery over 5 seconds. [Fixed source and line references](cryptic_toughness_on_damage_taken.md#fixed-source-evidence) | Consistent | The stated fraction and recovery duration match the verified effect. |
+| Cooldown claim | 10s Cooldown; `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c` | The template sets `cooldown = 10`; `ProcBuff` reads `cooldown_duration`, so that value is not used in cooldown checks. [Fixed source and line references](cryptic_toughness_on_damage_taken.md#fixed-source-evidence) | Explicit contradiction | The English explicitly promises a cooldown absent from the accepted fixed-source implementation; same-build in-game confirmation remains outstanding. |
+| Health-only trigger and refresh | Does not specify Health damage, percentage basis or retriggering; `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c` | Require self as attacked unit and `damage_amount > 0`; Toughness-only loss does not qualify. A new trigger resets the recovery budget and 5 seconds without stacking rate. [Fixed source and line references](cryptic_toughness_on_damage_taken.md#fixed-source-evidence) | Not covered by the description | These details explain the original 100-maximum example: 5 points/second and up to 35 through a retrigger at 2 seconds. |
+
 ## Comparison totals
 
 146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

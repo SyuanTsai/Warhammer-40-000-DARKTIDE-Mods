@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="Superior Tracking Litanies talent icon"> [Superior Tracking Litanies](#cryptic_no_braced_movement_penalty) | <ul><li>Halves the movement-speed penalty while bracing or aiming down sights, and always reduces shooting Spread by 45%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="Hydraulic Impact talent icon"> [Hydraulic Impact](#cryptic_better_heavies) | <ul><li>Protects against ordinary hit interruption while charging melee attacks and grants 15% Heavy Melee Damage; full charge is not required for the damage bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="Hybrid Combat Covenant talent icon"> [Hybrid Combat Covenant](#cryptic_hybrid_damage) | <ul><li>Melee kills grant Ranged Damage stacks and ranged kills grant Melee Damage stacks: 3% per stack, up to 5 of each, decaying one at a time every 8 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="32" height="32" alt="Kinetic Energy Distributors talent icon"> [Kinetic Energy Distributors](#cryptic_toughness_on_damage_taken) | <ul><li>Taking positive Health damage restores 25% of maximum Toughness over 5 seconds. Taking only Toughness damage does not trigger it; retriggering refreshes recovery.</li></ul> | Talent |
 
 ---
 
@@ -1117,3 +1118,17 @@
 - **Damage example**: Five Ranged Damage stacks give 15%, taking base shooting damage from 100 to 115. Even if you also have five Melee Damage stacks, that shot still receives only the 15% Ranged Damage bonus.
 
 [Details](cryptic_hybrid_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_toughness_on_damage_taken"></a>
+
+### Kinetic Energy Distributors
+
+<img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="72" height="72" alt="Kinetic Energy Distributors talent icon">
+
+- **Trigger**: After you take positive Health damage, restore 25% of maximum Toughness over 5 seconds. Losing Toughness alone does not trigger this effect.
+- **Refresh**: Taking qualifying damage again restarts recovery; the recovery rate does not stack.
+- **Recovery example**: At 100 maximum Toughness, recover `100 × 25% ÷ 5 = 5` points per second. Taking damage again at 2 seconds extends recovery until 7 seconds, restoring up to 35 points over that period.
+
+[Details](cryptic_toughness_on_damage_taken.md) · [Back to index](#talent-index)

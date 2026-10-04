@@ -82,3 +82,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Superior Tracking Litanies](cryptic_no_braced_movement_penalty.md) / `cryptic_no_braced_movement_penalty` | Talent |
 | [Hydraulic Impact](cryptic_better_heavies.md) / `cryptic_better_heavies` | Talent |
 | [Hybrid Combat Covenant](cryptic_hybrid_damage.md) / `cryptic_hybrid_damage` | Talent |
+| [Kinetic Energy Distributors](cryptic_toughness_on_damage_taken.md) / `cryptic_toughness_on_damage_taken` | Talent |
