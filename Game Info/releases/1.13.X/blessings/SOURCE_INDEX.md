@@ -92,3 +92,4 @@
 | [雙管齊發](entries/雙管齊發/README.md) | [來源索引](entries/雙管齊發/SOURCE_INDEX.md) |
 | [交叉動量](entries/交叉動量/README.md) | [來源索引](entries/交叉動量/SOURCE_INDEX.md) |
 | [凶殘之寧](entries/凶殘之寧/README.md) | [來源索引](entries/凶殘之寧/SOURCE_INDEX.md) |
+| [快速裝填](entries/快速裝填/README.md) | [來源索引](entries/快速裝填/SOURCE_INDEX.md) |

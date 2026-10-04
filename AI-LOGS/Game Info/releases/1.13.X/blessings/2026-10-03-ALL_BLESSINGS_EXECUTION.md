@@ -329,3 +329,5 @@
 - 第18輪三項已Commit後完整掃描通過：syphon (`3e599f5d87e979a39eca965796429368b2a633fd`)、both-barrels (`e00d9abba95a64d860f909c37b6f3fc70df8a2bf`)、gauntlet-momentum (`0147ec19081ab2a27a04c1b05e00619377ea8929`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-018-full-scan.json`／SHA-256 `50537572ac4176f44ef9c60075cbfc71e4ae549998bbd778254c4d8e89cd52fa`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [凶殘之寧](2026-10-03-MURDEROUS-TRANQUILITY_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [快速裝填](2026-10-03-QUICKLOADER_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

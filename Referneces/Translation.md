@@ -1865,3 +1865,6 @@
 
 - Murderous Tranquility - 凶殘之寧
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_vent_warp_charge_on_multiple_hits`，hash `558074d6`；英文／繁中RAW配對確認。
+
+- Quickloader - 快速裝填
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_dodge`，hash `10e76602`；英文／繁中RAW配對確認。

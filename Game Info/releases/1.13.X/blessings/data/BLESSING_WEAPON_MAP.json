@@ -1160,6 +1160,20 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
       "effect": "持用烈焰力場巨劍時，當合格近戰命中事件序號達 3 或以上，同批事件合併成一次延後扣除，依 I–IV 級減少目前反噬 2／3／4／5 個百分點；額外風刃與甩擊不觸發。"
+    },
+    {
+      "id": "quickloader",
+      "name_zh_tw": "快速裝填",
+      "name_en": "Quickloader",
+      "name_key": "loc_trait_bespoke_reload_speed_on_dodge",
+      "description_key": "loc_trait_bespoke_reload_speed_on_dodge_desc",
+      "name_hash": "10e76602",
+      "description_hash": "ed6915e5",
+      "page": "entries/快速裝填/README.md",
+      "kind": "ranged",
+      "icon": "",
+      "effect": "持用適用步兵自動槍進入閃避狀態後，接下來 2 秒內提高 10%／12.5%／15%／20% 裝填速度；再次觸發會刷新計時。",
+      "icon_status": "unavailable_user_approved"
     }
   ],
   "weapons": [
@@ -17813,6 +17827,99 @@
       "icon": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_220",
       "effect": "持用烈焰力場巨劍時，當合格近戰命中事件序號達 3 或以上，同批事件合併成一次延後扣除，依 I–IV 級減少目前反噬 2／3／4／5 個百分點；額外風刃與甩擊不觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+      "blessing_id": "quickloader",
+      "weapon_id": "autogun_p1",
+      "page": "entries/快速裝填/weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "reload_speed",
+        "stat_type": "additive_multiplier",
+        "base_value": 1,
+        "tier_bonus_by_level": {
+          "I": 0.1,
+          "II": 0.125,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "active_duration_seconds": 2,
+        "proc_event": "on_dodge_start",
+        "proc_event_chance": 1,
+        "wrapper_proc_stat_fallback": 0.5,
+        "tier_same_key_override_replaces_wrapper_fallback": true,
+        "held_item_slot_gate": true,
+        "cooldown_duration_declared": false,
+        "repeated_trigger": "resets active_start_time; does not add stacks",
+        "reload_time_formula": "T1 = T0 * (1 + q) / (1 + q + p), assuming same weapon handling and unclamped action time scale; p=Quickloader tier bonus, q=other reload_speed bonuses, T0=baseline action duration with q but without p.",
+        "time_scale_is_sampled_at_action_start": true,
+        "not_claimed": "20% reload speed does not mean 20% shorter duration; no absolute mark reload time is asserted.",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+        "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+        "restriction_key": "autogun_p1",
+        "marks": [
+          {
+            "mark_id": "autogun_p1_m1",
+            "name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+            "name_en": "Infantry Autogun Agripinaa Mk I",
+            "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+            "hip_kind": "shoot_hit_scan",
+            "zoom_kind": "shoot_hit_scan",
+            "reload_total_time": 3.3,
+            "reload_handling_template": "time_scale_1_2"
+          },
+          {
+            "mark_id": "autogun_p1_m2",
+            "name_zh_tw": "步兵自動槍 弗拉克斯 Mk V",
+            "name_en": "Infantry Autogun Vraks Mk V",
+            "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+            "hip_kind": "shoot_hit_scan",
+            "zoom_kind": "shoot_hit_scan",
+            "reload_total_time": 3.3,
+            "reload_handling_template": "time_scale_1_3"
+          },
+          {
+            "mark_id": "autogun_p1_m3",
+            "name_zh_tw": "步兵自動槍 哥倫努 Mk VIII",
+            "name_en": "Infantry Autogun Columnus Mk VIII",
+            "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+            "hip_kind": "shoot_hit_scan",
+            "zoom_kind": "shoot_hit_scan",
+            "reload_total_time": 3.3,
+            "reload_handling_template": "time_scale_1_2"
+          }
+        ],
+        "actual_reload_consumer": "action_reload.time_scale_stat_buffs=[buff_stat_buffs.reload_speed]",
+        "reload_handling_template_by_mark": {
+          "autogun_p1_m1": "time_scale_1_2",
+          "autogun_p1_m2": "time_scale_1_3",
+          "autogun_p1_m3": "time_scale_1_2"
+        },
+        "all_marks_share_trait_tiers_and_proc_wrapper": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 392,
+        "end_line": 441
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 39
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_dodge_desc",
+      "description_hash": "ed6915e5",
+      "icon": "",
+      "icon_path": "",
+      "effect": "三型號均在閃避事件後取得同一個兩秒 reload_speed bonus；I–IV為+10%／+12.5%／+15%／+20%，僅新開始的裝填動作按開始時的stat計算。",
+      "icon_status": "unavailable_user_approved"
     }
   ],
   "bindings": [
@@ -24926,6 +25033,48 @@
         "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
         "import_line": 15,
         "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "quickloader",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "quickloader",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "quickloader",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
       }
     }
   ]
