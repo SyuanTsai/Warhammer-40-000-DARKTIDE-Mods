@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="Enhanced Capacitance Protocols talent icon"> [Enhanced Capacitance Protocols](#cryptic_dissector_ability_stacks) | <ul><li>Using a Combat Ability restores all missing Flensing Protocols stacks, up to the current cap: 6 normally, or 8 with Honed Dissector.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="Powerdrive talent icon"> [Powerdrive](#cryptic_overload_keystone_abilities) | <ul><li>Voltaic Emitter gives 5 Power Overload stacks per charge consumed. The Chordclaw counts its first activation; continued attacks during the same activation do not add stacks. Advanced Combat Doctrines settles whole-charge consumption when the stance ends.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="Higher Purpose talent icon"> [Higher Purpose](#cryptic_dissector_power) | <ul><li>Elite or Specialist kills restore an additional 2.5% of one Combat Ability charge, added to the class's base 4% for a total of 6.5%. This kill recovery is inactive during Advanced Combat Doctrines.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="Surge-Extension talent icon"> [Surge-Extension](#cryptic_redline_toughness) | <ul><li>Each charge-gained or charge-spent event starts 5 seconds of Toughness recovery, restoring 25% of maximum Toughness in total. It can trigger at the Redline stack cap; repeated events reset the duration and recovery budget.</li></ul> | Keystone |
 
 ---
 
@@ -739,3 +740,17 @@
 - **Exception**: While Advanced Combat Doctrines is active, both the class's base kill recovery and this talent's additional recovery are suspended.
 
 [Details](cryptic_dissector_power.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_redline_toughness"></a>
+
+### Surge-Extension
+
+<img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="72" height="72" alt="Surge-Extension talent icon">
+
+- **Trigger**: Gaining or spending a Combat Ability charge starts **5 seconds of Toughness recovery**. This can still trigger when Redline is at its stack cap.
+- **Amount**: Restore **25% of maximum Toughness in total**, at **5% per second**. At 100 maximum Toughness, this is 5 points per second and 25 points over 5 seconds.
+- **Repeated triggers**: A new trigger resets the 5-second duration and remaining recovery budget. If one charge event adds two Redline stacks, it still starts one 25% recovery, rather than 50%.
+
+[Details](cryptic_redline_toughness.md) · [Back to index](#talent-index)

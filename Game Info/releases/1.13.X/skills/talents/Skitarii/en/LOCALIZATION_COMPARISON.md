@@ -563,6 +563,18 @@ Full raw template and formatting: [source evidence](cryptic_dissector_power.md#o
 | Additional value and kill types | Elite and Specialist kills restore an additional +2.5% Capacitance; `ui / loc_talent_cryptic_dissector_power_desc / 2baab5a1` | The special rule adds `0.025` to the class's existing Elite/Specialist `0.04`, yielding `0.065` [Fixed source and line references](cryptic_dissector_power.md#fixed-source-evidence) | Consistent | The English says additional, so it does not claim 2.5% is the combined total. |
 | Recovery basis, progress and stance exception | Does not specify the one-charge denominator, total, modifier handling or stance suspension; `ui / loc_talent_cryptic_dissector_power_desc / 2baab5a1` | One-charge cost ×6.5% restores progress; at cost 50, total 3.25 includes extra 1.25. The helper ignores stat buffs, and `cryptic_precision_stance` suspends the kill proc [Fixed source and line references](cryptic_dissector_power.md#fixed-source-evidence) | Not covered by the description | The original numerical example and recovery restrictions supplement the English. |
 
+
+<a id="cryptic_redline_toughness"></a>
+
+## Surge-Extension
+
+Full raw template and formatting: [source evidence](cryptic_redline_toughness.md#original-english-template-and-reconstruction). Name hash `e4547a36`. Every row uses `ui / loc_talent_cryptic_redline_toughness_clarified_desc / 5f6b15fb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery amount and duration | Gaining a Redline Capacitors stack replenishes 25% Toughness over 5s; `ui / loc_talent_cryptic_redline_toughness_clarified_desc / 5f6b15fb` | The child buff sets total restoration to `0.25` and duration to 5 seconds [Fixed source and line references](cryptic_redline_toughness.md#fixed-source-evidence) | Consistent | The amount and duration match the verified values. |
+| Event granularity, recovery basis and retriggering | Does not state the denominator, event quantity, reset behavior or stack-cap behavior; `ui / loc_talent_cryptic_redline_toughness_clarified_desc / 5f6b15fb` | Maximum-Toughness recovery at 5% per second; each charge event starts or resets one 25% budget, even at the stack cap. Deficit limits and recovery modifiers apply [Fixed source and line references](cryptic_redline_toughness.md#fixed-source-evidence) | Not covered by the description | The examples and event restrictions supplement the wording; it does not promise separate recovery for each stack or exclude other triggers. |
+
 ## Comparison totals
 
 94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.
