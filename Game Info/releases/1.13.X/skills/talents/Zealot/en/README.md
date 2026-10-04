@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="Restorative Verses talent icon"> [Restorative Verses](#zealot_martyrdom_toughness_modifier) | <ul><li>Each complete missing Wound counted by Martyrdom increases Toughness replenishment by 5%, up to 5 stacks and +25%; gaining stacks does not directly restore Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="Eternal talent icon"> [Eternal](#zealot_quickness_increased_duration) | <ul><li>Inexorable Judgement's active bonus lasts 10 seconds instead of 6.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="On the Brink talent icon"> [On the Brink](#zealot_corruption_resistance_stacking) | <ul><li>Each complete missing Wound counted by Martyrdom reduces Corruption damage taken by 10%, up to 5 Wounds and 50%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="Zealous Pilgrim talent icon"> [Zealous Pilgrim](#zealot_resist_death_ability) | <ul><li>Ability use grants 4 seconds of Unkillable; Shroudfield starts it upon leaving Stealth, Chorus upon unwielding the relic. While Unkillable, gain 10% Damage and Attack Speed.</li></ul> | Keystone |
 
 ---
 
@@ -536,3 +537,17 @@
 - **Corruption example**: An event normally granting 20 Corruption grants 20 × (1 − 3 × 10%) = 14 at 3 stacks, or 10 at 5. Other Corruption multipliers multiply separately; this does not grant immunity to all Corruption sources.
 
 [Details](zealot_corruption_resistance_stacking.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_resist_death_ability"></a>
+
+### Zealous Pilgrim
+
+<img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="72" height="72" alt="Zealous Pilgrim talent icon">
+
+- **Trigger**: Ability use grants 4 seconds of Unkillable. Shroudfield starts this when Stealth ends; Chorus of Spiritual Fortitude starts it when the relic is unwielded.
+- **Offensive bonuses**: While Unkillable, gain 10% Damage and 10% Attack Speed.
+- **Damage and speed example**: Counting only this bonus, base damage 100 becomes 100 × 1.1 = 110. An affected 1-second action becomes 1 ÷ 1.1 ≈ 0.909 seconds. Other bonuses in the same stage add first.
+
+[Details](zealot_resist_death_ability.md) · [Back to index](#talent-index)
