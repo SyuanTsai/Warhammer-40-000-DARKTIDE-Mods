@@ -22,3 +22,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Enhanced Arc Grenades](cryptic_arc_grenades_weapon_malfunction.md) / `cryptic_arc_grenades_weapon_malfunction` | Blitz |
 | [Overcharged Refraction Emitter](cryptic_force_field_duration_increase.md) / `cryptic_force_field_duration_increase` | Blitz |
 | [Voltaic Resistance](cryptic_force_field_arcs.md) / `cryptic_force_field_arcs` | Blitz |
+| [Resurgence](cryptic_coherency_regen_aura_improved.md) / `cryptic_coherency_regen_aura_improved` | Aura |

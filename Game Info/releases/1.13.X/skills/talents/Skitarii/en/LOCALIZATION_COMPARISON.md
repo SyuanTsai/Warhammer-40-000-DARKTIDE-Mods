@@ -140,6 +140,18 @@ Full raw template and formatting: [source evidence](cryptic_force_field_arcs.md#
 | Ending arcs and attack-count basis | When Refraction Emitter ends, shoot up to 4 Arcs in front based on absorbed attacks; `ui / loc_talent_cryptic_force_field_arcs_desc / 143e5c50` | Field kill on expiry or ranged Health depletion; with living caster/talent, clamp(ceil(count / 6), 1, 4), selecting targets in front [Fixed source and line references](cryptic_force_field_arcs.md#fixed-source-evidence) | Consistent | The ending condition, forward selection, maximum and count basis agree. |
 | Minimum, thresholds and target/chain limits | No step size, zero-hit minimum, target radius or chain limit; `ui / loc_talent_cryptic_force_field_arcs_desc / 143e5c50` | 0–6 →1, 7–12 →2, 13–18 →3, 19+ →4; zero still selects; living targetable enemies within 12m, dot >0.5; no valid target means no shot; 12m chain radius, up to 4 jumps [Fixed source and line references](cryptic_force_field_arcs.md#fixed-source-evidence) | Not covered by the description | The zero-absorption example, target conditions and chain limits are supplements. Count is ranged/flagged-ranged events, not damage amount; these arcs are separate from 5m field explosions. |
 
+
+<a id="cryptic_coherency_regen_aura_improved"></a>
+
+## Resurgence
+
+Full raw template and formatting: [source evidence](cryptic_coherency_regen_aura_improved.md#original-english-template-and-reconstruction). Name hash `82e9b3ce`. Every row uses `ui / loc_talent_cryptic_coherency_regen_aura_improved_desc / a053ecfc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Personal Toughness and Coherency regeneration | Gain +25 Toughness; You and Allies in Coherency regenerate 50% Coherency Toughness regardless of enemy proximity; `ui / loc_talent_cryptic_coherency_regen_aura_improved_desc / a053ecfc` | Personal toughness =25 only on caster; Coherency minimum normal-rate multiplier 0.5 applies to caster and chain allies [Fixed source and line references](cryptic_coherency_regen_aura_improved.md#fixed-source-evidence) | Consistent | The personal amount, aura recipients and nearby-enemy regeneration agree. The percentage refers to Coherency rate, not maximum Toughness. |
+| Rate, delay and recipient limits | No regeneration delay, deficit, personal modifiers or base-aura priority details; `ui / loc_talent_cryptic_coherency_regen_aura_improved_desc / a053ecfc` | Same coherency_id as base, priority 1; base minimum 25%, improved 50%; delay/disable/weapon/movement/modifiers and maximum remain [Fixed source and line references](cryptic_coherency_regen_aura_improved.md#fixed-source-evidence) | Not covered by the description | Preserve 10 × 50% = 5 points/s and 4s →20 with sufficient deficit and uninterrupted recovery; the text does not promise immediate or uncapped restoration. |
+
 ## Comparison totals
 
 21 rules: 10 Consistent / 0 Explicit contradiction / 10 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 473.
