@@ -166,6 +166,18 @@ Full raw template and formatting: [source evidence](zealot_increased_duration.md
 | Extension and signed post-Stealth bonuses | Duration +2s; “gain -75% Threat and 50% Backstab Damage for 5s”; `ui / loc_talent_zealot_stealth_duration_threat_damage_desc / f25397d4` | Stealth totals 5s; post-Stealth `threat_weight_multiplier=0.25`, `backstab_damage=0.5`, duration 5s. [Fixed source and line references](zealot_increased_duration.md#fixed-source-evidence) | Consistent | Reading the negative sign with “gain” gives the correct direction. The separate Chinese wording issue does not establish an English erratum. |
 | Threat, refresh and damage interpretation | No target-selection probability, refresh rule or additive-stage example; `ui / loc_talent_zealot_stealth_duration_threat_damage_desc / f25397d4` | Threat weight is affected, with other AI factors still relevant; max 1 refreshes; Backstab 100→150 or 170 with an existing same-stage 20%. [Fixed source and line references](zealot_increased_duration.md#fixed-source-evidence) | Not covered by the description | These conditions and calculations supplement the stated bonuses. |
 
+
+<a id="zealot_leaving_stealth_restores_toughness"></a>
+
+## Invigorating Revelation
+
+Full raw template and formatting: [source evidence](zealot_leaving_stealth_restores_toughness.md#original-english-template-and-reconstruction). Name hash `5be8c25c`. Every row uses `ui / loc_talent_zealot_stealth_toughness_dr_desc / cc97b988`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration and exit resistance | “Shroudfield Replenishes 50% Toughness. Gain +30% Damage Resistance for 8s upon exiting Stealth.”; `ui / loc_talent_zealot_stealth_toughness_dr_desc / cc97b988` | Entry restores 0.5 maximum Toughness; exit adds `damage_taken_multiplier=0.7` for 8s. [Fixed source and line references](zealot_leaving_stealth_restores_toughness.md#fixed-source-evidence) | Consistent | The exit qualifier applies to resistance; the first sentence does not explicitly assert restoration on exit. |
+| Restoration basis, timing and damage limits | No maximum-versus-missing basis, cap, explicit entry timing or stacking rule; `ui / loc_talent_zealot_stealth_toughness_dr_desc / cc97b988` | Restoration occurs on entry and caps at missing Toughness; exit does not repeat it. General damage multiplier, max 1, duration begins on application. [Fixed source and line references](zealot_leaving_stealth_restores_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain the two effects and their limits without inventing an English timing error. |
+
 ## Comparison totals
 
 23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.
