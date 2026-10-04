@@ -226,6 +226,18 @@ Full raw template and formatting: [source evidence](zealot_fotf_refund_cooldown.
 | Kill condition, window, refund and limit | Elite/Specialist kill within 5s of Fury restores +20% Ability Cooldown; maximum once per use.; `ui / loc_talent_zealot_fotf_refund_cooldown_desc / 0dec8750` | Kill-filtered refund window lasts 5s; restores 0.2 of one charge and removes the Buff after success. [Fixed source and line references](zealot_fotf_refund_cooldown.md#fixed-source-evidence) | Consistent | The English percentage and use limit agree; it has no fixed-seconds unit error. |
 | Charge basis and resource limits | No charge-pool denominator or cap example; `ui / loc_talent_zealot_fotf_refund_cooldown_desc / 0dec8750` | A 30-resource charge refunds 6; only 4 restores if 4 is missing. Two charges do not change the denominator to 60. [Fixed source and line references](zealot_fotf_refund_cooldown.md#fixed-source-evidence) | Not covered by the description | The one-charge basis and timing/tag limits supplement the percentage statement. |
 
+
+<a id="zealot_stealth_cooldown_regeneration"></a>
+
+## Perfectionist
+
+Full raw template and formatting: [source evidence](zealot_stealth_cooldown_regeneration.md#original-english-template-and-reconstruction). Name hash `997e4534`. Every row uses `ui / loc_talent_zealot_stealth_cooldown_regeneration_desc / d641c97c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stealth kill and target-dependent refund | “Restore Ability Cooldown on Stealth Kill”; Monstrosities 50%, Ogryns 30%, others 15%.; `ui / loc_talent_zealot_stealth_cooldown_regeneration_desc / d641c97c` | The active invisibility special-rule hook refunds 0.5/0.3/0.15 of one charge by killed breed tags. [Fixed source and line references](zealot_stealth_cooldown_regeneration.md#fixed-source-evidence) | Consistent | The English percentages and target categories match and contain no seconds-unit error. |
+| Qualifying event, success lock and cap | No exit-attack filter, once-per-Stealth limit or resource-cap example; `ui / loc_talent_zealot_stealth_cooldown_regeneration_desc / d641c97c` | Qualifying effective exit attack kill; existing DoT kills excluded; successful refund sets `got_cooldown=true`. One-charge cost and missing resource limit apply. [Fixed source and line references](zealot_stealth_cooldown_regeneration.md#fixed-source-evidence) | Not covered by the description | These restrictions and the 15/9/4.5-resource examples supplement the percentage description. |
+
 ## Comparison totals
 
 33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.

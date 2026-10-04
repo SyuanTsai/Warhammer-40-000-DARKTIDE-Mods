@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="Pious Cut-Throat talent icon"> [Pious Cut-Throat](#zealot_backstab_kills_restore_cd) | <ul><li>A Melee Backstab or Weakspot hit grants extra cooldown recovery for 2 seconds, without requiring a kill. Restore 0.75 additional combat ability resource per second; further hits refresh duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173" width="32" height="32" alt="Invocation of Death talent icon"> [Invocation of Death](#zealot_crits_grant_cd) | <ul><li>A Melee Critical Hit grants extra ability recharge for about 3.25 seconds, at most once per swing. Restore 1 additional resource per second; further swings can refresh duration without stacking the rate.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="Unrelenting Fury talent icon"> [Unrelenting Fury](#zealot_fotf_refund_cooldown) | <ul><li>Kill an Elite or Specialist within 5 seconds of Fury of the Faithful to refund 20% of one charge. Maximum once per use; a base 30-second charge refunds 6 seconds of progress.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="32" height="32" alt="Perfectionist talent icon"> [Perfectionist](#zealot_stealth_cooldown_regeneration) | <ul><li>A qualifying Stealth kill refunds one charge's cooldown resource, at most once per Stealth: Monstrosities 50%, Ogryns 30%, others 15%. With base cooldown 30 seconds, these are 15, 9 and 4.5 seconds of progress.</li></ul> | Ability |
 
 ---
 
@@ -299,3 +300,18 @@
 - **Chinese original-text erratum**: The Chinese text incorrectly adds “seconds” after the percentage refund. The correct value is 20% of one charge, equivalent to 6 seconds of progress for a base 30-second cooldown.
 
 [Details](zealot_fotf_refund_cooldown.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_stealth_cooldown_regeneration"></a>
+
+### Perfectionist
+
+<img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="72" height="72" alt="Perfectionist talent icon">
+
+- **Trigger**: While in Shroudfield, kill an enemy with a qualifying effective attack that ends Stealth to refund ability cooldown. Maximum once per Stealth. Existing Bleed, Burning and similar damage-over-time kills do not give this refund.
+- **Refund percentages**: Monstrosities restore 50% of one charge, Ogryns 30%, and other enemies 15%.
+- **Cooldown example**: Shroudfield's base cooldown is 30 seconds, so refunds equal 30 × 50% = 15 seconds, 30 × 30% = 9 seconds, or 30 × 15% = 4.5 seconds of natural recharge progress. They remain capped at the amount currently missing.
+- **Chinese original-text erratum**: The Chinese text adds “seconds” to the Monstrosity, Ogryn and other-enemy percentages. The correct units are 50%, 30% and 15% of one charge, not fixed refunds of 50, 30 and 15 seconds.
+
+[Details](zealot_stealth_cooldown_regeneration.md) · [Back to index](#talent-index)
