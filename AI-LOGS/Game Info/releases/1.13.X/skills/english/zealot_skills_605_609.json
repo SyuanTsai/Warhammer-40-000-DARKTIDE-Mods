@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_605_609",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L1363-L1379, L1733-L1757 (already minimally read last batch), L2955-L2978, L2911-L2932, L3199-L3213. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Actual armour categories, full-stack refresh, independent Toughness reduction, successful-Dodge cooldown and shooting tail/HUD distinction supplement the English."
+  ],
+  "skills": [
+    {
+      "id": "zealot_increased_damage_vs_resilient",
+      "name": "Purge the Unclean",
+      "name_hash": "57c6f92b",
+      "description_hash": "96b4257f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increased_damage_vs_resilient.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_increased_damage_vs_resilient.md",
+      "commit": "89f5e1aa5"
+    },
+    {
+      "id": "zealot_hits_grant_stacking_damage",
+      "name": "Sustained Assault",
+      "name_hash": "ce6fa468",
+      "description_hash": "fa8c449f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_hits_grant_stacking_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_hits_grant_stacking_damage.md",
+      "commit": "4b146399e"
+    },
+    {
+      "id": "zealot_crits_reduce_toughness_damage",
+      "name": "Enduring Faith",
+      "name_hash": "8ef2c52d",
+      "description_hash": "56b689eb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_reduce_toughness_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_crits_reduce_toughness_damage.md",
+      "commit": "e23cfebd5"
+    },
+    {
+      "id": "zealot_toughness_on_dodge",
+      "name": "Second Wind",
+      "name_hash": "0b5ba976",
+      "description_hash": "7b3709d4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_on_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_on_dodge.md",
+      "commit": "aba1f87c9"
+    },
+    {
+      "id": "zealot_toughness_while_shooting",
+      "name": "The Voice of Terra",
+      "name_hash": "4bc5e375",
+      "description_hash": "fce063da",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_while_shooting.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_while_shooting.md",
+      "commit": "8c9a62cf1"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 273,
+    "from_commit": "4d0abf117",
+    "to_commit": "8c9a62cf1",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

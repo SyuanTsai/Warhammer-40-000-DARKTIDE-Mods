@@ -553,4 +553,4 @@ Full raw template and formatting: [source evidence](zealot_toughness_while_shoot
 
 ## Comparison totals
 
-84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.
+94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.
