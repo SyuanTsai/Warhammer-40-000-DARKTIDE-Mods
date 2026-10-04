@@ -1178,6 +1178,18 @@ Full raw template and formatting: [source evidence](cryptic_ranged_kills_tdr.md#
 | Ranged kills, values and sequential decay | Ranged Kills reduce Toughness Damage Taken by +4% for 8s; stacks 5 times; decays one at a time.; `ui / loc_talent_cryptic_ranged_kills_tdr_desc / 3a7d18c1` | Ranged kills add up to 5 stacks, with a 0.04 step and 8-second sequential duration. [Fixed source and line references](cryptic_ranged_kills_tdr.md#fixed-source-evidence) | Consistent | The trigger, displayed numbers and one-at-a-time decay match. |
 | Refresh, timeline and calculation | The refresh behavior and combination of reductions are not specified.; `ui / loc_talent_cryptic_ranged_kills_tdr_desc / 3a7d18c1` | Gaining or removing a stack refreshes 8 seconds. Without further kills, 5 stacks reach 4/3/2/1/0 after 8/16/24/32/40 seconds. The multiplier is 1 − 0.04n and multiplies independent reductions. [Fixed source and line references](cryptic_ranged_kills_tdr.md#fixed-source-evidence) | Not covered by the description | These details explain the sequential duration and reduction calculation. |
 
+
+<a id="cryptic_discharge_base"></a>
+
+## Voltaic Expander
+
+Full raw template and formatting: [source evidence](cryptic_discharge_base.md#original-english-template-and-reconstruction). Name hash `8454232a`. Every row uses `ui / loc_talent_cryptic_discharge_base_desc / a2ee7263`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Discharge and charge-dependent radius | Electric Discharge; 6m and 2s; at 2 charges or above, 9m; at 3 or above, 12m.; `ui / loc_talent_cryptic_discharge_base_desc / a2ee7263` | Activation spends 1–3 full charges and selects the 6/9/12-metre explosion, applying 2-second cryptic_discharge_shock. [Fixed source and line references](cryptic_discharge_base.md#fixed-source-evidence) | Consistent | The effect, thresholds, radii and duration match. |
+| Resource and damage boundaries | The spending cap, retained resources and separation of explosion/electrical damage are not specified.; `ui / loc_talent_cryptic_discharge_base_desc / a2ee7263` | At most 3 full charges are spent; partial and excess resources remain. Direct explosion power is zero; electrical damage uses 0.3–0.8-second ticks, a frame offset and target-dependent calculation. [Fixed source and line references](cryptic_discharge_base.md#fixed-source-evidence) | Not covered by the description | These details explain the resource and damage implementation without contradicting the stated discharge. |
+
 ## Comparison totals
 
 197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.

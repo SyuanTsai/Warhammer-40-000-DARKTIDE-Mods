@@ -108,3 +108,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Burst](cryptic_electrocution_push.md) / `cryptic_electrocution_push` | Talent |
 | [Ablative Wards](cryptic_corruption_resistance_doom.md) / `cryptic_corruption_resistance_doom` | Talent |
 | [Threat Detection Imperative](cryptic_ranged_kills_tdr.md) / `cryptic_ranged_kills_tdr` | Talent |
+| [Voltaic Expander](cryptic_discharge_base.md) / `cryptic_discharge_base` | Base Combat Ability |
