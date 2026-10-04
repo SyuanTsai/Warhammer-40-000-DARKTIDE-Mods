@@ -24,3 +24,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Resistance](cryptic_force_field_arcs.md) / `cryptic_force_field_arcs` | Blitz |
 | [Resurgence](cryptic_coherency_regen_aura_improved.md) / `cryptic_coherency_regen_aura_improved` | Aura |
 | [Ammunition Deposit](cryptic_ammo_aura.md) / `cryptic_ammo_aura` | Aura |
+| [Foe-Render Creed](cryptic_aura_weapon_improved.md) / `cryptic_aura_weapon_improved` | Aura |
