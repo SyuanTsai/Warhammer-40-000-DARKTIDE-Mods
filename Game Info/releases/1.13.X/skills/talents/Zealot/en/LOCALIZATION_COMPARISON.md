@@ -250,6 +250,18 @@ Full raw template and formatting: [source evidence](zealot_resist_death.md#origi
 | Fatal trigger, effect and cooldown field | “Fatal damage instead grants you Unkillable for 8s. 120s Cooldown.”; `ui / loc_talent_zealot_resist_death_base_desc / 0da0b898` | Fatal damage proc provides `unkillable`; `active_duration=8`, `cooldown_duration=120`. [Fixed source and line references](zealot_resist_death.md#fixed-source-evidence) | Consistent | The condition, keyword and two field values match. |
 | Cooldown starting point and exclusions | No cooldown starting point, other-Unkillable exclusion or Keystone selection rule; `ui / loc_talent_zealot_resist_death_base_desc / 0da0b898` | Cooldown follows the active 8s effect: about 128s trigger-to-next availability; another Unkillable effect returns early; exclusive Keystone group. [Fixed source and line references](zealot_resist_death.md#fixed-source-evidence) | Not covered by the description | The English does not explicitly place cooldown at activation; retain the accepted timeline as a supplement. |
 
+
+<a id="zealot_martyrdom"></a>
+
+## Martyrdom
+
+Full raw template and formatting: [source evidence](zealot_martyrdom.md#original-english-template-and-reconstruction). Name hash `15d87f95`. Every row uses `ui / loc_talent_zealot_martyrdom_desc / b90da3ce`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Damage, missing Wounds and cap | “+10% Melee Damage for each missing Wound, up to a maximum of 5 missing Wounds.”; `ui / loc_talent_zealot_martyrdom_desc / b90da3ce` | `melee_damage` scales by fully missing segments, +10% each, capped at 5. [Fixed source and line references](zealot_martyrdom.md#fixed-source-evidence) | Consistent | The English scope and unit are Wounds, not a fixed missing-Health percentage. |
+| Segment calculation and damage combination | No Corruption, healing, segment-width or same-stage formula; `ui / loc_talent_zealot_martyrdom_desc / b90da3ce` | Uses the greater of damage and permanent damage, segment width `max_health/max_wounds`; unused `health_step=0.15` does not define stacks. [Fixed source and line references](zealot_martyrdom.md#fixed-source-evidence) | Not covered by the description | Retain all original 49/100-loss and 120/145-damage examples as supplements. |
+
 ## Comparison totals
 
 43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.

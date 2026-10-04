@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="Unrelenting Fury talent icon"> [Unrelenting Fury](#zealot_fotf_refund_cooldown) | <ul><li>Kill an Elite or Specialist within 5 seconds of Fury of the Faithful to refund 20% of one charge. Maximum once per use; a base 30-second charge refunds 6 seconds of progress.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="32" height="32" alt="Perfectionist talent icon"> [Perfectionist](#zealot_stealth_cooldown_regeneration) | <ul><li>A qualifying Stealth kill refunds one charge's cooldown resource, at most once per Stealth: Monstrosities 50%, Ogryns 30%, others 15%. With base cooldown 30 seconds, these are 15, 9 and 4.5 seconds of progress.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="Until Death talent icon"> [Until Death](#zealot_resist_death) | <ul><li>Fatal damage grants Unkillable for 8 seconds. The 120-second cooldown begins after the effect ends.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="Martyrdom talent icon"> [Martyrdom](#zealot_martyrdom) | <ul><li>Gain 10% Melee Damage for each fully missing Wound, up to 5 stacks / 50%. Stacks follow current missing Health segments, including Corruption.</li></ul> | Keystone |
 
 ---
 
@@ -329,3 +330,17 @@
 - **Cooldown example**: After the 8-second effect ends, a further 120-second cooldown runs. A trigger at second 0 ends at about second 8 and becomes available again at about second 128. Another active Unkillable effect prevents this talent from triggering.
 
 [Details](zealot_resist_death.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_martyrdom"></a>
+
+### Martyrdom
+
+<img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="72" height="72" alt="Martyrdom talent icon">
+
+- **Behavior**: Each fully missing Health Wound grants 10% Melee Damage, up to 5 stacks / 50%. Healing lowers the stack count. Health occupied by Corruption also counts.
+- **Wound example**: With maximum Health 200 and 4 Wounds, each segment is 50. Losing 49 Health has not removed a full segment and adds no stack. Losing 100 gives 2 stacks: base Melee Damage 100 becomes 100 × (1 + 2 × 10%) = 120.
+- **Other bonuses**: At those 2 stacks with an existing same-stage 25% Melee Damage bonus, 100 × (1 + 25% + 20%) = 145. A cap of 5 does not mean every Wound count can reach full stacks while alive.
+
+[Details](zealot_martyrdom.md) · [Back to index](#talent-index)

@@ -31,3 +31,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Unrelenting Fury](zealot_fotf_refund_cooldown.md) / `zealot_fotf_refund_cooldown` | Ability |
 | [Perfectionist](zealot_stealth_cooldown_regeneration.md) / `zealot_stealth_cooldown_regeneration` | Ability |
 | [Until Death](zealot_resist_death.md) / `zealot_resist_death` | Keystone |
+| [Martyrdom](zealot_martyrdom.md) / `zealot_martyrdom` | Keystone |
