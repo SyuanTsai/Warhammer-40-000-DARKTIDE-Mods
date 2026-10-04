@@ -156,6 +156,18 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub
 | Detailed scope and conditions | No radius, Melee-only statistic or living/server stop detail; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | Radius 4.5 m; second Shout requires living character/server and use_exhaust=false; only melee_attack_speed is modified; actual animations and other modifiers still affect intervals. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Not covered by the description | These are supplementary limits, not a separate repeated numeric erratum. |
 | Malformed first name placeholder | First token is {punk_rage%s}; second is {punk_rage:%s}; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | Mapping provides the localized punk_rage value, but runtime handling of the malformed first token is not established by the existing evidence. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Cannot confirm | The partial reconstruction retains the first token; actual game rendering is not asserted or researched further. |
 
+
+<a id="broker_ability_punk_rage_sub_4"></a>
+
+## Boiling Blood
+
+Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub_4.md#original-english-template-and-reconstruction). Name hash `f8c9fad1`. Every row uses `ui / loc_talent_broker_ability_punk_rage_sub_4_desc / 43686b03`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Listed enemies and upgraded extension | Melee strikes against Elites and Monstrosities extend Rampage! by 1s; diminution begins at 30s; `ui / loc_talent_broker_ability_punk_rage_sub_4_desc / 43686b03` | With the branch active, elite/monster-tagged Melee hits use added_duration 1 and max_duration 30. [Fixed source and line references](broker_ability_punk_rage_sub_4.md#fixed-source-evidence) | Consistent | The stated targets receive the described values; Strikes does not require a kill. |
+| Broader tags and ordinary-hit limits | No Specialist/Captain list, separate ordinary-hit rule or exact later extension values; `ui / loc_talent_broker_ability_punk_rage_sub_4_desc / 43686b03` | special/captain tags also qualify; special hits follow 1/2^floor(elapsed/30), ordinary hits retain 0.3/2^floor(elapsed/20); remaining-duration constraints still apply. [Fixed source and line references](broker_ability_punk_rage_sub_4.md#fixed-source-evidence) | Not covered by the description | The wording does not explicitly exclude other tags or promise a universal 30-second upgrade. These retain the original examples and scope limits. |
+
 ## Comparison totals
 
 The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.

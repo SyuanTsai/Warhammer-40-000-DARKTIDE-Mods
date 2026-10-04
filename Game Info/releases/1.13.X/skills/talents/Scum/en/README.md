@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="Pulverising Strikes talent icon"> [Pulverising Strikes](#broker_ability_punk_rage_sub_2) | <ul><li>During rage, Cleave capacity gains an additive +50%. Gain a Melee Power stack for approximately every second rage persists: +2.5% each, up to 10 stacks (+25%).</li><li>With rage's base +35% Melee Power Level, these two effects give at most +60% Power Level, not a guaranteed +60% final Damage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="Channelled Aggression talent icon"> [Channelled Aggression](#broker_ability_punk_rage_sub_1) | <ul><li>While rage is active, Melee Heavy Attacks gain additive +25% Rending in the armour-penetration calculation.</li><li>The effect checks Melee Heavy Attacks; Rending is not a direct 25% Damage increase.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="Forge's Bellow talent icon"> [Forge's Bellow](#broker_ability_punk_rage_sub_3) | <ul><li>Shout when rage starts and ends, Staggering enemies within 4.5 metres.</li><li>Each Shout adds −50% enemy Melee Attack Speed for 5 seconds; a 1-second attack interval becomes approximately 2 seconds with only this effect.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="Boiling Blood talent icon"> [Boiling Blood](#broker_ability_punk_rage_sub_4) | <ul><li>Melee hits on Elite, Specialist, Monstrosity or Captain-tagged enemies extend rage by 1 second; these hits begin diminishing after 30 seconds, halving at each 30-second stage.</li><li>Ordinary enemy hits keep the base 0.3-second extension and 20-second diminution stages; the 30-second upgrade applies only to the special tags.</li></ul> | Ability |
 
 ---
 
@@ -232,3 +233,17 @@
 - English says the time between attacks increases by +50%. The verified modifier halves Melee Attack Speed; with this effect alone, the reciprocal interval doubles, increasing by 100%.
 
 [Details](broker_ability_punk_rage_sub_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_4"></a>
+
+### Boiling Blood
+
+<img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="72" height="72" alt="Boiling Blood talent icon">
+
+- **Special-enemy extension:** Melee hits on Elites, Specialists, Monstrosities or Captain-type enemies extend rage by 1 second. This type of hit begins diminishing only after 30 seconds: 0.5 seconds per hit after 30 seconds and 0.25 seconds after 60 seconds.
+
+- **Ordinary-enemy extension:** ordinary enemy hits retain the base 0.3-second extension and start diminishing after 20 seconds. The 30-second threshold does not also change ordinary hits.
+
+[Details](broker_ability_punk_rage_sub_4.md) · [Back to index](#talent-index)
