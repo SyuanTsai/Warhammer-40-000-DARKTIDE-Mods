@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="Static Capacitor Drain talent icon"> [Static Capacitor Drain](#cryptic_overload_keystone_permastack) | <ul><li>After 8 /16 /24 overloads, gain +15% Damage /20% Toughness Damage Reduction /25% faster natural Capacitance generation, respectively. All three can remain together, each awarded once; the description says they last until death.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="Servo-Sinew Surge talent icon"> [Servo-Sinew Surge](#cryptic_dissector_crit_attack_speed) | <ul><li>Each current Flensing Protocols stack also grants 1.5 percentage points of Critical Strike Chance and +1.5% Melee Attack Speed. The bonuses follow the stack count: 6 stacks give 9 points /9%, and 8 give 12 points /12%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="Honed Dissector talent icon"> [Honed Dissector](#cryptic_dissector_max_stacks) | <ul><li>Raises the Flensing Protocols cap from 6 to 8 stacks and starts at 8. Per-stack values remain unchanged: full stacks give +20% Damage and a Toughness damage taken multiplier of 0.80.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="Advanced Power Management talent icon"> [Advanced Power Management](#cryptic_redline_strength) | <ul><li>On Combat Ability use, gain one stack per charge held before use, each granting 5% Power for 10 seconds, up to 5 stacks. New stacks refresh the duration; repeated Chordclaw actions during the same activation do not trigger it again.</li></ul> | Keystone |
 
 ---
 
@@ -643,3 +644,18 @@
 - **Example**: Damage remains +2.5% per stack, so 8 stacks give **+20% Damage**. The Toughness damage taken multiplier is `1 − 0.025 × 8 = 0.80`. With no other damage bonuses, base attack damage `100` becomes `120`; with no other damage reduction, 100 incoming Toughness damage becomes `80`.
 
 [Details](cryptic_dissector_max_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_redline_strength"></a>
+
+### Advanced Power Management
+
+<img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="72" height="72" alt="Advanced Power Management talent icon">
+
+- **Trigger**: On Combat Ability use, add one effect stack for each charge held **before using the ability**, up to **5 stacks**.
+- **Effect**: Each stack increases **Power by 5% for 10 seconds**. Adding stacks resets the countdown. Another trigger at 5 stacks refreshes the duration without exceeding the cap.
+- **Example**: Holding 3 charges before use grants 3 stacks, or +15% Power. An original Power Level of `500` becomes `575`. This does not guarantee 15% more final damage; damage still depends on attack type, weapon damage settings, target armour and other conditions.
+- **Chordclaw limit**: Repeated Chordclaw actions during a continuous activation do not trigger this effect again. End the Chordclaw activation, then activate the ability again.
+
+[Details](cryptic_redline_strength.md) · [Back to index](#talent-index)

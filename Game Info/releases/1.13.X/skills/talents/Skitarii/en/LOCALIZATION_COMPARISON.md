@@ -490,6 +490,18 @@ Full raw template and formatting: [source evidence](cryptic_dissector_max_stacks
 | Increased cap | Increase Max Stacks to 8; `ui / loc_talent_cryptic_dissector_max_stacks_desc / 52304209` | The special rule raises both the logical and controlled-buff caps from 6 to 8 [Fixed source and line references](cryptic_dissector_max_stacks.md#fixed-source-evidence) | Consistent | The displayed cap is the verified sum 6 + 2. |
 | Initialization and unchanged stack effects | Does not specify starting at full stacks or retaining the other stack rules; `ui / loc_talent_cryptic_dissector_max_stacks_desc / 52304209` | Initialization starts at 8; each stack retains 2.5% Damage and the stepped Toughness multiplier. At 8: +20% Damage, multiplier 0.80. Loss and kill-restoration rules remain unchanged [Fixed source and line references](cryptic_dissector_max_stacks.md#fixed-source-evidence) | Not covered by the description | Starting stacks and the original 120 / 80 examples explain omitted details without changing the English. |
 
+
+<a id="cryptic_redline_strength"></a>
+
+## Advanced Power Management
+
+Full raw template and formatting: [source evidence](cryptic_redline_strength.md#original-english-template-and-reconstruction). Name hash `ef81a91f`. Every row uses `ui / loc_talent_cryptic_redline_strength_clarified_desc / 4e708242`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ability use, held charges, value and duration | On Ability use, gain 5% Strength for each Charge you had on use, for 10s; `ui / loc_talent_cryptic_redline_strength_clarified_desc / 4e708242` | Combat Ability use adds stacks according to charges held before use; each grants a `0.05` Power Level modifier for 10s [Fixed source and line references](cryptic_redline_strength.md#fixed-source-evidence) | Consistent | The trigger, held-charge basis, per-charge value and duration agree. Strength does not explicitly claim a final-damage multiplier. |
+| Power calculation, cap and Chordclaw restriction | Does not define Strength's calculation stage, the stack cap, refresh or repeated Chordclaw actions; `ui / loc_talent_cryptic_redline_strength_clarified_desc / 4e708242` | Power Level adds at its stage then enters attack curves; maximum 5 stacks and duration refresh. Repeated actions within a continuous Chordclaw activation do not trigger it again [Fixed source and line references](cryptic_redline_strength.md#fixed-source-evidence) | Not covered by the description | The verified 500 →575 Power example and limits supplement the text; actual damage cannot be derived from this modifier alone. |
+
 ## Comparison totals
 
 83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
