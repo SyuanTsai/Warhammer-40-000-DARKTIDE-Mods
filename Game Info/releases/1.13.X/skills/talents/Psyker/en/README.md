@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="Empyric Resolve talent icon"> [Empyric Resolve](#psyker_warp_glass_cannon) | <ul><li>40% less Peril generation; 30% less Toughness restored by effects subject to the restoration modifier.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="Warp Ghost talent icon"> [Warp Ghost](#psyker_stat_mix) | <ul><li>+2 Stamina and +25% Toughness restoration; natural Peril decay is 80% slower in affected bands.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="Penetration of the Soul talent icon"> [Penetration of the Soul](#psyker_warp_attacks_rending) | <ul><li>Warp Attacks gain Rending linearly with Peril: 10% at 50% Peril, 20% at 100%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e66044cc-0b83-4f85-86ff-84661f076941" width="32" height="32" alt="Psykinetic Grip talent icon"> [Psykinetic Grip](#psyker_increased_blitz_damage) | <ul><li>+20% Damage for Brain Rupture, Smite and Assail.</li></ul> | Talent |
 
 ---
 
@@ -1326,3 +1327,21 @@
 - **Different target**: With the same 20% Rending, a baseline armour multiplier already at 1 and an excess-Rending conversion coefficient of 0.25, 100 becomes 100 × (1 + 0.2 × 0.25) = 105, only a 5% increase.
 
 [Details](psyker_warp_attacks_rending.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_increased_blitz_damage"></a>
+
+### Psykinetic Grip
+
+<img src="https://github.com/user-attachments/assets/e66044cc-0b83-4f85-86ff-84661f076941" width="72" height="72" alt="Psykinetic Grip talent icon">
+
+- **How it works**: Brain Rupture, Smite and Assail deal 20% more Damage.
+
+- **Damage example**: Compare only this Damage stage, with all other multipliers fixed at 1. With a baseline of 100 and no other bonuses, 100 × (1 + 20%) = 120. With an existing 25% bonus in the same stage, 125 becomes 100 × (1 + 25% + 20%) = 145.
+
+#### Traditional Chinese wording correction
+
+- The Chinese construction meaning “Damage dealt to…” presents the three Blitz abilities as targets being attacked. The effect instead increases the Damage dealt by Brain Rupture, Smite and Assail themselves.
+
+[Details](psyker_increased_blitz_damage.md) · [Back to index](#talent-index)

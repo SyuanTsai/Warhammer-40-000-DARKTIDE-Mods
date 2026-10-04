@@ -91,3 +91,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Empyric Resolve](psyker_warp_glass_cannon.md) / `psyker_warp_glass_cannon` | Talent |
 | [Warp Ghost](psyker_stat_mix.md) / `psyker_stat_mix` | Talent |
 | [Penetration of the Soul](psyker_warp_attacks_rending.md) / `psyker_warp_attacks_rending` | Talent |
+| [Psykinetic Grip](psyker_increased_blitz_damage.md) / `psyker_increased_blitz_damage` | Talent |

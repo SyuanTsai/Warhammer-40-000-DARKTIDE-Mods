@@ -979,6 +979,18 @@ Full raw template and formatting: [source evidence](psyker_warp_attacks_rending.
 | Rending amount and Peril | Up to +20% Rending on Warp-Attacks, based on Peril.; `ui / loc_talent_psyker_warp_attacks_rending_alt_desc / 35bc88f1` | `warp_attacks_rending_multiplier` scales linearly from 0 to 0.2 with `current_percentage`, without using the 0.75 setting. [Fixed source and line references](psyker_warp_attacks_rending.md#fixed-source-evidence) | Consistent | The maximum, attack category and Peril dependence agree; no threshold is stated. |
 | Armour and finesse calculation | Up to +20% Rending… based on Peril.; `ui / loc_talent_psyker_warp_attacks_rending_alt_desc / 35bc88f1` | Rending is totalled and adjusted by armour type; excess beyond ADM 1 uses `overdamage`; Weakspots/Critical Hits subsequently recalculate `finesse`. [Fixed source and line references](psyker_warp_attacks_rending.md#fixed-source-evidence) | Not covered by the description | The English names Rending without claiming a fixed Damage gain; its armour and finesse calculations are supplementary. |
 
+
+<a id="psyker_increased_blitz_damage"></a>
+
+## Psykinetic Grip
+
+Full raw template and formatting: [source evidence](psyker_increased_blitz_damage.md#original-english-template-and-reconstruction). Name hash `4ac15b0d`. Every row uses `ui / loc_talent_psyker_increased_blitz_damage_desc / 9b44cc81`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Amount and affected attacks | +20% Damage for Brain Rupture, Smite, and Assail.; `ui / loc_talent_psyker_increased_blitz_damage_desc / 9b44cc81` | The buff adds 0.2 to `smite_damage`, `chain_lightning_damage` and `psyker_throwing_knives_damage_multiplier` for the corresponding attacks. [Fixed source and line references](psyker_increased_blitz_damage.md#fixed-source-evidence) | Consistent | For identifies the abilities receiving the bonus, rather than targets attacked by it. |
+| Damage types and additive stage | +20% Damage for the three Blitz abilities.; `ui / loc_talent_psyker_increased_blitz_damage_desc / 9b44cc81` | Each corresponding Damage type adds its bonus in the `damage_stat_buffs` stage. [Fixed source and line references](psyker_increased_blitz_damage.md#fixed-source-evidence) | Not covered by the description | The text omits internal Damage-type checks and combination with other bonuses in that stage. |
+
 ## Comparison totals
 
 The 172 listed rules comprise **80 Consistent**, **4 Explicit contradictions**, **80 Not covered by the description**, **0 No corresponding implementation evidence found** and **8 Cannot confirm**.
