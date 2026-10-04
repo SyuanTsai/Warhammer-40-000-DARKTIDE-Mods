@@ -806,6 +806,18 @@ Full raw template and formatting: [source evidence](zealot_melee_crits_restore_s
 | Trigger, restoration and cooldown | Melee Critical Hit; replenish 10% Stamina; 1s Cooldown; `ui / loc_talent_zealot_melee_crits_restore_stamina_desc / 01adc74d` | `on_hit` / `on_crit_melee`, `Stamina.add_stamina_percent(.1)`, cooldown 1 second [Fixed source and line references](zealot_melee_crits_restore_stamina.md#fixed-source-evidence) | Consistent | The trigger, proportion and cooldown agree. |
 | Restoration basis and limits | Does not specify the basis or cap; `ui / loc_talent_zealot_melee_crits_restore_stamina_desc / 01adc74d` | Uses maximum Stamina, clamps to the cap, and applies the cooldown to multiple hits in one critical sweep; no kill is required [Fixed source and line references](zealot_melee_crits_restore_stamina.md#fixed-source-evidence) | Not covered by the description | The omitted details supplement the wording. |
 
+
+<a id="zealot_revive_speed"></a>
+
+## Providence
+
+Full raw template and formatting: [source evidence](zealot_revive_speed.md#original-english-template-and-reconstruction). Name hash `0e3f36dc`. Every row uses `ui / loc_talent_zealot_revive_speed_desc / 6421ecda`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Speed and ally effect | Revive Speed +25%; Allies you Assist / Revive get +10% Movement Speed and +15% Toughness Damage Reduction for 5s; `ui / loc_talent_zealot_revive_speed_desc / 6421ecda` | Permanent revive modifier +0.25; effect on `params.target_unit`, movement +0.1, Toughness damage multiplier 0.85, duration 5 seconds [Fixed source and line references](zealot_revive_speed.md#fixed-source-evidence) | Consistent | Values, duration and recipient agree; Revive Speed is not a claim that every rescue action is faster. |
+| Completion events and refresh | No individual assistance events or stacking rule; `ui / loc_talent_zealot_revive_speed_desc / 6421ecda` | Revive, rescue, hanging-ally pull-up and net-removal completion give a single refreshing effect; original 5→5.5 m/s and 100→85 examples [Fixed source and line references](zealot_revive_speed.md#fixed-source-evidence) | Not covered by the description | These event and calculation details supplement the wording. |
+
 ## Comparison totals
 
 137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.
