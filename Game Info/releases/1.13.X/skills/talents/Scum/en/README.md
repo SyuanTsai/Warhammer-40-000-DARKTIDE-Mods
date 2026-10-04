@@ -63,6 +63,7 @@
 | <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="Critical Chance Boost talent icon"> [Critical Chance Boost](#base_crit_chance_node_buff_low_1) | <ul><li>Gain 5 percentage points of Critical Hit Chance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain 10% Melee Damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="Potent Tox talent icon"> [Potent Tox](#base_toxin_power_boost_1) | <ul><li>Gain 10% Toxin Power.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="Sticky Hands talent icon"> [Sticky Hands](#broker_passive_reduce_swap_time) | <ul><li>Gain 40% Weapon Swap Speed; while hip-firing or bracing, reduce Recoil by 10% and Spread by 30%.</li></ul> | Talent |
 
 ---
 
@@ -930,3 +931,19 @@
 - **Power example**: With Toxin input Power of 500, this effect alone gives 500 × 1.1 = 550, then the Toxin Damage curve and enemy armour determine Damage. Each Toxin tick cannot simply be treated as dealing a fixed 10% more Damage.
 
 [Details](base_toxin_power_boost_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_reduce_swap_time"></a>
+
+### Sticky Hands
+
+<img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="72" height="72" alt="Sticky Hands talent icon">
+
+- **Swap example**: An accelerable swap action that normally takes 1s becomes 1 ÷ 1.4 ≈ 0.71s.
+
+- **Firing control**: While firing from the hip or bracing, the Recoil modifier is ×0.9 and reticle Spread is ×0.7. Ordinary aiming without bracing does not gain these two bonuses.
+
+- **Spread example**: With this effect alone, a 2-degree Spread angle becomes 2 × 0.7 = 1.4 degrees. The Recoil modifier affects unsteadiness accumulation and recovery; actual camera displacement also depends on weapon curves.
+
+[Details](broker_passive_reduce_swap_time.md) · [Back to index](#talent-index)

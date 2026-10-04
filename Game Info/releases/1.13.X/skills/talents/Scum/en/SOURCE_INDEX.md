@@ -67,3 +67,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Critical Chance Boost](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | Talent |
 | [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Talent |
 | [Potent Tox](base_toxin_power_boost_1.md) / `base_toxin_power_boost_1` | Talent |
+| [Sticky Hands](broker_passive_reduce_swap_time.md) / `broker_passive_reduce_swap_time` | Talent |
