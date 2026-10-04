@@ -843,6 +843,18 @@ Full raw template and formatting: [source evidence](psyker_damage_vs_ogryns_and_
 | Amount and targets | +20% Damage vs Ogryns and Monstrosities.; `ui / loc_talent_psyker_damage_vs_ogryns_and_monsters_desc / 454bae2f` | `damage_vs_ogryn_and_monsters = 0.2` applies to the matching breed tags. [Fixed source and line references](psyker_damage_vs_ogryns_and_monsters.md#fixed-source-evidence) | Consistent | The named categories and bonus agree. |
 | Eligibility and calculation stage | +20% Damage vs Ogryns and Monstrosities.; `ui / loc_talent_psyker_damage_vs_ogryns_and_monsters_desc / 454bae2f` | The bonus joins `damage_stat_buffs`; visual size does not establish eligibility. [Fixed source and line references](psyker_damage_vs_ogryns_and_monsters.md#fixed-source-evidence) | Not covered by the description | The concise text omits breed-tag checks and the additive stage. |
 
+
+<a id="psyker_increased_warp_damage"></a>
+
+## Focused Warp
+
+Full raw template and formatting: [source evidence](psyker_increased_warp_damage.md#original-english-template-and-reconstruction). Name hash `32fd96aa`. Every row uses `ui / loc_talent_psyker_increased_warp_damage_desc / f4703bae`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Warp Damage bonus | +15% Damage on Warp-Attacks.; `ui / loc_talent_psyker_increased_warp_damage_desc / f4703bae` | `warp_damage = 0.15` is added for qualifying `warp_damage_types`. [Fixed source and line references](psyker_increased_warp_damage.md#fixed-source-evidence) | Consistent | The effect and displayed amount agree. |
+| Eligibility and additive stage | +15% Damage on Warp-Attacks.; `ui / loc_talent_psyker_increased_warp_damage_desc / f4703bae` | `damage_calculation` checks Damage type and adds the value within the same additive Damage stage. [Fixed source and line references](psyker_increased_warp_damage.md#fixed-source-evidence) | Not covered by the description | The English omits the internal eligibility check and calculation stage. |
+
 ## Comparison totals
 
 The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

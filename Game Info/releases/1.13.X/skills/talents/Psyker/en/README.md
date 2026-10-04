@@ -76,6 +76,7 @@
 | <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="Souldrinker talent icon"> [Souldrinker](#psyker_killing_enemy_with_warpfire_boosts) | <ul><li>A Soulblaze-related enemy death restores 15% maximum Toughness over 5 seconds and grants +5 percentage points Critical Hit Chance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="By Crack of Bone talent icon"> [By Crack of Bone](#psyker_melee_weaving) | <ul><li>Melee Weakspot Kills remove 10 percentage points of Peril and reduce Peril generation by 20% for 4 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="Vulnerable Minds talent icon"> [Vulnerable Minds](#psyker_damage_vs_ogryns_and_monsters) | <ul><li>+20% Damage against Ogryns and Monstrosities.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="Focused Warp talent icon"> [Focused Warp](#psyker_increased_warp_damage) | <ul><li>+15% Damage on Warp Attacks.</li></ul> | Talent |
 
 ---
 
@@ -1141,3 +1142,17 @@
 - **Damage example**: Compare only this Damage stage, with all other multipliers fixed at 1. With a baseline of 100 and no other bonuses, 100 × (1 + 20%) = 120. With an existing 25% bonus in the same stage, 125 becomes 100 × (1 + 25% + 20%) = 145.
 
 [Details](psyker_damage_vs_ogryns_and_monsters.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_increased_warp_damage"></a>
+
+### Focused Warp
+
+<img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="72" height="72" alt="Focused Warp talent icon">
+
+- **How it works**: Warp Damage increases by 15%. Eligibility depends on the attack's Damage type, rather than its weapon name.
+
+- **Damage example**: Compare only this Damage stage, with all other multipliers fixed at 1. With a baseline of 100 and no other bonuses, 100 × (1 + 15%) = 115. With an existing 25% bonus in the same stage, 125 becomes 100 × (1 + 25% + 15%) = 140.
+
+[Details](psyker_increased_warp_damage.md) · [Back to index](#talent-index)

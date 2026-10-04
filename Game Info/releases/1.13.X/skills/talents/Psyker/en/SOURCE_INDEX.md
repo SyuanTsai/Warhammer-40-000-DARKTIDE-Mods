@@ -80,3 +80,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Souldrinker](psyker_killing_enemy_with_warpfire_boosts.md) / `psyker_killing_enemy_with_warpfire_boosts` | Talent |
 | [By Crack of Bone](psyker_melee_weaving.md) / `psyker_melee_weaving` | Talent |
 | [Vulnerable Minds](psyker_damage_vs_ogryns_and_monsters.md) / `psyker_damage_vs_ogryns_and_monsters` | Talent |
+| [Focused Warp](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | Talent |
