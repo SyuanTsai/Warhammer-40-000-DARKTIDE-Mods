@@ -289,3 +289,5 @@
 - 第13輪三項已Commit後完整掃描通過：telescopic-sight (`ee8fb53d4453ae035f457c2452d8fa20946b11b7`)、sucker-punch (`1595da321b7ed95281c8643b89bc0d1ca67b1bea`)、bug-out (`fc19e9466c8c2b20348d0c08b4d16813d7f3f5d9`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-013-full-scan.json`／SHA-256 `54ee05026345515fb4de84abbece3cf7b430fbddf1d7d90f3f7085d6aeba1661`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [持續射擊](2026-10-03-SUSTAINED-FIRE_ACCEPTANCE.json)：新增10變體、18型號關聯；共10變體、18關聯。
+
+- [擊倒](2026-10-03-SMACKDOWN_ACCEPTANCE.json)：新增2變體、5型號關聯；共2變體、5關聯。

@@ -79,5 +79,6 @@
 | <img src="https://github.com/user-attachments/assets/8d8fcea8-fdfc-4f8c-958c-fccc4983c64f" width="32" height="32" alt="突然襲擊祝福圖示"> [突然襲擊](entries/突然襲擊/README.md)<br>- Sucker Punch<br>[完整說明](entries/突然襲擊/README.md) | <ul><li>持用裝有本祝福的廁所鏟，以近戰特殊攻擊命中後，近戰暴擊機率提高 I級 +7.5、II級 +10、III級 +12.5、IV級 +15 個百分點，持續3秒；Mk III使用特殊上勾拳，Mk XIX與Mk V使用折疊模式近戰特殊攻擊。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/d330a7e8-a3da-46cc-ab78-44445b228c71" width="32" height="32" alt="開溜祝福圖示"> [開溜](entries/開溜/README.md)<br>- Bug Out<br>[完整說明](entries/開溜/README.md) | <ul><li>持用步兵自動槍並成功衝刺閃避合格敵方射線攻擊後，I–IV 提供衝刺速度加算係數 +10%／+12.5%／+15%／+15%，持續1秒；III／IV 持用時另降低側向衝刺閃避角度門檻10°。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5" width="32" height="32" alt="持續射擊祝福圖示"> [持續射擊](entries/持續射擊/README.md)<br>- Sustained Fire<br>[完整說明](entries/持續射擊/README.md) | <ul><li>持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd" width="32" height="32" alt="擊倒祝福圖示"> [擊倒](entries/擊倒/README.md)<br>- Smackdown<br>[完整說明](entries/擊倒/README.md) | <ul><li>命中踉蹌小兵的合格特殊近戰攻擊後，持用來源武器時增加近戰暴擊機率，I–IV級+12.5／15／17.5／20個百分點，持續4.5秒。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

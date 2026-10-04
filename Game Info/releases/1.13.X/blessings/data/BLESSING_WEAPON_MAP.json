@@ -965,6 +965,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5",
       "effect": "持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。"
+    },
+    {
+      "id": "smackdown",
+      "name_zh_tw": "擊倒",
+      "name_en": "Smackdown",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy",
+      "description_key": "loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy_desc",
+      "name_hash": "90a360d3",
+      "description_hash": "46f2e4e3",
+      "page": "entries/擊倒/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
+      "effect": "命中踉蹌小兵的合格特殊近戰攻擊後，持用來源武器時增加近戰暴擊機率，I–IV級+12.5／15／17.5／20個百分點，持續4.5秒。"
     }
   ],
   "weapons": [
@@ -3253,6 +3266,55 @@
             "weapon_family_display_name": "loc_weapon_family_ogryn_hammer_2h_p1_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_hammer_2h_p1_m1",
             "weapon_mark_display_name": "loc_weapon_mark_ogryn_hammer_2h_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_club_p2",
+      "name_zh_tw": "惡霸棍棒",
+      "name_en": "Bully Club",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_club_p2_m1",
+      "page": "weapons/melee/惡霸棍棒/README.md",
+      "marks": [
+        {
+          "id": "ogryn_club_p2_m1",
+          "item": "content/items/weapons/player/melee/ogryn_club_p2_m1",
+          "name": "惡霸棍棒 「布倫特專用」 Mk I",
+          "name_en": "Bully Club \"Brunt Special\" Mk I",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+          "trait_category": "bespoke_ogryn_club_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_club_p2_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_club_p2_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_club_p2_m1"
+          }
+        },
+        {
+          "id": "ogryn_club_p2_m2",
+          "item": "content/items/weapons/player/melee/ogryn_club_p2_m2",
+          "name": "惡霸棍棒 「布倫特得意之作」 Mk II",
+          "name_en": "Bully Club \"Brunt's Pride\" Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+          "trait_category": "bespoke_ogryn_club_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_club_p2_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_club_p2_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_club_p2_m2"
+          }
+        },
+        {
+          "id": "ogryn_club_p2_m3",
+          "item": "content/items/weapons/player/melee/ogryn_club_p2_m3",
+          "name": "惡霸棍棒 「布倫特猛擊」 Mk IIIb",
+          "name_en": "Bully Club \"Brunt's Basher\" Mk IIIb",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+          "trait_category": "bespoke_ogryn_club_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_club_p2_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_club_p2_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_club_p2_m3"
           }
         }
       ]
@@ -16169,6 +16231,128 @@
       "icon": "https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_057",
       "effect": "持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit",
+      "blessing_id": "smackdown",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/擊倒/weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "critical_strike_chance": {
+            "I": 0.125,
+            "II": 0.15,
+            "III": 0.175,
+            "IV": 0.2
+          }
+        },
+        "localized_values": {
+          "crit_chance": {
+            "I": "+12.5%",
+            "II": "+15%",
+            "III": "+17.5%",
+            "IV": "+20%"
+          },
+          "time": {
+            "I": "4.5",
+            "II": "4.5",
+            "III": "4.5",
+            "IV": "4.5"
+          }
+        },
+        "effect": "合格特殊近戰命中後，近戰暴擊機率增加12.5／15／17.5／20個百分點，持續4.5秒。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 452,
+        "end_line": 503
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy_desc",
+      "description_hash": "46f2e4e3",
+      "icon": "https://github.com/user-attachments/assets/8d70f4f1-3461-40d1-b18c-604551fab4bd",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_198",
+      "effect": "Mk III／Mk VI 的特殊拳擊符合；其後續一般刀擊只享有效窗口加成。數值與期限見完整玩家說明。",
+      "buff_template_id": "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit",
+      "blessing_id": "smackdown",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/擊倒/weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "critical_strike_chance": {
+            "I": 0.125,
+            "II": 0.15,
+            "III": 0.175,
+            "IV": 0.2
+          }
+        },
+        "localized_values": {
+          "crit_chance": {
+            "I": "+12.5%",
+            "II": "+15%",
+            "III": "+17.5%",
+            "IV": "+20%"
+          },
+          "time": {
+            "I": "4.5",
+            "II": "4.5",
+            "III": "4.5",
+            "IV": "4.5"
+          }
+        },
+        "effect": "合格特殊近戰命中後，近戰暴擊機率增加12.5／15／17.5／20個百分點，持續4.5秒。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 367,
+        "end_line": 416
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy_desc",
+      "description_hash": "46f2e4e3",
+      "icon": "https://github.com/user-attachments/assets/ea26c7d6-7705-46a0-aaf5-1936c555af89",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_211",
+      "effect": "三型號的特殊拍擊符合；Mk II 特殊後續拳擊也符合，Mk IIIb 同名一般拳擊不觸發。數值與期限見完整玩家說明。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit_parent"
     }
   ],
   "bindings": [
@@ -22722,6 +22906,76 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "smackdown",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "smackdown",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "smackdown",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "smackdown",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "smackdown",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/increased_crit_chance_on_staggered_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
       }
     }
   ]

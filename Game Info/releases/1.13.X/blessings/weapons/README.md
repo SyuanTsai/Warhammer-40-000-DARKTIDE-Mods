@@ -70,3 +70,4 @@
 | [滅絕者霰彈槍](ranged/滅絕者霰彈槍/README.md)<br>- Exterminator Shotgun | 遠程 | 滅絕者霰彈槍 鐵腕 Mk III、滅絕者霰彈槍 鐵腕 Mk VIII |
 | [砍刀](melee/砍刀/README.md)<br>- Cleaver | 近戰 | 砍刀 克魯克 Mk VI、砍刀 蠻牛屠夫 Mk III、砍刀 克魯克 Mk IV |
 | [碎骨者](melee/碎骨者/README.md)<br>- Cruncher | 近戰 | 碎骨者 克魯克 Mk IIa |
+| [惡霸棍棒](melee/惡霸棍棒/README.md)<br>- Bully Club | 近戰 | 惡霸棍棒 「布倫特專用」 Mk I、惡霸棍棒 「布倫特得意之作」 Mk II、惡霸棍棒 「布倫特猛擊」 Mk IIIb |

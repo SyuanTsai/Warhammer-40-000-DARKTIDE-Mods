@@ -216,3 +216,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [開溜全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BUG-OUT_ACCEPTANCE.json)
 
 - [持續射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUSTAINED-FIRE_ACCEPTANCE.json)
+
+- [擊倒全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SMACKDOWN_ACCEPTANCE.json)
