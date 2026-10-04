@@ -518,6 +518,18 @@ Full raw template and formatting: [source evidence](psyker_increased_max_souls.m
 | Storage cap | Store up to six Warp Charges; `ui / loc_talent_psyker_increased_souls_desc / e69bf6d1` | Initialization selects the soul buff with max_stacks = 6 instead of the base four. [Fixed source and line references](psyker_increased_max_souls.md#fixed-source-evidence) | Consistent | The stated cap agrees. |
 | Unchanged per-charge effects | No different Damage, cooldown restoration, duration or expenditure rule stated; `ui / loc_talent_psyker_increased_souls_desc / e69bf6d1` | talent_resource.max_resource is already six, retaining +4% Damage per stack; original soul duration and consumption functions are shared. Six stacks give +24% Damage and 45% restoration of one ability charge. [Fixed source and line references](psyker_increased_max_souls.md#fixed-source-evidence) | Not covered by the description | The accepted formulas and unchanged behavior supplement the storage statement. |
 
+
+<a id="psyker_mark_weakspot_kills"></a>
+
+## Cruel Fortune
+
+Full raw template and formatting: [source evidence](psyker_mark_weakspot_kills.md#original-english-template-and-reconstruction). Name hash `1570663e`. Every row uses `ui / loc_talent_psyker_mark_weakspot_stacks_description / 40c93869`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional versus total stacks | Weakspot Kills grant two additional stacks of Disrupt Destiny; `ui / loc_talent_psyker_mark_weakspot_stacks_description / 40c93869` | weakspot_stacks = 3 is the total grant; the display maps weakspot_stacks − 1 = 2 additional. [Fixed source and line references](psyker_mark_weakspot_kills.md#fixed-source-evidence) | Consistent | The English's additional count agrees with three total rather than granting three extra. |
+| Current target and cap | Does not restate current-Marked-target eligibility or the cap; `ui / loc_talent_psyker_mark_weakspot_stacks_description / 40c93869` | on_hit requires a personal kill of current_target and passes hit_weakspot to give_stack; unmarked kills do not qualify. Four→seven; 14 at cap 15→15. all_weakspot_kills_grant_buff is an internal name, not broader eligibility. [Fixed source and line references](psyker_mark_weakspot_kills.md#fixed-source-evidence) | Not covered by the description | The accepted base-trigger requirement and capped examples supplement the English; it does not explicitly state unmarked enemies are eligible. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

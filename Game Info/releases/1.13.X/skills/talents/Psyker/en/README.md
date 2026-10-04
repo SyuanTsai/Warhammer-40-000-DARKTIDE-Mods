@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="In Fire Reborn talent icon"> [In Fire Reborn](#psyker_warpfire_generate_souls) | <ul><li>A qualifying death with Soulblaze present, or caused by your Soulblaze, has a 10% chance to grant one Warp Charge; choose either this or Psychic Vampire.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="32" height="32" alt="Psychic Vampire talent icon"> [Psychic Vampire](#psyker_aura_souls_on_kill) | <ul><li>You or an Ally in Coherency killing an enemy gives you a 4% chance to gain one Warp Charge; choose either this or In Fire Reborn.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="32" height="32" alt="Warp Battery talent icon"> [Warp Battery](#psyker_increased_max_souls) | <ul><li>Raises Warp Charge storage from four to six; Damage and cooldown restoration per charge remain unchanged.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/a3deac9c-bddd-441f-a916-e41eecf9b23e" width="32" height="32" alt="Cruel Fortune talent icon"> [Cruel Fortune](#psyker_mark_weakspot_kills) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy with a Weakspot hit grants two extra Precision stacks, three in total, subject to the cap.</li></ul> | Keystone |
 
 ---
 
@@ -698,3 +699,17 @@
 - **Cooldown example:** Six stacks restore `6 × 7.5% = 45%` of one ability charge's cooldown; for a 30-second cooldown, this restores 13.5 seconds of progress.
 
 [Details](psyker_increased_max_souls.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_mark_weakspot_kills"></a>
+
+### Cruel Fortune
+
+<img src="https://github.com/user-attachments/assets/a3deac9c-bddd-441f-a916-e41eecf9b23e" width="72" height="72" alt="Cruel Fortune talent icon">
+
+- **Trigger:** Kill Disrupt Destiny's current Marked Enemy with a Weakspot hit to gain two Precision stacks in addition to the original one, for three in total. Killing an unmarked enemy does not trigger this effect.
+
+- **Stack example:** At four stacks, gain `4 + 3 = 7`. At 14 with a cap of 15, the count stops at 15.
+
+[Details](psyker_mark_weakspot_kills.md) · [Back to index](#talent-index)

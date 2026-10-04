@@ -53,3 +53,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [In Fire Reborn](psyker_warpfire_generate_souls.md) / `psyker_warpfire_generate_souls` | Keystone |
 | [Psychic Vampire](psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | Keystone |
 | [Warp Battery](psyker_increased_max_souls.md) / `psyker_increased_max_souls` | Keystone |
+| [Cruel Fortune](psyker_mark_weakspot_kills.md) / `psyker_mark_weakspot_kills` | Keystone |
