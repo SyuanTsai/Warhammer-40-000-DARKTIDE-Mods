@@ -4385,7 +4385,11 @@
         "base_toughness_damage_reduction_node_buff_medium_1",
         "psyker_melee_attack_speed",
         "psyker_damage_vs_ogryns_and_monsters",
-        "psyker_increased_warp_damage"
+        "psyker_increased_warp_damage",
+        "psyker_reload_speed_warp_charge",
+        "psyker_alternative_peril_explosion",
+        "psyker_force_staff_bonus",
+        "psyker_force_staff_quick_attack_bonus"
       ],
       "checks": []
     },
@@ -4467,7 +4471,12 @@
         "psyker_killing_enemy_with_warpfire_boosts",
         "psyker_melee_weaving",
         "psyker_damage_vs_ogryns_and_monsters",
-        "psyker_increased_warp_damage"
+        "psyker_increased_warp_damage",
+        "psyker_weapon_attacks_peril_equilibrium",
+        "psyker_reload_speed_warp_charge",
+        "psyker_alternative_peril_explosion",
+        "psyker_force_staff_bonus",
+        "psyker_force_staff_quick_attack_bonus"
       ],
       "checks": []
     },
@@ -4549,7 +4558,12 @@
         "psyker_killing_enemy_with_warpfire_boosts",
         "psyker_melee_weaving",
         "psyker_damage_vs_ogryns_and_monsters",
-        "psyker_increased_warp_damage"
+        "psyker_increased_warp_damage",
+        "psyker_weapon_attacks_peril_equilibrium",
+        "psyker_reload_speed_warp_charge",
+        "psyker_alternative_peril_explosion",
+        "psyker_force_staff_bonus",
+        "psyker_force_staff_quick_attack_bonus"
       ],
       "checks": []
     },
@@ -4631,7 +4645,12 @@
         "psyker_killing_enemy_with_warpfire_boosts",
         "psyker_melee_weaving",
         "psyker_damage_vs_ogryns_and_monsters",
-        "psyker_increased_warp_damage"
+        "psyker_increased_warp_damage",
+        "psyker_weapon_attacks_peril_equilibrium",
+        "psyker_reload_speed_warp_charge",
+        "psyker_alternative_peril_explosion",
+        "psyker_force_staff_bonus",
+        "psyker_force_staff_quick_attack_bonus"
       ],
       "checks": []
     },
@@ -4743,9 +4762,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d1aa2f9839e1cdd1008ad8e09e54c26dd8d324c6",
       "chinese_sha256": "841f2ff38ac065527fb7e0d4f4855863a1c518dd98d19ad85f5674ee14a70539",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_alternative_peril_explosion"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_crit_chance_aura.md",
@@ -5244,9 +5270,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f8305b9182511e71678e2785878d10fc65a5f091",
       "chinese_sha256": "de88d7ec54bb499f38adffcd159140c1f347e3fd3a1ba9bb4b63c77fd716030b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_force_staff_bonus"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_force_staff_quick_attack_bonus.md",
@@ -5255,9 +5288,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "597f34234d1c6e060ee34473416eed5338872166",
       "chinese_sha256": "b96e857e5f1b63be723bf1444ce5e461c1cdfa4342099d686e7136fbcb48858c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_force_staff_quick_attack_bonus"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_chain_lightning.md",
@@ -5673,9 +5713,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "31e97b42569b38e08d867e1ef65afffd71e4d7b2",
       "chinese_sha256": "b19850a593d4dacd305cf8c94ef8efe6d09fbe1085cbb0bd68e10c16d08214d7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_reload_speed_warp_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shield_extra_charge.md",
@@ -6023,9 +6070,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a5f9ea7388991d929749ca9ccb77dfa531f0ee41",
       "chinese_sha256": "288fbfbfb55ef5c6b3d8ee356de1ccd3798a3d0f204d20f83e802f31301e6f43",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_weapon_attacks_peril_equilibrium"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/BASE_EFFECTS.md",
@@ -14748,6 +14802,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_warp_damage.md"
+    },
+    {
+      "id": "psyker_weapon_attacks_peril_equilibrium",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_weapon_attacks_peril_equilibrium.md"
+    },
+    {
+      "id": "psyker_reload_speed_warp_charge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_reload_speed_warp_charge.md"
+    },
+    {
+      "id": "psyker_alternative_peril_explosion",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_alternative_peril_explosion.md"
+    },
+    {
+      "id": "psyker_force_staff_bonus",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_force_staff_bonus.md"
+    },
+    {
+      "id": "psyker_force_staff_quick_attack_bonus",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_force_staff_quick_attack_bonus.md"
     }
   ],
   "pending_chinese_corrections": [

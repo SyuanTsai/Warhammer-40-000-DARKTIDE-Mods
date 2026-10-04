@@ -920,4 +920,4 @@ Full raw template and formatting: [source evidence](psyker_force_staff_quick_att
 
 ## Comparison totals
 
-The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.
+The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.
