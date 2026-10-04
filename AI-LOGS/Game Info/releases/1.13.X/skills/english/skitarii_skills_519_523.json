@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_519_523",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L1935-L1945 (Shockline Breach Protocol), L2165-L2179 (Rad-Sink), L1896-L1910 (Progressive Plating Matrix), L2684-L2695 (Retribution Conduit), L1785-L1799 (Galvanic Marking Array). Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "Rad-Sink first-stack wording remains ambiguous: the English may imply another second after the initial 1-second wait; accepted source gives stacks at 1 and 2 seconds. Kept as a wording caveat, not an explicit contradiction. Galvanic Marking Array Chinese-only enemy-type correction retained; English permits the verified ranged-kill interpretation."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_pushing_grants_cleave",
+      "name": "Shockline Breach Protocol",
+      "name_hash": "53810570",
+      "description_hash": "d5aece03",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_pushing_grants_cleave.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_pushing_grants_cleave.md",
+      "commit": "703b90b89"
+    },
+    {
+      "id": "cryptic_stacking_ranged_damage",
+      "name": "Rad-Sink",
+      "name_hash": "237b28e6",
+      "description_hash": "0ff2b66e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stacking_ranged_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stacking_ranged_damage.md",
+      "commit": "4dbdd807f"
+    },
+    {
+      "id": "cryptic_stacking_tdr",
+      "name": "Progressive Plating Matrix",
+      "name_hash": "3d848475",
+      "description_hash": "1e30d43e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stacking_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stacking_tdr.md",
+      "commit": "fc70c748e"
+    },
+    {
+      "id": "cryptic_damage_vs_electrocuted_scaling_on_charge",
+      "name": "Retribution Conduit",
+      "name_hash": "d9d4b1f5",
+      "description_hash": "232897f8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_damage_vs_electrocuted_scaling_on_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_damage_vs_electrocuted_scaling_on_charge.md",
+      "commit": "87cd30597"
+    },
+    {
+      "id": "cryptic_elite_kills_damage",
+      "name": "Galvanic Marking Array",
+      "name_hash": "ac680fe6",
+      "description_hash": "768f2807",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_elite_kills_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_elite_kills_damage.md",
+      "commit": "bb93ed41e"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 337,
+    "from_commit": "55edc5336",
+    "to_commit": "bb93ed41e",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

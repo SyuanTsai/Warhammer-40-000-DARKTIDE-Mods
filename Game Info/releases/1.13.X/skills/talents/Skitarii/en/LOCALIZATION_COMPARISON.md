@@ -735,4 +735,4 @@ Full raw template and formatting: [source evidence](cryptic_elite_kills_damage.m
 
 ## Comparison totals
 
-115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.
+126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.
