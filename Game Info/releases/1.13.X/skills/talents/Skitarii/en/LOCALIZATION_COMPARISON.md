@@ -213,6 +213,18 @@ Full raw template and formatting: [source evidence](cryptic_precision_stance_fir
 | Stance condition, Fire Rate and delay | While Advanced Combat Doctrines is active, +15% Fire Rate, increased to +30% after 4s; `ui / loc_talent_cryptic_precision_stance_fire_rate_increased_desc / 305b77d8` | Base ranged_attack_speed +0.15 requires the active stance keyword; after 4s, delayed +0.15 raises the combined total to +0.30 [Fixed source and line references](cryptic_precision_stance_fire_rate_increased.md#fixed-source-evidence) | Consistent | The activation condition, values and delay agree. Increased to +30% describes the combined total. |
 | Continuous activation and reset | No interruption/reset or action/weapon-limit details; `ui / loc_talent_cryptic_precision_stance_fire_rate_increased_desc / 305b77d8` | Delayed start time t +4; interruption clears state/timer and withdraws the delayed bonus; reactivation starts anew [Fixed source and line references](cryptic_precision_stance_fire_rate_increased.md#fixed-source-evidence) | Not covered by the description | Preserve the 5 →5.75 →6.5 rounds/s example, with other action/weapon limits separate. The modifier changes ranged Fire Rate rather than establishing damage or Reload Speed. |
 
+
+<a id="cryptic_discharge_generates_arcs"></a>
+
+## Voltaic Arcs
+
+Full raw template and formatting: [source evidence](cryptic_discharge_generates_arcs.md#original-english-template-and-reconstruction). Name hash `c021d976`. Every row uses `ui / loc_talent_cryptic_discharge_arc_bonus_desc / b7638357`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, direction and arcs per charge | Using Voltaic Emitter releases 1 forward-facing Arcs per Charge spent; high damage and Impact; `ui / loc_talent_cryptic_discharge_arc_bonus_desc / b7638357` | Activation creates one forward arc per full charge consumed; link Impact and subsequent Electrocution use the accepted damage profiles [Fixed source and line references](cryptic_discharge_generates_arcs.md#fixed-source-evidence) | Consistent | The trigger, direction and count agree. High damage is qualitative, and link attack power 0 does not exclude subsequent Electrocution damage. |
+| Target, arc and chaining limits | No target checks, range, cap or linking limit; `ui / loc_talent_cryptic_discharge_arc_bonus_desc / b7638357` | Initial living/targetable enemies require flattened direction dot >0.5 within 12m; broadphase-order selection; template cap 5; each chain has 12m radius, one child/step and at most 4 links [Fixed source and line references](cryptic_discharge_generates_arcs.md#fixed-source-evidence) | Not covered by the description | Normal use consumes at most 3 charges and therefore yields at most 3 arcs; fewer valid targets reduce the actual count. Arc count cannot establish fixed Health damage. |
+
 ## Comparison totals
 
 32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
