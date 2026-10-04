@@ -66,3 +66,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Retaliatory Defence](zealot_stamina_on_block_break.md) / `zealot_stamina_on_block_break` | Skill |
 | [Good Balance](zealot_reduced_damage_after_dodge.md) / `zealot_reduced_damage_after_dodge` | Skill |
 | [Enemies Within, Enemies Without](zealot_toughness_in_melee.md) / `zealot_toughness_in_melee` | Skill |
+| [Faithful Frenzy](zealot_attack_speed.md) / `zealot_attack_speed` | Skill |
