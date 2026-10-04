@@ -152,6 +152,19 @@ Full raw template and formatting: [source evidence](cryptic_coherency_regen_aura
 | Personal Toughness and Coherency regeneration | Gain +25 Toughness; You and Allies in Coherency regenerate 50% Coherency Toughness regardless of enemy proximity; `ui / loc_talent_cryptic_coherency_regen_aura_improved_desc / a053ecfc` | Personal toughness =25 only on caster; Coherency minimum normal-rate multiplier 0.5 applies to caster and chain allies [Fixed source and line references](cryptic_coherency_regen_aura_improved.md#fixed-source-evidence) | Consistent | The personal amount, aura recipients and nearby-enemy regeneration agree. The percentage refers to Coherency rate, not maximum Toughness. |
 | Rate, delay and recipient limits | No regeneration delay, deficit, personal modifiers or base-aura priority details; `ui / loc_talent_cryptic_coherency_regen_aura_improved_desc / a053ecfc` | Same coherency_id as base, priority 1; base minimum 25%, improved 50%; delay/disable/weapon/movement/modifiers and maximum remain [Fixed source and line references](cryptic_coherency_regen_aura_improved.md#fixed-source-evidence) | Not covered by the description | Preserve 10 × 50% = 5 points/s and 4s →20 with sufficient deficit and uninterrupted recovery; the text does not promise immediate or uncapped restoration. |
 
+
+<a id="cryptic_ammo_aura"></a>
+
+## Ammunition Deposit
+
+Full raw template and formatting: [source evidence](cryptic_ammo_aura.md#original-english-template-and-reconstruction). Name hash `a45966fb`. Every row uses `ui / loc_talent_cryptic_ammo_aura_toughness_desc / cc394399`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Personal Toughness and Ammo Reserve amount | Gain +25 Toughness; +15% Ammo Reserve; `ui / loc_talent_cryptic_ammo_aura_toughness_desc / cc394399` | Caster passive toughness =25; ammo_reserve_capacity additive +0.15 [Fixed source and line references](cryptic_ammo_aura.md#fixed-source-evidence) | Consistent | Both numerical values agree; only the caster receives the personal Toughness bonus. |
+| Allied recipient scope | You and Allies in Coherency have +15% Ammo Reserve; `ui / loc_talent_cryptic_ammo_aura_toughness_desc / cc394399` | Server start_func iterates human_players and applies effect to each living player unit; player_spawned_func handles later joins; no Coherency/distance/chain check [Fixed source and line references](cryptic_ammo_aura.md#fixed-source-evidence) | Explicit contradiction | The English imposes a Coherency restriction absent from the accepted fixed-source recipient selection. This is a text/evidence mismatch, not an observed game result; the earlier Chinese verdict is not inherited. |
+| Capacity adjustment and non-stacking | No flooring, current-reserve adjustment, late joins, removal or multiple-source limit; `ui / loc_talent_cryptic_ammo_aura_toughness_desc / cc394399` | Current/max reserve scale by 1.15 and floor; effects removed on ending; min_max_step_func 0,1 keeps a single 15% step across sources [Fixed source and line references](cryptic_ammo_aura.md#fixed-source-evidence) | Not covered by the description | Retain floor(101 ×1.15) =116, with 116.15 before flooring. Multiple teammates do not each add another 15%; display near floating-point integer boundaries remains unobserved. |
+
 ## Comparison totals
 
 21 rules: 10 Consistent / 0 Explicit contradiction / 10 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 473.

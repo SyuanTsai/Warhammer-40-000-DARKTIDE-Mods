@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/e70f3e4b-d2c2-4840-bc29-56ba85dd816d" width="32" height="32" alt="Overcharged Refraction Emitter talent icon"> [Overcharged Refraction Emitter](#cryptic_force_field_duration_increase) | <ul><li>Increase Integrated Refraction Emitter's duration from 8s to 12s and add an Electrocution explosion at the midpoint.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b" width="32" height="32" alt="Voltaic Resistance talent icon"> [Voltaic Resistance](#cryptic_force_field_arcs) | <ul><li>When Integrated Refraction Emitter ends, send 1–4 arcs towards enemies in front, based on absorbed Ranged Attack count.</li><li>Each arc can chain to nearby enemies.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be" width="32" height="32" alt="Resurgence talent icon"> [Resurgence](#cryptic_coherency_regen_aura_improved) | <ul><li>Gain 25 Toughness; you and allies in Coherency retain at least 50% of the normal Coherency Toughness regeneration rate during combat.</li><li>The minimum regeneration multiplier applies even with enemies nearby.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="Ammunition Deposit talent icon"> [Ammunition Deposit](#cryptic_ammo_aura) | <ul><li>You gain 25 Toughness; players in the mission gain 15% Ammo Reserve capacity.</li><li>The Ammo Reserve effect has no Coherency-distance limit and does not stack from multiple allies selecting the talent.</li></ul> | Aura |
 
 ---
 
@@ -203,3 +204,17 @@
 - **Regeneration conditions**: The Toughness regeneration delay after taking damage must still finish, and normal Coherency regeneration must remain available. This effect does not cancel the delay or let Toughness exceed its maximum.
 
 [Details](cryptic_coherency_regen_aura_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_ammo_aura"></a>
+
+### Ammunition Deposit
+
+<img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="72" height="72" alt="Ammunition Deposit talent icon">
+
+- **How it works**: Gain 25 Toughness and increase Ammo Reserve capacity by 15%.
+- **Example**: A maximum reserve of 101 rounds becomes 101 × 1.15 = 116.15, rounded down to 116 rounds. Current reserve also adjusts when capacity changes.
+- **Recipients**: The Ammo Reserve bonus applies to you and player-controlled allies in the mission, without requiring Coherency range. If multiple allies select this talent, the capacity bonus remains 15%.
+
+[Details](cryptic_ammo_aura.md) · [Back to index](#talent-index)
