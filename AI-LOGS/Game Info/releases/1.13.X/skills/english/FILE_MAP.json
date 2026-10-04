@@ -13736,9 +13736,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5cc181b5766e309fc7f8ac01db0273d8c61de00b",
       "chinese_sha256": "e9c888285b0c2b4216f2ed17b2efa0702fe86e94d640dcb9a9b3fa039ad3d113",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_ally_damage_taken_reduced"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_attack_speed.md",
@@ -14134,9 +14141,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "517c10c444cfe5858981939b00ca91c11ce039c3",
       "chinese_sha256": "b2bc3440b7f050294a3b1650a068cd4fa5dab84a8bbc1631b00ab96edf583eb0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_heal_part_of_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_hits_grant_stacking_damage.md",
@@ -14203,9 +14217,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b0701c92fb8df5074986866d4057649d69ead53a",
       "chinese_sha256": "73f8a80f5fd90f53c9c2dc7b2f056dc995e250c92b954fac8f77db1df9a69127",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_increased_crit_and_weakspot_damage_after_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increased_damage_vs_resilient.md",
@@ -14507,9 +14528,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c626648f9e7d62d38141c580e93b9c8fb4c7883a",
       "chinese_sha256": "88c4eca46041d3a93f4b9f3217d988e0969b2a9a413acec4e2d0a63afad56dc5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_reduced_damage_on_wound"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reload_from_melee.md",
@@ -14829,9 +14857,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "af73a215a4339fd8d8aa73d638985cc6e94461db",
       "chinese_sha256": "5dd74bada49a6eccc7ee72036deab0d8bbadc97f25dbed9db7c595aaae166cff",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_toughness_on_heavy_kills"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_while_shooting.md",
@@ -19833,6 +19868,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_605_609.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_while_shooting.md"
+    },
+    {
+      "id": "zealot_heal_part_of_damage_taken",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_heal_part_of_damage_taken.md"
+    },
+    {
+      "id": "zealot_reduced_damage_on_wound",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_on_wound.md"
+    },
+    {
+      "id": "zealot_toughness_on_heavy_kills",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_on_heavy_kills.md"
+    },
+    {
+      "id": "zealot_increased_crit_and_weakspot_damage_after_dodge",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_increased_crit_and_weakspot_damage_after_dodge.md"
+    },
+    {
+      "id": "zealot_ally_damage_taken_reduced",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_ally_damage_taken_reduced.md"
     }
   ],
   "pending_chinese_corrections": [

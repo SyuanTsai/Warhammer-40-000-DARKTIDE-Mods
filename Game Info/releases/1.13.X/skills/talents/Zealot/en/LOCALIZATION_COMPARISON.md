@@ -614,4 +614,4 @@ Full raw template and formatting: [source evidence](zealot_ally_damage_taken_red
 
 ## Comparison totals
 
-94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.
+105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

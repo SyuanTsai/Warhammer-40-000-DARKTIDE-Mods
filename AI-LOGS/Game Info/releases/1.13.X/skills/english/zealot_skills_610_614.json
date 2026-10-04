@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_610_614",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L3063-L3082, L3099-L3114, L2865-L2886, L1305-L1338, L3149-L3173. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "English Shield of Contempt explicitly restricts allies to Coherency, conflicting with the accepted fixed execution path without that check; actual game range unobserved. Restoring Faith scheduling and Bleed for the Emperor equality boundary are supplements. Vicious Offering English correctly requires a kill; the Chinese correction is separate."
+  ],
+  "skills": [
+    {
+      "id": "zealot_heal_part_of_damage_taken",
+      "name": "Restoring Faith",
+      "name_hash": "a90f2f4a",
+      "description_hash": "c39c8d71",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_heal_part_of_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_heal_part_of_damage_taken.md",
+      "commit": "d8149989a"
+    },
+    {
+      "id": "zealot_reduced_damage_on_wound",
+      "name": "Bleed for the Emperor",
+      "name_hash": "8391b055",
+      "description_hash": "4cc48983",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_on_wound.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_on_wound.md",
+      "commit": "1a42946d5"
+    },
+    {
+      "id": "zealot_toughness_on_heavy_kills",
+      "name": "Vicious Offering",
+      "name_hash": "4033ba2a",
+      "description_hash": "d50c0dd8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_on_heavy_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_on_heavy_kills.md",
+      "commit": "b2c0ab25c"
+    },
+    {
+      "id": "zealot_increased_crit_and_weakspot_damage_after_dodge",
+      "name": "Duellist",
+      "name_hash": "ea05e792",
+      "description_hash": "b41ec4a9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increased_crit_and_weakspot_damage_after_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_increased_crit_and_weakspot_damage_after_dodge.md",
+      "commit": "b4bc42880"
+    },
+    {
+      "id": "zealot_ally_damage_taken_reduced",
+      "name": "Shield of Contempt",
+      "name_hash": "3c826469",
+      "description_hash": "96972711",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_ally_damage_taken_reduced.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_ally_damage_taken_reduced.md",
+      "commit": "6b3ea7a1f"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 511,
+    "from_commit": "32db1cec1",
+    "to_commit": "6b3ea7a1f",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}
