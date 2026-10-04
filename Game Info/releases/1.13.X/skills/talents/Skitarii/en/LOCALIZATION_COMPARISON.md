@@ -201,6 +201,18 @@ Full raw template and formatting: [source evidence](cryptic_precision_stance_tou
 | Recovery and activation-time Suppression clear | 10% Toughness per second for the duration; instantly clears all Suppression on activation; `ui / loc_talent_cryptic_precision_stance_toughness_suppression_desc / e35e0d88` | Stance activation calls Suppression.clear_suppression; the active stance passes 0.1 × dt to Toughness.replenish_percentage [Fixed source and line references](cryptic_precision_stance_toughness_suppression.md#fixed-source-evidence) | Consistent | The percentage and activation trigger agree. The English does not add a point unit after the percentage. |
 | Recovery basis, limits and switching off | No maximum-Toughness basis, recovery modifiers/cap, ranged-slot condition or off-branch detail; `ui / loc_talent_cryptic_precision_stance_toughness_suppression_desc / e35e0d88` | Recovery multiplies maximum Toughness, applies replenishment modifiers and caps at the deficit; leaving the ranged slot ends the stance; switching off does not perform the activation clear [Fixed source and line references](cryptic_precision_stance_toughness_suppression.md#fixed-source-evidence) | Not covered by the description | With maximum Toughness 150, recovery is 15 points/s and 60 over 4s under the stated assumptions. Clearing Suppression once does not grant ongoing immunity. |
 
+
+<a id="cryptic_precision_stance_fire_rate_increased"></a>
+
+## Writ of Ammunition Enumeration
+
+Full raw template and formatting: [source evidence](cryptic_precision_stance_fire_rate_increased.md#original-english-template-and-reconstruction). Name hash `521de828`. Every row uses `ui / loc_talent_cryptic_precision_stance_fire_rate_increased_desc / 305b77d8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stance condition, Fire Rate and delay | While Advanced Combat Doctrines is active, +15% Fire Rate, increased to +30% after 4s; `ui / loc_talent_cryptic_precision_stance_fire_rate_increased_desc / 305b77d8` | Base ranged_attack_speed +0.15 requires the active stance keyword; after 4s, delayed +0.15 raises the combined total to +0.30 [Fixed source and line references](cryptic_precision_stance_fire_rate_increased.md#fixed-source-evidence) | Consistent | The activation condition, values and delay agree. Increased to +30% describes the combined total. |
+| Continuous activation and reset | No interruption/reset or action/weapon-limit details; `ui / loc_talent_cryptic_precision_stance_fire_rate_increased_desc / 305b77d8` | Delayed start time t +4; interruption clears state/timer and withdraws the delayed bonus; reactivation starts anew [Fixed source and line references](cryptic_precision_stance_fire_rate_increased.md#fixed-source-evidence) | Not covered by the description | Preserve the 5 →5.75 →6.5 rounds/s example, with other action/weapon limits separate. The modifier changes ranged Fire Rate rather than establishing damage or Reload Speed. |
+
 ## Comparison totals
 
 32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
