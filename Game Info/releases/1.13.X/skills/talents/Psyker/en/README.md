@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="Soulstealer talent icon"> [Soulstealer](#psyker_toughness_on_warp_kill) | <ul><li>A Warp Attack Kill restores 7.5% of maximum Toughness, subject to restoration modifiers and missing Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="Quietude talent icon"> [Quietude](#psyker_toughness_on_vent) | <ul><li>Both Peril Generation and Quelling restore Toughness: 4% of maximum Toughness per ten percentage points of actual Peril change.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="Warp Expenditure talent icon"> [Warp Expenditure](#psyker_toughness_on_melee) | <ul><li>First melee target hit: restore 2.5% maximum Toughness. Melee Weakspot Kill: restore 15% over 3s instead; refreshes without increasing the rate.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="Mettle talent icon"> [Mettle](#psyker_crits_regen_toughness_movement_speed) | <ul><li>Critical Hits restore 10% maximum Toughness over 4s and grant +5% Movement Speed, up to 3 stacks. Toughness restoration rate does not multiply with stacks.</li></ul> | Talent |
 
 ---
 
@@ -760,3 +761,19 @@
 - **Restoration example**: with 100 maximum Toughness, no other bonuses and a sufficient deficit, an ordinary hit restores 2.5 points. A Weakspot Kill restores 100 × 15% ÷ 3 = 5 points per second, for 15 points over 3 seconds.
 
 [Details](psyker_toughness_on_melee.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_crits_regen_toughness_movement_speed"></a>
+
+### Mettle
+
+<img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="72" height="72" alt="Mettle talent icon">
+
+- **Trigger**: after a Critical Hit, restore 10% of maximum Toughness over 4 seconds and gain 5% Movement Speed.
+
+- **Stacks and refresh**: Movement Speed stacks up to 3 times, for a total increase of 15%; triggering the effect again resets the 4 seconds. Toughness continues to regenerate at 2.5% of maximum per second and does not multiply with the Movement Speed stack count.
+
+- **Restoration example**: with 100 maximum Toughness, a sufficient deficit and no other bonuses, the 4-second effect restores 100 × 10% = 10 points. At 3 stacks it still restores 2.5 points per second, while the movement multiplier is 1 + 3 × 5% = 1.15.
+
+[Details](psyker_crits_regen_toughness_movement_speed.md) · [Back to index](#talent-index)

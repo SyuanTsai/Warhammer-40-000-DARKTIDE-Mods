@@ -57,3 +57,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Soulstealer](psyker_toughness_on_warp_kill.md) / `psyker_toughness_on_warp_kill` | Talent |
 | [Quietude](psyker_toughness_on_vent.md) / `psyker_toughness_on_vent` | Talent |
 | [Warp Expenditure](psyker_toughness_on_melee.md) / `psyker_toughness_on_melee` | Talent |
+| [Mettle](psyker_crits_regen_toughness_movement_speed.md) / `psyker_crits_regen_toughness_movement_speed` | Talent |

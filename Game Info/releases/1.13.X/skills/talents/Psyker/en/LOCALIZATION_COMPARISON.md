@@ -566,6 +566,18 @@ Full raw template and formatting: [source evidence](psyker_toughness_on_melee.md
 | Restoration amounts and duration | 15% over 3s for Melee Weakspot Kills; 2.5% instantly for successful Melee Attacks; `ui / loc_talent_psyker_toughness_on_melee_description / 3f010d59` | The verified branches restore these configured amounts. [Fixed source and line references](psyker_toughness_on_melee.md#fixed-source-evidence) | Consistent | Both quantities and the sustained duration agree. |
 | Branch selection and refresh limits | Successful Melee Attacks; no target-index, exclusivity or refresh details; `ui / loc_talent_psyker_toughness_on_melee_description / 3f010d59` | Instant restoration requires target_index == 1 after the Weakspot Kill branch fails; sustained restoration has one refreshing stack and uses maximum Toughness. [Fixed source and line references](psyker_toughness_on_melee.md#fixed-source-evidence) | Not covered by the description | The English omits these conditions and does not explicitly say the two branches both pay out. |
 
+
+<a id="psyker_crits_regen_toughness_movement_speed"></a>
+
+## Mettle
+
+Full raw template and formatting: [source evidence](psyker_crits_regen_toughness_movement_speed.md#original-english-template-and-reconstruction). Name hash `56d92a9d`. Every row uses `ui / loc_talent_psyker_crits_regen_toughness_speed_description / 0da7190a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Separate Critical Hit effects | 10% Toughness over 4s; +5% Movement Speed for 4s, stacking 3 times; `ui / loc_talent_psyker_crits_regen_toughness_speed_description / 0da7190a` | Critical Hit events apply the effect; speed stacks to +15%, while sustained restoration remains 10% over 4s. [Fixed source and line references](psyker_crits_regen_toughness_movement_speed.md#fixed-source-evidence) | Consistent | Stacking is attached to Movement Speed in the English, so it does not contradict the fixed Toughness rate. |
+| Restoration and timer details | No maximum-Toughness basis, per-second rate or refresh rule; `ui / loc_talent_psyker_crits_regen_toughness_speed_description / 0da7190a` | Restoration is 0.1 × dt / 4 of maximum Toughness, once per Buff instance; retriggering resets 4s. [Fixed source and line references](psyker_crits_regen_toughness_movement_speed.md#fixed-source-evidence) | Not covered by the description | These implementation details supplement the separate English effects. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
