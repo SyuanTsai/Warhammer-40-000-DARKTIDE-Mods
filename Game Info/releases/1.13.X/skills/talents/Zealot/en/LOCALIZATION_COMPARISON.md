@@ -599,6 +599,19 @@ Full raw template and formatting: [source evidence](zealot_increased_crit_and_we
 | Finesse bonus, Dodge and duration | “+50% Finesse Damage for 3s on successful Dodge.”; `ui / loc_talent_zealot_duelist_new_desc / b41ec4a9` | Successful Dodge gives finesse_modifier_bonus 0.5 for 3 seconds. [Fixed source and line references](zealot_increased_crit_and_weakspot_damage_after_dodge.md#fixed-source-evidence) | Consistent | The trigger, stat and values agree. |
 | Extra-damage calculation and refresh | No whole-hit formula, combined Weakspot/Critical rule or refresh detail.; `ui / loc_talent_zealot_duelist_new_desc / b41ec4a9` | B+F×(1+s+0.5); original examples 150→175, 200→250 and 225→275. No cooldown; another successful Dodge resets active_start_time. Combined Weakspot/Critical curves receive the bonus once. [Fixed source and line references](zealot_increased_crit_and_weakspot_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | Finesse wording does not promise a fixed 50% increase to the entire hit; these formulas supplement it. |
 
+
+<a id="zealot_ally_damage_taken_reduced"></a>
+
+## Shield of Contempt
+
+Full raw template and formatting: [source evidence](zealot_ally_damage_taken_reduced.md#original-english-template-and-reconstruction). Name hash `3c826469`. Every row uses `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reduction and separate timers | “+60% Damage Reduction for 4s. Triggers every 8s.”; `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711` | Child multiplier 0.4/duration 4; template cooldown 8, no active_duration. [Fixed source and line references](zealot_ally_damage_taken_reduced.md#fixed-source-evidence) | Consistent | Reduction, effect duration and trigger interval agree. |
+| Ally range | “an Ally in Coherency”; `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711` | on_damage_taken broadcasts to side.valid_player_units; template checks damage_amount>0 and applies to attacked_unit without Coherency, distance or holder-equality checks. [Fixed source and line references](zealot_ally_damage_taken_reduced.md#fixed-source-evidence) | Explicit contradiction | The English imposes a range restriction absent from the accepted fixed execution path. Actual game range remains unobserved. |
+| Trigger damage, recipients and stacking | No Health-only condition, retroactive-damage rule or per-holder/multiple-holder detail.; `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711` | Toughness-only damage fails; trigger hit already resolved. Each holder shares its cooldown across recipients; independent child instances multiply. Original 100→40 and t0/t4/t8 example retained. [Fixed source and line references](zealot_ally_damage_taken_reduced.md#fixed-source-evidence) | Not covered by the description | These timing and recipient details supplement the stated effect. |
+
 ## Comparison totals
 
 94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.
