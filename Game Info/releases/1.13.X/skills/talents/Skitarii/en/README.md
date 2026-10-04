@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="Invigorating Overload talent icon"> [Invigorating Overload](#cryptic_overload_keystone_toughness_stamina) | <ul><li>Each Power Overload restores 20% of maximum Toughness and 20% of maximum Stamina to you and allies in Coherency. Resource caps apply; Toughness recovery also uses existing replenishment modifiers.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="Static Capacitor Drain talent icon"> [Static Capacitor Drain](#cryptic_overload_keystone_permastack) | <ul><li>After 8 /16 /24 overloads, gain +15% Damage /20% Toughness Damage Reduction /25% faster natural Capacitance generation, respectively. All three can remain together, each awarded once; the description says they last until death.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="Servo-Sinew Surge talent icon"> [Servo-Sinew Surge](#cryptic_dissector_crit_attack_speed) | <ul><li>Each current Flensing Protocols stack also grants 1.5 percentage points of Critical Strike Chance and +1.5% Melee Attack Speed. The bonuses follow the stack count: 6 stacks give 9 points /9%, and 8 give 12 points /12%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="Honed Dissector talent icon"> [Honed Dissector](#cryptic_dissector_max_stacks) | <ul><li>Raises the Flensing Protocols cap from 6 to 8 stacks and starts at 8. Per-stack values remain unchanged: full stacks give +20% Damage and a Toughness damage taken multiplier of 0.80.</li></ul> | Keystone |
 
 ---
 
@@ -629,3 +630,16 @@
 - **Calculation examples**: An original Critical Strike Chance of `7.5%` becomes `7.5% + 6 × 1.5% = 16.5%` at 6 stacks. A melee attack that originally takes 1 second takes approximately `1 ÷ 1.09 = 0.917` seconds with no other attack-speed bonus.
 
 [Details](cryptic_dissector_crit_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_dissector_max_stacks"></a>
+
+### Honed Dissector
+
+<img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="72" height="72" alt="Honed Dissector talent icon">
+
+- **Effect**: Raises the Flensing Protocols stack cap from **6 to 8**; starts at **8 stacks**.
+- **Example**: Damage remains +2.5% per stack, so 8 stacks give **+20% Damage**. The Toughness damage taken multiplier is `1 − 0.025 × 8 = 0.80`. With no other damage bonuses, base attack damage `100` becomes `120`; with no other damage reduction, 100 incoming Toughness damage becomes `80`.
+
+[Details](cryptic_dissector_max_stacks.md) · [Back to index](#talent-index)

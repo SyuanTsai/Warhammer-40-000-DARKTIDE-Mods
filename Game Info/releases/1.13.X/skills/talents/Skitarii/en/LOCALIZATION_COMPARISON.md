@@ -478,6 +478,18 @@ Full raw template and formatting: [source evidence](cryptic_dissector_crit_attac
 | Per-stack chance and Melee Attack Speed | Each stack also grants +1.5% Critical Hit Chance and +1.5% Melee Attack Speed; `ui / loc_talent_cryptic_dissector_crit_attack_speed_desc / 7ddcfcd5` | The special rule enables conditional `critical_strike_chance =0.015` and `melee_attack_speed =0.015` for each Flensing Protocols stack [Fixed source and line references](cryptic_dissector_crit_attack_speed.md#fixed-source-evidence) | Consistent | The per-stack scope and both values agree. |
 | Count changes and calculation | Does not explain changing stack counts, percentage-point addition or action time; `ui / loc_talent_cryptic_dissector_crit_attack_speed_desc / 7ddcfcd5` | Current count controls both effects; 6 stacks give +9 points /+9%, 8 give +12 points /+12%; 7.5% becomes16.5% at6; 1s ÷1.09 ≈0.917s without other speed bonuses [Fixed source and line references](cryptic_dissector_crit_attack_speed.md#fixed-source-evidence) | Not covered by the description | These verified examples explain the different chance and speed calculations; Melee Attack Speed does not increase damage per hit. |
 
+
+<a id="cryptic_dissector_max_stacks"></a>
+
+## Honed Dissector
+
+Full raw template and formatting: [source evidence](cryptic_dissector_max_stacks.md#original-english-template-and-reconstruction). Name hash `a5e601c2`. Every row uses `ui / loc_talent_cryptic_dissector_max_stacks_desc / 52304209`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Increased cap | Increase Max Stacks to 8; `ui / loc_talent_cryptic_dissector_max_stacks_desc / 52304209` | The special rule raises both the logical and controlled-buff caps from 6 to 8 [Fixed source and line references](cryptic_dissector_max_stacks.md#fixed-source-evidence) | Consistent | The displayed cap is the verified sum 6 + 2. |
+| Initialization and unchanged stack effects | Does not specify starting at full stacks or retaining the other stack rules; `ui / loc_talent_cryptic_dissector_max_stacks_desc / 52304209` | Initialization starts at 8; each stack retains 2.5% Damage and the stepped Toughness multiplier. At 8: +20% Damage, multiplier 0.80. Loss and kill-restoration rules remain unchanged [Fixed source and line references](cryptic_dissector_max_stacks.md#fixed-source-evidence) | Not covered by the description | Starting stacks and the original 120 / 80 examples explain omitted details without changing the English. |
+
 ## Comparison totals
 
 72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.

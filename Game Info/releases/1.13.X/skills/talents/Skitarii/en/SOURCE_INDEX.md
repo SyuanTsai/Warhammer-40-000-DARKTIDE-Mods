@@ -50,3 +50,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Invigorating Overload](cryptic_overload_keystone_toughness_stamina.md) / `cryptic_overload_keystone_toughness_stamina` | Keystone |
 | [Static Capacitor Drain](cryptic_overload_keystone_permastack.md) / `cryptic_overload_keystone_permastack` | Keystone |
 | [Servo-Sinew Surge](cryptic_dissector_crit_attack_speed.md) / `cryptic_dissector_crit_attack_speed` | Keystone |
+| [Honed Dissector](cryptic_dissector_max_stacks.md) / `cryptic_dissector_max_stacks` | Keystone |
