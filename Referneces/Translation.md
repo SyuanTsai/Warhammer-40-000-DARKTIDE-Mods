@@ -1848,3 +1848,6 @@
 
 - Bug Out - 開溜
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_improved_sprint_dodge`，hash `f1dfd8b7`；英文／繁中RAW配對確認。
+
+- Punisher - 懲罰者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_damage_on_close_kill`，hash `5d0f2ffa`；英文／繁中RAW配對確認。

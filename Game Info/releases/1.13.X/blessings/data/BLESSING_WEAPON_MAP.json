@@ -1017,6 +1017,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a24dfe97-3d90-44b2-afb5-99309f88e6f4",
       "effect": "每次開始符合該型號條件的蓄力次要攻擊釋放動作時獲得一層效果；每層讓蓄力時間縮短 I–IV 的 5.5%／6.5%／7.5%／8.5%，最多三層，三層合計縮短 16.5%／19.5%／22.5%／25.5%。首次釋放只建立效果，不追溯縮短已完成的那次蓄力。"
+    },
+    {
+      "id": "punisher",
+      "name_zh_tw": "懲罰者",
+      "name_en": "Punisher",
+      "name_key": "loc_trait_bespoke_increase_damage_on_close_kill",
+      "description_key": "loc_trait_bespoke_increase_damage_on_close_kill_desc",
+      "name_hash": "5d0f2ffa",
+      "description_hash": "b9c3e73b",
+      "page": "entries/懲罰者/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/329f2103-f30b-4830-aed7-b0abb3a073fc",
+      "effect": "持用步兵自動槍 阿格里皮娜 Mk I、弗拉克斯 Mk V 或哥倫努 Mk VIII，並以同一把武器在 12.5 公尺內取得遠程擊殺後，每層一般傷害加成為 I／II／III／IV 的 2%／3%／4%／5%；最多五層，持續 1.75 秒，合格擊殺會刷新整組期限。"
     }
   ],
   "weapons": [
@@ -16821,6 +16834,82 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_015",
       "effect": "action_shoot_charged 開始時累積；只適用虛空打擊力場法杖 陰陽 Mk IV。",
       "buff_template_id": "weapon_trait_bespoke_forcestaff_p4_faster_charge_on_chained_secondary_attacks_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill",
+      "blessing_id": "punisher",
+      "weapon_id": "autogun_p1",
+      "page": "entries/懲罰者/weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "damage",
+        "stat_type": "additive_multiplier",
+        "tier_values": [
+          0.02,
+          0.03,
+          0.04,
+          0.05
+        ],
+        "tier_duration_seconds": 1.75,
+        "wrapper_fallback_damage": 0.01,
+        "tier_same_key_override": "parent stat_buffs.damage replaces child conditional damage fallback; not additive with fallback",
+        "declared_child_max_stacks": 5,
+        "stack_offset": -1,
+        "parent_physical_child_cap_including_sentinel": 6,
+        "effective_damage_stack_cap": 5,
+        "valid_close_ranged_kill_adds": 1,
+        "valid_kill_at_cap_adds": 0,
+        "valid_kill_at_cap_refreshes_shared_expiry": true,
+        "trigger_distance_meters": 12.5,
+        "distance_comparison": "squared distance attacker to hit_world_position <= CLOSE_RANGE squared",
+        "same_weapon_required": true,
+        "held_slot_required_for_proc_and_damage": true,
+        "all_tiers_have_same_duration": true,
+        "trait_id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_autogun_p1/increase_damage_on_close_kill",
+        "tier_damage": [
+          0.02,
+          0.03,
+          0.04,
+          0.05
+        ],
+        "duration_seconds": 1.75,
+        "effective_max_stacks": 5,
+        "physical_child_cap_including_sentinel": 6,
+        "mark_ids": [
+          "autogun_p1_m1",
+          "autogun_p1_m2",
+          "autogun_p1_m3"
+        ],
+        "trigger_range_meters": 12.5,
+        "attack_modes": [
+          "shoot_hit_scan hip",
+          "shoot_hit_scan ADS"
+        ],
+        "special_attack": "toggle_special flashlight; no attack on toggle"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 256,
+        "end_line": 309
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_increase_damage_on_close_kill_desc",
+      "description_hash": "b9c3e73b",
+      "icon": "https://github.com/user-attachments/assets/329f2103-f30b-4830-aed7-b0abb3a073fc",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "持用步兵自動槍 阿格里皮娜 Mk I、弗拉克斯 Mk V 或哥倫努 Mk VIII，並以同一把武器在 12.5 公尺內取得遠程擊殺後，每層一般傷害加成為 I／II／III／IV 的 2%／3%／4%／5%；最多五層，持續 1.75 秒，合格擊殺會刷新整組期限。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill_parent"
     }
   ],
   "bindings": [
@@ -23584,6 +23673,48 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
         "import_line": 13,
         "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "punisher",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "punisher",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "punisher",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
       }
     }
   ]

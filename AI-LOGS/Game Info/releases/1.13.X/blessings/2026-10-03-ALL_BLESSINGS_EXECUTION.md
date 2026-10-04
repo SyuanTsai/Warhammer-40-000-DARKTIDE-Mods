@@ -299,3 +299,5 @@
 - [殺戮狂潮](2026-10-03-SLAUGHTER-SPREE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
 
 - [亞空間亂舞](2026-10-03-WARP-FLURRY_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。
+
+- [懲罰者](2026-10-03-PUNISHER_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
