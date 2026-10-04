@@ -843,6 +843,18 @@ Full raw template and formatting: [source evidence](broker_passive_replenish_tou
 | Recovery, interval, range and enemy cap | Replenish 1% Toughness every 1s per Chem Toxin infected enemy within 15m, up to 10 enemies; `ui / loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc / c1d98f78` | Server interval every 1s calls `Toughness.replenish_percentage(0.01 × min(n, 10))`; radius 15m [Fixed source and line references](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md#fixed-source-evidence) | Consistent | The stated amount, interval, range and upper count match. |
 | Recovery basis, counting and state limits | No maximum-Toughness basis, ownership filter, query frequency or knocked-down rule is stated; `ui / loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc / c1d98f78` | Count queried every 0.2s without requiring your Toxin; recovery uses maximum Toughness and caps at missing Toughness. Knocked-down behavior is unverified [Fixed source and line references](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md#fixed-source-evidence) | Not covered by the description | These retain the original 100 maximum / four enemies / 4 per second, ten-enemy cap and missing-3 examples. The existing state caveat remains unresolved. |
 
+
+<a id="broker_passive_extended_mag"></a>
+
+## Ammo Jack
+
+Full raw template and formatting: [source evidence](broker_passive_extended_mag.md#original-english-template-and-reconstruction). Name hash `5fc69f62`. Every row uses `ui / loc_talent_broker_passive_extended_mag_desc / 414a3799`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Clip size and rounding | +15% Clip Size, rounded up; `ui / loc_talent_broker_passive_extended_mag_desc / 414a3799` | `clip_size_modifier = 0.15`; normal updates use `ceil(base_max_clip × modifier)` [Fixed source and line references](broker_passive_extended_mag.md#fixed-source-evidence) | Consistent | The statistic, value and upward rounding are stated correctly. |
+| Combination, current ammunition and initialization | No reserve, combination, proportional-ammunition or initialization details are stated; `ui / loc_talent_broker_passive_extended_mag_desc / 414a3799` | Same-type bonuses add before capacity rounding; current ammunition converts proportionally using floor; initialization floor is followed by normal ceil capacity alignment [Fixed source and line references](broker_passive_extended_mag.md#fixed-source-evidence) | Not covered by the description | These retain the original 30→35 and 7→9 examples and explain the effect's limits. |
+
 ## Comparison totals
 
 The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

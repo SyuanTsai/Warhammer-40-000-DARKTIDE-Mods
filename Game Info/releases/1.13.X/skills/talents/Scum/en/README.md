@@ -77,6 +77,7 @@
 | <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="Pocket Toxin talent icon"> [Pocket Toxin](#broker_passive_blitz_inflicts_toxin) | <ul><li>Blitz explosion hits add Chem Toxin stacks: Blackout 3, Boom Bringer 6, Chem Grenade 10.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="Targeted Toxin talent icon"> [Targeted Toxin](#broker_passive_reduced_damage_by_toxined) | <ul><li>Enemies you infect with Chem Toxin deal 15% less Damage; monsters and Captain bosses instead deal 30% less.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="Toxic Renewal talent icon"> [Toxic Renewal](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | <ul><li>Each Chem Toxin infected enemy within 15m restores 1% of maximum Toughness per second, up to 10 enemies.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="Ammo Jack talent icon"> [Ammo Jack](#broker_passive_extended_mag) | <ul><li>Gain 15% Clip Size, rounded up after combining bonuses of the same kind.</li></ul> | Talent |
 
 ---
 
@@ -1160,3 +1161,17 @@
 - **Recovery example**: At 100 maximum Toughness with four infected enemies nearby, restore 100 × 4 × 1% = 4 per second. At 10 or more enemies, the maximum is 10 per second. If only 3 Toughness is missing, only 3 is actually restored.
 
 [Details](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_extended_mag"></a>
+
+### Ammo Jack
+
+<img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="72" height="72" alt="Ammo Jack talent icon">
+
+- **Capacity example**: A starting 30-round clip becomes ⌈30 × 1.15⌉ = 35 rounds; a starting 7-round clip becomes ⌈7 × 1.15⌉ = 9 rounds.
+
+- **Scope**: Changes clip capacity without directly increasing the reserve-ammunition maximum. Other bonuses of the same capacity type add first, then the result is rounded up.
+
+[Details](broker_passive_extended_mag.md) · [Back to index](#talent-index)
