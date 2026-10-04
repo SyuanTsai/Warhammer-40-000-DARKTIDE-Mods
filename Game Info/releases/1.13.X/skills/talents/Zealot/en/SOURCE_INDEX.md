@@ -16,3 +16,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Stunstorm Grenade](zealot_improved_stun_grenade.md) / `zealot_improved_stun_grenade` | Blitz |
 | [Benediction](zealot_toughness_damage_reduction_coherency_improved.md) / `zealot_toughness_damage_reduction_coherency_improved` | Aura |
 | [Beacon of Purity](zealot_corruption_healing_coherency_improved.md) / `zealot_corruption_healing_coherency_improved` | Aura |
+| [Zealous](zealot_stamina_cost_multiplier_aura.md) / `zealot_stamina_cost_multiplier_aura` | Aura |

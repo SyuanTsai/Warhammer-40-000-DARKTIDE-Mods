@@ -69,6 +69,18 @@ Full raw template and formatting: [source evidence](zealot_corruption_healing_co
 | Fixed removal, current Wound and recipients | Heal 1.5 Corruption from the current Wound for you and Allies in Coherency every 1s.; `ui / loc_talent_zealot_corruption_healing_coherency_improved_desc / afc49dc9` | The Aura calls reduce_permanent_damage(1.5) at interval 1, bounded by the Wound floor and affecting the holder plus Coherency allies. [Fixed source and line references](zealot_corruption_healing_coherency_improved.md#fixed-source-evidence) | Consistent | The fixed amount, period, recipients and current-Wound restriction agree. |
 | Duplicates, floor details and tick phase | No unique-Aura priority, recipient keyword exception, first-tick phase or numeric floor formula stated.; `ui / loc_talent_zealot_corruption_healing_coherency_improved_desc / afc49dc9` | One Aura per coherency_id; improved priority1/base2; recipient keyword can reject others' Auras; floor51 at 200 Health/4 Wounds/one lost; first tick unobserved. [Fixed source and line references](zealot_corruption_healing_coherency_improved.md#fixed-source-evidence) | Not covered by the description | Existing 10→8.5→0 after seven recoveries and 60→51 examples supplement the correctly stated current-Wound limit. |
 
+
+<a id="zealot_stamina_cost_multiplier_aura"></a>
+
+## Zealous
+
+Full raw template and formatting: [source evidence](zealot_stamina_cost_multiplier_aura.md#original-english-template-and-reconstruction). Name hash `2c4f35ed`. Every row uses `ui / loc_talent_zealot_stamina_cost_multiplier_delay_aura_description / 2b5c13bc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Signed cost, delay and recipients | -15% Stamina Cost and 0.15s Stamina Regeneration Delay Reduction, for you and Allies in Coherency.; `ui / loc_talent_zealot_stamina_cost_multiplier_delay_aura_description / 2b5c13bc` | Expenditure ×0.85; regeneration delay adds −0.15s; self and Coherency allies receive the Aura. [Fixed source and line references](zealot_stamina_cost_multiplier_aura.md#fixed-source-evidence) | Consistent | The signed percentage and explicit Delay Reduction express the accepted direction and units. |
+| Duplicates, pause and display metadata | No duplicate-source rule, recipient exception, recovery-pause condition or Tactical Overlay lookup listed.; `ui / loc_talent_zealot_stamina_cost_multiplier_delay_aura_description / 2b5c13bc` | One selected Aura; max_stacks1; recipient keyword restricts others' sources; paused regeneration may block recovery; related_talents may produce a Benediction display mismatch. [Fixed source and line references](zealot_stamina_cost_multiplier_aura.md#fixed-source-evidence) | Not covered by the description | Preserve 20→17 and 0.50→0.35s. The unobserved overlay question does not prove the English Aura description wrong. |
+
 ## Comparison totals
 
 12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.
