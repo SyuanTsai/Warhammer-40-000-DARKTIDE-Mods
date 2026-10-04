@@ -1,5 +1,7 @@
 # 靈能者：當前技能樹未直接使用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回技術索引](SOURCE_INDEX.md)｜[角色基礎效果](BASE_EFFECTS.md)
 
 比對固定 SHA `7e662fcda16219d775b84af50322be2e9cd9d62e` 的技能樹、職業基礎天賦與天賦定義。本表表示沒有獨立節點直接引用該識別碼；相關增益或特殊規則可能已併入其他技能。

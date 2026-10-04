@@ -991,6 +991,53 @@ Full raw template and formatting: [source evidence](psyker_increased_blitz_damag
 | Amount and affected attacks | +20% Damage for Brain Rupture, Smite, and Assail.; `ui / loc_talent_psyker_increased_blitz_damage_desc / 9b44cc81` | The buff adds 0.2 to `smite_damage`, `chain_lightning_damage` and `psyker_throwing_knives_damage_multiplier` for the corresponding attacks. [Fixed source and line references](psyker_increased_blitz_damage.md#fixed-source-evidence) | Consistent | For identifies the abilities receiving the bonus, rather than targets attacked by it. |
 | Damage types and additive stage | +20% Damage for the three Blitz abilities.; `ui / loc_talent_psyker_increased_blitz_damage_desc / 9b44cc81` | Each corresponding Damage type adds its bonus in the `damage_stat_buffs` stage. [Fixed source and line references](psyker_increased_blitz_damage.md#fixed-source-evidence) | Not covered by the description | The text omits internal Damage-type checks and combination with other bonuses in that stage. |
 
+
+<a id="psyker_combat_ability_shout"></a>
+
+## Base Combat Ability
+
+Original template, display mapping and all fixed-source pointers: [base evidence](BASE_EFFECTS.md#psyker_combat_ability_shout). Name hash `f79dd1bd`. Every row uses `ui / loc_talent_psyker_shout_ability_description / a1d796b7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Forward Stagger, Quell and cooldown | Staggers Enemies in front of you. Quells 10% Peril. Base Cooldown: 30s.; `ui / loc_talent_psyker_shout_ability_description / a1d796b7` | The base shout uses `warpcharge_vent_base = 0.1` and cooldown 30, subtracting from the Peril gauge. [Fixed source](BASE_EFFECTS.md#psyker_combat_ability_shout) | Consistent | The matched game template agrees with the verified settings rather than the old 50% internal comment. |
+| Replacement and gauge basis | Quells 10% Peril.; `ui / loc_talent_psyker_shout_ability_description / a1d796b7` | `decrease_immediate` subtracts 0.1; selecting Venting Shriek changes the reduction to 0.5. [Fixed source](BASE_EFFECTS.md#psyker_combat_ability_shout) | Not covered by the description | The base text omits the replacement and direct gauge calculation. |
+
+<a id="psyker_grenade_smite"></a>
+
+## Base Blitz
+
+Original template, display mapping and all fixed-source pointers: [base evidence](BASE_EFFECTS.md#psyker_grenade_smite). Name hash `6f06e398`. Every row uses `ui / loc_ability_psyker_smite_description_new / c4358c2e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charged single-enemy attack | Charge up your Psychic Power and release it to deal high Damage to a Single Enemy.; `ui / loc_ability_psyker_smite_description_new / c4358c2e` | The base ability supplies `PlayerAbilities.psyker_smite` with the shared locking and charging process. [Fixed source](BASE_EFFECTS.md#psyker_grenade_smite) | Consistent | The attack type and single target agree; no fixed Damage value is asserted. |
+| Modes, Peril and upgrade | No charging times, Peril amounts or upgrade multiplier.; `ui / loc_ability_psyker_smite_description_new / c4358c2e` | Base pre-charge/locked charge take approximately 3s/2s; charge plus attack adds approximately 20+25 Peril percentage points; the base lacks Brain Rupture's ×1.5 passive. [Fixed source](BASE_EFFECTS.md#psyker_grenade_smite) | Not covered by the description | These verified details are omitted, including the distinction from Assail's throwable charges. |
+
+<a id="psyker_aura_ability_cooldown"></a>
+
+## Base Aura
+
+Original template, display mapping and all fixed-source pointers: [base evidence](BASE_EFFECTS.md#psyker_aura_ability_cooldown). Name hash `b6a94636`. Every row uses `ui / loc_talent_psyker_aura_reduced_ability_cooldown_description / ed9f8507`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reduction and beneficiaries | +7.5% Ability Cooldown Reduction for you and Allies in Coherency.; `ui / loc_talent_psyker_aura_reduced_ability_cooldown_description / ed9f8507` | The aura applies `combat_ability_resource_cost_per_use_modifier = -0.075` to you and Allies in Coherency. [Fixed source](BASE_EFFECTS.md#psyker_aura_ability_cooldown) | Consistent | The value and beneficiaries agree. |
+| Stacking, resource basis and replacement | No stacking or resource formula.; `ui / loc_talent_psyker_aura_reduced_ability_cooldown_description / ed9f8507` | Maximum one stack; each use costs 7.5% less cooldown resource; Seer's Presence replaces this with 10% rather than adding both. [Fixed source](BASE_EFFECTS.md#psyker_aura_ability_cooldown) | Not covered by the description | The text omits these combination and ability-resource details. |
+
+<a id="psyker_peril_passive"></a>
+
+## Peril System
+
+Original template, display mapping and all fixed-source pointers: [base evidence](BASE_EFFECTS.md#psyker_peril_passive). Name hash `dafbc14a`. Every row uses `ui / loc_talent_psyker_peril_passive_desc / 3beb17a2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Displayed maximum and waiting period | Up to 100%. After 3s without generating Peril it passively quells.; `ui / loc_talent_psyker_peril_passive_desc / 3beb17a2` | The display maximum is 1; `auto_vent_delay = 3`; the critical/extreme display thresholds are 0.97. [Fixed source](BASE_EFFECTS.md#psyker_peril_passive) | Consistent | The numeric maximum, wait and displayed critical threshold agree; the wait is not a fixed gauge-emptying time. |
+| Explosion trigger | Generating Peril while at Critical Peril (97%) or above… causes an explosion.; `ui / loc_talent_psyker_peril_passive_desc / 3beb17a2` | Immediate generation checks for an increase when already at 100%; `check_new_state` requires current and starting Peril >=1. [Fixed source](BASE_EFFECTS.md#psyker_peril_passive) | Explicit contradiction | The English states 97% as sufficient, while the accepted explosion paths require the additional 100% conditions. |
+| Decay and prevention conditions | After 3s without generating Peril it passively quells.; `ui / loc_talent_psyker_peril_passive_desc / 3beb17a2` | Natural decay also requires idle state and varies with band/weapon/modifiers; overload-prevention effects are separate. [Fixed source](BASE_EFFECTS.md#psyker_peril_passive) | Not covered by the description | The English omits those conditions and exceptions. |
+| Active input and movement wording | Hold 'Quell Peril'… reduce Peril rapidly while slowing your movement.; `ui / loc_talent_psyker_peril_passive_desc / 3beb17a2` | The accepted base evidence establishes that active Quelling is available but does not independently detail every input or movement clause. [Fixed source](BASE_EFFECTS.md#psyker_peril_passive) | Cannot confirm | The original clause is preserved without extending the existing mechanism research. |
+
 ## Comparison totals
 
-The 172 listed rules comprise **80 Consistent**, **4 Explicit contradictions**, **80 Not covered by the description**, **0 No corresponding implementation evidence found** and **8 Cannot confirm**.
+The 184 listed rules comprise **85 Consistent**, **5 Explicit contradictions**, **85 Not covered by the description**, **0 No corresponding implementation evidence found** and **9 Cannot confirm**.

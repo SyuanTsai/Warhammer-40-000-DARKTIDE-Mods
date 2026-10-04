@@ -1,5 +1,7 @@
 # 靈能者：角色基礎效果
 
+[English](en/BASE_EFFECTS.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[未直接使用的定義](UNUSED_DEFINITIONS.md)
 
 以下四項由職業設定預先提供，不占本文件的 81 個可選節點。功能標題用於辨識，不宣稱是遊戲正式譯名。固定來源為 Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`；以下為靜態核對，未進行遊戲內測試。

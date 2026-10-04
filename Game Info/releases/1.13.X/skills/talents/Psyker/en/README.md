@@ -2,6 +2,46 @@
 
 [繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Talent classes](../../../README.en.md) | [Release information](../../../../README.md)
 
+[Archetype base effects](BASE_EFFECTS.md)
+
+## Archetype base effects
+
+These four pre-installed effects are separate from the 81 selectable nodes. Functional headings identify them without substituting other talent icons.
+
+### Base Combat Ability
+
+- Releases a forward shockwave that Staggers enemies and Quells 10 percentage points of Peril; base cooldown is 30 seconds.
+- At an initial 60% Peril, 60% − 10 percentage points = 50%. Selecting Venting Shriek changes the reduction to 50 percentage points.
+
+[Sources and limits](BASE_EFFECTS.md#psyker_combat_ability_shout)
+
+### Base Blitz
+
+- Charges an attack against one enemy. It is the base ability before Brain Rupture's upgrade and does not use Assail's ten throwable charges.
+- You can charge before finding a target: a full base charge takes approximately 3 seconds; locking on before charging takes approximately 2 seconds. Without other modifiers, a full charge adds approximately 20 percentage points of Peril and a successful attack adds another 25, approximately 45 in total.
+- Brain Rupture adds a 1.5 Damage multiplier. Under the same fixed conditions, if the base version deals 100, the upgraded version deals 100 × 1.5 = 150.
+
+[Sources and limits](BASE_EFFECTS.md#psyker_grenade_smite)
+
+### Base Aura
+
+- Your and your Allies' Combat Ability cooldowns in Coherency are reduced by 7.5%; the same aura does not apply repeatedly.
+- With only this effect, 40 seconds becomes 40 × (1 − 7.5%) = 37 seconds. When Seer's Presence replaces it with 10% reduction, the result is 36 seconds; the two bonuses cannot be added together.
+
+[Sources and limits](BASE_EFFECTS.md#psyker_aura_ability_cooldown)
+
+### Peril System
+
+- Peril caps at 100%, with a high-Peril threshold of 97%. Generating Peril delays natural decay; after generation stops and you return to idle, wait approximately 3 seconds before natural decay begins.
+- Three seconds is the waiting period, rather than the time needed to empty a 100% gauge. Decay rate depends on the Peril band, weapon and bonuses; you can also actively Quell Peril.
+- Overload is not determined solely by reaching 100%. The immediate-generation path checks for an explosion when Peril is already at 100% and increases again; the continuous-cast path also checks current and starting Peril. Overload-prevention effects are handled separately.
+
+#### English wording correction
+
+- The English says generating Peril at Critical Peril (97%) or above causes the explosion. The verified generation paths use additional 100% and starting-Peril conditions, so being at 97% and generating Peril is not itself the stated explosion condition.
+
+[Sources and limits](BASE_EFFECTS.md#psyker_peril_passive)
+
 <a id="talent-index"></a>
 ## Talent index
 
