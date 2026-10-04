@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="Resource Optimisation Canticles talent icon"> [Resource Optimisation Canticles](#cryptic_redline_extra_max_stacks) | <ul><li>Adds another maximum Combat Ability charge and raises the Redline Capacitors stack cap from 4 to 5. At 5 stacks, Toughness damage taken is multiplied by 0.75 and natural Capacitance recovery is 25% faster.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="Enhanced Capacitance Protocols talent icon"> [Enhanced Capacitance Protocols](#cryptic_dissector_ability_stacks) | <ul><li>Using a Combat Ability restores all missing Flensing Protocols stacks, up to the current cap: 6 normally, or 8 with Honed Dissector.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="Powerdrive talent icon"> [Powerdrive](#cryptic_overload_keystone_abilities) | <ul><li>Voltaic Emitter gives 5 Power Overload stacks per charge consumed. The Chordclaw counts its first activation; continued attacks during the same activation do not add stacks. Advanced Combat Doctrines settles whole-charge consumption when the stance ends.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="Higher Purpose talent icon"> [Higher Purpose](#cryptic_dissector_power) | <ul><li>Elite or Specialist kills restore an additional 2.5% of one Combat Ability charge, added to the class's base 4% for a total of 6.5%. This kill recovery is inactive during Advanced Combat Doctrines.</li></ul> | Keystone |
 
 ---
 
@@ -724,3 +725,17 @@
 - **Overload example**: Starting at 22 stacks, consuming 2 charges adds 10: `22 + 10 = 32`. One overload triggers immediately and resets the count to zero; the 2 excess stacks are discarded.
 
 [Details](cryptic_overload_keystone_abilities.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_dissector_power"></a>
+
+### Higher Purpose
+
+<img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="72" height="72" alt="Higher Purpose talent icon">
+
+- **Trigger**: An Elite or Specialist kill restores an **additional 2.5% of one Combat Ability charge's cost**. Added to the class's original 4%, that kill restores **6.5% in total**.
+- **Example**: With a 50-point cost per charge, the additional 2.5% is `1.25` points; the original 4% is `2` points, for a total of `3.25`. These resources first accumulate as charge progress and do not necessarily add one whole usable charge immediately.
+- **Exception**: While Advanced Combat Doctrines is active, both the class's base kill recovery and this talent's additional recovery are suspended.
+
+[Details](cryptic_dissector_power.md) · [Back to index](#talent-index)

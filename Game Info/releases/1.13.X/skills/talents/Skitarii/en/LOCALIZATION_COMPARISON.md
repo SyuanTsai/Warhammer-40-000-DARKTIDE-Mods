@@ -551,6 +551,18 @@ Full raw template and formatting: [source evidence](cryptic_overload_keystone_ab
 | Each-charge claim during continuous Chordclaw use | for each Charge spent; `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b` | Only the first Chordclaw activation sends `on_combat_ability`. Later uses while `active = true` still spend charges but grant no further stacks through this path [Fixed source and line references](cryptic_overload_keystone_abilities.md#fixed-source-evidence) | Explicit contradiction | The unqualified each-charge promise is not satisfied by the verified subsequent Chordclaw charge spending. Correct wording must state this exception. |
 | Stance settlement, recovery and overflow | Does not specify when stance consumption is settled, fractional remainder or threshold overflow; `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b` | On stance end, `floor(cooldown_percent_used + 0.25) × 5` counts complete consumed charges; restoration does not subtract recorded consumption. Reaching at least 30 triggers once and discards excess [Fixed source and line references](cryptic_overload_keystone_abilities.md#fixed-source-evidence) | Not covered by the description | Retain the original 2.05 →2 charges →10 stacks and 22 +10 =32 →one overload examples as supplements. |
 
+
+<a id="cryptic_dissector_power"></a>
+
+## Higher Purpose
+
+Full raw template and formatting: [source evidence](cryptic_dissector_power.md#original-english-template-and-reconstruction). Name hash `90d98e74`. Every row uses `ui / loc_talent_cryptic_dissector_power_desc / 2baab5a1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional value and kill types | Elite and Specialist kills restore an additional +2.5% Capacitance; `ui / loc_talent_cryptic_dissector_power_desc / 2baab5a1` | The special rule adds `0.025` to the class's existing Elite/Specialist `0.04`, yielding `0.065` [Fixed source and line references](cryptic_dissector_power.md#fixed-source-evidence) | Consistent | The English says additional, so it does not claim 2.5% is the combined total. |
+| Recovery basis, progress and stance exception | Does not specify the one-charge denominator, total, modifier handling or stance suspension; `ui / loc_talent_cryptic_dissector_power_desc / 2baab5a1` | One-charge cost ×6.5% restores progress; at cost 50, total 3.25 includes extra 1.25. The helper ignores stat buffs, and `cryptic_precision_stance` suspends the kill proc [Fixed source and line references](cryptic_dissector_power.md#fixed-source-evidence) | Not covered by the description | The original numerical example and recovery restrictions supplement the English. |
+
 ## Comparison totals
 
 94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.
