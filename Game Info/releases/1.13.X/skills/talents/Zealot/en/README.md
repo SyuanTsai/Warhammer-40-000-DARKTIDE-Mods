@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="Got Your Back talent icon"> [Got Your Back](#zealot_melee_kills_restore_toughness_to_target) | <ul><li>Melee Kills against enemies targeting an ally restore 7.5% of that ally's maximum Toughness and an extra 5% of yours.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="Purifying Hatred talent icon"> [Purifying Hatred](#zealot_dmg_vs_burning_electrocuted) | <ul><li>Deal +15% damage to Burning enemies and another +15% to Electrocuted enemies; both conditions give +30%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="Dance of Death talent icon"> [Dance of Death](#zealot_improved_weapon_handling_after_dodge) | <ul><li>Successful Dodges reduce Spread by 75% and Recoil unsteadiness buildup by 50% for 3 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
 
 ---
 
@@ -1199,3 +1200,16 @@
 - **Recoil example:** an original unsteadiness increase of 0.2 per event becomes 0.2 × 0.5 = 0.1. Its decay rate during recovery is multiplied by 1 ÷ 0.5 = 2. Actual crosshair displacement still follows the weapon's Recoil curve; this does not guarantee that all visible camera movement is halved.
 
 [Details](zealot_improved_weapon_handling_after_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+
+### Melee Damage Boost
+
+<img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="72" height="72" alt="Melee Damage Boost talent icon">
+
+- **How it works:** gain +10% Melee damage. The two same-name nodes each provide their own bonus; selecting both gives +20% in total.
+- **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
+
+[Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)
