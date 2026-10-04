@@ -80,3 +80,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Providence](zealot_revive_speed.md) / `zealot_revive_speed` | Skill |
 | [Abolish Blasphemers](zealot_damage_vs_elites.md) / `zealot_damage_vs_elites` | Skill |
 | [Hubris](zealot_weakspot_damage_reduction.md) / `zealot_weakspot_damage_reduction` | Skill |
+| [Prime Target](zealot_elite_kills_empowers.md) / `zealot_elite_kills_empowers` | Skill |

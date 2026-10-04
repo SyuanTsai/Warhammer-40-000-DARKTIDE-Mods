@@ -842,6 +842,18 @@ Full raw template and formatting: [source evidence](zealot_weakspot_damage_reduc
 | Weakspot Kill and resistance | Damage Resistance +15% after Weakspot Kill; lasts 4s; `ui / loc_talent_zealot_weakspot_damage_reduction_desc / b3615f2a` | `on_kill` / `on_weakspot_kill`, damage multiplier 0.85, duration 4 seconds [Fixed source and line references](zealot_weakspot_damage_reduction.md#fixed-source-evidence) | Consistent | Trigger, reduction and duration agree. |
 | Refresh and calculation | No stack, attack-type or combination details; `ui / loc_talent_zealot_weakspot_damage_reduction_desc / b3615f2a` | One refreshing stack; Melee and Ranged kills qualify, a hit alone does not. Original examples: 100 × 0.85 = 85, with independent 25% reduction 63.75 [Fixed source and line references](zealot_weakspot_damage_reduction.md#fixed-source-evidence) | Not covered by the description | These limits and calculation details supplement the wording. |
 
+
+<a id="zealot_elite_kills_empowers"></a>
+
+## Prime Target
+
+Full raw template and formatting: [source evidence](zealot_elite_kills_empowers.md#original-english-template-and-reconstruction). Name hash `b976e500`. Every row uses `ui / loc_talent_zealot_elite_kills_empowers_desc / 3d3cbd01`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Elite Kill bonus and restoration | After Elite Kill: +10% Damage; replenish 15% Toughness over 5s; `ui / loc_talent_zealot_elite_kills_empowers_desc / 3d3cbd01` | Single-stack effect: damage +0.1, duration 5; restoration 0.15 × dt / 5 of maximum Toughness [Fixed source and line references](zealot_elite_kills_empowers.md#fixed-source-evidence) | Consistent | Trigger, values and restoration period agree. |
+| Basis, refresh and cap | No maximum-resource basis or repeat-trigger rule; `ui / loc_talent_zealot_elite_kills_empowers_desc / 3d3cbd01` | Refresh resets duration without stacking damage or restoration rate; limited by missing Toughness. Original retrigger-at-3s example totals 24 points by 8s at maximum Toughness 100 [Fixed source and line references](zealot_elite_kills_empowers.md#fixed-source-evidence) | Not covered by the description | These restoration and refresh details supplement the wording. |
+
 ## Comparison totals
 
 137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.

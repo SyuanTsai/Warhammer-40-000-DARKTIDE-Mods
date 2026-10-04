@@ -77,6 +77,7 @@
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="Providence talent icon"> [Providence](#zealot_revive_speed) | <ul><li>Revive speed increases by 25%; assisted allies gain Movement Speed and Toughness Damage Reduction.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="Abolish Blasphemers talent icon"> [Abolish Blasphemers](#zealot_damage_vs_elites) | <ul><li>Deal 15% more damage to Elite enemies.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="Hubris talent icon"> [Hubris](#zealot_weakspot_damage_reduction) | <ul><li>Weakspot Kills reduce damage taken by 15% for 4 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="Prime Target talent icon"> [Prime Target](#zealot_elite_kills_empowers) | <ul><li>Elite Kills grant +10% damage and restore 15% of maximum Toughness over 5 seconds.</li></ul> | Skill |
 
 ---
 
@@ -1048,3 +1049,17 @@
 - **Duration and example:** the effect does not gain stacks, and another trigger restarts the timer. This talent alone gives 100 × 0.85 = 85 points of damage. With a separate 25% reduction, the result is 100 × 0.85 × 0.75 = 63.75 points.
 
 [Details](zealot_weakspot_damage_reduction.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_elite_kills_empowers"></a>
+
+### Prime Target
+
+<img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="72" height="72" alt="Prime Target talent icon">
+
+- **Trigger:** an Elite Kill grants +10% damage for 5 seconds. During the effect, restore 3% of maximum Toughness per second, for 15% over the full 5 seconds.
+- **Timer refresh:** another Elite Kill resets the 5-second countdown. It does not stack the damage bonus or the per-second restoration rate.
+- **Damage and restoration example:** base damage 100 becomes 100 × 1.1 = 110. With maximum Toughness 100, restore 100 × 15% ÷ 5 = 3 points per second. If triggered again at the third second and then sustained until the eighth second, total restoration can reach 24 points, limited by missing Toughness.
+
+[Details](zealot_elite_kills_empowers.md) · [Back to index](#talent-index)
