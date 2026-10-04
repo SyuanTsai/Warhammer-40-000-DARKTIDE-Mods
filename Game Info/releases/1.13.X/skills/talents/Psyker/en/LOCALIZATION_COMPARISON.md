@@ -931,6 +931,18 @@ Full raw template and formatting: [source evidence](psyker_damage_to_peril_conve
 | Conversion wording | 25% of Damage Taken is converted into Peril.; `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a` | `damage_taken_multiplier = 0.75` reduces Damage; Peril separately uses reported Health plus Toughness Damage ×0.0025×`warp_charge_amount`. [Fixed source and line references](psyker_damage_to_peril_conversion.md#fixed-source-evidence) | Cannot confirm | The text does not define a literal transfer between prevented Damage and Peril units; the two verified calculations must remain separate. |
 | Reported Damage basis and cap | Damage Taken is converted into Peril.; `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a` | `damage.lua` supplies `damage` and `actual_toughness_damage_dealt`, rather than a direct Health difference; generated Peril caps at 0.97. [Fixed source and line references](psyker_damage_to_peril_conversion.md#fixed-source-evidence) | Not covered by the description | The reporting basis, generation modifier and cap are absent from the concise text. |
 
+
+<a id="psyker_damage_resistance_stun_immunity"></a>
+
+## Immaterial Focus
+
+Full raw template and formatting: [source evidence](psyker_damage_resistance_stun_immunity.md#original-english-template-and-reconstruction). Name hash `b08dfe13`. Every row uses `ui / loc_talent_psyker_damage_resistance_stun_immunity_desc / c5294daa`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Damage reduction and immunity | +10% Damage Resistance, in addition, while at Critical Peril, and for 4s afterwards, you are Stun Immune.; `ui / loc_talent_psyker_damage_resistance_stun_immunity_desc / c5294daa` | Unconditional `damage_taken_multiplier = 0.9`; `stun_immune` at current Peril >=0.97, with a 4-second buff on leaving that condition. [Fixed source and line references](psyker_damage_resistance_stun_immunity.md#fixed-source-evidence) | Consistent | The grammar separates unconditional reduction from immunity and gives the correct continuation. |
+| Threshold, stacking and scope | At Critical Peril… Stun Immune; `ui / loc_talent_psyker_damage_resistance_stun_immunity_desc / c5294daa` | The boundary is 0.97; the continuation buff refreshes at maximum one stack; stun immunity is not evidence of grab or universal crowd-control immunity. [Fixed source and line references](psyker_damage_resistance_stun_immunity.md#fixed-source-evidence) | Not covered by the description | The text omits the numerical boundary and buff handling and does not promise broader immunity. |
+
 ## Comparison totals
 
 The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.

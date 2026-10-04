@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="Channeled Force talent icon"> [Channeled Force](#psyker_force_staff_bonus) | <ul><li>Finishing a staff charge above 95% grants +20% Primary Damage for 5 seconds; finishing a Primary action grants +10% Secondary Damage for 5 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="Empyric Shock talent icon"> [Empyric Shock](#psyker_force_staff_quick_attack_bonus) | <ul><li>Force Staff Primary hits apply +6% Warp Damage Taken per multiplicative stack, up to 5 stacks for 10 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="Just a Dream talent icon"> [Just a Dream](#psyker_damage_to_peril_conversion) | <ul><li>Below 97% Peril, take 25% less Damage and gain 0.25 percentage points of Peril per reported Health/Toughness Damage point, capped at 97%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="Immaterial Focus talent icon"> [Immaterial Focus](#psyker_damage_resistance_stun_immunity) | <ul><li>10% Damage reduction; Stun Immunity at Peril ≥97% and for 4 seconds after dropping below it.</li></ul> | Talent |
 
 ---
 
@@ -1260,3 +1261,17 @@
 - **Peril example**: If the hit reports 40 combined Health and Toughness Damage, with no other Peril modifiers, gain 40 × 0.25 = 10 percentage points of Peril. An initial 50% becomes 60%; an initial 92% reaches at most 97%.
 
 [Details](psyker_damage_to_peril_conversion.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_damage_resistance_stun_immunity"></a>
+
+### Immaterial Focus
+
+<img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="72" height="72" alt="Immaterial Focus talent icon">
+
+- **How it works**: Take 10% less Damage. At 97% Peril or above, become Stun Immune; after dropping below 97%, the immunity lasts another 4 seconds.
+
+- **Damage reduction example**: Compare only this reduction stage. 100 Damage becomes 100 × 0.9 = 90. With another independent 20% reduction, 100 × 0.8 × 0.9 = 72, a combined reduction of 28%.
+
+[Details](psyker_damage_resistance_stun_immunity.md) · [Back to index](#talent-index)
