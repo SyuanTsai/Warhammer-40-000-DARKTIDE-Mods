@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="Uncapped Arrestor talent icon"> [Uncapped Arrestor](#cryptic_melee_attacks_give_melee_attack_speed) | <ul><li>A melee swing that hits an enemy grants one 2.5% Melee Attack Speed stack, up to 5. Each trigger refreshes the 3-second duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="Electro-Strike Conduit talent icon"> [Electro-Strike Conduit](#cryptic_melee_crits_electrocute_first) | <ul><li>Melee Critical Hits Electrocute the first target of the swing, provided it survives the hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="Gunsmith talent icon"> [Gunsmith](#cryptic_auto_reload) | <ul><li>Always grants 15% Reload Speed. After 5 seconds without shooting, transfers 7.5% of clip capacity from reserves each subsequent second, rounded up; the first batch is around 6 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="Assassination Protocols talent icon"> [Assassination Protocols](#cryptic_ranged_vs_bfg) | <ul><li>Grants 25% Ranged Damage against Ogryns, Monstrosities and Captains; melee attacks do not benefit.</li></ul> | Talent |
 
 ---
 
@@ -1178,3 +1179,16 @@
 - **Exceptions**: No transfer occurs during manual reloading, with a full clip or with empty reserves. Shooting again resets the wait. This moves reserve ammo into the clip; it does not create new ammo.
 
 [Details](cryptic_auto_reload.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_ranged_vs_bfg"></a>
+
+### Assassination Protocols
+
+<img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="72" height="72" alt="Assassination Protocols talent icon">
+
+- **Targets**: Ranged attacks deal 25% more damage to Ogryn, Monstrosity or Captain enemies. Melee attacks do not benefit.
+- **Damage example**: Against a target matching one of those categories, base ranged damage 100 becomes `100 × 1.25 = 125`. With an existing 20% bonus in the same stage, it becomes `100 × (1 + 20% + 25%) = 145`.
+
+[Details](cryptic_ranged_vs_bfg.md) · [Back to index](#talent-index)

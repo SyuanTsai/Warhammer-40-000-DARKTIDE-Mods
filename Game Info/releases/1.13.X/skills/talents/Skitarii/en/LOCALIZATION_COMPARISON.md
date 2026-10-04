@@ -914,6 +914,18 @@ Full raw template and formatting: [source evidence](cryptic_auto_reload.md#origi
 | Reload Speed and reserve transfer | 15% Reload Speed; after not shooting for 5s, each second reloads 7.5% of the Clip from Ammo Reserve; `ui / loc_talent_cryptic_auto_reload_desc / 612ee334` | Unconditional `reload_speed = 0.15`; after the 5-second cooldown, the first transfer is one second later, at about 6 seconds, then once per second. [Fixed source and line references](cryptic_auto_reload.md#fixed-source-evidence) | Consistent | The values and reserve source match; each second after the wait is compatible with the verified first-batch timing. |
 | Rounding, eligibility and examples | Does not specify rounding, reload suppression, stowed-gun operation or transfer limits; `ui / loc_talent_cryptic_auto_reload_desc / 612ee334` | `ceil(max_ammo_in_clip × 0.075)` is limited by missing ammo/reserves and disabled during manual reload; shooting resets the timer; operates on `slot_secondary`. [Fixed source and line references](cryptic_auto_reload.md#fixed-source-evidence) | Not covered by the description | The original 2÷1.15≈1.74-second example and 30-round clip giving 3/2/1-round transfers explain the omitted calculations and exceptions; no ammo is created. |
 
+
+<a id="cryptic_ranged_vs_bfg"></a>
+
+## Assassination Protocols
+
+Full raw template and formatting: [source evidence](cryptic_ranged_vs_bfg.md#original-english-template-and-reconstruction). Name hash `575cea5a`. Every row uses `ui / loc_talent_cryptic_ranged_vs_bfg_desc / 01397401`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack type, targets and value | Increase Ranged Damage vs Ogryns, Monstrosities and Captains by +25%; `ui / loc_talent_cryptic_ranged_vs_bfg_desc / 01397401` | Each corresponding ranged-damage stat is 0.25; melee attacks do not receive it. [Fixed source and line references](cryptic_ranged_vs_bfg.md#fixed-source-evidence) | Consistent | The attack type, named categories and numerical bonus match. |
+| Tag eligibility and addition | Does not specify breed tags or how damage bonuses combine; `ui / loc_talent_cryptic_ranged_vs_bfg_desc / 01397401` | `breed.tags` selects applicable bonuses, which add in the shared calculation. Against one category, 100→125, or 145 with existing same-stage 20%. [Fixed source and line references](cryptic_ranged_vs_bfg.md#fixed-source-evidence) | Not covered by the description | These original examples and eligibility details explain the stat without using body size as a substitute for tags. |
+
 ## Comparison totals
 
 157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
