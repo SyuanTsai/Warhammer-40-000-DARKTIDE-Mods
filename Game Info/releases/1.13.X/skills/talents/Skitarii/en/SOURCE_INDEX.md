@@ -40,3 +40,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Emitter](cryptic_discharge.md) / `cryptic_discharge` | Ability |
 | [Advanced Combat Doctrines](cryptic_precision_stance.md) / `cryptic_precision_stance` | Ability |
 | [Satiated Steel](cryptic_chordclaw_capacitance_restoration.md) / `cryptic_chordclaw_capacitance_restoration` | Ability |
+| [Slice and Dice](cryptic_chordclaw_consecutive_bonus.md) / `cryptic_chordclaw_consecutive_bonus` | Ability |

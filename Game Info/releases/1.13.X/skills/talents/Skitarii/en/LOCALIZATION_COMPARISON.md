@@ -357,6 +357,18 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw_capacitanc
 | Chordclaw kill, recovery amount and duration | Chordclaw Kills restore 25% Capacitance over 5s; `ui / loc_talent_cryptic_chordclaw_capacitance_restoration_desc / 18058d13` | Qualifying Chordclaw melee kills start recovery of 0.25 of one-charge cost over 5s [Fixed source and line references](cryptic_chordclaw_capacitance_restoration.md#fixed-source-evidence) | Consistent | The kill trigger, total amount and recovery period agree. |
 | Qualifying types, recovery basis and refresh | No specific melee/damage-type checks, single-charge denominator, refresh or pool-cap details; `ui / loc_talent_cryptic_chordclaw_capacitance_restoration_desc / 18058d13` | Kill plus melee and transonic_claw/transonic_claw_stick/transonic_claw_rip; recovery increments via restore_ability_charge_percentage; ProcBuff restarts 5s without stacking rate; pool maximum caps recovery [Fixed source and line references](cryptic_chordclaw_capacitance_restoration.md#fixed-source-evidence) | Not covered by the description | At cost 50, total extra recovery 12.5 over 5s =2.5/s, with natural recovery separate. Another kill refreshes duration; other weapon/non-melee/non-killing events do not qualify. |
 
+
+<a id="cryptic_chordclaw_consecutive_bonus"></a>
+
+## Slice and Dice
+
+Full raw template and formatting: [source evidence](cryptic_chordclaw_consecutive_bonus.md#original-english-template-and-reconstruction). Name hash `9cf4cd86`. Every row uses `ui / loc_talent_cryptic_chordclaw_consecutive_bonus_desc / 0ec90e2e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ability use, Chordclaw scope, value and cap | Using the Chordclaw Ability increases damage dealt by the Chordclaw by 20% for 5s; stacking 3 times; `ui / loc_talent_cryptic_chordclaw_consecutive_bonus_desc / 0ec90e2e` | Ability activation adds cryptic_chordclaw_damage 0.2 per stack; duration 5, max_stacks/max_stacks_cap 3; Chordclaw profiles use this stat [Fixed source and line references](cryptic_chordclaw_consecutive_bonus.md#fixed-source-evidence) | Consistent | The English explicitly states the Chordclaw damage scope; the trigger, amount, duration and cap agree. |
+| Stack addition, refresh and damage calculation | No consumed-charge independence, duration-refresh or additive-calculation detail; `ui / loc_talent_cryptic_chordclaw_consecutive_bonus_desc / 0ec90e2e` | add_internally_controlled_buff on activation, not each hit; no charge-count scaling; refresh_duration_on_stack true; additive_multiplier [Fixed source and line references](cryptic_chordclaw_consecutive_bonus.md#fixed-source-evidence) | Not covered by the description | Preserve baseline 100 →120/140/160 and three-stack +60%, with target/protection/hit/modifiers still determining actual Health damage. |
+
 ## Comparison totals
 
 52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.

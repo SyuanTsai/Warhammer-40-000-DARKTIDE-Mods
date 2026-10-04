@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="Voltaic Emitter talent icon"> [Voltaic Emitter](#cryptic_discharge) | <ul><li>Activation consumes 1–3 full Capacitance charges, at most 3 per use. Extra charges and fractional progress towards the next charge are retained.</li><li>The main Discharge affects enemies within a fixed 12m radius, Electrocuting them for 2s and dealing ongoing damage.</li><li>Consuming at least 2 charges also causes Weapon Malfunction in qualifying enemies within 30m; consuming at least 3 grants 15s of attacks Electrocuting enemies for 2s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="32" height="32" alt="Advanced Combat Doctrines talent icon"> [Advanced Combat Doctrines](#cryptic_precision_stance) | <ul><li>Switches to your ranged weapon and assists aiming at enemies near the reticule; Spread −90% and Recoil −60%.</li><li>Activation spends 25% of one charge, then 10% per second and 1% per shot. Reloading pauses the per-second drain.</li><li>Reload Speed +25%, lingering for 5s after the stance ends; reactivation, leaving the ranged weapon or exhausting Capacitance ends the stance.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="Satiated Steel talent icon"> [Satiated Steel](#cryptic_chordclaw_capacitance_restoration) | <ul><li>A Chordclaw melee kill restores an additional 25% of the current Combat Ability's cost per charge over 5s.</li><li>At 50 points per charge, the full 5s gives 12.5 extra points. Another kill during the effect resets the timer without stacking the recovery rate.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="Slice and Dice talent icon"> [Slice and Dice](#cryptic_chordclaw_consecutive_bonus) | <ul><li>Each Chordclaw ability activation adds one Chordclaw damage stack, +20% per stack, up to 3.</li><li>Duration is 5s; adding a stack refreshes the duration. At 3 stacks, the Chordclaw damage modifier totals +60%.</li></ul> | Ability |
 
 ---
 
@@ -470,3 +471,16 @@
 - **Recovery example**: 50 × 25% = 12.5 points, spread over 5s, so extra recovery is 12.5 ÷ 5 = 2.5 points/s. If it is not retriggered and the pool does not fill early, the complete 5s gives these 12.5 points.
 
 [Details](cryptic_chordclaw_capacitance_restoration.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_chordclaw_consecutive_bonus"></a>
+
+### Slice and Dice
+
+<img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="72" height="72" alt="Slice and Dice talent icon">
+
+- **How it works**: Each Chordclaw ability activation adds one Chordclaw damage stack, +20% per stack, up to 3. Adding a stack refreshes the 5s duration.
+- **How it works**: Three stacks give +60% Chordclaw damage. With an illustrative base Chordclaw damage of 100, considering only this effect, the values are approximately 120 / 140 / 160.
+
+[Details](cryptic_chordclaw_consecutive_bonus.md) · [Back to index](#talent-index)
