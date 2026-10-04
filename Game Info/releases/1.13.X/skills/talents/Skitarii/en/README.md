@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="Servo-Sinew Surge talent icon"> [Servo-Sinew Surge](#cryptic_dissector_crit_attack_speed) | <ul><li>Each current Flensing Protocols stack also grants 1.5 percentage points of Critical Strike Chance and +1.5% Melee Attack Speed. The bonuses follow the stack count: 6 stacks give 9 points /9%, and 8 give 12 points /12%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="Honed Dissector talent icon"> [Honed Dissector](#cryptic_dissector_max_stacks) | <ul><li>Raises the Flensing Protocols cap from 6 to 8 stacks and starts at 8. Per-stack values remain unchanged: full stacks give +20% Damage and a Toughness damage taken multiplier of 0.80.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="Advanced Power Management talent icon"> [Advanced Power Management](#cryptic_redline_strength) | <ul><li>On Combat Ability use, gain one stack per charge held before use, each granting 5% Power for 10 seconds, up to 5 stacks. New stacks refresh the duration; repeated Chordclaw actions during the same activation do not trigger it again.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="Capacitory Limit Override talent icon"> [Capacitory Limit Override](#cryptic_redline_rending) | <ul><li>At 3 or more Redline Capacitors stacks, gain +15% Rending. The bonus turns off at 2 or fewer stacks; stacks above the threshold do not increase its value.</li></ul> | Keystone |
 
 ---
 
@@ -659,3 +660,21 @@
 - **Chordclaw limit**: Repeated Chordclaw actions during a continuous activation do not trigger this effect again. End the Chordclaw activation, then activate the ability again.
 
 [Details](cryptic_redline_strength.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_redline_rending"></a>
+
+### Capacitory Limit Override
+
+<img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="72" height="72" alt="Capacitory Limit Override talent icon">
+
+- **Trigger**: Active at **3 or more Redline Capacitors stacks**; inactive at **2 or fewer**.
+- **Effect**: Gain **+15% Rending**. At 3, 4 or additional stacks, the value remains 15%; it does not accumulate per stack.
+- **Damage example**: Comparing only the armour stage, assume pre-armour damage `100`, original armour multiplier `0.5`, and a Rending coefficient of `1` for that armour type. The original result is `100 × 0.5 = 50`; with the bonus, `100 × (0.5 + 0.15) = 65`. This example increases damage by 30%. Different armour multipliers give different increases; this effect does not simply multiply all damage by `1.15`.
+
+#### Traditional Chinese original-text correction
+
+- The Traditional Chinese template swaps the stack count and talent name. After substitution, its condition is equivalent to “while 3 reaches Redline Capacitors stacks or above.” The correct condition is “at 3 or more Redline Capacitors stacks, gain 15% Rending.” The corresponding English puts the stack count and name in the correct positions.
+
+[Details](cryptic_redline_rending.md) · [Back to index](#talent-index)

@@ -52,3 +52,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Servo-Sinew Surge](cryptic_dissector_crit_attack_speed.md) / `cryptic_dissector_crit_attack_speed` | Keystone |
 | [Honed Dissector](cryptic_dissector_max_stacks.md) / `cryptic_dissector_max_stacks` | Keystone |
 | [Advanced Power Management](cryptic_redline_strength.md) / `cryptic_redline_strength` | Keystone |
+| [Capacitory Limit Override](cryptic_redline_rending.md) / `cryptic_redline_rending` | Keystone |

@@ -502,6 +502,18 @@ Full raw template and formatting: [source evidence](cryptic_redline_strength.md#
 | Ability use, held charges, value and duration | On Ability use, gain 5% Strength for each Charge you had on use, for 10s; `ui / loc_talent_cryptic_redline_strength_clarified_desc / 4e708242` | Combat Ability use adds stacks according to charges held before use; each grants a `0.05` Power Level modifier for 10s [Fixed source and line references](cryptic_redline_strength.md#fixed-source-evidence) | Consistent | The trigger, held-charge basis, per-charge value and duration agree. Strength does not explicitly claim a final-damage multiplier. |
 | Power calculation, cap and Chordclaw restriction | Does not define Strength's calculation stage, the stack cap, refresh or repeated Chordclaw actions; `ui / loc_talent_cryptic_redline_strength_clarified_desc / 4e708242` | Power Level adds at its stage then enters attack curves; maximum 5 stacks and duration refresh. Repeated actions within a continuous Chordclaw activation do not trigger it again [Fixed source and line references](cryptic_redline_strength.md#fixed-source-evidence) | Not covered by the description | The verified 500 →575 Power example and limits supplement the text; actual damage cannot be derived from this modifier alone. |
 
+
+<a id="cryptic_redline_rending"></a>
+
+## Capacitory Limit Override
+
+Full raw template and formatting: [source evidence](cryptic_redline_rending.md#original-english-template-and-reconstruction). Name hash `906dcd58`. Every row uses `ui / loc_talent_cryptic_redline_rending_clarified_desc / 477f3a77`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Threshold, amount and placeholder meaning | +15% Rending while at 3 Redline Capacitors stacks or above; `ui / loc_talent_cryptic_redline_rending_clarified_desc / 477f3a77` | Selected modifier enables fixed `rending_multiplier =0.15` while the current Redline stack count is at least 3 [Fixed source and line references](cryptic_redline_rending.md#fixed-source-evidence) | Consistent | The condition and value match. Unlike the Traditional Chinese template, the English places the stack count and talent name correctly. |
+| Fixed bonus and armour calculation | Does not describe the fixed value above the threshold or the armour calculation; `ui / loc_talent_cryptic_redline_rending_clarified_desc / 477f3a77` | The root conditional modifier is not applied per stack. With pre-armour damage 100, multiplier 0.5 and Rending coefficient 1, armour-stage damage 50 becomes 65; actual increase depends on armour [Fixed source and line references](cryptic_redline_rending.md#fixed-source-evidence) | Not covered by the description | The verified example and inactive-at-2 limit supplement the English, without treating Rending as a universal final-damage multiplier. |
+
 ## Comparison totals
 
 83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
