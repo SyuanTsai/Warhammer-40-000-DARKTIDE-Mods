@@ -17,3 +17,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Arc Grenades](cryptic_grenade_ability_arc_grenade.md) / `cryptic_grenade_ability_arc_grenade` | Blitz |
 | [Artificer Servo-Skull](cryptic_servo_skull_improved.md) / `cryptic_servo_skull_improved` | Blitz |
 | [Kinetic Repulsion](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | Blitz |
+| [Noospheric Command](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | Blitz |
