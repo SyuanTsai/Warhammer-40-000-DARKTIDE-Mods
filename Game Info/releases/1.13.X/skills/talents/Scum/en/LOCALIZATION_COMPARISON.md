@@ -831,6 +831,18 @@ Full raw template and formatting: [source evidence](broker_passive_reduced_damag
 | Inflicter, output reduction and replacement | Enemies you infect with Chem Toxin deal -15% Damage; Monstrosities instead deal -30%; `ui / loc_talent_broker_passive_reduced_damage_by_toxined_desc / 615c771b` | Owner-forwarded Toxin application applies an enemy `damage` debuff of -0.15 or -0.3 [Fixed source and line references](broker_passive_reduced_damage_by_toxined.md#fixed-source-evidence) | Consistent | The English identifies your infection and enemy Damage output; the stronger value replaces the ordinary one. |
 | Boss tags and debuff lifetime | No exact tags, stack limit or removal rule is stated; `ui / loc_talent_broker_passive_reduced_damage_by_toxined_desc / 615c771b` | `tags.monster`, `captain` or `cultist_captain` selects the stronger debuff; maximum one stack, no fixed duration, removal after losing Toxin [Fixed source and line references](broker_passive_reduced_damage_by_toxined.md#fixed-source-evidence) | Not covered by the description | These clarify the boss category and lifetime. The original 100→85/70 example also explains why teammates benefit. |
 
+
+<a id="broker_passive_replenish_toughness_while_toxined_enemies_in_proximity"></a>
+
+## Toxic Renewal
+
+Full raw template and formatting: [source evidence](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md#original-english-template-and-reconstruction). Name hash `c7a7a696`. Every row uses `ui / loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc / c1d98f78`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery, interval, range and enemy cap | Replenish 1% Toughness every 1s per Chem Toxin infected enemy within 15m, up to 10 enemies; `ui / loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc / c1d98f78` | Server interval every 1s calls `Toughness.replenish_percentage(0.01 × min(n, 10))`; radius 15m [Fixed source and line references](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md#fixed-source-evidence) | Consistent | The stated amount, interval, range and upper count match. |
+| Recovery basis, counting and state limits | No maximum-Toughness basis, ownership filter, query frequency or knocked-down rule is stated; `ui / loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc / c1d98f78` | Count queried every 0.2s without requiring your Toxin; recovery uses maximum Toughness and caps at missing Toughness. Knocked-down behavior is unverified [Fixed source and line references](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md#fixed-source-evidence) | Not covered by the description | These retain the original 100 maximum / four enemies / 4 per second, ten-enemy cap and missing-3 examples. The existing state caveat remains unresolved. |
+
 ## Comparison totals
 
 The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
