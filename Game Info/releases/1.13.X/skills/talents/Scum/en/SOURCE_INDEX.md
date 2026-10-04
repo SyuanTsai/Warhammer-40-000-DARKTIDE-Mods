@@ -117,3 +117,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kalma I](broker_stimm_concentration_1.md) / `broker_stimm_concentration_1` | Stimm recipe |
 | [Kalma II](broker_stimm_concentration_2.md) / `broker_stimm_concentration_2` | Stimm recipe |
 | [Kalma III](broker_stimm_concentration_3.md) / `broker_stimm_concentration_3` | Stimm recipe |
+| [Kalma IV](broker_stimm_concentration_4.md) / `broker_stimm_concentration_4` | Stimm recipe |
