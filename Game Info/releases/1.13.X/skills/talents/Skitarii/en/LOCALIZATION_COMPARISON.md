@@ -273,6 +273,18 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw_quick_stab
 | Quick stabs, Bleed value and held input | 3 Quick Stab attacks applying 6 stack(s) of Bleed; holding performs the regular attack; `ui / loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc / e0d3d43f` | Quick branch selects action_stab_1/2/3 and chordclaw_stab_bleed with bleed_long 6; from_charge retains action_heavy_sticky_attack_1 [Fixed source and line references](cryptic_chordclaw_quick_stab_combo.md#fixed-source-evidence) | Consistent | The attack count, Bleed value and held-input branch agree; the wording does not explicitly state that 6 is a whole-combo total. |
 | Per-stab application, Critical Strikes and Bleed limits | No per-damaging-stab condition, guaranteed crit, stack cap, duration or tick detail; `ui / loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc / e0d3d43f` | Each guaranteed-crit stab adds 6 stacks with damage >0 and a target buff extension; bleed_long cap 18, duration 9.5s, interval 0.375; added stacks restart the timer [Fixed source and line references](cryptic_chordclaw_quick_stab_combo.md#fixed-source-evidence) | Not covered by the description | Three damaging stabs add 18 stacks; two add 12; misses add none. Existing stacks/cap and target/armour/modifiers limit actual Bleed and Health damage. |
 
+
+<a id="cryptic_crits_grant_power"></a>
+
+## Flux Conduit Build-Up
+
+Full raw template and formatting: [source evidence](cryptic_crits_grant_power.md#original-english-template-and-reconstruction). Name hash `977e362d`. Every row uses `ui / loc_talent_cryptic_crits_grant_power_desc / 10f2fa54`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical hits, amount and duration | Critical hits generate 5% Capacitance over 4s; `ui / loc_talent_cryptic_crits_grant_power_desc / 10f2fa54` | on_crit checks is_critical_strike; cooldown_regen 0.05 converts one 50-point charge to 2.5 extra points over 4s [Fixed source and line references](cryptic_crits_grant_power.md#fixed-source-evidence) | Consistent | The trigger, amount and period agree; the percentage does not explicitly specify a different denominator. |
+| Recovery basis, refresh and rate | No single-charge basis, resource rate, nonstacking refresh or base-recovery detail; `ui / loc_talent_cryptic_crits_grant_power_desc / 10f2fa54` | Extra rate 2.5 ÷4 =0.625 points/s; base 1/s gives 1.625/s; allow_proc_while_active refreshes active_start_time without stacking; trigger does not read damage_amount [Fixed source and line references](cryptic_crits_grant_power.md#fixed-source-evidence) | Not covered by the description | Total recovery is 6.5 points over 4s, including 2.5 extra. Repeated Critical hits reset the period; costs, pauses and other modifiers are excluded from the example. |
+
 ## Comparison totals
 
 42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.

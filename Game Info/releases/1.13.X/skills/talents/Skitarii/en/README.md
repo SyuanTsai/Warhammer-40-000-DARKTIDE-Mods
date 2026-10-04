@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="Voltaic Overcharge talent icon"> [Voltaic Overcharge](#cryptic_discharge_toughness) | <ul><li>Voltaic Emitter immediately restores 25% of maximum Toughness per full charge consumed; each Electric Discharge explosion hit on a living enemy restores another 1% of maximum Toughness.</li><li>Recovery receives Toughness Replenishment modifiers and cannot exceed the current Toughness deficit.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="32" height="32" alt="Axial Slash talent icon"> [Axial Slash](#cryptic_chordclaw_horizontal_swipe) | <ul><li>Quickly activating the Chordclaw replaces its default Heavy stab with a horizontal sweep, which remains a guaranteed Critical Strike. Holding to charge still uses the original Heavy stab.</li><li>A sweep can hit multiple targets; damage to later targets decreases according to the damage profile.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7d516cae-80f0-4d48-b562-b5a21f6ddcd1" width="32" height="32" alt="Probing Strikes talent icon"> [Probing Strikes](#cryptic_chordclaw_quick_stab_combo) | <ul><li>Quick Chordclaw activation becomes three successive stabs; holding the input still uses the regular Heavy Attack.</li><li>Each stab is a guaranteed Critical Strike and applies 6 Bleed stacks to its target when it deals Health damage. Bleed is capped at 18 stacks.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="Flux Conduit Build-Up talent icon"> [Flux Conduit Build-Up](#cryptic_crits_grant_power) | <ul><li>Critical hits accelerate Capacitance recovery for 4s. At the base recovery rate, the extra amount is 5% of one charge.</li><li>Another Critical hit within 4s resets the recovery window; the recovery bonus stays fixed and does not stack with repeated Critical hits.</li></ul> | Ability |
 
 ---
 
@@ -359,3 +360,17 @@
 - **Duration**: Bleed lasts 9.5s; applying it again restarts the timer. If all three stabs damage the same enemy, they add 6 + 6 + 6 = 18 stacks, reaching the cap.
 
 [Details](cryptic_chordclaw_quick_stab_combo.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_crits_grant_power"></a>
+
+### Flux Conduit Build-Up
+
+<img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="72" height="72" alt="Flux Conduit Build-Up talent icon">
+
+- **How it works**: Capacitance recovery accelerates for 4s after a Critical hit. With a 50-point charge cost, the extra recovery over 4s is 2.5 points, equivalent to 5%.
+- **How it works**: Another Critical hit within 4s restarts the window; it does not stack a higher recovery rate.
+- **Recovery example**: With one charge costing 50 points, the extra recovery is 50 × 5% = 2.5 points over 4s. Including the base 1 point/s, total recovery over 4s is 4 × (1 + 2.5 ÷ 4) = 6.5 points. Another Critical hit extends the accelerated recovery period.
+
+[Details](cryptic_crits_grant_power.md) · [Back to index](#talent-index)
