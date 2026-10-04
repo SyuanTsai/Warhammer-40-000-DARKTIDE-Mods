@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="Toxic Renewal talent icon"> [Toxic Renewal](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | <ul><li>Each Chem Toxin infected enemy within 15m restores 1% of maximum Toughness per second, up to 10 enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="Ammo Jack talent icon"> [Ammo Jack](#broker_passive_extended_mag) | <ul><li>Gain 15% Clip Size, rounded up after combining bonuses of the same kind.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="Cheap Shots talent icon"> [Cheap Shots](#broker_passive_damage_vs_heavy_staggered) | <ul><li>Deal 10% more damage to Staggered enemies, or 15% in total to enemies with Medium or Heavy Stagger.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="Hyper-Critical talent icon"> [Hyper-Critical](#broker_passive_melee_crit_instakill) | <ul><li>After a Critical Melee Hit, execute a living human-sized enemy whose remaining Health is below the hit's actual Damage; Captains are excluded.</li></ul> | Talent |
 
 ---
 
@@ -1190,3 +1191,19 @@
 - **Damage example**: With a base of 100, Light Stagger gives 110, and Medium or Heavy Stagger gives 115. With another 25% bonus at the same stage, the latter becomes 100 × (1 + 25% + 15%) = 140.
 
 [Details](broker_passive_damage_vs_heavy_staggered.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_melee_crit_instakill"></a>
+
+### Hyper-Critical
+
+<img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="72" height="72" alt="Hyper-Critical talent icon">
+
+- **Trigger**: After a Critical Melee Hit against a human-sized enemy, execute it if it is still alive and its remaining Health is strictly below the actual Damage dealt by that hit. Captain enemies are excluded.
+
+- **Health threshold example**: An enemy starts with 190 Health and the Critical Hit deals 100, leaving 90. Since 90 < 100, it is executed. Starting with 200 leaves 100; 100 is not below 100, so execution does not trigger.
+
+- **Meaning of twice the Damage**: Provided this hit actually removes the same amount of Health, the condition is equivalent to pre-hit Health below twice the Damage. It does not mean post-hit Health below twice the Damage.
+
+[Details](broker_passive_melee_crit_instakill.md) · [Back to index](#talent-index)

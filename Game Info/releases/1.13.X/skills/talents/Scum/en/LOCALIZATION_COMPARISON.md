@@ -867,6 +867,19 @@ Full raw template and formatting: [source evidence](broker_passive_damage_vs_hea
 | Stagger damage bonus | Staggered enemies: +10%; Medium and Heavy enemies instead: +5% (static reconstruction); `ui / loc_talent_broker_passive_damage_vs_heavy_staggered_desc_02 / 6dc4e3b1` | 0.1 base Stagger bonus plus 0.05 for at least Medium Stagger: 10% or 15% total [Fixed source and line references](broker_passive_damage_vs_heavy_staggered.md#fixed-source-evidence) | Explicit contradiction | The replacement wording presents 5% as the higher-tier total, while the mapped field is only the additional 5%; actual total is 15%. |
 | Damage calculation | No same-stage stacking formula; `ui / loc_talent_broker_passive_damage_vs_heavy_staggered_desc_02 / 6dc4e3b1` | Add the applicable bonus to other general damage bonuses at the same stage [Fixed source and line references](broker_passive_damage_vs_heavy_staggered.md#fixed-source-evidence) | Not covered by the description | The formula and 100 → 110/115 or 140 examples supplement the description. |
 
+
+<a id="broker_passive_melee_crit_instakill"></a>
+
+## Hyper-Critical
+
+Full raw template and formatting: [source evidence](broker_passive_melee_crit_instakill.md#original-english-template-and-reconstruction). Name hash `f0e426c8`. Every row uses `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack and target conditions | Critical Melee Hits; human sized Enemies; `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648` | Requires `on_crit_melee`, `HEALTH_ALIVE` and a human-sized target [Fixed source and line references](broker_passive_melee_crit_instakill.md#fixed-source-evidence) | Consistent | The English expressly includes both Critical and Melee conditions and the target size. |
+| Health threshold timing | Current Health less than 2 times the attack's Damage; `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648` | Reads post-hit Health and tests it against `actual_damage_dealt`; pre-hit Health below twice the Damage is equivalent under matching single-hit damage [Fixed source and line references](broker_passive_melee_crit_instakill.md#fixed-source-evidence) | Cannot confirm | The English leaves the Health-read timing unspecified. A pre-hit reading is consistent, but a post-hit reading would not be; no definite English error is inferred. |
+| Exclusions and example limits | No Captain exclusion or event-reading assumptions; `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648` | Captains are excluded; event order and strict inequality govern the 190/200 Health examples [Fixed source and line references](broker_passive_melee_crit_instakill.md#fixed-source-evidence) | Not covered by the description | These clarify the existing evidence without treating omissions as errors. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
