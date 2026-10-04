@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="I Shall Not Fall talent icon"> [I Shall Not Fall](#zealot_martyrdom_grants_toughness) | <ul><li>Each fully missing Wound counted by Martyrdom reduces Toughness damage taken by 7.5%, up to 5 Wounds / 37.5%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="Maniac talent icon"> [Maniac](#zealot_martyrdom_grants_attack_speed) | <ul><li>Each fully missing Wound counted by Martyrdom grants 6% Melee Attack Speed, up to 5 Wounds / 30%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="Inexorable Judgement talent icon"> [Inexorable Judgement](#zealot_quickness_passive) | <ul><li>Movement grants 1 Momentum stack per 5 metres, maximum 20; Sprint distance counts double. A Melee or Ranged Hit spends current stacks for a 6-second bonus to damage, attack speeds and dodge stats.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="Retributor's Stance talent icon"> [Retributor's Stance](#zealot_momentum_toughness_replenish) | <ul><li>During Inexorable Judgement's active bonus, replenish 0.5% maximum Toughness per second for each spent Momentum stack.</li></ul> | Keystone |
 
 ---
 
@@ -388,3 +389,16 @@
 - **Dodge bonuses**: Each stack also adds 0.5% Dodge Distance, shortens consecutive-dodge recovery time by 1%, and multiplies Dodge Speed by 1.005. At 20 stacks, distance is ×1.1, recovery time ×0.8, and speed about 1.005²⁰ ≈ ×1.105.
 
 [Details](zealot_quickness_passive.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_momentum_toughness_replenish"></a>
+
+### Retributor's Stance
+
+<img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="72" height="72" alt="Retributor's Stance talent icon">
+
+- **Effect**: During Inexorable Judgement's active bonus, each stack replenishes 0.5% maximum Toughness per second, accumulating over time according to the active stack count.
+- **Restoration example**: With maximum Toughness 100 and 20 stacks on activation, restore 100 × 20 × 0.5% = 10 per second, at most 60 over a full 6 seconds. With duration extended to 10 seconds, the theoretical maximum is 100. Restoration bonuses and the current missing amount still apply.
+
+[Details](zealot_momentum_toughness_replenish.md) · [Back to index](#talent-index)

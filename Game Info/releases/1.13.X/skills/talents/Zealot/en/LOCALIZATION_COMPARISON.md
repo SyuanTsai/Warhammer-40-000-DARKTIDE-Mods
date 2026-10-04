@@ -298,6 +298,18 @@ Full raw template and formatting: [source evidence](zealot_quickness_passive.md#
 | Movement, stack cap and hit-activated bonuses | Movement grants Momentum, max 20; hit spends stacks for +1% Melee/Ranged Attack Speed and Damage each, lasting 6s.; `ui / loc_talent_zealot_quickness_desc / 634bdcc4` | Distance counter capped at 20; qualifying hit transfers its stacks to a 6s active Buff with matching stat values. [Fixed source and line references](zealot_quickness_passive.md#fixed-source-evidence) | Consistent | The stated acquisition direction, cap, per-stack bonuses and duration agree. |
 | Acquisition thresholds and active-state restrictions | No exact movement distance, Sprint weighting, active-Buff gate or dodge stats; `ui / loc_talent_zealot_quickness_desc / 634bdcc4` | 5m per stack, Sprint ×2, distance remainder retained; active Buff prevents new consumption/refresh. Extra dodge modifiers and no base Dodge stacks apply. [Fixed source and line references](zealot_quickness_passive.md#fixed-source-evidence) | Not covered by the description | These qualify the stated behavior; preserve all movement, damage, speed and dodge examples as supplements. |
 
+
+<a id="zealot_momentum_toughness_replenish"></a>
+
+## Retributor's Stance
+
+Full raw template and formatting: [source evidence](zealot_momentum_toughness_replenish.md#original-english-template-and-reconstruction). Name hash `af56f063`. Every row uses `ui / loc_talent_zealot_momentum_toughness_replenish_desc / 11690b77`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Rate, spent stacks and active duration | “Replenish 0.5% Toughness per second per spent Stack of Momentum during its Duration.”; `ui / loc_talent_zealot_momentum_toughness_replenish_desc / 11690b77` | Active Buff updates restore `0.005×active stack_count×dt` of maximum Toughness, only during that Buff. [Fixed source and line references](zealot_momentum_toughness_replenish.md#fixed-source-evidence) | Consistent | The English explicitly ties the rate to spent stacks and their active duration. |
+| Integration, cap and restoration examples | No maximum-versus-missing basis, frame integration or total recovery amount; `ui / loc_talent_zealot_momentum_toughness_replenish_desc / 11690b77` | Maximum-Toughness rate, per-frame `dt`, limited by missing Toughness; 20 stacks/maximum 100 give 10/s, 60 over 6s or 100 over 10s before limits. [Fixed source and line references](zealot_momentum_toughness_replenish.md#fixed-source-evidence) | Not covered by the description | These calculations and assumptions supplement the stated rate. |
+
 ## Comparison totals
 
 43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.
