@@ -339,3 +339,5 @@
 - [勢頭](2026-10-03-MOMENTUM_ACCEPTANCE.json)：新增5變體、12型號關聯；共5變體、12關聯。
 
 - [撕扯震盪](2026-10-03-RENDING-SHOCKWAVE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [機魂再臨](2026-10-03-MACHINE-SPIRIT-RESURGENT_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

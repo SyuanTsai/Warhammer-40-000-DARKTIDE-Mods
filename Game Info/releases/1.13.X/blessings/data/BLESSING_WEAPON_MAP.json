@@ -1213,6 +1213,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16",
       "effect": "次要蓄力爆炸命中依蓄力比例施加每層 2.5% 脆弱；I–IV 滿蓄力請求 2／4／6／8 層，目標最多 16 層、持續 5 秒；完整說明包含延遲命中例外。"
+    },
+    {
+      "id": "machine-spirit-resurgent",
+      "name_zh_tw": "機魂再臨",
+      "name_en": "Machine Spirit Resurgent",
+      "name_key": "loc_trait_bespoke_refund_charge_on_weapon_special_weakspot_kill",
+      "description_key": "loc_trait_bespoke_refund_charge_on_weapon_special_weakspot_kill_desc",
+      "name_hash": "b760a1fc",
+      "description_hash": "f87fcde6",
+      "page": "entries/機魂再臨/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
+      "effect": "持用機械神教動力劍布蘭克斯 Mk VI，以啟用特殊攻擊命中弱點並擊殺目標，且事件處理時仍持用此劍，即返還1道特殊充能（上限6）；I–IV級冷卻為5.5／4.5／3.5／2.5秒。"
     }
   ],
   "weapons": [
@@ -18653,6 +18666,47 @@
       "icon": "https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_010",
       "effect": "次要蓄力爆炸命中依蓄力比例施加每層 2.5% 脆弱；I–IV 滿蓄力請求 2／4／6／8 層，目標最多 16 層、持續 5 秒；完整說明包含延遲命中例外。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_refund_charge_on_weapon_special_weakspot_kill",
+      "blessing_id": "machine-spirit-resurgent",
+      "weapon_id": "powersword_p3",
+      "page": "entries/機魂再臨/weapon_trait_bespoke_powersword_p3_refund_charge_on_weapon_special_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "cooldown_seconds_by_tier": {
+          "I": 5.5,
+          "II": 4.5,
+          "III": 3.5,
+          "IV": 2.5
+        },
+        "refund_per_successful_proc": 1,
+        "max_charges": 6,
+        "activation_cost": 1,
+        "active_duration_seconds": 4,
+        "natural_recovery_interval_seconds": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 387,
+        "end_line": 418
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 89,
+        "end_line": 114
+      },
+      "description_key": "loc_trait_bespoke_refund_charge_on_weapon_special_weakspot_kill_desc",
+      "description_hash": "f87fcde6",
+      "icon": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_251",
+      "effect": "布蘭克斯 Mk VI 為唯一實作；僅特殊攻擊弱點擊殺符合，普通輕／重攻擊、推擊及推擊追擊不符合。"
     }
   ],
   "bindings": [
@@ -26214,6 +26268,20 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
         "import_line": 14,
         "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "machine-spirit-resurgent",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_refund_charge_on_weapon_special_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/refund_charge_on_weapon_special_weakspot_kill",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
       }
     }
   ]

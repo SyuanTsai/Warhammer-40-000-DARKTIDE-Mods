@@ -96,3 +96,4 @@
 | [奪顱者](entries/奪顱者/README.md) | [來源索引](entries/奪顱者/SOURCE_INDEX.md) |
 | [勢頭](entries/勢頭/README.md) | [來源索引](entries/勢頭/SOURCE_INDEX.md) |
 | [撕扯震盪](entries/撕扯震盪/README.md) | [來源索引](entries/撕扯震盪/SOURCE_INDEX.md) |
+| [機魂再臨](entries/機魂再臨/README.md) | [來源索引](entries/機魂再臨/SOURCE_INDEX.md) |

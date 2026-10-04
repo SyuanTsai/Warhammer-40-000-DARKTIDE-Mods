@@ -1871,3 +1871,6 @@
 
 - Quickloader - 快速裝填
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_dodge`，hash `10e76602`；英文／繁中RAW配對確認。
+
+- Machine Spirit Resurgent - 機魂再臨
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_refund_charge_on_weapon_special_weakspot_kill`，hash `b760a1fc`；英文／繁中RAW配對確認。
