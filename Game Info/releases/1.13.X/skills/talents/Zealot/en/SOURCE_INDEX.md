@@ -52,3 +52,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Backstabber](zealot_backstab_damage.md) / `zealot_backstab_damage` | Skill |
 | [Disdain](zealot_multi_hits_increase_damage.md) / `zealot_multi_hits_increase_damage` | Skill |
 | [Purge the Unclean](zealot_increased_damage_vs_resilient.md) / `zealot_increased_damage_vs_resilient` | Skill |
+| [Sustained Assault](zealot_hits_grant_stacking_damage.md) / `zealot_hits_grant_stacking_damage` | Skill |

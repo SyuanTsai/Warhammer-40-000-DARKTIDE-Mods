@@ -503,6 +503,18 @@ Full raw template and formatting: [source evidence](zealot_increased_damage_vs_r
 | Damage and armour categories | “+20% Increased Damage against Infested & Unyielding Enemies.”; `ui / loc_talent_zealot_3_passive_2_description / 96b4257f` | Adds .2 to corresponding `disgustingly_resilient_damage` and `resistant_damage` armour-type stats. [Fixed source and line references](zealot_increased_damage_vs_resilient.md#fixed-source-evidence) | Consistent | Displayed value and named categories match the accepted effects. |
 | Hit-location classification and addition | No hit-location or bonus-combination formula.; `ui / loc_talent_zealot_3_passive_2_description / 96b4257f` | Actual hit armour type is used, not infected appearance; mutually exclusive categories do not stack to40%. Original examples100→120 or110→130 with same-type10%. [Fixed source and line references](zealot_increased_damage_vs_resilient.md#fixed-source-evidence) | Not covered by the description | Classification and additive calculation qualify the named-category bonus. |
 
+
+<a id="zealot_hits_grant_stacking_damage"></a>
+
+## Sustained Assault
+
+Full raw template and formatting: [source evidence](zealot_hits_grant_stacking_damage.md#original-english-template-and-reconstruction). Name hash `ce6fa468`. Every row uses `ui / loc_talent_zealot_increased_damage_stacks_on_hit_desc / fa8c449f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee hit, damage, duration and cap | “+4% Melee Damage for 5s” on a Melee hit; stacks 5 times.; `ui / loc_talent_zealot_increased_damage_stacks_on_hit_desc / fa8c449f` | Melee `on_hit` applies .04 Melee damage per stack, max 5, duration 5s. [Fixed source and line references](zealot_hits_grant_stacking_damage.md#fixed-source-evidence) | Consistent | Trigger, stat target, value, duration and cap agree. |
+| Refresh and additive damage | No full-stack refresh or combination formula.; `ui / loc_talent_zealot_increased_damage_stacks_on_hit_desc / fa8c449f` | Further hits refresh 5s even at cap; same-stage bonuses add. Original examples give 112/120 or 145 with same-stage 25%. [Fixed source and line references](zealot_hits_grant_stacking_damage.md#fixed-source-evidence) | Not covered by the description | The accepted refresh behavior and damage examples supplement the stacking effect. |
+
 ## Comparison totals
 
 84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.

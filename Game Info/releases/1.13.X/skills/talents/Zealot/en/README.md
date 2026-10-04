@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="Backstabber talent icon"> [Backstabber](#zealot_backstab_damage) | <ul><li>Deal 25% more damage on Melee Backstabs and Ranged Flanking hits.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="Disdain talent icon"> [Disdain](#zealot_multi_hits_increase_damage) | <ul><li>Each enemy hit by the previous Melee sweep adds 5% damage to the next Melee attack, up to 5 enemies/+25%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="Purge the Unclean talent icon"> [Purge the Unclean](#zealot_increased_damage_vs_resilient) | <ul><li>Deal 20% more damage against Infested and Unyielding armour types, according to the hit location's armour.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="Sustained Assault talent icon"> [Sustained Assault](#zealot_hits_grant_stacking_damage) | <ul><li>Melee hits grant 4% Melee Damage for 5 seconds, up to 5 stacks/+20%; further hits refresh duration, including at full stacks.</li></ul> | Skill |
 
 ---
 
@@ -643,3 +644,16 @@
 - **Damage example**: Counting only this armour-type bonus, 100 becomes 100 × 1.20 = 120. With an existing 10% bonus of the same type, 110 becomes 100 × (1 + 10% + 20%) = 130, an actual increase of about 18.18%.
 
 [Details](zealot_increased_damage_vs_resilient.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_hits_grant_stacking_damage"></a>
+
+### Sustained Assault
+
+<img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="72" height="72" alt="Sustained Assault talent icon">
+
+- **Stacks and refresh**: Each Melee hit on an enemy adds one stack of 4% Melee Damage, up to 5 stacks and 20%. Lasts 5 seconds; further hits reset the duration, including at full stacks.
+- **Damage example**: With no other bonuses, 3 stacks give 100 × (1 + 3 × 4%) = 112, or 120 at full stacks. With an existing same-stage 25% bonus, full stacks give 100 × (1 + 25% + 20%) = 145.
+
+[Details](zealot_hits_grant_stacking_damage.md) · [Back to index](#talent-index)
