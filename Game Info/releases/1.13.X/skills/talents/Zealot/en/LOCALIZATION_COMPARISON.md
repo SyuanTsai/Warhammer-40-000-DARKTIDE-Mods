@@ -383,6 +383,18 @@ Full raw template and formatting: [source evidence](zealot_shared_fanatic_rage.m
 | Availability while personal Fury is active | “while Blazing Piety is active”; `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544` | Separate shared Buff lasts 8s from application; personal Fury refresh does not rerun distribution, and new Coherency entrants are not continuously supplied. [Fixed source and line references](zealot_shared_fanatic_rage.md#fixed-source-evidence) | Explicit contradiction | The English ties availability to all personal activity, but accepted fixed-version behavior can let the ally bonus expire earlier. Actual game timing remains unobserved. |
 | Independent shared effect and probability | No caster exclusion, Righteous Warrior interaction, stack cap or cooldown details.; `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544` | Caster excluded; shared max 1, no independent cooldown, fixed +10 points: 5%→15%; Righteous Warrior does not change it. [Fixed source and line references](zealot_shared_fanatic_rage.md#fixed-source-evidence) | Not covered by the description | These details qualify the shared bonus without introducing further English errata. |
 
+
+<a id="zealot_martyrdom_toughness_modifier"></a>
+
+## Restorative Verses
+
+Full raw template and formatting: [source evidence](zealot_martyrdom_toughness_modifier.md#original-english-template-and-reconstruction). Name hash `71808fb8`. Every row uses `ui / loc_talent_zealot_martyrdom_toughness_modifier_upd_desc / d473a3ea`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack replenishment bonus | “Martyrdom grants 5% Toughness Replenishment per stack.”; `ui / loc_talent_zealot_martyrdom_toughness_modifier_upd_desc / d473a3ea` | Missing-Wound interpolation adds 0.05 per stack to `toughness_replenish_modifier`. [Fixed source and line references](zealot_martyrdom_toughness_modifier.md#fixed-source-evidence) | Consistent | The English names the replenishment stat bonus and does not explicitly say gaining a stack immediately restores Toughness. |
+| Wound cap, restoration source and combination | No cap, Wound calculation, immediate-event distinction or combination formula.; `ui / loc_talent_zealot_martyrdom_toughness_modifier_upd_desc / d473a3ea` | Max 5/+25%; complete Wounds from max(damage, permanent damage). Requires another restoration source; 10→11/12.5 or 14.5 with same-stage 20%, capped by missing Toughness. [Fixed source and line references](zealot_martyrdom_toughness_modifier.md#fixed-source-evidence) | Not covered by the description | The accepted examples and limits clarify the modifier; the Chinese direct-restoration correction is separate. |
+
 ## Comparison totals
 
 63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.

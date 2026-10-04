@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="Stalwart talent icon"> [Stalwart](#zealot_fanatic_rage_toughness_on_max) | <ul><li>Entering Fury restores 50% of maximum Toughness once. At full Fury stacks, gain 25% Toughness Damage Reduction and restore 2% of maximum Toughness per second.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="Righteous Warrior talent icon"> [Righteous Warrior](#zealot_fanatic_rage_improved) | <ul><li>Blazing Piety grants another 10 percentage points of Critical Chance during Fury, for a total talent bonus of 25 points.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="Infectious Zeal talent icon"> [Infectious Zeal](#zealot_shared_fanatic_rage) | <ul><li>When Fury starts, other allies currently in Coherency gain 10 percentage points of Critical Chance for 8 seconds; refreshing your Fury does not extend their existing bonus.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="Restorative Verses talent icon"> [Restorative Verses](#zealot_martyrdom_toughness_modifier) | <ul><li>Each complete missing Wound counted by Martyrdom increases Toughness replenishment by 5%, up to 5 stacks and +25%; gaining stacks does not directly restore Toughness.</li></ul> | Keystone |
 
 ---
 
@@ -493,3 +494,17 @@
 - **Duration limits**: Later refreshing your own Fury does not extend the 8 seconds already given to allies. Allies who enter Coherency during the effect do not immediately receive it.
 
 [Details](zealot_shared_fanatic_rage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_martyrdom_toughness_modifier"></a>
+
+### Restorative Verses
+
+<img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="72" height="72" alt="Restorative Verses talent icon">
+
+- **Operation**: Each complete missing Wound increases Toughness restored by 5%, up to 5 stacks and 25%. An existing restoration source is required; gaining stacks does not directly replenish Toughness.
+- **Restoration example**: An effect normally restoring 10 Toughness restores 10 × (1 + 2 × 5%) = 11 at 2 stacks, or 12.5 at 5. With another 20% restoration bonus in the same stage, full stacks give 10 × (1 + 20% + 25%) = 14.5, still capped by missing Toughness.
+- **Chinese original-text erratum**: The Chinese says each stack restores Toughness, which can imply immediate restoration on gaining a stack. The actual effect increases restoration amount by 5% per stack and works through other restoration sources.
+
+[Details](zealot_martyrdom_toughness_modifier.md) · [Back to index](#talent-index)
