@@ -711,6 +711,18 @@ Full raw template and formatting: [source evidence](broker_passive_knockback_on_
 | Excluded enemies and pulse properties | No excluded enemy category, radius or pulse Damage is stated; `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408` | Excludes `breed.tags.disabler`; radius 3m; `attack = 0`, medium Stagger [Fixed source and line references](broker_passive_knockback_on_taking_melee_damage.md#fixed-source-evidence) | Not covered by the description | These are limits and properties omitted from the English. |
 | Universal backward knockback | knock all nearby Enemies around you backwards; `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408` | Actual interruption depends on Stagger resistance and state; Impact differs for super armour and other armour [Fixed source and line references](broker_passive_knockback_on_taking_melee_damage.md#fixed-source-evidence) | Cannot confirm | The accepted evidence does not establish guaranteed backward knockback for every nearby enemy and state; retain this question without further research. |
 
+
+<a id="broker_passive_crit_grants_damage"></a>
+
+## Channelled Devastation
+
+Full raw template and formatting: [source evidence](broker_passive_crit_grants_damage.md#original-english-template-and-reconstruction). Name hash `b59bc562`. Every row uses `ui / loc_talent_broker_passive_crit_grants_damage_desc / ef095720`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Current chance, bonus and cap | Each 1% of current Critical Hit Chance grants +0.5% Melee Damage; 30 stacks, up to +15%; `ui / loc_talent_broker_passive_crit_grants_damage_desc / ef095720` | `floor(chance / 0.01)`, capped at 30, multiplied by `melee_damage_per_stack = 0.005` [Fixed source and line references](broker_passive_crit_grants_damage.md#fixed-source-evidence) | Consistent | The English refers to current chance rather than a Critical Hit event and states the correct bonus and cap. |
+| Rounding, updates and combination | No fractional-step rounding or weapon/update formula is stated; `ui / loc_talent_broker_passive_crit_grants_damage_desc / ef095720` | `update` obtains chance from the wielded weapon and handling template; whole steps count and Melee Damage adds at the general Damage stage [Fixed source and line references](broker_passive_crit_grants_damage.md#fixed-source-evidence) | Not covered by the description | This retains the original 12.8%→12 steps→6% and 100→106/131 examples, dynamic updates and non-consumption explanation. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -66,6 +66,7 @@
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="Sticky Hands talent icon"> [Sticky Hands](#broker_passive_reduce_swap_time) | <ul><li>Gain 40% Weapon Swap Speed; while hip-firing or bracing, reduce Recoil by 10% and Spread by 30%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="Calling for a Time Out talent icon"> [Calling for a Time Out](#broker_passive_reduced_toughness_damage_during_reload) | <ul><li>Reduce Toughness Damage taken by 25% while reloading and for 4s after leaving the reload state.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="Street Tough talent icon"> [Street Tough](#broker_passive_knockback_on_taking_melee_damage) | <ul><li>A qualifying Melee hit triggers nearby knockback and +10% Movement Speed for 3s; cooldown 8s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="Channelled Devastation talent icon"> [Channelled Devastation](#broker_passive_crit_grants_damage) | <ul><li>Each whole percentage point of current Critical Hit Chance grants 0.5% Melee Damage, up to 30 steps / 15%.</li></ul> | Talent |
 
 ---
 
@@ -981,3 +982,19 @@
 - **Knockback limits**: The pulse itself deals no Damage. Whether it interrupts an enemy still depends on the enemy's Stagger resistance and state.
 
 [Details](broker_passive_knockback_on_taking_melee_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_crit_grants_damage"></a>
+
+### Channelled Devastation
+
+<img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="72" height="72" alt="Channelled Devastation talent icon">
+
+- **Calculation**: Each complete percentage point of current Critical Hit Chance grants 0.5% Melee Damage. At most 30 percentage points count, for a total of 15%. You do not need to land a Critical Hit first, and Critical Hit Chance is not consumed.
+
+- **Damage example**: At 12.8% Critical Hit Chance, 12 steps count, giving 12 × 0.5% = 6% Damage. Base 100 becomes 106. With another 25% Damage bonus at the same stage, 100 × (1 + 25% + 6%) = 131.
+
+- **Dynamic updates**: Changes to your weapon, temporary bonuses or Critical Hit Chance also update the Melee Damage bonus.
+
+[Details](broker_passive_crit_grants_damage.md) · [Back to index](#talent-index)
