@@ -56,3 +56,4 @@
 | [還擊](entries/還擊/README.md) | [來源索引](entries/還擊/SOURCE_INDEX.md) |
 | [猛撞](entries/猛撞/README.md) | [來源索引](entries/猛撞/SOURCE_INDEX.md) |
 | [燃起來！](entries/燃起來！/README.md) | [來源索引](entries/燃起來！/SOURCE_INDEX.md) |
+| [未卜先知](entries/未卜先知/README.md) | [來源索引](entries/未卜先知/SOURCE_INDEX.md) |

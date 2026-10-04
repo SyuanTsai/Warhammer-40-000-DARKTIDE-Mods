@@ -675,6 +675,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
       "effect": "持用電漿槍時，依目前熱能階數提高一般爆擊機率與遠程爆擊傷害；最多五階，散熱／裝填或切換離手時停用。"
+    },
+    {
+      "id": "precognition",
+      "name_zh_tw": "未卜先知",
+      "name_en": "Precognition",
+      "name_key": "loc_trait_bespoke_dodge_grants_finesse_bonus",
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "name_hash": "621fe25c",
+      "description_hash": "bcf83027",
+      "page": "entries/未卜先知/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "effect": "成功閃避後，2秒內提高暴擊或弱點命中的靈巧額外傷害：戰刃、決鬥劍、烈焰力場巨劍與烈焰力場劍 I–IV 為45／50／55／60%；短刀與穿音速雙刀為30／35／40／45%。"
     }
   ],
   "weapons": [
@@ -12708,6 +12721,276 @@
       "icon": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_157",
       "effect": "電漿槍 M35熔岩核心 Mk II（`plasmagun_p1_m1`）與 Mk III（`plasmagun_p1_m2`）共用 I–IV 數值。每熱階增加一般爆擊機率 +5.5／+7／+8.5／+10 個百分點，以及遠程爆擊傷害 +4／+6／+8／+10%；最多五階，兩種射擊模式都是單發 hit-scan。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.45,
+          "II": 0.5,
+          "III": 0.55,
+          "IV": 0.6
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 190,
+        "end_line": 243
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高45／50／55／60%；總命中增幅取決於 Finesse 組件比例。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/未卜先知/weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.45,
+          "II": 0.5,
+          "III": 0.55,
+          "IV": 0.6
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 130,
+        "end_line": 183
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高45／50／55／60%；總命中增幅取決於 Finesse 組件比例。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/未卜先知/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.3,
+          "II": 0.35,
+          "III": 0.4,
+          "IV": 0.45
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 190,
+        "end_line": 243
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高30／35／40／45%；總命中增幅取決於 Finesse 組件比例。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/未卜先知/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.45,
+          "II": 0.5,
+          "III": 0.55,
+          "IV": 0.6
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 346,
+        "end_line": 399
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高45／50／55／60%；總命中增幅取決於 Finesse 組件比例。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/未卜先知/weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.45,
+          "II": 0.5,
+          "III": 0.55,
+          "IV": 0.6
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 269,
+        "end_line": 322
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高45／50／55／60%；總命中增幅取決於 Finesse 組件比例。"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus",
+      "blessing_id": "precognition",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/未卜先知/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "finesse_modifier_bonus",
+        "raw_additive_modifier": {
+          "I": 0.3,
+          "II": 0.35,
+          "III": 0.4,
+          "IV": 0.45
+        },
+        "active_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 110,
+        "end_line": 163
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_dodge_grants_finesse_bonus_desc",
+      "description_hash": "bcf83027",
+      "icon": "https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_182",
+      "effect": "成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高30／35／40／45%；總命中增幅取決於 Finesse 組件比例。"
     }
   ],
   "bindings": [
@@ -17721,6 +18004,188 @@
         "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
         "import_line": 18,
         "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "precognition",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_finesse_bonus",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/dodge_grants_finesse_damage",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]

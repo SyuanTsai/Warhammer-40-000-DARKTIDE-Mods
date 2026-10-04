@@ -231,3 +231,5 @@
 - 第6輪三項已Commit後完整掃描通過：riposte (`9d904ba80b8c75877d124422088c6a20c0d0e04f`)、shred (`6ec44fbdb35395e00771a2965f81910839ea5369`)、bash (`c0e42a9a91498d2c369662ae1ac0142bb419a482`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-006-full-scan.json`／SHA-256 `8505ff10afb71662367b9647383133573da8608b07a168914853cf206a3e0506`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [燃起來！](2026-10-03-GETS-HOT_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [未卜先知](2026-10-03-PRECOGNITION_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。

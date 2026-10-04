@@ -8,12 +8,13 @@
 | <img src="https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72" width="32" height="32" alt="撕碎祝福圖示"> [撕碎](../../../entries/撕碎/README.md)<br>- Lacerate<br>[完整說明](../../../entries/撕碎/README.md) | <ul><li>符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca" width="32" height="32" alt="行刑者祝福圖示"> [行刑者](../../../entries/行刑者/README.md)<br>- Executor<br>[完整說明](../../../entries/行刑者/README.md) | <ul><li>近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376" width="32" height="32" alt="還擊祝福圖示"> [還擊](../../../entries/還擊/README.md)<br>- Riposte<br>[完整說明](../../../entries/還擊/README.md) | <ul><li>成功閃避敵方攻擊後，提高12.5／15／17.5／20個百分點的爆擊率，持續6秒；再次合格閃避刷新，切出時加成暫停、期限繼續。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6" width="32" height="32" alt="未卜先知祝福圖示"> [未卜先知](../../../entries/未卜先知/README.md)<br>- Precognition<br>[完整說明](../../../entries/未卜先知/README.md) | <ul><li>成功閃避後，2秒內使暴擊或弱點命中的 Finesse 傷害組件提高45／50／55／60%；總命中增幅取決於 Finesse 組件比例。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 戰刃 卡塔昌 Mk III | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md)、[還擊](../../../entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md) | I–IV |
-| 戰刃 卡塔昌 Mk VI | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md)、[還擊](../../../entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md) | I–IV |
+| 戰刃 卡塔昌 Mk III | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md)、[還擊](../../../entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md)、[未卜先知](../../../entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md) | I–IV |
+| 戰刃 卡塔昌 Mk VI | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md)、[還擊](../../../entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md)、[未卜先知](../../../entries/未卜先知/weapon_trait_bespoke_combatknife_p1_dodge_grants_finesse_bonus.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
