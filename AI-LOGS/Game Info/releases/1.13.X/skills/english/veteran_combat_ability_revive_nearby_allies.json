@@ -1,0 +1,167 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for used and unused display parameters.",
+  "static_reconstruction": "Voice of Command revives Knocked Down Allies within Radius.",
+  "additional_english_pairs": [
+    {
+      "key": "loc_talent_veteran_combat_ability_stagger_nearby_enemies",
+      "hash": "36c11826",
+      "text": "Voice of Command",
+      "usage": "talent_name display parameter"
+    }
+  ],
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name/description and Voice of Command display-name records",
+    "Existing icon audit",
+    "veteran_talents.lua:565-605 (display parameters only)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier for automatic Knocked Down assistance, radial allied query, multiple allies, excluded states, passive-loadout routing, unattached cost/radius buff and 9m/40s baseline. Accepted formatter evidence reused; no full revive or loadout implementation analysis repeated.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "9m/40s baseline measured in game.",
+    "Exact assistance timing and target-state boundaries measured in game."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full revive/loadout implementation analysis (outside clarified review scope)"
+  ],
+  "id": "veteran_combat_ability_revive_nearby_allies",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Only In Death Does Duty End",
+  "name_key": "loc_talent_veteran_combat_ability_revives",
+  "name_hash": "9533a7e9",
+  "name_entry_index": 9644,
+  "description_key": "loc_talent_veteran_combat_ability_revives_new_description",
+  "description_hash": "1ae25548",
+  "description_entry_index": 1751,
+  "raw_template": "{talent_name:%s} revives Knocked Down Allies within Radius.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 3
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 862,
+      "unique_source_ranges": 204,
+      "source_files": 42
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 720,
+      "local_references": 6629,
+      "remote_references": 9779,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 16,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 6,
+        "scroll": false
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 3,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 32,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 5206,
+      "sha256": "171dba6714a0c8364e6b61f3a08caddacb123831ab1370d6b1eca76f897397bc",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "ability-name reconstruction and unused numeric display parameters",
+      "result": "passed",
+      "numeric_range_or_cooldown_tokens_in_raw_template": false
+    },
+    {
+      "check": "range and unmodified recharge arithmetic",
+      "result": "passed",
+      "inside_distances_metres": [
+        5,
+        8
+      ],
+      "outside_distance_metres": 10,
+      "baseline_radius_metres": 9,
+      "baseline_recharge_seconds": 40
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 18,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 16
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/only-in-death-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_revive_nearby_allies.md",
+  "commit": "a39b4e917c2d2de9cdc81b86f46235708ef67406"
+}

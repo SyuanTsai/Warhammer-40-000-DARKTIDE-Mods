@@ -1,5 +1,7 @@
 # 強化能量循環(Augmented Power-Cycle)：原始碼依據
 
+[English](en/cryptic_increased_passive_cooldown_regen.md)
+
 [返回玩家說明](README.md#cryptic_increased_passive_cooldown_regen)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_increased_passive_cooldown_regen)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

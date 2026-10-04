@@ -1,5 +1,7 @@
 # 亞空間爆發(Warp Rupture)：原始碼依據
 
+[English](en/psyker_discharge_damage_debuff.md)
+
 [返回玩家說明](README.md#psyker_discharge_damage_debuff)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_discharge_damage_debuff)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

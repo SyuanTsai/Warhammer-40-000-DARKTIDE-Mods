@@ -1,0 +1,64 @@
+{
+  "id": "veteran_class",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "FILE_MAP.json: scope Veteran",
+  "English_entry": "Game Info/releases/1.13.X/skills/talents/Veteran/en/README.md",
+  "checks": {
+    "mapped_English_pages": 89,
+    "Chinese_language_switch_only": 89,
+    "skill_commit_history": 83,
+    "reference_validator": {
+      "Markdown_files": 178,
+      "local_references": 1728,
+      "remote_references": 5077,
+      "errors": 0
+    },
+    "Markdown_parse_and_HTML_structure": {
+      "English_pages": 89,
+      "tree_table": "3 columns / 77 rows",
+      "tree_icons": "32px index / 72px body",
+      "base_sections": 6,
+      "technical_index_rows": 83,
+      "percentage_rows": 83,
+      "comparison_rules": 516,
+      "excluded_definition_rows": 19
+    },
+    "icon_identity_matches_Chinese": 77,
+    "public_images_GET": {
+      "checked": 77,
+      "passed": 77,
+      "method": "Anonymous GET, content type and first 16 bytes; HEAD returned 403."
+    },
+    "English_prose_language": "passed",
+    "read_only_class_text_review": "passed; added base-cover-peeking qualifier to duplicate Low Profile labels"
+  },
+  "comparison_totals": {
+    "Consistent": 231,
+    "Explicit contradiction": 9,
+    "Not covered by the description": 267,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 9
+  },
+  "evidence_limits": [
+    "Existing source analysis and icon provenance were reused.",
+    "Previously recorded unresolved English interpretations remain in LOCALIZATION_COMPARISON.md.",
+    "No fresh mechanism research, in-game execution or game UI observation.",
+    "Markdown was parsed and its HTML structure inspected; browser screenshot inspection was not performed."
+  ],
+  "commit_path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json",
+  "timing_checkpoint": {
+    "five_skills": "Scavenger through Determined",
+    "start_UTC": "2026-10-03 11:46:55",
+    "end_UTC": "2026-10-03 12:03:38",
+    "elapsed_seconds": 1003,
+    "remaining_at_checkpoint": {
+      "mechanism": 564,
+      "class_support": 41,
+      "shared": 2
+    },
+    "provisional_remaining_continuous_hours": "20–30; based on observed pace, subject to document complexity"
+  }
+}

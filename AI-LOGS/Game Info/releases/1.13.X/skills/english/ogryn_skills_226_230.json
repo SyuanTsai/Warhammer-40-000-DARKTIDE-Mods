@@ -1,0 +1,72 @@
+{
+  "id": "ogryn_skills_226_230",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L862–882, L1909–1930, L838–861, L2685–2716 and base_talents.lua L437–463 were read. Existing mechanisms, values, formulas, source links and common formatting reused.",
+  "questions": [
+    "Final game UI remains unobserved. No new explicit English contradiction in this batch."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_knocked_allies_grant_damage_reduction",
+      "name": "Won't Give In",
+      "name_hash": "229fa257",
+      "description_hash": "3845cefa",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_knocked_allies_grant_damage_reduction.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_knocked_allies_grant_damage_reduction.md",
+      "commit": "0971c61db"
+    },
+    {
+      "id": "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+      "name": "Crunch!",
+      "name_hash": "43e35dc2",
+      "description_hash": "d8632c1b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_fully_charged_attacks_gain_damage_and_stagger.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_fully_charged_attacks_gain_damage_and_stagger.md",
+      "commit": "7b52b1187"
+    },
+    {
+      "id": "ogryn_nearby_bleeds_reduce_damage_taken",
+      "name": "Delight in Destruction",
+      "name_hash": "3984145b",
+      "description_hash": "2f439ba8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_nearby_bleeds_reduce_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_nearby_bleeds_reduce_damage_taken.md",
+      "commit": "c4f6a34be"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "name": "Toughness Damage Reduction",
+      "name_hash": "4cf5defc",
+      "description_hash": "1272bcc0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/base_toughness_damage_reduction_node_buff_medium_1.md",
+      "commit": "439f9e28e"
+    },
+    {
+      "id": "ogryn_damage_taken_by_all_increases_strength_tdr",
+      "name": "No Hurting Friends!",
+      "name_hash": "78920596",
+      "description_hash": "05e8af7e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_taken_by_all_increases_strength_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_taken_by_all_increases_strength_tdr.md",
+      "commit": "a0c4f5cb1"
+    }
+  ],
+  "English_wording_note": "No Hurting Friends! English says Damage Taken, without the Chinese Health-only restriction; its English trigger is consistent.",
+  "timing": {
+    "commit_interval_seconds": 288,
+    "from_commit": "7e0e13e93",
+    "to_commit": "a0c4f5cb1",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

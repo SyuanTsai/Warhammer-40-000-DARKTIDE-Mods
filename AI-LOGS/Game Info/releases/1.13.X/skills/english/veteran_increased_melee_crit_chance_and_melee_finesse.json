@@ -1,0 +1,117 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+10% Melee Critical Hit Chance & +25% Melee Finesse Bonus.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 2,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Desperado dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:1925-1966, display fields only"
+  ],
+  "reused_evidence": [
+    "Accepted melee critical chance0.10 and melee finesse bonus0.25, separate probability and extra-damage meaning",
+    "Accepted shared finesse calculation, combined critical weakspot component and once-only bonus",
+    "Accepted buff-value lookup, custom percentage conversion and placeholder interpolation",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5794 bytes, SHA256 e536323641cf3214b43ba06b7f5107b0459a92a86da8c7bf8a760bda30e69092",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only draft checked exact English pairs, separate probability/finesse meanings, once-only combined hit and existing damage examples. Primary checked the two display fields and reviewed the complete final staged diff."
+  },
+  "static_examples": {
+    "starting_critical_chance": 0.1,
+    "critical_chance_after": 0.2,
+    "base_damage": 100,
+    "extra_component40_before": 140,
+    "extra_component40_after": 150,
+    "whole_hit_increase40_percent": 7.14285714285714,
+    "extra_component100_before": 200,
+    "extra_component100_after": 225,
+    "whole_hit_increase100_percent": 12.5
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Actual critical frequency, weapon/target-specific final damage and average DPS.",
+    "Final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game critical/damage/UI measurements"
+  ],
+  "id": "veteran_increased_melee_crit_chance_and_melee_finesse",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Desperado",
+  "name_key": "loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse",
+  "name_hash": "cd3136fe",
+  "description_key": "loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse_desc",
+  "description_hash": "0ffe42c2",
+  "raw_template": "{crit_chance%s} Melee Critical Hit Chance & {finesse%s} Melee Finesse Bonus.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 113,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 153,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 324,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 43,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/desperado-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_melee_crit_chance_and_melee_finesse.md",
+  "commit": "c864e15c5fa3d5027a1e355cf9e81d1a7810d1af"
+}

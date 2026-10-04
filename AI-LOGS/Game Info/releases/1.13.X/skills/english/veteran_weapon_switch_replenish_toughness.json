@@ -1,0 +1,121 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing two-parameter display mapping read from fixed-source modifier definition.",
+  "static_reconstruction": "Activating Melee Specialist and Ranged Specialist replenishes 20% Toughness. 3s Cooldown for each.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese On Your Toes dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA veteran_talents.lua lines 2958–2977: exact UI keys, literal 0.2 percentage and 3-second number display"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted On Your Toes WebP audit: 288×288, 3552 bytes, SHA-256 592c5d2077f4f421e95481c6ab1f58cd168d96193c0d2b5a673ed087a99a52eb; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact same-version name/key/hash/raw, Keystone modifier category, separate direction cooldowns, required/consumed storage and maximum-Toughness recovery with normal modifiers and deficit cap. Primary resolved both literal placeholders through the narrow definition, retained the strict >3 timestamp boundary and full assumed recovery examples, and independently recorded omitted limits without an English erratum. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "Maximum 100, current 70; recovery multiplier 1",
+      "Requested: `100 × 0.20 × 1 = 20 points`; actual: `min(20, 100 − 70) = 20`; new total `70 + 20 = 90/100`.",
+      "A qualifying activation restores 20 points with room for the whole amount."
+    ],
+    [
+      "Maximum 100, current 90; recovery multiplier 1",
+      "Requested: `20 points`; actual: `min(20, 100 − 90) = 10`; new total `100/100`.",
+      "Only the 10 missing points are restored."
+    ],
+    [
+      "Maximum 100, current 70; illustrative applicable +25% recovery modifier",
+      "Requested: `100 × 0.20 × 1.25 = 25 points`; actual: `min(25, 30) = 25`; new total `95/100`.",
+      "The ordinary recovery modifier changes the grant; storing more stacks does not multiply it."
+    ]
+  ],
+  "category_section": "Keystones",
+  "unconfirmed": [
+    "The recovery examples use explicit maximum/current values and modifiers with recovery permitted and the cooldown check passing. Exact threshold-frame timing was not measured. The display says 3 seconds, while the accepted static comparison is strictly t greater than last timestamp plus 3; no exact observed 3.0-second UI behavior is claimed."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "veteran_weapon_switch_replenish_toughness",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "On Your Toes",
+  "name_key": "loc_talent_veteran_weapon_switch_replenish_toughness",
+  "name_hash": "4d8f7e13",
+  "description_key": "loc_talent_veteran_weapon_switch_replenish_toughness_description",
+  "description_hash": "9a112db1",
+  "raw_template": "Activating Melee Specialist and Ranged Specialist replenishes {toughness:%s} Toughness. {cooldown:%s}s Cooldown for each.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 197,
+        "Explicit contradiction": 8,
+        "Not covered by the description": 225,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 9
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 520,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 71,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/on-your-toes-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_toughness.md",
+  "commit": "13caba26bc3f0de376995eb8f83799a1a1a66d33"
+}

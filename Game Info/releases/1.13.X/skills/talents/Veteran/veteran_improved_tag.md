@@ -1,5 +1,7 @@
 # 鎖定目標(Focus Target!)：原始碼依據
 
+[English](en/veteran_improved_tag.md)
+
 [返回玩家說明](README.md#veteran_improved_tag)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

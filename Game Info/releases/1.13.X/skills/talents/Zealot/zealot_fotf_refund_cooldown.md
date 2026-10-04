@@ -1,5 +1,7 @@
 # 無盡狂怒(Unrelenting Fury)：原始碼依據
 
+[English](en/zealot_fotf_refund_cooldown.md)
+
 [返回玩家說明](README.md#zealot_fotf_refund_cooldown)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_fotf_refund_cooldown)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

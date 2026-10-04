@@ -1,5 +1,7 @@
 # Low Profile(Low Profile)
 
+[English](en/veteran_cover_peeking.md)
+
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 
 ## 運作方式

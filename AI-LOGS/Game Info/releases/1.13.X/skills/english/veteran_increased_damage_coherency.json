@@ -1,0 +1,173 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted display-field read only, plus the existing Scavenger dossier for owner/aura-priority citations.",
+  "static_reconstruction": "+7.5% Damage for you and Allies in Coherency.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese Fire Team dossier and player description",
+    "Exact same-version English name, full raw description and Scavenger name record",
+    "Existing icon audit",
+    "veteran_talents.lua:696-720 (display field)",
+    "Existing Scavenger dossier for owner membership and base aura priority citations only"
+  ],
+  "reused_mechanism_evidence": "Existing Fire Team dossier for +0.075 additive damage, max_stacks 1 and veteran_aura priority 2; existing Scavenger evidence supplies priority 1 and owner-inclusive Coherency membership. Accepted common percentage/buff lookup/outer formatting evidence reused. Complete Coherency or damage chains were not reanalyzed.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Actual Coherency transitions, aura update timing, multi-provider interactions and final game UI."
+  ],
+  "unperformed": [
+    "Repeated complete Coherency and damage implementation analysis (outside clarified review scope)",
+    "In-game aura/damage measurements",
+    "Actual game UI observation"
+  ],
+  "id": "veteran_increased_damage_coherency",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Fire Team",
+  "name_key": "loc_talent_veteran_damage_coherency",
+  "name_hash": "75bd6576",
+  "name_entry_index": 7650,
+  "description_key": "loc_talent_veteran_damage_coherency_desc",
+  "description_hash": "9a17fbd0",
+  "description_entry_index": 9935,
+  "raw_template": "{damage:%s} Damage for you and Allies in Coherency.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 3
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 1661,
+      "unique_source_ranges": 329,
+      "source_files": 59
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 734,
+      "local_references": 6814,
+      "remote_references": 10648,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 30,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 5,
+        "scroll": false
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 1,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 60,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 5236,
+      "sha256": "691888a8cdefd1b7ad5f8d43cc4822acdaa4861d426e3cba5a953f55e25d9bf4",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Exact one-field English template and percentage reconstruction",
+      "result": "passed",
+      "parameter_fields": 1,
+      "raw_damage_delta": 0.075,
+      "reconstructed_damage": "+7.5%"
+    },
+    {
+      "check": "Three isolated additive and duplicate-aura examples",
+      "result": "passed",
+      "no_other_stage_bonus": [
+        100,
+        107.5
+      ],
+      "existing_25_percent_bonus": [
+        125,
+        132.5
+      ],
+      "relative_gain_over_125": 0.06,
+      "two_identical_auras_stage_result": 107.5,
+      "universal_final_hit_gain_claim": false
+    },
+    {
+      "check": "Owner/allies, same-aura cap and selected base replacement remain separate",
+      "result": "passed",
+      "max_stacks": 1,
+      "selected_priority": 2,
+      "base_priority": 1,
+      "base_name": "Scavenger"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 32,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 30
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/fire-team-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md",
+  "commit": "58512e57f0ca41f41d89392368d25f11b70a8036"
+}

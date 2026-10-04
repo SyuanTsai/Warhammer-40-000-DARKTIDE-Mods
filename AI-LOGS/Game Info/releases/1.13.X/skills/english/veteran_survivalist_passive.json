@@ -1,0 +1,37 @@
+{
+  "id": "veteran_survivalist_passive",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name": "Practiced Efficiency",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_survivalist_passive.md",
+  "text_resource": "SteamBuild_25606770_1.13.1 / content/localization/ui / en",
+  "name_key": "loc_talent_veteran_survivalist_passive",
+  "name_hash": "55ea75f0",
+  "description_key": "loc_talent_veteran_survivalist_passive_desc",
+  "description_hash": "88860a94",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_english_comparison": {
+      "Consistent": 4,
+      "Explicit contradiction": 0,
+      "Not covered by the description": 3,
+      "No corresponding implementation evidence found": 0,
+      "Cannot confirm": 0
+    },
+    "added_markdown_fragments": "parsed",
+    "added_local_references": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed"
+  },
+  "evidence_mode": "Reuse accepted mechanisms, citations and formatting; no call-chain retracing.",
+  "new_code_reads": [
+    "Necessary display placeholder mapping only: veteran_talents.lua#L1417-L1436. Existing 0.01/5 values and all mechanism evidence reused."
+  ],
+  "questions": [
+    "The raw English template spells occur as ocurr; the verbatim template and static reconstruction preserve that spelling."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_survivalist_passive.md"
+}

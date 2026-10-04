@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_615_619",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L2386-L2405 (minimally read last batch), L3042-L3062, L2280-L2299, L2724-L2763, L2979-L3017. Known explicit value-manipulation formatter reused from accepted L860-L883 documentation. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "English Monstrosities count as 5 conflicts with accepted total weight 1+5=6. Good Balance duration mapping statically gives -150 rather than implemented 2.5; actual English game display Cannot confirm. Thy Wrath raw trailing space preserved by JSON quotation."
+  ],
+  "skills": [
+    {
+      "id": "zealot_push_attacks_attack_speed",
+      "name": "Punish Impiety",
+      "name_hash": "707ee4fe",
+      "description_hash": "ab4ad805",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_push_attacks_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_push_attacks_attack_speed.md",
+      "commit": "c1a891b59"
+    },
+    {
+      "id": "zealot_damage_boosts_movement",
+      "name": "Thy Wrath be Swift",
+      "name_hash": "2b1f657c",
+      "description_hash": "bdaf3ea6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_damage_boosts_movement.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_damage_boosts_movement.md",
+      "commit": "e8f7b5e4d"
+    },
+    {
+      "id": "zealot_stamina_on_block_break",
+      "name": "Retaliatory Defence",
+      "name_hash": "2db26b4b",
+      "description_hash": "2fb38d1a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stamina_on_block_break.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stamina_on_block_break.md",
+      "commit": "a5101ca42"
+    },
+    {
+      "id": "zealot_reduced_damage_after_dodge",
+      "name": "Good Balance",
+      "name_hash": "027aafc6",
+      "description_hash": "d65317f7",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_after_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_after_dodge.md",
+      "commit": "3f51caff2"
+    },
+    {
+      "id": "zealot_toughness_in_melee",
+      "name": "Enemies Within, Enemies Without",
+      "name_hash": "3991c347",
+      "description_hash": "fc8eff61",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_in_melee.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_in_melee.md",
+      "commit": "d99677818"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 351,
+    "from_commit": "a777bd53f",
+    "to_commit": "d99677818",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

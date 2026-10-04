@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_494_498",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: cryptic_talents.lua L447-L473 (Piercing Sight, already read before this batch), L414-L430 (Calculated Priority), L1125-L1160 (Flensing Protocols), L1402-L1430 (Redline Capacitors), L1240-L1282 (Power Overload). Existing numeric values and paired ability/Capacitance names reused; modifier English names reused from verified Chinese navigation. No mechanism retracing."
+  ],
+  "questions": [
+    "No new unresolved question or explicit English contradiction. The ranged-kill requirement in Calculated Priority and stack/resource lifecycle details are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_precision_stance_crit_cleave",
+      "name": "Piercing Sight",
+      "name_hash": "64749e8f",
+      "description_hash": "f7e91cd6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_crit_cleave.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_crit_cleave.md",
+      "commit": "ecac1c882"
+    },
+    {
+      "id": "cryptic_precision_stance_damage_on_elite_kill",
+      "name": "Calculated Priority",
+      "name_hash": "1194be75",
+      "description_hash": "0da94924",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_damage_on_elite_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_damage_on_elite_kill.md",
+      "commit": "6e175524b"
+    },
+    {
+      "id": "cryptic_dissector",
+      "name": "Flensing Protocols",
+      "name_hash": "1a83e6d0",
+      "description_hash": "3e2c62db",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector.md",
+      "commit": "cf7487b61"
+    },
+    {
+      "id": "cryptic_redline",
+      "name": "Redline Capacitors",
+      "name_hash": "765c4c20",
+      "description_hash": "22a7f709",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline.md",
+      "commit": "40d62960c"
+    },
+    {
+      "id": "cryptic_overload_keystone",
+      "name": "Power Overload",
+      "name_hash": "c79e512b",
+      "description_hash": "58d058f4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone.md",
+      "commit": "37f99917b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 725,
+    "from_commit": "d86f15f22",
+    "to_commit": "37f99917b",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

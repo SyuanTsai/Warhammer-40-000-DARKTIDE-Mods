@@ -1,0 +1,72 @@
+{
+  "id": "psyker_skills_318_322",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1697–1702, L1599–1605, L1099–1143, L1571–1587 and L1520–1542.",
+    "Previously verified stack amounts, independent timers, reduction endpoints and Dodge stats reused; shared number/percentage formatting and manipulation override reused. No Buff, damage-calculation or event-chain retracing."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "psyker_spread_warpfire_on_kill",
+      "name": "Wildfire",
+      "name_hash": "19f630c7",
+      "description_hash": "7f4f685e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_spread_warpfire_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_spread_warpfire_on_kill.md",
+      "commit": "765c66df7"
+    },
+    {
+      "id": "psyker_venting_improvements",
+      "name": "Mind in Motion",
+      "name_hash": "f93d1ade",
+      "description_hash": "86b17787",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_venting_improvements.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_venting_improvements.md",
+      "commit": "e19820430"
+    },
+    {
+      "id": "psyker_kills_stack_other_weapon_damage",
+      "name": "Malefic Momentum",
+      "name_hash": "23bf2118",
+      "description_hash": "ef213cd8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_kills_stack_other_weapon_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_kills_stack_other_weapon_damage.md",
+      "commit": "c61437394"
+    },
+    {
+      "id": "psyker_warp_charge_reduces_toughness_damage_taken",
+      "name": "One with the Warp",
+      "name_hash": "96a29f5e",
+      "description_hash": "96e4cb7c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warp_charge_reduces_toughness_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warp_charge_reduces_toughness_damage_taken.md",
+      "commit": "e22137476"
+    },
+    {
+      "id": "psyker_improved_dodge",
+      "name": "Anticipation",
+      "name_hash": "3a1d92bc",
+      "description_hash": "b7dff1d2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_improved_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_improved_dodge.md",
+      "commit": "cafaac27d"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 290,
+    "from_commit": "3f3047396",
+    "to_commit": "cafaac27d",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

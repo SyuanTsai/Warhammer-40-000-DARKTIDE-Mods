@@ -1,5 +1,7 @@
 # 衛兵(Guardsman)
 
+[English](en/veteran_base_ranged_damage.md)
+
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 
 ## 運作方式

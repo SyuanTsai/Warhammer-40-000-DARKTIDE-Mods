@@ -1,0 +1,174 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for display parameters and the six-versus-five-second duration discrepancy.",
+  "static_reconstruction": "Executioner's Stance now outlines Elite & Specialist Enemies for Allies in Coherency for 6s.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 1,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [
+    {
+      "rule": "Shared ally outline duration",
+      "description_reconstruction": "6 seconds",
+      "configured_recipient_effect": "5 seconds",
+      "evidence": "veteran_talents.lua:406-429; talent_settings_veteran.lua:78-99,158-160; veteran_buff_templates.lua:270-293"
+    }
+  ],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name, raw description and referenced ability-name records",
+    "Existing icon audit",
+    "veteran_talents.lua:406-429 and talent_settings_veteran.lua:158-160 (display definition and shared duration setting)",
+    "talent_settings_veteran.lua:78-99 and veteran_buff_templates.lua:270-293 (specific display six-second versus recipient five-second discrepancy)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier and accepted Executioner's Stance evidence for start/refresh grant flags, owner exclusion, current-Coherency recipients, single-instance refresh, recipient-relative candidate range, category exclusions and separate visual timers. Accepted number/name formatter reused. No complete grant, Coherency or outline call-chain analysis repeated.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Actual shared outline visibility, network/update timing and visual offsets.",
+    "Actual game UI observation."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full Coherency/grant/outline implementation analysis (outside clarified review scope)"
+  ],
+  "id": "veteran_combat_ability_coherency_outlines",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Enhanced Target Priority",
+  "name_key": "loc_talent_veteran_combat_ability_coherency_outlines",
+  "name_hash": "e386d7f9",
+  "name_entry_index": 14754,
+  "description_key": "loc_talent_veteran_combat_ability_coherency_outlines_description",
+  "description_hash": "5a8d783e",
+  "description_entry_index": 5875,
+  "raw_template": "{talent_name:%s} now outlines Elite & Specialist Enemies for Allies in Coherency for {duration:%s}s.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 3
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 1141,
+      "unique_source_ranges": 243,
+      "source_files": 42
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 724,
+      "local_references": 6682,
+      "remote_references": 10078,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 20,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 8,
+        "scroll": true
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 2,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 40,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 6388,
+      "sha256": "bbba08dd91a33b7b8f2c203680d2c43de5ec030e6d150dbe583011f7f5565bce",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Exact ability-name/duration reconstruction and shared duration discrepancy",
+      "result": "passed",
+      "parameter_fields": 2,
+      "display_duration_seconds": 6,
+      "shared_duration_seconds": 5,
+      "referenced_ability_name": "Executioner's Stance"
+    },
+    {
+      "check": "Four static timing and recipient-distance examples",
+      "result": "passed",
+      "initial_expiry_seconds": 5,
+      "refresh_time_seconds": 4,
+      "remaining_before_refresh_seconds": 1,
+      "refreshed_expiry_seconds": 9,
+      "late_entry_time_seconds": 2,
+      "next_grant_time_seconds": 4,
+      "distance_49m_squared_ratio": 0.9604,
+      "distance_50m_squared_ratio": 1,
+      "distance_55m_squared_ratio": 1.21,
+      "boundary_operator": "strictly less than",
+      "Specialist_distance_filter_bypassed": true
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 22,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 20
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/enhanced-target-priority-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_coherency_outlines.md",
+  "commit": "c7c4d2a26b0b5e9394838b0e16aead8f7f57c43e"
+}

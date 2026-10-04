@@ -1,5 +1,7 @@
 # 電子獒犬標記指令：原始碼依據
 
+[English](en/adamant_command_dog_with_tag.md)
+
 [返回基礎效果](BASE_EFFECTS.md#adamant_command_dog_with_tag)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

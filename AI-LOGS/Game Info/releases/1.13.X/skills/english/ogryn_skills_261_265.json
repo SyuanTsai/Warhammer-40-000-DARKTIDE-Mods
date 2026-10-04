@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_261_265",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing name/description mappings and display formatting in ogryn_talents.lua L34–72, L200–209, L651–668, L505–516 and L467–504 were read. Existing mechanisms, values, examples and source links were reused.",
+  "questions": [
+    "Bull Rush's complete mapping of English stopping-target categories to accepted armour identifiers is unconfirmed. Actual game presentation remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_charge",
+      "name": "Bull Rush",
+      "name_hash": "80d4e4d1",
+      "description_hash": "8e6bf564",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_charge.md",
+      "commit": "aad854aee"
+    },
+    {
+      "id": "ogryn_grenade_box",
+      "name": "Big Box of Hurt",
+      "name_hash": "848c694f",
+      "description_hash": "77e8d4ed",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_box.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_grenade_box.md",
+      "commit": "74d6e2bb1"
+    },
+    {
+      "id": "ogryn_melee_damage_coherency",
+      "name": "Intimidating Presence",
+      "name_hash": "c99667f7",
+      "description_hash": "36195984",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_damage_coherency.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_coherency.md",
+      "commit": "e3ad2e584"
+    },
+    {
+      "id": "ogryn_helping_hand",
+      "name": "Loyal Protector",
+      "name_hash": "acede63a",
+      "description_hash": "bdd83157",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_helping_hand.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_helping_hand.md",
+      "commit": "a08fa990f"
+    },
+    {
+      "id": "ogryn_base_tank_passive",
+      "name": "Thick Skin",
+      "name_hash": "277672aa",
+      "description_hash": "70b7dd54",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_base_tank_passive.md",
+      "commit": "236039eab"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 341,
+    "from_commit": "ea2b3856c",
+    "to_commit": "236039eab",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

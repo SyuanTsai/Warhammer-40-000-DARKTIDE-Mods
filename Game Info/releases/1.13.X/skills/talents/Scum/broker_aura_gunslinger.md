@@ -1,5 +1,7 @@
 # 神射手(Gunslinger)：基礎光環：原始碼依據
 
+[English](en/broker_aura_gunslinger.md)
+
 [返回基礎效果](BASE_EFFECTS.md#broker_aura_gunslinger)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

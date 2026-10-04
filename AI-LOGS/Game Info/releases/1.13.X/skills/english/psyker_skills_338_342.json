@@ -1,0 +1,75 @@
+{
+  "id": "psyker_skills_338_342",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L2633–2642, L2500–2513, L2768–2779, L2794–2813 and L2535–2571.",
+    "Existing verified values and shared formatter behavior reused; no mechanism or event-chain retracing."
+  ],
+  "questions": [
+    "Crystalline Will: Corruption Damage wording versus remove_wounds(1) remains Cannot confirm; existing Health/Medicae, t <= damage_t and repeated-explosion flag limits are retained without extending research.",
+    "Channeled Force: staff cancellation, switching and chaining trigger timing remains unobserved; Fully Charged does not give an explicit numeric threshold."
+  ],
+  "skills": [
+    {
+      "id": "psyker_weapon_attacks_peril_equilibrium",
+      "name": "Peril Equilibrium",
+      "name_hash": "63ed565b",
+      "description_hash": "dc54df8c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_weapon_attacks_peril_equilibrium.md",
+      "commit": "39cf392e9"
+    },
+    {
+      "id": "psyker_reload_speed_warp_charge",
+      "name": "Surety of Arms",
+      "name_hash": "d9a5f4a2",
+      "description_hash": "62b8a0d4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_reload_speed_warp_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_reload_speed_warp_charge.md",
+      "commit": "2aa390319"
+    },
+    {
+      "id": "psyker_alternative_peril_explosion",
+      "name": "Crystalline Will",
+      "name_hash": "fef3e1de",
+      "description_hash": "7ea53d48",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_alternative_peril_explosion.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_alternative_peril_explosion.md",
+      "commit": "ed59cd16b"
+    },
+    {
+      "id": "psyker_force_staff_bonus",
+      "name": "Channeled Force",
+      "name_hash": "4df98799",
+      "description_hash": "44883ede",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_force_staff_bonus.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_force_staff_bonus.md",
+      "commit": "d9fedd245"
+    },
+    {
+      "id": "psyker_force_staff_quick_attack_bonus",
+      "name": "Empyric Shock",
+      "name_hash": "94dc0150",
+      "description_hash": "c4f73f93",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_force_staff_quick_attack_bonus.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_force_staff_quick_attack_bonus.md",
+      "commit": "79c008204"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 234,
+    "from_commit": "0ce078bce",
+    "to_commit": "79c008204",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; targeted fixed-source rounding discrepancy read.",
+  "static_reconstruction": "+25% Clip Size, rounded up.",
+  "comparison_rule_totals": {
+    "Consistent": 1,
+    "Explicit contradiction": 1,
+    "Not covered by the description": 2,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [
+    {
+      "rule": "Rounding direction",
+      "english": "rounded up",
+      "implemented": "floor / rounded down",
+      "example": "7 × 1.25 = 8.75 → 8 rounds, not 9",
+      "fixed_source": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua:1342-1343"
+    }
+  ],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Lock and Load dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:3097-3112, display field",
+    "player_unit_weapon_extension.lua:1326-1346, targeted explicit rounding discrepancy",
+    "buff_settings.lua:1048-1058, common base-value definitions"
+  ],
+  "reused_evidence": [
+    "Existing +0.25 magazine modifier, reserve separation and per-slot limits",
+    "Accepted shared percentage formatter",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 6388 bytes, SHA256 9790ccce73a54206e009e6c63464f308cc83e28ee9141d23200355de4916401c",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "exact pairing, magazine-only scope and English rounded-up contradiction identified; primary verified fixed floor lines and final text"
+  },
+  "static_examples": {
+    "base_magazine_40": 50,
+    "base_magazine_7": 8,
+    "incorrect_round_up_for_7": 9,
+    "other_modifiers": "none; hard cap above example results"
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Actual small/multi-magazine configurations, initialization/network boundaries and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New public-image retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game magazine/UI measurements"
+  ],
+  "id": "veteran_clip_size",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Lock and Load",
+  "name_key": "loc_talent_veteran_2_tier_2_name_2",
+  "name_hash": "58740664",
+  "description_key": "loc_talent_adamant_clip_size_alt_desc",
+  "description_hash": "5f584f5e",
+  "raw_template": "{clip_size:%s} Clip Size, rounded up.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 93,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 130,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 261,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 34,
+      "comparison_rows": 4,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/lock-and-load-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_clip_size.md",
+  "commit": "8b2dbfcb98758553e1f607f7502a114c9f741813"
+}

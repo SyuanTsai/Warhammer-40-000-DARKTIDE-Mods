@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_231_235",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L1331–1351, L904–930, L931–956, L983–1007 and L1221–1241 were read. Existing mechanisms, values, formulas, source links and common formatting reused.",
+  "questions": [
+    "Final game UI remains unobserved. Payback Time's existing melee-trigger cross-source question retained as supplementary; no new explicit English contradiction."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_ally_movement_boost_on_ability",
+      "name": "Get Stuck In",
+      "name_hash": "58c6ea3b",
+      "description_hash": "2156e8e1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ally_movement_boost_on_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ally_movement_boost_on_ability.md",
+      "commit": "1e67d3713"
+    },
+    {
+      "id": "ogryn_windup_reduces_damage_taken",
+      "name": "Implacable",
+      "name_hash": "944c3baa",
+      "description_hash": "fed4526c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_windup_reduces_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_windup_reduces_damage_taken.md",
+      "commit": "68309a20a"
+    },
+    {
+      "id": "ogryn_windup_is_uninterruptible",
+      "name": "No Stopping Me!",
+      "name_hash": "c63c5e99",
+      "description_hash": "6704b700",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_windup_is_uninterruptible.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_windup_is_uninterruptible.md",
+      "commit": "bf93d55db"
+    },
+    {
+      "id": "ogryn_kills_grant_crit_chance",
+      "name": "Massacre",
+      "name_hash": "b46db274",
+      "description_hash": "4e716e92",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_kills_grant_crit_chance.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_kills_grant_crit_chance.md",
+      "commit": "ac2da2044"
+    },
+    {
+      "id": "ogryn_revenge_damage",
+      "name": "Payback Time",
+      "name_hash": "b8069177",
+      "description_hash": "2474ccf6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_revenge_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_revenge_damage.md",
+      "commit": "28643afb5"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 247,
+    "from_commit": "856d67369",
+    "to_commit": "28643afb5",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

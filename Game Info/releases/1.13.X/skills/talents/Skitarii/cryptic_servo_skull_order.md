@@ -1,5 +1,7 @@
 # 伺服頭骨(Servo-Skull)：原始碼依據
 
+[English](en/cryptic_servo_skull_order.md)
+
 [返回基礎效果](BASE_EFFECTS.md#cryptic_servo_skull_order)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

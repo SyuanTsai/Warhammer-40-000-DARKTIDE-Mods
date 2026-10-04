@@ -1,0 +1,65 @@
+{
+  "id": "ogryn_skills_206_210",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display maps in the cited talent definitions were read. Accepted mechanisms, calculations, decimal formatting and image evidence reused; source pointers remain in the English documents.",
+  "questions": [
+    "Existing multi-Ogryn shared-state behavior and final game UI remain unobserved. No new unresolved English contradiction in this batch."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_heavy_hitter_tdr",
+      "name": "Don't Feel a Thing",
+      "name_hash": "75b8b424",
+      "description_hash": "063dfc94",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_tdr.md",
+      "commit": "49043c104"
+    },
+    {
+      "id": "ogryn_heavy_hitter_cleave",
+      "name": "Great Cleaver",
+      "name_hash": "af115733",
+      "description_hash": "7eed29b9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_cleave.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_cleave.md",
+      "commit": "c035ee4c7"
+    },
+    {
+      "id": "ogryn_heavy_hitter_max_stacks_improves_toughness",
+      "name": "Unstoppable",
+      "name_hash": "d47d21bf",
+      "description_hash": "e1a057de",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_max_stacks_improves_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_max_stacks_improves_toughness.md",
+      "commit": "7c9773568"
+    },
+    {
+      "id": "ogryn_heavy_hitter_stagger",
+      "name": "Impactful",
+      "name_hash": "7d3c1644",
+      "description_hash": "657b35a0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_stagger.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_stagger.md",
+      "commit": "dfaf1fbfe"
+    },
+    {
+      "id": "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+      "name": "Just Getting Started!",
+      "name_hash": "377e881a",
+      "description_hash": "7e2f23b1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md",
+      "commit": "884a0075c"
+    }
+  ]
+}

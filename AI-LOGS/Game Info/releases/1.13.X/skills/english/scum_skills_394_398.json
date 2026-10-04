@@ -1,0 +1,69 @@
+{
+  "id": "scum_skills_394_398",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Minimum existing English display mappings only: broker_talents.lua L1579-L1588, L1664-L1707, L1367-L1373, L1505-L1515 and L911-L917. Accepted values and shared formatting reused; no mechanism, Buff, event or call-chain retracing.",
+  "questions": "None newly unresolved in this batch.",
+  "skills": [
+    {
+      "id": "broker_passive_replenish_toughness_on_ranged_toughness_damage",
+      "name": "Tis but a Scratch",
+      "name_hash": "6de924eb",
+      "description_hash": "6f652e30",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_replenish_toughness_on_ranged_toughness_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_replenish_toughness_on_ranged_toughness_damage.md",
+      "commit": "a87b7d103"
+    },
+    {
+      "id": "broker_passive_damage_on_reload",
+      "name": "Unload",
+      "name_hash": "25a0e32f",
+      "description_hash": "6645de88",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_on_reload.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_on_reload.md",
+      "commit": "afae78f63"
+    },
+    {
+      "id": "broker_passive_stamina_grants_atk_speed",
+      "name": "Swift Endurance",
+      "name_hash": "0d4f0d6b",
+      "description_hash": "15f411fc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stamina_grants_atk_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stamina_grants_atk_speed.md",
+      "commit": "bbcfcf089"
+    },
+    {
+      "id": "broker_passive_ramping_backstabs",
+      "name": "Ramping Backstabs",
+      "name_hash": "d0970afd",
+      "description_hash": "2f7fcac8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_ramping_backstabs.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_ramping_backstabs.md",
+      "commit": "860a956a0"
+    },
+    {
+      "id": "broker_passive_increased_ranged_dodges",
+      "name": "Moving Target",
+      "name_hash": "0158f675",
+      "description_hash": "a7db2b5d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_increased_ranged_dodges.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_ranged_dodges.md",
+      "commit": "3f0d7c991"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 266,
+    "from_commit": "58a906e9a",
+    "to_commit": "3f0d7c991",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

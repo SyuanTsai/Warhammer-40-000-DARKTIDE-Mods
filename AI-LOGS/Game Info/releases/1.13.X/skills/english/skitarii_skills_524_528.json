@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_524_528",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L2435-L2446 (Auto-Repair Doctrines), L2365-L2380 (Last Stand Relay), L2082-L2092 (Weakness Analysis Doctrine), L1863-L1871 (Ablative Motion Routines), L2126-L2131 (Power Overflow). Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction or new unresolved question. Full-charge counting, percentage points, status scope, sprinting Stamina and exact sharing eligibility are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_toughness_per_charge",
+      "name": "Auto-Repair Doctrines",
+      "name_hash": "1af984d6",
+      "description_hash": "04db1c7b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_per_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_toughness_per_charge.md",
+      "commit": "023073c5d"
+    },
+    {
+      "id": "cryptic_crit_chance_based_on_charge",
+      "name": "Last Stand Relay",
+      "name_hash": "54aa6f0e",
+      "description_hash": "dd636885",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_crit_chance_based_on_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_crit_chance_based_on_charge.md",
+      "commit": "3fe401178"
+    },
+    {
+      "id": "cryptic_afflicted_increased_damage",
+      "name": "Weakness Analysis Doctrine",
+      "name_hash": "7e4a79f1",
+      "description_hash": "70e7ba50",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_afflicted_increased_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_afflicted_increased_damage.md",
+      "commit": "d9966edf8"
+    },
+    {
+      "id": "cryptic_mobile_defense",
+      "name": "Ablative Motion Routines",
+      "name_hash": "55f092c8",
+      "description_hash": "7c92ecd3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_mobile_defense.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_mobile_defense.md",
+      "commit": "abbe77796"
+    },
+    {
+      "id": "cryptic_shared_toughness",
+      "name": "Power Overflow",
+      "name_hash": "43bec6ab",
+      "description_hash": "0f1a34d2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_shared_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_shared_toughness.md",
+      "commit": "0514c6241"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 298,
+    "from_commit": "a798e2251",
+    "to_commit": "0514c6241",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

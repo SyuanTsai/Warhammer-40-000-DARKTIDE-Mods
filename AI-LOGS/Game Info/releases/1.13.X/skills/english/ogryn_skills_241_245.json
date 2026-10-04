@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_241_245",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L2269–2317, L2334–2352, L1956–1978, L2476–2490 and L2113–2135 were read. Existing mechanisms, values, formulas, source links and common formatting reused.",
+  "questions": [
+    "Final game UI remains unobserved. Focused Fighter's existing team-wide stack-removal question retained; no explicit self-only removal promise in English. No new explicit English contradiction."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_protect_allies",
+      "name": "For the Lil'Uns",
+      "name_hash": "9fd98f36",
+      "description_hash": "67e1573d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_protect_allies.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_protect_allies.md",
+      "commit": "96421ff42"
+    },
+    {
+      "id": "ogryn_corruption_resistance",
+      "name": "Simple Minded",
+      "name_hash": "c147793d",
+      "description_hash": "ca230578",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_corruption_resistance.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_corruption_resistance.md",
+      "commit": "d65cf519d"
+    },
+    {
+      "id": "ogryn_melee_attacks_give_mtdr",
+      "name": "Focused Fighter",
+      "name_hash": "25803371",
+      "description_hash": "7ced0743",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_attacks_give_mtdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_attacks_give_mtdr.md",
+      "commit": "363658d2b"
+    },
+    {
+      "id": "ogryn_pushing_applies_brittleness",
+      "name": "Brutish Strength",
+      "name_hash": "353eeb71",
+      "description_hash": "f63bfc12",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_pushing_applies_brittleness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_pushing_applies_brittleness.md",
+      "commit": "9c2a6d6cc"
+    },
+    {
+      "id": "ogryn_explosions_burn",
+      "name": "Fire Away",
+      "name_hash": "9c8e3f4e",
+      "description_hash": "2024bc9e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_explosions_burn.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_explosions_burn.md",
+      "commit": "9a496f000"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 250,
+    "from_commit": "55d539180",
+    "to_commit": "9a496f000",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

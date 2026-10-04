@@ -1,5 +1,7 @@
 # 歐格林：未被當前技能樹直接使用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[角色基礎效果](BASE_EFFECTS.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

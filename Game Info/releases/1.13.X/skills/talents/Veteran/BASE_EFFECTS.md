@@ -1,5 +1,7 @@
 # 老兵基礎效果
 
+[English](en/BASE_EFFECTS.md)
+
 [返回老兵天賦](README.md)｜[來源索引](SOURCE_INDEX.md)
 
 下列效果由角色基礎配置提供；可替換的手雷與光環依配裝選擇變更。起始戰鬥技能另見[火力齊射](README.md#veteran_combat_ability_stance)。

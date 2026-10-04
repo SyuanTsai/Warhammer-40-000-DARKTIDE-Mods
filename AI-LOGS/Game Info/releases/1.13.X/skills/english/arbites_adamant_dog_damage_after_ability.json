@@ -1,0 +1,31 @@
+{
+  "id": "adamant_dog_damage_after_ability",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Kill Order",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_damage_after_ability.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_damage_after_ability.md",
+  "name_key": "loc_talent_adamant_dog_damage_after_ability",
+  "name_hash": "4f3d7eb4",
+  "description_key": "loc_talent_adamant_dog_damage_after_ability_desc",
+  "description_hash": "9f9da5ce",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 4,
+      "Not covered by the description": 3
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L1387-L1406. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_damage_after_ability.md"
+}

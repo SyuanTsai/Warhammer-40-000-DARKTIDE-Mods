@@ -1,0 +1,67 @@
+{
+  "id": "ogryn_skills_201_205",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display maps were read for Maximum Firepower, Bulletstorm, Heat of Battle and Back Off. Good Shootin required no code read. Existing mechanisms, calculations, formatting and image evidence reused; source pointers remain in the English documents.",
+  "questions": [
+    "Maximum Firepower: English cooldown-reduction wording leaves its time basis unspecified; the existing tick behavior is preserved.",
+    "Chinese-only Bulletstorm and Back Off corrections remain in their technical pages; no English contradiction was inherited.",
+    "Existing multi-Ogryn shared-state behavior and final game UI remain unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_leadbelcher_cooldown_reduction",
+      "name": "Maximum Firepower",
+      "name_hash": "6e911941",
+      "description_hash": "5aacc61b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_leadbelcher_cooldown_reduction.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_cooldown_reduction.md",
+      "commit": "caf7514c5"
+    },
+    {
+      "id": "ogryn_leadbelcher_crits",
+      "name": "Good Shootin'",
+      "name_hash": "35e6dc94",
+      "description_hash": "c346583c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_leadbelcher_crits.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_crits.md",
+      "commit": "a3f24ecb1"
+    },
+    {
+      "id": "ogryn_blo_ally_ranged_buffs",
+      "name": "Bulletstorm",
+      "name_hash": "668af910",
+      "description_hash": "99f32156",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_ally_ranged_buffs.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_ally_ranged_buffs.md",
+      "commit": "da26d824d"
+    },
+    {
+      "id": "ogryn_blo_wield_speed",
+      "name": "Heat of Battle",
+      "name_hash": "fa4b3c95",
+      "description_hash": "7290e9ce",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_wield_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_wield_speed.md",
+      "commit": "d95bbeab2"
+    },
+    {
+      "id": "ogryn_blo_melee",
+      "name": "Back Off!",
+      "name_hash": "7aa2470d",
+      "description_hash": "d4561ed1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_melee.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_melee.md",
+      "commit": "57cf9a3aa"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+25% Ammo.",
+  "comparison_rule_totals": {
+    "Consistent": 1,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "export_annotations": {
+    "description_suffix": "[Writer]",
+    "role": "resource metadata, excluded from displayed-text reconstruction"
+  },
+  "primary_direct_reads": [
+    "Complete Chinese Fully Loaded dossier and player section",
+    "Exact same-version English name and raw description",
+    "veteran_talents.lua:2503-2526, display field only"
+  ],
+  "reused_evidence": [
+    "Existing reserve-capacity, additive baseline, separate clip modifier, flooring/hard-limit source evidence",
+    "Accepted common percentage/buff lookup/outer formatting evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5220 bytes, SHA256 48a6c0145bfe6e0c57e6dd99d2cdd3629f359789253939e6527cebb0a0e19246",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "exact English pairing, reserve-only scope, flooring/hard limit and additive examples checked; primary final text review"
+  },
+  "static_examples": {
+    "base_100_capacity": 125,
+    "base_150_capacity_after_floor": 187,
+    "base_100_existing_20_percent_before": 120,
+    "base_100_existing_20_percent_after": 145,
+    "relative_gain_over_120": 0.20833333333333334
+  },
+  "unconfirmed": [
+    "Actual weapon reserves, slot changes, network hard limits and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range validation",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game ammo capacity/UI measurements"
+  ],
+  "id": "veteran_ammo_increase",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Fully Loaded",
+  "name_key": "loc_talent_veteran_ammo_increase",
+  "name_hash": "f2231e7d",
+  "description_key": "loc_talent_veteran_ammo_increase_desc",
+  "description_hash": "3dd8af7f",
+  "raw_template": "{ammo:%s} Ammo.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 92,
+        "Explicit contradiction": 5,
+        "Not covered by the description": 128,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 254,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 33,
+      "comparison_rows": 4,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    },
+    {
+      "check": "player category and body section agree: Passive talent / Passive talents",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/fully-loaded-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ammo_increase.md",
+  "commit": "722ac4656036aa5c906326ee6cdaa236dfcfa71b"
+}

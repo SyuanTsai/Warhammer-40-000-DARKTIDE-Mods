@@ -1,0 +1,57 @@
+{
+  "id": "skitarii_class",
+  "class": "Skitarii",
+  "date": "2026-10-04",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "FILE_MAP.json: scope Skitarii",
+  "English_entry": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/README.md",
+  "checks": {
+    "mapped_English_pages": 107,
+    "previous_skill_acceptance": "101 mechanism translations and independent English comparisons reused; no mechanism reanalysis or repeated skill acceptance.",
+    "shared_page_checks": {
+      "pages": 6,
+      "local_references": 932,
+      "errors": 0,
+      "Markdown_parse_and_HTML_structure": "97 selectable index rows and player sections; 4 base sections; 101 source, percentage-review and comparison records; 2 definitions not directly used.",
+      "existing_image_references_matching_sources_and_dimensions": 194,
+      "empty_image_alt": 0
+    }
+  },
+  "comparison_totals": {
+    "Consistent": 101,
+    "Explicit contradictions": 4,
+    "Not covered by the description": 101,
+    "No implementation found": 0,
+    "Cannot confirm": 3
+  },
+  "source_reads": [
+    "Item 564: missing English name/display mapping only, cryptic_talents.lua L1016-L1033. Shared-page closeout used existing documentation only."
+  ],
+  "questions": [
+    "Four existing explicit English contradictions and three unresolved comparisons retained. Base Resurgence omits the normal-rate basis and recovery conditions; supplements, without explicit English contradiction."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_coherency_regen_aura",
+      "name": "Resurgence",
+      "name_hash": "82e9b3ce",
+      "description_hash": "f34842d1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_regen_aura.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_coherency_regen_aura.md",
+      "commit": "9feabcd91"
+    }
+  ],
+  "timing": {
+    "last_mechanism_commit_interval_seconds": 92,
+    "from_commit": "bf9caefca",
+    "to_commit": "9feabcd91",
+    "class_closeout_commit_interval_seconds": 567,
+    "class_closeout_commit": "eac058e9d",
+    "interruptions": "No requested pause or capacity failure. Class closeout counted separately from mechanism translation; no new estimate."
+  },
+  "evidence_limits": [
+    "Fixed evidence reused; displays statically reconstructed, not observed game UI.",
+    "Existing image references, dimensions and Markdown checked; no downloads, screenshots or source retracing."
+  ]
+}

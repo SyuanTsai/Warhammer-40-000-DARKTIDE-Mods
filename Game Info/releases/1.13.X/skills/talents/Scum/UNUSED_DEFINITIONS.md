@@ -1,5 +1,7 @@
 # 巢都渣滓：未被技能樹或基礎清單直接引用的天賦定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

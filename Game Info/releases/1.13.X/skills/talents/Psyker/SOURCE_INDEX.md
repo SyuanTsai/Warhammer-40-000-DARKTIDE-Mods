@@ -1,5 +1,7 @@
 # 靈能者：來源文件與技術索引
 
+[English](en/SOURCE_INDEX.md)
+
 [返回玩家說明](README.md)｜[版本、日期與證據限制](../../../README.md)
 
 [遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於目前技能樹的定義](UNUSED_DEFINITIONS.md)

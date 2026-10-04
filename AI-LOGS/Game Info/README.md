@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [七職業英文文件維護](releases/1.13.X/skills/english/README.md)
+
 - [1.13.1天賦更新](releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.md)
 
 - [忽略規則調整](changes/2026-10-02-IGNORE_RULES.json)

@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_600_604",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L3331-L3345, L3429-L3453, L1457-L1509, L1339-L1362, L1397-L1417. Upcoming Purge/Sustained mappings L1363-L1379 and L1733-L1757 read minimally. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Burn and Bleed global caps/formulas, current Toughness retention, attack-angle scope and sweep count replacement are supplements. Risen raw trailing space preserved by JSON quotation."
+  ],
+  "skills": [
+    {
+      "id": "zealot_resist_death_fire",
+      "name": "Fire and Fury",
+      "name_hash": "af670dea",
+      "description_hash": "2ee3f440",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_fire.md",
+      "commit": "962de92b6"
+    },
+    {
+      "id": "zealot_resist_death_golden_toughness",
+      "name": "Risen",
+      "name_hash": "95780e03",
+      "description_hash": "568ffaee",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_golden_toughness.md",
+      "commit": "0e71a07e0"
+    },
+    {
+      "id": "zealot_crits_apply_bleed",
+      "name": "Scourge",
+      "name_hash": "bc085cdc",
+      "description_hash": "cddf2bee",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_apply_bleed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_crits_apply_bleed.md",
+      "commit": "54e91155c"
+    },
+    {
+      "id": "zealot_backstab_damage",
+      "name": "Backstabber",
+      "name_hash": "5730dc87",
+      "description_hash": "cbe3a511",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_damage.md",
+      "commit": "2d4f3b38a"
+    },
+    {
+      "id": "zealot_multi_hits_increase_damage",
+      "name": "Disdain",
+      "name_hash": "0153ea4d",
+      "description_hash": "e1fe6b4c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_multi_hits_increase_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_multi_hits_increase_damage.md",
+      "commit": "7737c5f13"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 354,
+    "from_commit": "92b36d4c2",
+    "to_commit": "7737c5f13",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

@@ -1,5 +1,7 @@
 # 烈焰與怒火(Fire and Fury)：原始碼依據
 
+[English](en/zealot_resist_death_fire.md)
+
 [返回玩家說明](README.md#zealot_resist_death_fire)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_resist_death_fire)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

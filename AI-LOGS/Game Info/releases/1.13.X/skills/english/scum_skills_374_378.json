@@ -1,0 +1,69 @@
+{
+  "id": "scum_skills_374_378",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Minimum English display mapping only: broker_talents.lua L2439–2444, L2454–2459, L2702–2718 and L2773–2788. Vulture's Push has no placeholders and required no source-format read. All mechanisms, Dodge-branch evidence and examples reuse accepted records; no Buff/event/call-chain retracing.",
+  "questions": "Vulture's Push's universal backwards-displacement wording cannot be confirmed from the accepted target-dependent medium-Stagger evidence. Existing questions remain in earlier records.",
+  "skills": [
+    {
+      "id": "broker_keystone_vultures_mark_aoe_stagger",
+      "name": "Vulture's Push",
+      "name_hash": "763b07e9",
+      "description_hash": "d98831c7",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_aoe_stagger.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_aoe_stagger.md",
+      "commit": "8ed56d8b0"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_increased_duration",
+      "name": "Patient Hunter",
+      "name_hash": "2c5bc480",
+      "description_hash": "2a61076a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_increased_duration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_increased_duration.md",
+      "commit": "1c3fcd76b"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+      "name": "Vulture's Dodge",
+      "name_hash": "18262d3b",
+      "description_hash": "c8880e0b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_dodge_on_ranged_crit.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_dodge_on_ranged_crit.md",
+      "commit": "037a243aa"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_1",
+      "name": "Adrenaline Assassin",
+      "name_hash": "f9457720",
+      "description_hash": "02bab200",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_1.md",
+      "commit": "5c4733a1d"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_3",
+      "name": "Stoked Rage",
+      "name_hash": "6d1091f8",
+      "description_hash": "95b51a39",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_3.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_3.md",
+      "commit": "2b6102974"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 358,
+    "from_commit": "9b7f1a04f",
+    "to_commit": "2b6102974",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

@@ -1,5 +1,7 @@
 # 還治其人之身(Retaliatory Force)：原始碼依據
 
+[English](en/adamant_perfect_block_damage_boost.md)
+
 [返回玩家說明](README.md#adamant_perfect_block_damage_boost)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_perfect_block_damage_boost)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

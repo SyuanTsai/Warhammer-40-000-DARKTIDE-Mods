@@ -1,0 +1,71 @@
+{
+  "id": "psyker_skills_268_272",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Display/name fields only in psyker_talents.lua L155–265, L722–737 and L1708–1731; English name localization supplied Brain Burst. Accepted mechanisms, values, examples and common formatters reused; no buff/event/call-chain tracing.",
+  "questions": [
+    "Kinetic Flayer: critical-Peril exclusion remains pending in-game confirmation under existing evidence; no new tracing."
+  ],
+  "skills": [
+    {
+      "id": "psyker_smite_on_hit",
+      "name": "Kinetic Flayer",
+      "name_hash": "14d069c4",
+      "description_hash": "63bc627a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_smite_on_hit.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_smite_on_hit.md",
+      "commit": "a3af04b80"
+    },
+    {
+      "id": "psyker_brain_burst_improved",
+      "name": "Brain Rupture",
+      "name_hash": "c3b5cefd",
+      "description_hash": "681e4980",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_brain_burst_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_brain_burst_improved.md",
+      "commit": "224133767"
+    },
+    {
+      "id": "psyker_grenade_throwing_knives",
+      "name": "Assail",
+      "name_hash": "9cd7d808",
+      "description_hash": "72fc17b1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_throwing_knives.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_grenade_throwing_knives.md",
+      "commit": "d94742cc8"
+    },
+    {
+      "id": "psyker_throwing_knives_piercing",
+      "name": "Ethereal Shards",
+      "name_hash": "d81ea964",
+      "description_hash": "392c597f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_throwing_knives_piercing.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_throwing_knives_piercing.md",
+      "commit": "8f19e5c29"
+    },
+    {
+      "id": "psyker_grenade_chain_lightning",
+      "name": "Smite",
+      "name_hash": "eb65c907",
+      "description_hash": "837f8e7f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_chain_lightning.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_grenade_chain_lightning.md",
+      "commit": "11c18be35"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 616,
+    "from_commit": "d50672b50",
+    "to_commit": "11c18be35",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

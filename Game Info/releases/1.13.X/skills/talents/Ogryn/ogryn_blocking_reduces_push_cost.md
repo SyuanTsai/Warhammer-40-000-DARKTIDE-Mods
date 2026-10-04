@@ -1,5 +1,7 @@
 # 睚眥必報(No Pushover)：原始碼依據
 
+[English](en/ogryn_blocking_reduces_push_cost.md)
+
 [返回玩家說明](README.md#ogryn_blocking_reduces_push_cost)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_blocking_reduces_push_cost)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

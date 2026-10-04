@@ -1,5 +1,7 @@
 # 亡命之徒(Desperado)：基礎戰鬥能力：原始碼依據
 
+[English](en/broker_ability_focus.md)
+
 [返回基礎效果](BASE_EFFECTS.md#broker_ability_focus)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。

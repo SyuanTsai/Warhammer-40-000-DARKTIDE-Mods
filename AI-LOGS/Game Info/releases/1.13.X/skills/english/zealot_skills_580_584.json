@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_580_584",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L1256-L1277, L357-L378, L2504-L2524, L2438-L2460, L2821-L2840. Existing mechanism evidence reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Chinese added-seconds corrections for Unrelenting Fury and Perfectionist remain separate. Invocation duration uses zero-decimal display precision; Until Death cooldown starting point is supplementary."
+  ],
+  "skills": [
+    {
+      "id": "zealot_backstab_kills_restore_cd",
+      "name": "Pious Cut-Throat",
+      "name_hash": "5bf093a5",
+      "description_hash": "169457dc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_kills_restore_cd.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_kills_restore_cd.md",
+      "commit": "f3589a682"
+    },
+    {
+      "id": "zealot_crits_grant_cd",
+      "name": "Invocation of Death",
+      "name_hash": "c907a59f",
+      "description_hash": "ec418944",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_grant_cd.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_crits_grant_cd.md",
+      "commit": "443017b50"
+    },
+    {
+      "id": "zealot_fotf_refund_cooldown",
+      "name": "Unrelenting Fury",
+      "name_hash": "c6a43b9e",
+      "description_hash": "0dec8750",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fotf_refund_cooldown.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_fotf_refund_cooldown.md",
+      "commit": "743a36fde"
+    },
+    {
+      "id": "zealot_stealth_cooldown_regeneration",
+      "name": "Perfectionist",
+      "name_hash": "997e4534",
+      "description_hash": "d641c97c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stealth_cooldown_regeneration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stealth_cooldown_regeneration.md",
+      "commit": "0aad44079"
+    },
+    {
+      "id": "zealot_resist_death",
+      "name": "Until Death",
+      "name_hash": "72493f76",
+      "description_hash": "0da0b898",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death.md",
+      "commit": "378aebde9"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 332,
+    "from_commit": "1d8d62ff0",
+    "to_commit": "378aebde9",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

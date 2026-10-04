@@ -1,5 +1,7 @@
 # 過載艾曼納圖斯力場(Overcharged Refraction Emitter)：原始碼依據
 
+[English](en/cryptic_force_field_duration_increase.md)
+
 [返回玩家說明](README.md#cryptic_force_field_duration_increase)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_force_field_duration_increase)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

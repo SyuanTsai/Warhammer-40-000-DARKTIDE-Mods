@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_595_599",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L1178-L1199, L2300-L2319, L2260-L2279, L2624-L2643, L3288-L3328. Upcoming Fire and Fury display mapping L3331-L3345 read minimally. Localized referenced names paired by exact key. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "Infectious Zeal while-active wording contradicts accepted separate 8s ally Buff timing when personal Fury refreshes; actual timing unobserved. Restorative Verses English names a replenishment modifier; the Chinese immediate-restoration correction is separate. Other omitted details remain supplements."
+  ],
+  "skills": [
+    {
+      "id": "zealot_shared_fanatic_rage",
+      "name": "Infectious Zeal",
+      "name_hash": "57b9d494",
+      "description_hash": "95bbc544",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_shared_fanatic_rage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_shared_fanatic_rage.md",
+      "commit": "645431c97"
+    },
+    {
+      "id": "zealot_martyrdom_toughness_modifier",
+      "name": "Restorative Verses",
+      "name_hash": "71808fb8",
+      "description_hash": "d473a3ea",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_martyrdom_toughness_modifier.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_martyrdom_toughness_modifier.md",
+      "commit": "3371b911f"
+    },
+    {
+      "id": "zealot_quickness_increased_duration",
+      "name": "Eternal",
+      "name_hash": "6f4e2bef",
+      "description_hash": "ffd6bfbb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_quickness_increased_duration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_quickness_increased_duration.md",
+      "commit": "733cc615a"
+    },
+    {
+      "id": "zealot_corruption_resistance_stacking",
+      "name": "On the Brink",
+      "name_hash": "26f3f7c2",
+      "description_hash": "892c3a6b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_corruption_resistance_stacking.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_corruption_resistance_stacking.md",
+      "commit": "9e469cf62"
+    },
+    {
+      "id": "zealot_resist_death_ability",
+      "name": "Zealous Pilgrim",
+      "name_hash": "a196609b",
+      "description_hash": "ccea0bcc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_ability.md",
+      "commit": "cb7f41707"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 367,
+    "from_commit": "9f013637b",
+    "to_commit": "cb7f41707",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

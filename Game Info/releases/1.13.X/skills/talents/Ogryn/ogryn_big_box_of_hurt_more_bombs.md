@@ -1,5 +1,7 @@
 # 超巨量傷害箱(Bigger Box of Hurt)：原始碼依據
 
+[English](en/ogryn_big_box_of_hurt_more_bombs.md)
+
 [返回玩家說明](README.md#ogryn_big_box_of_hurt_more_bombs)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_big_box_of_hurt_more_bombs)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

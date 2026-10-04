@@ -1,0 +1,73 @@
+{
+  "id": "psyker_skills_303_307",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Missing display mappings only: psyker_talents.lua L2108–2133, L2190–2215, L2144–2169, L1336–1345 and L1855–1867. Accepted values, same-build localized names and common formatting reused; no buff/event/calculation-chain retrace."
+  ],
+  "questions": [
+    "In Fire Reborn: 'Killing an Enemy with Soulblaze' does not clearly distinguish fatal Soulblaze Damage from a Soulblaze-bearing enemy's death; accepted wider trigger coverage is retained pending in-game comparison."
+  ],
+  "skills": [
+    {
+      "id": "psyker_mark_increased_max_stacks",
+      "name": "Perfectionism",
+      "name_hash": "af94ab08",
+      "description_hash": "781eac6d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_increased_max_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_increased_max_stacks.md",
+      "commit": "948d26e51"
+    },
+    {
+      "id": "psyker_mark_kills_can_vent",
+      "name": "Purloin Providence",
+      "name_hash": "c9b1ee8e",
+      "description_hash": "01016112",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_kills_can_vent.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_kills_can_vent.md",
+      "commit": "fe3e7c4eb"
+    },
+    {
+      "id": "psyker_mark_increased_duration",
+      "name": "Lingering Influence",
+      "name_hash": "e4c25bba",
+      "description_hash": "cacfbe0c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_increased_duration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_increased_duration.md",
+      "commit": "4195c899b"
+    },
+    {
+      "id": "psyker_empowered_grenades_increased_max_stacks",
+      "name": "Charged Up",
+      "name_hash": "ae374526",
+      "description_hash": "61957b58",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_grenades_increased_max_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_grenades_increased_max_stacks.md",
+      "commit": "0a30b4827"
+    },
+    {
+      "id": "psyker_warpfire_generate_souls",
+      "name": "In Fire Reborn",
+      "name_hash": "842629ba",
+      "description_hash": "d52dac75",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warpfire_generate_souls.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warpfire_generate_souls.md",
+      "commit": "826017c75"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 302,
+    "from_commit": "0d16d4cfc",
+    "to_commit": "826017c75",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

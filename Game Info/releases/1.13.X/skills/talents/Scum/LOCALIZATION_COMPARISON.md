@@ -1,5 +1,7 @@
 # 巢都渣滓：遊戲本體繁中描述比對
 
+[English](en/LOCALIZATION_COMPARISON.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
 - 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。

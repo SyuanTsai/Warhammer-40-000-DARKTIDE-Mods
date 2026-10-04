@@ -1,0 +1,32 @@
+{
+  "id": "adamant_whistle",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Remote Detonation",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_whistle.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_whistle.md",
+  "name_key": "loc_talent_ability_detonate",
+  "name_hash": "c6cb4eee",
+  "description_key": "loc_talent_ability_detonate_description",
+  "description_hash": "29c13c22",
+  "node_id": "node_2d88b9f8-d7dc-402f-8c33-9d836f577ec6",
+  "checks": {
+    "translation_conditions_values_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 3,
+      "Not covered by the description": 4
+    },
+    "changed_Markdown_fragments": 11,
+    "changed_local_links": 32,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary display values only: adamant_talents.lua#L343-L376 and talent_settings_adamant.lua#L88-L94. Existing mechanism, formatting and icon evidence reused.",
+  "questions": [
+    "No game execution or final game UI observation."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_whistle.md"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "psyker_skills_273_277",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display fields in psyker_talents.lua L1873–1897, L738–795, L819–844 and L926–940. Charged Strike has no placeholders and needed no source read. Accepted mechanics, values, examples and common formatters reused.",
+  "questions": [
+    "Quick Shards raw English has {recharge%s}, without a colon. Mapped 30% was manually reconstructed and labeled; actual game formatting remains unobserved.",
+    "Kinetic Flayer critical-Peril uncertainty remains from the previous batch."
+  ],
+  "skills": [
+    {
+      "id": "psyker_ability_increase_brain_burst_speed",
+      "name": "Kinetic Resonance",
+      "name_hash": "fc3add45",
+      "description_hash": "ee94ffdd",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_ability_increase_brain_burst_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_ability_increase_brain_burst_speed.md",
+      "commit": "a3ca25d1e"
+    },
+    {
+      "id": "psyker_throwing_knives_cast_speed",
+      "name": "Quick Shards",
+      "name_hash": "55e1656b",
+      "description_hash": "da103b93",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_throwing_knives_cast_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_throwing_knives_cast_speed.md",
+      "commit": "f74e62705"
+    },
+    {
+      "id": "psyker_chain_lightning_improved_target_buff",
+      "name": "Enfeeble",
+      "name_hash": "030a19d8",
+      "description_hash": "da40a0a2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_improved_target_buff.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chain_lightning_improved_target_buff.md",
+      "commit": "0d5949df5"
+    },
+    {
+      "id": "psyker_chain_lightning_heavy_attacks",
+      "name": "Charged Strike",
+      "name_hash": "b2c5eb1f",
+      "description_hash": "e84d2a21",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_heavy_attacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chain_lightning_heavy_attacks.md",
+      "commit": "7053b8dfd"
+    },
+    {
+      "id": "psyker_aura_damage_vs_elites",
+      "name": "Kinetic Presence",
+      "name_hash": "aa5cdd41",
+      "description_hash": "4fad8ca6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_damage_vs_elites.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_damage_vs_elites.md",
+      "commit": "50b0e8d9b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 448,
+    "from_commit": "8330f4174",
+    "to_commit": "50b0e8d9b",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

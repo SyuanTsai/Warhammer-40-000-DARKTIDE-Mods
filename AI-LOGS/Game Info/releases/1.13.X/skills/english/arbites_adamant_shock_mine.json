@@ -1,0 +1,33 @@
+{
+  "id": "adamant_shock_mine",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Voltaic Shock Mine",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_shock_mine.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shock_mine.md",
+  "name_key": "loc_talent_ability_shock_mine",
+  "name_hash": "db593af0",
+  "description_key": "loc_talent_ability_shock_mine_description",
+  "description_hash": "d710719f",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 3,
+      "Not covered by the description": 4,
+      "Cannot confirm": 1
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mapping only: adamant_talents.lua#L469-L502. Existing numerical values, mechanisms, citations, shared formatting and icons reused.",
+  "questions": [
+    "All-enemy coverage cannot be guaranteed by the existing per-scan evidence.",
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shock_mine.md"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_509_513",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L1220-L1230 (Higher Purpose), L1491-L1504 (Surge-Extension), L1721-L1735 (Power Redistribution Uplink), L2500-L2516 (Adaptive Combat Engram), L1920-L1925 (Evasive Servo Recovery). Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "Adaptive Combat Engram: the English activation interval of 15 seconds explicitly contradicts the accepted 5-second effect followed by 15-second cooldown, minimum 20 seconds. Other omitted details are supplements. No new unresolved question."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_dissector_power",
+      "name": "Higher Purpose",
+      "name_hash": "90d98e74",
+      "description_hash": "2baab5a1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_power.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_power.md",
+      "commit": "4e8622740"
+    },
+    {
+      "id": "cryptic_redline_toughness",
+      "name": "Surge-Extension",
+      "name_hash": "e4547a36",
+      "description_hash": "5f6b15fb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_toughness.md",
+      "commit": "af6e1cccb"
+    },
+    {
+      "id": "cryptic_crits_grant_tdr",
+      "name": "Power Redistribution Uplink",
+      "name_hash": "1e644149",
+      "description_hash": "12420803",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_crits_grant_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_crits_grant_tdr.md",
+      "commit": "ecd38eb50"
+    },
+    {
+      "id": "cryptic_dr_on_toughness_break",
+      "name": "Adaptive Combat Engram",
+      "name_hash": "971612d9",
+      "description_hash": "05a4e1a1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dr_on_toughness_break.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dr_on_toughness_break.md",
+      "commit": "65ab50840"
+    },
+    {
+      "id": "cryptic_successful_dodge_stamina",
+      "name": "Evasive Servo Recovery",
+      "name_hash": "3b7e8ada",
+      "description_hash": "99f3c08d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_successful_dodge_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_successful_dodge_stamina.md",
+      "commit": "2c5172209"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 525,
+    "from_commit": "7d520f34e",
+    "to_commit": "2c5172209",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

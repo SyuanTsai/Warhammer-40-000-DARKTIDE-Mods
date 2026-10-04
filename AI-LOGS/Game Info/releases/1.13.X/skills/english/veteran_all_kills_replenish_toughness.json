@@ -1,0 +1,115 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "Your Kills Replenish an additional 5% Toughness.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 2,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Out for Blood dossier and player section",
+    "Exact same-version English name and full raw description, including metadata suffix",
+    "veteran_talents.lua:1457-1479, tiered display field only"
+  ],
+  "reused_evidence": [
+    "Accepted one-point tier 1 override and 0.05 restoration value",
+    "Accepted melee/ranged kill-triggered maximum-Toughness restoration and shared missing-amount cap",
+    "Accepted tier lookup and percentage formatter evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 4956 bytes, SHA256 fe0c54ad6c1ad67879b25548191ef3075e21abe337e24fe9a8ca122101c6637b",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only draft checked exact English records, additional on-kill restoration, maximum-Toughness basis and cap. Primary checked the tiered display field; final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "maximum_toughness": 100,
+    "restoration_fraction": 0.05,
+    "restoration_with_sufficient_missing": 5,
+    "current_toughness": 98,
+    "missing_toughness": 2,
+    "actual_capped_restoration": 2,
+    "current_after": 100
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Individual special kill-event cases and final restoration under additional modifiers.",
+    "Final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game kill/restoration/UI measurements"
+  ],
+  "id": "veteran_all_kills_replenish_toughness",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Out for Blood",
+  "name_key": "loc_talent_veteran_all_kills_replenish_toughness",
+  "name_hash": "e1ec88bf",
+  "description_key": "loc_talent_veteran_all_kills_replenish_toughness_description",
+  "description_hash": "a8f7b6af",
+  "raw_template": "Your Kills Replenish an additional {toughness%s} Toughness.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 115,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 155,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 331,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 44,
+      "comparison_rows": 4,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/out-for-blood-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_all_kills_replenish_toughness.md",
+  "commit": "ef21eac34a9495d087efc532643340c3748641cf"
+}

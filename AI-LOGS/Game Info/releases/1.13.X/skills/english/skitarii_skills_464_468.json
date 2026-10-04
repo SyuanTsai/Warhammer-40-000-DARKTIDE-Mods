@@ -1,0 +1,77 @@
+{
+  "id": "skitarii_skills_464_468",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L780-L821 (Integrated Refraction Emitter), L670-L695 (Purgator), L723-L774 (Medicae), L920-L961 (Arc Grenades), L629-L669 (Artificer). All mechanisms and values reuse accepted evidence."
+  ],
+  "questions": [
+    "Arc Grenades broad Armoured/Specialist priority remains unresolved against existing specific-breed and differing elite-tag evidence; not classified as English errata. Integrated Refraction Emitter range has format_values rather than format_type in its mapping; numerical reconstruction retained without claiming observed rendering."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_grenade_ability_force_field",
+      "name": "Integrated Refraction Emitter",
+      "name_hash": "1b8e6a78",
+      "description_hash": "1988edfa",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_grenade_ability_force_field.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_grenade_ability_force_field.md",
+      "commit": "69b04252c"
+    },
+    {
+      "id": "cryptic_flamethrower",
+      "name": "Purgator Servo-Skull",
+      "name_hash": "dfc8746f",
+      "description_hash": "e66555ce",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_flamethrower.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_flamethrower.md",
+      "commit": "8e4f91cfc"
+    },
+    {
+      "id": "cryptic_servo_skull_inject_ally",
+      "name": "Medicae Servo-Skull",
+      "name_hash": "9182c0fe",
+      "description_hash": "86ee1b55",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_inject_ally.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_inject_ally.md",
+      "commit": "7a1a2ac49"
+    },
+    {
+      "id": "cryptic_grenade_ability_arc_grenade",
+      "name": "Arc Grenades",
+      "name_hash": "cfab3f3d",
+      "description_hash": "22344160",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_grenade_ability_arc_grenade.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_grenade_ability_arc_grenade.md",
+      "commit": "54796a76d"
+    },
+    {
+      "id": "cryptic_servo_skull_improved",
+      "name": "Artificer Servo-Skull",
+      "name_hash": "a3e27be3",
+      "description_hash": "4bb85179",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_improved.md",
+      "commit": "51fece06d"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 962,
+    "from_commit": "eda401846",
+    "to_commit": "51fece06d",
+    "first_interval_seconds": 345,
+    "first_interval_note": "Class receipt to item 464 includes PR creation/push, initial Skitarii entry preparation and item 464 translation; these cannot be separated precisely from commit records and are not used to estimate translation speed.",
+    "subsequent_four_item_interval_seconds": 617,
+    "subsequent_four_item_from_commit": "69b04252c",
+    "interruptions": "No handoff, requested pause or model-capacity failure in this batch."
+  }
+}

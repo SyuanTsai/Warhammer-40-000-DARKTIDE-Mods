@@ -1,0 +1,186 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "id": "veteran_snipers_focus",
+  "class": "Veteran",
+  "name": "Marksman's Focus",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name_key": "loc_talent_veteran_snipers_focus",
+  "name_hash": "90f993d2",
+  "description_key": "loc_talent_veteran_snipers_focus_duration_desc",
+  "description_hash": "bd7cf7c2",
+  "raw_template": "Ranged Weakspot kills grant {stacks:%s} stack(s) of Focus. Up to {max_stacks:%s} Max Stacks. Lasts {duration:%s}s. Stacks are refreshed on Weakspot Hit and decay one at a time.\n\nEach stack of Focus grants {power:%s} Ranged Finesse Strength, and {reload_speed:%s} Reload Speed.",
+  "static_reconstruction": "Ranged Weakspot kills grant 3 stack(s) of Focus. Up to 10 Max Stacks. Lasts 5s. Stacks are refreshed on Weakspot Hit and decay one at a time.\n\nEach stack of Focus grants +7.5% Ranged Finesse Strength, and +1% Reload Speed.",
+  "comparison_rule_totals": {
+    "Consistent": 5,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "veteran_tree.lua:1710-1740",
+    "veteran_talents.lua:2585-2716 (15-stack definition rechecked at 2697-2716)",
+    "talent_settings_veteran.lua:35-39",
+    "veteran_buff_templates.lua:2704-2910",
+    "buff_settings.lua:945-962",
+    "buff_extension_base.lua:384-488,560-615;187-206,635-698 (shared third-skill reads)",
+    "player_unit_buff_extension.lua:209-260,656-678",
+    "buff.lua:346-369;29-44,404-410,453-515,619-639,689-727 (shared prior reads)",
+    "damage_calculation.lua:60-110,672-783 (shared second-skill reads)",
+    "action_handler.lua:356-429",
+    "action_handler_settings.lua:59-69",
+    "network_constants.lua:197-200",
+    "lasgun_p1_m1.lua:378-400,432-450",
+    "stamina.lua:102-118",
+    "attack.lua:86-88,550-620;proc_buff.lua:174-194,304-380 (shared third-skill reads)",
+    "talent_layout_parser.lua:379-426,613-651,690-713;localization_manager.lua:285-320 (shared formatting reads)",
+    "Fixed-SHA global searches for veteran_snipers_focus_stacks_on_still and threat_bonus; no current stillness tree/implementation or active threat flag assignment found."
+  ],
+  "checks": [
+    {
+      "check": "exact English UI export SHA256, name/description key/hash and complete raw template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "display values, decimal percentage formatter and static base-skill reconstruction",
+      "result": "passed",
+      "referenced_parameters": 5,
+      "unused_parameters": [
+        "grace_time=6",
+        "grace_time_hit=3"
+      ]
+    },
+    {
+      "check": "fixed-SHA citations in current Veteran English scope",
+      "result": "passed",
+      "references": 250,
+      "unique_source_ranges": 87,
+      "source_files": 25
+    },
+    {
+      "check": "component damage, baseline-sensitive synergy and reload-speed arithmetic",
+      "result": "passed",
+      "whole_hit_gain_percent": [
+        21.43,
+        37.5,
+        32.61,
+        32.14,
+        8.82
+      ],
+      "reload_action_seconds": [
+        3.64,
+        3.48,
+        3.08
+      ],
+      "time_saved_percent": [
+        9.09,
+        13.04,
+        7.69
+      ],
+      "timeline": "Approximately 5/10/15 seconds from exactly three raw stacks, no later refresh or forced removal, strict update expiry."
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 708,
+      "local_references": 6467,
+      "remote_references": 9107,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge DOM rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 4
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 9
+      },
+      "damage_table": {
+        "columns": 3,
+        "rows": 5
+      },
+      "reload_table": {
+        "columns": 3,
+        "rows": 3
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 8
+      },
+      "player_icons": "32x32 and 72x72; all loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of player section plus damage, reload and template viewport screenshots",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 4918,
+      "sha256": "1e38a66e17a2786ce463f81983920d536e3f93a1c15b667fcd780cc0d705cfaa",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese technical content preserved except language switch; English prose/alt and private-path exclusion",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 6,
+      "errors": 0
+    },
+    {
+      "check": "690 unique file mappings, four accepted skills, INDEX Git-path existence, privacy and ignored QA artifacts",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only",
+    "result": "one_ambiguity_corrected",
+    "corrections": [
+      "Hard-cap rejection was clarified to preserve the dedicated timer-refresh side effect at raw count 31. The refresh comparison remains Consistent."
+    ],
+    "primary_verification": "Primary directly read the full cap helper, concrete add method and proc; corrected the page and comparison citation, and re-rendered all five pages. Initial link validation also found one bad heading anchor and one source path; both were corrected and checks rerun. A semantically misassigned 15-stack definition range was corrected to 2697-2716.",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact same-frame overflow removal ordering.",
+    "HUD display of raw versus effective Focus counts.",
+    "Eligible event emission for every special weapon or damage path.",
+    "Runtime-derived network action-time-scale bounds."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Runtime timing and special-weapon measurements",
+    "Full independent acceptance of the three related modifier talents"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/focus-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md",
+  "commit": "b52a89064cbf95759d1f4ef1916b9ccd30225ae2"
+}
