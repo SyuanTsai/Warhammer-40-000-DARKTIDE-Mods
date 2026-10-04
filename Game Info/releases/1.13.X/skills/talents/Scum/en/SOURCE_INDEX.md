@@ -89,3 +89,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Long Lasting](broker_passive_stimm_increased_duration.md) / `broker_passive_stimm_increased_duration` | Talent |
 | [Blessed Stimms](broker_passive_stimm_cleanse_on_kill.md) / `broker_passive_stimm_cleanse_on_kill` | Talent |
 | [Hive City Brawler](broker_passive_dr_damage_tradeoff_on_stamina.md) / `broker_passive_dr_damage_tradeoff_on_stamina` | Talent |
+| [Pickpocket](broker_passive_low_ammo_regen.md) / `broker_passive_low_ammo_regen` | Talent |

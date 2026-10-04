@@ -941,6 +941,18 @@ Full raw template and formatting: [source evidence](broker_passive_dr_damage_tra
 | Stamina relationship and maxima | Up to 20% Damage Reduction from available Stamina; up to 20% Melee Damage from spent Stamina; `ui / loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc / 2fe3c231` | Reduction scales with remaining Stamina and Melee Damage with spent Stamina, each to 20% [Fixed source and line references](broker_passive_dr_damage_tradeoff_on_stamina.md#fixed-source-evidence) | Consistent | Both directions, damage categories and maximum values agree. |
 | Interpolation and combination | No interpolation or combination formula; `ui / loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc / 2fe3c231` | `lerp(1, 0.8, stamina_fraction)` for damage taken; `lerp(0, 0.2, 1 − stamina_fraction)` for additive Melee Damage [Fixed source and line references](broker_passive_dr_damage_tradeoff_on_stamina.md#fixed-source-evidence) | Not covered by the description | The half/full/empty examples and 100 × 0.8 × 0.8 = 64 combination explain the verified formulas. |
 
+
+<a id="broker_passive_low_ammo_regen"></a>
+
+## Pickpocket
+
+Full raw template and formatting: [source evidence](broker_passive_low_ammo_regen.md#original-english-template-and-reconstruction). Name hash `f774ba92`. Every row uses `ui / loc_talent_broker_passive_low_ammo_regen_desc_04 / aa6ac8e6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill conditions and refill target | Elite or Specialist killed by Melee; Ammo Reserve below 20%; refill to 20%; `ui / loc_talent_broker_passive_low_ammo_regen_desc_04 / aa6ac8e6` | Requires the matching Melee Kill and a reserve below `floor(max × 0.2)`, then fills the difference [Fixed source and line references](broker_passive_low_ammo_regen.md#fixed-source-evidence) | Consistent | The English describes topping up to the threshold, rather than adding a fixed 20% per Kill. |
+| Rounding and reserve scope | No integer rounding, clip counting or capacity guard; `ui / loc_talent_broker_passive_low_ammo_regen_desc_04 / aa6ac8e6` | Requires `max_reserve > 0`; thresholds use floor, exclude the clip and the refill has a minimum of 1 [Fixed source and line references](broker_passive_low_ammo_regen.md#fixed-source-evidence) | Not covered by the description | These preserve the 150-round and 37-round examples and existing limits. |
+
 ## Comparison totals
 
 The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.

@@ -85,6 +85,7 @@
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="Long Lasting talent icon"> [Long Lasting](#broker_passive_stimm_increased_duration) | <ul><li>Stimm effects last 5 seconds longer.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="Blessed Stimms talent icon"> [Blessed Stimms](#broker_passive_stimm_cleanse_on_kill) | <ul><li>While Stimmed, each Kill clears 1% of maximum Health as Corruption; 50% cleared per Stimm is the stopping threshold.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="Hive City Brawler talent icon"> [Hive City Brawler](#broker_passive_dr_damage_tradeoff_on_stamina) | <ul><li>More remaining Stamina gives more Damage Reduction; more spent Stamina gives more Melee Damage. Each reaches up to 20%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="Pickpocket talent icon"> [Pickpocket](#broker_passive_low_ammo_regen) | <ul><li>Melee Kills on Elites or Specialists refill Ammo Reserve to 20% if it is below that threshold.</li></ul> | Talent |
 
 ---
 
@@ -1292,3 +1293,17 @@
 - **Other bonuses**: Damage Reduction uses an independent damage-taken multiplier. With another independent 20% reduction at full Stamina, damage is 100 × 0.8 × 0.8 = 64. Melee Damage adds to other bonuses at the same stage.
 
 [Details](broker_passive_dr_damage_tradeoff_on_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_low_ammo_regen"></a>
+
+### Pickpocket
+
+<img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="72" height="72" alt="Pickpocket talent icon">
+
+- **Trigger**: Kill an Elite or Specialist with a Melee Attack while Ammo Reserve is below 20% of its maximum, then refill the reserve to that threshold. Ammunition in the clip is excluded from the threshold.
+
+- **Refill example**: With maximum reserve 150, the threshold is ⌊150 × 20%⌋ = 30 rounds. At 8 rounds, gain 22 to reach 30; at 30, nothing triggers. With a maximum of 37, the rounded-down threshold is 7 rounds.
+
+[Details](broker_passive_low_ammo_regen.md) · [Back to index](#talent-index)
