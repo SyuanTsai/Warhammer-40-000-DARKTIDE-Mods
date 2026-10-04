@@ -43,3 +43,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Empowered Psionics](psyker_empowered_ability.md) / `psyker_empowered_ability` | Keystone |
 | [Inner Tranquility](psyker_reduced_warp_charge_cost_and_venting_speed.md) / `psyker_reduced_warp_charge_cost_and_venting_speed` | Keystone |
 | [Essence Harvest](psyker_toughness_on_soul.md) / `psyker_toughness_on_soul` | Keystone |
+| [Bio-Lodestone](psyker_empowered_grenades_passive_improved.md) / `psyker_empowered_grenades_passive_improved` | Keystone |

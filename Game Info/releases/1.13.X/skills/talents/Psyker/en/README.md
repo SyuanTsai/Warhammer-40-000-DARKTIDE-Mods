@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="32" height="32" alt="Empowered Psionics talent icon"> [Empowered Psionics](#psyker_empowered_ability) | <ul><li>Kills have a 10% chance to empower the next Blitz; base storage is one. Empowered Brain Rupture and Smite gain Damage, while Assail avoids Peril and Blitz-stock payment and gains Damage/cleave.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="Inner Tranquility talent icon"> [Inner Tranquility](#psyker_reduced_warp_charge_cost_and_venting_speed) | <ul><li>Each Warp Charge reduces Peril Generation by 8%; four charges give 32% reduction, or 48% at six with Warp Battery.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="Essence Harvest talent icon"> [Essence Harvest](#psyker_toughness_on_soul) | <ul><li>Gaining a Warp Charge restores 30% of maximum Toughness over five seconds; further gains refresh the duration without stacking the restoration rate.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="Bio-Lodestone talent icon"> [Bio-Lodestone](#psyker_empowered_grenades_passive_improved) | <ul><li>Raises the chance of gaining empowerment on a kill from 10% to 15%; the storage cap remains unchanged.</li></ul> | Keystone |
 
 ---
 
@@ -538,3 +539,17 @@
 - **Restoration example:** With 100 maximum Toughness, restore `100 × 30% ÷ 5 = 6` per second, or 30 over a full five seconds. If only 12 is missing, at most 12 can actually be restored.
 
 [Details](psyker_toughness_on_soul.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_empowered_grenades_passive_improved"></a>
+
+### Bio-Lodestone
+
+<img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="72" height="72" alt="Bio-Lodestone talent icon">
+
+- **How it works:** The chance to gain empowerment on killing an enemy rises from 10% to 15%; the storage cap does not change.
+
+- **Chance example:** With storage available each time, the expected number of empowerments from 100 kills rises from `100 × 10% = 10` to `100 × 15% = 15`. Random outcomes are not guaranteed to equal the expectation.
+
+[Details](psyker_empowered_grenades_passive_improved.md) · [Back to index](#talent-index)

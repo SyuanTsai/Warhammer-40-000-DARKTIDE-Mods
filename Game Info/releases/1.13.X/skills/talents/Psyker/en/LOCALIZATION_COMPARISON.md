@@ -397,6 +397,18 @@ Full raw template and formatting: [source evidence](psyker_toughness_on_soul.md#
 | Restoration and refresh | Replenish 30% Toughness over 5s on gaining Warp Charge; a new charge resets the timer; `ui / loc_talent_psyker_toughness_regen_on_soul_desc / fc9f3c0b` | percent_toughness 0.06 per second × duration 5 = 0.30; refresh_duration_on_stack resets the duration. [Fixed source and line references](psyker_toughness_on_soul.md#fixed-source-evidence) | Consistent | The total, duration, over-time delivery and explicit refresh rule agree. |
 | Rate cap, deficit and soul-cap trigger | No maximum-Toughness basis, missing-Toughness cap, rate stacking or capped-soul event detail specified; `ui / loc_talent_psyker_toughness_regen_on_soul_desc / fc9f3c0b` | Buff cap is one, so refresh does not stack the rate. Restoration is capped by the deficit; a successful soul-add/update event can refresh the effect at the soul cap. [Fixed source and line references](psyker_toughness_on_soul.md#fixed-source-evidence) | Not covered by the description | These are accepted boundaries and formula details; English makes no contrary instant-restoration or rate-stacking claim. |
 
+
+<a id="psyker_empowered_grenades_passive_improved"></a>
+
+## Bio-Lodestone
+
+Full raw template and formatting: [source evidence](psyker_empowered_grenades_passive_improved.md#original-english-template-and-reconstruction). Name hash `05299d2a`. Every row uses `ui / loc_talent_psyker_increase_empower_chain_lighting_chance_description / 542f4465`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill chance increase | Chance to gain Empowered Psionics on Kill increases from 10% to 15%; `ui / loc_talent_psyker_increase_empower_chain_lighting_chance_description / 542f4465` | The copied proc buff replaces on_hit probability 0.10 with 0.15; the shared handler requires CheckProcFunctions.on_kill(params). [Fixed source and line references](psyker_empowered_grenades_passive_improved.md#fixed-source-evidence) | Consistent | The stated values and kill condition agree; the on_hit event name does not make this an on-every-hit effect. |
+| Cap, probability and Elite interaction | No storage-cap change, deterministic trigger interval or interaction with guaranteed Elite gains stated; `ui / loc_talent_psyker_increase_empower_chain_lighting_chance_description / 542f4465` | Successful gains are clamped to the cap. Expected outcomes require available storage and independent chances. With Overpowering Souls, guaranteed Elite kills are excluded from the ordinary chance path. [Fixed source and line references](psyker_empowered_grenades_passive_improved.md#fixed-source-evidence) | Not covered by the description | The retained assumptions and interaction are supplementary limits, rather than English omissions treated as errors. |
+
 ## Comparison totals
 
 The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
