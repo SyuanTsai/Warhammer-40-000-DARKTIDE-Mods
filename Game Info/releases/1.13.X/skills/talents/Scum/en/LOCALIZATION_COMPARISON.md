@@ -130,6 +130,18 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub
 | Cleave and time-driven Power | +50% Cleave while Rampage! is active; +2.5% Melee Power per active second, up to 10 times; `ui / loc_talent_broker_ability_punk_rage_sub_2_desc / fb3a2cef` | rage_cleave adds 0.5 to attack/impact hit-mass capacities; time-based ramping stacks add melee_power_level_modifier 0.025, max 10. [Fixed source and line references](broker_ability_punk_rage_sub_2.md#fixed-source-evidence) | Consistent | The English active-state condition, per-second driver, amount and cap agree with accepted evidence. |
 | Calculation and timing limits | No separate mass-budget, additive base-Power or update/cleanup detail; `ui / loc_talent_broker_ability_punk_rage_sub_2_desc / fb3a2cef` | Damage/Stagger Cleave capacities 10→15; Power stacks add 25% to base rage 35% for 60%, giving Power 500→800 before curves; stacks stop with rage and timing can affect reaching the cap. [Fixed source and line references](broker_ability_punk_rage_sub_2.md#fixed-source-evidence) | Not covered by the description | Existing calculations and limits explain omitted details; no fixed final-Damage percentage or guaranteed cap is inferred. |
 
+
+<a id="broker_ability_punk_rage_sub_1"></a>
+
+## Channelled Aggression
+
+Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub_1.md#original-english-template-and-reconstruction). Name hash `f1fa0859`. Every row uses `ui / loc_talent_broker_ability_punk_rage_sub_1_desc_02 / 472cc8e5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Heavy-Attack Rending during rage | Heavy Attacks while Rampage! is active have +25% Rending; `ui / loc_talent_broker_ability_punk_rage_sub_1_desc_02 / 472cc8e5` | broker_rage_rending enables additive melee_heavy_rending_multiplier 0.25 during the state. [Fixed source and line references](broker_ability_punk_rage_sub_1.md#fixed-source-evidence) | Consistent | The amount, Rending effect and active-rage condition agree; no first-half gate is stated. |
+| Eligibility and armour calculation | No explicit Melee check, armour calculation or ability-progress gate; `ui / loc_talent_broker_ability_punk_rage_sub_1_desc_02 / 472cc8e5` | Only Melee heavy profiles read the term; armour conversion is capped at 1; the 0.5 format progress value is not used to delay or limit enabling. [Fixed source and line references](broker_ability_punk_rage_sub_1.md#fixed-source-evidence) | Not covered by the description | The existing 100 pre-armour Damage/0.5 multiplier example gives 50→75, not a fixed ×1.25 Damage rule. |
+
 ## Comparison totals
 
 The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.

@@ -22,3 +22,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Stimm Supply](broker_ability_stimm_field.md) / `broker_ability_stimm_field` | Ability |
 | [Rampage!](broker_ability_punk_rage.md) / `broker_ability_punk_rage` | Ability |
 | [Pulverising Strikes](broker_ability_punk_rage_sub_2.md) / `broker_ability_punk_rage_sub_2` | Ability |
+| [Channelled Aggression](broker_ability_punk_rage_sub_1.md) / `broker_ability_punk_rage_sub_1` | Ability |

@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="32" height="32" alt="Stimm Supply talent icon"> [Stimm Supply](#broker_ability_stimm_field) | <ul><li>Deploy a Stimm gas field with a 3-metre radius for 20 seconds. Operatives in it heal 0.5 Corruption every 0.25 seconds, up to 40 total, and become immune to Corruption.</li><li>If you carry a Stimm, the field also gives nearby allies its effects. Base cooldown 60 seconds; natural replenishment pauses while the field exists.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="Rampage! talent icon"> [Rampage!](#broker_ability_punk_rage) | <ul><li>Activate to refill Toughness and enter rage for 10 seconds: additive +35% Melee Power Level, additive +20% Melee Attack Speed and ×0.75 Damage taken (25% reduction from this effect alone).</li><li>Melee hits extend rage, initially by 0.3 seconds each; after every 20 seconds from activation the per-hit extension halves. Base cooldown 30 seconds, with natural replenishment paused during rage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="Pulverising Strikes talent icon"> [Pulverising Strikes](#broker_ability_punk_rage_sub_2) | <ul><li>During rage, Cleave capacity gains an additive +50%. Gain a Melee Power stack for approximately every second rage persists: +2.5% each, up to 10 stacks (+25%).</li><li>With rage's base +35% Melee Power Level, these two effects give at most +60% Power Level, not a guaranteed +60% final Damage.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="Channelled Aggression talent icon"> [Channelled Aggression](#broker_ability_punk_rage_sub_1) | <ul><li>While rage is active, Melee Heavy Attacks gain additive +25% Rending in the armour-penetration calculation.</li><li>The effect checks Melee Heavy Attacks; Rending is not a direct 25% Damage increase.</li></ul> | Ability |
 
 ---
 
@@ -194,3 +195,19 @@
 - **Combined with rage:** if you have rage's own +35% Melee Power Level, counting only these effects at the stack cap gives 35% + (10 × 2.5%) = 60% Power Level modifier. This is not +60% final Damage. For example, Power 500 becomes 500 × 1.6 = 800.
 
 [Details](broker_ability_punk_rage_sub_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_1"></a>
+
+### Channelled Aggression
+
+<img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="72" height="72" alt="Channelled Aggression talent icon">
+
+- **Eligible attacks:** while rage is active, Melee Heavy Attacks gain +25% Rending.
+
+- **Reading the effect:** Rending affects the armour-penetration calculation. It does not multiply Damage by 1.25 and does not apply to Light or Ranged Attacks.
+
+- **Armour example:** assume an original armour Damage multiplier of 0.5 and armour that fully accepts this Rending. The multiplier becomes 0.5 + 0.25 = 0.75; the same 100 pre-armour Damage changes from 50 to 75. Different armour and existing weapon penetration change the actual increase.
+
+[Details](broker_ability_punk_rage_sub_1.md) · [Back to index](#talent-index)
