@@ -107,3 +107,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Precision Combat Augurs](cryptic_next_hit_all_damage_on_dodge.md) / `cryptic_next_hit_all_damage_on_dodge` | Talent |
 | [Voltaic Burst](cryptic_electrocution_push.md) / `cryptic_electrocution_push` | Talent |
 | [Ablative Wards](cryptic_corruption_resistance_doom.md) / `cryptic_corruption_resistance_doom` | Talent |
+| [Threat Detection Imperative](cryptic_ranged_kills_tdr.md) / `cryptic_ranged_kills_tdr` | Talent |

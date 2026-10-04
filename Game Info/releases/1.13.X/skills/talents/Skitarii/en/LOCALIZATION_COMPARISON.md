@@ -1166,6 +1166,18 @@ Full raw template and formatting: [source evidence](cryptic_corruption_resistanc
 | Resistance and periodic baseline | Gain +90% Corruption Resistance; every 20s, take 1 Corruption Damage.; `ui / loc_talent_cryptic_corruption_resistance_doom_desc / ed668132` | corruption_taken_multiplier = 0.1; the periodic power/profile calculation offsets its own resistance to produce baseline 1 at interval 20. [Fixed source and line references](cryptic_corruption_resistance_doom.md#fixed-source-evidence) | Consistent | The displayed resistance, interval and baseline cost match. |
 | Cost eligibility and other modifiers | The self-resistance offset, eligible status and other modifiers are not specified.; `ui / loc_talent_cryptic_corruption_resistance_doom_desc / ed668132` | The cost ignores Toughness and skips on-hit procs, runs only while HEALTH_ALIVE and not requires_help, and may still be affected by other shared modifiers. It does not clear accumulated Corruption. [Fixed source and line references](cryptic_corruption_resistance_doom.md#fixed-source-evidence) | Not covered by the description | These conditions qualify the baseline cost; the wording does not explicitly promise an immutable cost in every state. |
 
+
+<a id="cryptic_ranged_kills_tdr"></a>
+
+## Threat Detection Imperative
+
+Full raw template and formatting: [source evidence](cryptic_ranged_kills_tdr.md#original-english-template-and-reconstruction). Name hash `9998676d`. Every row uses `ui / loc_talent_cryptic_ranged_kills_tdr_desc / 3a7d18c1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged kills, values and sequential decay | Ranged Kills reduce Toughness Damage Taken by +4% for 8s; stacks 5 times; decays one at a time.; `ui / loc_talent_cryptic_ranged_kills_tdr_desc / 3a7d18c1` | Ranged kills add up to 5 stacks, with a 0.04 step and 8-second sequential duration. [Fixed source and line references](cryptic_ranged_kills_tdr.md#fixed-source-evidence) | Consistent | The trigger, displayed numbers and one-at-a-time decay match. |
+| Refresh, timeline and calculation | The refresh behavior and combination of reductions are not specified.; `ui / loc_talent_cryptic_ranged_kills_tdr_desc / 3a7d18c1` | Gaining or removing a stack refreshes 8 seconds. Without further kills, 5 stacks reach 4/3/2/1/0 after 8/16/24/32/40 seconds. The multiplier is 1 − 0.04n and multiplies independent reductions. [Fixed source and line references](cryptic_ranged_kills_tdr.md#fixed-source-evidence) | Not covered by the description | These details explain the sequential duration and reduction calculation. |
+
 ## Comparison totals
 
 197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.

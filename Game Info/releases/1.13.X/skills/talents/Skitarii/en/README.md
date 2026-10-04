@@ -104,6 +104,7 @@
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="Precision Combat Augurs talent icon"> [Precision Combat Augurs](#cryptic_next_hit_all_damage_on_dodge) | <ul><li>After a successful dodge, gain 15% damage for the next melee swing or shot. The attack consumes the effect even if it misses; repeated dodges cannot store multiple bonuses.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="Voltaic Burst talent icon"> [Voltaic Burst](#cryptic_electrocution_push) | <ul><li>A Push that staggers enemies applies Electrocution to all qualifying living targets. The shared 12-second cooldown starts when that Push finishes.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="Ablative Wards talent icon"> [Ablative Wards](#cryptic_corruption_resistance_doom) | <ul><li>Reduce incoming Corruption by 90%. Every 20 seconds, incur a baseline cost of 1 Corruption, with this talent's own resistance already offset.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="32" height="32" alt="Threat Detection Imperative talent icon"> [Threat Detection Imperative](#cryptic_ranged_kills_tdr) | <ul><li>Ranged kills grant up to 5 stacks of 4% Toughness Damage Reduction. Further kills reset the 8-second timer; without more kills, stacks decay one every 8 seconds.</li></ul> | Talent |
 
 ---
 
@@ -1499,3 +1500,17 @@ The verified Chinese document notes that its original wording says, in translati
 - **Other effects**: Additional damage reduction, Corruption Resistance and other modifiers may still affect the actual cost. This talent does not remove accumulated Corruption.
 
 [Details](cryptic_corruption_resistance_doom.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_ranged_kills_tdr"></a>
+
+### Threat Detection Imperative
+
+<img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="72" height="72" alt="Threat Detection Imperative talent icon">
+
+- **Stacking**: A ranged kill grants **1 stack**, each providing **4% Toughness Damage Reduction**, up to **5 stacks**. Another trigger resets the **8-second** timer.
+- **Decay**: Without further kills, lose one stack every **8 seconds**. Starting at **5 stacks**, after **8, 16, 24, 32 and 40 seconds**, the remaining counts are **4, 3, 2, 1 and 0**.
+- **Reduction example**: **5 stacks** give **20%** total reduction. Incoming Toughness damage **100** becomes `100 × (1 − 5 × 4%) = 80`. With a separate **15%** reduction, `80 × 0.85 = 68` damage remains.
+
+[Details](cryptic_ranged_kills_tdr.md) · [Back to index](#talent-index)
