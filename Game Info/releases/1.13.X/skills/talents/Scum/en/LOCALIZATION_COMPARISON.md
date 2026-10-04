@@ -638,6 +638,18 @@ Full raw template and formatting: [source evidence](broker_passive_improved_dodg
 | Stamina boundary | while Stamina is above 75%; `ui / loc_talent_broker_passive_improved_dodges_at_full_stamina_desc / abe61ad9` | `stamina_percentage >= 0.75` includes exactly 75% [Fixed source and line references](broker_passive_improved_dodges_at_full_stamina.md#fixed-source-evidence) | Explicit contradiction | “Above” excludes equality, while the verified threshold includes it. This comparison concerns the fixed evidence; the boundary has not been observed in game. |
 | Recovery timing | Dodge Recovery Speed +40%; `ui / loc_talent_broker_passive_improved_dodges_at_full_stamina_desc / abe61ad9` | `dodge_reset_modifier = -0.4`; reset wait is (archetype reset time + weapon extra) × buff modifier [Fixed source and line references](broker_passive_improved_dodges_at_full_stamina.md#fixed-source-evidence) | Not covered by the description | The wording does not explain the time modifier or formula. The verified example gives 1s × 0.6 = 0.6s; no separate rate formula is assumed. |
 
+
+<a id="base_crit_chance_node_buff_low_1"></a>
+
+## Critical Chance Boost
+
+Full raw template and formatting: [source evidence](base_crit_chance_node_buff_low_1.md#original-english-template-and-reconstruction). Name hash `3ec7f5ef`. Every row uses `ui / loc_talent_crit_chance_low_desc / 3019333a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical Hit Chance bonus | +5% Critical Hit Chance; `ui / loc_talent_crit_chance_low_desc / 3019333a` | Tier 1 grants `critical_strike_chance = 0.05` [Fixed source and line references](base_crit_chance_node_buff_low_1.md#fixed-source-evidence) | Consistent | The named statistic and magnitude match the verified bonus. |
+| Combination and limits | No calculation or clamp is stated; `ui / loc_talent_crit_chance_low_desc / 3019333a` | `CriticalStrike.chance` adds the bonus and clamps the total to 0–1 [Fixed source and line references](base_crit_chance_node_buff_low_1.md#fixed-source-evidence) | Not covered by the description | This explains 10%→15% and 25%→30% without adding a new condition to the English. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

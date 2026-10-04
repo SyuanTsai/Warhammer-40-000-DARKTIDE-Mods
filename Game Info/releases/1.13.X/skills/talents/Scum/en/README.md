@@ -60,6 +60,7 @@
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="Moving Target talent icon"> [Moving Target](#broker_passive_increased_ranged_dodges) | <ul><li>While wielding a Ranged weapon, gain 1 Effective Dodge.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="Sample Collector talent icon"> [Sample Collector](#broker_passive_stimm_cd_on_kill) | <ul><li>Each kill reduces Stimm cooldown by 0.5s; a Chem Toxin infected enemy instead reduces it by 1s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="Jittery talent icon"> [Jittery](#broker_passive_improved_dodges_at_full_stamina) | <ul><li>At least 75% of maximum Stamina reduces the wait for consecutive Dodges to reset by 40%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="Critical Chance Boost talent icon"> [Critical Chance Boost](#base_crit_chance_node_buff_low_1) | <ul><li>Gain 5 percentage points of Critical Hit Chance.</li></ul> | Talent |
 
 ---
 
@@ -889,3 +890,15 @@
 - **Timing example**: If stopping consecutive Dodges normally requires a 1-second wait, it becomes 1 × (1 − 40%) = 0.6s. With 4 maximum Stamina, retaining at least 4 × 75% = 3 points enables the bonus.
 
 [Details](broker_passive_improved_dodges_at_full_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_crit_chance_node_buff_low_1"></a>
+
+### Critical Chance Boost
+
+<img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="72" height="72" alt="Critical Chance Boost talent icon">
+
+- **Chance example**: An initial 10% Critical Hit Chance becomes 10% + 5% = 15%; an initial 25% becomes 30%.
+
+[Details](base_crit_chance_node_buff_low_1.md) · [Back to index](#talent-index)

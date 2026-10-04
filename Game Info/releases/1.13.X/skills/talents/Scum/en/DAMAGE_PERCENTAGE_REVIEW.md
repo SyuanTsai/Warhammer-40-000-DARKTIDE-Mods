@@ -54,3 +54,4 @@ The review covers Power, general Damage and additional Weakspot/Critical Damage,
 | [Moving Target](broker_passive_increased_ranged_dodges.md) | Talent | Static check | **Count example**: a weapon with 3 Effective Dodges gains 1, giving 3 + 1 = 4. The bonus does not increase Dodge Distance or Dodge Speed. |
 | [Sample Collector](broker_passive_stimm_cd_on_kill.md) | Talent | Static check | Cooldown example: 20s remaining − 4 × 0.5s = 18s; four Chem Toxin infected kills instead leave 16s. The examples exclude resource-recovery modifiers and elapsed time. |
 | [Jittery](broker_passive_improved_dodges_at_full_stamina.md) | Talent | Static check | Timing example: a 1s reset wait becomes 1 × (1 − 40%) = 0.6s. At 4 maximum Stamina, at least 4 × 75% = 3 points enables the bonus. |
+| [Critical Chance Boost](base_crit_chance_node_buff_low_1.md) | Talent | Static check | Chance example: 10% + 5% = 15%; an initial 25% becomes 30%. The bonus adds five percentage points. |

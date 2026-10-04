@@ -64,3 +64,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Moving Target](broker_passive_increased_ranged_dodges.md) / `broker_passive_increased_ranged_dodges` | Talent |
 | [Sample Collector](broker_passive_stimm_cd_on_kill.md) / `broker_passive_stimm_cd_on_kill` | Talent |
 | [Jittery](broker_passive_improved_dodges_at_full_stamina.md) / `broker_passive_improved_dodges_at_full_stamina` | Talent |
+| [Critical Chance Boost](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | Talent |
