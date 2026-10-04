@@ -4373,7 +4373,12 @@
         "psyker_venting_improvements",
         "psyker_kills_stack_other_weapon_damage",
         "psyker_warp_charge_reduces_toughness_damage_taken",
-        "psyker_improved_dodge"
+        "psyker_improved_dodge",
+        "psyker_dodge_after_crits",
+        "psyker_increased_vent_speed",
+        "psyker_damage_based_on_warp_charge",
+        "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+        "psyker_coherency_aura_size_increase"
       ],
       "checks": []
     },
@@ -4440,7 +4445,12 @@
         "psyker_venting_improvements",
         "psyker_kills_stack_other_weapon_damage",
         "psyker_warp_charge_reduces_toughness_damage_taken",
-        "psyker_improved_dodge"
+        "psyker_improved_dodge",
+        "psyker_dodge_after_crits",
+        "psyker_increased_vent_speed",
+        "psyker_damage_based_on_warp_charge",
+        "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+        "psyker_coherency_aura_size_increase"
       ],
       "checks": []
     },
@@ -4507,7 +4517,12 @@
         "psyker_venting_improvements",
         "psyker_kills_stack_other_weapon_damage",
         "psyker_warp_charge_reduces_toughness_damage_taken",
-        "psyker_improved_dodge"
+        "psyker_improved_dodge",
+        "psyker_dodge_after_crits",
+        "psyker_increased_vent_speed",
+        "psyker_damage_based_on_warp_charge",
+        "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+        "psyker_coherency_aura_size_increase"
       ],
       "checks": []
     },
@@ -4574,7 +4589,12 @@
         "psyker_venting_improvements",
         "psyker_kills_stack_other_weapon_damage",
         "psyker_warp_charge_reduces_toughness_damage_taken",
-        "psyker_improved_dodge"
+        "psyker_improved_dodge",
+        "psyker_dodge_after_crits",
+        "psyker_increased_vent_speed",
+        "psyker_damage_based_on_warp_charge",
+        "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+        "psyker_coherency_aura_size_increase"
       ],
       "checks": []
     },
@@ -4842,9 +4862,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f509ea35f671c75b1cc3a2eb80992a2c9b3af213",
       "chinese_sha256": "8fdb6976e8672eeb5336bf77ebd5d6902f01f0eeb4598c164e9d44ecff0df34e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_coherency_aura_size_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_force_field.md",
@@ -4943,9 +4970,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b0504d11479ca9e5a0fee33cd1efeaa05b8181b6",
       "chinese_sha256": "786a12234cd28bf1e4b2201c58750797acc02e3e455d8183e9b1fd18f71312b4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_damage_based_on_warp_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_resistance_stun_immunity.md",
@@ -5005,9 +5039,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a0dce66f179873011c2075309c5fd3e9884708dc",
       "chinese_sha256": "907590d18e24e000f693e497530a0cc4f1b36f737627c30ea6a564a7200e54a2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_dodge_after_crits"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_elite_kills_add_warpfire.md",
@@ -5182,9 +5223,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b914c202f076d5c8689137d93464321c98d60846",
       "chinese_sha256": "2c0d503bc0a56d0e390e70f9fc91ddcf2e67becff030bcf1c2f6d5e09178e496",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_guaranteed_crit_on_multiple_weakspot_hits"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_improved_dodge.md",
@@ -5240,9 +5288,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "dab8c8d8e25c82f2fcc23061cb40a1fe7d4b5c8d",
       "chinese_sha256": "63d0b0ffaa8e90abe101b3c27ce7d5e7a7b5e011dcec9b5f0911a8b8ac686a72",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_increased_vent_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md",
@@ -14466,6 +14521,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_improved_dodge.md"
+    },
+    {
+      "id": "psyker_dodge_after_crits",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_dodge_after_crits.md"
+    },
+    {
+      "id": "psyker_increased_vent_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_vent_speed.md"
+    },
+    {
+      "id": "psyker_damage_based_on_warp_charge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_based_on_warp_charge.md"
+    },
+    {
+      "id": "psyker_guaranteed_crit_on_multiple_weakspot_hits",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_guaranteed_crit_on_multiple_weakspot_hits.md"
+    },
+    {
+      "id": "psyker_coherency_aura_size_increase",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_coherency_aura_size_increase.md"
     }
   ],
   "pending_chinese_corrections": [
