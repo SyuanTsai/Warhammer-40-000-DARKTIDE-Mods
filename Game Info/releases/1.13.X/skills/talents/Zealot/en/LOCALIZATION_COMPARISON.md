@@ -794,6 +794,18 @@ Full raw template and formatting: [source evidence](zealot_more_damage_when_low_
 | Missing Stamina and maximum bonus | “Up to +20% Melee Damage based on missing Stamina.”; `ui / loc_talent_zealot_damage_based_on_stamina_desc / 3a2192a6` | Current template interpolates melee_damage from 0 to 0.2 with lerp_t=1−current/max. [Fixed source and line references](zealot_more_damage_when_low_on_stamina.md#fixed-source-evidence) | Consistent | Stat, missing-resource condition and maximum agree. |
 | Interpolation and old identifier | No exact linear formula or timer.; `ui / loc_talent_zealot_damage_based_on_stamina_desc / 3a2192a6` | Full/half/empty Stamina gives 0/10/20%; recovery lowers bonus. Original maximum-6/current-2 example gives 13.33%, base100→113.33. Old identifier and unused duration mapping do not select the separate 5s proc. [Fixed source and line references](zealot_more_damage_when_low_on_stamina.md#fixed-source-evidence) | Not covered by the description | These calculation and template distinctions supplement the continuous resource-based effect. |
 
+
+<a id="zealot_melee_crits_restore_stamina"></a>
+
+## No Respite
+
+Full raw template and formatting: [source evidence](zealot_melee_crits_restore_stamina.md#original-english-template-and-reconstruction). Name hash `a0fbdd92`. Every row uses `ui / loc_talent_zealot_melee_crits_restore_stamina_desc / 01adc74d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, restoration and cooldown | Melee Critical Hit; replenish 10% Stamina; 1s Cooldown; `ui / loc_talent_zealot_melee_crits_restore_stamina_desc / 01adc74d` | `on_hit` / `on_crit_melee`, `Stamina.add_stamina_percent(.1)`, cooldown 1 second [Fixed source and line references](zealot_melee_crits_restore_stamina.md#fixed-source-evidence) | Consistent | The trigger, proportion and cooldown agree. |
+| Restoration basis and limits | Does not specify the basis or cap; `ui / loc_talent_zealot_melee_crits_restore_stamina_desc / 01adc74d` | Uses maximum Stamina, clamps to the cap, and applies the cooldown to multiple hits in one critical sweep; no kill is required [Fixed source and line references](zealot_melee_crits_restore_stamina.md#fixed-source-evidence) | Not covered by the description | The omitted details supplement the wording. |
+
 ## Comparison totals
 
 137 rules: 64 Consistent / 5 Explicit contradiction / 64 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 629.
