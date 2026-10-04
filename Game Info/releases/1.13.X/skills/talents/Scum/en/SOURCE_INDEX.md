@@ -122,3 +122,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Hypex](broker_stimm_concentration_5b.md) / `broker_stimm_concentration_5b` | Stimm recipe |
 | [Klay](broker_stimm_concentration_5c.md) / `broker_stimm_concentration_5c` | Stimm recipe |
 | [Desperado](broker_ability_focus.md) / `broker_ability_focus` | Base Combat Ability |
+| [Blinder](broker_blitz_flash_grenade.md) / `broker_blitz_flash_grenade` | Base Blitz |

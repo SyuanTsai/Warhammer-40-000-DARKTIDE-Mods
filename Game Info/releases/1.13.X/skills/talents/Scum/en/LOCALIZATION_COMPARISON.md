@@ -1342,6 +1342,18 @@ Full raw template and formatting: [source evidence](broker_ability_focus.md#orig
 | Base stance and listed effects | Ranged Weapon switch/reload; Desperado for 10s; counts as Dodging against Ranged Attacks; Sprinting costs no Stamina; +20% Sprint Speed; reloads do not reduce Ammo Reserve; base cooldown 45s; `ui / loc_talent_broker_ability_focus_desc / a131b118` | slot_secondary; broker_focus_stance duration 10; count_as_dodge_vs_ranged; sprinting_cost_multiplier = 0; sprint_movement_speed = 0.20; free ammo transfers; resource cost 45 with natural regeneration 1/s [Fixed source and line references](broker_ability_focus.md#fixed-source-evidence) | Consistent | The English's explicit conditions, effects and values match the accepted base ability. |
 | Additional base rules and limits | No cooldown pause, Toughness restoration, Suppression immunity, ammo reconciliation or upgrade boundaries; `ui / loc_talent_broker_ability_focus_desc / a131b118` | Cooldown pauses during Focus; Toughness restoration is deficit-capped; suppression_immune; normal ammo reconciliation at expiry; no broker_focus_improved kill behavior [Fixed source and line references](broker_ability_focus.md#fixed-source-evidence) | Not covered by the description | The original 10 + 45 = 55-second cooldown and 100 × 1.20 = 120 Sprint Speed examples retain their assumptions. These unmentioned details supplement the text. |
 
+
+<a id="broker_blitz_flash_grenade"></a>
+
+## Blinder: base blitz
+
+Full raw template and formatting: [source evidence](broker_blitz_flash_grenade.md#original-english-template-and-reconstruction). Name hash `6fa18120`. Every row uses `ui / loc_talent_broker_blitz_flash_grenade_desc / 9cb00aee`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Grenade and replenishment | Quick Grenade Staggers enemies; every 20 Close Range Kills generate 1 Grenade; maximum 3; `ui / loc_talent_broker_blitz_flash_grenade_desc / 9cb00aee` | quick_flash_grenade; flash Stagger profile; on_close_kill counter resets at 20 and adds 1 below max_charges = 3 [Fixed source and line references](broker_blitz_flash_grenade.md#fixed-source-evidence) | Consistent | The listed effects, trigger and values match the accepted base Blitz. |
+| Throw, damage and counting limits | No throw timing, collision/radii, Health Damage, full-charge counter or delayed-kill details; `ui / loc_talent_broker_blitz_flash_grenade_desc / 9cb00aee` | 0.55-second action, projectile at 0.25s; collision detonation; radii 3.5m/2.25m; explosion no Health Damage; counter retained while full; specific tracked needle-pistol toxin death with attacking_unit distance check [Fixed source and line references](broker_blitz_flash_grenade.md#fixed-source-evidence) | Not covered by the description | These details supplement the text; the achievement tracker adds no player Damage or charge bonus. Original counter examples retain their qualifying-kill and below-maximum conditions. |
+
 ## Comparison totals
 
 The 235 listed rules comprise **109 Consistent**, **7 Explicit contradictions**, **109 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

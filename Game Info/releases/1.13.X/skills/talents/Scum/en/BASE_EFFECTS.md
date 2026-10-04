@@ -19,3 +19,19 @@ These effects come from the character's base configuration. Combat Ability, Blit
 [Source evidence and example assumptions](broker_ability_focus.md)
 
 ---
+
+<a id="broker_blitz_flash_grenade"></a>
+
+## Blinder: base blitz
+
+- **Throw effect**: Quickly throw a flash grenade that detonates on collision. Its explosion radius is 3.5 metres, with stronger Stagger inside 2.25 metres. The explosion itself deals no Health Damage; a direct projectile hit is separate.
+
+- **Capacity and replenishment**: Carry up to 3 grenades. While below maximum, every 20 accumulated kills within 12.5 metres restore 1 grenade; both Melee and Ranged Kills can count.
+
+- **Replenishment example**: With 2 grenades and 19 qualifying kills accumulated, 1 more kill restores the third grenade and resets the counter. Kills while full do not increase the counter.
+
+- **Needle pistol exception**: Enemies hit and tracked by the needle pistol can also count when they die from Toxin at Close Range.
+
+[Source evidence and example assumptions](broker_blitz_flash_grenade.md)
+
+---
