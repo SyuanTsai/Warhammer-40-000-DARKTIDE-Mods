@@ -616,4 +616,4 @@ Full raw template and formatting: [source evidence](psyker_crits_empower_next_at
 
 ## Comparison totals
 
-The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -4363,7 +4363,12 @@
         "psyker_increased_max_souls",
         "psyker_mark_weakspot_kills",
         "psyker_toughness_on_warp_kill",
-        "psyker_toughness_on_vent"
+        "psyker_toughness_on_vent",
+        "psyker_toughness_on_melee",
+        "psyker_crits_regen_toughness_movement_speed",
+        "psyker_elite_kills_add_warpfire",
+        "psyker_chance_to_vent_on_kill",
+        "psyker_crits_empower_next_attack"
       ],
       "checks": []
     },
@@ -4420,7 +4425,12 @@
         "psyker_increased_max_souls",
         "psyker_mark_weakspot_kills",
         "psyker_toughness_on_warp_kill",
-        "psyker_toughness_on_vent"
+        "psyker_toughness_on_vent",
+        "psyker_toughness_on_melee",
+        "psyker_crits_regen_toughness_movement_speed",
+        "psyker_elite_kills_add_warpfire",
+        "psyker_chance_to_vent_on_kill",
+        "psyker_crits_empower_next_attack"
       ],
       "checks": []
     },
@@ -4477,7 +4487,12 @@
         "psyker_increased_max_souls",
         "psyker_mark_weakspot_kills",
         "psyker_toughness_on_warp_kill",
-        "psyker_toughness_on_vent"
+        "psyker_toughness_on_vent",
+        "psyker_toughness_on_melee",
+        "psyker_crits_regen_toughness_movement_speed",
+        "psyker_elite_kills_add_warpfire",
+        "psyker_chance_to_vent_on_kill",
+        "psyker_crits_empower_next_attack"
       ],
       "checks": []
     },
@@ -4534,7 +4549,12 @@
         "psyker_increased_max_souls",
         "psyker_mark_weakspot_kills",
         "psyker_toughness_on_warp_kill",
-        "psyker_toughness_on_vent"
+        "psyker_toughness_on_vent",
+        "psyker_toughness_on_melee",
+        "psyker_crits_regen_toughness_movement_speed",
+        "psyker_elite_kills_add_warpfire",
+        "psyker_chance_to_vent_on_kill",
+        "psyker_crits_empower_next_attack"
       ],
       "checks": []
     },
@@ -4773,9 +4793,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fef1a921b25f7115a7e9385d2b31503fb3e2b35e",
       "chinese_sha256": "877a2b302fb05cf5f02fe818e5def1159df046aaffae42014bab6e40a8348d63",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_chance_to_vent_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_cleave_from_peril.md",
@@ -4860,9 +4887,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5ca254ea8af7bbf613cd1452ae68ba9299a739cd",
       "chinese_sha256": "c06bcaa188d2f5cfa472d27d6f6b8d591380e9cbbe7ce2007e189a353d106bdb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_crits_empower_next_attack"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_crits_regen_toughness_movement_speed.md",
@@ -4871,9 +4905,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "94c044b5219d6ae6116c5a39c6b8db68df9d0d53",
       "chinese_sha256": "60c9e1901094f5008f19d88b52a40a14080b6e249d5ef34e6b07b92c43991b7b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_crits_regen_toughness_movement_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_based_on_warp_charge.md",
@@ -4955,9 +4996,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "470f10dccff3b5be3d82d46ba83fa000d03ea2d4",
       "chinese_sha256": "6b4d8176cc7a418daf20becd600d832bd1c3f3636865ebe75ccb42d933c21a81",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_elite_kills_add_warpfire"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_ability.md",
@@ -5606,9 +5654,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bbca59577c5e5c0d7ba7b81f000306dc35d6dfb5",
       "chinese_sha256": "5a3d1ea548eb3f75d26914908aab27069ce1efff1af6782a3a05778ebc02af15",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_toughness_on_melee"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_soul.md",
@@ -14276,6 +14331,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_vent.md"
+    },
+    {
+      "id": "psyker_toughness_on_melee",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_melee.md"
+    },
+    {
+      "id": "psyker_crits_regen_toughness_movement_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_crits_regen_toughness_movement_speed.md"
+    },
+    {
+      "id": "psyker_elite_kills_add_warpfire",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_elite_kills_add_warpfire.md"
+    },
+    {
+      "id": "psyker_chance_to_vent_on_kill",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_chance_to_vent_on_kill.md"
+    },
+    {
+      "id": "psyker_crits_empower_next_attack",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_crits_empower_next_attack.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 312 completed on 2026-10-04. [Receipt](psyker_skills_308_312.json) and [FILE_MAP](FILE_MAP.json) record 312 accepted mechanisms. Next item: **313, Warp Expenditure**, `psyker_toughness_on_melee`. The full goal remains active and unfinished.
+Checkpoint 317 completed on 2026-10-04. [Receipt](psyker_skills_313_317.json) and [FILE_MAP](FILE_MAP.json) record 317 accepted mechanisms. Next item: **318, Wildfire**, `psyker_spread_warpfire_on_kill`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 334 mechanisms + 24 class-support files + 2 shared files = 360 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 45/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 97 = 46 Consistent / 2 Explicit contradictions / 45 Not covered / 0 No implementation / 4 Cannot confirm. Latest batch commit interval: 466s (7m 46s), b67efb460→123d2d24b. All five English descriptions agree with the existing evidence. Cruel Fortune's two additional stacks means three total; its omitted current-target condition is a supplement. Quietude reconstructs 4% Toughness per 10% Peril change. Caps, recipients and restoration limits are preserved.
+Remaining: 329 mechanisms + 24 class-support files + 2 shared files = 355 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 50/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 107 = 51 Consistent / 2 Explicit contradictions / 50 Not covered / 0 No implementation / 4 Cannot confirm. Latest batch commit interval: 281s (4m 41s), cbf1053c9→21c0c5604. All five English effects agree with the accepted evidence. Mettle's separate speed paragraph does not stack Toughness restoration. Warp Expenditure's branch restrictions, Perilous Combustion's exceptions, Battle Meditation's update coalescing and Perfect Timing's event limits remain supplements.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
