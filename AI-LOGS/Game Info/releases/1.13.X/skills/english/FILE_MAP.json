@@ -8901,9 +8901,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b94ad11d89fe4fb5349f2a017e936743bb7ff704",
       "chinese_sha256": "e46c4e45ed41d246809f5af329f8e2da9ed376331533b3ad7142bbfbe8d5faef",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_ammo_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ammo_reserve.md",
@@ -8959,9 +8966,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5f00e3e39de85aa9f8a7734e9d27948357a234ae",
       "chinese_sha256": "cf6d63c817733dd09e4bf081ef4db4c43c0931439ba9efd3eb3a94018d480c86",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_aura_weapon_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_auto_reload.md",
@@ -8992,9 +9006,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3b271df844c3b540c34387b3af93709f2dc0593a",
       "chinese_sha256": "f55429e6a2129f88801db9a235e8ea954bc9d5ff328ffaaa126422c85dc15ad2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_chordclaw"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_capacitance_restoration.md",
@@ -9069,9 +9090,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "128a5afa0435d155bd77661bb12826f259d33e67",
       "chinese_sha256": "72a4bd2c47eead60ce6a4a943117549eaeeb01516cb80e2320f720a730edb193",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_coherency_regen_aura_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_toughness_on_ability.md",
@@ -9373,9 +9401,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "863e82d6798505ae0c398ba7add1c6c80d1ca1dc",
       "chinese_sha256": "f6d6b46de0eb2d5edcb7e4304cbd651e54fecbbe6b0dd7349e4d6d039d32f8c9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_force_field_arcs"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_capacitance_restore.md",
@@ -17354,6 +17389,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_duration_increase.md"
+    },
+    {
+      "id": "cryptic_force_field_arcs",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_arcs.md"
+    },
+    {
+      "id": "cryptic_coherency_regen_aura_improved",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_coherency_regen_aura_improved.md"
+    },
+    {
+      "id": "cryptic_ammo_aura",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ammo_aura.md"
+    },
+    {
+      "id": "cryptic_aura_weapon_improved",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_aura_weapon_improved.md"
+    },
+    {
+      "id": "cryptic_chordclaw",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw.md"
     }
   ],
   "pending_chinese_corrections": [

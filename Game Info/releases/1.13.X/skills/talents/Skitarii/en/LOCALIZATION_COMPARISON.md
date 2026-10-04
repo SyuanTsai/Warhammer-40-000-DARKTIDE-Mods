@@ -191,4 +191,4 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw.md#origina
 
 ## Comparison totals
 
-21 rules: 10 Consistent / 0 Explicit contradiction / 10 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 473.
+32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.

@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_474_478",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L876-L891 (Voltaic Resistance), L1034-L1058 (Resurgence), L1090-L1115 (Ammunition Deposit), L1059-L1089 (Foe-Render Creed), L474-L493 (Chordclaw Strike). No mechanism retracing."
+  ],
+  "questions": [
+    "Ammunition Deposit: English explicitly restricts allies to Coherency, whereas accepted source distributes Ammo Reserve to human mission players without that check; English scope contradiction recorded, actual game manifestation unobserved."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_force_field_arcs",
+      "name": "Voltaic Resistance",
+      "name_hash": "e1595ef8",
+      "description_hash": "143e5c50",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_arcs.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_arcs.md",
+      "commit": "8907a01d5"
+    },
+    {
+      "id": "cryptic_coherency_regen_aura_improved",
+      "name": "Resurgence",
+      "name_hash": "82e9b3ce",
+      "description_hash": "a053ecfc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_regen_aura_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_coherency_regen_aura_improved.md",
+      "commit": "f87b0c127"
+    },
+    {
+      "id": "cryptic_ammo_aura",
+      "name": "Ammunition Deposit",
+      "name_hash": "a45966fb",
+      "description_hash": "cc394399",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ammo_aura.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ammo_aura.md",
+      "commit": "5135ead0b"
+    },
+    {
+      "id": "cryptic_aura_weapon_improved",
+      "name": "Foe-Render Creed",
+      "name_hash": "87e80221",
+      "description_hash": "6d4feb19",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_aura_weapon_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_aura_weapon_improved.md",
+      "commit": "d26b047c8"
+    },
+    {
+      "id": "cryptic_chordclaw",
+      "name": "Chordclaw Strike",
+      "name_hash": "e1996142",
+      "description_hash": "df29b524",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw.md",
+      "commit": "80f42da36"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 458,
+    "from_commit": "cc2684631",
+    "to_commit": "80f42da36",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}
