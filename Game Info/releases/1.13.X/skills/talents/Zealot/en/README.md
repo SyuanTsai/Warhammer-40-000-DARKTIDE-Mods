@@ -78,6 +78,7 @@
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="Abolish Blasphemers talent icon"> [Abolish Blasphemers](#zealot_damage_vs_elites) | <ul><li>Deal 15% more damage to Elite enemies.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="Hubris talent icon"> [Hubris](#zealot_weakspot_damage_reduction) | <ul><li>Weakspot Kills reduce damage taken by 15% for 4 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="Prime Target talent icon"> [Prime Target](#zealot_elite_kills_empowers) | <ul><li>Elite Kills grant +10% damage and restore 15% of maximum Toughness over 5 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="Behind the Lines talent icon"> [Behind the Lines](#zealot_suppress_on_backstab_kill) | <ul><li>Heavy Melee Backstab Kills suppress enemies within 8 metres of you, with a 5-second cooldown.</li></ul> | Skill |
 
 ---
 
@@ -1063,3 +1064,17 @@
 - **Damage and restoration example:** base damage 100 becomes 100 × 1.1 = 110. With maximum Toughness 100, restore 100 × 15% ÷ 5 = 3 points per second. If triggered again at the third second and then sustained until the eighth second, total restoration can reach 24 points, limited by missing Toughness.
 
 [Details](zealot_elite_kills_empowers.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_suppress_on_backstab_kill"></a>
+
+### Behind the Lines
+
+<img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="72" height="72" alt="Behind the Lines talent icon">
+
+- **Trigger:** a Heavy Melee Backstab Kill suppresses enemies capable of being suppressed within 8 metres of you, with a 5-second cooldown. The area is centred on your position.
+- **Limits:** suppression decreases with distance from you. Enemy suppression resistance and behaviour differ, so this does not guarantee that every enemy stops attacking, and it deals no extra damage.
+- **Cooldown example:** after triggering at 0 seconds, another Heavy Melee Backstab Kill at 2 seconds does not trigger it again. It can trigger again from about 5 seconds.
+
+[Details](zealot_suppress_on_backstab_kill.md) · [Back to index](#talent-index)

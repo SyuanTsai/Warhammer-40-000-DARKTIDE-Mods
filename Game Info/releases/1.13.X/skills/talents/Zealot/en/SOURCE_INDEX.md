@@ -81,3 +81,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Abolish Blasphemers](zealot_damage_vs_elites.md) / `zealot_damage_vs_elites` | Skill |
 | [Hubris](zealot_weakspot_damage_reduction.md) / `zealot_weakspot_damage_reduction` | Skill |
 | [Prime Target](zealot_elite_kills_empowers.md) / `zealot_elite_kills_empowers` | Skill |
+| [Behind the Lines](zealot_suppress_on_backstab_kill.md) / `zealot_suppress_on_backstab_kill` | Skill |

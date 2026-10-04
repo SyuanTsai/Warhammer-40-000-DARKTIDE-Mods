@@ -854,6 +854,18 @@ Full raw template and formatting: [source evidence](zealot_elite_kills_empowers.
 | Elite Kill bonus and restoration | After Elite Kill: +10% Damage; replenish 15% Toughness over 5s; `ui / loc_talent_zealot_elite_kills_empowers_desc / 3d3cbd01` | Single-stack effect: damage +0.1, duration 5; restoration 0.15 × dt / 5 of maximum Toughness [Fixed source and line references](zealot_elite_kills_empowers.md#fixed-source-evidence) | Consistent | Trigger, values and restoration period agree. |
 | Basis, refresh and cap | No maximum-resource basis or repeat-trigger rule; `ui / loc_talent_zealot_elite_kills_empowers_desc / 3d3cbd01` | Refresh resets duration without stacking damage or restoration rate; limited by missing Toughness. Original retrigger-at-3s example totals 24 points by 8s at maximum Toughness 100 [Fixed source and line references](zealot_elite_kills_empowers.md#fixed-source-evidence) | Not covered by the description | These restoration and refresh details supplement the wording. |
 
+
+<a id="zealot_suppress_on_backstab_kill"></a>
+
+## Behind the Lines
+
+Full raw template and formatting: [source evidence](zealot_suppress_on_backstab_kill.md#original-english-template-and-reconstruction). Name hash `5e4f6e53`. Every row uses `ui / loc_talent_zealot_suppress_on_backstab_kill_desc / 2ae92ad1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, suppression and cooldown | Heavy Melee Backstab Kills; suppress enemies within 8m; 5s Cooldown; `ui / loc_talent_zealot_suppress_on_backstab_kill_desc / 2ae92ad1` | Kill plus Heavy Hit and Backstab requirements; area suppression, radius 8, cooldown 5 seconds [Fixed source and line references](zealot_suppress_on_backstab_kill.md#fixed-source-evidence) | Consistent | Trigger, effect, radius and cooldown agree. |
+| Area and resistance limits | No area centre, falloff or resistance details; `ui / loc_talent_zealot_suppress_on_backstab_kill_desc / 2ae92ad1` | Holder-centred `Suppression.apply_area_minion_suppression`, suppression 200000, falloff true; not extra damage or a guarantee that every enemy stops attacking [Fixed source and line references](zealot_suppress_on_backstab_kill.md#fixed-source-evidence) | Not covered by the description | These application limits supplement the wording. |
+
 ## Comparison totals
 
 147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.
