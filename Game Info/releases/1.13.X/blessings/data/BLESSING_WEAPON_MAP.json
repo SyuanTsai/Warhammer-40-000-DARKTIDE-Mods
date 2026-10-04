@@ -874,6 +874,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
       "effect": "命中弱點且符合齊射計數時，I–IV級提高35／40／45／50%弱點加成部分；不是整筆遠程傷害。"
+    },
+    {
+      "id": "efficiency",
+      "name_zh_tw": "效率",
+      "name_en": "Efficiency",
+      "name_key": "loc_trait_bespoke_first_shot_ammo_cost_reduction",
+      "description_key": "loc_trait_bespoke_first_shot_ammo_cost_reduction_desc",
+      "name_hash": "18073829",
+      "description_hash": "1be750a9",
+      "page": "entries/效率/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/882a8dca-8f18-4327-901b-c03dba2ca7e7",
+      "effect": "新裝備時即就緒；每次射擊事件後冷卻 I–IV 為 1.25／1／0.75／0.5 秒，連射會刷新。就緒時 Mk VII／IX 用量 3→1，約省66.7%；Mk IIb 用量2→1，省50%。"
     }
   ],
   "weapons": [
@@ -15057,6 +15070,126 @@
       "icon": "https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
       "effect": "弱點命中且combo_count為1–3時，額外弱點傷害部分提高35–50%；分批結算可使轉場首殼符合。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+      "blessing_id": "efficiency",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/效率/weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+        "actual_mark_ids": [
+          "lasgun_p1_m1",
+          "lasgun_p1_m2",
+          "lasgun_p1_m3"
+        ],
+        "tier_cooldown_seconds": {
+          "I": 1.25,
+          "II": 1.0,
+          "III": 0.75,
+          "IV": 0.5
+        },
+        "wrapper_fallback_cooldown_seconds": 1.0,
+        "tier_replaces_wrapper_fallback": true,
+        "allow_proc_while_cooling_down": true,
+        "off_cooldown_keyword": "reduced_ammo_consumption",
+        "ammo_cost_when_keyword_active": "round(u/3); actual consumption=min(current_clip,cost)",
+        "base_ammo_usage_by_mark": {
+          "lasgun_p1_m1": 3,
+          "lasgun_p1_m2": 2,
+          "lasgun_p1_m3": 3
+        },
+        "ammo_cost_when_keyword_active_by_mark": {
+          "lasgun_p1_m1": 1,
+          "lasgun_p1_m2": 1,
+          "lasgun_p1_m3": 1
+        },
+        "ammo_saving_fraction_by_mark": {
+          "lasgun_p1_m1": "2/3 ≈ 66.7%",
+          "lasgun_p1_m2": "1/2 = 50%",
+          "lasgun_p1_m3": "2/3 ≈ 66.7%"
+        },
+        "actions_by_mark": {
+          "lasgun_p1_m1": {
+            "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+            "name_en": "Infantry Lasgun Kantrael Mk VII",
+            "ordinary_hip": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 3,
+              "allow_shots_with_less_than_required_ammo": true
+            },
+            "aimed_zoom": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 3
+            },
+            "special": {
+              "kind": "toggle_special",
+              "function": "flashlight_toggle",
+              "fires_shot": false
+            }
+          },
+          "lasgun_p1_m2": {
+            "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+            "name_en": "Infantry Lasgun Kantrael Mk IIb",
+            "ordinary_hip": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 2,
+              "allow_shots_with_less_than_required_ammo": true
+            },
+            "aimed_zoom": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 2
+            },
+            "special": {
+              "kind": "toggle_special",
+              "function": "flashlight_toggle",
+              "fires_shot": false
+            }
+          },
+          "lasgun_p1_m3": {
+            "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+            "name_en": "Infantry Lasgun Kantrael Mk IX",
+            "ordinary_hip": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 3,
+              "allow_shots_with_less_than_required_ammo": true
+            },
+            "aimed_zoom": {
+              "kind": "shoot_hit_scan",
+              "ammo_usage": 3
+            },
+            "special": {
+              "kind": "toggle_special",
+              "function": "flashlight_toggle",
+              "fires_shot": false
+            }
+          }
+        },
+        "held_slot_condition": false,
+        "known_scope": "Only these three actual inventory bindings reviewed."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 50,
+        "end_line": 95
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 40
+      },
+      "description_key": "loc_trait_bespoke_first_shot_ammo_cost_reduction_desc",
+      "description_hash": "1be750a9",
+      "icon": "https://github.com/user-attachments/assets/882a8dca-8f18-4327-901b-c03dba2ca7e7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_048",
+      "effect": "新裝備時即就緒；每次射擊事件後冷卻 I–IV 為 1.25／1／0.75／0.5 秒，連射會刷新。就緒時 Mk VII／IX 用量 3→1，約省66.7%；Mk IIb 用量2→1，省50%。"
     }
   ],
   "bindings": [
@@ -21106,6 +21239,48 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
         "import_line": 15,
         "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "efficiency",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/first_shot_ammo_cost_reduction",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "efficiency",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/first_shot_ammo_cost_reduction",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "efficiency",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_first_shot_ammo_cost_reduction",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/first_shot_ammo_cost_reduction",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
       }
     }
   ]

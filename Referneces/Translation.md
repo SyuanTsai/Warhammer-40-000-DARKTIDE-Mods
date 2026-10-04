@@ -448,6 +448,7 @@
 - Infernus - 煉獄
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_burninating_on_crit`，hash `fa25b219`；英文／繁中RAW配對確認。
 - Efficiency - 效率
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_first_shot_ammo_cost_reduction`，hash `18073829`；英文／繁中RAW配對確認。
 - Concentrated Fire - 集中火力
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_chained_weakspot_hits`，hash `cc0b463d`；英文／繁中RAW配對確認。
 - Desperado - 亡命之徒
