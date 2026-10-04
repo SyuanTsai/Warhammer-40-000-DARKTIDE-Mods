@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="32" height="32" alt="Kinetic Energy Distributors talent icon"> [Kinetic Energy Distributors](#cryptic_toughness_on_damage_taken) | <ul><li>Taking positive Health damage restores 25% of maximum Toughness over 5 seconds. Taking only Toughness damage does not trigger it; retriggering refreshes recovery.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="Uncapped Arrestor talent icon"> [Uncapped Arrestor](#cryptic_melee_attacks_give_melee_attack_speed) | <ul><li>A melee swing that hits an enemy grants one 2.5% Melee Attack Speed stack, up to 5. Each trigger refreshes the 3-second duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="Electro-Strike Conduit talent icon"> [Electro-Strike Conduit](#cryptic_melee_crits_electrocute_first) | <ul><li>Melee Critical Hits Electrocute the first target of the swing, provided it survives the hit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="Gunsmith talent icon"> [Gunsmith](#cryptic_auto_reload) | <ul><li>Always grants 15% Reload Speed. After 5 seconds without shooting, transfers 7.5% of clip capacity from reserves each subsequent second, rounded up; the first batch is around 6 seconds.</li></ul> | Talent |
 
 ---
 
@@ -1162,3 +1163,18 @@
 - **Exception**: There is no additional trigger cooldown. Whether an enemy can be kept under continuous control still depends on its own resistances.
 
 [Details](cryptic_melee_crits_electrocute_first.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_auto_reload"></a>
+
+### Gunsmith
+
+<img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="72" height="72" alt="Gunsmith talent icon">
+
+- **Reload Speed**: Gain 15% Reload Speed. An affected reload action that originally takes 2 seconds becomes `2 ÷ 1.15 ≈ 1.74` seconds.
+- **Automatic reload**: After 5 full seconds without shooting, every additional second transfers ammo from reserves into the clip. After normal shooting, the first batch arrives at approximately 6 seconds. Each batch is 7.5% of clip capacity, rounded up.
+- **Ammo example**: A 30-round clip gives `30 × 7.5% = 2.25`, rounded up to 3 rounds per batch. If the clip is missing 2 rounds, only 2 are transferred; if reserves contain only 1 round, only 1 is transferred.
+- **Exceptions**: No transfer occurs during manual reloading, with a full clip or with empty reserves. Shooting again resets the wait. This moves reserve ammo into the clip; it does not create new ammo.
+
+[Details](cryptic_auto_reload.md) · [Back to index](#talent-index)

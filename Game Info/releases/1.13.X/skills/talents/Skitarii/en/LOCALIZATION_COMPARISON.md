@@ -902,6 +902,18 @@ Full raw template and formatting: [source evidence](cryptic_melee_crits_electroc
 | Critical melee hit and first target | Melee Critical hits Electrocute the first target hit; `ui / loc_talent_cryptic_melee_crits_electrocute_first_desc / 3fc35e67` | `on_crit_melee` plus `on_first_target_melee_hit` applies Electrocution to the first qualifying target. [Fixed source and line references](cryptic_melee_crits_electrocute_first.md#fixed-source-evidence) | Consistent | Both the attack condition and target ordering match. |
 | Target eligibility, duration and limits | Does not specify survival, duration, refresh, cooldown or resistances; `ui / loc_talent_cryptic_melee_crits_electrocute_first_desc / 3fc35e67` | The target must survive and have a `buff_system`; `cryptic_electrocution_default` lasts 3 seconds with 1 stack and refresh. No extra trigger cooldown; enemy resistances still apply. [Fixed source and line references](cryptic_melee_crits_electrocute_first.md#fixed-source-evidence) | Not covered by the description | These details preserve the existing 5-target cleave limitation and explain why the status does not guarantee continuous control. |
 
+
+<a id="cryptic_auto_reload"></a>
+
+## Gunsmith
+
+Full raw template and formatting: [source evidence](cryptic_auto_reload.md#original-english-template-and-reconstruction). Name hash `d211baf4`. Every row uses `ui / loc_talent_cryptic_auto_reload_desc / 612ee334`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reload Speed and reserve transfer | 15% Reload Speed; after not shooting for 5s, each second reloads 7.5% of the Clip from Ammo Reserve; `ui / loc_talent_cryptic_auto_reload_desc / 612ee334` | Unconditional `reload_speed = 0.15`; after the 5-second cooldown, the first transfer is one second later, at about 6 seconds, then once per second. [Fixed source and line references](cryptic_auto_reload.md#fixed-source-evidence) | Consistent | The values and reserve source match; each second after the wait is compatible with the verified first-batch timing. |
+| Rounding, eligibility and examples | Does not specify rounding, reload suppression, stowed-gun operation or transfer limits; `ui / loc_talent_cryptic_auto_reload_desc / 612ee334` | `ceil(max_ammo_in_clip × 0.075)` is limited by missing ammo/reserves and disabled during manual reload; shooting resets the timer; operates on `slot_secondary`. [Fixed source and line references](cryptic_auto_reload.md#fixed-source-evidence) | Not covered by the description | The original 2÷1.15≈1.74-second example and 30-round clip giving 3/2/1-round transfers explain the omitted calculations and exceptions; no ammo is created. |
+
 ## Comparison totals
 
 146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

@@ -85,3 +85,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kinetic Energy Distributors](cryptic_toughness_on_damage_taken.md) / `cryptic_toughness_on_damage_taken` | Talent |
 | [Uncapped Arrestor](cryptic_melee_attacks_give_melee_attack_speed.md) / `cryptic_melee_attacks_give_melee_attack_speed` | Talent |
 | [Electro-Strike Conduit](cryptic_melee_crits_electrocute_first.md) / `cryptic_melee_crits_electrocute_first` | Talent |
+| [Gunsmith](cryptic_auto_reload.md) / `cryptic_auto_reload` | Talent |
