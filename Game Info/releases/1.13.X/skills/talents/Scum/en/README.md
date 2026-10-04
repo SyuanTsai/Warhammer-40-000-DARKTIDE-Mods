@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_1) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="32" height="32" alt="Regained Posture talent icon"> [Regained Posture](#broker_passive_stamina_on_successful_dodge) | <ul><li>A Successful Dodge restores 10% of maximum Stamina.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="32" height="32" alt="Slippery Customer talent icon"> [Slippery Customer](#broker_passive_dodge_melee_on_slide) | <ul><li>While sliding, count as Dodging against Melee attacks.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="32" height="32" alt="Tis but a Scratch talent icon"> [Tis but a Scratch](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | <ul><li>Taking Ranged Damage while Toughness remains restores 30% of maximum Toughness over 3 seconds.</li></ul> | Talent |
 
 ---
 
@@ -778,3 +779,17 @@
 - **Trigger limit**: starting a slide does not mean an attack has already been successfully Dodged. You must actually avoid an attack that qualifies for the check to trigger talents tied to a Successful Dodge.
 
 [Details](broker_passive_dodge_melee_on_slide.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_replenish_toughness_on_ranged_toughness_damage"></a>
+
+### Tis but a Scratch
+
+<img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="72" height="72" alt="Tis but a Scratch talent icon">
+
+- **Trigger condition**: taking Ranged Damage while your Toughness is not depleted starts ongoing Toughness recovery. Restore 10% of maximum Toughness per second for 3 seconds.
+- **Refresh and cancellation**: retriggering resets the 3-second duration without stacking the recovery rate. Recovery stops when Toughness is depleted.
+- **Recovery example**: at 100 maximum Toughness, restore 10 points per second, totalling 30 over a full 3 seconds. If triggered again at the 2-second mark, recovery can extend to the 5-second mark, totalling at most 50 points, still capped by the deficit.
+
+[Details](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) · [Back to index](#talent-index)

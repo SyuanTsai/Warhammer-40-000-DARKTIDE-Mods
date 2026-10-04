@@ -554,6 +554,18 @@ Full raw template and formatting: [source evidence](broker_passive_dodge_melee_o
 | Sliding and Melee Dodge state | While sliding, count as Dodging against Melee Attacks; `ui / loc_talent_broker_passive_dodge_melee_on_slide_desc / 2eb1aa86` | `movement_state.method == sliding` enables `count_as_dodge_vs_melee`. [Fixed source and line references](broker_passive_dodge_melee_on_slide.md#fixed-source-evidence) | Consistent | The English correctly describes a conditional Dodging state. |
 | Checking branches and Successful Dodge events | No grab branch or actual avoidance/event distinction is stated; `ui / loc_talent_broker_passive_dodge_melee_on_slide_desc / 2eb1aa86` | `Dodge.is_dodging` reads the keyword for `melee` and `incapacitating_grab`. Sliding alone is not a Successful Dodge; related talents require avoiding a qualifying attack. It is not universal Damage immunity. [Fixed source and line references](broker_passive_dodge_melee_on_slide.md#fixed-source-evidence) | Not covered by the description | These clarify the checking scope and event requirement without contradicting count as Dodging. |
 
+
+<a id="broker_passive_replenish_toughness_on_ranged_toughness_damage"></a>
+
+## Tis but a Scratch
+
+Full raw template and formatting: [source evidence](broker_passive_replenish_toughness_on_ranged_toughness_damage.md#original-english-template-and-reconstruction). Name hash `6de924eb`. Every row uses `ui / loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc / 6f652e30`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged Toughness Damage, recovery, and cancellation | Replenish 30% Toughness over 3s after Ranged Toughness Damage; losing all Toughness cancels the effect; `ui / loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc / 6f652e30` | `on_damage_taken` requires `has_toughness` and `on_ranged_hit`; the 3-second child buff regenerates 0.3 / 3 per second and finishes on Toughness break. [Fixed source and line references](broker_passive_replenish_toughness_on_ranged_toughness_damage.md#fixed-source-evidence) | Consistent | The English explicitly covers both the recovery and the depletion cancellation. |
+| Recovery basis and refresh | No maximum-Toughness basis, rate-stacking, refresh, or deficit details are stated; `ui / loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc / 6f652e30` | One buff refreshes to 3 seconds without adding recovery rates. It restores 10% of maximum Toughness per second, capped by the deficit. [Fixed source and line references](broker_passive_replenish_toughness_on_ranged_toughness_damage.md#fixed-source-evidence) | Not covered by the description | These explain the accepted extension example and recovery limits. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
