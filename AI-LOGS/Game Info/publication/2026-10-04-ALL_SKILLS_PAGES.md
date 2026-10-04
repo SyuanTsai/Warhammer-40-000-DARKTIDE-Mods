@@ -52,4 +52,15 @@ AI-LOGS全根歷史檢查另有13個原有封存引用指向Git外歷史RAW／�
 
 ### 交付狀態
 
-精確提交／推送及兩個Draft PR、既有CI結果於完成後記錄。未合併，未正式發布；原技術限制與待遊戲內核對事項保留於每個來源頁。
+- 匯出工具／流程 Commit：[`52266f37c9fea095a6d2dc095f0eacd089f110a3`](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/commit/52266f37c9fea095a6d2dc095f0eacd089f110a3)。
+- 文件 [Draft PR #191](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/191)，基準為公開固定知識分支 `codex/darktide-dialogue-archive`；只包含本次9個檔案，先前對話提交不列入PR差異。
+- 網站 Commit：[`58cd2e185579d6022c46d03a3624eacc22193d07`](https://github.com/SyuanTsai/SyuanTsai.github.io/commit/58cd2e185579d6022c46d03a3624eacc22193d07)。
+- 網站 [Draft PR #52](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/52)，基準 `gh-pages`；1,346個任務檔案，只有技能頁、Darktide原生入口、CSS、映射及說明／素材metadata。
+- 兩個工作分支均已正常推送 `codex/darktide-skill-pages`；本次Author與Committer均為使用者指定身分，私人信箱只在Git metadata。公開新增diff無私人絕對路徑、信箱、憑證、圖片binary或runtime artifacts。Pages本機remediation `809b44f6ab3591f2a70a4a13cab8e1b89bac0917` 不在交付祖先。
+- [Test Jekyll site run 37165370815](https://github.com/SyuanTsai/SyuanTsai.github.io/actions/runs/37165370815) **success**，精確對應網站SHA `58cd2e1`。Jekyll、46項unittest、文章／discovery、SEO、preview、Pages交付、全站品質、Lighthouse accessibility audit、產物排除與既有視覺／搜尋檢查全部通過。未增加任何CI步驟。
+- Lighthouse首頁行動基線：Performance 100、Accessibility 100、Best Practices 96、SEO 100；分數為既有首頁報告，不能稱為每個技能的Lighthouse評分。
+- 外部HTTP報告2,388個URL：1,357回200、1,030回429限流、另1筆999。410個固定Source URL均200，固定Source SHA也由公開GitHub API核對存在。限流報告為既有非阻擋檢查；Git知識SHA、檔案及原圖附件分別由固定Git物件、公開Commit API及真實瀏覽讀回驗證，沒有把429誤列缺頁或更換附件。
+- 實際CI產物的1,336個技能相關HTML及CSS共1,337檔全部存在，與來源（僅正規化CRLF）0差異；再次檢查1,336頁的所有連結／錨點與681份完整正文，0錯誤／差異。JS停用下完成Darktide→職業→玩家→機制→返回／上一頁→已建置網站首頁的原生往返。
+- 本機解壓既有CI整站產物時，在其他文章的大小寫路徑碰撞中止；全部Darktide頁、技能CSS及已建置首頁已完整核對，技能預覽使用這些實際Jekyll產物。此限制不涉及正式Linux CI或本次技能檔案，未修改其他文章。
+
+兩個PR保留Draft，未合併、正式發布或force-push。原技能及唯讀Source工作樹均無差異；原文件的翻譯勘誤、程式推導、待遊戲內核對項保留。既有13個歷史封存引用限制已另記，不擴大修改其他任務。
