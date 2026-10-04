@@ -7,6 +7,114 @@
 - Read game English independently against previously verified evidence. Only explicit contradictions in effect direction, target, condition, quantity or unit count as English errata. Omitted mechanics and examples are supplementary.
 - Placeholder displays are static reconstructions from the original template, existing verified values and necessary display mappings; they are not observed game screens. Export suffixes are metadata.
 
+## Comparison index
+
+Coverage: **97 selectable talents and 4 base effects**. The conclusions below summarize the independently read English; Traditional Chinese localization notes remain separate.
+
+| Talent | Conclusion |
+|---|---|
+| [Integrated Refraction Emitter](#cryptic_grenade_ability_force_field) | No explicit English contradiction; supplementary details. |
+| [Purgator Servo-Skull](#cryptic_flamethrower) | No explicit English contradiction; supplementary details. |
+| [Medicae Servo-Skull](#cryptic_servo_skull_inject_ally) | No explicit English contradiction; supplementary details. |
+| [Arc Grenades](#cryptic_grenade_ability_arc_grenade) | English claim remains unconfirmed; see details. |
+| [Artificer Servo-Skull](#cryptic_servo_skull_improved) | No explicit English contradiction; supplementary details. |
+| [Overcharged Arc Grenades](#cryptic_arc_grenades_brittleness) | No explicit English contradiction; supplementary details. |
+| [Enhanced Arc Grenades](#cryptic_arc_grenades_weapon_malfunction) | No explicit English contradiction; supplementary details. |
+| [Overcharged Refraction Emitter](#cryptic_force_field_duration_increase) | No explicit English contradiction; supplementary details. |
+| [Kinetic Repulsion](#cryptic_force_field_capacitance_restore) | No explicit English contradiction; supplementary details. |
+| [Noospheric Command](#cryptic_servo_skull_improved_tagging) | No explicit English contradiction; supplementary details. |
+| [Voltaic Resistance](#cryptic_force_field_arcs) | No explicit English contradiction; supplementary details. |
+| [Resurgence](#cryptic_coherency_regen_aura_improved) | No explicit English contradiction; supplementary details. |
+| [Ammunition Deposit](#cryptic_ammo_aura) | Explicit English contradiction; see details. |
+| [Foe-Render Creed](#cryptic_aura_weapon_improved) | No explicit English contradiction; supplementary details. |
+| [Chordclaw Strike](#cryptic_chordclaw) | No explicit English contradiction; supplementary details. |
+| [Restoration Protocol](#cryptic_precision_stance_toughness_suppression) | No explicit English contradiction; supplementary details. |
+| [Writ of Ammunition Enumeration](#cryptic_precision_stance_fire_rate_increased) | No explicit English contradiction; supplementary details. |
+| [Voltaic Arcs](#cryptic_discharge_generates_arcs) | No explicit English contradiction; supplementary details. |
+| [Voltaic Motivator](#cryptic_discharge_attack_speed_increase) | No explicit English contradiction; supplementary details. |
+| [Voltaic Overcharge](#cryptic_discharge_toughness) | No explicit English contradiction; supplementary details. |
+| [Axial Slash](#cryptic_chordclaw_horizontal_swipe) | No explicit English contradiction; supplementary details. |
+| [Probing Strikes](#cryptic_chordclaw_quick_stab_combo) | No explicit English contradiction; supplementary details. |
+| [Flux Conduit Build-Up](#cryptic_crits_grant_power) | No explicit English contradiction; supplementary details. |
+| [Reactor Coil Recharge](#cryptic_weakspot_kills_grant_power) | No explicit English contradiction; supplementary details. |
+| [Augmented Power-Cycle](#cryptic_increased_passive_cooldown_regen) | No explicit English contradiction; supplementary details. |
+| [Capacitor Reclamation Loop](#cryptic_multi_hits_grant_power) | No explicit English contradiction; supplementary details. |
+| [Voltaic Emitter](#cryptic_discharge) | No explicit English contradiction; supplementary details. |
+| [Advanced Combat Doctrines](#cryptic_precision_stance) | No explicit English contradiction; supplementary details. |
+| [Satiated Steel](#cryptic_chordclaw_capacitance_restoration) | No explicit English contradiction; supplementary details. |
+| [Slice and Dice](#cryptic_chordclaw_consecutive_bonus) | No explicit English contradiction; supplementary details. |
+| [Piercing Sight](#cryptic_precision_stance_crit_cleave) | No explicit English contradiction; supplementary details. |
+| [Calculated Priority](#cryptic_precision_stance_damage_on_elite_kill) | No explicit English contradiction; supplementary details. |
+| [Flensing Protocols](#cryptic_dissector) | No explicit English contradiction; supplementary details. |
+| [Redline Capacitors](#cryptic_redline) | No explicit English contradiction; supplementary details. |
+| [Power Overload](#cryptic_overload_keystone) | No explicit English contradiction; supplementary details. |
+| [Critical Power Overload](#cryptic_overload_keystone_bigger_explosion) | No explicit English contradiction; supplementary details. |
+| [Invigorating Overload](#cryptic_overload_keystone_toughness_stamina) | No explicit English contradiction; supplementary details. |
+| [Static Capacitor Drain](#cryptic_overload_keystone_permastack) | English claim remains unconfirmed; see details. |
+| [Servo-Sinew Surge](#cryptic_dissector_crit_attack_speed) | No explicit English contradiction; supplementary details. |
+| [Honed Dissector](#cryptic_dissector_max_stacks) | No explicit English contradiction; supplementary details. |
+| [Advanced Power Management](#cryptic_redline_strength) | No explicit English contradiction; supplementary details. |
+| [Capacitory Limit Override](#cryptic_redline_rending) | No explicit English contradiction; supplementary details. |
+| [Resource Optimisation Canticles](#cryptic_redline_extra_max_stacks) | No explicit English contradiction; supplementary details. |
+| [Enhanced Capacitance Protocols](#cryptic_dissector_ability_stacks) | No explicit English contradiction; supplementary details. |
+| [Powerdrive](#cryptic_overload_keystone_abilities) | Explicit English contradiction; see details. |
+| [Higher Purpose](#cryptic_dissector_power) | No explicit English contradiction; supplementary details. |
+| [Surge-Extension](#cryptic_redline_toughness) | No explicit English contradiction; supplementary details. |
+| [Power Redistribution Uplink](#cryptic_crits_grant_tdr) | No explicit English contradiction; supplementary details. |
+| [Adaptive Combat Engram](#cryptic_dr_on_toughness_break) | Explicit English contradiction; see details. |
+| [Evasive Servo Recovery](#cryptic_successful_dodge_stamina) | No explicit English contradiction; supplementary details. |
+| [Omnissian Recharge Litany](#cryptic_multi_hits_restore_toughness) | No explicit English contradiction; supplementary details. |
+| [Channelled Motive Force](#cryptic_stamina_increases_damage) | No explicit English contradiction; supplementary details. |
+| [Entropic Transfer](#cryptic_electrocution_toughness) | No explicit English contradiction; supplementary details. |
+| [Overcharge Transfer Lattice](#cryptic_electrocution_defense) | No explicit English contradiction; supplementary details. |
+| [Sureshot Cogitator Sync](#cryptic_weakspot_damage) | No explicit English contradiction; supplementary details. |
+| [Shockline Breach Protocol](#cryptic_pushing_grants_cleave) | No explicit English contradiction; supplementary details. |
+| [Rad-Sink](#cryptic_stacking_ranged_damage) | English claim remains unconfirmed; see details. |
+| [Progressive Plating Matrix](#cryptic_stacking_tdr) | No explicit English contradiction; supplementary details. |
+| [Retribution Conduit](#cryptic_damage_vs_electrocuted_scaling_on_charge) | No explicit English contradiction; supplementary details. |
+| [Galvanic Marking Array](#cryptic_elite_kills_damage) | No explicit English contradiction; supplementary details. |
+| [Auto-Repair Doctrines](#cryptic_toughness_per_charge) | No explicit English contradiction; supplementary details. |
+| [Last Stand Relay](#cryptic_crit_chance_based_on_charge) | No explicit English contradiction; supplementary details. |
+| [Weakness Analysis Doctrine](#cryptic_afflicted_increased_damage) | No explicit English contradiction; supplementary details. |
+| [Ablative Motion Routines](#cryptic_mobile_defense) | No explicit English contradiction; supplementary details. |
+| [Power Overflow](#cryptic_shared_toughness) | No explicit English contradiction; supplementary details. |
+| [Target-Neutralization Feedback](#cryptic_stun_suppression_immune) | No explicit English contradiction; supplementary details. |
+| [Binary Ballistics Protocol](#cryptic_elite_kills_toughness) | No explicit English contradiction; supplementary details. |
+| [Force Distribution Actuators](#cryptic_push_stagger_stamina) | No explicit English contradiction; supplementary details. |
+| [Superior Tracking Litanies](#cryptic_no_braced_movement_penalty) | No explicit English contradiction; supplementary details. |
+| [Hydraulic Impact](#cryptic_better_heavies) | No explicit English contradiction; supplementary details. |
+| [Hybrid Combat Covenant](#cryptic_hybrid_damage) | No explicit English contradiction; supplementary details. |
+| [Kinetic Energy Distributors](#cryptic_toughness_on_damage_taken) | Explicit English contradiction; see details. |
+| [Uncapped Arrestor](#cryptic_melee_attacks_give_melee_attack_speed) | No explicit English contradiction; supplementary details. |
+| [Electro-Strike Conduit](#cryptic_melee_crits_electrocute_first) | No explicit English contradiction; supplementary details. |
+| [Gunsmith](#cryptic_auto_reload) | No explicit English contradiction; supplementary details. |
+| [Assassination Protocols](#cryptic_ranged_vs_bfg) | No explicit English contradiction; supplementary details. |
+| [System Shock](#cryptic_electrocution_applies_brittleness) | No explicit English contradiction; supplementary details. |
+| [Ammo-Cell Augury](#cryptic_ammo_reserve) | No explicit English contradiction; supplementary details. |
+| [Voltaic Restoration](#cryptic_coherency_toughness_on_ability) | No explicit English contradiction; supplementary details. |
+| [Salvation Doctrine](#cryptic_revive_speed_and_dr) | No explicit English contradiction; supplementary details. |
+| [Ammunition-Restoration Pod](#cryptic_passive_ammo_replenishment) | No explicit English contradiction; supplementary details. |
+| [Sustained Assault Doctrine](#cryptic_stacking_melee_damage) | No explicit English contradiction; supplementary details. |
+| [Galvanized Coating](#cryptic_stun_dr_power) | No explicit English contradiction; supplementary details. |
+| [Moebian Conductor](#cryptic_damage_on_ability) | No explicit English contradiction; supplementary details. |
+| [Servo-Core Recharge Engine](#cryptic_weakspot_kills_restore_toughness) | No explicit English contradiction; supplementary details. |
+| [Adaptive Combat Calibration](#cryptic_cleave_and_impact) | No explicit English contradiction; supplementary details. |
+| [Residual Current Buffer](#cryptic_tdr_based_on_charge) | No explicit English contradiction; supplementary details. |
+| [Superior Defence Engrams](#cryptic_ranged_stacking_toughness) | No explicit English contradiction; supplementary details. |
+| [Target Prioritization Psalms](#cryptic_specials_marking) | No explicit English contradiction; supplementary details. |
+| [Protectorate Protocol](#cryptic_disabled_allies_defense) | No explicit English contradiction; supplementary details. |
+| [Data Sensor Protocol](#cryptic_ally_coherency_defenses) | No explicit English contradiction; supplementary details. |
+| [Sequenced Charge](#cryptic_strength_on_charge_gain) | No explicit English contradiction; supplementary details. |
+| [Slaughter Protocol](#cryptic_toughness_replenishment_on_kill_bonus) | No explicit English contradiction; supplementary details. |
+| [Precision Combat Augurs](#cryptic_next_hit_all_damage_on_dodge) | No explicit English contradiction; supplementary details. |
+| [Voltaic Burst](#cryptic_electrocution_push) | No explicit English contradiction; supplementary details. |
+| [Ablative Wards](#cryptic_corruption_resistance_doom) | No explicit English contradiction; supplementary details. |
+| [Threat Detection Imperative](#cryptic_ranged_kills_tdr) | No explicit English contradiction; supplementary details. |
+| [Voltaic Expander](#cryptic_discharge_base) | No explicit English contradiction; supplementary details. |
+| [Motive Engine](#cryptic_passive_cooldown_regen) | No explicit English contradiction; supplementary details. |
+| [Servo-Skull](#cryptic_servo_skull_order) | No explicit English contradiction; supplementary details. |
+| [Resurgence](#cryptic_coherency_regen_aura) | No explicit English contradiction; supplementary details. |
+
 
 <a id="cryptic_grenade_ability_force_field"></a>
 
@@ -69,30 +177,6 @@ Full raw template and formatting: [source evidence](cryptic_servo_skull_improved
 | Numerical bonuses and order limits | No numerical bonuses, vulnerability/Burn stacking or target restrictions listed; `ui / loc_talent_cryptic_servo_skull_improved_clarified_desc / 4bb85179` | Damage +25%; cooldown ×0.5; hit applies Damage taken +15% for 5s, one refreshing stack; Burn adds 1 up to 8 then resets duration; living/orderable skull and valid target required [Fixed source and line references](cryptic_servo_skull_improved.md#fixed-source-evidence) | Not covered by the description | Retain 100 × 1.25 = 125 and 3 × 0.5 = 1.5s; the 3–3.25s base shooting range, unprovoked Daemonhost exclusion and decoding interaction condition supplement the wording. |
 
 
-<a id="cryptic_force_field_capacitance_restore"></a>
-
-## Kinetic Repulsion
-
-Full raw template and formatting: [source evidence](cryptic_force_field_capacitance_restore.md#original-english-template-and-reconstruction). Name hash `fc74e086`. Every row uses `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586`.
-
-| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
-|---|---|---|---|---|
-| Absorbed attacks and restoration amounts | While the force field is active, absorbed attacks generate 2.5% Capacitance, up to 75%; `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586` | Qualifying absorbed attacks restore 0.025 combat_ability charges; _capacitance_restored capped at 0.75 per field [Fixed source and line references](cryptic_force_field_capacitance_restore.md#fixed-source-evidence) | Consistent | The rate and maximum agree; percentages are fractions of one Combat Ability charge. |
-| Attack classification, resource and reset | No explicit ranged flag, damage-count basis, new-field reset or Blitz distinction; `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586` | ranged or count_as_ranged_attack; restore_ability_charge_percentage(combat_ability); maximum-resource cap; per-object reset; Voltaic Resistance tracks its output separately [Fixed source and line references](cryptic_force_field_capacitance_restore.md#fixed-source-evidence) | Not covered by the description | The details supplement the wording. Preserve 10 → 0.25 and 30 → 0.75, with 50-point charges yielding 1.25 per attack and 37.5 at the cap. |
-
-
-<a id="cryptic_servo_skull_improved_tagging"></a>
-
-## Noospheric Command
-
-Full raw template and formatting: [source evidence](cryptic_servo_skull_improved_tagging.md#original-english-template-and-reconstruction). Name hash `dd8d8400`. Every row uses `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80`.
-
-| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
-|---|---|---|---|---|
-| Attack order, duration and cost | Ordering an attack greatly increases Fire Rate for 2s; costs 30% Capacitance; `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80` | Valid command applies cryptic_servo_skull_tagging_buff for 2s; cooldown ×0.15; full cost 0.3 combat_ability charges [Fixed source and line references](cryptic_servo_skull_improved_tagging.md#fixed-source-evidence) | Consistent | The trigger, duration and charge-fraction cost agree. The qualitative Fire Rate wording does not assert an exact percentage; the unused format value is +567%. |
-| Threshold, refresh and stacking limits | No minimum resource, Psykhanium exception, existing-boost pricing or permanent multiplier listed; `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80` | At least 0.3 charges in normal play; training_grounds bypass; valid living skull/enemy and following states; existing duration progress adjusts cost before resetting 2s; ×0.5 and ×0.15 multiply [Fixed source and line references](cryptic_servo_skull_improved_tagging.md#fixed-source-evidence) | Not covered by the description | Preserve 0.25 below threshold, 3 × 0.15 = 0.45s and 3 × 0.5 × 0.15 = 0.225s. Combat Ability Capacitance is separate from the Flamer/Medicae grenade uses. |
-
-
 <a id="cryptic_arc_grenades_brittleness"></a>
 
 ## Overcharged Arc Grenades
@@ -127,6 +211,30 @@ Full raw template and formatting: [source evidence](cryptic_force_field_duration
 |---|---|---|---|---|
 | Duration and extra midpoint Electrocution | Field duration 12s; Electrocute nearby enemies an additional time at the midpoint; `ui / loc_talent_cryptic_force_field_duration_increase_desc / edf9be63` | 12s action replaces 8s action; extra explosion scheduled at t + total_time ×0.5 [Fixed source and line references](cryptic_force_field_duration_increase.md#fixed-source-evidence) | Consistent | The configured duration and one added midpoint explosion agree; 12 ÷ 2 = 6s. |
 | Timeline, interruption and unchanged radius | No full activation/finish timeline, early-interruption behavior or radius/damage increase; `ui / loc_talent_cryptic_force_field_duration_increase_desc / edf9be63` | Full duration explodes at 0/6/12s with 5m radius; finishing at 4s still explodes on finish but skips the unreached midpoint; damage profile unchanged [Fixed source and line references](cryptic_force_field_duration_increase.md#fixed-source-evidence) | Not covered by the description | The additional timing and limits supplement the wording. Retain the earlier source record's lack of independent identical-Build/in-game confirmation. |
+
+
+<a id="cryptic_force_field_capacitance_restore"></a>
+
+## Kinetic Repulsion
+
+Full raw template and formatting: [source evidence](cryptic_force_field_capacitance_restore.md#original-english-template-and-reconstruction). Name hash `fc74e086`. Every row uses `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Absorbed attacks and restoration amounts | While the force field is active, absorbed attacks generate 2.5% Capacitance, up to 75%; `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586` | Qualifying absorbed attacks restore 0.025 combat_ability charges; _capacitance_restored capped at 0.75 per field [Fixed source and line references](cryptic_force_field_capacitance_restore.md#fixed-source-evidence) | Consistent | The rate and maximum agree; percentages are fractions of one Combat Ability charge. |
+| Attack classification, resource and reset | No explicit ranged flag, damage-count basis, new-field reset or Blitz distinction; `ui / loc_talent_cryptic_force_field_capacitance_restore / e9096586` | ranged or count_as_ranged_attack; restore_ability_charge_percentage(combat_ability); maximum-resource cap; per-object reset; Voltaic Resistance tracks its output separately [Fixed source and line references](cryptic_force_field_capacitance_restore.md#fixed-source-evidence) | Not covered by the description | The details supplement the wording. Preserve 10 → 0.25 and 30 → 0.75, with 50-point charges yielding 1.25 per attack and 37.5 at the cap. |
+
+
+<a id="cryptic_servo_skull_improved_tagging"></a>
+
+## Noospheric Command
+
+Full raw template and formatting: [source evidence](cryptic_servo_skull_improved_tagging.md#original-english-template-and-reconstruction). Name hash `dd8d8400`. Every row uses `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack order, duration and cost | Ordering an attack greatly increases Fire Rate for 2s; costs 30% Capacitance; `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80` | Valid command applies cryptic_servo_skull_tagging_buff for 2s; cooldown ×0.15; full cost 0.3 combat_ability charges [Fixed source and line references](cryptic_servo_skull_improved_tagging.md#fixed-source-evidence) | Consistent | The trigger, duration and charge-fraction cost agree. The qualitative Fire Rate wording does not assert an exact percentage; the unused format value is +567%. |
+| Threshold, refresh and stacking limits | No minimum resource, Psykhanium exception, existing-boost pricing or permanent multiplier listed; `ui / loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc / 843cef80` | At least 0.3 charges in normal play; training_grounds bypass; valid living skull/enemy and following states; existing duration progress adjusts cost before resetting 2s; ×0.5 and ×0.15 multiply [Fixed source and line references](cryptic_servo_skull_improved_tagging.md#fixed-source-evidence) | Not covered by the description | Preserve 0.25 below threshold, 3 × 0.15 = 0.45s and 3 × 0.5 × 0.15 = 0.225s. Combat Ability Capacitance is separate from the Flamer/Medicae grenade uses. |
 
 
 <a id="cryptic_force_field_arcs"></a>
@@ -1228,4 +1336,4 @@ Full raw template and formatting: [source evidence](cryptic_coherency_regen_aura
 
 ## Comparison totals
 
-207 rules: 100 Consistent / 4 Explicit contradiction / 100 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 563.
+209 rules: 101 Consistent / 4 Explicit contradiction / 101 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at Skitarii class closeout.

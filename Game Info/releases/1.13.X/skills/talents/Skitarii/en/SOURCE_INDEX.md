@@ -2,6 +2,8 @@
 
 [繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Release, date and evidence limits](../../../../README.md)
 
+[Character base effects](BASE_EFFECTS.md) | [Definitions not directly used](UNUSED_DEFINITIONS.md)
+
 [Original game English comparison](LOCALIZATION_COMPARISON.md) | [Percentage-description review](DAMAGE_PERCENTAGE_REVIEW.md)
 
 Fixed source SHA: `7e662fcda16219d775b84af50322be2e9cd9d62e`. The talent tree has **97 selectable nodes**, each costing one point; a single build can allocate at most 30 points.
@@ -16,11 +18,11 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Medicae Servo-Skull](cryptic_servo_skull_inject_ally.md) / `cryptic_servo_skull_inject_ally` | Blitz |
 | [Arc Grenades](cryptic_grenade_ability_arc_grenade.md) / `cryptic_grenade_ability_arc_grenade` | Blitz |
 | [Artificer Servo-Skull](cryptic_servo_skull_improved.md) / `cryptic_servo_skull_improved` | Blitz |
-| [Kinetic Repulsion](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | Blitz |
-| [Noospheric Command](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | Blitz |
 | [Overcharged Arc Grenades](cryptic_arc_grenades_brittleness.md) / `cryptic_arc_grenades_brittleness` | Blitz |
 | [Enhanced Arc Grenades](cryptic_arc_grenades_weapon_malfunction.md) / `cryptic_arc_grenades_weapon_malfunction` | Blitz |
 | [Overcharged Refraction Emitter](cryptic_force_field_duration_increase.md) / `cryptic_force_field_duration_increase` | Blitz |
+| [Kinetic Repulsion](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | Blitz |
+| [Noospheric Command](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | Blitz |
 | [Voltaic Resistance](cryptic_force_field_arcs.md) / `cryptic_force_field_arcs` | Blitz |
 | [Resurgence](cryptic_coherency_regen_aura_improved.md) / `cryptic_coherency_regen_aura_improved` | Aura |
 | [Ammunition Deposit](cryptic_ammo_aura.md) / `cryptic_ammo_aura` | Aura |
