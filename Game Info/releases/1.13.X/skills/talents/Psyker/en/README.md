@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="Charged Up talent icon"> [Charged Up](#psyker_empowered_grenades_increased_max_stacks) | <ul><li>Raises Empowered Psionics storage from one to three stacks; each empowered Blitz still spends one, with unchanged per-use strength.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="In Fire Reborn talent icon"> [In Fire Reborn](#psyker_warpfire_generate_souls) | <ul><li>A qualifying death with Soulblaze present, or caused by your Soulblaze, has a 10% chance to grant one Warp Charge; choose either this or Psychic Vampire.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="32" height="32" alt="Psychic Vampire talent icon"> [Psychic Vampire](#psyker_aura_souls_on_kill) | <ul><li>You or an Ally in Coherency killing an enemy gives you a 4% chance to gain one Warp Charge; choose either this or In Fire Reborn.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="32" height="32" alt="Warp Battery talent icon"> [Warp Battery](#psyker_increased_max_souls) | <ul><li>Raises Warp Charge storage from four to six; Damage and cooldown restoration per charge remain unchanged.</li></ul> | Keystone |
 
 ---
 
@@ -681,3 +682,19 @@
 - **Selection limit:** Choose either Psychic Vampire or In Fire Reborn.
 
 [Details](psyker_aura_souls_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_increased_max_souls"></a>
+
+### Warp Battery
+
+<img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="72" height="72" alt="Warp Battery talent icon">
+
+- **How it works:** Warp Charge storage increases from four to six stacks. Damage and cooldown effects per stack remain unchanged.
+
+- **Damage example:** Six stacks give `6 × 4% = 24%` Damage. Without other bonuses, `100 × 1.24 = 124`. This is eight more than 116 at the original four-stack cap.
+
+- **Cooldown example:** Six stacks restore `6 × 7.5% = 45%` of one ability charge's cooldown; for a 30-second cooldown, this restores 13.5 seconds of progress.
+
+[Details](psyker_increased_max_souls.md) · [Back to index](#talent-index)

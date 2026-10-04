@@ -506,6 +506,18 @@ Full raw template and formatting: [source evidence](psyker_aura_souls_on_kill.md
 | Trigger, recipient and chance | You or an Ally in Coherency kills an Enemy; you have a 4% chance to gain a Warp Charge; `ui / loc_talent_psyker_souls_on_kill_coop_desc / 03d352e7` | Server on_minion_death checks attacking_unit in the Coherency set, including self, then math.random() < 0.04 adds a soul to the holder's buff_extension. [Fixed source and line references](psyker_aura_souls_on_kill.md#fixed-source-evidence) | Consistent | The English explicitly matches both qualifying attackers and the holder-only recipient; it does not grant charges to all Allies. |
 | Storage, probability and choice | No guaranteed interval, available-storage assumption or selection boundary specified; `ui / loc_talent_psyker_souls_on_kill_coop_desc / 03d352e7` | With storage available, 100 qualifying kills expect four stacks; no guarantee every 25 kills. Psychic Vampire and In Fire Reborn are alternative choices. [Fixed source and line references](psyker_aura_souls_on_kill.md#fixed-source-evidence) | Not covered by the description | These retain the accepted example and limits without changing the stated chance. |
 
+
+<a id="psyker_increased_max_souls"></a>
+
+## Warp Battery
+
+Full raw template and formatting: [source evidence](psyker_increased_max_souls.md#original-english-template-and-reconstruction). Name hash `a643d61c`. Every row uses `ui / loc_talent_psyker_increased_souls_desc / e69bf6d1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Storage cap | Store up to six Warp Charges; `ui / loc_talent_psyker_increased_souls_desc / e69bf6d1` | Initialization selects the soul buff with max_stacks = 6 instead of the base four. [Fixed source and line references](psyker_increased_max_souls.md#fixed-source-evidence) | Consistent | The stated cap agrees. |
+| Unchanged per-charge effects | No different Damage, cooldown restoration, duration or expenditure rule stated; `ui / loc_talent_psyker_increased_souls_desc / e69bf6d1` | talent_resource.max_resource is already six, retaining +4% Damage per stack; original soul duration and consumption functions are shared. Six stacks give +24% Damage and 45% restoration of one ability charge. [Fixed source and line references](psyker_increased_max_souls.md#fixed-source-evidence) | Not covered by the description | The accepted formulas and unchanged behavior supplement the storage statement. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -52,3 +52,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Charged Up](psyker_empowered_grenades_increased_max_stacks.md) / `psyker_empowered_grenades_increased_max_stacks` | Keystone |
 | [In Fire Reborn](psyker_warpfire_generate_souls.md) / `psyker_warpfire_generate_souls` | Keystone |
 | [Psychic Vampire](psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | Keystone |
+| [Warp Battery](psyker_increased_max_souls.md) / `psyker_increased_max_souls` | Keystone |
