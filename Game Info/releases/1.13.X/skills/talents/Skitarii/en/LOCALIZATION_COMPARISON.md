@@ -721,6 +721,18 @@ Full raw template and formatting: [source evidence](cryptic_damage_vs_electrocut
 | Target condition and charge scaling | Gain +10% Damage vs Electrocuted, increased by +5% per current charge; `ui / loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc / 232897f8` | `damage_vs_electrocuted` is `0.1 + 0.05n` for current remaining full charges [Fixed source and line references](cryptic_damage_vs_electrocuted_scaling_on_charge.md#fixed-source-evidence) | Consistent | The target condition, base bonus and per-charge increase agree. |
 | Integer charges and additive calculation | Does not specify partial-charge handling or combination with other damage stats; `ui / loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc / 232897f8` | Integer `num_charges` excludes partial progress; spending changes n. At 3 charges, 25% gives 100→125, or 145 with same-stage 20%; the target must remain Electrocuted [Fixed source and line references](cryptic_damage_vs_electrocuted_scaling_on_charge.md#fixed-source-evidence) | Not covered by the description | The calculation basis, state changes and original examples supplement the English. |
 
+
+<a id="cryptic_elite_kills_damage"></a>
+
+## Galvanic Marking Array
+
+Full raw template and formatting: [source evidence](cryptic_elite_kills_damage.md#original-english-template-and-reconstruction). Name hash `ac680fe6`. Every row uses `ui / loc_talent_cryptic_elite_kills_damage_desc / 768f2807`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged killing method, bonus and decay | Ranged Elite Kills increase Damage by +5% for 15s. Stacks 4 times. Stacks decay one at a time; `ui / loc_talent_cryptic_elite_kills_damage_desc / 768f2807` | `all(on_ranged_kill, on_elite_kill)`; each stack adds `0.05`, cap 4, duration 15, one-stack decay [Fixed source and line references](cryptic_elite_kills_damage.md#fixed-source-evidence) | Consistent | Ranged can describe the kill method; the effect values and decay direction agree. The Chinese enemy-type correction remains separate. |
+| Refresh rules and calculation examples | Does not state both timer-refresh flags or same-stage damage addition; `ui / loc_talent_cryptic_elite_kills_damage_desc / 768f2807` | Adding and removing a stack refresh duration. Four stacks give 100→120; absent new kills, 3/2/1/0 remain at 15/30/45/60 seconds [Fixed source and line references](cryptic_elite_kills_damage.md#fixed-source-evidence) | Not covered by the description | The original damage and decay examples supplement the English. |
+
 ## Comparison totals
 
 115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.

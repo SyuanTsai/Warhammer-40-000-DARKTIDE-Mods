@@ -70,3 +70,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Rad-Sink](cryptic_stacking_ranged_damage.md) / `cryptic_stacking_ranged_damage` | Talent |
 | [Progressive Plating Matrix](cryptic_stacking_tdr.md) / `cryptic_stacking_tdr` | Talent |
 | [Retribution Conduit](cryptic_damage_vs_electrocuted_scaling_on_charge.md) / `cryptic_damage_vs_electrocuted_scaling_on_charge` | Talent |
+| [Galvanic Marking Array](cryptic_elite_kills_damage.md) / `cryptic_elite_kills_damage` | Talent |
