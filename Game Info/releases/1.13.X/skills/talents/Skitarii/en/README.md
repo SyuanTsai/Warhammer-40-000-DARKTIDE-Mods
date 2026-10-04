@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="Capacitory Limit Override talent icon"> [Capacitory Limit Override](#cryptic_redline_rending) | <ul><li>At 3 or more Redline Capacitors stacks, gain +15% Rending. The bonus turns off at 2 or fewer stacks; stacks above the threshold do not increase its value.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="Resource Optimisation Canticles talent icon"> [Resource Optimisation Canticles](#cryptic_redline_extra_max_stacks) | <ul><li>Adds another maximum Combat Ability charge and raises the Redline Capacitors stack cap from 4 to 5. At 5 stacks, Toughness damage taken is multiplied by 0.75 and natural Capacitance recovery is 25% faster.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="Enhanced Capacitance Protocols talent icon"> [Enhanced Capacitance Protocols](#cryptic_dissector_ability_stacks) | <ul><li>Using a Combat Ability restores all missing Flensing Protocols stacks, up to the current cap: 6 normally, or 8 with Honed Dissector.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="Powerdrive talent icon"> [Powerdrive](#cryptic_overload_keystone_abilities) | <ul><li>Voltaic Emitter gives 5 Power Overload stacks per charge consumed. The Chordclaw counts its first activation; continued attacks during the same activation do not add stacks. Advanced Combat Doctrines settles whole-charge consumption when the stance ends.</li></ul> | Keystone |
 
 ---
 
@@ -708,3 +709,18 @@
 - **Example**: With the base cap of 6 and 3 stacks remaining, the next ability use restores 3 to reach 6. At a full 6, using the ability cannot exceed the cap.
 
 [Details](cryptic_dissector_ability_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_abilities"></a>
+
+### Powerdrive
+
+<img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="72" height="72" alt="Powerdrive talent icon">
+
+- **Trigger**: With Voltaic Emitter, each consumed charge adds **5 Power Overload stacks**. The Chordclaw counts **only its first activation**; charges spent on continued attacks during that same activation do not grant more stacks.
+- **Advanced Combat Doctrines**: When the stance ends, its activation, ongoing and shot charge consumption is totalled. Each complete charge adds 5 stacks; a remainder smaller than one charge is discarded.
+- **Charge example**: One stance consumes `0.25` charges on activation, `1.6` while maintained and `0.2` through shots, totalling `2.05`. Two complete charges count, giving `2 × 5 = 10` stacks. Charges recovered along the way do not subtract from the consumption already recorded.
+- **Overload example**: Starting at 22 stacks, consuming 2 charges adds 10: `22 + 10 = 32`. One overload triggers immediately and resets the count to zero; the 2 excess stacks are discarded.
+
+[Details](cryptic_overload_keystone_abilities.md) · [Back to index](#talent-index)

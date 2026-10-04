@@ -55,3 +55,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Capacitory Limit Override](cryptic_redline_rending.md) / `cryptic_redline_rending` | Keystone |
 | [Resource Optimisation Canticles](cryptic_redline_extra_max_stacks.md) / `cryptic_redline_extra_max_stacks` | Keystone |
 | [Enhanced Capacitance Protocols](cryptic_dissector_ability_stacks.md) / `cryptic_dissector_ability_stacks` | Keystone |
+| [Powerdrive](cryptic_overload_keystone_abilities.md) / `cryptic_overload_keystone_abilities` | Keystone |

@@ -538,6 +538,19 @@ Full raw template and formatting: [source evidence](cryptic_dissector_ability_st
 | All-stack restoration | Using an Ability replenishes all stacks; `ui / loc_talent_cryptic_dissector_ability_stacks_desc / 39219dd5` | With the special rule, `on_combat_ability` restores `num_max_stacks − current_stacks`, filling to the current cap [Fixed source and line references](cryptic_dissector_ability_stacks.md#fixed-source-evidence) | Consistent | The restoration amount agrees with the English. |
 | Event and current-cap details | Does not specify the actual event or the current numerical cap; `ui / loc_talent_cryptic_dissector_ability_stacks_desc / 39219dd5` | Actions must send `on_combat_ability`; stack restoration does not use `ability_cost`. At 3/6, restores 3 to 6/6; at full adds 0; Honed Dissector raises the cap to 8 [Fixed source and line references](cryptic_dissector_ability_stacks.md#fixed-source-evidence) | Not covered by the description | The original examples and event requirement supplement the text. |
 
+
+<a id="cryptic_overload_keystone_abilities"></a>
+
+## Powerdrive
+
+Full raw template and formatting: [source evidence](cryptic_overload_keystone_abilities.md#original-english-template-and-reconstruction). Name hash `bb01bbb3`. Every row uses `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Amount per counted charge | Gain 5 stacks for each Charge spent; `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b` | The setting is 5 stacks per counted Combat Ability charge; ordinary qualifying `ability_cost > 0` gives `ability_cost × 5` [Fixed source and line references](cryptic_overload_keystone_abilities.md#fixed-source-evidence) | Consistent | The numeric amount matches for charge spending counted by the effect. |
+| Each-charge claim during continuous Chordclaw use | for each Charge spent; `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b` | Only the first Chordclaw activation sends `on_combat_ability`. Later uses while `active = true` still spend charges but grant no further stacks through this path [Fixed source and line references](cryptic_overload_keystone_abilities.md#fixed-source-evidence) | Explicit contradiction | The unqualified each-charge promise is not satisfied by the verified subsequent Chordclaw charge spending. Correct wording must state this exception. |
+| Stance settlement, recovery and overflow | Does not specify when stance consumption is settled, fractional remainder or threshold overflow; `ui / loc_talent_cryptic_overload_keystone_abilities_desc / 6c9f2d5b` | On stance end, `floor(cooldown_percent_used + 0.25) × 5` counts complete consumed charges; restoration does not subtract recorded consumption. Reaching at least 30 triggers once and discards excess [Fixed source and line references](cryptic_overload_keystone_abilities.md#fixed-source-evidence) | Not covered by the description | Retain the original 2.05 →2 charges →10 stacks and 22 +10 =32 →one overload examples as supplements. |
+
 ## Comparison totals
 
 83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
