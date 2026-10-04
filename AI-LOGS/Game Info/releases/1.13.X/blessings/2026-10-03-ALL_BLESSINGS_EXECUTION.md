@@ -307,3 +307,5 @@
 - [浴血而生](2026-10-03-BORN-IN-BLOOD_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
 
 - [熱力震盪](2026-10-03-VOLATILE_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [升溫](2026-10-03-RISING-HEAT_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。

@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-04",
+  "blessing": "rising-heat",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/升溫/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "rising-heat",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-agent-config.json": "35c1317a0c387d1ced0413088289fc98c93875056db884cb88208af1faed38c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-agent-draft.md": "6afcebb2fcf0f8d060f8fd426454ebf9ef42c290e6c66b340e6a649e766bc7dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-agent-evidence.json": "967044fd5ea6c609d01453922ddf0b04883ccff4664280d732ffcefbe05556fe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-config.json": "4c9e4b9ec0965449fad432bcc0026d6902e38ad31834710b7bfaef66a9ea30e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-extension-draft.json": "06705fabf9deb7ab54c91cb23b8d9d08d01a05a5e912ab61f36cfb509d158efa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-image.json": "818560fbdfd02346b8de569ee4ed6de036341e2ebf8fed9cc2e1810c2560e374",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-consumer-delta-review.json": "d035e8d7c9ac8331dfb05ebd3dc6d9ef1a18c9c0689f0f1894c2e25bcaeb369e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-focused-checks.json": "b6c342d9a3d16810d0d0487516c311e1d521f0411cc88de43e3ab0689ce61865",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-frozen-source-verification.json": "750c5453116e524097c70a159ce81b428edcf2f733cc02928f60873c34bc5f9c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-own-tier-diff.json": "1cb45aea72d421a025b93e4cb39e0e8820467989342d82ccb521be60b17de4b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-resume-review.json": "c0f124aefb41fc0f9ac21380d3442901901d19d5778b1695d15e4b814cf90b20",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-traits-review.json": "d11a15dec3e7955f4d580711b39d7592c1fb4e25a635266c34b2b8f53df03be6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-ui-raw-verification.json": "2944c06e04e153a69473fdf6baccf061b1561105536f62fa4d1e4859f038b300",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-ui-review.json": "a7f18d6e7bfda586c99484bb4be382f267217189c77f411d31136752d0df64d2",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "8a4b0ce13561a4aa5fd8e189693d4bc125b5cc25f7ada8dd6320bf036740c2ff",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/DAMAGE_PERCENTAGE_REVIEW.md": "898cbc0cbb81580a23b7c8e3e44bd225d7810ecece5965894277221f279d508e",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/LOCALIZATION_COMPARISON.md": "586cb19154bb08bffd596bba20ebf5d0fffa5624430cf5ff8bf55c44a121142a",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/README.md": "82d4b8925a22dd502e1a9c021ce33ba65b303fc254d7e8e4ffc606b6ef6392b2",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/SOURCE_INDEX.md": "7eda3d95811f4f9dfda5f2296115ffd843845db6751c05aeec61b00fadf02c63",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/TIER_VALUES.md": "7f490141034699527f384bfe41c84f1bd48ec9cbc70a105905740b7d9cb8a073",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/WEAPON_COMPATIBILITY.md": "4b28f608c82bfce096466f3d2d65427f6b266f5ded5cb490ea8d100db66c53b9",
+      "Game Info/releases/1.13.X/blessings/entries/升溫/weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat.md": "188733f61588a29cfedd089930c9bab41deaae93855d9cc0da799b80ae7e2561",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "5525377505134b14d1bf70812ef734c30e8f37f2684a9fb9197c126136b0be22",
+      "Game Info/releases/1.13.X/blessings/README.md": "d2e49ed7b6fe598bba0ba0ab408576aae9b72f8958a18bd6b7869aff5012bdc1",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "aca94192f1a13f6735a208f35e1ecb19c384708bb1eda1bad7646020006d10ca",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "25428fd36aac38d64a100a7a91a6f17f66c93f7f286377c5003ed1ed63113fef",
+      "Referneces/Translation.md": "63961b4eefeec111460bcbf356fcf328bce2a3990c0323899abaed7a99bc30c9"
+    },
+    "scope": {
+      "file_count": 28,
+      "formal_markdown_count": 7,
+      "scope_manifest_sha256": "88df46c630c5709083fabc89db7f988ce663f7cae54ac83ea950240d4e342db7"
+    },
+    "review_summary": [
+      "All 28 fixed-scope file SHA-256 values match the manifest.",
+      "The seven blessing entry pages consistently document one ranged trait variant and exactly two actual plasmagun_p1 bindings: M35 Magnacore Mk II (m1) and Mk III (m2); the shared map and plasma-gun reverse index agree.",
+      "The actual tier values, tier-over-fallback override, 0–5 heat formula, held-slot/non-reload gates, zero event stacks/TTL, shot-before-heat order, charge/brace routes, vent/reload exclusion and later cache refresh are stated consistently with the reviewed evidence.",
+      "The power-stage explanation distinguishes power-level modifiers from final damage. The q=0.10 example is arithmetically consistent: 500→550 before this trait and 550→590 after A=0.08, a 40/550≈7.27% increase at that stage, not a separate 1.08 multiplication.",
+      "RAW keys, strings, hashes and all four formatter maximum sentences agree with the five-step maxima; omitted runtime details are classified as not covered, with no unsupported erratum.",
+      "The actual hitscan/HitScan max_hit_mass consumer evidence is tied to the two bound marks and does not promise proportional final damage or extra penetration. The icon path and attachment URL match the fixed image receipt."
+    ],
+    "reviewed_associations": {
+      "variant_ids": [
+        "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat"
+      ],
+      "bindings": [
+        {
+          "weapon_id": "plasmagun_p1",
+          "mark_id": "plasmagun_p1_m1",
+          "name_zh_tw": "電漿槍 M35熔岩核心 Mk II",
+          "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat"
+        },
+        {
+          "weapon_id": "plasmagun_p1",
+          "mark_id": "plasmagun_p1_m2",
+          "name_zh_tw": "電漿槍 M35熔岩核心 Mk III",
+          "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat"
+        }
+      ],
+      "map_and_reverse_indexes": "Exactly one blessing/variant with two bindings; both mark rows and the Plasma Gun reverse README point to the same implementation and displayed effect."
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "公式、熱能階與算例",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/升溫/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/DAMAGE_PERCENTAGE_REVIEW.md"
+        ],
+        "conclusion": "通過：公式只列精確代入例，不把未核實的浮動臨界值當作精確界線；P=500、IV級n=2得A=.08、540；q=.10時按加法合併得550→590，7.27%只指威力輸入階段。"
+      },
+      {
+        "topic": "首次生效、快取、射擊與熱能時序",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/升溫/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/SOURCE_INDEX.md"
+        ],
+        "conclusion": "通過：持用及非裝填條件下依最近的 stat cache 計算；射擊攻擊先於該發熱能增加，新熱能待後續 cache 更新才改變貢獻；切換、裝填和排熱說法不宣稱同影格即時更新。"
+      },
+      {
+        "topic": "實際兩 Mark 攻擊與 power consumer",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/升溫/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/SOURCE_INDEX.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/WEAPON_COMPATIBILITY.md"
+        ],
+        "conclusion": "通過：Mk II、Mk III 的普通及蓄力／架槍路徑按實際接線使用 hitscan；power modifier 作用於各威力曲線輸出，profile 分配 attack/impact/cleave；HitScan max_hit_mass 證據沒有被擴張成最終傷害或穿透保證。"
+      },
+      {
+        "topic": "RAW、formatter、等級與本體比較",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/升溫/LOCALIZATION_COMPARISON.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/TIER_VALUES.md",
+          "Game Info/releases/1.13.X/blessings/entries/升溫/weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat.md"
+        ],
+        "conclusion": "通過：EN/ZH RAW name/description hashes一致；自訂value×5×100及「+」前綴重建I–IV五階上限+7.5/+10/+15/+20%；tier每階1.5/2/3/4%另列，描述未涵蓋的公式/結算未誤列勘誤。"
+      },
+      {
+        "topic": "型號、索引與圖示",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/升溫/WEAPON_COMPATIBILITY.md",
+          "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md",
+          "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json"
+        ],
+        "conclusion": "通過：一個 variant 對應實際 m1/m2 兩 binding；實際組名源自 family/pattern/mark loc IDs；icon path weapon_trait_152 與附件 URL 分開且符合 image receipt。"
+      }
+    ],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "rising-heat",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_152",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_152.png",
+      "attachment": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5980527752",
+      "acquired_date": "2026-10-04",
+      "sha256": "a7743ffb8683c05c42b3a3a11ec675ba6e3fa3301c93be41e9a0e20f7b727d1a",
+      "content_type": "image/png",
+      "size": 2844,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "升溫祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Source original and public original inspected; corresponding alpha diagnostics both depict three descending bars surrounded by flame silhouette.",
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 276,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 27,
+      "bindings": 496,
+      "variants": 257,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 27,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 682,
+      "remote_references": 320,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 16,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-015-full-scan.json",
+        "sha256": "f3247716fcfb74a948b692fd33e897f3bb16093e0f9f16e0ad71cf5982d651d0",
+        "trigger": "round-015"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 88,
+    "not_started_name_groups": 88,
+    "partial_name_groups": 0,
+    "remaining_variants": 348,
+    "remaining_bindings": 689,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6dadfaa141f0c4ca36d3ff9f2023ec48f8b680a4770151800d29cae01162b1bb"
+  },
+  "previous_local_commit": "a2043874be1499f5b4607af545c358ee3b00d0f8",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-consumer-delta-review.json",
+      "sha256": "d035e8d7c9ac8331dfb05ebd3dc6d9ef1a18c9c0689f0f1894c2e25bcaeb369e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-focused-checks.json",
+      "sha256": "b6c342d9a3d16810d0d0487516c311e1d521f0411cc88de43e3ab0689ce61865"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-frozen-source-verification.json",
+      "sha256": "750c5453116e524097c70a159ce81b428edcf2f733cc02928f60873c34bc5f9c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-own-tier-diff.json",
+      "sha256": "1cb45aea72d421a025b93e4cb39e0e8820467989342d82ccb521be60b17de4b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-resume-review.json",
+      "sha256": "c0f124aefb41fc0f9ac21380d3442901901d19d5778b1695d15e4b814cf90b20"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-traits-review.json",
+      "sha256": "d11a15dec3e7955f4d580711b39d7592c1fb4e25a635266c34b2b8f53df03be6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-ui-raw-verification.json",
+      "sha256": "2944c06e04e153a69473fdf6baccf061b1561105536f62fa4d1e4859f038b300"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-primary-ui-review.json",
+      "sha256": "a7f18d6e7bfda586c99484bb4be382f267217189c77f411d31136752d0df64d2"
+    }
+  ],
+  "primary_review_method": "Ownfulltier/wrapper/UI2/RAWmaxformatter and40frozenrange/inputhashes verified; cache reused underexactconditions; powercurve/profile/newactualhitscanconsumer andsame-shotheat order directly reviewed.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-config.json",
+    "sha256": "4c9e4b9ec0965449fad432bcc0026d6902e38ad31834710b7bfaef66a9ea30e5"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "35c1317a0c387d1ced0413088289fc98c93875056db884cb88208af1faed38c8",
+    "evidence.json": "967044fd5ea6c609d01453922ddf0b04883ccff4664280d732ffcefbe05556fe",
+    "draft.md": "6afcebb2fcf0f8d060f8fd426454ebf9ef42c290e6c66b340e6a649e766bc7dd"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rising-heat-formal-peer-scope.json",
+    "sha256": "88df46c630c5709083fabc89db7f988ce663f7cae54ac83ea950240d4e342db7",
+    "final_content_hashes_unchanged": true
+  }
+}

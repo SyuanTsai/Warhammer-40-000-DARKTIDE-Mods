@@ -1447,6 +1447,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-VOLATILE_ACCEPTANCE.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RISING-HEAT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RISING-HEAT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

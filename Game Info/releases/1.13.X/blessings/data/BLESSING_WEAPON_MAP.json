@@ -1056,6 +1056,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
       "effect": "持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。"
+    },
+    {
+      "id": "rising-heat",
+      "name_zh_tw": "升溫",
+      "name_en": "Rising Heat",
+      "name_key": "loc_trait_bespoke_power_bonus_scaled_on_heat",
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_heat_desc",
+      "name_hash": "d4f69cb8",
+      "description_hash": "88798c11",
+      "page": "entries/升溫/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
+      "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，每一熱能階使威力修正增加 I–IV 級 1.5%／2%／3%／4%，最高 +7.5%／+10%／+15%／+20%；這項威力修正不等於最終傷害同比增加。"
     }
   ],
   "weapons": [
@@ -17215,6 +17228,69 @@
       "icon": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_154",
       "effect": "持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
+      "blessing_id": "rising-heat",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/升溫/weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_heat_step_by_tier": {
+          "I": 0.015,
+          "II": 0.02,
+          "III": 0.03,
+          "IV": 0.04
+        },
+        "five_step_max_modifier_by_tier": {
+          "I": 0.075,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "heat_input": "overheat_current_percentage normalized 0..1",
+        "heat_steps": "round(5*clamp01((h-0.10)/0.90))",
+        "step_limits": [
+          0,
+          5
+        ],
+        "fallback_conditional_stat_per_step": 0.01,
+        "tier_same_key_override_replaces_fallback": true,
+        "optional_stepped_stat_buffs": [],
+        "held_slot_and_not_reloading_gate": true,
+        "no_event_stack_or_ttl": true,
+        "final_damage_percent_claim": false,
+        "actual_trait_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
+        "actual_trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat",
+        "actual_mark_ids": [
+          "plasmagun_p1_m1",
+          "plasmagun_p1_m2"
+        ],
+        "actual_buff_template_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 257,
+        "end_line": 299
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 104,
+        "end_line": 143
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_heat_desc",
+      "description_hash": "88798c11",
+      "icon": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_152",
+      "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，每一熱能階使威力修正增加 I–IV 級 1.5%／2%／3%／4%，最高 +7.5%／+10%／+15%／+20%；這項威力修正不等於最終傷害同比增加。"
     }
   ],
   "bindings": [
@@ -24126,6 +24202,34 @@
       "mark_id": "plasmagun_p1_m2",
       "variant_id": "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge",
       "trait_item": "content/items/traits/bespoke_plasmagun_p1/lower_overheat_gives_faster_charge",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "rising-heat",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "rising-heat",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat",
       "trait_category": "bespoke_plasmagun_p1",
       "available_tiers": null,
       "source": {
