@@ -274,6 +274,18 @@ Full raw template and formatting: [source evidence](zealot_martyrdom_grants_toug
 | Per-stack amount and Toughness scope | “Martyrdom grants +7.5% Toughness Damage Reduction per stack.”; `ui / loc_talent_zealot_martyrdom_grants_toughness_upd_desc / 15546289` | `toughness_damage_taken_modifier` scales by missing Martyrdom segments, −0.075 each. [Fixed source and line references](zealot_martyrdom_grants_toughness.md#fixed-source-evidence) | Consistent | The signed display describes reduction of the correct damage target. |
 | Cap, segment scaling and combinations | No segment cap, timer behavior or combination formula; `ui / loc_talent_zealot_martyrdom_grants_toughness_upd_desc / 15546289` | Same segment algorithm as Martyrdom, at most 5; no independent trigger/timer; same-stage reductions add and independent reductions multiply. [Fixed source and line references](zealot_martyrdom_grants_toughness.md#fixed-source-evidence) | Not covered by the description | The 77.5/62.5/52.5 examples and limits supplement the per-stack effect. |
 
+
+<a id="zealot_martyrdom_grants_attack_speed"></a>
+
+## Maniac
+
+Full raw template and formatting: [source evidence](zealot_martyrdom_grants_attack_speed.md#original-english-template-and-reconstruction). Name hash `7dee864b`. Every row uses `ui / loc_talent_zealot_attack_speed_per_martyrdom_upd_desc / b83c3710`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack bonus | “Martyrdom grants +6% Attack Speed per stack.”; `ui / loc_talent_zealot_attack_speed_per_martyrdom_upd_desc / b83c3710` | `melee_attack_speed` gains 0.06 per missing Martyrdom segment. [Fixed source and line references](zealot_martyrdom_grants_attack_speed.md#fixed-source-evidence) | Consistent | The effect direction and per-stack value match. |
+| Melee scope, cap and action timing | No explicit melee/ranged scope, cap or action-duration formula; `ui / loc_talent_zealot_attack_speed_per_martyrdom_upd_desc / b83c3710` | Melee only, at most 5 segments / 30%; live missing-Wound interpolation without a proc/timer; action time scales reciprocally. [Fixed source and line references](zealot_martyrdom_grants_attack_speed.md#fixed-source-evidence) | Not covered by the description | The English does not explicitly assert Ranged firing speed; retain scope and the 0.847/0.769s examples as supplements. |
+
 ## Comparison totals
 
 43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.

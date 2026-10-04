@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="Until Death talent icon"> [Until Death](#zealot_resist_death) | <ul><li>Fatal damage grants Unkillable for 8 seconds. The 120-second cooldown begins after the effect ends.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="Martyrdom talent icon"> [Martyrdom](#zealot_martyrdom) | <ul><li>Gain 10% Melee Damage for each fully missing Wound, up to 5 stacks / 50%. Stacks follow current missing Health segments, including Corruption.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="I Shall Not Fall talent icon"> [I Shall Not Fall](#zealot_martyrdom_grants_toughness) | <ul><li>Each fully missing Wound counted by Martyrdom reduces Toughness damage taken by 7.5%, up to 5 Wounds / 37.5%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="Maniac talent icon"> [Maniac](#zealot_martyrdom_grants_attack_speed) | <ul><li>Each fully missing Wound counted by Martyrdom grants 6% Melee Attack Speed, up to 5 Wounds / 30%.</li></ul> | Keystone |
 
 ---
 
@@ -358,3 +359,16 @@
 - **Reduction example**: 3 stacks give 22.5% Toughness damage reduction: 100 × (1 − 22.5%) = 77.5. At 5 stacks, the result is 62.5. With another same-stage 10% Toughness damage reduction, full stacks give 100 × (1 − 37.5% − 10%) = 52.5. Independent reductions multiply afterwards.
 
 [Details](zealot_martyrdom_grants_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_martyrdom_grants_attack_speed"></a>
+
+### Maniac
+
+<img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="72" height="72" alt="Maniac talent icon">
+
+- **Effect**: Each fully missing Health Wound grants 6% Melee Attack Speed, counting at most 5 Wounds for a maximum +30%.
+- **Speed example**: 3 stacks grant 3 × 6% = 18% Melee Attack Speed. An affected 1-second action takes 1 ÷ 1.18 ≈ 0.847 seconds; at 5 stacks, 1 ÷ 1.3 ≈ 0.769 seconds. Other same-stage Attack Speed bonuses add first.
+
+[Details](zealot_martyrdom_grants_attack_speed.md) · [Back to index](#talent-index)

@@ -33,3 +33,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Until Death](zealot_resist_death.md) / `zealot_resist_death` | Keystone |
 | [Martyrdom](zealot_martyrdom.md) / `zealot_martyrdom` | Keystone |
 | [I Shall Not Fall](zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | Keystone |
+| [Maniac](zealot_martyrdom_grants_attack_speed.md) / `zealot_martyrdom_grants_attack_speed` | Keystone |
