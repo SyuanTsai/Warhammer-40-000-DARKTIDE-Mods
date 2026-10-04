@@ -2434,6 +2434,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_590_594.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_595_599",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_595_599.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

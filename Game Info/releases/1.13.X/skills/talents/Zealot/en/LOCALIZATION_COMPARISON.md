@@ -433,4 +433,4 @@ Full raw template and formatting: [source evidence](zealot_resist_death_ability.
 
 ## Comparison totals
 
-63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.
+74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.
