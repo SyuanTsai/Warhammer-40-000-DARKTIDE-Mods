@@ -12,3 +12,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | Talent / code identifier | Category |
 |---|---|
 | [Integrated Refraction Emitter](cryptic_grenade_ability_force_field.md) / `cryptic_grenade_ability_force_field` | Blitz |
+| [Purgator Servo-Skull](cryptic_flamethrower.md) / `cryptic_flamethrower` | Blitz |
