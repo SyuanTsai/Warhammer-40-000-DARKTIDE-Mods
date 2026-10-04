@@ -614,4 +614,4 @@ Full raw template and formatting: [source evidence](cryptic_successful_dodge_sta
 
 ## Comparison totals
 
-94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.
+105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.
