@@ -542,6 +542,18 @@ Full raw template and formatting: [source evidence](broker_passive_stamina_on_su
 | Successful Dodge and recovery amount | +10% Stamina on Successful Dodge; `ui / loc_talent_broker_passive_stamina_on_successful_dodge_desc / 022ffbe4` | `on_successful_dodge` calls `Stamina.add_stamina(percentage = 0.1)`. [Fixed source and line references](broker_passive_stamina_on_successful_dodge.md#fixed-source-evidence) | Consistent | The trigger and percentage match the accepted recovery. |
 | Maximum-Stamina basis and cap | No current-weapon/property basis or cap is stated; `ui / loc_talent_broker_passive_stamina_on_successful_dodge_desc / 022ffbe4` | Recovery uses maximum Stamina determined by the current weapon and properties, without exceeding the cap. [Fixed source and line references](broker_passive_stamina_on_successful_dodge.md#fixed-source-evidence) | Not covered by the description | These specify the amount's basis and qualify the original recovery example. |
 
+
+<a id="broker_passive_dodge_melee_on_slide"></a>
+
+## Slippery Customer
+
+Full raw template and formatting: [source evidence](broker_passive_dodge_melee_on_slide.md#original-english-template-and-reconstruction). Name hash `abb5fdd2`. Every row uses `ui / loc_talent_broker_passive_dodge_melee_on_slide_desc / 2eb1aa86`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Sliding and Melee Dodge state | While sliding, count as Dodging against Melee Attacks; `ui / loc_talent_broker_passive_dodge_melee_on_slide_desc / 2eb1aa86` | `movement_state.method == sliding` enables `count_as_dodge_vs_melee`. [Fixed source and line references](broker_passive_dodge_melee_on_slide.md#fixed-source-evidence) | Consistent | The English correctly describes a conditional Dodging state. |
+| Checking branches and Successful Dodge events | No grab branch or actual avoidance/event distinction is stated; `ui / loc_talent_broker_passive_dodge_melee_on_slide_desc / 2eb1aa86` | `Dodge.is_dodging` reads the keyword for `melee` and `incapacitating_grab`. Sliding alone is not a Successful Dodge; related talents require avoiding a qualifying attack. It is not universal Damage immunity. [Fixed source and line references](broker_passive_dodge_melee_on_slide.md#fixed-source-evidence) | Not covered by the description | These clarify the checking scope and event requirement without contradicting count as Dodging. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

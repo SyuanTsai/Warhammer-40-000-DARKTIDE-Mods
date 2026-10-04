@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="Burst of Energy talent icon"> [Burst of Energy](#broker_passive_stun_immunity_on_toughness_broken) | <ul><li>When your Toughness breaks, restore 50% of maximum Toughness and gain Stun Immunity for 6 seconds; a 10-second cooldown follows the effect.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_1) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="32" height="32" alt="Regained Posture talent icon"> [Regained Posture](#broker_passive_stamina_on_successful_dodge) | <ul><li>A Successful Dodge restores 10% of maximum Stamina.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="32" height="32" alt="Slippery Customer talent icon"> [Slippery Customer](#broker_passive_dodge_melee_on_slide) | <ul><li>While sliding, count as Dodging against Melee attacks.</li></ul> | Talent |
 
 ---
 
@@ -764,3 +765,16 @@
 - **Recovery example**: at 5 maximum Stamina, each trigger restores 5 × 10% = 0.5 points. At 4.8 current Stamina, it restores only 0.2 points.
 
 [Details](broker_passive_stamina_on_successful_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_dodge_melee_on_slide"></a>
+
+### Slippery Customer
+
+<img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="72" height="72" alt="Slippery Customer talent icon">
+
+- **How it works**: while sliding, you have Melee Dodge status, so Enemy Melee attacks follow their Dodge rules. This does not directly make you immune to all Damage.
+- **Trigger limit**: starting a slide does not mean an attack has already been successfully Dodged. You must actually avoid an attack that qualifies for the check to trigger talents tied to a Successful Dodge.
+
+[Details](broker_passive_dodge_melee_on_slide.md) · [Back to index](#talent-index)

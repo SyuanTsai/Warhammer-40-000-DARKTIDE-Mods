@@ -56,3 +56,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Burst of Energy](broker_passive_stun_immunity_on_toughness_broken.md) / `broker_passive_stun_immunity_on_toughness_broken` | Talent |
 | [Toughness Boost](base_toughness_node_buff_medium_1.md) / `base_toughness_node_buff_medium_1` | Talent |
 | [Regained Posture](broker_passive_stamina_on_successful_dodge.md) / `broker_passive_stamina_on_successful_dodge` | Talent |
+| [Slippery Customer](broker_passive_dodge_melee_on_slide.md) / `broker_passive_dodge_melee_on_slide` | Talent |
