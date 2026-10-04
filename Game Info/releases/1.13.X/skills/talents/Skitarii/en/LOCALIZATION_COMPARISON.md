@@ -1070,6 +1070,18 @@ Full raw template and formatting: [source evidence](cryptic_ranged_stacking_toug
 | Trigger, stacks and recovery | Ranged kills grant stacks; each restores +1% Toughness per second; maximum 5; lasts 8s.; `ui / loc_talent_cryptic_ranged_stacking_toughness_desc / 057bb0ce` | Each ranged kill grants a stack, capped at 5, with 0.01 recovery per stack per second and an 8-second duration. [Fixed source and line references](cryptic_ranged_stacking_toughness.md#fixed-source-evidence) | Consistent | The trigger and all displayed numbers match. |
 | Recovery basis and refresh | The percentage basis, recovery cap and refresh behavior are not specified.; `ui / loc_talent_cryptic_ranged_stacking_toughness_desc / 057bb0ce` | Recovery uses maximum Toughness and stops at that maximum. Another ranged kill resets the 8-second timer, including at the stack cap. [Fixed source and line references](cryptic_ranged_stacking_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain how the stated ongoing recovery and duration operate. |
 
+
+<a id="cryptic_specials_marking"></a>
+
+## Target Prioritization Psalms
+
+Full raw template and formatting: [source evidence](cryptic_specials_marking.md#original-english-template-and-reconstruction). Name hash `08e4cc0d`. Every row uses `ui / loc_talent_cryptic_specials_marking_desc / 5d780574`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Enemy category and range | “Specialists that get within …m of you are Marked”; 12.5m; `ui / loc_talent_cryptic_specials_marking_desc / 5d780574` | Living enemies with breed.tags.special within outline_range = 12.5 receive an outline. [Fixed source and line references](cryptic_specials_marking.md#fixed-source-evidence) | Consistent | The range and target category match; “Marked” does not explicitly specify a different marking system. |
+| Outline behavior and limits | No update interval, SmartTag interaction or team-wide visual behavior is specified.; `ui / loc_talent_cryptic_specials_marking_desc / 5d780574` | broker_proximity_target outlines update about every 0.25 seconds locally, disappear on death or leaving range, and provide no damage, charge or manual-marking reward. Other clients' presentation remains unobserved. [Fixed source and line references](cryptic_specials_marking.md#fixed-source-evidence) | Not covered by the description | These details qualify the broad marking term. The description makes no explicit team-sharing or SmartTag promise. |
+
 ## Comparison totals
 
 177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.

@@ -96,6 +96,7 @@
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="Adaptive Combat Calibration talent icon"> [Adaptive Combat Calibration](#cryptic_cleave_and_impact) | <ul><li>Above 50% Toughness, gain +30% Melee Cleave; at or below 50%, gain +30% Melee Impact.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="Residual Current Buffer talent icon"> [Residual Current Buffer](#cryptic_tdr_based_on_charge) | <ul><li>Always gain 10% Toughness Damage Reduction, plus 2.5% per fully charged unit of Capacitance currently held.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="Superior Defence Engrams talent icon"> [Superior Defence Engrams](#cryptic_ranged_stacking_toughness) | <ul><li>Ranged kills grant up to 5 stacks, each restoring 1% of maximum Toughness per second; another kill refreshes the 8-second duration, even at the cap.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="Target Prioritization Psalms talent icon"> [Target Prioritization Psalms](#cryptic_specials_marking) | <ul><li>Shows outlines on living Specialists within 12.5 metres; no manual marking is required.</li></ul> | Talent |
 
 ---
 
@@ -1372,3 +1373,17 @@
 - **Recovery example**: At **200 maximum Toughness** and **5 stacks**, recover `200 × 5 × 1% = 10` points per second. Maintaining full stacks for **8 seconds** can restore **80** points, capped at maximum Toughness.
 
 [Details](cryptic_ranged_stacking_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_specials_marking"></a>
+
+### Target Prioritization Psalms
+
+<img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="72" height="72" alt="Target Prioritization Psalms talent icon">
+
+- **Operation**: Living Specialists within **12.5 metres** show an outline; no manual marking is required.
+- **Updates**: The outline updates approximately every **0.25 seconds** and is removed when the enemy leaves the range or dies.
+- **Marking distinction**: This is an enemy outline indicator. The talent itself grants no damage bonus, charge recovery, or additional manual-marking reward.
+
+[Details](cryptic_specials_marking.md) · [Back to index](#talent-index)

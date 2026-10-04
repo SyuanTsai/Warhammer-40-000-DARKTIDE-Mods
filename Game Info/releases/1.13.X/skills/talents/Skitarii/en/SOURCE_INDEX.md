@@ -99,3 +99,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Adaptive Combat Calibration](cryptic_cleave_and_impact.md) / `cryptic_cleave_and_impact` | Talent |
 | [Residual Current Buffer](cryptic_tdr_based_on_charge.md) / `cryptic_tdr_based_on_charge` | Talent |
 | [Superior Defence Engrams](cryptic_ranged_stacking_toughness.md) / `cryptic_ranged_stacking_toughness` | Talent |
+| [Target Prioritization Psalms](cryptic_specials_marking.md) / `cryptic_specials_marking` | Talent |
