@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="32" height="32" alt="Psychic Leeching talent icon"> [Psychic Leeching](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies) | <ul><li>Using an empowered Blitz restores 20% of maximum Toughness to you and Allies in Coherency; restoration timing depends on the Blitz.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="Overpowering Souls talent icon"> [Overpowering Souls](#psyker_empowered_ability_on_elite_kills) | <ul><li>Elite kills guarantee one empowerment stack, subject to the storage cap; Specialist and ordinary kills retain their existing gain chance.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d2ef8713-7c0b-4dec-b13a-7f9e6a294435" width="32" height="32" alt="Perfectionism talent icon"> [Perfectionism](#psyker_mark_increased_max_stacks) | <ul><li>Raises Disrupt Destiny's Precision cap from 15 to 25 stacks; per-stack effects and five-second one-stack decay remain unchanged. Choose either this or Lingering Influence.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="Purloin Providence talent icon"> [Purloin Providence](#psyker_mark_kills_can_vent) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy Quells five percentage points of Peril.</li></ul> | Keystone |
 
 ---
 
@@ -600,3 +601,17 @@
 - **Selection limit:** Choose either Perfectionism or Lingering Influence.
 
 [Details](psyker_mark_increased_max_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_mark_kills_can_vent"></a>
+
+### Purloin Providence
+
+<img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="72" height="72" alt="Purloin Providence talent icon">
+
+- **Trigger:** Personally kill Disrupt Destiny's current Marked Enemy to immediately Quell five percentage points of Peril.
+
+- **Peril example:** At 60% Peril, `60% − 5 percentage points = 55%`. At 3%, Peril falls to 0%.
+
+[Details](psyker_mark_kills_can_vent.md) · [Back to index](#talent-index)

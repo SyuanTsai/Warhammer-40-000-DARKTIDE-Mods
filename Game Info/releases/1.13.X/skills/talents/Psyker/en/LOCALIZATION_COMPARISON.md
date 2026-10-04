@@ -445,6 +445,18 @@ Full raw template and formatting: [source evidence](psyker_mark_increased_max_st
 | Precision cap | Maximum Precision Bonus stacks increase from 15 to 25; `ui / loc_talent_psyker_mark_increased_max_stacks_description / 781eac6d` | The increased_stacks clone sets max_stacks = 25, compared with the base 15. [Fixed source and line references](psyker_mark_increased_max_stacks.md#fixed-source-evidence) | Consistent | The stated old and new caps agree. |
 | Unchanged stats and selection | No stronger per-stack bonus, duration change or combined variant stated; `ui / loc_talent_psyker_mark_increased_max_stacks_description / 781eac6d` | damage 0.01, critical_strike_damage 0.02, weakspot_damage 0.025, duration 5 and refresh flags are unchanged; this is an alternative to Lingering Influence. [Fixed source and line references](psyker_mark_increased_max_stacks.md#fixed-source-evidence) | Not covered by the description | The full example, unchanged rules and selection limit supplement the cap change. |
 
+
+<a id="psyker_mark_kills_can_vent"></a>
+
+## Purloin Providence
+
+Full raw template and formatting: [source evidence](psyker_mark_kills_can_vent.md#original-english-template-and-reconstruction). Name hash `c9b1ee8e`. Every row uses `ui / loc_talent_psyker_mark_kills_can_vent_description / 01016112`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Marked-kill Quelling | Killing enemies Marked by Disrupt Destiny has a 100% chance to instantly Quell 5% of your Peril; `ui / loc_talent_psyker_mark_kills_can_vent_description / 01016112` | Current Marked-target kill sets procced with probability 1; the next update calls decrease_immediate(0.05). [Fixed source and line references](psyker_mark_kills_can_vent.md#fixed-source-evidence) | Consistent | The stated trigger, guaranteed chance and immediate-reduction value agree with the accepted Peril-gauge interpretation. |
+| Gauge and event boundaries | No current-target/personal checks, zero-floor formula or same-update event handling specified; `ui / loc_talent_psyker_mark_kills_can_vent_description / 01016112` | Personally kill the current Marked target; 60%→55% and 3%→0%. Multiple pre-update events share one procced boolean, so separate deductions per event are not guaranteed. [Fixed source and line references](psyker_mark_kills_can_vent.md#fixed-source-evidence) | Not covered by the description | These clarify the accepted percentage-point effect and event limits. The English does not explicitly prescribe multiplying current Peril by 0.95. |
+
 ## Comparison totals
 
 The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
