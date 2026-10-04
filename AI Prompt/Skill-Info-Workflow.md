@@ -4,6 +4,8 @@
 
 [返回 Game Info 流程入口](Game-Info-Workflow.md)
 
+將已有技能展示於 Pages 時，另使用 [Skill-Pages-Workflow.md](Skill-Pages-Workflow.md)；保留本流程的 Git 玩家主文與來源文件，網站在獨立分支與工作樹維護。
+
 ---
 
 請從指定版本的 Darktide 公開原始碼逆向分析天賦，產生臺灣繁體中文的玩家說明與可追溯的來源文件。玩家要看懂技能怎麼運作，以及傷害、恢復、冷卻、疊層與各項公式的結果；程式細節放在獨立來源 Markdown。

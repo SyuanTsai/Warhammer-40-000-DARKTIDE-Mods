@@ -6,6 +6,9 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [七職業全部技能 Pages 轉移與交付](publication/2026-10-04-ALL_SKILLS_PAGES.md)
+- [技能 Pages 範本與獨立展示流程](publication/2026-10-04-SKILL_PAGE_TEMPLATE.md)
+
 - [全量對話 Pages 最終建置與交付](publication/2026-10-04-ALL_DIALOGUES_PAGES.md)
 
 - [全部官方對話與字幕目錄整理](dialogues/2026-10-04-ALL_DIALOGUES.md)
