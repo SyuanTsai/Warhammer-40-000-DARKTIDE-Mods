@@ -10,11 +10,12 @@
 | <img src="https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8" width="32" height="32" alt="歎為觀止祝福圖示"> [歎為觀止](../../../entries/歎為觀止/README.md)<br>- Showstopper<br>[完整說明](../../../entries/歎為觀止/README.md) | <ul><li>符合條件的擊殺有14%／16%／18%／20%機率引發固定威力1000、基本半徑3且不隨距離衰減的爆炸。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/007da39c-7650-4720-86f2-51f8f1aa9df2" width="32" height="32" alt="迅捷火焰祝福圖示"> [迅捷火焰](../../../entries/迅捷火焰/README.md)<br>- Quickflame<br>[完整說明](../../../entries/迅捷火焰/README.md) | <ul><li>奧特米亞 Mk III 為唯一適用型號；點放與持續噴射可用於打空彈匣後的裝填。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040" width="32" height="32" alt="煽風點火祝福圖示"> [煽風點火](../../../entries/煽風點火/README.md)<br>- Fan the Flames<br>[完整說明](../../../entries/煽風點火/README.md) | <ul><li>未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522" width="32" height="32" alt="超壓祝福圖示"> [超壓](../../../entries/超壓/README.md)<br>- Overpressure<br>[完整說明](../../../entries/超壓/README.md) | <ul><li>持用淨化噴火器 奧特米亞 Mk III 時，依可用彈量計算 0–5 階；I–IV 每階增加 +2%／+3%／+4%／+5%，最多五階。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 淨化噴火器 奧特米亞 Mk III | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_flamer_p1_toughness_on_continuous_fire.md)、[永燃烈焰](../../../entries/永燃烈焰/weapon_trait_bespoke_flamer_p1_ammo_from_reserve_on_crit.md)、[穿透火焰](../../../entries/穿透火焰/weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff.md)、[歎為觀止](../../../entries/歎為觀止/weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill.md)、[迅捷火焰](../../../entries/迅捷火焰/weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip.md)、[煽風點火](../../../entries/煽風點火/weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning.md) | I–IV |
+| 淨化噴火器 奧特米亞 Mk III | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_flamer_p1_toughness_on_continuous_fire.md)、[永燃烈焰](../../../entries/永燃烈焰/weapon_trait_bespoke_flamer_p1_ammo_from_reserve_on_crit.md)、[穿透火焰](../../../entries/穿透火焰/weapon_trait_bespoke_flamer_p1_burned_targets_receive_rending_debuff.md)、[歎為觀止](../../../entries/歎為觀止/weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill.md)、[迅捷火焰](../../../entries/迅捷火焰/weapon_trait_bespoke_flamer_p1_faster_reload_on_empty_clip.md)、[煽風點火](../../../entries/煽風點火/weapon_trait_bespoke_flamer_p1_negate_stagger_reduction_with_primary_on_burning.md)、[超壓](../../../entries/超壓/weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

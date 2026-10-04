@@ -1095,6 +1095,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
       "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，爆擊射擊的新增即時熱能依 I–IV 級相對減少30%／40%／50%／60%；判定不要求命中，蓄力期間持續生熱與排熱速度使用原計算。"
+    },
+    {
+      "id": "overpressure",
+      "name_zh_tw": "超壓",
+      "name_en": "Overpressure",
+      "name_key": "loc_trait_bespoke_power_scales_with_clip_percentage",
+      "description_key": "loc_trait_bespoke_power_scales_with_clip_percentage_desc",
+      "name_hash": "568c86d7",
+      "description_hash": "760901c5",
+      "page": "entries/超壓/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
+      "effect": "持用淨化噴火器 奧特米亞 Mk III 時，依目前可用彈匣內彈量比例計算 0–5 階；I–IV 每階增加 +2%／+3%／+4%／+5% 通用威力修正，五階上限為 +10%／+15%／+20%／+25%。這是威力修正，不等於最終傷害同比增加。"
     }
   ],
   "weapons": [
@@ -17447,6 +17460,85 @@
       "icon": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_156",
       "effect": "電漿槍 M35熔岩核心 Mk II與Mk III使用相同I–IV倍率；僅縮減致命一擊射擊所增加的即時熱量。"
+    },
+    {
+      "id": "weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage",
+      "blessing_id": "overpressure",
+      "weapon_id": "flamer_p1",
+      "page": "entries/超壓/weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_step_fraction_by_tier": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "per_step_percent_by_tier": {
+          "I": 2,
+          "II": 3,
+          "III": 4,
+          "IV": 5
+        },
+        "effective_steps": "clamp(floor(5 * (1 - (r - 0.10) / 0.90)), 0, 5)",
+        "r": "Ammo.current_ammo_in_clips(slot) / Ammo.max_ammo_in_clips(slot), across clips marked in use",
+        "step_limits": [
+          0,
+          5
+        ],
+        "five_step_max_fraction_by_tier": {
+          "I": 0.1,
+          "II": 0.15,
+          "III": 0.2,
+          "IV": 0.25
+        },
+        "five_step_max_percent_by_tier": {
+          "I": 10,
+          "II": 15,
+          "III": 20,
+          "IV": 25
+        },
+        "wrapper_max_stacks": 1,
+        "wrapper_stack_offset": -1,
+        "conditional_fallback_per_step": 0.05,
+        "tier_same_key_override_replaces_fallback": true,
+        "held_weapon_slot_gate": true,
+        "reload_exclusion": false,
+        "no_event_proc_stack_or_fixed_ttl": true,
+        "reserve_ammo_in_ratio": false,
+        "final_damage_percent_claim": false,
+        "actual_trait_id": "weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage",
+        "actual_trait_item": "content/items/traits/bespoke_flamer_p1/power_scales_with_clip_percentage",
+        "actual_mark_ids": [
+          "flamer_p1_m1"
+        ],
+        "actual_buff_template_id": "weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+        "actual_weapon_template_path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "restriction_key": "flamer_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_flamer_p1.lua",
+        "start_line": 138,
+        "end_line": 181
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_power_scales_with_clip_percentage_desc",
+      "description_hash": "760901c5",
+      "icon": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_163",
+      "effect": "持用淨化噴火器 奧特米亞 Mk III 時，依可用彈量計算 0–5 階；I–IV 每階增加 +2%／+3%／+4%／+5%，最多五階。"
     }
   ],
   "bindings": [
@@ -24448,6 +24540,20 @@
         "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
         "import_line": 18,
         "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "overpressure",
+      "weapon_id": "flamer_p1",
+      "mark_id": "flamer_p1_m1",
+      "variant_id": "weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage",
+      "trait_item": "content/items/traits/bespoke_flamer_p1/power_scales_with_clip_percentage",
+      "trait_category": "bespoke_flamer_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 747
       }
     }
   ]

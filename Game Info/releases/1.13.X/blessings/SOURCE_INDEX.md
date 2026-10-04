@@ -87,3 +87,4 @@
 | [升溫](entries/升溫/README.md) | [來源索引](entries/升溫/SOURCE_INDEX.md) |
 | [優化冷卻](entries/優化冷卻/README.md) | [來源索引](entries/優化冷卻/SOURCE_INDEX.md) |
 | [專注冷卻](entries/專注冷卻/README.md) | [來源索引](entries/專注冷卻/SOURCE_INDEX.md) |
+| [超壓](entries/超壓/README.md) | [來源索引](entries/超壓/SOURCE_INDEX.md) |

@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-04",
+  "blessing": "overpressure",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/超壓/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "overpressure",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 29,
+      "formal_markdown_count": 7,
+      "scope_manifest_sha256": "495aca7f6bc851a8777f20bfb2fd57401ccf7916490d3584a21efee07406b43d",
+      "description": "Updated fixed Overpressure formal peer scope; the Markdown whitespace-only repair was verified and all 29 listed file hashes match."
+    },
+    "review_summary": [
+      "All 29 files in the updated fixed peer scope match their declared SHA-256 values; the frozen research trio remains unchanged.",
+      "The seven formal pages, shared blessing map, and Purgation Flamer reverse index consistently identify one ranged trait, one actual flamer_p1_m1 binding, and the UI name 淨化噴火器 奧特米亞 Mk III.",
+      "The clip ratio formula, 0–5 step calculation, tier values, fallback override, held-slot condition, no reload exclusion, shot-before-ammo order, and cache-update timing are stated consistently.",
+      "The formal damage explanation distinguishes direct flame, current-owner DoT ticks, and the weapon special push; the full inner/outer profiles preserve zero armor-damage multipliers while impact remains independently profiled.",
+      "The examples use S after the power-type curve and before the buff modifier; the q=0.20 example gives 600→650 and about 8.33% relative to that stage baseline, without claiming final health damage increases by the same percentage.",
+      "The RAW strings, hashes, four tier-specific formatter reconstructions, and both trailing ASCII-space annotations match the scoped RAW verification; the omitted p×n formula is treated as undocumented detail rather than an erratum.",
+      "The icon path remains distinct from the validated attachment URL for icon 163; the image receipt reports matching source/public bytes, 128×128 dimensions, and visual verification.",
+      "The two RAW-template Markdown line endings were trimmed to satisfy diff --check; both exact English/Traditional Chinese RAW trailing ASCII spaces remain in the verification receipt, and the formal annotation remains present."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-agent-config.json": "31cd8eeb71a13ec77f82a60bdd322b6503ed403128eba5174e58f0871fd4cf7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-agent-draft.md": "cb01bebe814a8979e72e35496bba3b9bec1286aa86e83331483707a8a2242d75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-agent-evidence.json": "0fa62a45adbc496100c6516e69630acd8208ef41270b80c05fce949b94bc6f4d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-config.json": "559544668d427b2faaecf34fa44af6ccc17daf38921dd1b92aa7540f5c93007c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-extension-draft.json": "36a535d14c2f3cbcd518047fd2783c76e21379a52765f01dbd677e20048e30d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-image.json": "1ef7b61a0c068a89dfa6b467201a59a3b19ba1c7ec98c84a8ddbf4117ac78c33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-extra-attack-review.json": "0c8c13b0e5496a633f6ac16e0dcdcd472c51161283f683531171fb2382918134",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-focused-checks.json": "f0983c5d89e3976b672a3ef02138592bd8a557bcad169cff5174d9258a1b845b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-frozen-source-verification.json": "39856e5d7f6deea9543e0c6b2d5aeedd9d66131eee8b9d38e59513329f4e81a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-own-tier-diff.json": "1dccc5ceeefb4b47d18cbed6a81e9392f7879826e26d57d06f20bed29d94a19b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-resume-review.json": "dfad87e790e2569acbd17b77307c71ab24ef8b8bdc5416941a3e24b6a57aed7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-traits-review.json": "bb77b8da88fc71312a23a6992dff7c787b24ffb2840fc13b35c2a6c472ccd135",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-ui-raw-verification.json": "4dbc7b99877e3aa102cafecbc4c573c05b2f9bbdbda770cc31e0dcec06f799db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-ui-review.json": "1efab99ddcd8d5fe76a9a9c23e38cbb59b6a3046f6d06e38753a932a652b8e29",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "13dd8f84518651378a17203ba3ccfa5ebd3fe2df5864cd1110515a0595612906",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/DAMAGE_PERCENTAGE_REVIEW.md": "3a82124d8fbd84fa963f279bb8b740ab75a4906da95ab28ea7250ebddf73644d",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/LOCALIZATION_COMPARISON.md": "a6845b215ee1eb09bac80a7bdfd039fba2cf079aa89ee77326401d05608763b4",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/README.md": "3b942ea0351c9db19f24fbe47db270f0b710583cbe3c4ef7db945a5979781c0e",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/SOURCE_INDEX.md": "5c2a543872e381986b2d3b7cde02d3ffb692f8dd51e5e7fec234c49ce0049865",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/TIER_VALUES.md": "e2ac21a3f766873693bc13c8845f35c95b086b7ab1945b09e5a105b7ca944341",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/WEAPON_COMPATIBILITY.md": "ef6985cee8358c61c1d494b1d828a120cf3a44771fd375a39f5eeb80be66eea6",
+      "Game Info/releases/1.13.X/blessings/entries/超壓/weapon_trait_bespoke_flamer_p1_power_scales_with_clip_percentage.md": "3f5cef3776bbcd2272838d6cd1c6b59f52876bb57756a0f9dd5092d05ec6d28e",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "7a369373b676dd1f05a490317c35ef9e261b98fd90817abd99336b0c7ea8be6f",
+      "Game Info/releases/1.13.X/blessings/README.md": "39607f2da8afa409af65f0c094f33019cb7da6f38d8a82e898842b1d1116e602",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "ba21cd0f3315ea622a38703deaec4c0a02ab8483488a0685a658a6d6bddaad5d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/淨化噴火器/README.md": "7288cc9b73fb15fc49d9a1d1b300350f143c05a5178695e7fb2819ba49d01ed9",
+      "Referneces/Translation.md": "ffefd16d3d8822bb2492fe2fc5e5ef23bb6de61b9e5239e8e00c956690a5842e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-markdown-whitespace-repair.json": "36186fbd0f633d2095128dec2120d0f16188285d3f88afb7e80229671e9b23ac"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "overpressure",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_163",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_163.png",
+      "attachment": "https://github.com/user-attachments/assets/93d0d585-1ac5-4d54-bc29-d7f399538522",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5981196206",
+      "acquired_date": "2026-10-04",
+      "sha256": "13c6b51a36682a50c382368d75687a803a3866b696217666268ca0ca084d9422",
+      "content_type": "image/png",
+      "size": 4057,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "超壓祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true,
+        "description": "Canister with cap beside a widening striped triangular jet; source/public originals and alpha identity checked."
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 11,
+      "rows": 286,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 29,
+      "bindings": 501,
+      "variants": 260,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 29,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 707,
+      "remote_references": 326,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 17,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-016-full-scan.json",
+        "sha256": "36a72bd54712e0f338b714ba41cda20dd9720b53141245f45c3f9611c5824dda",
+        "trigger": "round-016"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 85,
+    "not_started_name_groups": 85,
+    "partial_name_groups": 0,
+    "remaining_variants": 345,
+    "remaining_bindings": 684,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "397b0ab4fb46974ffe973647d230e216cee545c90f4442fd24126c1d61af1d54"
+  },
+  "previous_local_commit": "73e813c8d76ccad5a22eaa16ed0fefae81bbbc3b",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-extra-attack-review.json",
+      "sha256": "0c8c13b0e5496a633f6ac16e0dcdcd472c51161283f683531171fb2382918134"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-focused-checks.json",
+      "sha256": "f0983c5d89e3976b672a3ef02138592bd8a557bcad169cff5174d9258a1b845b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-frozen-source-verification.json",
+      "sha256": "39856e5d7f6deea9543e0c6b2d5aeedd9d66131eee8b9d38e59513329f4e81a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-markdown-whitespace-repair.json",
+      "sha256": "36186fbd0f633d2095128dec2120d0f16188285d3f88afb7e80229671e9b23ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-own-tier-diff.json",
+      "sha256": "1dccc5ceeefb4b47d18cbed6a81e9392f7879826e26d57d06f20bed29d94a19b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-resume-review.json",
+      "sha256": "dfad87e790e2569acbd17b77307c71ab24ef8b8bdc5416941a3e24b6a57aed7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-traits-review.json",
+      "sha256": "bb77b8da88fc71312a23a6992dff7c787b24ffb2840fc13b35c2a6c472ccd135"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-ui-raw-verification.json",
+      "sha256": "4dbc7b99877e3aa102cafecbc4c573c05b2f9bbdbda770cc31e0dcec06f799db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-primary-ui-review.json",
+      "sha256": "1efab99ddcd8d5fe76a9a9c23e38cbb59b6a3046f6d06e38753a932a652b8e29"
+    }
+  ],
+  "primary_review_method": "Fullown4tiers/clone/base/UI/RAW/image163 and40frozenrange/inputhashes stable; reusedheld/stepped/currentcache/PowerLevelcurve semantics; newdot live-owner and actualpush zero-profileconditions reviewed inrootextraattackreceipt.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-config.json",
+    "sha256": "559544668d427b2faaecf34fa44af6ccc17daf38921dd1b92aa7540f5c93007c"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "31cd8eeb71a13ec77f82a60bdd322b6503ed403128eba5174e58f0871fd4cf7c",
+    "evidence.json": "0fa62a45adbc496100c6516e69630acd8208ef41270b80c05fce949b94bc6f4d",
+    "draft.md": "cb01bebe814a8979e72e35496bba3b9bec1286aa86e83331483707a8a2242d75"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overpressure-formal-peer-scope.json",
+    "sha256": "495aca7f6bc851a8777f20bfb2fd57401ccf7916490d3584a21efee07406b43d",
+    "final_content_hashes_unchanged": true
+  }
+}

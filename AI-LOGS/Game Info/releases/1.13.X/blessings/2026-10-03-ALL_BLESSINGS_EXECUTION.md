@@ -315,3 +315,5 @@
 - [優化冷卻](2026-10-03-OPTIMISED-COOLING_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [專注冷卻](2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [超壓](2026-10-03-OVERPRESSURE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
