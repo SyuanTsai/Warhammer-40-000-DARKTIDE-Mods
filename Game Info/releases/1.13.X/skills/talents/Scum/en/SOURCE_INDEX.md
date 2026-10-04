@@ -82,3 +82,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Targeted Toxin](broker_passive_reduced_damage_by_toxined.md) / `broker_passive_reduced_damage_by_toxined` | Talent |
 | [Toxic Renewal](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) / `broker_passive_replenish_toughness_while_toxined_enemies_in_proximity` | Talent |
 | [Ammo Jack](broker_passive_extended_mag.md) / `broker_passive_extended_mag` | Talent |
+| [Cheap Shots](broker_passive_damage_vs_heavy_staggered.md) / `broker_passive_damage_vs_heavy_staggered` | Talent |

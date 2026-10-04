@@ -855,6 +855,18 @@ Full raw template and formatting: [source evidence](broker_passive_extended_mag.
 | Clip size and rounding | +15% Clip Size, rounded up; `ui / loc_talent_broker_passive_extended_mag_desc / 414a3799` | `clip_size_modifier = 0.15`; normal updates use `ceil(base_max_clip × modifier)` [Fixed source and line references](broker_passive_extended_mag.md#fixed-source-evidence) | Consistent | The statistic, value and upward rounding are stated correctly. |
 | Combination, current ammunition and initialization | No reserve, combination, proportional-ammunition or initialization details are stated; `ui / loc_talent_broker_passive_extended_mag_desc / 414a3799` | Same-type bonuses add before capacity rounding; current ammunition converts proportionally using floor; initialization floor is followed by normal ceil capacity alignment [Fixed source and line references](broker_passive_extended_mag.md#fixed-source-evidence) | Not covered by the description | These retain the original 30→35 and 7→9 examples and explain the effect's limits. |
 
+
+<a id="broker_passive_damage_vs_heavy_staggered"></a>
+
+## Cheap Shots
+
+Full raw template and formatting: [source evidence](broker_passive_damage_vs_heavy_staggered.md#original-english-template-and-reconstruction). Name hash `1d40fec5`. Every row uses `ui / loc_talent_broker_passive_damage_vs_heavy_staggered_desc_02 / 6dc4e3b1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stagger damage bonus | Staggered enemies: +10%; Medium and Heavy enemies instead: +5% (static reconstruction); `ui / loc_talent_broker_passive_damage_vs_heavy_staggered_desc_02 / 6dc4e3b1` | 0.1 base Stagger bonus plus 0.05 for at least Medium Stagger: 10% or 15% total [Fixed source and line references](broker_passive_damage_vs_heavy_staggered.md#fixed-source-evidence) | Explicit contradiction | The replacement wording presents 5% as the higher-tier total, while the mapped field is only the additional 5%; actual total is 15%. |
+| Damage calculation | No same-stage stacking formula; `ui / loc_talent_broker_passive_damage_vs_heavy_staggered_desc_02 / 6dc4e3b1` | Add the applicable bonus to other general damage bonuses at the same stage [Fixed source and line references](broker_passive_damage_vs_heavy_staggered.md#fixed-source-evidence) | Not covered by the description | The formula and 100 → 110/115 or 140 examples supplement the description. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

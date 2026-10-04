@@ -78,6 +78,7 @@
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="Targeted Toxin talent icon"> [Targeted Toxin](#broker_passive_reduced_damage_by_toxined) | <ul><li>Enemies you infect with Chem Toxin deal 15% less Damage; monsters and Captain bosses instead deal 30% less.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="Toxic Renewal talent icon"> [Toxic Renewal](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | <ul><li>Each Chem Toxin infected enemy within 15m restores 1% of maximum Toughness per second, up to 10 enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="Ammo Jack talent icon"> [Ammo Jack](#broker_passive_extended_mag) | <ul><li>Gain 15% Clip Size, rounded up after combining bonuses of the same kind.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="Cheap Shots talent icon"> [Cheap Shots](#broker_passive_damage_vs_heavy_staggered) | <ul><li>Deal 10% more damage to Staggered enemies, or 15% in total to enemies with Medium or Heavy Stagger.</li></ul> | Talent |
 
 ---
 
@@ -1175,3 +1176,17 @@
 - **Scope**: Changes clip capacity without directly increasing the reserve-ammunition maximum. Other bonuses of the same capacity type add first, then the result is rounded up.
 
 [Details](broker_passive_extended_mag.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_damage_vs_heavy_staggered"></a>
+
+### Cheap Shots
+
+<img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="72" height="72" alt="Cheap Shots talent icon">
+
+- **Damage bonus**: Deal 10% more damage while the enemy meets the Stagger condition. Medium or Heavy Stagger raises the total bonus to 15%; the 10% and 15% figures do not combine to 25%.
+
+- **Damage example**: With a base of 100, Light Stagger gives 110, and Medium or Heavy Stagger gives 115. With another 25% bonus at the same stage, the latter becomes 100 × (1 + 25% + 15%) = 140.
+
+[Details](broker_passive_damage_vs_heavy_staggered.md) · [Back to index](#talent-index)
