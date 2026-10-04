@@ -1,5 +1,6 @@
 # 1.13.0 → 1.13.1：天賦差異
 
+[English](TALENT_CHANGES_1.13.0_TO_1.13.1.en.md)
 [技能分類](README.md)｜[版本資訊](../README.md)｜[文字差異](../source/TEXT_DIFF_1.13.0_TO_1.13.1.md)
 
 ## 天賦效果
