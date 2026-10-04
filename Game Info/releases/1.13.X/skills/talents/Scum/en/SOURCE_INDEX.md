@@ -46,3 +46,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Uncontrolled Aggression](broker_keystone_adrenaline_junkie_sub_4.md) / `broker_keystone_adrenaline_junkie_sub_4` | Keystone |
 | [Adrenaline Smiter](broker_keystone_adrenaline_junkie_sub_2.md) / `broker_keystone_adrenaline_junkie_sub_2` | Keystone |
 | [Alley Rat](broker_passive_longer_dodges.md) / `broker_passive_longer_dodges` | Keystone |
+| [Quick and Deadly](broker_passive_close_range_damage_on_dodge.md) / `broker_passive_close_range_damage_on_dodge` | Talent |

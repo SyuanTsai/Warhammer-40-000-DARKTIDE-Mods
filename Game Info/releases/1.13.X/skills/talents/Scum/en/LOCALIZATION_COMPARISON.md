@@ -422,6 +422,18 @@ Full raw template and formatting: [source evidence](broker_passive_longer_dodges
 | Distance stat and amount | +50% Dodge Distance; `ui / loc_talent_broker_passive_longer_dodges_desc / 22b08fe3` | `dodge_distance_modifier = 0.5` is an `additive_multiplier`, giving a base distance factor of 1 + 0.5 = 1.5. [Fixed source and line references](broker_passive_longer_dodges.md#fixed-source-evidence) | Consistent | The English names distance, and its percentage agrees with the accepted stat. |
 | Final distance and unchanged Dodge properties | No weapon, diminishing-return, sticky, or other Dodge-property details are stated; `ui / loc_talent_broker_passive_longer_dodges_desc / 22b08fe3` | Final distance includes weapon scaling, diminishing returns, and sticky factors. The talent does not increase speed, consecutive-Dodge allowance, or checking duration. [Fixed source and line references](broker_passive_longer_dodges.md#fixed-source-evidence) | Not covered by the description | These explain the stated distance bonus and qualify the original distance examples. |
 
+
+<a id="broker_passive_close_range_damage_on_dodge"></a>
+
+## Quick and Deadly
+
+Full raw template and formatting: [source evidence](broker_passive_close_range_damage_on_dodge.md#original-english-template-and-reconstruction). Name hash `d3130281`. Every row uses `ui / loc_talent_broker_passive_close_range_damage_on_dodge_desc / 0410a6ec`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge trigger, amount, and duration | +15% Close Range Damage for 3s after a Successful Dodge; `ui / loc_talent_broker_passive_close_range_damage_on_dodge_desc / 0410a6ec` | `on_successful_dodge` activates `damage_near = 0.15` for `active_duration = 3`; the Damage calculation is not restricted to Ranged attacks. [Fixed source and line references](broker_passive_close_range_damage_on_dodge.md#fixed-source-evidence) | Consistent | The English states the matching trigger, amount, and duration and does not claim Ranged-only scope. |
+| Distance falloff, combination, and refresh | No falloff formula, additive-stage, or retrigger details are stated; `ui / loc_talent_broker_passive_close_range_damage_on_dodge_desc / 0410a6ec` | The full 15% applies through 12.5 m, falls to zero at 30 m using the square-root interpolation, and adds to `damage_stat_buffs`. Retriggering resets the 3-second duration without stacking. [Fixed source and line references](broker_passive_close_range_damage_on_dodge.md#fixed-source-evidence) | Not covered by the description | These explain the verified examples and timer behavior without contradicting the short wording. |
+
 ## Comparison totals
 
 The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

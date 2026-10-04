@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="Uncontrolled Aggression talent icon"> [Uncontrolled Aggression](#broker_keystone_adrenaline_junkie_sub_4) | <ul><li>Increase the duration of each Adrenaline stack from 2 seconds to 4 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="Adrenaline Smiter talent icon"> [Adrenaline Smiter](#broker_keystone_adrenaline_junkie_sub_2) | <ul><li>Only Melee kills grant Adrenaline: ordinary kills grant 4 additional stacks, and Elite kills grant another 10.</li><li>Non-killing Melee hits grant no stacks; Critical kills retain the core's 1 additional stack.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="Alley Rat talent icon"> [Alley Rat](#broker_passive_longer_dodges) | <ul><li>Increase Dodge Distance by 50%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="Quick and Deadly talent icon"> [Quick and Deadly](#broker_passive_close_range_damage_on_dodge) | <ul><li>After a Successful Dodge, gain 15% Close Range Damage for 3 seconds; the bonus falls off with distance.</li></ul> | Talent |
 
 ---
 
@@ -621,3 +622,17 @@
 - **Actual distance**: the weapon's Dodge settings, consecutive-Dodge diminishing returns, and attack state still affect the final distance travelled.
 
 [Details](broker_passive_longer_dodges.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_close_range_damage_on_dodge"></a>
+
+### Quick and Deadly
+
+<img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="72" height="72" alt="Quick and Deadly talent icon">
+
+- **Trigger and duration**: after a Successful Dodge, Damage within 12.5 metres increases by 15% for 3 seconds. Retriggering resets the duration without stacking the amount.
+- **Distance example**: the bonus falls off beyond 12.5 metres and reaches zero at 30 metres. At 16.875 metres, the interpolation factor is √((16.875 − 12.5) ÷ 17.5) = 0.5, leaving 15% × (1 − 0.5) = 7.5%; base Damage of 100 becomes 107.5.
+- **Close-range example**: with this effect alone, base Damage of 100 becomes 115. With an existing 25% Damage bonus at the same stage, the result is 100 × (1 + 25% + 15%) = 140.
+
+[Details](broker_passive_close_range_damage_on_dodge.md) · [Back to index](#talent-index)
