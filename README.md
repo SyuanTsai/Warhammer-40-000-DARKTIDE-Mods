@@ -112,6 +112,8 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
+- **非官方修正（本 Repository 維護）**：以原作者 1.10.3 為基底，修正晨星號查詢其他玩家角色進度時的帳號範圍；詳見[修正紀錄與交接](AI-LOGS/true_level/README.md)。
+- 修正狀態：8 項行為回歸與 13 項 Lua 語法檢查通過，遊戲內待驗收。原作者新版優先；更新後先驗證作者版本，再確認是否仍需此修正。
 - MOD 網站最後更新日期：2026-08-17T08:20:00.0000000+00:00
 - MOD 版本：Version 1.10.3
 - MOD 檔案名稱：True Level 156 1.10.3 2026-08-17T08-20Z txMvExehe.zip
