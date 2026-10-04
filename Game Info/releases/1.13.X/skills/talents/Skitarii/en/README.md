@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="Advanced Power Management talent icon"> [Advanced Power Management](#cryptic_redline_strength) | <ul><li>On Combat Ability use, gain one stack per charge held before use, each granting 5% Power for 10 seconds, up to 5 stacks. New stacks refresh the duration; repeated Chordclaw actions during the same activation do not trigger it again.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="Capacitory Limit Override talent icon"> [Capacitory Limit Override](#cryptic_redline_rending) | <ul><li>At 3 or more Redline Capacitors stacks, gain +15% Rending. The bonus turns off at 2 or fewer stacks; stacks above the threshold do not increase its value.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="Resource Optimisation Canticles talent icon"> [Resource Optimisation Canticles](#cryptic_redline_extra_max_stacks) | <ul><li>Adds another maximum Combat Ability charge and raises the Redline Capacitors stack cap from 4 to 5. At 5 stacks, Toughness damage taken is multiplied by 0.75 and natural Capacitance recovery is 25% faster.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="Enhanced Capacitance Protocols talent icon"> [Enhanced Capacitance Protocols](#cryptic_dissector_ability_stacks) | <ul><li>Using a Combat Ability restores all missing Flensing Protocols stacks, up to the current cap: 6 normally, or 8 with Honed Dissector.</li></ul> | Keystone |
 
 ---
 
@@ -694,3 +695,16 @@
 - **Recovery example**: At 5 Redline stacks, natural recovery is increased by 25%. With no other modifiers, the rate rises from 2% of one charge per second to `2% × 1.25 = 2.5%` per second.
 
 [Details](cryptic_redline_extra_max_stacks.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_dissector_ability_stacks"></a>
+
+### Enhanced Capacitance Protocols
+
+<img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="72" height="72" alt="Enhanced Capacitance Protocols talent icon">
+
+- **Trigger**: Using a Combat Ability fills Flensing Protocols to its **current maximum**; with Honed Dissector, it fills to **8 stacks**.
+- **Example**: With the base cap of 6 and 3 stacks remaining, the next ability use restores 3 to reach 6. At a full 6, using the ability cannot exceed the cap.
+
+[Details](cryptic_dissector_ability_stacks.md) · [Back to index](#talent-index)

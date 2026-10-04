@@ -526,6 +526,18 @@ Full raw template and formatting: [source evidence](cryptic_redline_extra_max_st
 | Additional charge and stack cap | +1 Max Ability Charges and +1 Redline Capacitors Max Stacks; `ui / loc_talent_cryptic_redline_stacks_clarified_desc / b176ca53` | Separate passive adds `ability_extra_charges = 1`; the special rule adds 1 to both Redline stack caps, from 4 to 5 [Fixed source and line references](cryptic_redline_extra_max_stacks.md#fixed-source-evidence) | Consistent | The two increments agree with the English. |
 | Resulting caps, calculations and limits | Does not repeat the root extra charge or calculate the resulting bonuses; `ui / loc_talent_cryptic_redline_stacks_clarified_desc / b176ca53` | Base 3 + root 1 + modifier 1 = 5 maximum charges; Voltaic Emitter still spends at most 3 per use. At 5 Redline stacks: Toughness multiplier 0.75 and natural recovery `2% × 1.25 = 2.5%/s` [Fixed source and line references](cryptic_redline_extra_max_stacks.md#fixed-source-evidence) | Not covered by the description | The original charge, Toughness and recovery examples supplement the English. This concerns Combat Ability charge systems and Toughness damage, not all Health damage. |
 
+
+<a id="cryptic_dissector_ability_stacks"></a>
+
+## Enhanced Capacitance Protocols
+
+Full raw template and formatting: [source evidence](cryptic_dissector_ability_stacks.md#original-english-template-and-reconstruction). Name hash `0f7aa923`. Every row uses `ui / loc_talent_cryptic_dissector_ability_stacks_desc / 39219dd5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| All-stack restoration | Using an Ability replenishes all stacks; `ui / loc_talent_cryptic_dissector_ability_stacks_desc / 39219dd5` | With the special rule, `on_combat_ability` restores `num_max_stacks − current_stacks`, filling to the current cap [Fixed source and line references](cryptic_dissector_ability_stacks.md#fixed-source-evidence) | Consistent | The restoration amount agrees with the English. |
+| Event and current-cap details | Does not specify the actual event or the current numerical cap; `ui / loc_talent_cryptic_dissector_ability_stacks_desc / 39219dd5` | Actions must send `on_combat_ability`; stack restoration does not use `ability_cost`. At 3/6, restores 3 to 6/6; at full adds 0; Honed Dissector raises the cap to 8 [Fixed source and line references](cryptic_dissector_ability_stacks.md#fixed-source-evidence) | Not covered by the description | The original examples and event requirement supplement the text. |
+
 ## Comparison totals
 
 83 rules: 40 Consistent / 1 Explicit contradiction / 40 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 503.
