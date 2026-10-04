@@ -95,6 +95,7 @@
 | <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="Servo-Core Recharge Engine talent icon"> [Servo-Core Recharge Engine](#cryptic_weakspot_kills_restore_toughness) | <ul><li>Melee or ranged Weakspot kills immediately restore 5% of maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="Adaptive Combat Calibration talent icon"> [Adaptive Combat Calibration](#cryptic_cleave_and_impact) | <ul><li>Above 50% Toughness, gain +30% Melee Cleave; at or below 50%, gain +30% Melee Impact.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="Residual Current Buffer talent icon"> [Residual Current Buffer](#cryptic_tdr_based_on_charge) | <ul><li>Always gain 10% Toughness Damage Reduction, plus 2.5% per fully charged unit of Capacitance currently held.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="Superior Defence Engrams talent icon"> [Superior Defence Engrams](#cryptic_ranged_stacking_toughness) | <ul><li>Ranged kills grant up to 5 stacks, each restoring 1% of maximum Toughness per second; another kill refreshes the 8-second duration, even at the cap.</li></ul> | Talent |
 
 ---
 
@@ -1357,3 +1358,17 @@
 - **Update condition**: Only fully charged units count. The effect updates when Capacitance is spent or a charge finishes recharging. With **0 charges**, the **10%** base reduction remains.
 
 [Details](cryptic_tdr_based_on_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_ranged_stacking_toughness"></a>
+
+### Superior Defence Engrams
+
+<img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="72" height="72" alt="Superior Defence Engrams talent icon">
+
+- **Stacking**: Each ranged kill grants **1 stack**, up to **5**. Each stack restores **1% of maximum Toughness per second**.
+- **Duration**: Another ranged kill resets the **8-second** timer. The duration can still refresh at maximum stacks.
+- **Recovery example**: At **200 maximum Toughness** and **5 stacks**, recover `200 × 5 × 1% = 10` points per second. Maintaining full stacks for **8 seconds** can restore **80** points, capped at maximum Toughness.
+
+[Details](cryptic_ranged_stacking_toughness.md) · [Back to index](#talent-index)

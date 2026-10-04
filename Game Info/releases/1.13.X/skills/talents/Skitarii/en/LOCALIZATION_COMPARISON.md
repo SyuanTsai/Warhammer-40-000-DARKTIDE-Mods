@@ -1058,6 +1058,18 @@ Full raw template and formatting: [source evidence](cryptic_tdr_based_on_charge.
 | Base and current-charge reduction | “Gain … Toughness Damage Reduction, increased by … per Current Charge”; +10% and +2.5%; `ui / loc_talent_cryptic_tdr_based_on_charge_base_desc / 3b317052` | The multiplier is 1 − 0.1 − 0.025 × remaining_ability_charges. [Fixed source and line references](cryptic_tdr_based_on_charge.md#fixed-source-evidence) | Consistent | The values and dependence on the current charge count match. |
 | Charge threshold and combination | The description does not define the fully charged threshold or how independent reductions combine.; `ui / loc_talent_cryptic_tdr_based_on_charge_base_desc / 3b317052` | Only full charges count; spending or completing a charge updates the effect. Its reductions add internally and multiply independent reductions; zero charges retain 10%. [Fixed source and line references](cryptic_tdr_based_on_charge.md#fixed-source-evidence) | Not covered by the description | These conditions explain the charge count and damage calculation without contradicting the wording. |
 
+
+<a id="cryptic_ranged_stacking_toughness"></a>
+
+## Superior Defence Engrams
+
+Full raw template and formatting: [source evidence](cryptic_ranged_stacking_toughness.md#original-english-template-and-reconstruction). Name hash `24e5786c`. Every row uses `ui / loc_talent_cryptic_ranged_stacking_toughness_desc / 057bb0ce`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, stacks and recovery | Ranged kills grant stacks; each restores +1% Toughness per second; maximum 5; lasts 8s.; `ui / loc_talent_cryptic_ranged_stacking_toughness_desc / 057bb0ce` | Each ranged kill grants a stack, capped at 5, with 0.01 recovery per stack per second and an 8-second duration. [Fixed source and line references](cryptic_ranged_stacking_toughness.md#fixed-source-evidence) | Consistent | The trigger and all displayed numbers match. |
+| Recovery basis and refresh | The percentage basis, recovery cap and refresh behavior are not specified.; `ui / loc_talent_cryptic_ranged_stacking_toughness_desc / 057bb0ce` | Recovery uses maximum Toughness and stops at that maximum. Another ranged kill resets the 8-second timer, including at the stack cap. [Fixed source and line references](cryptic_ranged_stacking_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain how the stated ongoing recovery and duration operate. |
+
 ## Comparison totals
 
 177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.
