@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="Holy Cause talent icon"> [Holy Cause](#zealot_channel_grants_toughness_damage_reduction) | <ul><li>Each Chorus pulse grants you and Coherency allies 8% Toughness damage reduction, up to 5 stacks/40%.</li><li>Lasts 10 seconds; later pulses refresh the duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="Ecclesiarch's Call talent icon"> [Ecclesiarch's Call](#zealot_channel_grants_damage) | <ul><li>Each Chorus pulse adds 6% Damage, up to 5 stacks / 30%.</li><li>Affects you and Coherency allies; lasts 10 seconds and refreshes on later pulses.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="Redoubled Zeal talent icon"> [Redoubled Zeal](#zealot_additional_charge_of_ability) | <ul><li>Fury of the Faithful has 2 charges. Both uses share one recharge pool; after spending both, natural recharge restores one after about 30 seconds and both after about 60 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="32" height="32" alt="Shroudfield talent icon"> [Shroudfield](#zealot_stealth) | <ul><li>Enter Stealth for 3 seconds; base cooldown 30 seconds. Gain 20% Movement Speed, 150% Backstab/Finesse bonuses, 100 percentage points of Critical Chance and 100% Melee Rending. Qualifying attacks and actions end Stealth.</li></ul> | Ability |
 
 ---
 
@@ -192,3 +193,19 @@
 - **Cooldown example**: After using both consecutively, the first charge returns after about 30 seconds and both return after about 60 seconds. Waiting 30 seconds does not refill both at once. If you use only one, only that expenditure needs to recharge.
 
 [Details](zealot_additional_charge_of_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_stealth"></a>
+
+### Shroudfield
+
+<img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="72" height="72" alt="Shroudfield talent icon">
+
+- **Stealth and cooldown**: Enter Stealth for 3 seconds; base cooldown 30 seconds, maximum 1 charge.
+- **Bonuses**: Gain 20% Movement Speed, 100 percentage points of Critical Chance, 100% Melee Rending, and 150% bonuses to Backstab/flanking damage and the extra Finesse damage component. Backstab applies to qualifying melee positioning; flanking applies to the corresponding ranged positioning. They are not two bonuses added to the same hit.
+- **Ending Stealth**: Your ordinary shooting, qualifying effective hits, grenade/throwing-knife actions and assistance actions such as reviving or rescuing can end Stealth. Listed damage-over-time events do not end it by themselves. The first 0.5 seconds provide a grace period for non-damage events.
+- **Finesse example**: Fix the attack type, hit zone and armour, and consider only Finesse. A base component of 100 plus an extra Weakspot/Critical component of 50 changes from 150 to 100 + 50 × (1 + 150%) = 225, a 50% increase to the whole hit. With an extra component of 100, 200 becomes 350, a 75% increase. Backstab, Rending and other factors are calculated separately.
+- **Movement example**: A base speed of 5 m/s with no other modifiers becomes 5 × 1.2 = 6 m/s.
+
+[Details](zealot_stealth.md) · [Back to index](#talent-index)
