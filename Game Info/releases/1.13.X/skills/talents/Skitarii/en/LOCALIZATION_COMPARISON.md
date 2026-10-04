@@ -817,6 +817,18 @@ Full raw template and formatting: [source evidence](cryptic_elite_kills_toughnes
 | Trigger, recovery and duration | Elite Kills restore 15% Toughness over 3s; `ui / loc_talent_cryptic_elite_kills_toughness_desc / 46309d46` | Elite kills of either attack type trigger 15% of maximum Toughness over 3 seconds. [Fixed source and line references](cryptic_elite_kills_toughness.md#fixed-source-evidence) | Consistent | The stated enemy type, fraction and duration match; the English does not impose a ranged-kill restriction. |
 | Recovery basis and retriggering | The description does not specify the percentage basis, refresh or recovery modifiers; `ui / loc_talent_cryptic_elite_kills_toughness_desc / 46309d46` | Rate is `0.15 / 3` of maximum Toughness per second; retriggering refreshes 3 seconds without increasing that rate. Recovery bonuses and the cap apply. [Fixed source and line references](cryptic_elite_kills_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain the existing 200-maximum example: 10 points/second, 30 over 3 seconds, or 50 across a refresh at 2 seconds. |
 
+
+<a id="cryptic_push_stagger_stamina"></a>
+
+## Force Distribution Actuators
+
+Full raw template and formatting: [source evidence](cryptic_push_stagger_stamina.md#original-english-template-and-reconstruction). Name hash `ec311974`. Every row uses `ui / loc_talent_cryptic_push_stagger_stamina_desc / 19866afe`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Inclusive condition and effect | Your Pushes have +75% Impact when at or above 50% Stamina; `ui / loc_talent_cryptic_push_stagger_stamina_desc / 19866afe` | At current/maximum Stamina ≥0.5, `push_impact_modifier = 0.75` is active. [Fixed source and line references](cryptic_push_stagger_stamina.md#fixed-source-evidence) | Consistent | Both the inclusive boundary and the stat affected match. |
+| Dynamic condition and limits | The description does not specify the maximum-Stamina basis or enemy interruption thresholds; `ui / loc_talent_cryptic_push_stagger_stamina_desc / 19866afe` | The condition follows current Stamina; with 6 maximum bars, at least 3 are needed. Original Push Impact 100 becomes 175; enemy thresholds still determine interruption. [Fixed source and line references](cryptic_push_stagger_stamina.md#fixed-source-evidence) | Not covered by the description | These details explain the existing examples and control limits without adding a damage bonus or guaranteed interruption. |
+
 ## Comparison totals
 
 136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.

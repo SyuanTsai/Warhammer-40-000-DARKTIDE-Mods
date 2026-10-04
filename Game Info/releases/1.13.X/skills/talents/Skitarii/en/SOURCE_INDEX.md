@@ -78,3 +78,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Power Overflow](cryptic_shared_toughness.md) / `cryptic_shared_toughness` | Talent |
 | [Target-Neutralization Feedback](cryptic_stun_suppression_immune.md) / `cryptic_stun_suppression_immune` | Talent |
 | [Binary Ballistics Protocol](cryptic_elite_kills_toughness.md) / `cryptic_elite_kills_toughness` | Talent |
+| [Force Distribution Actuators](cryptic_push_stagger_stamina.md) / `cryptic_push_stagger_stamina` | Talent |
