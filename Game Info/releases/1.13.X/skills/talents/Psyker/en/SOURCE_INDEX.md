@@ -45,3 +45,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Essence Harvest](psyker_toughness_on_soul.md) / `psyker_toughness_on_soul` | Keystone |
 | [Bio-Lodestone](psyker_empowered_grenades_passive_improved.md) / `psyker_empowered_grenades_passive_improved` | Keystone |
 | [Psychic Leeching](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) / `psyker_empowered_chain_lightnings_replenish_toughness_to_allies` | Keystone |
+| [Overpowering Souls](psyker_empowered_ability_on_elite_kills.md) / `psyker_empowered_ability_on_elite_kills` | Keystone |

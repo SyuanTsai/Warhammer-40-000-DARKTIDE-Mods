@@ -421,6 +421,18 @@ Full raw template and formatting: [source evidence](psyker_empowered_chain_light
 | Empowered use, recipients and value | Using Blitz while Empowered Psionics is active restores 20% Toughness to you and Allies in Coherency; `ui / loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description / 0f6ef5af` | The special rule gates the empowered buff's restoration events; they require an available charge or successful spend and iterate in_coherence_units with replenish_percentage(..., 0.2). [Fixed source and line references](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md#fixed-source-evidence) | Consistent | The empowerment prerequisite, stated recipients and restoration value agree with the accepted evidence. |
 | Timing and restoration limits | No separate Blitz timings, maximum-Toughness formula, deficit cap or per-target scaling specified; `ui / loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description / 0f6ef5af` | Smite restores at start and spends at finish; Assail restores on throw and Brain Rupture at attack resolution. Each recipient is capped by missing Toughness; more targets do not repeat this restore. [Fixed source and line references](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md#fixed-source-evidence) | Not covered by the description | These are supplementary event and quantity limits. Recipient eligibility remains defined by the Coherency system's returned set. |
 
+
+<a id="psyker_empowered_ability_on_elite_kills"></a>
+
+## Overpowering Souls
+
+Full raw template and formatting: [source evidence](psyker_empowered_ability_on_elite_kills.md#original-english-template-and-reconstruction). Name hash `faea4485`. Every row uses `ui / loc_talent_psyker_empowered_ability_on_elite_kills_description / 23c36e9e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Guaranteed Elite gain | Guaranteed chance to gain Empowered Psionics on Elite Kills; `ui / loc_talent_psyker_empowered_ability_on_elite_kills_description / 23c36e9e` | With the special rule enabled, on_kill requires params.tags.elite and adds one charge. [Fixed source and line references](psyker_empowered_ability_on_elite_kills.md#fixed-source-evidence) | Consistent | The guarantee and Elite condition agree. The text does not extend the guarantee to Specialists. |
+| Cap and ordinary chance path | No cap variant or duplicate-proc handling specified; `ui / loc_talent_psyker_empowered_ability_on_elite_kills_description / 23c36e9e` | Shared counter clamps at the cap; base cap one and Charged Up cap three. Guaranteed Elite kills return from the ordinary chance handler; other kills retain the base chance path. [Fixed source and line references](psyker_empowered_ability_on_elite_kills.md#fixed-source-evidence) | Not covered by the description | The storage and event boundaries supplement the guarantee; it does not promise extra stored stacks when already full. |
+
 ## Comparison totals
 
 The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.

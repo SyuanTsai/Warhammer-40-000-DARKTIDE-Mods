@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="Essence Harvest talent icon"> [Essence Harvest](#psyker_toughness_on_soul) | <ul><li>Gaining a Warp Charge restores 30% of maximum Toughness over five seconds; further gains refresh the duration without stacking the restoration rate.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="Bio-Lodestone talent icon"> [Bio-Lodestone](#psyker_empowered_grenades_passive_improved) | <ul><li>Raises the chance of gaining empowerment on a kill from 10% to 15%; the storage cap remains unchanged.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="32" height="32" alt="Psychic Leeching talent icon"> [Psychic Leeching](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies) | <ul><li>Using an empowered Blitz restores 20% of maximum Toughness to you and Allies in Coherency; restoration timing depends on the Blitz.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="Overpowering Souls talent icon"> [Overpowering Souls](#psyker_empowered_ability_on_elite_kills) | <ul><li>Elite kills guarantee one empowerment stack, subject to the storage cap; Specialist and ordinary kills retain their existing gain chance.</li></ul> | Keystone |
 
 ---
 
@@ -568,3 +569,17 @@
 - **Restoration example:** A player with 100 maximum Toughness restores `100 × 20% = 20`; one with 150 restores 30. Each is capped by their own missing Toughness. Hitting more enemies with a single Smite does not increase this restoration.
 
 [Details](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_empowered_ability_on_elite_kills"></a>
+
+### Overpowering Souls
+
+<img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="72" height="72" alt="Overpowering Souls talent icon">
+
+- **Trigger:** Killing an Elite Enemy guarantees one empowerment stack. Specialist and ordinary enemies retain the existing gain chance.
+
+- **Stack example:** Killing an Elite at zero stacks gives one. The base cap is one, so another kill at the cap does not give two. Charged Up raises the cap to three.
+
+[Details](psyker_empowered_ability_on_elite_kills.md) · [Back to index](#talent-index)
