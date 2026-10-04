@@ -6,12 +6,13 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee" width="32" height="32" alt="創傷祝福圖示"> [創傷](../../../entries/創傷/README.md)<br>- Trauma<br>[完整說明](../../../entries/創傷/README.md) | <ul><li>每層近戰衝擊修正+14%／+16%／+18%／+20%（I–IV），最多5層；2秒期限；另有每層×1.1一般踉蹌時間倍率。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd" width="32" height="32" alt="奪顱者祝福圖示"> [奪顱者](../../../entries/奪顱者/README.md)<br>- Headtaker<br>[完整說明](../../../entries/奪顱者/README.md) | <ul><li>- 雷鎚十字星 Mk II、鐵盔 Mk IV 共用 I–IV 數值；蓄能後的直接揮擊可命中觸發，單純啟用不觸發。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0" width="32" height="32" alt="勢頭祝福圖示"> [勢頭](../../../entries/勢頭/README.md)<br>- Momentum<br>[完整說明](../../../entries/勢頭/README.md) | <ul><li>同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 雷鎚 十字星 Mk II | [創傷](../../../entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit.md) | I–IV |
-| 雷鎚 鐵盔 Mk IV | [創傷](../../../entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit.md) | I–IV |
+| 雷鎚 十字星 Mk II | [創傷](../../../entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit.md)、[勢頭](../../../entries/勢頭/weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits.md) | I–IV |
+| 雷鎚 鐵盔 Mk IV | [創傷](../../../entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit.md)、[勢頭](../../../entries/勢頭/weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

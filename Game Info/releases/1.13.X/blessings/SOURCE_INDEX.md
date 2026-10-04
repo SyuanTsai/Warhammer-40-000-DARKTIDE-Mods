@@ -94,3 +94,4 @@
 | [凶殘之寧](entries/凶殘之寧/README.md) | [來源索引](entries/凶殘之寧/SOURCE_INDEX.md) |
 | [快速裝填](entries/快速裝填/README.md) | [來源索引](entries/快速裝填/SOURCE_INDEX.md) |
 | [奪顱者](entries/奪顱者/README.md) | [來源索引](entries/奪顱者/SOURCE_INDEX.md) |
+| [勢頭](entries/勢頭/README.md) | [來源索引](entries/勢頭/SOURCE_INDEX.md) |

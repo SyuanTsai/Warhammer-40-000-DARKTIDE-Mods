@@ -1187,6 +1187,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd",
       "effect": "持用裝有奪顱者的對應近戰武器，以未被 damage profile 排除的合格近戰命中加一層；每層提高近戰威力，最多五層，合格命中重設3.5秒共享閒置期限。重劍每層數值較高。"
+    },
+    {
+      "id": "momentum",
+      "name_zh_tw": "勢頭",
+      "name_en": "Momentum",
+      "name_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits",
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "name_hash": "e4cb3efd",
+      "description_hash": "d6e3e99b",
+      "page": "entries/勢頭/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "effect": "同一次近戰攻擊處理到第 3 個或後續目標，且該目標送出本祝福可讀取的命中事件時，依 I–IV 恢復最大韌性的 12%／13%／14%／15%（實際值受韌性回復修正與缺額限制）。"
     }
   ],
   "weapons": [
@@ -18248,6 +18261,318 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_176",
       "effect": "- 雷鎚十字星 Mk II、鐵盔 Mk IV 共用 I–IV 數值；蓄能後的直接揮擊可命中觸發，單純啟用不觸發。",
       "buff_template_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits",
+      "blessing_id": "momentum",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/勢頭/weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.replenish_percentage",
+        "tier_values_by_level": {
+          "I": 0.12,
+          "II": 0.13,
+          "III": 0.14,
+          "IV": 0.15
+        },
+        "value_unit": "fraction of maximum Toughness requested before toughness-replenish modifiers; actual recovery capped at missing Toughness",
+        "wrapper_fallback": 0.5,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "attack_type_required": "melee",
+        "target_number_comparison": "current target_number >= required_num_hits",
+        "cooldown_duration_seconds": 0.12,
+        "recovery_request_formula": "max_toughness * tier_fraction * toughness_replenish_modifier * toughness_replenish_multiplier",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": false,
+        "one_proc_per_sweep": false,
+        "proc_callback_immediate": true,
+        "trait_id": "weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits",
+        "mark_ids": [
+          "chainsword_2h_p1_m1",
+          "chainsword_2h_p1_m2"
+        ],
+        "base_wrapper_fallback": 0.5,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 146,
+        "end_line": 200
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "description_hash": "d6e3e99b",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "effect": "同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits",
+      "blessing_id": "momentum",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/勢頭/weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.replenish_percentage",
+        "tier_values_by_level": {
+          "I": 0.12,
+          "II": 0.13,
+          "III": 0.14,
+          "IV": 0.15
+        },
+        "value_unit": "fraction of maximum Toughness requested before toughness-replenish modifiers; actual recovery capped at missing Toughness",
+        "wrapper_fallback": 0.5,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "attack_type_required": "melee",
+        "target_number_comparison": "current target_number >= required_num_hits",
+        "cooldown_duration_seconds": 0.12,
+        "recovery_request_formula": "max_toughness * tier_fraction * toughness_replenish_modifier * toughness_replenish_multiplier",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": false,
+        "one_proc_per_sweep": false,
+        "proc_callback_immediate": true,
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits",
+        "mark_ids": [
+          "forcesword_2h_p1_m1",
+          "forcesword_2h_p1_m2"
+        ],
+        "base_wrapper_fallback": 0.5,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 492,
+        "end_line": 546
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 48,
+        "end_line": 48
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "description_hash": "d6e3e99b",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "effect": "同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/勢頭/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.replenish_percentage",
+        "tier_values_by_level": {
+          "I": 0.12,
+          "II": 0.13,
+          "III": 0.14,
+          "IV": 0.15
+        },
+        "value_unit": "fraction of maximum Toughness requested before toughness-replenish modifiers; actual recovery capped at missing Toughness",
+        "wrapper_fallback": 0.5,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "attack_type_required": "melee",
+        "target_number_comparison": "current target_number >= required_num_hits",
+        "cooldown_duration_seconds": 0.12,
+        "recovery_request_formula": "max_toughness * tier_fraction * toughness_replenish_modifier * toughness_replenish_multiplier",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": false,
+        "one_proc_per_sweep": false,
+        "proc_callback_immediate": true,
+        "trait_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+        "mark_ids": [
+          "ogryn_club_p2_m1",
+          "ogryn_club_p2_m2",
+          "ogryn_club_p2_m3"
+        ],
+        "base_wrapper_fallback": 0.5,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 170,
+        "end_line": 224
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "description_hash": "d6e3e99b",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "effect": "同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/勢頭/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.replenish_percentage",
+        "tier_values_by_level": {
+          "I": 0.12,
+          "II": 0.13,
+          "III": 0.14,
+          "IV": 0.15
+        },
+        "value_unit": "fraction of maximum Toughness requested before toughness-replenish modifiers; actual recovery capped at missing Toughness",
+        "wrapper_fallback": 0.5,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "attack_type_required": "melee",
+        "target_number_comparison": "current target_number >= required_num_hits",
+        "cooldown_duration_seconds": 0.12,
+        "recovery_request_formula": "max_toughness * tier_fraction * toughness_replenish_modifier * toughness_replenish_multiplier",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": false,
+        "one_proc_per_sweep": false,
+        "proc_callback_immediate": true,
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+        "mark_ids": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "base_wrapper_fallback": 0.5,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 342,
+        "end_line": 396
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 113,
+        "end_line": 113
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "description_hash": "d6e3e99b",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "effect": "同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits",
+      "blessing_id": "momentum",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/勢頭/weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.replenish_percentage",
+        "tier_values_by_level": {
+          "I": 0.12,
+          "II": 0.13,
+          "III": 0.14,
+          "IV": 0.15
+        },
+        "value_unit": "fraction of maximum Toughness requested before toughness-replenish modifiers; actual recovery capped at missing Toughness",
+        "wrapper_fallback": 0.5,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "attack_type_required": "melee",
+        "target_number_comparison": "current target_number >= required_num_hits",
+        "cooldown_duration_seconds": 0.12,
+        "recovery_request_formula": "max_toughness * tier_fraction * toughness_replenish_modifier * toughness_replenish_multiplier",
+        "actual_recovery_formula": "min(missing_toughness, requested_amount) when recovery is allowed",
+        "ignore_toughness_replenish_stat_buffs": false,
+        "one_proc_per_sweep": false,
+        "proc_callback_immediate": true,
+        "trait_id": "weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits",
+        "mark_ids": [
+          "thunderhammer_2h_p1_m1",
+          "thunderhammer_2h_p1_m2"
+        ],
+        "base_wrapper_fallback": 0.5,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 253,
+        "end_line": 307
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_multiple_hits_desc",
+      "description_hash": "d6e3e99b",
+      "icon": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "effect": "同一次攻擊處理至至少第 3 個目標的合格近戰命中時，請求恢復最大韌性的 12%／13%／14%／15%（I–IV）；實際回復受角色修正與韌性缺額限制。"
     }
   ],
   "bindings": [
@@ -25621,6 +25946,174 @@
       "mark_id": "thunderhammer_2h_p1_m2",
       "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_hit",
       "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/increase_power_on_hit",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/toughness_recovery_on_multiple_hits",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "momentum",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/toughness_recovery_on_multiple_hits",
       "trait_category": "bespoke_thunderhammer_2h_p1",
       "available_tiers": null,
       "source": {
