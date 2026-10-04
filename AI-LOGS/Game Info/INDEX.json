@@ -1938,6 +1938,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_303_307",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

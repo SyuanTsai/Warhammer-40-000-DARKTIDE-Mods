@@ -496,4 +496,4 @@ Full raw template and formatting: [source evidence](psyker_warpfire_generate_sou
 
 ## Comparison totals
 
-The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
+The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -4353,7 +4353,12 @@
         "psyker_toughness_on_soul",
         "psyker_empowered_grenades_passive_improved",
         "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
-        "psyker_empowered_ability_on_elite_kills"
+        "psyker_empowered_ability_on_elite_kills",
+        "psyker_mark_increased_max_stacks",
+        "psyker_mark_kills_can_vent",
+        "psyker_mark_increased_duration",
+        "psyker_empowered_grenades_increased_max_stacks",
+        "psyker_warpfire_generate_souls"
       ],
       "checks": []
     },
@@ -4400,7 +4405,12 @@
         "psyker_toughness_on_soul",
         "psyker_empowered_grenades_passive_improved",
         "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
-        "psyker_empowered_ability_on_elite_kills"
+        "psyker_empowered_ability_on_elite_kills",
+        "psyker_mark_increased_max_stacks",
+        "psyker_mark_kills_can_vent",
+        "psyker_mark_increased_duration",
+        "psyker_empowered_grenades_increased_max_stacks",
+        "psyker_warpfire_generate_souls"
       ],
       "checks": []
     },
@@ -4447,7 +4457,12 @@
         "psyker_toughness_on_soul",
         "psyker_empowered_grenades_passive_improved",
         "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
-        "psyker_empowered_ability_on_elite_kills"
+        "psyker_empowered_ability_on_elite_kills",
+        "psyker_mark_increased_max_stacks",
+        "psyker_mark_kills_can_vent",
+        "psyker_mark_increased_duration",
+        "psyker_empowered_grenades_increased_max_stacks",
+        "psyker_warpfire_generate_souls"
       ],
       "checks": []
     },
@@ -4494,7 +4509,12 @@
         "psyker_toughness_on_soul",
         "psyker_empowered_grenades_passive_improved",
         "psyker_empowered_chain_lightnings_replenish_toughness_to_allies",
-        "psyker_empowered_ability_on_elite_kills"
+        "psyker_empowered_ability_on_elite_kills",
+        "psyker_mark_increased_max_stacks",
+        "psyker_mark_kills_can_vent",
+        "psyker_mark_increased_duration",
+        "psyker_empowered_grenades_increased_max_stacks",
+        "psyker_warpfire_generate_souls"
       ],
       "checks": []
     },
@@ -4973,9 +4993,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "880a86b83e6c538bd94dedf7268f5c571398003e",
       "chinese_sha256": "079066f90008bf9858ade9484ad1d863bdaa2617caec0a98e0d728343eea37e6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_empowered_grenades_increased_max_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_grenades_passive_improved.md",
@@ -5148,9 +5175,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "20415179f230f6470fc83be5f06e76126735d1fc",
       "chinese_sha256": "693542ae9eb84c34f911690d1224f1a5f32c862e4287b5150a23fc846df366a6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_mark_increased_duration"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_increased_max_stacks.md",
@@ -5159,9 +5193,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "de5bed464e68d1f12cc6f34432da25f2b85a9c30",
       "chinese_sha256": "248910cf4743685b53e5c02edf70e1789cd0a06a2cebc742fa4fc8ec9500f34d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_mark_increased_max_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_kills_can_vent.md",
@@ -5170,9 +5211,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c61f114f0896f64f4ec4abbc87a7c524a04f19ce",
       "chinese_sha256": "dfdff5681a5a99d07ff6349cbc8e0c2610bb1355aed8e600fc6f212f9d5fff4b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_mark_kills_can_vent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_weakspot_kills.md",
@@ -5612,9 +5660,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5123fceb61087f657d8fb94759bdf98467aaf417",
       "chinese_sha256": "a0ba5c0ee9f6aec59cb97e21e4edeeb8523230c260d034bb5da9da3500342d1a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_warpfire_generate_souls"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warpfire_on_shout.md",
@@ -14086,6 +14141,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_ability_on_elite_kills.md"
+    },
+    {
+      "id": "psyker_mark_increased_max_stacks",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_increased_max_stacks.md"
+    },
+    {
+      "id": "psyker_mark_kills_can_vent",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_kills_can_vent.md"
+    },
+    {
+      "id": "psyker_mark_increased_duration",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_increased_duration.md"
+    },
+    {
+      "id": "psyker_empowered_grenades_increased_max_stacks",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_grenades_increased_max_stacks.md"
+    },
+    {
+      "id": "psyker_warpfire_generate_souls",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warpfire_generate_souls.md"
     }
   ],
   "pending_chinese_corrections": [
