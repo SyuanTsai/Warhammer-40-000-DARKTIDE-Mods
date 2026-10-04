@@ -80,6 +80,7 @@
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="Prime Target talent icon"> [Prime Target](#zealot_elite_kills_empowers) | <ul><li>Elite Kills grant +10% damage and restore 15% of maximum Toughness over 5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="Behind the Lines talent icon"> [Behind the Lines](#zealot_suppress_on_backstab_kill) | <ul><li>Heavy Melee Backstab Kills suppress enemies within 8 metres of you, with a 5-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="Time to Kill talent icon"> [Time to Kill](#zealot_backstab_periodic_damage) | <ul><li>The next valid Melee Backstab deals +50% damage, then starts an 8-second cooldown.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="Against the Odds talent icon"> [Against the Odds](#zealot_offensive_vs_many) | <ul><li>Every 2 enemies within 5 metres grant +2% damage and +10% Cleave, up to 5 stacks.</li></ul> | Skill |
 
 ---
 
@@ -1093,3 +1094,17 @@
 - **Direction limit:** the Melee hit must land within the valid angle behind the enemy. Shooting from behind does not count as this Melee Backstab.
 
 [Details](zealot_backstab_periodic_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_offensive_vs_many"></a>
+
+### Against the Odds
+
+<img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="72" height="72" alt="Against the Odds talent icon">
+
+- **Stacks:** every 2 enemies within 5 metres grant +2% damage and +10% Cleave, up to 5 stacks at 10 enemies. Stacks decrease as enemies leave; bonuses are suspended while you are disabled.
+- **Damage example:** 6 nearby enemies give 3 stacks, so base damage 100 becomes 100 × (1 + 3 × 2%) = 106. At 10 or more enemies, the maximum is 110. Other same-stage damage bonuses are added first.
+- **Cleave example:** an original enemy hit-mass budget of 10 becomes 10 × (1 + 3 × 10%) = 13 at 3 stacks, or 15 at maximum stacks. This is the total mass you can cleave through, not a fixed extra 3 or 5 enemies.
+
+[Details](zealot_offensive_vs_many.md) · [Back to index](#talent-index)

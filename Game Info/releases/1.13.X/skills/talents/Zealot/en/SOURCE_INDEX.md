@@ -83,3 +83,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Prime Target](zealot_elite_kills_empowers.md) / `zealot_elite_kills_empowers` | Skill |
 | [Behind the Lines](zealot_suppress_on_backstab_kill.md) / `zealot_suppress_on_backstab_kill` | Skill |
 | [Time to Kill](zealot_backstab_periodic_damage.md) / `zealot_backstab_periodic_damage` | Skill |
+| [Against the Odds](zealot_offensive_vs_many.md) / `zealot_offensive_vs_many` | Skill |

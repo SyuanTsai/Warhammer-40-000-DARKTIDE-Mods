@@ -878,6 +878,18 @@ Full raw template and formatting: [source evidence](zealot_backstab_periodic_dam
 | Bonus and cooldown | Melee Backstab Damage +50%; 8s Cooldown; `ui / loc_talent_zealot_backstab_periodic_damage_desc / f5f63199` | Conditional backstab_damage +0.5 while not on cooldown; cooldown 8 seconds [Fixed source and line references](zealot_backstab_periodic_damage.md#fixed-source-evidence) | Consistent | Stat and cooldown agree. |
 | Trigger, direction and calculation | No damaging-hit trigger or calculation details; `ui / loc_talent_zealot_backstab_periodic_damage_desc / f5f63199` | `on_hit` / `is_damaging_backstab` consumes availability without requiring a kill; valid rear Melee angle, not rear shooting; permanent allow_backstabbing; separate from Finesse extra damage; original 100→150 or same-stage 120→170 [Fixed source and line references](zealot_backstab_periodic_damage.md#fixed-source-evidence) | Not covered by the description | These trigger and calculation details supplement the wording. |
 
+
+<a id="zealot_offensive_vs_many"></a>
+
+## Against the Odds
+
+Full raw template and formatting: [source evidence](zealot_offensive_vs_many.md#original-english-template-and-reconstruction). Name hash `e699905e`. Every row uses `ui / loc_talent_zealot_offensive_vs_many_desc / d2cd1130`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Nearby-enemy stacks | Every 2 enemies within 5m; +2% Damage and +10% Cleave; stacks 5 times; `ui / loc_talent_zealot_offensive_vs_many_desc / d2cd1130` | Radius 5; stacks min(1 + floor((N − 2) / 2), 5) for N >= 2; damage +0.02 and hit-mass modifier +0.1 per stack [Fixed source and line references](zealot_offensive_vs_many.md#fixed-source-evidence) | Consistent | Count, range, bonuses and cap agree. |
+| Updates, exception and calculations | No check interval, disabled-state rule or hit-mass explanation; `ui / loc_talent_zealot_offensive_vs_many_desc / d2cd1130` | Check every 0.1 seconds; stacks fall as enemies leave and return to 0 while disabled. Original 3-stack damage 106 and mass budget 13; full-stack 110 and 15; mass budget is not a fixed extra enemy count [Fixed source and line references](zealot_offensive_vs_many.md#fixed-source-evidence) | Not covered by the description | These operating and calculation details supplement the wording. |
+
 ## Comparison totals
 
 147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.
