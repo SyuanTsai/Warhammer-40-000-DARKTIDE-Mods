@@ -417,6 +417,18 @@ Full raw template and formatting: [source evidence](cryptic_redline.md#original-
 | Charge trigger, bonuses, duration and cap | Spending or gaining a Charge grants +5% Toughness Damage Reduction and +5% Capacitance generation for 12s, up to 4 stacks; stacks decay one at a time; +1 Max Ability Charges; `ui / loc_talent_cryptic_redline_charge_stacking_clarified_desc / 22a7f709` | Combat Ability charge events add one stack per actual charge gained/spent; 5% per-stack modifiers, duration 12, cap 4, individual decay and `ability_extra_charges = 1` [Fixed source and line references](cryptic_redline.md#fixed-source-evidence) | Consistent | The stated trigger, amounts, duration, decay and extra charge agree. |
 | Event quantities, refresh and restoration paths | Does not specify quantities per event, cap refresh or the direct-restoration calculation; `ui / loc_talent_cryptic_redline_charge_stacking_clarified_desc / 22a7f709` | Multiple charges add multiple stacks. New additions refresh the 12-second timer, including at the cap. Toughness multiplier is `1 − 0.05 × stacks`; `restore_ability_charge_percentage` ignores stat buffs [Fixed source and line references](cryptic_redline.md#fixed-source-evidence) | Not covered by the description | The 2.4%/s and 80-damage examples and restoration exceptions explain the verified calculation without changing the English claim. |
 
+
+<a id="cryptic_overload_keystone"></a>
+
+## Power Overload
+
+Full raw template and formatting: [source evidence](cryptic_overload_keystone.md#original-english-template-and-reconstruction). Name hash `c79e512b`. Every row uses `ui / loc_talent_cryptic_overload_keystone_coherency_desc / 58d058f4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Coherency kills, overload threshold and group buff | You and allies in Coherency gain 1 stack per ordinary kill and 2 for Elite/Specialist kills; maximum 30, overload resets to 0; +15% Damage and +15% Toughness Damage Reduction for 8s; `ui / loc_talent_cryptic_overload_keystone_coherency_desc / 58d058f4` | Qualifying player-owned attacks in Coherency give 1 or 2; reaching at least 30 clears stacks and applies `damage = 0.15`, Toughness multiplier `0.85`, duration 8 [Fixed source and line references](cryptic_overload_keystone.md#fixed-source-evidence) | Consistent | The English conditions, numbers and beneficiaries match. |
+| Overflow, accumulation and trigger details | Does not specify overflow, a stack timer, recipient snapshot or which modifier creates an explosion; `ui / loc_talent_cryptic_overload_keystone_coherency_desc / 58d058f4` | No accumulation countdown; 29 +2 triggers once and discards excess. Group buff targets current non-companion Coherency members and refreshes 8s. The base trigger has no enemy-damage explosion; Critical Power Overload enables the enemy effect [Fixed source and line references](cryptic_overload_keystone.md#fixed-source-evidence) | Not covered by the description | The omitted details and original 115 /85 examples supplement the text. The unused Monster/Captain hit setting remains excluded from active behavior. |
+
 ## Comparison totals
 
 62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.

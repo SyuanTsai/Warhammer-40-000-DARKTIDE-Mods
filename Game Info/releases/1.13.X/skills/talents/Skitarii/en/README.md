@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="Calculated Priority talent icon"> [Calculated Priority](#cryptic_precision_stance_damage_on_elite_kill) | <ul><li>While Advanced Combat Doctrines is active, ranged Elite kills grant +5% Damage per stack for 10 seconds, up to 5 stacks (+25%). New stacks refresh the duration; existing stacks can outlast the ability.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="Flensing Protocols talent icon"> [Flensing Protocols](#cryptic_dissector) | <ul><li>Start with 6 stacks; each grants +2.5% Damage and 2.5% Toughness Damage Reduction. Taking Health or Toughness damage removes one stack at most once per second. Elite or Specialist kills restore up to 2 stacks and 15% of maximum Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="Redline Capacitors talent icon"> [Redline Capacitors](#cryptic_redline) | <ul><li>Each Combat Ability charge actually gained or spent adds one stack: +5% natural Capacitance generation and 5% Toughness Damage Reduction per stack, up to 4. New stacks refresh 12 seconds; stacks then decay one at a time. Maximum Combat Ability charges increase by 1.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="Power Overload talent icon"> [Power Overload](#cryptic_overload_keystone) | <ul><li>Kills by you or allies in Coherency give 1 stack, or 2 for Elites and Specialists. Reaching 30 triggers an overload and resets to zero. You and allies in Coherency gain +15% Damage and 15% Toughness Damage Reduction for 8 seconds.</li></ul> | Keystone |
 
 ---
 
@@ -550,3 +551,18 @@
 - **Restoration exceptions**: Kill restoration, weakspot-kill restoration and Higher Purpose's direct restoration are not increased by this modifier.
 
 [Details](cryptic_redline.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone"></a>
+
+### Power Overload
+
+<img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="72" height="72" alt="Power Overload talent icon">
+
+- **Trigger**: Kills by you or allies in Coherency add **1 stack** for an ordinary enemy, or **2 stacks** for an Elite or Specialist.
+- **Accumulation**: Up to **30 stacks**, with no countdown. Reaching or exceeding 30 triggers an overload and resets the count to **0**.
+- **Overload effect**: You and allies in Coherency receive an **8-second** buff: **+15% Damage** and **15% less Toughness damage taken**. With no other damage bonuses, illustrative damage `100` becomes `115`; incoming Toughness damage `100` becomes `85`. With Critical Power Overload, an explosion also occurs around you and debuffs enemies.
+- **Examples**: At 28 stacks, an Elite or Specialist kill adds 2 to reach 30, immediately triggering and resetting to zero. At 29, adding 2 still triggers only once; the amount beyond 30 does not carry over.
+
+[Details](cryptic_overload_keystone.md) · [Back to index](#talent-index)
