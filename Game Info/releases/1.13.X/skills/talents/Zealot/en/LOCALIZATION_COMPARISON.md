@@ -154,6 +154,18 @@ Full raw template and formatting: [source evidence](zealot_stealth.md#original-e
 | Duration, cooldown and bonuses | 3s Stealth; +20% Movement Speed, +150% Backstab/Finesse, +100% Critical Chance/Melee Rending; cooldown 30s; `ui / loc_ability_zealot_stealth_rending_description / 644f101d` | Base Buff and ability values match; `critical_strike_chance=1` adds 100 percentage points. [Fixed source and line references](zealot_stealth.md#fixed-source-evidence) | Consistent | The reconstructed numbers agree with the accepted values. |
 | Exit filters and damage stages | “Attacking makes you leave Stealth”; no detailed filters or component formula; `ui / loc_ability_zealot_stealth_rending_description / 644f101d` | Own-event and damage/action filters, 0.5s non-damage grace, assistance events and separate damage stages qualify the behavior. [Fixed source and line references](zealot_stealth.md#fixed-source-evidence) | Not covered by the description | The omissions supplement the ordinary behavior; the Finesse examples do not imply +150% to the whole hit. |
 
+
+<a id="zealot_increased_duration"></a>
+
+## Master-Crafted Shroudfield
+
+Full raw template and formatting: [source evidence](zealot_increased_duration.md#original-english-template-and-reconstruction). Name hash `ad0e421f`. Every row uses `ui / loc_talent_zealot_stealth_duration_threat_damage_desc / f25397d4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Extension and signed post-Stealth bonuses | Duration +2s; “gain -75% Threat and 50% Backstab Damage for 5s”; `ui / loc_talent_zealot_stealth_duration_threat_damage_desc / f25397d4` | Stealth totals 5s; post-Stealth `threat_weight_multiplier=0.25`, `backstab_damage=0.5`, duration 5s. [Fixed source and line references](zealot_increased_duration.md#fixed-source-evidence) | Consistent | Reading the negative sign with “gain” gives the correct direction. The separate Chinese wording issue does not establish an English erratum. |
+| Threat, refresh and damage interpretation | No target-selection probability, refresh rule or additive-stage example; `ui / loc_talent_zealot_stealth_duration_threat_damage_desc / f25397d4` | Threat weight is affected, with other AI factors still relevant; max 1 refreshes; Backstab 100→150 or 170 with an existing same-stage 20%. [Fixed source and line references](zealot_increased_duration.md#fixed-source-evidence) | Not covered by the description | These conditions and calculations supplement the stated bonuses. |
+
 ## Comparison totals
 
 23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.

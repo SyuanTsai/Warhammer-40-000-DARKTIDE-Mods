@@ -23,3 +23,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ecclesiarch's Call](zealot_channel_grants_damage.md) / `zealot_channel_grants_damage` | Ability |
 | [Redoubled Zeal](zealot_additional_charge_of_ability.md) / `zealot_additional_charge_of_ability` | Ability |
 | [Shroudfield](zealot_stealth.md) / `zealot_stealth` | Ability |
+| [Master-Crafted Shroudfield](zealot_increased_duration.md) / `zealot_increased_duration` | Ability |

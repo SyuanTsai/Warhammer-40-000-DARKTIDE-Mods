@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="Ecclesiarch's Call talent icon"> [Ecclesiarch's Call](#zealot_channel_grants_damage) | <ul><li>Each Chorus pulse adds 6% Damage, up to 5 stacks / 30%.</li><li>Affects you and Coherency allies; lasts 10 seconds and refreshes on later pulses.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="Redoubled Zeal talent icon"> [Redoubled Zeal](#zealot_additional_charge_of_ability) | <ul><li>Fury of the Faithful has 2 charges. Both uses share one recharge pool; after spending both, natural recharge restores one after about 30 seconds and both after about 60 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="32" height="32" alt="Shroudfield talent icon"> [Shroudfield](#zealot_stealth) | <ul><li>Enter Stealth for 3 seconds; base cooldown 30 seconds. Gain 20% Movement Speed, 150% Backstab/Finesse bonuses, 100 percentage points of Critical Chance and 100% Melee Rending. Qualifying attacks and actions end Stealth.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="32" height="32" alt="Master-Crafted Shroudfield talent icon"> [Master-Crafted Shroudfield](#zealot_increased_duration) | <ul><li>Extend Shroudfield from 3 to 5 seconds. After leaving Stealth, gain 75% lower threat weight and 50% Melee Backstab damage for 5 seconds.</li></ul> | Ability |
 
 ---
 
@@ -209,3 +210,17 @@
 - **Movement example**: A base speed of 5 m/s with no other modifiers becomes 5 × 1.2 = 6 m/s.
 
 [Details](zealot_stealth.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_increased_duration"></a>
+
+### Master-Crafted Shroudfield
+
+<img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="72" height="72" alt="Master-Crafted Shroudfield talent icon">
+
+- **Stealth duration**: Shroudfield lasts 2 seconds longer, increasing from 3 to 5 seconds. The base cooldown remains 30 seconds.
+- **After leaving Stealth**: For 5 seconds, your threat weight for enemy target selection falls by 75% and Melee Backstab damage increases by 50%. Triggering the effect again restarts its timer.
+- **Damage and threat example**: With other conditions fixed, 100 at the Backstab stage becomes 100 × 1.5 = 150; with an existing 20% Backstab bonus at the same stage, it becomes 170. Threat weight 100 becomes 100 × 0.25 = 25. This does not mean enemies have a fixed 25% chance to target you.
+
+[Details](zealot_increased_duration.md) · [Back to index](#talent-index)
