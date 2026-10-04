@@ -745,6 +745,18 @@ Full raw template and formatting: [source evidence](cryptic_toughness_per_charge
 | Base rate and charge scaling | Replenish +3% Toughness per second. Increased by +0.5% per Current Charge; `ui / loc_talent_cryptic_toughness_per_charge_desc / 04db1c7b` | Updates recover `(0.03 + 0.005n) × dt` through `replenish_percentage` [Fixed source and line references](cryptic_toughness_per_charge.md#fixed-source-evidence) | Consistent | The base rate and per-charge addition agree. |
 | Recovery basis and conditions | Does not specify integer charges, denominator, modifiers, cap or other trigger requirements; `ui / loc_talent_cryptic_toughness_per_charge_desc / 04db1c7b` | Full integer charges only; recovery uses maximum Toughness and applicable recovery bonuses, capped at full. No distance, kill or Coherency condition [Fixed source and line references](cryptic_toughness_per_charge.md#fixed-source-evidence) | Not covered by the description | The 200-Toughness examples giving 9 points with 3 charges and 6 with none supplement the English. |
 
+
+<a id="cryptic_crit_chance_based_on_charge"></a>
+
+## Last Stand Relay
+
+Full raw template and formatting: [source evidence](cryptic_crit_chance_based_on_charge.md#original-english-template-and-reconstruction). Name hash `54aa6f0e`. Every row uses `ui / loc_talent_cryptic_crit_chance_based_on_charge_zero_desc / dd636885`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base and zero-charge bonus | Gain +6% Crit Chance, increased to +10% when at 0 charges; `ui / loc_talent_cryptic_crit_chance_based_on_charge_zero_desc / dd636885` | Permanent `critical_strike_chance = 0.06`; conditional `0.04` when `remaining_ability_charges <= 0`, total `0.10` [Fixed source and line references](cryptic_crit_chance_based_on_charge.md#fixed-source-evidence) | Consistent | The English increased to expresses the correct combined bonus. |
+| Percentage points and full-charge state | Does not specify percentage-point addition, partial progress or state transitions; `ui / loc_talent_cryptic_crit_chance_based_on_charge_zero_desc / dd636885` | Base 7.5% becomes 13.5% with a full charge or 17.5% with none. A charge at 90% progress still counts as zero; completing it removes the extra 4 points [Fixed source and line references](cryptic_crit_chance_based_on_charge.md#fixed-source-evidence) | Not covered by the description | The denominator and preserved examples supplement the English. |
+
 ## Comparison totals
 
 126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.

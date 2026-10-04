@@ -72,3 +72,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Retribution Conduit](cryptic_damage_vs_electrocuted_scaling_on_charge.md) / `cryptic_damage_vs_electrocuted_scaling_on_charge` | Talent |
 | [Galvanic Marking Array](cryptic_elite_kills_damage.md) / `cryptic_elite_kills_damage` | Talent |
 | [Auto-Repair Doctrines](cryptic_toughness_per_charge.md) / `cryptic_toughness_per_charge` | Talent |
+| [Last Stand Relay](cryptic_crit_chance_based_on_charge.md) / `cryptic_crit_chance_based_on_charge` | Talent |

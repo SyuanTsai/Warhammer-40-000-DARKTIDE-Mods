@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="Retribution Conduit talent icon"> [Retribution Conduit](#cryptic_damage_vs_electrocuted_scaling_on_charge) | <ul><li>Gain 10% Damage against Electrocuted enemies, plus 5% for each full Combat Ability charge currently held. Partial charges do not count; the bonus follows the remaining charges and ends for targets no longer Electrocuted.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="Galvanic Marking Array talent icon"> [Galvanic Marking Array](#cryptic_elite_kills_damage) | <ul><li>Killing an Elite with a ranged attack grants one stack of 5% Damage, up to 4 stacks. Triggers refresh a 15-second timer; without further kills, one stack decays every 15 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="32" height="32" alt="Auto-Repair Doctrines talent icon"> [Auto-Repair Doctrines](#cryptic_toughness_per_charge) | <ul><li>Continuously restores 3% of maximum Toughness per second, plus 0.5% per second for each full charge currently held. Partial charges do not count; recovery is capped at maximum Toughness.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="Last Stand Relay talent icon"> [Last Stand Relay](#cryptic_crit_chance_based_on_charge) | <ul><li>Always grants 6 percentage points of Critical Hit Chance. With no full charge remaining, adds another 4 points for a total of 10. Partial charge progress still counts as zero full charges.</li></ul> | Talent |
 
 ---
 
@@ -967,3 +968,17 @@
 - **Limits**: Incomplete charges do not count. Recovery cannot exceed maximum Toughness.
 
 [Details](cryptic_toughness_per_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_crit_chance_based_on_charge"></a>
+
+### Last Stand Relay
+
+<img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="72" height="72" alt="Last Stand Relay talent icon">
+
+- **Effect**: Always gain **6 percentage points of Critical Hit Chance**. With less than one full charge currently held, gain another **4 percentage points**, for **10 percentage points in total**.
+- **Example**: At an original 7.5% chance, having a full charge gives `7.5% + 6% = 13.5%`. With no full charge, it gives `7.5% + 6% + 4% = 17.5%`.
+- **Changes**: A charge being restored still counts as zero full charges even at **90% progress**. Once it becomes full, the extra 4 percentage points disappear.
+
+[Details](cryptic_crit_chance_based_on_charge.md) · [Back to index](#talent-index)
