@@ -1027,6 +1027,18 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_4.md#o
 | Recipe statistics | +4% Attack Speed; −20% Stamina Cost (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | `attack_speed = 0.04`; `stamina_cost_multiplier = 0.8` [Fixed source and line references](broker_stimm_celerity_4.md#fixed-source-evidence) | Consistent | Both stat names and numerical changes agree. |
 | Cost, stacking and timing | No purchase, shared lifetime or stacking formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | One purchase at cost 4; selected prerequisites remain active; speed bonuses add and Stamina Cost multipliers multiply; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_4.md#fixed-source-evidence) | Not covered by the description | The original 8/5.78 Stamina Cost and 0.862-second attack examples clarify the effects. |
 
+
+<a id="broker_stimm_celerity_5a"></a>
+
+## Spur V
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_5a.md#original-english-template-and-reconstruction). Name hash `33b4b842`. Every row uses `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_keyword_stun_immune / a6fe7bf4`; `ui / loc_talent_keyword_slowdown_immune / 5936af23`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics and protection | +4% Attack Speed; Grants Stun Immunity; Grants Slowdown Immunity; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_keyword_stun_immune / a6fe7bf4`; `ui / loc_talent_keyword_slowdown_immune / 5936af23` | `attack_speed = 0.04`; child `broker_syringe_slow_and_stun_immune` supplies the two matching keywords [Fixed source and line references](broker_stimm_celerity_5a.md#fixed-source-evidence) | Consistent | The stat value and both immunity types agree. |
+| Cost, lifetime and immunity limits | No purchase, full-route formula, existing-disabled release or attack keyword-check details; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_keyword_stun_immune / a6fe7bf4`; `ui / loc_talent_keyword_slowdown_immune / 5936af23` | One purchase at cost 5; prerequisites remain active; immunity follows the root lifetime and requires attack keyword checks; no call releases an existing disabled state [Fixed source and line references](broker_stimm_celerity_5a.md#fixed-source-evidence) | Not covered by the description | These preserve the 20% total/0.833-second example and the original protection limits. |
+
 ## Comparison totals
 
 The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.

@@ -92,6 +92,7 @@
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="Spur II talent icon"> [Spur II](#broker_stimm_celerity_2) | <ul><li>Gain 4% Attack Speed.</li><li>Gain 25% Weapon Swap Speed.</li><li>Reduce Stamina Cost by 15%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="Spur III talent icon"> [Spur III](#broker_stimm_celerity_3) | <ul><li>Gain 4% Attack Speed.</li><li>Reduce Stamina Cost by 15%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="Spur IV talent icon"> [Spur IV](#broker_stimm_celerity_4) | <ul><li>Gain 4% Attack Speed.</li><li>Reduce Stamina Cost by 20%.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="Spur V talent icon"> [Spur V](#broker_stimm_celerity_5a) | <ul><li>Gain another 4% Attack Speed, plus Stun and Slowdown Immunity.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1435,3 +1436,21 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Attack Speed example**: Selecting from Spur I through this node gives 16% in total. A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.16 ≈ 0.862 seconds.
 
 [Details](broker_stimm_celerity_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_5a"></a>
+
+### Spur V
+
+<img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="72" height="72" alt="Spur V talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Attack Speed**: Gain 4%. Together with Spur I–IV, the total is 20%.
+
+- **Attack Speed example**: A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.2 ≈ 0.833 seconds with the full Spur route.
+
+- **Protection**: Gain Stun and Slowdown Immunity during the effects. This does not release an existing grab or capture.
+
+[Details](broker_stimm_celerity_5a.md) · [Back to index](#talent-index)
