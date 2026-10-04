@@ -107,6 +107,17 @@ Full raw template and formatting: [source evidence](zealot_attack_speed_post_abi
 | Recovery, offensive bonuses and base cooldown | Replenishes50% Toughness; +20% Attack Speed; next Melee Hit +25% Damage/+100% Rending/guaranteed Critical; Base Cooldown30s.; `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318` | Restore_toughness0.5; attack_speed0.2; melee_damage0.25, melee_critical_strike_chance1, melee_rending_multiplier1; base cooldown30. [Fixed source and line references](zealot_attack_speed_post_ability.md#fixed-source-evidence) | Consistent | The explicit effect directions and amounts agree; different damage stages remain distinct. |
 | Melee window, filters, travel and calculation limits | No3-second hit window, Push/ranged exclusions, special retention, precise travel settings or capped recovery examples.; `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318` | Melee duration3s; qualifying hit filtering; keep_buff_ability_active_on_special may retain effect; distance7/target21; recovery capped and modified. [Fixed source and line references](zealot_attack_speed_post_ability.md#fixed-source-evidence) | Not covered by the description | Preserve100→125 or145 before Critical/Rending,20/100→70 and70/100→100, and1/1.2≈0.833s action timing as supplements. |
 
+
+<a id="zealot_channel_grants_toughness_damage_reduction"></a>
+
+## Holy Cause
+
+Name and missing description: [source evidence](zealot_channel_grants_toughness_damage_reduction.md#original-english-template-and-reconstruction). Name hash `6a8b51aa`. Every row uses `ui / candidate key loc_talent_zealot_zealot_channel_defensive_desc  / no exact hash`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Exact description pairing | Exact description unavailable; candidate key contains duplicate zealot and a trailing space.; `ui / candidate key loc_talent_zealot_zealot_channel_defensive_desc  / no exact hash` | Accepted special rule, pulse application and stepped Buff confirm 8% per stack, max5, duration10s for self and Coherency allies. [Fixed source and line references](zealot_channel_grants_toughness_damage_reduction.md#fixed-source-evidence) | Cannot confirm | The absence of an exact description match prevents semantic comparison or reconstruction; no similar-key replacement is made. |
+
 ## Comparison totals
 
 12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.

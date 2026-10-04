@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/9e356573-f707-473e-8a64-943ae670aeeb" width="32" height="32" alt="Zealous talent icon"> [Zealous](#zealot_stamina_cost_multiplier_aura) | <ul><li>You and allies in Coherency spend 15% less Stamina.</li><li>Reduce the delay before Stamina recovery starts by 0.15 seconds.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="Chorus of Spiritual Fortitude talent icon"> [Chorus of Spiritual Fortitude](#zealot_bolstering_prayer) | <ul><li>Channel for about 3.67 seconds, with about 5 pulses; base cooldown 60 seconds.</li><li>Restore Toughness and temporarily raise its maximum for you and Coherency allies, with brief Unkillable and ordinary Stagger immunity.</li><li>Pulses Stagger and Suppress nearby enemies.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="Fury of the Faithful talent icon"> [Fury of the Faithful](#zealot_attack_speed_post_ability) | <ul><li>Dash forward and restore 50% maximum Toughness; base cooldown 30 seconds.</li><li>Gain 20% Attack Speed for about 11 seconds.</li><li>The next qualifying Melee Hit within 3 seconds gains 25% damage, a guaranteed Critical Hit and 100% Rending.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="Holy Cause talent icon"> [Holy Cause](#zealot_channel_grants_toughness_damage_reduction) | <ul><li>Each Chorus pulse grants you and Coherency allies 8% Toughness damage reduction, up to 5 stacks/40%.</li><li>Lasts 10 seconds; later pulses refresh the duration.</li></ul> | Ability |
 
 ---
 
@@ -144,3 +145,17 @@
 - **Special attacks**: Certain weapon specials that remain attached to an enemy can retain the enhancement until that attack ends. Exact behavior depends on the weapon.
 
 [Details](zealot_attack_speed_post_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_channel_grants_toughness_damage_reduction"></a>
+
+### Holy Cause
+
+<img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="72" height="72" alt="Holy Cause talent icon">
+
+- **Operation**: Each Chorus of Spiritual Fortitude pulse gives you and Coherency allies **1 stack** of Toughness damage reduction: **8% per stack**, up to **5 stacks / 40%**.
+- **Duration**: Lasts **10 seconds**; further pulses refresh the timer. Early interruption may prevent reaching 5 stacks.
+- **Reduction example**: At full stacks, **100** Toughness damage becomes `100 × (1 − 5 × 8%) = 60`. With an independent **25%** Toughness reduction, `100 × 0.6 × 0.75 = 45`. This does not directly reduce Health damage.
+
+[Details](zealot_channel_grants_toughness_damage_reduction.md) · [Back to index](#talent-index)

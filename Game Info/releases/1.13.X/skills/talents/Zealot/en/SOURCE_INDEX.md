@@ -19,3 +19,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Zealous](zealot_stamina_cost_multiplier_aura.md) / `zealot_stamina_cost_multiplier_aura` | Aura |
 | [Chorus of Spiritual Fortitude](zealot_bolstering_prayer.md) / `zealot_bolstering_prayer` | Ability |
 | [Fury of the Faithful](zealot_attack_speed_post_ability.md) / `zealot_attack_speed_post_ability` | Ability |
+| [Holy Cause](zealot_channel_grants_toughness_damage_reduction.md) / `zealot_channel_grants_toughness_damage_reduction` | Ability |
