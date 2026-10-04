@@ -6211,7 +6211,12 @@
         "broker_ability_punk_rage_sub_3",
         "broker_ability_punk_rage_sub_4",
         "broker_ability_focus_sub_3",
-        "broker_ability_focus_sub_2"
+        "broker_ability_focus_sub_2",
+        "broker_ability_stimm_field_sub_3",
+        "broker_ability_stimm_field_sub_1",
+        "broker_ability_stimm_field_sub_2",
+        "broker_passive_improved_dodges",
+        "broker_keystone_adrenaline_junkie"
       ],
       "checks": []
     },
@@ -6238,7 +6243,12 @@
         "broker_ability_punk_rage_sub_3",
         "broker_ability_punk_rage_sub_4",
         "broker_ability_focus_sub_3",
-        "broker_ability_focus_sub_2"
+        "broker_ability_focus_sub_2",
+        "broker_ability_stimm_field_sub_3",
+        "broker_ability_stimm_field_sub_1",
+        "broker_ability_stimm_field_sub_2",
+        "broker_passive_improved_dodges",
+        "broker_keystone_adrenaline_junkie"
       ],
       "checks": []
     },
@@ -6265,7 +6275,12 @@
         "broker_ability_punk_rage_sub_3",
         "broker_ability_punk_rage_sub_4",
         "broker_ability_focus_sub_3",
-        "broker_ability_focus_sub_2"
+        "broker_ability_focus_sub_2",
+        "broker_ability_stimm_field_sub_3",
+        "broker_ability_stimm_field_sub_1",
+        "broker_ability_stimm_field_sub_2",
+        "broker_passive_improved_dodges",
+        "broker_keystone_adrenaline_junkie"
       ],
       "checks": []
     },
@@ -6292,7 +6307,12 @@
         "broker_ability_punk_rage_sub_3",
         "broker_ability_punk_rage_sub_4",
         "broker_ability_focus_sub_3",
-        "broker_ability_focus_sub_2"
+        "broker_ability_focus_sub_2",
+        "broker_ability_stimm_field_sub_3",
+        "broker_ability_stimm_field_sub_1",
+        "broker_ability_stimm_field_sub_2",
+        "broker_passive_improved_dodges",
+        "broker_keystone_adrenaline_junkie"
       ],
       "checks": []
     },
@@ -6531,9 +6551,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "195db891c69cc27b41b0c810e5964790df2aac46",
       "chinese_sha256": "03fd3d11444584a7c9aa4af55f99d1204bcd807875d7f04c8e9dc294fd3f51dc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_stimm_field_sub_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field_sub_2.md",
@@ -6542,9 +6569,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e50c45bbafa32c53207db28fd03708c2562b055b",
       "chinese_sha256": "c6b8967b7396cf17b6e4f12be6059bfa7ba85747b328372f708e4d38e1e78e10",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_stimm_field_sub_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field_sub_3.md",
@@ -6553,9 +6587,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c31dfc87c6a89f77d79aa5303563707be70af75b",
       "chinese_sha256": "e3a6220aa6740bf6caf15eba70eb03d0e3c430b46bbb6f74b752a9bbe951d993",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_stimm_field_sub_3"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_aura_gunslinger.md",
@@ -6694,9 +6735,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7f9b9cf3cca0b02c6221f79108bf5d5ad5edfaae",
       "chinese_sha256": "3665fb6ef43472a5c2a8158ab885dd7932121123da50de0aa6d57a856f4fb832",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_1.md",
@@ -6991,9 +7039,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5f3cbe507af47dabc0488252124edd548168dbf9",
       "chinese_sha256": "ec601d67e77a93b3dc23ef93ecbf4f422e099152522bed0c419c9e55434beb1e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_improved_dodges"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_dodges_at_full_stamina.md",
@@ -15275,6 +15330,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_359_363.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_focus_sub_2.md"
+    },
+    {
+      "id": "broker_ability_stimm_field_sub_3",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_stimm_field_sub_3.md"
+    },
+    {
+      "id": "broker_ability_stimm_field_sub_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_stimm_field_sub_1.md"
+    },
+    {
+      "id": "broker_ability_stimm_field_sub_2",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_stimm_field_sub_2.md"
+    },
+    {
+      "id": "broker_passive_improved_dodges",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_improved_dodges.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie.md"
     }
   ],
   "pending_chinese_corrections": [
