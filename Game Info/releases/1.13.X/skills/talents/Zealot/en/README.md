@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="Out of Pocket talent icon"> [Out of Pocket](#zealot_reload_from_melee) | <ul><li>Melee Kills transfer 10% of the magazine's missing ammunition from reserves.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="Wait in Line talent icon"> [Wait in Line](#zealot_reduced_damage_from_ranged) | <ul><li>Take 20% less damage from Ranged attacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="Holy Tools talent icon"> [Holy Tools](#zealot_weapon_special_damage) | <ul><li>Activating a Melee Weapon Special grants +20% damage to the next Melee attack within 5 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="Got Your Back talent icon"> [Got Your Back](#zealot_melee_kills_restore_toughness_to_target) | <ul><li>Melee Kills against enemies targeting an ally restore 7.5% of that ally's maximum Toughness and an extra 5% of yours.</li></ul> | Skill |
 
 ---
 
@@ -1155,3 +1156,17 @@
 - **Damage example:** base damage 100 becomes 100 × 1.2 = 120. With an existing same-stage 25% Melee damage bonus, the result is 100 × (1 + 25% + 20%) = 145. For one sweep, the effect lasts until that swing ends.
 
 [Details](zealot_weapon_special_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_melee_kills_restore_toughness_to_target"></a>
+
+### Got Your Back
+
+<img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="72" height="72" alt="Got Your Back talent icon">
+
+- **Trigger:** a Melee Kill against an enemy targeting another ally restores 7.5% of that ally's maximum Toughness and an additional 5% of yours. It does not trigger if the enemy targets you or has no target.
+- **Restoration example:** with the ally's maximum Toughness 120 and yours 100, the ally restores 120 × 7.5% = 9 points, and you restore an extra 100 × 5% = 5. Each recipient follows their own restoration bonuses and missing-Toughness limit. Normal Melee Kill restoration is separate.
+- **Distance condition:** the talent adds no Coherency range requirement. What matters is the killed enemy's target at that moment.
+
+[Details](zealot_melee_kills_restore_toughness_to_target.md) · [Back to index](#talent-index)

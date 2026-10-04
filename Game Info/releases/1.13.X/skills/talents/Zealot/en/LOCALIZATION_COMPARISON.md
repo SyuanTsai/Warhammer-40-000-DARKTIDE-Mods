@@ -927,6 +927,18 @@ Full raw template and formatting: [source evidence](zealot_weapon_special_damage
 | Next attack bonus and window | Next Melee Attack within 5s after activating Weapon Special; +20% Damage; `ui / loc_talent_zealot_weapon_special_damage_desc / 21bf1b41` | Primary-slot on_weapon_special_activate adds one 5-second effect with melee_damage +0.2 [Fixed source and line references](zealot_weapon_special_damage.md#fixed-source-evidence) | Consistent | Activation, next-attack bonus and time window agree. |
 | Activation and consumption limits | No event, stacking or miss details; `ui / loc_talent_zealot_weapon_special_damage_desc / 21bf1b41` | Weapon action must send the activation event; one refreshing stack; on_sweep_finish force-finishes without a hit check, after the whole sweep; no swing means expiry [Fixed source and line references](zealot_weapon_special_damage.md#fixed-source-evidence) | Not covered by the description | These action and consumption details supplement the wording. |
 
+
+<a id="zealot_melee_kills_restore_toughness_to_target"></a>
+
+## Got Your Back
+
+Full raw template and formatting: [source evidence](zealot_melee_kills_restore_toughness_to_target.md#original-english-template-and-reconstruction). Name hash `28db6608`. Every row uses `ui / loc_talent_zealot_melee_kills_restore_toughness_to_target_desc / 185f78b2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and recipients | Melee Kills vs enemies targeting an ally; 7.5% Toughness to ally and additional 5% to you; `ui / loc_talent_zealot_melee_kills_restore_toughness_to_target_desc / 185f78b2` | on_melee_kill with existing non-self target; target restores 0.075 and holder 0.05 of their own maximum Toughness [Fixed source and line references](zealot_melee_kills_restore_toughness_to_target.md#fixed-source-evidence) | Consistent | The ordinary ally case, recipients and values agree. |
+| Target-test and restoration limits | No distance, cooldown, maximum-resource or extension details; `ui / loc_talent_zealot_melee_kills_restore_toughness_to_target_desc / 185f78b2` | No Coherency/distance test or cooldown; only excludes self/nil without an extra player test, so non-Toughness targets do not guarantee restoration. Each recipient uses their own modifiers/cap; normal kill restoration is separate [Fixed source and line references](zealot_melee_kills_restore_toughness_to_target.md#fixed-source-evidence) | Not covered by the description | These implementation and resource limits supplement the wording. |
+
 ## Comparison totals
 
 158 rules: 74 Consistent / 6 Explicit contradiction / 74 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 639.

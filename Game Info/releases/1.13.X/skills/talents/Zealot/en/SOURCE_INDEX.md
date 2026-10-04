@@ -87,3 +87,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Out of Pocket](zealot_reload_from_melee.md) / `zealot_reload_from_melee` | Skill |
 | [Wait in Line](zealot_reduced_damage_from_ranged.md) / `zealot_reduced_damage_from_ranged` | Skill |
 | [Holy Tools](zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | Skill |
+| [Got Your Back](zealot_melee_kills_restore_toughness_to_target.md) / `zealot_melee_kills_restore_toughness_to_target` | Skill |
