@@ -184,3 +184,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [高壓電全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json)
 
 - [處決全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXECUTION_ACCEPTANCE.json)
+
+- [湧動全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SURGE_ACCEPTANCE.json)

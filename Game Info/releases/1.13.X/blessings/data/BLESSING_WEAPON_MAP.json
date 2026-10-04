@@ -748,6 +748,23 @@
         "melee",
         "ranged"
       ]
+    },
+    {
+      "id": "surge",
+      "name_zh_tw": "湧動",
+      "name_en": "Surge",
+      "name_key": "loc_trait_bespoke_double_shot_on_crit",
+      "description_key": "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc",
+      "name_hash": "7873018f",
+      "description_hash": "821c8289",
+      "page": "entries/湧動/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+      "effect": "持用時遠程致命一擊機率 I–IV 加算 2／3／4／5 個百分點；適用的致命一擊射擊額外一枚投射物，總共兩枚。",
+      "description_keys": [
+        "loc_trait_bespoke_double_shot_on_crit_and_crit_chance_desc",
+        "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc"
+      ]
     }
   ],
   "weapons": [
@@ -14043,6 +14060,141 @@
       "icon": "https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
       "effect": "兩型號特殊彈分別施加電擊或破甲，各筆傷害仍須符合踉蹌判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/湧動/weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "ranged_critical_strike_chance",
+        "raw_additive_modifier": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "effect": "critical_strike_second_projectile adds one projectile"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 451,
+        "end_line": 496
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 93,
+        "end_line": 95
+      },
+      "description_key": "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc",
+      "description_hash": "821c8289",
+      "icon": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_062",
+      "effect": "一般主要射擊可追加一枚；蓄力爆炸只獲得遠程致命一擊機率加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p3",
+      "page": "entries/湧動/weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "ranged_critical_strike_chance",
+        "raw_additive_modifier": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "effect": "critical_strike_second_projectile adds one projectile"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start_line": 311,
+        "end_line": 354
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start_line": 45,
+        "end_line": 45
+      },
+      "description_key": "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc",
+      "description_hash": "821c8289",
+      "icon": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_062",
+      "effect": "一般主要射擊可追加一枚；蓄力連鎖閃電只獲得遠程致命一擊機率加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit",
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/湧動/weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_key": "ranged_critical_strike_chance",
+        "raw_additive_modifier": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "effect": "critical_strike_second_projectile adds one projectile"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 381,
+        "end_line": 426
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 47,
+        "end_line": 49
+      },
+      "description_key": "loc_trait_bespoke_double_shot_on_crit_and_crit_chance_desc",
+      "description_hash": "acb93627",
+      "icon": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_062",
+      "effect": "一般主要與蓄力次要射擊都可追加一枚。"
     }
   ],
   "bindings": [
@@ -19700,6 +19852,48 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
         "import_line": 15,
         "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/double_shot_on_crit",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/double_shot_on_crit",
+      "trait_category": "bespoke_forcestaff_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "append_line": 1301
+      }
+    },
+    {
+      "blessing_id": "surge",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/double_shot_on_crit",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
       }
     }
   ]

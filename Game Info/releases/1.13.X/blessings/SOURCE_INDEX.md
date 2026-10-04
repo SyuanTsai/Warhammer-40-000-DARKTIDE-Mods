@@ -61,3 +61,4 @@
 | [致命精準](entries/致命精準/README.md) | [來源索引](entries/致命精準/SOURCE_INDEX.md) |
 | [高壓電](entries/高壓電/README.md) | [來源索引](entries/高壓電/SOURCE_INDEX.md) |
 | [處決](entries/處決/README.md) | [來源索引](entries/處決/SOURCE_INDEX.md) |
+| [湧動](entries/湧動/README.md) | [來源索引](entries/湧動/SOURCE_INDEX.md) |

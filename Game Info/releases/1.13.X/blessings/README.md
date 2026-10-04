@@ -63,5 +63,6 @@
 | <img src="https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5" width="32" height="32" alt="致命精準祝福圖示"> [致命精準](entries/致命精準/README.md)<br>- Deadly Accurate<br>[完整說明](entries/致命精準/README.md) | <ul><li>持用時，爆擊兼弱點命中的靈巧額外傷害增加；I–IV：電能步槍30／40／50／60%，其餘四類70／80／90／100%。此值不乘整次命中傷害。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645" width="32" height="32" alt="高壓電祝福圖示"> [高壓電](entries/高壓電/README.md)<br>- High Voltage<br>[完整說明](entries/高壓電/README.md) | <ul><li>持用適用武器攻擊已有電擊狀態的目標，I–IV 級增加一般傷害加算池 +10%／+15%／+20%／+25%；不限制電擊施加者。</li></ul> | 近戰／遠程 |
 | <img src="https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a" width="32" height="32" alt="處決祝福圖示"> [處決](entries/處決/README.md)<br>- Execution<br>[完整說明](entries/處決/README.md) | <ul><li>持用適用武器，對傷害計算時已有踉蹌或有效「視為踉蹌」狀態的目標，I–IV 級增加一般傷害加算池 +5%／+10%／+15%／+20%。</li></ul> | 近戰／遠程 |
+| <img src="https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c" width="32" height="32" alt="湧動祝福圖示"> [湧動](entries/湧動/README.md)<br>- Surge<br>[完整說明](entries/湧動/README.md) | <ul><li>持用時遠程致命一擊機率 I–IV 加算 2／3／4／5 個百分點；適用的致命一擊射擊額外一枚投射物，總共兩枚。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

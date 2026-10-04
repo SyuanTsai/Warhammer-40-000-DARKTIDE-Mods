@@ -1,0 +1,376 @@
+{
+  "date": "2026-10-04",
+  "blessing": "surge",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/湧動/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+    "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+    "weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 3,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "surge",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/湧動/DAMAGE_PERCENTAGE_REVIEW.md": "c71489008b560c33aea83bf1030a171eb0ff8ce5b626380c821b9cf93c31f2b3",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/LOCALIZATION_COMPARISON.md": "bb06a6ac4ddf3dcc6e7e8642d7c391cebba021b004476806664df95c82c6fd32",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/README.md": "9fe31b4760c74686f23eba7499597cd7ae1c43b0788a628130ec0a0bf524dbf8",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/SOURCE_INDEX.md": "8294ee738844ec3a84d9255df379c29d0d97ea0cfe91f720e2f50f8b84900773",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/TIER_VALUES.md": "ddfcd33ed3df9672b154166ed2ee16c5e7f5547c35a63c013bc304603f1efbd7",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/WEAPON_COMPATIBILITY.md": "958d087384e16f201088c66c0dab8b9a9373c21ce1d8252e8558338dcb3305dd",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit.md": "dd17676ff54c618b50d5fcaf36b96f234b497ce8663c32ea4d3e0e63c6f5faba",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit.md": "0467775c0829055312c9255e875eeb2657a94449d3db2245cd755ededc8ba811",
+      "Game Info/releases/1.13.X/blessings/entries/湧動/weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit.md": "7e66395f302f4375ddf3a0dd302ddb79e8b7259dc9f5dd067f51cb1afa56ce52",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "8041f68592a1ce367219b60a29d5f65b97eacd956bd7aa29a2e62b8485d45dd2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "c8177607fe2a4ac9073c8802c2014c2536cdb0ec80dc53a0c6584f86c2b77f17",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "24f4a7f8cb67bdcc88b8486a9037df9f5eff91acba8880c428f758717179cab7",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e8e387ad32e88e35ba5e5e1d09959ccebbaf83f2606b3b91168e66d02addd339",
+      "Game Info/releases/1.13.X/blessings/README.md": "910cdf2a96e7bca5b99509d1f5f7b25e20141487360e048416dda341d0a4c193",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "d6e927cbcba2bd1c53061fc75e35724eddc747dca3dd12a6cf0f94ec34109faf",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "94e50fbc6ada207211f71220a6ecfc68707fcdc5c952a51e39bcce42a99ca7ba",
+      "Referneces/Translation.md": "bf33e0fb1f3d36d78144b8f052264b7821ce7a03df43209de28859cd3d6e82fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-config.json": "5cb3ab9107235b6ce9bc62caad44e45637a9c5c4787c7a827f2249aa3caf47ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-extension-draft.json": "405a5da0af171b587c7fa0a974ed925acf27af228b5abf8bc59552321672bf59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-image.json": "3721b5d054d337a3eccd79d1bd88cb386a384dbba12b55c2e8ae0c53b4d36a64",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-resume-review.json": "258ebbee940a17f830873a0968599c5699f0a635831cd2351dc6167d1748517d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-own-tier-diff.json": "4f403797cdfb9d82fa51984c96a0f87c89972e80b5e8473030fb4396192561ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-ui-review.json": "c12e3e100f906aa117ec84ba603b9994ea837612c5ccb3ebf69cc2a7a77307ec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-passive-gate-review.json": "33119c7e02b69425d5a2f3997c7f29b87ae4f6414c4810701930f3f2e9f717e2"
+    },
+    "scope": {
+      "file_count": 24,
+      "formal_markdown_count": 9,
+      "scope_manifest_sha256": "6e68373648ad485f83b287e4bd4e58f79a8b0870f4e90bf3ddd0fc594c39f44f"
+    },
+    "reviewed_associations": {
+      "variant_ids": [
+        "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+        "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+        "weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit"
+      ],
+      "bindings": [
+        {
+          "weapon_id": "forcestaff_p1",
+          "mark_id": "forcestaff_p1_m1",
+          "description_key": "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc"
+        },
+        {
+          "weapon_id": "forcestaff_p3",
+          "mark_id": "forcestaff_p3_m1",
+          "description_key": "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc"
+        },
+        {
+          "weapon_id": "forcestaff_p4",
+          "mark_id": "forcestaff_p4_m1",
+          "description_key": "loc_trait_bespoke_double_shot_on_crit_and_crit_chance_desc"
+        }
+      ],
+      "map_and_reverse_indexes": "Verified 3 map variants / 3 bindings, all three reverse pages and ranged/global index rows match the actual weapon-specific action notes and icon attachment."
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "繁中追加次數與實作總數",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/湧動/README.md:33",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/LOCALIZATION_COMPARISON.md:31"
+        ],
+        "conclusion": "通過；明確勘誤 RAW「再射擊 2 次」容易表示額外兩枚，實作是基礎一枚加一枚、總共兩枚；英文 2 Shots 和總數相符。"
+      },
+      {
+        "topic": "P1 爆炸與 P3 連鎖閃電的遠程暴擊機率",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/湧動/README.md:13",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/LOCALIZATION_COMPARISON.md:36",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/SOURCE_INDEX.md:84"
+        ],
+        "source_ranges": [
+          {
+            "label": "蓄力爆炸的遠程致命一擊判定",
+            "path": "scripts/extension_systems/weapon/actions/action_trigger_explosion.lua",
+            "lines": [
+              21,
+              55
+            ],
+            "sha256": "b9e18cc3a1ba672387bc955a1772dc1debfaeec29521bae079db3528f7f4885d",
+            "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "P1蓄力爆炸使用ranged=true判定並傳遞結果；追加投射物keyword未在此讀取。",
+            "applicability": "實際P1 action_trigger_explosion接線，不外推至其他爆炸。"
+          },
+          {
+            "label": "連鎖閃電的遠程致命一擊判定",
+            "path": "scripts/extension_systems/weapon/actions/action_chain_lightning.lua",
+            "lines": [
+              110,
+              119
+            ],
+            "sha256": "2ca6646a023f18d3acabd354d95293a6ba6e675ca5d62d3909baba918cde294e",
+            "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "can_crit為true時使用ranged=true判定。",
+            "applicability": "實際P3 charged action明列can_crit=true。"
+          },
+          {
+            "label": "實際連鎖閃電允許致命一擊",
+            "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+            "lines": [
+              442,
+              461
+            ],
+            "sha256": "06ce9fe524d3f7748bad73c5889b42c45da78f90768b148049610b5a6533fdea",
+            "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "P3蓄力連鎖閃電can_crit=true，kind不是spawn_projectile。",
+            "applicability": "P3單一實際型號，兩種祝福效果範圍分開。"
+          }
+        ],
+        "conclusion": "通過；兩種蓄力命中仍讀取遠程暴擊機率，但不讀追加投射物 keyword；P3 設定 can_crit=true，P1 explosion 有遠程判定。追加範圍和機率範圍已分開敘述。"
+      },
+      {
+        "topic": "兩枚發射時間與速度倍率",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/湧動/README.md:15",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/README.md:27",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/DAMAGE_PERCENTAGE_REVIEW.md:9",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/SOURCE_INDEX.md:90"
+        ],
+        "source_ranges": [
+          {
+            "label": "投射物發射偏移與動作速度",
+            "path": "scripts/extension_systems/weapon/actions/action_spawn_projectile.lua",
+            "lines": [
+              182,
+              215
+            ],
+            "sha256": "b66cef8371f8a224d1de8a18011b95e3935a2d9d902b87aa9ecc72458a9ff6cc",
+            "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+            "conclusion": "第ii枚偏移(ii-1)*.1再除time_scale；第二枚在time_scale=1基準下晚.1秒。",
+            "applicability": "三個實作的合格spawn_projectile動作，非絕對牆鐘.1秒保證。"
+          }
+        ],
+        "conclusion": "通過；第一與第二枚偏移差固定 .1，間隔為 .1/time_scale；絕對門檻明列非遠端 fire_time 及遠端 lag-compensation rewind 調整。未把牆鐘間隔寫成固定 .1 秒。"
+      },
+      {
+        "topic": "暴擊機率計算順序",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/湧動/DAMAGE_PERCENTAGE_REVIEW.md:5",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/SOURCE_INDEX.md:86"
+        ],
+        "conclusion": "通過；c 是 clamp 前的加總，先 clamp(c+p)，再乘 chance-to-damage conversion，最後取兩位小數送入 PRD；假設條件明示，q=.10 時 +.05 是加五個百分點而非乘 1.05。"
+      },
+      {
+        "topic": "兩枚各 150 的總傷害算例",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/湧動/README.md:25",
+          "Game Info/releases/1.13.X/blessings/entries/湧動/DAMAGE_PERCENTAGE_REVIEW.md:11"
+        ],
+        "conclusion": "通過；前提明示暴擊、兩枚均發出、命中同一存活目標且每枚最終結算各 150；300 是兩次攻擊的最終傷害總和，相對單枚 150 增加 100%，並非本祝福直接乘傷害。"
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config_sha256": "5cb3ab9107235b6ce9bc62caad44e45637a9c5c4787c7a827f2249aa3caf47ad",
+      "extension_draft_sha256": "405a5da0af171b587c7fa0a974ed925acf27af228b5abf8bc59552321672bf59",
+      "image_receipt_sha256": "3721b5d054d337a3eccd79d1bd88cb386a384dbba12b55c2e8ae0c53b4d36a64",
+      "resume_receipt_sha256": "258ebbee940a17f830873a0968599c5699f0a635831cd2351dc6167d1748517d",
+      "conclusion": "Canonical config, generated draft, formal pages and compatibility/index summaries are consistent for the reviewed scope."
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "surge",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_062",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_062.png",
+      "attachment": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5975705436",
+      "acquired_date": "2026-10-04",
+      "sha256": "7a579174593490e534f8cd84687ef1f1319d31d8a961c33d94ffe454bd1cf73b",
+      "content_type": "image/png",
+      "size": 2640,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "湧動祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_note": "Primary visually inspected original and public downloaded 128x128 PNG at original size: identical white/gray geometric horizontal blocks on black; no crop or shape mismatch."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 15,
+      "rows": 246,
+      "lists": 95,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 54,
+      "source_files": 22,
+      "bindings": 407,
+      "variants": 213,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 532,
+      "remote_references": 316,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 9,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-008-full-scan.json",
+        "sha256": "e8818006f58c825fcf644685d1d4e16e9307bfe7435852fa511f597606c195fc",
+        "trigger": "round-008"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 111,
+    "not_started_name_groups": 111,
+    "partial_name_groups": 0,
+    "remaining_variants": 392,
+    "remaining_bindings": 778,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "2ed736af1105d0a55761e37fae6c9d00a617da3ae353ad1076f99904c0be588f"
+  },
+  "previous_local_commit": "d0d86ba8d3d2e277ace4493f8b3fec84ef0cab4d",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 3,
+    "binding_count": 3,
+    "primary_receipt": "surge-primary-resume-review.json",
+    "conditional_override_replaces_fallback": true,
+    "bonus_crit_and_extra_projectile_modes_separate": true,
+    "delay_scaled_by_action_speed": true,
+    "same_crit_result_both_projectiles": true,
+    "raw_extra_count_erratum": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-extension-draft.json",
+      "sha256": "405a5da0af171b587c7fa0a974ed925acf27af228b5abf8bc59552321672bf59"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-ui-review.json",
+      "sha256": "c12e3e100f906aa117ec84ba603b9994ea837612c5ccb3ebf69cc2a7a77307ec"
+    },
+    "bindings": [
+      {
+        "weapon_id": "forcestaff_p4",
+        "mark_id": "forcestaff_p4_m1",
+        "trait_id": "weapon_trait_bespoke_forcestaff_p4_double_shot_on_crit",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_forcestaff_p4_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p4_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p4_m1"
+        },
+        "name_zh_tw": "虛空打擊力場法杖 陰陽 Mk IV",
+        "name_en": "Voidstrike Force Staff Equinox Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1151,
+        "append_line": 1153
+      },
+      {
+        "weapon_id": "forcestaff_p1",
+        "mark_id": "forcestaff_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_forcestaff_p1_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p1_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p1_m1"
+        },
+        "name_zh_tw": "虛空爆破力場法杖 陰陽 Mk III",
+        "name_en": "Voidblast Force Staff Equinox Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1162,
+        "append_line": 1164
+      },
+      {
+        "weapon_id": "forcestaff_p3",
+        "mark_id": "forcestaff_p3_m1",
+        "trait_id": "weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_forcestaff_p3_m1",
+          "weapon_pattern_display_name": "loc_weapon_pattern_forcestaff_p3_m1",
+          "weapon_mark_display_name": "loc_weapon_mark_forcestaff_p3_m1"
+        },
+        "name_zh_tw": "電流力場法杖 諾瑪努斯 Mk VI",
+        "name_en": "Electrokinetic Force Staff Nomanus Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1299,
+        "append_line": 1301
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-resume-review.json",
+      "sha256": "258ebbee940a17f830873a0968599c5699f0a635831cd2351dc6167d1748517d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-own-tier-diff.json",
+      "sha256": "4f403797cdfb9d82fa51984c96a0f87c89972e80b5e8473030fb4396192561ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-passive-gate-review.json",
+      "sha256": "33119c7e02b69425d5a2f3997c7f29b87ae4f6414c4810701930f3f2e9f717e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surge-primary-ui-review.json",
+      "sha256": "c12e3e100f906aa117ec84ba603b9994ea837612c5ccb3ebf69cc2a7a77307ec"
+    }
+  ],
+  "primary_review_method": "Reuse validated fixed-SHA common cache; review own tiers/wrappers, actual ranged crit callers and projectile mode/timing/cancellation differences, exact RAW discrepancy and numerical examples; fixed final peer scope unchanged.",
+  "prior_reviewed_content_unchanged": {
+    "blessings": 55,
+    "variants": 210,
+    "bindings": 404
+  }
+}
