@@ -626,6 +626,18 @@ Full raw template and formatting: [source evidence](broker_passive_stimm_cd_on_k
 | Kill recovery and toxin replacement | Kills reduce 0.5s; Chem Toxin infected enemies instead restore 1s; `ui / loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc / f234d4bf` | `on_kill` restores 0.5 or 1 resource, selected by `has_keyword(toxin)` [Fixed source and line references](broker_passive_stimm_cd_on_kill.md#fixed-source-evidence) | Consistent | The toxin condition modifies which amount is restored; the amounts do not add. |
 | Recovery limits | No statement about paused or complete recovery; `ui / loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc / f234d4bf` | Recovery must be unpaused; no excess can be banked at full resource [Fixed source and line references](broker_passive_stimm_cd_on_kill.md#fixed-source-evidence) | Not covered by the description | These limits and the exclusion of natural recovery in examples supplement the English. |
 
+
+<a id="broker_passive_improved_dodges_at_full_stamina"></a>
+
+## Jittery
+
+Full raw template and formatting: [source evidence](broker_passive_improved_dodges_at_full_stamina.md#original-english-template-and-reconstruction). Name hash `27778997`. Every row uses `ui / loc_talent_broker_passive_improved_dodges_at_full_stamina_desc / abe61ad9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stamina boundary | while Stamina is above 75%; `ui / loc_talent_broker_passive_improved_dodges_at_full_stamina_desc / abe61ad9` | `stamina_percentage >= 0.75` includes exactly 75% [Fixed source and line references](broker_passive_improved_dodges_at_full_stamina.md#fixed-source-evidence) | Explicit contradiction | “Above” excludes equality, while the verified threshold includes it. This comparison concerns the fixed evidence; the boundary has not been observed in game. |
+| Recovery timing | Dodge Recovery Speed +40%; `ui / loc_talent_broker_passive_improved_dodges_at_full_stamina_desc / abe61ad9` | `dodge_reset_modifier = -0.4`; reset wait is (archetype reset time + weapon extra) × buff modifier [Fixed source and line references](broker_passive_improved_dodges_at_full_stamina.md#fixed-source-evidence) | Not covered by the description | The wording does not explain the time modifier or formula. The verified example gives 1s × 0.6 = 0.6s; no separate rate formula is assumed. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

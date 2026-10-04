@@ -59,6 +59,7 @@
 | <img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="32" height="32" alt="Ramping Backstabs talent icon"> [Ramping Backstabs](#broker_passive_ramping_backstabs) | <ul><li>Each Melee Backstab adds 10% Melee Power, up to 5 stacks; a non-Backstab Melee hit clears them.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="Moving Target talent icon"> [Moving Target](#broker_passive_increased_ranged_dodges) | <ul><li>While wielding a Ranged weapon, gain 1 Effective Dodge.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="Sample Collector talent icon"> [Sample Collector](#broker_passive_stimm_cd_on_kill) | <ul><li>Each kill reduces Stimm cooldown by 0.5s; a Chem Toxin infected enemy instead reduces it by 1s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="Jittery talent icon"> [Jittery](#broker_passive_improved_dodges_at_full_stamina) | <ul><li>At least 75% of maximum Stamina reduces the wait for consecutive Dodges to reset by 40%.</li></ul> | Talent |
 
 ---
 
@@ -874,3 +875,17 @@
 - The Chinese original places the toxin name in the enemy-count position, equivalent to “kill … enemies.” The actual condition is killing an enemy infected with Chem Toxin, which instead reduces cooldown by 1s per kill.
 
 [Details](broker_passive_stimm_cd_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_improved_dodges_at_full_stamina"></a>
+
+### Jittery
+
+<img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="72" height="72" alt="Jittery talent icon">
+
+- **Condition**: At 75% of maximum Stamina or higher, the wait for the consecutive-Dodge count to recover is reduced by 40%. The bonus is lost below the threshold.
+
+- **Timing example**: If stopping consecutive Dodges normally requires a 1-second wait, it becomes 1 × (1 − 40%) = 0.6s. With 4 maximum Stamina, retaining at least 4 × 75% = 3 points enables the bonus.
+
+[Details](broker_passive_improved_dodges_at_full_stamina.md) · [Back to index](#talent-index)
