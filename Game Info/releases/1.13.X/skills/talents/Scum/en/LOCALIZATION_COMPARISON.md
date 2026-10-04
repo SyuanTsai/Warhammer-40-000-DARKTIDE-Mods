@@ -1136,6 +1136,18 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_4c.md#or
 | Recipe statistics | +4% Strength; +5% Critical Strike Chance (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | power_level_modifier = 0.04; critical_strike_chance = 0.05 [Fixed source and line references](broker_stimm_combat_4c.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. The Critical Strike Chance label and value match an additive percentage-point bonus; stacking and clamping supplement it. |
 | Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_critical_strike_chance / a4e46663` | One purchase at cost 4; prerequisite Power adds before weapon curves. `critical_strike_chance` is a `value` stat, added to the base and other Critical Strike Chance values before `clamp01`. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_4c.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
 
+
+<a id="broker_stimm_combat_5a"></a>
+
+## Wildfire V
+
+Full raw template and formatting: [source evidence](broker_stimm_combat_5a.md#original-english-template-and-reconstruction). Name hash `fe5e6f12`. Every row uses `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Strength; +25% Finesse (component reconstruction); `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | power_level_modifier = 0.04; finesse_modifier_bonus = 0.25 [Fixed source and line references](broker_stimm_combat_5a.md#fixed-source-evidence) | Consistent | The English labels match the mapped stats and values. Finesse is an abbreviated label for the additional Weakspot/Critical Damage component and does not state that the whole hit gains this percentage. |
+| Cost, stacking and stat scope | No cost, shared lifetime or calculation formula; `ui / loc_talent_stat_power_level / f8a49d31`; `ui / loc_talent_stat_finesse_modifier_bonus / b004d6a5` | One purchase at cost 5; prerequisite Power adds before weapon curves. `finesse_modifier_bonus` adds to the additional Finesse component, rather than the whole Weakspot/Critical Damage amount. Field lifetime is externally controlled. [Fixed source and line references](broker_stimm_combat_5a.md#fixed-source-evidence) | Not covered by the description | The original Power and additional-stat examples explain the accepted formulas and limits. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **89 Consistent**, **5 Explicit contradictions**, **89 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
