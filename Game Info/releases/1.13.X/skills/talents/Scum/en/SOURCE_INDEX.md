@@ -44,3 +44,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Stoked Rage](broker_keystone_adrenaline_junkie_sub_3.md) / `broker_keystone_adrenaline_junkie_sub_3` | Keystone |
 | [Adrenaline Unbound](broker_keystone_adrenaline_junkie_sub_5.md) / `broker_keystone_adrenaline_junkie_sub_5` | Keystone |
 | [Uncontrolled Aggression](broker_keystone_adrenaline_junkie_sub_4.md) / `broker_keystone_adrenaline_junkie_sub_4` | Keystone |
+| [Adrenaline Smiter](broker_keystone_adrenaline_junkie_sub_2.md) / `broker_keystone_adrenaline_junkie_sub_2` | Keystone |

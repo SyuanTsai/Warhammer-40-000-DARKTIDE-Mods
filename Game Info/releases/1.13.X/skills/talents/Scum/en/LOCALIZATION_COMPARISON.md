@@ -398,6 +398,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Final Adrenaline duration | Increase duration of Adrenaline to 4s; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc / fb871cba` | The 2-second core timer gains 4 − 2 seconds, yielding a final duration of 4 seconds. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_4.md#fixed-source-evidence) | Consistent | To describes the final duration, rather than an additional 4 seconds. |
 | Shared decay timer and cap behavior | No timer-reset or cap-clearing details are stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc / fb871cba` | Gains reset the shared timer; each expired stack removal resets it to 4 seconds. At 30 stacks, the core triggers Frenzy and clears Adrenaline. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_4.md#fixed-source-evidence) | Not covered by the description | The shared timing and unchanged cap rules supplement the stated duration. |
 
+
+<a id="broker_keystone_adrenaline_junkie_sub_2"></a>
+
+## Adrenaline Smiter
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie_sub_2.md#original-english-template-and-reconstruction). Name hash `11bcd450`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc / e0b9d68a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional kill grants and non-killing exclusion | Killing Blows grant +4 additional Adrenaline stacks; Elite Killing Blows grant +10 additional stacks; Non-Killing Blows grant none; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc / e0b9d68a` | `on_hit` returns; `on_kill` runs core hit/Critical grants, then adds 4 and another 10 for an Elite kill. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_2.md#fixed-source-evidence) | Consistent | The English uses additional amounts, not final totals. Ordinary kills yield 5/6 and Elite kills 15/16 under the stated assumptions. |
+| Melee scope, classification, and core constraints | No attack-type, tag, cap, or decay details are stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc / e0b9d68a` | Only `attack_type = melee` qualifies; the extra 10 requires `tags.elite`, not a `special` tag alone. Stacks retain the core's cap, timing, decay, and interactions with other special rules. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_2.md#fixed-source-evidence) | Not covered by the description | These conditions complete the accepted mechanism without contradicting the English. |
+
 ## Comparison totals
 
 The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="Stoked Rage talent icon"> [Stoked Rage](#broker_keystone_adrenaline_junkie_sub_3) | <ul><li>Frenzy lasts 20 seconds, 10 seconds longer than the core.</li><li>Retriggering refreshes one Frenzy buff to 20 seconds; Adrenaline timing, stack cap and Frenzy's speed/Damage bonuses remain unchanged.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="Adrenaline Unbound talent icon"> [Adrenaline Unbound](#broker_keystone_adrenaline_junkie_sub_5) | <ul><li>Restore 5% of maximum Toughness each second during Adrenaline Frenzy.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="Uncontrolled Aggression talent icon"> [Uncontrolled Aggression](#broker_keystone_adrenaline_junkie_sub_4) | <ul><li>Increase the duration of each Adrenaline stack from 2 seconds to 4 seconds.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="Adrenaline Smiter talent icon"> [Adrenaline Smiter](#broker_keystone_adrenaline_junkie_sub_2) | <ul><li>Only Melee kills grant Adrenaline: ordinary kills grant 4 additional stacks, and Elite kills grant another 10.</li><li>Non-killing Melee hits grant no stacks; Critical kills retain the core's 1 additional stack.</li></ul> | Keystone |
 
 ---
 
@@ -590,3 +591,18 @@
 - **Cap trigger**: Adrenaline Frenzy still triggers at 30 stacks. On reaching the cap, the core triggers Frenzy and clears the Adrenaline stacks.
 
 [Details](broker_keystone_adrenaline_junkie_sub_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_2"></a>
+
+### Adrenaline Smiter
+
+<img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="72" height="72" alt="Adrenaline Smiter talent icon">
+
+- **Trigger**: an ordinary Melee kill grants the core's 1 hit stack plus this upgrade's 4 stacks, for 5 total. A Critical Melee kill also grants the core's Critical stack, for 6 total.
+- **Elite kills**: killing an Elite grants another 10 stacks, giving 15 for an ordinary Elite kill or 16 for a Critical Elite kill.
+- **Non-killing hits**: a Melee attack that does not kill its target grants no stacks. Even a Critical non-killing hit does not trigger the core's additional Critical stack.
+- **Elite check**: the extra 10 stacks depend on the Elite classification. An enemy classified only as a Specialist does not qualify for this Elite bonus.
+
+[Details](broker_keystone_adrenaline_junkie_sub_2.md) · [Back to index](#talent-index)
