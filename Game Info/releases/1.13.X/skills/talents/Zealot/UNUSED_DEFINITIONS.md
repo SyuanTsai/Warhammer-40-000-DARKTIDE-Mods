@@ -1,5 +1,6 @@
 # 狂信徒：當前技能樹未直接使用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[角色基礎效果](BASE_EFFECTS.md)
 
 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。狂信徒定義共有 130 項：79 項直接出現在技能樹，4 項由職業預先提供，剩下 47 項列於下表。技能樹另有 3 個通用屬性節點，所以可選節點總數為 82。

@@ -2,6 +2,8 @@
 
 [繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Talent classes](../../../README.en.md) | [Release information](../../../../README.md)
 
+[Class base effects](BASE_EFFECTS.md)
+
 <a id="talent-index"></a>
 
 ## Talent index
@@ -52,10 +54,12 @@
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="Sustained Assault talent icon"> [Sustained Assault](#zealot_hits_grant_stacking_damage) | <ul><li>Melee hits grant 4% Melee Damage for 5 seconds, up to 5 stacks/+20%; further hits refresh duration, including at full stacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="Enduring Faith talent icon"> [Enduring Faith](#zealot_crits_reduce_toughness_damage) | <ul><li>Critical Hits reduce Toughness damage taken by 40% for 4 seconds; both Melee and Ranged crits trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="Second Wind talent icon"> [Second Wind](#zealot_toughness_on_dodge) | <ul><li>Successfully dodging an attack restores 15% of maximum Toughness, at most once every 0.5 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="The Voice of Terra talent icon"> [The Voice of Terra](#zealot_toughness_while_shooting) | <ul><li>Shooting restores 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops; hits and kills are not required.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="Restoring Faith talent icon"> [Restoring Faith](#zealot_heal_part_of_damage_taken) | <ul><li>After taking Health damage, gradually heal 20% of that damage over about 4 seconds; Toughness damage is excluded.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="Bleed for the Emperor talent icon"> [Bleed for the Emperor](#zealot_reduced_damage_on_wound) | <ul><li>If Health damage would cross the next Wound threshold, reduce that entire Health-damage amount by 40%; landing exactly on the threshold does not trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="Vicious Offering talent icon"> [Vicious Offering](#zealot_toughness_on_heavy_kills) | <ul><li>A Heavy Attack kill restores an extra 10% of maximum Toughness; merely hitting without a kill does not trigger it.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="Duellist talent icon"> [Duellist](#zealot_increased_crit_and_weakspot_damage_after_dodge) | <ul><li>A successful Dodge increases extra Weakspot/Critical damage by 50% for 3 seconds; another successful Dodge restarts the timer.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="32" height="32" alt="Shield of Contempt talent icon"> [Shield of Contempt](#zealot_ally_damage_taken_reduced) | <ul><li>After you or an ally takes Health damage, the injured player gains 60% damage reduction for 4 seconds; each holder shares an 8-second trigger cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="32" height="32" alt="Punish Impiety talent icon"> [Punish Impiety](#zealot_push_attacks_attack_speed) | <ul><li>A hit from the attack following a push grants +10% Melee Attack Speed for 5 seconds; another trigger restarts the timer.</li></ul> | Skill |
@@ -77,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="Providence talent icon"> [Providence](#zealot_revive_speed) | <ul><li>Revive speed increases by 25%; assisted allies gain Movement Speed and Toughness Damage Reduction.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="Abolish Blasphemers talent icon"> [Abolish Blasphemers](#zealot_damage_vs_elites) | <ul><li>Deal 15% more damage to Elite enemies.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="Hubris talent icon"> [Hubris](#zealot_weakspot_damage_reduction) | <ul><li>Weakspot Kills reduce damage taken by 15% for 4 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_4) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="Prime Target talent icon"> [Prime Target](#zealot_elite_kills_empowers) | <ul><li>Elite Kills grant +10% damage and restore 15% of maximum Toughness over 5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="Behind the Lines talent icon"> [Behind the Lines](#zealot_suppress_on_backstab_kill) | <ul><li>Heavy Melee Backstab Kills suppress enemies within 8 metres of you, with a 5-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="Time to Kill talent icon"> [Time to Kill](#zealot_backstab_periodic_damage) | <ul><li>The next valid Melee Backstab deals +50% damage, then starts an 8-second cooldown.</li></ul> | Skill |
@@ -87,11 +92,10 @@
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="Got Your Back talent icon"> [Got Your Back](#zealot_melee_kills_restore_toughness_to_target) | <ul><li>Melee Kills against enemies targeting an ally restore 7.5% of that ally's maximum Toughness and an extra 5% of yours.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="Purifying Hatred talent icon"> [Purifying Hatred](#zealot_dmg_vs_burning_electrocuted) | <ul><li>Deal +15% damage to Burning enemies and another +15% to Electrocuted enemies; both conditions give +30%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="Dance of Death talent icon"> [Dance of Death](#zealot_improved_weapon_handling_after_dodge) | <ul><li>Successful Dodges reduce Spread by 75% and Recoil unsteadiness buildup by 50% for 3 seconds.</li></ul> | Skill |
-| <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
-| <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_4) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
-| <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%.</li></ul> | Skill |
 
 ---
+
+## Blitz
 
 <a id="zealot_flame_grenade"></a>
 
@@ -144,6 +148,8 @@
 
 ---
 
+## Aura
+
 <a id="zealot_toughness_damage_reduction_coherency_improved"></a>
 
 ### Benediction
@@ -187,6 +193,8 @@
 [Details](zealot_stamina_cost_multiplier_aura.md) · [Back to index](#talent-index)
 
 ---
+
+## Ability
 
 <a id="zealot_bolstering_prayer"></a>
 
@@ -380,6 +388,8 @@
 [Details](zealot_stealth_cooldown_regeneration.md) · [Back to index](#talent-index)
 
 ---
+
+## Keystone
 
 <a id="zealot_resist_death"></a>
 
@@ -631,6 +641,8 @@
 
 ---
 
+## Skill
+
 <a id="zealot_crits_apply_bleed"></a>
 
 ### Scourge
@@ -727,6 +739,19 @@
 
 ---
 
+<a id="base_melee_damage_node_buff_medium_1"></a>
+
+### Melee Damage Boost
+
+<img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="72" height="72" alt="Melee Damage Boost talent icon">
+
+- **How it works:** gain +10% Melee damage. The two same-name nodes each provide their own bonus; selecting both gives +20% in total.
+- **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
+
+[Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+---
+
 <a id="zealot_toughness_while_shooting"></a>
 
 ### The Voice of Terra
@@ -780,6 +805,19 @@
 - **Separation**: Normal Melee-kill Toughness restoration is calculated separately from this talent's extra restoration.
 
 [Details](zealot_toughness_on_heavy_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+### Toughness Damage Reduction
+
+<img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="72" height="72" alt="Toughness Damage Reduction talent icon">
+
+- **How it works:** damage taken by Toughness is reduced by 10%.
+- **Reduction example:** without other bonuses, 100 × (1 − 10%) = 90 points of Toughness damage. With an existing 20% Toughness reduction in the same additive stage, the result is 100 × (1 − 20% − 10%) = 70. Independent damage-reduction effects multiply separately.
+
+[Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
 
 ---
 
@@ -1064,6 +1102,19 @@
 
 ---
 
+<a id="base_melee_damage_node_buff_medium_4"></a>
+
+### Melee Damage Boost
+
+<img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="72" height="72" alt="Melee Damage Boost talent icon">
+
+- **How it works:** gain +10% Melee damage. The two same-name nodes each provide their own bonus; selecting both gives +20% in total.
+- **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
+
+[Details](base_melee_damage_node_buff_medium_4.md) · [Back to index](#talent-index)
+
+---
+
 <a id="zealot_elite_kills_empowers"></a>
 
 ### Prime Target
@@ -1204,40 +1255,3 @@
 [Details](zealot_improved_weapon_handling_after_dodge.md) · [Back to index](#talent-index)
 
 ---
-
-<a id="base_melee_damage_node_buff_medium_1"></a>
-
-### Melee Damage Boost
-
-<img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="72" height="72" alt="Melee Damage Boost talent icon">
-
-- **How it works:** gain +10% Melee damage. The two same-name nodes each provide their own bonus; selecting both gives +20% in total.
-- **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
-
-[Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)
-
----
-
-<a id="base_melee_damage_node_buff_medium_4"></a>
-
-### Melee Damage Boost
-
-<img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="72" height="72" alt="Melee Damage Boost talent icon">
-
-- **How it works:** gain +10% Melee damage. The two same-name nodes each provide their own bonus; selecting both gives +20% in total.
-- **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
-
-[Details](base_melee_damage_node_buff_medium_4.md) · [Back to index](#talent-index)
-
----
-
-<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
-
-### Toughness Damage Reduction
-
-<img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="72" height="72" alt="Toughness Damage Reduction talent icon">
-
-- **How it works:** damage taken by Toughness is reduced by 10%.
-- **Reduction example:** without other bonuses, 100 × (1 − 10%) = 90 points of Toughness damage. With an existing 20% Toughness reduction in the same additive stage, the result is 100 × (1 − 20% − 10%) = 70. Independent damage-reduction effects multiply separately.
-
-[Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)

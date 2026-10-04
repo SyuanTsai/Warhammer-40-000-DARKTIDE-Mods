@@ -2,6 +2,8 @@
 
 [繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Release, date and evidence limits](../../../../README.md)
 
+[Class base effects](BASE_EFFECTS.md) | [Definitions not directly used](UNUSED_DEFINITIONS.md)
+
 [Original game English comparison](LOCALIZATION_COMPARISON.md) | [Percentage-description review](DAMAGE_PERCENTAGE_REVIEW.md)
 
 Fixed source SHA: `7e662fcda16219d775b84af50322be2e9cd9d62e`. The talent tree has **82 selectable nodes**, each costing one point; a single build can allocate at most 30 points.
@@ -55,10 +57,12 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Sustained Assault](zealot_hits_grant_stacking_damage.md) / `zealot_hits_grant_stacking_damage` | Skill |
 | [Enduring Faith](zealot_crits_reduce_toughness_damage.md) / `zealot_crits_reduce_toughness_damage` | Skill |
 | [Second Wind](zealot_toughness_on_dodge.md) / `zealot_toughness_on_dodge` | Skill |
+| [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Skill |
 | [The Voice of Terra](zealot_toughness_while_shooting.md) / `zealot_toughness_while_shooting` | Skill |
 | [Restoring Faith](zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | Skill |
 | [Bleed for the Emperor](zealot_reduced_damage_on_wound.md) / `zealot_reduced_damage_on_wound` | Skill |
 | [Vicious Offering](zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | Skill |
+| [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Skill |
 | [Duellist](zealot_increased_crit_and_weakspot_damage_after_dodge.md) / `zealot_increased_crit_and_weakspot_damage_after_dodge` | Skill |
 | [Shield of Contempt](zealot_ally_damage_taken_reduced.md) / `zealot_ally_damage_taken_reduced` | Skill |
 | [Punish Impiety](zealot_push_attacks_attack_speed.md) / `zealot_push_attacks_attack_speed` | Skill |
@@ -80,6 +84,7 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Providence](zealot_revive_speed.md) / `zealot_revive_speed` | Skill |
 | [Abolish Blasphemers](zealot_damage_vs_elites.md) / `zealot_damage_vs_elites` | Skill |
 | [Hubris](zealot_weakspot_damage_reduction.md) / `zealot_weakspot_damage_reduction` | Skill |
+| [Melee Damage Boost](base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | Skill |
 | [Prime Target](zealot_elite_kills_empowers.md) / `zealot_elite_kills_empowers` | Skill |
 | [Behind the Lines](zealot_suppress_on_backstab_kill.md) / `zealot_suppress_on_backstab_kill` | Skill |
 | [Time to Kill](zealot_backstab_periodic_damage.md) / `zealot_backstab_periodic_damage` | Skill |
@@ -90,6 +95,3 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Got Your Back](zealot_melee_kills_restore_toughness_to_target.md) / `zealot_melee_kills_restore_toughness_to_target` | Skill |
 | [Purifying Hatred](zealot_dmg_vs_burning_electrocuted.md) / `zealot_dmg_vs_burning_electrocuted` | Skill |
 | [Dance of Death](zealot_improved_weapon_handling_after_dodge.md) / `zealot_improved_weapon_handling_after_dodge` | Skill |
-| [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Skill |
-| [Melee Damage Boost](base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | Skill |
-| [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Skill |
