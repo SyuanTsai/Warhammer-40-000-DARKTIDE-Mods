@@ -2242,6 +2242,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_479_483",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

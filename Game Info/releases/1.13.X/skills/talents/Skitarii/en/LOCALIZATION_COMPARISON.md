@@ -251,4 +251,4 @@ Full raw template and formatting: [source evidence](cryptic_discharge_toughness.
 
 ## Comparison totals
 
-32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
+42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.

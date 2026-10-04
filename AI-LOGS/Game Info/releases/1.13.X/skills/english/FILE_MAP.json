@@ -9207,9 +9207,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ff704453cc29ebdda7b8c344ac7ad67f13ddcf61",
       "chinese_sha256": "3a7852d2fcfd5f3a027163cbdd9ad6368c9efc5e175a9d1e4008a1dcf0a2384c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_discharge_attack_speed_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_base.md",
@@ -9229,9 +9236,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e960830df56a2ee3235d9117ef13afd754537593",
       "chinese_sha256": "f53dc3c90f583989ff1f17b04e19fd7f1add71255fd5f02a78405d346fef097e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_discharge_generates_arcs"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_toughness.md",
@@ -9240,9 +9254,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1862f9000c59e2db7c745f94bf005ba2f7685980",
       "chinese_sha256": "42f26b1cab015d8f0a74df94ebc3be6fb5d9458f78995a5d92dccd78a720b2d5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_discharge_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector.md",
@@ -9700,9 +9721,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6018d62b2afe46f83efcc471d20fe1fef4c83264",
       "chinese_sha256": "c6ee89759cf72b1951dd960a60d29f7bf8527aa23873b60df97c925763a26588",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_precision_stance_fire_rate_increased"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_toughness_suppression.md",
@@ -9711,9 +9739,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3669fe3a64cf7fdb4f1ff4abe3deacea3f130f41",
       "chinese_sha256": "037a9fed938d7e6b45d5adce499eb5adc7c20cba5b562ecc9b35327fa3ea82d6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_precision_stance_toughness_suppression"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_push_stagger_stamina.md",
@@ -17429,6 +17464,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw.md"
+    },
+    {
+      "id": "cryptic_precision_stance_toughness_suppression",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_toughness_suppression.md"
+    },
+    {
+      "id": "cryptic_precision_stance_fire_rate_increased",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_fire_rate_increased.md"
+    },
+    {
+      "id": "cryptic_discharge_generates_arcs",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_generates_arcs.md"
+    },
+    {
+      "id": "cryptic_discharge_attack_speed_increase",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_attack_speed_increase.md"
+    },
+    {
+      "id": "cryptic_discharge_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_toughness.md"
     }
   ],
   "pending_chinese_corrections": [
