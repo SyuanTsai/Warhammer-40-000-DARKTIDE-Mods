@@ -21,3 +21,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Fury of the Faithful](zealot_attack_speed_post_ability.md) / `zealot_attack_speed_post_ability` | Ability |
 | [Holy Cause](zealot_channel_grants_toughness_damage_reduction.md) / `zealot_channel_grants_toughness_damage_reduction` | Ability |
 | [Ecclesiarch's Call](zealot_channel_grants_damage.md) / `zealot_channel_grants_damage` | Ability |
+| [Redoubled Zeal](zealot_additional_charge_of_ability.md) / `zealot_additional_charge_of_ability` | Ability |

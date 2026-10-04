@@ -130,6 +130,18 @@ Full raw template and formatting: [source evidence](zealot_channel_grants_damage
 | Pulse amount, stacks, duration and recipients | Each pulse grants +6% Damage to you and Allies in Coherency; stacks 5 times; lasts 10s.; `ui / loc_talent_zealot_zealot_channel_offensive_desc / af1e14c2` | Each tick adds one damage stat stack of 0.06 to self and Coherency allies; max 5, duration 10s. [Fixed source and line references](zealot_channel_grants_damage.md#fixed-source-evidence) | Consistent | The English uses the correct stacks placeholder and agrees on recipients and quantities. |
 | Refresh, interruption and damage calculation | No duration refresh, early-interruption limit or additive damage-stage calculation specified.; `ui / loc_talent_zealot_zealot_channel_offensive_desc / af1e14c2` | Further pulses refresh the stacked Buff; full channel gives about 5 pulses; damage is a global stat with same-stage addition and weapon-dependent calculations. [Fixed source and line references](zealot_channel_grants_damage.md#fixed-source-evidence) | Not covered by the description | Retain 100→130 and existing same-stage 25%→155; these are supplements rather than repeated English errors. |
 
+
+<a id="zealot_additional_charge_of_ability"></a>
+
+## Redoubled Zeal
+
+Full raw template and formatting: [source evidence](zealot_additional_charge_of_ability.md#original-english-template-and-reconstruction). Name hash `973b6f3c`. Every row uses `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge limit | “now has {charges:%s} charges” → 2; `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb` | `PlayerAbilities.zealot_targeted_dash_improved_double` sets `max_charges=2`. [Fixed source and line references](zealot_additional_charge_of_ability.md#fixed-source-evidence) | Consistent | The named ability and charge count match. |
+| Recharge details | The template specifies a count but no recharge schedule.; `ui / loc_talent_zealot_dash_has_more_charges_desc / 13ade9bb` | One resource pool recharges at 1 resource/s; each charge costs 30. Two empty charges take about 30/60 seconds for one/both under the stated assumptions. [Fixed source and line references](zealot_additional_charge_of_ability.md#fixed-source-evidence) | Not mentioned | Shared recharge, the cap, and interactions supplement the count without contradicting it. |
+
 ## Comparison totals
 
 23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.

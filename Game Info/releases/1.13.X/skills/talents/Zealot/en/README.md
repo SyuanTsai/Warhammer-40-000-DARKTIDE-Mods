@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="Fury of the Faithful talent icon"> [Fury of the Faithful](#zealot_attack_speed_post_ability) | <ul><li>Dash forward and restore 50% maximum Toughness; base cooldown 30 seconds.</li><li>Gain 20% Attack Speed for about 11 seconds.</li><li>The next qualifying Melee Hit within 3 seconds gains 25% damage, a guaranteed Critical Hit and 100% Rending.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="Holy Cause talent icon"> [Holy Cause](#zealot_channel_grants_toughness_damage_reduction) | <ul><li>Each Chorus pulse grants you and Coherency allies 8% Toughness damage reduction, up to 5 stacks/40%.</li><li>Lasts 10 seconds; later pulses refresh the duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="Ecclesiarch's Call talent icon"> [Ecclesiarch's Call](#zealot_channel_grants_damage) | <ul><li>Each Chorus pulse adds 6% Damage, up to 5 stacks / 30%.</li><li>Affects you and Coherency allies; lasts 10 seconds and refreshes on later pulses.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="Redoubled Zeal talent icon"> [Redoubled Zeal](#zealot_additional_charge_of_ability) | <ul><li>Fury of the Faithful has 2 charges. Both uses share one recharge pool; after spending both, natural recharge restores one after about 30 seconds and both after about 60 seconds.</li></ul> | Ability |
 
 ---
 
@@ -178,3 +179,16 @@
 - The Chinese “stack count” incorrectly uses the damage-percentage placeholder. The correct limit is **5 stacks**, with **6% Damage** per stack.
 
 [Details](zealot_channel_grants_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_additional_charge_of_ability"></a>
+
+### Redoubled Zeal
+
+<img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="72" height="72" alt="Redoubled Zeal talent icon">
+
+- **Charges**: Fury of the Faithful can hold 2 uses. Both uses share the same cooldown resource.
+- **Cooldown example**: After using both consecutively, the first charge returns after about 30 seconds and both return after about 60 seconds. Waiting 30 seconds does not refill both at once. If you use only one, only that expenditure needs to recharge.
+
+[Details](zealot_additional_charge_of_ability.md) · [Back to index](#talent-index)
