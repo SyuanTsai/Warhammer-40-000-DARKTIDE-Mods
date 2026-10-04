@@ -58,3 +58,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Regained Posture](broker_passive_stamina_on_successful_dodge.md) / `broker_passive_stamina_on_successful_dodge` | Talent |
 | [Slippery Customer](broker_passive_dodge_melee_on_slide.md) / `broker_passive_dodge_melee_on_slide` | Talent |
 | [Tis but a Scratch](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) / `broker_passive_replenish_toughness_on_ranged_toughness_damage` | Talent |
+| [Unload](broker_passive_damage_on_reload.md) / `broker_passive_damage_on_reload` | Talent |

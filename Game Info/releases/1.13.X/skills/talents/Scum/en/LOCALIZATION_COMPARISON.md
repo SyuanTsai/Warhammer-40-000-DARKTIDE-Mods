@@ -566,6 +566,18 @@ Full raw template and formatting: [source evidence](broker_passive_replenish_tou
 | Ranged Toughness Damage, recovery, and cancellation | Replenish 30% Toughness over 3s after Ranged Toughness Damage; losing all Toughness cancels the effect; `ui / loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc / 6f652e30` | `on_damage_taken` requires `has_toughness` and `on_ranged_hit`; the 3-second child buff regenerates 0.3 / 3 per second and finishes on Toughness break. [Fixed source and line references](broker_passive_replenish_toughness_on_ranged_toughness_damage.md#fixed-source-evidence) | Consistent | The English explicitly covers both the recovery and the depletion cancellation. |
 | Recovery basis and refresh | No maximum-Toughness basis, rate-stacking, refresh, or deficit details are stated; `ui / loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc / 6f652e30` | One buff refreshes to 3 seconds without adding recovery rates. It restores 10% of maximum Toughness per second, capped by the deficit. [Fixed source and line references](broker_passive_replenish_toughness_on_ranged_toughness_damage.md#fixed-source-evidence) | Not covered by the description | These explain the accepted extension example and recovery limits. |
 
+
+<a id="broker_passive_damage_on_reload"></a>
+
+## Unload
+
+Full raw template and formatting: [source evidence](broker_passive_damage_on_reload.md#original-english-template-and-reconstruction). Name hash `25a0e32f`. Every row uses `ui / loc_talent_broker_passive_damage_on_reload_desc / 6645de88`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reload effect and ammunition-based increments | Reloading grants +2% Ranged Damage for 7s; each 10% of magazine spent grants +2% additional Ranged Damage; `ui / loc_talent_broker_passive_damage_on_reload_desc / 6645de88` | The buff supplies initial 0.02 and adds 0.02 per complete ammunition stage equal to 10% of magazine capacity. [Fixed source and line references](broker_passive_damage_on_reload.md#fixed-source-evidence) | Consistent | The English matches the initial bonus, duration, and additional-per-stage amounts. |
+| Refill timing, reset, rounding, and cap | No refill-event timing, reset, full-stage rounding, combination, or cap is stated; `ui / loc_talent_broker_passive_damage_on_reload_desc / 6645de88` | `on_reload` fires at `refill_ammunition`; refresh clears accumulated ammunition usage. The formula uses `floor` without clamping stage count and adds at the Ranged Damage stage; non-resetting replenishment can exceed one magazine's 22%. [Fixed source and line references](broker_passive_damage_on_reload.md#fixed-source-evidence) | Not covered by the description | These qualify the stated increments and preserve the original example and cap explanation. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

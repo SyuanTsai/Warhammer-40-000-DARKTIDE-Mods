@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="32" height="32" alt="Regained Posture talent icon"> [Regained Posture](#broker_passive_stamina_on_successful_dodge) | <ul><li>A Successful Dodge restores 10% of maximum Stamina.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="32" height="32" alt="Slippery Customer talent icon"> [Slippery Customer](#broker_passive_dodge_melee_on_slide) | <ul><li>While sliding, count as Dodging against Melee attacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="32" height="32" alt="Tis but a Scratch talent icon"> [Tis but a Scratch](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | <ul><li>Taking Ranged Damage while Toughness remains restores 30% of maximum Toughness over 3 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6849ad32-3ebc-4d11-b980-612b4d23fd94" width="32" height="32" alt="Unload talent icon"> [Unload](#broker_passive_damage_on_reload) | <ul><li>After reloading, gain 2% Ranged Damage for 7 seconds; each amount of ammunition spent equal to 10% of magazine capacity adds another 2%.</li></ul> | Talent |
 
 ---
 
@@ -793,3 +794,18 @@
 - **Recovery example**: at 100 maximum Toughness, restore 10 points per second, totalling 30 over a full 3 seconds. If triggered again at the 2-second mark, recovery can extend to the 5-second mark, totalling at most 50 points, still capped by the deficit.
 
 [Details](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_damage_on_reload"></a>
+
+### Unload
+
+<img src="https://github.com/user-attachments/assets/6849ad32-3ebc-4d11-b980-612b4d23fd94" width="72" height="72" alt="Unload talent icon">
+
+- **How it works**: when a reload refills ammunition, gain a 7-second Damage effect. It starts at 2% Ranged Damage and adds another 2% for every accumulated amount of ammunition spent equal to 10% of magazine capacity. Incomplete stages do not count.
+- **Reloading again**: another reload resets the duration and ammunition-spent counter, restarting accumulation from 2%.
+- **Damage example**: with a 100-round magazine and 30 rounds spent during the effect, the bonus is 2% + ⌊30 ÷ 10⌋ × 2% = 8%. Base Damage of 100 becomes 108; with an existing 25% bonus at the same stage, it becomes 100 × (1 + 25% + 8%) = 133.
+- **Cap explanation**: spending the equivalent of one full magazine gives 22%. Ammunition replenishment that does not reset this effect can allow continued accumulation, so 22% is not a fixed cap.
+
+[Details](broker_passive_damage_on_reload.md) · [Back to index](#talent-index)
