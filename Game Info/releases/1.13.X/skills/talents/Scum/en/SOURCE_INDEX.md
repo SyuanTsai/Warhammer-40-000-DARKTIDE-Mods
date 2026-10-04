@@ -50,3 +50,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [A Tertium Welcome](broker_passive_first_target_damage.md) / `broker_passive_first_target_damage` | Talent |
 | [In Your Face](broker_passive_close_ranged_damage.md) / `broker_passive_close_ranged_damage` | Talent |
 | [Precision Violence](broker_passive_restore_toughness_on_weakspot_kill.md) / `broker_passive_restore_toughness_on_weakspot_kill` | Talent |
+| [Voice of Tertium](broker_passive_restore_toughness_on_close_ranged_kill.md) / `broker_passive_restore_toughness_on_close_ranged_kill` | Talent |

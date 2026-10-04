@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="A Tertium Welcome talent icon"> [A Tertium Welcome](#broker_passive_first_target_damage) | <ul><li>Each Melee attack deals 15% more Melee Damage to its first Enemy hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="In Your Face talent icon"> [In Your Face](#broker_passive_close_ranged_damage) | <ul><li>While wielding a Ranged weapon, gain 25% Damage within 12.5 metres, falling off to 10% at 30 metres and beyond.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="Precision Violence talent icon"> [Precision Violence](#broker_passive_restore_toughness_on_weakspot_kill) | <ul><li>Melee hits restore 4% of maximum Toughness; Critical or Weakspot hits instead restore 8%, and Critical Weakspot hits restore 12%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="32" height="32" alt="Voice of Tertium talent icon"> [Voice of Tertium](#broker_passive_restore_toughness_on_close_ranged_kill) | <ul><li>Ranged kills within 12.5 metres restore 8% of maximum Toughness; Elite or Specialist kills instead restore 15%.</li></ul> | Talent |
 
 ---
 
@@ -679,3 +680,16 @@
 - **Recovery example**: with 100 maximum Toughness, hitting an ordinary target and then a Weakspot restores 4 points followed by 8, for 12 total. A subsequent Critical Weakspot hit in the same attack can restore another 12 points. Each recovery is capped by the deficit; if only 5 points are missing, it restores at most 5.
 
 [Details](broker_passive_restore_toughness_on_weakspot_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_restore_toughness_on_close_ranged_kill"></a>
+
+### Voice of Tertium
+
+<img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="72" height="72" alt="Voice of Tertium talent icon">
+
+- **Kill condition**: killing an Enemy within 12.5 metres with a Ranged attack restores 8% of maximum Toughness. Elite or Specialist enemies instead restore 15%.
+- **Recovery example**: with 100 maximum Toughness, an ordinary Enemy restores 8 points, and an Elite or Specialist restores 15. At 95 current Toughness, either restores only the 5 missing points.
+
+[Details](broker_passive_restore_toughness_on_close_ranged_kill.md) · [Back to index](#talent-index)

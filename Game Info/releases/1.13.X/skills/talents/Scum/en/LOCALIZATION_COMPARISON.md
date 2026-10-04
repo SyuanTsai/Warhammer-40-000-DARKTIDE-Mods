@@ -470,6 +470,18 @@ Full raw template and formatting: [source evidence](broker_passive_restore_tough
 | Melee hit types and recovery values | Melee Hits replenish 4%; Critical Strikes or Weakspot Hits instead replenish 8%; Critical Weakspot Strikes replenish 12%; `ui / loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc / d91c10cd` | Eligible Melee hits use the corresponding full recovery percentage, without requiring a kill. [Fixed source and line references](broker_passive_restore_toughness_on_weakspot_kill.md#fixed-source-evidence) | Consistent | The English's hit conditions and replacement values match the accepted mechanism. |
 | Same-attack gate and recovery limits | No same-attack tracking, instakill exclusion, or recovery-basis details are stated; `ui / loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc / d91c10cd` | Only a higher percentage triggers again in the same attack, but it restores the full value: 4→8→12 can total 24%, whereas 12→8/4 adds nothing. Recovery excludes `is_instakill`, uses maximum Toughness and recovery modifiers, and caps at the deficit. [Fixed source and line references](broker_passive_restore_toughness_on_weakspot_kill.md#fixed-source-evidence) | Not covered by the description | The English does not promise a 12% per-swing cap or recovery from every cleaved target. These are supplementary constraints. |
 
+
+<a id="broker_passive_restore_toughness_on_close_ranged_kill"></a>
+
+## Voice of Tertium
+
+Full raw template and formatting: [source evidence](broker_passive_restore_toughness_on_close_ranged_kill.md#original-english-template-and-reconstruction). Name hash `07db222a`. Every row uses `ui / loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc / 7f8728ae`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged kills and replacement amount | Replenish +8% Toughness on Ranged Kill; Elites and Specials instead replenish +15%; `ui / loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc / 7f8728ae` | Qualifying kills use 0.08, or 0.15 for an Elite/Specialist, without adding the two. [Fixed source and line references](broker_passive_restore_toughness_on_close_ranged_kill.md#fixed-source-evidence) | Consistent | Ranged kills and the replacement wording agree with accepted evidence. |
+| Close-range and recovery constraints | No distance limit, positional check, or recovery basis is stated; `ui / loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc / 7f8728ae` | `on_ranged_close_kill` checks death, Ranged or `count_as_ranged_attack`, and squared hit-position/attacker distance ≤12.5². Recovery uses maximum Toughness and is capped by the deficit. [Fixed source and line references](broker_passive_restore_toughness_on_close_ranged_kill.md#fixed-source-evidence) | Not covered by the description | The omitted close-range requirement and recovery limits supplement the wording; no all-range claim is explicit. |
+
 ## Comparison totals
 
 The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
