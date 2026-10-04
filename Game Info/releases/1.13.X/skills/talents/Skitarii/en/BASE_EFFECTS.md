@@ -16,3 +16,15 @@ These effects are supplied by the base character configuration. Combat Ability, 
 - **Charge example**: Starting with **2.4 charges**, spend **2** and retain **0.4**. If other talents allow **4.4 charges**, spend **3** and retain **1.4**.
 
 [Source evidence and example conditions](cryptic_discharge_base.md)
+
+---
+
+<a id="cryptic_passive_cooldown_regen"></a>
+
+## Motive Engine
+
+- Capacitance percentages use **one Combat Ability charge**. Natural recovery is **2% per second**, so one full charge takes **50 seconds**; three empty charges take **150 seconds** to refill.
+- **Kill recovery**: An ordinary kill restores **2% of one charge**; an Elite or Specialist kill restores **4%**. At **50 points per charge**, these are `50 × 2% = 1` point and `50 × 4% = 2` points. This kill recovery is not increased by **Redline Capacitors**.
+- While **Advanced Combat Doctrine** is active, kills do not trigger this additional recovery; the stance itself spends Capacitance.
+
+[Source evidence and example conditions](cryptic_passive_cooldown_regen.md)

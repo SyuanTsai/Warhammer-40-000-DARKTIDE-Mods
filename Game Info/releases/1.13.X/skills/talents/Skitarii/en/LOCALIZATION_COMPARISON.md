@@ -1190,6 +1190,18 @@ Full raw template and formatting: [source evidence](cryptic_discharge_base.md#or
 | Discharge and charge-dependent radius | Electric Discharge; 6m and 2s; at 2 charges or above, 9m; at 3 or above, 12m.; `ui / loc_talent_cryptic_discharge_base_desc / a2ee7263` | Activation spends 1–3 full charges and selects the 6/9/12-metre explosion, applying 2-second cryptic_discharge_shock. [Fixed source and line references](cryptic_discharge_base.md#fixed-source-evidence) | Consistent | The effect, thresholds, radii and duration match. |
 | Resource and damage boundaries | The spending cap, retained resources and separation of explosion/electrical damage are not specified.; `ui / loc_talent_cryptic_discharge_base_desc / a2ee7263` | At most 3 full charges are spent; partial and excess resources remain. Direct explosion power is zero; electrical damage uses 0.3–0.8-second ticks, a frame offset and target-dependent calculation. [Fixed source and line references](cryptic_discharge_base.md#fixed-source-evidence) | Not covered by the description | These details explain the resource and damage implementation without contradicting the stated discharge. |
 
+
+<a id="cryptic_passive_cooldown_regen"></a>
+
+## Motive Engine
+
+Full raw template and formatting: [source evidence](cryptic_passive_cooldown_regen.md#original-english-template-and-reconstruction). Name hash `f57f4b1c`. Every row uses `ui / loc_talent_cryptic_passive_cooldown_regen_desc / cc7d6ab9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base resource and recovery | 3 Base Charges; generate 2% Capacitance/second, 1 Charge at 100%; kills give 2%, Elite/Specialist kills 4%.; `ui / loc_talent_cryptic_passive_cooldown_regen_desc / cc7d6ab9` | The base cap is 3, charge cost 50 and natural recovery 1 point/second. Kill recovery restores 0.02 or 0.04 of one charge. [Fixed source and line references](cryptic_passive_cooldown_regen.md#fixed-source-evidence) | Consistent | The base capacity, cycle and rates match. |
+| General charge overview and ability-specific limits | Abilities require at least 1 charge to activate and spend up to 3; detailed costs and recovery restrictions are not given.; `ui / loc_talent_cryptic_passive_cooldown_regen_desc / cc7d6ab9` | Individual abilities use one charge, up to three or fractional/ongoing costs. Percentages use one charge. Advanced Combat Doctrine suppresses kill recovery and offsets base natural recovery with upkeep; display fields do not set runtime capacity. [Fixed source and line references](cryptic_passive_cooldown_regen.md#fixed-source-evidence) | Not covered by the description | The broad resource overview does not specify each ability's spending method; the existing ability documents supply those rules. |
+
 ## Comparison totals
 
 197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.
