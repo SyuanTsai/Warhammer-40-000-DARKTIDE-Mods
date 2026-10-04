@@ -479,6 +479,18 @@ Full raw template and formatting: [source evidence](zealot_backstab_damage.md#or
 | Backstab and Flanking damage | “+25% Damage on Backstab and Flanking Hits.”; `ui / loc_talent_zealot_backstab_flanking_damage_all_desc / cbe3a511` | Template enables Backstabbing/Flanking and adds .25 to each damage stat. [Fixed source and line references](zealot_backstab_damage.md#fixed-source-evidence) | Consistent | Effect types and bonus values agree. |
 | Attack eligibility, angles and additive calculation | No attack-type angles, boundary or bonus-combination formula.; `ui / loc_talent_zealot_backstab_flanking_damage_all_desc / cbe3a511` | Melee Backstab dot>.5/rear±60°; Ranged Flanking dot>0/rear half-plane. Add same-type/profile bonuses; one attack receives only one effect. [Fixed source and line references](zealot_backstab_damage.md#fixed-source-evidence) | Not covered by the description | Accepted geometric limits, damage scope and original examples clarify the two bonuses. |
 
+
+<a id="zealot_multi_hits_increase_damage"></a>
+
+## Disdain
+
+Full raw template and formatting: [source evidence](zealot_multi_hits_increase_damage.md#original-english-template-and-reconstruction). Name hash `0153ea4d`. Every row uses `ui / loc_talent_zealot_3_tier_2_ability_1_description / e1fe6b4c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Next-attack damage and count cap | “+5% Damage on your next Melee Attack for each Enemy Hit. Stacks 5 times.”; `ui / loc_talent_zealot_3_tier_2_ability_1_description / e1fe6b4c` | Sweep finish stores hit count; next Melee damage adds .05 per enemy, max .25. [Fixed source and line references](zealot_multi_hits_increase_damage.md#fixed-source-evidence) | Consistent | The next-attack timing, value and cap agree. |
+| Replacement, missed sweeps and calculation | No replacement, duration or missed-sweep rule.; `ui / loc_talent_zealot_3_tier_2_ability_1_description / e1fe6b4c` | Latest sweep count replaces the prior value, without accumulation or timer; miss sets0. Original 100→115/125 example applies. [Fixed source and line references](zealot_multi_hits_increase_damage.md#fixed-source-evidence) | Not covered by the description | These update rules and the existing example explain the next-attack bonus. |
+
 ## Comparison totals
 
 74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.

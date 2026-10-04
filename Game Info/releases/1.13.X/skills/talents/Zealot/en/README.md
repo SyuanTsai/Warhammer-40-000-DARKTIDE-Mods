@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="Risen talent icon"> [Risen](#zealot_resist_death_golden_toughness) | <ul><li>While Unkillable, gain 5 maximum Toughness per second, up to 8 stacks/+40. Added stacks refresh a 5-second duration, and raising the cap also raises current Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="Scourge talent icon"> [Scourge](#zealot_crits_apply_bleed) | <ul><li>Damaging Melee Critical Hits apply 2 Bleed stacks to living enemies. Melee hits on bleeding targets build +10 percentage points of Melee Critical Chance per stack, up to 3 for 3 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="Backstabber talent icon"> [Backstabber](#zealot_backstab_damage) | <ul><li>Deal 25% more damage on Melee Backstabs and Ranged Flanking hits.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="Disdain talent icon"> [Disdain](#zealot_multi_hits_increase_damage) | <ul><li>Each enemy hit by the previous Melee sweep adds 5% damage to the next Melee attack, up to 5 enemies/+25%.</li></ul> | Skill |
 
 ---
 
@@ -614,3 +615,17 @@
 - **Damage example**: With the same weapon, armour and hit location and no other Backstab/Flanking bonus, 100 damage at that stage becomes 100 × (1 + 25%) = 125. With an existing 20% bonus of the same type, 120 becomes 100 × (1 + 20% + 25%) = 145, an actual increase of about 20.83%.
 
 [Details](zealot_backstab_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_multi_hits_increase_damage"></a>
+
+### Disdain
+
+<img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="72" height="72" alt="Disdain talent icon">
+
+- **Operation**: Each enemy hit by the previous Melee sweep adds 5% damage to the next Melee attack, counting at most 5 enemies for +25%.
+- **Updates**: Recalculate from the latest sweep's hit count, without accumulating across sweeps. After the next sweep misses, the bonus becomes zero.
+- **Damage example**: With no other bonuses, 3 enemies hit by the previous attack make the next attack's 100 become 100 × (1 + 3 × 5%) = 115. Five or more give 125.
+
+[Details](zealot_multi_hits_increase_damage.md) · [Back to index](#talent-index)
