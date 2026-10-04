@@ -506,6 +506,18 @@ Full raw template and formatting: [source evidence](broker_passive_reload_speed_
 | Close Ranged kill and Reload Speed | +30% Reload Speed for 8s on Close Ranged Kill; `ui / loc_talent_broker_passive_reload_speed_on_close_kill_desc / f9ccd2c5` | A qualifying close-range Ranged kill applies `reload_speed = 0.3` for 8 seconds. [Fixed source and line references](broker_passive_reload_speed_on_close_kill.md#fixed-source-evidence) | Consistent | The English explicitly names both close range and Ranged kills and matches the bonus and duration. |
 | Threshold, refresh, timing, and Needle Pistol exception | No exact close-range threshold, refresh, action-time formula, or Toxin exception is stated; `ui / loc_talent_broker_passive_reload_speed_on_close_kill_desc / f9ccd2c5` | The effect uses 12.5 m and refreshes one buff. Accelerable action time divides by the combined Reload Speed factor. Tracked Needle Pistol targets can also qualify on a close Toxin death, using the event attacker and without a separate final-owner check. [Fixed source and line references](broker_passive_reload_speed_on_close_kill.md#fixed-source-evidence) | Not covered by the description | These supplement the trigger and preserve the accepted timing examples and attribution limits. |
 
+
+<a id="broker_passive_stun_immunity_on_toughness_broken"></a>
+
+## Burst of Energy
+
+Full raw template and formatting: [source evidence](broker_passive_stun_immunity_on_toughness_broken.md#original-english-template-and-reconstruction). Name hash `42123092`. Every row uses `ui / loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc / 261ee901`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Toughness-break effect and configured values | Gain Stun Immunity for 6s and restore +50% Toughness when Toughness is broken; 10s Cooldown; `ui / loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc / 261ee901` | The self Toughness-break event enables `stun_immune` for 6 seconds and replenishes 0.5; the configured cooldown is 10 seconds. [Fixed source and line references](broker_passive_stun_immunity_on_toughness_broken.md#fixed-source-evidence) | Consistent | The trigger, recovery value, active duration, and cooldown value match. |
+| Cooldown start and recovery basis | No cooldown start point or maximum-Toughness basis is stated; `ui / loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc / 261ee901` | The cooldown check uses `active_start + active_duration + cooldown`; it begins after the active 6 seconds. The recovery uses maximum Toughness, and the event must refer to the talent owner. [Fixed source and line references](broker_passive_stun_immunity_on_toughness_broken.md#fixed-source-evidence) | Not covered by the description | The wording does not promise a 10-second total trigger interval; these details supplement it. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

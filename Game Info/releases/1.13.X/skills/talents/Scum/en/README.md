@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="32" height="32" alt="Voice of Tertium talent icon"> [Voice of Tertium](#broker_passive_restore_toughness_on_close_ranged_kill) | <ul><li>Ranged kills within 12.5 metres restore 8% of maximum Toughness; Elite or Specialist kills instead restore 15%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="Float Like a Butterfly talent icon"> [Float Like a Butterfly](#broker_passive_ninja_grants_crit_chance) | <ul><li>After a Successful Dodge or Perfect Block, gain 20 percentage points of Critical Strike Chance for 3 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="32" height="32" alt="Speedloader talent icon"> [Speedloader](#broker_passive_reload_speed_on_close_kill) | <ul><li>Ranged kills within 12.5 metres grant 30% Reload Speed for 8 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="Burst of Energy talent icon"> [Burst of Energy](#broker_passive_stun_immunity_on_toughness_broken) | <ul><li>When your Toughness breaks, restore 50% of maximum Toughness and gain Stun Immunity for 6 seconds; a 10-second cooldown follows the effect.</li></ul> | Talent |
 
 ---
 
@@ -722,3 +723,16 @@
 - **Needle Pistol**: first hit a living Enemy with the Needle Pistol. If that Enemy remains tracked by the Toxin logic and dies to Toxin at close range, the bonus can also trigger.
 
 [Details](broker_passive_reload_speed_on_close_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stun_immunity_on_toughness_broken"></a>
+
+### Burst of Energy
+
+<img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="72" height="72" alt="Burst of Energy talent icon">
+
+- **Trigger effect**: when your Toughness breaks, immediately restore 50% of maximum Toughness and gain Stun Immunity for 6 seconds.
+- **Recovery and cooldown example**: at 100 maximum Toughness, this talent alone restores Toughness from 0 to 50. The trigger first gives 6 seconds of Stun Immunity, followed by a 10-second cooldown. With no other changes, eligible triggers are at least 6 + 10 = 16 seconds apart.
+
+[Details](broker_passive_stun_immunity_on_toughness_broken.md) · [Back to index](#talent-index)
