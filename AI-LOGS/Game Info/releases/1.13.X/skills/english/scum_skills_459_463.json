@@ -1,0 +1,74 @@
+{
+  "id": "scum_skills_459_463",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display/key mapping: broker_talents.lua L598-L639 (Blinder), L750-L776 (Gunslinger), L29-L59 (Like the Wind), L3172-L3186 (Cartel Special). Values and mechanisms reuse accepted Chinese/source evidence; no mechanism retracing."
+  ],
+  "questions": [
+    "Special mission large Ammo Crate event/sharing remains unverified; standalone broker_syringe has no independently paired English description key."
+  ],
+  "skills": [
+    {
+      "id": "broker_blitz_flash_grenade",
+      "name": "Blinder",
+      "name_hash": "6fa18120",
+      "description_hash": "9cb00aee",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_flash_grenade.md",
+      "commit": "980f0efd8"
+    },
+    {
+      "id": "broker_aura_gunslinger",
+      "name": "Gunslinger",
+      "name_hash": "24295b77",
+      "description_hash": "3df231fe",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_aura_gunslinger.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_aura_gunslinger.md",
+      "commit": "60ed32d6a"
+    },
+    {
+      "id": "broker_passive_improved_sprint_dodge",
+      "name": "Like the Wind",
+      "name_hash": "9ac70c19",
+      "description_hash": "993a0d69",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_improved_sprint_dodge.md",
+      "commit": "913340791"
+    },
+    {
+      "id": "broker_stimm_description_talent",
+      "name": "Cartel Special",
+      "name_hash": "7a34c61a",
+      "description_hash": "042ba657",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_description_talent.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_description_talent.md",
+      "commit": "ad102106c"
+    },
+    {
+      "id": "broker_syringe",
+      "name": "Dedicated Stimm charge",
+      "name_hash": null,
+      "description_hash": null,
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_syringe.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_syringe.md",
+      "commit": "339ead7c8",
+      "English_text_limit": "No standalone description key; similar keys not substituted."
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 623,
+    "from_commit": "8119fc96a",
+    "to_commit": "339ead7c8",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

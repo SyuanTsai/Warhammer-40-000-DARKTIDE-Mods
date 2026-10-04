@@ -1402,4 +1402,4 @@ Full raw template and formatting: [source evidence](broker_stimm_description_tal
 
 ## Comparison totals
 
-The 235 listed rules comprise **109 Consistent**, **7 Explicit contradictions**, **109 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
+The 245 listed rules comprise **113 Consistent**, **7 Explicit contradictions**, **113 Not covered by the description**, **1 No corresponding implementation evidence found** and **11 Cannot confirm**.

@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 458 completed on 2026-10-04. [Receipt](scum_skills_454_458.json) and [FILE_MAP](FILE_MAP.json) record 458 accepted mechanisms. Next item: **459, Blinder: base Blitz**, `broker_blitz_flash_grenade`. The full goal remains active and unfinished.
+Checkpoint 463 completed on 2026-10-04. [Receipt](scum_skills_459_463.json) and [FILE_MAP](FILE_MAP.json) record 463 accepted mechanisms. Scum's **115/115 mechanisms are complete**; next is its six shared-page closeout, followed by Skitarii. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 188 mechanisms + 18 class-support files + 2 shared files = 208 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 110/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 235 = 109 Consistent / 7 Explicit contradictions / 109 Not covered / 1 No implementation / 9 Cannot confirm. Latest batch commit interval: 626s (10m 26s), d1f4ae74c→2ea42d49b. Hypex and Klay record explicit numerical contradictions; Desperado base text is consistent, with unmentioned base rules supplementary. Scum BASE_EFFECTS is partial until the remaining five base mechanisms are translated.
+Remaining: 183 mechanisms + 18 class-support files + 2 shared files = 203 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum comparison totals: 245 = 113 Consistent / 7 Explicit contradictions / 113 Not covered / 1 No implementation / 11 Cannot confirm. Latest batch commit interval: 623s (10m 23s), 8119fc96a→339ead7c8. No new clear English contradiction. Special mission Ammo Crate sharing and missing standalone syringe text remain explicit limitations.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

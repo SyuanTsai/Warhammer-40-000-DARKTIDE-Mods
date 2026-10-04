@@ -6186,7 +6186,12 @@
       "chinese_sha256": "b6ab72e68a1208616cfa8b562011b30218d451c6a77f58fadbf543b82b3e80b7",
       "status": "partial",
       "accepted_skill_ids": [
-        "broker_ability_focus"
+        "broker_ability_focus",
+        "broker_blitz_flash_grenade",
+        "broker_aura_gunslinger",
+        "broker_passive_improved_sprint_dodge",
+        "broker_stimm_description_talent",
+        "broker_syringe"
       ],
       "checks": []
     },
@@ -6304,7 +6309,11 @@
         "broker_stimm_concentration_5a",
         "broker_stimm_concentration_5b",
         "broker_stimm_concentration_5c",
-        "broker_ability_focus"
+        "broker_ability_focus",
+        "broker_blitz_flash_grenade",
+        "broker_aura_gunslinger",
+        "broker_passive_improved_sprint_dodge",
+        "broker_syringe"
       ],
       "checks": []
     },
@@ -6426,7 +6435,12 @@
         "broker_stimm_concentration_5a",
         "broker_stimm_concentration_5b",
         "broker_stimm_concentration_5c",
-        "broker_ability_focus"
+        "broker_ability_focus",
+        "broker_blitz_flash_grenade",
+        "broker_aura_gunslinger",
+        "broker_passive_improved_sprint_dodge",
+        "broker_stimm_description_talent",
+        "broker_syringe"
       ],
       "checks": []
     },
@@ -6548,7 +6562,9 @@
         "broker_stimm_concentration_5a",
         "broker_stimm_concentration_5b",
         "broker_stimm_concentration_5c",
-        "broker_ability_focus"
+        "broker_ability_focus",
+        "broker_blitz_flash_grenade",
+        "broker_aura_gunslinger"
       ],
       "checks": []
     },
@@ -6670,7 +6686,12 @@
         "broker_stimm_concentration_5a",
         "broker_stimm_concentration_5b",
         "broker_stimm_concentration_5c",
-        "broker_ability_focus"
+        "broker_ability_focus",
+        "broker_blitz_flash_grenade",
+        "broker_aura_gunslinger",
+        "broker_passive_improved_sprint_dodge",
+        "broker_stimm_description_talent",
+        "broker_syringe"
       ],
       "checks": []
     },
@@ -6998,9 +7019,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "685f2b5fa6fb5655d23220819c723ff4e33a307e",
       "chinese_sha256": "af85ef41151800b8b7110d5a09a82a33b2d5fe4f0bd56bc2ffecc3bf1c3396bf",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_aura_gunslinger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_aura_gunslinger_improved.md",
@@ -7027,9 +7055,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0c1d11690cd32061056d00614f9a17c257b67d23",
       "chinese_sha256": "edb56e90042846177a2460eb8c243c1002934407e841a9ac1c5923ac9922aa47",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade_improved.md",
@@ -7650,9 +7685,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "de1a2a8187b5c1d4343cb15f5f0f36a4a4a634a4",
       "chinese_sha256": "1c89a267c73d4c219efc22d361fb596e5f8116830fb5499cef1c988014947fa7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_improved_sprint_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_increased_blitz_ammo.md",
@@ -8597,9 +8639,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f95ec97c57f9c5d07fa34b9b62f4c1d80fe20b2e",
       "chinese_sha256": "857edb259248176b335c1ba3fc67b442ab0f038229b19b203fdeec5cdd333dd3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_description_talent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md",
@@ -8716,9 +8765,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0d40ed6c8872d9a8df43940d954d68961b84b73e",
       "chinese_sha256": "e15a1dcc4fa570cf91d725fbd10b8f9a3b7ddd5473ff1942b49092cb8b702275",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_syringe"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/BASE_EFFECTS.md",
@@ -17078,6 +17134,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_454_458.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_focus.md"
+    },
+    {
+      "id": "broker_blitz_flash_grenade",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_flash_grenade.md"
+    },
+    {
+      "id": "broker_aura_gunslinger",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_aura_gunslinger.md"
+    },
+    {
+      "id": "broker_passive_improved_sprint_dodge",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_improved_sprint_dodge.md"
+    },
+    {
+      "id": "broker_stimm_description_talent",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_description_talent.md"
+    },
+    {
+      "id": "broker_syringe",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_syringe.md"
     }
   ],
   "pending_chinese_corrections": [
