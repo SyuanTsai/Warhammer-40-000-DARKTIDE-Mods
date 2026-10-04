@@ -783,6 +783,18 @@ Full raw template and formatting: [source evidence](broker_passive_toxin_spread_
 | Spread trigger, area and initial infection | Killing an Elite Enemy with a Melee Attack infects up to 10 enemies within 4m with 2 stacks of Chem Toxin; `ui / loc_talent_broker_passive_toxin_spread_on_kills_desc_02 / a94fd4a3` | Melee Elite-kill event; radius 4m; selection limit 10; initially uninfected targets reach two stacks [Fixed source and line references](broker_passive_toxin_spread_on_kills.md#fixed-source-evidence) | Consistent | The English's trigger, radius, upper target count and initial stack count match. |
 | Existing stacks, selection and Toxin calculation | No additive-stack promise, selection order, duration or Power formula is stated; `ui / loc_talent_broker_passive_toxin_spread_on_kills_desc_02 / a94fd4a3` | Fill only to two stacks, otherwise refresh; living targets filtered after selecting at most 10; 3s Toxin, 0.35s ticks, shared cap 30 [Fixed source and line references](broker_passive_toxin_spread_on_kills.md#fixed-source-evidence) | Not covered by the description | These preserve the 0→2/1→2/2+ refresh cases and the original 500 × 2 ÷ 30 Power example without treating two as the shared Toxin cap. |
 
+
+<a id="broker_passive_increased_blitz_ammo"></a>
+
+## Extra Pouches
+
+Full raw template and formatting: [source evidence](broker_passive_increased_blitz_ammo.md#original-english-template-and-reconstruction). Name hash `a26229aa`. Every row uses `ui / loc_talent_broker_passive_increased_blitz_ammo_desc / 0e811057`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Maximum Blitz charges | +1 Blitz Charges; `ui / loc_talent_broker_passive_increased_blitz_ammo_desc / 0e811057` | `extra_max_amount_of_grenades = 1` adds to the Broker abilities' `max_charges` [Fixed source and line references](broker_passive_increased_blitz_ammo.md#fixed-source-evidence) | Consistent | The charge increase applies to carrying capacity. |
+| Capacity and regeneration distinction | No regeneration is promised; `ui / loc_talent_broker_passive_increased_blitz_ammo_desc / 0e811057` | The effect increases capacity rather than regenerating a charge after each use [Fixed source and line references](broker_passive_increased_blitz_ammo.md#fixed-source-evidence) | Not covered by the description | This retains the original 3→4 and 2→3 capacity examples and their limit. |
+
 ## Comparison totals
 
 The 128 listed rules comprise **60 Consistent**, **3 Explicit contradictions**, **59 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

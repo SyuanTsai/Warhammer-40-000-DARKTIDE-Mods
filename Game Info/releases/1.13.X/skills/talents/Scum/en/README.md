@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="Virulent Strain talent icon"> [Virulent Strain](#broker_passive_toxin_infected_enemies_take_increased_damage) | <ul><li>Adding Chem Toxin or a stack to an enemy makes it take 10% more Damage from all sources for up to 5s; retriggering refreshes.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="Toxin Mania talent icon"> [Toxin Mania](#broker_passive_damage_after_toxined_enemies) | <ul><li>Each Chem Toxin infected enemy within 12.5m grants 5% Damage, up to 15% at three enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="Splash Damage talent icon"> [Splash Damage](#broker_passive_toxin_spread_on_kills) | <ul><li>A Melee Elite kill spreads Chem Toxin within 4m to up to 10 selected enemies, filling this talent's contribution to 2 stacks.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="Extra Pouches talent icon"> [Extra Pouches](#broker_passive_increased_blitz_ammo) | <ul><li>Gain 1 maximum Blitz charge.</li></ul> | Talent |
 
 ---
 
@@ -1081,3 +1082,17 @@
 - **Toxin example**: Damage occurs every 0.35s based on current Toxin stacks. At 2 stacks, input Power is 500 × 2 ÷ 30 ≈ 33.33, then the Toxin curve and armour determine Damage. This does not directly deal 33.33 Damage.
 
 [Details](broker_passive_toxin_spread_on_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_increased_blitz_ammo"></a>
+
+### Extra Pouches
+
+<img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="72" height="72" alt="Extra Pouches talent icon">
+
+- **Capacity example**: A starting capacity of 3 Blitz uses becomes 3 + 1 = 4; a starting capacity of 2 becomes 3.
+
+- **Scope**: Increases carrying capacity. It does not automatically regenerate one charge after each use.
+
+[Details](broker_passive_increased_blitz_ammo.md) · [Back to index](#talent-index)

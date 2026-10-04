@@ -76,3 +76,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Virulent Strain](broker_passive_toxin_infected_enemies_take_increased_damage.md) / `broker_passive_toxin_infected_enemies_take_increased_damage` | Talent |
 | [Toxin Mania](broker_passive_damage_after_toxined_enemies.md) / `broker_passive_damage_after_toxined_enemies` | Talent |
 | [Splash Damage](broker_passive_toxin_spread_on_kills.md) / `broker_passive_toxin_spread_on_kills` | Talent |
+| [Extra Pouches](broker_passive_increased_blitz_ammo.md) / `broker_passive_increased_blitz_ammo` | Talent |
