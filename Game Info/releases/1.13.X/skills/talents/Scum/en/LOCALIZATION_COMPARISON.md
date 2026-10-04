@@ -410,6 +410,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Additional kill grants and non-killing exclusion | Killing Blows grant +4 additional Adrenaline stacks; Elite Killing Blows grant +10 additional stacks; Non-Killing Blows grant none; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc / e0b9d68a` | `on_hit` returns; `on_kill` runs core hit/Critical grants, then adds 4 and another 10 for an Elite kill. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_2.md#fixed-source-evidence) | Consistent | The English uses additional amounts, not final totals. Ordinary kills yield 5/6 and Elite kills 15/16 under the stated assumptions. |
 | Melee scope, classification, and core constraints | No attack-type, tag, cap, or decay details are stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc / e0b9d68a` | Only `attack_type = melee` qualifies; the extra 10 requires `tags.elite`, not a `special` tag alone. Stacks retain the core's cap, timing, decay, and interactions with other special rules. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_2.md#fixed-source-evidence) | Not covered by the description | These conditions complete the accepted mechanism without contradicting the English. |
 
+
+<a id="broker_passive_longer_dodges"></a>
+
+## Alley Rat
+
+Full raw template and formatting: [source evidence](broker_passive_longer_dodges.md#original-english-template-and-reconstruction). Name hash `f8484bf1`. Every row uses `ui / loc_talent_broker_passive_longer_dodges_desc / 22b08fe3`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Distance stat and amount | +50% Dodge Distance; `ui / loc_talent_broker_passive_longer_dodges_desc / 22b08fe3` | `dodge_distance_modifier = 0.5` is an `additive_multiplier`, giving a base distance factor of 1 + 0.5 = 1.5. [Fixed source and line references](broker_passive_longer_dodges.md#fixed-source-evidence) | Consistent | The English names distance, and its percentage agrees with the accepted stat. |
+| Final distance and unchanged Dodge properties | No weapon, diminishing-return, sticky, or other Dodge-property details are stated; `ui / loc_talent_broker_passive_longer_dodges_desc / 22b08fe3` | Final distance includes weapon scaling, diminishing returns, and sticky factors. The talent does not increase speed, consecutive-Dodge allowance, or checking duration. [Fixed source and line references](broker_passive_longer_dodges.md#fixed-source-evidence) | Not covered by the description | These explain the stated distance bonus and qualify the original distance examples. |
+
 ## Comparison totals
 
 The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

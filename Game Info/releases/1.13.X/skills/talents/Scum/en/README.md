@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="Adrenaline Unbound talent icon"> [Adrenaline Unbound](#broker_keystone_adrenaline_junkie_sub_5) | <ul><li>Restore 5% of maximum Toughness each second during Adrenaline Frenzy.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="Uncontrolled Aggression talent icon"> [Uncontrolled Aggression](#broker_keystone_adrenaline_junkie_sub_4) | <ul><li>Increase the duration of each Adrenaline stack from 2 seconds to 4 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="Adrenaline Smiter talent icon"> [Adrenaline Smiter](#broker_keystone_adrenaline_junkie_sub_2) | <ul><li>Only Melee kills grant Adrenaline: ordinary kills grant 4 additional stacks, and Elite kills grant another 10.</li><li>Non-killing Melee hits grant no stacks; Critical kills retain the core's 1 additional stack.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="Alley Rat talent icon"> [Alley Rat](#broker_passive_longer_dodges) | <ul><li>Increase Dodge Distance by 50%.</li></ul> | Keystone |
 
 ---
 
@@ -606,3 +607,17 @@
 - **Elite check**: the extra 10 stacks depend on the Elite classification. An enemy classified only as a Specialist does not qualify for this Elite bonus.
 
 [Details](broker_keystone_adrenaline_junkie_sub_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_longer_dodges"></a>
+
+### Alley Rat
+
+<img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="72" height="72" alt="Alley Rat talent icon">
+
+- **Distance bonus**: Dodge Distance increases by 50%.
+- **Distance example**: using the archetype's base distance of 2.5 metres, without weapon modifiers or consecutive-Dodge diminishing returns, the result is 2.5 × 1.5 = 3.75 metres.
+- **Actual distance**: the weapon's Dodge settings, consecutive-Dodge diminishing returns, and attack state still affect the final distance travelled.
+
+[Details](broker_passive_longer_dodges.md) · [Back to index](#talent-index)

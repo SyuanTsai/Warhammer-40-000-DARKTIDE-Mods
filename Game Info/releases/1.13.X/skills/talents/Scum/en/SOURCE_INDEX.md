@@ -45,3 +45,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Adrenaline Unbound](broker_keystone_adrenaline_junkie_sub_5.md) / `broker_keystone_adrenaline_junkie_sub_5` | Keystone |
 | [Uncontrolled Aggression](broker_keystone_adrenaline_junkie_sub_4.md) / `broker_keystone_adrenaline_junkie_sub_4` | Keystone |
 | [Adrenaline Smiter](broker_keystone_adrenaline_junkie_sub_2.md) / `broker_keystone_adrenaline_junkie_sub_2` | Keystone |
+| [Alley Rat](broker_passive_longer_dodges.md) / `broker_passive_longer_dodges` | Keystone |
