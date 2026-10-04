@@ -1,0 +1,73 @@
+{
+  "id": "scum_skills_399_403",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display mappings only: broker_talents.lua L1920-L1958 and L1340-L1362; base_talents.lua L2622-L2645, L1037-L1060 and L1757-L1781. Existing mechanism evidence and formatter conclusions reused."
+  ],
+  "questions": [
+    "Jittery: English 'above 75%' conflicts with verified inclusive >= 75%; actual in-game boundary remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "broker_passive_stimm_cd_on_kill",
+      "name": "Sample Collector",
+      "name_hash": "c7530a4c",
+      "description_hash": "f234d4bf",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_cd_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_cd_on_kill.md",
+      "commit": "818789a17"
+    },
+    {
+      "id": "broker_passive_improved_dodges_at_full_stamina",
+      "name": "Jittery",
+      "name_hash": "27778997",
+      "description_hash": "abe61ad9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_dodges_at_full_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_improved_dodges_at_full_stamina.md",
+      "commit": "c51eca361"
+    },
+    {
+      "id": "base_crit_chance_node_buff_low_1",
+      "name": "Critical Chance Boost",
+      "name_hash": "3ec7f5ef",
+      "description_hash": "3019333a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_crit_chance_node_buff_low_1.md",
+      "commit": "eed46983a"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "name": "Melee Damage Boost",
+      "name_hash": "cb9e7b48",
+      "description_hash": "7b5da013",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/base_melee_damage_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_melee_damage_node_buff_medium_1.md",
+      "commit": "4f4ea4fe2"
+    },
+    {
+      "id": "base_toxin_power_boost_1",
+      "name": "Potent Tox",
+      "name_hash": "d8d25992",
+      "description_hash": "f89ff0b1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_toxin_power_boost_1.md",
+      "commit": "07545cf87"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 510,
+    "from_commit": "1080e71c1",
+    "to_commit": "07545cf87",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

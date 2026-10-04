@@ -676,4 +676,4 @@ Full raw template and formatting: [source evidence](base_toxin_power_boost_1.md#
 
 ## Comparison totals
 
-The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

@@ -6242,7 +6242,12 @@
         "broker_passive_damage_on_reload",
         "broker_passive_stamina_grants_atk_speed",
         "broker_passive_ramping_backstabs",
-        "broker_passive_increased_ranged_dodges"
+        "broker_passive_increased_ranged_dodges",
+        "broker_passive_stimm_cd_on_kill",
+        "broker_passive_improved_dodges_at_full_stamina",
+        "base_crit_chance_node_buff_low_1",
+        "base_melee_damage_node_buff_medium_1",
+        "base_toxin_power_boost_1"
       ],
       "checks": []
     },
@@ -6304,7 +6309,12 @@
         "broker_passive_damage_on_reload",
         "broker_passive_stamina_grants_atk_speed",
         "broker_passive_ramping_backstabs",
-        "broker_passive_increased_ranged_dodges"
+        "broker_passive_increased_ranged_dodges",
+        "broker_passive_stimm_cd_on_kill",
+        "broker_passive_improved_dodges_at_full_stamina",
+        "base_crit_chance_node_buff_low_1",
+        "base_melee_damage_node_buff_medium_1",
+        "base_toxin_power_boost_1"
       ],
       "checks": []
     },
@@ -6366,7 +6376,12 @@
         "broker_passive_damage_on_reload",
         "broker_passive_stamina_grants_atk_speed",
         "broker_passive_ramping_backstabs",
-        "broker_passive_increased_ranged_dodges"
+        "broker_passive_increased_ranged_dodges",
+        "broker_passive_stimm_cd_on_kill",
+        "broker_passive_improved_dodges_at_full_stamina",
+        "base_crit_chance_node_buff_low_1",
+        "base_melee_damage_node_buff_medium_1",
+        "base_toxin_power_boost_1"
       ],
       "checks": []
     },
@@ -6428,7 +6443,12 @@
         "broker_passive_damage_on_reload",
         "broker_passive_stamina_grants_atk_speed",
         "broker_passive_ramping_backstabs",
-        "broker_passive_increased_ranged_dodges"
+        "broker_passive_increased_ranged_dodges",
+        "broker_passive_stimm_cd_on_kill",
+        "broker_passive_improved_dodges_at_full_stamina",
+        "base_crit_chance_node_buff_low_1",
+        "base_melee_damage_node_buff_medium_1",
+        "base_toxin_power_boost_1"
       ],
       "checks": []
     },
@@ -6450,9 +6470,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "962638910e9627eff0bb6c74d45e1c77d2545199",
       "chinese_sha256": "16bc905937e16c6ce4d47e88b52b8bf93ce90c51c7ae1519791b231d49c5a4b9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_crit_chance_node_buff_low_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/base_melee_damage_node_buff_medium_1.md",
@@ -6461,9 +6488,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "de1b5610bf918db438ba09e9c6407f06929703e2",
       "chinese_sha256": "91ccf774aa06dcc9f97257bd8a383181ea922293771a4475e1744c0da4ea07cb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_melee_damage_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/base_toughness_node_buff_medium_1.md",
@@ -6490,9 +6524,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "efe76f8f57b4b5bc700a1f131a3b073af67f253f",
       "chinese_sha256": "56716e9a7109a3a4a040e0460d59f13a6de84add1cdd732482b31915e2b74616",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toxin_power_boost_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus.md",
@@ -7306,9 +7347,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8a46dfd2e2b3d28e410f202cb710286ca6b79f5d",
       "chinese_sha256": "c6e0f6c2df1062b9fcf88426325fd1bb3ca2b0f1692220c3ca36f40d4d1c5c90",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_improved_dodges_at_full_stamina"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md",
@@ -7640,9 +7688,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "03d7254a27b85591fa0b8a7a2c401c66bf5eeabe",
       "chinese_sha256": "e563445a2d65bc6b84b56186719d48bd098647950994e79cb69eb130f86e602c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_stimm_cd_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_cleanse_on_kill.md",
@@ -15936,6 +15991,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_394_398.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_ranged_dodges.md"
+    },
+    {
+      "id": "broker_passive_stimm_cd_on_kill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_cd_on_kill.md"
+    },
+    {
+      "id": "broker_passive_improved_dodges_at_full_stamina",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_improved_dodges_at_full_stamina.md"
+    },
+    {
+      "id": "base_crit_chance_node_buff_low_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_crit_chance_node_buff_low_1.md"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_melee_damage_node_buff_medium_1.md"
+    },
+    {
+      "id": "base_toxin_power_boost_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_toxin_power_boost_1.md"
     }
   ],
   "pending_chinese_corrections": [
