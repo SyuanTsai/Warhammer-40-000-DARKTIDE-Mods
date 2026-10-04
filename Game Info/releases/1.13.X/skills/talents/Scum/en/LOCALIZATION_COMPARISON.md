@@ -616,4 +616,4 @@ Full raw template and formatting: [source evidence](broker_passive_increased_ran
 
 ## Comparison totals
 
-The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
