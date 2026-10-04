@@ -636,6 +636,18 @@ Full raw template and formatting: [source evidence](cryptic_stamina_increases_da
 | Spending threshold, bonus and duration | Spending 1 Stamina grants +15% Damage for 4s; `ui / loc_talent_cryptic_stamina_increases_damage_desc / 0a1fb7eb` | Each accumulated Stamina bar spent activates `damage = 0.15` for 4 seconds [Fixed source and line references](cryptic_stamina_increases_damage.md#fixed-source-evidence) | Consistent | The threshold and effect values agree; the wording does not require one uninterrupted expenditure. |
 | Accumulation and damage calculation | Does not state the bar unit, recovery handling, maximum changes, remainder or refreshing; `ui / loc_talent_cryptic_stamina_increases_damage_desc / 0a1fb7eb` | Positive differences accumulate; maximum-Stamina changes are excluded. Subtract 1 on activation and retain the remainder. Recovery does not erase spending; one stack refreshes. Same-stage bonuses add [Fixed source and line references](cryptic_stamina_increases_damage.md#fixed-source-evidence) | Not covered by the description | The preserved 0.4 + 0.6 trigger and 100 × (1 + 25% + 15%) = 140 example supplement the English. |
 
+
+<a id="cryptic_electrocution_toughness"></a>
+
+## Entropic Transfer
+
+Full raw template and formatting: [source evidence](cryptic_electrocution_toughness.md#original-english-template-and-reconstruction). Name hash `18815327`. Every row uses `ui / loc_talent_cryptic_electrocution_toughness_desc / f4493647`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Electrocution condition, amount and duration | Replenish 12% Toughness over 4s on Electrocuting an enemy; `ui / loc_talent_cryptic_electrocution_toughness_desc / f4493647` | Qualifying Electrocution buff events activate recovery at `0.12 / 4` for 4 seconds [Fixed source and line references](cryptic_electrocution_toughness.md#fixed-source-evidence) | Consistent | The stated condition and effect values agree. |
+| Qualifying events, refreshing and recovery basis | Does not specify buff-event granularity, damage ticks, denominator or duration refreshing; `ui / loc_talent_cryptic_electrocution_toughness_desc / f4493647` | New buff, added stack and maximum-stack refresh events qualify through `group_keywords.electrocuted`; damage ticks do not. Recover 3% of maximum Toughness per second, refresh 4 seconds without increasing rate; bonuses and cap apply [Fixed source and line references](cryptic_electrocution_toughness.md#fixed-source-evidence) | Not covered by the description | The 100-Toughness example with a trigger at 2 seconds and 18 points through 6 seconds supplements the English. |
+
 ## Comparison totals
 
 105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.

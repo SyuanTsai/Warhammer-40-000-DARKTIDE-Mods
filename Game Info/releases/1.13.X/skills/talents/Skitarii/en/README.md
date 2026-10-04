@@ -60,6 +60,7 @@
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="Evasive Servo Recovery talent icon"> [Evasive Servo Recovery](#cryptic_successful_dodge_stamina) | <ul><li>Successfully dodging an enemy attack immediately restores 10% of maximum Stamina. Pressing dodge without avoiding an attack does not qualify; recovery is capped at full Stamina.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="Omnissian Recharge Litany talent icon"> [Omnissian Recharge Litany](#cryptic_multi_hits_restore_toughness) | <ul><li>Hitting the third enemy with one attack starts 3 seconds of recovery totaling 10% of maximum Toughness. Melee and ranged hits qualify. Further triggers refresh the duration, at least 0.25 seconds apart.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="Channelled Motive Force talent icon"> [Channelled Motive Force](#cryptic_stamina_increases_damage) | <ul><li>Every accumulated Stamina bar spent grants 15% Damage for 4 seconds. Spending can be split across actions; recovery does not erase accumulated spending. Further triggers refresh the duration without stacking.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="Entropic Transfer talent icon"> [Entropic Transfer](#cryptic_electrocution_toughness) | <ul><li>Applying Electrocution, adding an Electrocution stack or refreshing it at the stack cap starts 4 seconds of recovery totaling 12% of maximum Toughness. Further triggers restart the duration without increasing the recovery rate.</li></ul> | Talent |
 
 ---
 
@@ -828,3 +829,17 @@
 - **Example**: Spending 0.4 bars followed by 0.6 bars triggers it. At 100 base damage with an existing 25% bonus in the same stage, the result is `100 × (1 + 25% + 15%) = 140` damage.
 
 [Details](cryptic_stamina_increases_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_electrocution_toughness"></a>
+
+### Entropic Transfer
+
+<img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="72" height="72" alt="Entropic Transfer talent icon">
+
+- **Trigger**: Applying Electrocution to an enemy, adding an Electrocution stack, or refreshing its duration at the stack cap starts recovery of **12% of maximum Toughness over 4 seconds**.
+- **Refreshing**: Another trigger restarts the 4-second duration without increasing the amount restored per second.
+- **Example**: At 100 maximum Toughness, restore `100 × 12% ÷ 4 = 3` points per second. Retriggering at 2 seconds extends the effect until 6 seconds, allowing 18 points to be restored over that period.
+
+[Details](cryptic_electrocution_toughness.md) · [Back to index](#talent-index)
