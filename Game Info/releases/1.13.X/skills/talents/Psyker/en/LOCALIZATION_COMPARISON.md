@@ -918,6 +918,19 @@ Full raw template and formatting: [source evidence](psyker_force_staff_quick_att
 | Target, amount and stack limit | 6% Warp-Damage Taken by victims of your Force Staff's Primary Attack. Max Stacks 5. Lasts 10s.; `ui / loc_talent_psyker_force_staff_quick_attack_bonus_desc / c4f73f93` | `force_staff_primary` hits apply a target debuff with `warp_damage_taken_multiplier = 1.06`, maximum 5 stacks and duration 10 seconds. [Fixed source and line references](psyker_force_staff_quick_attack_bonus.md#fixed-source-evidence) | Consistent | The effect's target, per-stack amount, limit and duration agree. |
 | Multiplication, Allies and refresh | 6% Warp-Damage Taken… Max Stacks 5. Lasts 10s.; `ui / loc_talent_psyker_force_staff_quick_attack_bonus_desc / c4f73f93` | Stacks multiply as 1.06ⁿ in the target's Warp Damage-taken stage; both your and Allies' Warp Attacks benefit, and hits refresh at maximum stacks. [Fixed source and line references](psyker_force_staff_quick_attack_bonus.md#fixed-source-evidence) | Not covered by the description | The text does not specify the stacking formula, beneficiary scope or refresh behavior. |
 
+
+<a id="psyker_damage_to_peril_conversion"></a>
+
+## Just a Dream
+
+Full raw template and formatting: [source evidence](psyker_damage_to_peril_conversion.md#original-english-template-and-reconstruction). Name hash `68abed2f`. Every row uses `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Peril condition | While below Critical Peril; `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a` | The conditional Damage multiplier applies while current Peril <0.97. [Fixed source and line references](psyker_damage_to_peril_conversion.md#fixed-source-evidence) | Consistent | The critical threshold agrees with the accepted 97% condition. |
+| Conversion wording | 25% of Damage Taken is converted into Peril.; `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a` | `damage_taken_multiplier = 0.75` reduces Damage; Peril separately uses reported Health plus Toughness Damage ×0.0025×`warp_charge_amount`. [Fixed source and line references](psyker_damage_to_peril_conversion.md#fixed-source-evidence) | Cannot confirm | The text does not define a literal transfer between prevented Damage and Peril units; the two verified calculations must remain separate. |
+| Reported Damage basis and cap | Damage Taken is converted into Peril.; `ui / loc_talent_psyker_damage_to_peril_conversion_desc / 832ffb7a` | `damage.lua` supplies `damage` and `actual_toughness_damage_dealt`, rather than a direct Health difference; generated Peril caps at 0.97. [Fixed source and line references](psyker_damage_to_peril_conversion.md#fixed-source-evidence) | Not covered by the description | The reporting basis, generation modifier and cap are absent from the concise text. |
+
 ## Comparison totals
 
 The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.

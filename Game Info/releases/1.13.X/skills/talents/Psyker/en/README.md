@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="Crystalline Will talent icon"> [Crystalline Will](#psyker_alternative_peril_explosion) | <ul><li>+100% Overload Explosion Damage and +25% radius; ordinarily lose one Wound afterward, waived if the explosion kills an Elite.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="Channeled Force talent icon"> [Channeled Force](#psyker_force_staff_bonus) | <ul><li>Finishing a staff charge above 95% grants +20% Primary Damage for 5 seconds; finishing a Primary action grants +10% Secondary Damage for 5 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="Empyric Shock talent icon"> [Empyric Shock](#psyker_force_staff_quick_attack_bonus) | <ul><li>Force Staff Primary hits apply +6% Warp Damage Taken per multiplicative stack, up to 5 stacks for 10 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="Just a Dream talent icon"> [Just a Dream](#psyker_damage_to_peril_conversion) | <ul><li>Below 97% Peril, take 25% less Damage and gain 0.25 percentage points of Peril per reported Health/Toughness Damage point, capped at 97%.</li></ul> | Talent |
 
 ---
 
@@ -1243,3 +1244,19 @@
 - **Damage example**: A target originally taking 100 Warp Damage takes 100 × 1.06 = 106 at one stack. At five stacks, 100 × 1.06⁵ ≈ 133.82, an increase of approximately 33.82%.
 
 [Details](psyker_force_staff_quick_attack_bonus.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_damage_to_peril_conversion"></a>
+
+### Just a Dream
+
+<img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="72" height="72" alt="Just a Dream talent icon">
+
+- **How it works**: Below 97% Peril, take 25% less Damage. Also generate Peril from the combined Health and Toughness Damage reported for the hit: 0.25 percentage points per Damage point, up to 97% Peril.
+
+- **Damage reduction example**: Compare only this reduction stage. An original 100 Damage becomes 100 × 0.75 = 75.
+
+- **Peril example**: If the hit reports 40 combined Health and Toughness Damage, with no other Peril modifiers, gain 40 × 0.25 = 10 percentage points of Peril. An initial 50% becomes 60%; an initial 92% reaches at most 97%.
+
+[Details](psyker_damage_to_peril_conversion.md) · [Back to index](#talent-index)

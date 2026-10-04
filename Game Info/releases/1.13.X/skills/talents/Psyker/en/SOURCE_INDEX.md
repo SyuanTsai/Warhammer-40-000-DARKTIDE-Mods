@@ -86,3 +86,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Crystalline Will](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | Talent |
 | [Channeled Force](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | Talent |
 | [Empyric Shock](psyker_force_staff_quick_attack_bonus.md) / `psyker_force_staff_quick_attack_bonus` | Talent |
+| [Just a Dream](psyker_damage_to_peril_conversion.md) / `psyker_damage_to_peril_conversion` | Talent |
