@@ -563,6 +563,18 @@ Full raw template and formatting: [source evidence](zealot_heal_part_of_damage_t
 | Damage recovery and designed duration | “On taking Damage, heal 20% of that Damage. Occurs over 4s.”; `ui / loc_talent_zealot_heal_damage_taken_desc / c39c8d71` | Victim's Health damage × 0.2 enters healing slices designed for 4 seconds. [Fixed source and line references](zealot_heal_part_of_damage_taken.md#fixed-source-evidence) | Consistent | Healing direction, proportion and designed duration agree. |
 | Damage scope, pending healing and actual timing | No separate Toughness-damage rule, slice handling, healing cap or scheduling precision.; `ui / loc_talent_zealot_heal_damage_taken_desc / c39c8d71` | Toughness damage excluded; up to 10 additive slices with 96 ticks each and one tick/update. Original 50/30 damage example adds 10/6 healing; healable missing Health caps recovery. [Fixed source and line references](zealot_heal_part_of_damage_taken.md#fixed-source-evidence) | Not covered by the description | These execution and recovery limits supplement the description without an explicit contrary promise. |
 
+
+<a id="zealot_reduced_damage_on_wound"></a>
+
+## Bleed for the Emperor
+
+Full raw template and formatting: [source evidence](zealot_reduced_damage_on_wound.md#original-english-template-and-reconstruction). Name hash `8391b055`. Every row uses `ui / loc_talent_zealot_3_tier_3_ability_2_description / 4cc48983`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Wound threshold and reduction | “Damage that would take your Health to the next Wound is reduced by 40%.”; `ui / loc_talent_zealot_3_tier_3_ability_2_description / 4cc48983` | Damage crossing the next segment threshold is multiplied by 0.6. [Fixed source and line references](zealot_reduced_damage_on_wound.md#fixed-source-evidence) | Consistent | Trigger direction and reduction amount agree. |
+| Strict boundary and entire damage amount | No explicit equality rule or restriction to damage beyond the threshold.; `ui / loc_talent_zealot_3_tier_3_ability_2_description / 4cc48983` | Strict current_segment_health<health_damage reduces the whole amount. At 120/200 Health with 4 Wounds, incoming 30 becomes 18 and leaves 102; incoming 20 reaches 100 without activation. [Fixed source and line references](zealot_reduced_damage_on_wound.md#fixed-source-evidence) | Not covered by the description | The wording leaves equality unspecified; the boundary and original example explain the accepted condition. |
+
 ## Comparison totals
 
 94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.

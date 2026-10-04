@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="Second Wind talent icon"> [Second Wind](#zealot_toughness_on_dodge) | <ul><li>Successfully dodging an attack restores 15% of maximum Toughness, at most once every 0.5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="The Voice of Terra talent icon"> [The Voice of Terra](#zealot_toughness_while_shooting) | <ul><li>Shooting restores 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops; hits and kills are not required.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="Restoring Faith talent icon"> [Restoring Faith](#zealot_heal_part_of_damage_taken) | <ul><li>After taking Health damage, gradually heal 20% of that damage over about 4 seconds; Toughness damage is excluded.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="Bleed for the Emperor talent icon"> [Bleed for the Emperor](#zealot_reduced_damage_on_wound) | <ul><li>If Health damage would cross the next Wound threshold, reduce that entire Health-damage amount by 40%; landing exactly on the threshold does not trigger it.</li></ul> | Skill |
 
 ---
 
@@ -716,3 +717,17 @@
 - **Limit**: Healing fills only healable missing Health and does not remove Corruption.
 
 [Details](zealot_heal_part_of_damage_taken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_reduced_damage_on_wound"></a>
+
+### Bleed for the Emperor
+
+<img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="72" height="72" alt="Bleed for the Emperor talent icon">
+
+- **Operation**: If incoming Health damage would take Health below the next Wound threshold, that entire Health-damage amount is reduced by 40%.
+- **Damage example**: Maximum Health 200 with 4 Wounds gives 50 Health per segment. At 120 Health, the next threshold is 100. Incoming Health damage 30 crosses that threshold, so it becomes 30 × 0.6 = 18, leaving 102 Health.
+- **Boundary**: Incoming damage 20 from 120 Health lands exactly at 100 and does not trigger this reduction.
+
+[Details](zealot_reduced_damage_on_wound.md) · [Back to index](#talent-index)
