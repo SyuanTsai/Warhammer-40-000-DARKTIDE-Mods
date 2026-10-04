@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="32" height="32" alt="Kinetic Deflection talent icon"> [Kinetic Deflection](#psyker_block_costs_warp_charge) | <ul><li>Below 97% Peril, Blocking converts Stamina cost to Peril at 25% of the cost's fraction of maximum Stamina; overflow is paid with Stamina.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_5) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/92db3e61-eb2d-4af5-b9a7-3a1bab73234a" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_4) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>10% Toughness Damage Reduction in this additive stage; no Health Damage reduction.</li></ul> | Talent |
 
 ---
 
@@ -1045,3 +1046,17 @@
 - **Toughness example**: with no other modifiers, 100 maximum Toughness becomes 100 + 15 = 115 points; selecting another node with the same effect gives 130 points. This increases the maximum rather than restoring Toughness over time.
 
 [Details](base_toughness_node_buff_medium_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+### Toughness Damage Reduction
+
+<img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="72" height="72" alt="Toughness Damage Reduction talent icon">
+
+- **Effect**: reduce Toughness Damage by 10% in this reduction stage; this does not reduce Health Damage.
+
+- **Reduction example**: with an original 100 points of Toughness Damage and no other reduction in this stage, 100 × (1 − 10%) = 90 points. With an existing 5% reduction in the same stage, 100 × (1 − 5% − 10%) = 85 points. Other independent multiplicative reductions apply separately.
+
+[Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)

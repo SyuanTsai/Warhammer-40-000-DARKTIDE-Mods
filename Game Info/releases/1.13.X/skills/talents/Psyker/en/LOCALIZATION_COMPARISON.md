@@ -770,6 +770,18 @@ Full raw template and formatting: [source evidence](base_toughness_node_buff_med
 | Flat Toughness bonus | +15 Toughness; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | The accepted node adds 15 flat maximum Toughness. [Fixed source and line references](base_toughness_node_buff_medium_4.md#fixed-source-evidence) | Consistent | The mapped number matches the verified flat bonus; it is not a percentage. |
 | Maximum capacity and modifier order | No maximum/current distinction, recovery effect or modifier formula; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | Maximum Toughness adds flat toughness first, then multiplies by toughness_bonus and rounds up. [Fixed source and line references](base_toughness_node_buff_medium_4.md#fixed-source-evidence) | Not covered by the description | The capacity basis, combination order and absence of sustained restoration are supplementary explanations. |
 
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+## Toughness Damage Reduction
+
+Full raw template and formatting: [source evidence](base_toughness_damage_reduction_node_buff_medium_1.md#original-english-template-and-reconstruction). Name hash `4cf5defc`. Every row uses `ui / loc_talent_toughness_damage_reduction_medium_desc / 1272bcc0`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Amount and damage scope | +10% Toughness Damage Reduction; `ui / loc_talent_toughness_damage_reduction_medium_desc / 1272bcc0` | The verified toughness_damage_taken_modifier is −0.1 and affects Toughness Damage only. [Fixed source and line references](base_toughness_damage_reduction_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The reduction amount and Toughness scope agree. |
+| Combination stage | No formula for combining reductions; `ui / loc_talent_toughness_damage_reduction_medium_desc / 1272bcc0` | The modifier is additive within its stage, while other independent multiplicative reductions apply separately. [Fixed source and line references](base_toughness_damage_reduction_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The existing 100→90 and same-stage 5% plus 10%→85 examples explain the omitted stage rules. |
+
 ## Comparison totals
 
 The 127 listed rules comprise **59 Consistent**, **3 Explicit contradictions**, **60 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

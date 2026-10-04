@@ -74,3 +74,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kinetic Deflection](psyker_block_costs_warp_charge.md) / `psyker_block_costs_warp_charge` | Talent |
 | [Toughness Boost](base_toughness_node_buff_medium_5.md) / `base_toughness_node_buff_medium_5` | Talent |
 | [Toughness Boost](base_toughness_node_buff_medium_4.md) / `base_toughness_node_buff_medium_4` | Talent |
+| [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Talent |
