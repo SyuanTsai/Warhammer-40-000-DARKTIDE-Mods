@@ -1130,6 +1130,18 @@ Full raw template and formatting: [source evidence](cryptic_toughness_replenishm
 | Melee-kill bonus and zero charges | +25% Toughness Replenishment on Melee Kill; increased to +50% at 0 Charges.; `ui / loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc / 583f2cab` | toughness_melee_replenish is 0.25, with an additional 0.25 at remaining-charge count <= 0. [Fixed source and line references](cryptic_toughness_replenishment_on_kill_bonus.md#fixed-source-evidence) | Consistent | The trigger, values and zero-charge condition match. |
 | Recovery basis and combination | The description does not specify a maximum-Toughness basis or how recovery bonuses combine.; `ui / loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc / 583f2cab` | The bonus modifies existing melee-kill recovery, using class/weapon recovery and same-stage addition before total_replenish_multiplier. Only full charges count; recovery is capped at maximum. [Fixed source and line references](cryptic_toughness_replenishment_on_kill_bonus.md#fixed-source-evidence) | Not covered by the description | The English describes a replenishment bonus without explicitly asserting direct recovery of 25% or 50% of maximum Toughness. |
 
+
+<a id="cryptic_next_hit_all_damage_on_dodge"></a>
+
+## Precision Combat Augurs
+
+Full raw template and formatting: [source evidence](cryptic_next_hit_all_damage_on_dodge.md#original-english-template-and-reconstruction). Name hash `cf9ae6f0`. Every row uses `ui / loc_talent_cryptic_next_attack_all_damage_on_dodge_desc / 501926d3`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful dodge and next attack | +15% Damage for your Next Attack on Successful Dodge.; `ui / loc_talent_cryptic_next_attack_all_damage_on_dodge_desc / 501926d3` | A successful dodge activates 0.15 melee_damage and ranged_damage for the next swing or shot. [Fixed source and line references](cryptic_next_hit_all_damage_on_dodge.md#fixed-source-evidence) | Consistent | The trigger, value and attack wording match. |
+| Consumption, storage and timing | Misses, stored-use cap, expiry and projectile order are not specified.; `ui / loc_talent_cryptic_next_attack_all_damage_on_dodge_desc / 501926d3` | on_shoot or on_sweep_finish consumes the effect, even on a miss. Only one use is stored, with no expiry. Delayed/multiple-projectile damage order still requires observation. [Fixed source and line references](cryptic_next_hit_all_damage_on_dodge.md#fixed-source-evidence) | Not covered by the description | These boundaries supplement “Next Attack”; it does not promise a bonus until the next successful hit. |
+
 ## Comparison totals
 
 187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.
