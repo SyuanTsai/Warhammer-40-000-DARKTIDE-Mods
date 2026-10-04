@@ -626,6 +626,18 @@ Full raw template and formatting: [source evidence](psyker_spread_warpfire_on_ki
 | Death condition and upper limits | Dies while affected by your Soulblaze; each gains up to 4 and cannot gain more than the victim had; `ui / loc_talent_psyker_warpfire_spread_desc / 7f4f685e` | Death while carrying the owner's Soulblaze triggers spread, with stacks_on_death = min(pre-death stacks, 4). Soulblaze need not deliver the final hit. [Fixed source and line references](psyker_spread_warpfire_on_kill.md#fixed-source-evidence) | Consistent | The death condition is explicit, and the stated per-target ceilings do not require every target to receive four stacks. |
 | Shared pool and recipient checks | No total distribution budget, existing-stack check or exact radius; `ui / loc_talent_psyker_warpfire_spread_desc / 7f4f685e` | A single pool of up to 4 is shared one stack at a time within 5m; targets already at stacks_on_death are skipped. [Fixed source and line references](psyker_spread_warpfire_on_kill.md#fixed-source-evidence) | Not covered by the description | “Up to” does not promise an independent allocation. The shared pool and final recipient ceiling require supplementary explanation. |
 
+
+<a id="psyker_venting_improvements"></a>
+
+## Mind in Motion
+
+Full raw template and formatting: [source evidence](psyker_venting_improvements.md#original-english-template-and-reconstruction). Name hash `f93d1ade`. Every row uses `ui / loc_talent_psyker_improved_venting_desc / 86b17787`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Speed and action penalties | +5% Movement Speed; Movement Speed is not reduced while Quelling Peril or Reloading; `ui / loc_talent_psyker_improved_venting_desc / 86b17787` | Unconditional movement_speed = 0.05, with the Quelling and Reloading movement-reduction stats set to zero. [Fixed source and line references](psyker_venting_improvements.md#fixed-source-evidence) | Consistent | The stated bonus and two removed action penalties agree. |
+| Display state and other slows | No active-state check or unrelated slowing rules; `ui / loc_talent_psyker_improved_venting_desc / 86b17787` | check_active_func affects the display only; other slowing sources still calculate separately. [Fixed source and line references](psyker_venting_improvements.md#fixed-source-evidence) | Not covered by the description | The action context identifies the removed penalties; it does not detail all other movement modifiers. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

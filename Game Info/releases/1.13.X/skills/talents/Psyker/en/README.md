@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="Battle Meditation talent icon"> [Battle Meditation](#psyker_chance_to_vent_on_kill) | <ul><li>−10% Peril Generation. Each Kill has a 10% chance to remove 10 percentage points of Peril.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="Perfect Timing talent icon"> [Perfect Timing](#psyker_crits_empower_next_attack) | <ul><li>Critical Hit: gain +3% Damage for 10s, up to 5 stacks (+15%); retriggering refreshes duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/1e6189fe-4a6e-4fda-bbe9-e2a38c75ff2a" width="32" height="32" alt="Wildfire talent icon"> [Wildfire](#psyker_spread_warpfire_on_kill) | <ul><li>When an enemy affected by your Soulblaze dies, distribute up to 4 shared stacks among enemies within 5m. Soulblaze need not deliver the final hit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="Mind in Motion talent icon"> [Mind in Motion](#psyker_venting_improvements) | <ul><li>+5% Movement Speed; removes Quelling and Reloading movement penalties. Other slowing sources still apply.</li></ul> | Talent |
 
 ---
 
@@ -849,3 +850,17 @@
 - The Traditional Chinese wording narrows the trigger to being burned to death by your Soulblaze. The English and verified execution condition require the enemy to be affected by your Soulblaze when it dies; another attack can deliver the killing blow.
 
 [Details](psyker_spread_warpfire_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_venting_improvements"></a>
+
+### Mind in Motion
+
+<img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="72" height="72" alt="Mind in Motion talent icon">
+
+- **Effect**: remove the movement penalties caused by Quelling Peril and Reloading, and gain 5% Movement Speed. Slows from other sources are still calculated separately.
+
+- **Movement example**: with no other modifiers, if movement at this stage was 5 metres per second, it becomes 5 × (1 + 5%) = 5.25 metres per second.
+
+[Details](psyker_venting_improvements.md) · [Back to index](#talent-index)
