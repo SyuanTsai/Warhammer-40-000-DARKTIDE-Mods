@@ -56,3 +56,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Enduring Faith](zealot_crits_reduce_toughness_damage.md) / `zealot_crits_reduce_toughness_damage` | Skill |
 | [Second Wind](zealot_toughness_on_dodge.md) / `zealot_toughness_on_dodge` | Skill |
 | [The Voice of Terra](zealot_toughness_while_shooting.md) / `zealot_toughness_while_shooting` | Skill |
+| [Restoring Faith](zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | Skill |

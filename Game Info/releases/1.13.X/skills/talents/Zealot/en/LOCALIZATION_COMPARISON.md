@@ -551,6 +551,18 @@ Full raw template and formatting: [source evidence](zealot_toughness_while_shoot
 | Shooting condition and restoration rate | “Replenish 10% Toughness per second while Shooting.”; `ui / loc_talent_zealot_toughness_while_shooting_desc / fce063da` | Server update restores .1×dt of maximum Toughness while shooting. [Fixed source and line references](zealot_toughness_while_shooting.md#fixed-source-evidence) | Consistent | Condition and rate agree; no hit/kill requirement is stated. |
 | Tail, frame integration and cap | No tail, maximum-Toughness basis or HUD-slot distinction.; `ui / loc_talent_zealot_toughness_while_shooting_desc / fce063da` | Restores through t≤shooting_end_time+.5, including after weapon switching; slot check only HUD/is_active. Original 2s+.5s example gives25 at max100, capped by missing Toughness. [Fixed source and line references](zealot_toughness_while_shooting.md#fixed-source-evidence) | Not covered by the description | These timing and calculation details supplement shooting restoration. |
 
+
+<a id="zealot_heal_part_of_damage_taken"></a>
+
+## Restoring Faith
+
+Full raw template and formatting: [source evidence](zealot_heal_part_of_damage_taken.md#original-english-template-and-reconstruction). Name hash `a90f2f4a`. Every row uses `ui / loc_talent_zealot_heal_damage_taken_desc / c39c8d71`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Damage recovery and designed duration | “On taking Damage, heal 20% of that Damage. Occurs over 4s.”; `ui / loc_talent_zealot_heal_damage_taken_desc / c39c8d71` | Victim's Health damage × 0.2 enters healing slices designed for 4 seconds. [Fixed source and line references](zealot_heal_part_of_damage_taken.md#fixed-source-evidence) | Consistent | Healing direction, proportion and designed duration agree. |
+| Damage scope, pending healing and actual timing | No separate Toughness-damage rule, slice handling, healing cap or scheduling precision.; `ui / loc_talent_zealot_heal_damage_taken_desc / c39c8d71` | Toughness damage excluded; up to 10 additive slices with 96 ticks each and one tick/update. Original 50/30 damage example adds 10/6 healing; healable missing Health caps recovery. [Fixed source and line references](zealot_heal_part_of_damage_taken.md#fixed-source-evidence) | Not covered by the description | These execution and recovery limits supplement the description without an explicit contrary promise. |
+
 ## Comparison totals
 
 94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.

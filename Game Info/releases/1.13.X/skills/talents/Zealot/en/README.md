@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="Enduring Faith talent icon"> [Enduring Faith](#zealot_crits_reduce_toughness_damage) | <ul><li>Critical Hits reduce Toughness damage taken by 40% for 4 seconds; both Melee and Ranged crits trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="Second Wind talent icon"> [Second Wind](#zealot_toughness_on_dodge) | <ul><li>Successfully dodging an attack restores 15% of maximum Toughness, at most once every 0.5 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="The Voice of Terra talent icon"> [The Voice of Terra](#zealot_toughness_while_shooting) | <ul><li>Shooting restores 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops; hits and kills are not required.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="Restoring Faith talent icon"> [Restoring Faith](#zealot_heal_part_of_damage_taken) | <ul><li>After taking Health damage, gradually heal 20% of that damage over about 4 seconds; Toughness damage is excluded.</li></ul> | Skill |
 
 ---
 
@@ -700,3 +701,18 @@
 - **Restoration example**: With maximum Toughness 100, no other restoration bonuses and 2 seconds of continuous shooting followed by the full 0.5-second tail, restore 100 × 10% × (2 + 0.5) = 25, capped by missing Toughness.
 
 [Details](zealot_toughness_while_shooting.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_heal_part_of_damage_taken"></a>
+
+### Restoring Faith
+
+<img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="72" height="72" alt="Restoring Faith talent icon">
+
+- **Operation**: After taking Health damage, gradually heal 20% of that damage over about 4 seconds. Toughness damage does not contribute.
+- **Additional damage**: A new hit adds another healing allowance without clearing healing still pending from earlier damage.
+- **Healing example**: Losing 50 Health adds 10 healing, averaging 2.5 per second over the designed 4 seconds. Losing another 30 Health during that period adds 6 more pending healing.
+- **Limit**: Healing fills only healable missing Health and does not remove Corruption.
+
+[Details](zealot_heal_part_of_damage_taken.md) · [Back to index](#talent-index)
