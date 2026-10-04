@@ -45,6 +45,18 @@ Full raw template and formatting: [source evidence](zealot_improved_stun_grenade
 | All-enemy control claim | Stuns all Enemies within its blast radius.; `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631` | Accepted documentation retains target checks, distance/obstruction limits and resistance-dependent sustained control; every enemy's actual response remains unobserved. [Fixed source and line references](zealot_improved_stun_grenade.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish the universal control claim; no new mechanism investigation is required. |
 | Charges, timing and periodic damage exception | No capacity, fuse, Electrocution duration, refresh, interval or damage exception specified.; `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631` | Capacity 3, fuse 1.5s, one refreshing 8s Electrocution effect at 0.3–0.8s intervals; isolated damage 4/8; excludes periodic damage on an already staggered Poxwalker Bomber. [Fixed source and line references](zealot_improved_stun_grenade.md#fixed-source-evidence) | Not covered by the description | These details supplement the radius/control wording; the exception does not imply complete grenade immunity. |
 
+
+<a id="zealot_toughness_damage_reduction_coherency_improved"></a>
+
+## Benediction
+
+Full raw template and formatting: [source evidence](zealot_toughness_damage_reduction_coherency_improved.md#original-english-template-and-reconstruction). Name hash `fc382324`. Every row uses `ui / loc_talent_zealot_toughness_aura_efficiency_desc / 90d53110`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients and Toughness reduction |  +15% Toughness Damage Reduction for you and Allies in Coherency; augmented base Aura The Emperor's Will.; `ui / loc_talent_zealot_toughness_aura_efficiency_desc / 90d53110` | The chain includes self and Coherency allies; improved toughness_damage_taken_multiplier is 0.85, replacing the base 0.925 Aura. [Fixed source and line references](zealot_toughness_damage_reduction_coherency_improved.md#fixed-source-evidence) | Consistent | The named recipients, damage type and 15% reduction agree. The English does not promise direct Health reduction or additive base-Aura stacking. |
+| Priority, duplicates and recipient exception | No priority, duplicate-source rule, recipient keyword exception or independent-modifier calculation specified.; `ui / loc_talent_zealot_toughness_aura_efficiency_desc / 90d53110` | One winning Aura per coherency_id; improved priority 1 precedes base 2; max_stacks 1; prevent_coherency_buffs_from_other_players limits outside-player sources. [Fixed source and line references](zealot_toughness_damage_reduction_coherency_improved.md#fixed-source-evidence) | Not covered by the description | Retain 100→85 versus base92.5 and independent40%→51; these limits supplement the stated effect. |
+
 ## Comparison totals
 
 Updated at five-item checkpoints.
