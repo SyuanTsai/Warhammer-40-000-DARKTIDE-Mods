@@ -14205,9 +14205,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6f94a59a708923df5e58579bd0e54ad990ddfcaf",
       "chinese_sha256": "f9c4761d677b5f4fed63afbf5f086b6419ad738071149fcb604d62fe4095accb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_martyrdom"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_martyrdom_grants_attack_speed.md",
@@ -14216,9 +14223,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3c5eea9d801d8e4298b856f2011d00ad54480ab0",
       "chinese_sha256": "a1bc8a5ae9632ee766d01f556214a3e81b894f6954f99e42ccb3faf96e8b4f30",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_martyrdom_grants_attack_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_martyrdom_grants_toughness.md",
@@ -14227,9 +14241,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "323852d424fd30075faf79fd3b1927576587ffc3",
       "chinese_sha256": "cf55b014cec81147611425cdce29b5b7aaf1baf492d9510d65436d61565f6618",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_martyrdom_grants_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_martyrdom_toughness_modifier.md",
@@ -14271,9 +14292,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7f2805573fe7fed984036962d0d6800462f0cf9a",
       "chinese_sha256": "d1ebffcedbd3efba1eefca7914c0df32c135aa598ce0d38c801a15f0052b2173",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_momentum_toughness_replenish"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_more_damage_when_low_on_stamina.md",
@@ -14337,9 +14365,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "64b7e176a936b0c50a1150c7a84750c2954ef7fc",
       "chinese_sha256": "41b40595a5763785c37b87d4009030e6c7097ef29f4ddb11b6a86bcce4714658",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_quickness_passive"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_quickness_passive_dodge_stacks.md",
@@ -19458,6 +19493,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death.md"
+    },
+    {
+      "id": "zealot_martyrdom",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_martyrdom.md"
+    },
+    {
+      "id": "zealot_martyrdom_grants_toughness",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_martyrdom_grants_toughness.md"
+    },
+    {
+      "id": "zealot_martyrdom_grants_attack_speed",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_martyrdom_grants_attack_speed.md"
+    },
+    {
+      "id": "zealot_quickness_passive",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_quickness_passive.md"
+    },
+    {
+      "id": "zealot_momentum_toughness_replenish",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_momentum_toughness_replenish.md"
     }
   ],
   "pending_chinese_corrections": [
