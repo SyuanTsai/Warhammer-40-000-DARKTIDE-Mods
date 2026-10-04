@@ -1015,6 +1015,18 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_3.md#o
 | Recipe statistics | +4% Attack Speed; −15% Stamina Cost (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | `attack_speed = 0.04`; `stamina_cost_multiplier = 0.85` [Fixed source and line references](broker_stimm_celerity_3.md#fixed-source-evidence) | Consistent | Both stat names and numerical changes agree. |
 | Cost, stacking and timing | No purchase, shared lifetime or stacking formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | One purchase at cost 3; selected prerequisites remain active; speed bonuses add and Stamina Cost multipliers multiply; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_3.md#fixed-source-evidence) | Not covered by the description | The original 8.5/5.78 Stamina Cost and 0.893-second attack examples clarify the effects. |
 
+
+<a id="broker_stimm_celerity_4"></a>
+
+## Spur IV
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_4.md#original-english-template-and-reconstruction). Name hash `33b4b842`. Every row uses `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Attack Speed; −20% Stamina Cost (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | `attack_speed = 0.04`; `stamina_cost_multiplier = 0.8` [Fixed source and line references](broker_stimm_celerity_4.md#fixed-source-evidence) | Consistent | Both stat names and numerical changes agree. |
+| Cost, stacking and timing | No purchase, shared lifetime or stacking formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | One purchase at cost 4; selected prerequisites remain active; speed bonuses add and Stamina Cost multipliers multiply; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_4.md#fixed-source-evidence) | Not covered by the description | The original 8/5.78 Stamina Cost and 0.862-second attack examples clarify the effects. |
+
 ## Comparison totals
 
 The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.

@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="Spur I talent icon"> [Spur I](#broker_stimm_celerity_1) | <ul><li>Gain 4% Attack Speed.</li><li>Gain 25% Weapon Swap Speed.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="Spur II talent icon"> [Spur II](#broker_stimm_celerity_2) | <ul><li>Gain 4% Attack Speed.</li><li>Gain 25% Weapon Swap Speed.</li><li>Reduce Stamina Cost by 15%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="Spur III talent icon"> [Spur III](#broker_stimm_celerity_3) | <ul><li>Gain 4% Attack Speed.</li><li>Reduce Stamina Cost by 15%.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="Spur IV talent icon"> [Spur IV](#broker_stimm_celerity_4) | <ul><li>Gain 4% Attack Speed.</li><li>Reduce Stamina Cost by 20%.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1414,3 +1415,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Attack Speed example**: Selecting from Spur I through this node gives 12% in total. A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.12 ≈ 0.893 seconds.
 
 [Details](broker_stimm_celerity_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_4"></a>
+
+### Spur IV
+
+<img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="72" height="72" alt="Spur IV talent icon">
+
+- **Recipe cost**: 4 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Attack Speed**: Gain 4%, additive with other Attack Speed bonuses.
+
+- **Stamina Cost**: This node multiplies Stamina Cost by 0.8, a 20% reduction.
+
+- **Stamina example**: A cost of 10 becomes 10 × 0.8 = 8 with this node alone. Selecting II, III and IV gives 10 × 0.85 × 0.85 × 0.8 = 5.78.
+
+- **Attack Speed example**: Selecting from Spur I through this node gives 16% in total. A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.16 ≈ 0.862 seconds.
+
+[Details](broker_stimm_celerity_4.md) · [Back to index](#talent-index)
