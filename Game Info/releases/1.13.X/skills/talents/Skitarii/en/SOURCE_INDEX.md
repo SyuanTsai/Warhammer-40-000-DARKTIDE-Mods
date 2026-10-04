@@ -19,3 +19,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Kinetic Repulsion](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | Blitz |
 | [Noospheric Command](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | Blitz |
 | [Overcharged Arc Grenades](cryptic_arc_grenades_brittleness.md) / `cryptic_arc_grenades_brittleness` | Blitz |
+| [Enhanced Arc Grenades](cryptic_arc_grenades_weapon_malfunction.md) / `cryptic_arc_grenades_weapon_malfunction` | Blitz |
