@@ -505,6 +505,8 @@
 
 ## 職業與天賦
 
+1.13 新增及盤點補缺名稱已按 Steam Build 25606770 的英文／繁中相同名稱鍵與 hash 配對，直接採用遊戲繁中名稱。標記「過時」的詞條保留歷史譯名。[完整名稱對照清單](../Darktide%20Translation%20Workspace/Term%20Candidates.md)｜[文本配對紀錄](../AI-LOGS/Game%20Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json)。
+
 ### Psyker - 靈能者
 
 #### 靈能者專有名詞
@@ -609,11 +611,8 @@
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
 - Warp Ghost - 亞空間幽魂
-- Tranquility Through Slaughter - 殺無赦，心祥和
+- Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Surety of Arms - 武器在手，信心我有。
-- Focused Warp - 聚焦亞空間（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_warp_damage`；本機遊戲繁中名稱為「聚焦次元」，暫定譯名沿用詞表的亞空間用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2648-L2671)）
-- Peril Equilibrium - 反噬平衡（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_weapon_attacks_peril_equilibrium`；本機遊戲繁中名稱為「危險平衡」，暫定譯名沿用詞表的反噬用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2628-L2647)）
-- Psykinetic Grip - 念力之握（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_blitz_damage`；沿用本機遊戲繁中名稱；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2672-L2700)）
 
 ### Ogryn - 歐格林
 
@@ -680,7 +679,7 @@
 - Smash 'Em! - 碾碎它們！
 - The Best Defence - 最好的防禦
 - Furious - 怒不可遏
-- Towering Presence - 卓越氣場
+- Towering Presence - 卓越氣場（1.13 改為職業內建被動）
 - Soften Them Up - 削弱敵人
 - Payback Time - 報復時間
 - Pumped Up - 士氣高昂
@@ -741,7 +740,7 @@
 
 ##### 光環
 
-- The Emperors's Will - 帝皇之諭
+- The Emperor's Will - 帝皇之諭（舊英文拼寫：The Emperors's Will）
 - Benediction - 恩賜
 - Beacon of Purity - 純潔信標
 - Zealous - 熱忱
@@ -786,7 +785,7 @@
 - Backstabber - 背刺者
 - The Voice of Terra - 泰拉之音
 - Enemies Within, Enemies Without - 內憂外患
-- Blood Redemption - 鮮血救贖
+- Blood Redemption - 鮮血救贖（1.13 改為職業內建被動）
 - Second Wind - 精力復甦
 - Vicious Offering - 惡毒贈禮
 - Purge the Unclean - 淨化不潔
@@ -796,7 +795,7 @@
 - Holy Revenant - 吊命聖徒
 - Thy Wrath be Swift - 勃然大怒
 - Desperation - 背水一戰
-- Punishment - 懲罰
+- Punishment - 懲罰（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Against the Odds - 逆境而上
 - Shield of Contempt - 輕蔑之盾
 - Unseen Blade - 無形之刃
@@ -804,12 +803,12 @@
 - Faithful Frenzy - 信仰狂亂
 - Providence - 神恩庇護
 - Good Balance - 四平八穩
-- Impassible - 不可逾越
+- Impassible - 不可逾越（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Retaliatory Defence - 反制護盾
 - Abolish Blasphemers - 弒除瀆者
 - The Master's Retribution - 大師的反擊
 - Dance of Death - 死亡之舞
-- Grievous Wounds - 重傷
+- Grievous Wounds - 重傷（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Scourge - 天災
 - Enduring Faith - 堅韌信仰
 - Punish Impiety - 褻瀆必懲
@@ -834,20 +833,20 @@
   - 英文對應：Marksman。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)；此來源證明識別鍵與天賦關係。
 
-- `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 生存專家（基礎被動）
-  - 英文對應：Survivalist Passive。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+- `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 實踐效率
+  - 英文正式名稱：Practiced Efficiency。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`55ea75f0`）；舊盤點功能標題：Survivalist Passive。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1417-L1436)。
 
-- `loc_talent_veteran_base_ranged_damage` / `veteran_base_ranged_damage` - 基礎遠程傷害加成
-  - 英文對應：Increased Ranged Damage。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+- `loc_talent_veteran_base_ranged_damage` / `veteran_base_ranged_damage` - 衛兵
+  - 英文正式名稱：Guardsman。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`0c3fe87c`）；舊盤點功能標題：Increased Ranged Damage。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)。
 
-- `loc_talent_veteran_supression_immunity` / `veteran_supression_immunity` - 壓制免疫
-  - 英文對應：Suppression Immunity。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+- `loc_talent_veteran_supression_immunity` / `veteran_supression_immunity` - 堅定不移
+  - 英文正式名稱：Determined。繁中名稱已按 1.13.1 同鍵／hash 文本配對（`829e5480`）；舊盤點功能標題：Suppression Immunity。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1390-L1399)。
 
-- `loc_talent_veteran_cover_peeking` / `veteran_cover_peeking` - 掩體探身
-  - 英文對應：Cover Peeking。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+- `loc_talent_veteran_cover_peeking` / `veteran_cover_peeking` - Low Profile
+  - 英文正式名稱：Low Profile。1.13.1 的 zh-tw 同鍵／hash 項目（`da809230`）仍標記 `[Not Translated]`，保留原始英文名稱；舊盤點功能標題：Cover Peeking。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)。
 
 - `loc_talent_veteran_elite_kills_grant_ammo_coop` / `veteran_aura_gain_ammo_on_elite_kill` - 拾荒者
@@ -1516,7 +1515,7 @@
 - Restoration Protocol - 修復協定
 - Writ of Ammunition Enumeration - 彈藥盤點之旨
 - Calculated Priority - 精算順序
-- Readiness Doctrines - 備戰教條
+- Readiness Doctrines - 備戰教條（過時：1.13 已移除獨立子節點；效果整合至 Advanced Combat Doctrines）
 - Piercing Sight - 洞察之眼
 - Capacitor Reclamation Loop - 電容回收迴路
 - Augmented Power-Cycle - 強化能量循環
@@ -1545,7 +1544,7 @@
 
 - Overcharge Transfer Lattice - 過載轉移晶格
 - Retribution Conduit - 報應導管
-- Kinetic Energy Distribution - 動能分配器
+- Kinetic Energy Distributors - 動能分配器（舊英文拼寫：Kinetic Energy Distribution；沿用既有繁中對應）
 - System Shock - 系統電擊
 - Entropic Transfer - 熵能轉移
 - Weakness Analysis Doctrine - 弱點分析教義
@@ -1625,14 +1624,14 @@
 
 ### 天賦相關 (小型節點)
 
-- Peril Resistance - 反噬抗性
+- Peril Resistance - 反噬抗性（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
 - Melee Damage Boost - 近戰增幅
-- Movement Speed Boost - 移動速度增幅
-- Reload Boost - 換彈速度增幅
-- Rending Boost - 撕裂增幅
-- Stamina Boost - 耐力增幅
-- Stamina Regeneration Boost - 耐力恢復增幅
-- Suppression Boost - 壓制增幅
+- Movement Speed Boost - 移動速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+- Reload Boost - 換彈速度增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+- Rending Boost - 撕裂增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+- Stamina Boost - 耐力增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+- Stamina Regeneration Boost - 耐力恢復增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
+- Suppression Boost - 壓制增幅（過時：1.13 七職業技能樹均無同名可選小型節點；保留歷史譯名）
 - Toughness Boost - 韌性增幅
 - Toughness Damage Reduction - 韌性減傷
 
@@ -1661,92 +1660,82 @@
 - Melee Specialist - 近戰專家
 - Ranged Specialist - 遠程專家
 
-### 狂信徒新增名稱（待確認）
+### 1.13 技能名稱文本對照
 
-- Wait in Line - 排隊等候（沿用本機繁中名稱，待使用者確認；`zealot_reduced_damage_from_ranged`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3230-L3248)）
+以下 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
 
-- Holy Tools - 神聖工具（沿用本機繁中名稱，待使用者確認；`zealot_weapon_special_damage`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3268-L3287)）
+#### 靈能者（遊戲繁中名稱）
 
-- Got Your Back - 為您撐腰（沿用本機繁中名稱，待使用者確認；`zealot_melee_kills_restore_toughness_to_target`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3249-L3267)）
+- Focused Warp - 聚焦次元（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_warp_damage`；名稱 hash `32fd96aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md)）
+- Peril Equilibrium - 危險平衡（1.13.1 遊戲繁中名稱；1.13新增；`psyker_weapon_attacks_peril_equilibrium`；名稱 hash `63ed565b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md)）
+- Psykinetic Grip - 念力之握（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_blitz_damage`；名稱 hash `4ac15b0d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md)）
+- Perils of the Warp - 次元危險（1.13.1 遊戲繁中名稱；盤點補缺；`psyker_peril_passive`；名稱 hash `dafbc14a`；[來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606)）
 
-- Purifying Hatred - 淨化仇恨（沿用本機繁中名稱，待使用者確認；`zealot_dmg_vs_burning_electrocuted`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3214-L3229)）
+#### 歐格林（遊戲繁中名稱）
 
-- Zealous Pilgrim - 狂熱朝聖者（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_ability`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330)）
+- Found Some More - 發現更多（1.13.1 遊戲繁中名稱；1.13新增；`ogryn_free_reload_after_ability`；名稱 hash `e56eeef1`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md)）
+- Thick Skin - 厚實表皮（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_base_tank_passive`；名稱 hash `277672aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md)）
+- Outta My Way! - 滾吧你！（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_dodge_stagger`；名稱 hash `7abf1c42`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md)）
 
-- Risen - 復活（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_golden_toughness`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3429-L3453)）
+#### 狂信徒（遊戲繁中名稱）
 
-- Fire and Fury - 烈焰與怒火（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_fire`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3331-L3345)）
+- Wait in Line - 排隊等候（1.13.1 遊戲繁中名稱；1.13新增；`zealot_reduced_damage_from_ranged`；名稱 hash `f8ea87eb`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_from_ranged.md)）
+- Holy Tools - 神聖工具（1.13.1 遊戲繁中名稱；1.13新增；`zealot_weapon_special_damage`；名稱 hash `af1ee73d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md)）
+- Got Your Back - 為您撐腰（1.13.1 遊戲繁中名稱；1.13新增；`zealot_melee_kills_restore_toughness_to_target`；名稱 hash `28db6608`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md)）
+- Purifying Hatred - 淨化仇恨（1.13.1 遊戲繁中名稱；1.13新增；`zealot_dmg_vs_burning_electrocuted`；名稱 hash `9b5165a8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md)）
+- Zealous Pilgrim - 狂熱朝聖者（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_ability`；名稱 hash `a196609b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md)）
+- Risen - 復活（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_golden_toughness`；名稱 hash `95780e03`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md)）
+- Fire and Fury - 烈焰與怒火（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_fire`；名稱 hash `af670dea`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md)）
 
-### 歐格林新增名稱（待確認）
+#### 老兵（遊戲繁中名稱）
 
-- Found Some More - 發現更多（沿用本機繁中名稱，待使用者確認；`ogryn_free_reload_after_ability`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2753-L2771)）
+- Guardsman - 衛兵（1.13.1 遊戲繁中名稱；1.13新增；`veteran_base_ranged_damage`；名稱 hash `0c3fe87c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md)）
+- Practiced Efficiency - 實踐效率（1.13.1 遊戲繁中名稱；1.13新增；`veteran_survivalist_passive`；名稱 hash `55ea75f0`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md)）
+- Determined - 堅定不移（1.13.1 遊戲繁中名稱；盤點補缺；`veteran_supression_immunity`；名稱 hash `829e5480`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md)）
 
-### 法務官新增名稱（待確認）
+#### 法務官（遊戲繁中名稱）
 
-- Ranged Damage Boost - 遠程傷害增幅（沿用本機繁中名稱，待使用者確認；`base_ranged_damage_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1637-L1660)）
+- Ranged Damage Boost - 遠程傷害增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_ranged_damage_node_buff_medium_1`；名稱 hash `4530d417`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md)）
+- Cleave Boost - 順劈加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_cleave_node_buff_medium_1`；名稱 hash `5583cb92`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md)）
+- Impact Boost - 衝擊加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_impact_node_buff_medium_1`；名稱 hash `007795f8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_impact_node_buff_medium_1.md)）
 
-- Cleave Boost - 順劈加成（沿用本機繁中名稱，待使用者確認；`base_cleave_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1013-L1036)）
+#### 巢都渣滓（遊戲繁中名稱）
 
-- Impact Boost - 衝擊加成（沿用本機繁中名稱，待使用者確認；`base_impact_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L989-L1012)）
+- Critical Chance Boost - 暴擊幾率增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_crit_chance_node_buff_low_1`；名稱 hash `3ec7f5ef`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md)）
+- Potent Tox - 強效毒藥（1.13.1 遊戲繁中名稱；盤點補缺；`base_toxin_power_boost_1`；名稱 hash `d8d25992`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md)）
+- Equip Cartel Special - 裝備財閥特殊裝備（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_activation_talent`；名稱 hash `6158914f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md)）
+- Spur I - 激勵I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_1`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md)）
+- Spur II - 激勵II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_2`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md)）
+- Spur III - 激勵III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_3`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md)）
+- Spur IV - 激勵IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_4`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md)）
+- Reflex - 反射（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5b`；名稱 hash `d33a89f3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5b.md)）
+- Fervor - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5c`；名稱 hash `9b5b6688`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5c.md)）
+- Vultoprene I - 獵鷹蕈劑I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md)）
+- Vultoprene II - 獵鷹蕈劑II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md)）
+- Kalma I - 抗焦慮藥I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_1`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_1.md)）
+- Kalma II - 抗焦慮藥II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_2`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md)）
+- Kalma III - 抗焦慮藥III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_3`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md)）
+- Kalma IV - 抗焦慮藥IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_4`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md)）
+- Kalma V - 抗焦慮藥V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5a`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md)）
+- Like the Wind - 迅如疾風（1.13.1 遊戲繁中名稱；盤點補缺；`broker_passive_improved_sprint_dodge`；名稱 hash `9ac70c19`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md)）
+- Cartel Special - 財閥專員（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_description_talent`；名稱 hash `7a34c61a`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_description_talent.md)）
+- Barrage I - 彈幕I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_1`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md)）
+- Barrage II - 彈幕II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_2`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md)）
+- Barrage III - 彈幕III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_3`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md)）
+- Barrage IV - 彈幕IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_4`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md)）
+- Tank - 坦克（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5a`；名稱 hash `e3530c66`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5a.md)）
+- Regain - 恢復（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5b`；名稱 hash `3e34e34e`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md)）
+- Spur V - 激勵V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5a`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md)）
+- Hypex - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5b`；名稱 hash `99e5c538`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md)）
+- Klay - 集中藥（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5c`；名稱 hash `f7a8d514`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md)）
+- Wildfire I - 野火I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_1`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md)）
+- Wildfire II - 野火II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_2`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md)）
+- Wildfire III - 野火III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_3`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md)）
+- Wildfire IV - 野火IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md)）
+- Wildfire V - 野火V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md)）
+- Fury I - 狂怒I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md)）
+- Fury II - 狂怒II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md)）
 
-### 巢都渣滓新增名稱（待確認）
+#### 護教軍（遊戲繁中名稱）
 
-- Critical Chance Boost - 爆擊機率增幅（沿用本機繁中名稱，待使用者確認；`base_crit_chance_node_buff_low_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L2622-L2645)）
-
-- Potent Tox - 強效毒藥（沿用本機繁中名稱，待使用者確認；`base_toxin_power_boost_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1757-L1781)）
-
-- Equip Cartel Special - 裝備財閥特殊裝備（沿用本機繁中名稱，待使用者確認；`broker_stimm_activation_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3187-L3191)）
-
-- Spur I - 激勵 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L499-L507)）
-
-- Spur II - 激勵 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L508-L522)）
-
-- Spur III - 激勵 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L523-L533)）
-
-- Spur IV - 激勵 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L534-L544)）
-
-- Reflex - 反射（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L550-L557)）
-
-- Fervor - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L558-L580)）
-
-- Vultoprene I - 獵鷹蕈劑 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_4c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L632-L640)）
-
-- Vultoprene II - 獵鷹蕈劑 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L641-L649)）
-
-- Kalma I - 抗焦慮藥 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L733-L737)）
-
-- Kalma II - 抗焦慮藥 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L738-L742)）
-
-- Kalma III - 抗焦慮藥 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L743-L747)）
-
-- Kalma IV - 抗焦慮藥 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L748-L752)）
-
-- Kalma V - 抗焦慮藥 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L753-L757)）
-
-- Like the Wind - 迅如疾風（沿用本機繁中名稱，待使用者確認；`broker_passive_improved_sprint_dodge`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L65-L67)）
-
-- Cartel Special - 財閥專員（沿用本機繁中名稱，待使用者確認；`broker_stimm_description_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L35-L89)）
-
-- Barrage I - 彈幕 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L650-L666)）
-
-- Barrage II - 彈幕 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L667-L683)）
-
-- Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）
-
-- Barrage IV - 彈幕 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L701-L717)）
-
-- Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）
-
-- Regain - 恢復（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L723-L732)）
-
-- Spur V - 激勵 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L545-L549)）
-
-- Hypex - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L758-L768)）
-
-- Klay - 集中藥（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L769-L781)）
-
-### 護教軍新增名稱（待確認）
-
-- Kinetic Energy Distributors - 動能分配器（沿用本機繁中名稱，待使用者確認；`cryptic_toughness_on_damage_taken`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L2318-L2340)）
-
-- Motive Engine - 動力引擎（沿用本機繁中名稱，待使用者確認；`cryptic_passive_cooldown_regen`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L1-L17)）
+- Motive Engine - 動力引擎（1.13.1 遊戲繁中名稱；盤點補缺；`cryptic_passive_cooldown_regen`；名稱 hash `f57f4b1c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md)）

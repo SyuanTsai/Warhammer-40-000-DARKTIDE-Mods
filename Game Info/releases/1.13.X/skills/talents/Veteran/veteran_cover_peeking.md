@@ -1,4 +1,4 @@
-# 掩體探身(Cover Peeking)
+# Low Profile(Low Profile)
 
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 

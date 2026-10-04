@@ -1,4 +1,4 @@
-# 基礎減傷與閃避防護：原始碼依據
+# 厚實表皮(Thick Skin)：原始碼依據
 
 [返回基礎效果](BASE_EFFECTS.md#ogryn_base_tank_passive)｜[技術索引](SOURCE_INDEX.md)
 
