@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="Rampage! talent icon"> [Rampage!](#broker_ability_punk_rage) | <ul><li>Activate to refill Toughness and enter rage for 10 seconds: additive +35% Melee Power Level, additive +20% Melee Attack Speed and ×0.75 Damage taken (25% reduction from this effect alone).</li><li>Melee hits extend rage, initially by 0.3 seconds each; after every 20 seconds from activation the per-hit extension halves. Base cooldown 30 seconds, with natural replenishment paused during rage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="Pulverising Strikes talent icon"> [Pulverising Strikes](#broker_ability_punk_rage_sub_2) | <ul><li>During rage, Cleave capacity gains an additive +50%. Gain a Melee Power stack for approximately every second rage persists: +2.5% each, up to 10 stacks (+25%).</li><li>With rage's base +35% Melee Power Level, these two effects give at most +60% Power Level, not a guaranteed +60% final Damage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="Channelled Aggression talent icon"> [Channelled Aggression](#broker_ability_punk_rage_sub_1) | <ul><li>While rage is active, Melee Heavy Attacks gain additive +25% Rending in the armour-penetration calculation.</li><li>The effect checks Melee Heavy Attacks; Rending is not a direct 25% Damage increase.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="Forge's Bellow talent icon"> [Forge's Bellow](#broker_ability_punk_rage_sub_3) | <ul><li>Shout when rage starts and ends, Staggering enemies within 4.5 metres.</li><li>Each Shout adds −50% enemy Melee Attack Speed for 5 seconds; a 1-second attack interval becomes approximately 2 seconds with only this effect.</li></ul> | Ability |
 
 ---
 
@@ -211,3 +212,23 @@
 - **Armour example:** assume an original armour Damage multiplier of 0.5 and armour that fully accepts this Rending. The multiplier becomes 0.5 + 0.25 = 0.75; the same 100 pre-armour Damage changes from 50 to 75. Different armour and existing weapon penetration change the actual increase.
 
 [Details](broker_ability_punk_rage_sub_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_3"></a>
+
+### Forge's Bellow
+
+<img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="72" height="72" alt="Forge's Bellow talent icon">
+
+- **Trigger:** Shout once when rage starts; when rage ends, Shout again if you are still alive.
+
+- **Range and Stagger:** each Shout has a 4.5-metre radius and Staggers enemies in range.
+
+- **Enemy slowdown:** each Shout reduces affected enemies' Melee Attack Speed by 50% for 5 seconds. If the original interval is 1 second, half speed gives approximately 1 ÷ 0.5 = 2 seconds between attacks, an increase of 100%, not 50%. This statistic does not modify Ranged Attack Speed.
+
+#### English description erratum
+
+- English says the time between attacks increases by +50%. The verified modifier halves Melee Attack Speed; with this effect alone, the reciprocal interval doubles, increasing by 100%.
+
+[Details](broker_ability_punk_rage_sub_3.md) · [Back to index](#talent-index)

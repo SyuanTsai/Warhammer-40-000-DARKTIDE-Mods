@@ -142,6 +142,20 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub
 | Heavy-Attack Rending during rage | Heavy Attacks while Rampage! is active have +25% Rending; `ui / loc_talent_broker_ability_punk_rage_sub_1_desc_02 / 472cc8e5` | broker_rage_rending enables additive melee_heavy_rending_multiplier 0.25 during the state. [Fixed source and line references](broker_ability_punk_rage_sub_1.md#fixed-source-evidence) | Consistent | The amount, Rending effect and active-rage condition agree; no first-half gate is stated. |
 | Eligibility and armour calculation | No explicit Melee check, armour calculation or ability-progress gate; `ui / loc_talent_broker_ability_punk_rage_sub_1_desc_02 / 472cc8e5` | Only Melee heavy profiles read the term; armour conversion is capped at 1; the 0.5 format progress value is not used to delay or limit enabling. [Fixed source and line references](broker_ability_punk_rage_sub_1.md#fixed-source-evidence) | Not covered by the description | The existing 100 pre-armour Damage/0.5 multiplier example gives 50→75, not a fixed ×1.25 Damage rule. |
 
+
+<a id="broker_ability_punk_rage_sub_3"></a>
+
+## Forge's Bellow
+
+Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub_3.md#original-english-template-and-reconstruction). Name hash `fc8121dd`. Every row uses `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Interval increase | Increases time between attacks by +50%; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | melee_attack_speed −0.5 leaves speed 0.5; isolated reciprocal interval is 1/0.5 = 2 times the original, an increase of 100%. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Explicit contradiction | The English explicitly specifies an interval increase that differs from the accepted speed-based derivation; both original languages sharing it does not remove the English contradiction. |
+| Shouts and debuff duration | Shout on activation and again when rage runs out; Staggers enemies; debuff 5s; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | Start and stop call the Shout; affected enemies receive Stagger and a 5-second debuff. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Consistent | The trigger pattern and debuff duration agree under the accepted stop conditions. |
+| Detailed scope and conditions | No radius, Melee-only statistic or living/server stop detail; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | Radius 4.5 m; second Shout requires living character/server and use_exhaust=false; only melee_attack_speed is modified; actual animations and other modifiers still affect intervals. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Not covered by the description | These are supplementary limits, not a separate repeated numeric erratum. |
+| Malformed first name placeholder | First token is {punk_rage%s}; second is {punk_rage:%s}; `ui / loc_talent_broker_ability_punk_rage_sub_3_desc_02 / aa1fa2de` | Mapping provides the localized punk_rage value, but runtime handling of the malformed first token is not established by the existing evidence. [Fixed source and line references](broker_ability_punk_rage_sub_3.md#fixed-source-evidence) | Cannot confirm | The partial reconstruction retains the first token; actual game rendering is not asserted or researched further. |
+
 ## Comparison totals
 
 The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.

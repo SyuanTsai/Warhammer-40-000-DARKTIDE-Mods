@@ -23,3 +23,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Rampage!](broker_ability_punk_rage.md) / `broker_ability_punk_rage` | Ability |
 | [Pulverising Strikes](broker_ability_punk_rage_sub_2.md) / `broker_ability_punk_rage_sub_2` | Ability |
 | [Channelled Aggression](broker_ability_punk_rage_sub_1.md) / `broker_ability_punk_rage_sub_1` | Ability |
+| [Forge's Bellow](broker_ability_punk_rage_sub_3.md) / `broker_ability_punk_rage_sub_3` | Ability |
