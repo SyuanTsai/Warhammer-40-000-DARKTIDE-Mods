@@ -87,3 +87,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Electro-Strike Conduit](cryptic_melee_crits_electrocute_first.md) / `cryptic_melee_crits_electrocute_first` | Talent |
 | [Gunsmith](cryptic_auto_reload.md) / `cryptic_auto_reload` | Talent |
 | [Assassination Protocols](cryptic_ranged_vs_bfg.md) / `cryptic_ranged_vs_bfg` | Talent |
+| [System Shock](cryptic_electrocution_applies_brittleness.md) / `cryptic_electrocution_applies_brittleness` | Talent |

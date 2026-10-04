@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="Electro-Strike Conduit talent icon"> [Electro-Strike Conduit](#cryptic_melee_crits_electrocute_first) | <ul><li>Melee Critical Hits Electrocute the first target of the swing, provided it survives the hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="Gunsmith talent icon"> [Gunsmith](#cryptic_auto_reload) | <ul><li>Always grants 15% Reload Speed. After 5 seconds without shooting, transfers 7.5% of clip capacity from reserves each subsequent second, rounded up; the first batch is around 6 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="Assassination Protocols talent icon"> [Assassination Protocols](#cryptic_ranged_vs_bfg) | <ul><li>Grants 25% Ranged Damage against Ogryns, Monstrosities and Captains; melee attacks do not benefit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="System Shock talent icon"> [System Shock](#cryptic_electrocution_applies_brittleness) | <ul><li>Applying, stacking or refreshing Electrocution adds 3 Brittleness stacks at 2.5% each. Brittleness lasts 5 seconds and shares a 16-stack / 40% cap.</li></ul> | Talent |
 
 ---
 
@@ -1192,3 +1193,18 @@
 - **Damage example**: Against a target matching one of those categories, base ranged damage 100 becomes `100 × 1.25 = 125`. With an existing 20% bonus in the same stage, it becomes `100 × (1 + 20% + 25%) = 145`.
 
 [Details](cryptic_ranged_vs_bfg.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_electrocution_applies_brittleness"></a>
+
+### System Shock
+
+<img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="72" height="72" alt="System Shock talent icon">
+
+- **Trigger**: Applying Electrocution to an enemy, adding a stack or refreshing its duration adds 3 Brittleness stacks. Each gives 2.5%, for 7.5% added by that trigger.
+- **Stacks and duration**: Brittleness lasts 5 seconds; applying it again refreshes the duration. The same Brittleness effect has a combined cap of 16 stacks, or 40%. For example, 6 consecutive triggers raise the count through 3, 6, 9, 12 and 15 to the cap of 16.
+- **Damage example**: Brittleness improves the attack's effectiveness against armour; it cannot be treated as 7.5% more total damage. With an unarmoured damage baseline of 100 and an original armour modifier of 0.5, adding 7.5% Brittleness makes this stage `100 × (0.5 + 0.075) = 57.5`, compared with 50 before.
+- **Team effect**: Brittleness is applied to the enemy, so teammates' attacks can also benefit. The actual increase varies with the weapon and armour.
+
+[Details](cryptic_electrocution_applies_brittleness.md) · [Back to index](#talent-index)

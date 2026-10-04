@@ -926,6 +926,18 @@ Full raw template and formatting: [source evidence](cryptic_ranged_vs_bfg.md#ori
 | Attack type, targets and value | Increase Ranged Damage vs Ogryns, Monstrosities and Captains by +25%; `ui / loc_talent_cryptic_ranged_vs_bfg_desc / 01397401` | Each corresponding ranged-damage stat is 0.25; melee attacks do not receive it. [Fixed source and line references](cryptic_ranged_vs_bfg.md#fixed-source-evidence) | Consistent | The attack type, named categories and numerical bonus match. |
 | Tag eligibility and addition | Does not specify breed tags or how damage bonuses combine; `ui / loc_talent_cryptic_ranged_vs_bfg_desc / 01397401` | `breed.tags` selects applicable bonuses, which add in the shared calculation. Against one category, 100→125, or 145 with existing same-stage 20%. [Fixed source and line references](cryptic_ranged_vs_bfg.md#fixed-source-evidence) | Not covered by the description | These original examples and eligibility details explain the stat without using body size as a substitute for tags. |
 
+
+<a id="cryptic_electrocution_applies_brittleness"></a>
+
+## System Shock
+
+Full raw template and formatting: [source evidence](cryptic_electrocution_applies_brittleness.md#original-english-template-and-reconstruction). Name hash `78199f16`. Every row uses `ui / loc_talent_cryptic_electrocution_applies_brittleness_desc / 47a5f3d9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Target and stacks | Electrocuting an enemy applies 3 Stacks of 2.5% Brittleness to them; `ui / loc_talent_cryptic_electrocution_applies_brittleness_desc / 47a5f3d9` | Electrocution Buff events apply 3 `rending_debuff` stacks to that enemy, at 2.5% each. [Fixed source and line references](cryptic_electrocution_applies_brittleness.md#fixed-source-evidence) | Consistent | The target, number of stacks and per-stack value match. |
+| Events, cap, duration and armour calculation | Does not specify refresh events, cap, duration or damage calculation; `ui / loc_talent_cryptic_electrocution_applies_brittleness_desc / 47a5f3d9` | Added/stack/refresh events qualify; Brittleness refreshes 5 seconds and caps at 16 stacks / 40%. Rending and Brittleness combine in armour penetration; teammates can benefit. [Fixed source and line references](cryptic_electrocution_applies_brittleness.md#fixed-source-evidence) | Not covered by the description | The original 3→6→9→12→15→16 sequence and 50→57.5 armour example, with all stated assumptions, explain omitted details rather than a flat total-damage increase. |
+
 ## Comparison totals
 
 157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
