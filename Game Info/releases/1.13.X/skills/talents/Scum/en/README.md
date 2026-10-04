@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="Maxed Out Chems talent icon"> [Maxed Out Chems](#broker_keystone_chemical_dependency_sub_3) | <ul><li>Dependency's shared stack timer becomes 60 seconds and its cap becomes 4, one more stack with a timer 30 seconds shorter than the core.</li><li>The unchanged +10% recovery per stack gives a 1.40 rate at 4 stacks; uninterrupted isolated 60-second recovery takes approximately 42.86 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="Vulture's Push talent icon"> [Vulture's Push](#broker_keystone_vultures_mark_aoe_stagger) | <ul><li>Ranged Elite or Specialist kills trigger a Stagger explosion around the player, without requiring existing Mark stacks.</li><li>Its radius is 3 metres and it deals no direct Damage; actual displacement depends on each target's Stagger resistance, armour and current state.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="Patient Hunter talent icon"> [Patient Hunter](#broker_keystone_vultures_mark_increased_duration) | <ul><li>Vulture's Mark's shared duration increases from 8 to 12 seconds.</li><li>New qualifying gains refresh 12 seconds even at 3 stacks; without another gain, all remaining stacks expire together. Vulture's Dodge stays at 1 second.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="Vulture's Dodge talent icon"> [Vulture's Dodge](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | <ul><li>Ranged Critical hits make you count as Dodging in the Melee, grab and Ranged checking branches for 1 second, without requiring a Dodge movement.</li><li>Retriggering refreshes 1 second without stacking; attacks still follow their own Dodge logic, and the effect does not make all Damage ineffective.</li></ul> | Keystone |
 
 ---
 
@@ -505,3 +506,23 @@
 - **Timing example:** gain the first stack at 0 seconds and a second at 6 seconds. The second gain restarts 12 seconds; without further gains, the current stacks expire at 18 seconds.
 
 [Details](broker_keystone_vultures_mark_increased_duration.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_dodge_on_ranged_crit"></a>
+
+### Vulture's Dodge
+
+<img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="72" height="72" alt="Vulture's Dodge talent icon">
+
+- **Trigger:** a Ranged Critical hit triggers the effect. An ordinary Ranged hit or a Critical Melee hit does not.
+
+- **Effect:** for 1 second, you count as Dodging against Melee and Ranged attacks even without pressing Dodge. The result still follows each attack's Dodge rules; this does not make all Damage ineffective.
+
+- **Refresh:** another Ranged Critical hit within that second restarts the 1-second timer, without accumulating multiple stacks.
+
+- **Scope:** this directly changes Dodging checks. It does not increase actual Dodge distance or movement speed and does not require a Dodge action.
+
+- **Timing example:** trigger at 0 seconds, then land another Ranged Critical hit at 0.6 seconds; the effect continues until 1.6 seconds.
+
+[Details](broker_keystone_vultures_mark_dodge_on_ranged_crit.md) · [Back to index](#talent-index)

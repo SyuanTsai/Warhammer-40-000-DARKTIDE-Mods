@@ -337,6 +337,19 @@ Full raw template and formatting: [source evidence](broker_keystone_vultures_mar
 | Final Mark duration | Duration of Vulture's Mark extended to 12s; `ui / loc_talent_broker_keystone_vultures_mark_increased_duration_desc / 2a61076a` | The core 8 s gains the 12 − 8 = 4 s difference, for 12 s total. [Fixed source and line references](broker_keystone_vultures_mark_increased_duration.md#fixed-source-evidence) | Consistent | The stated final duration matches the accepted setting. |
 | Shared refresh, expiry and separate effects | No capped-use refresh, shared expiry or separate Dodge duration details; `ui / loc_talent_broker_keystone_vultures_mark_increased_duration_desc / 2a61076a` | Gain or capped qualifying kill refreshes one 12 s timer; all remaining Marks expire together. The cap stays at 3, other bonuses/restoration checks remain unchanged, and Vulture's Dodge stays at 1 s. [Fixed source and line references](broker_keystone_vultures_mark_increased_duration.md#fixed-source-evidence) | Not covered by the description | These preserve the original 0/6/18-second timing and fourth-kill cap examples. |
 
+
+<a id="broker_keystone_vultures_mark_dodge_on_ranged_crit"></a>
+
+## Vulture's Dodge
+
+Full raw template and formatting: [source evidence](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#original-english-template-and-reconstruction). Name hash `18262d3b`. Every row uses `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and duration | Ranged Critical Hits; for 1s; `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b` | on_crit_ranged requires a Critical hit and Ranged classification; the triggered buff has duration 1. [Fixed source and line references](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#fixed-source-evidence) | Consistent | The listed trigger and duration match. |
+| Universal attack coverage | Count as Dodging against all Attacks; `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b` | The buff only sets count_as_dodge_vs_melee and count_as_dodge_vs_ranged; Dodge.is_dodging uses them for melee/incapacitating_grab and ranged. It has no count_as_dodge_vs_all and does not cover types outside those branches. [Fixed source and line references](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#fixed-source-evidence) | Explicit contradiction | All Attacks is explicitly broader than the accepted attack-branch coverage. |
+| Refresh and avoidance limits | No repeated-trigger timing, motion or attack-logic details; `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b` | One stack refreshes for 1 s; a trigger at 0.6 s extends an initial 0 s trigger to 1.6 s. No movement state, speed, distance or Damage change is applied; avoidance depends on each attack using its Dodge rules. [Fixed source and line references](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#fixed-source-evidence) | Not covered by the description | These preserve the original timing and functional limits rather than adding further contradiction rows. |
+
 ## Comparison totals
 
 The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.
