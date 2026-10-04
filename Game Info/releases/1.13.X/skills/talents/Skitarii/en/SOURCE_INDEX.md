@@ -111,3 +111,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Voltaic Expander](cryptic_discharge_base.md) / `cryptic_discharge_base` | Base Combat Ability |
 | [Motive Engine](cryptic_passive_cooldown_regen.md) / `cryptic_passive_cooldown_regen` | Base passive |
 | [Servo-Skull](cryptic_servo_skull_order.md) / `cryptic_servo_skull_order` | Base Blitz |
+| [Resurgence](cryptic_coherency_regen_aura.md) / `cryptic_coherency_regen_aura` | Base Aura |

@@ -1214,6 +1214,18 @@ Full raw template and formatting: [source evidence](cryptic_servo_skull_order.md
 | Commands and empowerment | Double-tap Tag to order shooting/data interrogation; Blitz empowerment 8s; +100% Fire Rate, +25% Damage, 1 Burn stack (max 8), +15% target damage taken for 5s; 16s Cooldown.; `ui / loc_talent_cryptic_servo_skull_base_burn_desc / a5b8ce99` | Base Blitz grants temporary 8-second companion empowerment with 0.5 firing interval and 0.25 damage modifier. Living-target companion hits add the 0.15/5-second debuff and one Burn stack, capped at 8; base cooldown resource is 16 seconds. [Fixed source and line references](cryptic_servo_skull_order.md#fixed-source-evidence) | Consistent | The commands, recipient and reconstructed effect values match. |
 | Cooldown pause, commands and improved node | Cooldown recovery during empowerment, command threshold and replacement behavior are not specified.; `ui / loc_talent_cryptic_servo_skull_base_burn_desc / a5b8ce99` | Cooldown pauses for 8 seconds, then recovers 16 without other modifiers. Shooting commands require 0.3 Combat Ability charge except in training; hacking costs zero uses. Burn refreshes at cap; the improved node makes empowerment/on-hit effects permanent. [Fixed source and line references](cryptic_servo_skull_order.md#fixed-source-evidence) | Not covered by the description | The stated 16-second cooldown does not explicitly promise recovery during empowerment. These details explain the separate command resource and replacement. |
 
+
+<a id="cryptic_coherency_regen_aura"></a>
+
+## Resurgence
+
+Full raw template and formatting: [source evidence](cryptic_coherency_regen_aura.md#original-english-template-and-reconstruction). Name hash `82e9b3ce`. Every row uses `ui / loc_talent_cryptic_coherency_regen_aura_desc / f34842d1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients and enemy proximity | You and Allies in Coherency regenerate 25% Coherency Toughness regardless of enemy proximity.; `ui / loc_talent_cryptic_coherency_regen_aura_desc / f34842d1` | The chain includes self and valid allied players. The base Aura supplies a minimum normal Coherency regeneration-rate multiplier of 0.25 during combat. [Fixed source and line references](cryptic_coherency_regen_aura.md#fixed-source-evidence) | Consistent | The recipients, displayed value and enemy-proximity behavior match. |
+| Rate basis, recovery conditions and replacement | The percentage basis, recovery delay, cap and improved-Aura interaction are not specified.; `ui / loc_talent_cryptic_coherency_regen_aura_desc / f34842d1` | The rate is normal Coherency recovery × 0.25 before other modifiers, requiring missing Toughness and available regeneration after the normal delay. The improved Aura replaces the base for a shared recipient. [Fixed source and line references](cryptic_coherency_regen_aura.md#fixed-source-evidence) | Not covered by the description | The English does not explicitly describe a maximum-Toughness percentage per second or cancellation of normal recovery conditions. |
+
 ## Comparison totals
 
 207 rules: 100 Consistent / 4 Explicit contradiction / 100 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 563.

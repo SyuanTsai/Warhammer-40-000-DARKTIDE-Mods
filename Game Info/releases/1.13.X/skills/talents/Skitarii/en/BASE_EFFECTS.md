@@ -43,3 +43,15 @@ These effects are supplied by the base character configuration. Combat Ability, 
 - **Damage and firing-rate example**: With no other effects, damage **100** becomes `100 × 1.25 = 125`; a **3-second** firing interval becomes `3 × 0.5 = 1.5` seconds.
 
 [Source evidence and example conditions](cryptic_servo_skull_order.md)
+
+---
+
+<a id="cryptic_coherency_regen_aura"></a>
+
+## Resurgence
+
+- **Operation**: You and allies within Coherency can regenerate Toughness even with enemies nearby. The Coherency recovery rate is at least **25% of its normal rate**.
+- **Example**: If normal Coherency regeneration is **10 points/second**, the minimum rate in combat is `10 × 25% = 2.5` points/second, recovering **10 points over 4 seconds**. Actual recovery still depends on weapon, movement, other recovery modifiers, recovery delay and missing Toughness.
+- **Recovery conditions**: The normal post-damage recovery delay must finish and normal Coherency regeneration must be available. This effect does not remove the delay or raise Toughness above its maximum.
+
+[Source evidence and example conditions](cryptic_coherency_regen_aura.md)
