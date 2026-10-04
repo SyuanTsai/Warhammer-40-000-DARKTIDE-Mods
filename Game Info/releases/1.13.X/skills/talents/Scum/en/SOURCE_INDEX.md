@@ -16,3 +16,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Boom Bringer](broker_blitz_missile_launcher.md) / `broker_blitz_missile_launcher` | Blitz |
 | [Chem Grenade](broker_blitz_tox_grenade.md) / `broker_blitz_tox_grenade` | Blitz |
 | [Gunslinger Improved](broker_aura_gunslinger_improved.md) / `broker_aura_gunslinger_improved` | Aura |
+| [Ruffian](broker_coherency_melee_damage.md) / `broker_coherency_melee_damage` | Aura |

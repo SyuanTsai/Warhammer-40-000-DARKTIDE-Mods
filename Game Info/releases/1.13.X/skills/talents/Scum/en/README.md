@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="32" height="32" alt="Boom Bringer talent icon"> [Boom Bringer](#broker_blitz_missile_launcher) | <ul><li>High-powered missile launcher, up to 2 missiles; base explosion radius 7 metres.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="32" height="32" alt="Chem Grenade talent icon"> [Chem Grenade](#broker_blitz_tox_grenade) | <ul><li>Thrown Chem Grenade leaves toxic matter for 15 seconds; carry up to 2.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="Gunslinger Improved talent icon"> [Gunslinger Improved](#broker_aura_gunslinger_improved) | <ul><li>An Ammo pickup collected in Coherency additionally replenishes each member with 10% of that pickup's amount, calculated for their own capacity.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="Ruffian talent icon"> [Ruffian](#broker_coherency_melee_damage) | <ul><li>You and allies in Coherency gain 10% Melee Damage.</li></ul> | Aura |
 
 ---
 
@@ -86,3 +87,17 @@
 - **Duplicate limits:** multiple players with the same Aura do not provide multiple copies. This improved version's 10% replaces the base version's 5%. Shared Ammo cannot trigger another chain of sharing.
 
 [Details](broker_aura_gunslinger_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_coherency_melee_damage"></a>
+
+### Ruffian
+
+<img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="72" height="72" alt="Ruffian talent icon">
+
+- **Recipients:** you and allies in Coherency gain 10% Melee Damage. Only one copy of the same Aura applies.
+
+- **Damage example:** base Melee Damage of 100 becomes 110. With another 25% bonus in the same stage, 100 × (1 + 25% + 10%) = 135.
+
+[Details](broker_coherency_melee_damage.md) · [Back to index](#talent-index)

@@ -56,6 +56,18 @@ Full raw template and formatting: [source evidence](broker_aura_gunslinger_impro
 | Calculation and duplicate limits | No individual-capacity, rounding, priority or recursion detail; `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c` | Each ammo_amount_func recalculates the member's capacity; small and large pickups round up; priority 1 replaces base priority 2; final true prevents recursive sharing. [Fixed source and line references](broker_aura_gunslinger_improved.md#fixed-source-evidence) | Not covered by the description | The existing small/large/deployed-crate examples and limits explain how sharing is calculated. |
 | Special mission large Ammo Crate | The description does not qualify the 10% rule by pickup type; `ui / loc_talent_broker_aura_gunslinger_improved_desc / 03a59c5c` | large_ammunition_crate_pickup ignores modifier and would use full capacity if it emitted the same event; that event route and actual scene behavior are unresolved. [Fixed source and line references](broker_aura_gunslinger_improved.md#fixed-source-evidence) | Cannot confirm | The conditional exception is retained without promoting an unverified event route into an explicit English contradiction. |
 
+
+<a id="broker_coherency_melee_damage"></a>
+
+## Ruffian
+
+Full raw template and formatting: [source evidence](broker_coherency_melee_damage.md#original-english-template-and-reconstruction). Name hash `3b445793`. Every row uses `ui / loc_talent_broker_aura_ruffian_desc / a241f5b9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Damage and recipients | +10% Melee Damage for you and Allies in Coherency; `ui / loc_talent_broker_aura_ruffian_desc / a241f5b9` | melee_damage 0.1 applies to self and Coherency allies. [Fixed source and line references](broker_coherency_melee_damage.md#fixed-source-evidence) | Consistent | The amount, Damage type and recipients match the accepted evidence. |
+| Duplicate and calculation limits | No stacking-stage or duplicate rule; `ui / loc_talent_broker_aura_ruffian_desc / a241f5b9` | max_stacks 1 and coherency_id prevent duplicate copies; general damage_stat_buffs add within the same stage. [Fixed source and line references](broker_coherency_melee_damage.md#fixed-source-evidence) | Not covered by the description | The existing 100→110 and 100×(1+25%+10%)=135 examples explain omitted calculation details. |
+
 ## Comparison totals
 
 Totals are updated at each batch checkpoint.
