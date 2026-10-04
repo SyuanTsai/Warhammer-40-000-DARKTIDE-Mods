@@ -661,6 +661,19 @@ Full raw template and formatting: [source evidence](zealot_reduced_damage_after_
 | Duration formatting | Raw {duration:%s}s; fixed mapping reconstructs −150s.; `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7` | Accepted active_duration is 2.5; duration manipulation round((1−value)×100) gives −150. [Fixed source and line references](zealot_reduced_damage_after_dodge.md#fixed-source-evidence) | Cannot confirm | The static mapping discrepancy is established; actual English game display has not been observed. |
 | Refresh and independent reduction | No refresh or independent-multiplier formula.; `ui / loc_talent_reduced_damage_after_dodge_description / d65317f7` | Another successful Dodge restarts the timer. Original damage 100→75, or 100×0.75×0.6=45 with independent 40% reduction. [Fixed source and line references](zealot_reduced_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | These timing and calculation details supplement the effect. |
 
+
+<a id="zealot_toughness_in_melee"></a>
+
+## Enemies Within, Enemies Without
+
+Full raw template and formatting: [source evidence](zealot_toughness_in_melee.md#original-english-template-and-reconstruction). Name hash `3991c347`. Every row uses `ui / loc_talent_zealot_toughness_near_enemies_desc / fc8eff61`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Enemy range and restoration rate | “+2.5% Toughness per Second … 5m … increased by +1% per Enemy … Max +7.5%.”; `ui / loc_talent_zealot_toughness_near_enemies_desc / fc8eff61` | Initial 2.5% plus 1 percentage point per additional enemy, capped at 7.5% within radius 5. [Fixed source and line references](zealot_toughness_in_melee.md#fixed-source-evidence) | Consistent | Condition, rate progression and cap agree. |
+| Monstrosity count | “Monstrosities count as 5.”; `ui / loc_talent_zealot_toughness_near_enemies_desc / fc8eff61` | Each enemy first adds 1, then monster/captain/cultist_captain adds monster_count 5, total weight 6. [Fixed source and line references](zealot_toughness_in_melee.md#fixed-source-evidence) | Explicit contradiction | English gives a total of 5, while the accepted update gives 6; actual game behavior unobserved. |
+| Integration, disabled state and cap | No update ordering, disabled-state pause, maximum basis or missing cap.; `ui / loc_talent_zealot_toughness_near_enemies_desc / fc8eff61` | Previous rate×dt precedes 0.1-second queries; is_disabled returns. Original maximum-100 example gives 4.5/s with 3 ordinary enemies and 7.5/s with 6; restoration modifiers and missing cap apply. [Fixed source and line references](zealot_toughness_in_melee.md#fixed-source-evidence) | Not covered by the description | These execution and calculation details supplement the stated restoration. |
+
 ## Comparison totals
 
 105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

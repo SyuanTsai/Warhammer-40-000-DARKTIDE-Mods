@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/52db08a6-3729-466e-ac16-d02a1a7ebecb" width="32" height="32" alt="Thy Wrath be Swift talent icon"> [Thy Wrath be Swift](#zealot_damage_boosts_movement) | <ul><li>Taking damage grants +15% Movement Speed for 2 seconds; ordinary hit slowdown and stun immunity are always active.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/607612bf-67ee-475e-9a16-0b5541c7b4ea" width="32" height="32" alt="Retaliatory Defence talent icon"> [Retaliatory Defence](#zealot_stamina_on_block_break) | <ul><li>When available, a Block Break restores 50% of maximum Stamina and prevents that Block Break's stun; 12-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/41e85f89-6787-4fe4-9fd7-a2382f2aa025" width="32" height="32" alt="Good Balance talent icon"> [Good Balance](#zealot_reduced_damage_after_dodge) | <ul><li>A successful Dodge reduces damage taken by 25% for 2.5 seconds; another successful Dodge restarts the timer.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="Enemies Within, Enemies Without talent icon"> [Enemies Within, Enemies Without](#zealot_toughness_in_melee) | <ul><li>Enemies within 5 metres grant ongoing Toughness restoration, from 2.5% up to 7.5% of maximum Toughness per second.</li></ul> | Skill |
 
 ---
 
@@ -833,3 +834,17 @@
 - **Damage example**: Damage of 100 becomes 100 × 0.75 = 75. With another independent 40% reduction, it becomes 100 × 0.75 × 0.6 = 45.
 
 [Details](zealot_reduced_damage_after_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_toughness_in_melee"></a>
+
+### Enemies Within, Enemies Without
+
+<img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="72" height="72" alt="Enemies Within, Enemies Without talent icon">
+
+- **Operation**: With an enemy within 5 metres, restore 2.5% of maximum Toughness per second. Each additional enemy adds 1 percentage point per second, up to 7.5%. Restoration pauses while disabled and unable to act.
+- **Restoration example**: With maximum Toughness 100 and 3 ordinary enemies nearby, restore 100 × [2.5% + (3 − 1) × 1%] = 4.5 per second. Six enemies reach the 7.5-per-second cap.
+- **Large enemies**: The fixed source counts a Monstrosity or specified boss as 6 enemies, so one alone reaches the restoration cap.
+
+[Details](zealot_toughness_in_melee.md) · [Back to index](#talent-index)
