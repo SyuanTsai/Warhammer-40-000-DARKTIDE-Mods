@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="Time to Kill talent icon"> [Time to Kill](#zealot_backstab_periodic_damage) | <ul><li>The next valid Melee Backstab deals +50% damage, then starts an 8-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="Against the Odds talent icon"> [Against the Odds](#zealot_offensive_vs_many) | <ul><li>Every 2 enemies within 5 metres grant +2% damage and +10% Cleave, up to 5 stacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="Out of Pocket talent icon"> [Out of Pocket](#zealot_reload_from_melee) | <ul><li>Melee Kills transfer 10% of the magazine's missing ammunition from reserves.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="Wait in Line talent icon"> [Wait in Line](#zealot_reduced_damage_from_ranged) | <ul><li>Take 20% less damage from Ranged attacks.</li></ul> | Skill |
 
 ---
 
@@ -1127,3 +1128,16 @@
 - The original Chinese says it restores missing ammunition reserves. The effect instead consumes reserves to refill the magazine, without increasing reserves or total ammunition.
 
 [Details](zealot_reload_from_melee.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_reduced_damage_from_ranged"></a>
+
+### Wait in Line
+
+<img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="72" height="72" alt="Wait in Line talent icon">
+
+- **How it works:** damage from Ranged attacks is reduced by 20%. Eligibility follows the attack type, not simply whether the enemy carries a gun. If the same gunner switches to Melee, this talent does not reduce that damage.
+- **Reduction example:** this talent alone changes incoming Ranged damage 100 to 100 × 0.8 = 80. With a separate 25% general reduction, the result is 100 × 0.8 × 0.75 = 60.
+
+[Details](zealot_reduced_damage_from_ranged.md) · [Back to index](#talent-index)

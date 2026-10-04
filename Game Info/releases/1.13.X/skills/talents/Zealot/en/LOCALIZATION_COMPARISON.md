@@ -902,6 +902,19 @@ Full raw template and formatting: [source evidence](zealot_reload_from_melee.md#
 | Trigger and transfer direction | Melee Kills replenish 10% of Missing Ammo from your Reserve; `ui / loc_talent_zealot_reload_from_melee_desc / 730a8c75` | `on_melee_kill`; missing magazine ammunition × 0.1; transfer_from_reserve_to_clip [Fixed source and line references](zealot_reload_from_melee.md#fixed-source-evidence) | Consistent | The trigger, proportion and reserves as source agree. The existing Chinese direction error is not an English error. |
 | Pool and reserve limits | No fractional, rounding or special-mode details; `ui / loc_talent_zealot_reload_from_melee_desc / 730a8c75` | Add to ammo_pool; floor transfer request and deduct requested whole credit even with insufficient reserves. Full magazine adds no credit; normal finite reserves limit transfer; free_ammunition_transfer/infinite_ammo are exceptions [Fixed source and line references](zealot_reload_from_melee.md#fixed-source-evidence) | Not covered by the description | These accounting and limit details supplement the wording. |
 
+
+<a id="zealot_reduced_damage_from_ranged"></a>
+
+## Wait in Line
+
+Full raw template and formatting: [source evidence](zealot_reduced_damage_from_ranged.md#original-english-template-and-reconstruction). Name hash `f8ea87eb`. Every row uses `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Resistance value | Damage Resistance +20%; `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42` | Permanent ranged_damage_taken_multiplier 0.8 [Fixed source and line references](zealot_reduced_damage_from_ranged.md#fixed-source-evidence) | Consistent | The reduction value agrees. |
+| Enemy category versus attack type | vs Ranged Enemies; `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42` | Eligibility is `is_ranged_attack`, not `breed.ranged`; the same gunner's Melee attack is not reduced [Fixed source and line references](zealot_reduced_damage_from_ranged.md#fixed-source-evidence) | Explicit contradiction | The stated enemy-category condition differs from the accepted attack-type condition. Both languages sharing the wording does not resolve the English source discrepancy. |
+| Combination | No formula for other reductions; `ui / loc_talent_zealot_reduced_damage_from_ranged_desc / 5dbe3a42` | Original Ranged damage 100→80; with independent general 25% reduction, 100 × 0.8 × 0.75 = 60 [Fixed source and line references](zealot_reduced_damage_from_ranged.md#fixed-source-evidence) | Not covered by the description | The combination formula supplements the wording. |
+
 ## Comparison totals
 
 147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.
