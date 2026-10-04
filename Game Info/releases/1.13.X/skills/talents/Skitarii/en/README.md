@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="Voltaic Arcs talent icon"> [Voltaic Arcs](#cryptic_discharge_generates_arcs) | <ul><li>Voltaic Emitter releases one additional forward arc per charge consumed. A use consumes at most 3 charges, so normal use releases at most 3 arcs.</li><li>Each arc starts from a valid enemy within 12m in front of you and can then link to nearby enemies.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="Voltaic Motivator talent icon"> [Voltaic Motivator](#cryptic_discharge_attack_speed_increase) | <ul><li>Each use of Voltaic Emitter gives a base +5% Attack Speed, plus another +5% per charge consumed.</li><li>The bonus lasts 15s; consuming 1, 2 or 3 charges gives a total of +10%, +15% or +20%, respectively.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="Voltaic Overcharge talent icon"> [Voltaic Overcharge](#cryptic_discharge_toughness) | <ul><li>Voltaic Emitter immediately restores 25% of maximum Toughness per full charge consumed; each Electric Discharge explosion hit on a living enemy restores another 1% of maximum Toughness.</li><li>Recovery receives Toughness Replenishment modifiers and cannot exceed the current Toughness deficit.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="32" height="32" alt="Axial Slash talent icon"> [Axial Slash](#cryptic_chordclaw_horizontal_swipe) | <ul><li>Quickly activating the Chordclaw replaces its default Heavy stab with a horizontal sweep, which remains a guaranteed Critical Strike. Holding to charge still uses the original Heavy stab.</li><li>A sweep can hit multiple targets; damage to later targets decreases according to the damage profile.</li></ul> | Ability |
 
 ---
 
@@ -327,3 +328,18 @@
 - **Recovery example**: With 100 maximum Toughness, consuming 2 charges and hitting 5 qualifying enemies restores 100 × (2 × 25% + 5 × 1%) = 55 points. If only 40 points are missing, it restores only 40.
 
 [Details](cryptic_discharge_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_chordclaw_horizontal_swipe"></a>
+
+### Axial Slash
+
+<img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="72" height="72" alt="Axial Slash talent icon">
+
+- **How it works**: Selecting Axial Slash replaces the Chordclaw ability's default Heavy stab with a horizontal sweep. It remains a guaranteed Critical Strike.
+- **How it works**: The sweep can hit multiple targets according to the weapon's Cleave settings. Actual target count and Health damage depend on the targets and hit results.
+- **Target-order example**: Comparing only the damage distribution with the same hit location, armour and modifiers, the second target relative to the first is 480 ÷ 500 = 96%. If the first takes 100 damage, the second takes 96. The fifth takes 100 × 360 ÷ 500 = 72. Actual results still depend on each target's conditions.
+- **Holding the input**: Quick activation uses the sweep. Holding to charge and then releasing still uses the original Heavy stab.
+
+[Details](cryptic_chordclaw_horizontal_swipe.md) · [Back to index](#talent-index)
