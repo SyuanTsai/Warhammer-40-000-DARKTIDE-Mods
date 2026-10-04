@@ -132,4 +132,4 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub
 
 ## Comparison totals
 
-The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
+The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.

@@ -1,0 +1,74 @@
+{
+  "id": "scum_skills_354_358",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum missing display mappings only: broker_talents.lua L826–832, L109–139, L500–517, L266–326 and L376–415.",
+    "Missing fractional display basis: shared talent_layout_parser.lua L354–428; 2.5 selects one decimal. No mechanism/Buff/event-chain retracing."
+  ],
+  "questions": [
+    "Rampage!: the English Suppression immunity promise has no corresponding implementation evidence in the accepted Chinese record, which lacks the required state flag. Retained as an unresolved implementation/text gap; no asserted explicit English erratum."
+  ],
+  "skills": [
+    {
+      "id": "broker_coherency_anarchist",
+      "name": "Anarchist",
+      "name_hash": "9337fdef",
+      "description_hash": "d1ab227e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_coherency_anarchist.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_coherency_anarchist.md",
+      "commit": "ae20f1725"
+    },
+    {
+      "id": "broker_ability_focus_improved",
+      "name": "Enhanced Desperado",
+      "name_hash": "df173866",
+      "description_hash": "a1148a57",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_focus_improved.md",
+      "commit": "a308faf88"
+    },
+    {
+      "id": "broker_ability_stimm_field",
+      "name": "Stimm Supply",
+      "name_hash": "56107528",
+      "description_hash": "81b45839",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_stimm_field.md",
+      "commit": "2ebead1c0"
+    },
+    {
+      "id": "broker_ability_punk_rage",
+      "name": "Rampage!",
+      "name_hash": "b37505a2",
+      "description_hash": "be0f1026",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_punk_rage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_punk_rage.md",
+      "commit": "638db7bbc"
+    },
+    {
+      "id": "broker_ability_punk_rage_sub_2",
+      "name": "Pulverising Strikes",
+      "name_hash": "fb15cb7e",
+      "description_hash": "fb3a2cef",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_punk_rage_sub_2.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_punk_rage_sub_2.md",
+      "commit": "ee202416d"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 455,
+    "from_commit": "74ea174a8",
+    "to_commit": "ee202416d",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

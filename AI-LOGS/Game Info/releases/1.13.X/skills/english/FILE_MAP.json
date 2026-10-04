@@ -6201,7 +6201,12 @@
         "broker_blitz_missile_launcher",
         "broker_blitz_tox_grenade",
         "broker_aura_gunslinger_improved",
-        "broker_coherency_melee_damage"
+        "broker_coherency_melee_damage",
+        "broker_coherency_anarchist",
+        "broker_ability_focus_improved",
+        "broker_ability_stimm_field",
+        "broker_ability_punk_rage",
+        "broker_ability_punk_rage_sub_2"
       ],
       "checks": []
     },
@@ -6218,7 +6223,12 @@
         "broker_blitz_missile_launcher",
         "broker_blitz_tox_grenade",
         "broker_aura_gunslinger_improved",
-        "broker_coherency_melee_damage"
+        "broker_coherency_melee_damage",
+        "broker_coherency_anarchist",
+        "broker_ability_focus_improved",
+        "broker_ability_stimm_field",
+        "broker_ability_punk_rage",
+        "broker_ability_punk_rage_sub_2"
       ],
       "checks": []
     },
@@ -6235,7 +6245,12 @@
         "broker_blitz_missile_launcher",
         "broker_blitz_tox_grenade",
         "broker_aura_gunslinger_improved",
-        "broker_coherency_melee_damage"
+        "broker_coherency_melee_damage",
+        "broker_coherency_anarchist",
+        "broker_ability_focus_improved",
+        "broker_ability_stimm_field",
+        "broker_ability_punk_rage",
+        "broker_ability_punk_rage_sub_2"
       ],
       "checks": []
     },
@@ -6252,7 +6267,12 @@
         "broker_blitz_missile_launcher",
         "broker_blitz_tox_grenade",
         "broker_aura_gunslinger_improved",
-        "broker_coherency_melee_damage"
+        "broker_coherency_melee_damage",
+        "broker_coherency_anarchist",
+        "broker_ability_focus_improved",
+        "broker_ability_stimm_field",
+        "broker_ability_punk_rage",
+        "broker_ability_punk_rage_sub_2"
       ],
       "checks": []
     },
@@ -6329,9 +6349,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d21ca0747a8916e98322d07e5a3bb50c69940f5b",
       "chinese_sha256": "b67074f56a4bfd2fb70d147d78379e887802e6fac3e878db70b4ce9c9bb6d61c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_focus_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus_sub_2.md",
@@ -6362,9 +6389,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9137d13938131eaf22a663bc495c3af682e61555",
       "chinese_sha256": "01e2d6886f0314b5875302f8cb3dd7e28b414714ef88a1991f16bcf170af8974",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_punk_rage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_punk_rage_sub_1.md",
@@ -6384,9 +6418,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2a58b4882d2caf277842aaa7d4d04042ff08551e",
       "chinese_sha256": "35a360379f29d205b24f64e9d683189873611c7eb5a637f3ddf7119f59e16cc4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_punk_rage_sub_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_punk_rage_sub_3.md",
@@ -6417,9 +6458,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "821bc7426828b369d428b85429b2fe48cebdd39c",
       "chinese_sha256": "2e4dde2d2d35f91ff2d17e3827e3d28681853915fa0d80adc2e5ac21386f24cc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_ability_stimm_field"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_stimm_field_sub_1.md",
@@ -6555,9 +6603,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2f2eba4a7864f324745f9cb2b7f35b7d545cbb4d",
       "chinese_sha256": "a5432ea9c96e66d83c6141d5de7a1b88d3b8b2ec73ce73a5a38a5a60cf138b69",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_coherency_anarchist"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_coherency_melee_damage.md",
@@ -15085,6 +15140,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_coherency_melee_damage.md"
+    },
+    {
+      "id": "broker_coherency_anarchist",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_coherency_anarchist.md"
+    },
+    {
+      "id": "broker_ability_focus_improved",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_focus_improved.md"
+    },
+    {
+      "id": "broker_ability_stimm_field",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_stimm_field.md"
+    },
+    {
+      "id": "broker_ability_punk_rage",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_punk_rage.md"
+    },
+    {
+      "id": "broker_ability_punk_rage_sub_2",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_punk_rage_sub_2.md"
     }
   ],
   "pending_chinese_corrections": [
