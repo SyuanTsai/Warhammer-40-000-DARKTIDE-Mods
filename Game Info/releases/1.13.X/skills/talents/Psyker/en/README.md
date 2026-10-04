@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="Empathic Evasion talent icon"> [Empathic Evasion](#psyker_dodge_after_crits) | <ul><li>Critical Hit: count as Dodging against Ranged Attacks for 1s; triggering it again resets the timer.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="Solidity talent icon"> [Solidity](#psyker_increased_vent_speed) | <ul><li>Active Quelling time and interval ×0.7: 30% shorter time, equivalent to approximately 42.9% higher processing rate.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="Warp Rider talent icon"> [Warp Rider](#psyker_damage_based_on_warp_charge) | <ul><li>Damage bonus scales linearly with current Peril: +0% / +10% / +20% at 0% / 50% / 100% Peril.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="True Aim talent icon"> [True Aim](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | <ul><li>After 5 valid damaging Weakspot Hits, the next Ranged Attack is guaranteed Critical; repeat hits and cleaved later targets are restricted.</li></ul> | Talent |
 
 ---
 
@@ -962,3 +963,19 @@
 - **Damage example**: at 50% Peril, with a baseline Damage of 100 at this stage and all other multipliers fixed at 1, 100 × (1 + 20% × 50%) = 110 points. With an existing 25% bonus in the same stage, Damage rises from 125 to 135 points.
 
 [Details](psyker_damage_based_on_warp_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_guaranteed_crit_on_multiple_weakspot_hits"></a>
+
+### True Aim
+
+<img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="72" height="72" alt="True Aim talent icon">
+
+- **Effect**: after accumulating 5 valid Weakspot Hits that deal damage, the next Ranged Attack is guaranteed to be Critical and consumes this accumulated effect.
+
+- **Accumulation limits**: repeated hits by the same projectile and later enemies cleaved by one attack cannot all be counted as an additional stack.
+
+- **Example**: from 0 stacks, five separately valid Weakspot Hits give 1 → 2 → 3 → 4 → 5 stacks. The following Ranged Critical Strike consumes this effect. Critical Damage still depends on the weapon, hit location and target; it is not a fixed doubling.
+
+[Details](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) · [Back to index](#talent-index)

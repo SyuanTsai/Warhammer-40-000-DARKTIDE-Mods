@@ -710,6 +710,18 @@ Full raw template and formatting: [source evidence](psyker_damage_based_on_warp_
 | Peril scaling and maximum bonus | Up to +20% Damage, increasing as Peril increases; `ui / loc_talent_psyker_damage_based_on_warp_charge_desc / bfd23655` | The actual damage stat interpolates from 0 to 0.2 using current_percentage. [Fixed source and line references](psyker_damage_based_on_warp_charge.md#fixed-source-evidence) | Consistent | The maximum bonus and resource direction agree; the old development name is not localized text. |
 | Interpolation and additive stage | No zero endpoint, interpolation rule or combination formula; `ui / loc_talent_psyker_damage_based_on_warp_charge_desc / bfd23655` | At 50% Peril the bonus is 10%; it adds to other bonuses in the same stage, as in the existing 125→135 example. [Fixed source and line references](psyker_damage_based_on_warp_charge.md#fixed-source-evidence) | Not covered by the description | The formula and examples supplement the broad scaling description. |
 
+
+<a id="psyker_guaranteed_crit_on_multiple_weakspot_hits"></a>
+
+## True Aim
+
+Full raw template and formatting: [source evidence](psyker_guaranteed_crit_on_multiple_weakspot_hits.md#original-english-template-and-reconstruction). Name hash `702479a6`. Every row uses `ui / loc_talent_psyker_weakspot_grants_crit_once_description / 2341fb06`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Threshold, reward and attack limit | 5 Weakspot Hits grant the next Ranged Attack a guaranteed Critical; once per Attack; `ui / loc_talent_psyker_weakspot_grants_crit_once_description / 2341fb06` | Five eligible stacks activate guaranteed_ranged_critical_strike; duplicate attack_instigator_unit events and non-projectile later targets are restricted. [Fixed source and line references](psyker_guaranteed_crit_on_multiple_weakspot_hits.md#fixed-source-evidence) | Consistent | The threshold, ranged reward and restriction on repeated attack triggers agree. |
+| Eligibility, consumption and weapon limits | No damage floor, countdown, consumption event or critical-damage formula; `ui / loc_talent_psyker_weakspot_grants_crit_once_description / 2341fb06` | Zero-damage hits are excluded; a ranged on_critical_strike finishes the active effect without a normal duration timer. Critical sequence and Damage depend on the weapon and target. [Fixed source and line references](psyker_guaranteed_crit_on_multiple_weakspot_hits.md#fixed-source-evidence) | Not covered by the description | These details explain valid accumulation and consumption without promising a single bullet or fixed doubling. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **56 Consistent**, **2 Explicit contradictions**, **55 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

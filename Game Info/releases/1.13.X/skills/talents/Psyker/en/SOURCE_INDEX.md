@@ -69,3 +69,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Empathic Evasion](psyker_dodge_after_crits.md) / `psyker_dodge_after_crits` | Talent |
 | [Solidity](psyker_increased_vent_speed.md) / `psyker_increased_vent_speed` | Talent |
 | [Warp Rider](psyker_damage_based_on_warp_charge.md) / `psyker_damage_based_on_warp_charge` | Talent |
+| [True Aim](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) / `psyker_guaranteed_crit_on_multiple_weakspot_hits` | Talent |
