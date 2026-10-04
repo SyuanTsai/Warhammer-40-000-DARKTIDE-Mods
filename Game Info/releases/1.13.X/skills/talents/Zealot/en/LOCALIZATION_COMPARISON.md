@@ -527,6 +527,18 @@ Full raw template and formatting: [source evidence](zealot_crits_reduce_toughnes
 | Critical Hit reduction and duration | “+40% Toughness Damage Reduction on Critical Hit for 4s.”; `ui / loc_talent_zealot_toughness_melee_effectiveness_desc / 56b689eb` | Crit check has no Melee restriction; Toughness damage multiplier .6 for4s. [Fixed source and line references](zealot_crits_reduce_toughness_damage.md#fixed-source-evidence) | Consistent | Value, duration, Toughness target and unrestricted Critical Hit trigger agree. |
 | Single effect, refresh and independent combination | No stack/refresh or combination formula.; `ui / loc_talent_zealot_toughness_melee_effectiveness_desc / 56b689eb` | Max1 effect; subsequent crit refreshes4s. Original example100×.6=60 or×.9=54 with independent10%. [Fixed source and line references](zealot_crits_reduce_toughness_damage.md#fixed-source-evidence) | Not covered by the description | These accepted limits and the 46% combined-reduction example supplement the effect. |
 
+
+<a id="zealot_toughness_on_dodge"></a>
+
+## Second Wind
+
+Full raw template and formatting: [source evidence](zealot_toughness_on_dodge.md#original-english-template-and-reconstruction). Name hash `0b5ba976`. Every row uses `ui / loc_talent_zealot_toughness_on_dodge_desc / 7b3709d4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge and restoration value | “Replenish 15% Toughness on a Successful Dodge.”; `ui / loc_talent_zealot_toughness_on_dodge_desc / 7b3709d4` | `on_successful_dodge` calls holder percentage restoration .15. [Fixed source and line references](zealot_toughness_on_dodge.md#fixed-source-evidence) | Consistent | The event qualifier and percentage agree. |
+| Cooldown, percentage basis and cap | No cooldown, maximum-Toughness basis or modifier details.; `ui / loc_talent_zealot_toughness_on_dodge_desc / 7b3709d4` | Cooldown .5s; maximum-Toughness percentage plus restoration modifiers, capped by missing Toughness. Original max 100 example restores 15 or only 5 at current 95. [Fixed source and line references](zealot_toughness_on_dodge.md#fixed-source-evidence) | Not covered by the description | The accepted calculation and trigger-rate limits supplement the restoration statement. |
+
 ## Comparison totals
 
 84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.

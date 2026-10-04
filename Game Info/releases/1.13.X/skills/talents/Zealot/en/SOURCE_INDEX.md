@@ -54,3 +54,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Purge the Unclean](zealot_increased_damage_vs_resilient.md) / `zealot_increased_damage_vs_resilient` | Skill |
 | [Sustained Assault](zealot_hits_grant_stacking_damage.md) / `zealot_hits_grant_stacking_damage` | Skill |
 | [Enduring Faith](zealot_crits_reduce_toughness_damage.md) / `zealot_crits_reduce_toughness_damage` | Skill |
+| [Second Wind](zealot_toughness_on_dodge.md) / `zealot_toughness_on_dodge` | Skill |

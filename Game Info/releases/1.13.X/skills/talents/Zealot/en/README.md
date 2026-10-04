@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="Purge the Unclean talent icon"> [Purge the Unclean](#zealot_increased_damage_vs_resilient) | <ul><li>Deal 20% more damage against Infested and Unyielding armour types, according to the hit location's armour.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="Sustained Assault talent icon"> [Sustained Assault](#zealot_hits_grant_stacking_damage) | <ul><li>Melee hits grant 4% Melee Damage for 5 seconds, up to 5 stacks/+20%; further hits refresh duration, including at full stacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="Enduring Faith talent icon"> [Enduring Faith](#zealot_crits_reduce_toughness_damage) | <ul><li>Critical Hits reduce Toughness damage taken by 40% for 4 seconds; both Melee and Ranged crits trigger it.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="Second Wind talent icon"> [Second Wind](#zealot_toughness_on_dodge) | <ul><li>Successfully dodging an attack restores 15% of maximum Toughness, at most once every 0.5 seconds.</li></ul> | Skill |
 
 ---
 
@@ -672,3 +673,16 @@
 - **Reduction example**: Counting only this effect, 100 Toughness damage becomes 100 × 0.6 = 60. With another independent 10% Toughness reduction, it becomes 100 × 0.6 × 0.9 = 54, a total reduction of 46%. This is not Health damage reduction.
 
 [Details](zealot_crits_reduce_toughness_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_toughness_on_dodge"></a>
+
+### Second Wind
+
+<img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="72" height="72" alt="Second Wind talent icon">
+
+- **Operation**: Successfully dodging an enemy attack restores 15% of maximum Toughness, at most once every 0.5 seconds. Merely performing a Dodge does not restore it.
+- **Restoration example**: With maximum Toughness 100 and no other restoration bonuses, one trigger restores 100 × 15% = 15. At current Toughness 95, only 5 can be restored, reaching the cap.
+
+[Details](zealot_toughness_on_dodge.md) · [Back to index](#talent-index)
