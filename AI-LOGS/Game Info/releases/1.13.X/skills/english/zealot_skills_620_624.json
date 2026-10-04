@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_620_624",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L1434-L1456 and L2804-L2820 (minimally read last batch), L1716-L1732, L1942-L1958, L2025-L2049. Existing mechanisms and common formulas reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Anoint in Blood Ranged wording does not explicitly impose an attack_type exclusion; accepted slot condition retained as supplement. Unfaltering windup/control limits remain supplements."
+  ],
+  "skills": [
+    {
+      "id": "zealot_attack_speed",
+      "name": "Faithful Frenzy",
+      "name_hash": "292b37d4",
+      "description_hash": "6513bf51",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_attack_speed.md",
+      "commit": "68793e4bb"
+    },
+    {
+      "id": "zealot_additional_wounds",
+      "name": "Faith's Fortitude",
+      "name_hash": "6f7a7374",
+      "description_hash": "029afb2e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_additional_wounds.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_additional_wounds.md",
+      "commit": "70b7515d1"
+    },
+    {
+      "id": "zealot_increase_ranged_close_damage",
+      "name": "Anoint in Blood",
+      "name_hash": "e5a06eb7",
+      "description_hash": "7504148a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increase_ranged_close_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_increase_ranged_close_damage.md",
+      "commit": "70196e28d"
+    },
+    {
+      "id": "zealot_uninterruptible_no_slow_heavies",
+      "name": "Unfaltering",
+      "name_hash": "87775a98",
+      "description_hash": "9e2ba609",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_uninterruptible_no_slow_heavies.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_uninterruptible_no_slow_heavies.md",
+      "commit": "1d73e75f1"
+    },
+    {
+      "id": "zealot_stacking_melee_damage_after_dodge",
+      "name": "Riposte",
+      "name_hash": "65e38fc5",
+      "description_hash": "b421dbe6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stacking_melee_damage_after_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stacking_melee_damage_after_dodge.md",
+      "commit": "e2a4c70cf"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 267,
+    "from_commit": "497908cc2",
+    "to_commit": "e2a4c70cf",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

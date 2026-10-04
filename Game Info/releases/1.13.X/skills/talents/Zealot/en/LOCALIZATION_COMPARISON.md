@@ -736,4 +736,4 @@ Full raw template and formatting: [source evidence](zealot_stacking_melee_damage
 
 ## Comparison totals
 
-117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.
+127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.
