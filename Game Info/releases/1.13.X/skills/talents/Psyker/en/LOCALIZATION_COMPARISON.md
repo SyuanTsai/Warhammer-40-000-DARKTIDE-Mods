@@ -967,6 +967,18 @@ Full raw template and formatting: [source evidence](psyker_stat_mix.md#original-
 | Stat amounts and passive decay | -80% Passive Quelling, +2 Stamina, and +25% Toughness Replenishment.; `ui / loc_talent_psyker_stat_mix_desc / df89fc40` | The buff uses `warp_charge_dissipation_multiplier = 0.2`, `stamina_modifier = 2` and `toughness_replenish_modifier = 0.25`. [Fixed source and line references](psyker_stat_mix.md#fixed-source-evidence) | Consistent | The amounts match; passive decay is distinct from active Quelling. |
 | Bands and calculation stages | -80% Passive Quelling… +25% Toughness Replenishment.; `ui / loc_talent_psyker_stat_mix_desc / df89fc40` | Only low/high/critical coefficients receive ×0.2; the lowest fallback uses `default_threshold_decay_rate_modifier`. Restoration adds within its stage; fixed-band decay time becomes approximately ×5. [Fixed source and line references](psyker_stat_mix.md#fixed-source-evidence) | Not covered by the description | The English omits the band exception, additive combination and reciprocal timing calculation. |
 
+
+<a id="psyker_warp_attacks_rending"></a>
+
+## Penetration of the Soul
+
+Full raw template and formatting: [source evidence](psyker_warp_attacks_rending.md#original-english-template-and-reconstruction). Name hash `5437d8c9`. Every row uses `ui / loc_talent_psyker_warp_attacks_rending_alt_desc / 35bc88f1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Rending amount and Peril | Up to +20% Rending on Warp-Attacks, based on Peril.; `ui / loc_talent_psyker_warp_attacks_rending_alt_desc / 35bc88f1` | `warp_attacks_rending_multiplier` scales linearly from 0 to 0.2 with `current_percentage`, without using the 0.75 setting. [Fixed source and line references](psyker_warp_attacks_rending.md#fixed-source-evidence) | Consistent | The maximum, attack category and Peril dependence agree; no threshold is stated. |
+| Armour and finesse calculation | Up to +20% Rending… based on Peril.; `ui / loc_talent_psyker_warp_attacks_rending_alt_desc / 35bc88f1` | Rending is totalled and adjusted by armour type; excess beyond ADM 1 uses `overdamage`; Weakspots/Critical Hits subsequently recalculate `finesse`. [Fixed source and line references](psyker_warp_attacks_rending.md#fixed-source-evidence) | Not covered by the description | The English names Rending without claiming a fixed Damage gain; its armour and finesse calculations are supplementary. |
+
 ## Comparison totals
 
 The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.

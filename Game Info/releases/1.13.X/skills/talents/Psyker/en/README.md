@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="Immaterial Focus talent icon"> [Immaterial Focus](#psyker_damage_resistance_stun_immunity) | <ul><li>10% Damage reduction; Stun Immunity at Peril ≥97% and for 4 seconds after dropping below it.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="Empyric Resolve talent icon"> [Empyric Resolve](#psyker_warp_glass_cannon) | <ul><li>40% less Peril generation; 30% less Toughness restored by effects subject to the restoration modifier.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="Warp Ghost talent icon"> [Warp Ghost](#psyker_stat_mix) | <ul><li>+2 Stamina and +25% Toughness restoration; natural Peril decay is 80% slower in affected bands.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="Penetration of the Soul talent icon"> [Penetration of the Soul](#psyker_warp_attacks_rending) | <ul><li>Warp Attacks gain Rending linearly with Peril: 10% at 50% Peril, 20% at 100%.</li></ul> | Talent |
 
 ---
 
@@ -1309,3 +1310,19 @@
 - **Natural decay example**: Within the same eligible Peril band, an original decrease of 5 percentage points per second becomes 5 × 0.2 = 1 percentage point per second. With other conditions unchanged, decay across that same band takes approximately five times as long.
 
 [Details](psyker_stat_mix.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_warp_attacks_rending"></a>
+
+### Penetration of the Soul
+
+<img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="72" height="72" alt="Penetration of the Soul talent icon">
+
+- **How it works**: Warp Attacks gain Rending based on current Peril: 10% / 20% Rending at 50% / 100% Peril. The actual Damage increase depends on the weapon and enemy armour.
+
+- **Armour example**: Compare only the armour stage with a Rending-resistance modifier of 1, excluding Weakspots, Critical Hits and other multipliers. With 100 pre-armour Damage and a baseline armour multiplier of 0.5, at 100% Peril, 100 × 0.5 = 50 becomes 100 × (0.5 + 0.2) = 70, a 40% Damage increase.
+
+- **Different target**: With the same 20% Rending, a baseline armour multiplier already at 1 and an excess-Rending conversion coefficient of 0.25, 100 becomes 100 × (1 + 0.2 × 0.25) = 105, only a 5% increase.
+
+[Details](psyker_warp_attacks_rending.md) · [Back to index](#talent-index)
