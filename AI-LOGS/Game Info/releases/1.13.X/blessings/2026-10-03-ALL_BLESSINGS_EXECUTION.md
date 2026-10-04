@@ -249,3 +249,5 @@
 - 第8輪三項已Commit後完整掃描通過：deadly-accurate (`35148d02bb9b8c56874d40876be7eec837f9dacd`)、high-voltage (`6b84306efa00fbcb6f24dfb9072093652d87c2bd`)、execution (`d0d86ba8d3d2e277ace4493f8b3fec84ef0cab4d`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-008-full-scan.json`／SHA-256 `e8818006f58c825fcf644685d1d4e16e9307bfe7435852fa511f597606c195fc`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [湧動](2026-10-03-SURGE_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
+
+- [狂轟猛炸](2026-10-03-BLAST-ZONE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

@@ -497,6 +497,7 @@
 - Expansive - 擴展性
 - Shrapnel - 破片四射
 - Blast Zone - 狂轟猛炸
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire`，hash `d72f3677`；英文／繁中RAW配對確認。
 - Adhesive Charge - 黏著炸藥
 - Marksman's Reflex - 迅雷反射
 

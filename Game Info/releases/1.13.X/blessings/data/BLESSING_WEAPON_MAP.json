@@ -765,6 +765,19 @@
         "loc_trait_bespoke_double_shot_on_crit_and_crit_chance_desc",
         "loc_trait_bespoke_double_shot_on_primary_crit_and_crit_chance_desc"
       ]
+    },
+    {
+      "id": "blast-zone",
+      "name_zh_tw": "狂轟猛炸",
+      "name_en": "Blast Zone",
+      "name_key": "loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire",
+      "description_key": "loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire_desc",
+      "name_hash": "d72f3677",
+      "description_hash": "a8764734",
+      "page": "entries/狂轟猛炸/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
+      "effect": "持用並接續射擊時，I–IV 每層增加 3／4／5／6% 爆炸半徑，最多五層；依引爆時已計算的連擊與持用加成修正外圈及近距離半徑。"
     }
   ],
   "weapons": [
@@ -14195,6 +14208,63 @@
       "icon": "https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_062",
       "effect": "一般主要與蓄力次要射擊都可追加一枚。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire",
+      "blessing_id": "blast-zone",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/狂轟猛炸/weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire",
+        "actual_mark_ids": [
+          "ogryn_thumper_p1_m2"
+        ],
+        "tier_fraction_by_level": {
+          "I": 0.03,
+          "II": 0.04,
+          "III": 0.05,
+          "IV": 0.06
+        },
+        "display_percent_by_level": {
+          "I": 3,
+          "II": 4,
+          "III": 5,
+          "IV": 6
+        },
+        "max_logical_steps": 5,
+        "max_bonus_percent_by_level": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "wrapper_fallback": 0.03,
+        "tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 88,
+        "end_line": 131
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_explosion_radius_bonus_on_continuous_fire_desc",
+      "description_hash": "a8764734",
+      "icon": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_235",
+      "effect": "一般與瞄準射擊的榴彈引信或撞擊爆炸均適用；直擊傷害與槍托打擊不屬半徑加成。"
     }
   ],
   "bindings": [
@@ -19894,6 +19964,20 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
         "import_line": 13,
         "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "blast-zone",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/explosion_radius_bonus_on_continuous_fire",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
       }
     }
   ]
