@@ -494,6 +494,18 @@ Full raw template and formatting: [source evidence](psyker_warpfire_generate_sou
 | Soulblaze kill wording | Killing an Enemy with Soulblaze; `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75` | check_proc_func accepts warpfire_burning at death from any source, or otherwise the player's own attacker with damage_types.warpfire; the marker path does not require the player's last hit. [Fixed source and line references](psyker_warpfire_generate_souls.md#fixed-source-evidence) | Cannot confirm | The English can describe Soulblaze killing Damage or a Soulblaze-bearing enemy. Accepted broader death coverage is retained as a text/source difference pending in-game comparison; no clear exclusive claim is established. |
 | Cap, range and selection | No charge-cap assumptions, range/Coherency restriction, separate gain modifier or choice boundary specified; `ui / loc_talent_psyker_warpfire_generates_souls_desc / d52dac75` | Expected gain assumes no truncation at the charge cap. No Coherency/distance check; increased_soul_generation outside this tree can separately add two. In Fire Reborn and Psychic Vampire are alternative choices. [Fixed source and line references](psyker_warpfire_generate_souls.md#fixed-source-evidence) | Not covered by the description | These accepted limits and scope details supplement the original wording. |
 
+
+<a id="psyker_aura_souls_on_kill"></a>
+
+## Psychic Vampire
+
+Full raw template and formatting: [source evidence](psyker_aura_souls_on_kill.md#original-english-template-and-reconstruction). Name hash `302abae8`. Every row uses `ui / loc_talent_psyker_souls_on_kill_coop_desc / 03d352e7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, recipient and chance | You or an Ally in Coherency kills an Enemy; you have a 4% chance to gain a Warp Charge; `ui / loc_talent_psyker_souls_on_kill_coop_desc / 03d352e7` | Server on_minion_death checks attacking_unit in the Coherency set, including self, then math.random() < 0.04 adds a soul to the holder's buff_extension. [Fixed source and line references](psyker_aura_souls_on_kill.md#fixed-source-evidence) | Consistent | The English explicitly matches both qualifying attackers and the holder-only recipient; it does not grant charges to all Allies. |
+| Storage, probability and choice | No guaranteed interval, available-storage assumption or selection boundary specified; `ui / loc_talent_psyker_souls_on_kill_coop_desc / 03d352e7` | With storage available, 100 qualifying kills expect four stacks; no guarantee every 25 kills. Psychic Vampire and In Fire Reborn are alternative choices. [Fixed source and line references](psyker_aura_souls_on_kill.md#fixed-source-evidence) | Not covered by the description | These retain the accepted example and limits without changing the stated chance. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

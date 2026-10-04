@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="Lingering Influence talent icon"> [Lingering Influence](#psyker_mark_increased_duration) | <ul><li>Extends Disrupt Destiny's Precision timer before each one-stack decay from five to ten seconds; choose either this or Perfectionism.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="Charged Up talent icon"> [Charged Up](#psyker_empowered_grenades_increased_max_stacks) | <ul><li>Raises Empowered Psionics storage from one to three stacks; each empowered Blitz still spends one, with unchanged per-use strength.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="In Fire Reborn talent icon"> [In Fire Reborn](#psyker_warpfire_generate_souls) | <ul><li>A qualifying death with Soulblaze present, or caused by your Soulblaze, has a 10% chance to grant one Warp Charge; choose either this or Psychic Vampire.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="32" height="32" alt="Psychic Vampire talent icon"> [Psychic Vampire](#psyker_aura_souls_on_kill) | <ul><li>You or an Ally in Coherency killing an enemy gives you a 4% chance to gain one Warp Charge; choose either this or In Fire Reborn.</li></ul> | Keystone |
 
 ---
 
@@ -664,3 +665,19 @@
 - **Selection limit:** Choose either In Fire Reborn or Psychic Vampire.
 
 [Details](psyker_warpfire_generate_souls.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_aura_souls_on_kill"></a>
+
+### Psychic Vampire
+
+<img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="72" height="72" alt="Psychic Vampire talent icon">
+
+- **Trigger:** When you or an Ally in Coherency kills an enemy, you have a 4% chance to gain one Warp Charge. Allies do not receive your charge from this effect.
+
+- **Chance example:** With storage available each time, 100 qualifying kills have expected gain `100 × 4% = 4` stacks; there is no guaranteed gain every 25 kills.
+
+- **Selection limit:** Choose either Psychic Vampire or In Fire Reborn.
+
+[Details](psyker_aura_souls_on_kill.md) · [Back to index](#talent-index)

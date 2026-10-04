@@ -51,3 +51,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Lingering Influence](psyker_mark_increased_duration.md) / `psyker_mark_increased_duration` | Keystone |
 | [Charged Up](psyker_empowered_grenades_increased_max_stacks.md) / `psyker_empowered_grenades_increased_max_stacks` | Keystone |
 | [In Fire Reborn](psyker_warpfire_generate_souls.md) / `psyker_warpfire_generate_souls` | Keystone |
+| [Psychic Vampire](psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | Keystone |
