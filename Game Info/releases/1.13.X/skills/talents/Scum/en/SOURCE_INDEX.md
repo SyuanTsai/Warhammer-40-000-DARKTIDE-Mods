@@ -94,3 +94,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Equip Cartel Special](broker_stimm_activation_talent.md) / `broker_stimm_activation_talent` | Stimm recipe |
 | [Spur I](broker_stimm_celerity_1.md) / `broker_stimm_celerity_1` | Stimm recipe |
 | [Spur II](broker_stimm_celerity_2.md) / `broker_stimm_celerity_2` | Stimm recipe |
+| [Spur III](broker_stimm_celerity_3.md) / `broker_stimm_celerity_3` | Stimm recipe |
