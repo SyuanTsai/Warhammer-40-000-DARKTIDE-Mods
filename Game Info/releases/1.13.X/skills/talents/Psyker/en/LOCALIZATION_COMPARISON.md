@@ -955,6 +955,18 @@ Full raw template and formatting: [source evidence](psyker_warp_glass_cannon.md#
 | Generation and restoration amounts | -40% Peril Generation. -30% Toughness Replenished.; `ui / loc_talent_psyker_warp_glass_cannon_desc / 3e435c7d` | `warp_charge_amount = 0.6` and `toughness_replenish_multiplier = 0.7`. [Fixed source and line references](psyker_warp_glass_cannon.md#fixed-source-evidence) | Consistent | The reconstructed percentages agree with the two reduction multipliers. |
 | Combination and restoration eligibility | -40% Peril Generation. -30% Toughness Replenished.; `ui / loc_talent_psyker_warp_glass_cannon_desc / 3e435c7d` | The multipliers combine with other modifiers; `recover_percentage_toughness` uses the restoration modifier when `ignore_stat_buffs = false`; direct setting is not automatically affected. [Fixed source and line references](psyker_warp_glass_cannon.md#fixed-source-evidence) | Not covered by the description | The English omits combination and path-specific eligibility details. |
 
+
+<a id="psyker_stat_mix"></a>
+
+## Warp Ghost
+
+Full raw template and formatting: [source evidence](psyker_stat_mix.md#original-english-template-and-reconstruction). Name hash `126c6a5f`. Every row uses `ui / loc_talent_psyker_stat_mix_desc / df89fc40`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stat amounts and passive decay | -80% Passive Quelling, +2 Stamina, and +25% Toughness Replenishment.; `ui / loc_talent_psyker_stat_mix_desc / df89fc40` | The buff uses `warp_charge_dissipation_multiplier = 0.2`, `stamina_modifier = 2` and `toughness_replenish_modifier = 0.25`. [Fixed source and line references](psyker_stat_mix.md#fixed-source-evidence) | Consistent | The amounts match; passive decay is distinct from active Quelling. |
+| Bands and calculation stages | -80% Passive Quelling… +25% Toughness Replenishment.; `ui / loc_talent_psyker_stat_mix_desc / df89fc40` | Only low/high/critical coefficients receive ×0.2; the lowest fallback uses `default_threshold_decay_rate_modifier`. Restoration adds within its stage; fixed-band decay time becomes approximately ×5. [Fixed source and line references](psyker_stat_mix.md#fixed-source-evidence) | Not covered by the description | The English omits the band exception, additive combination and reciprocal timing calculation. |
+
 ## Comparison totals
 
 The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.

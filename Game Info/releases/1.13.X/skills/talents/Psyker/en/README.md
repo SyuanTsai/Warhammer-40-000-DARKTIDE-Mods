@@ -85,6 +85,7 @@
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="Just a Dream talent icon"> [Just a Dream](#psyker_damage_to_peril_conversion) | <ul><li>Below 97% Peril, take 25% less Damage and gain 0.25 percentage points of Peril per reported Health/Toughness Damage point, capped at 97%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="Immaterial Focus talent icon"> [Immaterial Focus](#psyker_damage_resistance_stun_immunity) | <ul><li>10% Damage reduction; Stun Immunity at Peril ≥97% and for 4 seconds after dropping below it.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="Empyric Resolve talent icon"> [Empyric Resolve](#psyker_warp_glass_cannon) | <ul><li>40% less Peril generation; 30% less Toughness restored by effects subject to the restoration modifier.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="Warp Ghost talent icon"> [Warp Ghost](#psyker_stat_mix) | <ul><li>+2 Stamina and +25% Toughness restoration; natural Peril decay is 80% slower in affected bands.</li></ul> | Talent |
 
 ---
 
@@ -1292,3 +1293,19 @@
 - **Restoration example**: An original 10 Toughness restored becomes 10 × 0.7 = 7. With another 25% restoration bonus, 10 × 1.25 × 0.7 = 8.75, still limited by maximum Toughness.
 
 [Details](psyker_warp_glass_cannon.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_stat_mix"></a>
+
+### Warp Ghost
+
+<img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="72" height="72" alt="Warp Ghost talent icon">
+
+- **How it works**: Gain 2 Stamina and 25% Toughness restoration. Natural Peril decay is 80% slower in affected bands. Active Quelling does not use this slowdown multiplier.
+
+- **Restoration example**: Without other bonuses, an original 10 Toughness restored becomes 10 × 1.25 = 12.5. With an existing 20% bonus of the same type, 10 × (1 + 20% + 25%) = 14.5.
+
+- **Natural decay example**: Within the same eligible Peril band, an original decrease of 5 percentage points per second becomes 5 × 0.2 = 1 percentage point per second. With other conditions unchanged, decay across that same band takes approximately five times as long.
+
+[Details](psyker_stat_mix.md) · [Back to index](#talent-index)

@@ -89,3 +89,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Just a Dream](psyker_damage_to_peril_conversion.md) / `psyker_damage_to_peril_conversion` | Talent |
 | [Immaterial Focus](psyker_damage_resistance_stun_immunity.md) / `psyker_damage_resistance_stun_immunity` | Talent |
 | [Empyric Resolve](psyker_warp_glass_cannon.md) / `psyker_warp_glass_cannon` | Talent |
+| [Warp Ghost](psyker_stat_mix.md) / `psyker_stat_mix` | Talent |
