@@ -305,3 +305,5 @@
 - 第15輪三項已Commit後完整掃描通過：slaughter-spree (`3ab45d8a5781e7142ef12b4e294ebfd2c15aac4a`)、warp-flurry (`e67cf2e8c2ac34ebb8397b299d62f753dffc7a0a`)、punisher (`fa1343391326daa5ee0e585d51a8ed6911ee4fc6`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-015-full-scan.json`／SHA-256 `f3247716fcfb74a948b692fd33e897f3bb16093e0f9f16e0ad71cf5982d651d0`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [浴血而生](2026-10-03-BORN-IN-BLOOD_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- [熱力震盪](2026-10-03-VOLATILE_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。

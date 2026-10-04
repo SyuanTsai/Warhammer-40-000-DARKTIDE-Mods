@@ -490,6 +490,7 @@
 - Gets Hot! - 燃起來！
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_scaled_on_heat`，hash `0ecf6094`；英文／繁中RAW配對確認。
 - Volatile - 熱力震盪
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_lower_overheat_gives_faster_charge`，hash `da057b0d`；英文／繁中RAW配對確認。
 - Blaze Away - 連續發射
 - Rising Heat - 升溫
 - Optimised Cooling - 優化冷卻

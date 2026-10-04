@@ -1043,6 +1043,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
       "effect": "持用撕裂槍、獵人霰彈槍或滅絕者霰彈槍，在距離不超過12.5公尺以遠程攻擊擊殺目標時，依等級恢復最大韌性的4.5%／5%／5.5%／6%；刺刀近戰與P4 Mk III電擊tick等非遠程攻擊不觸發。"
+    },
+    {
+      "id": "volatile",
+      "name_zh_tw": "熱力震盪",
+      "name_en": "Volatile",
+      "name_key": "loc_trait_bespoke_lower_overheat_gives_faster_charge",
+      "description_key": "loc_trait_bespoke_lower_overheat_gives_faster_charge_desc",
+      "name_hash": "da057b0d",
+      "description_hash": "078227e8",
+      "page": "entries/熱力震盪/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
+      "effect": "持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。"
     }
   ],
   "weapons": [
@@ -17136,6 +17149,72 @@
       "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
       "effect": "鐵腕 Mk III／Mk VIII普通及特殊彈丸都走遠程命中路徑；Mk III 的後續電擊擊殺不觸發；Mk VIII 的特殊附加效果為碎甲，不另造成週期傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge",
+      "blessing_id": "volatile",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/熱力震盪/weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "charge_up_time",
+        "stat_type": "additive_multiplier",
+        "neutral_multiplier": 1,
+        "tier_modifier_by_level": {
+          "I": -0.025,
+          "II": -0.03,
+          "III": -0.035,
+          "IV": -0.04
+        },
+        "displayed_positive_percent_per_step": {
+          "I": 2.5,
+          "II": 3,
+          "III": 3.5,
+          "IV": 4
+        },
+        "max_effective_heat_steps": 5,
+        "heat_state_formula": "round(5*(1-clamp01((h-0.1)/0.9)))",
+        "max_step_total_time_reduction_percent": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "dynamic_while_charging": true,
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge",
+        "actual_mark_ids": [
+          "plasmagun_p1_m1",
+          "plasmagun_p1_m2"
+        ],
+        "actual_charge_template_ids": [
+          "plasmagun_p1_m1_charge_direct",
+          "plasmagun_p1_m1_charge"
+        ],
+        "direct_min_charge": 0.05,
+        "direct_fully_charged_threshold": 0.525,
+        "charge_duration_parameter_is_not_necessarily_full_time": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 155,
+        "end_line": 200
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 62
+      },
+      "description_key": "loc_trait_bespoke_lower_overheat_gives_faster_charge_desc",
+      "description_hash": "078227e8",
+      "icon": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_154",
+      "effect": "持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。"
     }
   ],
   "bindings": [
@@ -24025,6 +24104,34 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
         "import_line": 15,
         "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "volatile",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/lower_overheat_gives_faster_charge",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "volatile",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/lower_overheat_gives_faster_charge",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
       }
     }
   ]

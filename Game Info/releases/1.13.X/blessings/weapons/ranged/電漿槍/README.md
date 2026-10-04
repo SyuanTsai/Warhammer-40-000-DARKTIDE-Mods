@@ -7,12 +7,13 @@
 | <img src="https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5" width="32" height="32" alt="破碎衝擊祝福圖示"> [破碎衝擊](../../../entries/破碎衝擊/README.md)<br>- Shattering Impact<br>[完整說明](../../../entries/破碎衝擊/README.md) | <ul><li>符合條件的命中對目標施加1／2／3／4層脆弱；每層提供2.5個百分點撕裂，最多16層、持續5秒。擲彈兵臂鎧與震盪槍的指定爆炸也能觸發。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db" width="32" height="32" alt="燃起來！祝福圖示"> [燃起來！](../../../entries/燃起來！/README.md)<br>- Gets Hot!<br>[完整說明](../../../entries/燃起來！/README.md) | <ul><li>電漿槍 M35熔岩核心 Mk II（`plasmagun_p1_m1`）與 Mk III（`plasmagun_p1_m2`）共用 I–IV 數值。每熱階增加一般爆擊機率 +5.5／+7／+8.5／+10 個百分點，以及遠程爆擊傷害 +4／+6／+8／+10%；最多五階，兩種射擊模式都是單發 hit-scan。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8" width="32" height="32" alt="聚能爆發祝福圖示"> [聚能爆發](../../../entries/聚能爆發/README.md)<br>- Power Blast<br>[完整說明](../../../entries/聚能爆發/README.md) | <ul><li>射擊開始按當時有效充能階數增加 +2／+3／+4／+5 個百分點／階；普通直蓄最多2階，架槍滿蓄最多5階。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a" width="32" height="32" alt="熱力震盪祝福圖示"> [熱力震盪](../../../entries/熱力震盪/README.md)<br>- Volatile<br>[完整說明](../../../entries/熱力震盪/README.md) | <ul><li>持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 電漿槍 M35熔岩核心 Mk II | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff.md)、[燃起來！](../../../entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md)、[聚能爆發](../../../entries/聚能爆發/weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance.md) | I–IV |
-| 電漿槍 M35熔岩核心 Mk III | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff.md)、[燃起來！](../../../entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md) | I–IV |
+| 電漿槍 M35熔岩核心 Mk II | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff.md)、[燃起來！](../../../entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md)、[聚能爆發](../../../entries/聚能爆發/weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance.md)、[熱力震盪](../../../entries/熱力震盪/weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge.md) | I–IV |
+| 電漿槍 M35熔岩核心 Mk III | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff.md)、[燃起來！](../../../entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md)、[熱力震盪](../../../entries/熱力震盪/weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

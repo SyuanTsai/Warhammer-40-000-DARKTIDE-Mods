@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-04",
+  "blessing": "volatile",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/熱力震盪/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "volatile",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-formal-peer-scope.json",
+      "sha256": "36c6c7656a98ba6fb5956d7b332585058dfa0ff4947f72171601f87469acd208",
+      "files": 28,
+      "review": "All 28 fixed files were independently rehashed before review and match the supplied scope."
+    },
+    "reviewed_associations": [
+      "Seven blessing formal pages agree on one ranged Volatile implementation and the two actual marks. Tier, localization, percentage, compatibility, source and trait pages cross-link consistently.",
+      "The shared map has exactly two Volatile rows, for plasmagun_p1_m1 and plasmagun_p1_m2. Both use the same exact trait id, trait item and category. The Plasma Gun reverse index links both marks to the same trait page.",
+      "The catalog, ranged index, weapon reverse page, source index and translation glossary point to consistent names and locations. The image receipt verifies icon 154, path, attachment and image hash.",
+      "Canonical config and extension draft agree on id, kind, variant and binding counts, effect summary, exact trait id, icon fields and not_verified faster status. The frozen agent trio hashes remain unchanged."
+    ],
+    "reviewed_deltas": [
+      "The I-IV own values and actual SteppedStatBuff wrapper agree: charge_up_time -0.025/-0.03/-0.035/-0.04 per effective heat-derived step; wrapper computes n=round(5*(1-clamp01((h-.1)/.9))) and clamps 0..5. Held-slot is preserved; reload_state and vent_overheat are excluded by the not-reloading predicate; cached heat can change the step count during charge.",
+      "Both actual marks select the M1-named direct and brace charge templates; M2-specific duration templates are defined but not selected. The interpolation examples identify D0 as resolved charge_duration, not a measured Mark time.",
+      "Direct-route threshold is independently confirmed: min_charge=.05, fully_charged_charge_level and ActionCharge max_charge=.525, zero delay, and positive-time start from 0. The target factor is (.525-.05)/(1-.05)=.5. At D0=.80, IV three steps and fixed h=.46, duration parameter .80 to .704 and auto-fire threshold time .400 to .352 seconds. For q=.20, threshold .480 to .432 seconds, a 10% reduction over q-only.",
+      "The threshold derivation requires fixed heat/cache, zero delay, no interruption, and a reachable threshold. The direct template declares limit_max_charge_to_ammo_clip, but overload_charge dispatches to ActionOverloadCharge extending ActionCharge; only ActionChargeAmmo consumes that field, so no ammo clipping applies on the actual route. The direct action auto maps fully_charged to charged_enough then action_shoot. Brace uses a distinct template and release chain, so the direct half-duration factor is not reused.",
+      "Damage prose is bounded: charge_up_time adds no direct damage multiplier; at the same charge level and other conditions it adds no separate shot damage, while faster progress may change charge level at the same elapsed time.",
+      "Four RAW tiers are reconstructed with formatter values and no-space-after-placeholder text; the RAW trailing ASCII space is explicitly annotated and not left as Markdown trailing whitespace. Charge Speed / charge speed labels are not called an explicit reciprocal-rate contradiction."
+    ],
+    "configuration_consistency": {
+      "id": "volatile",
+      "kind": "ranged",
+      "variant_count": 1,
+      "binding_count": 2,
+      "variant_ids_are_exact_traits": true,
+      "weapon_keys": [
+        "plasmagun_p1"
+      ],
+      "actual_marks": [
+        "plasmagun_p1_m1",
+        "plasmagun_p1_m2"
+      ],
+      "canonical_effect_matches_extension": true,
+      "faster_status": "not_verified",
+      "open_issues": 0
+    },
+    "supporting_receipt_hashes": {
+      "volatile-primary-own-tier-diff.json": "7978a64481c383515ceb9779627932ad6279dc0a5b7b383defeffcc7b00b9697",
+      "volatile-primary-ui-review.json": "457e0b3708aaa93f1f93dedb8bc6281bf0ffe6654d8b01b8fab2d2164675b309",
+      "volatile-primary-ui-raw-verification.json": "a9126553121881b6750a284de137f880387d820ee66575ecd0a02e667e9c4a93",
+      "volatile-image.json": "6bfed2bdd75a7d262d301445403abafa308ef54c579c429e8a44b71a985c4ea4",
+      "volatile-primary-charge-threshold-review.json": "a4a6a712127a05f6e607380f50fc47084c084f7a1a40abf6788453e3b39e2ab9",
+      "volatile-agent-threshold-followup.json": "4a570752d5386f48eda0371f0aa886fe6e43b53a2ead2bd735fe701ba47fc59c"
+    },
+    "source_boundary": {
+      "fixed_source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "raw_and_formatter_pair_consistent": true,
+      "common_cache_path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "common_cache_sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "reuse_limited_to_verified_conditions_and_cache_behavior": true,
+      "gameplay_test_performed": false
+    },
+    "validation": {
+      "scope_hash_matches": true,
+      "all_28_scoped_hashes_match": true,
+      "canonical_configuration_matches_scope": true,
+      "source_commit_matches": true,
+      "own_tiers_wrapper_heat_gate_checked": true,
+      "direct_threshold_math_and_conditions_checked": true,
+      "raw_four_tiers_and_trailing_space_annotation_checked": true,
+      "map_reverse_links_and_image_checked": true,
+      "primary_links_and_gfm_pass_receipts_checked": true,
+      "faster_unverified_not_claimed": true
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-agent-config.json": "fe71dfe69dab0efea5f17d7a1bdf7c18f2ad678554f15f77ae1be608611d0577",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-agent-draft.md": "6034d805f181cb50e847ae3408d0ec746230c1dfa8e5a278253c02cdd29d9647",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-agent-evidence.json": "86ede92697c74ea0052108e52a0ce739dd44b10608d989ad47034e0b96060a94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-config.json": "8cdf7cff897955ea825fac9b18bd91c0e4c5f5fc6f5e375659ce8c25a9994fba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-extension-draft.json": "01648ba1d1104e1e879a46173c1294b35e8f9490325cd848d1c9a1d2ee7f95b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-image.json": "6bfed2bdd75a7d262d301445403abafa308ef54c579c429e8a44b71a985c4ea4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-charge-threshold-review.json": "a4a6a712127a05f6e607380f50fc47084c084f7a1a40abf6788453e3b39e2ab9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-focused-checks.json": "db8ca696817e6eadda1ca6bd2405c73132fa5e6cd0dfb656ac01e20d1c3ec87f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-frozen-source-verification.json": "d915c86d862c6cf680f9989a62dc3807c1220cae6307db298f320e38994b0463",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-own-tier-diff.json": "7978a64481c383515ceb9779627932ad6279dc0a5b7b383defeffcc7b00b9697",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-resume-review.json": "184511e2a7b9cd4de0e438f992023d84affe3a1ab680338489cf632e5ea70ba1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-traits-review.json": "31fd280b3b28325fbdc3a3efd47bad643bb9d7f17b7837f38c27a3c1a89e59ab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-ui-raw-verification.json": "a9126553121881b6750a284de137f880387d820ee66575ecd0a02e667e9c4a93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-ui-review.json": "457e0b3708aaa93f1f93dedb8bc6281bf0ffe6654d8b01b8fab2d2164675b309",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "53e6f3962e1bd7f7c07a127a07be2e7717bd0eba0b81e15940913519cc5c19c8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a56b047af05a711f3297c818335c9caf04b7689a0ccc712cb81798b705d01204",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "77458cfbea173acd76843975792d8b328cb89d4f7dcd3be9df2c41fc1ebc6e3b",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/DAMAGE_PERCENTAGE_REVIEW.md": "bbab62b2df7b7561a7b9a8ee9765666354661d4230bd8b18aca1ebd005d565a3",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/LOCALIZATION_COMPARISON.md": "600e606acbf4faa7df70941722a5570d05dd279f97f68eb49b8f075a55a5ca8e",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/README.md": "369f1ad08af3781acb02466035719cbaf1588d8ace9f2885e015079f9c2c5291",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/SOURCE_INDEX.md": "d52efbafe7c0ca8d306babf685cd20be1fe9fd21ff23d746320add63ced2c3a7",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/TIER_VALUES.md": "2c7574507b250bbee1deaabb282e122a82aa936f741629da5562e3b1161cc922",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/WEAPON_COMPATIBILITY.md": "a4c4cade47c8471225771b853d30cb2af4a5de0d794e6bfc34677287296b88c9",
+      "Game Info/releases/1.13.X/blessings/entries/熱力震盪/weapon_trait_bespoke_plasmagun_p1_lower_overheat_gives_faster_charge.md": "28efe6c646d971f4df1dc6845475c489e59fde804d481601546cf409bb56305c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "b385f64e8e2a292a10bbc5f603bf6076030f14df37716ccf728d5b0f9a941288",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "dd19e0db54d5e2bb960baec534bc446c91b93b68b1095338cc9be188c8a73ee0",
+      "Referneces/Translation.md": "c9975782d84e866b5b059a3c8af7aac556df578979d244ace77b36ec49ee6d3e"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "volatile",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_154",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_154.png",
+      "attachment": "https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5980012137",
+      "acquired_date": "2026-10-04",
+      "sha256": "942fe4ff7143c1b9e774c677791d59dda9d3b63c2b5c9784e1f8d297361c17af",
+      "content_type": "image/png",
+      "size": 7391,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "熱力震盪祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Source and public original RGBA images and alpha QA show centered three horizontal descending trapezoids within circular outline with outward triangular rays; identical hash128x128."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 13,
+      "rows": 280,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 25,
+      "bindings": 494,
+      "variants": 256,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 670,
+      "remote_references": 317,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 16,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-015-full-scan.json",
+        "sha256": "f3247716fcfb74a948b692fd33e897f3bb16093e0f9f16e0ad71cf5982d651d0",
+        "trigger": "round-015"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 89,
+    "not_started_name_groups": 89,
+    "partial_name_groups": 0,
+    "remaining_variants": 349,
+    "remaining_bindings": 691,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "21af418b6d7cba6b461aa814f795c64fff2746021db3a4bc644a96b61986d9c1"
+  },
+  "previous_local_commit": "6f28bebbf2b560719cdaeac45e82a81934cd5f23",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-charge-threshold-review.json",
+      "sha256": "a4a6a712127a05f6e607380f50fc47084c084f7a1a40abf6788453e3b39e2ab9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-focused-checks.json",
+      "sha256": "db8ca696817e6eadda1ca6bd2405c73132fa5e6cd0dfb656ac01e20d1c3ec87f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-frozen-source-verification.json",
+      "sha256": "d915c86d862c6cf680f9989a62dc3807c1220cae6307db298f320e38994b0463"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-own-tier-diff.json",
+      "sha256": "7978a64481c383515ceb9779627932ad6279dc0a5b7b383defeffcc7b00b9697"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-resume-review.json",
+      "sha256": "184511e2a7b9cd4de0e438f992023d84affe3a1ab680338489cf632e5ea70ba1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-traits-review.json",
+      "sha256": "31fd280b3b28325fbdc3a3efd47bad643bb9d7f17b7837f38c27a3c1a89e59ab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-ui-raw-verification.json",
+      "sha256": "a9126553121881b6750a284de137f880387d820ee66575ecd0a02e667e9c4a93"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-primary-ui-review.json",
+      "sha256": "457e0b3708aaa93f1f93dedb8bc6281bf0ffe6654d8b01b8fab2d2164675b309"
+    }
+  ],
+  "primary_review_method": "Exact own tier/full wrapper and UI2/formatter confirmed; reused held/stepped/override/charge cache on actual conditions; verified frozen40range hashes and directly reviewed new heat/reload/vent and charge parameter/fullycharged threshold differences.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-config.json",
+    "sha256": "8cdf7cff897955ea825fac9b18bd91c0e4c5f5fc6f5e375659ce8c25a9994fba"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "fe71dfe69dab0efea5f17d7a1bdf7c18f2ad678554f15f77ae1be608611d0577",
+    "evidence.json": "86ede92697c74ea0052108e52a0ce739dd44b10608d989ad47034e0b96060a94",
+    "draft.md": "6034d805f181cb50e847ae3408d0ec746230c1dfa8e5a278253c02cdd29d9647"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-formal-peer-scope.json",
+    "sha256": "36c6c7656a98ba6fb5956d7b332585058dfa0ff4947f72171601f87469acd208",
+    "final_content_hashes_unchanged": true
+  },
+  "additional_peer_evidence": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/volatile-agent-threshold-followup.json",
+    "sha256": "4a570752d5386f48eda0371f0aa886fe6e43b53a2ead2bd735fe701ba47fc59c",
+    "scope": "Actual direct threshold, reset/ammo-class/auto-chain evidence referenced in final peer; original frozentrio preserved."
+  }
+}

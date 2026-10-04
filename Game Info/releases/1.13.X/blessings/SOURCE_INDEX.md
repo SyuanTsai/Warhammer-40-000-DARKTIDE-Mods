@@ -83,3 +83,4 @@
 | [亞空間亂舞](entries/亞空間亂舞/README.md) | [來源索引](entries/亞空間亂舞/SOURCE_INDEX.md) |
 | [懲罰者](entries/懲罰者/README.md) | [來源索引](entries/懲罰者/SOURCE_INDEX.md) |
 | [浴血而生](entries/浴血而生/README.md) | [來源索引](entries/浴血而生/SOURCE_INDEX.md) |
+| [熱力震盪](entries/熱力震盪/README.md) | [來源索引](entries/熱力震盪/SOURCE_INDEX.md) |
