@@ -81,6 +81,19 @@ Full raw template and formatting: [source evidence](zealot_stamina_cost_multipli
 | Signed cost, delay and recipients | -15% Stamina Cost and 0.15s Stamina Regeneration Delay Reduction, for you and Allies in Coherency.; `ui / loc_talent_zealot_stamina_cost_multiplier_delay_aura_description / 2b5c13bc` | Expenditure ×0.85; regeneration delay adds −0.15s; self and Coherency allies receive the Aura. [Fixed source and line references](zealot_stamina_cost_multiplier_aura.md#fixed-source-evidence) | Consistent | The signed percentage and explicit Delay Reduction express the accepted direction and units. |
 | Duplicates, pause and display metadata | No duplicate-source rule, recipient exception, recovery-pause condition or Tactical Overlay lookup listed.; `ui / loc_talent_zealot_stamina_cost_multiplier_delay_aura_description / 2b5c13bc` | One selected Aura; max_stacks1; recipient keyword restricts others' sources; paused regeneration may block recovery; related_talents may produce a Benediction display mismatch. [Fixed source and line references](zealot_stamina_cost_multiplier_aura.md#fixed-source-evidence) | Not covered by the description | Preserve 20→17 and 0.50→0.35s. The unobserved overlay question does not prove the English Aura description wrong. |
 
+
+<a id="zealot_bolstering_prayer"></a>
+
+## Chorus of Spiritual Fortitude
+
+Full raw template and formatting: [source evidence](zealot_bolstering_prayer.md#original-english-template-and-reconstruction). Name hash `b1a2ee76`. Every row uses `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-pulse recovery | Each pulse Replenishes 45% Toughness to Allies in Coherency.; `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a` | Each pulse restores 20%; fixed updates separately restore 25%/second, including an initial-frame adjustment. The format sum is 0.20 + 0.25. [Fixed source and line references](zealot_bolstering_prayer.md#fixed-source-evidence) | Explicit contradiction | The English assigns the sum to each pulse, contradicting the accepted separation of a pulse amount from a per-second rate. Static reconstruction is not an observed game screen. |
+| Pulse interval, maximum bonus and cooldown | Pulses every 0.8s; each adds +15 Max Toughness, up to +75 for10s; 60s Base Cooldown.; `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a` | Interval0.8s; +15 per stack/max5, duration10s refreshing; base resource cooldown60s. [Fixed source and line references](zealot_bolstering_prayer.md#fixed-source-evidence) | Consistent | These explicit values agree. The English does not specify the post-relic start of cooldown recovery. |
+| Recipients, protection and execution limits | Allies in Coherency have Stun Immunity and Unkillable while channeling; detailed execution conditions omitted.; `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a` | Self is also in the chain; protection refreshes1.5s per pulse; full action≈3.67s/5 ticks; susceptible targets, line-of-sight and range rules; recovery capped/modified and cooldown paused while relic held. [Fixed source and line references](zealot_bolstering_prayer.md#fixed-source-evidence) | Not covered by the description | Caster inclusion and detailed timing/conditions supplement the wording; retain75/115 and28.75/s examples without a fixed total-recovery promise. |
+
 ## Comparison totals
 
 12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.

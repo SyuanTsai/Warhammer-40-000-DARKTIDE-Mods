@@ -17,3 +17,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Benediction](zealot_toughness_damage_reduction_coherency_improved.md) / `zealot_toughness_damage_reduction_coherency_improved` | Aura |
 | [Beacon of Purity](zealot_corruption_healing_coherency_improved.md) / `zealot_corruption_healing_coherency_improved` | Aura |
 | [Zealous](zealot_stamina_cost_multiplier_aura.md) / `zealot_stamina_cost_multiplier_aura` | Aura |
+| [Chorus of Spiritual Fortitude](zealot_bolstering_prayer.md) / `zealot_bolstering_prayer` | Ability |
