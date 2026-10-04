@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="32" height="32" alt="Shroudfield talent icon"> [Shroudfield](#zealot_stealth) | <ul><li>Enter Stealth for 3 seconds; base cooldown 30 seconds. Gain 20% Movement Speed, 150% Backstab/Finesse bonuses, 100 percentage points of Critical Chance and 100% Melee Rending. Qualifying attacks and actions end Stealth.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="32" height="32" alt="Master-Crafted Shroudfield talent icon"> [Master-Crafted Shroudfield](#zealot_increased_duration) | <ul><li>Extend Shroudfield from 3 to 5 seconds. After leaving Stealth, gain 75% lower threat weight and 50% Melee Backstab damage for 5 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d" width="32" height="32" alt="Invigorating Revelation talent icon"> [Invigorating Revelation](#zealot_leaving_stealth_restores_toughness) | <ul><li>Entering Shroudfield restores 50% maximum Toughness. Leaving Stealth grants 30% damage reduction for 8 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="32" height="32" alt="Martyr's Purpose talent icon"> [Martyr's Purpose](#zealot_restore_stealth_cd_on_damage) | <ul><li>Lower current Health increases combat ability recharge. At 25% Health or less, gain up to 0.5 additional resource per second, equivalent to +50% regeneration when natural recharge is 1 resource/s.</li></ul> | Ability |
 
 ---
 
@@ -239,3 +240,17 @@
 - **Restoration and damage example**: With maximum Toughness 100 and current Toughness 20, entry restores 100 × 50% = 50 to reach 70. If only 30 is missing, only 30 is restored. After exit, damage of 100 becomes 100 × 0.7 = 70; with another independent 25% reduction it becomes 52.5.
 
 [Details](zealot_leaving_stealth_restores_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_restore_stealth_cd_on_damage"></a>
+
+### Martyr's Purpose
+
+<img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="72" height="72" alt="Martyr's Purpose talent icon">
+
+- **Behavior**: Lower Health makes your combat ability recharge faster. Full Health gives no extra recharge. At 25% Health or less, the maximum is equivalent to recovering an additional 0.5 seconds of base cooldown per second.
+- **Formula**: Extra recovery = 0.5 × min[(1 − current Health fraction) ÷ 0.75, 1]. Healing reduces this bonus; another hit is not required for it to update.
+- **Cooldown example**: At a steady 50% Health with normal natural recharge, total progress per second is 1 + 0.5 × 0.5 ÷ 0.75 ≈ 1.333 seconds, so a 30-second ability recharges in about 22.5 seconds. At 25% Health or less, 30 ÷ 1.5 = 20 seconds. Actual settlement occurs once per second, so timing may differ slightly.
+
+[Details](zealot_restore_stealth_cd_on_damage.md) · [Back to index](#talent-index)

@@ -178,6 +178,18 @@ Full raw template and formatting: [source evidence](zealot_leaving_stealth_resto
 | Restoration and exit resistance | “Shroudfield Replenishes 50% Toughness. Gain +30% Damage Resistance for 8s upon exiting Stealth.”; `ui / loc_talent_zealot_stealth_toughness_dr_desc / cc97b988` | Entry restores 0.5 maximum Toughness; exit adds `damage_taken_multiplier=0.7` for 8s. [Fixed source and line references](zealot_leaving_stealth_restores_toughness.md#fixed-source-evidence) | Consistent | The exit qualifier applies to resistance; the first sentence does not explicitly assert restoration on exit. |
 | Restoration basis, timing and damage limits | No maximum-versus-missing basis, cap, explicit entry timing or stacking rule; `ui / loc_talent_zealot_stealth_toughness_dr_desc / cc97b988` | Restoration occurs on entry and caps at missing Toughness; exit does not repeat it. General damage multiplier, max 1, duration begins on application. [Fixed source and line references](zealot_leaving_stealth_restores_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain the two effects and their limits without inventing an English timing error. |
 
+
+<a id="zealot_restore_stealth_cd_on_damage"></a>
+
+## Martyr's Purpose
+
+Full raw template and formatting: [source evidence](zealot_restore_stealth_cd_on_damage.md#original-english-template-and-reconstruction). Name hash `2d55be3c`. Every row uses `ui / loc_talent_zealot_damage_taken_restores_cd_new_description / 62f53f3a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Missing-Health dependence and maximum | “Up to +50% Ability Cooldown Regeneration based on Missing Health. Max reached at 25% Current Health.”; `ui / loc_talent_zealot_damage_taken_restores_cd_new_description / 62f53f3a` | Every second: extra `0.5×clamp((1-health_percent)/0.75,0,1)` combat ability resource; maximum at 25% Health or lower. [Fixed source and line references](zealot_restore_stealth_cd_on_damage.md#fixed-source-evidence) | Consistent | The direction, cap threshold and maximum additional regeneration agree under the accepted natural 1 resource/s basis. |
+| Sampling, healing and elapsed recharge | No event requirement, sampling interval or full recharge time specified; `ui / loc_talent_zealot_damage_taken_restores_cd_new_description / 62f53f3a` | Periodic current-Health sampling, not an `on_damage` proc; healing lowers the bonus. Natural recharge and other effects remain separate. [Fixed source and line references](zealot_restore_stealth_cd_on_damage.md#fixed-source-evidence) | Not covered by the description | The existing 22.5s/20s examples and update timing explain the stated regeneration. |
+
 ## Comparison totals
 
 23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.

@@ -25,3 +25,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Shroudfield](zealot_stealth.md) / `zealot_stealth` | Ability |
 | [Master-Crafted Shroudfield](zealot_increased_duration.md) / `zealot_increased_duration` | Ability |
 | [Invigorating Revelation](zealot_leaving_stealth_restores_toughness.md) / `zealot_leaving_stealth_restores_toughness` | Ability |
+| [Martyr's Purpose](zealot_restore_stealth_cd_on_damage.md) / `zealot_restore_stealth_cd_on_damage` | Ability |
