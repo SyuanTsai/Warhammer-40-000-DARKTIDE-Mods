@@ -313,6 +313,18 @@ Full raw template and formatting: [source evidence](broker_keystone_chemical_dep
 | Upgraded duration and stack cap | Dependency now lasts 60s per stack; Max Stacks increased to 4; `ui / loc_talent_broker_keystone_chemical_dependency_sub_3_desc / 80f78eef` | The upgrade adds one to max_stacks/max_stacks_cap and changes duration by −30 s, yielding 4 stacks and 60 s. [Fixed source and line references](broker_keystone_chemical_dependency_sub_3.md#fixed-source-evidence) | Consistent | The final duration and cap match the stated tradeoff. |
 | Shared timer, recovery and capped-use behavior | No shared-timer refresh, sequential decay or recovery calculation details; `ui / loc_talent_broker_keystone_chemical_dependency_sub_3_desc / 80f78eef` | Gain/removal refreshes the shared 60 s timer; capped uses refresh without adding a fifth stack. Four unchanged 0.10 recovery bonuses give 1.40 rate and isolated 60 ÷ 1.40 ≈ 42.86 s recovery. [Fixed source and line references](broker_keystone_chemical_dependency_sub_3.md#fixed-source-evidence) | Not covered by the description | These retain the original timing and recovery examples without adding new mechanism analysis. |
 
+
+<a id="broker_keystone_vultures_mark_aoe_stagger"></a>
+
+## Vulture's Push
+
+Full raw template and formatting: [source evidence](broker_keystone_vultures_mark_aoe_stagger.md#original-english-template-and-reconstruction). Name hash `763b07e9`. Every row uses `ui / loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc / d98831c7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged kill trigger and player-centred effect | Killing Elite or Special enemies with Ranged Attacks; enemies around you; `ui / loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc / d98831c7` | The on_kill check requires died, elite/special and Ranged classification; the explosion is centred at player position + 0.65 m. [Fixed source and line references](broker_keystone_vultures_mark_aoe_stagger.md#fixed-source-evidence) | Consistent | The trigger and location agree with the accepted evidence. |
+| Universal knockback result | Knocks all enemies around you backwards; `ui / loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc / d98831c7` | The 3 m villains-filtered explosion requests medium Stagger, with Impact 0.55 modified by armour and resistance/state; attack Power is 0. Actual displacement is target-dependent, and the separate Toxin Mark event does not automatically trigger this handler. [Fixed source and line references](broker_keystone_vultures_mark_aoe_stagger.md#fixed-source-evidence) | Cannot confirm | The accepted evidence does not guarantee the stated backwards displacement for every enemy and state. Other omitted area/handler limits remain supplements. |
+
 ## Comparison totals
 
 The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.

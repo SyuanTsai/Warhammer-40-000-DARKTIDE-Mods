@@ -37,3 +37,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Chem Enhanced](broker_keystone_chemical_dependency_sub_1.md) / `broker_keystone_chemical_dependency_sub_1` | Keystone |
 | [Chem Fortified](broker_keystone_chemical_dependency_sub_2.md) / `broker_keystone_chemical_dependency_sub_2` | Keystone |
 | [Maxed Out Chems](broker_keystone_chemical_dependency_sub_3.md) / `broker_keystone_chemical_dependency_sub_3` | Keystone |
+| [Vulture's Push](broker_keystone_vultures_mark_aoe_stagger.md) / `broker_keystone_vultures_mark_aoe_stagger` | Keystone |
