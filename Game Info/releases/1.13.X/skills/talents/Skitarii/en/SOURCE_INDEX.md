@@ -60,3 +60,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Surge-Extension](cryptic_redline_toughness.md) / `cryptic_redline_toughness` | Keystone |
 | [Power Redistribution Uplink](cryptic_crits_grant_tdr.md) / `cryptic_crits_grant_tdr` | Talent |
 | [Adaptive Combat Engram](cryptic_dr_on_toughness_break.md) / `cryptic_dr_on_toughness_break` | Talent |
+| [Evasive Servo Recovery](cryptic_successful_dodge_stamina.md) / `cryptic_successful_dodge_stamina` | Talent |

@@ -57,6 +57,7 @@
 | <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="Surge-Extension talent icon"> [Surge-Extension](#cryptic_redline_toughness) | <ul><li>Each charge-gained or charge-spent event starts 5 seconds of Toughness recovery, restoring 25% of maximum Toughness in total. It can trigger at the Redline stack cap; repeated events reset the duration and recovery budget.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="Power Redistribution Uplink talent icon"> [Power Redistribution Uplink](#cryptic_crits_grant_tdr) | <ul><li>Critical hits start 3 seconds of recovery at 2.5% of maximum Toughness per second and grant 15% Toughness Damage Reduction. Further critical hits restart the duration; the rate and reduction do not stack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="Adaptive Combat Engram talent icon"> [Adaptive Combat Engram](#cryptic_dr_on_toughness_break) | <ul><li>When your Toughness breaks, gain 30% Damage Reduction for 5 seconds. A further 15-second cooldown follows the effect, so successive triggers are at least 20 seconds apart.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="Evasive Servo Recovery talent icon"> [Evasive Servo Recovery](#cryptic_successful_dodge_stamina) | <ul><li>Successfully dodging an enemy attack immediately restores 10% of maximum Stamina. Pressing dodge without avoiding an attack does not qualify; recovery is capped at full Stamina.</li></ul> | Talent |
 
 ---
 
@@ -784,3 +785,16 @@
 - **Example**: With no other reduction, `100 × (1 − 30%) = 70` damage. With another independent 25% reduction, `100 × 0.70 × 0.75 = 52.5` damage.
 
 [Details](cryptic_dr_on_toughness_break.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_successful_dodge_stamina"></a>
+
+### Evasive Servo Recovery
+
+<img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="72" height="72" alt="Evasive Servo Recovery talent icon">
+
+- **Trigger**: Successfully dodging an enemy attack immediately restores **10% of maximum Stamina**. Simply pressing dodge without avoiding an attack does not count.
+- **Example**: At 5 maximum Stamina bars, each successful dodge restores `5 × 10% = 0.5` bars. At 4.8 current bars, it only restores up to 5.
+
+[Details](cryptic_successful_dodge_stamina.md) · [Back to index](#talent-index)

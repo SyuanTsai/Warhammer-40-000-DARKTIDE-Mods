@@ -600,6 +600,18 @@ Full raw template and formatting: [source evidence](cryptic_dr_on_toughness_brea
 | Interval between activations | Can only occur once every 15s; `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1` | Cooldown test is `active_start + active_duration + cooldown_duration`: 5 + 15 = 20 seconds between triggers [Fixed source and line references](cryptic_dr_on_toughness_break.md#fixed-source-evidence) | Explicit contradiction | The English states a 15-second activation interval; the verified minimum is 20 seconds. |
 | Event ownership, damage timing and stacking | Does not specify event ownership, retroactive damage handling or other reductions; `ui / loc_talent_cryptic_dr_on_toughness_break_desc / 05a4e1a1` | Only the owner's break triggers it; protection applies afterwards. Independent 25% reduction gives `100 × 0.70 × 0.75 = 52.5` [Fixed source and line references](cryptic_dr_on_toughness_break.md#fixed-source-evidence) | Not covered by the description | These conditions and examples supplement the English. |
 
+
+<a id="cryptic_successful_dodge_stamina"></a>
+
+## Evasive Servo Recovery
+
+Full raw template and formatting: [source evidence](cryptic_successful_dodge_stamina.md#original-english-template-and-reconstruction). Name hash `3b7e8ada`. Every row uses `ui / loc_talent_cryptic_successful_dodge_stamina_desc / 99f3c08d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful-dodge trigger and restoration | Successful dodges restore 10% Stamina; `ui / loc_talent_cryptic_successful_dodge_stamina_desc / 99f3c08d` | `on_successful_dodge` calls `Stamina.add_stamina_percent(unit, 0.1)` [Fixed source and line references](cryptic_successful_dodge_stamina.md#fixed-source-evidence) | Consistent | The event and restoration value agree with the wording. |
+| Recovery basis and limits | Does not specify the maximum-Stamina denominator, timing, cap, cooldown or stacks; `ui / loc_talent_cryptic_successful_dodge_stamina_desc / 99f3c08d` | Immediate recovery is 10% of maximum Stamina, capped at full; this template has no cooldown or stacks. At 5 maximum bars, restore 0.5; from 4.8, stop at 5 [Fixed source and line references](cryptic_successful_dodge_stamina.md#fixed-source-evidence) | Not covered by the description | These restrictions and the preserved example supplement the English. |
+
 ## Comparison totals
 
 94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.
