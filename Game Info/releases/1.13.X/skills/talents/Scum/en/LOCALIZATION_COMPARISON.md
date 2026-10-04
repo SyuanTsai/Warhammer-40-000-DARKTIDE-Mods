@@ -386,6 +386,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Frenzy condition and recovery rate | While Frenzy is active, replenish 5% Toughness each second; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc / 1af84a83` | The server Frenzy buff enables `restore_toughness = 0.05` and replenishes at 1-second intervals. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_5.md#fixed-source-evidence) | Consistent | The stated condition and percentage match the accepted mechanism. |
 | Recovery basis, cap, and first tick | No maximum-Toughness basis, deficit limit, or first-tick timing is stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc / 1af84a83` | Recovery uses maximum Toughness, respects the current deficit and recovery modifiers, and initializes `next_tick = t`. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_5.md#fixed-source-evidence) | Not covered by the description | These limits and timing details supplement the short description. |
 
+
+<a id="broker_keystone_adrenaline_junkie_sub_4"></a>
+
+## Uncontrolled Aggression
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie_sub_4.md#original-english-template-and-reconstruction). Name hash `b6f65f02`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc / fb871cba`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Final Adrenaline duration | Increase duration of Adrenaline to 4s; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc / fb871cba` | The 2-second core timer gains 4 − 2 seconds, yielding a final duration of 4 seconds. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_4.md#fixed-source-evidence) | Consistent | To describes the final duration, rather than an additional 4 seconds. |
+| Shared decay timer and cap behavior | No timer-reset or cap-clearing details are stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc / fb871cba` | Gains reset the shared timer; each expired stack removal resets it to 4 seconds. At 30 stacks, the core triggers Frenzy and clears Adrenaline. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_4.md#fixed-source-evidence) | Not covered by the description | The shared timing and unchanged cap rules supplement the stated duration. |
+
 ## Comparison totals
 
 The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

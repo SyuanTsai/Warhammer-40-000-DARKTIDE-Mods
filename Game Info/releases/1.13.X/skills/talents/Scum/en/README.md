@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="Adrenaline Assassin talent icon"> [Adrenaline Assassin](#broker_keystone_adrenaline_junkie_sub_1) | <ul><li>Weakspot Melee hits grant the original 1 stack plus 2 additional stacks, for 3; ordinary non-Weakspot non-Critical hits grant none.</li><li>The independent Critical bonus remains: a non-Weakspot Critical hit grants 1, and a Critical Weakspot hit grants 4, subject to the core's 30-stack cap.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="Stoked Rage talent icon"> [Stoked Rage](#broker_keystone_adrenaline_junkie_sub_3) | <ul><li>Frenzy lasts 20 seconds, 10 seconds longer than the core.</li><li>Retriggering refreshes one Frenzy buff to 20 seconds; Adrenaline timing, stack cap and Frenzy's speed/Damage bonuses remain unchanged.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="Adrenaline Unbound talent icon"> [Adrenaline Unbound](#broker_keystone_adrenaline_junkie_sub_5) | <ul><li>Restore 5% of maximum Toughness each second during Adrenaline Frenzy.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="Uncontrolled Aggression talent icon"> [Uncontrolled Aggression](#broker_keystone_adrenaline_junkie_sub_4) | <ul><li>Increase the duration of each Adrenaline stack from 2 seconds to 4 seconds.</li></ul> | Keystone |
 
 ---
 
@@ -575,3 +576,17 @@
 - **Timing**: recovery occurs only during Adrenaline Frenzy. The first tick can occur immediately when Frenzy begins, followed by 1-second intervals.
 
 [Details](broker_keystone_adrenaline_junkie_sub_5.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_4"></a>
+
+### Uncontrolled Aggression
+
+<img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="72" height="72" alt="Uncontrolled Aggression talent icon">
+
+- **Stack timer**: after gaining Adrenaline stacks, the timer is 4 seconds. New stacks reset this shared timer.
+- **Decay**: if no new stacks arrive within 4 seconds, lose 1 stack and restart the timer. If no further stacks arrive, lose another stack every 4 seconds.
+- **Cap trigger**: Adrenaline Frenzy still triggers at 30 stacks. On reaching the cap, the core triggers Frenzy and clears the Adrenaline stacks.
+
+[Details](broker_keystone_adrenaline_junkie_sub_4.md) · [Back to index](#talent-index)
