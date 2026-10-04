@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="Channelled Aggression talent icon"> [Channelled Aggression](#broker_ability_punk_rage_sub_1) | <ul><li>While rage is active, Melee Heavy Attacks gain additive +25% Rending in the armour-penetration calculation.</li><li>The effect checks Melee Heavy Attacks; Rending is not a direct 25% Damage increase.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="Forge's Bellow talent icon"> [Forge's Bellow](#broker_ability_punk_rage_sub_3) | <ul><li>Shout when rage starts and ends, Staggering enemies within 4.5 metres.</li><li>Each Shout adds −50% enemy Melee Attack Speed for 5 seconds; a 1-second attack interval becomes approximately 2 seconds with only this effect.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="Boiling Blood talent icon"> [Boiling Blood](#broker_ability_punk_rage_sub_4) | <ul><li>Melee hits on Elite, Specialist, Monstrosity or Captain-tagged enemies extend rage by 1 second; these hits begin diminishing after 30 seconds, halving at each 30-second stage.</li><li>Ordinary enemy hits keep the base 0.3-second extension and 20-second diminution stages; the 30-second upgrade applies only to the special tags.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="Focused Resolve talent icon"> [Focused Resolve](#broker_ability_focus_sub_3) | <ul><li>During focus, eligible Close Range Ranged kills restore 0.5 seconds of Ability Cooldown, or 1 second for Elites and Specialists.</li><li>Each focus activation can restore at most 5 seconds; qualifying Needle Pistol Toxin deaths can also contribute.</li></ul> | Ability |
 
 ---
 
@@ -247,3 +248,21 @@
 - **Ordinary-enemy extension:** ordinary enemy hits retain the base 0.3-second extension and start diminishing after 20 seconds. The 30-second threshold does not also change ordinary hits.
 
 [Details](broker_ability_punk_rage_sub_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_focus_sub_3"></a>
+
+### Focused Resolve
+
+<img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="72" height="72" alt="Focused Resolve talent icon">
+
+- **Cooldown restored:** during focus, ordinary Close Range Ranged kills restore 0.5 seconds of Ability Cooldown. Elite and Specialist kills restore 1 second.
+
+- **Per-activation cap:** each focus state restores at most 5 seconds: 10 ordinary kills or 5 Elite/Specialist kills reach the cap, and mixed kills stop restoring once their combined total reaches 5 seconds.
+
+- **Cooldown example:** natural recovery is 1 second per second and the base cooldown is 45 seconds. Restoring the full 5 seconds leaves 45 − 5 = 40 seconds of natural recovery after focus ends. Natural recovery pauses during focus, but kill-triggered restoration still adds resource directly.
+
+- **Needle Pistol exception:** a target tracked after a Needle Pistol hit during focus can also restore cooldown if it subsequently dies from Toxin within Close Range. This does not make every Toxin death eligible.
+
+[Details](broker_ability_focus_sub_3.md) · [Back to index](#talent-index)

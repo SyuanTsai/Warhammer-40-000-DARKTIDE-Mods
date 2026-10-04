@@ -25,3 +25,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Channelled Aggression](broker_ability_punk_rage_sub_1.md) / `broker_ability_punk_rage_sub_1` | Ability |
 | [Forge's Bellow](broker_ability_punk_rage_sub_3.md) / `broker_ability_punk_rage_sub_3` | Ability |
 | [Boiling Blood](broker_ability_punk_rage_sub_4.md) / `broker_ability_punk_rage_sub_4` | Ability |
+| [Focused Resolve](broker_ability_focus_sub_3.md) / `broker_ability_focus_sub_3` | Ability |

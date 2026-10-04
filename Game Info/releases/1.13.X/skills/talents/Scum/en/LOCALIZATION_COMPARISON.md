@@ -168,6 +168,18 @@ Full raw template and formatting: [source evidence](broker_ability_punk_rage_sub
 | Listed enemies and upgraded extension | Melee strikes against Elites and Monstrosities extend Rampage! by 1s; diminution begins at 30s; `ui / loc_talent_broker_ability_punk_rage_sub_4_desc / 43686b03` | With the branch active, elite/monster-tagged Melee hits use added_duration 1 and max_duration 30. [Fixed source and line references](broker_ability_punk_rage_sub_4.md#fixed-source-evidence) | Consistent | The stated targets receive the described values; Strikes does not require a kill. |
 | Broader tags and ordinary-hit limits | No Specialist/Captain list, separate ordinary-hit rule or exact later extension values; `ui / loc_talent_broker_ability_punk_rage_sub_4_desc / 43686b03` | special/captain tags also qualify; special hits follow 1/2^floor(elapsed/30), ordinary hits retain 0.3/2^floor(elapsed/20); remaining-duration constraints still apply. [Fixed source and line references](broker_ability_punk_rage_sub_4.md#fixed-source-evidence) | Not covered by the description | The wording does not explicitly exclude other tags or promise a universal 30-second upgrade. These retain the original examples and scope limits. |
 
+
+<a id="broker_ability_focus_sub_3"></a>
+
+## Focused Resolve
+
+Full raw template and formatting: [source evidence](broker_ability_focus_sub_3.md#original-english-template-and-reconstruction). Name hash `26e4c99d`. Every row uses `ui / loc_talent_broker_ability_focus_sub_3_desc / 5ba532cd`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration values | 0.5s for ordinary kills, 1s for Elite/Specialist kills; 5s maximum; `ui / loc_talent_broker_ability_focus_sub_3_desc / 5ba532cd` | Eligible ordinary victims restore 0.5, elite/special victims restore 1; accumulated restoration is capped at 5 per focus state. [Fixed source and line references](broker_ability_focus_sub_3.md#fixed-source-evidence) | Consistent | All three displayed quantities match the accepted values. |
+| Actual eligibility and recovery limits | Highlighted Enemies; no Ranged/distance checks, Toxin exception or natural-recovery details; `ui / loc_talent_broker_ability_focus_sub_3_desc / 5ba532cd` | Ordinary kills require Ranged attacks within 12.5 m, without a separate highlight-status check; tracked Needle Pistol Toxin deaths can qualify. Natural recovery pauses, but direct restoration remains possible and the 5-second cap applies per state. [Fixed source and line references](broker_ability_focus_sub_3.md#fixed-source-evidence) | Not covered by the description | These conditions and exceptions supplement the short trigger wording; no omitted detail is counted as an English translation error. |
+
 ## Comparison totals
 
 The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.
