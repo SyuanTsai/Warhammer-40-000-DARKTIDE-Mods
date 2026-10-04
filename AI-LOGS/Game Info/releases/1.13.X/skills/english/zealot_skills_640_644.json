@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_640_644",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L3268-L3287, L3249-L3267, L3214-L3229, L1572-L1623; base_talents.lua L1037-L1060 and L1109-L1132. Existing mechanisms and known formatter reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Purifying Hatred and can list both enemy groups, with simultaneous stacking supplementary; Dance of Death Recoil does not explicitly promise halved final camera displacement."
+  ],
+  "skills": [
+    {
+      "id": "zealot_weapon_special_damage",
+      "name": "Holy Tools",
+      "name_hash": "af1ee73d",
+      "description_hash": "21bf1b41",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_weapon_special_damage.md",
+      "commit": "b55aabf6d"
+    },
+    {
+      "id": "zealot_melee_kills_restore_toughness_to_target",
+      "name": "Got Your Back",
+      "name_hash": "28db6608",
+      "description_hash": "185f78b2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_melee_kills_restore_toughness_to_target.md",
+      "commit": "bd5e6dc13"
+    },
+    {
+      "id": "zealot_dmg_vs_burning_electrocuted",
+      "name": "Purifying Hatred",
+      "name_hash": "9b5165a8",
+      "description_hash": "34bfb2f6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_dmg_vs_burning_electrocuted.md",
+      "commit": "05ddc3531"
+    },
+    {
+      "id": "zealot_improved_weapon_handling_after_dodge",
+      "name": "Dance of Death",
+      "name_hash": "3be70e6b",
+      "description_hash": "b7d4f75a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_improved_weapon_handling_after_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_improved_weapon_handling_after_dodge.md",
+      "commit": "e3dbf4f63"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "name": "Melee Damage Boost",
+      "name_hash": "cb9e7b48",
+      "description_hash": "7b5da013",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/base_melee_damage_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_melee_damage_node_buff_medium_1.md",
+      "commit": "66ee9d0bc"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 335,
+    "from_commit": "98e963a96",
+    "to_commit": "66ee9d0bc",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

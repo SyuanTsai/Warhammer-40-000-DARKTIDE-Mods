@@ -13674,9 +13674,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8210e47217420ac36970827055fff5dfc3bd391c",
       "chinese_sha256": "122cc05e41e861d844041ba878805683cfa7e684d0e8caeab398f1dae0869e33",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_melee_damage_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/base_melee_damage_node_buff_medium_4.md",
@@ -14085,9 +14092,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "478882d5f6f03be4d16ede15c1b33ff14e452c79",
       "chinese_sha256": "a49c20e801897cc2fb15aaa440682628029eb340d650fdfd42caf7d9291e046e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_dmg_vs_burning_electrocuted"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_elite_kills_empowers.md",
@@ -14258,9 +14272,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "16eb330802815664f60f7363061a91c62fa6f39c",
       "chinese_sha256": "ee613960c1067724ffb8a6b7dbcce5ddaed790f2045e44a2cea79d40b23425e6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_improved_weapon_handling_after_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increase_ranged_close_damage.md",
@@ -14449,9 +14470,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "964b877cb477929395ee21df7be17069a166f33d",
       "chinese_sha256": "ff7c5ad02393ed16d08e93087761f8105541ece0d5f0cc342487cce97536e7fb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_melee_kills_restore_toughness_to_target"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_momentum_toughness_replenish.md",
@@ -15090,9 +15118,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "665e1713167740ba6c60ea905e70752d1729b1cc",
       "chinese_sha256": "e20c5dba3ce0212c845ec2be0f019ccc63a297aa691d10baac7af121f9cdec41",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_weapon_special_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json"
     }
   ],
   "accepted_skills": [
@@ -20283,6 +20318,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_from_ranged.md"
+    },
+    {
+      "id": "zealot_weapon_special_damage",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_weapon_special_damage.md"
+    },
+    {
+      "id": "zealot_melee_kills_restore_toughness_to_target",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_melee_kills_restore_toughness_to_target.md"
+    },
+    {
+      "id": "zealot_dmg_vs_burning_electrocuted",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_dmg_vs_burning_electrocuted.md"
+    },
+    {
+      "id": "zealot_improved_weapon_handling_after_dodge",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_improved_weapon_handling_after_dodge.md"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/base_melee_damage_node_buff_medium_1.md"
     }
   ],
   "pending_chinese_corrections": [
