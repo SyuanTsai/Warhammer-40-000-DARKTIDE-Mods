@@ -433,6 +433,18 @@ Full raw template and formatting: [source evidence](psyker_empowered_ability_on_
 | Guaranteed Elite gain | Guaranteed chance to gain Empowered Psionics on Elite Kills; `ui / loc_talent_psyker_empowered_ability_on_elite_kills_description / 23c36e9e` | With the special rule enabled, on_kill requires params.tags.elite and adds one charge. [Fixed source and line references](psyker_empowered_ability_on_elite_kills.md#fixed-source-evidence) | Consistent | The guarantee and Elite condition agree. The text does not extend the guarantee to Specialists. |
 | Cap and ordinary chance path | No cap variant or duplicate-proc handling specified; `ui / loc_talent_psyker_empowered_ability_on_elite_kills_description / 23c36e9e` | Shared counter clamps at the cap; base cap one and Charged Up cap three. Guaranteed Elite kills return from the ordinary chance handler; other kills retain the base chance path. [Fixed source and line references](psyker_empowered_ability_on_elite_kills.md#fixed-source-evidence) | Not covered by the description | The storage and event boundaries supplement the guarantee; it does not promise extra stored stacks when already full. |
 
+
+<a id="psyker_mark_increased_max_stacks"></a>
+
+## Perfectionism
+
+Full raw template and formatting: [source evidence](psyker_mark_increased_max_stacks.md#original-english-template-and-reconstruction). Name hash `af94ab08`. Every row uses `ui / loc_talent_psyker_mark_increased_max_stacks_description / 781eac6d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Precision cap | Maximum Precision Bonus stacks increase from 15 to 25; `ui / loc_talent_psyker_mark_increased_max_stacks_description / 781eac6d` | The increased_stacks clone sets max_stacks = 25, compared with the base 15. [Fixed source and line references](psyker_mark_increased_max_stacks.md#fixed-source-evidence) | Consistent | The stated old and new caps agree. |
+| Unchanged stats and selection | No stronger per-stack bonus, duration change or combined variant stated; `ui / loc_talent_psyker_mark_increased_max_stacks_description / 781eac6d` | damage 0.01, critical_strike_damage 0.02, weakspot_damage 0.025, duration 5 and refresh flags are unchanged; this is an alternative to Lingering Influence. [Fixed source and line references](psyker_mark_increased_max_stacks.md#fixed-source-evidence) | Not covered by the description | The full example, unchanged rules and selection limit supplement the cap change. |
+
 ## Comparison totals
 
 The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
