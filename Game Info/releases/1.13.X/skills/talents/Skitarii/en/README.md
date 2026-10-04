@@ -74,6 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="Ablative Motion Routines talent icon"> [Ablative Motion Routines](#cryptic_mobile_defense) | <ul><li>Take 25% less damage while sprinting with Stamina remaining, or while sliding. Sliding does not require remaining Stamina. The effect ends immediately when neither condition holds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="32" height="32" alt="Power Overflow talent icon"> [Power Overflow](#cryptic_shared_toughness) | <ul><li>When already at full Toughness and a recovery event restores nothing to you, each other ally in Coherency receives 25% of that event's intended recovery. It is applied separately to each ally, with their own recovery bonuses and cap.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="32" height="32" alt="Target-Neutralization Feedback talent icon"> [Target-Neutralization Feedback](#cryptic_stun_suppression_immune) | <ul><li>Weakspot kills grant 5 seconds of Stun and Suppression immunity.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="Binary Ballistics Protocol talent icon"> [Binary Ballistics Protocol](#cryptic_elite_kills_toughness) | <ul><li>Elite kills restore 15% of maximum Toughness over 3 seconds. Melee and ranged kills both qualify; retriggering refreshes the duration.</li></ul> | Talent |
 
 ---
 
@@ -1042,3 +1043,17 @@
 - This grants no damage reduction. It does not make you immune to nets, pounces or every form of forced control.
 
 [Details](cryptic_stun_suppression_immune.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_elite_kills_toughness"></a>
+
+### Binary Ballistics Protocol
+
+<img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="72" height="72" alt="Binary Ballistics Protocol talent icon">
+
+- Killing an Elite restores 15% of maximum Toughness over 3 seconds. Both melee and ranged kills qualify.
+- Another qualifying kill refreshes the 3-second duration; it does not increase the recovery rate.
+- **Example**: With 200 maximum Toughness, recovery is `200 × 15% ÷ 3 = 10` points per second, or 30 points over 3 seconds. If you trigger it again after 2 seconds, continuous recovery lasts 5 seconds and restores 50 points in total.
+
+[Details](cryptic_elite_kills_toughness.md) · [Back to index](#talent-index)

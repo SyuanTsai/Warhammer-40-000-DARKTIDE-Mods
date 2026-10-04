@@ -805,6 +805,18 @@ Full raw template and formatting: [source evidence](cryptic_stun_suppression_imm
 | Trigger and immunity | Weakspot kills; Stun and Suppression Immunity for 5s; `ui / loc_talent_cryptic_stun_suppression_immune_desc / 38272d6c` | `on_kill` plus `on_weakspot_kill` grants `stun_immune` and `suppression_immune` for 5 seconds. [Fixed source and line references](cryptic_stun_suppression_immune.md#fixed-source-evidence) | Consistent | The stated trigger, duration and immunity types match the verified evidence. |
 | Refresh and limits | The description does not specify retriggering or list disabling actions; `ui / loc_talent_cryptic_stun_suppression_immune_desc / 38272d6c` | Retriggering refreshes 5 seconds; a 0-second trigger followed by one at 3 seconds lasts until 8 seconds. No damage reduction or general immunity to nets/pounces is granted. [Fixed source and line references](cryptic_stun_suppression_immune.md#fixed-source-evidence) | Not covered by the description | The omitted timing and scope details supplement the named immunity keywords; the English makes no explicit broader promise. |
 
+
+<a id="cryptic_elite_kills_toughness"></a>
+
+## Binary Ballistics Protocol
+
+Full raw template and formatting: [source evidence](cryptic_elite_kills_toughness.md#original-english-template-and-reconstruction). Name hash `73cdec4e`. Every row uses `ui / loc_talent_cryptic_elite_kills_toughness_desc / 46309d46`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, recovery and duration | Elite Kills restore 15% Toughness over 3s; `ui / loc_talent_cryptic_elite_kills_toughness_desc / 46309d46` | Elite kills of either attack type trigger 15% of maximum Toughness over 3 seconds. [Fixed source and line references](cryptic_elite_kills_toughness.md#fixed-source-evidence) | Consistent | The stated enemy type, fraction and duration match; the English does not impose a ranged-kill restriction. |
+| Recovery basis and retriggering | The description does not specify the percentage basis, refresh or recovery modifiers; `ui / loc_talent_cryptic_elite_kills_toughness_desc / 46309d46` | Rate is `0.15 / 3` of maximum Toughness per second; retriggering refreshes 3 seconds without increasing that rate. Recovery bonuses and the cap apply. [Fixed source and line references](cryptic_elite_kills_toughness.md#fixed-source-evidence) | Not covered by the description | These details explain the existing 200-maximum example: 10 points/second, 30 over 3 seconds, or 50 across a refresh at 2 seconds. |
+
 ## Comparison totals
 
 136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.
