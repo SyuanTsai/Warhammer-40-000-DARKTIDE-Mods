@@ -130,4 +130,4 @@ Full raw template and formatting: [source evidence](cryptic_force_field_duration
 
 ## Comparison totals
 
-11 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 468.
+21 rules: 10 Consistent / 0 Explicit contradiction / 10 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 473.

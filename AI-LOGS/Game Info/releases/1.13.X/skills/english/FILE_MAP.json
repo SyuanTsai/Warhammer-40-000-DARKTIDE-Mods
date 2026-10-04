@@ -8923,9 +8923,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "deb301837641ae0a2feaa52aba6c35b61f8e5eed",
       "chinese_sha256": "82cd19231dc85fa17f4e0cd7508d3f4689fe87863146ef9bfd4f3b6aedba6f92",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_arc_grenades_brittleness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_arc_grenades_weapon_malfunction.md",
@@ -8934,9 +8941,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a5611a1c0eec548af165c24f47c23bea82c8b956",
       "chinese_sha256": "73000c605c983a56ff512bf12394a4fd4bc54e7c0291aae8c6b4428a8d5db9dd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_arc_grenades_weapon_malfunction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_aura_weapon_improved.md",
@@ -9370,9 +9384,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3c1a568f0b8b5c925b7ca8c87afd95cee501142e",
       "chinese_sha256": "eaa9d344ae8248400f20cb3494777b888acde92b0a6c4e6ca8e9e4686031c2d9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_force_field_capacitance_restore"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_duration_increase.md",
@@ -9381,9 +9402,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "37a38f66d9ab5a9aaf509e6e72a6b2c9784f6704",
       "chinese_sha256": "bc53a2033d269c2876887b8f5ca511a839cf85db91358ae120cbf6a1d7dfcf73",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_force_field_duration_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_grenade_ability_arc_grenade.md",
@@ -9798,9 +9826,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0b475f4b23d7045e9bd74896b9bdcd96d1e2eb46",
       "chinese_sha256": "269319615485ee02135fa0be9b36b1a9566be0dcfbfed56a2a7f23128946cd0c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_servo_skull_improved_tagging"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_inject_ally.md",
@@ -17279,6 +17314,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_improved.md"
+    },
+    {
+      "id": "cryptic_force_field_capacitance_restore",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_capacitance_restore.md"
+    },
+    {
+      "id": "cryptic_servo_skull_improved_tagging",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_improved_tagging.md"
+    },
+    {
+      "id": "cryptic_arc_grenades_brittleness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_arc_grenades_brittleness.md"
+    },
+    {
+      "id": "cryptic_arc_grenades_weapon_malfunction",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_arc_grenades_weapon_malfunction.md"
+    },
+    {
+      "id": "cryptic_force_field_duration_increase",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_force_field_duration_increase.md"
     }
   ],
   "pending_chinese_corrections": [
