@@ -794,6 +794,18 @@ Full raw template and formatting: [source evidence](psyker_melee_attack_speed.md
 | Attack Speed amount | 10% Melee Attack Speed; `ui / loc_talent_psyker_melee_attack_speed_desc / 10f28165` | melee_attack_speed = 0.1 adds to the melee action playback rate. [Fixed source and line references](psyker_melee_attack_speed.md#fixed-source-evidence) | Consistent | The displayed amount and melee stat agree. |
 | Affected segments and time conversion | No whole-combo duration or affected-segment formula; `ui / loc_talent_psyker_melee_attack_speed_desc / 10f28165` | Affected segments use time / 1.1 without other bonuses; waits outside the coefficient remain separate. [Fixed source and line references](psyker_melee_attack_speed.md#fixed-source-evidence) | Not covered by the description | The existing 1s→approximately 0.909s example clarifies the rate without treating an omitted time formula as an error. |
 
+
+<a id="psyker_cleave_from_peril"></a>
+
+## Warp Splitting
+
+Full raw template and formatting: [source evidence](psyker_cleave_from_peril.md#original-english-template-and-reconstruction). Name hash `ef20acce`. Every row uses `ui / loc_talent_psyker_cleave_from_peril_desc / 5de5fc01`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Cleave bonus and Peril | Up to +100% Cleave, based on Peril.; `ui / loc_talent_psyker_cleave_from_peril_desc / 5de5fc01` | `max_hit_mass_attack_modifier` scales from 0 to 1 with Peril, increasing damage Cleave capacity. [Fixed source and line references](psyker_cleave_from_peril.md#fixed-source-evidence) | Consistent | Cleave describes how much enemy mass an attack can pass through, without promising additional damage per target. |
+| Scaling and impact limit | Up to +100% Cleave, based on Peril.; `ui / loc_talent_psyker_cleave_from_peril_desc / 5de5fc01` | Linear scaling modifies `attack_modifier`, not `impact_modifier`. [Fixed source and line references](psyker_cleave_from_peril.md#fixed-source-evidence) | Not covered by the description | The concise English does not specify the interpolation or separate impact capacity. |
+
 ## Comparison totals
 
 The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.

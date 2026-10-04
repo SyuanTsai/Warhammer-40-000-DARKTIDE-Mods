@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/92db3e61-eb2d-4af5-b9a7-3a1bab73234a" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_4) | <ul><li>+15 maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>10% Toughness Damage Reduction in this additive stage; no Health Damage reduction.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="Lightning Speed talent icon"> [Lightning Speed](#psyker_melee_attack_speed) | <ul><li>+10% Melee Attack Speed; affected action segments take time ÷1.1 with no other speed bonuses.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="Warp Splitting talent icon"> [Warp Splitting](#psyker_cleave_from_peril) | <ul><li>Peril increases damage Cleave capacity by up to 100%.</li></ul> | Talent |
 
 ---
 
@@ -1075,3 +1076,21 @@
 - **Timing example**: comparing only the action segment affected by Attack Speed, a segment that originally takes 1 second with no other Attack Speed bonuses becomes 1 ÷ 1.1 ≈ 0.909 seconds. This does not mean the entire combo always takes 10% less time.
 
 [Details](psyker_melee_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_cleave_from_peril"></a>
+
+### Warp Splitting
+
+<img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="72" height="72" alt="Warp Splitting talent icon">
+
+- **How it works**: Higher Peril allows attacks to pass through more total enemy mass: +50% at 50% Peril and +100% at 100% Peril.
+
+- **Cleave example**: With a baseline damage Cleave capacity of 4 mass units, 50% Peril and no other bonuses, 4 × (1 + 50%) = 6. This does not increase damage to a single enemy by 50% and cannot be converted directly into a fixed number of extra enemies hit.
+
+#### Traditional Chinese wording correction
+
+- The Chinese phrase meaning “Cleave attack damage” presents Cleave capacity as a damage increase. The English says Cleave; the effect raises the enemy mass limit an attack can pass through, rather than directly increasing damage per hit.
+
+[Details](psyker_cleave_from_peril.md) · [Back to index](#talent-index)

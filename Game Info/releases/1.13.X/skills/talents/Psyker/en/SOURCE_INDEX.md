@@ -76,3 +76,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Toughness Boost](base_toughness_node_buff_medium_4.md) / `base_toughness_node_buff_medium_4` | Talent |
 | [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Talent |
 | [Lightning Speed](psyker_melee_attack_speed.md) / `psyker_melee_attack_speed` | Talent |
+| [Warp Splitting](psyker_cleave_from_peril.md) / `psyker_cleave_from_peril` | Talent |
