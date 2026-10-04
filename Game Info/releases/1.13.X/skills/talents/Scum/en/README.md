@@ -75,6 +75,7 @@
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="Extra Pouches talent icon"> [Extra Pouches](#broker_passive_increased_blitz_ammo) | <ul><li>Gain 1 maximum Blitz charge.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="Coated Weaponry talent icon"> [Coated Weaponry](#broker_passive_melee_attacks_apply_toxin) | <ul><li>Melee Critical Hits add 1 Chem Toxin stack and refresh duration; shared cap 30.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="Pocket Toxin talent icon"> [Pocket Toxin](#broker_passive_blitz_inflicts_toxin) | <ul><li>Blitz explosion hits add Chem Toxin stacks: Blackout 3, Boom Bringer 6, Chem Grenade 10.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="Targeted Toxin talent icon"> [Targeted Toxin](#broker_passive_reduced_damage_by_toxined) | <ul><li>Enemies you infect with Chem Toxin deal 15% less Damage; monsters and Captain bosses instead deal 30% less.</li></ul> | Talent |
 
 ---
 
@@ -1130,3 +1131,17 @@
 - **Damage behavior**: The same Toxin resolves every 0.35s. Eight stacks give input Power 500 × 8 ÷ 30 ≈ 133.33, then the Toxin curve and armour determine Damage.
 
 [Details](broker_passive_blitz_inflicts_toxin.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_reduced_damage_by_toxined"></a>
+
+### Targeted Toxin
+
+<img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="72" height="72" alt="Targeted Toxin talent icon">
+
+- **Behavior**: After you apply Chem Toxin to an enemy, its Damage dealt is reduced by 15%; monsters and Captain-type bosses instead have a 30% reduction. When Toxin disappears, the reduction is removed too.
+
+- **Damage-reduction example**: With this effect alone, an enemy that would deal 100 Damage deals 85; a boss eligible for the 30% reduction deals 70. This reduces the enemy's output, so teammates attacked by it also benefit.
+
+[Details](broker_passive_reduced_damage_by_toxined.md) · [Back to index](#talent-index)

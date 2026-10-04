@@ -819,6 +819,18 @@ Full raw template and formatting: [source evidence](broker_passive_blitz_inflict
 | Blitz explosion types and stack counts | Blitz explosions infect enemies; Blackout 3, Boom Bringer 6, Chem Grenade 10; `ui / loc_talent_broker_passive_blitz_inflicts_toxin_desc_02 / 8757c0f2` | Server `on_hit` requires grenade-ability slot and explosion type; special-rule table selects 3/6/10 stacks [Fixed source and line references](broker_passive_blitz_inflicts_toxin.md#fixed-source-evidence) | Consistent | The English's Blitz restriction and separate values match. |
 | Ground liquid and shared Toxin behavior | No liquid-tick, shared-cap, refresh or Power calculation is stated; `ui / loc_talent_broker_passive_blitz_inflicts_toxin_desc_02 / 8757c0f2` | This passive is separate from Chem Grenade liquid; same-type Toxin stacks cap at 30 and refresh on application; ticks every 0.35s [Fixed source and line references](broker_passive_blitz_inflicts_toxin.md#fixed-source-evidence) | Not covered by the description | These retain the original 2 + 6 = 8 stack and 500 × 8 ÷ 30 ≈ 133.33 input-Power examples. |
 
+
+<a id="broker_passive_reduced_damage_by_toxined"></a>
+
+## Targeted Toxin
+
+Full raw template and formatting: [source evidence](broker_passive_reduced_damage_by_toxined.md#original-english-template-and-reconstruction). Name hash `78d6f9f3`. Every row uses `ui / loc_talent_broker_passive_reduced_damage_by_toxined_desc / 615c771b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Inflicter, output reduction and replacement | Enemies you infect with Chem Toxin deal -15% Damage; Monstrosities instead deal -30%; `ui / loc_talent_broker_passive_reduced_damage_by_toxined_desc / 615c771b` | Owner-forwarded Toxin application applies an enemy `damage` debuff of -0.15 or -0.3 [Fixed source and line references](broker_passive_reduced_damage_by_toxined.md#fixed-source-evidence) | Consistent | The English identifies your infection and enemy Damage output; the stronger value replaces the ordinary one. |
+| Boss tags and debuff lifetime | No exact tags, stack limit or removal rule is stated; `ui / loc_talent_broker_passive_reduced_damage_by_toxined_desc / 615c771b` | `tags.monster`, `captain` or `cultist_captain` selects the stronger debuff; maximum one stack, no fixed duration, removal after losing Toxin [Fixed source and line references](broker_passive_reduced_damage_by_toxined.md#fixed-source-evidence) | Not covered by the description | These clarify the boss category and lifetime. The original 100→85/70 example also explains why teammates benefit. |
+
 ## Comparison totals
 
 The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

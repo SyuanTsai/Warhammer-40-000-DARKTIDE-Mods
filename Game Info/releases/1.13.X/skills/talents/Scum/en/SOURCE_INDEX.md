@@ -79,3 +79,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Extra Pouches](broker_passive_increased_blitz_ammo.md) / `broker_passive_increased_blitz_ammo` | Talent |
 | [Coated Weaponry](broker_passive_melee_attacks_apply_toxin.md) / `broker_passive_melee_attacks_apply_toxin` | Talent |
 | [Pocket Toxin](broker_passive_blitz_inflicts_toxin.md) / `broker_passive_blitz_inflicts_toxin` | Talent |
+| [Targeted Toxin](broker_passive_reduced_damage_by_toxined.md) / `broker_passive_reduced_damage_by_toxined` | Talent |
