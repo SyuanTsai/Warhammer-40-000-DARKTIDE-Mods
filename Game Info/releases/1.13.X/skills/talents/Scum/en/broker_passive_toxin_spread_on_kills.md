@@ -7,7 +7,7 @@ Release 1.13.1; fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Talent `br
 ## Source-confirmed behavior and static derivation
 
 - `on_melee_hit` also requires `on_elite_kill`. The query first selects `min(num_hits, 10)`, then filters for `HEALTH_ALIVE`, so fewer than 10 living targets may actually be affected.
-- It applies `neurotoxin_interval_buff` for 3s. `stacks_to_add` is 2, but each addition first checks `current < max_stacks_to_add` with a threshold of 2; at that threshold it refreshes duration. The shared cap for this Toxin type is 30. This talent's two-stack limit must not be described as the cap for all Toxin.
+- It applies `neurotoxin_interval_buff3`. `stacks_to_add` is 2, but each addition first checks `current < max_stacks_to_add` with a threshold of 2; at that threshold it refreshes duration. The shared cap for this Toxin type is 30. This talent's two-stack limit must not be described as the cap for all Toxin.
 
 ## Fixed source evidence
 
@@ -59,7 +59,7 @@ Killing an Elite Enemy with a Melee Attack infects up to 10 enemies within 4m of
 
 ## English comparison
 
-The English states a Melee Elite kill, a 4m radius, up to 10 enemies and two Toxin stacks, matching the spread event and an initially uninfected target. It does not explicitly promise two additional stacks on an already infected enemy. The fill/refresh threshold, living-target filtering, Toxin duration and Power calculation are supplements.
+The English states a Melee Elite kill, a 4m radius, up to 10 enemies and two Toxin stacks, matching the spread event and an initially uninfected target. It does not explicitly promise two additional stacks on an already infected enemy. The fill/refresh threshold, living-target filtering and Power calculation are supplements.
 
 ## Icon source
 
