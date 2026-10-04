@@ -80,3 +80,4 @@
 | [擊倒](entries/擊倒/README.md) | [來源索引](entries/擊倒/SOURCE_INDEX.md) |
 | [猛攻](entries/猛攻/README.md) | [來源索引](entries/猛攻/SOURCE_INDEX.md) |
 | [殺戮狂潮](entries/殺戮狂潮/README.md) | [來源索引](entries/殺戮狂潮/SOURCE_INDEX.md) |
+| [亞空間亂舞](entries/亞空間亂舞/README.md) | [來源索引](entries/亞空間亂舞/SOURCE_INDEX.md) |

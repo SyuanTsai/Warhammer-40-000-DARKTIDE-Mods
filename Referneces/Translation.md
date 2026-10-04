@@ -441,6 +441,7 @@
 - Surge - 湧動
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_double_shot_on_crit`，hash `7873018f`；英文／繁中RAW配對確認。
 - Warp Flurry - 亞空間亂舞
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_charge_on_chained_secondary_attacks`，hash `4cf5de54`；英文／繁中RAW配對確認。
 - Warp Nexus - 亞空間樞紐
 - Transfer Peril - 轉移反噬
 - Rending Shockwave - 撕扯震盪
