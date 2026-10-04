@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="Booby Trap talent icon"> [Booby Trap](#broker_ability_stimm_field_sub_2) | <ul><li>When Stimm Supply's field completes its lifetime, it causes one frag explosion within 3 metres.</li><li>Enemies taking positive explosion Damage and having a buff extension receive 7 Toxin stacks. The explosion does not extend the cooldown pause.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="Nimble talent icon"> [Nimble](#broker_passive_improved_dodges) | <ul><li>Dodge movement speed increases by 25%.</li><li>After a Dodge, the additional 0.15-second Dodging window gives 0.40 seconds for Melee/grab checks and 0.15 seconds for Ranged checks; avoidance still depends on each attack's rules.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="Adrenaline Frenzy talent icon"> [Adrenaline Frenzy](#broker_keystone_adrenaline_junkie) | <ul><li>Melee hits grant 1 Adrenaline stack; Critical Melee hits grant 1 additional stack. Without another gain, one stack decays every 2 seconds.</li><li>Reaching 30 stacks clears Adrenaline and grants 10 seconds of +10% Melee Attack Speed and +25% additive Melee Damage; retriggering refreshes Frenzy.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="Vulture's Mark talent icon"> [Vulture's Mark](#broker_keystone_vultures_mark_on_kill) | <ul><li>Ranged Elite or Specialist kills grant an 8-second Mark, up to 3 stacks; a new stack refreshes the shared timer, and all expire together without another gain.</li><li>Each stack gives +5% Ranged Damage, +5 percentage points Ranged Critical Chance and +5% Movement Speed. At maximum stacks, qualifying further kills restore 15% maximum Toughness to you and Allies in Coherency.</li></ul> | Keystone |
 
 ---
 
@@ -376,3 +377,25 @@
 - **Frenzy Damage:** +25% Melee Damage is additive Damage modification. With only this effect, base Damage 100 becomes 125.
 
 [Details](broker_keystone_adrenaline_junkie.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_on_kill"></a>
+
+### Vulture's Mark
+
+<img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="72" height="72" alt="Vulture's Mark talent icon">
+
+- **Gaining Marks:** kill an Elite or Specialist with a Ranged attack to gain 1 stack for 8 seconds. Another gain adds a stack and resets the shared timer, up to 3 stacks. Without another gain, all Marks disappear 8 seconds after the last gain.
+
+- **Per-stack bonuses:** each stack adds 5% Ranged Damage, 5 percentage points of Ranged Critical Chance and 5% Movement Speed. At 3 stacks these are +15%, +15 percentage points and +15%, respectively.
+
+- **Toughness at the cap:** while at 3 stacks, each further Ranged Elite or Specialist kill restores 15% of maximum Toughness to you and Allies in Coherency, limited by each recipient's missing Toughness.
+
+- **Weapon exception:** a Close Range Needle Pistol Toxin kill can grant a Mark. First hit an Elite/Specialist with a Needle Pistol in the Ranged weapon slot; while its Toxin effect remains active, that target must die from Toxin within Close Range.
+
+- **Damage example:** with no other modifiers, base Ranged Damage 100 at 3 stacks becomes 100 × (1 + 3 × 0.05) = 115. With another 20% at the same stage, it becomes 100 × (1 + 0.20 + 0.15) = 135.
+
+- **Toughness example:** with maximum Toughness 100 and at least 15 missing, a qualifying Ranged Elite/Specialist kill at maximum stacks restores 100 × 0.15 = 15.
+
+[Details](broker_keystone_vultures_mark_on_kill.md) · [Back to index](#talent-index)

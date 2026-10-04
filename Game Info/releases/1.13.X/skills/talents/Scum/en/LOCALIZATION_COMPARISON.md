@@ -252,6 +252,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Stack cycle and Frenzy values | Melee hit grants one stack, Critical hit +1 additional; one stack lost after 2s without a gain; at 30, clear stacks and gain 10s Frenzy with +10% Attack Speed and +25% Melee Damage; `ui / loc_talent_broker_keystone_adrenaline_junkie_desc / b4493ff1` | Ordinary Melee hits give 1, Critical Melee hits 2 total; 2 s shared expiry removes one stack. Reaching 30 clears Adrenaline and applies the 10 s Frenzy with melee_attack_speed 0.1 and melee_damage 0.25. [Fixed source and line references](broker_keystone_adrenaline_junkie.md#fixed-source-evidence) | Consistent | The stated gains, threshold, decay interval, duration and numerical bonuses match the accepted values. |
 | Scope, timer refresh and calculation | Attack Speed; no explicit Ranged bonus, sequential timer resets, retrigger refresh or additive calculation details; `ui / loc_talent_broker_keystone_adrenaline_junkie_desc / b4493ff1` | The speed stat applies to Melee. Gain/removal resets the 2 s stack timer; retriggering refreshes 10 s Frenzy. Damage adds in the same-stage pool, e.g. 100 × (1 + 0.20 + 0.25) = 145. [Fixed source and line references](broker_keystone_adrenaline_junkie.md#fixed-source-evidence) | Not covered by the description | These clarify scope and timing without counting absent qualifiers or formulas as English errors. |
 
+
+<a id="broker_keystone_vultures_mark_on_kill"></a>
+
+## Vulture's Mark
+
+Full raw template and formatting: [source evidence](broker_keystone_vultures_mark_on_kill.md#original-english-template-and-reconstruction). Name hash `a46e752f`. Every row uses `ui / loc_talent_broker_keystone_vultures_mark_on_kill_desc / 5b5c21fe`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Standard acquisition, bonuses and restoration | Ranged Special/Elite kill grants an 8s Mark, up to 3; each gives +5% Ranged Damage, Ranged Critical Chance and Movement Speed; qualifying kills at the cap restore 15% Toughness to self/Allies in Coherency; `ui / loc_talent_broker_keystone_vultures_mark_on_kill_desc / 5b5c21fe` | Standard on_kill requires died, elite/special and Ranged classification. Three per-stack stats are 0.05; at_max_stacks qualifying kills restore replenish_percentage(0.15) to Coherency units. [Fixed source and line references](broker_keystone_vultures_mark_on_kill.md#fixed-source-evidence) | Consistent | The listed standard trigger, values and recipient scope agree with accepted evidence. |
+| Expiry, Toxin exception and calculation limits | No shared expiry, weapon exception, additive pools, Critical Chance cap or Toughness-deficit details; `ui / loc_talent_broker_keystone_vultures_mark_on_kill_desc / 5b5c21fe` | All stacks expire together 8 s after the last gain, or 12 s with Patient Hunter. Tracked secondary-slot Needle Pistol Close Range Toxin deaths also grant a stack. Damage adds, Critical Chance adds percentage points and clamps to 0%–100%; restoration cannot exceed missing Toughness. [Fixed source and line references](broker_keystone_vultures_mark_on_kill.md#fixed-source-evidence) | Not covered by the description | These preserve the separate standard/full-stack checks and original calculations without treating omitted exceptions as English errors. |
+
 ## Comparison totals
 
 The 45 listed rules comprise **21 Consistent**, **1 Explicit contradictions**, **20 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
