@@ -48,3 +48,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Alley Rat](broker_passive_longer_dodges.md) / `broker_passive_longer_dodges` | Keystone |
 | [Quick and Deadly](broker_passive_close_range_damage_on_dodge.md) / `broker_passive_close_range_damage_on_dodge` | Talent |
 | [A Tertium Welcome](broker_passive_first_target_damage.md) / `broker_passive_first_target_damage` | Talent |
+| [In Your Face](broker_passive_close_ranged_damage.md) / `broker_passive_close_ranged_damage` | Talent |

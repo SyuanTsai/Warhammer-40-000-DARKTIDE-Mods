@@ -446,6 +446,18 @@ Full raw template and formatting: [source evidence](broker_passive_first_target_
 | First target of each Melee attack | +15% Melee Damage on first Enemy hit with each attack; `ui / loc_talent_broker_passive_first_target_damage_desc / 4ebbdbb2` | The permanent 0.15 modifier requires both `is_first_target` and `is_melee_attack`. [Fixed source and line references](broker_passive_first_target_damage.md#fixed-source-evidence) | Consistent | The English correctly identifies the amount, attack type, and first-target restriction. |
 | Damage combination and permanent effect | No additive-stage, stack, timer, or cooldown details are stated; `ui / loc_talent_broker_passive_first_target_damage_desc / 4ebbdbb2` | The modifier adds at the Damage-bonus stage and has no stacks, duration, or cooldown. [Fixed source and line references](broker_passive_first_target_damage.md#fixed-source-evidence) | Not covered by the description | These supplement the wording and support the original Damage example. |
 
+
+<a id="broker_passive_close_ranged_damage"></a>
+
+## In Your Face
+
+Full raw template and formatting: [source evidence](broker_passive_close_ranged_damage.md#original-english-template-and-reconstruction). Name hash `f80ef4b2`. Every row uses `ui / loc_talent_broker_passive_close_ranged_damage_desc / be48df80`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Near/far amounts and distances | +25% Ranged Damage within 12.5 m, scaling down to a minimum of +10% at 30 m and beyond; `ui / loc_talent_broker_passive_close_ranged_damage_desc / be48df80` | The conditional stats supply near 0.25 and far 0.1, with the accepted range endpoints 12.5 m and 30 m. [Fixed source and line references](broker_passive_close_ranged_damage.md#fixed-source-evidence) | Consistent | The English correctly states both endpoints and the minimum beyond the far range. |
+| Wielded-slot condition and interpolation | No separate wielded-slot condition, square-root formula, or additive stage is stated; `ui / loc_talent_broker_passive_close_ranged_damage_desc / be48df80` | `wielded_slot == slot_secondary` enables both stats; `distance_damage_buff` uses square-root interpolation and adds to general `damage_stat_buffs`. [Fixed source and line references](broker_passive_close_ranged_damage.md#fixed-source-evidence) | Not covered by the description | Ranged Damage does not explicitly define an exclusive attack-type check. The accepted condition and formula complete the description. |
+
 ## Comparison totals
 
 The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

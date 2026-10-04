@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="Alley Rat talent icon"> [Alley Rat](#broker_passive_longer_dodges) | <ul><li>Increase Dodge Distance by 50%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="Quick and Deadly talent icon"> [Quick and Deadly](#broker_passive_close_range_damage_on_dodge) | <ul><li>After a Successful Dodge, gain 15% Close Range Damage for 3 seconds; the bonus falls off with distance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="A Tertium Welcome talent icon"> [A Tertium Welcome](#broker_passive_first_target_damage) | <ul><li>Each Melee attack deals 15% more Melee Damage to its first Enemy hit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="In Your Face talent icon"> [In Your Face](#broker_passive_close_ranged_damage) | <ul><li>While wielding a Ranged weapon, gain 25% Damage within 12.5 metres, falling off to 10% at 30 metres and beyond.</li></ul> | Talent |
 
 ---
 
@@ -650,3 +651,16 @@
 - **Damage example**: if base Damage to the first target is 100, this effect alone gives 100 × 1.15 = 115. With an existing 25% Damage bonus at the same stage, it gives 100 × (1 + 25% + 15%) = 140.
 
 [Details](broker_passive_first_target_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_close_ranged_damage"></a>
+
+### In Your Face
+
+<img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="72" height="72" alt="In Your Face talent icon">
+
+- **Distance bonus**: while wielding a Ranged weapon, deal 25% more Damage to targets within 12.5 metres. The bonus decreases with distance, remaining at 10% from 30 metres onwards.
+- **Damage example**: at 16.875 metres, the falloff factor is √((16.875 − 12.5) ÷ 17.5) = 0.5. The bonus is 25% + (10% − 25%) × 0.5 = 17.5%. Base Damage of 100 becomes 117.5; with an existing 25% bonus at the same stage, the result is 100 × (1 + 25% + 17.5%) = 142.5.
+
+[Details](broker_passive_close_ranged_damage.md) · [Back to index](#talent-index)
