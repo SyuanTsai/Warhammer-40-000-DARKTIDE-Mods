@@ -6,6 +6,14 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
+      "id": "publication/2026-10-04-TREE_READER",
+      "kind": "record",
+      "scope": "publication/skills",
+      "path": "AI-LOGS/Game Info/publication/2026-10-04-TREE_READER.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
       "id": "publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION",
       "kind": "record",
       "scope": "publication/skills",
