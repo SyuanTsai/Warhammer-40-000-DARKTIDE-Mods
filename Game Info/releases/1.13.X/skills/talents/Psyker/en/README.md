@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="Warp Expenditure talent icon"> [Warp Expenditure](#psyker_toughness_on_melee) | <ul><li>First melee target hit: restore 2.5% maximum Toughness. Melee Weakspot Kill: restore 15% over 3s instead; refreshes without increasing the rate.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="Mettle talent icon"> [Mettle](#psyker_crits_regen_toughness_movement_speed) | <ul><li>Critical Hits restore 10% maximum Toughness over 4s and grant +5% Movement Speed, up to 3 stacks. Toughness restoration rate does not multiply with stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="Perilous Combustion talent icon"> [Perilous Combustion](#psyker_elite_kills_add_warpfire) | <ul><li>Elite or Specialist Kill: apply 2 Soulblaze stacks to enemies within 4m of the victim. Sleeping Daemonhosts are excluded.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="Battle Meditation talent icon"> [Battle Meditation](#psyker_chance_to_vent_on_kill) | <ul><li>−10% Peril Generation. Each Kill has a 10% chance to remove 10 percentage points of Peril.</li></ul> | Talent |
 
 ---
 
@@ -794,3 +795,19 @@
 - **Exception**: a sleeping Daemonhost is not ignited by this effect.
 
 [Details](psyker_elite_kills_add_warpfire.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_chance_to_vent_on_kill"></a>
+
+### Battle Meditation
+
+<img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="72" height="72" alt="Battle Meditation talent icon">
+
+- **Effect**: Peril Generation is reduced by 10%; each Kill has a 10% chance to remove 10 percentage points of Peril.
+
+- **Peril example**: an attack that normally generates 20 percentage points of Peril instead generates 20 × 0.9 = 18 percentage points. When the kill effect triggers, 50% Peril falls to 40%; if only 6% remains, it falls to 0%.
+
+- **Proc chance**: 10% is the chance on each Kill; it does not guarantee one proc for every 10 enemies killed.
+
+[Details](psyker_chance_to_vent_on_kill.md) · [Back to index](#talent-index)

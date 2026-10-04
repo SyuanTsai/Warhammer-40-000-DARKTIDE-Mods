@@ -59,3 +59,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Warp Expenditure](psyker_toughness_on_melee.md) / `psyker_toughness_on_melee` | Talent |
 | [Mettle](psyker_crits_regen_toughness_movement_speed.md) / `psyker_crits_regen_toughness_movement_speed` | Talent |
 | [Perilous Combustion](psyker_elite_kills_add_warpfire.md) / `psyker_elite_kills_add_warpfire` | Talent |
+| [Battle Meditation](psyker_chance_to_vent_on_kill.md) / `psyker_chance_to_vent_on_kill` | Talent |

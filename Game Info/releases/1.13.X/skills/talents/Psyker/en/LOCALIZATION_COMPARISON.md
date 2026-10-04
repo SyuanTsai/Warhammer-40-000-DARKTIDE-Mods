@@ -590,6 +590,18 @@ Full raw template and formatting: [source evidence](psyker_elite_kills_add_warpf
 | Trigger and stack amount | Elite or Specialist Kill applies 2 Soulblaze stacks nearby, causing Damage over time; `ui / loc_talent_psyker_elite_and_special_kills_add_warpfire_desc / c4294372` | The verified death event adds 2 warp_fire stacks to nearby enemies. [Fixed source and line references](psyker_elite_kills_add_warpfire.md#fixed-source-evidence) | Consistent | The enemy categories, amount and effect agree. |
 | Radius, exceptions and damage scaling | Nearby Enemies; no exact radius, exception or formula; `ui / loc_talent_psyker_elite_and_special_kills_add_warpfire_desc / c4294372` | The radius is 4m around the victim; sleeping Daemonhosts are excluded; warpfire without attack_type is excluded, and power scales nonlinearly with stacks. [Fixed source and line references](psyker_elite_kills_add_warpfire.md#fixed-source-evidence) | Not covered by the description | The English gives a broad effect without these implementation details. |
 
+
+<a id="psyker_chance_to_vent_on_kill"></a>
+
+## Battle Meditation
+
+Full raw template and formatting: [source evidence](psyker_chance_to_vent_on_kill.md#original-english-template-and-reconstruction). Name hash `91b8623f`. Every row uses `ui / loc_talent_psyker_quell_on_kill_and_reduction_desc / 2b245e8a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Generation reduction and kill proc | −10% Peril Generation; 10% chance to Quell 10% Peril on Kill; `ui / loc_talent_psyker_quell_on_kill_and_reduction_desc / 2b245e8a` | Generation uses multiplier 0.9; a successful 0.1 kill proc removes 0.1 of the full Peril gauge. [Fixed source and line references](psyker_chance_to_vent_on_kill.md#fixed-source-evidence) | Consistent | The displayed values and trigger agree; the English does not specify multiplying current Peril by 0.9. |
+| Floor and update scheduling | No zero-floor or per-update aggregation rule; `ui / loc_talent_psyker_quell_on_kill_and_reduction_desc / 2b245e8a` | decrease_immediate(0.1) floors at zero; one Boolean flag coalesces multiple procs before an update. [Fixed source and line references](psyker_chance_to_vent_on_kill.md#fixed-source-evidence) | Not covered by the description | These details supplement the stated probability and removal amount. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
