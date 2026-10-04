@@ -976,4 +976,4 @@ Full raw template and formatting: [source evidence](cryptic_revive_speed_and_dr.
 
 ## Comparison totals
 
-157 rules: 75 Consistent / 4 Explicit contradiction / 75 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 538.
+167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.
