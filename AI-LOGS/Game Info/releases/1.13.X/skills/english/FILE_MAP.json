@@ -9196,9 +9196,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7cd2cfcdd250a1d563dfe1e659fb9294b04a9995",
       "chinese_sha256": "6524881ff7c6b5b9707018743afccd4e6988170f2d21a1962682aaece05b79a2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_corruption_resistance_doom"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_crit_chance_based_on_charge.md",
@@ -9351,9 +9358,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b8b2b7e0e662428b583d65da6a03dd7667e4b33c",
       "chinese_sha256": "0a20a0d28ad758a2a7ed89f177af847ffaff9850eb32ff2744d3547cb4ef1941",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_discharge_base"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_generates_arcs.md",
@@ -9992,9 +10006,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2e081a92ed2d289df6ea83219c6069fe6bd1d1e6",
       "chinese_sha256": "987a6344df682bedbcf86205f6bf4be15eeecda7044ea2121ce4296854d0fce1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_passive_cooldown_regen"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance.md",
@@ -10129,9 +10150,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "57c3418e186610806f5c36c2e7e91e59273825f0",
       "chinese_sha256": "5ce7e10cad5ebe14dfdbc2aae8d762063015cce1d1b8bd3203165dd97dcb55a1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_ranged_kills_tdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ranged_stacking_toughness.md",
@@ -10338,9 +10366,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "63c68ad37d3fdae49c502001548c53ef38bc89fd",
       "chinese_sha256": "b04b5c1e0c1059c6efe67051dd38a3892ae5612682c0305729a12d39e9cb1f74",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_servo_skull_order"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_shared_toughness.md",
@@ -18629,6 +18664,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_push.md"
+    },
+    {
+      "id": "cryptic_corruption_resistance_doom",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_corruption_resistance_doom.md"
+    },
+    {
+      "id": "cryptic_ranged_kills_tdr",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ranged_kills_tdr.md"
+    },
+    {
+      "id": "cryptic_discharge_base",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_base.md"
+    },
+    {
+      "id": "cryptic_passive_cooldown_regen",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_passive_cooldown_regen.md"
+    },
+    {
+      "id": "cryptic_servo_skull_order",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_order.md"
     }
   ],
   "pending_chinese_corrections": [

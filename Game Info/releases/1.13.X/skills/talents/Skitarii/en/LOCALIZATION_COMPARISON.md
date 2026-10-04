@@ -1216,4 +1216,4 @@ Full raw template and formatting: [source evidence](cryptic_servo_skull_order.md
 
 ## Comparison totals
 
-197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.
+207 rules: 100 Consistent / 4 Explicit contradiction / 100 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 563.
