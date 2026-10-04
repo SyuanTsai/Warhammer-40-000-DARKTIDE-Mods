@@ -132,4 +132,4 @@ Full raw template and formatting: [source evidence](zealot_channel_grants_damage
 
 ## Comparison totals
 
-12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.
+23 rules: 9 Consistent / 2 Explicit contradiction / 9 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 574.

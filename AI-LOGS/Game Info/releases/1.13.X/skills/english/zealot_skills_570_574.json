@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_570_574",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: zealot_talents.lua L860-L883 (read with previous batch), L92-L156, L383-L422, L673-L718. Upcoming 575/576 mappings also read minimally at L429-L447 and L240-L319; values remain reused. No Buff/event/source-call-chain retracing."
+  ],
+  "questions": [
+    "Chorus per-pulse 45% conflicts with accepted20% per pulse plus25%/s. Fury displayed10s differs from internal11s; actual HUD/perceived duration unobserved. Holy Cause description has no exact key/hash match; name is paired. Chinese pending/correction notes remain separate."
+  ],
+  "skills": [
+    {
+      "id": "zealot_stamina_cost_multiplier_aura",
+      "name": "Zealous",
+      "name_hash": "2c4f35ed",
+      "description_hash": "2b5c13bc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stamina_cost_multiplier_aura.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stamina_cost_multiplier_aura.md",
+      "commit": "312340a47"
+    },
+    {
+      "id": "zealot_bolstering_prayer",
+      "name": "Chorus of Spiritual Fortitude",
+      "name_hash": "b1a2ee76",
+      "description_hash": "ae04279a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_bolstering_prayer.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_bolstering_prayer.md",
+      "commit": "57d0af110"
+    },
+    {
+      "id": "zealot_attack_speed_post_ability",
+      "name": "Fury of the Faithful",
+      "name_hash": "813869f7",
+      "description_hash": "f5695318",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_attack_speed_post_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_attack_speed_post_ability.md",
+      "commit": "53741f512"
+    },
+    {
+      "id": "zealot_channel_grants_toughness_damage_reduction",
+      "name": "Holy Cause",
+      "name_hash": "6a8b51aa",
+      "description_hash": null,
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_channel_grants_toughness_damage_reduction.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_channel_grants_toughness_damage_reduction.md",
+      "commit": "6f3902d2b"
+    },
+    {
+      "id": "zealot_channel_grants_damage",
+      "name": "Ecclesiarch's Call",
+      "name_hash": "1627f378",
+      "description_hash": "af1e14c2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_channel_grants_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_channel_grants_damage.md",
+      "commit": "155000359"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 473,
+    "from_commit": "8d435ab97",
+    "to_commit": "155000359",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

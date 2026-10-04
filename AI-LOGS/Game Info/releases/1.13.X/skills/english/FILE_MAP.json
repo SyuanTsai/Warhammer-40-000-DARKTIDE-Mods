@@ -13751,9 +13751,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ff36cd819d58ed78264373b4d3d57b502541181e",
       "chinese_sha256": "aac18d314ed331d7f4e6001b3349824f1218535e8f0b840a45241947d6860279",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_attack_speed_post_ability"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_damage.md",
@@ -13806,9 +13813,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7f16dee036ce1cae65a8f8366310328e6e37f12e",
       "chinese_sha256": "e8ca27db6266e571cf23c202d934ef06405db5d6670625e71fe547618b5b94d8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_bolstering_prayer"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_channel_grants_damage.md",
@@ -13817,9 +13831,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "15cf757cd1cb450815026eaba4ae3a88d3be7efe",
       "chinese_sha256": "0e145e131b81dc1cb90cde9cffed4171b50259debecf499c35825226b29c88b4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_channel_grants_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_channel_grants_toughness_damage_reduction.md",
@@ -13828,9 +13849,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f3e53a33686f3178a8c37b3a8a833bea9e44c001",
       "chinese_sha256": "3fc913214b3cddd959072b9a7329ec96900b7c76475e4840d9e04daa17842555",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_channel_grants_toughness_damage_reduction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_corruption_healing_coherency_improved.md",
@@ -14443,9 +14471,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cdd7daa647faad35a765e3dc993ad93f6df5c5e3",
       "chinese_sha256": "71bbd8524d6f215395e8f08504f770b3c601d9a0ae9d3c20560190b04ed5d625",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_stamina_cost_multiplier_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_stamina_on_block_break.md",
@@ -19233,6 +19268,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_corruption_healing_coherency_improved.md"
+    },
+    {
+      "id": "zealot_stamina_cost_multiplier_aura",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stamina_cost_multiplier_aura.md"
+    },
+    {
+      "id": "zealot_bolstering_prayer",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_bolstering_prayer.md"
+    },
+    {
+      "id": "zealot_attack_speed_post_ability",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_attack_speed_post_ability.md"
+    },
+    {
+      "id": "zealot_channel_grants_toughness_damage_reduction",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_channel_grants_toughness_damage_reduction.md"
+    },
+    {
+      "id": "zealot_channel_grants_damage",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_channel_grants_damage.md"
     }
   ],
   "pending_chinese_corrections": [
