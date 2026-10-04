@@ -6,6 +6,30 @@
   "tools_root": "scripts/game-info",
   "records": [
     {
+      "id": "publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION",
+      "kind": "record",
+      "scope": "publication/skills",
+      "path": "AI-LOGS/Game Info/publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-04-ALL_SKILLS_PAGES",
+      "kind": "record",
+      "scope": "publication/skills",
+      "path": "AI-LOGS/Game Info/publication/2026-10-04-ALL_SKILLS_PAGES.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "publication/2026-10-04-SKILL_PAGE_TEMPLATE",
+      "kind": "record",
+      "scope": "publication/skills",
+      "path": "AI-LOGS/Game Info/publication/2026-10-04-SKILL_PAGE_TEMPLATE.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
       "id": "publication/2026-10-04-ALL_DIALOGUES_PAGES",
       "kind": "record",
       "scope": "publication",
