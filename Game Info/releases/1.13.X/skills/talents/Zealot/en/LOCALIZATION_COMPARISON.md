@@ -94,6 +94,19 @@ Full raw template and formatting: [source evidence](zealot_bolstering_prayer.md#
 | Pulse interval, maximum bonus and cooldown | Pulses every 0.8s; each adds +15 Max Toughness, up to +75 for10s; 60s Base Cooldown.; `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a` | Interval0.8s; +15 per stack/max5, duration10s refreshing; base resource cooldown60s. [Fixed source and line references](zealot_bolstering_prayer.md#fixed-source-evidence) | Consistent | These explicit values agree. The English does not specify the post-relic start of cooldown recovery. |
 | Recipients, protection and execution limits | Allies in Coherency have Stun Immunity and Unkillable while channeling; detailed execution conditions omitted.; `ui / loc_talent_zealot_bolstering_prayer_expanded_description / ae04279a` | Self is also in the chain; protection refreshes1.5s per pulse; full action≈3.67s/5 ticks; susceptible targets, line-of-sight and range rules; recovery capped/modified and cooldown paused while relic held. [Fixed source and line references](zealot_bolstering_prayer.md#fixed-source-evidence) | Not covered by the description | Caster inclusion and detailed timing/conditions supplement the wording; retain75/115 and28.75/s examples without a fixed total-recovery promise. |
 
+
+<a id="zealot_attack_speed_post_ability"></a>
+
+## Fury of the Faithful
+
+Full raw template and formatting: [source evidence](zealot_attack_speed_post_ability.md#original-english-template-and-reconstruction). Name hash `813869f7`. Every row uses `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack Speed duration | Gaining +20% Attack Speed for 10s.; `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318` | The accepted Attack Speed template has duration active_duration10 +1 =11s, with an internal timing margin. [Fixed source and line references](zealot_attack_speed_post_ability.md#fixed-source-evidence) | Explicit contradiction | The English display duration differs from the verified internal Buff duration. Actual HUD and perceived timing remain unobserved. |
+| Recovery, offensive bonuses and base cooldown | Replenishes50% Toughness; +20% Attack Speed; next Melee Hit +25% Damage/+100% Rending/guaranteed Critical; Base Cooldown30s.; `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318` | Restore_toughness0.5; attack_speed0.2; melee_damage0.25, melee_critical_strike_chance1, melee_rending_multiplier1; base cooldown30. [Fixed source and line references](zealot_attack_speed_post_ability.md#fixed-source-evidence) | Consistent | The explicit effect directions and amounts agree; different damage stages remain distinct. |
+| Melee window, filters, travel and calculation limits | No3-second hit window, Push/ranged exclusions, special retention, precise travel settings or capped recovery examples.; `ui / loc_talent_zealot_attack_speed_after_dash_new_desc / f5695318` | Melee duration3s; qualifying hit filtering; keep_buff_ability_active_on_special may retain effect; distance7/target21; recovery capped and modified. [Fixed source and line references](zealot_attack_speed_post_ability.md#fixed-source-evidence) | Not covered by the description | Preserve100→125 or145 before Critical/Rending,20/100→70 and70/100→100, and1/1.2≈0.833s action timing as supplements. |
+
 ## Comparison totals
 
 12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.
