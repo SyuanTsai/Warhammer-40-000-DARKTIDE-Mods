@@ -13,3 +13,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 |---|---|
 | [Immolation Grenade](zealot_flame_grenade.md) / `zealot_flame_grenade` | Blitz |
 | [Blades of Faith](zealot_throwing_knives.md) / `zealot_throwing_knives` | Blitz |
+| [Stunstorm Grenade](zealot_improved_stun_grenade.md) / `zealot_improved_stun_grenade` | Blitz |

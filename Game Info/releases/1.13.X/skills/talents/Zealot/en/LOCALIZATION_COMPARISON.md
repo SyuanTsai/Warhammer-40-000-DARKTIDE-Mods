@@ -32,6 +32,19 @@ Full raw template and formatting: [source evidence](zealot_throwing_knives.md#or
 | Melee kills, Ammo recovery and armour wording | Elite & Special melee kills replenish 1 knife; Ammo boxes replenish knives; less effective versus Carapace Armour.; `ui / loc_ability_zealot_throwing_knifes_desc / 5c177ee2` | A qualifying melee kill restores 1; Ammo pickup functions replenish variable amounts; ordinary-hit super_armor has no_damage, with final result dependent on armour zone and other calculations. [Fixed source and line references](zealot_throwing_knives.md#fixed-source-evidence) | Consistent | The explicit trigger and quantity agree. No fixed Ammo amount or unconditional zero-damage claim is made. |
 | Capacity, action timing and calculation limits | No knife capacity, sprint condition, grenade-pickup exclusion, timing or exact damage/recovery formulas listed.; `ui / loc_ability_zealot_throwing_knifes_desc / 5c177ee2` | Capacity 12; sprint throwing; ordinary grenades do not replenish; launch 0.25s/total action 0.55s; baseline 585/468/0 with separate Finesse; m=1 pickups 2/6/12, capped. [Fixed source and line references](zealot_throwing_knives.md#fixed-source-evidence) | Not covered by the description | These details and existing 11+1=12 and 8→10/12 examples supplement the qualitative wording. |
 
+
+<a id="zealot_improved_stun_grenade"></a>
+
+## Stunstorm Grenade
+
+Full raw template and formatting: [source evidence](zealot_improved_stun_grenade.md#original-english-template-and-reconstruction). Name hash `25c50f32`. Every row uses `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base grenade and radius upgrade | An augmented Stun Grenade with +50% blast radius.; `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631` | The verified radius modifier is 0.5, giving 1.5×: maximum 8→12, close 2→3, minimum 4→6 and minimum-close 2→3. [Fixed source and line references](zealot_improved_stun_grenade.md#fixed-source-evidence) | Consistent | The named base grenade and explicit percentage match the static reconstruction. |
+| All-enemy control claim | Stuns all Enemies within its blast radius.; `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631` | Accepted documentation retains target checks, distance/obstruction limits and resistance-dependent sustained control; every enemy's actual response remains unobserved. [Fixed source and line references](zealot_improved_stun_grenade.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish the universal control claim; no new mechanism investigation is required. |
+| Charges, timing and periodic damage exception | No capacity, fuse, Electrocution duration, refresh, interval or damage exception specified.; `ui / loc_zealot_improved_stun_grenade_desc / 35fbc631` | Capacity 3, fuse 1.5s, one refreshing 8s Electrocution effect at 0.3–0.8s intervals; isolated damage 4/8; excludes periodic damage on an already staggered Poxwalker Bomber. [Fixed source and line references](zealot_improved_stun_grenade.md#fixed-source-evidence) | Not covered by the description | These details supplement the radius/control wording; the exception does not imply complete grenade immunity. |
+
 ## Comparison totals
 
 Updated at five-item checkpoints.
