@@ -371,4 +371,4 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw_consecutiv
 
 ## Comparison totals
 
-52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.
+62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.

@@ -9024,9 +9024,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "570192137d0bcf50b72503fe22aafd6029dd3b2d",
       "chinese_sha256": "448b5c738528eb8c78172fcc11ef5ae305b3b179706f140bb82c9e8c46613ba1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_chordclaw_capacitance_restoration"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_consecutive_bonus.md",
@@ -9035,9 +9042,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "767426a1d354081b2401635360752e1a53ee10a4",
       "chinese_sha256": "11b2b52a01aff46b55eaccccb76485b5ef30e435fb12d55f63062f2864cbb5f1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_chordclaw_consecutive_bonus"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_horizontal_swipe.md",
@@ -9217,9 +9231,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f96e51612b45995825fb0aa304c80da7e8552710",
       "chinese_sha256": "9274ef0a151c6437511f5aba421103f595710646c1628349913cbb77324369a5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_discharge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_attack_speed_increase.md",
@@ -9595,9 +9616,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8853fe95c269ac87455fe23e85f28bd8ecf5006e",
       "chinese_sha256": "cd1f32604abdddf6aac84fc75f079978656a8933c4c222525befb87dcf206b3e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_multi_hits_grant_power"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_multi_hits_restore_toughness.md",
@@ -9716,9 +9744,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "76e6c7d0b4215de7028af76b31a2c9a747368597",
       "chinese_sha256": "ef6742a150e1753d37433698a6a723cdfebc2a9898d4c8d8a0827880bc53b951",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_precision_stance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_crit_cleave.md",
@@ -17579,6 +17614,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_increased_passive_cooldown_regen.md"
+    },
+    {
+      "id": "cryptic_multi_hits_grant_power",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_multi_hits_grant_power.md"
+    },
+    {
+      "id": "cryptic_discharge",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge.md"
+    },
+    {
+      "id": "cryptic_precision_stance",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance.md"
+    },
+    {
+      "id": "cryptic_chordclaw_capacitance_restoration",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_capacitance_restoration.md"
+    },
+    {
+      "id": "cryptic_chordclaw_consecutive_bonus",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_consecutive_bonus.md"
     }
   ],
   "pending_chinese_corrections": [
