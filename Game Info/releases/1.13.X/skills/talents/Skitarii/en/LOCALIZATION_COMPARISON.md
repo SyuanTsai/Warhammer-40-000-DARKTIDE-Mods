@@ -648,6 +648,18 @@ Full raw template and formatting: [source evidence](cryptic_electrocution_toughn
 | Electrocution condition, amount and duration | Replenish 12% Toughness over 4s on Electrocuting an enemy; `ui / loc_talent_cryptic_electrocution_toughness_desc / f4493647` | Qualifying Electrocution buff events activate recovery at `0.12 / 4` for 4 seconds [Fixed source and line references](cryptic_electrocution_toughness.md#fixed-source-evidence) | Consistent | The stated condition and effect values agree. |
 | Qualifying events, refreshing and recovery basis | Does not specify buff-event granularity, damage ticks, denominator or duration refreshing; `ui / loc_talent_cryptic_electrocution_toughness_desc / f4493647` | New buff, added stack and maximum-stack refresh events qualify through `group_keywords.electrocuted`; damage ticks do not. Recover 3% of maximum Toughness per second, refresh 4 seconds without increasing rate; bonuses and cap apply [Fixed source and line references](cryptic_electrocution_toughness.md#fixed-source-evidence) | Not covered by the description | The 100-Toughness example with a trigger at 2 seconds and 18 points through 6 seconds supplements the English. |
 
+
+<a id="cryptic_electrocution_defense"></a>
+
+## Overcharge Transfer Lattice
+
+Full raw template and formatting: [source evidence](cryptic_electrocution_defense.md#original-english-template-and-reconstruction). Name hash `2e776114`. Every row uses `ui / loc_talent_cryptic_electrocution_defense_desc / b02129e2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee attacker, area centre and cooldown | If an Enemy hits you with a Melee Attack, they and enemies within 2.5m of them are Electrocuted. 15s Cooldown; `ui / loc_talent_cryptic_electrocution_defense_desc / b02129e2` | A damaging melee hit triggers an enemy-faction query centred on the attacker with radius 2.5; cooldown is 15 seconds [Fixed source and line references](cryptic_electrocution_defense.md#fixed-source-evidence) | Consistent | The attack type, centre, radius and cooldown agree. |
+| Damage filtering, status and target limits | Does not specify damage-result filtering, status duration, refreshing or resistance; `ui / loc_talent_cryptic_electrocution_defense_desc / b02129e2` | `AttackSettings.is_damaging_result` excludes simple blocks; living targets with buff extensions receive the Electrocution status for 3 seconds, refreshed on reapplication. Enemy resistance affects control. Cooldown starts at the trigger [Fixed source and line references](cryptic_electrocution_defense.md#fixed-source-evidence) | Not covered by the description | These conditions and the 0/10/15-second example supplement the English. |
+
 ## Comparison totals
 
 105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.

@@ -64,3 +64,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Omnissian Recharge Litany](cryptic_multi_hits_restore_toughness.md) / `cryptic_multi_hits_restore_toughness` | Talent |
 | [Channelled Motive Force](cryptic_stamina_increases_damage.md) / `cryptic_stamina_increases_damage` | Talent |
 | [Entropic Transfer](cryptic_electrocution_toughness.md) / `cryptic_electrocution_toughness` | Talent |
+| [Overcharge Transfer Lattice](cryptic_electrocution_defense.md) / `cryptic_electrocution_defense` | Talent |

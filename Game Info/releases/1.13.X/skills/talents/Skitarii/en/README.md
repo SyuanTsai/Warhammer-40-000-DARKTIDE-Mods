@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="Omnissian Recharge Litany talent icon"> [Omnissian Recharge Litany](#cryptic_multi_hits_restore_toughness) | <ul><li>Hitting the third enemy with one attack starts 3 seconds of recovery totaling 10% of maximum Toughness. Melee and ranged hits qualify. Further triggers refresh the duration, at least 0.25 seconds apart.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="Channelled Motive Force talent icon"> [Channelled Motive Force](#cryptic_stamina_increases_damage) | <ul><li>Every accumulated Stamina bar spent grants 15% Damage for 4 seconds. Spending can be split across actions; recovery does not erase accumulated spending. Further triggers refresh the duration without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="Entropic Transfer talent icon"> [Entropic Transfer](#cryptic_electrocution_toughness) | <ul><li>Applying Electrocution, adding an Electrocution stack or refreshing it at the stack cap starts 4 seconds of recovery totaling 12% of maximum Toughness. Further triggers restart the duration without increasing the recovery rate.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="Overcharge Transfer Lattice talent icon"> [Overcharge Transfer Lattice](#cryptic_electrocution_defense) | <ul><li>Receiving melee damage Electrocutes living enemies within 2.5 metres of the attacker. Blocking alone does not trigger it. Electrocution lasts 3 seconds and refreshes when reapplied; the talent has a 15-second cooldown from activation.</li></ul> | Talent |
 
 ---
 
@@ -843,3 +844,17 @@
 - **Example**: At 100 maximum Toughness, restore `100 × 12% ÷ 4 = 3` points per second. Retriggering at 2 seconds extends the effect until 6 seconds, allowing 18 points to be restored over that period.
 
 [Details](cryptic_electrocution_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_electrocution_defense"></a>
+
+### Overcharge Transfer Lattice
+
+<img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="72" height="72" alt="Overcharge Transfer Lattice talent icon">
+
+- **Trigger**: Receiving damage from a melee attack Electrocutes living enemies within **2.5 metres of the attacker**. Simply blocking does not trigger it.
+- **Electrocution**: The status lasts **3 seconds** and refreshes when reapplied. Its actual control effect on different enemies still depends on their resistances.
+- **Cooldown**: Cooldown is **15 seconds from activation**. For example, after triggering at 0 seconds, another hit at 10 seconds does not activate it again; a qualifying hit after 15 seconds can.
+
+[Details](cryptic_electrocution_defense.md) · [Back to index](#talent-index)
