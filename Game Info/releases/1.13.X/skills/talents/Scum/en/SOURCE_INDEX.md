@@ -2,6 +2,8 @@
 
 [繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Release, date and evidence limits](../../../../README.md)
 
+[Character base effects](BASE_EFFECTS.md) | [Definitions not directly selected](UNUSED_DEFINITIONS.md)
+
 [Original game English comparison](LOCALIZATION_COMPARISON.md) | [Percentage-description review](DAMAGE_PERCENTAGE_REVIEW.md)
 
 Fixed source SHA: `7e662fcda16219d775b84af50322be2e9cd9d62e`. The talent tree has **79 selectable nodes**, each costing one point; a single build can allocate at most 30 points.
@@ -127,3 +129,9 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Like the Wind](broker_passive_improved_sprint_dodge.md) / `broker_passive_improved_sprint_dodge` | Base passive |
 | [Cartel Special](broker_stimm_description_talent.md) / `broker_stimm_description_talent` | Dedicated Stimm |
 | [Dedicated Stimm charge](broker_syringe.md) / `broker_syringe` | Conditional base ability |
+
+## Icon sources
+
+[Media-Assets Issue](https://github.com/SyuanTsai/Media-Assets/issues/12)
+
+Images identify talents; they are not mechanism evidence.

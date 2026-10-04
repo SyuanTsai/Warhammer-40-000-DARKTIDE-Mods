@@ -8,6 +8,129 @@
 - Placeholder displays are static reconstructions from the original template, existing verified values and necessary display mappings; they are not observed game screens. `[Dev]` / `[Writer]` export suffixes are metadata.
 
 
+
+## Comparison index
+
+The independent English comparison covers 79 main talents, 1 recipe starting description, 29 recipes and 5 base descriptions. Recipe text uses the corresponding stat/effect label hashes and fixed display values; similar names are not substituted. The conditional `broker_syringe` has no standalone localization key, so it is documented without inventing an original description. English errata and Traditional Chinese translation corrections are evaluated separately.
+
+| Talent or base effect | Conclusion |
+|---|---|
+| [Blackout](#broker_blitz_flash_grenade_improved) | No clear English contradiction |
+| [Boom Bringer](#broker_blitz_missile_launcher) | No clear English contradiction |
+| [Chem Grenade](#broker_blitz_tox_grenade) | No clear English contradiction |
+| [Gunslinger Improved](#broker_aura_gunslinger_improved) | Cannot confirm part of the description |
+| [Ruffian](#broker_coherency_melee_damage) | No clear English contradiction |
+| [Anarchist](#broker_coherency_anarchist) | No clear English contradiction |
+| [Enhanced Desperado](#broker_ability_focus_improved) | No clear English contradiction |
+| [Stimm Supply](#broker_ability_stimm_field) | No clear English contradiction |
+| [Rampage!](#broker_ability_punk_rage) | No corresponding implementation evidence found |
+| [Pulverising Strikes](#broker_ability_punk_rage_sub_2) | No clear English contradiction |
+| [Channelled Aggression](#broker_ability_punk_rage_sub_1) | No clear English contradiction |
+| [Forge's Bellow](#broker_ability_punk_rage_sub_3) | Explicit English contradiction |
+| [Boiling Blood](#broker_ability_punk_rage_sub_4) | No clear English contradiction |
+| [Focused Resolve](#broker_ability_focus_sub_3) | No clear English contradiction |
+| [Pick Your Targets](#broker_ability_focus_sub_2) | No clear English contradiction |
+| [Practiced Deployment](#broker_ability_stimm_field_sub_3) | No clear English contradiction |
+| [Fast Acting Stimms](#broker_ability_stimm_field_sub_1) | No clear English contradiction |
+| [Booby Trap](#broker_ability_stimm_field_sub_2) | No clear English contradiction |
+| [Nimble](#broker_passive_improved_dodges) | No clear English contradiction |
+| [Adrenaline Frenzy](#broker_keystone_adrenaline_junkie) | No clear English contradiction |
+| [Vulture's Mark](#broker_keystone_vultures_mark_on_kill) | No clear English contradiction |
+| [Chemical Dependency](#broker_keystone_chemical_dependency) | Cannot confirm part of the description |
+| [Chem Enhanced](#broker_keystone_chemical_dependency_sub_1) | No clear English contradiction |
+| [Chem Fortified](#broker_keystone_chemical_dependency_sub_2) | No clear English contradiction |
+| [Maxed Out Chems](#broker_keystone_chemical_dependency_sub_3) | No clear English contradiction |
+| [Vulture's Push](#broker_keystone_vultures_mark_aoe_stagger) | Cannot confirm part of the description |
+| [Patient Hunter](#broker_keystone_vultures_mark_increased_duration) | No clear English contradiction |
+| [Vulture's Dodge](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | Explicit English contradiction |
+| [Adrenaline Assassin](#broker_keystone_adrenaline_junkie_sub_1) | No clear English contradiction |
+| [Stoked Rage](#broker_keystone_adrenaline_junkie_sub_3) | No clear English contradiction |
+| [Adrenaline Unbound](#broker_keystone_adrenaline_junkie_sub_5) | No clear English contradiction |
+| [Uncontrolled Aggression](#broker_keystone_adrenaline_junkie_sub_4) | No clear English contradiction |
+| [Adrenaline Smiter](#broker_keystone_adrenaline_junkie_sub_2) | No clear English contradiction |
+| [Alley Rat](#broker_passive_longer_dodges) | No clear English contradiction |
+| [Quick and Deadly](#broker_passive_close_range_damage_on_dodge) | No clear English contradiction |
+| [A Tertium Welcome](#broker_passive_first_target_damage) | No clear English contradiction |
+| [In Your Face](#broker_passive_close_ranged_damage) | No clear English contradiction |
+| [Precision Violence](#broker_passive_restore_toughness_on_weakspot_kill) | No clear English contradiction |
+| [Voice of Tertium](#broker_passive_restore_toughness_on_close_ranged_kill) | No clear English contradiction |
+| [Float Like a Butterfly](#broker_passive_ninja_grants_crit_chance) | No clear English contradiction |
+| [Speedloader](#broker_passive_reload_speed_on_close_kill) | No clear English contradiction |
+| [Burst of Energy](#broker_passive_stun_immunity_on_toughness_broken) | No clear English contradiction |
+| [Toughness Boost](#base_toughness_node_buff_medium_1) | No clear English contradiction |
+| [Regained Posture](#broker_passive_stamina_on_successful_dodge) | No clear English contradiction |
+| [Slippery Customer](#broker_passive_dodge_melee_on_slide) | No clear English contradiction |
+| [Tis but a Scratch](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | No clear English contradiction |
+| [Unload](#broker_passive_damage_on_reload) | No clear English contradiction |
+| [Swift Endurance](#broker_passive_stamina_grants_atk_speed) | No clear English contradiction |
+| [Ramping Backstabs](#broker_passive_ramping_backstabs) | No clear English contradiction |
+| [Moving Target](#broker_passive_increased_ranged_dodges) | No clear English contradiction |
+| [Sample Collector](#broker_passive_stimm_cd_on_kill) | No clear English contradiction |
+| [Jittery](#broker_passive_improved_dodges_at_full_stamina) | Explicit English contradiction |
+| [Critical Chance Boost](#base_crit_chance_node_buff_low_1) | No clear English contradiction |
+| [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | No clear English contradiction |
+| [Potent Tox](#base_toxin_power_boost_1) | No clear English contradiction |
+| [Sticky Hands](#broker_passive_reduce_swap_time) | No clear English contradiction |
+| [Calling for a Time Out](#broker_passive_reduced_toughness_damage_during_reload) | No clear English contradiction |
+| [Street Tough](#broker_passive_knockback_on_taking_melee_damage) | Cannot confirm part of the description |
+| [Channelled Devastation](#broker_passive_crit_grants_damage) | No clear English contradiction |
+| [Battering Strikes](#broker_passive_melee_cleave_on_melee_kill) | No clear English contradiction |
+| [Hyper-Violence](#broker_passive_melee_damage_carry_over) | No clear English contradiction |
+| [Virulent Strain](#broker_passive_toxin_infected_enemies_take_increased_damage) | No clear English contradiction |
+| [Toxin Mania](#broker_passive_damage_after_toxined_enemies) | No clear English contradiction |
+| [Splash Damage](#broker_passive_toxin_spread_on_kills) | No clear English contradiction |
+| [Extra Pouches](#broker_passive_increased_blitz_ammo) | No clear English contradiction |
+| [Coated Weaponry](#broker_passive_melee_attacks_apply_toxin) | No clear English contradiction |
+| [Pocket Toxin](#broker_passive_blitz_inflicts_toxin) | No clear English contradiction |
+| [Targeted Toxin](#broker_passive_reduced_damage_by_toxined) | No clear English contradiction |
+| [Toxic Renewal](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | No clear English contradiction |
+| [Ammo Jack](#broker_passive_extended_mag) | No clear English contradiction |
+| [Cheap Shots](#broker_passive_damage_vs_heavy_staggered) | Explicit English contradiction |
+| [Hyper-Critical](#broker_passive_melee_crit_instakill) | Cannot confirm part of the description |
+| [Punching Above One's Weight](#broker_passive_damage_vs_elites_monsters) | No clear English contradiction |
+| [The Sweet Spot](#broker_passive_increased_weakspot_damage) | No clear English contradiction |
+| [Long Lasting](#broker_passive_stimm_increased_duration) | No clear English contradiction |
+| [Blessed Stimms](#broker_passive_stimm_cleanse_on_kill) | Explicit English contradiction |
+| [Hive City Brawler](#broker_passive_dr_damage_tradeoff_on_stamina) | No clear English contradiction |
+| [Pickpocket](#broker_passive_low_ammo_regen) | No clear English contradiction |
+| [Battering Momentum](#broker_passive_cleave_on_cleave) | Cannot confirm part of the description |
+| [Equip Cartel Special](#broker_stimm_activation_talent) | Cannot confirm part of the description |
+| [Spur I](#broker_stimm_celerity_1) | No clear English contradiction |
+| [Spur II](#broker_stimm_celerity_2) | No clear English contradiction |
+| [Spur III](#broker_stimm_celerity_3) | No clear English contradiction |
+| [Spur IV](#broker_stimm_celerity_4) | No clear English contradiction |
+| [Spur V](#broker_stimm_celerity_5a) | No clear English contradiction |
+| [Reflex](#broker_stimm_celerity_5b) | No clear English contradiction |
+| [Fervor](#broker_stimm_celerity_5c) | Cannot confirm part of the description |
+| [Wildfire I](#broker_stimm_combat_1) | No clear English contradiction |
+| [Wildfire II](#broker_stimm_combat_2) | No clear English contradiction |
+| [Wildfire III](#broker_stimm_combat_3) | No clear English contradiction |
+| [Wildfire IV](#broker_stimm_combat_4a) | No clear English contradiction |
+| [Fury I](#broker_stimm_combat_4b) | No clear English contradiction |
+| [Vultoprene I](#broker_stimm_combat_4c) | No clear English contradiction |
+| [Wildfire V](#broker_stimm_combat_5a) | No clear English contradiction |
+| [Fury II](#broker_stimm_combat_5b) | No clear English contradiction |
+| [Vultoprene II](#broker_stimm_combat_5c) | No clear English contradiction |
+| [Barrage I](#broker_stimm_durability_1) | No clear English contradiction |
+| [Barrage II](#broker_stimm_durability_2) | No clear English contradiction |
+| [Barrage III](#broker_stimm_durability_3) | No clear English contradiction |
+| [Barrage IV](#broker_stimm_durability_4) | No clear English contradiction |
+| [Tank](#broker_stimm_durability_5a) | No clear English contradiction |
+| [Regain](#broker_stimm_durability_5b) | No clear English contradiction |
+| [Kalma I](#broker_stimm_concentration_1) | No clear English contradiction |
+| [Kalma II](#broker_stimm_concentration_2) | No clear English contradiction |
+| [Kalma III](#broker_stimm_concentration_3) | No clear English contradiction |
+| [Kalma IV](#broker_stimm_concentration_4) | No clear English contradiction |
+| [Kalma V](#broker_stimm_concentration_5a) | No clear English contradiction |
+| [Hypex](#broker_stimm_concentration_5b) | Explicit English contradiction |
+| [Klay](#broker_stimm_concentration_5c) | Explicit English contradiction |
+| [Desperado: base combat ability](#broker_ability_focus) | No clear English contradiction |
+| [Blinder: base blitz](#broker_blitz_flash_grenade) | No clear English contradiction |
+| [Gunslinger: base aura](#broker_aura_gunslinger) | Cannot confirm part of the description |
+| [Like the Wind: base passive](#broker_passive_improved_sprint_dodge) | No clear English contradiction |
+| [Cartel Special: dedicated stimm](#broker_stimm_description_talent) | No clear English contradiction |
+| [Dedicated Stimm charge](#broker_syringe) | Cannot confirm part of the description |
+
 <a id="broker_blitz_flash_grenade_improved"></a>
 
 ## Blackout

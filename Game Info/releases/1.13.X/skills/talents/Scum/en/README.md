@@ -2,6 +2,8 @@
 
 [繁體中文](../README.md) | [Sources, formulas and technical index](SOURCE_INDEX.md) | [Talent classes](../../../README.en.md) | [Release information](../../../../README.md)
 
+[Character base effects](BASE_EFFECTS.md)
+
 <a id="talent-index"></a>
 
 ## Talent index
@@ -120,6 +122,8 @@
 
 ---
 
+## Blitz
+
 <a id="broker_blitz_flash_grenade_improved"></a>
 
 ### Blackout
@@ -176,6 +180,8 @@
 
 ---
 
+## Aura
+
 <a id="broker_aura_gunslinger_improved"></a>
 
 ### Gunslinger Improved
@@ -221,6 +227,8 @@
 [Details](broker_coherency_anarchist.md) · [Back to index](#talent-index)
 
 ---
+
+## Combat Ability
 
 <a id="broker_ability_focus_improved"></a>
 
@@ -431,6 +439,8 @@
 [Details](broker_ability_stimm_field_sub_2.md) · [Back to index](#talent-index)
 
 ---
+
+## Keystones
 
 <a id="broker_passive_improved_dodges"></a>
 
@@ -698,6 +708,8 @@
 [Details](broker_passive_longer_dodges.md) · [Back to index](#talent-index)
 
 ---
+
+## Talents
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 
