@@ -614,6 +614,18 @@ Full raw template and formatting: [source evidence](broker_passive_increased_ran
 | Effective Dodge count and wielded weapon | Gain +1 Effective Dodges while wielding your Ranged Weapon; `ui / loc_talent_broker_passive_increased_ranged_dodges_desc / a7db2b5d` | The secondary-slot condition enables `extra_consecutive_dodges = 1`. [Fixed source and line references](broker_passive_increased_ranged_dodges.md#fixed-source-evidence) | Consistent | The English names a Dodge count and correctly limits it to the wielded Ranged weapon. |
 | Threshold formula and unchanged movement properties | No threshold formula or distance/speed details are stated; `ui / loc_talent_broker_passive_increased_ranged_dodges_desc / a7db2b5d` | `consecutive_dodges_count` is the weapon's `diminishing_return_start` plus `round(extra)`. The bonus does not increase distance or speed and is lost on switching to Melee. [Fixed source and line references](broker_passive_increased_ranged_dodges.md#fixed-source-evidence) | Not covered by the description | These clarify what Effective Dodges means and support the original 3→4 example. |
 
+
+<a id="broker_passive_stimm_cd_on_kill"></a>
+
+## Sample Collector
+
+Full raw template and formatting: [source evidence](broker_passive_stimm_cd_on_kill.md#original-english-template-and-reconstruction). Name hash `c7530a4c`. Every row uses `ui / loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc / f234d4bf`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill recovery and toxin replacement | Kills reduce 0.5s; Chem Toxin infected enemies instead restore 1s; `ui / loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc / f234d4bf` | `on_kill` restores 0.5 or 1 resource, selected by `has_keyword(toxin)` [Fixed source and line references](broker_passive_stimm_cd_on_kill.md#fixed-source-evidence) | Consistent | The toxin condition modifies which amount is restored; the amounts do not add. |
+| Recovery limits | No statement about paused or complete recovery; `ui / loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc / f234d4bf` | Recovery must be unpaused; no excess can be banked at full resource [Fixed source and line references](broker_passive_stimm_cd_on_kill.md#fixed-source-evidence) | Not covered by the description | These limits and the exclusion of natural recovery in examples supplement the English. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

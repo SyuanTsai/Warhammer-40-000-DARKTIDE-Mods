@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/13f03cfd-6e09-41fe-920e-ad116f1a1548" width="32" height="32" alt="Swift Endurance talent icon"> [Swift Endurance](#broker_passive_stamina_grants_atk_speed) | <ul><li>Each whole point of current Stamina grants 2% Melee Attack Speed; fractional points are rounded down.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="32" height="32" alt="Ramping Backstabs talent icon"> [Ramping Backstabs](#broker_passive_ramping_backstabs) | <ul><li>Each Melee Backstab adds 10% Melee Power, up to 5 stacks; a non-Backstab Melee hit clears them.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="Moving Target talent icon"> [Moving Target](#broker_passive_increased_ranged_dodges) | <ul><li>While wielding a Ranged weapon, gain 1 Effective Dodge.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="Sample Collector talent icon"> [Sample Collector](#broker_passive_stimm_cd_on_kill) | <ul><li>Each kill reduces Stimm cooldown by 0.5s; a Chem Toxin infected enemy instead reduces it by 1s.</li></ul> | Talent |
 
 ---
 
@@ -853,3 +854,23 @@
 - **Count example**: a weapon with 3 Effective Dodges becomes 3 + 1 = 4. This bonus does not increase Dodge Distance or Dodge Speed.
 
 [Details](broker_passive_increased_ranged_dodges.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stimm_cd_on_kill"></a>
+
+### Sample Collector
+
+<img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="72" height="72" alt="Sample Collector talent icon">
+
+- **Recovery**: While your Stimm cooldown is recovering, each kill reduces it by 0.5s. Killing an enemy infected with Chem Toxin instead reduces it by 1s. The two amounts do not add together.
+
+- **Cooldown example**: With 20s remaining, four ordinary kills remove 4 × 0.5 = 2s, leaving 18s; four kills of Chem Toxin infected enemies remove 4s, leaving 16s.
+
+- **Limits**: This has no effect while Stimm recovery is paused. Once recovery is complete, excess recovery cannot be saved for the next use.
+
+#### Traditional Chinese wording erratum
+
+- The Chinese original places the toxin name in the enemy-count position, equivalent to “kill … enemies.” The actual condition is killing an enemy infected with Chem Toxin, which instead reduces cooldown by 1s per kill.
+
+[Details](broker_passive_stimm_cd_on_kill.md) · [Back to index](#talent-index)

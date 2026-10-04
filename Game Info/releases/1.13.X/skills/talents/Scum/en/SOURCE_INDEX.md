@@ -62,3 +62,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Swift Endurance](broker_passive_stamina_grants_atk_speed.md) / `broker_passive_stamina_grants_atk_speed` | Talent |
 | [Ramping Backstabs](broker_passive_ramping_backstabs.md) / `broker_passive_ramping_backstabs` | Talent |
 | [Moving Target](broker_passive_increased_ranged_dodges.md) / `broker_passive_increased_ranged_dodges` | Talent |
+| [Sample Collector](broker_passive_stimm_cd_on_kill.md) / `broker_passive_stimm_cd_on_kill` | Talent |
