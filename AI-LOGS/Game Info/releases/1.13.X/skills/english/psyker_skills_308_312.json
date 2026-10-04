@@ -13,7 +13,7 @@
   ],
   "source_reads": [
     "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1403–1408, L1681–1686, L2226–2235, L969–974 and L985–997.",
-    "Quietude missing display multiplier: scripts/settings/talent/talent_settings_psyker.lua L202–204; percentage formatter override: scripts/ui/views/talent_builder_view/talent_layout_parser.lua L379–404. value_manipulation replaces the default percentage ×100 step.",
+    "Quietude missing display multiplier: scripts/settings/talent/talent_settings_psyker.lua L202–204; percentage formatter override: scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua L379–404. value_manipulation replaces the default percentage ×100 step.",
     "Existing verified values and shared formatting reused; no mechanism or event-chain retracing."
   ],
   "questions": [],

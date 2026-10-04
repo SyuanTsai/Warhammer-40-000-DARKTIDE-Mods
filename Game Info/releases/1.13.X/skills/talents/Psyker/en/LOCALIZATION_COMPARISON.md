@@ -796,4 +796,4 @@ Full raw template and formatting: [source evidence](psyker_melee_attack_speed.md
 
 ## Comparison totals
 
-The 127 listed rules comprise **59 Consistent**, **3 Explicit contradictions**, **60 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.
+The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.
