@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_554_558",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L2711-L2728, L2601-L2611, L2576-L2591, L2739-L2744, L2561-L2566. Verified values and common formats reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction. English they includes the injured holder; the accepted Chinese localization note is retained separately. Shared recipient cooldown, full-charge threshold, power/recovery basis, next-attack consumption and whole-Push cooldown are supplements. Delayed/multiple-projectile ordering remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_ally_coherency_defenses",
+      "name": "Data Sensor Protocol",
+      "name_hash": "2dada14c",
+      "description_hash": "307b308a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ally_coherency_defenses.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ally_coherency_defenses.md",
+      "commit": "4a8c31eea"
+    },
+    {
+      "id": "cryptic_strength_on_charge_gain",
+      "name": "Sequenced Charge",
+      "name_hash": "6e7cd3d3",
+      "description_hash": "9e3a3df6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_strength_on_charge_gain.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_strength_on_charge_gain.md",
+      "commit": "9d68b2406"
+    },
+    {
+      "id": "cryptic_toughness_replenishment_on_kill_bonus",
+      "name": "Slaughter Protocol",
+      "name_hash": "70dde31f",
+      "description_hash": "583f2cab",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_replenishment_on_kill_bonus.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_toughness_replenishment_on_kill_bonus.md",
+      "commit": "d3d7dcc4b"
+    },
+    {
+      "id": "cryptic_next_hit_all_damage_on_dodge",
+      "name": "Precision Combat Augurs",
+      "name_hash": "cf9ae6f0",
+      "description_hash": "501926d3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_next_hit_all_damage_on_dodge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_next_hit_all_damage_on_dodge.md",
+      "commit": "10d79bea8"
+    },
+    {
+      "id": "cryptic_electrocution_push",
+      "name": "Voltaic Burst",
+      "name_hash": "cfd90f66",
+      "description_hash": "642d90e7",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_push.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_push.md",
+      "commit": "f7326d598"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 285,
+    "from_commit": "132e73427",
+    "to_commit": "f7326d598",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

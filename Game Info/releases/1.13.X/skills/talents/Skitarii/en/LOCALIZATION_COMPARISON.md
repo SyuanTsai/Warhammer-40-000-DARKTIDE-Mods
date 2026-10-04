@@ -1156,4 +1156,4 @@ Full raw template and formatting: [source evidence](cryptic_electrocution_push.m
 
 ## Comparison totals
 
-187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.
+197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.

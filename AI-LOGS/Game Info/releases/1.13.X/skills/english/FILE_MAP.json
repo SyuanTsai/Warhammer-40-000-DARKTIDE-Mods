@@ -8897,9 +8897,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8bc242200b0584e14ca998f073404355b60e706c",
       "chinese_sha256": "d669d3099e2d7cc7da2d97044d8604e067f0ed9b87059e9e0e9612f3662846aa",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_ally_coherency_defenses"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ammo_aura.md",
@@ -9535,9 +9542,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "587cc10131a89b5fd7709c529c06887ea533db8e",
       "chinese_sha256": "48cb3d19de8ce5858798d60a47b7d45bc5d37c14e2ccbac93ae0a42797f56b7f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_electrocution_push"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_toughness.md",
@@ -9834,9 +9848,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "56a256fbe6205c811ddaf7ac59012690ca9872b9",
       "chinese_sha256": "be96d987b42314c19b73ccbbfd29110e82f7734eed2483670b560cb6ae722245",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_next_hit_all_damage_on_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_no_braced_movement_penalty.md",
@@ -10436,9 +10457,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1435f18aefbcdd24b42c7d6511caa02c904287de",
       "chinese_sha256": "0357af264bc800a81d5b179de7e59448ef189506bcf23044564084ae8fd8d715",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_strength_on_charge_gain"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stun_dr_power.md",
@@ -10555,9 +10583,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "52c32520e9a299bfbd9ff11b7f2b14aec5112f6d",
       "chinese_sha256": "5ae1367ca448712308b51954927ba5f25ddd0454ab4d6eb6fc0ca2d5bcecd6d8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_toughness_replenishment_on_kill_bonus"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_damage.md",
@@ -18554,6 +18589,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_disabled_allies_defense.md"
+    },
+    {
+      "id": "cryptic_ally_coherency_defenses",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ally_coherency_defenses.md"
+    },
+    {
+      "id": "cryptic_strength_on_charge_gain",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_strength_on_charge_gain.md"
+    },
+    {
+      "id": "cryptic_toughness_replenishment_on_kill_bonus",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_toughness_replenishment_on_kill_bonus.md"
+    },
+    {
+      "id": "cryptic_next_hit_all_damage_on_dodge",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_next_hit_all_damage_on_dodge.md"
+    },
+    {
+      "id": "cryptic_electrocution_push",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_push.md"
     }
   ],
   "pending_chinese_corrections": [
