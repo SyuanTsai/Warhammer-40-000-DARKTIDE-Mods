@@ -467,6 +467,18 @@ Full raw template and formatting: [source evidence](zealot_crits_apply_bleed.md#
 | Melee Bleed and Critical Chance effects | Melee Critical Hits apply Bleed; Melee hits on bleeding enemies grant +10% Critical Chance for 3s, stacking 3 times.; `ui / loc_talent_zealot_bleed_melee_crit_chance_desc / cddf2bee` | Melee critical damage to a living target applies 2 Bleed; already bleeding targets grant a 0.10 Melee crit effect, max 3/duration 3s. [Fixed source and line references](zealot_crits_apply_bleed.md#fixed-source-evidence) | Consistent | Trigger directions and displayed bonus, duration and stack cap agree. |
 | Event order, Bleed scaling and effect limits | No application order, Bleed amount/damage formula, refresh or decay details.; `ui / loc_talent_zealot_bleed_melee_crit_chance_desc / cddf2bee` | Existing Bleed checked first; positive damage and surviving target required for application. Separate qualifying death event; additive Melee chance and accepted nonlinear tick/decay behavior apply. [Fixed source and line references](zealot_crits_apply_bleed.md#fixed-source-evidence) | Not covered by the description | The Melee-only bonus scope, original examples and event restrictions supplement the description. |
 
+
+<a id="zealot_backstab_damage"></a>
+
+## Backstabber
+
+Full raw template and formatting: [source evidence](zealot_backstab_damage.md#original-english-template-and-reconstruction). Name hash `5730dc87`. Every row uses `ui / loc_talent_zealot_backstab_flanking_damage_all_desc / cbe3a511`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Backstab and Flanking damage | “+25% Damage on Backstab and Flanking Hits.”; `ui / loc_talent_zealot_backstab_flanking_damage_all_desc / cbe3a511` | Template enables Backstabbing/Flanking and adds .25 to each damage stat. [Fixed source and line references](zealot_backstab_damage.md#fixed-source-evidence) | Consistent | Effect types and bonus values agree. |
+| Attack eligibility, angles and additive calculation | No attack-type angles, boundary or bonus-combination formula.; `ui / loc_talent_zealot_backstab_flanking_damage_all_desc / cbe3a511` | Melee Backstab dot>.5/rear±60°; Ranged Flanking dot>0/rear half-plane. Add same-type/profile bonuses; one attack receives only one effect. [Fixed source and line references](zealot_backstab_damage.md#fixed-source-evidence) | Not covered by the description | Accepted geometric limits, damage scope and original examples clarify the two bonuses. |
+
 ## Comparison totals
 
 74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.

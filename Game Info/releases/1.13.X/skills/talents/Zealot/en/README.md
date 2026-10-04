@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="Fire and Fury talent icon"> [Fire and Fury](#zealot_resist_death_fire) | <ul><li>While Unkillable, weapon hits apply Burn to living enemies: 3 stacks for Melee, 1 for Ranged, up to 12 from this talent.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="Risen talent icon"> [Risen](#zealot_resist_death_golden_toughness) | <ul><li>While Unkillable, gain 5 maximum Toughness per second, up to 8 stacks/+40. Added stacks refresh a 5-second duration, and raising the cap also raises current Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="Scourge talent icon"> [Scourge](#zealot_crits_apply_bleed) | <ul><li>Damaging Melee Critical Hits apply 2 Bleed stacks to living enemies. Melee hits on bleeding targets build +10 percentage points of Melee Critical Chance per stack, up to 3 for 3 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="Backstabber talent icon"> [Backstabber](#zealot_backstab_damage) | <ul><li>Deal 25% more damage on Melee Backstabs and Ranged Flanking hits.</li></ul> | Skill |
 
 ---
 
@@ -600,3 +601,16 @@
 - **Bleed duration**: Adding stacks resets the 1.5-second retention period. After expiry, stacks decay one by one with each tick rather than all disappearing at 1.5 seconds.
 
 [Details](zealot_crits_apply_bleed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_backstab_damage"></a>
+
+### Backstabber
+
+<img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="72" height="72" alt="Backstabber talent icon">
+
+- **Operation**: Deal 25% more damage on a Melee hit from within the roughly 120-degree sector behind an enemy, or a Ranged hit from the rear half-plane.
+- **Damage example**: With the same weapon, armour and hit location and no other Backstab/Flanking bonus, 100 damage at that stage becomes 100 × (1 + 25%) = 125. With an existing 20% bonus of the same type, 120 becomes 100 × (1 + 20% + 25%) = 145, an actual increase of about 20.83%.
+
+[Details](zealot_backstab_damage.md) · [Back to index](#talent-index)

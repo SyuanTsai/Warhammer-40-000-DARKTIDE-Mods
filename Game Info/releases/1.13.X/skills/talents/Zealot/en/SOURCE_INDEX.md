@@ -49,3 +49,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Fire and Fury](zealot_resist_death_fire.md) / `zealot_resist_death_fire` | Keystone |
 | [Risen](zealot_resist_death_golden_toughness.md) / `zealot_resist_death_golden_toughness` | Keystone |
 | [Scourge](zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | Skill |
+| [Backstabber](zealot_backstab_damage.md) / `zealot_backstab_damage` | Skill |
