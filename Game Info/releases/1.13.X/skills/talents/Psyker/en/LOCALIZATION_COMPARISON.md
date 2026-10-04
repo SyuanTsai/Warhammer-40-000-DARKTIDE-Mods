@@ -556,4 +556,4 @@ Full raw template and formatting: [source evidence](psyker_toughness_on_vent.md#
 
 ## Comparison totals
 
-The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **40 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

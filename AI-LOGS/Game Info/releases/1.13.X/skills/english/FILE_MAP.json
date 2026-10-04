@@ -4358,7 +4358,12 @@
         "psyker_mark_kills_can_vent",
         "psyker_mark_increased_duration",
         "psyker_empowered_grenades_increased_max_stacks",
-        "psyker_warpfire_generate_souls"
+        "psyker_warpfire_generate_souls",
+        "psyker_aura_souls_on_kill",
+        "psyker_increased_max_souls",
+        "psyker_mark_weakspot_kills",
+        "psyker_toughness_on_warp_kill",
+        "psyker_toughness_on_vent"
       ],
       "checks": []
     },
@@ -4410,7 +4415,12 @@
         "psyker_mark_kills_can_vent",
         "psyker_mark_increased_duration",
         "psyker_empowered_grenades_increased_max_stacks",
-        "psyker_warpfire_generate_souls"
+        "psyker_warpfire_generate_souls",
+        "psyker_aura_souls_on_kill",
+        "psyker_increased_max_souls",
+        "psyker_mark_weakspot_kills",
+        "psyker_toughness_on_warp_kill",
+        "psyker_toughness_on_vent"
       ],
       "checks": []
     },
@@ -4462,7 +4472,12 @@
         "psyker_mark_kills_can_vent",
         "psyker_mark_increased_duration",
         "psyker_empowered_grenades_increased_max_stacks",
-        "psyker_warpfire_generate_souls"
+        "psyker_warpfire_generate_souls",
+        "psyker_aura_souls_on_kill",
+        "psyker_increased_max_souls",
+        "psyker_mark_weakspot_kills",
+        "psyker_toughness_on_warp_kill",
+        "psyker_toughness_on_vent"
       ],
       "checks": []
     },
@@ -4514,7 +4529,12 @@
         "psyker_mark_kills_can_vent",
         "psyker_mark_increased_duration",
         "psyker_empowered_grenades_increased_max_stacks",
-        "psyker_warpfire_generate_souls"
+        "psyker_warpfire_generate_souls",
+        "psyker_aura_souls_on_kill",
+        "psyker_increased_max_souls",
+        "psyker_mark_weakspot_kills",
+        "psyker_toughness_on_warp_kill",
+        "psyker_toughness_on_vent"
       ],
       "checks": []
     },
@@ -4652,9 +4672,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6d9fb06791139757e0e06fc4261bab6ace1a9ca0",
       "chinese_sha256": "8b5324d92a8bc81e4a2bd533aaa9a56f2a0213501eb8adc3e91e1c1edb9306de",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_aura_souls_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_block_costs_warp_charge.md",
@@ -5120,9 +5147,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6c2555c5e7903ad11441a39609289968507e3b69",
       "chinese_sha256": "c5609a5dc0e81a29c1f499fd63a5b467ea7138bbcd0742ac13f00f6746f7e7b6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_increased_max_souls"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_vent_speed.md",
@@ -5229,9 +5263,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "444a3f629fb2c3ade037f336f56e53116082b1a8",
       "chinese_sha256": "1b5c693e6ace2a1b37924776d2fd51f082eabfc7633ec9485eccdf5816675cdb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_mark_weakspot_kills"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_melee_attack_speed.md",
@@ -5594,9 +5635,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1ea81522355e8b9b59e2c765671723895f8b85e2",
       "chinese_sha256": "934dab0360981c6f9d39afc85b5e1c575e97626ae1e32ef8523e014afc572a31",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_toughness_on_vent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_warp_kill.md",
@@ -5605,9 +5653,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "761411ff4db74dbea6476b24db038840af0a0e77",
       "chinese_sha256": "ea496ec4ea1be12cc4d4baf2ed6af5777d53c538966f1c1e180582b97835b92a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_toughness_on_warp_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_venting_improvements.md",
@@ -14181,6 +14236,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warpfire_generate_souls.md"
+    },
+    {
+      "id": "psyker_aura_souls_on_kill",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_souls_on_kill.md"
+    },
+    {
+      "id": "psyker_increased_max_souls",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_max_souls.md"
+    },
+    {
+      "id": "psyker_mark_weakspot_kills",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_weakspot_kills.md"
+    },
+    {
+      "id": "psyker_toughness_on_warp_kill",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_warp_kill.md"
+    },
+    {
+      "id": "psyker_toughness_on_vent",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_vent.md"
     }
   ],
   "pending_chinese_corrections": [

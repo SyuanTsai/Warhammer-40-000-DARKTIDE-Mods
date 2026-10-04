@@ -1,0 +1,73 @@
+{
+  "id": "psyker_skills_308_312",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L1403–1408, L1681–1686, L2226–2235, L969–974 and L985–997.",
+    "Quietude missing display multiplier: scripts/settings/talent/talent_settings_psyker.lua L202–204; percentage formatter override: scripts/ui/views/talent_builder_view/talent_layout_parser.lua L379–404. value_manipulation replaces the default percentage ×100 step.",
+    "Existing verified values and shared formatting reused; no mechanism or event-chain retracing."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "psyker_aura_souls_on_kill",
+      "name": "Psychic Vampire",
+      "name_hash": "302abae8",
+      "description_hash": "03d352e7",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_souls_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_souls_on_kill.md",
+      "commit": "e74737d46"
+    },
+    {
+      "id": "psyker_increased_max_souls",
+      "name": "Warp Battery",
+      "name_hash": "a643d61c",
+      "description_hash": "e69bf6d1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_max_souls.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_max_souls.md",
+      "commit": "47fd9112c"
+    },
+    {
+      "id": "psyker_mark_weakspot_kills",
+      "name": "Cruel Fortune",
+      "name_hash": "1570663e",
+      "description_hash": "40c93869",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_mark_weakspot_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_mark_weakspot_kills.md",
+      "commit": "73f789a39"
+    },
+    {
+      "id": "psyker_toughness_on_warp_kill",
+      "name": "Soulstealer",
+      "name_hash": "f5eac803",
+      "description_hash": "ffb1d758",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_warp_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_warp_kill.md",
+      "commit": "7547c1e3d"
+    },
+    {
+      "id": "psyker_toughness_on_vent",
+      "name": "Quietude",
+      "name_hash": "742e490a",
+      "description_hash": "50f8f0f2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_toughness_on_vent.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_toughness_on_vent.md",
+      "commit": "123d2d24b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 466,
+    "from_commit": "b67efb460",
+    "to_commit": "123d2d24b",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}
