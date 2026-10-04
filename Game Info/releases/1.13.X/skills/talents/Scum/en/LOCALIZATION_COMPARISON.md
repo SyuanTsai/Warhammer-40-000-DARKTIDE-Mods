@@ -953,6 +953,19 @@ Full raw template and formatting: [source evidence](broker_passive_low_ammo_rege
 | Kill conditions and refill target | Elite or Specialist killed by Melee; Ammo Reserve below 20%; refill to 20%; `ui / loc_talent_broker_passive_low_ammo_regen_desc_04 / aa6ac8e6` | Requires the matching Melee Kill and a reserve below `floor(max × 0.2)`, then fills the difference [Fixed source and line references](broker_passive_low_ammo_regen.md#fixed-source-evidence) | Consistent | The English describes topping up to the threshold, rather than adding a fixed 20% per Kill. |
 | Rounding and reserve scope | No integer rounding, clip counting or capacity guard; `ui / loc_talent_broker_passive_low_ammo_regen_desc_04 / aa6ac8e6` | Requires `max_reserve > 0`; thresholds use floor, exclude the clip and the refill has a minimum of 1 [Fixed source and line references](broker_passive_low_ammo_regen.md#fixed-source-evidence) | Not covered by the description | These preserve the 150-round and 37-round examples and existing limits. |
 
+
+<a id="broker_passive_cleave_on_cleave"></a>
+
+## Battering Momentum
+
+Full raw template and formatting: [source evidence](broker_passive_cleave_on_cleave.md#original-english-template-and-reconstruction). Name hash `66764aec`. Every row uses `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and Cleave value | Single Melee Attack hits 3 or more enemies; +50% Cleave; `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2` | Grants the child at `target_number >= 3`; both Damage and Stagger Cleave modifiers are 0.5 [Fixed source and line references](broker_passive_cleave_on_cleave.md#fixed-source-evidence) | Consistent | The attack condition, threshold and capacity bonus agree. |
+| Consumption and duration | No fixed duration or consumption event details; `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2` | `on_hit` with `target_number < 3` consumes the child, including non-Melee hits; the next qualifying attack can grant it again [Fixed source and line references](broker_passive_cleave_on_cleave.md#fixed-source-evidence) | Not covered by the description | These preserve the event limits and both Cleave-capacity examples. |
+| Same-attack timing | For your next Attack; `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2` | Whether later hits of the triggering attack already read the new bonus depends on attack sampling and remains untested [Fixed source and line references](broker_passive_cleave_on_cleave.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish an exclusive next-attack-only effect for every weapon; retain the caveat. |
+
 ## Comparison totals
 
 The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.

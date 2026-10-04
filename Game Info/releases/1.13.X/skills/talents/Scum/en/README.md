@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="Blessed Stimms talent icon"> [Blessed Stimms](#broker_passive_stimm_cleanse_on_kill) | <ul><li>While Stimmed, each Kill clears 1% of maximum Health as Corruption; 50% cleared per Stimm is the stopping threshold.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="Hive City Brawler talent icon"> [Hive City Brawler](#broker_passive_dr_damage_tradeoff_on_stamina) | <ul><li>More remaining Stamina gives more Damage Reduction; more spent Stamina gives more Melee Damage. Each reaches up to 20%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="Pickpocket talent icon"> [Pickpocket](#broker_passive_low_ammo_regen) | <ul><li>Melee Kills on Elites or Specialists refill Ammo Reserve to 20% if it is below that threshold.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="Battering Momentum talent icon"> [Battering Momentum](#broker_passive_cleave_on_cleave) | <ul><li>Hit at least 3 enemies with one Melee Attack to gain 50% Cleave for the next attack.</li></ul> | Talent |
 
 ---
 
@@ -1307,3 +1308,19 @@
 - **Refill example**: With maximum reserve 150, the threshold is ⌊150 × 20%⌋ = 30 rounds. At 8 rounds, gain 22 to reach 30; at 30, nothing triggers. With a maximum of 37, the rounded-down threshold is 7 rounds.
 
 [Details](broker_passive_low_ammo_regen.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_cleave_on_cleave"></a>
+
+### Battering Momentum
+
+<img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="72" height="72" alt="Battering Momentum talent icon">
+
+- **Trigger**: Hitting the third enemy with the same Melee Attack grants 50% Damage Cleave and Stagger Cleave. It is consumed when the next attack starts hitting; reaching three enemies again can grant it again.
+
+- **Cleave example**: Damage Cleave capacity 10 and Stagger Cleave capacity 8 become 10 × 1.5 = 15 and 8 × 1.5 = 12. Actual enemies hit still depend on enemy mass and weapon limits.
+
+- **Duration limit**: There is no fixed countdown in seconds. Subsequent hits consume this effect; it does not continuously increase every attack's damage.
+
+[Details](broker_passive_cleave_on_cleave.md) · [Back to index](#talent-index)
