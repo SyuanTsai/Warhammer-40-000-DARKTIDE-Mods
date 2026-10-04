@@ -52,3 +52,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Precision Violence](broker_passive_restore_toughness_on_weakspot_kill.md) / `broker_passive_restore_toughness_on_weakspot_kill` | Talent |
 | [Voice of Tertium](broker_passive_restore_toughness_on_close_ranged_kill.md) / `broker_passive_restore_toughness_on_close_ranged_kill` | Talent |
 | [Float Like a Butterfly](broker_passive_ninja_grants_crit_chance.md) / `broker_passive_ninja_grants_crit_chance` | Talent |
+| [Speedloader](broker_passive_reload_speed_on_close_kill.md) / `broker_passive_reload_speed_on_close_kill` | Talent |

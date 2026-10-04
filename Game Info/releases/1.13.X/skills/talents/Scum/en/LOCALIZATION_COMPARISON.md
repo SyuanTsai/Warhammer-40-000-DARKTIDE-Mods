@@ -494,6 +494,18 @@ Full raw template and formatting: [source evidence](broker_passive_ninja_grants_
 | Triggers, chance bonus, and duration | Perfect Blocks and Successful Dodges grant +20% Critical Strike Chance for 3s; `ui / loc_talent_broker_passive_ninja_grants_crit_chance_desc / 43d506f8` | Both events independently activate the same 0.2 chance stat for 3 seconds; `proc_chance = 1`. [Fixed source and line references](broker_passive_ninja_grants_crit_chance.md#fixed-source-evidence) | Consistent | The English lists the matching triggers, bonus, and duration. |
 | Chance calculation and retriggering | No chance-combination, clamp, or retrigger details are stated; `ui / loc_talent_broker_passive_ninja_grants_crit_chance_desc / 43d506f8` | `CriticalStrike.chance` adds chance values and clamps to 0..1. `max_stacks = 1` and `allow_proc_while_active = true` allow a duration reset without another bonus. [Fixed source and line references](broker_passive_ninja_grants_crit_chance.md#fixed-source-evidence) | Not covered by the description | These qualify the percentage and preserve the original chance examples. |
 
+
+<a id="broker_passive_reload_speed_on_close_kill"></a>
+
+## Speedloader
+
+Full raw template and formatting: [source evidence](broker_passive_reload_speed_on_close_kill.md#original-english-template-and-reconstruction). Name hash `e3392d09`. Every row uses `ui / loc_talent_broker_passive_reload_speed_on_close_kill_desc / f9ccd2c5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Close Ranged kill and Reload Speed | +30% Reload Speed for 8s on Close Ranged Kill; `ui / loc_talent_broker_passive_reload_speed_on_close_kill_desc / f9ccd2c5` | A qualifying close-range Ranged kill applies `reload_speed = 0.3` for 8 seconds. [Fixed source and line references](broker_passive_reload_speed_on_close_kill.md#fixed-source-evidence) | Consistent | The English explicitly names both close range and Ranged kills and matches the bonus and duration. |
+| Threshold, refresh, timing, and Needle Pistol exception | No exact close-range threshold, refresh, action-time formula, or Toxin exception is stated; `ui / loc_talent_broker_passive_reload_speed_on_close_kill_desc / f9ccd2c5` | The effect uses 12.5 m and refreshes one buff. Accelerable action time divides by the combined Reload Speed factor. Tracked Needle Pistol targets can also qualify on a close Toxin death, using the event attacker and without a separate final-owner check. [Fixed source and line references](broker_passive_reload_speed_on_close_kill.md#fixed-source-evidence) | Not covered by the description | These supplement the trigger and preserve the accepted timing examples and attribution limits. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

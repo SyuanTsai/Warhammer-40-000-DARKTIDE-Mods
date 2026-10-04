@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="Precision Violence talent icon"> [Precision Violence](#broker_passive_restore_toughness_on_weakspot_kill) | <ul><li>Melee hits restore 4% of maximum Toughness; Critical or Weakspot hits instead restore 8%, and Critical Weakspot hits restore 12%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="32" height="32" alt="Voice of Tertium talent icon"> [Voice of Tertium](#broker_passive_restore_toughness_on_close_ranged_kill) | <ul><li>Ranged kills within 12.5 metres restore 8% of maximum Toughness; Elite or Specialist kills instead restore 15%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="Float Like a Butterfly talent icon"> [Float Like a Butterfly](#broker_passive_ninja_grants_crit_chance) | <ul><li>After a Successful Dodge or Perfect Block, gain 20 percentage points of Critical Strike Chance for 3 seconds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="32" height="32" alt="Speedloader talent icon"> [Speedloader](#broker_passive_reload_speed_on_close_kill) | <ul><li>Ranged kills within 12.5 metres grant 30% Reload Speed for 8 seconds.</li></ul> | Talent |
 
 ---
 
@@ -707,3 +708,17 @@
 - **Chance examples**: an initial 10% Critical Strike Chance becomes 10% + 20% = 30%; an initial 25% becomes 45%.
 
 [Details](broker_passive_ninja_grants_crit_chance.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_reload_speed_on_close_kill"></a>
+
+### Speedloader
+
+<img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="72" height="72" alt="Speedloader talent icon">
+
+- **Trigger and refresh**: a Ranged kill within 12.5 metres grants 30% Reload Speed for 8 seconds. Retriggering resets the duration without stacking the amount.
+- **Timing example**: a reload action that can be accelerated and normally takes 2 seconds becomes 2 ÷ 1.3 ≈ 1.54 seconds with this effect alone. With an existing 20% Reload Speed bonus at the same stage, it becomes 2 ÷ (1 + 20% + 30%) ≈ 1.33 seconds.
+- **Needle Pistol**: first hit a living Enemy with the Needle Pistol. If that Enemy remains tracked by the Toxin logic and dies to Toxin at close range, the bonus can also trigger.
+
+[Details](broker_passive_reload_speed_on_close_kill.md) · [Back to index](#talent-index)
