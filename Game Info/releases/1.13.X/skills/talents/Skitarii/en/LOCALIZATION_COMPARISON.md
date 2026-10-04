@@ -575,6 +575,18 @@ Full raw template and formatting: [source evidence](cryptic_redline_toughness.md
 | Recovery amount and duration | Gaining a Redline Capacitors stack replenishes 25% Toughness over 5s; `ui / loc_talent_cryptic_redline_toughness_clarified_desc / 5f6b15fb` | The child buff sets total restoration to `0.25` and duration to 5 seconds [Fixed source and line references](cryptic_redline_toughness.md#fixed-source-evidence) | Consistent | The amount and duration match the verified values. |
 | Event granularity, recovery basis and retriggering | Does not state the denominator, event quantity, reset behavior or stack-cap behavior; `ui / loc_talent_cryptic_redline_toughness_clarified_desc / 5f6b15fb` | Maximum-Toughness recovery at 5% per second; each charge event starts or resets one 25% budget, even at the stack cap. Deficit limits and recovery modifiers apply [Fixed source and line references](cryptic_redline_toughness.md#fixed-source-evidence) | Not covered by the description | The examples and event restrictions supplement the wording; it does not promise separate recovery for each stack or exclude other triggers. |
 
+
+<a id="cryptic_crits_grant_tdr"></a>
+
+## Power Redistribution Uplink
+
+Full raw template and formatting: [source evidence](cryptic_crits_grant_tdr.md#original-english-template-and-reconstruction). Name hash `1e644149`. Every row uses `ui / loc_talent_cryptic_crits_grant_tdr_desc / 12420803`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, total recovery and reduction | Critical hits restore 7.5% Toughness and grant +15% Toughness Damage Reduction over 3s; `ui / loc_talent_cryptic_crits_grant_tdr_desc / 12420803` | Critical hits activate a 3-second effect restoring 7.5% in total and applying Toughness damage multiplier `0.85` [Fixed source and line references](cryptic_crits_grant_tdr.md#fixed-source-evidence) | Consistent | The wording and verified values agree; it does not explicitly say restoration is instantaneous. |
+| Rate, refreshing and calculation limits | Does not state the per-second rate, denominator, refresh behavior or interaction with other modifiers; `ui / loc_talent_cryptic_crits_grant_tdr_desc / 12420803` | Recover 2.5% of maximum Toughness per second; retriggering restarts without stacking. Recovery bonuses and the maximum apply; independent reductions multiply [Fixed source and line references](cryptic_crits_grant_tdr.md#fixed-source-evidence) | Not covered by the description | The preserved examples and calculation restrictions supplement the English. |
+
 ## Comparison totals
 
 94 rules: 45 Consistent / 2 Explicit contradiction / 45 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 508.

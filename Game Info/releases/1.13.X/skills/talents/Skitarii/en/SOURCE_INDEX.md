@@ -58,3 +58,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Powerdrive](cryptic_overload_keystone_abilities.md) / `cryptic_overload_keystone_abilities` | Keystone |
 | [Higher Purpose](cryptic_dissector_power.md) / `cryptic_dissector_power` | Keystone |
 | [Surge-Extension](cryptic_redline_toughness.md) / `cryptic_redline_toughness` | Keystone |
+| [Power Redistribution Uplink](cryptic_crits_grant_tdr.md) / `cryptic_crits_grant_tdr` | Talent |

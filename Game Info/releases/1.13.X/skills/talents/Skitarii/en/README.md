@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="Powerdrive talent icon"> [Powerdrive](#cryptic_overload_keystone_abilities) | <ul><li>Voltaic Emitter gives 5 Power Overload stacks per charge consumed. The Chordclaw counts its first activation; continued attacks during the same activation do not add stacks. Advanced Combat Doctrines settles whole-charge consumption when the stance ends.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="Higher Purpose talent icon"> [Higher Purpose](#cryptic_dissector_power) | <ul><li>Elite or Specialist kills restore an additional 2.5% of one Combat Ability charge, added to the class's base 4% for a total of 6.5%. This kill recovery is inactive during Advanced Combat Doctrines.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="Surge-Extension talent icon"> [Surge-Extension](#cryptic_redline_toughness) | <ul><li>Each charge-gained or charge-spent event starts 5 seconds of Toughness recovery, restoring 25% of maximum Toughness in total. It can trigger at the Redline stack cap; repeated events reset the duration and recovery budget.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="Power Redistribution Uplink talent icon"> [Power Redistribution Uplink](#cryptic_crits_grant_tdr) | <ul><li>Critical hits start 3 seconds of recovery at 2.5% of maximum Toughness per second and grant 15% Toughness Damage Reduction. Further critical hits restart the duration; the rate and reduction do not stack.</li></ul> | Talent |
 
 ---
 
@@ -754,3 +755,17 @@
 - **Repeated triggers**: A new trigger resets the 5-second duration and remaining recovery budget. If one charge event adds two Redline stacks, it still starts one 25% recovery, rather than 50%.
 
 [Details](cryptic_redline_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_crits_grant_tdr"></a>
+
+### Power Redistribution Uplink
+
+<img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="72" height="72" alt="Power Redistribution Uplink talent icon">
+
+- **Trigger**: After a critical hit, restore **2.5% of maximum Toughness per second for 3 seconds** and gain **15% Toughness Damage Reduction**.
+- **Refreshing**: Another critical hit restarts the duration. The restoration rate and damage reduction do not stack.
+- **Example**: At 100 maximum Toughness, restore `100 × 2.5% = 2.5` points per second, or 7.5 points over the full 3 seconds. With no other damage reduction, 100 points of Toughness damage become `100 × 0.85 = 85`.
+
+[Details](cryptic_crits_grant_tdr.md) · [Back to index](#talent-index)
