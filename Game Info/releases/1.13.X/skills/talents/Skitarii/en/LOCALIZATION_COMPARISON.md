@@ -878,6 +878,18 @@ Full raw template and formatting: [source evidence](cryptic_toughness_on_damage_
 | Cooldown claim | 10s Cooldown; `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c` | The template sets `cooldown = 10`; `ProcBuff` reads `cooldown_duration`, so that value is not used in cooldown checks. [Fixed source and line references](cryptic_toughness_on_damage_taken.md#fixed-source-evidence) | Explicit contradiction | The English explicitly promises a cooldown absent from the accepted fixed-source implementation; same-build in-game confirmation remains outstanding. |
 | Health-only trigger and refresh | Does not specify Health damage, percentage basis or retriggering; `ui / loc_talent_cryptic_toughness_on_damage_taken_desc / 655fac7c` | Require self as attacked unit and `damage_amount > 0`; Toughness-only loss does not qualify. A new trigger resets the recovery budget and 5 seconds without stacking rate. [Fixed source and line references](cryptic_toughness_on_damage_taken.md#fixed-source-evidence) | Not covered by the description | These details explain the original 100-maximum example: 5 points/second and up to 35 through a retrigger at 2 seconds. |
 
+
+<a id="cryptic_melee_attacks_give_melee_attack_speed"></a>
+
+## Uncapped Arrestor
+
+Full raw template and formatting: [source evidence](cryptic_melee_attacks_give_melee_attack_speed.md#original-english-template-and-reconstruction). Name hash `7e00e5eb`. Every row uses `ui / loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc / ff4edf3b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, speed, duration and cap | Successful Melee Attacks grants +2.5% Melee Attack Speed for 3s; stacking 5 times; `ui / loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc / ff4edf3b` | A completed melee swing with `num_hit_units > 0` adds a 2.5% stack, maximum 5, duration 3 seconds. [Fixed source and line references](cryptic_melee_attacks_give_melee_attack_speed.md#fixed-source-evidence) | Consistent | The trigger and numerical effect match; the text specifies attacks rather than each hit target. |
+| Per-swing count, refresh and action time | Does not explain multiple targets, refreshing or the speed-to-time formula; `ui / loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc / ff4edf3b` | Multiple targets still grant one stack per swing; retriggering refreshes 3 seconds. Five stacks give 12.5%; a 1-second affected action becomes `1 ÷ 1.125 ≈ 0.889` seconds. [Fixed source and line references](cryptic_melee_attacks_give_melee_attack_speed.md#fixed-source-evidence) | Not covered by the description | The original example and full-combo limitation clarify the stat without promising a corresponding reduction in all combo time. |
+
 ## Comparison totals
 
 146 rules: 70 Consistent / 3 Explicit contradiction / 70 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 533.

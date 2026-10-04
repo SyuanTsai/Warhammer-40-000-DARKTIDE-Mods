@@ -80,6 +80,7 @@
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="Hydraulic Impact talent icon"> [Hydraulic Impact](#cryptic_better_heavies) | <ul><li>Protects against ordinary hit interruption while charging melee attacks and grants 15% Heavy Melee Damage; full charge is not required for the damage bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="Hybrid Combat Covenant talent icon"> [Hybrid Combat Covenant](#cryptic_hybrid_damage) | <ul><li>Melee kills grant Ranged Damage stacks and ranged kills grant Melee Damage stacks: 3% per stack, up to 5 of each, decaying one at a time every 8 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eae28459-1a70-43fc-a5ff-35d2b3adc0eb" width="32" height="32" alt="Kinetic Energy Distributors talent icon"> [Kinetic Energy Distributors](#cryptic_toughness_on_damage_taken) | <ul><li>Taking positive Health damage restores 25% of maximum Toughness over 5 seconds. Taking only Toughness damage does not trigger it; retriggering refreshes recovery.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="Uncapped Arrestor talent icon"> [Uncapped Arrestor](#cryptic_melee_attacks_give_melee_attack_speed) | <ul><li>A melee swing that hits an enemy grants one 2.5% Melee Attack Speed stack, up to 5. Each trigger refreshes the 3-second duration.</li></ul> | Talent |
 
 ---
 
@@ -1132,3 +1133,17 @@
 - **Recovery example**: At 100 maximum Toughness, recover `100 × 25% ÷ 5 = 5` points per second. Taking damage again at 2 seconds extends recovery until 7 seconds, restoring up to 35 points over that period.
 
 [Details](cryptic_toughness_on_damage_taken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_melee_attacks_give_melee_attack_speed"></a>
+
+### Uncapped Arrestor
+
+<img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="72" height="72" alt="Uncapped Arrestor talent icon">
+
+- **Stacks**: A melee swing that hits an enemy grants one Melee Attack Speed stack. Hitting multiple enemies still grants only one stack. Each stack gives 2.5%, up to 5 stacks.
+- **Duration**: Every trigger resets the 3-second countdown. If you do not trigger it again within 3 seconds, the effect expires.
+- **Attack-speed example**: Five stacks give 12.5% Attack Speed. An attack action affected by Attack Speed that originally takes 1 second becomes `1 ÷ 1.125 ≈ 0.889` seconds. An actual full combo also contains other actions.
+
+[Details](cryptic_melee_attacks_give_melee_attack_speed.md) · [Back to index](#talent-index)

@@ -83,3 +83,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Hydraulic Impact](cryptic_better_heavies.md) / `cryptic_better_heavies` | Talent |
 | [Hybrid Combat Covenant](cryptic_hybrid_damage.md) / `cryptic_hybrid_damage` | Talent |
 | [Kinetic Energy Distributors](cryptic_toughness_on_damage_taken.md) / `cryptic_toughness_on_damage_taken` | Talent |
+| [Uncapped Arrestor](cryptic_melee_attacks_give_melee_attack_speed.md) / `cryptic_melee_attacks_give_melee_attack_speed` | Talent |
