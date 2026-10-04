@@ -97,6 +97,7 @@
 | <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="Residual Current Buffer talent icon"> [Residual Current Buffer](#cryptic_tdr_based_on_charge) | <ul><li>Always gain 10% Toughness Damage Reduction, plus 2.5% per fully charged unit of Capacitance currently held.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="Superior Defence Engrams talent icon"> [Superior Defence Engrams](#cryptic_ranged_stacking_toughness) | <ul><li>Ranged kills grant up to 5 stacks, each restoring 1% of maximum Toughness per second; another kill refreshes the 8-second duration, even at the cap.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="Target Prioritization Psalms talent icon"> [Target Prioritization Psalms](#cryptic_specials_marking) | <ul><li>Shows outlines on living Specialists within 12.5 metres; no manual marking is required.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="Protectorate Protocol talent icon"> [Protectorate Protocol](#cryptic_disabled_allies_defense) | <ul><li>Allies requiring help in Coherency take 25% less damage. After you assist them, they gain a separate 6-second effect with 25% Damage Resistance and ordinary hit Stun immunity.</li></ul> | Talent |
 
 ---
 
@@ -1387,3 +1388,17 @@
 - **Marking distinction**: This is an enemy outline indicator. The talent itself grants no damage bonus, charge recovery, or additional manual-marking reward.
 
 [Details](cryptic_specials_marking.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_disabled_allies_defense"></a>
+
+### Protectorate Protocol
+
+<img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="72" height="72" alt="Protectorate Protocol talent icon">
+
+- **Protection**: Allies who require help within Coherency take **25% less damage**, until they leave that state or lose the Coherency effect.
+- **Assistance bonus**: When **you** complete the assistance, the rescued ally gains **6 seconds** of **25% Damage Resistance** and immunity to ordinary hit Stun. This separate reduction does not require them to remain within Coherency.
+- **Reduction example**: With one effect, incoming damage **100** becomes `100 × 0.75 = 75`. With another independent **20%** reduction, `100 × 0.75 × 0.80 = 60` damage remains.
+
+[Details](cryptic_disabled_allies_defense.md) · [Back to index](#talent-index)

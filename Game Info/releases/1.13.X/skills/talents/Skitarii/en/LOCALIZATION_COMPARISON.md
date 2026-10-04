@@ -1082,6 +1082,18 @@ Full raw template and formatting: [source evidence](cryptic_specials_marking.md#
 | Enemy category and range | “Specialists that get within …m of you are Marked”; 12.5m; `ui / loc_talent_cryptic_specials_marking_desc / 5d780574` | Living enemies with breed.tags.special within outline_range = 12.5 receive an outline. [Fixed source and line references](cryptic_specials_marking.md#fixed-source-evidence) | Consistent | The range and target category match; “Marked” does not explicitly specify a different marking system. |
 | Outline behavior and limits | No update interval, SmartTag interaction or team-wide visual behavior is specified.; `ui / loc_talent_cryptic_specials_marking_desc / 5d780574` | broker_proximity_target outlines update about every 0.25 seconds locally, disappear on death or leaving range, and provide no damage, charge or manual-marking reward. Other clients' presentation remains unobserved. [Fixed source and line references](cryptic_specials_marking.md#fixed-source-evidence) | Not covered by the description | These details qualify the broad marking term. The description makes no explicit team-sharing or SmartTag promise. |
 
+
+<a id="cryptic_disabled_allies_defense"></a>
+
+## Protectorate Protocol
+
+Full raw template and formatting: [source evidence](cryptic_disabled_allies_defense.md#original-english-template-and-reconstruction). Name hash `45c3de20`. Every row uses `ui / loc_talent_cryptic_disabled_allies_defense_post_boost_desc / 5bdd6b9d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients, assistance and values | An incapacitated Ally in Coherency has Damage Resistance until freed; if you free them, they gain Stun Immunity and Damage Resistance for 6s; both +25%.; `ui / loc_talent_cryptic_disabled_allies_defense_post_boost_desc / 5bdd6b9d` | The requires_help Coherency effect uses 0.75. Assistance by self to a living ally grants a 6-second, 0.75 effect and stun_immune. [Fixed source and line references](cryptic_disabled_allies_defense.md#fixed-source-evidence) | Consistent | The recipient, conditional trigger, duration and reconstructed values match. |
+| Boundaries and refresh | The exact help-state boundary, loss of Coherency, refresh and later Coherency independence are not specified.; `ui / loc_talent_cryptic_disabled_allies_defense_post_boost_desc / 5bdd6b9d` | Initial protection ends when the help state or Coherency effect ends. The later one-stack buff refreshes, provides ordinary hit Stun immunity, and does not require continued Coherency. [Fixed source and line references](cryptic_disabled_allies_defense.md#fixed-source-evidence) | Not covered by the description | These details distinguish the two effects without changing the stated assistance condition. |
+
 ## Comparison totals
 
 177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.
