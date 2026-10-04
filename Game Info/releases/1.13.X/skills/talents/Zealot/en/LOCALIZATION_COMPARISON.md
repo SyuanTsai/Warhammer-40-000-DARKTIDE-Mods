@@ -286,6 +286,18 @@ Full raw template and formatting: [source evidence](zealot_martyrdom_grants_atta
 | Per-stack bonus | “Martyrdom grants +6% Attack Speed per stack.”; `ui / loc_talent_zealot_attack_speed_per_martyrdom_upd_desc / b83c3710` | `melee_attack_speed` gains 0.06 per missing Martyrdom segment. [Fixed source and line references](zealot_martyrdom_grants_attack_speed.md#fixed-source-evidence) | Consistent | The effect direction and per-stack value match. |
 | Melee scope, cap and action timing | No explicit melee/ranged scope, cap or action-duration formula; `ui / loc_talent_zealot_attack_speed_per_martyrdom_upd_desc / b83c3710` | Melee only, at most 5 segments / 30%; live missing-Wound interpolation without a proc/timer; action time scales reciprocally. [Fixed source and line references](zealot_martyrdom_grants_attack_speed.md#fixed-source-evidence) | Not covered by the description | The English does not explicitly assert Ranged firing speed; retain scope and the 0.847/0.769s examples as supplements. |
 
+
+<a id="zealot_quickness_passive"></a>
+
+## Inexorable Judgement
+
+Full raw template and formatting: [source evidence](zealot_quickness_passive.md#original-english-template-and-reconstruction). Name hash `5a980ea5`. Every row uses `ui / loc_talent_zealot_quickness_desc / 634bdcc4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Movement, stack cap and hit-activated bonuses | Movement grants Momentum, max 20; hit spends stacks for +1% Melee/Ranged Attack Speed and Damage each, lasting 6s.; `ui / loc_talent_zealot_quickness_desc / 634bdcc4` | Distance counter capped at 20; qualifying hit transfers its stacks to a 6s active Buff with matching stat values. [Fixed source and line references](zealot_quickness_passive.md#fixed-source-evidence) | Consistent | The stated acquisition direction, cap, per-stack bonuses and duration agree. |
+| Acquisition thresholds and active-state restrictions | No exact movement distance, Sprint weighting, active-Buff gate or dodge stats; `ui / loc_talent_zealot_quickness_desc / 634bdcc4` | 5m per stack, Sprint ×2, distance remainder retained; active Buff prevents new consumption/refresh. Extra dodge modifiers and no base Dodge stacks apply. [Fixed source and line references](zealot_quickness_passive.md#fixed-source-evidence) | Not covered by the description | These qualify the stated behavior; preserve all movement, damage, speed and dodge examples as supplements. |
+
 ## Comparison totals
 
 43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.

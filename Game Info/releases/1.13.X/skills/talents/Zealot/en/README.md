@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="Martyrdom talent icon"> [Martyrdom](#zealot_martyrdom) | <ul><li>Gain 10% Melee Damage for each fully missing Wound, up to 5 stacks / 50%. Stacks follow current missing Health segments, including Corruption.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="I Shall Not Fall talent icon"> [I Shall Not Fall](#zealot_martyrdom_grants_toughness) | <ul><li>Each fully missing Wound counted by Martyrdom reduces Toughness damage taken by 7.5%, up to 5 Wounds / 37.5%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="Maniac talent icon"> [Maniac](#zealot_martyrdom_grants_attack_speed) | <ul><li>Each fully missing Wound counted by Martyrdom grants 6% Melee Attack Speed, up to 5 Wounds / 30%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="Inexorable Judgement talent icon"> [Inexorable Judgement](#zealot_quickness_passive) | <ul><li>Movement grants 1 Momentum stack per 5 metres, maximum 20; Sprint distance counts double. A Melee or Ranged Hit spends current stacks for a 6-second bonus to damage, attack speeds and dodge stats.</li></ul> | Keystone |
 
 ---
 
@@ -372,3 +373,18 @@
 - **Speed example**: 3 stacks grant 3 × 6% = 18% Melee Attack Speed. An affected 1-second action takes 1 ÷ 1.18 ≈ 0.847 seconds; at 5 stacks, 1 ÷ 1.3 ≈ 0.769 seconds. Other same-stage Attack Speed bonuses add first.
 
 [Details](zealot_martyrdom_grants_attack_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_quickness_passive"></a>
+
+### Inexorable Judgement
+
+<img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="72" height="72" alt="Inexorable Judgement talent icon">
+
+- **Building Momentum**: Movement grants 1 Momentum stack per accumulated 5 metres, maximum 20. Sprint distance counts double: reaching full stacks from zero requires 100 metres of ordinary movement or 50 metres of Sprinting.
+- **Activation**: A Melee or Ranged Hit consumes current Momentum for a 6-second bonus. You can build the next pool during this bonus, but hits do not refresh the current bonus, consume the next pool or increase the current bonus's stacks.
+- **Damage and speed**: Each spent stack grants 1% Damage, 1% Melee Attack Speed and 1% Ranged Attack Speed. At 20 stacks, base damage 100 becomes 100 × 1.2 = 120; an affected 1-second action takes 1 ÷ 1.2 ≈ 0.833 seconds. Other same-stage bonuses add first.
+- **Dodge bonuses**: Each stack also adds 0.5% Dodge Distance, shortens consecutive-dodge recovery time by 1%, and multiplies Dodge Speed by 1.005. At 20 stacks, distance is ×1.1, recovery time ×0.8, and speed about 1.005²⁰ ≈ ×1.105.
+
+[Details](zealot_quickness_passive.md) · [Back to index](#talent-index)

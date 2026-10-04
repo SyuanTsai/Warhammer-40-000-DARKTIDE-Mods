@@ -34,3 +34,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Martyrdom](zealot_martyrdom.md) / `zealot_martyrdom` | Keystone |
 | [I Shall Not Fall](zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | Keystone |
 | [Maniac](zealot_martyrdom_grants_attack_speed.md) / `zealot_martyrdom_grants_attack_speed` | Keystone |
+| [Inexorable Judgement](zealot_quickness_passive.md) / `zealot_quickness_passive` | Keystone |
