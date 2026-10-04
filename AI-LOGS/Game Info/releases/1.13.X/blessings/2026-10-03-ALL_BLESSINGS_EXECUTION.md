@@ -265,3 +265,5 @@
 - 第10輪三項已Commit後完整掃描通過：quickflame (`0b455a4fe12266db8dbebbb41626260a6ffbc234`)、adhesive-charge (`b73064e2698b9d76b64a55b8b8ace8ccdd9dfa73`)、fan-the-flames (`2a72f9338638f7357bdebcee53dcaa1762db56d1`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-010-full-scan.json`／SHA-256 `de5d8373fa4cade0e0cdc498eede92f70774d095a9a5aa7dfd4e42d57b4f991f`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [聚能爆發](2026-10-03-POWER-BLAST_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- [致命頻率](2026-10-03-DEADLY-FREQUENCIES_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

@@ -68,3 +68,4 @@
 | [黏著炸藥](entries/黏著炸藥/README.md) | [來源索引](entries/黏著炸藥/SOURCE_INDEX.md) |
 | [煽風點火](entries/煽風點火/README.md) | [來源索引](entries/煽風點火/SOURCE_INDEX.md) |
 | [聚能爆發](entries/聚能爆發/README.md) | [來源索引](entries/聚能爆發/SOURCE_INDEX.md) |
+| [致命頻率](entries/致命頻率/README.md) | [來源索引](entries/致命頻率/SOURCE_INDEX.md) |

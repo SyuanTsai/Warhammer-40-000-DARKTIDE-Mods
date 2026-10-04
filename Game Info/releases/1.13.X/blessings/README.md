@@ -70,5 +70,6 @@
 | <img src="https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816" width="32" height="32" alt="黏著炸藥祝福圖示"> [黏著炸藥](entries/黏著炸藥/README.md)<br>- Adhesive Charge<br>[完整說明](entries/黏著炸藥/README.md) | <ul><li>震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0d297dab-50af-49f0-8303-46347b9ab040" width="32" height="32" alt="煽風點火祝福圖示"> [煽風點火](entries/煽風點火/README.md)<br>- Fan the Flames<br>[完整說明](entries/煽風點火/README.md) | <ul><li>未架槍主要攻擊提供 +30%～+45% 遠程衝擊；對已燃燒目標，另降低 40%～70% 可適用的踉蹌減免。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8" width="32" height="32" alt="聚能爆發祝福圖示"> [聚能爆發](entries/聚能爆發/README.md)<br>- Power Blast<br>[完整說明](entries/聚能爆發/README.md) | <ul><li>持握電漿槍射擊時，每充能階增加爆擊機率 I–IV 為 +2／+3／+4／+5 個百分點，0–5 階最高 +10／+15／+20／+25 個百分點；未蓄力的普通首發可實際增加 0 個百分點。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/35aec3d1-ef69-4923-8034-2109c6646b57" width="32" height="32" alt="致命頻率祝福圖示"> [致命頻率](entries/致命頻率/README.md)<br>- Deadly Frequencies<br>[完整說明](entries/致命頻率/README.md) | <ul><li>以穿音速雙刀的特殊啟動或解除斬擊命中後，I–IV 級近戰威力輸入增加 +15%／+20%／+25%／+30%；依掃掠完成次數扣除，通常觸發掃掠結束後尚可作用於 3 次掃掠。推擊不適用。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

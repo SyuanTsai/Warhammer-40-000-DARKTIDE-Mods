@@ -1829,3 +1829,6 @@
 
 - Pulverise - 粉碎（Pulverise）
   - 文件譯名；本體1.13.1繁中仍為「粉碎」。名稱鍵 `loc_trait_bespoke_crit_chance_on_melee_kill`，hash `2e6beae6`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Deadly Frequencies - 致命頻率
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits`，hash `e03c3c69`；英文／繁中RAW配對確認。
