@@ -378,6 +378,7 @@
 - Bash - 猛撞
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_push`，hash `71cd141b`；英文／繁中RAW配對確認。
 - Tenderiser - 肉槌
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_power_on_weapon_special_follow_up_hits`，hash `b746cc13`；英文／繁中RAW配對確認。
 - Unstoppable Force - 勢不可擋
 - Torment - 凌遲
 - Slow and Steady - 緩慢而確實

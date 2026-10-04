@@ -273,3 +273,5 @@
 - 第11輪三項已Commit後完整掃描通過：power-blast (`feacf7d6c3d8c619014c9a6179b5486e7a2579b5`)、deadly-frequencies (`311de37faaa929d679bc1924f61fc8b35a9baebf`)、punishing-salvo (`5cbaea76d4445a7ef270172c517026c32cebc3bc`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-011-full-scan.json`／SHA-256 `2481f69432050a91fcd17bef347e56680a793c964e9b8ca8632e61b9ee4a1ed8`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [效率](2026-10-03-EFFICIENCY_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [肉槌](2026-10-03-TENDERISER_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

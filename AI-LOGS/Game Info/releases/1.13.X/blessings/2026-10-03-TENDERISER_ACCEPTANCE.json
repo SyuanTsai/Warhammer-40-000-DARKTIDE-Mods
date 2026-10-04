@@ -1,0 +1,406 @@
+{
+  "date": "2026-10-04",
+  "blessing": "tenderiser",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/肉槌/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "tenderiser",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-formal-peer-scope.json",
+    "scope_manifest_sha256": "2c97264eff474b514b198c54e8e8c8ad9e58553f3c0faea2812a044e2f477922",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file_count": 29,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-agent-config.json": "7fe32e75a6ac76154e4102a4a2b3b40ea414142f47b9f25fa77c1de25b74568a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-agent-draft.md": "01703ed26236a5bd4310940682abcb73571c05a78145b9695b1e5133f870bc8f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-agent-evidence.json": "84757edcc2558c0141be77c69ae756da51f79048a46997c09d636920d6c04ebb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-config.json": "7c13c82093e7e8ac285d26f1ab5ebbbbd4e7b60cc055ee60bde4687d4bf7d628",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-extension-draft.json": "b85b43e26fa809f507d03271bca4a6e9ebc735fdeca92ed81bd51df934a24489",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-image.json": "2a6ffa42863a1e898332536af553a8fec1bf12571ff2fe7fe04bab2818b91c6f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-common-applicability.json": "b8cb7261d0b68815e63472a76d624a155ce85e04690b05e91ed368bb59151199",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-own-tier-diff.json": "0341c3ca82d3e80582ff0c66c9dddeded4e3f300f0735863eec811e15e1e2a55",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-resume-review.json": "4299688c1c75546f33a6096663131c822f89f003f7e27145fc4c3c1bd0d60103",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-special-power-review.json": "a47037584af09607e5d11d540b9ed2a6c7deddd542c4d4dea86782747931168f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-raw-verification.json": "9700842e19a4dcc2f5775ee6c2287906eb93fa17300c6b9e0233414a66f6ec41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-review.json": "af35c8b673426d90588acafb752e4cc08d7a0dde23eb4dff706473a2b1e53c3a",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "cce4a32fea7fa90fbb1ef2c2a3b0bb864cb6d76c43cbc668109fcd902fd62066",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "415b739f74d57126f78c0c83bd85bb1755a7f4c2584656e659d4ceb8e8aa7a3a",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "a6391bb1aa3e5e8e865d8b564278c48f9c4475c42d53b1d0b2df16198fa8e1ad",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/DAMAGE_PERCENTAGE_REVIEW.md": "ea064a6836b69dee8c6d332ab0463f64dfacf8136587ec4678f8d9c2205f6b5f",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/LOCALIZATION_COMPARISON.md": "ecea4554d70808a9839908d5274affc58cc4259fa94c58e99a85547ebafb31a3",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/README.md": "79e761b9e0d7d4861f6d0ab6e43861fa95dfbfad55ecf4a62da92c68e376874b",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/SOURCE_INDEX.md": "ea8793bf2e76ab1208e2b56a8a6c08fead984b337501dce68596fd8516975b9b",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/TIER_VALUES.md": "c2024925723a8945b8480d99832e36e190fd59981d5e335f98b821a84186dc74",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/WEAPON_COMPATIBILITY.md": "f424c9c355fd4673ef2ef0e2ffa8ba816c1dfb835b060785bdf1505c972f7b90",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits.md": "4d71c6ca23962b44b2d2ac2b0b0125d5afb5b9519f7a437018127617bcb222ed",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "853532f12f97ff8518d7e407704191ef821fd3b103b51e32987941c068e632c6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "2dadad949d27a0da7baf36691f59c1fe133f1ff732924d7370147fd41b7d4f69",
+      "Referneces/Translation.md": "2af9cebbcbc3459bc45c26230ad0294d100cc78688fde92cf49bb3acdb1313c6"
+    },
+    "hash_stability": {
+      "expected_scope_count": 29,
+      "checked_count": 29,
+      "all_expected_hashes_match": true,
+      "checked_before_review": true,
+      "checked_at_receipt_write": true,
+      "scope_manifest_sha256": "2c97264eff474b514b198c54e8e8c8ad9e58553f3c0faea2812a044e2f477922"
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/肉槌/weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits.md"
+    ],
+    "reviewed_deltas": [
+      {
+        "area": "Trigger, weapon modes, and lifecycle",
+        "result": "PASS",
+        "finding": "The three actual marks bind the matched-item special uppercut melee sweep with weapon_special=true. Ordinary light/heavy or charged attacks and pushfollow cannot trigger or refresh; ordinary melee sweeps and pushfollow can benefit while held and active. Pure push uses attack_type=push/on_push_finish and is excluded from both the wrapper event and melee power selector. The hit resolves damage/HitReaction before on_hit; the triggering hit is not retroactively boosted. After the buff/stat cache refresh, a later hit in a still-open sweep can benefit, with no same-fixed-update second-target guarantee. A qualifying hit resets the internal counter to4; the triggering sweep finish normally consumes one (4→3), then three further held active sweep finishes consume the rest. Misses and pure push do not create target-based counts; misses still consume at sweep finish. Re-hit refreshes to4. The wrapper has no TTL or independent stacks. Switching away suppresses effect/decrement after cache update while preserving state as long as the item remains equipped; unequipping the source item removes its buff."
+      },
+      {
+        "area": "Own tiers, wrapper, and exact override applicability",
+        "result": "PASS",
+        "finding": "Own I–IV stat values are melee_power_level_modifier .15/.20/.25/.30, formatted as +15/+20/+25/+30%. The actual wrapper is a held, active-gated ProcBuff with conditional fallback .10. Its static stat_buffs table is empty and the generic same-key override path replaces that conditional fallback with the own tier, rather than adding a second term; this reuse is conditioned on the actual shared key and wrapper structure."
+      },
+      {
+        "area": "All three bindings and uppercut source power",
+        "result": "PASS",
+        "finding": "The map contains one trait variant and exactly three bindings for ogryn_combatblade_p1 marks m1/m2/m3. All use the verified actual UI names (砍刀 克魯克 Mk VI, 砍刀 蠻牛屠夫 Mk III, 砍刀 克魯克 Mk IV), actual item/category restriction, and corresponding import/trait append locations. Each special_uppercut resolves through special_uppercut_plus and weapon_special=true. M1 obtains ActionSweep DEFAULT_POWER_LEVEL, which aliases PowerLevelSettings.default_power_level=500; M2/M3 declare 500. Thus all three source power inputs are 500, and the formal pages correctly avoid inferring equal final damage from this source-power equality."
+      },
+      {
+        "area": "Power consumers, example math, and cleave timing",
+        "result": "PASS",
+        "finding": "The formula is scoped to S after the native power-type curve and before buff modifiers: S_after=S×(1+q+p), with q as another additive contribution to the same stat. Tier IV at S=100 gives 130; with q=.20, 120 becomes 150, a +30 change or +25% versus the prior 120 (not 156). The text identifies damage, impact, and cleave as downstream power inputs and does not equate the modifier with final damage, stagger, or target count. ActionSweep stores its cleave budget at action start, so a later trigger in that sweep does not automatically recompute it; the documented server-correction recomputation exception is within source scope."
+      },
+      {
+        "area": "RAW and exact tier reconstruction",
+        "result": "PASS",
+        "finding": "The paired RAW name/description keys and hashes match Tenderiser/肉槌 and the verified bilingual resource. All four tier strings substitute the actual formatter’s percentage value and plus prefix: +15%, +20%, +25%, +30%. English “next melee attacks” is plural while zh-TW “下一次近戰攻擊” reads singular; the comparison correctly records wording ambiguity and uncovered counter-window details without asserting an unsupported translation/code erratum."
+      },
+      {
+        "area": "Formal content and shared/reverse associations",
+        "result": "PASS",
+        "finding": "The seven formal files agree with the approved canonical config/draft on trigger, tier values, effect, counter rules, math examples, actual UI restriction, item.icon identity path, and attachment URL. The shared catalog and melee index use the same kind/effect/icon and link to this entry; the map records one variant and three actual bindings; the Cleaver reverse page lists all three models and links to the same trait page."
+      }
+    ],
+    "configuration_consistency": {
+      "status": "PASS",
+      "formal_matches_approved_root_config_and_extension_draft": true,
+      "canonical_config_sha256": "7c13c82093e7e8ac285d26f1ab5ebbbbd4e7b60cc055ee60bde4687d4bf7d628",
+      "extension_draft_sha256": "b85b43e26fa809f507d03271bca4a6e9ebc735fdeca92ed81bd51df934a24489",
+      "kind": "melee",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_ids": [
+        "ogryn_combatblade_p1_m1",
+        "ogryn_combatblade_p1_m2",
+        "ogryn_combatblade_p1_m3"
+      ],
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits",
+      "name_key": "loc_trait_bespoke_increased_power_on_weapon_special_follow_up_hits",
+      "description_key": "loc_trait_bespoke_increased_melee_power_on_weapon_special_follow_up_hits_desc",
+      "tier_values": {
+        "I": 0.15,
+        "II": 0.2,
+        "III": 0.25,
+        "IV": 0.3
+      },
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_082",
+      "icon_attachment": "https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b"
+    },
+    "reviewed_associations": {
+      "map_variant_count": 1,
+      "map_binding_count": 3,
+      "actual_weapon_id": "ogryn_combatblade_p1",
+      "actual_ui_names": [
+        "砍刀 克魯克 Mk VI",
+        "砍刀 蠻牛屠夫 Mk III",
+        "砍刀 克魯克 Mk IV"
+      ],
+      "reverse_weapon_page": "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md",
+      "shared_indexes": [
+        "Game Info/releases/1.13.X/blessings/README.md",
+        "Game Info/releases/1.13.X/blessings/melee/README.md"
+      ]
+    },
+    "source_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-own-tier-diff.json",
+        "sha256": "0341c3ca82d3e80582ff0c66c9dddeded4e3f300f0735863eec811e15e1e2a55"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-review.json",
+        "sha256": "af35c8b673426d90588acafb752e4cc08d7a0dde23eb4dff706473a2b1e53c3a"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-raw-verification.json",
+        "sha256": "9700842e19a4dcc2f5775ee6c2287906eb93fa17300c6b9e0233414a66f6ec41"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-common-applicability.json",
+        "sha256": "b8cb7261d0b68815e63472a76d624a155ce85e04690b05e91ed368bb59151199"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-special-power-review.json",
+        "sha256": "a47037584af09607e5d11d540b9ed2a6c7deddd542c4d4dea86782747931168f"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-resume-review.json",
+        "sha256": "4299688c1c75546f33a6096663131c822f89f003f7e27145fc4c3c1bd0d60103"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-image.json",
+        "sha256": "2a6ffa42863a1e898332536af553a8fec1bf12571ff2fe7fe04bab2818b91c6f"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json",
+        "sha256": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+        "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+        "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9"
+      }
+    ],
+    "faster_status": {
+      "confirmed_enabled": false,
+      "status": "not confirmed; no claim of activation"
+    },
+    "review_basis": "Fixed Release 1.13.1 source SHA and the 29-file scope manifest. Formal pages and related map/index/reverse links were reviewed against the approved canonical configuration and source receipts. Python SHA-256 verification matched all expected scope files both before review and at receipt write; no formal/shared files were edited."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "tenderiser",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_082",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_082.png",
+      "attachment": "https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5977523884",
+      "acquired_date": "2026-10-04",
+      "sha256": "37447c0eafe000347f5e2400a33af255d201e664df1561ca5f5b3a7af5402e73",
+      "content_type": "image/png",
+      "size": 3728,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "肉槌祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and public attachment visually identical; 128x128 LA white fist with radial triangular impact marks. Alpha-only local inspection used for transparency detail."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 261,
+      "lists": 86,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 72,
+      "source_files": 24,
+      "bindings": 438,
+      "variants": 229,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 560,
+      "remote_references": 317,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 12,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-011-full-scan.json",
+        "sha256": "2481f69432050a91fcd17bef347e56680a793c964e9b8ca8632e61b9ee4a1ed8",
+        "trigger": "round-011"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 101,
+    "not_started_name_groups": 101,
+    "partial_name_groups": 0,
+    "remaining_variants": 376,
+    "remaining_bindings": 747,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c6507b6bfc8cdb2a9265e0c7ecdc150ce680b5373154e4af65f7e765dcb08f8d"
+  },
+  "previous_local_commit": "c525e4b4b88b81a161b3f15081552b94b7973624",
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-review.json",
+      "sha256": "af35c8b673426d90588acafb752e4cc08d7a0dde23eb4dff706473a2b1e53c3a"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m1",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m1",
+          "loc_weapon_mark_ogryn_combatblade_p1_m1"
+        ],
+        "name_zh_tw": "砍刀 克魯克 Mk VI",
+        "name_en": "Cleaver Krourk Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1331,
+        "append_line": 1333
+      },
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m2",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m2",
+          "loc_weapon_mark_ogryn_combatblade_p1_m2"
+        ],
+        "name_zh_tw": "砍刀 蠻牛屠夫 Mk III",
+        "name_en": "Cleaver Bull Butcher Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 1365,
+        "append_line": 1367
+      },
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_power_on_weapon_special_follow_up_hits",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m3",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m3",
+          "loc_weapon_mark_ogryn_combatblade_p1_m3"
+        ],
+        "name_zh_tw": "砍刀 克魯克 Mk IV",
+        "name_en": "Cleaver Krourk Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 1309,
+        "append_line": 1311
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-resume-review.json",
+      "sha256": "4299688c1c75546f33a6096663131c822f89f003f7e27145fc4c3c1bd0d60103"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-own-tier-diff.json",
+      "sha256": "0341c3ca82d3e80582ff0c66c9dddeded4e3f300f0735863eec811e15e1e2a55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-review.json",
+      "sha256": "af35c8b673426d90588acafb752e4cc08d7a0dde23eb4dff706473a2b1e53c3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-ui-raw-verification.json",
+      "sha256": "9700842e19a4dcc2f5775ee6c2287906eb93fa17300c6b9e0233414a66f6ec41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-common-applicability.json",
+      "sha256": "b8cb7261d0b68815e63472a76d624a155ce85e04690b05e91ed368bb59151199"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-image.json",
+      "sha256": "2a6ffa42863a1e898332536af553a8fec1bf12571ff2fe7fe04bab2818b91c6f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-sweep-power-review.json",
+      "sha256": "469691f1aa107728e60792fd2b21fd3df945b091bd3fcbad9655123a81ef9fef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deadly-frequencies-primary-override-consumer-review.json",
+      "sha256": "e91c33068470965d501c314f737a33b40ab9e7cf45d99bfdebc08cc6b8b2dcc3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+      "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-primary-special-power-review.json",
+      "sha256": "a47037584af09607e5d11d540b9ed2a6c7deddd542c4d4dea86782747931168f"
+    }
+  ],
+  "primary_review_method": "Own complete I–IV/wrapper directly reviewed; actual3marks uppercut item/profile dispatch and RAW/UI binding checked. Exact wrapper equality to accepted DeadlyFrequencies and own gate permits fixed-SHA override/event/order/PowerLevel and cleave lifecycle reuse; only new actual default500 and uppercut differences expanded. 65 evidence range hashes cross-checked, not substituted for content review.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/tenderiser-config.json",
+    "sha256": "7c13c82093e7e8ac285d26f1ab5ebbbbd4e7b60cc055ee60bde4687d4bf7d628"
+  },
+  "agent_frozen_hashes": {
+    "config": "7fe32e75a6ac76154e4102a4a2b3b40ea414142f47b9f25fa77c1de25b74568a",
+    "evidence": "84757edcc2558c0141be77c69ae756da51f79048a46997c09d636920d6c04ebb",
+    "draft": "01703ed26236a5bd4310940682abcb73571c05a78145b9695b1e5133f870bc8f"
+  },
+  "previous_objects_unchanged": {
+    "blessings": 65,
+    "variants": 228,
+    "bindings": 435
+  },
+  "previous_weapons_unchanged": true,
+  "common_mechanism_cache": {
+    "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+    "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+    "application": "Own exactwrapper comparison to accepted DeadlyFrequencies, own item/held/profile predicates and actual PowerLevel melee/cleave consumers reviewed; unchanged event order/override/lifecycle reused only under explicit own applicable conditions. Actual default500 and own3uppercuts expanded separately."
+  }
+}
