@@ -64,7 +64,7 @@
 
 | 武器 | 適用型號 | 等級 | 效果差異 |
 |---|---|---|---|
-| [戰鬥斧](../../weapons/melee/戰鬥斧/README.md) | 拉沙德Mk II、安塔克斯Mk V、阿克利斯Mk VIII | I–IV | 每層2／3／4／5%，最多10層 |
+| [戰鬥斧](../../weapons/melee/戰鬥斧/README.md) | 戰鬥斧 拉沙德 Mk III、戰鬥斧 安塔克斯 Mk V、戰鬥斧 阿克利斯 Mk VIII | I–IV | 每層2／3／4／5%，最多10層 |
 | [戰術斧](../../weapons/melee/戰術斧/README.md) | 埃托克斯Mk II、Mk IV、Mk VII | I–IV | 與本頁戰鬥斧變體相同 |
 | [工兵鏟](../../weapons/melee/工兵鏟/README.md) | 軍務部標配工兵鏟、軍務部Mk III工兵鏟、軍務部Mk VII工兵鏟 | I–IV | 每層2／3／4／5%近戰威力，最多10層；命中刷新2秒、揮空清層 |
 | [骨鋸](../../weapons/melee/骨鋸/README.md) | 外科醫師Mk IV骨鋸 | I–IV | 每層2／3／4／5%近戰威力，最多10層；命中刷新2秒、揮空清層 |

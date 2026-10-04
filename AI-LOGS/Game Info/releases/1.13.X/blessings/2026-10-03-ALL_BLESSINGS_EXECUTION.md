@@ -331,3 +331,5 @@
 - [凶殘之寧](2026-10-03-MURDEROUS-TRANQUILITY_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [快速裝填](2026-10-03-QUICKLOADER_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [奪顱者](2026-10-03-HEADTAKER_ACCEPTANCE.json)：新增6變體、16型號關聯；共6變體、16關聯。

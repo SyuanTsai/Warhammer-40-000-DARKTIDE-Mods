@@ -4,7 +4,7 @@
 
 | 武器 | 類型 | 型號 |
 |---|---|---|
-| [戰鬥斧](melee/戰鬥斧/README.md)<br>- Combat Axe | 近戰 | 拉沙德Mk II戰鬥斧、安塔克斯Mk V戰鬥斧、阿克利斯Mk VIII戰鬥斧 |
+| [戰鬥斧](melee/戰鬥斧/README.md)<br>- Combat Axe | 近戰 | 戰鬥斧 拉沙德 Mk III、戰鬥斧 安塔克斯 Mk V、戰鬥斧 阿克利斯 Mk VIII |
 | [戰術斧](melee/戰術斧/README.md)<br>- Tactical Axe | 近戰 | 戰術斧 埃托克斯 Mk II、戰術斧 埃托克斯 Mk IV、戰術斧 埃托克斯 Mk VII |
 | [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 步兵自動槍 阿格里皮娜 Mk I、步兵自動槍 弗拉克斯 Mk V、步兵自動槍 哥倫努 Mk VIII |
 | [雙鏈重型機槍](ranged/雙鏈重型機槍/README.md)<br>- Twin-Linked Heavy Stubber | 遠程 | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 |

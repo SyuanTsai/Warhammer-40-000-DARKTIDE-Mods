@@ -5,13 +5,14 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](../../../entries/憤怒/README.md)<br>- Wrath<br>[完整說明](../../../entries/憤怒/README.md) | <ul><li>近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd" width="32" height="32" alt="奪顱者祝福圖示"> [奪顱者](../../../entries/奪顱者/README.md)<br>- Headtaker<br>[完整說明](../../../entries/奪顱者/README.md) | <ul><li>- 重劍圖妥斯基 Mk VI、Mk VII、Mk IX 使用較高的專屬 I–IV 每層數值；特殊攻擊另有第二段近戰掃掠。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 重劍 圖妥斯基 Mk VI | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md) | I–IV |
-| 重劍 圖妥斯基 Mk VII | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md) | I–IV |
-| 重劍 圖妥斯基 Mk IX | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md) | I–IV |
+| 重劍 圖妥斯基 Mk VI | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_combatsword_p2_increase_power_on_hit.md) | I–IV |
+| 重劍 圖妥斯基 Mk VII | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_combatsword_p2_increase_power_on_hit.md) | I–IV |
+| 重劍 圖妥斯基 Mk IX | [憤怒](../../../entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md)、[奪顱者](../../../entries/奪顱者/weapon_trait_bespoke_combatsword_p2_increase_power_on_hit.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

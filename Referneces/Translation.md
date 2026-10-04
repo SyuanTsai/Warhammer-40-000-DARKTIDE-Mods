@@ -290,6 +290,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_activated_hit`，hash `08b71eb1`；英文／繁中RAW配對確認。
 - Bloodthirsty - 嗜血
 - Headtaker - 奪顱者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_hit`，hash `c9a0bfb2`；英文／繁中RAW配對確認。
 - Slaughterer - 殺戮者
 - Rev it up -提速
 - Thrust - 推進
