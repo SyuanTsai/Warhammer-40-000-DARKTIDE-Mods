@@ -979,6 +979,18 @@ Full raw template and formatting: [source evidence](broker_stimm_activation_tale
 | Other-Stimm use restriction | While equipped, you are unable to use other Stimms; `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406` | The item occupies `slot_pocketable_small` and is non-givable/non-droppable; the existing evidence does not fully establish every other-Stimm use path [Fixed source and line references](broker_stimm_activation_talent.md#fixed-source-evidence) | Cannot confirm | Preserve this concrete limitation of the available evidence without extending the task into a mechanism investigation. |
 | Selection, budget and cycle | No recipe-selection, budget, duration or recovery formula; `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406` | Zero-cost start node; any selected recipe equips the item; 30-point recipe budget; 15-second effects pause natural recovery; recovery scales from 15 to 75 seconds [Fixed source and line references](broker_stimm_activation_talent.md#fixed-source-evidence) | Not covered by the description | The original formulas, costs and 90-second cycle explain the dedicated item's operation. |
 
+
+<a id="broker_stimm_celerity_1"></a>
+
+## Spur I
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_1.md#original-english-template-and-reconstruction). Name hash `33b4b842`. Every row uses `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Attack Speed; +25% Weapon Swap Speed (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040` | `attack_speed = 0.04`; `wield_speed = 0.25` affects applicable action time scales [Fixed source and line references](broker_stimm_celerity_1.md#fixed-source-evidence) | Consistent | Both stat names and values match the accepted recipe. |
+| Cost, stacking and timing | No purchase, shared lifetime, stacking or action-segment formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040` | One purchase at cost 1; selected prerequisites remain active; additive speed bonuses divide applicable action times; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_1.md#fixed-source-evidence) | Not covered by the description | The original 0.8/0.667-second swap and 0.962-second attack examples clarify the effects. |
+
 ## Comparison totals
 
 The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
