@@ -795,4 +795,4 @@ Full raw template and formatting: [source evidence](cryptic_shared_toughness.md#
 
 ## Comparison totals
 
-126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.
+136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.
