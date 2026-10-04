@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_590_594",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L1011-L1027, L3346-L3375, L1071-L1102, L1139-L1173, L1108-L1134. Existing mechanisms reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "No new English contradiction. Holy Revenant English multiplier refers to healing amount; the accepted Chinese wrong-target correction is separate. Full-resource conditions, pool reuse and additive Critical Chance supplement the English."
+  ],
+  "skills": [
+    {
+      "id": "zealot_quickness_passive_dodge_stacks",
+      "name": "Inebriate's Poise",
+      "name_hash": "8791f06d",
+      "description_hash": "6a266b91",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_quickness_passive_dodge_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_quickness_passive_dodge_stacks.md",
+      "commit": "df0c04e67"
+    },
+    {
+      "id": "zealot_resist_death_heal",
+      "name": "Holy Revenant",
+      "name_hash": "3a3afbf8",
+      "description_hash": "7e66622d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_heal.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_heal.md",
+      "commit": "ed51bf080"
+    },
+    {
+      "id": "zealot_fanatic_rage",
+      "name": "Blazing Piety",
+      "name_hash": "e87afd11",
+      "description_hash": "c80efade",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fanatic_rage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_fanatic_rage.md",
+      "commit": "15132ab73"
+    },
+    {
+      "id": "zealot_fanatic_rage_toughness_on_max",
+      "name": "Stalwart",
+      "name_hash": "b8850d7c",
+      "description_hash": "efdfa530",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fanatic_rage_toughness_on_max.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_fanatic_rage_toughness_on_max.md",
+      "commit": "6c7ab6ade"
+    },
+    {
+      "id": "zealot_fanatic_rage_improved",
+      "name": "Righteous Warrior",
+      "name_hash": "4ae53808",
+      "description_hash": "cde6c5ff",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fanatic_rage_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_fanatic_rage_improved.md",
+      "commit": "d5c489f27"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 544,
+    "from_commit": "c625b6db7",
+    "to_commit": "d5c489f27",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

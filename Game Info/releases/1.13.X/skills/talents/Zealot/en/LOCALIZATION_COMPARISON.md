@@ -372,4 +372,4 @@ Full raw template and formatting: [source evidence](zealot_fanatic_rage_improved
 
 ## Comparison totals
 
-53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.
+63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.
