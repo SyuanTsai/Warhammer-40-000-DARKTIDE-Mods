@@ -92,3 +92,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Dance of Death](zealot_improved_weapon_handling_after_dodge.md) / `zealot_improved_weapon_handling_after_dodge` | Skill |
 | [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Skill |
 | [Melee Damage Boost](base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | Skill |
+| [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Skill |

@@ -89,6 +89,7 @@
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="Dance of Death talent icon"> [Dance of Death](#zealot_improved_weapon_handling_after_dodge) | <ul><li>Successful Dodges reduce Spread by 75% and Recoil unsteadiness buildup by 50% for 3 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_4) | <ul><li>Gain +10% Melee damage; both same-name nodes together give +20%.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%.</li></ul> | Skill |
 
 ---
 
@@ -1227,3 +1228,16 @@
 - **Damage example:** without other bonuses, 100 × (1 + 10%) = 110. Selecting both nodes gives 120. With an existing same-stage 25% bonus, selecting one node gives 100 × (1 + 25% + 10%) = 135.
 
 [Details](base_melee_damage_node_buff_medium_4.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+### Toughness Damage Reduction
+
+<img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="72" height="72" alt="Toughness Damage Reduction talent icon">
+
+- **How it works:** damage taken by Toughness is reduced by 10%.
+- **Reduction example:** without other bonuses, 100 × (1 − 10%) = 90 points of Toughness damage. With an existing 20% Toughness reduction in the same additive stage, the result is 100 × (1 − 20% − 10%) = 70. Independent damage-reduction effects multiply separately.
+
+[Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
