@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="Writ of Ammunition Enumeration talent icon"> [Writ of Ammunition Enumeration](#cryptic_precision_stance_fire_rate_increased) | <ul><li>While Advanced Combat Doctrines is active, gain +15% ranged Fire Rate, increasing to a total of +30% after maintaining the stance continuously for 4s.</li><li>Leaving the stance removes the bonus; reactivation starts again at +15% with a new 4s timer.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="Voltaic Arcs talent icon"> [Voltaic Arcs](#cryptic_discharge_generates_arcs) | <ul><li>Voltaic Emitter releases one additional forward arc per charge consumed. A use consumes at most 3 charges, so normal use releases at most 3 arcs.</li><li>Each arc starts from a valid enemy within 12m in front of you and can then link to nearby enemies.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="Voltaic Motivator talent icon"> [Voltaic Motivator](#cryptic_discharge_attack_speed_increase) | <ul><li>Each use of Voltaic Emitter gives a base +5% Attack Speed, plus another +5% per charge consumed.</li><li>The bonus lasts 15s; consuming 1, 2 or 3 charges gives a total of +10%, +15% or +20%, respectively.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="Voltaic Overcharge talent icon"> [Voltaic Overcharge](#cryptic_discharge_toughness) | <ul><li>Voltaic Emitter immediately restores 25% of maximum Toughness per full charge consumed; each Electric Discharge explosion hit on a living enemy restores another 1% of maximum Toughness.</li><li>Recovery receives Toughness Replenishment modifiers and cannot exceed the current Toughness deficit.</li></ul> | Ability |
 
 ---
 
@@ -312,3 +313,17 @@
 - **Attack Speed example**: Consuming 1, 2 or 3 charges gives a total of +10%, +15% or +20%, respectively. If an affected attack action originally takes 1s, consuming 3 charges changes it to 1 ÷ 1.20 ≈ 0.833s.
 
 [Details](cryptic_discharge_attack_speed_increase.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_discharge_toughness"></a>
+
+### Voltaic Overcharge
+
+<img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="72" height="72" alt="Voltaic Overcharge talent icon">
+
+- **Recovery on activation**: Using Voltaic Emitter restores 25% of maximum Toughness per full charge of Capacitance consumed.
+- **Recovery on hit**: The Discharge hitting an enemy that is still alive restores another 1% of maximum Toughness. Subsequent arcs or Electrocution added by weapons do not receive this on-hit recovery.
+- **Recovery example**: With 100 maximum Toughness, consuming 2 charges and hitting 5 qualifying enemies restores 100 × (2 × 25% + 5 × 1%) = 55 points. If only 40 points are missing, it restores only 40.
+
+[Details](cryptic_discharge_toughness.md) · [Back to index](#talent-index)

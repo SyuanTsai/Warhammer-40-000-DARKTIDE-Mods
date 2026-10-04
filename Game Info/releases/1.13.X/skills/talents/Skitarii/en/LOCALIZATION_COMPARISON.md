@@ -237,6 +237,18 @@ Full raw template and formatting: [source evidence](cryptic_discharge_attack_spe
 | Base bonus, charge scaling and duration | Using Voltaic Emitter gives +5% Attack Speed plus +5% per Charge spent for 15s; `ui / loc_talent_cryptic_discharge_attack_speed_bonus_desc / 204600f6` | Fixed attack_speed 0.05 plus interpolated 0.05 ×n, lasting 15s [Fixed source and line references](cryptic_discharge_attack_speed_increase.md#fixed-source-evidence) | Consistent | The total 0.05 +0.05n gives 10%, 15% or 20% for 1, 2 or 3 charges. No two-charge threshold appears in the English. |
 | Execution details and effective charge count | No non-base-version condition, full-charge counting, forced-charge treatment or action-time calculation; `ui / loc_talent_cryptic_discharge_attack_speed_bonus_desc / 204600f6` | Non-base action with the special rule adds the buff; num_charges_used_required =2 is not a trigger check; effects forcing 3 charges make the action use 3 for the bonus [Fixed source and line references](cryptic_discharge_attack_speed_increase.md#fixed-source-evidence) | Not covered by the description | The unused display field does not contradict the current template. An affected 1s action with +20% Attack Speed takes 1 ÷1.20 ≈0.833s under the stated assumptions. |
 
+
+<a id="cryptic_discharge_toughness"></a>
+
+## Voltaic Overcharge
+
+Full raw template and formatting: [source evidence](cryptic_discharge_toughness.md#original-english-template-and-reconstruction). Name hash `b0495f45`. Every row uses `ui / loc_talent_cryptic_discharge_toughness_per_charge_desc / c12213ad`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery values, charges and explosion hits | 25% Toughness per Charge spent, plus 1% for each enemy hit by the Electric Discharge; `ui / loc_talent_cryptic_discharge_toughness_per_charge_desc / c12213ad` | On-use recovery =0.25 ×target_num_ability_charges_effect; qualifying cryptic_discharge_explosion on_hit recovers 0.01 [Fixed source and line references](cryptic_discharge_toughness.md#fixed-source-evidence) | Consistent | The percentages, charge scaling and Discharge hit scope agree. |
+| Recovery basis and qualifying-hit limits | No maximum-Toughness basis, full/effective-charge details, living-target/profile checks, modifiers or cap; `ui / loc_talent_cryptic_discharge_toughness_per_charge_desc / c12213ad` | Full charges normally set the effect count; always_full_charges_bonus uses 3. Server-side on_hit requires a still-living target and cryptic_discharge_explosion, without checking positive damage; replenish uses maximum Toughness, modifiers and current deficit [Fixed source and line references](cryptic_discharge_toughness.md#fixed-source-evidence) | Not covered by the description | Subsequent arcs/weapon Electrocution do not qualify. With maximum 100, 2 charges and 5 qualifying hits give 55 points, capped at 40 if only 40 are missing. |
+
 ## Comparison totals
 
 32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
