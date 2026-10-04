@@ -98,3 +98,4 @@
 | [撕扯震盪](entries/撕扯震盪/README.md) | [來源索引](entries/撕扯震盪/SOURCE_INDEX.md) |
 | [機魂再臨](entries/機魂再臨/README.md) | [來源索引](entries/機魂再臨/SOURCE_INDEX.md) |
 | [精煉殺意](entries/精煉殺意/README.md) | [來源索引](entries/精煉殺意/SOURCE_INDEX.md) |
+| [迅雷反射](entries/迅雷反射/README.md) | [來源索引](entries/迅雷反射/SOURCE_INDEX.md) |

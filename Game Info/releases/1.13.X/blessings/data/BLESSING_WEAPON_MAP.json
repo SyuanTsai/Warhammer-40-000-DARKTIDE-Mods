@@ -1239,6 +1239,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
       "effect": "持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。"
+    },
+    {
+      "id": "marksman-reflex",
+      "name_zh_tw": "迅雷反射",
+      "name_en": "Marksman's Reflex",
+      "name_key": "loc_trait_bespoke_weakspot_projectile_hit_increases_reload_speed",
+      "description_key": "loc_trait_bespoke_weakspot_projectile_hit_increases_reload_speed_desc",
+      "name_hash": "fd4fa8f4",
+      "description_hash": "1ac645ec",
+      "page": "entries/迅雷反射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
+      "effect": "合格弱點命中觸發 3 秒單份換彈速度加值，I–IV 為 15%／20%／25%／30%；不限定投射物或來源武器，切換武器仍保留。裝填動作開始時採樣速度，速度加值不是時間減幅。"
     }
   ],
   "weapons": [
@@ -18776,6 +18789,83 @@
       "icon": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_245",
       "effect": "持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed",
+      "blessing_id": "marksman-reflex",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/迅雷反射/weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reload_speed_additive_by_tier": {
+          "I": 0.15,
+          "II": 0.2,
+          "III": 0.25,
+          "IV": 0.3
+        },
+        "displayed_reload_speed_percent_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "wrapper_fallback_reload_speed": 0.5,
+        "own_tier_overrides_same_key": true,
+        "active_duration_seconds": 3,
+        "max_stacks": 1,
+        "proc_event": "on_hit",
+        "proc_chance": 1,
+        "check_proc_func": "CheckProcFunctions.on_weakspot_hit",
+        "checked_event_field": "hit_weakspot",
+        "predicted": false,
+        "cooldown_duration": null,
+        "explicit_held_gate": false,
+        "explicit_attacking_item_gate": false,
+        "explicit_attack_type_gate": false,
+        "reload_speed_stat_type": "additive_multiplier",
+        "reload_speed_base_value": 1,
+        "actual_rumbler_reload_action_total_time_seconds": 2.333,
+        "actual_reload_action_time_scale_stat": "reload_speed",
+        "time_scale_sampled_at_action_start": true,
+        "time_formula": "T=T0/(1+b) under the stated no-other-modifier/no-clamp assumption",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed",
+        "trait_item": "content/items/traits/bespoke_thumper_p2/weakspot_projectile_hit_increases_reload_speed",
+        "weapon_id": "ogryn_thumper_p2",
+        "mark_ids": [
+          "ogryn_thumper_p1_m2"
+        ],
+        "restriction_key": "thumper_p2",
+        "duration_seconds": 3,
+        "no_explicit_held_or_item_or_attack_type_gate": true,
+        "trigger_may_accept_other_player_weakspot_on_hit_while_trait_buff_installed": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 132,
+        "end_line": 181
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 71,
+        "end_line": 85
+      },
+      "description_key": "loc_trait_bespoke_weakspot_projectile_hit_increases_reload_speed_desc",
+      "description_hash": "1ac645ec",
+      "icon": "https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_234",
+      "effect": "合格弱點命中觸發 3 秒單份換彈速度加值，I–IV 為 15%／20%／25%／30%；不限定投射物或來源武器，切換武器仍保留。裝填動作開始時採樣速度，速度加值不是時間減幅。"
     }
   ],
   "bindings": [
@@ -26365,6 +26455,20 @@
         "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
         "import_line": 14,
         "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "marksman-reflex",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/weakspot_projectile_hit_increases_reload_speed",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
       }
     }
   ]

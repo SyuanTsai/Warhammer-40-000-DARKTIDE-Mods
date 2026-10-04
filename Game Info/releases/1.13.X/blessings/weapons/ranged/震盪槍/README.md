@@ -8,11 +8,12 @@
 | <img src="https://github.com/user-attachments/assets/76d7ae66-9a8f-4e19-8443-246a889eee83" width="32" height="32" alt="破片四濺祝福圖示"> [破片四濺](../../../entries/破片四濺/README.md)<br>- Shrapnel<br>[完整說明](../../../entries/破片四濺/README.md) | <ul><li>持用震盪槍時，榴彈爆炸內圈每次命中施加1／2／3／4層流血；每名敵人的共用流血上限16層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c" width="32" height="32" alt="狂轟猛炸祝福圖示"> [狂轟猛炸](../../../entries/狂轟猛炸/README.md)<br>- Blast Zone<br>[完整說明](../../../entries/狂轟猛炸/README.md) | <ul><li>一般與瞄準射擊的榴彈引信或撞擊爆炸均適用；直擊傷害與槍托打擊不屬半徑加成。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816" width="32" height="32" alt="黏著炸藥祝福圖示"> [黏著炸藥](../../../entries/黏著炸藥/README.md)<br>- Adhesive Charge<br>[完整說明](../../../entries/黏著炸藥/README.md) | <ul><li>震盪槍手榴彈可黏附於歐格林或巨獸標籤的存活目標；持握時，對這兩類目標的通用傷害加成依階級為 +6/9/12/15%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/51ba138d-a251-4d0f-9e71-557dc791caee" width="32" height="32" alt="迅雷反射祝福圖示"> [迅雷反射](../../../entries/迅雷反射/README.md)<br>- Marksman's Reflex<br>[完整說明](../../../entries/迅雷反射/README.md) | <ul><li>合格弱點命中觸發 3 秒單份換彈速度加值，I–IV 為 15%／20%／25%／30%；不限定投射物或來源武器，切換武器仍保留。裝填動作開始時採樣速度，速度加值不是時間減幅。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 震盪槍 洛倫茲 Mk VI | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff.md)、[破片四濺](../../../entries/破片四濺/weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed.md)、[狂轟猛炸](../../../entries/狂轟猛炸/weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire.md)、[黏著炸藥](../../../entries/黏著炸藥/weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters.md) | I–IV |
+| 震盪槍 洛倫茲 Mk VI | [破碎衝擊](../../../entries/破碎衝擊/weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff.md)、[破片四濺](../../../entries/破片四濺/weapon_trait_bespoke_ogryn_thumper_p2_close_explosion_applies_bleed.md)、[狂轟猛炸](../../../entries/狂轟猛炸/weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire.md)、[黏著炸藥](../../../entries/黏著炸藥/weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters.md)、[迅雷反射](../../../entries/迅雷反射/weapon_trait_bespoke_ogryn_thumper_p2_weakspot_projectile_hit_increases_reload_speed.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

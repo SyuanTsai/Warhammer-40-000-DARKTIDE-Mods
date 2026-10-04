@@ -526,6 +526,7 @@
 - Adhesive Charge - 黏著炸藥
   - 文件譯名；本體1.13.1繁中仍為「粘性炸藥」。名稱鍵 `loc_trait_bespoke_grenades_stick_to_monsters`，hash `d10e33b3`；保留同hash中英RAW原文與文件翻譯分層。
 - Marksman's Reflex - 迅雷反射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weakspot_projectile_hit_increases_reload_speed`，hash `fd4fa8f4`；英文／繁中RAW配對確認。
 
 ## 裝備屬性
 
