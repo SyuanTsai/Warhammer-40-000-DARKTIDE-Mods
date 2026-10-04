@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="Vulture's Dodge talent icon"> [Vulture's Dodge](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | <ul><li>Ranged Critical hits make you count as Dodging in the Melee, grab and Ranged checking branches for 1 second, without requiring a Dodge movement.</li><li>Retriggering refreshes 1 second without stacking; attacks still follow their own Dodge logic, and the effect does not make all Damage ineffective.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="Adrenaline Assassin talent icon"> [Adrenaline Assassin](#broker_keystone_adrenaline_junkie_sub_1) | <ul><li>Weakspot Melee hits grant the original 1 stack plus 2 additional stacks, for 3; ordinary non-Weakspot non-Critical hits grant none.</li><li>The independent Critical bonus remains: a non-Weakspot Critical hit grants 1, and a Critical Weakspot hit grants 4, subject to the core's 30-stack cap.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="Stoked Rage talent icon"> [Stoked Rage](#broker_keystone_adrenaline_junkie_sub_3) | <ul><li>Frenzy lasts 20 seconds, 10 seconds longer than the core.</li><li>Retriggering refreshes one Frenzy buff to 20 seconds; Adrenaline timing, stack cap and Frenzy's speed/Damage bonuses remain unchanged.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="Adrenaline Unbound talent icon"> [Adrenaline Unbound](#broker_keystone_adrenaline_junkie_sub_5) | <ul><li>Restore 5% of maximum Toughness each second during Adrenaline Frenzy.</li></ul> | Keystone |
 
 ---
 
@@ -560,3 +561,17 @@
 - **Other rules:** this upgrade leaves Adrenaline's 2-second stack timer, 30-stack cap, and Frenzy's Attack Speed and Damage multipliers unchanged.
 
 [Details](broker_keystone_adrenaline_junkie_sub_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_5"></a>
+
+### Adrenaline Unbound
+
+<img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="72" height="72" alt="Adrenaline Unbound talent icon">
+
+- **Recovery amount**: restore 5% of maximum Toughness each second. At 100 maximum Toughness, each tick restores 100 × 0.05 = 5 points.
+- **Recovery cap**: recovery cannot exceed the current Toughness deficit. A tick adds no Toughness when Toughness is already full.
+- **Timing**: recovery occurs only during Adrenaline Frenzy. The first tick can occur immediately when Frenzy begins, followed by 1-second intervals.
+
+[Details](broker_keystone_adrenaline_junkie_sub_5.md) · [Back to index](#talent-index)

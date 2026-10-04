@@ -374,6 +374,18 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 | Final Frenzy duration | Increase duration of Adrenaline Frenzy to 20s; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc / 95b51a39` | The 10 s base gains add_duration(20 − 10), yielding 20 s total. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_3.md#fixed-source-evidence) | Consistent | To specifies the final duration, which agrees with accepted evidence. |
 | Retrigger refresh and unchanged core rules | No single-buff refresh or unchanged stacking/bonus details; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc / 95b51a39` | max_stacks 1 and refresh_duration_on_stack restart 20 s on retrigger; at 18 s another full 20 s begins. Adrenaline keeps its 2 s timer and 30-stack cap; Frenzy retains melee_attack_speed 0.10 and melee_damage 0.25. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_3.md#fixed-source-evidence) | Not covered by the description | These preserve the original timing example and scope of the duration-only upgrade. |
 
+
+<a id="broker_keystone_adrenaline_junkie_sub_5"></a>
+
+## Adrenaline Unbound
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie_sub_5.md#original-english-template-and-reconstruction). Name hash `c11b1c30`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc / 1af84a83`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Frenzy condition and recovery rate | While Frenzy is active, replenish 5% Toughness each second; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc / 1af84a83` | The server Frenzy buff enables `restore_toughness = 0.05` and replenishes at 1-second intervals. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_5.md#fixed-source-evidence) | Consistent | The stated condition and percentage match the accepted mechanism. |
+| Recovery basis, cap, and first tick | No maximum-Toughness basis, deficit limit, or first-tick timing is stated; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc / 1af84a83` | Recovery uses maximum Toughness, respects the current deficit and recovery modifiers, and initializes `next_tick = t`. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_5.md#fixed-source-evidence) | Not covered by the description | These limits and timing details supplement the short description. |
+
 ## Comparison totals
 
 The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
