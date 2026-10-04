@@ -9,6 +9,12 @@
 >
 # Warhammer-40-000-DARKTIDE-Mods
 
+## AUPM 私人修正（非官方）
+
+本 Repository 收錄的 [AUPM](Warhammer%2040%2C000%20DARKTIDE/mods/AUPM/) 包含針對 Darktide 1.13.0／1.13.1 的私人相容性修正。此修正為本 Repository 私人維護的非官方版本，並非遊戲官方或 AUPM 原作者發布的更新。
+
+修正內容包含新版技能冷卻介面相容性，以及任務計時尚未就緒時的錯誤處理。
+
 
 ## 公告與技能圖片保存
 
