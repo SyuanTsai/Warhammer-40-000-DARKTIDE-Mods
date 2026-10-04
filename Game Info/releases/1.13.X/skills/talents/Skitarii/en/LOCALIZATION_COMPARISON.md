@@ -333,6 +333,18 @@ Full raw template and formatting: [source evidence](cryptic_discharge.md#origina
 | Main Discharge and charge-dependent effects | 12m Electrocution for 2s; at 2 charges or above, 30m ranged-enemy Weapon Malfunction for 12s; at 3 or above, 15s of attacks Electrocuting targets for 2s; enhanced Voltaic Expander; `ui / loc_talent_cryptic_discharge_desc / 1ffeaa91` | Enhanced Discharge radius 12m and 2s Electrocution; consumed-charge thresholds 2/3 enable the 30m Malfunction/default 12s and 15s on-hit/2s Electrocution effects [Fixed source and line references](cryptic_discharge.md#fixed-source-evidence) | Consistent | The effect directions, thresholds, values and enhanced version agree; qualifying weapon-state components and breed duration overrides are supplementary. |
 | Charge cost, target limits and damage resolution | No per-use cap, fractional progress, cost-event timing, initial-zero-power/tick detail or conditional arc detail; `ui / loc_talent_cryptic_discharge_desc / 1ffeaa91` | Full-charge use clamped 1–3; surplus and fractional progress retained; cost/event at action start; initial attack/Impact power 0 with subsequent 0.3–0.8s Electrocution ticks; non-killing hits apply the 15s buff; optional arcs use actual charge count [Fixed source and line references](cryptic_discharge.md#fixed-source-evidence) | Not covered by the description | Preserve the 185 −150 =35 resource/15s refill and conditional 10 ×4 =40 damage examples. No universal damage or tick count; optional 5-arc template cap is normally limited to 3 by actual use cost. |
 
+
+<a id="cryptic_precision_stance"></a>
+
+## Advanced Combat Doctrines
+
+Full raw template and formatting: [source evidence](cryptic_precision_stance.md#original-english-template-and-reconstruction). Name hash `c4f43796`. Every row uses `ui / loc_talent_cryptic_precision_stance_drain_cost_combined_desc / 090d6895`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Activation, aiming, costs and ending conditions | 25% activation; Secondary Weapon/aim lock; Spread −90%, Recoil −60%, Reload Speed +25% lingering 5s; 10%/s plus 1%/shot, drain paused during reload; weapon switch/zero resource/reactivation ends it; at least 1 charge; No Cooldown; `ui / loc_talent_cryptic_precision_stance_drain_cost_combined_desc / 090d6895` | Activation 12.5 at cost 50 requires one full charge; slot_secondary auto-aim/spread/recoil and active/lingering Reload Speed; stance drains 5/s and 0.5/shot with reload pause; zero/switch/toggle ends stance [Fixed source and line references](cryptic_precision_stance.md#fixed-source-evidence) | Consistent | The conditions and values agree. No fixed cooldown is compatible with waiting for the required resource to regenerate. |
+| Resource basis, recovery and recorded full-charge consumption | No single-charge cost basis, recovery/upkeep cancellation, kill-recovery suspension or full-charge rounding details; `ui / loc_talent_cryptic_precision_stance_drain_cost_combined_desc / 090d6895` | Base recovery 1/s cancels active cost 1/s; separate stance drain uses one-charge cost; toggle-off repeats no activation cost/event; ending floors accumulated cost for per-charge overload effects [Fixed source and line references](cryptic_precision_stance.md#fixed-source-evidence) | Not covered by the description | Preserve 7.5s/27.5s duration, 77.5-point shooting, 1.6s reload, 4.5/s net-drain and 50s reuse examples. Powerdrive: 0.95 charges adds 0 stacks, 2.05 counts as 2 and adds 10. |
+
 ## Comparison totals
 
 52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.

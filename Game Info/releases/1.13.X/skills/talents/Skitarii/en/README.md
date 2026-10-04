@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="Augmented Power-Cycle talent icon"> [Augmented Power-Cycle](#cryptic_increased_passive_cooldown_regen) | <ul><li>Natural Capacitance recovery increases from 2% to 3% of one charge per second. At 50 points per charge, recovery rises from 1 to 1.5 points/s.</li><li>With no other costs or recovery modifiers, one charge refills in about 33.3s and three charges from empty in about 100s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="Capacitor Reclamation Loop talent icon"> [Capacitor Reclamation Loop](#cryptic_multi_hits_grant_power) | <ul><li>Hitting at least 3 enemies with one attack restores 1% of the current Combat Ability's cost per charge.</li><li>At 50 points per charge, each proc restores 0.5 points. After a proc, at least 0.25s must pass before another can trigger.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="Voltaic Emitter talent icon"> [Voltaic Emitter](#cryptic_discharge) | <ul><li>Activation consumes 1–3 full Capacitance charges, at most 3 per use. Extra charges and fractional progress towards the next charge are retained.</li><li>The main Discharge affects enemies within a fixed 12m radius, Electrocuting them for 2s and dealing ongoing damage.</li><li>Consuming at least 2 charges also causes Weapon Malfunction in qualifying enemies within 30m; consuming at least 3 grants 15s of attacks Electrocuting enemies for 2s.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="32" height="32" alt="Advanced Combat Doctrines talent icon"> [Advanced Combat Doctrines](#cryptic_precision_stance) | <ul><li>Switches to your ranged weapon and assists aiming at enemies near the reticule; Spread −90% and Recoil −60%.</li><li>Activation spends 25% of one charge, then 10% per second and 1% per shot. Reloading pauses the per-second drain.</li><li>Reload Speed +25%, lingering for 5s after the stance ends; reactivation, leaving the ranged weapon or exhausting Capacitance ends the stance.</li></ul> | Ability |
 
 ---
 
@@ -435,3 +436,22 @@
 - **Damage example**: The initial area effect does not directly remove Health; damage comes from subsequent Electrocution. Assuming each tick deals 10 damage to a particular target and this instance resolves 4 ticks, the total is 10 × 4 = 40. Actual damage and tick count vary with the target and resolution timing.
 
 [Details](cryptic_discharge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_precision_stance"></a>
+
+### Advanced Combat Doctrines
+
+<img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="72" height="72" alt="Advanced Combat Doctrines talent icon">
+
+- **Aiming effects**: Switches to your ranged weapon and assists aiming at enemies near the reticule. While active, Spread decreases by 90% and Recoil by 60%. This supplies no separate fixed damage bonus.
+- **Activation cost**: Requires at least 1 full charge to activate, but actually spends only 25% of one charge. At 50 points per charge, activation costs 50 × 25% = 12.5 points.
+- **Ongoing and shooting costs**: Separately drains 10% of one charge/s, or 50 × 10% = 5 points/s, plus 50 × 1% = 0.5 points per shot. These percentages all use one charge; increasing maximum charge capacity does not increase each deduction.
+- **Duration example**: With only one charge, or 50 points, activation leaves 37.5 points. Without shooting, reloading or extra recovery, it lasts 37.5 ÷ 5 = 7.5s. With three full charges, it lasts (150 − 12.5) ÷ 5 = 27.5s.
+- **Shooting example**: Starting with three full charges, activating for 10s and firing 20 shots leaves 150 − 12.5 − 10 × 5 − 20 × 0.5 = 77.5 points. This excludes reloading and extra recovery.
+- **Reloading**: Reloading pauses the 5-point/s ongoing drain. Reload Speed increases by 25% and lingers for 5s after the stance ends. With no other bonuses, a 2s reload takes 2 ÷ 1.25 = 1.6s.
+- **Recovery limits**: While active, base natural recovery and the extra upkeep cost cancel; the class's original kill-triggered recovery also stops. Other natural recovery bonuses can offset some drain. For example, +50% natural recovery leaves net drain of 5 − 0.5 = 4.5 points/s.
+- **Ending and reuse**: Reactivating the ability, leaving the ranged weapon or exhausting Capacitance ends the stance. Normal recovery resumes afterwards. Starting at 0 points with only natural recovery of 1 point/s, it takes 50s to obtain one charge and activate again.
+
+[Details](cryptic_precision_stance.md) · [Back to index](#talent-index)
