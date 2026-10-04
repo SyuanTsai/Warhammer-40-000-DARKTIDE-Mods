@@ -6195,8 +6195,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "94dea31baaf9602b2b00767dfa32c9b6b6a7adc4",
       "chinese_sha256": "82e954c298f9d821fae56adaf4c12065d857dd7d5cd8bf81e9bb003be305248d",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade_improved",
+        "broker_blitz_missile_launcher",
+        "broker_blitz_tox_grenade",
+        "broker_aura_gunslinger_improved",
+        "broker_coherency_melee_damage"
+      ],
       "checks": []
     },
     {
@@ -6206,8 +6212,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "e995d6b86d67643532c756b917bd87fcb6e3bd02",
       "chinese_sha256": "3fc6d5db13fff6252b23bdef777b740d875774242191ffdcca15c6c659ce1c30",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade_improved",
+        "broker_blitz_missile_launcher",
+        "broker_blitz_tox_grenade",
+        "broker_aura_gunslinger_improved",
+        "broker_coherency_melee_damage"
+      ],
       "checks": []
     },
     {
@@ -6217,8 +6229,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "5a9c7291994ea2d455381a00c6564fb21f04c716",
       "chinese_sha256": "64bd16aa783047250d57a91e5929c5e4041faf969f5996bebd8b259503b3406a",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade_improved",
+        "broker_blitz_missile_launcher",
+        "broker_blitz_tox_grenade",
+        "broker_aura_gunslinger_improved",
+        "broker_coherency_melee_damage"
+      ],
       "checks": []
     },
     {
@@ -6228,8 +6246,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "418e6696b2f66aabf5dfc1251da59a05ef4dde45",
       "chinese_sha256": "cc3736c7b4d04af0d5fe518d311a56f4be40d641e6f9b2e7e643f391378dcc68",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade_improved",
+        "broker_blitz_missile_launcher",
+        "broker_blitz_tox_grenade",
+        "broker_aura_gunslinger_improved",
+        "broker_coherency_melee_damage"
+      ],
       "checks": []
     },
     {
@@ -6448,9 +6472,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9c097c576c908dac28e2860356e896010abdf25a",
       "chinese_sha256": "9bed92b51438c11c9c0053f9829ca6d6d68de920d98f0c75eb5d7211b2043057",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_aura_gunslinger_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_flash_grenade.md",
@@ -6470,9 +6501,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "28d77a69289db2be3428871369f9df850c32fadd",
       "chinese_sha256": "39016b1ac54a8cf2e3fd9cef7bf09fc4f607dad0a80f108c2b89864d0815ff4b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_blitz_flash_grenade_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_missile_launcher.md",
@@ -6481,9 +6519,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c29c0899f8a156c7792968e4faccdae37eeb0c9e",
       "chinese_sha256": "3ec6027bd0fea2e46016f06cb65c826ad471a245ffb9f4b2409c5655d8f20461",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_blitz_missile_launcher"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_blitz_tox_grenade.md",
@@ -6492,9 +6537,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ce90000a67d3e329a0249937b2b38ab6b8a74553",
       "chinese_sha256": "700d86d5c313820aaf94dc7dbfcc4b63a5c776bb19eeb222a81addb80b051857",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_blitz_tox_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_coherency_anarchist.md",
@@ -6514,9 +6566,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "985e8953cbdc2c97e4f6e0639607ffad457b715d",
       "chinese_sha256": "efe7ec259b840985380289483dc7825ca905d70e58628c8b23807f2b58d21ec3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_coherency_melee_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie.md",
@@ -14986,6 +15045,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_348.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_blitz_damage.md"
+    },
+    {
+      "id": "broker_blitz_flash_grenade_improved",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_flash_grenade_improved.md"
+    },
+    {
+      "id": "broker_blitz_missile_launcher",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_missile_launcher.md"
+    },
+    {
+      "id": "broker_blitz_tox_grenade",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_blitz_tox_grenade.md"
+    },
+    {
+      "id": "broker_aura_gunslinger_improved",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_aura_gunslinger_improved.md"
+    },
+    {
+      "id": "broker_coherency_melee_damage",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_coherency_melee_damage.md"
     }
   ],
   "pending_chinese_corrections": [

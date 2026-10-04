@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Psyker closeout completed on 2026-10-04. [Item 348 receipt](psyker_skills_348.json), [class receipt](psyker_class.json) and [FILE_MAP](FILE_MAP.json) record **348 accepted mechanisms / 372 accepted files**. Next item: **349, Scum Blackout**, `broker_blitz_flash_grenade_improved`. The full goal remains active and unfinished.
+Checkpoint 353 completed on 2026-10-04. [Receipt](scum_skills_349_353.json) and [FILE_MAP](FILE_MAP.json) record 353 accepted mechanisms. Next item: **354, Anarchist**, `broker_coherency_anarchist`. The full goal remains active and unfinished.
 
-The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. No push, PR, merge, reset, source update or agent review.
+The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 298 mechanisms + 18 class-support files + 2 shared files = 318 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Psyker totals: 184 = 85 Consistent / 5 Explicit contradictions / 85 Not covered / 0 No implementation / 9 Cannot confirm. Item 348 interval: 93s; class-support interval: 568s, counted separately. Class check passed all six shared pages (705 local references, 162 existing images). Base Peril English has a sufficient-condition contradiction; its full active-Quell input/movement clause remains unresolved under existing evidence.
+Remaining: 293 mechanisms + 18 class-support files + 2 shared files = 313 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 5/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 11 = 5 Consistent / 0 Explicit contradictions / 5 Not covered / 0 No implementation / 1 Cannot confirm. Latest batch commit interval: 395s (6m 35s), d798e00f9→c604a0b17. No explicit English contradiction in this batch. Blackout's existing Traditional Chinese close-range/Melee correction remains separate; Gunslinger Improved retains the conditional special-pickup uncertainty. All original calculations and exceptions preserved.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
