@@ -20,3 +20,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Anarchist](broker_coherency_anarchist.md) / `broker_coherency_anarchist` | Aura |
 | [Enhanced Desperado](broker_ability_focus_improved.md) / `broker_ability_focus_improved` | Ability |
 | [Stimm Supply](broker_ability_stimm_field.md) / `broker_ability_stimm_field` | Ability |
+| [Rampage!](broker_ability_punk_rage.md) / `broker_ability_punk_rage` | Ability |

@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="Anarchist talent icon"> [Anarchist](#broker_coherency_anarchist) | <ul><li>You and allies in Coherency gain 5 percentage points of Critical Chance.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="Enhanced Desperado talent icon"> [Enhanced Desperado](#broker_ability_focus_improved) | <ul><li>Activate to swap to and reload the Ranged Weapon for 10 seconds of focus: count as Dodging Ranged Attacks, Sprint without Stamina cost and gain an additive 20% Sprint Speed.</li><li>Highlight eligible enemies within 12.5 metres; Ranged kills of highlighted targets at Close Range extend the state, initially by 1 second per kill, with progressively smaller extensions after 20 seconds.</li><li>Base cooldown 45 seconds; natural replenishment pauses during the state and resumes when it ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6" width="32" height="32" alt="Stimm Supply talent icon"> [Stimm Supply](#broker_ability_stimm_field) | <ul><li>Deploy a Stimm gas field with a 3-metre radius for 20 seconds. Operatives in it heal 0.5 Corruption every 0.25 seconds, up to 40 total, and become immune to Corruption.</li><li>If you carry a Stimm, the field also gives nearby allies its effects. Base cooldown 60 seconds; natural replenishment pauses while the field exists.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="Rampage! talent icon"> [Rampage!](#broker_ability_punk_rage) | <ul><li>Activate to refill Toughness and enter rage for 10 seconds: additive +35% Melee Power Level, additive +20% Melee Attack Speed and ×0.75 Damage taken (25% reduction from this effect alone).</li><li>Melee hits extend rage, initially by 0.3 seconds each; after every 20 seconds from activation the per-hit extension halves. Base cooldown 30 seconds, with natural replenishment paused during rage.</li></ul> | Ability |
 
 ---
 
@@ -156,3 +157,23 @@
 - **Cooldown:** base cooldown 60 seconds. Natural replenishment pauses while the field operates and starts after it ends.
 
 [Details](broker_ability_stimm_field.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage"></a>
+
+### Rampage!
+
+<img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="72" height="72" alt="Rampage! talent icon">
+
+- **Activation:** replenish all Toughness, swap to your Melee Weapon and enter rage for a base 10 seconds.
+
+- **Melee Power and Attack Speed:** gain additive +35% Melee Power Level and +20% Melee Attack Speed. Power Level affects attack output and impact, and cannot be treated as an equal percentage of final Damage. With only +20% Attack Speed, an initial 1-second action takes approximately 1 ÷ 1.20 = 0.83 seconds. For example, Power 500 becomes 500 × 1.35 = 675 before the weapon's Damage and Stagger curves.
+
+- **Damage taken:** multiply Damage taken by 0.75. With only this effect, 100 incoming Damage becomes 100 × 0.75 = 75, a 25% reduction.
+
+- **Duration extension:** each Melee hit initially extends rage by 0.3 seconds. For every 20 seconds elapsed since activation, the per-hit extension halves: 0.15 seconds during seconds 20–40 and 0.075 seconds during seconds 40–60. This diminishes individual extensions; it does not impose a total 20-second duration cap.
+
+- **Immunity and cooldown:** rage grants Stun and Slowdown immunity. Natural replenishment for the base 30-second cooldown begins after rage ends.
+
+[Details](broker_ability_punk_rage.md) · [Back to index](#talent-index)

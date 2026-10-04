@@ -104,6 +104,20 @@ Full raw template and formatting: [source evidence](broker_ability_stimm_field.m
 | Field, healing and Stimm sharing | 20s gas field; heal up to 40 Corruption over time and become immune; copy equipped Stimm effects to nearby allies; base cooldown 60s; `ui / loc_talent_broker_ability_stimm_field_desc_3 / 81b45839` | Field life_time 20; server removes 0.5 Corruption every 0.25 s, capped by removable Corruption; Corruption taken multiplier 0; equipped usable Stimm effects are copied. [Fixed source and line references](broker_ability_stimm_field.md#fixed-source-evidence) | Consistent | The upper-bound wording, immunity, sharing and base values agree with the accepted evidence. |
 | Range, consumption and cooldown limits | No radius, tick interval, full-segment restriction, use consumption or pause rule; `ui / loc_talent_broker_ability_stimm_field_desc_3 / 81b45839` | Radius 3 m; 0.25 s ticks; cannot clear Corruption consuming a complete Health segment; ordinary Stimm item or pocket charge is consumed/removed; base effects end on exit; natural replenishment pauses while the field works. [Fixed source and line references](broker_ability_stimm_field.md#fixed-source-evidence) | Not covered by the description | These preserve existing conditions and the 20/0.25×0.5=40 derivation; Base Cooldown does not specify an uninterrupted countdown. |
 
+
+<a id="broker_ability_punk_rage"></a>
+
+## Rampage!
+
+Full raw template and formatting: [source evidence](broker_ability_punk_rage.md#original-english-template-and-reconstruction). Name hash `b37505a2`. Every row uses `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Rage values and hit extension | Refill all Toughness; 10s; +35% Melee Power, +20% Melee Attack Speed, +25% Damage Reduction; Melee strikes extend by 0.3s, reduced after 20s; base cooldown 30s; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | The accepted state and ability use those values; Power is separate from Damage; taken-Damage multiplier 0.75; Melee on_hit extends without a kill. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | Consistent | The quantities and hit condition match; the English states Power and reduction rather than an equal final-Damage increase. |
+| Stun immunity | Stun immune; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | The state includes stun_immune. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | Consistent | This stated immunity has corresponding accepted evidence. |
+| Suppression immunity | Suppression immune; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | The state includes stun_immune and slowdown_immune but no suppression_immune; the accepted suppression handler checks suppression_immune to skip accumulation. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | No corresponding implementation evidence found | Both original languages promise this effect, but the existing record does not establish it. The implementation/text gap remains unresolved without new tracing. |
+| Supplementary timing and immunity | No exact diminishing formula, Slowdown immunity, weapon swap or pause rule; `ui / loc_talent_broker_ability_punk_rage_desc_3 / be0f1026` | Extension = 0.3/2^floor(elapsed/20); state has slowdown_immune; activation swaps to Melee; natural replenishment resumes after rage ends. [Fixed source and line references](broker_ability_punk_rage.md#fixed-source-evidence) | Not covered by the description | These preserve original examples and limits; 20 seconds is an extension-diminution threshold, not a total duration cap. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
