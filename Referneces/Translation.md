@@ -495,6 +495,7 @@
 - Rising Heat - 升溫
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_scaled_on_heat`，hash `d4f69cb8`；英文／繁中RAW配對確認。
 - Optimised Cooling - 優化冷卻
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_reduced_heat_on_continuous_charge`，hash `4e05ef2d`；英文／繁中RAW配對確認。
 - Focused Cooling - 專注冷卻
 - Gauntlet Momentum - 交叉動量
 - Pulverise - 粉碎

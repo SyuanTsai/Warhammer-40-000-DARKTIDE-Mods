@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-04",
+  "blessing": "optimised-cooling",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/優化冷卻/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "optimised-cooling",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-formal-peer-scope.json",
+    "scope_sha256": "3aa6515b260a1dd25f59343f5956794858af6e2c14e704c6910bcd73356c79f7",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-agent-combo-start-followup.json": "b83ba5fea025a2a8dc93bb367efa61bb2faa281973ea22c5afe52f5911b47308",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-agent-config.json": "57b4657e9b7877f7f4e9004f60956fe5fa68baa75c570b91b4e7151cf1211574",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-agent-draft.md": "9d6163a55dc121489e740a94b76891d4b84168254c364af219ae0d8b52803b8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-agent-evidence.json": "592b181ff501f886f74ec4af6a260154a108beabe7d1dc7a298733248131c9b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-config.json": "4124e337673df2bab2e58928b5e05c64154247a6d6f098863660dae5cc5049a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-extension-draft.json": "fe5f3942f82a3499dacef283d1fdf0b9e2c507e00cf8089bbe8b0d88068d0e9f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-image.json": "b5e252f7cc839d2ef14dc855575d80634ab67ad8c643bed795a441e4414cadde",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-combo-heat-delta-review.json": "05b7f94561e864f3a27f99b823a1658a09b6b01f854e96a89f726948f1b22e73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-focused-checks.json": "081cdf58fe7c31d03a65c353ad4410d846d2a6e8795d57ce1a123f8f7ab57494",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-frozen-source-verification.json": "9b8c6e9f8ba96ec368d95a44917a926c2169c70e0ff27309996e7724cd5bcdd3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-own-tier-diff.json": "f2b7d67ec7a0ffcf5a849205aed1b48f3c1f4ce231704830a0bd72ea0dcc453d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-resume-review.json": "ad85198472f33eb1650822d229b6efc9faa46c7eedec270553f6b6eda55cdde2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-traits-review.json": "711d5efef796bf8ad8ff9309cb27c83d30fa1df47941dd5f7ff2b6a33ec19bf9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-ui-raw-verification.json": "d893dddd890b0f0019964bea289aba25ac1f5561bf1cc523989db5f0db93231f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-ui-review.json": "bfe6e3167047d42c633d28daa5d2a3b5fcbcdb48e54a1c6a32b85451e25f5efd",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b32b32a5a757a2d64bc1e32e846f41d9ecdd1954af22b17675265355fb961f2d",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/DAMAGE_PERCENTAGE_REVIEW.md": "257e0435fac924668304e83a8617dad540e7276007b8bcb92ee6ee3f9a2b17ea",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/LOCALIZATION_COMPARISON.md": "44a31d1299026f9719d8cbbae3340cd49cdad43ca3b72da3e9b4af40c5db0c5b",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/README.md": "7ce4f6f895a2b47c9d4ad97f12ec87497f4d406fd4bb0fcfdd93559b910fc54c",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/SOURCE_INDEX.md": "392fc184850ce3ccf9f084d75747f307743fa3320195d4b5319c190df23e39ad",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/TIER_VALUES.md": "8a9757a1c92e2b20e7863b457a6c6d9e2851bbd736b8ff31d1a006e575463d0a",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/WEAPON_COMPATIBILITY.md": "20c32be958eead058b85a0db1adc0a18d552b881ae73079d476136b980c76ca5",
+      "Game Info/releases/1.13.X/blessings/entries/優化冷卻/weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire.md": "098473265d1d3f253f49c50b60fa7b83710eb15ef1e950f824cb3b755467c3c7",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "91b622c4c517dbd821beb11a4d4d4fe7fb4a15a0905d9b8a92a5fa8c785956ec",
+      "Game Info/releases/1.13.X/blessings/README.md": "ff7fb1b9dd31302139f511f1924f125ac7f03768fc93604a2909ee452834bd84",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "46b42d95868e600b0f9172b73edcbe9df10e2ff2e0ff3c24c3ba12f24a458bb7",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "a30f98495e3808b678b3075ce556366dd8637cf3afbb56f440b51e9f8da2c803",
+      "Referneces/Translation.md": "05ac9bf12d0439b7144c77ab8d624d964b7f40d98aec506dce5c856c46ea334d"
+    },
+    "reviewed_content": [
+      "Reviewed all seven formal entry pages plus the blessing map, ranged weapon reverse index, catalog indexes, and translation glossary in the fixed 29-file scope; every file hash matches the frozen scope.",
+      "Confirmed the actual single trait and two bindings (plasmagun_p1_m1 / M35 Magnacore Mk II and plasmagun_p1_m2 / M35 Magnacore Mk III), ranged classification, shared tier behavior, weapon-page backlinks, and icon attachment/path identity.",
+      "Confirmed I–IV factors 0.96/0.94/0.92/0.90 replace the same-key 0.9 wrapper fallback, with effective count clamped to five and multiplicative p^n aggregation; five-step reductions and tier table values are arithmetically correct.",
+      "Confirmed actual action-chain scope: linked shoot_hit_scan actions increment; linked direct/brace charge holds the current count; the accepted 15-range follow-up correctly qualifies fresh manual starts because ActionHandler early-resets before hold/increase when no running action and keep_combo_on_start is absent. The .5-second idle reset, reload/vent/unwield clearing and first updated-cache effect are described without promising retroactive heat changes.",
+      "Confirmed selected shot and charge heat producers use overheat_amount with their stage multipliers; natural dissipation, vent speed, and charge duration are separate consumers and are not claimed to improve.",
+      "Confirmed all four exact EN/ZH tier reconstructions and formatter order. English “reduces ... by -X%” is identified as a signed-direction contradiction; the Chinese fragment is described as missing an explicit verb without inferring the opposite effect.",
+      "Confirmed examples distinguish normalized H=0.20 from 20 heat-meter percentage points, show IV one/five-step outputs, and correctly compute q=0.80 compound output 0.0944784 from baseline 0.16 with a 40.951% relative reduction under stated no-lockout/no-cap assumptions.",
+      "Root focused source, link and GFM receipts pass with no new errors; no FASTER support is claimed."
+    ],
+    "stability": {
+      "fixed_scope_file_count": 29,
+      "all_scope_hashes_match": true,
+      "accepted_combo_start_followup_ranges": 15,
+      "faster_enabled": false
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "optimised-cooling",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_153",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_153.png",
+      "attachment": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5980625752",
+      "acquired_date": "2026-10-04",
+      "sha256": "77d646e3ea6c8aaa149f576597cbd1c58a043332b1148c3720bf3a993a5c5e01",
+      "content_type": "image/png",
+      "size": 3395,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "優化冷卻祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Source original and public original inspected; both alpha diagnostics show three descending central trapezoids with grey side fins.",
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 281,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 25,
+      "bindings": 498,
+      "variants": 258,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 694,
+      "remote_references": 323,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 17,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-016-full-scan.json",
+        "sha256": "36a72bd54712e0f338b714ba41cda20dd9720b53141245f45c3f9611c5824dda",
+        "trigger": "round-016"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 87,
+    "not_started_name_groups": 87,
+    "partial_name_groups": 0,
+    "remaining_variants": 347,
+    "remaining_bindings": 687,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "3c2e8e14f43508a7f17712f99e25bcc05842034a42fad6b07ad913e295678347"
+  },
+  "previous_local_commit": "a525f24b37696402e207c26c0453a37c4ac9a4cf",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-combo-heat-delta-review.json",
+      "sha256": "05b7f94561e864f3a27f99b823a1658a09b6b01f854e96a89f726948f1b22e73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-focused-checks.json",
+      "sha256": "081cdf58fe7c31d03a65c353ad4410d846d2a6e8795d57ce1a123f8f7ab57494"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-frozen-source-verification.json",
+      "sha256": "9b8c6e9f8ba96ec368d95a44917a926c2169c70e0ff27309996e7724cd5bcdd3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-own-tier-diff.json",
+      "sha256": "f2b7d67ec7a0ffcf5a849205aed1b48f3c1f4ce231704830a0bd72ea0dcc453d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-resume-review.json",
+      "sha256": "ad85198472f33eb1650822d229b6efc9faa46c7eedec270553f6b6eda55cdde2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-traits-review.json",
+      "sha256": "711d5efef796bf8ad8ff9309cb27c83d30fa1df47941dd5f7ff2b6a33ec19bf9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-ui-raw-verification.json",
+      "sha256": "d893dddd890b0f0019964bea289aba25ac1f5561bf1cc523989db5f0db93231f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-primary-ui-review.json",
+      "sha256": "bfe6e3167047d42c633d28daa5d2a3b5fcbcdb48e54a1c6a32b85451e25f5efd"
+    }
+  ],
+  "primary_review_method": "Delta review against frozen42source and own full tiers/UI/RAW/image receipts; reuse same-SHA applicable shared stepped/override/cache mechanisms. Root inspected actual combo early reset exception and all heat consumers. Agent15range exact-chain followup accepted and stable; root actualreset exception validated.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-config.json",
+    "sha256": "4124e337673df2bab2e58928b5e05c64154247a6d6f098863660dae5cc5049a6"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "57b4657e9b7877f7f4e9004f60956fe5fa68baa75c570b91b4e7151cf1211574",
+    "evidence.json": "592b181ff501f886f74ec4af6a260154a108beabe7d1dc7a298733248131c9b5",
+    "draft.md": "9d6163a55dc121489e740a94b76891d4b84168254c364af219ae0d8b52803b8d"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-formal-peer-scope.json",
+    "sha256": "3aa6515b260a1dd25f59343f5956794858af6e2c14e704c6910bcd73356c79f7",
+    "final_content_hashes_unchanged": true
+  },
+  "extra_peer_evidence": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/optimised-cooling-agent-combo-start-followup.json",
+      "sha256": "b83ba5fea025a2a8dc93bb367efa61bb2faa281973ea22c5afe52f5911b47308",
+      "complete": true,
+      "accepted": true,
+      "source_ranges": 15,
+      "topic": "actual combo chained hold vs freshmanual early-return reset, both Marks"
+    }
+  ]
+}

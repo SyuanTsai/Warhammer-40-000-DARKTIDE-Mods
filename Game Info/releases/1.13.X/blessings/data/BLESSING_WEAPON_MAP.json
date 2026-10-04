@@ -1069,6 +1069,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
       "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，每一熱能階使威力修正增加 I–IV 級 1.5%／2%／3%／4%，最高 +7.5%／+10%／+15%／+20%；這項威力修正不等於最終傷害同比增加。"
+    },
+    {
+      "id": "optimised-cooling",
+      "name_zh_tw": "優化冷卻",
+      "name_en": "Optimised Cooling",
+      "name_key": "loc_trait_bespoke_reduced_heat_on_continuous_charge",
+      "description_key": "loc_trait_bespoke_reduced_heat_on_continuous_clarified_desc",
+      "name_hash": "4e05ef2d",
+      "description_hash": "82e540b2",
+      "page": "entries/優化冷卻/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
+      "effect": "普通與蓄力射擊接續動作鏈累積最多五階連射計數；I–IV 每階生熱依序乘 .96／.94／.92／.90，適用射擊與持續蓄力生熱，IV 五階相對少40.951%。"
     }
   ],
   "weapons": [
@@ -17291,6 +17304,64 @@
       "icon": "https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_152",
       "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，每一熱能階使威力修正增加 I–IV 級 1.5%／2%／3%／4%，最高 +7.5%／+10%／+15%／+20%；這項威力修正不等於最終傷害同比增加。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire",
+      "blessing_id": "optimised-cooling",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/優化冷卻/weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "overheat_amount",
+        "stat_type": "multiplicative_multiplier",
+        "tier_multiplier_by_level": {
+          "I": 0.96,
+          "II": 0.94,
+          "III": 0.92,
+          "IV": 0.9
+        },
+        "displayed_reduction_percent_per_effective_step": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "max_effective_combo_steps": 5,
+        "step_formula": "n=clamp(combo_count,0,5)",
+        "item_multiplier_formula": "tier_multiplier^n",
+        "heat_formula": "base_heat × other_overheat_amount_multipliers × tier_multiplier^n × stage_multiplier",
+        "stage_multiplier": "overheat_immediate_amount for shots; overheat_over_time_amount while charging; critical immediate modifier also applies to crit shots",
+        "unaffected_stats": [
+          "overheat_dissipation_multiplier",
+          "vent_overheat_speed",
+          "charge_up_time"
+        ],
+        "applies_equally_to": [
+          "plasmagun_p1_m1",
+          "plasmagun_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 343,
+        "end_line": 389
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 153,
+        "end_line": 158
+      },
+      "description_key": "loc_trait_bespoke_reduced_heat_on_continuous_clarified_desc",
+      "description_hash": "82e540b2",
+      "icon": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_153",
+      "effect": "Mk II/Mk III have identical tier factors; their shot profiles differ but do not change the blessing multiplier."
     }
   ],
   "bindings": [
@@ -24230,6 +24301,34 @@
       "mark_id": "plasmagun_p1_m2",
       "variant_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_scaled_on_heat",
       "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "optimised-cooling",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/reduced_overheat_on_continuous_fire",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "optimised-cooling",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/reduced_overheat_on_continuous_fire",
       "trait_category": "bespoke_plasmagun_p1",
       "available_tiers": null,
       "source": {
