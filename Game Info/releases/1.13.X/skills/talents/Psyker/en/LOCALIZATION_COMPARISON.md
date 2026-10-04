@@ -638,6 +638,18 @@ Full raw template and formatting: [source evidence](psyker_venting_improvements.
 | Speed and action penalties | +5% Movement Speed; Movement Speed is not reduced while Quelling Peril or Reloading; `ui / loc_talent_psyker_improved_venting_desc / 86b17787` | Unconditional movement_speed = 0.05, with the Quelling and Reloading movement-reduction stats set to zero. [Fixed source and line references](psyker_venting_improvements.md#fixed-source-evidence) | Consistent | The stated bonus and two removed action penalties agree. |
 | Display state and other slows | No active-state check or unrelated slowing rules; `ui / loc_talent_psyker_improved_venting_desc / 86b17787` | check_active_func affects the display only; other slowing sources still calculate separately. [Fixed source and line references](psyker_venting_improvements.md#fixed-source-evidence) | Not covered by the description | The action context identifies the removed penalties; it does not detail all other movement modifiers. |
 
+
+<a id="psyker_kills_stack_other_weapon_damage"></a>
+
+## Malefic Momentum
+
+Full raw template and formatting: [source evidence](psyker_kills_stack_other_weapon_damage.md#original-english-template-and-reconstruction). Name hash `23bf2118`. Every row uses `ui / loc_talent_psyker_kills_stack_other_weapon_damage_both_description / ef213cd8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Opposite damage groups and stacks | Non-Warp Kill grants +5% to Warp Attacks; Warp Kill grants +5% to non-Warp Attacks; each lasts 10s and stacks 5 times; `ui / loc_talent_psyker_kills_stack_other_weapon_damage_both_description / ef213cd8` | The corresponding Buff grants the stated bonus to the opposite damage group, with each template capped at 5 stacks for 10s. [Fixed source and line references](psyker_kills_stack_other_weapon_damage.md#fixed-source-evidence) | Consistent | Both directions, quantities, durations and caps agree. |
+| Classification and damage-stage implementation | No held-weapon test, timer-refresh rule or damage-stage formula; `ui / loc_talent_psyker_kills_stack_other_weapon_damage_both_description / ef213cd8` | Kill damage_type membership in warp_damage_types chooses the Buff; timers are separate and refresh per group; +0.05 damage and −0.05 warp_damage cancel for Warp Attacks. [Fixed source and line references](psyker_kills_stack_other_weapon_damage.md#fixed-source-evidence) | Not covered by the description | These implementation details explain the stated attack categories without changing them. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

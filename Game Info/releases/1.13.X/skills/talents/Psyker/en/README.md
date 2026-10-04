@@ -59,6 +59,7 @@
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="Perfect Timing talent icon"> [Perfect Timing](#psyker_crits_empower_next_attack) | <ul><li>Critical Hit: gain +3% Damage for 10s, up to 5 stacks (+15%); retriggering refreshes duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/1e6189fe-4a6e-4fda-bbe9-e2a38c75ff2a" width="32" height="32" alt="Wildfire talent icon"> [Wildfire](#psyker_spread_warpfire_on_kill) | <ul><li>When an enemy affected by your Soulblaze dies, distribute up to 4 shared stacks among enemies within 5m. Soulblaze need not deliver the final hit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="Mind in Motion talent icon"> [Mind in Motion](#psyker_venting_improvements) | <ul><li>+5% Movement Speed; removes Quelling and Reloading movement penalties. Other slowing sources still apply.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="Malefic Momentum talent icon"> [Malefic Momentum](#psyker_kills_stack_other_weapon_damage) | <ul><li>Non-Warp Kill: +5% Warp Damage. Warp Kill: +5% non-Warp Damage. Each group lasts 10s and stacks separately up to 5 times.</li></ul> | Talent |
 
 ---
 
@@ -864,3 +865,19 @@
 - **Movement example**: with no other modifiers, if movement at this stage was 5 metres per second, it becomes 5 × (1 + 5%) = 5.25 metres per second.
 
 [Details](psyker_venting_improvements.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_kills_stack_other_weapon_damage"></a>
+
+### Malefic Momentum
+
+<img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="72" height="72" alt="Malefic Momentum talent icon">
+
+- **Effect**: a kill with non-Warp Damage grants 5% Warp Damage; a kill with Warp Damage grants 5% non-Warp Damage.
+
+- **Stacks and refresh**: the two groups each have a separate cap of 5 stacks and last 10 seconds. Gaining the same group's effect again resets that group's timer. Each group at full stacks adds 25% Damage.
+
+- **Damage example**: compare only this damage-bonus stage, with all other multipliers fixed at 1. With a baseline of 100 points and no other bonus, 100 × (1 + 25%) = 125 points. With an existing 25% bonus in the same stage, Damage rises from 125 to 100 × (1 + 25% + 25%) = 150 points.
+
+[Details](psyker_kills_stack_other_weapon_damage.md) · [Back to index](#talent-index)
