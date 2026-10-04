@@ -734,6 +734,18 @@ Full raw template and formatting: [source evidence](zealot_stacking_melee_damage
 | Successful Dodge, stacking and duration | “+5% Melee Damage after Successful Dodge. Stacking 3 times. Lasts 8s.”; `ui / loc_talent_zealot_stacking_melee_damage_after_dodge_desc / b421dbe6` | Each successful Dodge adds melee_damage 0.05 effect, max_stacks 3 and duration 8. [Fixed source and line references](zealot_stacking_melee_damage_after_dodge.md#fixed-source-evidence) | Consistent | Trigger, per-stack value, cap and duration agree. |
 | Refresh and additive damage | No refresh or same-stage damage formula.; `ui / loc_talent_zealot_stacking_melee_damage_after_dodge_desc / b421dbe6` | refresh_duration_on_stack true; original base-100 example gives 115 at 3 stacks, or 135 with another same-stage 20%. [Fixed source and line references](zealot_stacking_melee_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | These timer and damage calculations supplement the stated stacks. |
 
+
+<a id="zealot_sprint_improvements"></a>
+
+## Relentless Fervor
+
+Full raw template and formatting: [source evidence](zealot_sprint_improvements.md#original-english-template-and-reconstruction). Name hash `bc4195b7`. Every row uses `ui / loc_talent_zealot_sprint_improvements_alt_desc / 490f7206`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Sprint stats and immunity delay | “+10% Sprint Speed and -10% Sprint Cost. Sprinting for 1s grants Slowdown Immunity.”; `ui / loc_talent_zealot_sprint_improvements_alt_desc / 490f7206` | sprint_movement_speed 0.1, sprinting_cost_multiplier 0.9; child grants slowdown_immune at start+1. [Fixed source and line references](zealot_sprint_improvements.md#fixed-source-evidence) | Consistent | Speed, cost reduction and continuous-Sprint delay agree. |
+| Sprint end and timer reset | No child lifecycle, end-removal or next-Sprint timer rule.; `ui / loc_talent_zealot_sprint_improvements_alt_desc / 490f7206` | Single-stack child starts on_sprint_started and exits on_sprint_ended; immunity does not carry over. Original 6→6.6m/s and 2→1.8 Stamina/s example retained. [Fixed source and line references](zealot_sprint_improvements.md#fixed-source-evidence) | Not covered by the description | These lifecycle and calculation details supplement the Sprint effect. |
+
 ## Comparison totals
 
 127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.
