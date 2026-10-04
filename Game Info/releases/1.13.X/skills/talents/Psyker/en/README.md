@@ -66,6 +66,7 @@
 | <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="Solidity talent icon"> [Solidity](#psyker_increased_vent_speed) | <ul><li>Active Quelling time and interval ×0.7: 30% shorter time, equivalent to approximately 42.9% higher processing rate.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="Warp Rider talent icon"> [Warp Rider](#psyker_damage_based_on_warp_charge) | <ul><li>Damage bonus scales linearly with current Peril: +0% / +10% / +20% at 0% / 50% / 100% Peril.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="True Aim talent icon"> [True Aim](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | <ul><li>After 5 valid damaging Weakspot Hits, the next Ranged Attack is guaranteed Critical; repeat hits and cleaved later targets are restricted.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="Puppet Master talent icon"> [Puppet Master](#psyker_coherency_aura_size_increase) | <ul><li>Coherency Aura radius +75%, giving 1.75 times the original radius with other modifiers unchanged.</li></ul> | Talent |
 
 ---
 
@@ -979,3 +980,21 @@
 - **Example**: from 0 stacks, five separately valid Weakspot Hits give 1 → 2 → 3 → 4 → 5 stacks. The following Ranged Critical Strike consumes this effect. Critical Damage still depends on the weapon, hit location and target; it is not a fixed doubling.
 
 [Details](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_coherency_aura_size_increase"></a>
+
+### Puppet Master
+
+<img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="72" height="72" alt="Puppet Master talent icon">
+
+- **Effect**: increase the Coherency Aura radius by 75%, allowing more distant allies to remain in Coherency.
+
+- **Range example**: with other modifiers unchanged, an original radius of 8 metres becomes 8 × 1.75 = 14 metres. The increase is to radius; when comparing only the area of a flat circle, the area multiplier is 1.75² = 3.0625.
+
+#### Existing Traditional Chinese text correction
+
+- The Traditional Chinese wording says the Aura range becomes {radius_modifier} times the original, mixing a multiplier with a bonus amount. The verified effect increases radius by 75%, making it 1.75 times the original.
+
+[Details](psyker_coherency_aura_size_increase.md) · [Back to index](#talent-index)

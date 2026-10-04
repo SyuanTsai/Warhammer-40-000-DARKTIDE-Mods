@@ -722,6 +722,18 @@ Full raw template and formatting: [source evidence](psyker_guaranteed_crit_on_mu
 | Threshold, reward and attack limit | 5 Weakspot Hits grant the next Ranged Attack a guaranteed Critical; once per Attack; `ui / loc_talent_psyker_weakspot_grants_crit_once_description / 2341fb06` | Five eligible stacks activate guaranteed_ranged_critical_strike; duplicate attack_instigator_unit events and non-projectile later targets are restricted. [Fixed source and line references](psyker_guaranteed_crit_on_multiple_weakspot_hits.md#fixed-source-evidence) | Consistent | The threshold, ranged reward and restriction on repeated attack triggers agree. |
 | Eligibility, consumption and weapon limits | No damage floor, countdown, consumption event or critical-damage formula; `ui / loc_talent_psyker_weakspot_grants_crit_once_description / 2341fb06` | Zero-damage hits are excluded; a ranged on_critical_strike finishes the active effect without a normal duration timer. Critical sequence and Damage depend on the weapon and target. [Fixed source and line references](psyker_guaranteed_crit_on_multiple_weakspot_hits.md#fixed-source-evidence) | Not covered by the description | These details explain valid accumulation and consumption without promising a single bullet or fixed doubling. |
 
+
+<a id="psyker_coherency_aura_size_increase"></a>
+
+## Puppet Master
+
+Full raw template and formatting: [source evidence](psyker_coherency_aura_size_increase.md#original-english-template-and-reconstruction). Name hash `3d9caf6e`. Every row uses `ui / loc_talent_psyker_coherency_size_increase_description / 5556945e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Bonus versus final radius wording | 75% Radius for your Coherency Aura; no increase verb or plus sign; `ui / loc_talent_psyker_coherency_size_increase_description / 5556945e` | The 0.75 additive modifier has base 1, giving 1.75 times radius. [Fixed source and line references](psyker_coherency_aura_size_increase.md#fixed-source-evidence) | Cannot confirm | The terse English does not explicitly identify 75% as either a bonus or the resulting total; an English numerical contradiction is not established. |
+| Radius formula and area | Radius is specified; no combination or area formula; `ui / loc_talent_psyker_coherency_size_increase_description / 5556945e` | current_radius uses radius × modifier × multiplier; 8m becomes 14m with other modifiers unchanged, and flat-circle area scales by 1.75². [Fixed source and line references](psyker_coherency_aura_size_increase.md#fixed-source-evidence) | Not covered by the description | The verified radius calculation and existing geometric example supplement the wording. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **56 Consistent**, **2 Explicit contradictions**, **55 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
