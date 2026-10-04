@@ -1,5 +1,7 @@
 # 巢都渣滓基礎效果
 
+[English](en/BASE_EFFECTS.md)
+
 [返回巢都渣滓天賦](README.md)｜[來源索引](SOURCE_INDEX.md)
 
 以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
