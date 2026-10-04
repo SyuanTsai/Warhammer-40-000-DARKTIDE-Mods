@@ -6216,7 +6216,12 @@
         "broker_ability_stimm_field_sub_1",
         "broker_ability_stimm_field_sub_2",
         "broker_passive_improved_dodges",
-        "broker_keystone_adrenaline_junkie"
+        "broker_keystone_adrenaline_junkie",
+        "broker_keystone_vultures_mark_on_kill",
+        "broker_keystone_chemical_dependency",
+        "broker_keystone_chemical_dependency_sub_1",
+        "broker_keystone_chemical_dependency_sub_2",
+        "broker_keystone_chemical_dependency_sub_3"
       ],
       "checks": []
     },
@@ -6248,7 +6253,12 @@
         "broker_ability_stimm_field_sub_1",
         "broker_ability_stimm_field_sub_2",
         "broker_passive_improved_dodges",
-        "broker_keystone_adrenaline_junkie"
+        "broker_keystone_adrenaline_junkie",
+        "broker_keystone_vultures_mark_on_kill",
+        "broker_keystone_chemical_dependency",
+        "broker_keystone_chemical_dependency_sub_1",
+        "broker_keystone_chemical_dependency_sub_2",
+        "broker_keystone_chemical_dependency_sub_3"
       ],
       "checks": []
     },
@@ -6280,7 +6290,12 @@
         "broker_ability_stimm_field_sub_1",
         "broker_ability_stimm_field_sub_2",
         "broker_passive_improved_dodges",
-        "broker_keystone_adrenaline_junkie"
+        "broker_keystone_adrenaline_junkie",
+        "broker_keystone_vultures_mark_on_kill",
+        "broker_keystone_chemical_dependency",
+        "broker_keystone_chemical_dependency_sub_1",
+        "broker_keystone_chemical_dependency_sub_2",
+        "broker_keystone_chemical_dependency_sub_3"
       ],
       "checks": []
     },
@@ -6312,7 +6327,12 @@
         "broker_ability_stimm_field_sub_1",
         "broker_ability_stimm_field_sub_2",
         "broker_passive_improved_dodges",
-        "broker_keystone_adrenaline_junkie"
+        "broker_keystone_adrenaline_junkie",
+        "broker_keystone_vultures_mark_on_kill",
+        "broker_keystone_chemical_dependency",
+        "broker_keystone_chemical_dependency_sub_1",
+        "broker_keystone_chemical_dependency_sub_2",
+        "broker_keystone_chemical_dependency_sub_3"
       ],
       "checks": []
     },
@@ -6808,9 +6828,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2ca671601e11cd4b8f85e301849fa46f9e260dd9",
       "chinese_sha256": "bc09ef28ec4db19f23e97baab2577948de03faf15c34e189a56c6c3a2e7d4fd6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_chemical_dependency"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_chemical_dependency_sub_1.md",
@@ -6819,9 +6846,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3c73794456d711e1792a9fab3e2a3f543abf0b97",
       "chinese_sha256": "8a2ab62c1e735b95592ac05883c590800fcf6ba659d5969a75e233ae62e0476e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_chemical_dependency_sub_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_chemical_dependency_sub_2.md",
@@ -6830,9 +6864,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5809b3e2b13729e8f9afb91d4f56d5ac75114aff",
       "chinese_sha256": "dcbd82fb3974194d093f44894e1a3e848d52963c1102a8cdc2f356dfe6a387b3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_chemical_dependency_sub_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_chemical_dependency_sub_3.md",
@@ -6841,9 +6882,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "402b2cc00ee508027a068108e0c16ffca3c2f1fe",
       "chinese_sha256": "b6d96250f5ab1da9479e73cb265dd6421cd6dcf39f25654c21f2594d54a6fb4a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_chemical_dependency_sub_3"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_aoe_stagger.md",
@@ -6885,9 +6933,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c37e0f38f539e8611dcd1000a33208b2c485ba4e",
       "chinese_sha256": "180ce549b97f072a338494a811fb9bdf87e06af13cf4346296c28217fd2c5c2f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_vultures_mark_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_blitz_inflicts_toxin.md",
@@ -15370,6 +15425,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie.md"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_on_kill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_on_kill.md"
+    },
+    {
+      "id": "broker_keystone_chemical_dependency",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_chemical_dependency.md"
+    },
+    {
+      "id": "broker_keystone_chemical_dependency_sub_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_chemical_dependency_sub_1.md"
+    },
+    {
+      "id": "broker_keystone_chemical_dependency_sub_2",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_chemical_dependency_sub_2.md"
+    },
+    {
+      "id": "broker_keystone_chemical_dependency_sub_3",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_chemical_dependency_sub_3.md"
     }
   ],
   "pending_chinese_corrections": [

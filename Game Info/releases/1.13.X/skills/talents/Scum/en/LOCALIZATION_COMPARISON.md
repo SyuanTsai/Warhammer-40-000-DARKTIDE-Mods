@@ -315,4 +315,4 @@ Full raw template and formatting: [source evidence](broker_keystone_chemical_dep
 
 ## Comparison totals
 
-The 45 listed rules comprise **21 Consistent**, **1 Explicit contradictions**, **20 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
+The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.
