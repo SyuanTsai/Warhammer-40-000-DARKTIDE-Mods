@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="Gunslinger Improved talent icon"> [Gunslinger Improved](#broker_aura_gunslinger_improved) | <ul><li>An Ammo pickup collected in Coherency additionally replenishes each member with 10% of that pickup's amount, calculated for their own capacity.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="Ruffian talent icon"> [Ruffian](#broker_coherency_melee_damage) | <ul><li>You and allies in Coherency gain 10% Melee Damage.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="Anarchist talent icon"> [Anarchist](#broker_coherency_anarchist) | <ul><li>You and allies in Coherency gain 5 percentage points of Critical Chance.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="Enhanced Desperado talent icon"> [Enhanced Desperado](#broker_ability_focus_improved) | <ul><li>Activate to swap to and reload the Ranged Weapon for 10 seconds of focus: count as Dodging Ranged Attacks, Sprint without Stamina cost and gain an additive 20% Sprint Speed.</li><li>Highlight eligible enemies within 12.5 metres; Ranged kills of highlighted targets at Close Range extend the state, initially by 1 second per kill, with progressively smaller extensions after 20 seconds.</li><li>Base cooldown 45 seconds; natural replenishment pauses during the state and resumes when it ends.</li></ul> | Ability |
 
 ---
 
@@ -116,3 +117,23 @@
 - **Chance example:** an initial 10% becomes 10% + 5% = 15%; an initial 25% becomes 30%.
 
 [Details](broker_coherency_anarchist.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_focus_improved"></a>
+
+### Enhanced Desperado
+
+<img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="72" height="72" alt="Enhanced Desperado talent icon">
+
+- **Activation and protection:** immediately swap to your Ranged Weapon, fill the magazine and enter focus for 10 seconds. During focus, you count as Dodging Ranged Attacks, Sprint without Stamina cost and are immune to Suppression.
+
+- **Sprint example:** Sprint Speed increases by 20%; an initial 5 metres/second becomes 5 × 1.2 = 6 metres/second.
+
+- **Highlighting and extension:** highlight eligible enemies within 12.5 metres. Ranged kills at Close Range extend focus, initially by 1 second each; after 20 seconds from activation this falls to 0.2 seconds per kill, and after 40 seconds to 0.04 seconds. Each extension can restore remaining duration to at most 10 seconds.
+
+- **Needle Pistol Toxin exception:** an enemy hit with a Ranged Needle Pistol attack and tracked during focus may extend the state even when Toxin Damage delivers the killing blow; it must also die at Close Range. Other Toxin kills do not automatically trigger this.
+
+- **Ammo and cooldown:** reloading during focus does not consume reserve Ammo. Natural replenishment for the base 45-second cooldown starts only after focus ends; extending focus delays that start. At the end, the magazine is recalculated against remaining reserve Ammo, so a whole magazine of free rounds from the state is not retained.
+
+[Details](broker_ability_focus_improved.md) · [Back to index](#talent-index)

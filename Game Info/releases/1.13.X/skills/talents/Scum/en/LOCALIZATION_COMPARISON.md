@@ -80,6 +80,18 @@ Full raw template and formatting: [source evidence](broker_coherency_anarchist.m
 | Critical Chance and recipients | +5% Critical Chance for you and allies in Coherency; `ui / loc_talent_broker_aura_anarchist_desc / d1ab227e` | critical_strike_chance 0.05 applies to self and Coherency allies. [Fixed source and line references](broker_coherency_anarchist.md#fixed-source-evidence) | Consistent | The amount, chance statistic and recipients match the accepted evidence. |
 | Addition and duplicate limits | No arithmetic or duplicate rule; `ui / loc_talent_broker_aura_anarchist_desc / d1ab227e` | Critical Chance adds; one stack and coherency_id prevent duplicate copies. [Fixed source and line references](broker_coherency_anarchist.md#fixed-source-evidence) | Not covered by the description | The existing 10%→15% and 25%→30% examples explain omitted calculations. |
 
+
+<a id="broker_ability_focus_improved"></a>
+
+## Enhanced Desperado
+
+Full raw template and formatting: [source evidence](broker_ability_focus_improved.md#original-english-template-and-reconstruction). Name hash `df173866`. Every row uses `ui / loc_talent_broker_ability_focus_improved_desc / a1148a57`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Focus and extension description | 10s focus, Ranged Dodging, no Sprint Stamina cost, +20% Sprint Speed, reloads do not reduce Ammo Reserve; close-target highlights and 1s extensions diminishing after 20s; base cooldown 45s; `ui / loc_talent_broker_ability_focus_improved_desc / a1148a57` | The improved focus buff and ability use the stated values and free transfers; close Ranged kills extend focus under the accepted event conditions. [Fixed source and line references](broker_ability_focus_improved.md#fixed-source-evidence) | Consistent | The English effects, amounts and initial timing match the verified evidence; Base Cooldown does not promise replenishment during the state. |
+| Geometry, immunity and timing limits | No numeric close radius, exact later extensions, tracked Toxin exception, Ammo cleanup or pause rule; `ui / loc_talent_broker_ability_focus_improved_desc / a1148a57` | 12.5 m checks; suppression_immune; extensions 1/5^floor(elapsed/20), remaining duration capped at 10 s; tracked Needle Pistol death conditions; Ammo reconciliation on stop; natural replenishment paused during focus. [Fixed source and line references](broker_ability_focus_improved.md#fixed-source-evidence) | Not covered by the description | These retain existing conditions and calculations, including 100→120 speed and the player 5→6 m/s example, without treating omissions as errors. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
