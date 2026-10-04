@@ -104,3 +104,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Wildfire III](broker_stimm_combat_3.md) / `broker_stimm_combat_3` | Stimm recipe |
 | [Wildfire IV](broker_stimm_combat_4a.md) / `broker_stimm_combat_4a` | Stimm recipe |
 | [Fury I](broker_stimm_combat_4b.md) / `broker_stimm_combat_4b` | Stimm recipe |
+| [Vultoprene I](broker_stimm_combat_4c.md) / `broker_stimm_combat_4c` | Stimm recipe |
