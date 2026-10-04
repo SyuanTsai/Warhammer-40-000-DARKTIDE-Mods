@@ -1022,6 +1022,18 @@ Full raw template and formatting: [source evidence](cryptic_damage_on_ability.md
 | Damage, duration and ability trigger | Gain +15% Damage for 10s on Ability Use; `ui / loc_talent_cryptic_damage_on_ability_desc / d9e47181` | `on_combat_ability` activates `damage = 0.15` for 10 seconds. [Fixed source and line references](cryptic_damage_on_ability.md#fixed-source-evidence) | Consistent | The effect, value and duration match the verified ability trigger. |
 | Ability category, refresh and charges | Does not specify Blitz, repeat activation or charges spent; `ui / loc_talent_cryptic_damage_on_ability_desc / d9e47181` | Blitz does not qualify; another activation refreshes 10 seconds without stacking. `num_charges` is not read, so multiple charges still give 15%. [Fixed source and line references](cryptic_damage_on_ability.md#fixed-source-evidence) | Not covered by the description | The original additive example `100 × (1 + 25% + 15%) = 140` and charge-count limit supplement the description. |
 
+
+<a id="cryptic_weakspot_kills_restore_toughness"></a>
+
+## Servo-Core Recharge Engine
+
+Full raw template and formatting: [source evidence](cryptic_weakspot_kills_restore_toughness.md#original-english-template-and-reconstruction). Name hash `bd0b9fe9`. Every row uses `ui / loc_talent_cryptic_weakspot_kills_restore_toughness_desc / 8c1c47d8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weakspot kill and recovery | Weakspot Kills restore 5% Toughness; `ui / loc_talent_cryptic_weakspot_kills_restore_toughness_desc / 8c1c47d8` | `on_kill` plus `on_weakspot_hit` immediately applies `replenish_percentage = 0.05`; melee and ranged qualify. [Fixed source and line references](cryptic_weakspot_kills_restore_toughness.md#fixed-source-evidence) | Consistent | The trigger and fraction match, and the English does not impose an attack-type restriction. |
+| Recovery basis, timing and cap | Does not specify the percentage basis, duration, cooldown or cap; `ui / loc_talent_cryptic_weakspot_kills_restore_toughness_desc / 8c1c47d8` | Recovery is immediate, based on maximum Toughness, with no duration/cooldown. At maximum 200, each gives 10; three give up to 30, capped at maximum. [Fixed source and line references](cryptic_weakspot_kills_restore_toughness.md#fixed-source-evidence) | Not covered by the description | The original example explains the omitted recovery basis and limits. |
+
 ## Comparison totals
 
 167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.

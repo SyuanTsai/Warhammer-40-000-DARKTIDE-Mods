@@ -92,6 +92,7 @@
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="Sustained Assault Doctrine talent icon"> [Sustained Assault Doctrine](#cryptic_stacking_melee_damage) | <ul><li>Each melee swing that hits an enemy grants one 3% Damage stack, up to 5, refreshing 8 seconds. The bonus also increases ranged damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="Galvanized Coating talent icon"> [Galvanized Coating](#cryptic_stun_dr_power) | <ul><li>Always grants ordinary hit Stun immunity and 15% Damage Resistance. Qualifying melee damage events spend 7.5% of one Capacitance charge; defence remains with insufficient Capacitance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="Moebian Conductor talent icon"> [Moebian Conductor](#cryptic_damage_on_ability) | <ul><li>Activating a Combat Ability grants 15% Damage for 10 seconds. Another activation refreshes the duration; spending multiple charges does not increase the bonus.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="Servo-Core Recharge Engine talent icon"> [Servo-Core Recharge Engine](#cryptic_weakspot_kills_restore_toughness) | <ul><li>Melee or ranged Weakspot kills immediately restore 5% of maximum Toughness.</li></ul> | Talent |
 
 ---
 
@@ -1312,3 +1313,16 @@
 - **Damage example**: At base damage 100 with an existing 25% bonus in the same stage, `100 × (1 + 25% + 15%) = 140` damage.
 
 [Details](cryptic_damage_on_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_kills_restore_toughness"></a>
+
+### Servo-Core Recharge Engine
+
+<img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="72" height="72" alt="Servo-Core Recharge Engine talent icon">
+
+- **Trigger**: Killing an enemy with a Weakspot hit immediately restores 5% of maximum Toughness. Both melee and ranged attacks qualify.
+- **Recovery example**: At 200 maximum Toughness, each trigger restores `200 × 5% = 10` points. Three consecutive qualifying kills can restore 30 points, capped at maximum Toughness.
+
+[Details](cryptic_weakspot_kills_restore_toughness.md) · [Back to index](#talent-index)
