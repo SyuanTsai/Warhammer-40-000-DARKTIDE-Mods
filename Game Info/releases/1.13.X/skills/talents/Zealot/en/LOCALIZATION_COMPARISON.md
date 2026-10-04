@@ -515,6 +515,18 @@ Full raw template and formatting: [source evidence](zealot_hits_grant_stacking_d
 | Melee hit, damage, duration and cap | “+4% Melee Damage for 5s” on a Melee hit; stacks 5 times.; `ui / loc_talent_zealot_increased_damage_stacks_on_hit_desc / fa8c449f` | Melee `on_hit` applies .04 Melee damage per stack, max 5, duration 5s. [Fixed source and line references](zealot_hits_grant_stacking_damage.md#fixed-source-evidence) | Consistent | Trigger, stat target, value, duration and cap agree. |
 | Refresh and additive damage | No full-stack refresh or combination formula.; `ui / loc_talent_zealot_increased_damage_stacks_on_hit_desc / fa8c449f` | Further hits refresh 5s even at cap; same-stage bonuses add. Original examples give 112/120 or 145 with same-stage 25%. [Fixed source and line references](zealot_hits_grant_stacking_damage.md#fixed-source-evidence) | Not covered by the description | The accepted refresh behavior and damage examples supplement the stacking effect. |
 
+
+<a id="zealot_crits_reduce_toughness_damage"></a>
+
+## Enduring Faith
+
+Full raw template and formatting: [source evidence](zealot_crits_reduce_toughness_damage.md#original-english-template-and-reconstruction). Name hash `8ef2c52d`. Every row uses `ui / loc_talent_zealot_toughness_melee_effectiveness_desc / 56b689eb`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Critical Hit reduction and duration | “+40% Toughness Damage Reduction on Critical Hit for 4s.”; `ui / loc_talent_zealot_toughness_melee_effectiveness_desc / 56b689eb` | Crit check has no Melee restriction; Toughness damage multiplier .6 for4s. [Fixed source and line references](zealot_crits_reduce_toughness_damage.md#fixed-source-evidence) | Consistent | Value, duration, Toughness target and unrestricted Critical Hit trigger agree. |
+| Single effect, refresh and independent combination | No stack/refresh or combination formula.; `ui / loc_talent_zealot_toughness_melee_effectiveness_desc / 56b689eb` | Max1 effect; subsequent crit refreshes4s. Original example100×.6=60 or×.9=54 with independent10%. [Fixed source and line references](zealot_crits_reduce_toughness_damage.md#fixed-source-evidence) | Not covered by the description | These accepted limits and the 46% combined-reduction example supplement the effect. |
+
 ## Comparison totals
 
 84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.

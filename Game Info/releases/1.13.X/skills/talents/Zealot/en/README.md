@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="Disdain talent icon"> [Disdain](#zealot_multi_hits_increase_damage) | <ul><li>Each enemy hit by the previous Melee sweep adds 5% damage to the next Melee attack, up to 5 enemies/+25%.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="Purge the Unclean talent icon"> [Purge the Unclean](#zealot_increased_damage_vs_resilient) | <ul><li>Deal 20% more damage against Infested and Unyielding armour types, according to the hit location's armour.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="Sustained Assault talent icon"> [Sustained Assault](#zealot_hits_grant_stacking_damage) | <ul><li>Melee hits grant 4% Melee Damage for 5 seconds, up to 5 stacks/+20%; further hits refresh duration, including at full stacks.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="Enduring Faith talent icon"> [Enduring Faith](#zealot_crits_reduce_toughness_damage) | <ul><li>Critical Hits reduce Toughness damage taken by 40% for 4 seconds; both Melee and Ranged crits trigger it.</li></ul> | Skill |
 
 ---
 
@@ -657,3 +658,17 @@
 - **Damage example**: With no other bonuses, 3 stacks give 100 × (1 + 3 × 4%) = 112, or 120 at full stacks. With an existing same-stage 25% bonus, full stacks give 100 × (1 + 25% + 20%) = 145.
 
 [Details](zealot_hits_grant_stacking_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_crits_reduce_toughness_damage"></a>
+
+### Enduring Faith
+
+<img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="72" height="72" alt="Enduring Faith talent icon">
+
+- **Operation**: A Critical Hit reduces Toughness damage taken by 40% for 4 seconds. Both Melee and Ranged Critical Hits can trigger it.
+- **Refresh**: Another Critical Hit resets the 4-second countdown without applying multiple copies of the reduction.
+- **Reduction example**: Counting only this effect, 100 Toughness damage becomes 100 × 0.6 = 60. With another independent 10% Toughness reduction, it becomes 100 × 0.6 × 0.9 = 54, a total reduction of 46%. This is not Health damage reduction.
+
+[Details](zealot_crits_reduce_toughness_damage.md) · [Back to index](#talent-index)
