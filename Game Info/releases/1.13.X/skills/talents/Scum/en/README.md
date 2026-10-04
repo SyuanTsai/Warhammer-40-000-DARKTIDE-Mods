@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="Potent Tox talent icon"> [Potent Tox](#base_toxin_power_boost_1) | <ul><li>Gain 10% Toxin Power.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="Sticky Hands talent icon"> [Sticky Hands](#broker_passive_reduce_swap_time) | <ul><li>Gain 40% Weapon Swap Speed; while hip-firing or bracing, reduce Recoil by 10% and Spread by 30%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="Calling for a Time Out talent icon"> [Calling for a Time Out](#broker_passive_reduced_toughness_damage_during_reload) | <ul><li>Reduce Toughness Damage taken by 25% while reloading and for 4s after leaving the reload state.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="Street Tough talent icon"> [Street Tough](#broker_passive_knockback_on_taking_melee_damage) | <ul><li>A qualifying Melee hit triggers nearby knockback and +10% Movement Speed for 3s; cooldown 8s.</li></ul> | Talent |
 
 ---
 
@@ -964,3 +965,19 @@
 - **Scope**: Only reduces Damage taken by Toughness; it does not directly reduce Health Damage by 25% as well.
 
 [Details](broker_passive_reduced_toughness_damage_during_reload.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_knockback_on_taking_melee_damage"></a>
+
+### Street Tough
+
+<img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="72" height="72" alt="Street Tough talent icon">
+
+- **Trigger**: When you receive a Melee hit, it knocks back enemies within 3m and increases Movement Speed by 10% for 3s. Melee attacks from enemies that disable you do not trigger it.
+
+- **Cooldown and example**: The cooldown is 8s after triggering. With this effect alone, Movement Speed of 5m/s becomes 5 × 1.1 = 5.5m/s.
+
+- **Knockback limits**: The pulse itself deals no Damage. Whether it interrupts an enemy still depends on the enemy's Stagger resistance and state.
+
+[Details](broker_passive_knockback_on_taking_melee_damage.md) · [Back to index](#talent-index)

@@ -698,6 +698,19 @@ Full raw template and formatting: [source evidence](broker_passive_reduced_tough
 | Reduction scope and duration | -25% Toughness Damage taken while reloading, and for 4s afterwards; `ui / loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc / b4e891ca` | `toughness_damage_taken_modifier = -0.25`; reload start activates it, and leaving the reload state starts the 4s tail [Fixed source and line references](broker_passive_reduced_toughness_damage_during_reload.md#fixed-source-evidence) | Consistent | The English specifies the correct statistic and duration. |
 | State handling and combination | No reactivation or combination formula is stated; `ui / loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc / b4e891ca` | Reloading again keeps the same reduction; another 20% at the same stage yields 100 × (1 − 20% − 25%) = 55 [Fixed source and line references](broker_passive_reduced_toughness_damage_during_reload.md#fixed-source-evidence) | Not covered by the description | These are supplementary timing and calculation details; the wording makes no separate Health Damage claim. |
 
+
+<a id="broker_passive_knockback_on_taking_melee_damage"></a>
+
+## Street Tough
+
+Full raw template and formatting: [source evidence](broker_passive_knockback_on_taking_melee_damage.md#original-english-template-and-reconstruction). Name hash `e7b80789`. Every row uses `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, movement and cooldown | When taking Melee Damage, gain +10% Movement Speed for 3s; once every 8s; `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408` | Qualifying `on_player_hit_received` Melee event; separate 3s movement child and parent cooldown of 8s [Fixed source and line references](broker_passive_knockback_on_taking_melee_damage.md#fixed-source-evidence) | Consistent | The movement value, duration and trigger-to-trigger cooldown match. |
+| Excluded enemies and pulse properties | No excluded enemy category, radius or pulse Damage is stated; `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408` | Excludes `breed.tags.disabler`; radius 3m; `attack = 0`, medium Stagger [Fixed source and line references](broker_passive_knockback_on_taking_melee_damage.md#fixed-source-evidence) | Not covered by the description | These are limits and properties omitted from the English. |
+| Universal backward knockback | knock all nearby Enemies around you backwards; `ui / loc_talent_broker_passive_knockback_on_taking_melee_damage_desc_02 / f7be7408` | Actual interruption depends on Stagger resistance and state; Impact differs for super armour and other armour [Fixed source and line references](broker_passive_knockback_on_taking_melee_damage.md#fixed-source-evidence) | Cannot confirm | The accepted evidence does not establish guaranteed backward knockback for every nearby enemy and state; retain this question without further research. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
