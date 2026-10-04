@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="Slice and Dice talent icon"> [Slice and Dice](#cryptic_chordclaw_consecutive_bonus) | <ul><li>Each Chordclaw ability activation adds one Chordclaw damage stack, +20% per stack, up to 3.</li><li>Duration is 5s; adding a stack refreshes the duration. At 3 stacks, the Chordclaw damage modifier totals +60%.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="Piercing Sight talent icon"> [Piercing Sight](#cryptic_precision_stance_crit_cleave) | <ul><li>While Advanced Combat Doctrines is active, gain 30% Ranged Cleave and 15 percentage points of Ranged Critical Strike Chance; after 4 continuous seconds, these rise to 60% and 30 percentage points. Both bonuses end with the ability.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="Calculated Priority talent icon"> [Calculated Priority](#cryptic_precision_stance_damage_on_elite_kill) | <ul><li>While Advanced Combat Doctrines is active, ranged Elite kills grant +5% Damage per stack for 10 seconds, up to 5 stacks (+25%). New stacks refresh the duration; existing stacks can outlast the ability.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="Flensing Protocols talent icon"> [Flensing Protocols](#cryptic_dissector) | <ul><li>Start with 6 stacks; each grants +2.5% Damage and 2.5% Toughness Damage Reduction. Taking Health or Toughness damage removes one stack at most once per second. Elite or Specialist kills restore up to 2 stacks and 15% of maximum Toughness.</li></ul> | Keystone |
 
 ---
 
@@ -516,3 +517,19 @@
 - **After the ability ends**: Existing stacks remain until their own 10-second duration expires. Kills while the ability is inactive cannot add new stacks.
 
 [Details](cryptic_precision_stance_damage_on_elite_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_dissector"></a>
+
+### Flensing Protocols
+
+<img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="72" height="72" alt="Flensing Protocols talent icon">
+
+- **Starting stacks**: Start with **6 stacks**, or **8** with Honed Dissector.
+- **Per-stack effects**: Each stack grants **+2.5% Damage**; Toughness damage taken is multiplied by `1 − 2.5% × visible stack count`. At 6 stacks, Damage is +15% and Toughness damage taken is `0.85` (15% reduction). At 8, these become +20% and `0.80` (20% reduction). With illustrative base damage of `100` and no other damage modifiers, this gives `115` or `120`.
+- **Losing stacks**: Taking Health or Toughness damage removes one stack, at most once per second. Stacks have no expiry and do not decay passively.
+- **Restoring stacks and Toughness**: An Elite or Specialist kill restores up to **2 missing stacks** and **15% of maximum Toughness**. The Toughness recovery still occurs at full stacks.
+- **Examples**: Taking damage at 6 stacks leaves 5. Further damage within that second removes no additional stack; the next eligible hit at or after 1 second can remove one. At a full 6 stacks, illustrative damage `100` becomes `100 × 1.15 = 115`, and incoming Toughness damage `100` becomes `100 × 0.85 = 85`. If only one stack is missing, a qualifying kill restores that one stack and still restores 15% of maximum Toughness.
+
+[Details](cryptic_dissector.md) · [Back to index](#talent-index)

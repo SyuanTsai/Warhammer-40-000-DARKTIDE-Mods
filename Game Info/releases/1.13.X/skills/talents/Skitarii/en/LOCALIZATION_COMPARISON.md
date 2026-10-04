@@ -393,6 +393,18 @@ Full raw template and formatting: [source evidence](cryptic_precision_stance_dam
 | Active ability, Elite kills and stack values | While Advanced Combat Doctrines is active, Elite Kills grant +5% Damage for 10s, stacking 5 times; `ui / loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc / 0da94924` | A qualifying kill during the ability adds a `damage = 0.05` stack; duration 10 seconds and maximum 5 stacks [Fixed source and line references](cryptic_precision_stance_damage_on_elite_kill.md#fixed-source-evidence) | Consistent | The stated condition and all displayed values agree. |
 | Ranged requirement and stack lifecycle | Does not specify ranged kills, refreshing the duration or retaining stacks after the ability; `ui / loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc / 0da94924` | Both `on_ranged_kill` and `on_elite_kill` are required. New stacks refresh the duration; the independent stack buff survives ending the stance until expiry. Damage adds at the same calculation stage [Fixed source and line references](cryptic_precision_stance_damage_on_elite_kill.md#fixed-source-evidence) | Not covered by the description | The omitted condition and lifecycle details do not explicitly contradict the English; retain the verified 125 / 145 examples. |
 
+
+<a id="cryptic_dissector"></a>
+
+## Flensing Protocols
+
+Full raw template and formatting: [source evidence](cryptic_dissector.md#original-english-template-and-reconstruction). Name hash `1a83e6d0`. Every row uses `ui / loc_talent_cryptic_dissector_desc / 3e2c62db`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stack values, damage loss and kill recovery | Up to 6 stacks, each +2.5% Damage and +2.5% Toughness Damage Reduction; damage removes 1 once per 1s; Elite and Specialist kills restore 2 stacks and 15% Toughness; `ui / loc_talent_cryptic_dissector_desc / 3e2c62db` | Base cap 6; Damage `0.025` per stack and stepped Toughness multiplier `1 − 0.025 × i`; loss 1 with a 1-second interval; qualifying kills restore up to 2 and 15% maximum Toughness [Fixed source and line references](cryptic_dissector.md#fixed-source-evidence) | Consistent | The stated amounts and conditions agree with the verified behavior. |
+| Initialization, checks and recovery limits | Does not specify starting stacks, positive Health/Toughness damage, passive decay or recovery limits; `ui / loc_talent_cryptic_dissector_desc / 3e2c62db` | Starts at full visible stacks above a hidden base stack; no passive expiry. Loss requires positive damage. Restoration is capped by missing stacks and Toughness, with Toughness recovery even at full stacks; Honed Dissector raises the cap to 8 [Fixed source and line references](cryptic_dissector.md#fixed-source-evidence) | Not covered by the description | These omitted details and the verified 115 / 120 / 85 examples supplement the text. |
+
 ## Comparison totals
 
 62 rules: 30 Consistent / 1 Explicit contradiction / 30 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 493.
