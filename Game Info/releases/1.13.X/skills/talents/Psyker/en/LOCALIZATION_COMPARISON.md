@@ -554,6 +554,18 @@ Full raw template and formatting: [source evidence](psyker_toughness_on_vent.md#
 | Generation and Quelling ratio | Replenish 4% Toughness for each 10% of Peril Quelled or Generated; `ui / loc_talent_psyker_toughness_from_vent_and_gen_desc / 50f8f0f2` | Generation and vent templates cover opposite signs; restoration is abs(old − new) × 0.4. Display manipulation returns 0.4 × 10 = 4 and replaces default percentage scaling. [Fixed source and line references](psyker_toughness_on_vent.md#fixed-source-evidence) | Consistent | Both directions and the displayed ratio match the accepted formula. |
 | Actual change and cap | No current-gauge formula, ten-point threshold or missing-Toughness limit specified; `ui / loc_talent_psyker_toughness_from_vent_and_gen_desc / 50f8f0f2` | Uses actual Peril change, not current Peril × 0.4. Maximum Toughness 100 gives eight for 40%→60% and four for 60%→50%, without other restoration bonuses and capped by missing Toughness. [Fixed source and line references](psyker_toughness_on_vent.md#fixed-source-evidence) | Not covered by the description | The accepted formula and examples clarify proportional restoration without asserting discrete ten-point triggers. |
 
+
+<a id="psyker_toughness_on_melee"></a>
+
+## Warp Expenditure
+
+Full raw template and formatting: [source evidence](psyker_toughness_on_melee.md#original-english-template-and-reconstruction). Name hash `42b1f6c1`. Every row uses `ui / loc_talent_psyker_toughness_on_melee_description / 3f010d59`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Restoration amounts and duration | 15% over 3s for Melee Weakspot Kills; 2.5% instantly for successful Melee Attacks; `ui / loc_talent_psyker_toughness_on_melee_description / 3f010d59` | The verified branches restore these configured amounts. [Fixed source and line references](psyker_toughness_on_melee.md#fixed-source-evidence) | Consistent | Both quantities and the sustained duration agree. |
+| Branch selection and refresh limits | Successful Melee Attacks; no target-index, exclusivity or refresh details; `ui / loc_talent_psyker_toughness_on_melee_description / 3f010d59` | Instant restoration requires target_index == 1 after the Weakspot Kill branch fails; sustained restoration has one refreshing stack and uses maximum Toughness. [Fixed source and line references](psyker_toughness_on_melee.md#fixed-source-evidence) | Not covered by the description | The English omits these conditions and does not explicitly say the two branches both pay out. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **45 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
