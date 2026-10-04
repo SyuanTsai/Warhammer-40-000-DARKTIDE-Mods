@@ -8,6 +8,12 @@
 
 版本固定為 Release 1.13.1／Steam Build 25606770；固定 Source Code commit 為 `7e662fcda16219d775b84af50322be2e9cd9d62e`。對話維持單一目錄，不按遊戲小版本複製；技能資料與對話資料採不同工作流程。
 
+## 原未對應字幕的用途分類
+
+原來源索引的 14,251 筆保留原編號與正文位置；這個數量不代表全部都沒有 Source 引用。依同一固定版本的實際程式行為重新分類後，38 筆為[角色建立的性格介紹](source-catalog/subtitle-usages/personality-introductions.tsv)，22 筆有[回應觸發條件引用](source-catalog/subtitle-usages/response-trigger-references.tsv)（共 26 處引用）；其餘 14,191 筆用途待確認。英文均有原文，繁中待確認部分有 30 筆缺原文，仍保留缺失說明。
+
+用途 metadata 與逐筆來源 MD 只在本 Repository 維護，不複製字幕正文；網站依此產生兩種用途的獨立閱讀頁，其餘每頁最多 25 筆。性格介紹是畫面顯示文字，不保證等同試聽音訊；回應條件只證明規則會檢查該句，未確認其原始播放事件或說話者。完整盤點與證據限制見 [COVERAGE](COVERAGE.md#原未對應字幕的重新分類)。
+
 ## 原有 12 組中英聊天氣泡選集
 
 
