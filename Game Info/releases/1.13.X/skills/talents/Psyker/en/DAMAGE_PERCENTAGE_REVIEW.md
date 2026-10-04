@@ -92,3 +92,4 @@
 | [Vulnerable Minds](psyker_damage_vs_ogryns_and_monsters.md) | `damage_vs_ogryn_and_monsters = 0.2` joins general `damage_stat_buffs` for matching breed tags. | Other multipliers fixed at 1: 100→120; an existing 25% in the same stage gives 125→145. |
 | [Focused Warp](psyker_increased_warp_damage.md) | `warp_damage = 0.15` joins the additive Damage stage after a `warp_damage_types` check. | Other multipliers fixed at 1: 100→115; an existing 25% in the same stage gives 125→140. |
 | [Surety of Arms](psyker_reload_speed_warp_charge.md) | Conditional `reload_speed = 0.3` at Peril ≤0.8; affected 3s segment becomes 3 / 1.3 ≈ 2.31s. | Restoring 20/40 rounds without other Peril modifiers adds 7.5 percentage points; a full clip adds 15. |
+| [Crystalline Will](psyker_alternative_peril_explosion.md) | Overload Explosion Damage ×2; radius ×1.25. | Only these modifiers compared: 100→200 Damage and 10m→12.5m radius; distance falloff and armour still apply. |

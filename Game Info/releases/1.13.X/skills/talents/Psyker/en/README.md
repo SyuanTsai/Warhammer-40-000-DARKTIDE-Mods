@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="Focused Warp talent icon"> [Focused Warp](#psyker_increased_warp_damage) | <ul><li>+15% Damage on Warp Attacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="Peril Equilibrium talent icon"> [Peril Equilibrium](#psyker_weapon_attacks_peril_equilibrium) | <ul><li>Damaging non-Warp melee or ranged hits add 2 percentage points of Peril, up to 75%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="32" height="32" alt="Surety of Arms talent icon"> [Surety of Arms](#psyker_reload_speed_warp_charge) | <ul><li>+30% Reload Speed at Peril ≤80%; eligible completed reloads generate up to 15 percentage points of Peril according to the clip fraction restored.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="Crystalline Will talent icon"> [Crystalline Will](#psyker_alternative_peril_explosion) | <ul><li>+100% Overload Explosion Damage and +25% radius; ordinarily lose one Wound afterward, waived if the explosion kills an Elite.</li></ul> | Talent |
 
 ---
 
@@ -1192,3 +1193,19 @@
 - “Below 80% Peril” excludes exactly 80%, but the verified condition is Peril ≤80%.
 
 [Details](psyker_reload_speed_warp_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_alternative_peril_explosion"></a>
+
+### Crystalline Will
+
+<img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="72" height="72" alt="Crystalline Will talent icon">
+
+- **Explosion effect**: Overload Explosion Damage increases by 100% and radius by 25%, changing the cost of surviving the explosion.
+
+- **Wound cost**: After an explosion, ordinarily remove one Wound; with only one Wound left, you die. If this explosion kills an Elite enemy, its Wound cost is waived.
+
+- **Damage and radius example**: Compare only these two modifiers. An original 100 explosion Damage becomes 100 × 2 = 200; an original 10-metre explosion radius becomes 10 × 1.25 = 12.5 metres. Actual Damage remains subject to distance falloff and enemy armour.
+
+[Details](psyker_alternative_peril_explosion.md) · [Back to index](#talent-index)

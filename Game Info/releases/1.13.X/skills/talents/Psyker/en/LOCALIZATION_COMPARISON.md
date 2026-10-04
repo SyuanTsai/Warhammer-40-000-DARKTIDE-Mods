@@ -880,6 +880,20 @@ Full raw template and formatting: [source evidence](psyker_reload_speed_warp_cha
 | Threshold boundary | While below 80% Peril; `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4` | The accepted conditional check is `<= 0.8`. [Fixed source and line references](psyker_reload_speed_warp_charge.md#fixed-source-evidence) | Explicit contradiction | Below excludes exactly 80%, while the verified condition includes it. |
 | Completion and timing details | On Reload generate up to 15% Peril; `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4` | The threshold must still hold on completion; `increase_immediate` receives the restored clip fraction and `prevent_explosion = true`; only affected reload segments use the speed coefficient. [Fixed source and line references](psyker_reload_speed_warp_charge.md#fixed-source-evidence) | Not covered by the description | The English omits the completion check, explosion prevention and affected-segment timing. |
 
+
+<a id="psyker_alternative_peril_explosion"></a>
+
+## Crystalline Will
+
+Full raw template and formatting: [source evidence](psyker_alternative_peril_explosion.md#original-english-template-and-reconstruction). Name hash `fef3e1de`. Every row uses `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Explosion bonuses | +100% Overload Explosion Damage and +25% Overload Explosion Radius.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | The accepted modifiers double explosion Damage and multiply radius by 1.25. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Consistent | The displayed values agree; falloff and armour still affect actual Damage. |
+| Ordinary overload and Elite exception | No longer knocks you down… If the explosion kills an Elite enemy, you don't take any Corruption Damage.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | `psyker_no_knock_down_overload` bypasses the original `instakill`; an Elite kill waives the subsequent Wound cost. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Consistent | The ordinary overload bypass and Elite exemption agree. |
+| Cost terminology | You still take the appropriate Corruption Damage.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | The accepted evidence establishes `remove_wounds(1)` or `instakill` when `current_wounds <= 1`, without resolving all Health/Medicae interactions. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish full equivalence between the English Corruption Damage wording and the Wound-removal operation. |
+| Final Wound and update limits | No numeric Wound cost, final-Wound exception or update timing.; `ui / loc_talent_psyker_alternative_peril_explosion_new_desc / 7ea53d48` | The cost removes one Wound or kills at the final Wound; the delayed condition is `t <= damage_t`, with timing and retained-flag questions untested. [Fixed source and line references](psyker_alternative_peril_explosion.md#fixed-source-evidence) | Not covered by the description | These conditions and existing uncertainties are absent from the English. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.
