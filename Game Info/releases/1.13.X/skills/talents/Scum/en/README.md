@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="32" height="32" alt="Slippery Customer talent icon"> [Slippery Customer](#broker_passive_dodge_melee_on_slide) | <ul><li>While sliding, count as Dodging against Melee attacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="32" height="32" alt="Tis but a Scratch talent icon"> [Tis but a Scratch](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | <ul><li>Taking Ranged Damage while Toughness remains restores 30% of maximum Toughness over 3 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6849ad32-3ebc-4d11-b980-612b4d23fd94" width="32" height="32" alt="Unload talent icon"> [Unload](#broker_passive_damage_on_reload) | <ul><li>After reloading, gain 2% Ranged Damage for 7 seconds; each amount of ammunition spent equal to 10% of magazine capacity adds another 2%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/13f03cfd-6e09-41fe-920e-ad116f1a1548" width="32" height="32" alt="Swift Endurance talent icon"> [Swift Endurance](#broker_passive_stamina_grants_atk_speed) | <ul><li>Each whole point of current Stamina grants 2% Melee Attack Speed; fractional points are rounded down.</li></ul> | Talent |
 
 ---
 
@@ -809,3 +810,17 @@
 - **Cap explanation**: spending the equivalent of one full magazine gives 22%. Ammunition replenishment that does not reset this effect can allow continued accumulation, so 22% is not a fixed cap.
 
 [Details](broker_passive_damage_on_reload.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stamina_grants_atk_speed"></a>
+
+### Swift Endurance
+
+<img src="https://github.com/user-attachments/assets/13f03cfd-6e09-41fe-920e-ad116f1a1548" width="72" height="72" alt="Swift Endurance talent icon">
+
+- **Speed bonus**: use your remaining current Stamina. Each whole point grants 2% Melee Attack Speed; the bonus decreases as Stamina falls.
+- **Timing example**: 5.8 current Stamina counts as 5 points, granting 10% Attack Speed. An accelerable action normally taking 1 second becomes 1 ÷ 1.1 ≈ 0.91 seconds, rather than a direct 10% time reduction to 0.9 seconds.
+- **Cap**: at most 30 points of current Stamina count, giving 60% Attack Speed. Your actual attainable bonus is still limited by your maximum Stamina.
+
+[Details](broker_passive_stamina_grants_atk_speed.md) · [Back to index](#talent-index)

@@ -578,6 +578,18 @@ Full raw template and formatting: [source evidence](broker_passive_damage_on_rel
 | Reload effect and ammunition-based increments | Reloading grants +2% Ranged Damage for 7s; each 10% of magazine spent grants +2% additional Ranged Damage; `ui / loc_talent_broker_passive_damage_on_reload_desc / 6645de88` | The buff supplies initial 0.02 and adds 0.02 per complete ammunition stage equal to 10% of magazine capacity. [Fixed source and line references](broker_passive_damage_on_reload.md#fixed-source-evidence) | Consistent | The English matches the initial bonus, duration, and additional-per-stage amounts. |
 | Refill timing, reset, rounding, and cap | No refill-event timing, reset, full-stage rounding, combination, or cap is stated; `ui / loc_talent_broker_passive_damage_on_reload_desc / 6645de88` | `on_reload` fires at `refill_ammunition`; refresh clears accumulated ammunition usage. The formula uses `floor` without clamping stage count and adds at the Ranged Damage stage; non-resetting replenishment can exceed one magazine's 22%. [Fixed source and line references](broker_passive_damage_on_reload.md#fixed-source-evidence) | Not covered by the description | These qualify the stated increments and preserve the original example and cap explanation. |
 
+
+<a id="broker_passive_stamina_grants_atk_speed"></a>
+
+## Swift Endurance
+
+Full raw template and formatting: [source evidence](broker_passive_stamina_grants_atk_speed.md#original-english-template-and-reconstruction). Name hash `0d4f0d6b`. Every row uses `ui / loc_talent_broker_passive_stamina_grants_atk_speed_desc / 15f411fc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Current-Stamina Melee Attack Speed | +2% increased Melee Attack Speed for each current Stamina; `ui / loc_talent_broker_passive_stamina_grants_atk_speed_desc / 15f411fc` | Each step based on current Stamina contributes `melee_attack_speed = 0.02`. [Fixed source and line references](broker_passive_stamina_grants_atk_speed.md#fixed-source-evidence) | Consistent | The English identifies current Stamina, the per-point amount, and Melee Attack Speed. |
+| Whole-point rounding, cap, and action time | No rounding, implemented cap, or speed-to-time formula is stated; `ui / loc_talent_broker_passive_stamina_grants_atk_speed_desc / 15f411fc` | `floor(current_stamina)` supplies bonus stacks; `stack_offset = -1` removes the base stack contribution. The cap is 2 × 15 = 30 steps, or 60%, subject to available Stamina. Accelerable action time divides by the speed factor. [Fixed source and line references](broker_passive_stamina_grants_atk_speed.md#fixed-source-evidence) | Not covered by the description | These qualify the per-point wording and preserve the original timing example. |
+
 ## Comparison totals
 
 The 97 listed rules comprise **46 Consistent**, **2 Explicit contradictions**, **44 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
