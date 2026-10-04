@@ -9341,9 +9341,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5a113d35253bd24e7a33010ab8170140c090cbe4",
       "chinese_sha256": "8a49aa1d7b319cde2cbc03df55fa75a1ec4932da626fb698819a4bd8c529e404",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_flamethrower"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_arcs.md",
@@ -9385,9 +9392,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "578248435f49d76608982265a1fba8d1c8ec183e",
       "chinese_sha256": "9ae5556c6d8430a6d7d294469f75c054c2d857c3c55df57179a097960b35b5b1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_grenade_ability_arc_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_grenade_ability_force_field.md",
@@ -9396,9 +9410,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "29b6f788645ea0ca74b8e342cdc38adbe52c15b5",
       "chinese_sha256": "b24d70fc342ccd09916509034ece0d539e01fad678c3e14f0b8fb0e6e1ea5ec7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_grenade_ability_force_field"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_hybrid_damage.md",
@@ -9759,9 +9780,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fffc730126e90dbd8e8d0d68c82624355d1e79ff",
       "chinese_sha256": "4961b57f95bf49d96c3dc49f387b49a2187c5a6ec5044ae222a9e9d60cb72d6a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_servo_skull_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_improved_tagging.md",
@@ -9781,9 +9809,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "18c58a74bbf1b879e2a4e445180e2ed4db98d67d",
       "chinese_sha256": "d8d64bc02db5285625a04d5d2a58c287b9bad9f0a1c54222192922340e232b44",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_servo_skull_inject_ally"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_order.md",
@@ -17204,6 +17239,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_syringe.md"
+    },
+    {
+      "id": "cryptic_grenade_ability_force_field",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_grenade_ability_force_field.md"
+    },
+    {
+      "id": "cryptic_flamethrower",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_flamethrower.md"
+    },
+    {
+      "id": "cryptic_servo_skull_inject_ally",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_inject_ally.md"
+    },
+    {
+      "id": "cryptic_grenade_ability_arc_grenade",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_grenade_ability_arc_grenade.md"
+    },
+    {
+      "id": "cryptic_servo_skull_improved",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_improved.md"
     }
   ],
   "pending_chinese_corrections": [

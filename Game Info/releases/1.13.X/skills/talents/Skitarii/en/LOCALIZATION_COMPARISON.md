@@ -70,4 +70,4 @@ Full raw template and formatting: [source evidence](cryptic_servo_skull_improved
 
 ## Comparison totals
 
-Totals are updated at each batch checkpoint.
+11 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 468.
