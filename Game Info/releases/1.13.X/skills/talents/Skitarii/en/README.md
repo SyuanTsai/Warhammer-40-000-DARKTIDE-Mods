@@ -102,6 +102,7 @@
 | <img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="32" height="32" alt="Sequenced Charge talent icon"> [Sequenced Charge](#cryptic_strength_on_charge_gain) | <ul><li>Gaining at least one full Capacitance charge grants 12.5% Strength for 10 seconds. Further gains refresh the duration; gaining multiple charges at once does not multiply the bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="32" height="32" alt="Slaughter Protocol talent icon"> [Slaughter Protocol](#cryptic_toughness_replenishment_on_kill_bonus) | <ul><li>Increase the existing Toughness recovery from melee kills by 25%, or by 50% when no full Capacitance charge remains.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="Precision Combat Augurs talent icon"> [Precision Combat Augurs](#cryptic_next_hit_all_damage_on_dodge) | <ul><li>After a successful dodge, gain 15% damage for the next melee swing or shot. The attack consumes the effect even if it misses; repeated dodges cannot store multiple bonuses.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="Voltaic Burst talent icon"> [Voltaic Burst](#cryptic_electrocution_push) | <ul><li>A Push that staggers enemies applies Electrocution to all qualifying living targets. The shared 12-second cooldown starts when that Push finishes.</li></ul> | Talent |
 
 ---
 
@@ -1468,3 +1469,17 @@ The verified Chinese document notes that its original wording says, in translati
 - **Damage example**: Base damage **100** becomes `100 × 1.15 = 115`. With an existing **25%** bonus at the same stage, `100 × (1 + 25% + 15%) = 140`.
 
 [Details](cryptic_next_hit_all_damage_on_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_electrocution_push"></a>
+
+### Voltaic Burst
+
+<img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="72" height="72" alt="Voltaic Burst talent icon">
+
+- **Trigger**: When a Push actually staggers an enemy, it applies **3 seconds** of Electrocution to that still-living target. Every qualifying target in the same Push can receive Electrocution.
+- **Cooldown**: The **12-second** cooldown starts only after that Push finishes. A missed Push or one that does not stagger an enemy does not start the cooldown.
+- **Timing example**: If the Push finishes at **0 seconds**, the next Push able to apply Electrocution is available no earlier than **12 seconds** later. Pushes during the cooldown still retain their ordinary effects.
+
+[Details](cryptic_electrocution_push.md) · [Back to index](#talent-index)

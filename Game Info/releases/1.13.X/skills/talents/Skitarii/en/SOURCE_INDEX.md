@@ -105,3 +105,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Sequenced Charge](cryptic_strength_on_charge_gain.md) / `cryptic_strength_on_charge_gain` | Talent |
 | [Slaughter Protocol](cryptic_toughness_replenishment_on_kill_bonus.md) / `cryptic_toughness_replenishment_on_kill_bonus` | Talent |
 | [Precision Combat Augurs](cryptic_next_hit_all_damage_on_dodge.md) / `cryptic_next_hit_all_damage_on_dodge` | Talent |
+| [Voltaic Burst](cryptic_electrocution_push.md) / `cryptic_electrocution_push` | Talent |

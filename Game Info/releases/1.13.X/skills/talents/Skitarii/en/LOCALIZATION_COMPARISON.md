@@ -1142,6 +1142,18 @@ Full raw template and formatting: [source evidence](cryptic_next_hit_all_damage_
 | Successful dodge and next attack | +15% Damage for your Next Attack on Successful Dodge.; `ui / loc_talent_cryptic_next_attack_all_damage_on_dodge_desc / 501926d3` | A successful dodge activates 0.15 melee_damage and ranged_damage for the next swing or shot. [Fixed source and line references](cryptic_next_hit_all_damage_on_dodge.md#fixed-source-evidence) | Consistent | The trigger, value and attack wording match. |
 | Consumption, storage and timing | Misses, stored-use cap, expiry and projectile order are not specified.; `ui / loc_talent_cryptic_next_attack_all_damage_on_dodge_desc / 501926d3` | on_shoot or on_sweep_finish consumes the effect, even on a miss. Only one use is stored, with no expiry. Delayed/multiple-projectile damage order still requires observation. [Fixed source and line references](cryptic_next_hit_all_damage_on_dodge.md#fixed-source-evidence) | Not covered by the description | These boundaries supplement “Next Attack”; it does not promise a bonus until the next successful hit. |
 
+
+<a id="cryptic_electrocution_push"></a>
+
+## Voltaic Burst
+
+Full raw template and formatting: [source evidence](cryptic_electrocution_push.md#original-english-template-and-reconstruction). Name hash `cfd90f66`. Every row uses `ui / loc_talent_cryptic_electrocution_push_desc / 642d90e7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Push stagger and cooldown | Staggering enemies with a Push applies Electrocution; 12s Cooldown.; `ui / loc_talent_cryptic_electrocution_push_desc / 642d90e7` | A qualifying on_push_hit applies cryptic_electrocution_default, and on_push_finish starts cooldown_duration = 12. [Fixed source and line references](cryptic_electrocution_push.md#fixed-source-evidence) | Consistent | The trigger, applied effect and cooldown value match. |
+| Whole-Push application and timing | Target eligibility, effect duration, refresh and cooldown start are not specified.; `ui / loc_talent_cryptic_electrocution_push_desc / 642d90e7` | All qualifying living targets in one Push can receive the 3-second, one-stack refreshable effect. Cooldown starts at Push completion; no stagger means no cooldown, and ordinary Push effects remain available. [Fixed source and line references](cryptic_electrocution_push.md#fixed-source-evidence) | Not covered by the description | These details explain the trigger and shared cooldown without contradicting the stated interval. |
+
 ## Comparison totals
 
 187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.
