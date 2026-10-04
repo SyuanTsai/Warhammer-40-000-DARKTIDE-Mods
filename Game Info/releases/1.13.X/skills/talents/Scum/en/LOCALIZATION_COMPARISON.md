@@ -747,6 +747,18 @@ Full raw template and formatting: [source evidence](broker_passive_melee_damage_
 | Carry-over amount and duration | Kills grant +25% of the Damage/Health difference as Melee Damage for 1s; `ui / loc_talent_broker_passive_melee_damage_carry_over_desc / 821fa540` | Overkill Damage supplies a flat `melee_damage_bonus` at 25%, lasting 1s [Fixed source and line references](broker_passive_melee_damage_carry_over.md#fixed-source-evidence) | Consistent | The English's fraction of a Damage difference matches the flat bonus, not a percentage increase to the next attack. |
 | Trigger limits, replacement and calculation stage | No instant-execution exclusion or active-bonus handling is stated; `ui / loc_talent_broker_passive_melee_damage_carry_over_desc / 821fa540` | `on_kill` accepts attack types except `instakill`; subtracts the active bonus, replaces/restarts only for a higher value, and adds the flat bonus after general multiplier terms [Fixed source and line references](broker_passive_melee_damage_carry_over.md#fixed-source-evidence) | Not covered by the description | These explain the original 50, 87.5 and 37.5 examples and the fact that later Damage processing can still apply. |
 
+
+<a id="broker_passive_toxin_infected_enemies_take_increased_damage"></a>
+
+## Virulent Strain
+
+Full raw template and formatting: [source evidence](broker_passive_toxin_infected_enemies_take_increased_damage.md#original-english-template-and-reconstruction). Name hash `c1abbd9d`. Every row uses `ui / loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc / b7e6d44b`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Infection and vulnerability | When infecting an Enemy with Chem Toxin, increase Damage taken by +10% from all sources for 5s; `ui / loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc / b7e6d44b` | Owner-forwarded Toxin Buff events add a `damage_taken_modifier = 0.1` debuff with duration 5s [Fixed source and line references](broker_passive_toxin_infected_enemies_take_increased_damage.md#fixed-source-evidence) | Consistent | The trigger, target-side statistic, all-source scope and nominal duration match. |
+| Ownership, refresh and early ending | No teammate ownership, stack-addition, refresh or early-end rules are stated; `ui / loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc / b7e6d44b` | Buff add/stack-add events use `additional_arguments.owner_unit`; maximum one refreshed debuff; after 0.1s, loss of Toxin ends it [Fixed source and line references](broker_passive_toxin_infected_enemies_take_increased_damage.md#fixed-source-evidence) | Not covered by the description | These limit and explain the stated effect without treating omitted details as English errors. The original attacker/target-stage examples are retained. |
+
 ## Comparison totals
 
 The 128 listed rules comprise **60 Consistent**, **3 Explicit contradictions**, **59 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

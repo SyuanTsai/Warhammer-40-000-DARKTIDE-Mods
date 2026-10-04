@@ -73,3 +73,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Channelled Devastation](broker_passive_crit_grants_damage.md) / `broker_passive_crit_grants_damage` | Talent |
 | [Battering Strikes](broker_passive_melee_cleave_on_melee_kill.md) / `broker_passive_melee_cleave_on_melee_kill` | Talent |
 | [Hyper-Violence](broker_passive_melee_damage_carry_over.md) / `broker_passive_melee_damage_carry_over` | Talent |
+| [Virulent Strain](broker_passive_toxin_infected_enemies_take_increased_damage.md) / `broker_passive_toxin_infected_enemies_take_increased_damage` | Talent |

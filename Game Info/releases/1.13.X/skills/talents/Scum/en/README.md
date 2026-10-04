@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="Channelled Devastation talent icon"> [Channelled Devastation](#broker_passive_crit_grants_damage) | <ul><li>Each whole percentage point of current Critical Hit Chance grants 0.5% Melee Damage, up to 30 steps / 15%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="Battering Strikes talent icon"> [Battering Strikes](#broker_passive_melee_cleave_on_melee_kill) | <ul><li>Each Melee kill grants 10% Damage Cleave capacity for 5s, up to 5 stacks; retriggering refreshes the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="Hyper-Violence talent icon"> [Hyper-Violence](#broker_passive_melee_damage_carry_over) | <ul><li>Kills grant 25% of overkill Damage as flat Melee Damage for 1s.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="Virulent Strain talent icon"> [Virulent Strain](#broker_passive_toxin_infected_enemies_take_increased_damage) | <ul><li>Adding Chem Toxin or a stack to an enemy makes it take 10% more Damage from all sources for up to 5s; retriggering refreshes.</li></ul> | Talent |
 
 ---
 
@@ -1032,3 +1033,19 @@
 - **Another kill**: During the effect, the current bonus is subtracted before calculating the new 25%. Only a higher new value replaces the bonus and restarts its timer. With 50 bonus Damage already active and 400 overkill Damage on the next kill, the new value is (400 − 50) × 25% = 87.5. If overkill is only 200, the new value of 37.5 is lower, so it neither replaces the bonus nor restarts the timer.
 
 [Details](broker_passive_melee_damage_carry_over.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_toxin_infected_enemies_take_increased_damage"></a>
+
+### Virulent Strain
+
+<img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="72" height="72" alt="Virulent Strain talent icon">
+
+- **Behavior**: When you add Chem Toxin to an enemy or increase its Toxin stacks, it takes 10% more Damage from all sources. Retriggering resets the 5s duration without stacking the magnitude.
+
+- **Duration limit**: If Chem Toxin disappears early, the vulnerability also ends early; a full 5s duration is not guaranteed.
+
+- **Damage example**: An initial 100 Damage becomes 110 with the vulnerability alone. With another 25% Damage bonus on the attacker, 100 × 1.25 × 1.1 = 137.5. If the target already has another 20% vulnerability at the same stage, that stage is 1 + 20% + 10% = ×1.3.
+
+[Details](broker_passive_toxin_infected_enemies_take_increased_damage.md) · [Back to index](#talent-index)
