@@ -2042,6 +2042,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_359_363",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_359_363.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

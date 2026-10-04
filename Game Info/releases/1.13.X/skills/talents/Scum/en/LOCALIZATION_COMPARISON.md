@@ -194,4 +194,4 @@ Full raw template and formatting: [source evidence](broker_ability_focus_sub_2.m
 
 ## Comparison totals
 
-The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.
+The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
