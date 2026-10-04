@@ -89,6 +89,7 @@
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="Battering Momentum talent icon"> [Battering Momentum](#broker_passive_cleave_on_cleave) | <ul><li>Hit at least 3 enemies with one Melee Attack to gain 50% Cleave for the next attack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="Equip Cartel Special talent icon"> [Equip Cartel Special](#broker_stimm_activation_talent) | <ul><li>Select a Stimm recipe to equip the regenerating Cartel Special; recipes share a 30-point budget.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="Spur I talent icon"> [Spur I](#broker_stimm_celerity_1) | <ul><li>Gain 4% Attack Speed.</li><li>Gain 25% Weapon Swap Speed.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="Spur II talent icon"> [Spur II](#broker_stimm_celerity_2) | <ul><li>Gain 4% Attack Speed.</li><li>Gain 25% Weapon Swap Speed.</li><li>Reduce Stamina Cost by 15%.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1368,3 +1369,27 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Attack Speed example**: Selecting from Spur I through this node gives 4% in total. A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.04 ≈ 0.962 seconds.
 
 [Details](broker_stimm_celerity_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_2"></a>
+
+### Spur II
+
+<img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="72" height="72" alt="Spur II talent icon">
+
+- **Recipe cost**: 2 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Attack Speed**: Gain 4%, additive with other Attack Speed bonuses.
+
+- **Weapon swap**: Gain 25% Weapon Swap Speed. Selecting Spur I and II gives 50% in total.
+
+- **Swap example**: A speed-scaled swap action normally lasting 1 second takes 1 ÷ 1.25 = 0.8 seconds with this effect alone. I and II together give 1 ÷ 1.5 ≈ 0.667 seconds.
+
+- **Stamina Cost**: This node multiplies Stamina Cost by 0.85, a 15% reduction.
+
+- **Stamina example**: A cost of 10 becomes 10 × 0.85 = 8.5 with this node alone. Selecting II, III and IV gives 10 × 0.85 × 0.85 × 0.8 = 5.78.
+
+- **Attack Speed example**: Selecting from Spur I through this node gives 8% in total. A speed-scaled attack action normally lasting 1 second takes 1 ÷ 1.08 ≈ 0.926 seconds.
+
+[Details](broker_stimm_celerity_2.md) · [Back to index](#talent-index)

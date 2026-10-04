@@ -991,6 +991,18 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_1.md#o
 | Recipe statistics | +4% Attack Speed; +25% Weapon Swap Speed (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040` | `attack_speed = 0.04`; `wield_speed = 0.25` affects applicable action time scales [Fixed source and line references](broker_stimm_celerity_1.md#fixed-source-evidence) | Consistent | Both stat names and values match the accepted recipe. |
 | Cost, stacking and timing | No purchase, shared lifetime, stacking or action-segment formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040` | One purchase at cost 1; selected prerequisites remain active; additive speed bonuses divide applicable action times; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_1.md#fixed-source-evidence) | Not covered by the description | The original 0.8/0.667-second swap and 0.962-second attack examples clarify the effects. |
 
+
+<a id="broker_stimm_celerity_2"></a>
+
+## Spur II
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_2.md#original-english-template-and-reconstruction). Name hash `33b4b842`. Every row uses `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipe statistics | +4% Attack Speed; +25% Weapon Swap Speed; −15% Stamina Cost (component reconstruction); `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | `attack_speed = 0.04`; `wield_speed = 0.25`; `stamina_cost_multiplier = 0.85` [Fixed source and line references](broker_stimm_celerity_2.md#fixed-source-evidence) | Consistent | All three named stats and numerical changes agree. |
+| Cost, stacking and timing | No purchase, shared lifetime or stacking formula; `ui / loc_talent_stat_attack_speed / a2530496`; `ui / loc_talent_stat_wield_speed / d0347040`; `ui / loc_talent_stat_stamina_cost_multiplier / 26fbf08f` | One purchase at cost 2; selected prerequisites remain active; speed bonuses add, Stamina Cost multipliers multiply; field duration is externally controlled [Fixed source and line references](broker_stimm_celerity_2.md#fixed-source-evidence) | Not covered by the description | The swap, 5.78 Stamina Cost and 0.926-second attack examples preserve the accepted formulas and limits. |
+
 ## Comparison totals
 
 The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
