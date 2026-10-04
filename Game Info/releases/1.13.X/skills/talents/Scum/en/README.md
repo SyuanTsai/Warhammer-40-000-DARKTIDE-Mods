@@ -109,6 +109,7 @@
 | <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="Barrage III talent icon"> [Barrage III](#broker_stimm_durability_3) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="Barrage IV talent icon"> [Barrage IV](#broker_stimm_durability_4) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="32" height="32" alt="Tank talent icon"> [Tank](#broker_stimm_durability_5a) | <ul><li>Gain an additional 30% Toughness Replenishment.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="Regain talent icon"> [Regain](#broker_stimm_durability_5b) | <ul><li>During the Stimm effect, restore 5% of maximum Toughness per second.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1772,3 +1773,21 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Injection example**: With maximum Toughness 100, Barrage I–IV provide a total 25% one-time recovery. Applying this route's 50% recovery bonus gives 100 × 25% × 1.5 = 37.5.
 
 [Details](broker_stimm_durability_5a.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_durability_5b"></a>
+
+### Regain
+
+<img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="72" height="72" alt="Regain talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Ongoing recovery**: Restore 5% of maximum Toughness per second during the Stimm effect, affected by Toughness recovery bonuses. The first recovery occurs approximately 1 second after application.
+
+- **Recovery example**: With maximum Toughness 100 and the 20% recovery bonus from Barrage I–IV, each tick restores 100 × 5% × 1.2 = 6. If only 3 Toughness is missing, it restores only 3.
+
+- **Stopping conditions**: Recovery stops when the Stimm effect ends; it does not provide this recovery while knocked down.
+
+[Details](broker_stimm_durability_5b.md) · [Back to index](#talent-index)

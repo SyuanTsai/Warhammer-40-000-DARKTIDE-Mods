@@ -1232,6 +1232,18 @@ Full raw template and formatting: [source evidence](broker_stimm_durability_5a.m
 | Recovery modifier | +30% Toughness Replenishment; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71` | toughness_replenish_modifier = 0.3 [Fixed source and line references](broker_stimm_durability_5a.md#fixed-source-evidence) | Consistent | The recovery stat and value agree. |
 | Stacking, scope and recipe limits | No stacking formula, cap, stat-buff exception, cost or lifetime; `ui / loc_talent_stat_toughness_replenish_modifier / 805fdb71` | Four prerequisite 0.05 bonuses add with 0.3 to give multiplier 1.5; no maximum-Toughness increase; capped by deficit; sources ignoring stat buffs are unaffected; cost 5 and shared lifetime [Fixed source and line references](broker_stimm_durability_5a.md#fixed-source-evidence) | Not covered by the description | The original 10 → 15 and 37.5 injection examples retain the already-active recovery-bonus assumption. |
 
+
+<a id="broker_stimm_durability_5b"></a>
+
+## Regain
+
+Full raw template and formatting: [source evidence](broker_stimm_durability_5b.md#original-english-template-and-reconstruction). Name hash `3e34e34e`. Every row uses `ui / loc_talent_buff_toughness_during_stimm / 6dd3d484`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery amount and interval | Replenish +5% Toughness every 1 seconds (reconstruction); `ui / loc_talent_buff_toughness_during_stimm / 6dd3d484` | replenish_percentage(0.05, false, "broker_syringe"); interval = 1 [Fixed source and line references](broker_stimm_durability_5b.md#fixed-source-evidence) | Consistent | The nominal recurring recovery amount and interval agree. |
+| Timing, caps and recipe limits | No first-tick timing, exact total ticks, recovery basis/modifiers, knocked-down or lifetime rule; `ui / loc_talent_buff_toughness_during_stimm / 6dd3d484` | First tick requires time > start + 1; each tick schedules from current update time; deficit/recovery modifier applies; knocked-down returns; root removal stops recovery; cost 5 [Fixed source and line references](broker_stimm_durability_5b.md#fixed-source-evidence) | Not covered by the description | The original 6-Toughness example and 3-Toughness deficit cap are retained. No fixed 15-tick total is claimed. |
+
 ## Comparison totals
 
 The 213 listed rules comprise **99 Consistent**, **5 Explicit contradictions**, **99 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
