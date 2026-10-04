@@ -36,3 +36,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Chemical Dependency](broker_keystone_chemical_dependency.md) / `broker_keystone_chemical_dependency` | Keystone |
 | [Chem Enhanced](broker_keystone_chemical_dependency_sub_1.md) / `broker_keystone_chemical_dependency_sub_1` | Keystone |
 | [Chem Fortified](broker_keystone_chemical_dependency_sub_2.md) / `broker_keystone_chemical_dependency_sub_2` | Keystone |
+| [Maxed Out Chems](broker_keystone_chemical_dependency_sub_3.md) / `broker_keystone_chemical_dependency_sub_3` | Keystone |

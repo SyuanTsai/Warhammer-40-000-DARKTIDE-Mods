@@ -301,6 +301,18 @@ Full raw template and formatting: [source evidence](broker_keystone_chemical_dep
 | Restoration and per-stack Toughness reduction | Stimm use replenishes 50% Toughness; each Dependency stack grants +5% Toughness Damage Reduction; `ui / loc_talent_broker_keystone_chemical_dependency_sub_2_desc / bd5bf1c2` | Each syringe event restores replenish_percentage(0.5); each enabled stack applies toughness_damage_taken_multiplier 0.95. [Fixed source and line references](broker_keystone_chemical_dependency_sub_2.md#fixed-source-evidence) | Consistent | The restoration amount and each individual stack's Toughness-specific reduction agree. |
 | Stack combination and restoration limits | No multiplicative combination, missing-Toughness limit or capped-use detail; `ui / loc_talent_broker_keystone_chemical_dependency_sub_2_desc / bd5bf1c2` | Three stacks multiply to 0.857375, approximately 14.26% less Toughness Damage. Restoration precedes stack addition, still executes at the cap and is limited by the deficit/other modifiers; Health Damage is not directly reduced. [Fixed source and line references](broker_keystone_chemical_dependency_sub_2.md#fixed-source-evidence) | Not covered by the description | The wording specifies each stack's effect without claiming additive total reduction. |
 
+
+<a id="broker_keystone_chemical_dependency_sub_3"></a>
+
+## Maxed Out Chems
+
+Full raw template and formatting: [source evidence](broker_keystone_chemical_dependency_sub_3.md#original-english-template-and-reconstruction). Name hash `fdf59fed`. Every row uses `ui / loc_talent_broker_keystone_chemical_dependency_sub_3_desc / 80f78eef`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Upgraded duration and stack cap | Dependency now lasts 60s per stack; Max Stacks increased to 4; `ui / loc_talent_broker_keystone_chemical_dependency_sub_3_desc / 80f78eef` | The upgrade adds one to max_stacks/max_stacks_cap and changes duration by −30 s, yielding 4 stacks and 60 s. [Fixed source and line references](broker_keystone_chemical_dependency_sub_3.md#fixed-source-evidence) | Consistent | The final duration and cap match the stated tradeoff. |
+| Shared timer, recovery and capped-use behavior | No shared-timer refresh, sequential decay or recovery calculation details; `ui / loc_talent_broker_keystone_chemical_dependency_sub_3_desc / 80f78eef` | Gain/removal refreshes the shared 60 s timer; capped uses refresh without adding a fifth stack. Four unchanged 0.10 recovery bonuses give 1.40 rate and isolated 60 ÷ 1.40 ≈ 42.86 s recovery. [Fixed source and line references](broker_keystone_chemical_dependency_sub_3.md#fixed-source-evidence) | Not covered by the description | These retain the original timing and recovery examples without adding new mechanism analysis. |
+
 ## Comparison totals
 
 The 45 listed rules comprise **21 Consistent**, **1 Explicit contradictions**, **20 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.

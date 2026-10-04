@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="Chemical Dependency talent icon"> [Chemical Dependency](#broker_keystone_chemical_dependency) | <ul><li>Stimm use grants a Dependency stack, up to 3. Each adds 10% to Combat Ability resource recovery; 3 stacks give a 1.30 recovery multiplier.</li><li>Gains refresh the shared 90-second timer; without another gain, stacks decay one at a time every 90 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="Chem Enhanced talent icon"> [Chem Enhanced](#broker_keystone_chemical_dependency_sub_1) | <ul><li>Each Dependency stack adds 5 percentage points of general Critical Chance, applying to Melee and Ranged calculations.</li><li>At 3 stacks, Scum's base 10% becomes 25% before weapon and other modifiers. This affects chance, rather than Critical Damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="Chem Fortified talent icon"> [Chem Fortified](#broker_keystone_chemical_dependency_sub_2) | <ul><li>Every Stimm use restores 50% of maximum Toughness, limited by missing Toughness, even at the Dependency stack cap.</li><li>Each Dependency stack multiplies Toughness Damage Taken by 0.95; 3 stacks reduce it by approximately 14.26%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="Maxed Out Chems talent icon"> [Maxed Out Chems](#broker_keystone_chemical_dependency_sub_3) | <ul><li>Dependency's shared stack timer becomes 60 seconds and its cap becomes 4, one more stack with a timer 30 seconds shorter than the core.</li><li>The unchanged +10% recovery per stack gives a 1.40 rate at 4 stacks; uninterrupted isolated 60-second recovery takes approximately 42.86 seconds.</li></ul> | Keystone |
 
 ---
 
@@ -452,3 +453,19 @@
 - **At the cap:** even when Dependency is already at maximum stacks, another Stimm use can restore Toughness and refresh the stack timer.
 
 [Details](broker_keystone_chemical_dependency_sub_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency_sub_3"></a>
+
+### Maxed Out Chems
+
+<img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="72" height="72" alt="Maxed Out Chems talent icon">
+
+- **Duration and cap:** the stack timer becomes 60 seconds and the maximum becomes 4 stacks. Compared with the core, each timer is 30 seconds shorter and one additional stack is allowed.
+
+- **Recovery:** the core's +10% Combat Ability resource recovery per stack still applies. At 4 stacks the multiplier is 1 + 4 × 0.10 = 1.40. Uninterrupted recovery that originally takes 60 seconds becomes 60 ÷ 1.40 ≈ 42.86 seconds.
+
+- **Refresh and decay:** another Stimm use resets the shared timer. Without another gain, one stack expires after 60 seconds, then another every 60 seconds. A use at 4 stacks cannot add a fifth, but still refreshes the timer.
+
+[Details](broker_keystone_chemical_dependency_sub_3.md) · [Back to index](#talent-index)
