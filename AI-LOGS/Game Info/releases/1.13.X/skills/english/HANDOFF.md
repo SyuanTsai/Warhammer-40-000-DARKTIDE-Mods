@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 433 completed on 2026-10-04. [Receipt](scum_skills_429_433.json) and [FILE_MAP](FILE_MAP.json) record 433 accepted mechanisms. Next item: **434, Reflex**, `broker_stimm_celerity_5b`. The full goal remains active and unfinished.
+Checkpoint 438 completed on 2026-10-04. [Receipt](scum_skills_434_438.json) and [FILE_MAP](FILE_MAP.json) record 438 accepted mechanisms. Next item: **439, Wildfire IV**, `broker_stimm_combat_4a`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 213 mechanisms + 18 class-support files + 2 shared files = 233 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 85/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 182 = 84 Consistent / 5 Explicit contradictions / 84 Not covered / 1 No implementation / 8 Cannot confirm. Latest batch commit interval: 404s (6m 44s), 22da018e0→26763f7e9. No new English contradiction. Multiple description components paired by accepted hashes where JSONL omits keys; preserved all speed/Stamina examples and protection limits. Existing ephemeral writer minimally adapted for multi-template descriptions, Roman names and recipe costs; no persistent helper added.
+Remaining: 208 mechanisms + 18 class-support files + 2 shared files = 228 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 90/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 193 = 89 Consistent / 5 Explicit contradictions / 89 Not covered / 1 No implementation / 9 Cannot confirm. Latest batch commit interval: 437s (7m 17s), e2c696f7f→5f96abf89. Recipe names/stat components are paired by existing keys and hashes; display text is explicitly reconstructed. Reflex preserves unsteadiness gain/reciprocal decay, Fervor preserves effective-dodge recovery wait, and Wildfire preserves additive Power before weapon curves. No mechanism retracing.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

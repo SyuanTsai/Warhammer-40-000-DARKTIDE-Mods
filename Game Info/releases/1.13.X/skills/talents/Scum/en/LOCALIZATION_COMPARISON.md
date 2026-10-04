@@ -1102,4 +1102,4 @@ Full raw template and formatting: [source evidence](broker_stimm_combat_3.md#ori
 
 ## Comparison totals
 
-The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
+The 193 listed rules comprise **89 Consistent**, **5 Explicit contradictions**, **89 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

@@ -1,0 +1,83 @@
+{
+  "id": "scum_skills_434_438",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "talent_settings_broker.lua L550-L595: missing same-build recipe display values/transforms; shared generator and accepted formatting reused"
+  ],
+  "questions": [
+    "Fervor: Dodge Recovery Speed label does not define literal rate versus effective-dodge wait modifier; Cannot confirm."
+  ],
+  "skills": [
+    {
+      "id": "broker_stimm_celerity_5b",
+      "name": "Reflex",
+      "name_hash": "d33a89f3",
+      "description_hash": "9020f1a1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5b.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_5b.md",
+      "commit": "28ea258ab",
+      "description_hashes": [
+        "9020f1a1",
+        "302c7f95"
+      ]
+    },
+    {
+      "id": "broker_stimm_celerity_5c",
+      "name": "Fervor",
+      "name_hash": "9b5b6688",
+      "description_hash": "090b8be4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5c.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_celerity_5c.md",
+      "commit": "84ad59ce0",
+      "description_hashes": [
+        "090b8be4",
+        "ac38ced9",
+        "f5994101",
+        "1863559c"
+      ]
+    },
+    {
+      "id": "broker_stimm_combat_1",
+      "name": "Wildfire I",
+      "name_hash": "fe5e6f12",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_1.md",
+      "commit": "14282a694"
+    },
+    {
+      "id": "broker_stimm_combat_2",
+      "name": "Wildfire II",
+      "name_hash": "fe5e6f12",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_2.md",
+      "commit": "b105f672d"
+    },
+    {
+      "id": "broker_stimm_combat_3",
+      "name": "Wildfire III",
+      "name_hash": "fe5e6f12",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_3.md",
+      "commit": "5f96abf89"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 437,
+    "from_commit": "e2c696f7f",
+    "to_commit": "5f96abf89",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}
