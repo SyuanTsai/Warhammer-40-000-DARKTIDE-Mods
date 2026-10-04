@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="Sustained Assault talent icon"> [Sustained Assault](#zealot_hits_grant_stacking_damage) | <ul><li>Melee hits grant 4% Melee Damage for 5 seconds, up to 5 stacks/+20%; further hits refresh duration, including at full stacks.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="Enduring Faith talent icon"> [Enduring Faith](#zealot_crits_reduce_toughness_damage) | <ul><li>Critical Hits reduce Toughness damage taken by 40% for 4 seconds; both Melee and Ranged crits trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="Second Wind talent icon"> [Second Wind](#zealot_toughness_on_dodge) | <ul><li>Successfully dodging an attack restores 15% of maximum Toughness, at most once every 0.5 seconds.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="The Voice of Terra talent icon"> [The Voice of Terra](#zealot_toughness_while_shooting) | <ul><li>Shooting restores 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops; hits and kills are not required.</li></ul> | Skill |
 
 ---
 
@@ -686,3 +687,16 @@
 - **Restoration example**: With maximum Toughness 100 and no other restoration bonuses, one trigger restores 100 × 15% = 15. At current Toughness 95, only 5 can be restored, reaching the cap.
 
 [Details](zealot_toughness_on_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_toughness_while_shooting"></a>
+
+### The Voice of Terra
+
+<img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="72" height="72" alt="The Voice of Terra talent icon">
+
+- **Operation**: While shooting, restore 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops. Hits or kills are not required.
+- **Restoration example**: With maximum Toughness 100, no other restoration bonuses and 2 seconds of continuous shooting followed by the full 0.5-second tail, restore 100 × 10% × (2 + 0.5) = 25, capped by missing Toughness.
+
+[Details](zealot_toughness_while_shooting.md) · [Back to index](#talent-index)

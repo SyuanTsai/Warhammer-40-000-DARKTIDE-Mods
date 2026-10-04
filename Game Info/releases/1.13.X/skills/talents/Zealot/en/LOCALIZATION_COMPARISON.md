@@ -539,6 +539,18 @@ Full raw template and formatting: [source evidence](zealot_toughness_on_dodge.md
 | Successful Dodge and restoration value | “Replenish 15% Toughness on a Successful Dodge.”; `ui / loc_talent_zealot_toughness_on_dodge_desc / 7b3709d4` | `on_successful_dodge` calls holder percentage restoration .15. [Fixed source and line references](zealot_toughness_on_dodge.md#fixed-source-evidence) | Consistent | The event qualifier and percentage agree. |
 | Cooldown, percentage basis and cap | No cooldown, maximum-Toughness basis or modifier details.; `ui / loc_talent_zealot_toughness_on_dodge_desc / 7b3709d4` | Cooldown .5s; maximum-Toughness percentage plus restoration modifiers, capped by missing Toughness. Original max 100 example restores 15 or only 5 at current 95. [Fixed source and line references](zealot_toughness_on_dodge.md#fixed-source-evidence) | Not covered by the description | The accepted calculation and trigger-rate limits supplement the restoration statement. |
 
+
+<a id="zealot_toughness_while_shooting"></a>
+
+## The Voice of Terra
+
+Full raw template and formatting: [source evidence](zealot_toughness_while_shooting.md#original-english-template-and-reconstruction). Name hash `4bc5e375`. Every row uses `ui / loc_talent_zealot_toughness_while_shooting_desc / fce063da`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Shooting condition and restoration rate | “Replenish 10% Toughness per second while Shooting.”; `ui / loc_talent_zealot_toughness_while_shooting_desc / fce063da` | Server update restores .1×dt of maximum Toughness while shooting. [Fixed source and line references](zealot_toughness_while_shooting.md#fixed-source-evidence) | Consistent | Condition and rate agree; no hit/kill requirement is stated. |
+| Tail, frame integration and cap | No tail, maximum-Toughness basis or HUD-slot distinction.; `ui / loc_talent_zealot_toughness_while_shooting_desc / fce063da` | Restores through t≤shooting_end_time+.5, including after weapon switching; slot check only HUD/is_active. Original 2s+.5s example gives25 at max100, capped by missing Toughness. [Fixed source and line references](zealot_toughness_while_shooting.md#fixed-source-evidence) | Not covered by the description | These timing and calculation details supplement shooting restoration. |
+
 ## Comparison totals
 
 84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.
