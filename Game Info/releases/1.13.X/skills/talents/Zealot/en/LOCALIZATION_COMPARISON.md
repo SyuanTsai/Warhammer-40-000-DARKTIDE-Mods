@@ -676,4 +676,4 @@ Full raw template and formatting: [source evidence](zealot_toughness_in_melee.md
 
 ## Comparison totals
 
-105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.
+117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.
