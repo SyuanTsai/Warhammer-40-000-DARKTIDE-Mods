@@ -13787,9 +13787,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8cd4da00cfa20ae55d48f3e6a161a2e9df7c7c08",
       "chinese_sha256": "84109aa5365a521729d32b85e14fd4ad8f3ab4718043fc1927124be7b7fb35fb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_backstab_kills_restore_cd"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_periodic_damage.md",
@@ -13914,9 +13921,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5dd7397874634414c3d29251d91ff2c1c8358c96",
       "chinese_sha256": "0130d5d5605c68e06e990e8ba1f528614a17d6f41d8fd921af6d037186d75269",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_crits_grant_cd"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_reduce_toughness_damage.md",
@@ -14053,9 +14067,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "765d1e89d6d3bd423522ffaeddfd6be495e298cb",
       "chinese_sha256": "ed56a074754fe3f702b7215adbf50492f4614ce66a5540f8bbb0147287ef0da8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_fotf_refund_cooldown"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_heal_part_of_damage_taken.md",
@@ -14382,9 +14403,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fa2109267eebfd8b9e52bbed38c4fc1a19279200",
       "chinese_sha256": "c45ad837bfcc6f24bec4ef596271dd7f76f17f729089500b286a70d6b9a60797",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_resist_death"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md",
@@ -14546,9 +14574,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ab37e17e53ca23a804a88dbc250eddf115fcc4df",
       "chinese_sha256": "7de1a3691ebc40c12afef2132518d67485294f9df57dbc14d204dab4a96eb092",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_stealth_cooldown_regeneration"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_suppress_on_backstab_kill.md",
@@ -19383,6 +19418,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_575_579.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_restore_stealth_cd_on_damage.md"
+    },
+    {
+      "id": "zealot_backstab_kills_restore_cd",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_kills_restore_cd.md"
+    },
+    {
+      "id": "zealot_crits_grant_cd",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_crits_grant_cd.md"
+    },
+    {
+      "id": "zealot_fotf_refund_cooldown",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_fotf_refund_cooldown.md"
+    },
+    {
+      "id": "zealot_stealth_cooldown_regeneration",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_stealth_cooldown_regeneration.md"
+    },
+    {
+      "id": "zealot_resist_death",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -252,4 +252,4 @@ Full raw template and formatting: [source evidence](zealot_resist_death.md#origi
 
 ## Comparison totals
 
-33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.
+43 rules: 19 Consistent / 2 Explicit contradiction / 19 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 584.
