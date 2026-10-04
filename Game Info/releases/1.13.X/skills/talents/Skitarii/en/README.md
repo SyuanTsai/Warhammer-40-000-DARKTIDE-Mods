@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="Critical Power Overload talent icon"> [Critical Power Overload](#cryptic_overload_keystone_bigger_explosion) | <ul><li>On Power Overload, enemies hit within 8 metres are Electrocuted and take 15% more damage for 8 seconds. Reapplication refreshes the duration; the area effect itself deals no explosion damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="Invigorating Overload talent icon"> [Invigorating Overload](#cryptic_overload_keystone_toughness_stamina) | <ul><li>Each Power Overload restores 20% of maximum Toughness and 20% of maximum Stamina to you and allies in Coherency. Resource caps apply; Toughness recovery also uses existing replenishment modifiers.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="Static Capacitor Drain talent icon"> [Static Capacitor Drain](#cryptic_overload_keystone_permastack) | <ul><li>After 8 /16 /24 overloads, gain +15% Damage /20% Toughness Damage Reduction /25% faster natural Capacitance generation, respectively. All three can remain together, each awarded once; the description says they last until death.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="Servo-Sinew Surge talent icon"> [Servo-Sinew Surge](#cryptic_dissector_crit_attack_speed) | <ul><li>Each current Flensing Protocols stack also grants 1.5 percentage points of Critical Strike Chance and +1.5% Melee Attack Speed. The bonuses follow the stack count: 6 stacks give 9 points /9%, and 8 give 12 points /12%.</li></ul> | Keystone |
 
 ---
 
@@ -613,3 +614,18 @@
 - **Restoration exception**: Effects that directly restore a percentage of one charge do not universally restore 25% more. An ordinary kill that normally restores 1 point still restores 1 point.
 
 [Details](cryptic_overload_keystone_permastack.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_dissector_crit_attack_speed"></a>
+
+### Servo-Sinew Surge
+
+<img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="72" height="72" alt="Servo-Sinew Surge talent icon">
+
+- **Trigger**: With this modifier selected, each Flensing Protocols stack also grants **1.5 percentage points of Critical Strike Chance** and **+1.5% Melee Attack Speed**.
+- **Changing stacks**: Losing or restoring Flensing Protocols stacks decreases or increases both bonuses at the same time. Zero stacks give no bonus.
+- **Stack examples**: At 6 stacks, gain **9 percentage points** of Critical Strike Chance and **+9% Melee Attack Speed**. At 8, gain **12 percentage points** and **+12%**, respectively.
+- **Calculation examples**: An original Critical Strike Chance of `7.5%` becomes `7.5% + 6 × 1.5% = 16.5%` at 6 stacks. A melee attack that originally takes 1 second takes approximately `1 ÷ 1.09 = 0.917` seconds with no other attack-speed bonus.
+
+[Details](cryptic_dissector_crit_attack_speed.md) · [Back to index](#talent-index)

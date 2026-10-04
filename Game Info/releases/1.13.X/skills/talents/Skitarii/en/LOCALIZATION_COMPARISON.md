@@ -466,6 +466,18 @@ Full raw template and formatting: [source evidence](cryptic_overload_keystone_pe
 | Award lifecycle and calculation | Does not specify one award per threshold, simultaneous retention, calculation stages or restoration-path exceptions; `ui / loc_talent_cryptic_overload_keystone_permastack_desc / c193a6c8` | Each one-stack bonus is awarded once; bonuses coexist without a duration. Damage adds at its stage; Toughness multipliers combine multiplicatively; charge-percentage restoration can ignore stat buffs [Fixed source and line references](cryptic_overload_keystone_permastack.md#fixed-source-evidence) | Not covered by the description | The verified 115 /135 /80 /68 damage and 1.25 /1.75 points/s examples, 40s refill and unchanged 1-point kill restoration are supplements. |
 | Until-death wording | Bonuses lasts until death; `ui / loc_talent_cryptic_overload_keystone_permastack_desc / c193a6c8` | Bonus buffs have no duration; stopping the Keystone passive clears granted bonuses and count stacks. Existing evidence does not establish the complete death-reset process [Fixed source and line references](cryptic_overload_keystone_permastack.md#fixed-source-evidence) | Cannot confirm | Retain the original narrow evidence limit without adding a mechanism investigation or declaring an English error. |
 
+
+<a id="cryptic_dissector_crit_attack_speed"></a>
+
+## Servo-Sinew Surge
+
+Full raw template and formatting: [source evidence](cryptic_dissector_crit_attack_speed.md#original-english-template-and-reconstruction). Name hash `a5d94f72`. Every row uses `ui / loc_talent_cryptic_dissector_crit_attack_speed_desc / 7ddcfcd5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack chance and Melee Attack Speed | Each stack also grants +1.5% Critical Hit Chance and +1.5% Melee Attack Speed; `ui / loc_talent_cryptic_dissector_crit_attack_speed_desc / 7ddcfcd5` | The special rule enables conditional `critical_strike_chance =0.015` and `melee_attack_speed =0.015` for each Flensing Protocols stack [Fixed source and line references](cryptic_dissector_crit_attack_speed.md#fixed-source-evidence) | Consistent | The per-stack scope and both values agree. |
+| Count changes and calculation | Does not explain changing stack counts, percentage-point addition or action time; `ui / loc_talent_cryptic_dissector_crit_attack_speed_desc / 7ddcfcd5` | Current count controls both effects; 6 stacks give +9 points /+9%, 8 give +12 points /+12%; 7.5% becomes16.5% at6; 1s ÷1.09 ≈0.917s without other speed bonuses [Fixed source and line references](cryptic_dissector_crit_attack_speed.md#fixed-source-evidence) | Not covered by the description | These verified examples explain the different chance and speed calculations; Melee Attack Speed does not increase damage per hit. |
+
 ## Comparison totals
 
 72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.
