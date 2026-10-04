@@ -345,6 +345,18 @@ Full raw template and formatting: [source evidence](cryptic_precision_stance.md#
 | Activation, aiming, costs and ending conditions | 25% activation; Secondary Weapon/aim lock; Spread −90%, Recoil −60%, Reload Speed +25% lingering 5s; 10%/s plus 1%/shot, drain paused during reload; weapon switch/zero resource/reactivation ends it; at least 1 charge; No Cooldown; `ui / loc_talent_cryptic_precision_stance_drain_cost_combined_desc / 090d6895` | Activation 12.5 at cost 50 requires one full charge; slot_secondary auto-aim/spread/recoil and active/lingering Reload Speed; stance drains 5/s and 0.5/shot with reload pause; zero/switch/toggle ends stance [Fixed source and line references](cryptic_precision_stance.md#fixed-source-evidence) | Consistent | The conditions and values agree. No fixed cooldown is compatible with waiting for the required resource to regenerate. |
 | Resource basis, recovery and recorded full-charge consumption | No single-charge cost basis, recovery/upkeep cancellation, kill-recovery suspension or full-charge rounding details; `ui / loc_talent_cryptic_precision_stance_drain_cost_combined_desc / 090d6895` | Base recovery 1/s cancels active cost 1/s; separate stance drain uses one-charge cost; toggle-off repeats no activation cost/event; ending floors accumulated cost for per-charge overload effects [Fixed source and line references](cryptic_precision_stance.md#fixed-source-evidence) | Not covered by the description | Preserve 7.5s/27.5s duration, 77.5-point shooting, 1.6s reload, 4.5/s net-drain and 50s reuse examples. Powerdrive: 0.95 charges adds 0 stacks, 2.05 counts as 2 and adds 10. |
 
+
+<a id="cryptic_chordclaw_capacitance_restoration"></a>
+
+## Satiated Steel
+
+Full raw template and formatting: [source evidence](cryptic_chordclaw_capacitance_restoration.md#original-english-template-and-reconstruction). Name hash `19578f15`. Every row uses `ui / loc_talent_cryptic_chordclaw_capacitance_restoration_desc / 18058d13`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Chordclaw kill, recovery amount and duration | Chordclaw Kills restore 25% Capacitance over 5s; `ui / loc_talent_cryptic_chordclaw_capacitance_restoration_desc / 18058d13` | Qualifying Chordclaw melee kills start recovery of 0.25 of one-charge cost over 5s [Fixed source and line references](cryptic_chordclaw_capacitance_restoration.md#fixed-source-evidence) | Consistent | The kill trigger, total amount and recovery period agree. |
+| Qualifying types, recovery basis and refresh | No specific melee/damage-type checks, single-charge denominator, refresh or pool-cap details; `ui / loc_talent_cryptic_chordclaw_capacitance_restoration_desc / 18058d13` | Kill plus melee and transonic_claw/transonic_claw_stick/transonic_claw_rip; recovery increments via restore_ability_charge_percentage; ProcBuff restarts 5s without stacking rate; pool maximum caps recovery [Fixed source and line references](cryptic_chordclaw_capacitance_restoration.md#fixed-source-evidence) | Not covered by the description | At cost 50, total extra recovery 12.5 over 5s =2.5/s, with natural recovery separate. Another kill refreshes duration; other weapon/non-melee/non-killing events do not qualify. |
+
 ## Comparison totals
 
 52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.
