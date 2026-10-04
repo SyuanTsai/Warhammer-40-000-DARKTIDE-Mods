@@ -890,6 +890,18 @@ Full raw template and formatting: [source evidence](zealot_offensive_vs_many.md#
 | Nearby-enemy stacks | Every 2 enemies within 5m; +2% Damage and +10% Cleave; stacks 5 times; `ui / loc_talent_zealot_offensive_vs_many_desc / d2cd1130` | Radius 5; stacks min(1 + floor((N − 2) / 2), 5) for N >= 2; damage +0.02 and hit-mass modifier +0.1 per stack [Fixed source and line references](zealot_offensive_vs_many.md#fixed-source-evidence) | Consistent | Count, range, bonuses and cap agree. |
 | Updates, exception and calculations | No check interval, disabled-state rule or hit-mass explanation; `ui / loc_talent_zealot_offensive_vs_many_desc / d2cd1130` | Check every 0.1 seconds; stacks fall as enemies leave and return to 0 while disabled. Original 3-stack damage 106 and mass budget 13; full-stack 110 and 15; mass budget is not a fixed extra enemy count [Fixed source and line references](zealot_offensive_vs_many.md#fixed-source-evidence) | Not covered by the description | These operating and calculation details supplement the wording. |
 
+
+<a id="zealot_reload_from_melee"></a>
+
+## Out of Pocket
+
+Full raw template and formatting: [source evidence](zealot_reload_from_melee.md#original-english-template-and-reconstruction). Name hash `de287263`. Every row uses `ui / loc_talent_zealot_reload_from_melee_desc / 730a8c75`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and transfer direction | Melee Kills replenish 10% of Missing Ammo from your Reserve; `ui / loc_talent_zealot_reload_from_melee_desc / 730a8c75` | `on_melee_kill`; missing magazine ammunition × 0.1; transfer_from_reserve_to_clip [Fixed source and line references](zealot_reload_from_melee.md#fixed-source-evidence) | Consistent | The trigger, proportion and reserves as source agree. The existing Chinese direction error is not an English error. |
+| Pool and reserve limits | No fractional, rounding or special-mode details; `ui / loc_talent_zealot_reload_from_melee_desc / 730a8c75` | Add to ammo_pool; floor transfer request and deduct requested whole credit even with insufficient reserves. Full magazine adds no credit; normal finite reserves limit transfer; free_ammunition_transfer/infinite_ammo are exceptions [Fixed source and line references](zealot_reload_from_melee.md#fixed-source-evidence) | Not covered by the description | These accounting and limit details supplement the wording. |
+
 ## Comparison totals
 
 147 rules: 69 Consistent / 5 Explicit contradiction / 69 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 634.

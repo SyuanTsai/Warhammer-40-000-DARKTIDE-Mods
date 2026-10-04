@@ -81,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="Behind the Lines talent icon"> [Behind the Lines](#zealot_suppress_on_backstab_kill) | <ul><li>Heavy Melee Backstab Kills suppress enemies within 8 metres of you, with a 5-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="Time to Kill talent icon"> [Time to Kill](#zealot_backstab_periodic_damage) | <ul><li>The next valid Melee Backstab deals +50% damage, then starts an 8-second cooldown.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="Against the Odds talent icon"> [Against the Odds](#zealot_offensive_vs_many) | <ul><li>Every 2 enemies within 5 metres grant +2% damage and +10% Cleave, up to 5 stacks.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="Out of Pocket talent icon"> [Out of Pocket](#zealot_reload_from_melee) | <ul><li>Melee Kills transfer 10% of the magazine's missing ammunition from reserves.</li></ul> | Skill |
 
 ---
 
@@ -1108,3 +1109,21 @@
 - **Cleave example:** an original enemy hit-mass budget of 10 becomes 10 × (1 + 3 × 10%) = 13 at 3 stacks, or 15 at maximum stacks. This is the total mass you can cleave through, not a fixed extra 3 or 5 enemies.
 
 [Details](zealot_offensive_vs_many.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_reload_from_melee"></a>
+
+### Out of Pocket
+
+<img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="72" height="72" alt="Out of Pocket talent icon">
+
+- **How it works:** each Melee Kill transfers 10% of the ammunition currently missing from the magazine from your reserves. It does not create extra total ammunition or replenish reserves.
+- **Reload example:** magazine capacity 30 with 10 rounds leaves 20 missing. A kill transfers 20 × 10% = 2 rounds from reserves, giving 12 rounds. Next, 18 are missing: 1.8 rounds are credited, 1 is transferred this time, and the remaining 0.8 carries over to later kills.
+- **Limits:** a full magazine adds no new credit. Normally, no reserves means no transfer; insufficient reserves limit the transfer to the amount available.
+
+#### Original Traditional Chinese correction
+
+- The original Chinese says it restores missing ammunition reserves. The effect instead consumes reserves to refill the magazine, without increasing reserves or total ammunition.
+
+[Details](zealot_reload_from_melee.md) · [Back to index](#talent-index)
