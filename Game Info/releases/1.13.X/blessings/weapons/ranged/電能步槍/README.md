@@ -7,11 +7,12 @@
 | <img src="https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8" width="32" height="32" alt="大口徑彈藥祝福圖示"> [大口徑彈藥](../../../entries/大口徑彈藥/README.md)<br>- Man-Stopper<br>[完整說明](../../../entries/大口徑彈藥/README.md) | <ul><li>持用時遠程衝擊提高10%／15%／20%／25%；暴擊使該次傷害順劈預算為無限，仍受護甲與碰撞規則限制。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a4cfe045-7131-4b43-a81b-0cfb1012b545" width="32" height="32" alt="激射祝福圖示"> [激射](../../../entries/激射/README.md)<br>- Hot-Shot<br>[完整說明](../../../entries/激射/README.md) | <ul><li>弱點命中的順劈質量消耗減少20%／25%／30%／35%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887" width="32" height="32" alt="幽靈祝福圖示"> [幽靈](../../../entries/幽靈/README.md)<br>- Ghost<br>[完整說明](../../../entries/幽靈/README.md) | <ul><li>持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5" width="32" height="32" alt="致命精準祝福圖示"> [致命精準](../../../entries/致命精準/README.md)<br>- Deadly Accurate<br>[完整說明](../../../entries/致命精準/README.md) | <ul><li>持用時，爆擊兼弱點命中的靈巧額外傷害增加30／40／50／60%（I–IV）；不乘整次命中傷害。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 電能步槍 布蘭克斯 Mk CV | [大口徑彈藥](../../../entries/大口徑彈藥/weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit.md)、[激射](../../../entries/激射/weapon_trait_bespoke_galvanic_rifle_p1_target_hit_mass_reduction_on_weakspot_hits.md)、[幽靈](../../../entries/幽靈/weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
+| 電能步槍 布蘭克斯 Mk CV | [大口徑彈藥](../../../entries/大口徑彈藥/weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit.md)、[激射](../../../entries/激射/weapon_trait_bespoke_galvanic_rifle_p1_target_hit_mass_reduction_on_weakspot_hits.md)、[幽靈](../../../entries/幽靈/weapon_trait_bespoke_galvanic_rifle_p1_count_as_dodge_vs_ranged_on_weakspot.md)、[致命精準](../../../entries/致命精準/weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

@@ -58,3 +58,4 @@
 | [燃起來！](entries/燃起來！/README.md) | [來源索引](entries/燃起來！/SOURCE_INDEX.md) |
 | [未卜先知](entries/未卜先知/README.md) | [來源索引](entries/未卜先知/SOURCE_INDEX.md) |
 | [敏捷](entries/敏捷/README.md) | [來源索引](entries/敏捷/SOURCE_INDEX.md) |
+| [致命精準](entries/致命精準/README.md) | [來源索引](entries/致命精準/SOURCE_INDEX.md) |

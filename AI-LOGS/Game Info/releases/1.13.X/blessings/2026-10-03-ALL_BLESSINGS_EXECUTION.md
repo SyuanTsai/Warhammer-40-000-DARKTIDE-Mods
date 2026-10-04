@@ -235,3 +235,7 @@
 - [未卜先知](2026-10-03-PRECOGNITION_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。
 
 - [敏捷](2026-10-03-AGILE_ACCEPTANCE.json)：新增2變體、6型號關聯；共2變體、6關聯。
+
+- 第7輪三項已Commit後完整掃描通過：gets-hot (`861b87660d4c638bd4e444fff0a9db8a45d3cd11`)、precognition (`b9d83d871e8165726b45349b99554b13de9bb328`)、agile (`16983ffe34399e8ad5b11166b5f5cad820af889e`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-007-full-scan.json`／SHA-256 `61a9d3451bbae4b425a544f95c5b3be7a9df9d326fefd777a9e2c3537b166fca`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [致命精準](2026-10-03-DEADLY-ACCURATE_ACCEPTANCE.json)：新增5變體、12型號關聯；共5變體、12關聯。

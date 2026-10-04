@@ -60,5 +60,6 @@
 | <img src="https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db" width="32" height="32" alt="燃起來！祝福圖示"> [燃起來！](entries/燃起來！/README.md)<br>- Gets Hot!<br>[完整說明](entries/燃起來！/README.md) | <ul><li>持用電漿槍時，依目前熱能階數提高一般爆擊機率與遠程爆擊傷害；最多五階，散熱／裝填或切換離手時停用。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/9a361b5a-a825-4cb1-a115-953bdc3075e6" width="32" height="32" alt="未卜先知祝福圖示"> [未卜先知](entries/未卜先知/README.md)<br>- Precognition<br>[完整說明](entries/未卜先知/README.md) | <ul><li>成功閃避後，2秒內提高暴擊或弱點命中的靈巧額外傷害：戰刃、決鬥劍、烈焰力場巨劍與烈焰力場劍 I–IV 為45／50／55／60%；短刀與穿音速雙刀為30／35／40／45%。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d" width="32" height="32" alt="敏捷祝福圖示"> [敏捷](entries/敏捷/README.md)<br>- Agile<br>[完整說明](entries/敏捷/README.md) | <ul><li>持用時，該武器的近戰弱點命中將連續閃避次數歸零；I–IV 另常駐提供2.5／5／7.5／10%的近戰弱點靈巧額外傷害加成，不需先命中啟動。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5" width="32" height="32" alt="致命精準祝福圖示"> [致命精準](entries/致命精準/README.md)<br>- Deadly Accurate<br>[完整說明](entries/致命精準/README.md) | <ul><li>持用時，爆擊兼弱點命中的靈巧額外傷害增加；I–IV：電能步槍30／40／50／60%，其餘四類70／80／90／100%。此值不乘整次命中傷害。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

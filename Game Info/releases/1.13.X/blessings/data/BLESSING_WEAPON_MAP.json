@@ -701,6 +701,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d",
       "effect": "持用時，該武器的近戰弱點命中將連續閃避次數歸零；I–IV 另常駐提供2.5／5／7.5／10%的近戰弱點靈巧額外傷害加成，不需先命中啟動。"
+    },
+    {
+      "id": "deadly-accurate",
+      "name_zh_tw": "致命精準",
+      "name_en": "Deadly Accurate",
+      "name_key": "loc_trait_bespoke_crit_weakspot_finesse",
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "name_hash": "6b6877ef",
+      "description_hash": "0989d9b9",
+      "page": "entries/致命精準/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加；I–IV：電能步槍30／40／50／60%，其餘四類70／80／90／100%。此值不乘整次命中傷害。"
     }
   ],
   "weapons": [
@@ -13119,6 +13132,343 @@
       "icon": "https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_184",
       "effect": "持用時，該武器的近戰弱點命中將連續閃避次數歸零；I–IV 另常駐提供2.5／5／7.5／10%的近戰弱點靈巧額外傷害加成，不需先命中啟動。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "autogun_p3",
+      "page": "entries/致命精準/weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+        "marks": [
+          "autogun_p3_m1",
+          "autogun_p3_m2",
+          "autogun_p3_m3"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.7,
+            "added_finesse_extra_percent": 70.0,
+            "display_percent": 70
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.8,
+            "added_finesse_extra_percent": 80.0,
+            "display_percent": 80
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.9,
+            "added_finesse_extra_percent": 90.0,
+            "display_percent": 90
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 1.0,
+            "added_finesse_extra_percent": 100.0,
+            "display_percent": 100
+          }
+        ],
+        "stat_path": "stat_buffs.critical_strike_weakspot_damage",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.5,
+        "tier_override_replaces_fallback": true,
+        "only_when_crit_and_weakspot": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 318,
+        "end_line": 357
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "description_hash": "0989d9b9",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加70／80／90／100%（I–IV）；不乘整次命中傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/致命精準/weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+        "marks": [
+          "boltpistol_p1_m1",
+          "boltpistol_p1_m2"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.7,
+            "added_finesse_extra_percent": 70.0,
+            "display_percent": 70
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.8,
+            "added_finesse_extra_percent": 80.0,
+            "display_percent": 80
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.9,
+            "added_finesse_extra_percent": 90.0,
+            "display_percent": 90
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 1.0,
+            "added_finesse_extra_percent": 100.0,
+            "display_percent": 100
+          }
+        ],
+        "stat_path": "stat_buffs.critical_strike_weakspot_damage",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.5,
+        "tier_override_replaces_fallback": true,
+        "only_when_crit_and_weakspot": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 128,
+        "end_line": 167
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "description_hash": "0989d9b9",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加70／80／90／100%（I–IV）；不乘整次命中傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse",
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/致命精準/weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse",
+        "marks": [
+          "galvanic_rifle_p1_m1"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.3,
+            "added_finesse_extra_percent": 30.0,
+            "display_percent": 30
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.4,
+            "added_finesse_extra_percent": 40.0,
+            "display_percent": 40
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.5,
+            "added_finesse_extra_percent": 50.0,
+            "display_percent": 50
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 0.6,
+            "added_finesse_extra_percent": 60.0,
+            "display_percent": 60
+          }
+        ],
+        "stat_path": "stat_buffs.critical_strike_weakspot_damage",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.5,
+        "tier_override_replaces_fallback": true,
+        "only_when_crit_and_weakspot": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 39,
+        "end_line": 78
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "description_hash": "0989d9b9",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加30／40／50／60%（I–IV）；不乘整次命中傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/致命精準/weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+        "marks": [
+          "lasgun_p1_m1",
+          "lasgun_p1_m2",
+          "lasgun_p1_m3"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.7,
+            "added_finesse_extra_percent": 70.0,
+            "display_percent": 70
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.8,
+            "added_finesse_extra_percent": 80.0,
+            "display_percent": 80
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.9,
+            "added_finesse_extra_percent": 90.0,
+            "display_percent": 90
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 1.0,
+            "added_finesse_extra_percent": 100.0,
+            "display_percent": 100
+          }
+        ],
+        "stat_path": "stat_buffs.critical_strike_weakspot_damage",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.5,
+        "tier_override_replaces_fallback": true,
+        "only_when_crit_and_weakspot": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 360,
+        "end_line": 399
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 49,
+        "end_line": 49
+      },
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "description_hash": "0989d9b9",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加70／80／90／100%（I–IV）；不乘整次命中傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/致命精準/weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+        "marks": [
+          "ogryn_heavystubber_p2_m1",
+          "ogryn_heavystubber_p2_m2",
+          "ogryn_heavystubber_p2_m3"
+        ],
+        "tier_values": [
+          {
+            "tier": "I",
+            "override_fraction": 0.7,
+            "added_finesse_extra_percent": 70.0,
+            "display_percent": 70
+          },
+          {
+            "tier": "II",
+            "override_fraction": 0.8,
+            "added_finesse_extra_percent": 80.0,
+            "display_percent": 80
+          },
+          {
+            "tier": "III",
+            "override_fraction": 0.9,
+            "added_finesse_extra_percent": 90.0,
+            "display_percent": 90
+          },
+          {
+            "tier": "IV",
+            "override_fraction": 1.0,
+            "added_finesse_extra_percent": 100.0,
+            "display_percent": 100
+          }
+        ],
+        "stat_path": "stat_buffs.critical_strike_weakspot_damage",
+        "stat_type": "additive_multiplier",
+        "neutral_base": 1,
+        "wrapper_fallback": 0.5,
+        "tier_override_replaces_fallback": true,
+        "only_when_crit_and_weakspot": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 771,
+        "end_line": 810
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 65,
+        "end_line": 65
+      },
+      "description_key": "loc_trait_bespoke_crit_weakspot_finesse_desc",
+      "description_hash": "0989d9b9",
+      "icon": "https://github.com/user-attachments/assets/fe96b700-e959-4d2e-9e69-7786cf5443a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_050",
+      "effect": "持用時，爆擊兼弱點命中的靈巧額外傷害增加70／80／90／100%（I–IV）；不乘整次命中傷害。"
     }
   ],
   "bindings": [
@@ -18398,6 +18748,174 @@
         "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
         "import_line": 14,
         "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_weakspot_finesse",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_weakspot_finesse",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_weakspot_finesse",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/crit_weakspot_finesse",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_weakspot_finesse",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_weakspot_finesse",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "deadly-accurate",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_weakspot_finesse",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_weakspot_finesse",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
       }
     }
   ]
