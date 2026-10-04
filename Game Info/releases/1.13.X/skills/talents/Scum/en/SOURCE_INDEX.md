@@ -84,3 +84,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ammo Jack](broker_passive_extended_mag.md) / `broker_passive_extended_mag` | Talent |
 | [Cheap Shots](broker_passive_damage_vs_heavy_staggered.md) / `broker_passive_damage_vs_heavy_staggered` | Talent |
 | [Hyper-Critical](broker_passive_melee_crit_instakill.md) / `broker_passive_melee_crit_instakill` | Talent |
+| [Punching Above One's Weight](broker_passive_damage_vs_elites_monsters.md) / `broker_passive_damage_vs_elites_monsters` | Talent |

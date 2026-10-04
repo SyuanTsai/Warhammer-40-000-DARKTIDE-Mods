@@ -80,6 +80,7 @@
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="Ammo Jack talent icon"> [Ammo Jack](#broker_passive_extended_mag) | <ul><li>Gain 15% Clip Size, rounded up after combining bonuses of the same kind.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="Cheap Shots talent icon"> [Cheap Shots](#broker_passive_damage_vs_heavy_staggered) | <ul><li>Deal 10% more damage to Staggered enemies, or 15% in total to enemies with Medium or Heavy Stagger.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="Hyper-Critical talent icon"> [Hyper-Critical](#broker_passive_melee_crit_instakill) | <ul><li>After a Critical Melee Hit, execute a living human-sized enemy whose remaining Health is below the hit's actual Damage; Captains are excluded.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="Punching Above One's Weight talent icon"> [Punching Above One's Weight](#broker_passive_damage_vs_elites_monsters) | <ul><li>Deal 15% more Damage to Elites and Monstrosities.</li></ul> | Talent |
 
 ---
 
@@ -1207,3 +1208,17 @@
 - **Meaning of twice the Damage**: Provided this hit actually removes the same amount of Health, the condition is equivalent to pre-hit Health below twice the Damage. It does not mean post-hit Health below twice the Damage.
 
 [Details](broker_passive_melee_crit_instakill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_damage_vs_elites_monsters"></a>
+
+### Punching Above One's Weight
+
+<img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="72" height="72" alt="Punching Above One's Weight talent icon">
+
+- **Targets**: A target with the Elite or Monster classification receives the corresponding 15% damage bonus. Being classified only as a Specialist does not automatically qualify it.
+
+- **Damage example**: A base of 100 becomes 115. With another 25% bonus at the same stage, the result is 100 × (1 + 25% + 15%) = 140.
+
+[Details](broker_passive_damage_vs_elites_monsters.md) · [Back to index](#talent-index)

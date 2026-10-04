@@ -880,6 +880,18 @@ Full raw template and formatting: [source evidence](broker_passive_melee_crit_in
 | Health threshold timing | Current Health less than 2 times the attack's Damage; `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648` | Reads post-hit Health and tests it against `actual_damage_dealt`; pre-hit Health below twice the Damage is equivalent under matching single-hit damage [Fixed source and line references](broker_passive_melee_crit_instakill.md#fixed-source-evidence) | Cannot confirm | The English leaves the Health-read timing unspecified. A pre-hit reading is consistent, but a post-hit reading would not be; no definite English error is inferred. |
 | Exclusions and example limits | No Captain exclusion or event-reading assumptions; `ui / loc_talent_broker_passive_melee_crit_instakill_desc / 41e81648` | Captains are excluded; event order and strict inequality govern the 190/200 Health examples [Fixed source and line references](broker_passive_melee_crit_instakill.md#fixed-source-evidence) | Not covered by the description | These clarify the existing evidence without treating omissions as errors. |
 
+
+<a id="broker_passive_damage_vs_elites_monsters"></a>
+
+## Punching Above One's Weight
+
+Full raw template and formatting: [source evidence](broker_passive_damage_vs_elites_monsters.md#original-english-template-and-reconstruction). Name hash `e2641fac`. Every row uses `ui / loc_talent_broker_passive_damage_vs_elites_monsters_desc / a7b80936`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Targets and value | +15% Damage against Elites and Monstrosities; `ui / loc_talent_broker_passive_damage_vs_elites_monsters_desc / a7b80936` | Adds `damage_vs_elites = 0.15` or `damage_vs_monsters = 0.15` according to breed tags [Fixed source and line references](broker_passive_damage_vs_elites_monsters.md#fixed-source-evidence) | Consistent | Both named target classes and the numerical bonus agree. |
+| Classification and calculation | No combined-tag or stacking details; `ui / loc_talent_broker_passive_damage_vs_elites_monsters_desc / a7b80936` | Each tag is checked independently; a Specialist-only target does not automatically qualify; same-stage bonuses add [Fixed source and line references](broker_passive_damage_vs_elites_monsters.md#fixed-source-evidence) | Not covered by the description | The existing formula and classification limits supplement the English. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

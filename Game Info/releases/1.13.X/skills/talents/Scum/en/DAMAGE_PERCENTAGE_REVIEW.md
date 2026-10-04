@@ -74,3 +74,4 @@ The review covers Power, general Damage and additional Weakspot/Critical Damage,
 | [Ammo Jack](broker_passive_extended_mag.md) | Talent | Static check | Capacity example: ⌈30 × 1.15⌉ = 35 rounds. A 7-round clip becomes ⌈7 × 1.15⌉ = 9 rounds. |
 | [Cheap Shots](broker_passive_damage_vs_heavy_staggered.md) | Talent | Static check | With a base of 100, Light Stagger gives 110 and Medium or Heavy Stagger gives 115. With another 25% bonus at the same stage, the latter is 100 × (1 + 25% + 15%) = 140. |
 | [Hyper-Critical](broker_passive_melee_crit_instakill.md) | Talent | Static check | An enemy starts at 190 Health; a Critical Hit dealing 100 leaves 90, and 90 < 100 triggers execution. At 200 Health the same hit leaves 100; equality does not trigger. |
+| [Punching Above One's Weight](broker_passive_damage_vs_elites_monsters.md) | Talent | Static check | A base of 100 becomes 115. With another 25% bonus at the same stage: 100 × (1 + 25% + 15%) = 140. |
