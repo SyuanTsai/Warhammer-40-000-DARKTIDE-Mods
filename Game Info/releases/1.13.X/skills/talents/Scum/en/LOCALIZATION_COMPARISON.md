@@ -795,6 +795,18 @@ Full raw template and formatting: [source evidence](broker_passive_increased_bli
 | Maximum Blitz charges | +1 Blitz Charges; `ui / loc_talent_broker_passive_increased_blitz_ammo_desc / 0e811057` | `extra_max_amount_of_grenades = 1` adds to the Broker abilities' `max_charges` [Fixed source and line references](broker_passive_increased_blitz_ammo.md#fixed-source-evidence) | Consistent | The charge increase applies to carrying capacity. |
 | Capacity and regeneration distinction | No regeneration is promised; `ui / loc_talent_broker_passive_increased_blitz_ammo_desc / 0e811057` | The effect increases capacity rather than regenerating a charge after each use [Fixed source and line references](broker_passive_increased_blitz_ammo.md#fixed-source-evidence) | Not covered by the description | This retains the original 3→4 and 2→3 capacity examples and their limit. |
 
+
+<a id="broker_passive_melee_attacks_apply_toxin"></a>
+
+## Coated Weaponry
+
+Full raw template and formatting: [source evidence](broker_passive_melee_attacks_apply_toxin.md#original-english-template-and-reconstruction). Name hash `eed42f4b`. Every row uses `ui / loc_talent_broker_passive_melee_attacks_apply_toxin_desc / 4108cdaa`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Critical Hit infection | Melee Critical Strikes infect Enemies with 1 stack of Chem Toxin; `ui / loc_talent_broker_passive_melee_attacks_apply_toxin_desc / 4108cdaa` | `on_hit` requires `on_crit_melee` and adds one `neurotoxin_interval_buff3` stack [Fixed source and line references](broker_passive_melee_attacks_apply_toxin.md#fixed-source-evidence) | Consistent | The trigger and per-hit stack addition match. |
+| Shared stacks, decay and Damage calculation | No shared cap, refresh, decay or Power calculation is stated; `ui / loc_talent_broker_passive_melee_attacks_apply_toxin_desc / 4108cdaa` | Cap 30; refresh; base 2.6s wait with `interval_stack_removal = true` and 0.35s ticks [Fixed source and line references](broker_passive_melee_attacks_apply_toxin.md#fixed-source-evidence) | Not covered by the description | These preserve the original three-stack input Power of 50 and the distinction between Power and final Damage. |
+
 ## Comparison totals
 
 The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

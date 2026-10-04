@@ -73,6 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="Toxin Mania talent icon"> [Toxin Mania](#broker_passive_damage_after_toxined_enemies) | <ul><li>Each Chem Toxin infected enemy within 12.5m grants 5% Damage, up to 15% at three enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="Splash Damage talent icon"> [Splash Damage](#broker_passive_toxin_spread_on_kills) | <ul><li>A Melee Elite kill spreads Chem Toxin within 4m to up to 10 selected enemies, filling this talent's contribution to 2 stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="Extra Pouches talent icon"> [Extra Pouches](#broker_passive_increased_blitz_ammo) | <ul><li>Gain 1 maximum Blitz charge.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="Coated Weaponry talent icon"> [Coated Weaponry](#broker_passive_melee_attacks_apply_toxin) | <ul><li>Melee Critical Hits add 1 Chem Toxin stack and refresh duration; shared cap 30.</li></ul> | Talent |
 
 ---
 
@@ -1096,3 +1097,19 @@
 - **Scope**: Increases carrying capacity. It does not automatically regenerate one charge after each use.
 
 [Details](broker_passive_increased_blitz_ammo.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_melee_attacks_apply_toxin"></a>
+
+### Coated Weaponry
+
+<img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="72" height="72" alt="Coated Weaponry talent icon">
+
+- **Stacks**: Each Melee Critical Hit adds one stack of the same Toxin type to that enemy and resets Toxin duration. It shares the 30-stack cap with other ways of applying the same Toxin.
+
+- **Damage behavior**: Toxin resolves every 0.35s. At three stacks, input Power is 500 × 3 ÷ 30 = 50, then the Damage curve and enemy armour determine Damage. More stacks increase Power; Power cannot be treated directly as Damage.
+
+- **Decay**: After you stop replenishing Toxin, the base 2.6s wait elapses, then stacks decay one at a time with Toxin Damage ticks. Applying Toxin again restarts the waiting period.
+
+[Details](broker_passive_melee_attacks_apply_toxin.md) · [Back to index](#talent-index)
