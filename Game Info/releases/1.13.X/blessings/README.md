@@ -88,5 +88,6 @@
 | <img src="https://github.com/user-attachments/assets/bb4dde18-82c5-4a0a-b0f6-a0e16651bf5a" width="32" height="32" alt="熱力震盪祝福圖示"> [熱力震盪](entries/熱力震盪/README.md)<br>- Volatile<br>[完整說明](entries/熱力震盪/README.md) | <ul><li>持用適用電漿槍時，依目前過熱比例提供0至5個充能時間修正階數；I–IV每階分別使蓄力時間縮短2.5%／3%／3.5%／4%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/155eda34-c438-4fc9-8400-a055c6b492e2" width="32" height="32" alt="升溫祝福圖示"> [升溫](entries/升溫/README.md)<br>- Rising Heat<br>[完整說明](entries/升溫/README.md) | <ul><li>持用電漿槍 M35熔岩核心 Mk II／Mk III 時，每一熱能階使威力修正增加 I–IV 級 1.5%／2%／3%／4%，最高 +7.5%／+10%／+15%／+20%；這項威力修正不等於最終傷害同比增加。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44" width="32" height="32" alt="優化冷卻祝福圖示"> [優化冷卻](entries/優化冷卻/README.md)<br>- Optimised Cooling<br>[完整說明](entries/優化冷卻/README.md) | <ul><li>普通與蓄力射擊接續動作鏈累積最多五階連射計數；I–IV 每階生熱依序乘 .96／.94／.92／.90，適用射擊與持續蓄力生熱，IV 五階相對少40.951%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc" width="32" height="32" alt="專注冷卻祝福圖示"> [專注冷卻](entries/專注冷卻/README.md)<br>- Focused Cooling<br>[完整說明](entries/專注冷卻/README.md) | <ul><li>持用電漿槍 M35熔岩核心 Mk II／Mk III 時，爆擊射擊的新增即時熱能依 I–IV 級相對減少30%／40%／50%／60%；判定不要求命中，蓄力期間持續生熱與排熱速度使用原計算。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

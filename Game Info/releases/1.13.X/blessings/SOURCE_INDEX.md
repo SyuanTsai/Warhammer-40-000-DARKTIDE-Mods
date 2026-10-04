@@ -86,3 +86,4 @@
 | [熱力震盪](entries/熱力震盪/README.md) | [來源索引](entries/熱力震盪/SOURCE_INDEX.md) |
 | [升溫](entries/升溫/README.md) | [來源索引](entries/升溫/SOURCE_INDEX.md) |
 | [優化冷卻](entries/優化冷卻/README.md) | [來源索引](entries/優化冷卻/SOURCE_INDEX.md) |
+| [專注冷卻](entries/專注冷卻/README.md) | [來源索引](entries/專注冷卻/SOURCE_INDEX.md) |

@@ -1082,6 +1082,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
       "effect": "普通與蓄力射擊接續動作鏈累積最多五階連射計數；I–IV 每階生熱依序乘 .96／.94／.92／.90，適用射擊與持續蓄力生熱，IV 五階相對少40.951%。"
+    },
+    {
+      "id": "focused-cooling",
+      "name_zh_tw": "專注冷卻",
+      "name_en": "Focused Cooling",
+      "name_key": "loc_trait_bespoke_reduced_overheat_on_crits",
+      "description_key": "loc_trait_bespoke_reduced_overheat_on_crits_desc",
+      "name_hash": "cf4040c3",
+      "description_hash": "39b124c2",
+      "page": "entries/專注冷卻/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
+      "effect": "持用電漿槍 M35熔岩核心 Mk II／Mk III 時，爆擊射擊的新增即時熱能依 I–IV 級相對減少30%／40%／50%／60%；判定不要求命中，蓄力期間持續生熱與排熱速度使用原計算。"
     }
   ],
   "weapons": [
@@ -17362,6 +17375,78 @@
       "icon": "https://github.com/user-attachments/assets/67729505-43c4-4069-9e4b-d2fda4ca0e44",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_153",
       "effect": "Mk II/Mk III have identical tier factors; their shot profiles differ but do not change the blessing multiplier."
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike",
+      "blessing_id": "focused-cooling",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/專注冷卻/weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "overheat_immediate_amount_critical_strike",
+        "stat_type": "multiplicative_multiplier",
+        "base_wrapper_fallback": 0.5,
+        "tier_multiplier_by_level": {
+          "I": 0.7,
+          "II": 0.6,
+          "III": 0.5,
+          "IV": 0.4
+        },
+        "immediate_critical_heat_reduction_percent_by_level": {
+          "I": 30,
+          "II": 40,
+          "III": 50,
+          "IV": 60
+        },
+        "formula": "critical_immediate_heat_added = otherwise_same_critical_shot_immediate_heat_added * tier_multiplier; heat_after = clamp(current_heat + critical_immediate_heat_added, 0, 1)",
+        "not_applied_to": [
+          "noncritical shots",
+          "continuous heat added while charging",
+          "vent heat removal",
+          "existing current heat",
+          "damage or critical-strike chance"
+        ],
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike",
+        "critical_immediate_heat_multiplier_by_tier": {
+          "I": 0.7,
+          "II": 0.6,
+          "III": 0.5,
+          "IV": 0.4
+        },
+        "critical_immediate_heat_reduction_percent_by_tier": {
+          "I": 30,
+          "II": 40,
+          "III": 50,
+          "IV": 60
+        },
+        "actual_mark_ids": [
+          "plasmagun_p1_m1",
+          "plasmagun_p1_m2"
+        ],
+        "both_marks_share_tier_values": true,
+        "tier_override_replaces_wrapper_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 300,
+        "end_line": 342
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 144,
+        "end_line": 152
+      },
+      "description_key": "loc_trait_bespoke_reduced_overheat_on_crits_desc",
+      "description_hash": "39b124c2",
+      "icon": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_156",
+      "effect": "電漿槍 M35熔岩核心 Mk II與Mk III使用相同I–IV倍率；僅縮減致命一擊射擊所增加的即時熱量。"
     }
   ],
   "bindings": [
@@ -24329,6 +24414,34 @@
       "mark_id": "plasmagun_p1_m2",
       "variant_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_continuous_fire",
       "trait_item": "content/items/traits/bespoke_plasmagun_p1/reduced_overheat_on_continuous_fire",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "focused-cooling",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/reduced_overheat_on_critical_strike",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "focused-cooling",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/reduced_overheat_on_critical_strike",
       "trait_category": "bespoke_plasmagun_p1",
       "available_tiers": null,
       "source": {

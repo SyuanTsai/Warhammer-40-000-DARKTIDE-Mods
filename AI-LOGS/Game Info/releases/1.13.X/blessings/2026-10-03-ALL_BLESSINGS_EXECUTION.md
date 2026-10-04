@@ -313,3 +313,5 @@
 - 第16輪三項已Commit後完整掃描通過：born-in-blood (`6f28bebbf2b560719cdaeac45e82a81934cd5f23`)、volatile (`a2043874be1499f5b4607af545c358ee3b00d0f8`)、rising-heat (`a525f24b37696402e207c26c0453a37c4ac9a4cf`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-016-full-scan.json`／SHA-256 `36a72bd54712e0f338b714ba41cda20dd9720b53141245f45c3f9611c5824dda`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [優化冷卻](2026-10-03-OPTIMISED-COOLING_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [專注冷卻](2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
