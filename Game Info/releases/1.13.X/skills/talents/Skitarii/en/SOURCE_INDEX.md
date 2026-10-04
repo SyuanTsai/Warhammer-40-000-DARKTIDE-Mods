@@ -94,3 +94,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ammunition-Restoration Pod](cryptic_passive_ammo_replenishment.md) / `cryptic_passive_ammo_replenishment` | Talent |
 | [Sustained Assault Doctrine](cryptic_stacking_melee_damage.md) / `cryptic_stacking_melee_damage` | Talent |
 | [Galvanized Coating](cryptic_stun_dr_power.md) / `cryptic_stun_dr_power` | Talent |
+| [Moebian Conductor](cryptic_damage_on_ability.md) / `cryptic_damage_on_ability` | Talent |

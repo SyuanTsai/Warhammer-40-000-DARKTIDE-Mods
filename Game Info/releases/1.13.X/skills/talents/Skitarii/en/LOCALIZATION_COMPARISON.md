@@ -1010,6 +1010,18 @@ Full raw template and formatting: [source evidence](cryptic_stun_dr_power.md#ori
 | Defence and melee-event cost | Stun Immune; +15% Damage Resistance; Taking Melee Damage spends 7.5% Capacitance; `ui / loc_talent_cryptic_stun_dr_power_desc / bb527abc` | Unconditional `stun_immune` and 0.85 damage-taken multiplier; qualifying melee damage events consume 0.075 of one charge. [Fixed source and line references](cryptic_stun_dr_power.md#fixed-source-evidence) | Consistent | The named defensive effects, reduction magnitude and resource percentage match. |
 | Keyword scope, spending basis and exceptions | Does not specify insufficient resources, disabled state, Toughness-only events or one-charge basis; `ui / loc_talent_cryptic_stun_dr_power_desc / bb527abc` | Defence persists without enough Capacitance; spending clamps to available resources and excludes disabled state. No positive Health-damage check, so Toughness-only melee events may incur cost. [Fixed source and line references](cryptic_stun_dr_power.md#fixed-source-evidence) | Not covered by the description | The existing 50×7.5%=3.75-second recovery-equivalent and 100→85 damage examples clarify the values and omitted limits. |
 
+
+<a id="cryptic_damage_on_ability"></a>
+
+## Moebian Conductor
+
+Full raw template and formatting: [source evidence](cryptic_damage_on_ability.md#original-english-template-and-reconstruction). Name hash `7a67e0cf`. Every row uses `ui / loc_talent_cryptic_damage_on_ability_desc / d9e47181`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Damage, duration and ability trigger | Gain +15% Damage for 10s on Ability Use; `ui / loc_talent_cryptic_damage_on_ability_desc / d9e47181` | `on_combat_ability` activates `damage = 0.15` for 10 seconds. [Fixed source and line references](cryptic_damage_on_ability.md#fixed-source-evidence) | Consistent | The effect, value and duration match the verified ability trigger. |
+| Ability category, refresh and charges | Does not specify Blitz, repeat activation or charges spent; `ui / loc_talent_cryptic_damage_on_ability_desc / d9e47181` | Blitz does not qualify; another activation refreshes 10 seconds without stacking. `num_charges` is not read, so multiple charges still give 15%. [Fixed source and line references](cryptic_damage_on_ability.md#fixed-source-evidence) | Not covered by the description | The original additive example `100 × (1 + 25% + 15%) = 140` and charge-count limit supplement the description. |
+
 ## Comparison totals
 
 167 rules: 80 Consistent / 4 Explicit contradiction / 80 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 543.

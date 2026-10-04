@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="Ammunition-Restoration Pod talent icon"> [Ammunition-Restoration Pod](#cryptic_passive_ammo_replenishment) | <ul><li>Every 15 seconds replenishes 1% of maximum Ammo Reserve into reserves. Fractional rounds carry over; it does not directly reload the clip.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="Sustained Assault Doctrine talent icon"> [Sustained Assault Doctrine](#cryptic_stacking_melee_damage) | <ul><li>Each melee swing that hits an enemy grants one 3% Damage stack, up to 5, refreshing 8 seconds. The bonus also increases ranged damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="Galvanized Coating talent icon"> [Galvanized Coating](#cryptic_stun_dr_power) | <ul><li>Always grants ordinary hit Stun immunity and 15% Damage Resistance. Qualifying melee damage events spend 7.5% of one Capacitance charge; defence remains with insufficient Capacitance.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="Moebian Conductor talent icon"> [Moebian Conductor](#cryptic_damage_on_ability) | <ul><li>Activating a Combat Ability grants 15% Damage for 10 seconds. Another activation refreshes the duration; spending multiple charges does not increase the bonus.</li></ul> | Talent |
 
 ---
 
@@ -1297,3 +1298,17 @@
 - **Calculation example**: With a base natural recovery time of 50 seconds per charge, 7.5% equals `50 × 7.5% = 3.75` seconds of natural recovery. An original 100 damage becomes `100 × 0.85 = 85`.
 
 [Details](cryptic_stun_dr_power.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_damage_on_ability"></a>
+
+### Moebian Conductor
+
+<img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="72" height="72" alt="Moebian Conductor talent icon">
+
+- **Trigger**: Activating your Combat Ability grants 15% Damage for 10 seconds. Blitz does not trigger it.
+- **Refresh**: Another activation resets the 10-second countdown without stacking. Spending multiple Capacitance charges in one activation still grants only 15%.
+- **Damage example**: At base damage 100 with an existing 25% bonus in the same stage, `100 × (1 + 25% + 15%) = 140` damage.
+
+[Details](cryptic_damage_on_ability.md) · [Back to index](#talent-index)
