@@ -900,6 +900,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b",
       "effect": "持用三個實際砍刀型號之一，並以特殊上勾命中敵人後啟用近戰威力加成I–IV +15／20／25／30%；計數依掃掠結束，純推擊不受益。"
+    },
+    {
+      "id": "torment",
+      "name_zh_tw": "凌遲",
+      "name_en": "Torment",
+      "name_key": "loc_trait_bespoke_increase_power_on_weapon_special_hit",
+      "description_key": "loc_trait_bespoke_increase_power_on_weapon_special_hit_desc",
+      "name_hash": "6c7642c3",
+      "description_hash": "51c41ac8",
+      "page": "entries/凌遲/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
+      "effect": "持用戴維爾戰鎬布蘭克斯 Mk Ia、博羅維安 Mk III 或卡索拉斯 Mk II，以武器特殊攻擊命中後，近戰威力輸入依 I–IV 級提高 +12／16／20／24%，持續3.5秒；再次命中刷新時間，不疊高。"
     }
   ],
   "weapons": [
@@ -15257,6 +15270,64 @@
       "icon": "https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_082",
       "effect": "持用三個實際砍刀型號之一，並以特殊上勾命中敵人後啟用近戰威力加成I–IV +15／20／25／30%；計數依掃掠結束，純推擊不受益。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+      "blessing_id": "torment",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/凌遲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "available_tiers": null,
+        "stat_values": {
+          "melee_power_level_modifier": {
+            "I": 0.12,
+            "II": 0.16,
+            "III": 0.2,
+            "IV": 0.24
+          }
+        },
+        "localized_values": {
+          "power_level": {
+            "I": "+12%",
+            "II": "+16%",
+            "III": "+20%",
+            "IV": "+24%"
+          },
+          "time": {
+            "all": "3.5秒"
+          }
+        },
+        "effect": "特殊近戰命中後，持用期間近戰威力輸入依 I–IV 級提高 +12／16／20／24%，持續 3.5 秒；重複合格命中刷新時間，不疊高。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 366,
+        "end_line": 415
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_weapon_special_hit_desc",
+      "description_hash": "51c41ac8",
+      "icon": "https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_214",
+      "effect": "三型號共用相同 I–IV tier；布蘭克斯使用上勾特殊攻擊，其餘兩型號使用勾拉特殊攻擊，成功命中皆可觸發。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit_parent"
     }
   ],
   "bindings": [
@@ -21390,6 +21461,48 @@
         "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
         "import_line": 16,
         "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "torment",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "torment",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "torment",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_weapon_special_hit",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_weapon_special_hit",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
       }
     }
   ]

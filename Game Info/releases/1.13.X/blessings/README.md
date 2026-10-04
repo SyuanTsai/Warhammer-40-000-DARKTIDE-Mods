@@ -74,5 +74,6 @@
 | <img src="https://github.com/user-attachments/assets/e96c1d1f-19f3-42fc-91f8-1809cfb9c8c6" width="32" height="32" alt="懲罰齊射祝福圖示"> [懲罰齊射](entries/懲罰齊射/README.md)<br>- Punishing Salvo<br>[完整說明](entries/懲罰齊射/README.md) | <ul><li>命中弱點且符合齊射計數時，I–IV級提高35／40／45／50%弱點加成部分；不是整筆遠程傷害。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/882a8dca-8f18-4327-901b-c03dba2ca7e7" width="32" height="32" alt="效率祝福圖示"> [效率](entries/效率/README.md)<br>- Efficiency<br>[完整說明](entries/效率/README.md) | <ul><li>新裝備時即就緒；每次射擊事件後冷卻 I–IV 為 1.25／1／0.75／0.5 秒，連射會刷新。就緒時 Mk VII／IX 用量 3→1，約省66.7%；Mk IIb 用量2→1，省50%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/6765cb07-f1bf-4026-b850-12f27882d24b" width="32" height="32" alt="肉槌祝福圖示"> [肉槌](entries/肉槌/README.md)<br>- Tenderiser<br>[完整說明](entries/肉槌/README.md) | <ul><li>持用三個實際砍刀型號之一，並以特殊上勾命中敵人後啟用近戰威力加成I–IV +15／20／25／30%；計數依掃掠結束，純推擊不受益。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/4a26461f-b7ea-4fcc-a54c-529c4ebfeca9" width="32" height="32" alt="凌遲祝福圖示"> [凌遲](entries/凌遲/README.md)<br>- Torment<br>[完整說明](entries/凌遲/README.md) | <ul><li>持用戴維爾戰鎬布蘭克斯 Mk Ia、博羅維安 Mk III 或卡索拉斯 Mk II，以武器特殊攻擊命中後，近戰威力輸入依 I–IV 級提高 +12／16／20／24%，持續3.5秒；再次命中刷新時間，不疊高。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

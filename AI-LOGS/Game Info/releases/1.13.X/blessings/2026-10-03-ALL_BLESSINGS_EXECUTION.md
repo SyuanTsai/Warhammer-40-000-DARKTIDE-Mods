@@ -275,3 +275,5 @@
 - [效率](2026-10-03-EFFICIENCY_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
 
 - [肉槌](2026-10-03-TENDERISER_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [凌遲](2026-10-03-TORMENT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

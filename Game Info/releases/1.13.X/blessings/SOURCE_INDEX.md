@@ -72,3 +72,4 @@
 | [懲罰齊射](entries/懲罰齊射/README.md) | [來源索引](entries/懲罰齊射/SOURCE_INDEX.md) |
 | [效率](entries/效率/README.md) | [來源索引](entries/效率/SOURCE_INDEX.md) |
 | [肉槌](entries/肉槌/README.md) | [來源索引](entries/肉槌/SOURCE_INDEX.md) |
+| [凌遲](entries/凌遲/README.md) | [來源索引](entries/凌遲/SOURCE_INDEX.md) |
