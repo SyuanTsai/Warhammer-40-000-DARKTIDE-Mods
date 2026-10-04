@@ -26,3 +26,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ammunition Deposit](cryptic_ammo_aura.md) / `cryptic_ammo_aura` | Aura |
 | [Foe-Render Creed](cryptic_aura_weapon_improved.md) / `cryptic_aura_weapon_improved` | Aura |
 | [Chordclaw Strike](cryptic_chordclaw.md) / `cryptic_chordclaw` | Ability |
+| [Restoration Protocol](cryptic_precision_stance_toughness_suppression.md) / `cryptic_precision_stance_toughness_suppression` | Ability |

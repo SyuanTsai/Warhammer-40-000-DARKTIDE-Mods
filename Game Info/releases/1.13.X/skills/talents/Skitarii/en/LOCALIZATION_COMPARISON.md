@@ -189,6 +189,18 @@ Full raw template and formatting: [source evidence](cryptic_chordclaw.md#origina
 | Heavy Attack, Critical Strike and Rending | Powerful Heavy Melee Attack using a Chordclaw; Guaranteed Critical Strike; +50% Rending; `ui / loc_talent_cryptic_chordclaw_desc / df29b524` | Default action_heavy_sticky_attack_1 has guaranteed_crit true and chordclaw_main; cryptic_chordclaw gives melee_rending_multiplier 0.5 [Fixed source and line references](cryptic_chordclaw.md#fixed-source-evidence) | Consistent | The attack type, guaranteed Critical Strike and Rending value agree. Powerful does not establish an exact Health damage value. |
 | Active bonuses, charges and timing | No +30% Melee Damage, Stun immunity, charge settings, duration or charging limit; `ui / loc_talent_cryptic_chordclaw_desc / df29b524` | Active melee_damage 0.3 and stun_immune; base 3 charges, cost 1/50 points, regeneration 1/s; maximum 10s and ends on weapon-slot switch; full charge 0.5s; talents alter attack pattern [Fixed source and line references](cryptic_chordclaw.md#fixed-source-evidence) | Not covered by the description | Preserve 100 ×(1+30%) =130 and with another same-stage 20% bonus, 100 ×(1+20%+30%) =150. Repeat use spends charges but does not repeat initial-activation-dependent effects. |
 
+
+<a id="cryptic_precision_stance_toughness_suppression"></a>
+
+## Restoration Protocol
+
+Full raw template and formatting: [source evidence](cryptic_precision_stance_toughness_suppression.md#original-english-template-and-reconstruction). Name hash `1befb0f8`. Every row uses `ui / loc_talent_cryptic_precision_stance_toughness_suppression_desc / e35e0d88`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recovery and activation-time Suppression clear | 10% Toughness per second for the duration; instantly clears all Suppression on activation; `ui / loc_talent_cryptic_precision_stance_toughness_suppression_desc / e35e0d88` | Stance activation calls Suppression.clear_suppression; the active stance passes 0.1 × dt to Toughness.replenish_percentage [Fixed source and line references](cryptic_precision_stance_toughness_suppression.md#fixed-source-evidence) | Consistent | The percentage and activation trigger agree. The English does not add a point unit after the percentage. |
+| Recovery basis, limits and switching off | No maximum-Toughness basis, recovery modifiers/cap, ranged-slot condition or off-branch detail; `ui / loc_talent_cryptic_precision_stance_toughness_suppression_desc / e35e0d88` | Recovery multiplies maximum Toughness, applies replenishment modifiers and caps at the deficit; leaving the ranged slot ends the stance; switching off does not perform the activation clear [Fixed source and line references](cryptic_precision_stance_toughness_suppression.md#fixed-source-evidence) | Not covered by the description | With maximum Toughness 150, recovery is 15 points/s and 60 over 4s under the stated assumptions. Clearing Suppression once does not grant ongoing immunity. |
+
 ## Comparison totals
 
 32 rules: 15 Consistent / 1 Explicit contradiction / 15 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 478.
