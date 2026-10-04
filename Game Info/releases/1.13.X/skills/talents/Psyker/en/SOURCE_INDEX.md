@@ -48,3 +48,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Overpowering Souls](psyker_empowered_ability_on_elite_kills.md) / `psyker_empowered_ability_on_elite_kills` | Keystone |
 | [Perfectionism](psyker_mark_increased_max_stacks.md) / `psyker_mark_increased_max_stacks` | Keystone |
 | [Purloin Providence](psyker_mark_kills_can_vent.md) / `psyker_mark_kills_can_vent` | Keystone |
+| [Lingering Influence](psyker_mark_increased_duration.md) / `psyker_mark_increased_duration` | Keystone |

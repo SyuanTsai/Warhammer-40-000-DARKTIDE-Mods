@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="Overpowering Souls talent icon"> [Overpowering Souls](#psyker_empowered_ability_on_elite_kills) | <ul><li>Elite kills guarantee one empowerment stack, subject to the storage cap; Specialist and ordinary kills retain their existing gain chance.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d2ef8713-7c0b-4dec-b13a-7f9e6a294435" width="32" height="32" alt="Perfectionism talent icon"> [Perfectionism](#psyker_mark_increased_max_stacks) | <ul><li>Raises Disrupt Destiny's Precision cap from 15 to 25 stacks; per-stack effects and five-second one-stack decay remain unchanged. Choose either this or Lingering Influence.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="Purloin Providence talent icon"> [Purloin Providence](#psyker_mark_kills_can_vent) | <ul><li>Personally killing Disrupt Destiny's current Marked Enemy Quells five percentage points of Peril.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="Lingering Influence talent icon"> [Lingering Influence](#psyker_mark_increased_duration) | <ul><li>Extends Disrupt Destiny's Precision timer before each one-stack decay from five to ten seconds; choose either this or Perfectionism.</li></ul> | Keystone |
 
 ---
 
@@ -615,3 +616,19 @@
 - **Peril example:** At 60% Peril, `60% − 5 percentage points = 55%`. At 3%, Peril falls to 0%.
 
 [Details](psyker_mark_kills_can_vent.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_mark_increased_duration"></a>
+
+### Lingering Influence
+
+<img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="72" height="72" alt="Lingering Influence talent icon">
+
+- **How it works:** Disrupt Destiny's Precision timer before each one-stack decay increases from five to ten seconds. Gaining a stack or hitting a qualifying target can still refresh the countdown.
+
+- **Time example:** With three stacks and no subsequent refresh, the count falls to two, one and zero at about 10, 20 and 30 seconds. Full decay originally took about `5 × 3 = 15` seconds; it now takes about `10 × 3 = 30`.
+
+- **Selection limit:** Choose either Lingering Influence or Perfectionism.
+
+[Details](psyker_mark_increased_duration.md) · [Back to index](#talent-index)

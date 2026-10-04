@@ -457,6 +457,18 @@ Full raw template and formatting: [source evidence](psyker_mark_kills_can_vent.m
 | Marked-kill Quelling | Killing enemies Marked by Disrupt Destiny has a 100% chance to instantly Quell 5% of your Peril; `ui / loc_talent_psyker_mark_kills_can_vent_description / 01016112` | Current Marked-target kill sets procced with probability 1; the next update calls decrease_immediate(0.05). [Fixed source and line references](psyker_mark_kills_can_vent.md#fixed-source-evidence) | Consistent | The stated trigger, guaranteed chance and immediate-reduction value agree with the accepted Peril-gauge interpretation. |
 | Gauge and event boundaries | No current-target/personal checks, zero-floor formula or same-update event handling specified; `ui / loc_talent_psyker_mark_kills_can_vent_description / 01016112` | Personally kill the current Marked target; 60%→55% and 3%→0%. Multiple pre-update events share one procced boolean, so separate deductions per event are not guaranteed. [Fixed source and line references](psyker_mark_kills_can_vent.md#fixed-source-evidence) | Not covered by the description | These clarify the accepted percentage-point effect and event limits. The English does not explicitly prescribe multiplying current Peril by 0.95. |
 
+
+<a id="psyker_mark_increased_duration"></a>
+
+## Lingering Influence
+
+Full raw template and formatting: [source evidence](psyker_mark_increased_duration.md#original-english-template-and-reconstruction). Name hash `e4c25bba`. Every row uses `ui / loc_talent_psyker_mark_increased_duration_description / cacfbe0c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Duration increase | Disrupt Destiny duration increases from 5s to 10s; `ui / loc_talent_psyker_mark_increased_duration_description / cacfbe0c` | The increased_duration clone sets duration = 10 rather than the base 5. [Fixed source and line references](psyker_mark_increased_duration.md#fixed-source-evidence) | Consistent | The stated values agree with the accepted Precision timer. |
+| Decay, refresh and exclusive variant | No changed cap, refresh removal or combined variant stated; `ui / loc_talent_psyker_mark_increased_duration_description / cacfbe0c` | Retains max_stacks 15 and both refresh flags; gained stacks or qualifying hits refresh. Three unrefreshed stacks decay at about 10/20/30s. increased_stacks takes priority over increased_duration, and the choices are mutually exclusive. [Fixed source and line references](psyker_mark_increased_duration.md#fixed-source-evidence) | Not covered by the description | The timer example and selection boundaries supplement the duration statement; the English does not claim all stacks expire together at ten seconds. |
+
 ## Comparison totals
 
 The 76 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **35 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
