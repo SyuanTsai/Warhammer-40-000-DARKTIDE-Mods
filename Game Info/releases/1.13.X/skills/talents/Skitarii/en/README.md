@@ -66,6 +66,7 @@
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="Shockline Breach Protocol talent icon"> [Shockline Breach Protocol](#cryptic_pushing_grants_cleave) | <ul><li>Hitting an enemy with a push grants 50% increased melee cleave for 8 seconds. Further push hits refresh the duration without stacking. The bonus increases the attack's mass budget.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="Rad-Sink talent icon"> [Rad-Sink](#cryptic_stacking_ranged_damage) | <ul><li>Gain 10% Ranged Damage 1 second after the last shot, rising to 20% at 2 seconds, up to 2 stacks. Shooting again restarts the wait; sustained fire does not preserve the full bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="Progressive Plating Matrix talent icon"> [Progressive Plating Matrix](#cryptic_stacking_tdr) | <ul><li>Hitting the first target of an attack grants one stack of 2.5% Toughness Damage Reduction, up to 6 stacks. Triggers refresh a shared 5-second duration; one attack hitting several enemies still adds only one stack.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="Retribution Conduit talent icon"> [Retribution Conduit](#cryptic_damage_vs_electrocuted_scaling_on_charge) | <ul><li>Gain 10% Damage against Electrocuted enemies, plus 5% for each full Combat Ability charge currently held. Partial charges do not count; the bonus follows the remaining charges and ends for targets no longer Electrocuted.</li></ul> | Talent |
 
 ---
 
@@ -918,3 +919,17 @@
 - **Example**: Six stacks provide `6 × 2.5% = 15%` reduction, turning 100 points of Toughness damage into 85. With another independent 20% reduction, the result is `100 × 0.85 × 0.80 = 68` points.
 
 [Details](cryptic_stacking_tdr.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
+
+### Retribution Conduit
+
+<img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="72" height="72" alt="Retribution Conduit talent icon">
+
+- **Effect**: Deal **10% increased damage to Electrocuted enemies**, plus **5% for each full charge currently held**. An incomplete charge does not count.
+- **Example**: With 3 full charges, the bonus is `10% + 3 × 5% = 25%`, turning 100 base damage into 125. With another same-stage 20% bonus, `100 × (1 + 20% + 25%) = 145`.
+- **Changes**: After a charge is spent, the bonus recalculates from the remaining full charges. Once the target's Electrocution ends, this bonus against Electrocuted targets no longer applies.
+
+[Details](cryptic_damage_vs_electrocuted_scaling_on_charge.md) · [Back to index](#talent-index)

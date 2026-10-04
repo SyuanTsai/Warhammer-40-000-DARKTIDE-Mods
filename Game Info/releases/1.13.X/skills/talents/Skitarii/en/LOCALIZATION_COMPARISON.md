@@ -709,6 +709,18 @@ Full raw template and formatting: [source evidence](cryptic_stacking_tdr.md#orig
 | Hit trigger, values and stack limit | Hits grant +2.5% Toughness Damage Reduction for 5s. Stacks 6 times. Max one per attack; `ui / loc_talent_cryptic_stacking_tdr_desc / 1e30d43e` | The first target hit gives one step; 2.5% reduction per step, cap 6, duration 5 seconds [Fixed source and line references](cryptic_stacking_tdr.md#fixed-source-evidence) | Consistent | The trigger, per-step value, duration, cap and per-attack limit agree. |
 | Shared expiry and damage calculation | Does not specify first-target selection, shared refreshing or stacking arithmetic; `ui / loc_talent_cryptic_stacking_tdr_desc / 1e30d43e` | `target_index == 1`; duration refreshes as a whole, with no individual stack expiry. Multiplier `1 − 0.025n`; at 6, `0.85`, multiplied by independent reductions [Fixed source and line references](cryptic_stacking_tdr.md#fixed-source-evidence) | Not covered by the description | The original 100→85 and 100 × 0.85 × 0.80 = 68 examples supplement the English. |
 
+
+<a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
+
+## Retribution Conduit
+
+Full raw template and formatting: [source evidence](cryptic_damage_vs_electrocuted_scaling_on_charge.md#original-english-template-and-reconstruction). Name hash `d9d4b1f5`. Every row uses `ui / loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc / 232897f8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Target condition and charge scaling | Gain +10% Damage vs Electrocuted, increased by +5% per current charge; `ui / loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc / 232897f8` | `damage_vs_electrocuted` is `0.1 + 0.05n` for current remaining full charges [Fixed source and line references](cryptic_damage_vs_electrocuted_scaling_on_charge.md#fixed-source-evidence) | Consistent | The target condition, base bonus and per-charge increase agree. |
+| Integer charges and additive calculation | Does not specify partial-charge handling or combination with other damage stats; `ui / loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc / 232897f8` | Integer `num_charges` excludes partial progress; spending changes n. At 3 charges, 25% gives 100→125, or 145 with same-stage 20%; the target must remain Electrocuted [Fixed source and line references](cryptic_damage_vs_electrocuted_scaling_on_charge.md#fixed-source-evidence) | Not covered by the description | The calculation basis, state changes and original examples supplement the English. |
+
 ## Comparison totals
 
 115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.
