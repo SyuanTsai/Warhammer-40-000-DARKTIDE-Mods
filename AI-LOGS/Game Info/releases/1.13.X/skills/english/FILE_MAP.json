@@ -6247,7 +6247,12 @@
         "broker_passive_improved_dodges_at_full_stamina",
         "base_crit_chance_node_buff_low_1",
         "base_melee_damage_node_buff_medium_1",
-        "base_toxin_power_boost_1"
+        "base_toxin_power_boost_1",
+        "broker_passive_reduce_swap_time",
+        "broker_passive_reduced_toughness_damage_during_reload",
+        "broker_passive_knockback_on_taking_melee_damage",
+        "broker_passive_crit_grants_damage",
+        "broker_passive_melee_cleave_on_melee_kill"
       ],
       "checks": []
     },
@@ -6314,7 +6319,12 @@
         "broker_passive_improved_dodges_at_full_stamina",
         "base_crit_chance_node_buff_low_1",
         "base_melee_damage_node_buff_medium_1",
-        "base_toxin_power_boost_1"
+        "base_toxin_power_boost_1",
+        "broker_passive_reduce_swap_time",
+        "broker_passive_reduced_toughness_damage_during_reload",
+        "broker_passive_knockback_on_taking_melee_damage",
+        "broker_passive_crit_grants_damage",
+        "broker_passive_melee_cleave_on_melee_kill"
       ],
       "checks": []
     },
@@ -6381,7 +6391,12 @@
         "broker_passive_improved_dodges_at_full_stamina",
         "base_crit_chance_node_buff_low_1",
         "base_melee_damage_node_buff_medium_1",
-        "base_toxin_power_boost_1"
+        "base_toxin_power_boost_1",
+        "broker_passive_reduce_swap_time",
+        "broker_passive_reduced_toughness_damage_during_reload",
+        "broker_passive_knockback_on_taking_melee_damage",
+        "broker_passive_crit_grants_damage",
+        "broker_passive_melee_cleave_on_melee_kill"
       ],
       "checks": []
     },
@@ -6448,7 +6463,12 @@
         "broker_passive_improved_dodges_at_full_stamina",
         "base_crit_chance_node_buff_low_1",
         "base_melee_damage_node_buff_medium_1",
-        "base_toxin_power_boost_1"
+        "base_toxin_power_boost_1",
+        "broker_passive_reduce_swap_time",
+        "broker_passive_reduced_toughness_damage_during_reload",
+        "broker_passive_knockback_on_taking_melee_damage",
+        "broker_passive_crit_grants_damage",
+        "broker_passive_melee_cleave_on_melee_kill"
       ],
       "checks": []
     },
@@ -7209,9 +7229,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "22603ad176be10146c3af9c0138270caa1ac20d4",
       "chinese_sha256": "911275d24c42807771f0ff6763fc5180ab2b97c0f813335dbcc453c7bb520dd0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_crit_grants_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_after_toxined_enemies.md",
@@ -7416,9 +7443,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a56be0e4ba0ab17d57b071aab18e490d4a2a5bd1",
       "chinese_sha256": "713e7b2c0beb4f30b05b8aa602585db0dde9a48aa0f8f34510769efc49d70716",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_knockback_on_taking_melee_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_longer_dodges.md",
@@ -7467,9 +7501,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7256f08d5c1db233feffb2081361b61c4c8deddc",
       "chinese_sha256": "dac2c8c09309000a0299f215235180ef68932d79667e7a4586afe5a48ae959f7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_melee_cleave_on_melee_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_crit_instakill.md",
@@ -7536,9 +7577,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3a7c60b257b30eaddbc45db3e76c9f4d6d2ad023",
       "chinese_sha256": "c5a7d3acff386c6a567879c2200928d0f3bc1294c38d9d0259cf337e6e4547a3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_reduce_swap_time"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reduced_damage_by_toxined.md",
@@ -7558,9 +7606,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bbfa132d399a3c6f67a13a904041584b5842956f",
       "chinese_sha256": "9e3d0ad3b6389554e47ae36b70aba020a601f8e3852e4a8f9b9d9857cbb86cf9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_reduced_toughness_damage_during_reload"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reload_speed_on_close_kill.md",
@@ -16031,6 +16086,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/base_toxin_power_boost_1.md"
+    },
+    {
+      "id": "broker_passive_reduce_swap_time",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduce_swap_time.md"
+    },
+    {
+      "id": "broker_passive_reduced_toughness_damage_during_reload",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduced_toughness_damage_during_reload.md"
+    },
+    {
+      "id": "broker_passive_knockback_on_taking_melee_damage",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_knockback_on_taking_melee_damage.md"
+    },
+    {
+      "id": "broker_passive_crit_grants_damage",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_crit_grants_damage.md"
+    },
+    {
+      "id": "broker_passive_melee_cleave_on_melee_kill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_cleave_on_melee_kill.md"
     }
   ],
   "pending_chinese_corrections": [

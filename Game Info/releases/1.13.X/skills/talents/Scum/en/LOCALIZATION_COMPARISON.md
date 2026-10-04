@@ -737,4 +737,4 @@ Full raw template and formatting: [source evidence](broker_passive_melee_cleave_
 
 ## Comparison totals
 
-The 117 listed rules comprise **55 Consistent**, **3 Explicit contradictions**, **54 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 128 listed rules comprise **60 Consistent**, **3 Explicit contradictions**, **59 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
