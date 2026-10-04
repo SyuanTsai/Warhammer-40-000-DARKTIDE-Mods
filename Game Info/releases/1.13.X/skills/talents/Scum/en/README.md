@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e" width="32" height="32" alt="Speedloader talent icon"> [Speedloader](#broker_passive_reload_speed_on_close_kill) | <ul><li>Ranged kills within 12.5 metres grant 30% Reload Speed for 8 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="Burst of Energy talent icon"> [Burst of Energy](#broker_passive_stun_immunity_on_toughness_broken) | <ul><li>When your Toughness breaks, restore 50% of maximum Toughness and gain Stun Immunity for 6 seconds; a 10-second cooldown follows the effect.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_1) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="32" height="32" alt="Regained Posture talent icon"> [Regained Posture](#broker_passive_stamina_on_successful_dodge) | <ul><li>A Successful Dodge restores 10% of maximum Stamina.</li></ul> | Talent |
 
 ---
 
@@ -750,3 +751,16 @@
 - **Examples**: an initial 100 points becomes 125. With another 20% maximum-Toughness bonus, the result is (100 + 25) × 1.2 = 150.
 
 [Details](base_toughness_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_stamina_on_successful_dodge"></a>
+
+### Regained Posture
+
+<img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="72" height="72" alt="Regained Posture talent icon">
+
+- **Recovery**: each Successful Dodge restores 10% of maximum Stamina, without exceeding the Stamina cap.
+- **Recovery example**: at 5 maximum Stamina, each trigger restores 5 × 10% = 0.5 points. At 4.8 current Stamina, it restores only 0.2 points.
+
+[Details](broker_passive_stamina_on_successful_dodge.md) · [Back to index](#talent-index)

@@ -530,6 +530,18 @@ Full raw template and formatting: [source evidence](base_toughness_node_buff_med
 | Fixed Toughness increase | +25 Toughness; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | The one-tier node uses `talent_overrides[1]` with `toughness = 25`, rather than the template default 15. [Fixed source and line references](base_toughness_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The reconstructed English value matches the accepted tier override. |
 | Maximum-Toughness calculation | No maximum-stat wording or calculation order is stated; `ui / loc_talent_toughness_boost_medium_desc / 329702b6` | `max_toughness` adds the breed base and `stat_buffs.toughness`, multiplies by `toughness_bonus`, applies `ceil`, then adds the flat value. [Fixed source and line references](base_toughness_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The short stat label leaves the maximum-stat basis and combination order implicit. |
 
+
+<a id="broker_passive_stamina_on_successful_dodge"></a>
+
+## Regained Posture
+
+Full raw template and formatting: [source evidence](broker_passive_stamina_on_successful_dodge.md#original-english-template-and-reconstruction). Name hash `296a3ab9`. Every row uses `ui / loc_talent_broker_passive_stamina_on_successful_dodge_desc / 022ffbe4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Successful Dodge and recovery amount | +10% Stamina on Successful Dodge; `ui / loc_talent_broker_passive_stamina_on_successful_dodge_desc / 022ffbe4` | `on_successful_dodge` calls `Stamina.add_stamina(percentage = 0.1)`. [Fixed source and line references](broker_passive_stamina_on_successful_dodge.md#fixed-source-evidence) | Consistent | The trigger and percentage match the accepted recovery. |
+| Maximum-Stamina basis and cap | No current-weapon/property basis or cap is stated; `ui / loc_talent_broker_passive_stamina_on_successful_dodge_desc / 022ffbe4` | Recovery uses maximum Stamina determined by the current weapon and properties, without exceeding the cap. [Fixed source and line references](broker_passive_stamina_on_successful_dodge.md#fixed-source-evidence) | Not covered by the description | These specify the amount's basis and qualify the original recovery example. |
+
 ## Comparison totals
 
 The 87 listed rules comprise **41 Consistent**, **2 Explicit contradictions**, **39 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
