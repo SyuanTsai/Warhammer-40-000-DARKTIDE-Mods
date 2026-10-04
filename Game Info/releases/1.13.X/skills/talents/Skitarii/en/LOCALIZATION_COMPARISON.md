@@ -1154,6 +1154,18 @@ Full raw template and formatting: [source evidence](cryptic_electrocution_push.m
 | Push stagger and cooldown | Staggering enemies with a Push applies Electrocution; 12s Cooldown.; `ui / loc_talent_cryptic_electrocution_push_desc / 642d90e7` | A qualifying on_push_hit applies cryptic_electrocution_default, and on_push_finish starts cooldown_duration = 12. [Fixed source and line references](cryptic_electrocution_push.md#fixed-source-evidence) | Consistent | The trigger, applied effect and cooldown value match. |
 | Whole-Push application and timing | Target eligibility, effect duration, refresh and cooldown start are not specified.; `ui / loc_talent_cryptic_electrocution_push_desc / 642d90e7` | All qualifying living targets in one Push can receive the 3-second, one-stack refreshable effect. Cooldown starts at Push completion; no stagger means no cooldown, and ordinary Push effects remain available. [Fixed source and line references](cryptic_electrocution_push.md#fixed-source-evidence) | Not covered by the description | These details explain the trigger and shared cooldown without contradicting the stated interval. |
 
+
+<a id="cryptic_corruption_resistance_doom"></a>
+
+## Ablative Wards
+
+Full raw template and formatting: [source evidence](cryptic_corruption_resistance_doom.md#original-english-template-and-reconstruction). Name hash `9093d8ea`. Every row uses `ui / loc_talent_cryptic_corruption_resistance_doom_desc / ed668132`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Resistance and periodic baseline | Gain +90% Corruption Resistance; every 20s, take 1 Corruption Damage.; `ui / loc_talent_cryptic_corruption_resistance_doom_desc / ed668132` | corruption_taken_multiplier = 0.1; the periodic power/profile calculation offsets its own resistance to produce baseline 1 at interval 20. [Fixed source and line references](cryptic_corruption_resistance_doom.md#fixed-source-evidence) | Consistent | The displayed resistance, interval and baseline cost match. |
+| Cost eligibility and other modifiers | The self-resistance offset, eligible status and other modifiers are not specified.; `ui / loc_talent_cryptic_corruption_resistance_doom_desc / ed668132` | The cost ignores Toughness and skips on-hit procs, runs only while HEALTH_ALIVE and not requires_help, and may still be affected by other shared modifiers. It does not clear accumulated Corruption. [Fixed source and line references](cryptic_corruption_resistance_doom.md#fixed-source-evidence) | Not covered by the description | These conditions qualify the baseline cost; the wording does not explicitly promise an immutable cost in every state. |
+
 ## Comparison totals
 
 197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.

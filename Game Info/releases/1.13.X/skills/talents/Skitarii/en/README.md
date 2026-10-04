@@ -103,6 +103,7 @@
 | <img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="32" height="32" alt="Slaughter Protocol talent icon"> [Slaughter Protocol](#cryptic_toughness_replenishment_on_kill_bonus) | <ul><li>Increase the existing Toughness recovery from melee kills by 25%, or by 50% when no full Capacitance charge remains.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="Precision Combat Augurs talent icon"> [Precision Combat Augurs](#cryptic_next_hit_all_damage_on_dodge) | <ul><li>After a successful dodge, gain 15% damage for the next melee swing or shot. The attack consumes the effect even if it misses; repeated dodges cannot store multiple bonuses.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="Voltaic Burst talent icon"> [Voltaic Burst](#cryptic_electrocution_push) | <ul><li>A Push that staggers enemies applies Electrocution to all qualifying living targets. The shared 12-second cooldown starts when that Push finishes.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="Ablative Wards talent icon"> [Ablative Wards](#cryptic_corruption_resistance_doom) | <ul><li>Reduce incoming Corruption by 90%. Every 20 seconds, incur a baseline cost of 1 Corruption, with this talent's own resistance already offset.</li></ul> | Talent |
 
 ---
 
@@ -1483,3 +1484,18 @@ The verified Chinese document notes that its original wording says, in translati
 - **Timing example**: If the Push finishes at **0 seconds**, the next Push able to apply Electrocution is available no earlier than **12 seconds** later. Pushes during the cooldown still retain their ordinary effects.
 
 [Details](cryptic_electrocution_push.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_corruption_resistance_doom"></a>
+
+### Ablative Wards
+
+<img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="72" height="72" alt="Ablative Wards talent icon">
+
+- **Defence**: Reduce ordinary incoming Corruption by **90%**. If otherwise identical conditions would add **10** Corruption, this resistance alone changes it to `10 × 0.10 = 1`.
+- **Periodic cost**: Every **20 seconds**, incur a baseline **1 Corruption**. This cost already offsets the talent's own 90% resistance, so it must not be reduced again to 0.1.
+- **Cost example**: With no other modifiers, remaining alive and requiring no assistance throughout, **60 seconds** produces **3** applications, adding **3 baseline Corruption**. Applications are skipped while in a help-required state, such as being downed or subdued.
+- **Other effects**: Additional damage reduction, Corruption Resistance and other modifiers may still affect the actual cost. This talent does not remove accumulated Corruption.
+
+[Details](cryptic_corruption_resistance_doom.md) · [Back to index](#talent-index)
