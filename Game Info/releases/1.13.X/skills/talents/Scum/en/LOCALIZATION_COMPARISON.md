@@ -892,6 +892,18 @@ Full raw template and formatting: [source evidence](broker_passive_damage_vs_eli
 | Targets and value | +15% Damage against Elites and Monstrosities; `ui / loc_talent_broker_passive_damage_vs_elites_monsters_desc / a7b80936` | Adds `damage_vs_elites = 0.15` or `damage_vs_monsters = 0.15` according to breed tags [Fixed source and line references](broker_passive_damage_vs_elites_monsters.md#fixed-source-evidence) | Consistent | Both named target classes and the numerical bonus agree. |
 | Classification and calculation | No combined-tag or stacking details; `ui / loc_talent_broker_passive_damage_vs_elites_monsters_desc / a7b80936` | Each tag is checked independently; a Specialist-only target does not automatically qualify; same-stage bonuses add [Fixed source and line references](broker_passive_damage_vs_elites_monsters.md#fixed-source-evidence) | Not covered by the description | The existing formula and classification limits supplement the English. |
 
+
+<a id="broker_passive_increased_weakspot_damage"></a>
+
+## The Sweet Spot
+
+Full raw template and formatting: [source evidence](broker_passive_increased_weakspot_damage.md#original-english-template-and-reconstruction). Name hash `3f4df881`. Every row uses `ui / loc_talent_broker_passive_increased_weakspot_damage_desc / 54b98b85`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weakspot statistic and value | +25% Weakspot Damage; `ui / loc_talent_broker_passive_increased_weakspot_damage_desc / 54b98b85` | Adds 0.25 to `finesse_buff_damage_multiplier` on `hit_weakspot` [Fixed source and line references](broker_passive_increased_weakspot_damage.md#fixed-source-evidence) | Consistent | The named statistic, Weakspot condition and value agree. |
+| Component scope and total gain | No component formula or fixed total-damage claim; `ui / loc_talent_broker_passive_increased_weakspot_damage_desc / 54b98b85` | Applies to `base_finesse_damage`; the normal component remains separate, so weapon and hit properties affect the total gain [Fixed source and line references](broker_passive_increased_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | Both existing examples clarify the formula without treating the abbreviated statistic label as an error. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.

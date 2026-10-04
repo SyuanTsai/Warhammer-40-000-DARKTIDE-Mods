@@ -81,6 +81,7 @@
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="Cheap Shots talent icon"> [Cheap Shots](#broker_passive_damage_vs_heavy_staggered) | <ul><li>Deal 10% more damage to Staggered enemies, or 15% in total to enemies with Medium or Heavy Stagger.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="Hyper-Critical talent icon"> [Hyper-Critical](#broker_passive_melee_crit_instakill) | <ul><li>After a Critical Melee Hit, execute a living human-sized enemy whose remaining Health is below the hit's actual Damage; Captains are excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="Punching Above One's Weight talent icon"> [Punching Above One's Weight](#broker_passive_damage_vs_elites_monsters) | <ul><li>Deal 15% more Damage to Elites and Monstrosities.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="The Sweet Spot talent icon"> [The Sweet Spot](#broker_passive_increased_weakspot_damage) | <ul><li>Increase the additional Weakspot Damage component by 25%; the resulting total damage gain varies by weapon.</li></ul> | Talent |
 
 ---
 
@@ -1222,3 +1223,19 @@
 - **Damage example**: A base of 100 becomes 115. With another 25% bonus at the same stage, the result is 100 × (1 + 25% + 15%) = 140.
 
 [Details](broker_passive_damage_vs_elites_monsters.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_increased_weakspot_damage"></a>
+
+### The Sweet Spot
+
+<img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="72" height="72" alt="The Sweet Spot talent icon">
+
+- **Calculation**: On a Weakspot Hit, increase the additional Weakspot/Finesse Damage component. The whole damage amount is not multiplied by 1.25. Weapon, armour, attack type and whether the hit is Critical may change this component's share.
+
+- **Damage example**: Assume a normal component of 100 and additional Weakspot component of 100, for 200 total. The bonus gives 100 + 100 × 1.25 = 225, a 12.5% increase in total damage.
+
+- **Weapon difference example**: Another weapon with a normal component of 100 and additional component of 300 starts at 400. The bonus gives 100 + 300 × 1.25 = 475, a total increase of 18.75%. The same 25% Weakspot bonus therefore does not give every weapon the same total damage percentage increase.
+
+[Details](broker_passive_increased_weakspot_damage.md) · [Back to index](#talent-index)
