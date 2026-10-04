@@ -31,7 +31,7 @@
 
 ## 原未對應字幕的重新分類
 
-對固定 SHA 的整棵 Git 樹 10,554 檔（184,307,661 bytes）重新掃描，包含 `dialogues/generated`、角色／UI 設定、runtime 與 773 個 `content/levels` Lua 檔。228,036 個不同 quoted／`loc_` identifier 候選依 `MurmurHash64A(seed=0) >> 32` 比對；原資源 387 個已知明文 key 全部吻合，60 個新增分類 hash 沒有候選碰撞。未以文字相似、key 尾綴或檔名推造事件。
+固定 Source commit 7e662fcda16219d775b84af50322be2e9cd9d62e 的完整 Git 樹有 10,554 blobs、173,722,689 Git blob bytes；本機 Windows checkout 為 184,307,661 bytes，差異來自 CRLF。逐檔 Source blob 比對 10,554/10,554 通過，掃描包含 dialogues/generated、角色／UI 設定、runtime 與 773 個 content/levels Lua 檔。歷史 228,036 候選數採較廣的舊 selector；本次逐筆掃描以共用 evidence JSON 所列的明確 quoted identifier 與 loc_ 規則，取得 211,230 個候選值。兩個 aggregate 不是同一口徑；本次 hash、十進位與識別碼結果逐筆記錄於 source-catalog/subtitle-usages/subtitle-usages-audit.tsv。未以文字相似、key 尾綴或檔名推造事件。
 
 | 實際用途 | 不同 hash | 英文原文 | 繁中原文 | Source 引用位置 |
 |---|---:|---:|---:|---:|
@@ -44,7 +44,7 @@
 
 22 筆在 `heard_speak` 規則的 `query_context.sound_event / OP.SET_INCLUDES` 條件出現，共 26 處、14 個官方回應規則；完整條件位置及既有回應閱讀入口見 [response-trigger-references.tsv](source-catalog/subtitle-usages/response-trigger-references.tsv)。[dialogue_system.lua 第 474–486 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/dialogue/dialogue_system.lua#L474-L486)把上一句的 sound event 傳入 `heard_speak`；真正的播放選擇則讀 [rule.sound_events](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/dialogue/dialogue_extension.lua#L648-L655)。這 22 個 key 沒有在固定版本的播放候選池找到，不能把條件所屬的 response voice template 當作原始說話者，也不保證目前會播放。
 
-其餘 14,191 個 hash 尚無可證的 literal／identifier 或直接 hash 引用；不是「確定未使用」。例如 Flow 的 [vo_line_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L1908)與 [subtitle_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L2020)由外部資產參數提供，而此 Source 樹不含所有資產實體。原始未對應索引與正文位置保留作為穩定編號；上述 TSV 與逐筆來源 MD 是用途覆蓋層，網站據此分類，不另維護字幕副本。用途待確認字幕的網站閱讀頁採每頁最多 25 筆。
+其餘 14,191 個 hash 分類為「用途待確認」，不等於未使用。歷史 inventory 對這些列沒有 raw 英文 key、繁中 key 或 matched key；本次已掃描固定 Source 的 10,554 blobs，依共用 evidence JSON 的精確規則比對 quoted ASCII identifier、loc_ 候選、獨立 8-hex／0x hash 與有號／無號 32-bit 十進位形式，均無命中。掃描不解析 Lua 字串串接、執行期組字或動態 alias；Source 樹也不含全部 Flow／VO 遊戲資產實例。Flow 的 [vo_line_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L1908) 與 [subtitle_id](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/script_flow_nodes/flow_callbacks.lua#L2020) 由外部 runtime／asset 參數提供，因此這些列的 key、事件、說話者與實際播放仍未確認。保留既有 source number、entry_index、hash 與來源頁；唯一逐筆分類表與共用證據分別為 source-catalog/subtitle-usages/subtitle-usages-audit.tsv 和 source-catalog/subtitle-usages/subtitle-usage-evidence.json。網站閱讀頁維持每頁最多 25 筆。
 
 ## 字幕顯示資格缺口
 
