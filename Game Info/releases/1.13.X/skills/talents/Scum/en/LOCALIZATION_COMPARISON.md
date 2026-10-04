@@ -180,6 +180,18 @@ Full raw template and formatting: [source evidence](broker_ability_focus_sub_3.m
 | Restoration values | 0.5s for ordinary kills, 1s for Elite/Specialist kills; 5s maximum; `ui / loc_talent_broker_ability_focus_sub_3_desc / 5ba532cd` | Eligible ordinary victims restore 0.5, elite/special victims restore 1; accumulated restoration is capped at 5 per focus state. [Fixed source and line references](broker_ability_focus_sub_3.md#fixed-source-evidence) | Consistent | All three displayed quantities match the accepted values. |
 | Actual eligibility and recovery limits | Highlighted Enemies; no Ranged/distance checks, Toxin exception or natural-recovery details; `ui / loc_talent_broker_ability_focus_sub_3_desc / 5ba532cd` | Ordinary kills require Ranged attacks within 12.5 m, without a separate highlight-status check; tracked Needle Pistol Toxin deaths can qualify. Natural recovery pauses, but direct restoration remains possible and the 5-second cap applies per state. [Fixed source and line references](broker_ability_focus_sub_3.md#fixed-source-evidence) | Not covered by the description | These conditions and exceptions supplement the short trigger wording; no omitted detail is counted as an English translation error. |
 
+
+<a id="broker_ability_focus_sub_2"></a>
+
+## Pick Your Targets
+
+Full raw template and formatting: [source evidence](broker_ability_focus_sub_2.md#original-english-template-and-reconstruction). Name hash `af69e03a`. Every row uses `ui / loc_talent_broker_ability_focus_sub_2_desc / 4946598e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Rending and Damage values | During Enhanced Desperado: +15% Ranged Rending; kills grant +3% Ranged Damage, stacking 5 times; `ui / loc_talent_broker_ability_focus_sub_2_desc / 4946598e` | Focus gives additive ranged_rending_multiplier 0.15; each damage stack adds ranged_damage 0.03, up to 5 stacks. [Fixed source and line references](broker_ability_focus_sub_2.md#fixed-source-evidence) | Consistent | The values and separate effect types agree; Rending is not direct Damage. |
+| Eligibility, refresh and decay | Highlighted enemies; no distance, attack-type, Toxin exception, duration or decay details; `ui / loc_talent_broker_ability_focus_sub_2_desc / 4946598e` | Ordinary kills require Ranged attacks within 12.5 m without a separate highlight check; tracked Needle Pistol Toxin deaths can qualify. Stacks refresh to 3 seconds, expire one at a time and all end with focus. [Fixed source and line references](broker_ability_focus_sub_2.md#fixed-source-evidence) | Not covered by the description | The accepted trigger restrictions and timing supplement the English wording. |
+
 ## Comparison totals
 
 The 23 listed rules comprise **11 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **1 No corresponding implementation evidence found** and **1 Cannot confirm**.

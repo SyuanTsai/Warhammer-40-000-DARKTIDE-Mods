@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="Forge's Bellow talent icon"> [Forge's Bellow](#broker_ability_punk_rage_sub_3) | <ul><li>Shout when rage starts and ends, Staggering enemies within 4.5 metres.</li><li>Each Shout adds −50% enemy Melee Attack Speed for 5 seconds; a 1-second attack interval becomes approximately 2 seconds with only this effect.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="Boiling Blood talent icon"> [Boiling Blood](#broker_ability_punk_rage_sub_4) | <ul><li>Melee hits on Elite, Specialist, Monstrosity or Captain-tagged enemies extend rage by 1 second; these hits begin diminishing after 30 seconds, halving at each 30-second stage.</li><li>Ordinary enemy hits keep the base 0.3-second extension and 20-second diminution stages; the 30-second upgrade applies only to the special tags.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="Focused Resolve talent icon"> [Focused Resolve](#broker_ability_focus_sub_3) | <ul><li>During focus, eligible Close Range Ranged kills restore 0.5 seconds of Ability Cooldown, or 1 second for Elites and Specialists.</li><li>Each focus activation can restore at most 5 seconds; qualifying Needle Pistol Toxin deaths can also contribute.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="Pick Your Targets talent icon"> [Pick Your Targets](#broker_ability_focus_sub_2) | <ul><li>During focus, Ranged Attacks gain +15% Rending.</li><li>Eligible Close Range Ranged kills add +3% Ranged Damage per stack, up to 5 stacks. New kills refresh the 3-second duration; stacks then decay one at a time, and all end when focus ends.</li></ul> | Ability |
 
 ---
 
@@ -266,3 +267,21 @@
 - **Needle Pistol exception:** a target tracked after a Needle Pistol hit during focus can also restore cooldown if it subsequently dies from Toxin within Close Range. This does not make every Toxin death eligible.
 
 [Details](broker_ability_focus_sub_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_focus_sub_2"></a>
+
+### Pick Your Targets
+
+<img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="72" height="72" alt="Pick Your Targets talent icon">
+
+- **Ranged Rending:** while focus is active, Ranged Attacks gain +15% Rending in armour penetration. This is not a direct 15% Damage increase.
+
+- **Damage stacks:** each eligible Close Range Ranged kill adds one stack of +3% Ranged Damage, up to 5 stacks. A new kill refreshes the duration. After kills stop, one stack expires every 3 seconds; ending focus removes all remaining stacks.
+
+- **Eligibility:** ordinary kills must occur within 12.5 m. A previously tracked enemy hit by the Needle Pistol can also trigger the effect if it later dies from Toxin within Close Range.
+
+- **Damage example:** with only this effect and 5 stacks, base Damage 100 becomes 100 × (1 + 5 × 0.03) = 115. Other Ranged Damage bonuses add to the same pool.
+
+[Details](broker_ability_focus_sub_2.md) · [Back to index](#talent-index)
