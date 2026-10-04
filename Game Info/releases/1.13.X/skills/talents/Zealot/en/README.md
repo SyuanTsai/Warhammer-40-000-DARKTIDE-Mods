@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="Zealous Pilgrim talent icon"> [Zealous Pilgrim](#zealot_resist_death_ability) | <ul><li>Ability use grants 4 seconds of Unkillable; Shroudfield starts it upon leaving Stealth, Chorus upon unwielding the relic. While Unkillable, gain 10% Damage and Attack Speed.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="Fire and Fury talent icon"> [Fire and Fury](#zealot_resist_death_fire) | <ul><li>While Unkillable, weapon hits apply Burn to living enemies: 3 stacks for Melee, 1 for Ranged, up to 12 from this talent.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="Risen talent icon"> [Risen](#zealot_resist_death_golden_toughness) | <ul><li>While Unkillable, gain 5 maximum Toughness per second, up to 8 stacks/+40. Added stacks refresh a 5-second duration, and raising the cap also raises current Toughness.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="Scourge talent icon"> [Scourge](#zealot_crits_apply_bleed) | <ul><li>Damaging Melee Critical Hits apply 2 Bleed stacks to living enemies. Melee hits on bleeding targets build +10 percentage points of Melee Critical Chance per stack, up to 3 for 3 seconds.</li></ul> | Skill |
 
 ---
 
@@ -583,3 +584,19 @@
 - **Temporary Unkillable**: In 4 seconds, gains around 0.75, 1.75, 2.75 and 3.75 seconds give 4 stacks, totaling +20. Actual triggers depend on update timing.
 
 [Details](zealot_resist_death_golden_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_crits_apply_bleed"></a>
+
+### Scourge
+
+<img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="72" height="72" alt="Scourge talent icon">
+
+- **Applying Bleed**: A Melee Critical Hit that deals damage while the enemy remains alive applies 2 Bleed stacks. A Melee hit on an already bleeding enemy grants 1 stack of Melee Critical Chance: +10 percentage points per stack, max 3, lasting 3 seconds. Another trigger resets duration.
+- **Trigger order**: Existing Bleed is checked before this crit applies Bleed. The first crit on a previously non-bleeding enemy therefore does not also grant Critical Chance merely from its newly applied Bleed. A Melee kill event on a bleeding enemy can also grant the bonus.
+- **Critical Chance example**: Base Melee Critical Chance 5% becomes 5% + 3 × 10% = 35% at 3 stacks, not 5% × 1.3.
+- **Bleed damage example**: Bleed ticks about every 0.5 seconds, up to 16 stacks. Against a fixed Unarmoured hit location with no other modifiers, one tick at 2 stacks deals 175 × (2 ÷ 16)² × [3 − 2 × (2 ÷ 16)] × 0.5 ≈ 3.76 damage; 8 stacks deal 43.75. Damage does not rise proportionally with stacks.
+- **Bleed duration**: Adding stacks resets the 1.5-second retention period. After expiry, stacks decay one by one with each tick rather than all disappearing at 1.5 seconds.
+
+[Details](zealot_crits_apply_bleed.md) · [Back to index](#talent-index)

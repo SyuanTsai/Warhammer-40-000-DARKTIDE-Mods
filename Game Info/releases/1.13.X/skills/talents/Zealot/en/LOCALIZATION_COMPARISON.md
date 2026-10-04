@@ -455,6 +455,18 @@ Full raw template and formatting: [source evidence](zealot_resist_death_golden_t
 | Flat maximum-Toughness gains and duration | While Unkillable, each second +5 Max Toughness, total +40, lasting 5s.; `ui / loc_talent_resist_death_toughness_desc / 568ffaee` | Child Buff +5 flat maximum per stack, max 8, duration 5s refreshed by stacking. [Fixed source and line references](zealot_resist_death_golden_toughness.md#fixed-source-evidence) | Consistent | The stat target, per-second gain, total cap and stated duration agree. |
 | First tick, refresh and current-Toughness retention | No initial scheduling, refresh, current-Toughness or cap-expiry details.; `ui / loc_talent_resist_death_toughness_desc / 568ffaee` | First at .75s then 1s; 4s Unkillable can give +20. Maximum increases leave damage unchanged; decreases adjust damage so current is retained up to the old cap. [Fixed source and line references](zealot_resist_death_golden_toughness.md#fixed-source-evidence) | Not covered by the description | Accepted timing and current/maximum examples supplement the maximum-Toughness description. |
 
+
+<a id="zealot_crits_apply_bleed"></a>
+
+## Scourge
+
+Full raw template and formatting: [source evidence](zealot_crits_apply_bleed.md#original-english-template-and-reconstruction). Name hash `bc085cdc`. Every row uses `ui / loc_talent_zealot_bleed_melee_crit_chance_desc / cddf2bee`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Bleed and Critical Chance effects | Melee Critical Hits apply Bleed; Melee hits on bleeding enemies grant +10% Critical Chance for 3s, stacking 3 times.; `ui / loc_talent_zealot_bleed_melee_crit_chance_desc / cddf2bee` | Melee critical damage to a living target applies 2 Bleed; already bleeding targets grant a 0.10 Melee crit effect, max 3/duration 3s. [Fixed source and line references](zealot_crits_apply_bleed.md#fixed-source-evidence) | Consistent | Trigger directions and displayed bonus, duration and stack cap agree. |
+| Event order, Bleed scaling and effect limits | No application order, Bleed amount/damage formula, refresh or decay details.; `ui / loc_talent_zealot_bleed_melee_crit_chance_desc / cddf2bee` | Existing Bleed checked first; positive damage and surviving target required for application. Separate qualifying death event; additive Melee chance and accepted nonlinear tick/decay behavior apply. [Fixed source and line references](zealot_crits_apply_bleed.md#fixed-source-evidence) | Not covered by the description | The Melee-only bonus scope, original examples and event restrictions supplement the description. |
+
 ## Comparison totals
 
 74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.

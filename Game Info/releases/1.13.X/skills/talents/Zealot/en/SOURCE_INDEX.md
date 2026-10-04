@@ -48,3 +48,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Zealous Pilgrim](zealot_resist_death_ability.md) / `zealot_resist_death_ability` | Keystone |
 | [Fire and Fury](zealot_resist_death_fire.md) / `zealot_resist_death_fire` | Keystone |
 | [Risen](zealot_resist_death_golden_toughness.md) / `zealot_resist_death_golden_toughness` | Keystone |
+| [Scourge](zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | Skill |
