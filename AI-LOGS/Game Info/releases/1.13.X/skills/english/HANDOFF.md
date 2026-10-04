@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 418 completed on 2026-10-04. [Receipt](scum_skills_414_418.json) and [FILE_MAP](FILE_MAP.json) record 418 accepted mechanisms. Next item: **419, Cheap Shots**, `broker_passive_damage_vs_heavy_staggered`. The full goal remains active and unfinished.
+Checkpoint 423 completed on 2026-10-04. [Receipt](scum_skills_419_423.json) and [FILE_MAP](FILE_MAP.json) record 423 accepted mechanisms. Next item: **424, Blessed Stimms**, `broker_passive_stimm_cleanse_on_kill`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 228 mechanisms + 18 class-support files + 2 shared files = 248 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 70/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 148 = 70 Consistent / 3 Explicit contradictions / 69 Not covered / 1 No implementation / 5 Cannot confirm. Latest batch commit interval: 358s (5m 58s), e32b9c34a→cb04bc269. No new English contradiction. Preserved same-type Toxin caps/decay, Blitz-only 3/6/10 stack application, owner-forwarded enemy-output reduction, Toxic Renewal's existing state caveat and Ammo Jack's ceil capacity update. Corrected the newly translated Splash Damage Buff identifier neurotoxin_interval_buff3 in c3f4111bc, removing the unsupported 3s interpretation.
+Remaining: 223 mechanisms + 18 class-support files + 2 shared files = 243 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 75/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 159 = 74 Consistent / 4 Explicit contradictions / 74 Not covered / 1 No implementation / 6 Cannot confirm. Latest batch commit interval: 275s (4m 35s), b0063b590→695b9e07a. Cheap Shots has a reconstructed English numerical contradiction; Hyper-Critical retains a Health-read timing ambiguity. No mechanism retracing or in-game test.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

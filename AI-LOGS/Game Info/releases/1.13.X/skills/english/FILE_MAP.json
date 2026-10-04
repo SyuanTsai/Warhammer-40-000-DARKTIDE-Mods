@@ -6262,7 +6262,12 @@
         "broker_passive_blitz_inflicts_toxin",
         "broker_passive_reduced_damage_by_toxined",
         "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
-        "broker_passive_extended_mag"
+        "broker_passive_extended_mag",
+        "broker_passive_damage_vs_heavy_staggered",
+        "broker_passive_melee_crit_instakill",
+        "broker_passive_damage_vs_elites_monsters",
+        "broker_passive_increased_weakspot_damage",
+        "broker_passive_stimm_increased_duration"
       ],
       "checks": []
     },
@@ -6344,7 +6349,12 @@
         "broker_passive_blitz_inflicts_toxin",
         "broker_passive_reduced_damage_by_toxined",
         "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
-        "broker_passive_extended_mag"
+        "broker_passive_extended_mag",
+        "broker_passive_damage_vs_heavy_staggered",
+        "broker_passive_melee_crit_instakill",
+        "broker_passive_damage_vs_elites_monsters",
+        "broker_passive_increased_weakspot_damage",
+        "broker_passive_stimm_increased_duration"
       ],
       "checks": []
     },
@@ -6426,7 +6436,12 @@
         "broker_passive_blitz_inflicts_toxin",
         "broker_passive_reduced_damage_by_toxined",
         "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
-        "broker_passive_extended_mag"
+        "broker_passive_extended_mag",
+        "broker_passive_damage_vs_heavy_staggered",
+        "broker_passive_melee_crit_instakill",
+        "broker_passive_damage_vs_elites_monsters",
+        "broker_passive_increased_weakspot_damage",
+        "broker_passive_stimm_increased_duration"
       ],
       "checks": []
     },
@@ -6508,7 +6523,12 @@
         "broker_passive_blitz_inflicts_toxin",
         "broker_passive_reduced_damage_by_toxined",
         "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
-        "broker_passive_extended_mag"
+        "broker_passive_extended_mag",
+        "broker_passive_damage_vs_heavy_staggered",
+        "broker_passive_melee_crit_instakill",
+        "broker_passive_damage_vs_elites_monsters",
+        "broker_passive_increased_weakspot_damage",
+        "broker_passive_stimm_increased_duration"
       ],
       "checks": []
     },
@@ -7330,9 +7350,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ae5257d1b47944689c76ce57102fc71546642fe0",
       "chinese_sha256": "b50c107b3c13c1e51902728d3a2255e43fb15006ffbf38e0959cf30a644b34bc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_damage_vs_elites_monsters"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_vs_heavy_staggered.md",
@@ -7341,9 +7368,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9b0617f6a66419d59221b0ff1521e3da7aeb4994",
       "chinese_sha256": "10a69485540ed56fda04cc2dbc28c2e89093e23bfbb95a6ce30994366a9f9c11",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_damage_vs_heavy_staggered"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_dodge_melee_on_slide.md",
@@ -7500,9 +7534,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "003b69fb9987eaadf51be2f22dd6b5a07af4f01b",
       "chinese_sha256": "ae58f9cad163e938ce2d7d7bc47efb2dd2431ed43d0de3717b7d79396bdee129",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_increased_weakspot_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_knockback_on_taking_melee_damage.md",
@@ -7594,9 +7635,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7b8bd8b75405d1928b4eee94976551cf01fc2440",
       "chinese_sha256": "cf208882cad56c392b32e295733f06d2b3384392996d286427794d748bb3cfd0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_melee_crit_instakill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_damage_carry_over.md",
@@ -7868,9 +7916,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bdb43a117c8d5fa9a8fad79ff6d77a72b5ffc7ed",
       "chinese_sha256": "9fc9184993385f6b48ba90e25da0ed2316336d92a1af41cf2e4338ac7329b07a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_stimm_increased_duration"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stun_immunity_on_toughness_broken.md",
@@ -16316,6 +16371,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_extended_mag.md"
+    },
+    {
+      "id": "broker_passive_damage_vs_heavy_staggered",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_vs_heavy_staggered.md"
+    },
+    {
+      "id": "broker_passive_melee_crit_instakill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_crit_instakill.md"
+    },
+    {
+      "id": "broker_passive_damage_vs_elites_monsters",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_vs_elites_monsters.md"
+    },
+    {
+      "id": "broker_passive_increased_weakspot_damage",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_weakspot_damage.md"
+    },
+    {
+      "id": "broker_passive_stimm_increased_duration",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_increased_duration.md"
     }
   ],
   "pending_chinese_corrections": [

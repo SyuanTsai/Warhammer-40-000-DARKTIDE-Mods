@@ -1,0 +1,74 @@
+{
+  "id": "scum_skills_419_423",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display-substitution mappings only: broker_talents.lua L1982-L2014, L1713-L1733, L1766-L1788, L1379-L1394, L1613-L1628; reused accepted Buff values and common formatting."
+  ],
+  "questions": [
+    "Cheap Shots: power_heavy maps the additional 0.05, so reconstructed English says +5% instead of the verified total +15%; explicit numerical contradiction, game presentation unobserved.",
+    "Hyper-Critical: current Health does not specify pre-hit or post-hit timing; retain Cannot confirm, Captain exclusion as supplement."
+  ],
+  "skills": [
+    {
+      "id": "broker_passive_damage_vs_heavy_staggered",
+      "name": "Cheap Shots",
+      "name_hash": "1d40fec5",
+      "description_hash": "6dc4e3b1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_vs_heavy_staggered.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_vs_heavy_staggered.md",
+      "commit": "883d03c0a"
+    },
+    {
+      "id": "broker_passive_melee_crit_instakill",
+      "name": "Hyper-Critical",
+      "name_hash": "f0e426c8",
+      "description_hash": "41e81648",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_crit_instakill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_crit_instakill.md",
+      "commit": "ce802d0a7"
+    },
+    {
+      "id": "broker_passive_damage_vs_elites_monsters",
+      "name": "Punching Above One's Weight",
+      "name_hash": "e2641fac",
+      "description_hash": "a7b80936",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_vs_elites_monsters.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_vs_elites_monsters.md",
+      "commit": "c8b27d386"
+    },
+    {
+      "id": "broker_passive_increased_weakspot_damage",
+      "name": "The Sweet Spot",
+      "name_hash": "3f4df881",
+      "description_hash": "54b98b85",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_increased_weakspot_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_weakspot_damage.md",
+      "commit": "269fb09bc"
+    },
+    {
+      "id": "broker_passive_stimm_increased_duration",
+      "name": "Long Lasting",
+      "name_hash": "e452d69c",
+      "description_hash": "905ad5d9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_increased_duration.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_increased_duration.md",
+      "commit": "695b9e07a"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 275,
+    "from_commit": "b0063b590",
+    "to_commit": "695b9e07a",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}
