@@ -672,6 +672,18 @@ Full raw template and formatting: [source evidence](cryptic_weakspot_damage.md#o
 | Weakspot stat and value | +25% Weakspot Damage; `ui / loc_talent_cryptic_weakspot_damage_desc / 6cd677cf` | `weakspot_damage = 0.25` joins the finesse multiplier on `hit_weakspot` [Fixed source and line references](cryptic_weakspot_damage.md#fixed-source-evidence) | Consistent | The English names the correct stat and value without explicitly claiming a 25% increase to the complete hit. |
 | Component formula and varying total increase | Does not state the component split, weapon conditions or existing same-stage bonuses; `ui / loc_talent_cryptic_weakspot_damage_desc / 6cd677cf` | `B + F × (1 + s + 0.25)`; relative increase `0.25F / [B + F × (1 + s)]`. Profiles, armour finesse, boost curve, critical hits and hit zones affect F; body/head subtraction alone cannot recover it [Fixed source and line references](cryptic_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | The original 200→225, 300→350 and 220→245 examples and non-critical, subsequent-multiplier-1 assumptions supplement the stat wording. |
 
+
+<a id="cryptic_pushing_grants_cleave"></a>
+
+## Shockline Breach Protocol
+
+Full raw template and formatting: [source evidence](cryptic_pushing_grants_cleave.md#original-english-template-and-reconstruction). Name hash `53810570`. Every row uses `ui / loc_talent_cryptic_pushing_grants_cleave_alt_desc / d5aece03`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Push trigger, cleave and duration | Pushing an enemy grants +50% increased Melee Cleave for 8s; `ui / loc_talent_cryptic_pushing_grants_cleave_alt_desc / d5aece03` | `on_push_hit` activates `max_melee_hit_mass_attack_modifier = 0.5` for 8 seconds [Fixed source and line references](cryptic_pushing_grants_cleave.md#fixed-source-evidence) | Consistent | The trigger, affected stat, value and duration agree. |
+| Mass budget and refreshing | Does not specify the mass calculation, target-count limits or duration refreshing; `ui / loc_talent_cryptic_pushing_grants_cleave_alt_desc / d5aece03` | A 10-unit enemy-mass budget becomes `10 × (1 + 50%) = 15`; enemy mass and attack limits determine additional targets. Further push hits refresh without stacks [Fixed source and line references](cryptic_pushing_grants_cleave.md#fixed-source-evidence) | Not covered by the description | These mechanics and the preserved example supplement the English. |
+
 ## Comparison totals
 
 115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.
