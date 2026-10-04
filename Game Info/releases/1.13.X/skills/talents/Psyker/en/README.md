@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="Inner Tranquility talent icon"> [Inner Tranquility](#psyker_reduced_warp_charge_cost_and_venting_speed) | <ul><li>Each Warp Charge reduces Peril Generation by 8%; four charges give 32% reduction, or 48% at six with Warp Battery.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="Essence Harvest talent icon"> [Essence Harvest](#psyker_toughness_on_soul) | <ul><li>Gaining a Warp Charge restores 30% of maximum Toughness over five seconds; further gains refresh the duration without stacking the restoration rate.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="Bio-Lodestone talent icon"> [Bio-Lodestone](#psyker_empowered_grenades_passive_improved) | <ul><li>Raises the chance of gaining empowerment on a kill from 10% to 15%; the storage cap remains unchanged.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="32" height="32" alt="Psychic Leeching talent icon"> [Psychic Leeching](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies) | <ul><li>Using an empowered Blitz restores 20% of maximum Toughness to you and Allies in Coherency; restoration timing depends on the Blitz.</li></ul> | Keystone |
 
 ---
 
@@ -553,3 +554,17 @@
 - **Chance example:** With storage available each time, the expected number of empowerments from 100 kills rises from `100 × 10% = 10` to `100 × 15% = 15`. Random outcomes are not guaranteed to equal the expectation.
 
 [Details](psyker_empowered_grenades_passive_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_empowered_chain_lightnings_replenish_toughness_to_allies"></a>
+
+### Psychic Leeching
+
+<img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="72" height="72" alt="Psychic Leeching talent icon">
+
+- **Trigger:** While holding empowerment, use an empowered Blitz to restore 20% of maximum Toughness to you and each Ally in Coherency. Smite restores it when casting starts, Assail when thrown, and Brain Rupture when the attack resolves.
+
+- **Restoration example:** A player with 100 maximum Toughness restores `100 × 20% = 20`; one with 150 restores 30. Each is capped by their own missing Toughness. Hitting more enemies with a single Smite does not increase this restoration.
+
+[Details](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) · [Back to index](#talent-index)

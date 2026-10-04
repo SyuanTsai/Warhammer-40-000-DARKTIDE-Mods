@@ -44,3 +44,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Inner Tranquility](psyker_reduced_warp_charge_cost_and_venting_speed.md) / `psyker_reduced_warp_charge_cost_and_venting_speed` | Keystone |
 | [Essence Harvest](psyker_toughness_on_soul.md) / `psyker_toughness_on_soul` | Keystone |
 | [Bio-Lodestone](psyker_empowered_grenades_passive_improved.md) / `psyker_empowered_grenades_passive_improved` | Keystone |
+| [Psychic Leeching](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) / `psyker_empowered_chain_lightnings_replenish_toughness_to_allies` | Keystone |

@@ -409,6 +409,18 @@ Full raw template and formatting: [source evidence](psyker_empowered_grenades_pa
 | Kill chance increase | Chance to gain Empowered Psionics on Kill increases from 10% to 15%; `ui / loc_talent_psyker_increase_empower_chain_lighting_chance_description / 542f4465` | The copied proc buff replaces on_hit probability 0.10 with 0.15; the shared handler requires CheckProcFunctions.on_kill(params). [Fixed source and line references](psyker_empowered_grenades_passive_improved.md#fixed-source-evidence) | Consistent | The stated values and kill condition agree; the on_hit event name does not make this an on-every-hit effect. |
 | Cap, probability and Elite interaction | No storage-cap change, deterministic trigger interval or interaction with guaranteed Elite gains stated; `ui / loc_talent_psyker_increase_empower_chain_lighting_chance_description / 542f4465` | Successful gains are clamped to the cap. Expected outcomes require available storage and independent chances. With Overpowering Souls, guaranteed Elite kills are excluded from the ordinary chance path. [Fixed source and line references](psyker_empowered_grenades_passive_improved.md#fixed-source-evidence) | Not covered by the description | The retained assumptions and interaction are supplementary limits, rather than English omissions treated as errors. |
 
+
+<a id="psyker_empowered_chain_lightnings_replenish_toughness_to_allies"></a>
+
+## Psychic Leeching
+
+Full raw template and formatting: [source evidence](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md#original-english-template-and-reconstruction). Name hash `756c452b`. Every row uses `ui / loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description / 0f6ef5af`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Empowered use, recipients and value | Using Blitz while Empowered Psionics is active restores 20% Toughness to you and Allies in Coherency; `ui / loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description / 0f6ef5af` | The special rule gates the empowered buff's restoration events; they require an available charge or successful spend and iterate in_coherence_units with replenish_percentage(..., 0.2). [Fixed source and line references](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md#fixed-source-evidence) | Consistent | The empowerment prerequisite, stated recipients and restoration value agree with the accepted evidence. |
+| Timing and restoration limits | No separate Blitz timings, maximum-Toughness formula, deficit cap or per-target scaling specified; `ui / loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description / 0f6ef5af` | Smite restores at start and spends at finish; Assail restores on throw and Brain Rupture at attack resolution. Each recipient is capped by missing Toughness; more targets do not repeat this restore. [Fixed source and line references](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md#fixed-source-evidence) | Not covered by the description | These are supplementary event and quantity limits. Recipient eligibility remains defined by the Coherency system's returned set. |
+
 ## Comparison totals
 
 The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.
