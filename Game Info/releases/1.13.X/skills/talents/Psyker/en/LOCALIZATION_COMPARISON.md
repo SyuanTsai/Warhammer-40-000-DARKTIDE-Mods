@@ -867,6 +867,19 @@ Full raw template and formatting: [source evidence](psyker_weapon_attacks_peril_
 | Condition and generation | While below 75% Peril, non-warp hits Generate 2% Peril.; `ui / loc_talent_psyker_weapon_attacks_peril_equilibrium_desc / dc54df8c` | Qualifying non-Warp hits add 0.02 when current Peril is below 0.75. [Fixed source and line references](psyker_weapon_attacks_peril_equilibrium.md#fixed-source-evidence) | Consistent | The threshold, attack category and amount agree. |
 | Hit checks and processing | Non-warp hits Generate 2% Peril.; `ui / loc_talent_psyker_weapon_attacks_peril_equilibrium_desc / dc54df8c` | Requires your damaging melee/ranged hit; one counted proc is processed per update and clamps to 0.75 without `warp_charge_amount`. [Fixed source and line references](psyker_weapon_attacks_peril_equilibrium.md#fixed-source-evidence) | Not covered by the description | The text omits the eligibility checks, update scheduling, cap and modifier bypass. |
 
+
+<a id="psyker_reload_speed_warp_charge"></a>
+
+## Surety of Arms
+
+Full raw template and formatting: [source evidence](psyker_reload_speed_warp_charge.md#original-english-template-and-reconstruction). Name hash `d9a5f4a2`. Every row uses `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Speed and proportional Peril | 30% Reload Speed… generate up to 15% Peril based on the Percentage of the Clip Restored.; `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4` | `reload_speed = 0.3`; actual rounds restored / maximum clip capacity scales the 0.15 Peril amount. [Fixed source and line references](psyker_reload_speed_warp_charge.md#fixed-source-evidence) | Consistent | Both displayed amounts and the proportional clip calculation agree. |
+| Threshold boundary | While below 80% Peril; `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4` | The accepted conditional check is `<= 0.8`. [Fixed source and line references](psyker_reload_speed_warp_charge.md#fixed-source-evidence) | Explicit contradiction | Below excludes exactly 80%, while the verified condition includes it. |
+| Completion and timing details | On Reload generate up to 15% Peril; `ui / loc_talent_psyker_reload_speed_warp_desc / 62b8a0d4` | The threshold must still hold on completion; `increase_immediate` receives the restored clip fraction and `prevent_explosion = true`; only affected reload segments use the speed coefficient. [Fixed source and line references](psyker_reload_speed_warp_charge.md#fixed-source-evidence) | Not covered by the description | The English omits the completion check, explosion prevention and affected-segment timing. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.

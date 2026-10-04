@@ -78,6 +78,7 @@
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="Vulnerable Minds talent icon"> [Vulnerable Minds](#psyker_damage_vs_ogryns_and_monsters) | <ul><li>+20% Damage against Ogryns and Monstrosities.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="Focused Warp talent icon"> [Focused Warp](#psyker_increased_warp_damage) | <ul><li>+15% Damage on Warp Attacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="Peril Equilibrium talent icon"> [Peril Equilibrium](#psyker_weapon_attacks_peril_equilibrium) | <ul><li>Damaging non-Warp melee or ranged hits add 2 percentage points of Peril, up to 75%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="32" height="32" alt="Surety of Arms talent icon"> [Surety of Arms](#psyker_reload_speed_warp_charge) | <ul><li>+30% Reload Speed at Peril ≤80%; eligible completed reloads generate up to 15 percentage points of Peril according to the clip fraction restored.</li></ul> | Talent |
 
 ---
 
@@ -1171,3 +1172,23 @@
 - **Peril example**: Three successive triggers at 70% Peril give 70% → 72% → 74% → 75%. An initial 90% remains at 90%.
 
 [Details](psyker_weapon_attacks_peril_equilibrium.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_reload_speed_warp_charge"></a>
+
+### Surety of Arms
+
+<img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="72" height="72" alt="Surety of Arms talent icon">
+
+- **How it works**: At no more than 80% Peril, gain 30% Reload Speed. If the threshold condition still holds when the reload completes, generate Peril according to the fraction of the clip restored.
+
+- **Reload example**: Compare only the segment affected by Reload Speed. A segment that originally takes 3 seconds becomes 3 ÷ 1.3 ≈ 2.31 seconds.
+
+- **Peril example**: With a 40-round clip, 20 rounds restored and no other Peril modifiers, gain 20 ÷ 40 × 15% = 7.5 percentage points of Peril. Restoring a full clip adds 15 percentage points.
+
+#### English wording correction
+
+- “Below 80% Peril” excludes exactly 80%, but the verified condition is Peril ≤80%.
+
+[Details](psyker_reload_speed_warp_charge.md) · [Back to index](#talent-index)
