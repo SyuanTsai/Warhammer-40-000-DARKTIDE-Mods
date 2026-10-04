@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="Hive City Brawler talent icon"> [Hive City Brawler](#broker_passive_dr_damage_tradeoff_on_stamina) | <ul><li>More remaining Stamina gives more Damage Reduction; more spent Stamina gives more Melee Damage. Each reaches up to 20%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="Pickpocket talent icon"> [Pickpocket](#broker_passive_low_ammo_regen) | <ul><li>Melee Kills on Elites or Specialists refill Ammo Reserve to 20% if it is below that threshold.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="Battering Momentum talent icon"> [Battering Momentum](#broker_passive_cleave_on_cleave) | <ul><li>Hit at least 3 enemies with one Melee Attack to gain 50% Cleave for the next attack.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="Equip Cartel Special talent icon"> [Equip Cartel Special](#broker_stimm_activation_talent) | <ul><li>Select a Stimm recipe to equip the regenerating Cartel Special; recipes share a 30-point budget.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1324,3 +1325,25 @@
 - **Duration limit**: There is no fixed countdown in seconds. Subsequent hits consume this effect; it does not continuously increase every attack's damage.
 
 [Details](broker_passive_cleave_on_cleave.md) · [Back to index](#talent-index)
+
+---
+
+## Stimm recipes
+
+Recipes share a 30-point budget. Their selected effects act together after using the dedicated Stimm; each recipe documents its cost, duration and stacking examples.
+
+<a id="broker_stimm_activation_talent"></a>
+
+### Equip Cartel Special
+
+<img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="72" height="72" alt="Equip Cartel Special talent icon">
+
+- **Equipping**: Select at least one effect in the Stimm recipe tree to equip your dedicated Stimm. The central icon itself costs no points.
+
+- **Recipes and effects**: Recipes share 30 points, with each recipe costing 1–5 points. On use, the selected recipes act together for 15 seconds; Long Lasting adds another 5 seconds.
+
+- **Recovery time**: Recovery starts after the effects end. With total recipe cost P, base recovery seconds are `15 + 60 × (P − 1) ÷ 29`, rounded up. One point gives 15 seconds, 15 points gives 44 seconds, and 30 points gives 75 seconds.
+
+- **Full-cycle example**: At a recipe cost of 30 points, ignoring other recovery effects, the injection acts for 15 seconds and then recovers for 75 seconds: 15 + 75 = 90 seconds before reuse.
+
+[Details](broker_stimm_activation_talent.md) · [Back to index](#talent-index)

@@ -966,6 +966,19 @@ Full raw template and formatting: [source evidence](broker_passive_cleave_on_cle
 | Consumption and duration | No fixed duration or consumption event details; `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2` | `on_hit` with `target_number < 3` consumes the child, including non-Melee hits; the next qualifying attack can grant it again [Fixed source and line references](broker_passive_cleave_on_cleave.md#fixed-source-evidence) | Not covered by the description | These preserve the event limits and both Cleave-capacity examples. |
 | Same-attack timing | For your next Attack; `ui / loc_talent_broker_passive_cleave_on_cleave_desc / 04b9c8f2` | Whether later hits of the triggering attack already read the new bonus depends on attack sampling and remains untested [Fixed source and line references](broker_passive_cleave_on_cleave.md#fixed-source-evidence) | Cannot confirm | The existing evidence does not establish an exclusive next-attack-only effect for every weapon; retain the caveat. |
 
+
+<a id="broker_stimm_activation_talent"></a>
+
+## Equip Cartel Special
+
+Full raw template and formatting: [source evidence](broker_stimm_activation_talent.md#original-english-template-and-reconstruction). Name hash `6158914f`. Every row uses `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Dedicated Stimm | Equips your Cartel Special; `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406` | Selecting any `broker_stimm` recipe enables `broker_syringe` and equips the dedicated item [Fixed source and line references](broker_stimm_activation_talent.md#fixed-source-evidence) | Consistent | The dedicated item agrees; the central icon's lack of an action does not change the recipe-based equipping result. |
+| Other-Stimm use restriction | While equipped, you are unable to use other Stimms; `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406` | The item occupies `slot_pocketable_small` and is non-givable/non-droppable; the existing evidence does not fully establish every other-Stimm use path [Fixed source and line references](broker_stimm_activation_talent.md#fixed-source-evidence) | Cannot confirm | Preserve this concrete limitation of the available evidence without extending the task into a mechanism investigation. |
+| Selection, budget and cycle | No recipe-selection, budget, duration or recovery formula; `ui / loc_talent_broker_stimm_activation_talent_desc / 95c45406` | Zero-cost start node; any selected recipe equips the item; 30-point recipe budget; 15-second effects pause natural recovery; recovery scales from 15 to 75 seconds [Fixed source and line references](broker_stimm_activation_talent.md#fixed-source-evidence) | Not covered by the description | The original formulas, costs and 90-second cycle explain the dedicated item's operation. |
+
 ## Comparison totals
 
 The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.

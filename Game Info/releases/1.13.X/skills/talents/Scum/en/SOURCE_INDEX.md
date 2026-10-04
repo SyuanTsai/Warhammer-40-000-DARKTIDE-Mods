@@ -91,3 +91,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Hive City Brawler](broker_passive_dr_damage_tradeoff_on_stamina.md) / `broker_passive_dr_damage_tradeoff_on_stamina` | Talent |
 | [Pickpocket](broker_passive_low_ammo_regen.md) / `broker_passive_low_ammo_regen` | Talent |
 | [Battering Momentum](broker_passive_cleave_on_cleave.md) / `broker_passive_cleave_on_cleave` | Talent |
+| [Equip Cartel Special](broker_stimm_activation_talent.md) / `broker_stimm_activation_talent` | Stimm recipe |
