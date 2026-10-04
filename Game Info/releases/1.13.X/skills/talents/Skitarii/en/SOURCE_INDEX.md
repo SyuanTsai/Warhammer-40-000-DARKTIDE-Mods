@@ -34,3 +34,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Axial Slash](cryptic_chordclaw_horizontal_swipe.md) / `cryptic_chordclaw_horizontal_swipe` | Ability |
 | [Probing Strikes](cryptic_chordclaw_quick_stab_combo.md) / `cryptic_chordclaw_quick_stab_combo` | Ability |
 | [Flux Conduit Build-Up](cryptic_crits_grant_power.md) / `cryptic_crits_grant_power` | Ability |
+| [Reactor Coil Recharge](cryptic_weakspot_kills_grant_power.md) / `cryptic_weakspot_kills_grant_power` | Ability |

@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="32" height="32" alt="Axial Slash talent icon"> [Axial Slash](#cryptic_chordclaw_horizontal_swipe) | <ul><li>Quickly activating the Chordclaw replaces its default Heavy stab with a horizontal sweep, which remains a guaranteed Critical Strike. Holding to charge still uses the original Heavy stab.</li><li>A sweep can hit multiple targets; damage to later targets decreases according to the damage profile.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7d516cae-80f0-4d48-b562-b5a21f6ddcd1" width="32" height="32" alt="Probing Strikes talent icon"> [Probing Strikes](#cryptic_chordclaw_quick_stab_combo) | <ul><li>Quick Chordclaw activation becomes three successive stabs; holding the input still uses the regular Heavy Attack.</li><li>Each stab is a guaranteed Critical Strike and applies 6 Bleed stacks to its target when it deals Health damage. Bleed is capped at 18 stacks.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="Flux Conduit Build-Up talent icon"> [Flux Conduit Build-Up](#cryptic_crits_grant_power) | <ul><li>Critical hits accelerate Capacitance recovery for 4s. At the base recovery rate, the extra amount is 5% of one charge.</li><li>Another Critical hit within 4s resets the recovery window; the recovery bonus stays fixed and does not stack with repeated Critical hits.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="Reactor Coil Recharge talent icon"> [Reactor Coil Recharge](#cryptic_weakspot_kills_grant_power) | <ul><li>Weakspot Kills restore 2% of the current Combat Ability's cost per charge. At 50 points per charge, each restores 1 point of Capacitance.</li><li>Recovery is retained as fractional progress; usable charge count increases only upon reaching another full charge.</li></ul> | Ability |
 
 ---
 
@@ -374,3 +375,16 @@
 - **Recovery example**: With one charge costing 50 points, the extra recovery is 50 × 5% = 2.5 points over 4s. Including the base 1 point/s, total recovery over 4s is 4 × (1 + 2.5 ÷ 4) = 6.5 points. Another Critical hit extends the accelerated recovery period.
 
 [Details](cryptic_crits_grant_power.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_kills_grant_power"></a>
+
+### Reactor Coil Recharge
+
+<img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="72" height="72" alt="Reactor Coil Recharge talent icon">
+
+- **How it works**: Killing an enemy with a Weakspot hit restores Capacitance equal to 2% of the current Combat Ability's cost per charge. With a 50-point charge cost, each Weakspot Kill restores 1 point.
+- **How it works**: Capacitance progress accumulates. Every 50 points forms one full charge, and progress below 50 points is retained.
+
+[Details](cryptic_weakspot_kills_grant_power.md) · [Back to index](#talent-index)

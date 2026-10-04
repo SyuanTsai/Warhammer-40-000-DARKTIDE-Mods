@@ -285,6 +285,18 @@ Full raw template and formatting: [source evidence](cryptic_crits_grant_power.md
 | Critical hits, amount and duration | Critical hits generate 5% Capacitance over 4s; `ui / loc_talent_cryptic_crits_grant_power_desc / 10f2fa54` | on_crit checks is_critical_strike; cooldown_regen 0.05 converts one 50-point charge to 2.5 extra points over 4s [Fixed source and line references](cryptic_crits_grant_power.md#fixed-source-evidence) | Consistent | The trigger, amount and period agree; the percentage does not explicitly specify a different denominator. |
 | Recovery basis, refresh and rate | No single-charge basis, resource rate, nonstacking refresh or base-recovery detail; `ui / loc_talent_cryptic_crits_grant_power_desc / 10f2fa54` | Extra rate 2.5 ÷4 =0.625 points/s; base 1/s gives 1.625/s; allow_proc_while_active refreshes active_start_time without stacking; trigger does not read damage_amount [Fixed source and line references](cryptic_crits_grant_power.md#fixed-source-evidence) | Not covered by the description | Total recovery is 6.5 points over 4s, including 2.5 extra. Repeated Critical hits reset the period; costs, pauses and other modifiers are excluded from the example. |
 
+
+<a id="cryptic_weakspot_kills_grant_power"></a>
+
+## Reactor Coil Recharge
+
+Full raw template and formatting: [source evidence](cryptic_weakspot_kills_grant_power.md#original-english-template-and-reconstruction). Name hash `44336d2e`. Every row uses `ui / loc_talent_cryptic_weakspot_kills_grant_power_desc / 7e092f5a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weakspot Kill trigger and amount | Weakspot Kills generate 2% Capacitance; `ui / loc_talent_cryptic_weakspot_kills_grant_power_desc / 7e092f5a` | on_kill requires attack_result died and hit_weakspot true; restore_ability_charge_percentage receives 0.02 [Fixed source and line references](cryptic_weakspot_kills_grant_power.md#fixed-source-evidence) | Consistent | The trigger and amount agree. English states no conflicting percentage basis. |
+| Cost basis, progress and cap | No one-charge cost basis, weapon restriction, fractional-progress or pool-cap detail; `ui / loc_talent_cryptic_weakspot_kills_grant_power_desc / 7e092f5a` | Recovery =single-use/per-charge cost ×0.02; no weapon-type requirement; fixed-precision resource capped at pool maximum; usable charges =floor(resource /cost per charge) [Fixed source and line references](cryptic_weakspot_kills_grant_power.md#fixed-source-evidence) | Not covered by the description | At a 50-point cost, one kill adds 1 point and 50 kills add one charge; the three-charge pool caps at 150. Increasing charge count does not increase the per-kill amount. |
+
 ## Comparison totals
 
 42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.
