@@ -624,6 +624,18 @@ Full raw template and formatting: [source evidence](zealot_push_attacks_attack_s
 | Push follow-up speed and duration | “Push followup attacks grant +10% Melee Attack Speed for 5s.”; `ui / loc_talent_zealot_push_attacks_attack_speed_desc / ab4ad805` | Valid follow-up's first hit grants melee_attack_speed 0.1 for 5 seconds. [Fixed source and line references](zealot_push_attacks_attack_speed.md#fixed-source-evidence) | Consistent | Attack type, stat and values agree. |
 | Hit condition, refresh and action timing | No explicit hit/miss handling, timer refresh or affected-action formula.; `ui / loc_talent_zealot_push_attacks_attack_speed_desc / ab4ad805` | on_push_finish/on_action_finish/on_sweep_start prepare valid; first on_hit triggers, miss clears on_sweep_finish. Listed actions use additive speed and total_time/time_scale; original 1s examples give 0.909s and 0.769s. [Fixed source and line references](zealot_push_attacks_attack_speed.md#fixed-source-evidence) | Not covered by the description | These proc and speed-calculation details supplement the description. |
 
+
+<a id="zealot_damage_boosts_movement"></a>
+
+## Thy Wrath be Swift
+
+Full raw template and formatting: [source evidence](zealot_damage_boosts_movement.md#original-english-template-and-reconstruction). Name hash `2b1f657c`. Every row uses `ui / loc_talent_zealot_movement_speed_on_damaged_desc / bdaf3ea6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stun protection and timed speed | “Enemy Melee Attacks cannot Stun you. On taking Damage, gain +15% Movement Speed for 2s.”; `ui / loc_talent_zealot_movement_speed_on_damaged_desc / bdaf3ea6` | Permanent stun_immune; holder's damage event grants movement_speed 0.15 for 2 seconds. [Fixed source and line references](zealot_damage_boosts_movement.md#fixed-source-evidence) | Consistent | Permanent protection and timed speed are separated correctly. |
+| Immunity limits, damage scope and refresh | No slowdown immunity, Health-damage test, refresh or immunity-bypass detail.; `ui / loc_talent_zealot_movement_speed_on_damaged_desc / bdaf3ea6` | slowdown_immune is permanent; attacked_unit==holder needs no positive Health damage; further damage refreshes. Stun can ignore immunity; no universal control/Push immunity. Original 5→5.75m/s example retained. [Fixed source and line references](zealot_damage_boosts_movement.md#fixed-source-evidence) | Not covered by the description | The narrower Melee statement does not assert that all other protections or bypass limits are absent. |
+
 ## Comparison totals
 
 105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

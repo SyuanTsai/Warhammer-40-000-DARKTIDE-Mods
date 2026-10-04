@@ -62,3 +62,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Duellist](zealot_increased_crit_and_weakspot_damage_after_dodge.md) / `zealot_increased_crit_and_weakspot_damage_after_dodge` | Skill |
 | [Shield of Contempt](zealot_ally_damage_taken_reduced.md) / `zealot_ally_damage_taken_reduced` | Skill |
 | [Punish Impiety](zealot_push_attacks_attack_speed.md) / `zealot_push_attacks_attack_speed` | Skill |
+| [Thy Wrath be Swift](zealot_damage_boosts_movement.md) / `zealot_damage_boosts_movement` | Skill |
