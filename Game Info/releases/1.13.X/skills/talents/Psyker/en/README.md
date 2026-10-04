@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="Empyric Shock talent icon"> [Empyric Shock](#psyker_force_staff_quick_attack_bonus) | <ul><li>Force Staff Primary hits apply +6% Warp Damage Taken per multiplicative stack, up to 5 stacks for 10 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="Just a Dream talent icon"> [Just a Dream](#psyker_damage_to_peril_conversion) | <ul><li>Below 97% Peril, take 25% less Damage and gain 0.25 percentage points of Peril per reported Health/Toughness Damage point, capped at 97%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="Immaterial Focus talent icon"> [Immaterial Focus](#psyker_damage_resistance_stun_immunity) | <ul><li>10% Damage reduction; Stun Immunity at Peril ≥97% and for 4 seconds after dropping below it.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="Empyric Resolve talent icon"> [Empyric Resolve](#psyker_warp_glass_cannon) | <ul><li>40% less Peril generation; 30% less Toughness restored by effects subject to the restoration modifier.</li></ul> | Talent |
 
 ---
 
@@ -1275,3 +1276,19 @@
 - **Damage reduction example**: Compare only this reduction stage. 100 Damage becomes 100 × 0.9 = 90. With another independent 20% reduction, 100 × 0.8 × 0.9 = 72, a combined reduction of 28%.
 
 [Details](psyker_damage_resistance_stun_immunity.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_warp_glass_cannon"></a>
+
+### Empyric Resolve
+
+<img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="72" height="72" alt="Empyric Resolve talent icon">
+
+- **How it works**: Peril generation decreases by 40%, while Toughness restoration affected by this modifier also decreases by 30%.
+
+- **Peril example**: An attack that originally generates 20 percentage points of Peril generates 20 × 0.6 = 12. With another independent 10% Peril reduction, 20 × 0.6 × 0.9 = 10.8 percentage points.
+
+- **Restoration example**: An original 10 Toughness restored becomes 10 × 0.7 = 7. With another 25% restoration bonus, 10 × 1.25 × 0.7 = 8.75, still limited by maximum Toughness.
+
+[Details](psyker_warp_glass_cannon.md) · [Back to index](#talent-index)

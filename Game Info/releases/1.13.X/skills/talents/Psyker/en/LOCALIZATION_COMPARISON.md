@@ -943,6 +943,18 @@ Full raw template and formatting: [source evidence](psyker_damage_resistance_stu
 | Damage reduction and immunity | +10% Damage Resistance, in addition, while at Critical Peril, and for 4s afterwards, you are Stun Immune.; `ui / loc_talent_psyker_damage_resistance_stun_immunity_desc / c5294daa` | Unconditional `damage_taken_multiplier = 0.9`; `stun_immune` at current Peril >=0.97, with a 4-second buff on leaving that condition. [Fixed source and line references](psyker_damage_resistance_stun_immunity.md#fixed-source-evidence) | Consistent | The grammar separates unconditional reduction from immunity and gives the correct continuation. |
 | Threshold, stacking and scope | At Critical Peril… Stun Immune; `ui / loc_talent_psyker_damage_resistance_stun_immunity_desc / c5294daa` | The boundary is 0.97; the continuation buff refreshes at maximum one stack; stun immunity is not evidence of grab or universal crowd-control immunity. [Fixed source and line references](psyker_damage_resistance_stun_immunity.md#fixed-source-evidence) | Not covered by the description | The text omits the numerical boundary and buff handling and does not promise broader immunity. |
 
+
+<a id="psyker_warp_glass_cannon"></a>
+
+## Empyric Resolve
+
+Full raw template and formatting: [source evidence](psyker_warp_glass_cannon.md#original-english-template-and-reconstruction). Name hash `81e0c6d7`. Every row uses `ui / loc_talent_psyker_warp_glass_cannon_desc / 3e435c7d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Generation and restoration amounts | -40% Peril Generation. -30% Toughness Replenished.; `ui / loc_talent_psyker_warp_glass_cannon_desc / 3e435c7d` | `warp_charge_amount = 0.6` and `toughness_replenish_multiplier = 0.7`. [Fixed source and line references](psyker_warp_glass_cannon.md#fixed-source-evidence) | Consistent | The reconstructed percentages agree with the two reduction multipliers. |
+| Combination and restoration eligibility | -40% Peril Generation. -30% Toughness Replenished.; `ui / loc_talent_psyker_warp_glass_cannon_desc / 3e435c7d` | The multipliers combine with other modifiers; `recover_percentage_toughness` uses the restoration modifier when `ignore_stat_buffs = false`; direct setting is not automatically affected. [Fixed source and line references](psyker_warp_glass_cannon.md#fixed-source-evidence) | Not covered by the description | The English omits combination and path-specific eligibility details. |
+
 ## Comparison totals
 
 The 161 listed rules comprise **75 Consistent**, **4 Explicit contradictions**, **75 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**.
