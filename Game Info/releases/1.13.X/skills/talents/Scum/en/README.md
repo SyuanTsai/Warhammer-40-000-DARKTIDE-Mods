@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="Sample Collector talent icon"> [Sample Collector](#broker_passive_stimm_cd_on_kill) | <ul><li>Each kill reduces Stimm cooldown by 0.5s; a Chem Toxin infected enemy instead reduces it by 1s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="Jittery talent icon"> [Jittery](#broker_passive_improved_dodges_at_full_stamina) | <ul><li>At least 75% of maximum Stamina reduces the wait for consecutive Dodges to reset by 40%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="Critical Chance Boost talent icon"> [Critical Chance Boost](#base_crit_chance_node_buff_low_1) | <ul><li>Gain 5 percentage points of Critical Hit Chance.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain 10% Melee Damage.</li></ul> | Talent |
 
 ---
 
@@ -902,3 +903,15 @@
 - **Chance example**: An initial 10% Critical Hit Chance becomes 10% + 5% = 15%; an initial 25% becomes 30%.
 
 [Details](base_crit_chance_node_buff_low_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+
+### Melee Damage Boost
+
+<img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="72" height="72" alt="Melee Damage Boost talent icon">
+
+- **Damage example**: A base 100 Melee Damage becomes 110. With an existing 25% Damage bonus at the same stage, the result is 100 × (1 + 25% + 10%) = 135.
+
+[Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)

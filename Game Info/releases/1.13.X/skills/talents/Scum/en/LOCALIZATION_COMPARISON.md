@@ -650,6 +650,18 @@ Full raw template and formatting: [source evidence](base_crit_chance_node_buff_l
 | Critical Hit Chance bonus | +5% Critical Hit Chance; `ui / loc_talent_crit_chance_low_desc / 3019333a` | Tier 1 grants `critical_strike_chance = 0.05` [Fixed source and line references](base_crit_chance_node_buff_low_1.md#fixed-source-evidence) | Consistent | The named statistic and magnitude match the verified bonus. |
 | Combination and limits | No calculation or clamp is stated; `ui / loc_talent_crit_chance_low_desc / 3019333a` | `CriticalStrike.chance` adds the bonus and clamps the total to 0–1 [Fixed source and line references](base_crit_chance_node_buff_low_1.md#fixed-source-evidence) | Not covered by the description | This explains 10%→15% and 25%→30% without adding a new condition to the English. |
 
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+
+## Melee Damage Boost
+
+Full raw template and formatting: [source evidence](base_melee_damage_node_buff_medium_1.md#original-english-template-and-reconstruction). Name hash `cb9e7b48`. Every row uses `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Melee Damage bonus | +10% Melee Damage; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | Tier 1 supplies `melee_damage = 0.1` [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The statistic, Melee scope and value match. |
+| Damage combination | No combination formula is stated; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | The bonus is added in general `damage_stat_buffs` [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The original 100→110 and 100 × (1 + 25% + 10%) = 135 examples explain the additive stage. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

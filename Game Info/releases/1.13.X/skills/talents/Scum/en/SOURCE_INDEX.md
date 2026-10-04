@@ -65,3 +65,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Sample Collector](broker_passive_stimm_cd_on_kill.md) / `broker_passive_stimm_cd_on_kill` | Talent |
 | [Jittery](broker_passive_improved_dodges_at_full_stamina.md) / `broker_passive_improved_dodges_at_full_stamina` | Talent |
 | [Critical Chance Boost](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | Talent |
+| [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Talent |
