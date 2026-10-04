@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_635_639",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: zealot_talents.lua L2481-L2503, L2677-L2696, L2644-L2676, L3184-L3198, L3230-L3248. Existing mechanisms and percentage formatter reused; no Buff/event/call-chain retracing."
+  ],
+  "questions": [
+    "Wait in Line: English Ranged Enemies conflicts with accepted is_ranged_attack condition, recorded independently of Chinese-only translation judgement. Out of Pocket Chinese reserve-direction correction retained; English transfer direction agrees."
+  ],
+  "skills": [
+    {
+      "id": "zealot_suppress_on_backstab_kill",
+      "name": "Behind the Lines",
+      "name_hash": "5e4f6e53",
+      "description_hash": "2ae92ad1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_suppress_on_backstab_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_suppress_on_backstab_kill.md",
+      "commit": "b5e7f6760"
+    },
+    {
+      "id": "zealot_backstab_periodic_damage",
+      "name": "Time to Kill",
+      "name_hash": "24b50209",
+      "description_hash": "f5f63199",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_periodic_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_periodic_damage.md",
+      "commit": "5954525c1"
+    },
+    {
+      "id": "zealot_offensive_vs_many",
+      "name": "Against the Odds",
+      "name_hash": "e699905e",
+      "description_hash": "d2cd1130",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_offensive_vs_many.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_offensive_vs_many.md",
+      "commit": "5a30e5619"
+    },
+    {
+      "id": "zealot_reload_from_melee",
+      "name": "Out of Pocket",
+      "name_hash": "de287263",
+      "description_hash": "730a8c75",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reload_from_melee.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reload_from_melee.md",
+      "commit": "eed5fb1d3"
+    },
+    {
+      "id": "zealot_reduced_damage_from_ranged",
+      "name": "Wait in Line",
+      "name_hash": "f8ea87eb",
+      "description_hash": "5dbe3a42",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_from_ranged.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_from_ranged.md",
+      "commit": "88b40a32c"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 269,
+    "from_commit": "6abe6f5ec",
+    "to_commit": "88b40a32c",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

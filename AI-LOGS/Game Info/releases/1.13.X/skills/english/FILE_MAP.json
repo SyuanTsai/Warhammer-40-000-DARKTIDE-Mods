@@ -13833,9 +13833,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "47f630cc753e527f8b63de8b4dd44f9a3313b3d4",
       "chinese_sha256": "eb440dc49c74c329dad9bcec863a47bf526be9afad07ee893a3759e557736077",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_backstab_periodic_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_bled_enemies_take_more_damage.md",
@@ -14507,9 +14514,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "df0492ab36ecfb380746da36d05f18e8b1e8f552",
       "chinese_sha256": "6bc5bb0d5c7521222fd6313a757a9f75f24294f80d43e4bc32bce7dc90effcdd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_offensive_vs_many"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_push_attacks_attack_speed.md",
@@ -14608,9 +14622,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d85a3d04d2fc20caa97edc1fee0cd7071c35a76d",
       "chinese_sha256": "b870f9feb891b9d2c62061feeea400e06c6f27ae482ed9d377fe497cbf482bc0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_reduced_damage_from_ranged"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_on_wound.md",
@@ -14637,9 +14658,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d3d3505745cb53dd6afc098493325b6ad7b5f54d",
       "chinese_sha256": "14265cceb82cc3d52cb2b3c7152a294356604b0994acc667d642175adc1db358",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_reload_from_melee"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death.md",
@@ -14900,9 +14928,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "12dc784e5c645df3bb0907bdb10a55f4c35077f2",
       "chinese_sha256": "16b73c6de84a879a4e6a97c1ed7c85760f96ed85b2bcdd0852ed15ff66ce1559",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_suppress_on_backstab_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_throwing_knives.md",
@@ -20208,6 +20243,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_elite_kills_empowers.md"
+    },
+    {
+      "id": "zealot_suppress_on_backstab_kill",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_suppress_on_backstab_kill.md"
+    },
+    {
+      "id": "zealot_backstab_periodic_damage",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_periodic_damage.md"
+    },
+    {
+      "id": "zealot_offensive_vs_many",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_offensive_vs_many.md"
+    },
+    {
+      "id": "zealot_reload_from_melee",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reload_from_melee.md"
+    },
+    {
+      "id": "zealot_reduced_damage_from_ranged",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_reduced_damage_from_ranged.md"
     }
   ],
   "pending_chinese_corrections": [
