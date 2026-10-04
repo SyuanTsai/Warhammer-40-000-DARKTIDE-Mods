@@ -59,3 +59,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Restoring Faith](zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | Skill |
 | [Bleed for the Emperor](zealot_reduced_damage_on_wound.md) / `zealot_reduced_damage_on_wound` | Skill |
 | [Vicious Offering](zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | Skill |
+| [Duellist](zealot_increased_crit_and_weakspot_damage_after_dodge.md) / `zealot_increased_crit_and_weakspot_damage_after_dodge` | Skill |

@@ -587,6 +587,18 @@ Full raw template and formatting: [source evidence](zealot_toughness_on_heavy_ki
 | Heavy Attack kill and restoration | “Replenish 10% Toughness on Heavy Attack Kill.”; `ui / loc_talent_zealot_toughness_on_heavy_kills_desc / d50c0dd8` | on_kill followed by on_heavy_hit restores 0.1 of maximum Toughness. [Fixed source and line references](zealot_toughness_on_heavy_kills.md#fixed-source-evidence) | Consistent | The English states the kill requirement correctly; the accepted Chinese hit/kill correction is separate. |
 | Restoration basis and limits | No maximum-Toughness basis, cap or relation to ordinary kill restoration.; `ui / loc_talent_zealot_toughness_on_heavy_kills_desc / d50c0dd8` | Original maximum-100 example restores an extra 10, or only 4 when 4 is missing. Normal Melee-kill restoration is separate; template has no cooldown_duration/max_stacks restriction. [Fixed source and line references](zealot_toughness_on_heavy_kills.md#fixed-source-evidence) | Not covered by the description | These calculation and proc limits supplement the stated effect. |
 
+
+<a id="zealot_increased_crit_and_weakspot_damage_after_dodge"></a>
+
+## Duellist
+
+Full raw template and formatting: [source evidence](zealot_increased_crit_and_weakspot_damage_after_dodge.md#original-english-template-and-reconstruction). Name hash `ea05e792`. Every row uses `ui / loc_talent_zealot_duelist_new_desc / b41ec4a9`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Finesse bonus, Dodge and duration | “+50% Finesse Damage for 3s on successful Dodge.”; `ui / loc_talent_zealot_duelist_new_desc / b41ec4a9` | Successful Dodge gives finesse_modifier_bonus 0.5 for 3 seconds. [Fixed source and line references](zealot_increased_crit_and_weakspot_damage_after_dodge.md#fixed-source-evidence) | Consistent | The trigger, stat and values agree. |
+| Extra-damage calculation and refresh | No whole-hit formula, combined Weakspot/Critical rule or refresh detail.; `ui / loc_talent_zealot_duelist_new_desc / b41ec4a9` | B+F×(1+s+0.5); original examples 150→175, 200→250 and 225→275. No cooldown; another successful Dodge resets active_start_time. Combined Weakspot/Critical curves receive the bonus once. [Fixed source and line references](zealot_increased_crit_and_weakspot_damage_after_dodge.md#fixed-source-evidence) | Not covered by the description | Finesse wording does not promise a fixed 50% increase to the entire hit; these formulas supplement it. |
+
 ## Comparison totals
 
 94 rules: 44 Consistent / 3 Explicit contradiction / 44 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 609.

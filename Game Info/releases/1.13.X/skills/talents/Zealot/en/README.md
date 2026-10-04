@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="Restoring Faith talent icon"> [Restoring Faith](#zealot_heal_part_of_damage_taken) | <ul><li>After taking Health damage, gradually heal 20% of that damage over about 4 seconds; Toughness damage is excluded.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="Bleed for the Emperor talent icon"> [Bleed for the Emperor](#zealot_reduced_damage_on_wound) | <ul><li>If Health damage would cross the next Wound threshold, reduce that entire Health-damage amount by 40%; landing exactly on the threshold does not trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="Vicious Offering talent icon"> [Vicious Offering](#zealot_toughness_on_heavy_kills) | <ul><li>A Heavy Attack kill restores an extra 10% of maximum Toughness; merely hitting without a kill does not trigger it.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="Duellist talent icon"> [Duellist](#zealot_increased_crit_and_weakspot_damage_after_dodge) | <ul><li>A successful Dodge increases extra Weakspot/Critical damage by 50% for 3 seconds; another successful Dodge restarts the timer.</li></ul> | Skill |
 
 ---
 
@@ -746,3 +747,17 @@
 - **Separation**: Normal Melee-kill Toughness restoration is calculated separately from this talent's extra restoration.
 
 [Details](zealot_toughness_on_heavy_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_increased_crit_and_weakspot_damage_after_dodge"></a>
+
+### Duellist
+
+<img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="72" height="72" alt="Duellist talent icon">
+
+- **Operation**: Successfully dodging an attack increases Finesse Damage by 50% for 3 seconds; another successful Dodge restarts the timer. This strengthens only extra Weakspot/Critical damage, so the increase for the entire hit depends on the weapon and target.
+- **Weakspot example**: With no crit or other bonuses, base portion 100 and extra Weakspot portion 50, the original 150 becomes 100 + 50 × 1.5 = 175, an increase of about 16.67%. If the extra portion is 100, 200 becomes 250, a 25% increase.
+- **Existing bonus**: With base and extra portions both 100 and an existing 25% same-stage bonus, 100 + 100 × 1.25 = 225 becomes 100 + 100 × (1 + 25% + 50%) = 275, an actual increase of about 22.22%.
+
+[Details](zealot_increased_crit_and_weakspot_damage_after_dodge.md) · [Back to index](#talent-index)
