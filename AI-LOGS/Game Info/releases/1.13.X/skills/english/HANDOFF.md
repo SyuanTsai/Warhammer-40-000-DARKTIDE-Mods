@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 443 completed on 2026-10-04. [Receipt](scum_skills_439_443.json) and [FILE_MAP](FILE_MAP.json) record 443 accepted mechanisms. Next item: **444, Vultoprene II**, `broker_stimm_combat_5c`. The full goal remains active and unfinished.
+Checkpoint 448 completed on 2026-10-04. [Receipt](scum_skills_444_448.json) and [FILE_MAP](FILE_MAP.json) record 448 accepted mechanisms. Next item: **449, Tank**, `broker_stimm_durability_5a`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 203 mechanisms + 18 class-support files + 2 shared files = 223 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 95/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 203 = 94 Consistent / 5 Explicit contradictions / 94 Not covered / 1 No implementation / 9 Cannot confirm. Latest batch commit interval: 208s (3m 28s), 5018a8330→0c770d196. No clear English contradiction. Preserved all Power, additional Finesse, Rending and Critical Strike Chance examples, including fixed-Power assumptions, crossing-1 limits and clamp01. Component reconstruction is explicitly unobserved; no mechanism retracing.
+Remaining: 198 mechanisms + 18 class-support files + 2 shared files = 218 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 100/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 213 = 99 Consistent / 5 Explicit contradictions / 99 Not covered / 1 No implementation / 9 Cannot confirm. Latest batch commit interval: 209s (3m 29s), b20a69c79→c1341a15d. No clear English contradiction. Preserved Vultoprene percentage-point/clamp examples and all Barrage multiplicative Damage Taken, additive Toughness recovery, deficit, knocked-down, first-update and field re-entry limits. Display text is explicitly reconstructed.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

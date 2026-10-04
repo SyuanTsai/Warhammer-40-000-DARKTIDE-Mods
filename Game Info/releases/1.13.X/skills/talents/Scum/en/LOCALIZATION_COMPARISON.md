@@ -1222,4 +1222,4 @@ Full raw template and formatting: [source evidence](broker_stimm_durability_4.md
 
 ## Comparison totals
 
-The 203 listed rules comprise **94 Consistent**, **5 Explicit contradictions**, **94 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.
+The 213 listed rules comprise **99 Consistent**, **5 Explicit contradictions**, **99 Not covered by the description**, **1 No corresponding implementation evidence found** and **9 Cannot confirm**.

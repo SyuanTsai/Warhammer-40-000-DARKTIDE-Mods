@@ -1,0 +1,97 @@
+{
+  "id": "scum_skills_444_448",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "talent_settings_broker.lua L641-L717: only missing recipe display tiers, buff value and custom Damage Reduction formatting; accepted generator reused"
+  ],
+  "questions": [
+    "Barrage one-time recovery examples retain the accepted unobserved synchronization/application-order assumption; no new mechanism investigation."
+  ],
+  "skills": [
+    {
+      "id": "broker_stimm_combat_5c",
+      "name": "Vultoprene II",
+      "name_hash": "0f81fa53",
+      "description_hash": "f8a49d31",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_combat_5c.md",
+      "commit": "b34941ec0",
+      "description_hashes": [
+        "f8a49d31",
+        "a4e46663"
+      ]
+    },
+    {
+      "id": "broker_stimm_durability_1",
+      "name": "Barrage I",
+      "name_hash": "6f8e5c73",
+      "description_hash": "75149821",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_1.md",
+      "commit": "9ccb5448a",
+      "description_hashes": [
+        "75149821",
+        "805fdb71",
+        "9a749a67"
+      ]
+    },
+    {
+      "id": "broker_stimm_durability_2",
+      "name": "Barrage II",
+      "name_hash": "6f8e5c73",
+      "description_hash": "75149821",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_2.md",
+      "commit": "42810ef85",
+      "description_hashes": [
+        "75149821",
+        "805fdb71",
+        "9a749a67"
+      ]
+    },
+    {
+      "id": "broker_stimm_durability_3",
+      "name": "Barrage III",
+      "name_hash": "6f8e5c73",
+      "description_hash": "75149821",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_3.md",
+      "commit": "9d5d00db2",
+      "description_hashes": [
+        "75149821",
+        "805fdb71",
+        "9a749a67"
+      ]
+    },
+    {
+      "id": "broker_stimm_durability_4",
+      "name": "Barrage IV",
+      "name_hash": "6f8e5c73",
+      "description_hash": "75149821",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_durability_4.md",
+      "commit": "c1341a15d",
+      "description_hashes": [
+        "75149821",
+        "805fdb71",
+        "9a749a67"
+      ]
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 209,
+    "from_commit": "b20a69c79",
+    "to_commit": "c1341a15d",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}
