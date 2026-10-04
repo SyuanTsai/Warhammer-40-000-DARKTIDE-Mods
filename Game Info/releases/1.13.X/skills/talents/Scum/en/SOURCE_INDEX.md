@@ -31,3 +31,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Fast Acting Stimms](broker_ability_stimm_field_sub_1.md) / `broker_ability_stimm_field_sub_1` | Ability |
 | [Booby Trap](broker_ability_stimm_field_sub_2.md) / `broker_ability_stimm_field_sub_2` | Ability |
 | [Nimble](broker_passive_improved_dodges.md) / `broker_passive_improved_dodges` | Keystone |
+| [Adrenaline Frenzy](broker_keystone_adrenaline_junkie.md) / `broker_keystone_adrenaline_junkie` | Keystone |

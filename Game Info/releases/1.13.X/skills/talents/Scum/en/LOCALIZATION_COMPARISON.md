@@ -240,6 +240,18 @@ Full raw template and formatting: [source evidence](broker_passive_improved_dodg
 | Speed and added Dodging time | Dodge Speed increased by +25%; time considered Dodging by +0.15s; `ui / loc_talent_broker_passive_improved_dodges_desc_02 / 1cc9786f` | The multiplicative Dodge speed stat is 1.25; the added dodge_linger_time is 0.15 seconds. [Fixed source and line references](broker_passive_improved_dodges.md#fixed-source-evidence) | Consistent | Both quantities and the stated speed/check-window effect types match. |
 | Attack-specific windows and scope | No Melee/grab versus Ranged windows, motion-duration or consecutive-Dodge details; `ui / loc_talent_broker_passive_improved_dodges_desc_02 / 1cc9786f` | Melee/grab checks use 0.25 + 0.15 = 0.40 s; Ranged checks use 0 + 0.15 = 0.15 s. An unchanged path takes approximately 0.8 times the original time, subject to curve/weapon modifiers; Dodge count and recovery are unchanged. [Fixed source and line references](broker_passive_improved_dodges.md#fixed-source-evidence) | Not covered by the description | These explain existing limits without implying every attack must be avoided. |
 
+
+<a id="broker_keystone_adrenaline_junkie"></a>
+
+## Adrenaline Frenzy
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie.md#original-english-template-and-reconstruction). Name hash `016dda96`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_desc / b4493ff1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stack cycle and Frenzy values | Melee hit grants one stack, Critical hit +1 additional; one stack lost after 2s without a gain; at 30, clear stacks and gain 10s Frenzy with +10% Attack Speed and +25% Melee Damage; `ui / loc_talent_broker_keystone_adrenaline_junkie_desc / b4493ff1` | Ordinary Melee hits give 1, Critical Melee hits 2 total; 2 s shared expiry removes one stack. Reaching 30 clears Adrenaline and applies the 10 s Frenzy with melee_attack_speed 0.1 and melee_damage 0.25. [Fixed source and line references](broker_keystone_adrenaline_junkie.md#fixed-source-evidence) | Consistent | The stated gains, threshold, decay interval, duration and numerical bonuses match the accepted values. |
+| Scope, timer refresh and calculation | Attack Speed; no explicit Ranged bonus, sequential timer resets, retrigger refresh or additive calculation details; `ui / loc_talent_broker_keystone_adrenaline_junkie_desc / b4493ff1` | The speed stat applies to Melee. Gain/removal resets the 2 s stack timer; retriggering refreshes 10 s Frenzy. Damage adds in the same-stage pool, e.g. 100 × (1 + 0.20 + 0.25) = 145. [Fixed source and line references](broker_keystone_adrenaline_junkie.md#fixed-source-evidence) | Not covered by the description | These clarify scope and timing without counting absent qualifiers or formulas as English errors. |
+
 ## Comparison totals
 
 The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.
