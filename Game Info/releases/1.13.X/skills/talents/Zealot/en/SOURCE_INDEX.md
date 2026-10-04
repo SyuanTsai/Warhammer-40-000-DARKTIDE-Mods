@@ -68,3 +68,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Enemies Within, Enemies Without](zealot_toughness_in_melee.md) / `zealot_toughness_in_melee` | Skill |
 | [Faithful Frenzy](zealot_attack_speed.md) / `zealot_attack_speed` | Skill |
 | [Faith's Fortitude](zealot_additional_wounds.md) / `zealot_additional_wounds` | Skill |
+| [Anoint in Blood](zealot_increase_ranged_close_damage.md) / `zealot_increase_ranged_close_damage` | Skill |

@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="Enemies Within, Enemies Without talent icon"> [Enemies Within, Enemies Without](#zealot_toughness_in_melee) | <ul><li>Enemies within 5 metres grant ongoing Toughness restoration, from 2.5% up to 7.5% of maximum Toughness per second.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="Faithful Frenzy talent icon"> [Faithful Frenzy](#zealot_attack_speed) | <ul><li>Permanently grants +10% Melee Attack Speed and +5% Movement Speed.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="Faith's Fortitude talent icon"> [Faith's Fortitude](#zealot_additional_wounds) | <ul><li>Adds 2 Wounds while leaving maximum Health unchanged.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="Anoint in Blood talent icon"> [Anoint in Blood](#zealot_increase_ranged_close_damage) | <ul><li>While holding a Ranged weapon, nearby-target damage gains up to 25%; the bonus falls with distance and reaches zero at 30 metres.</li></ul> | Skill |
 
 ---
 
@@ -876,3 +877,17 @@
 - **Wound example**: With maximum Health 200 and originally 2 Wounds, each segment has 200 ÷ 2 = 100 Health. Taking the talent gives 4 Wounds, each with 200 ÷ 4 = 50 Health. It does not increase Health to 400.
 
 [Details](zealot_additional_wounds.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_increase_ranged_close_damage"></a>
+
+### Anoint in Blood
+
+<img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="72" height="72" alt="Anoint in Blood talent icon">
+
+- **Operation**: While holding a Ranged weapon, gain up to 25% damage against targets within 12.5 metres. Beyond 12.5 metres it gradually falls, reaching zero at 30 metres.
+- **Distance example**: With other conditions fixed and base damage 100, within 12.5 metres the result is 100 × 1.25 = 125. At 16.875 metres, the bonus is 25% × [1 − √((16.875 − 12.5) ÷ 17.5)] = 12.5%, giving 112.5 damage.
+- **Other bonuses**: This adds to same-stage damage bonuses. The weapon's own distance falloff is calculated separately; the fixed base 100 above is not measured weapon damage at every distance.
+
+[Details](zealot_increase_ranged_close_damage.md) · [Back to index](#talent-index)

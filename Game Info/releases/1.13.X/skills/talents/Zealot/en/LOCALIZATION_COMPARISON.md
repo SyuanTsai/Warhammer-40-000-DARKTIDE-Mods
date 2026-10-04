@@ -698,6 +698,18 @@ Full raw template and formatting: [source evidence](zealot_additional_wounds.md#
 | Extra Wound count | “+2 Wounds.”; `ui / loc_talent_zealot_3_tier_1_ability_3_description / 029afb2e` | extra_max_amount_of_wounds 2 is added by max_wounds. [Fixed source and line references](zealot_additional_wounds.md#fixed-source-evidence) | Consistent | Count and additive direction agree. |
 | Health segmentation and other conditions | No maximum-Health or segment-size formula.; `ui / loc_talent_zealot_3_tier_1_ability_3_description / 029afb2e` | No max_health bonus; max_health/max_wounds. Original Health-200 example changes 2 segments of 100 to 4 of 50, not Health 400; other Wound-based conditions also change. [Fixed source and line references](zealot_additional_wounds.md#fixed-source-evidence) | Not covered by the description | These consequences supplement the extra Wound count. |
 
+
+<a id="zealot_increase_ranged_close_damage"></a>
+
+## Anoint in Blood
+
+Full raw template and formatting: [source evidence](zealot_increase_ranged_close_damage.md#original-english-template-and-reconstruction). Name hash `e5a06eb7`. Every row uses `ui / loc_talent_zealot_ranged_damage_increased_to_close_desc / 7504148a`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Maximum bonus and distance falloff | “Up to +25% Base Ranged Damage, reduced the further you are from the target.”; `ui / loc_talent_zealot_ranged_damage_increased_to_close_desc / 7504148a` | Ranged-weapon slot condition grants damage_near 0.25 with a decreasing near-range weight. [Fixed source and line references](zealot_increase_ranged_close_damage.md#fixed-source-evidence) | Consistent | Maximum bonus and falloff direction agree. |
+| Slot condition and curve | No attack-path exclusion, distance breakpoints or exact curve.; `ui / loc_talent_zealot_ranged_damage_increased_to_close_desc / 7504148a` | slot_secondary only; t=clamp((d−12.5)/17.5,0,1), near weight 1−sqrt(t). Original base-100 examples give 125 and 112.5; same-stage addition, weapon falloff separate. [Fixed source and line references](zealot_increase_ranged_close_damage.md#fixed-source-evidence) | Not covered by the description | Ranged wording does not explicitly exclude other paths while that slot is held; these calculations and eligibility details supplement it. |
+
 ## Comparison totals
 
 117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.
