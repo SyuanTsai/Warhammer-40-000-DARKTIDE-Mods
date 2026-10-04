@@ -350,6 +350,18 @@ Full raw template and formatting: [source evidence](broker_keystone_vultures_mar
 | Universal attack coverage | Count as Dodging against all Attacks; `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b` | The buff only sets count_as_dodge_vs_melee and count_as_dodge_vs_ranged; Dodge.is_dodging uses them for melee/incapacitating_grab and ranged. It has no count_as_dodge_vs_all and does not cover types outside those branches. [Fixed source and line references](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#fixed-source-evidence) | Explicit contradiction | All Attacks is explicitly broader than the accepted attack-branch coverage. |
 | Refresh and avoidance limits | No repeated-trigger timing, motion or attack-logic details; `ui / loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc / c8880e0b` | One stack refreshes for 1 s; a trigger at 0.6 s extends an initial 0 s trigger to 1.6 s. No movement state, speed, distance or Damage change is applied; avoidance depends on each attack using its Dodge rules. [Fixed source and line references](broker_keystone_vultures_mark_dodge_on_ranged_crit.md#fixed-source-evidence) | Not covered by the description | These preserve the original timing and functional limits rather than adding further contradiction rows. |
 
+
+<a id="broker_keystone_adrenaline_junkie_sub_1"></a>
+
+## Adrenaline Assassin
+
+Full raw template and formatting: [source evidence](broker_keystone_adrenaline_junkie_sub_1.md#original-english-template-and-reconstruction). Name hash `f9457720`. Every row uses `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc / 02bab200`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Additional Weakspot and regular grants | Weakspot Hits grant +2 additional Adrenaline stacks; Regular Melee Hits grant none; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc / 02bab200` | Weakspot Melee hits use the original 1 plus 2 additional stacks; the ordinary non-Weakspot grant becomes 0. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_1.md#fixed-source-evidence) | Consistent | Additional identifies the bonus rather than the final Weakspot total; the regular grant is removed. |
+| Independent Critical grant and limits | No removal of the core Critical bonus, Ranged Weakspot eligibility or cap/timing detail; `ui / loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc / 02bab200` | Critical grant 1 remains independent: non-Weakspot/non-Critical 0, non-Weakspot/Critical 1, Weakspot/non-Critical 3, Weakspot/Critical 4. Only Melee qualifies, with the core 30-stack cap, timing and Frenzy effects. [Fixed source and line references](broker_keystone_adrenaline_junkie_sub_1.md#fixed-source-evidence) | Not covered by the description | These preserve all four original cases without reading Regular as cancelling the separately defined Critical bonus. |
+
 ## Comparison totals
 
 The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.

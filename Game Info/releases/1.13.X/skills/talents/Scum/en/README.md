@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="Vulture's Push talent icon"> [Vulture's Push](#broker_keystone_vultures_mark_aoe_stagger) | <ul><li>Ranged Elite or Specialist kills trigger a Stagger explosion around the player, without requiring existing Mark stacks.</li><li>Its radius is 3 metres and it deals no direct Damage; actual displacement depends on each target's Stagger resistance, armour and current state.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="Patient Hunter talent icon"> [Patient Hunter](#broker_keystone_vultures_mark_increased_duration) | <ul><li>Vulture's Mark's shared duration increases from 8 to 12 seconds.</li><li>New qualifying gains refresh 12 seconds even at 3 stacks; without another gain, all remaining stacks expire together. Vulture's Dodge stays at 1 second.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="Vulture's Dodge talent icon"> [Vulture's Dodge](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | <ul><li>Ranged Critical hits make you count as Dodging in the Melee, grab and Ranged checking branches for 1 second, without requiring a Dodge movement.</li><li>Retriggering refreshes 1 second without stacking; attacks still follow their own Dodge logic, and the effect does not make all Damage ineffective.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="Adrenaline Assassin talent icon"> [Adrenaline Assassin](#broker_keystone_adrenaline_junkie_sub_1) | <ul><li>Weakspot Melee hits grant the original 1 stack plus 2 additional stacks, for 3; ordinary non-Weakspot non-Critical hits grant none.</li><li>The independent Critical bonus remains: a non-Weakspot Critical hit grants 1, and a Critical Weakspot hit grants 4, subject to the core's 30-stack cap.</li></ul> | Keystone |
 
 ---
 
@@ -526,3 +527,19 @@
 - **Timing example:** trigger at 0 seconds, then land another Ranged Critical hit at 0.6 seconds; the effect continues until 1.6 seconds.
 
 [Details](broker_keystone_vultures_mark_dodge_on_ranged_crit.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_1"></a>
+
+### Adrenaline Assassin
+
+<img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="72" height="72" alt="Adrenaline Assassin talent icon">
+
+- **Weakspot hits:** a Weakspot Melee hit gives the original 1 stack plus 2 additional stacks, for 3 total.
+
+- **Ordinary hits:** a non-Weakspot Melee hit gives no regular stack. The Critical check still runs independently, so a non-Weakspot Critical Melee hit still grants 1 additional stack.
+
+- **Critical Weakspot hit:** the Weakspot hit's 3 stacks plus the additional Critical stack give 4 total, still subject to the core 30-stack cap and stack-timing rules.
+
+[Details](broker_keystone_adrenaline_junkie_sub_1.md) · [Back to index](#talent-index)
