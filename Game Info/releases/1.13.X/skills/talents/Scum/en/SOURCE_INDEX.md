@@ -110,3 +110,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Vultoprene II](broker_stimm_combat_5c.md) / `broker_stimm_combat_5c` | Stimm recipe |
 | [Barrage I](broker_stimm_durability_1.md) / `broker_stimm_durability_1` | Stimm recipe |
 | [Barrage II](broker_stimm_durability_2.md) / `broker_stimm_durability_2` | Stimm recipe |
+| [Barrage III](broker_stimm_durability_3.md) / `broker_stimm_durability_3` | Stimm recipe |
