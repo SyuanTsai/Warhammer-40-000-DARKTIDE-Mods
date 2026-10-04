@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="Nimble talent icon"> [Nimble](#broker_passive_improved_dodges) | <ul><li>Dodge movement speed increases by 25%.</li><li>After a Dodge, the additional 0.15-second Dodging window gives 0.40 seconds for Melee/grab checks and 0.15 seconds for Ranged checks; avoidance still depends on each attack's rules.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="Adrenaline Frenzy talent icon"> [Adrenaline Frenzy](#broker_keystone_adrenaline_junkie) | <ul><li>Melee hits grant 1 Adrenaline stack; Critical Melee hits grant 1 additional stack. Without another gain, one stack decays every 2 seconds.</li><li>Reaching 30 stacks clears Adrenaline and grants 10 seconds of +10% Melee Attack Speed and +25% additive Melee Damage; retriggering refreshes Frenzy.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="Vulture's Mark talent icon"> [Vulture's Mark](#broker_keystone_vultures_mark_on_kill) | <ul><li>Ranged Elite or Specialist kills grant an 8-second Mark, up to 3 stacks; a new stack refreshes the shared timer, and all expire together without another gain.</li><li>Each stack gives +5% Ranged Damage, +5 percentage points Ranged Critical Chance and +5% Movement Speed. At maximum stacks, qualifying further kills restore 15% maximum Toughness to you and Allies in Coherency.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="Chemical Dependency talent icon"> [Chemical Dependency](#broker_keystone_chemical_dependency) | <ul><li>Stimm use grants a Dependency stack, up to 3. Each adds 10% to Combat Ability resource recovery; 3 stacks give a 1.30 recovery multiplier.</li><li>Gains refresh the shared 90-second timer; without another gain, stacks decay one at a time every 90 seconds.</li></ul> | Keystone |
 
 ---
 
@@ -399,3 +400,21 @@
 - **Toughness example:** with maximum Toughness 100 and at least 15 missing, a qualifying Ranged Elite/Specialist kill at maximum stacks restores 100 × 0.15 = 15.
 
 [Details](broker_keystone_vultures_mark_on_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency"></a>
+
+### Chemical Dependency
+
+<img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="72" height="72" alt="Chemical Dependency talent icon">
+
+- **Trigger:** each Stimm use grants 1 stack. First receiving the effects of a Stimm-containing Stimm Supply field also triggers it.
+
+- **Stacks:** the maximum is 3. Each adds 10% to the Combat Ability resource-recovery multiplier. At 3 stacks this is 1 + 3 × 0.10 = 1.30, or 30% faster recovery than the base rate.
+
+- **Timing:** the base duration is 90 seconds. A new stack resets the shared timer. After 90 seconds without another gain, one stack is lost and the timer restarts; subsequent stacks then expire one at a time every 90 seconds.
+
+- **Recovery example:** if the same Combat Ability resource amount normally takes 60 seconds to recover, with uninterrupted recovery and no other modifiers, 3 stacks take approximately 60 ÷ 1.30 = 46.15 seconds.
+
+[Details](broker_keystone_chemical_dependency.md) · [Back to index](#talent-index)

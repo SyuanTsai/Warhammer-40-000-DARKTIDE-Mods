@@ -33,3 +33,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Nimble](broker_passive_improved_dodges.md) / `broker_passive_improved_dodges` | Keystone |
 | [Adrenaline Frenzy](broker_keystone_adrenaline_junkie.md) / `broker_keystone_adrenaline_junkie` | Keystone |
 | [Vulture's Mark](broker_keystone_vultures_mark_on_kill.md) / `broker_keystone_vultures_mark_on_kill` | Keystone |
+| [Chemical Dependency](broker_keystone_chemical_dependency.md) / `broker_keystone_chemical_dependency` | Keystone |
