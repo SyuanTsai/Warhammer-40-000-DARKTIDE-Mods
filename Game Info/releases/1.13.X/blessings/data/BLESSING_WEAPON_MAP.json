@@ -1147,6 +1147,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/388f4d79-d16b-41b8-8280-51ee892743ca",
       "effect": "持用擲彈兵臂鎧布拉斯托姆 Mk III，以近戰命中首個目標時每次增加一層；每層實際提高近戰威力 5%，最多 10 層。切出時效果不提供近戰威力，但閒置計時仍繼續；每次合格命中會重新計時。"
+    },
+    {
+      "id": "murderous-tranquility",
+      "name_zh_tw": "凶殘之寧",
+      "name_en": "Murderous Tranquility",
+      "name_key": "loc_trait_bespoke_vent_warp_charge_on_multiple_hits",
+      "description_key": "loc_trait_bespoke_vent_warp_charge_on_multiple_hits_desc",
+      "name_hash": "558074d6",
+      "description_hash": "12b73524",
+      "page": "entries/凶殘之寧/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
+      "effect": "持用烈焰力場巨劍時，當合格近戰命中事件序號達 3 或以上，同批事件合併成一次延後扣除，依 I–IV 級減少目前反噬 2／3／4／5 個百分點；額外風刃與甩擊不觸發。"
     }
   ],
   "weapons": [
@@ -17738,6 +17751,68 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_145",
       "effect": "- 擲彈兵臂鎧 布拉斯托姆 Mk III（ogryn_gauntlet_p1_m1）：四級實際每層均為 +5% 近戰威力，最多 10 層；RAW I–III 顯示數值較低，IV 顯示值相符。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits",
+      "blessing_id": "murderous-tranquility",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/凶殘之寧/weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "vent_percentage",
+        "stat_type": "absolute_fraction_of_current_warp_charge",
+        "tier_values_by_level": {
+          "I": 0.02,
+          "II": 0.03,
+          "III": 0.04,
+          "IV": 0.05
+        },
+        "wrapper_fallback": 0.01,
+        "tier_overrides_replace_fallback": true,
+        "required_num_hits": 3,
+        "predicate": "eligible melee on_hit event with current target_number>=3",
+        "pending_proc_storage": "boolean template_data.proc",
+        "same_batch_coalesces": true,
+        "remove_formula": "clamp(current_fraction-tier_fraction,0,1)",
+        "new_state": "idle",
+        "no_direct_damage_multiplier": true,
+        "exploding_state_branch": "interrupt psyker_ability and record survived-perils",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits",
+        "mark_ids": [
+          "forcesword_2h_p1_m1",
+          "forcesword_2h_p1_m2"
+        ],
+        "value_unit": "fixed percentage points subtracted from normalized current warp charge; clamp 0..1",
+        "tier_replaces_fallback": true,
+        "coalescing": "one boolean flag per proc-event processing batch"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 450,
+        "end_line": 491
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 47
+      },
+      "description_key": "loc_trait_bespoke_vent_warp_charge_on_multiple_hits_desc",
+      "description_hash": "12b73524",
+      "icon": "https://github.com/user-attachments/assets/be8c86da-c7a2-49b0-a25f-93df4bb03455",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_220",
+      "effect": "持用烈焰力場巨劍時，當合格近戰命中事件序號達 3 或以上，同批事件合併成一次延後扣除，依 I–IV 級減少目前反噬 2／3／4／5 個百分點；額外風刃與甩擊不觸發。"
     }
   ],
   "bindings": [
@@ -24823,6 +24898,34 @@
         "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
         "import_line": 17,
         "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "murderous-tranquility",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/vent_warp_charge_on_multiple_hits",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "murderous-tranquility",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_vent_warp_charge_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/vent_warp_charge_on_multiple_hits",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
       }
     }
   ]

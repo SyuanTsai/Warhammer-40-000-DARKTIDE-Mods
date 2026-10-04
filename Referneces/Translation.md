@@ -1862,3 +1862,6 @@
 
 - Born in Blood - 浴血而生
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_close_range_kills`，hash `22ea2fab`；英文／繁中RAW配對確認。
+
+- Murderous Tranquility - 凶殘之寧
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_vent_warp_charge_on_multiple_hits`，hash `558074d6`；英文／繁中RAW配對確認。
