@@ -674,6 +674,18 @@ Full raw template and formatting: [source evidence](psyker_improved_dodge.md#ori
 | Additional Effective Dodge | Increase Effective Dodges by 1; `ui / loc_talent_psyker_improved_dodge_description / b7dff1d2` | extra_consecutive_dodges = 1 adds to diminishing_return_start. [Fixed source and line references](psyker_improved_dodge.md#fixed-source-evidence) | Consistent | “By” denotes an addition, consistent with the verified total of 3 + 1 = 4 in the existing example. |
 | Protection timing | Time considered Dodging increased by +50%; no exact phase specified; `ui / loc_talent_psyker_improved_dodge_description / b7dff1d2` | dodge_linger_time_modifier = 0.5 scales the protection linger after the action; it does not extend the whole dodge action by 50%. [Fixed source and line references](psyker_improved_dodge.md#fixed-source-evidence) | Not covered by the description | The amount agrees, but the English leaves the specific protected phase implicit. |
 
+
+<a id="psyker_dodge_after_crits"></a>
+
+## Empathic Evasion
+
+Full raw template and formatting: [source evidence](psyker_dodge_after_crits.md#original-english-template-and-reconstruction). Name hash `390d90d6`. Every row uses `ui / loc_talent_psyker_dodge_after_crits_description / 654d056c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, duration and ranged scope | A Critical Hit makes you count as Dodging against Ranged Attacks for 1s; `ui / loc_talent_psyker_dodge_after_crits_description / 654d056c` | The critical-hit proc enables count_as_dodge_vs_ranged for an active_duration of 1. [Fixed source and line references](psyker_dodge_after_crits.md#fixed-source-evidence) | Consistent | The stated event, duration and Dodge scope agree. |
+| Refresh and attack-specific limits | No refresh rule or list of attacks using dodge checks; `ui / loc_talent_psyker_dodge_after_crits_description / 654d056c` | Retriggering resets active time; only attacks using the ranged-dodge check are covered. Melee, explosions and ground fire do not acquire universal immunity. [Fixed source and line references](psyker_dodge_after_crits.md#fixed-source-evidence) | Not covered by the description | These limits clarify the Dodge keyword and are not an explicit English promise of invulnerability. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **56 Consistent**, **2 Explicit contradictions**, **55 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.

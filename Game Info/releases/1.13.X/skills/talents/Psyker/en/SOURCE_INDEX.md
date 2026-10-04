@@ -66,3 +66,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Malefic Momentum](psyker_kills_stack_other_weapon_damage.md) / `psyker_kills_stack_other_weapon_damage` | Talent |
 | [One with the Warp](psyker_warp_charge_reduces_toughness_damage_taken.md) / `psyker_warp_charge_reduces_toughness_damage_taken` | Talent |
 | [Anticipation](psyker_improved_dodge.md) / `psyker_improved_dodge` | Talent |
+| [Empathic Evasion](psyker_dodge_after_crits.md) / `psyker_dodge_after_crits` | Talent |

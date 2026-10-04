@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="Malefic Momentum talent icon"> [Malefic Momentum](#psyker_kills_stack_other_weapon_damage) | <ul><li>Non-Warp Kill: +5% Warp Damage. Warp Kill: +5% non-Warp Damage. Each group lasts 10s and stacks separately up to 5 times.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="32" height="32" alt="One with the Warp talent icon"> [One with the Warp](#psyker_warp_charge_reduces_toughness_damage_taken) | <ul><li>Toughness Damage Reduction scales linearly with current Peril: 10% at 0% Peril, 33% at 100%. Does not reduce Health Damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="Anticipation talent icon"> [Anticipation](#psyker_improved_dodge) | <ul><li>+1 Effective Dodge and +50% dodge protection linger time; the entire dodge animation is not extended by 50%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="Empathic Evasion talent icon"> [Empathic Evasion](#psyker_dodge_after_crits) | <ul><li>Critical Hit: count as Dodging against Ranged Attacks for 1s; triggering it again resets the timer.</li></ul> | Talent |
 
 ---
 
@@ -915,3 +916,19 @@
 - The Traditional Chinese wording says the Effective Dodge count increases to the specified number, treating the bonus as a new total. The English says to increase the count by that number; the verified effect adds 1 to the existing count, rather than allowing only 1 dodge in total.
 
 [Details](psyker_improved_dodge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_dodge_after_crits"></a>
+
+### Empathic Evasion
+
+<img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="72" height="72" alt="Empathic Evasion talent icon">
+
+- **Effect**: after a Critical Hit, count as Dodging against Ranged Attacks for 1 second; triggering it again resets the duration.
+
+- **Timing example**: a proc at 0 seconds lasts until approximately 1 second. Another proc at 0.6 seconds extends it until approximately 1.6 seconds.
+
+- **Scope**: this is a ranged-dodge check. It does not provide melee invulnerability, and explosions or ground fire cannot all be treated as ranged hits to which it grants immunity.
+
+[Details](psyker_dodge_after_crits.md) · [Back to index](#talent-index)
