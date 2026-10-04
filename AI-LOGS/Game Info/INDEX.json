@@ -2522,6 +2522,22 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/shared_completion",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/shared",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/shared_completion.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

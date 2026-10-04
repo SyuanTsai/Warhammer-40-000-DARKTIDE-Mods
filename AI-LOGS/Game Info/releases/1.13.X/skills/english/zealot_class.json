@@ -1,0 +1,47 @@
+{
+  "id": "zealot_class",
+  "class": "Zealot",
+  "date": "2026-10-04",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "FILE_MAP.json: scope Zealot",
+  "English_entry": "Game Info/releases/1.13.X/skills/talents/Zealot/en/README.md",
+  "checks": {
+    "mapped_English_pages": 88,
+    "previous_skill_acceptance": "82 mechanism translations and independent English comparisons reused; no mechanism reanalysis or repeated skill acceptance.",
+    "shared_page_checks": {
+      "pages": 6,
+      "local_references": 775,
+      "errors": 0,
+      "Markdown_parse_and_structure": "82 ordered selectable index rows/player sections, 82 source and percentage-review rows, 82 comparison sections, four class base effects and 47 definitions not directly used. All six pages parsed with marked.",
+      "existing_image_references_matching_sources_and_dimensions": 164,
+      "full_staged_diff_reading": "Complete changed text read once before class commit; later label correction read as its own delta."
+    }
+  },
+  "comparison_totals": {
+    "Consistent": 81,
+    "Explicit contradictions": 6,
+    "Not covered by the description": 81,
+    "No implementation found": 0,
+    "Cannot confirm": 4
+  },
+  "base_effect_comparison": "Four exact name/description pairs retained in BASE_EFFECTS.md; separate from the 172 selectable-node rules.",
+  "source_reads": [
+    "Closeout: missing base-effect English name/description and display mappings only, zealot_talents.lua L27-L63, L779-L801 and L2841-L2864. All other mechanisms and source links reused."
+  ],
+  "questions": [
+    "Six existing explicit English contradictions and four unresolved selectable-node comparisons retained. Holy Cause description key remains unpaired.",
+    "Base dash raw placeholders lack colons; verified value substitution is labelled as reconstruction, with actual formatter display unconfirmed.",
+    "Base grenade all-enemies wording retains the accepted resistance/control uncertainty. Chinese findings remain separate from English judgement."
+  ],
+  "timing": {
+    "class_closeout_commit_interval_seconds": 823,
+    "from_commit": "313c31381",
+    "class_closeout_commit": "468d103ee",
+    "interruptions": "No requested pause or model-capacity failure. Class closeout and shared-page work separate from mechanism translation speed; no new estimate."
+  },
+  "evidence_limits": [
+    "Static reconstruction and source-based evidence, not in-game observation.",
+    "Existing link/image/dimension/layout checks only; no downloads, screenshots, source retracing or agent review."
+  ]
+}

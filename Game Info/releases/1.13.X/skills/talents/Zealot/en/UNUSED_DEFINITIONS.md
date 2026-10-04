@@ -59,6 +59,6 @@ Comparison entry points: [Class base list](https://github.com/Aussiemon/Darktide
 ## Interpretation boundaries
 
 - The underlying effects of 2 definitions are still supplied by current talents: Chorus's Stagger rule and the Until Death upgrade's attack bonuses during the unkillable period. They are included in the corresponding selectable talents, not classified as defunct.
-- 1 definition has only its name reused by the current node: `zealot_resist_death_recuperate`. The current Resurrection node actually attaches a maximum-Toughness buff; do not splice the old healing implementation into it.
+- 1 definition has only its name reused by the current node: `zealot_resist_death_recuperate`. The current Risen node actually attaches a maximum-Toughness buff; do not splice the old healing implementation into it.
 - The other 44 definitions were not found attached through the current Zealot talent tree or class base entry points. Strings for 14 of them still occur in reused icon paths. Exclusion is scoped to the current class configuration; it does not assert that other modes, development tools or future versions never reference them, and does not recommend deleting source.
 - Local Steam Build 25606770 and the public source correspond to 1.13.1. No in-game tests were performed.

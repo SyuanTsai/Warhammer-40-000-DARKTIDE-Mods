@@ -9,7 +9,7 @@
   "source_tree_sha": "3241712b6784514ae2819f84350e96f8a39fb97f",
   "steam_build": "25606770",
   "source_batch": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1",
-  "status": "in_progress",
+  "status": "complete",
   "files": [
     {
       "source": "Game Info/releases/1.13.X/skills/README.md",
@@ -18,20 +18,16 @@
       "kind": "shared",
       "chinese_blob_sha": "681b32e042fcce0812bbe92813bed0f67ee67072",
       "chinese_sha256": "1e533eff387c45a91d4f2a418f2e0c3189599aa829baaf4d5a85eb60e9f989ba",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_replenish_grenades"
       ],
       "checks": [
-        "primary_direct_evidence",
-        "exact_english_key_hash",
-        "independent_english_comparison",
-        "source_lines",
-        "links_anchors",
-        "marked_parse_render",
-        "icon_public_read",
-        "read_only_review"
-      ]
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "one_full_changed_diff_reading"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/shared_completion.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/TALENT_CHANGES_1.13.0_TO_1.13.1.md",
@@ -40,9 +36,14 @@
       "kind": "shared",
       "chinese_blob_sha": "74fdf45079943e3c902a3f54f1eeb277ad10d39f",
       "chinese_sha256": "7053ccd475332fd1be3425c34bbaa2a8fdcbe656b132b13135634fdbed363c73",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "one_full_changed_diff_reading"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/shared_completion.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/BASE_EFFECTS.md",
@@ -13608,9 +13609,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "4c650ffff40993084caa5bb03f0cbdbd558fb02f",
       "chinese_sha256": "77e88eb9aae3508214aeaa97f34a88496cd670b5887b0ec1bf8862ccc6a42183",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/DAMAGE_PERCENTAGE_REVIEW.md",
@@ -13619,9 +13625,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "4f0bdf3422db2663c53bd2fc869a6156265a2674",
       "chinese_sha256": "7aa3daa64ca4eba9e357a6021d667a150b58d86e114d629a8e0e9aec0c3d0aca",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/LOCALIZATION_COMPARISON.md",
@@ -13630,9 +13641,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "80e6419a1087783dae80cc4124c0f06d6ab3411b",
       "chinese_sha256": "b73caf5c0fd668ae2a61a4f9cebc094580cefa7895d9e8f665961c934e9d1b10",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/README.md",
@@ -13641,9 +13657,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "e8ea50a3853e781dd9881b3e15736a6400acab36",
       "chinese_sha256": "6c5c19a78c3feac415a4d3b76294a82c805f15e2cf3039c778f2fc5a65f0da7f",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/SOURCE_INDEX.md",
@@ -13652,9 +13673,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "3e181cc5dc7ad8ef55c12c2edf737ebea89bd3e1",
       "chinese_sha256": "f3ecba2cbb6a2f2764f70fd16b91726ceb3679603150c7717727b09baafe1568",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/UNUSED_DEFINITIONS.md",
@@ -13663,9 +13689,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "a790abcbf18a9ee61d4a5acf9d80c60e43b45a50",
       "chinese_sha256": "9cf66f7222e7177db4262e32817b7b3724387452579f7d59365618a92547424e",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/base_melee_damage_node_buff_medium_1.md",

@@ -1,3 +1,15 @@
+# English documentation: completed delivery
+
+All seven classes and both required shared pages are complete: **646/646 mechanism documents and 690/690 mapped files**. [Final receipt](shared_completion.json), [Zealot closeout](zealot_class.json) and [FILE_MAP](FILE_MAP.json) contain final counts and retained caveats. No translation items remain.
+
+Checkout: `C:\Users\carsu\.codex\worktrees\skills-english\Warhammer-40-000-DARKTIDE-Mods`; branch `codex/skills-english`. Latest content commits: `468d103ee` (Zealot support), `60e00049a` (shared pages). Same-branch PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/192. The user authorized push and PR; no merge is authorized.
+
+Prior accepted mechanisms and class checks were reused. Zealot support passed 775 local references and 164 image references/dimensions; shared pages passed 22 local references. Independent English findings, missing exact strings, formatter questions and in-game limits remain documented. The confirmed Chinese follow-up in FILE_MAP is preserved for separate Chinese revision.
+
+Earlier continuation/handoff notes below are historical; pending counts, next-item instructions and former restrictions are superseded by this delivery and the latest user instructions.
+
+---
+
 # English documentation: current continuation
 
 Checkpoint 645–646 completed on 2026-10-04. [Receipt](zealot_skills_645_646.json) and [FILE_MAP](FILE_MAP.json) record all 646/646 accepted mechanisms and 682/690 accepted files. Next: Zealot class-support closeout, then two shared pages. Same branch draft PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/192. The full goal remains active and unfinished.

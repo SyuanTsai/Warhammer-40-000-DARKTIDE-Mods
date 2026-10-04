@@ -1,5 +1,9 @@
 # English skills documentation maintenance
 
+**Completed 2026-10-04:** 646/646 mechanism documents and 690/690 mapped files. All seven classes and required shared pages are accepted, with existing caveats retained. [Final receipt](shared_completion.json) | [Zealot closeout](zealot_class.json) | [English entry](../../../../../../Game%20Info/releases/1.13.X/skills/README.en.md).
+
+The execution notes/checkpoints below are historical. Latest user instructions supersede former agent-review and local-only restrictions; same-branch push and PR #192 are authorized, with no merge.
+
 [File mapping](FILE_MAP.json) | [Game Info records](../../../../README.md)
 
 - Release: 1.13.1; Steam Build: `25606770`.
@@ -525,3 +529,7 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Zealot skills 640–644](zealot_skills_640_644.json): Holy Tools, Got Your Back, Purifying Hatred, Dance of Death, Melee Damage Boost (medium_1). Complete translations and independent English comparisons; changed Markdown/links and one full diff reading per skill passed. Original activation/consumption, recipient, dual-status, handling and tier examples/limits retained. No new English contradiction; omissions remain supplements. Commit interval 98e963a96→66ee9d0bc: 335s (5m 35s), no pause or capacity failure. 644/646 mechanisms and 680/690 files accepted; 10 remain (2 mechanisms, 6 class-support, 2 shared). Continue 645, Melee Damage Boost (medium_4). PR #192 updated.
 
 - [Zealot skills 645–646](zealot_skills_645_646.json): Melee Damage Boost (medium_4), Toughness Damage Reduction (medium_1). Complete translations and independent English comparisons; changed Markdown/links and one full diff reading per skill passed. Original tiers, additive stages and examples retained. No new English contradiction. Commit interval d96eeee1f→7e9c0137b: 75s (1m 15s), no pause or capacity failure. All 646/646 mechanisms accepted, 682/690 files accepted; 8 remain (6 Zealot class-support, 2 shared). Continue the Zealot class closeout, measured separately.
+
+- [Zealot class closeout](zealot_class.json): 82 mechanisms and 6 support pages complete; 775 local references and 164 existing image references/dimensions passed. 172 independent rules: 81 Consistent / 6 Explicit contradictions / 81 Not covered / 0 No implementation / 4 Cannot confirm. Four base effects and 47 exclusions retained. Class interval 313c31381→468d103ee: 823s (13m 43s), separate from mechanism translation.
+
+- [Shared completion](shared_completion.json): both shared pages complete; 22 local references and changed Markdown passed. Shared interval 468d103ee→60e00049a: 132s (2m 12s). All 646 mechanisms and 690 files accepted; 0 translation files remain. Final metadata and PR synchronization separate. Existing caveats and Chinese follow-ups retained.
