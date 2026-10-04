@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="On the Brink talent icon"> [On the Brink](#zealot_corruption_resistance_stacking) | <ul><li>Each complete missing Wound counted by Martyrdom reduces Corruption damage taken by 10%, up to 5 Wounds and 50%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="Zealous Pilgrim talent icon"> [Zealous Pilgrim](#zealot_resist_death_ability) | <ul><li>Ability use grants 4 seconds of Unkillable; Shroudfield starts it upon leaving Stealth, Chorus upon unwielding the relic. While Unkillable, gain 10% Damage and Attack Speed.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="Fire and Fury talent icon"> [Fire and Fury](#zealot_resist_death_fire) | <ul><li>While Unkillable, weapon hits apply Burn to living enemies: 3 stacks for Melee, 1 for Ranged, up to 12 from this talent.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="Risen talent icon"> [Risen](#zealot_resist_death_golden_toughness) | <ul><li>While Unkillable, gain 5 maximum Toughness per second, up to 8 stacks/+40. Added stacks refresh a 5-second duration, and raising the cap also raises current Toughness.</li></ul> | Keystone |
 
 ---
 
@@ -567,3 +568,18 @@
 - **Damage example**: Against a fixed Unarmoured hit location with no other modifiers, one Burn tick at 3 stacks deals 400 × (3 ÷ 31)² × [3 − 2 × (3 ÷ 31)] × 1.5 ≈ 15.77 damage; 12 stacks deal about 200.11. These are individual ticks, not fixed damage per second against every enemy.
 
 [Details](zealot_resist_death_fire.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_resist_death_golden_toughness"></a>
+
+### Risen
+
+<img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="72" height="72" alt="Risen talent icon">
+
+- **Stacking**: While Unkillable, gain the first stack about 0.75 seconds after starting, then one per second. Each adds 5 maximum Toughness, capped at 8 stacks and +40.
+- **Duration**: Added stacks reset the whole effect's 5-second duration. Unkillable ending stops stack gains, while the countdown from the last stack continues.
+- **Toughness example**: Starting with maximum 100 and current 60, one stack makes maximum 105 and current 65. After all 8 stacks with no other changes, current/maximum becomes 100/140. When the effect expires and the cap returns to 100, current 100 is retained. If current was only 70 before expiry, it stays 70/100.
+- **Temporary Unkillable**: In 4 seconds, gains around 0.75, 1.75, 2.75 and 3.75 seconds give 4 stacks, totaling +20. Actual triggers depend on update timing.
+
+[Details](zealot_resist_death_golden_toughness.md) · [Back to index](#talent-index)
