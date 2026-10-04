@@ -9440,9 +9440,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3085f3b52fed0ed5f534bef25f6d1dcb1b0c86d7",
       "chinese_sha256": "03f979a03ec7858e42e3b9ef1f9f452f9c51daf108d87aba881ca81b9c772d64",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_electrocution_defense"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_push.md",
@@ -9462,9 +9469,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "918cfca46874cd20b2f91f2d4a5fb94be72d6bb3",
       "chinese_sha256": "9664c8cdfbe9c767a8d3ef050ae7569c71e9a0ef242f5df024de4f62bc3ff386",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_electrocution_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_elite_kills_damage.md",
@@ -9683,9 +9697,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "11092948062848503e9ead8a7099e5c829cf8c6b",
       "chinese_sha256": "6bfac113e09ff4492b0166d506e7b30250f14a926311f58ff2e81759ba0e3fc6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_multi_hits_restore_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_next_hit_all_damage_on_dodge.md",
@@ -10194,9 +10215,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7feaf7362025f591269b6eb9ca8a0d5400b8b6f7",
       "chinese_sha256": "75bfc1b913f1a576a9742b9f25a620c9b456fec7c9bbe0517e7e36a180bc05d7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_stamina_increases_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_strength_on_charge_gain.md",
@@ -10300,9 +10328,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "191d6e33e4d40e07c62afc325b9f8d7d653eda98",
       "chinese_sha256": "4af8f34766e001d963e487a286c4b21eb6d4950026b3413b74981b999c9be398",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_weakspot_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_kills_grant_power.md",
@@ -17954,6 +17989,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_509_513.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_successful_dodge_stamina.md"
+    },
+    {
+      "id": "cryptic_multi_hits_restore_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_multi_hits_restore_toughness.md"
+    },
+    {
+      "id": "cryptic_stamina_increases_damage",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stamina_increases_damage.md"
+    },
+    {
+      "id": "cryptic_electrocution_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_toughness.md"
+    },
+    {
+      "id": "cryptic_electrocution_defense",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_defense.md"
+    },
+    {
+      "id": "cryptic_weakspot_damage",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_damage.md"
     }
   ],
   "pending_chinese_corrections": [

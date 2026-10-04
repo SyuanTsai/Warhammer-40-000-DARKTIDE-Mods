@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_514_518",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L1683-L1696 (Omnissian Recharge Litany), L2141-L2155 (Channelled Motive Force), L2063-L2072 (Entropic Transfer), L1844-L1853 (Overcharge Transfer Lattice), L1809-L1815 (Sureshot Cogitator Sync). Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction or new unresolved question. Omitted event, recovery, cooldown and finesse-component details preserved as supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_multi_hits_restore_toughness",
+      "name": "Omnissian Recharge Litany",
+      "name_hash": "bdd7631c",
+      "description_hash": "6db4bbd5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_multi_hits_restore_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_multi_hits_restore_toughness.md",
+      "commit": "51906e078"
+    },
+    {
+      "id": "cryptic_stamina_increases_damage",
+      "name": "Channelled Motive Force",
+      "name_hash": "a201b166",
+      "description_hash": "0a1fb7eb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stamina_increases_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stamina_increases_damage.md",
+      "commit": "14fa6794f"
+    },
+    {
+      "id": "cryptic_electrocution_toughness",
+      "name": "Entropic Transfer",
+      "name_hash": "18815327",
+      "description_hash": "f4493647",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_toughness.md",
+      "commit": "ebcff486d"
+    },
+    {
+      "id": "cryptic_electrocution_defense",
+      "name": "Overcharge Transfer Lattice",
+      "name_hash": "2e776114",
+      "description_hash": "b02129e2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_electrocution_defense.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_electrocution_defense.md",
+      "commit": "1926dd3fc"
+    },
+    {
+      "id": "cryptic_weakspot_damage",
+      "name": "Sureshot Cogitator Sync",
+      "name_hash": "b4767d95",
+      "description_hash": "6cd677cf",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_damage.md",
+      "commit": "e89100f7f"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 332,
+    "from_commit": "38d97ad8b",
+    "to_commit": "e89100f7f",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

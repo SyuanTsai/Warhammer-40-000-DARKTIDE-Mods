@@ -674,4 +674,4 @@ Full raw template and formatting: [source evidence](cryptic_weakspot_damage.md#o
 
 ## Comparison totals
 
-105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.
+115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.
