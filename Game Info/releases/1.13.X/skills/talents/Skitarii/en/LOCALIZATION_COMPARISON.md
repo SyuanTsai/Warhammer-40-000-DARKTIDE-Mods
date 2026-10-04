@@ -311,4 +311,4 @@ Full raw template and formatting: [source evidence](cryptic_increased_passive_co
 
 ## Comparison totals
 
-42 rules: 20 Consistent / 1 Explicit contradiction / 20 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 483.
+52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.

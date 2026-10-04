@@ -9046,9 +9046,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5100c6228c02952c2b0aa58fc68e2303bb3b69bb",
       "chinese_sha256": "c124ab53eac14eaca9f5dc92beb1829a9b71269c12ea587982d9e2d00f4bba11",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_chordclaw_horizontal_swipe"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_quick_stab_combo.md",
@@ -9057,9 +9064,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "99058f7b1e35a4f96ea28f564f7b898a3a32e20d",
       "chinese_sha256": "5b2e88cccc62d365829a6eb3f32ad4bb333c1baab4987492218a132cacfb9b5b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_chordclaw_quick_stab_combo"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_cleave_and_impact.md",
@@ -9141,9 +9155,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f7b4e2d92dd3be28554953d6d228d24d1e61d014",
       "chinese_sha256": "3667a9b3023ebc0d6033a5ee16a235105d2a3af03c81f54bf9f1f82d9f16865a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_crits_grant_power"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_crits_grant_tdr.md",
@@ -9523,9 +9544,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "90d1e87b77ccfd18630d63c0df325fe0d389e61e",
       "chinese_sha256": "f08af907b26889aa776c689f71b761f510dad2d9a8e4ce0abc137c9935fcf7fd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_increased_passive_cooldown_regen"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_melee_attacks_give_melee_attack_speed.md",
@@ -10108,9 +10136,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "dc6da9219757b3dadfc714cda973871e4bb24b29",
       "chinese_sha256": "7b4b506295f78881b9c66b626b6190b0c4cebb9cee87dc10eef5861c17da42c2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_weakspot_kills_grant_power"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_kills_restore_toughness.md",
@@ -17504,6 +17539,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_toughness.md"
+    },
+    {
+      "id": "cryptic_chordclaw_horizontal_swipe",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_horizontal_swipe.md"
+    },
+    {
+      "id": "cryptic_chordclaw_quick_stab_combo",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_quick_stab_combo.md"
+    },
+    {
+      "id": "cryptic_crits_grant_power",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_crits_grant_power.md"
+    },
+    {
+      "id": "cryptic_weakspot_kills_grant_power",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_kills_grant_power.md"
+    },
+    {
+      "id": "cryptic_increased_passive_cooldown_regen",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_increased_passive_cooldown_regen.md"
     }
   ],
   "pending_chinese_corrections": [
