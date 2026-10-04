@@ -781,6 +781,18 @@ Full raw template and formatting: [source evidence](cryptic_mobile_defense.md#or
 | Movement states and reduction | 25% Damage Resistance while Sprinting or Sliding; `ui / loc_talent_cryptic_mobile_defense_desc / 7c92ecd3` | `(is_sprinting and current_stamina > 0) or is_sliding` applies multiplier `0.75` [Fixed source and line references](cryptic_mobile_defense.md#fixed-source-evidence) | Consistent | The states and reduction value agree. |
 | Stamina condition, ending and independent reductions | Does not specify sprinting Stamina, sliding's separate branch, lingering duration or other reductions; `ui / loc_talent_cryptic_mobile_defense_desc / 7c92ecd3` | Sprinting requires positive Stamina; sliding does not. Effect ends when the condition fails. 100→75, or `100 × 0.75 × 0.70 = 52.5` with independent 30% [Fixed source and line references](cryptic_mobile_defense.md#fixed-source-evidence) | Not covered by the description | The omitted condition and original examples supplement the English. |
 
+
+<a id="cryptic_shared_toughness"></a>
+
+## Power Overflow
+
+Full raw template and formatting: [source evidence](cryptic_shared_toughness.md#original-english-template-and-reconstruction). Name hash `43bec6ab`. Every row uses `ui / loc_talent_cryptic_shared_toughness_desc / 0f1a34d2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Full-Toughness condition, fraction and recipients | When at full Toughness, 25% of excess Toughness Replenished is distributed to each Ally in Coherency; `ui / loc_talent_cryptic_shared_toughness_desc / 0f1a34d2` | While full and actual recovery is zero, each other Coherency unit receives `params.amount × 0.25` [Fixed source and line references](cryptic_shared_toughness.md#fixed-source-evidence) | Consistent | Each specifies a separate per-recipient amount, not a divided pool. |
+| Event eligibility and modifier stages | Does not specify zero actual recovery, positive wanted amount, sharing recursion or modifier handling; `ui / loc_talent_cryptic_shared_toughness_desc / 0f1a34d2` | Require non-shared reason, positive wanted amount, actual recovery 0 and current percent ≥1. Source amount includes sender bonuses; recipient flat recovery applies recipient bonuses and cap. Partial filling does not qualify [Fixed source and line references](cryptic_shared_toughness.md#fixed-source-evidence) | Not covered by the description | The original 20→5-each/15-total example and 2-point deficit with 18 overflow exception supplement the English. |
+
 ## Comparison totals
 
 126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.

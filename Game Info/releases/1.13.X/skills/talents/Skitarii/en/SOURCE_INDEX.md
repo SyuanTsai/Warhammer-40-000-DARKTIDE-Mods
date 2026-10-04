@@ -75,3 +75,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Last Stand Relay](cryptic_crit_chance_based_on_charge.md) / `cryptic_crit_chance_based_on_charge` | Talent |
 | [Weakness Analysis Doctrine](cryptic_afflicted_increased_damage.md) / `cryptic_afflicted_increased_damage` | Talent |
 | [Ablative Motion Routines](cryptic_mobile_defense.md) / `cryptic_mobile_defense` | Talent |
+| [Power Overflow](cryptic_shared_toughness.md) / `cryptic_shared_toughness` | Talent |

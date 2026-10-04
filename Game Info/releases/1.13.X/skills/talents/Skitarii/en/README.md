@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="Last Stand Relay talent icon"> [Last Stand Relay](#cryptic_crit_chance_based_on_charge) | <ul><li>Always grants 6 percentage points of Critical Hit Chance. With no full charge remaining, adds another 4 points for a total of 10. Partial charge progress still counts as zero full charges.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="Weakness Analysis Doctrine talent icon"> [Weakness Analysis Doctrine](#cryptic_afflicted_increased_damage) | <ul><li>Hitting an Electrocuted, Burning, Soulblazed, Bleeding or Toxin-afflicted enemy with melee or ranged attacks grants 10% Damage for 8 seconds. The bonus can be used against other targets; qualifying hits refresh it without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="Ablative Motion Routines talent icon"> [Ablative Motion Routines](#cryptic_mobile_defense) | <ul><li>Take 25% less damage while sprinting with Stamina remaining, or while sliding. Sliding does not require remaining Stamina. The effect ends immediately when neither condition holds.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="32" height="32" alt="Power Overflow talent icon"> [Power Overflow](#cryptic_shared_toughness) | <ul><li>When already at full Toughness and a recovery event restores nothing to you, each other ally in Coherency receives 25% of that event's intended recovery. It is applied separately to each ally, with their own recovery bonuses and cap.</li></ul> | Talent |
 
 ---
 
@@ -1012,3 +1013,17 @@
 - **Ending**: The effect ends as soon as you leave those states, with no additional lingering duration.
 
 [Details](cryptic_mobile_defense.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_shared_toughness"></a>
+
+### Power Overflow
+
+<img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="72" height="72" alt="Power Overflow talent icon">
+
+- **Trigger**: If your Toughness was **already full**, and the next recovery event restores **nothing to you**, each teammate in Coherency separately receives **25% of that event's intended recovery**.
+- **Example**: While you are full, an effect that would restore 20 points gives each teammate `20 × 25% = 5` points. Three teammates can receive 15 points in total; the 5 points are not divided among them.
+- **Exceptions**: If you are missing 2 points and receive a 20-point recovery, the 18-point overflow is not shared. Recovery received through sharing cannot be passed on again. Each teammate's recovery bonuses and maximum Toughness still apply.
+
+[Details](cryptic_shared_toughness.md) · [Back to index](#talent-index)
