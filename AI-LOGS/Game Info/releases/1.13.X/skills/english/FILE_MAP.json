@@ -6257,7 +6257,12 @@
         "broker_passive_toxin_infected_enemies_take_increased_damage",
         "broker_passive_damage_after_toxined_enemies",
         "broker_passive_toxin_spread_on_kills",
-        "broker_passive_increased_blitz_ammo"
+        "broker_passive_increased_blitz_ammo",
+        "broker_passive_melee_attacks_apply_toxin",
+        "broker_passive_blitz_inflicts_toxin",
+        "broker_passive_reduced_damage_by_toxined",
+        "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+        "broker_passive_extended_mag"
       ],
       "checks": []
     },
@@ -6334,7 +6339,12 @@
         "broker_passive_toxin_infected_enemies_take_increased_damage",
         "broker_passive_damage_after_toxined_enemies",
         "broker_passive_toxin_spread_on_kills",
-        "broker_passive_increased_blitz_ammo"
+        "broker_passive_increased_blitz_ammo",
+        "broker_passive_melee_attacks_apply_toxin",
+        "broker_passive_blitz_inflicts_toxin",
+        "broker_passive_reduced_damage_by_toxined",
+        "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+        "broker_passive_extended_mag"
       ],
       "checks": []
     },
@@ -6411,7 +6421,12 @@
         "broker_passive_toxin_infected_enemies_take_increased_damage",
         "broker_passive_damage_after_toxined_enemies",
         "broker_passive_toxin_spread_on_kills",
-        "broker_passive_increased_blitz_ammo"
+        "broker_passive_increased_blitz_ammo",
+        "broker_passive_melee_attacks_apply_toxin",
+        "broker_passive_blitz_inflicts_toxin",
+        "broker_passive_reduced_damage_by_toxined",
+        "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+        "broker_passive_extended_mag"
       ],
       "checks": []
     },
@@ -6488,7 +6503,12 @@
         "broker_passive_toxin_infected_enemies_take_increased_damage",
         "broker_passive_damage_after_toxined_enemies",
         "broker_passive_toxin_spread_on_kills",
-        "broker_passive_increased_blitz_ammo"
+        "broker_passive_increased_blitz_ammo",
+        "broker_passive_melee_attacks_apply_toxin",
+        "broker_passive_blitz_inflicts_toxin",
+        "broker_passive_reduced_damage_by_toxined",
+        "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+        "broker_passive_extended_mag"
       ],
       "checks": []
     },
@@ -7191,9 +7211,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "84c772966d49bfdd0530d811f67d45aed3aa5c95",
       "chinese_sha256": "cc68c8d483f81acce1042f69b2255af20c42a7ace759c4c8b79f8a857af84ffe",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_blitz_inflicts_toxin"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_cleave_on_cleave.md",
@@ -7354,9 +7381,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "401d6887fc5f76ee394344f8b5849d0a2143f721",
       "chinese_sha256": "bde7a258122145d9e86780af2f4a7ad86ab798dc5b6c5be4006ce7b862a6948f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_extended_mag"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_first_target_damage.md",
@@ -7524,9 +7558,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bc0aa407f6819577e0a681b4779a5b906765dc8f",
       "chinese_sha256": "8ecc82430f37016c38c957e2ff946da73c24fe18824f5ca971d684b48a0358ca",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_melee_attacks_apply_toxin"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_cleave_on_melee_kill.md",
@@ -7636,9 +7677,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "da6324e9a0634c3fe63b7fb7f82e50424263eb58",
       "chinese_sha256": "55e0f8a8d1b6d301efb68d1fbe4f13a3275ecceff771faa6332a0b3d423bffe5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_reduced_damage_by_toxined"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reduced_toughness_damage_during_reload.md",
@@ -7701,9 +7749,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "60653336ae3d98d05a49b87503269da533fb5d65",
       "chinese_sha256": "68700518dfaf0e940bcb3357c8e9919ebfbe151ff606bf7a2009e608eadd9e57",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_restore_toughness_on_close_ranged_kill.md",
@@ -16221,6 +16276,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_409_413.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_blitz_ammo.md"
+    },
+    {
+      "id": "broker_passive_melee_attacks_apply_toxin",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_attacks_apply_toxin.md"
+    },
+    {
+      "id": "broker_passive_blitz_inflicts_toxin",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_blitz_inflicts_toxin.md"
+    },
+    {
+      "id": "broker_passive_reduced_damage_by_toxined",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduced_damage_by_toxined.md"
+    },
+    {
+      "id": "broker_passive_replenish_toughness_while_toxined_enemies_in_proximity",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md"
+    },
+    {
+      "id": "broker_passive_extended_mag",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_extended_mag.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -857,4 +857,4 @@ Full raw template and formatting: [source evidence](broker_passive_extended_mag.
 
 ## Comparison totals
 
-The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
+The 148 listed rules comprise **70 Consistent**, **3 Explicit contradictions**, **69 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
