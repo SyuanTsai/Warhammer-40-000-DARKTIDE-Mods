@@ -63,6 +63,7 @@
 | <img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="32" height="32" alt="One with the Warp talent icon"> [One with the Warp](#psyker_warp_charge_reduces_toughness_damage_taken) | <ul><li>Toughness Damage Reduction scales linearly with current Peril: 10% at 0% Peril, 33% at 100%. Does not reduce Health Damage.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="Anticipation talent icon"> [Anticipation](#psyker_improved_dodge) | <ul><li>+1 Effective Dodge and +50% dodge protection linger time; the entire dodge animation is not extended by 50%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="Empathic Evasion talent icon"> [Empathic Evasion](#psyker_dodge_after_crits) | <ul><li>Critical Hit: count as Dodging against Ranged Attacks for 1s; triggering it again resets the timer.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="Solidity talent icon"> [Solidity](#psyker_increased_vent_speed) | <ul><li>Active Quelling time and interval ×0.7: 30% shorter time, equivalent to approximately 42.9% higher processing rate.</li></ul> | Talent |
 
 ---
 
@@ -932,3 +933,17 @@
 - **Scope**: this is a ranged-dodge check. It does not provide melee invulnerability, and explosions or ground fire cannot all be treated as ranged hits to which it grants immunity.
 
 [Details](psyker_dodge_after_crits.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_increased_vent_speed"></a>
+
+### Solidity
+
+<img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="72" height="72" alt="Solidity talent icon">
+
+- **Effect**: the time needed to actively Quell Peril is reduced by 30%.
+
+- **Timing example**: with the same weapon, starting Peril and other conditions, a Quelling process that took 4 seconds becomes approximately 4 × 0.7 = 2.8 seconds. The processing rate per second is 1 ÷ 0.7 ≈ 1.429 times the original, approximately 42.9% faster.
+
+[Details](psyker_increased_vent_speed.md) · [Back to index](#talent-index)

@@ -686,6 +686,18 @@ Full raw template and formatting: [source evidence](psyker_dodge_after_crits.md#
 | Trigger, duration and ranged scope | A Critical Hit makes you count as Dodging against Ranged Attacks for 1s; `ui / loc_talent_psyker_dodge_after_crits_description / 654d056c` | The critical-hit proc enables count_as_dodge_vs_ranged for an active_duration of 1. [Fixed source and line references](psyker_dodge_after_crits.md#fixed-source-evidence) | Consistent | The stated event, duration and Dodge scope agree. |
 | Refresh and attack-specific limits | No refresh rule or list of attacks using dodge checks; `ui / loc_talent_psyker_dodge_after_crits_description / 654d056c` | Retriggering resets active time; only attacks using the ranged-dodge check are covered. Melee, explosions and ground fire do not acquire universal immunity. [Fixed source and line references](psyker_dodge_after_crits.md#fixed-source-evidence) | Not covered by the description | These limits clarify the Dodge keyword and are not an explicit English promise of invulnerability. |
 
+
+<a id="psyker_increased_vent_speed"></a>
+
+## Solidity
+
+Full raw template and formatting: [source evidence](psyker_increased_vent_speed.md#original-english-template-and-reconstruction). Name hash `cab0da20`. Every row uses `ui / loc_talent_psyker_increased_vent_speed_description / 479e9713`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Quell Speed percentage | Increases Quell Speed by 30%; `ui / loc_talent_psyker_increased_vent_speed_description / 479e9713` | Time and interval multiply by 0.7; the per-tick amount is unchanged, so the processing-rate multiplier is 1 / 0.7 ≈ 1.429. [Fixed source and line references](psyker_increased_vent_speed.md#fixed-source-evidence) | Explicit contradiction | A 30% time reduction gives approximately 42.9% more processing per second; the English labels 30% as a speed increase. |
+| Animation and scheduling limits | No animation or update-frame qualification; `ui / loc_talent_psyker_increased_vent_speed_description / 479e9713` | The existing 4s→2.8s example excludes entry/exit animations and is subject to discrete scheduling error. [Fixed source and line references](psyker_increased_vent_speed.md#fixed-source-evidence) | Not covered by the description | These limits qualify the static example and do not resolve the speed-versus-time percentage mismatch. |
+
 ## Comparison totals
 
 The 117 listed rules comprise **56 Consistent**, **2 Explicit contradictions**, **55 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
