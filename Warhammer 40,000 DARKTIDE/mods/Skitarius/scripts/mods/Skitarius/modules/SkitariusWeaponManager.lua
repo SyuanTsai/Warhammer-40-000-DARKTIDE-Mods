@@ -9,14 +9,18 @@ local TRAIT_MAP = {
     slow_and_steady = "toughness_on_hit_based_on_charge_time_visual_stack_count",
     crunch = "ogryn_windup_increases_power_parent",
     mechsword = "windup_increases_special_power_default_child",
-    big_hammer = "windup_increases_power_default_four_steps_child",
+    big_hammer = "windup_increases_power_default_four_steps_child", -- Cruncher
+    small_hammer = "windup_increases_power_default_three_steps_child", -- Thunder Hammer
+    unstoppable = "placeholder" -- shortcut for max charge heavies
 }
 local MAX_MAP = {
     thrust = 3,
     slow_and_steady = 3,
     crunch = 4,
     mechsword = 4,
-    big_hammer = 4
+    big_hammer = 4,
+    small_hammer = 3,
+    unstoppable = -1,
 }
 
 -- Weapons which should use normal heavy modifiers during special and NOT special modifiers
@@ -335,6 +339,10 @@ SkitariusWeaponManager.is_charged_melee = function(self, running_action, compone
             if not required_buff_special or (required_buff_special and is_special) then
                 -- Check that the weapon has the required buff before doing anything
                 local search_string = TRAIT_MAP[required_buff]
+                -- Unstoppable requires max charge, so it should always be considered "unsatisfied" until the engine forces release
+                if required_buff == "unstoppable" then
+                    return false -- "keep charging"
+                end
                 -- Thrust string must be unique per-weapon or it will match with crunch
                 if required_buff == "thrust" then
                     search_string = string.sub(weapon_name, 1, -3) .. search_string
@@ -347,14 +355,14 @@ SkitariusWeaponManager.is_charged_melee = function(self, running_action, compone
                     end
                     -- Compare current stacks to the required stacks
                     local current_stacks = self:fetch_stacks(search_string)
-                    
                     -- Handle thrust being offset by 1 internally
-                    if required_buff == "thrust" or required_buff == "mechsword" or required_buff == "big_hammer" then
+                    if required_buff == "thrust" or required_buff == "mechsword" or required_buff == "big_hammer" or required_buff == "small_hammer" then
                         current_stacks = current_stacks - 1
                         if current_stacks < 0 then
                             current_stacks = 0
                         end
                     end
+                    --mod:echo(current_stacks)
                     if current_stacks and not (current_stacks >= required_buff_stacks or current_stacks >= MAX_MAP[required_buff]) then
                         insufficient_stacks = true
                     end
@@ -732,10 +740,23 @@ SkitariusWeaponManager.update_peril = function(self)
         local player_unit = player and player.player_unit
         local unit_data_extension = player_unit and ScriptUnit.has_extension(player_unit, "unit_data_system")
         if unit_data_extension then
-            local warp_charge_component = unit_data_extension:read_component("warp_charge")
-            local current_charge = warp_charge_component and warp_charge_component.current_percentage or 0
-            if current_charge then
+            local profile = player and player:profile()
+            local archetype = profile and profile.archetype and profile.archetype.name or "uh oh"
+            if archetype == "psyker" then
+                local warp_charge_component = unit_data_extension:read_component("warp_charge")
+                local current_charge = warp_charge_component and warp_charge_component.current_percentage or 0
                 self.warp = current_charge
+            else -- plasma
+                local weapon = player_unit and ScriptUnit.extension(player_unit, "weapon_system")
+                local weapons = weapon and weapon._weapons
+                local secondary_weapon = weapons and weapons.slot_secondary
+                local secondary_slot_component = secondary_weapon and secondary_weapon.inventory_slot_component
+                if secondary_slot_component then
+                    local current_charge = secondary_slot_component.overheat_current_percentage or 0
+                    self.warp = current_charge
+                else
+                    self.warp = 0
+                end
             end
         end
     end

@@ -114,7 +114,7 @@ psyker_archetype.lua 將 psyker_aura_ability_cooldown 列為 tier 1 基礎天賦
 ---
 
 <a id="psyker_peril_passive"></a>
-## 反噬系統
+## 次元危險(Perils of the Warp)
 
 - 天賦識別碼：`psyker_peril_passive`。
 

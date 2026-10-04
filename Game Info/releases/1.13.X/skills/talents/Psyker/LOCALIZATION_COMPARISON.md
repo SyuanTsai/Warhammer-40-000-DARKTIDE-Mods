@@ -79,8 +79,8 @@
 | [汲魂者](#psyker_killing_enemy_with_warpfire_boosts) | 未見明確矛盾 |
 | [骨折後遺症](#psyker_melee_weaving) | 未見明確矛盾 |
 | [脆弱心智](#psyker_damage_vs_ogryns_and_monsters) | 未見明確矛盾 |
-| [聚焦亞空間](#psyker_increased_warp_damage) | 未見明確矛盾 |
-| [反噬平衡](#psyker_weapon_attacks_peril_equilibrium) | 未見明確矛盾 |
+| [聚焦次元](#psyker_increased_warp_damage) | 未見明確矛盾 |
+| [危險平衡](#psyker_weapon_attacks_peril_equilibrium) | 未見明確矛盾 |
 | [武器在手，信心我有。](#psyker_reload_speed_warp_charge) | 未見明確矛盾 |
 | [結晶意志](#psyker_alternative_peril_explosion) | 未見明確矛盾 |
 | [靈能引導](#psyker_force_staff_bonus) | 未見明確矛盾 |
@@ -588,14 +588,14 @@
 - [原始碼推導與限制](psyker_damage_vs_ogryns_and_monsters.md)。
 
 <a id="psyker_increased_warp_damage"></a>
-## 聚焦亞空間(Focused Warp)
+## 聚焦次元(Focused Warp)
 
 - 描述鍵：`loc_talent_psyker_increased_warp_damage_desc`；hash：`f4703bae`。
 - 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_increased_warp_damage.md)。
 
 <a id="psyker_weapon_attacks_peril_equilibrium"></a>
-## 反噬平衡(Peril Equilibrium)
+## 危險平衡(Peril Equilibrium)
 
 - 描述鍵：`loc_talent_psyker_weapon_attacks_peril_equilibrium_desc`；hash：`dc54df8c`。
 - 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。

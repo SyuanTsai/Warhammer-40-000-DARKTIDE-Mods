@@ -62,7 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="移動目標天賦圖示"> [移動目標](#broker_passive_increased_ranged_dodges)<br>- Moving Target | <ul><li>手持遠程武器時，有效閃避次數增加 1 次。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="樣本採集天賦圖示"> [樣本採集](#broker_passive_stimm_cd_on_kill)<br>- Sample Collector | <ul><li>每次擊殺縮短興奮劑冷卻 0.5 秒；目標受毒素感染時改為 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="神經質天賦圖示"> [神經質](#broker_passive_improved_dodges_at_full_stamina)<br>- Jittery | <ul><li>耐力至少 75% 時，有效閃避次數的恢復等待時間縮短 40%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="爆擊機率增幅天賦圖示"> [爆擊機率增幅](#base_crit_chance_node_buff_low_1)<br>- Critical Chance Boost | <ul><li>爆擊率增加 5 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="暴擊幾率增幅天賦圖示"> [暴擊幾率增幅](#base_crit_chance_node_buff_low_1)<br>- Critical Chance Boost | <ul><li>爆擊率增加 5 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="強效毒藥天賦圖示"> [強效毒藥](#base_toxin_power_boost_1)<br>- Potent Tox | <ul><li>毒素威力增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="黏黏手天賦圖示"> [黏黏手](#broker_passive_reduce_swap_time)<br>- Sticky Hands | <ul><li>武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。</li></ul> | 技能 |
@@ -90,33 +90,33 @@
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="裝備財閥特殊裝備天賦圖示"> [裝備財閥特殊裝備](#broker_stimm_activation_talent)<br>- Equip Cartel Special | <ul><li>分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵 III天賦圖示"> [激勵 III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="激勵 IV天賦圖示"> [激勵 IV](#broker_stimm_celerity_4)<br>- Spur IV | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 20%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵 V天賦圖示"> [激勵 V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫眩暈與減速。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵I天賦圖示"> [激勵I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵II天賦圖示"> [激勵II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵III天賦圖示"> [激勵III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="激勵IV天賦圖示"> [激勵IV](#broker_stimm_celerity_4)<br>- Spur IV | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 20%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵V天賦圖示"> [激勵V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫眩暈與減速。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="反射天賦圖示"> [反射](#broker_stimm_celerity_5b)<br>- Reflex | <ul><li>換彈速度增加 30%，後座不穩定度累積降低 50%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="野火 I天賦圖示"> [野火 I](#broker_stimm_combat_1)<br>- Wildfire I | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="野火 II天賦圖示"> [野火 II](#broker_stimm_combat_2)<br>- Wildfire II | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="野火 III天賦圖示"> [野火 III](#broker_stimm_combat_3)<br>- Wildfire III | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火 IV天賦圖示"> [野火 IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="32" height="32" alt="狂怒 I天賦圖示"> [狂怒 I](#broker_stimm_combat_4b)<br>- Fury I | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 5%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑 I天賦圖示"> [獵鷹蕈劑 I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊率增加 5 個百分點。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="野火 V天賦圖示"> [野火 V](#broker_stimm_combat_5a)<br>- Wildfire V | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="32" height="32" alt="狂怒 II天賦圖示"> [狂怒 II](#broker_stimm_combat_5b)<br>- Fury II | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 10%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑 II天賦圖示"> [獵鷹蕈劑 II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊率增加 10 個百分點。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="32" height="32" alt="彈幕 I天賦圖示"> [彈幕 I](#broker_stimm_durability_1)<br>- Barrage I | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="彈幕 II天賦圖示"> [彈幕 II](#broker_stimm_durability_2)<br>- Barrage II | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="彈幕 III天賦圖示"> [彈幕 III](#broker_stimm_durability_3)<br>- Barrage III | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="彈幕 IV天賦圖示"> [彈幕 IV](#broker_stimm_durability_4)<br>- Barrage IV | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="野火I天賦圖示"> [野火I](#broker_stimm_combat_1)<br>- Wildfire I | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="野火II天賦圖示"> [野火II](#broker_stimm_combat_2)<br>- Wildfire II | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="野火III天賦圖示"> [野火III](#broker_stimm_combat_3)<br>- Wildfire III | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火IV天賦圖示"> [野火IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="32" height="32" alt="狂怒I天賦圖示"> [狂怒I](#broker_stimm_combat_4b)<br>- Fury I | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 5%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑I天賦圖示"> [獵鷹蕈劑I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊率增加 5 個百分點。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="野火V天賦圖示"> [野火V](#broker_stimm_combat_5a)<br>- Wildfire V | <ul><li>威力增加 4%。</li><li>弱點與暴擊額外傷害增加 25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="32" height="32" alt="狂怒II天賦圖示"> [狂怒II](#broker_stimm_combat_5b)<br>- Fury II | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 10%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑II天賦圖示"> [獵鷹蕈劑II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊率增加 10 個百分點。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="32" height="32" alt="彈幕I天賦圖示"> [彈幕I](#broker_stimm_durability_1)<br>- Barrage I | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="彈幕II天賦圖示"> [彈幕II](#broker_stimm_durability_2)<br>- Barrage II | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="彈幕III天賦圖示"> [彈幕III](#broker_stimm_durability_3)<br>- Barrage III | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="彈幕IV天賦圖示"> [彈幕IV](#broker_stimm_durability_4)<br>- Barrage IV | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="32" height="32" alt="坦克天賦圖示"> [坦克](#broker_stimm_durability_5a)<br>- Tank | <ul><li>韌性恢復量額外增加 30%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="恢復天賦圖示"> [恢復](#broker_stimm_durability_5b)<br>- Regain | <ul><li>藥效期間每秒恢復最大韌性的 5%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="抗焦慮藥 I天賦圖示"> [抗焦慮藥 I](#broker_stimm_concentration_1)<br>- Kalma I | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="32" height="32" alt="抗焦慮藥 II天賦圖示"> [抗焦慮藥 II](#broker_stimm_concentration_2)<br>- Kalma II | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="32" height="32" alt="抗焦慮藥 III天賦圖示"> [抗焦慮藥 III](#broker_stimm_concentration_3)<br>- Kalma III | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="抗焦慮藥 IV天賦圖示"> [抗焦慮藥 IV](#broker_stimm_concentration_4)<br>- Kalma IV | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
-| <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="抗焦慮藥 V天賦圖示"> [抗焦慮藥 V](#broker_stimm_concentration_5a)<br>- Kalma V | <ul><li>戰鬥技能恢復速度增加 25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="抗焦慮藥I天賦圖示"> [抗焦慮藥I](#broker_stimm_concentration_1)<br>- Kalma I | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="32" height="32" alt="抗焦慮藥II天賦圖示"> [抗焦慮藥II](#broker_stimm_concentration_2)<br>- Kalma II | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="32" height="32" alt="抗焦慮藥III天賦圖示"> [抗焦慮藥III](#broker_stimm_concentration_3)<br>- Kalma III | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="抗焦慮藥IV天賦圖示"> [抗焦慮藥IV](#broker_stimm_concentration_4)<br>- Kalma IV | <ul><li>戰鬥技能恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="抗焦慮藥V天賦圖示"> [抗焦慮藥V](#broker_stimm_concentration_5a)<br>- Kalma V | <ul><li>戰鬥技能恢復速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/77f46379-3f89-4c81-8240-a0dc288fb868" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_concentration_5b)<br>- Hypex | <ul><li>藥效期間近戰擊殺後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="32" height="32" alt="集中藥天賦圖示"> [集中藥](#broker_stimm_concentration_5c)<br>- Klay | <ul><li>藥效期間遠程擊殺後，戰鬥技能恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
 
@@ -951,9 +951,9 @@
 ---
 
 <a id="base_crit_chance_node_buff_low_1"></a>
-### 爆擊機率增幅(Critical Chance Boost)
+### 暴擊幾率增幅(Critical Chance Boost)
 
-<img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="72" height="72" alt="爆擊機率增幅天賦圖示">
+<img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="72" height="72" alt="暴擊幾率增幅天賦圖示">
 
 - **機率算例**：原本 10% 爆擊率變成 10% + 5% = 15%；原本 25% 則變成 30%。
 
@@ -1356,34 +1356,34 @@
 ---
 
 <a id="broker_stimm_celerity_1"></a>
-### 激勵 I(Spur I)
+### 激勵I(Spur I)
 
-<img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="72" height="72" alt="激勵 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="72" height="72" alt="激勵I天賦圖示">
 
 - **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **攻擊速度**：增加 4%，與其他攻速加成相加。
 
-- **武器切換**：切換速度增加 25%；同時選取激勵 I、II 時，共增加 50%。
+- **武器切換**：切換速度增加 25%；同時選取激勵I、II 時，共增加 50%。
 
 - **切換算例**：原本可加速的切換動作為 1 秒，僅此項時為 1 ÷ 1.25 = 0.8 秒；I、II 合計為 1 ÷ 1.5 ≈ 0.667 秒。
 
-- **攻速算例**：從激勵 I 選到本節點，共增加 4%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.04 ≈ 0.962 秒。
+- **攻速算例**：從激勵I 選到本節點，共增加 4%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.04 ≈ 0.962 秒。
 
 [詳細資料](broker_stimm_celerity_1.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_celerity_2"></a>
-### 激勵 II(Spur II)
+### 激勵II(Spur II)
 
-<img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="72" height="72" alt="激勵 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="72" height="72" alt="激勵II天賦圖示">
 
 - **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **攻擊速度**：增加 4%，與其他攻速加成相加。
 
-- **武器切換**：切換速度增加 25%；同時選取激勵 I、II 時，共增加 50%。
+- **武器切換**：切換速度增加 25%；同時選取激勵I、II 時，共增加 50%。
 
 - **切換算例**：原本可加速的切換動作為 1 秒，僅此項時為 1 ÷ 1.25 = 0.8 秒；I、II 合計為 1 ÷ 1.5 ≈ 0.667 秒。
 
@@ -1391,16 +1391,16 @@
 
 - **耐力算例**：原消耗 10 點，僅此項時變成 10 × 0.85 = 8.5 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。
 
-- **攻速算例**：從激勵 I 選到本節點，共增加 8%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.08 ≈ 0.926 秒。
+- **攻速算例**：從激勵I 選到本節點，共增加 8%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.08 ≈ 0.926 秒。
 
 [詳細資料](broker_stimm_celerity_2.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_celerity_3"></a>
-### 激勵 III(Spur III)
+### 激勵III(Spur III)
 
-<img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="72" height="72" alt="激勵 III天賦圖示">
+<img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="72" height="72" alt="激勵III天賦圖示">
 
 - **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1410,16 +1410,16 @@
 
 - **耐力算例**：原消耗 10 點，僅此項時變成 10 × 0.85 = 8.5 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。
 
-- **攻速算例**：從激勵 I 選到本節點，共增加 12%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.12 ≈ 0.893 秒。
+- **攻速算例**：從激勵I 選到本節點，共增加 12%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.12 ≈ 0.893 秒。
 
 [詳細資料](broker_stimm_celerity_3.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_celerity_4"></a>
-### 激勵 IV(Spur IV)
+### 激勵IV(Spur IV)
 
-<img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="72" height="72" alt="激勵 IV天賦圖示">
+<img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="72" height="72" alt="激勵IV天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1429,20 +1429,20 @@
 
 - **耐力算例**：原消耗 10 點，僅此項時變成 10 × 0.8 = 8 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。
 
-- **攻速算例**：從激勵 I 選到本節點，共增加 16%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.16 ≈ 0.862 秒。
+- **攻速算例**：從激勵I 選到本節點，共增加 16%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.16 ≈ 0.862 秒。
 
 [詳細資料](broker_stimm_celerity_4.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_celerity_5a"></a>
-### 激勵 V(Spur V)
+### 激勵V(Spur V)
 
-<img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="72" height="72" alt="激勵 V天賦圖示">
+<img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="72" height="72" alt="激勵V天賦圖示">
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **攻擊速度**：增加 4%；與激勵 I～IV 合計增加 20%。
+- **攻擊速度**：增加 4%；與激勵I～IV 合計增加 20%。
 
 - **攻速算例**：原本可加速的 1 秒攻擊動作，在整條激勵路線下為 1 ÷ 1.2 ≈ 0.833 秒。
 
@@ -1487,81 +1487,81 @@
 ---
 
 <a id="broker_stimm_combat_1"></a>
-### 野火 I(Wildfire I)
+### 野火I(Wildfire I)
 
-<img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="72" height="72" alt="野火 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="72" height="72" alt="野火I天賦圖示">
 
 - **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
 
 [詳細資料](broker_stimm_combat_1.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_combat_2"></a>
-### 野火 II(Wildfire II)
+### 野火II(Wildfire II)
 
-<img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="72" height="72" alt="野火 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="72" height="72" alt="野火II天賦圖示">
 
 - **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 2 個威力節點時，為 500 × (1 + 2 × 4%) = 540。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 2 個威力節點時，為 500 × (1 + 2 × 4%) = 540。
 
 [詳細資料](broker_stimm_combat_2.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_combat_3"></a>
-### 野火 III(Wildfire III)
+### 野火III(Wildfire III)
 
-<img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="72" height="72" alt="野火 III天賦圖示">
+<img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="72" height="72" alt="野火III天賦圖示">
 
 - **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 3 個威力節點時，為 500 × (1 + 3 × 4%) = 560。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 3 個威力節點時，為 500 × (1 + 3 × 4%) = 560。
 
 [詳細資料](broker_stimm_combat_3.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_combat_4a"></a>
-### 野火 IV(Wildfire IV)
+### 野火IV(Wildfire IV)
 
-<img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="72" height="72" alt="野火 IV天賦圖示">
+<img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="72" height="72" alt="野火IV天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
 
 - **弱點與暴擊**：額外傷害部分增加 10%；普通命中傷害不受這一項加成。
 
-- **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.1 = 210，整筆傷害提高 5%。野火 IV、V 的這項加成合計 35%，同例為 235。
+- **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.1 = 210，整筆傷害提高 5%。野火IV、V 的這項加成合計 35%，同例為 235。
 
 [詳細資料](broker_stimm_combat_4a.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_combat_4b"></a>
-### 狂怒 I(Fury I)
+### 狂怒I(Fury I)
 
-<img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="72" height="72" alt="狂怒 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="72" height="72" alt="狂怒I天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
 
-- **護甲撕裂**：增加 5% 護甲撕裂；狂怒 I、II 都選取時合計 15%。
+- **護甲撕裂**：增加 5% 護甲撕裂；狂怒I、II 都選取時合計 15%。
 
 - **護甲算例**：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.05) = 55 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
 
@@ -1570,17 +1570,17 @@
 ---
 
 <a id="broker_stimm_combat_4c"></a>
-### 獵鷹蕈劑 I(Vultoprene I)
+### 獵鷹蕈劑I(Vultoprene I)
 
-<img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="72" height="72" alt="獵鷹蕈劑 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="72" height="72" alt="獵鷹蕈劑I天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
 
-- **爆擊率**：增加 5 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
+- **爆擊率**：增加 5 個百分點；獵鷹蕈劑I、II 都選取時合計增加 15 個百分點。
 
 - **暴擊算例**：原本 10%，僅本節點變成 10% + 5% = 15%；兩項合計為 25%，最終限制於 0%～100%。
 
@@ -1589,36 +1589,36 @@
 ---
 
 <a id="broker_stimm_combat_5a"></a>
-### 野火 V(Wildfire V)
+### 野火V(Wildfire V)
 
-<img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="72" height="72" alt="野火 V天賦圖示">
+<img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="72" height="72" alt="野火V天賦圖示">
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 
 - **弱點與暴擊**：額外傷害部分增加 25%；普通命中傷害不受這一項加成。
 
-- **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.25 = 225，整筆傷害提高 12.5%。野火 IV、V 的這項加成合計 35%，同例為 235。
+- **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.25 = 225，整筆傷害提高 12.5%。野火IV、V 的這項加成合計 35%，同例為 235。
 
 [詳細資料](broker_stimm_combat_5a.md) · [返回目錄](#talent-index)
 
 ---
 
 <a id="broker_stimm_combat_5b"></a>
-### 狂怒 II(Fury II)
+### 狂怒II(Fury II)
 
-<img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="72" height="72" alt="狂怒 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="72" height="72" alt="狂怒II天賦圖示">
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 
-- **護甲撕裂**：增加 10% 護甲撕裂；狂怒 I、II 都選取時合計 15%。
+- **護甲撕裂**：增加 10% 護甲撕裂；狂怒I、II 都選取時合計 15%。
 
 - **護甲算例**：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.1) = 60 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
 
@@ -1627,17 +1627,17 @@
 ---
 
 <a id="broker_stimm_combat_5c"></a>
-### 獵鷹蕈劑 II(Vultoprene II)
+### 獵鷹蕈劑II(Vultoprene II)
 
-<img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="72" height="72" alt="獵鷹蕈劑 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="72" height="72" alt="獵鷹蕈劑II天賦圖示">
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
 
-- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 
-- **爆擊率**：增加 10 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
+- **爆擊率**：增加 10 個百分點；獵鷹蕈劑I、II 都選取時合計增加 15 個百分點。
 
 - **暴擊算例**：原本 10%，僅本節點變成 10% + 10% = 20%；兩項合計為 25%，最終限制於 0%～100%。
 
@@ -1646,9 +1646,9 @@
 ---
 
 <a id="broker_stimm_durability_1"></a>
-### 彈幕 I(Barrage I)
+### 彈幕I(Barrage I)
 
-<img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="72" height="72" alt="彈幕 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="72" height="72" alt="彈幕I天賦圖示">
 
 - **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1656,7 +1656,7 @@
 
 - **持續效果**：韌性恢復量增加 5%，承受傷害乘以 0.96，也就是本節點提供 4% 減傷。
 
-- **減傷算例**：從彈幕 I 選到本節點，共 1 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^1 ≈ 96.000 點。
+- **減傷算例**：從彈幕I 選到本節點，共 1 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^1 ≈ 96.000 點。
 
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (1 × 6.25%) × (1 + 1 × 5%) = 6.5625 點；實際仍受缺額限制。
 
@@ -1665,9 +1665,9 @@
 ---
 
 <a id="broker_stimm_durability_2"></a>
-### 彈幕 II(Barrage II)
+### 彈幕II(Barrage II)
 
-<img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="72" height="72" alt="彈幕 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="72" height="72" alt="彈幕II天賦圖示">
 
 - **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1675,7 +1675,7 @@
 
 - **持續效果**：韌性恢復量增加 5%，承受傷害乘以 0.96，也就是本節點提供 4% 減傷。
 
-- **減傷算例**：從彈幕 I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
+- **減傷算例**：從彈幕I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
 
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (2 × 6.25%) × (1 + 2 × 5%) = 13.75 點；實際仍受缺額限制。
 
@@ -1684,9 +1684,9 @@
 ---
 
 <a id="broker_stimm_durability_3"></a>
-### 彈幕 III(Barrage III)
+### 彈幕III(Barrage III)
 
-<img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="72" height="72" alt="彈幕 III天賦圖示">
+<img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="72" height="72" alt="彈幕III天賦圖示">
 
 - **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1694,7 +1694,7 @@
 
 - **持續效果**：韌性恢復量增加 5%，承受傷害乘以 0.96，也就是本節點提供 4% 減傷。
 
-- **減傷算例**：從彈幕 I 選到本節點，共 3 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^3 ≈ 88.474 點。
+- **減傷算例**：從彈幕I 選到本節點，共 3 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^3 ≈ 88.474 點。
 
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (3 × 6.25%) × (1 + 3 × 5%) = 21.5625 點；實際仍受缺額限制。
 
@@ -1703,9 +1703,9 @@
 ---
 
 <a id="broker_stimm_durability_4"></a>
-### 彈幕 IV(Barrage IV)
+### 彈幕IV(Barrage IV)
 
-<img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="72" height="72" alt="彈幕 IV天賦圖示">
+<img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="72" height="72" alt="彈幕IV天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
@@ -1713,7 +1713,7 @@
 
 - **持續效果**：韌性恢復量增加 5%，承受傷害乘以 0.96，也就是本節點提供 4% 減傷。
 
-- **減傷算例**：從彈幕 I 選到本節點，共 4 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^4 ≈ 84.935 點。
+- **減傷算例**：從彈幕I 選到本節點，共 4 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^4 ≈ 84.935 點。
 
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (4 × 6.25%) × (1 + 4 × 5%) = 30 點；實際仍受缺額限制。
 
@@ -1728,11 +1728,11 @@
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
-- **恢復加成**：韌性恢復量增加 30%，與彈幕 I～IV 的 20% 相加，合計增加 50%。
+- **恢復加成**：韌性恢復量增加 30%，與彈幕I～IV 的 20% 相加，合計增加 50%。
 
 - **恢復算例**：原本恢復 10 點的效果，合計變成 10 × (1 + 20% + 30%) = 15 點；最多補滿韌性。
 
-- **注射算例**：最大韌性 100，彈幕 I～IV 共提供 25% 一次恢復，套用此路線 50% 恢復加成後為 100 × 25% × 1.5 = 37.5 點。
+- **注射算例**：最大韌性 100，彈幕I～IV 共提供 25% 一次恢復，套用此路線 50% 恢復加成後為 100 × 25% × 1.5 = 37.5 點。
 
 [詳細資料](broker_stimm_durability_5a.md) · [返回目錄](#talent-index)
 
@@ -1747,7 +1747,7 @@
 
 - **持續恢復**：藥效期間每秒恢復最大韌性的 5%，受到韌性恢復加成影響；第一次恢復約在生效 1 秒後。
 
-- **恢復算例**：最大韌性 100，計入彈幕 I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
+- **恢復算例**：最大韌性 100，計入彈幕I～IV 的 20% 恢復加成，每次恢復 100 × 5% × 1.2 = 6 點；若只缺 3 點，實際只補 3 點。
 
 - **停止條件**：興奮劑效果結束後停止；倒地期間不提供這項恢復。
 
@@ -1756,15 +1756,15 @@
 ---
 
 <a id="broker_stimm_concentration_1"></a>
-### 抗焦慮藥 I(Kalma I)
+### 抗焦慮藥I(Kalma I)
 
-<img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="72" height="72" alt="抗焦慮藥 I天賦圖示">
+<img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="72" height="72" alt="抗焦慮藥I天賦圖示">
 
 - **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
-- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 6.25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.0625 秒；15 秒藥效內共恢復 15 × 1.0625 = 15.9375 秒。
+- **持續恢復算例**：從抗焦慮藥I 選到本節點時，總加成為 6.25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.0625 秒；15 秒藥效內共恢復 15 × 1.0625 = 15.9375 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 15.9375 = 44.0625 秒；之後恢復原速。
 
@@ -1775,15 +1775,15 @@
 ---
 
 <a id="broker_stimm_concentration_2"></a>
-### 抗焦慮藥 II(Kalma II)
+### 抗焦慮藥II(Kalma II)
 
-<img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="72" height="72" alt="抗焦慮藥 II天賦圖示">
+<img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="72" height="72" alt="抗焦慮藥II天賦圖示">
 
 - **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
-- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 12.5%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.125 秒；15 秒藥效內共恢復 15 × 1.125 = 16.875 秒。
+- **持續恢復算例**：從抗焦慮藥I 選到本節點時，總加成為 12.5%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.125 秒；15 秒藥效內共恢復 15 × 1.125 = 16.875 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 16.875 = 43.125 秒；之後恢復原速。
 
@@ -1794,15 +1794,15 @@
 ---
 
 <a id="broker_stimm_concentration_3"></a>
-### 抗焦慮藥 III(Kalma III)
+### 抗焦慮藥III(Kalma III)
 
-<img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="72" height="72" alt="抗焦慮藥 III天賦圖示">
+<img src="https://github.com/user-attachments/assets/dc414369-8882-423d-9c5f-ba6a04583163" width="72" height="72" alt="抗焦慮藥III天賦圖示">
 
 - **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
-- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 18.75%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.1875 秒；15 秒藥效內共恢復 15 × 1.1875 = 17.8125 秒。
+- **持續恢復算例**：從抗焦慮藥I 選到本節點時，總加成為 18.75%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.1875 秒；15 秒藥效內共恢復 15 × 1.1875 = 17.8125 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 17.8125 = 42.1875 秒；之後恢復原速。
 
@@ -1813,15 +1813,15 @@
 ---
 
 <a id="broker_stimm_concentration_4"></a>
-### 抗焦慮藥 IV(Kalma IV)
+### 抗焦慮藥IV(Kalma IV)
 
-<img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="72" height="72" alt="抗焦慮藥 IV天賦圖示">
+<img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="72" height="72" alt="抗焦慮藥IV天賦圖示">
 
 - **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **恢復速度**：戰鬥技能自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
 
-- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.25 秒；15 秒藥效內共恢復 15 × 1.25 = 18.75 秒。
+- **持續恢復算例**：從抗焦慮藥I 選到本節點時，總加成為 25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.25 秒；15 秒藥效內共恢復 15 × 1.25 = 18.75 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 18.75 = 41.25 秒；之後恢復原速。
 
@@ -1832,15 +1832,15 @@
 ---
 
 <a id="broker_stimm_concentration_5a"></a>
-### 抗焦慮藥 V(Kalma V)
+### 抗焦慮藥V(Kalma V)
 
-<img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="72" height="72" alt="抗焦慮藥 V天賦圖示">
+<img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="72" height="72" alt="抗焦慮藥V天賦圖示">
 
 - **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
 
 - **恢復速度**：戰鬥技能自然恢復速度增加 25%；前置配方的加成保留，同階段相加。
 
-- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 50%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.5 秒；15 秒藥效內共恢復 15 × 1.5 = 22.5 秒。
+- **持續恢復算例**：從抗焦慮藥I 選到本節點時，總加成為 50%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.5 秒；15 秒藥效內共恢復 15 × 1.5 = 22.5 秒。
 
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 22.5 = 37.5 秒；之後恢復原速。
 
@@ -1861,7 +1861,7 @@
 
 - **重新計時方式**：再次合格擊殺會重設 1 秒倒數，不會疊成兩份加成。
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 
 - **恢復範圍**：只加快戰鬥技能的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
 
@@ -1880,7 +1880,7 @@
 
 - **重新計時方式**：再次合格擊殺會重設 1 秒倒數，不會疊成兩份加成。
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 
 - **恢復範圍**：只加快戰鬥技能的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
 

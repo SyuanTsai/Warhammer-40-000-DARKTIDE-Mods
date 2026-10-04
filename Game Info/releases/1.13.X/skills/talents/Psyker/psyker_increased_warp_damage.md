@@ -1,4 +1,4 @@
-# 聚焦亞空間(Focused Warp)：原始碼依據
+# 聚焦次元(Focused Warp)：原始碼依據
 
 [English](en/psyker_increased_warp_damage.md)
 

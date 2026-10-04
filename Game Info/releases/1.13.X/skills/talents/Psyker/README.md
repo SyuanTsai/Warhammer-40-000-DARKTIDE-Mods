@@ -79,8 +79,8 @@
 | <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="汲魂者天賦圖示"> [汲魂者](#psyker_killing_enemy_with_warpfire_boosts)<br>- Souldrinker | <ul><li>受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="骨折後遺症天賦圖示"> [骨折後遺症](#psyker_melee_weaving)<br>- By Crack of Bone | <ul><li>近戰弱點擊殺降低 10 個百分點反噬。</li><li>之後 4 秒反噬產生量減少 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="脆弱心智天賦圖示"> [脆弱心智](#psyker_damage_vs_ogryns_and_monsters)<br>- Vulnerable Minds | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦亞空間天賦圖示"> [聚焦亞空間](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="反噬平衡天賦圖示"> [反噬平衡](#psyker_weapon_attacks_peril_equilibrium)<br>- Peril Equilibrium | <ul><li>非亞空間近戰或遠程命中造成傷害時，反噬增加 2 個百分點，最高到 75%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦次元天賦圖示"> [聚焦次元](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="危險平衡天賦圖示"> [危險平衡](#psyker_weapon_attacks_peril_equilibrium)<br>- Peril Equilibrium | <ul><li>非亞空間近戰或遠程命中造成傷害時，反噬增加 2 個百分點，最高到 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="32" height="32" alt="武器在手，信心我有。天賦圖示"> [武器在手，信心我有。](#psyker_reload_speed_warp_charge)<br>- Surety of Arms | <ul><li>反噬不高於 80% 時，裝填速度增加 30%。</li><li>補滿一整個彈匣產生 15 個百分點反噬，按實際補彈比例計算。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="靈能引導天賦圖示"> [靈能引導](#psyker_force_staff_bonus)<br>- Channeled Force | <ul><li>高蓄力後，主要法杖攻擊增傷 20%，持續 5 秒。</li><li>主要攻擊後，次要法杖攻擊增傷 10%，持續 5 秒。</li></ul> | 技能 |
@@ -1120,9 +1120,9 @@
 ---
 
 <a id="psyker_increased_warp_damage"></a>
-### 聚焦亞空間(Focused Warp)
+### 聚焦次元(Focused Warp)
 
-<img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="72" height="72" alt="聚焦亞空間天賦圖示">
+<img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="72" height="72" alt="聚焦次元天賦圖示">
 
 - **運作方式**：亞空間傷害增加 15%。適用與否取決於攻擊的傷害類型，不是看武器名稱。
 
@@ -1133,9 +1133,9 @@
 ---
 
 <a id="psyker_weapon_attacks_peril_equilibrium"></a>
-### 反噬平衡(Peril Equilibrium)
+### 危險平衡(Peril Equilibrium)
 
-<img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="72" height="72" alt="反噬平衡天賦圖示">
+<img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="72" height="72" alt="危險平衡天賦圖示">
 
 - **運作方式**：以非亞空間的近戰或遠程攻擊命中並造成傷害，每次增加 2 個百分點反噬，最多加到 75%。已達 75% 時不再增加，也不會把更高的反噬往下降。
 

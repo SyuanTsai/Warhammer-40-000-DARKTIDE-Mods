@@ -1,4 +1,4 @@
-# 壓制免疫(Suppression Immunity)
+# 堅定不移(Determined)
 
 [English](en/veteran_supression_immunity.md)
 

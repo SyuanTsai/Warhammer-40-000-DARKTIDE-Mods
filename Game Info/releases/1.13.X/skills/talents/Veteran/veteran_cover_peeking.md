@@ -1,4 +1,4 @@
-# 掩體探身(Cover Peeking)
+# Low Profile(Low Profile)
 
 [English](en/veteran_cover_peeking.md)
 

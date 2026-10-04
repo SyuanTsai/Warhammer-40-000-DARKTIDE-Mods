@@ -82,8 +82,8 @@
 | [汲魂者](psyker_killing_enemy_with_warpfire_boosts.md) / `psyker_killing_enemy_with_warpfire_boosts` | 技能 |
 | [骨折後遺症](psyker_melee_weaving.md) / `psyker_melee_weaving` | 技能 |
 | [脆弱心智](psyker_damage_vs_ogryns_and_monsters.md) / `psyker_damage_vs_ogryns_and_monsters` | 技能 |
-| [聚焦亞空間](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | 技能 |
-| [反噬平衡](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | 技能 |
+| [聚焦次元](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | 技能 |
+| [危險平衡](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | 技能 |
 | [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | 技能 |
 | [結晶意志](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | 技能 |
 | [靈能引導](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | 技能 |

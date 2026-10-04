@@ -59,20 +59,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 29 September 2026, 8:40PM
-- MOD 版本：2.2.6
-- MOD 檔案名稱：Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：2026-10-02T16:41:57Z（Nexus API 原文；Asia/Taipei：2026-10-03 00:41:57）
+- MOD 版本：2.2.7
+- MOD 檔案名稱：Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
+- 手動維護最後下載日期：2026-10-03
 - Nexus MOD ID: 510
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/510
-- Nexus page version: 2.2.6
-- Nexus last updated: 2026-09-29T12:40:00.0000000+00:00
-- Main file ID: 8529
-- Main file version: 2.2.6
-- Main file uploaded at UTC: 2026-09-29T12:40:00.0000000+00:00
-- Archive filename: Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
-- Archive size bytes: 40183
-- Archive SHA-256: 23d79c80f5bb27a1d41d2a0a10921ac4a815aaa6abb43b6ee36544dec4e7af97
+- Nexus page version: 2.2.7
+- Nexus last updated: 2026-10-02T16:41:57Z
+- Main file ID: 8705
+- Main file version: 2.2.7
+- Main file uploaded at UTC: 2026-10-02T16:41:57Z
+- Archive filename: Skitarius 2.2.7 510 2.2.7 2026-10-02T16-41Z L8cAq8xlI.zip
+- Archive size bytes: 41043
+- Archive SHA-256: 7ca6c80947a64085afc56bbe2e3375659b5eeeffb82cf1b00d7c4b84c3d9ac4a
 - Acquisition method: manual-queue
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
@@ -259,20 +259,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 02 October 2026, 4:08AM
-- MOD 版本：2.15.6
-- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.6 2026-10-01T20-08Z 6nFZanYhW.zip
-- 手動維護最後下載日期：2026-10-02
+- MOD 網站最後更新日期：Last updated 2 October 2026, 9:01 pm (Asia/Taipei)
+- MOD 版本：2.15.7
+- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.7 2026-10-02T13-01Z eM9bJM2Ei.zip
+- 手動維護最後下載日期：2026-10-03
 - Nexus MOD ID: `447`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
-- Nexus page version: `2.15.6`
-- Nexus last updated: `2026-10-01T20:08Z`
-- Main file ID: `8679`
-- Main file version: `2.15.6`
-- Main file uploaded at UTC: `2026-10-01T20:08Z`
-- Archive filename: `Markers Improved All-in-One 447 2.15.6 2026-10-01T20-08Z 6nFZanYhW.zip`
-- Archive size bytes: `111975`
-- Archive SHA-256: `85b59c07e57ea2e557c1d42bd33b1603cda1582a48962d46527a27d36b3c6bca`
+- Nexus page version: `2.15.7`
+- Nexus last updated: `2026-10-02T13:01:17Z`
+- Main file ID: `8701`
+- Main file version: `2.15.7`
+- Main file uploaded at UTC: `2026-10-02T13:01:17Z`
+- Archive filename: `Markers Improved All-in-One 447 2.15.7 2026-10-02T13-01Z eM9bJM2Ei.zip`
+- Archive size bytes: `112669`
+- Archive SHA-256: `4df8cca8804ae5a1032614097fdd3e49157800a8bf8da315ea2a975acc4fac80`
 - Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)

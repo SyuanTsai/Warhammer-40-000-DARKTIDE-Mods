@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "scope": "1.13.X targeted document skill-name correction",
+  "source_pin": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "pairing_record": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json",
+  "counts": {
+    "targeted_name_entries": 56,
+    "changed_name_entries": 33,
+    "changed_talent_documents": 47,
+    "untranslated_name_fallbacks": 1
+  },
+  "changes": [
+    {
+      "class_name": "Psyker",
+      "id": "psyker_increased_warp_damage",
+      "key": "loc_talent_psyker_increased_warp_damage",
+      "hash": "32fd96aa",
+      "old_zh": "聚焦亞空間",
+      "old_en": "Focused Warp",
+      "zh_tw": "聚焦次元",
+      "en": "Focused Warp"
+    },
+    {
+      "class_name": "Psyker",
+      "id": "psyker_weapon_attacks_peril_equilibrium",
+      "key": "loc_talent_psyker_weapon_attacks_peril_equilibrium",
+      "hash": "63ed565b",
+      "old_zh": "反噬平衡",
+      "old_en": "Peril Equilibrium",
+      "zh_tw": "危險平衡",
+      "en": "Peril Equilibrium"
+    },
+    {
+      "class_name": "Veteran",
+      "id": "veteran_base_ranged_damage",
+      "key": "loc_talent_veteran_base_ranged_damage",
+      "hash": "0c3fe87c",
+      "old_zh": "基礎遠程傷害加成",
+      "old_en": "Increased Ranged Damage",
+      "zh_tw": "衛兵",
+      "en": "Guardsman"
+    },
+    {
+      "class_name": "Veteran",
+      "id": "veteran_survivalist_passive",
+      "key": "loc_talent_veteran_survivalist_passive",
+      "hash": "55ea75f0",
+      "old_zh": "生存專家（基礎被動）",
+      "old_en": "Survivalist Passive",
+      "zh_tw": "實踐效率",
+      "en": "Practiced Efficiency"
+    },
+    {
+      "class_name": "Scum",
+      "id": "base_crit_chance_node_buff_low_1",
+      "key": "loc_talent_crit_chance_low",
+      "hash": "3ec7f5ef",
+      "old_zh": "爆擊機率增幅",
+      "old_en": "Critical Chance Boost",
+      "zh_tw": "暴擊幾率增幅",
+      "en": "Critical Chance Boost"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_celerity_1",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "hash": "33b4b842",
+      "old_zh": "激勵 I",
+      "old_en": "Spur I",
+      "zh_tw": "激勵I",
+      "en": "Spur I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_celerity_2",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "hash": "33b4b842",
+      "old_zh": "激勵 II",
+      "old_en": "Spur II",
+      "zh_tw": "激勵II",
+      "en": "Spur II"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_celerity_3",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "hash": "33b4b842",
+      "old_zh": "激勵 III",
+      "old_en": "Spur III",
+      "zh_tw": "激勵III",
+      "en": "Spur III"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_celerity_4",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "hash": "33b4b842",
+      "old_zh": "激勵 IV",
+      "old_en": "Spur IV",
+      "zh_tw": "激勵IV",
+      "en": "Spur IV"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_4c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "hash": "0f81fa53",
+      "old_zh": "獵鷹蕈劑 I",
+      "old_en": "Vultoprene I",
+      "zh_tw": "獵鷹蕈劑I",
+      "en": "Vultoprene I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_5c",
+      "key": "loc_talent_broker_stimm_combat_c",
+      "hash": "0f81fa53",
+      "old_zh": "獵鷹蕈劑 II",
+      "old_en": "Vultoprene II",
+      "zh_tw": "獵鷹蕈劑II",
+      "en": "Vultoprene II"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_concentration_1",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "hash": "eab26b4f",
+      "old_zh": "抗焦慮藥 I",
+      "old_en": "Kalma I",
+      "zh_tw": "抗焦慮藥I",
+      "en": "Kalma I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_concentration_2",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "hash": "eab26b4f",
+      "old_zh": "抗焦慮藥 II",
+      "old_en": "Kalma II",
+      "zh_tw": "抗焦慮藥II",
+      "en": "Kalma II"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_concentration_3",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "hash": "eab26b4f",
+      "old_zh": "抗焦慮藥 III",
+      "old_en": "Kalma III",
+      "zh_tw": "抗焦慮藥III",
+      "en": "Kalma III"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_concentration_4",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "hash": "eab26b4f",
+      "old_zh": "抗焦慮藥 IV",
+      "old_en": "Kalma IV",
+      "zh_tw": "抗焦慮藥IV",
+      "en": "Kalma IV"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_concentration_5a",
+      "key": "loc_talent_broker_stimm_concentration_a",
+      "hash": "eab26b4f",
+      "old_zh": "抗焦慮藥 V",
+      "old_en": "Kalma V",
+      "zh_tw": "抗焦慮藥V",
+      "en": "Kalma V"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_durability_1",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "hash": "6f8e5c73",
+      "old_zh": "彈幕 I",
+      "old_en": "Barrage I",
+      "zh_tw": "彈幕I",
+      "en": "Barrage I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_durability_2",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "hash": "6f8e5c73",
+      "old_zh": "彈幕 II",
+      "old_en": "Barrage II",
+      "zh_tw": "彈幕II",
+      "en": "Barrage II"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_durability_3",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "hash": "6f8e5c73",
+      "old_zh": "彈幕 III",
+      "old_en": "Barrage III",
+      "zh_tw": "彈幕III",
+      "en": "Barrage III"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_durability_4",
+      "key": "loc_talent_broker_stimm_durability_a",
+      "hash": "6f8e5c73",
+      "old_zh": "彈幕 IV",
+      "old_en": "Barrage IV",
+      "zh_tw": "彈幕IV",
+      "en": "Barrage IV"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_celerity_5a",
+      "key": "loc_talent_broker_stimm_celerity_a",
+      "hash": "33b4b842",
+      "old_zh": "激勵 V",
+      "old_en": "Spur V",
+      "zh_tw": "激勵V",
+      "en": "Spur V"
+    },
+    {
+      "class_name": "Psyker",
+      "id": "psyker_peril_passive",
+      "key": "loc_talent_psyker_peril_passive",
+      "hash": "dafbc14a",
+      "old_zh": "反噬系統",
+      "old_en": "",
+      "zh_tw": "次元危險",
+      "en": "Perils of the Warp"
+    },
+    {
+      "class_name": "Ogryn",
+      "id": "ogryn_base_tank_passive",
+      "key": "loc_talent_ogryn_2_base_3",
+      "hash": "277672aa",
+      "old_zh": "基礎減傷與閃避防護",
+      "old_en": "",
+      "zh_tw": "厚實表皮",
+      "en": "Thick Skin"
+    },
+    {
+      "class_name": "Ogryn",
+      "id": "ogryn_dodge_stagger",
+      "key": "loc_talent_ogryn_dodge_stagger",
+      "hash": "7abf1c42",
+      "old_zh": "閃避撞擊",
+      "old_en": "",
+      "zh_tw": "滾吧你！",
+      "en": "Outta My Way!"
+    },
+    {
+      "class_name": "Veteran",
+      "id": "veteran_supression_immunity",
+      "key": "loc_talent_veteran_supression_immunity",
+      "hash": "829e5480",
+      "old_zh": "壓制免疫",
+      "old_en": "Suppression Immunity",
+      "zh_tw": "堅定不移",
+      "en": "Determined"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_1",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "hash": "fe5e6f12",
+      "old_zh": "野火 I",
+      "old_en": "Wildfire I",
+      "zh_tw": "野火I",
+      "en": "Wildfire I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_2",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "hash": "fe5e6f12",
+      "old_zh": "野火 II",
+      "old_en": "Wildfire II",
+      "zh_tw": "野火II",
+      "en": "Wildfire II"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_3",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "hash": "fe5e6f12",
+      "old_zh": "野火 III",
+      "old_en": "Wildfire III",
+      "zh_tw": "野火III",
+      "en": "Wildfire III"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_4a",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "hash": "fe5e6f12",
+      "old_zh": "野火 IV",
+      "old_en": "Wildfire IV",
+      "zh_tw": "野火IV",
+      "en": "Wildfire IV"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_5a",
+      "key": "loc_talent_broker_stimm_combat_a",
+      "hash": "fe5e6f12",
+      "old_zh": "野火 V",
+      "old_en": "Wildfire V",
+      "zh_tw": "野火V",
+      "en": "Wildfire V"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_4b",
+      "key": "loc_talent_broker_stimm_combat_b",
+      "hash": "ea57fba3",
+      "old_zh": "狂怒 I",
+      "old_en": "Fury I",
+      "zh_tw": "狂怒I",
+      "en": "Fury I"
+    },
+    {
+      "class_name": "Scum",
+      "id": "broker_stimm_combat_5b",
+      "key": "loc_talent_broker_stimm_combat_b",
+      "hash": "ea57fba3",
+      "old_zh": "狂怒 II",
+      "old_en": "Fury II",
+      "zh_tw": "狂怒II",
+      "en": "Fury II"
+    },
+    {
+      "class_name": "Veteran",
+      "id": "veteran_cover_peeking",
+      "key": "loc_talent_veteran_cover_peeking",
+      "hash": "da809230",
+      "old_zh": "掩體探身",
+      "old_en": "Cover Peeking",
+      "zh_tw": "Low Profile",
+      "en": "Low Profile"
+    }
+  ],
+  "changed_documents": [
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Ogryn/BASE_EFFECTS.md",
+      "before_sha256": "c677bec24442c8914ec8e9411451fa6a6ce0547fa6722251d5b3f8b85e7ee505",
+      "after_sha256": "9b53a9adedc828cffa329af88f79d8e91389e08cc22c1bcf0136aa87c6983b80"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md",
+      "before_sha256": "e7511b69716d9b4922872231a5e9ec58b995564921cd6ee5a9764a016aacf681",
+      "after_sha256": "e41145da065cd3efd5bb51c5f342814eef07cb15003cfb5ed2a5ae6be9d792ed"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md",
+      "before_sha256": "22284b60759b21612f1415e9c799c5ca5acfc7ad533093ed2ceafc507baa2391",
+      "after_sha256": "dfc9b4424e6767649ca47d09431116e9b2f36d8d4ac8bd7be96717e4d1f5a2e7"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/BASE_EFFECTS.md",
+      "before_sha256": "b7a35d09e1c4dcc4cce0f774116a9874e90bc9bc02648cae5b708ec33bfc5e48",
+      "after_sha256": "ccfd6efaea00f1039896b4b7427f1a3c442d7de0cebc7a406199c5712899364d"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/DAMAGE_PERCENTAGE_REVIEW.md",
+      "before_sha256": "949d56008837967913aa3fb141bf5b3e44c568265ed9b0715beb0c334c57fbd5",
+      "after_sha256": "d5ad9459602110dac6a9a90a0bdd50419b7e73c02144d72bac8792b489b7550a"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/LOCALIZATION_COMPARISON.md",
+      "before_sha256": "b84c088fb4bd2513a59a5d1c9a7a471d578f4439d7f9f48ee88cfa32d081f8e5",
+      "after_sha256": "20c060ff564b7f2ed80faac131462deaafa12ba567132a2e910fb14354ec88b5"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md",
+      "before_sha256": "5f10cb764f31709da13e4e86437af60af195fa1da48b9bd6f08c495c39260ace",
+      "after_sha256": "f078e29042057d59c73e9c2f19637fa65c8d105f22ee1631d3f284dfba318043"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md",
+      "before_sha256": "288fbfbfb55ef5c6b3d8ee356de1ccd3798a3d0f204d20f83e802f31301e6f43",
+      "after_sha256": "ebe208bb3377bc6a74b06f749f83bf15bd3193efd4e1f15e6f1eb4b9a035832c"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/README.md",
+      "before_sha256": "39246145bddc728adccab08b4cfeee81afbc5a4bb25839a95c52bf7f6e5a3a74",
+      "after_sha256": "f923782a1e059dac669e7869ef52b1971007e31144a9f0df8946cd20582e1146"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Psyker/SOURCE_INDEX.md",
+      "before_sha256": "1b1ab04c333c3740409f95bc38bf40bcc24f4593fa2183d4d30de9e3ea660ce0",
+      "after_sha256": "6815b2aab52643a8a50923714339bfd5cb95a0018b16b4076cb31d9ec6d7b3fd"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md",
+      "before_sha256": "16bc905937e16c6ce4d47e88b52b8bf93ce90c51c7ae1519791b231d49c5a4b9",
+      "after_sha256": "759b6b6dc03258f9758abfdeea48f8ed98629c0f39815f188dfe9e640c826e8b"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md",
+      "before_sha256": "b0e9133d0476642b74f6de85015abd351feb901bd5501b31cd06dc41afd57278",
+      "after_sha256": "0204f2718bf9c9d2acc70763d404585576bfd83df2d076a4f5d07af29ddc9c95"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md",
+      "before_sha256": "5064d6996fcfc4ad244e78ee930136425eae99e46410e56e0606991a5de0ee25",
+      "after_sha256": "6271c47be012c02f8ebb5ab08871344773ac1c29e9b08ad484ac0a7a7c1f24c9"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md",
+      "before_sha256": "bb529b4cb8d141b024b52cf031b5df1988efaaeb30df4c3364988a7fe735e56f",
+      "after_sha256": "066da5a1645ec990ca6640ff6b573642b8193ad172e271863395c34771901e0b"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md",
+      "before_sha256": "30d2383a7c63fe8bb2455e2158a7272c4ceb25538528ece820aa048abe22757c",
+      "after_sha256": "2314a1f04864d389c473c7cc9759523b5ee99a2d1fffa952109982ef980861b2"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md",
+      "before_sha256": "bf1196dd145bfe59651d0ee0be59554194c3d2a9f056315c5f19887316d97314",
+      "after_sha256": "53a5364e3ab9897ac0e5174152d7bbf970857ce0742a8a30039eeef3df057c6a"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md",
+      "before_sha256": "cba3db902d5b9d25901d39f320c0c488977b12ec3d6bc94c5a48ddbfed639fcd",
+      "after_sha256": "618692426b0f45d4258aac58dfab92e2d13eae2bfe40c5d26a63c35a47e95881"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md",
+      "before_sha256": "22bbbb7940479c7524f922e8c3ac66c4ffa41ebe4d9dca436105cefbbe175fbc",
+      "after_sha256": "d7b932732e923f678b4b6410346ca474828343a5ae1bca2c8d698f39b9e05497"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md",
+      "before_sha256": "7dc7016e1803d2c27ba9f82391b00133de2c82266c96aba3dd617c8c92f34994",
+      "after_sha256": "2aeb014465d8ec861bb79a45f1aa3fc0fbd43c578627c3f5b0de863b34e06125"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md",
+      "before_sha256": "d3b32838e89ca1a712703729ac79944cc884d4578cda3ac499511bb6d76ff9b6",
+      "after_sha256": "d5d5bdd0743a18be29c0d9f00b25f7dfa4c2993ec4fb8382ed2dd9d4cdfcf9ad"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md",
+      "before_sha256": "6f1a5cc6dcc4136a91a5d60b3350c919a45289de8dea272d9da462248d3538c0",
+      "after_sha256": "5dfb33a212e790b7a445b17ee861edfd49bac94bc31d05f061336c04a2911420"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md",
+      "before_sha256": "72e155bd8103138b3e3b08cffd9bd7e2dbecc3d9b94d3478deffdc6cec984e5f",
+      "after_sha256": "e3cc1bfda0d729d477b8f5de316087fdcc66ac9d259450f95d7fbb01d81fcdf9"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md",
+      "before_sha256": "4ebe6a078e066c066d40b8f57bb42894b1a5d00552daec046bb7a99ef52398b9",
+      "after_sha256": "20586d4f40cb75fadcaf45de8688f295cfe3b01d7c59ccc1054a2db1ba8fd0ec"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md",
+      "before_sha256": "f968ac0d647746a1a2fb82d043a2f6296d4104e8bb1eccec18ec685ea6475cb7",
+      "after_sha256": "2714dcfef99db46d5e764e3b97f2407dd3cc1972d578230cf3ec777c589d17d4"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md",
+      "before_sha256": "f78a9f75ed755f2623db6fc223921b98a5bd73b67c3e9cc67162ff8de5392d3e",
+      "after_sha256": "37baad56e01cf967d38970325280c8904366331659645fe9000a4279b86f22e2"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_1.md",
+      "before_sha256": "b314f93e239f4e0237b6538768055a87eebe25c6b4a1f355d1857bb16bfdcf5e",
+      "after_sha256": "1075b66db90a7b269b4541aa371cfc62c145f8fbed43d136c1869cf4900a16f4"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md",
+      "before_sha256": "94584fd6db8e8ce4945275c76f3cee698a6e524cdb20fd493239cf3a6ed16065",
+      "after_sha256": "a3c7eb42f366e070982024617b98ead4d8e505aa8e8467d43bcf59cd880b8ba0"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md",
+      "before_sha256": "8a9cdcbb0c1991d39ea8d4987c46e273b34eca43cecdadbdf93637faa6acd89d",
+      "after_sha256": "23f8756554e6328d6cd11e8f1cd0ed099ad832bc13ad2ef60c3c7cae9280fde0"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md",
+      "before_sha256": "ce62192e873bc7b55db0961a6816741f0fd32eb8477ab56b30459882f32376a4",
+      "after_sha256": "7f76a31c4f018e40443c355ed031a588a236c55a054070381637b2beae23f800"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md",
+      "before_sha256": "06c49dbc87cf24c8502bd109fd8be83236a1cd20badee3630aec1ddbf89a01f6",
+      "after_sha256": "b3bfd0eae30437943d208f83fb74b7a52c9108e4e557efaf388c8b52f809ba0b"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md",
+      "before_sha256": "8a2a4bff95a0d497b2456c614963ed9a2fc95c4f37375a15f9c496e26a834b8c",
+      "after_sha256": "cc6afefb1a902c11678660a9be47b6bfda79751c64e656d0ebd83868b61d599f"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md",
+      "before_sha256": "62d49894d70775d8aef635d6e27b4fe1341491d83eb2cf16ffb3b347f19bc63d",
+      "after_sha256": "1ed722b84e6262aee5538b7250b8b4e2166de541303daf72a56e972979696bf3"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md",
+      "before_sha256": "58ea1875b5ef2bfe5925238a5e1eabae542d5d0b35fe3557205e0ffc7270f61e",
+      "after_sha256": "5dc7e57afed27c8ca3ebcf590ed259cf38e08779be83188310801ca467c4bdd1"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md",
+      "before_sha256": "9045b7b76ce187a4bc133147251ae26a90cb364d4430f6aba05a8c2ae8ecb2a7",
+      "after_sha256": "c89baf5556cc01ffa01ed275b9f335098e2f0c7d15e7b0d870fba80b353cd703"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md",
+      "before_sha256": "99f3481088214426b8bbc6677140a0d797b1e3505509923f33e32f6969b213cd",
+      "after_sha256": "68f773705bc9b428db833e29a983503787c7dcd07ceac05c3e77c9dcbffed92b"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md",
+      "before_sha256": "21e724929ef7caa3ca6da61d6d7f37a1f11b19a0960b1154d079744067256662",
+      "after_sha256": "d506f149a70db5406f2e382e21cdab6408be0d4e320bc62d3e3459a7a2344366"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5a.md",
+      "before_sha256": "bc0ea92fbcb7119868e49aa463d10b6733be636859031517b2584c5e6f4addc3",
+      "after_sha256": "536dd8720d34ce2602d84b2dc62a649e8d8472d5748b63180c1171f61ea45c72"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md",
+      "before_sha256": "962dbefd46e4690882581c9c3b179e9bf8c9942758f119bc0a2bbd1fb2c4f563",
+      "after_sha256": "6dbe5089071d57ac5bbd035d5cae0958b48bb522f0fc4d18766b60ca6b9dca98"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/DAMAGE_PERCENTAGE_REVIEW.md",
+      "before_sha256": "82e954c298f9d821fae56adaf4c12065d857dd7d5cd8bf81e9bb003be305248d",
+      "after_sha256": "f2134c05790f9eea02916e9101092c0ce2f6c1a2547d92bdb6afa7975c7138c8"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/LOCALIZATION_COMPARISON.md",
+      "before_sha256": "3fc6d5db13fff6252b23bdef777b740d875774242191ffdcca15c6c659ce1c30",
+      "after_sha256": "a5849d641a23d4a3af92c4dd67c1a6825de7f57127fb9ce5c3fb3bce80d21e8f"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/README.md",
+      "before_sha256": "64bd16aa783047250d57a91e5929c5e4041faf969f5996bebd8b259503b3406a",
+      "after_sha256": "25a45840857e2d48eaf36f6743aeddd2dc041ab4b616abb724feddbd2d92bbad"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Scum/SOURCE_INDEX.md",
+      "before_sha256": "cc3736c7b4d04af0d5fe518d311a56f4be40d641e6f9b2e7e643f391378dcc68",
+      "after_sha256": "749edd30e7d749b47c48cbfe21a0e8007b36ec0d69999330b7855b6e6206f802"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/BASE_EFFECTS.md",
+      "before_sha256": "7e5c5b9b054dac632cc2f6790b2c5bfd0d92d152bb3091d90514fb8ea32064bf",
+      "after_sha256": "804eb76a8cce63ac9813ee7910bbb095ffd487317a0371d95b1de445ffc46d7e"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md",
+      "before_sha256": "4eb5584b74e9f76b45082aa184e95fe12855c638b758ed63ed67e02dba9ae0b1",
+      "after_sha256": "0d90bc869ca364ecb90efe4fc4ca7839bf129ec4ece0caabb30e3227fd3feb44"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_cover_peeking.md",
+      "before_sha256": "11d83025e61e6e6c753db7b529d93c4c500c38bd5b202044bc2dfd7d11c8b437",
+      "after_sha256": "6f95781b425a8c854359464352b0f89ba7afd891bce4522365851db48de5ba8a"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md",
+      "before_sha256": "2b56042872edae894dba718608892dce15464454cab5e7118d067e4ad4979fd1",
+      "after_sha256": "8edcc8fbb4c84ef70988a78bc8ccd15ae6cf88f0c8eaeb0aedb285b5d54c7390"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md",
+      "before_sha256": "0dc4a7b4b85879038ea81f998a1f967b0a35a345ad72cd08fff7af278f018439",
+      "after_sha256": "93611ac68195d6438b46ab686ec0a90ed86135b5867d5d8e78dcd73ec85e107f"
+    }
+  ],
+  "validation": {
+    "all_targeted_titles_matched": true,
+    "bodies_changed_only_by_listed_name_substitutions": true,
+    "skill_ids_and_categories_preserved": true,
+    "local_markdown_references": "passed: 690 skills Markdown files, 6292 local references",
+    "git_diff_check": "passed"
+  },
+  "hash_basis": "UTF-8 text with LF line endings"
+}

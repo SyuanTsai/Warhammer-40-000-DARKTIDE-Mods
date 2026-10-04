@@ -454,8 +454,9 @@ return {
                             { text = "slow_and_steady", value = "slow_and_steady" },
                             { text = "crunch",          value = "crunch" },
                             { text = "big_hammer",      value = "big_hammer" },
+                            { text = "small_hammer",    value = "small_hammer" },
                             { text = "mechsword",       value = "mechsword" },
-                            
+                            { text = "unstoppable",     value = "unstoppable"}
                         }
                     },
                     {
