@@ -6184,7 +6184,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "cc1f1e4fdbb51958bbce4b0a599d9dc35640a3e8",
       "chinese_sha256": "b6ab72e68a1208616cfa8b562011b30218d451c6a77f58fadbf543b82b3e80b7",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "broker_ability_focus",
         "broker_blitz_flash_grenade",
@@ -6193,7 +6193,12 @@
         "broker_stimm_description_talent",
         "broker_syringe"
       ],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/DAMAGE_PERCENTAGE_REVIEW.md",
@@ -6202,7 +6207,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "94dea31baaf9602b2b00767dfa32c9b6b6a7adc4",
       "chinese_sha256": "82e954c298f9d821fae56adaf4c12065d857dd7d5cd8bf81e9bb003be305248d",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "broker_blitz_flash_grenade_improved",
         "broker_blitz_missile_launcher",
@@ -6315,7 +6320,12 @@
         "broker_passive_improved_sprint_dodge",
         "broker_syringe"
       ],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/LOCALIZATION_COMPARISON.md",
@@ -6324,7 +6334,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "e995d6b86d67643532c756b917bd87fcb6e3bd02",
       "chinese_sha256": "3fc6d5db13fff6252b23bdef777b740d875774242191ffdcca15c6c659ce1c30",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "broker_blitz_flash_grenade_improved",
         "broker_blitz_missile_launcher",
@@ -6442,7 +6452,12 @@
         "broker_stimm_description_talent",
         "broker_syringe"
       ],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/README.md",
@@ -6451,7 +6466,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "5a9c7291994ea2d455381a00c6564fb21f04c716",
       "chinese_sha256": "64bd16aa783047250d57a91e5929c5e4041faf969f5996bebd8b259503b3406a",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "broker_blitz_flash_grenade_improved",
         "broker_blitz_missile_launcher",
@@ -6566,7 +6581,12 @@
         "broker_blitz_flash_grenade",
         "broker_aura_gunslinger"
       ],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/SOURCE_INDEX.md",
@@ -6575,7 +6595,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "418e6696b2f66aabf5dfc1251da59a05ef4dde45",
       "chinese_sha256": "cc3736c7b4d04af0d5fe518d311a56f4be40d641e6f9b2e7e643f391378dcc68",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "broker_blitz_flash_grenade_improved",
         "broker_blitz_missile_launcher",
@@ -6693,7 +6713,12 @@
         "broker_stimm_description_talent",
         "broker_syringe"
       ],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/UNUSED_DEFINITIONS.md",
@@ -6702,9 +6727,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "b8866e6a782435432b191b91e9a1f575519aef91",
       "chinese_sha256": "08354a09511acb138eae39d082d0010149d407f9d1909eca33efb042c7f75021",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "translation_text",
+        "shared_Markdown_links_and_image_references",
+        "navigation_order"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md",

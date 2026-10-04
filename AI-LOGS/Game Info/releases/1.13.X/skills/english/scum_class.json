@@ -1,0 +1,45 @@
+{
+  "id": "scum_class",
+  "class": "Scum",
+  "date": "2026-10-04",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "FILE_MAP.json: scope Scum",
+  "English_entry": "Game Info/releases/1.13.X/skills/talents/Scum/en/README.md",
+  "checks": {
+    "mapped_English_pages": 121,
+    "previous_skill_acceptance": "115 mechanism translations and independent English comparisons reused; no mechanism reanalysis or repeated skill acceptance.",
+    "shared_page_checks": {
+      "pages": 6,
+      "local_references": 1057,
+      "errors": 0,
+      "Markdown_parse_and_HTML_structure": "109 talent index rows and player sections; 6 base sections; 115 technical-index records; 114 percentage-review rows; 32 unused definitions.",
+      "existing_image_references_matching_sources_and_dimensions": 218,
+      "empty_image_alt": 0
+    }
+  },
+  "comparison_totals": {
+    "Consistent": 113,
+    "Explicit contradictions": 7,
+    "Not covered by the description": 113,
+    "No corresponding implementation evidence found": 1,
+    "Cannot confirm": 11
+  },
+  "source_reads": [
+    "Shared-page closeout used existing documentation only; no additional game-source reads."
+  ],
+  "questions": [
+    "Existing seven explicit English contradictions and unresolved evidence limits retained. Conditional broker_syringe has no independently paired English description key."
+  ],
+  "timing": {
+    "class_closeout_commit_interval_seconds": 428,
+    "from_commit": "339ead7c8",
+    "class_closeout_commit": "4abfc11bb",
+    "interruptions": "Class closeout counted separately from mechanism translation; earlier handoff/restoration gap excluded."
+  },
+  "evidence_limits": [
+    "Fixed source pointers and previously accepted mechanism evidence reused.",
+    "English display is static reconstruction, not observed game UI; existing unresolved comparisons retained.",
+    "Shared Markdown/HTML structure and existing image references checked; no image downloads, screenshots or game execution."
+  ]
+}

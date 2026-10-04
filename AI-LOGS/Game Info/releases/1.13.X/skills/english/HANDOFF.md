@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 463 completed on 2026-10-04. [Receipt](scum_skills_459_463.json) and [FILE_MAP](FILE_MAP.json) record 463 accepted mechanisms. Scum's **115/115 mechanisms are complete**; next is its six shared-page closeout, followed by Skitarii. The full goal remains active and unfinished.
+Scum class closeout completed on 2026-10-04. [Receipt](scum_class.json) and [FILE_MAP](FILE_MAP.json) record 463 accepted mechanisms and 493/690 accepted files. Next item: **464, Integrated Refraction Emitter**, `cryptic_grenade_ability_force_field`, Skitarii. The full goal remains active and unfinished.
 
-The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
+The original dedicated checkout was restored at exactly the same path with explicit user authorization, on `codex/skills-english`, preserving all commits. The user has now authorized continuing the same branch and opening a new PR; this supersedes the earlier local-only restriction. No source update, reset or agent review.
 
-Remaining: 183 mechanisms + 18 class-support files + 2 shared files = 203 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum comparison totals: 245 = 113 Consistent / 7 Explicit contradictions / 113 Not covered / 1 No implementation / 11 Cannot confirm. Latest batch commit interval: 623s (10m 23s), 8119fc96a→339ead7c8. No new clear English contradiction. Special mission Ammo Crate sharing and missing standalone syringe text remain explicit limitations.
+Remaining: 183 mechanisms + 12 class-support files + 2 shared files = 197 mapped files. Veteran, Arbites, Ogryn, Psyker and Scum class closeouts are accepted; do not repeat them. Scum has 115/115 mechanisms and all 6 shared pages accepted. Its 245 comparison rules comprise 113 Consistent / 7 Explicit contradictions / 113 Not covered / 1 No implementation / 11 Cannot confirm. Shared-page check: 1057 local references, 218 image references/dimensions, Markdown/table structure and navigation order passed. Closeout interval 339ead7c8→4abfc11bb: 428s, separate from translation speed.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
