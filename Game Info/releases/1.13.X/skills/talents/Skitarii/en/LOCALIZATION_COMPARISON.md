@@ -612,6 +612,18 @@ Full raw template and formatting: [source evidence](cryptic_successful_dodge_sta
 | Successful-dodge trigger and restoration | Successful dodges restore 10% Stamina; `ui / loc_talent_cryptic_successful_dodge_stamina_desc / 99f3c08d` | `on_successful_dodge` calls `Stamina.add_stamina_percent(unit, 0.1)` [Fixed source and line references](cryptic_successful_dodge_stamina.md#fixed-source-evidence) | Consistent | The event and restoration value agree with the wording. |
 | Recovery basis and limits | Does not specify the maximum-Stamina denominator, timing, cap, cooldown or stacks; `ui / loc_talent_cryptic_successful_dodge_stamina_desc / 99f3c08d` | Immediate recovery is 10% of maximum Stamina, capped at full; this template has no cooldown or stacks. At 5 maximum bars, restore 0.5; from 4.8, stop at 5 [Fixed source and line references](cryptic_successful_dodge_stamina.md#fixed-source-evidence) | Not covered by the description | These restrictions and the preserved example supplement the English. |
 
+
+<a id="cryptic_multi_hits_restore_toughness"></a>
+
+## Omnissian Recharge Litany
+
+Full raw template and formatting: [source evidence](cryptic_multi_hits_restore_toughness.md#original-english-template-and-reconstruction). Name hash `bdd7631c`. Every row uses `ui / loc_talent_cryptic_multi_hits_restore_toughness_desc / 6db4bbd5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Attack threshold, amount and duration | Hitting 3 or more enemies with an Attack restores 10% Toughness over 3s; `ui / loc_talent_cryptic_multi_hits_restore_toughness_desc / 6db4bbd5` | The third valid target triggers `0.1` recovery over 3 seconds [Fixed source and line references](cryptic_multi_hits_restore_toughness.md#fixed-source-evidence) | Consistent | Reaching the third target satisfies 3 or more; later targets do not imply additional stacks. |
+| Hit counting, refresh and recovery limits | Does not specify the counter, damage-type filter, trigger interval, denominator or refreshing; `ui / loc_talent_cryptic_multi_hits_restore_toughness_desc / 6db4bbd5` | Use positive `target_number`, otherwise `target_index`, equal to 3; no damage-type filter. Minimum interval 0.25 seconds, duration refreshed without parallel effects; maximum-Toughness recovery respects bonuses and the cap [Fixed source and line references](cryptic_multi_hits_restore_toughness.md#fixed-source-evidence) | Not covered by the description | These conditions and the 150-Toughness example supplement the English. |
+
 ## Comparison totals
 
 105 rules: 50 Consistent / 3 Explicit contradiction / 50 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 513.

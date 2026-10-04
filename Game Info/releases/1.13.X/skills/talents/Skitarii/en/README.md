@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="Power Redistribution Uplink talent icon"> [Power Redistribution Uplink](#cryptic_crits_grant_tdr) | <ul><li>Critical hits start 3 seconds of recovery at 2.5% of maximum Toughness per second and grant 15% Toughness Damage Reduction. Further critical hits restart the duration; the rate and reduction do not stack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="Adaptive Combat Engram talent icon"> [Adaptive Combat Engram](#cryptic_dr_on_toughness_break) | <ul><li>When your Toughness breaks, gain 30% Damage Reduction for 5 seconds. A further 15-second cooldown follows the effect, so successive triggers are at least 20 seconds apart.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="Evasive Servo Recovery talent icon"> [Evasive Servo Recovery](#cryptic_successful_dodge_stamina) | <ul><li>Successfully dodging an enemy attack immediately restores 10% of maximum Stamina. Pressing dodge without avoiding an attack does not qualify; recovery is capped at full Stamina.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="Omnissian Recharge Litany talent icon"> [Omnissian Recharge Litany](#cryptic_multi_hits_restore_toughness) | <ul><li>Hitting the third enemy with one attack starts 3 seconds of recovery totaling 10% of maximum Toughness. Melee and ranged hits qualify. Further triggers refresh the duration, at least 0.25 seconds apart.</li></ul> | Talent |
 
 ---
 
@@ -798,3 +799,17 @@
 - **Example**: At 5 maximum Stamina bars, each successful dodge restores `5 × 10% = 0.5` bars. At 4.8 current bars, it only restores up to 5.
 
 [Details](cryptic_successful_dodge_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_multi_hits_restore_toughness"></a>
+
+### Omnissian Recharge Litany
+
+<img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="72" height="72" alt="Omnissian Recharge Litany talent icon">
+
+- **Trigger**: Hitting the **third enemy with the same attack** starts recovery of **10% of maximum Toughness over 3 seconds**. Both melee and ranged hits can trigger it.
+- **Refreshing**: Another qualifying attack restarts the 3-second period. Triggers are at least **0.25 seconds apart**; hitting the fourth or fifth enemy does not add stacks.
+- **Example**: At 150 maximum Toughness, restore `150 × 10% ÷ 3 = 5` points per second, or 15 points over the full effect.
+
+[Details](cryptic_multi_hits_restore_toughness.md) · [Back to index](#talent-index)
