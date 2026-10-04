@@ -41,3 +41,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Warp Siphon](psyker_passive_souls_from_elite_kills.md) / `psyker_passive_souls_from_elite_kills` | Keystone |
 | [Disrupt Destiny](psyker_new_mark_passive.md) / `psyker_new_mark_passive` | Keystone |
 | [Empowered Psionics](psyker_empowered_ability.md) / `psyker_empowered_ability` | Keystone |
+| [Inner Tranquility](psyker_reduced_warp_charge_cost_and_venting_speed.md) / `psyker_reduced_warp_charge_cost_and_venting_speed` | Keystone |

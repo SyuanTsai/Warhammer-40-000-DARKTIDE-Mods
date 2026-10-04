@@ -373,6 +373,18 @@ Full raw template and formatting: [source evidence](psyker_empowered_ability.md#
 | Smite spread speed | 50% faster spread between enemies; `ui / loc_talent_psyker_empowered_ability_description / 8b4a7ea9` | Although a 0.5 jump-time modifier is declared, quick-cast, charged and direct-target templates specify jump_time = 0.3; the accepted or expression chooses that interval and does not multiply it. [Fixed source and line references](psyker_empowered_ability.md#fixed-source-evidence) | Explicit contradiction | The English asserts faster spread, but the accepted path leaves this interval unchanged. Actual in-game behavior remains unobserved. |
 | Storage, timing and Assail boundaries | No base storage cap, natural-expiry rule, empowerment consumption timing, cleave or hit-order formula stated; `ui / loc_talent_psyker_empowered_ability_description / 8b4a7ea9` | Base empowerment cap one with no duration; Smite spends it at continuous-cast end. Assail cleave 2→4; first-target distributions normal 225→350 and aimed 380→500, with other hit orders differing and shared Damage calculation still required. [Fixed source and line references](psyker_empowered_ability.md#fixed-source-evidence) | Not covered by the description | These accepted limits and examples supplement the English. The formatter's unresolved Base Damage numbers are documented without extending mechanism research. |
 
+
+<a id="psyker_reduced_warp_charge_cost_and_venting_speed"></a>
+
+## Inner Tranquility
+
+Full raw template and formatting: [source evidence](psyker_reduced_warp_charge_cost_and_venting_speed.md#original-english-template-and-reconstruction). Name hash `34b929e1`. Every row uses `ui / loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc / e3048a81`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reduction per Warp Charge | -8% Peril Generation Reduction for each Warp Charge; `ui / loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc / e3048a81` | warp_charge_amount interpolates 1→0.52 over zero to six souls, giving a 0.08 reduction per soul. [Fixed source and line references](psyker_reduced_warp_charge_cost_and_venting_speed.md#fixed-source-evidence) | Consistent | The mapped magnitude and reduction direction agree with the accepted evidence; the original prefix/wording is retained. |
+| Resource, cap and scope | No resource prerequisite, cap variant, interpolation formula or Quelling Speed effect specified; `ui / loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc / e3048a81` | Reads talent_resource.current_resource from Warp Siphon; four charges give 0.68, six give 0.52. Warp Battery changes the cap, not the per-charge reduction. This source sets only warp_charge_amount. [Fixed source and line references](psyker_reduced_warp_charge_cost_and_venting_speed.md#fixed-source-evidence) | Not covered by the description | The resource dependency, formulas and identifier caveat are supplements; English does not promise a separate Quelling effect. |
+
 ## Comparison totals
 
 The 66 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **30 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**.

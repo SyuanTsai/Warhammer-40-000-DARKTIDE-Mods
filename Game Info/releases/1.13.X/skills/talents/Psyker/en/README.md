@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="Warp Siphon talent icon"> [Warp Siphon](#psyker_passive_souls_from_elite_kills) | <ul><li>Personal Elite or Specialist kills grant Warp Charges: +4% Damage per charge, with all charges spent by a Combat Ability to restore 7.5% of one charge's cooldown per Warp Charge.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="Disrupt Destiny talent icon"> [Disrupt Destiny](#psyker_new_mark_passive) | <ul><li>Personal Marked Enemy kills grant Precision: per stack, +1% Damage, +2% Critical Damage and +2.5% Weakspot Damage; also restore 25% Toughness over 2.5 seconds and grant +20% Movement Speed for 2.5 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="32" height="32" alt="Empowered Psionics talent icon"> [Empowered Psionics](#psyker_empowered_ability) | <ul><li>Kills have a 10% chance to empower the next Blitz; base storage is one. Empowered Brain Rupture and Smite gain Damage, while Assail avoids Peril and Blitz-stock payment and gains Damage/cleave.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="Inner Tranquility talent icon"> [Inner Tranquility](#psyker_reduced_warp_charge_cost_and_venting_speed) | <ul><li>Each Warp Charge reduces Peril Generation by 8%; four charges give 32% reduction, or 48% at six with Warp Battery.</li></ul> | Keystone |
 
 ---
 
@@ -508,3 +509,17 @@
 - **Chance example:** If storage is available on every kill, 100 kills give an expected `100 × 10% = 10` empowerments; there is no guaranteed trigger every ten kills.
 
 [Details](psyker_empowered_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_reduced_warp_charge_cost_and_venting_speed"></a>
+
+### Inner Tranquility
+
+<img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="72" height="72" alt="Inner Tranquility talent icon">
+
+- **How it works:** Each Warp Charge reduces Peril Generation by 8%. Four stacks give a 32% reduction; six with Warp Battery give 48%.
+
+- **Peril example:** An attack that originally generates 10 percentage points of Peril generates `10 × (1 − 8% × 4) = 6.8` at four stacks, or 5.2 at six. Other Generation modifiers apply separately.
+
+[Details](psyker_reduced_warp_charge_cost_and_venting_speed.md) · [Back to index](#talent-index)
