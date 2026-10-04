@@ -192,6 +192,18 @@ Full raw template and formatting: [source evidence](broker_ability_focus_sub_2.m
 | Rending and Damage values | During Enhanced Desperado: +15% Ranged Rending; kills grant +3% Ranged Damage, stacking 5 times; `ui / loc_talent_broker_ability_focus_sub_2_desc / 4946598e` | Focus gives additive ranged_rending_multiplier 0.15; each damage stack adds ranged_damage 0.03, up to 5 stacks. [Fixed source and line references](broker_ability_focus_sub_2.md#fixed-source-evidence) | Consistent | The values and separate effect types agree; Rending is not direct Damage. |
 | Eligibility, refresh and decay | Highlighted enemies; no distance, attack-type, Toxin exception, duration or decay details; `ui / loc_talent_broker_ability_focus_sub_2_desc / 4946598e` | Ordinary kills require Ranged attacks within 12.5 m without a separate highlight check; tracked Needle Pistol Toxin deaths can qualify. Stacks refresh to 3 seconds, expire one at a time and all end with focus. [Fixed source and line references](broker_ability_focus_sub_2.md#fixed-source-evidence) | Not covered by the description | The accepted trigger restrictions and timing supplement the English wording. |
 
+
+<a id="broker_ability_stimm_field_sub_3"></a>
+
+## Practiced Deployment
+
+Full raw template and formatting: [source evidence](broker_ability_stimm_field_sub_3.md#original-english-template-and-reconstruction). Name hash `e8ac27b2`. Every row uses `ui / loc_talent_broker_ability_stimm_field_sub_3_desc / 88b27852`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Availability and readiness | Once a Stimm becomes available to use (collected or otherwise), Stimm Supply becomes ready; `ui / loc_talent_broker_ability_stimm_field_sub_3_desc / 88b27852` | A newly occupied syringe slot or increased dedicated Stimm charge count restores one full ability charge. [Fixed source and line references](broker_ability_stimm_field_sub_3.md#fixed-source-evidence) | Consistent | Both recorded availability transitions fit collected or otherwise, and restoration fills the one-charge ability. |
+| Polling and capacity | Instantly; no polling, initialization or extra-charge storage details; `ui / loc_talent_broker_ability_stimm_field_sub_3_desc / 88b27852` | The server checks every 0.5 seconds; initial availability is only recorded. Restoration is capped at one charge, with independent checks sharing the same cap. [Fixed source and line references](broker_ability_stimm_field_sub_3.md#fixed-source-evidence) | Not covered by the description | The short readiness wording leaves these timing and capacity limits unstated. |
+
 ## Comparison totals
 
 The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.

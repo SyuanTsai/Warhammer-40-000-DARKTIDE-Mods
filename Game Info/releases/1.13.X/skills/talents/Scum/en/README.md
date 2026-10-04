@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="Boiling Blood talent icon"> [Boiling Blood](#broker_ability_punk_rage_sub_4) | <ul><li>Melee hits on Elite, Specialist, Monstrosity or Captain-tagged enemies extend rage by 1 second; these hits begin diminishing after 30 seconds, halving at each 30-second stage.</li><li>Ordinary enemy hits keep the base 0.3-second extension and 20-second diminution stages; the 30-second upgrade applies only to the special tags.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="Focused Resolve talent icon"> [Focused Resolve](#broker_ability_focus_sub_3) | <ul><li>During focus, eligible Close Range Ranged kills restore 0.5 seconds of Ability Cooldown, or 1 second for Elites and Specialists.</li><li>Each focus activation can restore at most 5 seconds; qualifying Needle Pistol Toxin deaths can also contribute.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="Pick Your Targets talent icon"> [Pick Your Targets](#broker_ability_focus_sub_2) | <ul><li>During focus, Ranged Attacks gain +15% Rending.</li><li>Eligible Close Range Ranged kills add +3% Ranged Damage per stack, up to 5 stacks. New kills refresh the 3-second duration; stacks then decay one at a time, and all end when focus ends.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="Practiced Deployment talent icon"> [Practiced Deployment](#broker_ability_stimm_field_sub_3) | <ul><li>Acquiring a usable Stimm or recovering a dedicated Stimm charge fills one Stimm Supply ability charge.</li><li>The effect polls every 0.5 seconds and respects the one-charge cap; an already-held Stimm does not trigger it when first selecting the talent.</li></ul> | Ability |
 
 ---
 
@@ -285,3 +286,19 @@
 - **Damage example:** with only this effect and 5 stacks, base Damage 100 becomes 100 × (1 + 5 × 0.03) = 115. Other Ranged Damage bonuses add to the same pool.
 
 [Details](broker_ability_focus_sub_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_ability_stimm_field_sub_3"></a>
+
+### Practiced Deployment
+
+<img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="72" height="72" alt="Practiced Deployment talent icon">
+
+- **Trigger:** newly acquiring a usable Stimm, or restoring one dedicated Stimm charge, fills one Stimm Supply ability charge.
+
+- **Charge cap:** this ability has at most 1 charge. If it is already ready, the trigger cannot store an extra charge. A Stimm already in its slot when the talent is acquired does not immediately trigger restoration; availability must increase later.
+
+- **Timing example:** if 40 seconds of cooldown remain when the effect triggers, the ability becomes usable again. The polling check applies the effect within approximately half a second.
+
+[Details](broker_ability_stimm_field_sub_3.md) · [Back to index](#talent-index)
