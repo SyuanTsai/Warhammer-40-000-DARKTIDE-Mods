@@ -493,4 +493,4 @@ Full raw template and formatting: [source evidence](zealot_multi_hits_increase_d
 
 ## Comparison totals
 
-74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.
+84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.

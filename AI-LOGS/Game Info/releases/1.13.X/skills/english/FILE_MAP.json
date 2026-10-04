@@ -13776,9 +13776,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "750955d5fd6d30a706806f406c712b1d26a89f70",
       "chinese_sha256": "8ce1f75b13d619323040610ac83c861ee745fd9dcfef0bfd82760407b3c7e628",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_backstab_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_backstab_kills_restore_cd.md",
@@ -13917,9 +13924,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "eef0dc04844ef9e88eec95dad017c621b9cb0b26",
       "chinese_sha256": "15de9d4ce93d231b13f3b5375912e92d55b27fee60a153f4376c621e1b61dff3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_crits_apply_bleed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_crits_grant_cd.md",
@@ -14356,9 +14370,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c31417264599f624cfea90ed23a078b9f2c2ace4",
       "chinese_sha256": "caf5fa5afb0becb2f9738eca7024f42ee68138f0bb5f1cc740caddef268a2d6d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_multi_hits_increase_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_offensive_vs_many.md",
@@ -14523,9 +14544,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "702ac680257f87a5f2cf296f102b2f4ff405bba6",
       "chinese_sha256": "b248125380f3ddc62849eba82e98fc787e7179dc88369635affcff6a9664e0e2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_resist_death_fire"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md",
@@ -14534,9 +14562,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0b52542e70f8fc79dba6725401a63e6931ca7a11",
       "chinese_sha256": "ad76e227a1f4b3000c7c07a260055bf2ad9fd36e1612d1d5ce93dc3b2d560706",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_resist_death_golden_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_heal.md",
@@ -19683,6 +19718,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_595_599.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_ability.md"
+    },
+    {
+      "id": "zealot_resist_death_fire",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_fire.md"
+    },
+    {
+      "id": "zealot_resist_death_golden_toughness",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_resist_death_golden_toughness.md"
+    },
+    {
+      "id": "zealot_crits_apply_bleed",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_crits_apply_bleed.md"
+    },
+    {
+      "id": "zealot_backstab_damage",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_backstab_damage.md"
+    },
+    {
+      "id": "zealot_multi_hits_increase_damage",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_multi_hits_increase_damage.md"
     }
   ],
   "pending_chinese_corrections": [
