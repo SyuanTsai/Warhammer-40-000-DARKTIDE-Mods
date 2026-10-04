@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="Overcharge Transfer Lattice talent icon"> [Overcharge Transfer Lattice](#cryptic_electrocution_defense) | <ul><li>Receiving melee damage Electrocutes living enemies within 2.5 metres of the attacker. Blocking alone does not trigger it. Electrocution lasts 3 seconds and refreshes when reapplied; the talent has a 15-second cooldown from activation.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="32" height="32" alt="Sureshot Cogitator Sync talent icon"> [Sureshot Cogitator Sync](#cryptic_weakspot_damage) | <ul><li>Adds 25% to the extra damage component of weakspot hits, for both melee and ranged attacks. The increase to the complete hit depends on the weapon and hit conditions.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="Shockline Breach Protocol talent icon"> [Shockline Breach Protocol](#cryptic_pushing_grants_cleave) | <ul><li>Hitting an enemy with a push grants 50% increased melee cleave for 8 seconds. Further push hits refresh the duration without stacking. The bonus increases the attack's mass budget.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="Rad-Sink talent icon"> [Rad-Sink](#cryptic_stacking_ranged_damage) | <ul><li>Gain 10% Ranged Damage 1 second after the last shot, rising to 20% at 2 seconds, up to 2 stacks. Shooting again restarts the wait; sustained fire does not preserve the full bonus.</li></ul> | Talent |
 
 ---
 
@@ -888,3 +889,17 @@
 - **Example**: If the attack could originally handle 10 units of enemy mass, the effect changes that to `10 × (1 + 50%) = 15`. The number of additional enemies hit still depends on their mass and the attack's own limits.
 
 [Details](cryptic_pushing_grants_cleave.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_stacking_ranged_damage"></a>
+
+### Rad-Sink
+
+<img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="72" height="72" alt="Rad-Sink talent icon">
+
+- **Accumulation**: At **1 second since the last shot**, gain **10% Ranged Damage**. At **2 seconds**, it rises to **20%**, up to **2 stacks**.
+- **Consumption**: Shooting again restarts the waiting period. Sustained fire cannot keep both stacks continuously.
+- **Example**: At 100 base damage, one stack gives `100 × 1.10 = 110` and two give `100 × 1.20 = 120`. With an existing same-stage 25% bonus, two stacks give `100 × (1 + 25% + 20%) = 145`.
+
+[Details](cryptic_stacking_ranged_damage.md) · [Back to index](#talent-index)

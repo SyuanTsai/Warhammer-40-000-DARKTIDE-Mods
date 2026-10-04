@@ -684,6 +684,19 @@ Full raw template and formatting: [source evidence](cryptic_pushing_grants_cleav
 | Push trigger, cleave and duration | Pushing an enemy grants +50% increased Melee Cleave for 8s; `ui / loc_talent_cryptic_pushing_grants_cleave_alt_desc / d5aece03` | `on_push_hit` activates `max_melee_hit_mass_attack_modifier = 0.5` for 8 seconds [Fixed source and line references](cryptic_pushing_grants_cleave.md#fixed-source-evidence) | Consistent | The trigger, affected stat, value and duration agree. |
 | Mass budget and refreshing | Does not specify the mass calculation, target-count limits or duration refreshing; `ui / loc_talent_cryptic_pushing_grants_cleave_alt_desc / d5aece03` | A 10-unit enemy-mass budget becomes `10 × (1 + 50%) = 15`; enemy mass and attack limits determine additional targets. Further push hits refresh without stacks [Fixed source and line references](cryptic_pushing_grants_cleave.md#fixed-source-evidence) | Not covered by the description | These mechanics and the preserved example supplement the English. |
 
+
+<a id="cryptic_stacking_ranged_damage"></a>
+
+## Rad-Sink
+
+Full raw template and formatting: [source evidence](cryptic_stacking_ranged_damage.md#original-english-template-and-reconstruction). Name hash `237b28e6`. Every row uses `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-stack bonus, cap and next-shot scope | Ranged Damage by +10% on your next Shot. Stacks 2 times; `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e` | Each stack adds `ranged_damage = 0.1`, up to 2; shooting restarts the waiting period [Fixed source and line references](cryptic_stacking_ranged_damage.md#fixed-source-evidence) | Consistent | The bonus, cap and effect on resumed shooting agree. |
+| First-stack timing wording | After not Shooting for 1s, each subsequent second spent not Shooting; `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e` | `min(floor((fixed_t - fire_last_t - (1 - 1)) / 1), 2)` gives first stack at 1 second and second at 2 [Fixed source and line references](cryptic_stacking_ranged_damage.md#fixed-source-evidence) | Cannot confirm | The wording can imply another full second after the initial wait, but its timing is not unambiguous enough to classify as an explicit contradiction; the verified source timing is retained. |
+| Reset, same-frame order and damage addition | Does not state the reset window, update order or same-stage damage calculation; `ui / loc_talent_cryptic_stacking_ranged_damage_desc / 0ff2b66e` | `time_lapsed <= 0.1` clears stacks; same-frame ordering depends on weapon updates. Base 100 gives 110/120, or 145 with same-stage 25% [Fixed source and line references](cryptic_stacking_ranged_damage.md#fixed-source-evidence) | Not covered by the description | The preserved calculations and timing limits supplement the English. |
+
 ## Comparison totals
 
 115 rules: 55 Consistent / 3 Explicit contradiction / 55 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 518.

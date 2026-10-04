@@ -67,3 +67,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Overcharge Transfer Lattice](cryptic_electrocution_defense.md) / `cryptic_electrocution_defense` | Talent |
 | [Sureshot Cogitator Sync](cryptic_weakspot_damage.md) / `cryptic_weakspot_damage` | Talent |
 | [Shockline Breach Protocol](cryptic_pushing_grants_cleave.md) / `cryptic_pushing_grants_cleave` | Talent |
+| [Rad-Sink](cryptic_stacking_ranged_damage.md) / `cryptic_stacking_ranged_damage` | Talent |
