@@ -94,6 +94,7 @@
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="Moebian Conductor talent icon"> [Moebian Conductor](#cryptic_damage_on_ability) | <ul><li>Activating a Combat Ability grants 15% Damage for 10 seconds. Another activation refreshes the duration; spending multiple charges does not increase the bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="Servo-Core Recharge Engine talent icon"> [Servo-Core Recharge Engine](#cryptic_weakspot_kills_restore_toughness) | <ul><li>Melee or ranged Weakspot kills immediately restore 5% of maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="Adaptive Combat Calibration talent icon"> [Adaptive Combat Calibration](#cryptic_cleave_and_impact) | <ul><li>Above 50% Toughness, gain +30% Melee Cleave; at or below 50%, gain +30% Melee Impact.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="Residual Current Buffer talent icon"> [Residual Current Buffer](#cryptic_tdr_based_on_charge) | <ul><li>Always gain 10% Toughness Damage Reduction, plus 2.5% per fully charged unit of Capacitance currently held.</li></ul> | Talent |
 
 ---
 
@@ -1342,3 +1343,17 @@
 - Cleave affects how many enemies the attack can penetrate; Impact affects stagger. They do not apply together and are not a direct 30% damage bonus.
 
 [Details](cryptic_cleave_and_impact.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_tdr_based_on_charge"></a>
+
+### Residual Current Buffer
+
+<img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="72" height="72" alt="Residual Current Buffer talent icon">
+
+- **Operation**: Always reduce incoming Toughness damage by **10%**. Each fully charged unit of Capacitance currently held adds **2.5%** reduction.
+- **Reduction example**: With **3 charges**, `10% + 3 × 2.5% = 17.5%`. Incoming Toughness damage **100** becomes `100 × 0.825 = 82.5`. With a separate **20%** Toughness damage reduction, `82.5 × 0.8 = 66` damage remains.
+- **Update condition**: Only fully charged units count. The effect updates when Capacitance is spent or a charge finishes recharging. With **0 charges**, the **10%** base reduction remains.
+
+[Details](cryptic_tdr_based_on_charge.md) · [Back to index](#talent-index)

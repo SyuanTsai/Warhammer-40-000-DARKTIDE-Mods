@@ -1046,6 +1046,18 @@ Full raw template and formatting: [source evidence](cryptic_cleave_and_impact.md
 | Effects and threshold | “Melee Cleave while above … Toughness” and “Melee Impact while below”; +30% / 50% / +30%; `ui / loc_talent_cryptic_melee_cleave_and_impact_desc / 6d23edd0` | Current Toughness fraction selects Cleave above 0.5 and Impact at or below 0.5, each with a 0.3 modifier. [Fixed source and line references](cryptic_cleave_and_impact.md#fixed-source-evidence) | Consistent | The resource names the correct condition and effects with matching values. |
 | Exact boundary and effect scope | The exact 50% case and mechanical meanings of Cleave and Impact are not specified.; `ui / loc_talent_cryptic_melee_cleave_and_impact_desc / 6d23edd0` | Exactly 50% selects Impact. Cleave modifies enemy-mass penetration; Impact modifies stagger; the effects are mutually exclusive and do not grant damage. [Fixed source and line references](cryptic_cleave_and_impact.md#fixed-source-evidence) | Not covered by the description | These details supplement the concise wording; it does not explicitly exclude the equality case. |
 
+
+<a id="cryptic_tdr_based_on_charge"></a>
+
+## Residual Current Buffer
+
+Full raw template and formatting: [source evidence](cryptic_tdr_based_on_charge.md#original-english-template-and-reconstruction). Name hash `f6f0d3f8`. Every row uses `ui / loc_talent_cryptic_tdr_based_on_charge_base_desc / 3b317052`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Base and current-charge reduction | “Gain … Toughness Damage Reduction, increased by … per Current Charge”; +10% and +2.5%; `ui / loc_talent_cryptic_tdr_based_on_charge_base_desc / 3b317052` | The multiplier is 1 − 0.1 − 0.025 × remaining_ability_charges. [Fixed source and line references](cryptic_tdr_based_on_charge.md#fixed-source-evidence) | Consistent | The values and dependence on the current charge count match. |
+| Charge threshold and combination | The description does not define the fully charged threshold or how independent reductions combine.; `ui / loc_talent_cryptic_tdr_based_on_charge_base_desc / 3b317052` | Only full charges count; spending or completing a charge updates the effect. Its reductions add internally and multiply independent reductions; zero charges retain 10%. [Fixed source and line references](cryptic_tdr_based_on_charge.md#fixed-source-evidence) | Not covered by the description | These conditions explain the charge count and damage calculation without contradicting the wording. |
+
 ## Comparison totals
 
 177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.

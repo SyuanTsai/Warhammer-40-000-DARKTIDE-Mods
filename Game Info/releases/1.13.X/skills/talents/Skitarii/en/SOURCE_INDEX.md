@@ -97,3 +97,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Moebian Conductor](cryptic_damage_on_ability.md) / `cryptic_damage_on_ability` | Talent |
 | [Servo-Core Recharge Engine](cryptic_weakspot_kills_restore_toughness.md) / `cryptic_weakspot_kills_restore_toughness` | Talent |
 | [Adaptive Combat Calibration](cryptic_cleave_and_impact.md) / `cryptic_cleave_and_impact` | Talent |
+| [Residual Current Buffer](cryptic_tdr_based_on_charge.md) / `cryptic_tdr_based_on_charge` | Talent |
