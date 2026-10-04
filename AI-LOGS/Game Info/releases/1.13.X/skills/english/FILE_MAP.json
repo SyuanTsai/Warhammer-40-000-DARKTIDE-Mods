@@ -4383,7 +4383,9 @@
         "base_toughness_node_buff_medium_5",
         "base_toughness_node_buff_medium_4",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "psyker_melee_attack_speed"
+        "psyker_melee_attack_speed",
+        "psyker_damage_vs_ogryns_and_monsters",
+        "psyker_increased_warp_damage"
       ],
       "checks": []
     },
@@ -4460,7 +4462,12 @@
         "base_toughness_node_buff_medium_5",
         "base_toughness_node_buff_medium_4",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "psyker_melee_attack_speed"
+        "psyker_melee_attack_speed",
+        "psyker_cleave_from_peril",
+        "psyker_killing_enemy_with_warpfire_boosts",
+        "psyker_melee_weaving",
+        "psyker_damage_vs_ogryns_and_monsters",
+        "psyker_increased_warp_damage"
       ],
       "checks": []
     },
@@ -4537,7 +4544,12 @@
         "base_toughness_node_buff_medium_5",
         "base_toughness_node_buff_medium_4",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "psyker_melee_attack_speed"
+        "psyker_melee_attack_speed",
+        "psyker_cleave_from_peril",
+        "psyker_killing_enemy_with_warpfire_boosts",
+        "psyker_melee_weaving",
+        "psyker_damage_vs_ogryns_and_monsters",
+        "psyker_increased_warp_damage"
       ],
       "checks": []
     },
@@ -4614,7 +4626,12 @@
         "base_toughness_node_buff_medium_5",
         "base_toughness_node_buff_medium_4",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "psyker_melee_attack_speed"
+        "psyker_melee_attack_speed",
+        "psyker_cleave_from_peril",
+        "psyker_killing_enemy_with_warpfire_boosts",
+        "psyker_melee_weaving",
+        "psyker_damage_vs_ogryns_and_monsters",
+        "psyker_increased_warp_damage"
       ],
       "checks": []
     },
@@ -4899,9 +4916,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f1644f42c8744159a9c22f1874a5a1fc6773332f",
       "chinese_sha256": "ac01f0298f8224793b32f57fb47ea8a978e79148acbac14cc6b30fdb6c928fe6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_cleave_from_peril"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_coherency_aura_size_increase.md",
@@ -5058,9 +5082,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "631d4c276aafad3b04ee9ae942023bd48b0de026",
       "chinese_sha256": "7bddb449d9ccbe9d1f65f8ae2897d3164444b859633d067de130d5cd30fca95d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_damage_vs_ogryns_and_monsters"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_discharge_damage_debuff.md",
@@ -5354,9 +5385,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cb680eb425d620c834ececcfa3c1d450d119fe89",
       "chinese_sha256": "5f10cb764f31709da13e4e86437af60af195fa1da48b9bd6f08c495c39260ace",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_increased_warp_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_killing_enemy_with_warpfire_boosts.md",
@@ -5365,9 +5403,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bd15ed9eead04b616a77278842c8d3e9e35046f0",
       "chinese_sha256": "5ae066b7496cbc941eddf94cd8f1fa2cddc7ff7b885122426e23171f21a8c8b2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_killing_enemy_with_warpfire_boosts"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_kills_stack_other_weapon_damage.md",
@@ -5484,9 +5529,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6acb359d85924cb87a0fdbc0cee9c7a913c23955",
       "chinese_sha256": "597b246c913495bdf097272778e2a79520f4163aa0d788da1f3d10460d37e10f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_melee_weaving"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_new_mark_passive.md",
@@ -14656,6 +14708,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_328_332.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_melee_attack_speed.md"
+    },
+    {
+      "id": "psyker_cleave_from_peril",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_cleave_from_peril.md"
+    },
+    {
+      "id": "psyker_killing_enemy_with_warpfire_boosts",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_killing_enemy_with_warpfire_boosts.md"
+    },
+    {
+      "id": "psyker_melee_weaving",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_melee_weaving.md"
+    },
+    {
+      "id": "psyker_damage_vs_ogryns_and_monsters",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_vs_ogryns_and_monsters.md"
+    },
+    {
+      "id": "psyker_increased_warp_damage",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_warp_damage.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 332 completed on 2026-10-04. [Receipt](psyker_skills_328_332.json) and [FILE_MAP](FILE_MAP.json) record 332 accepted mechanisms. Next item: **333, Warp Splitting**, `psyker_cleave_from_peril`. The full goal remains active and unfinished.
+Checkpoint 337 completed on 2026-10-04. [Receipt](psyker_skills_333_337.json) and [FILE_MAP](FILE_MAP.json) record 337 accepted mechanisms. Next item: **338, Peril Equilibrium**, `psyker_weapon_attacks_peril_equilibrium`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 314 mechanisms + 24 class-support files + 2 shared files = 340 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 65/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 137 = 64 Consistent / 3 Explicit contradictions / 65 Not covered / 0 No implementation / 5 Cannot confirm. Latest batch commit interval: 316s (5m 16s), 8cb9212d0→a1df5fb64. All five English effects agree with the existing evidence. Kinetic Deflection's normalized cost, 97% cap and reverse conversion, both +15 capacity nodes, additive Toughness reduction and Attack Speed timing limits are retained. A receipt-only formatter source pointer was corrected to include utilities; accepted text and conclusions were unchanged.
+Remaining: 309 mechanisms + 24 class-support files + 2 shared files = 335 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 70/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 148 = 69 Consistent / 3 Explicit contradictions / 70 Not covered / 0 No implementation / 6 Cannot confirm. Latest batch commit interval: 208s (3m 28s), 16f9a00a3→d87f68956. Warp Splitting retains the accepted Chinese wording correction; independent English Cleave wording is consistent. Souldrinker has one wording ambiguity; no new English contradiction.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

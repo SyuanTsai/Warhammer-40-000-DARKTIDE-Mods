@@ -857,4 +857,4 @@ Full raw template and formatting: [source evidence](psyker_increased_warp_damage
 
 ## Comparison totals
 
-The 137 listed rules comprise **64 Consistent**, **3 Explicit contradictions**, **65 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**.
+The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.
