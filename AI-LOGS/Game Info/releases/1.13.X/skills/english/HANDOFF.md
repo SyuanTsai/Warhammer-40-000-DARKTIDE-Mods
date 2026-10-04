@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 544–548 completed on 2026-10-04. [Receipt](skitarii_skills_544_548.json) and [FILE_MAP](FILE_MAP.json) record 548 accepted mechanisms and 578/690 accepted files. Next item: **549, Adaptive Combat Calibration**, `cryptic_cleave_and_impact`, Skitarii. Same branch draft PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/192. The full goal remains active and unfinished.
+Checkpoint 549–553 completed on 2026-10-04. [Receipt](skitarii_skills_549_553.json) and [FILE_MAP](FILE_MAP.json) record 553 accepted mechanisms and 583/690 accepted files. Next item: **554, Data Sensor Protocol**, `cryptic_ally_coherency_defenses`, Skitarii. Same branch draft PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/192. The full goal remains active and unfinished.
 
 The original dedicated checkout was restored at exactly the same path with explicit user authorization, on `codex/skills-english`, preserving all commits. The user has now authorized continuing the same branch and opening a new PR; this supersedes the earlier local-only restriction. No source update, reset or agent review.
 
-Remaining: 98 mechanisms + 12 class-support files + 2 shared files = 112 mapped files. Veteran, Arbites, Ogryn, Psyker and Scum class closeouts are accepted; do not repeat them. Scum has 115/115 mechanisms and all 6 shared pages accepted. Its 245 comparison rules comprise 113 Consistent / 7 Explicit contradictions / 113 Not covered / 1 No implementation / 11 Cannot confirm. Shared-page check: 1057 local references, 218 image references/dimensions, Markdown/table structure and navigation order passed. Closeout interval 339ead7c8→4abfc11bb: 428s, separate from translation speed.
+Remaining: 93 mechanisms + 12 class-support files + 2 shared files = 107 mapped files. Veteran, Arbites, Ogryn, Psyker and Scum class closeouts are accepted; do not repeat them. Scum has 115/115 mechanisms and all 6 shared pages accepted. Its 245 comparison rules comprise 113 Consistent / 7 Explicit contradictions / 113 Not covered / 1 No implementation / 11 Cannot confirm. Shared-page check: 1057 local references, 218 image references/dimensions, Markdown/table structure and navigation order passed. Closeout interval 339ead7c8→4abfc11bb: 428s, separate from translation speed.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

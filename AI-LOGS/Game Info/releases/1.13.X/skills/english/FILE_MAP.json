@@ -9124,9 +9124,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b4a42894270bd581625f37062c20e9ad5878dba4",
       "chinese_sha256": "67de672a87a0ccb87eccfef4ec34af55bb47fe28fde2ebbf4b358d1d80d07df6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_cleave_and_impact"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_coherency_regen_aura.md",
@@ -9283,9 +9290,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f97e4a3bfadf41f4b60fea7c4ddb542050d21aa9",
       "chinese_sha256": "58e8f2fb8a0d82a49a5bebe8078b4a3a6be56bd18a136cf5f2017cf586f5ae3e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_disabled_allies_defense"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge.md",
@@ -10105,9 +10119,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "03e6e02ab86a317fb1d5eb757d895fcd647041ce",
       "chinese_sha256": "066a00f112bb96fda9c16b0c951bdae002512c7dc634dbdc5c3aa63750b8ed8b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_ranged_stacking_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ranged_vs_bfg.md",
@@ -10325,9 +10346,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cd8252f4f675e9b04d44152ca0a43bcde60ec322",
       "chinese_sha256": "3151bea93a074c02d4180046744a693b76f19d7041a6ae1e4126be76abbec954",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_specials_marking"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stacking_melee_damage.md",
@@ -10473,9 +10501,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c7027ceb4d430f1375e74f27fa499e0ca6b36e38",
       "chinese_sha256": "2dec81c1c39ff6f50de986fa2fdb07cae9849321f753e87b759728a30e751ad0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "cryptic_tdr_based_on_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_on_damage_taken.md",
@@ -18479,6 +18514,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_kills_restore_toughness.md"
+    },
+    {
+      "id": "cryptic_cleave_and_impact",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_cleave_and_impact.md"
+    },
+    {
+      "id": "cryptic_tdr_based_on_charge",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_tdr_based_on_charge.md"
+    },
+    {
+      "id": "cryptic_ranged_stacking_toughness",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ranged_stacking_toughness.md"
+    },
+    {
+      "id": "cryptic_specials_marking",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_specials_marking.md"
+    },
+    {
+      "id": "cryptic_disabled_allies_defense",
+      "scope": "Skitarii",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_disabled_allies_defense.md"
     }
   ],
   "pending_chinese_corrections": [

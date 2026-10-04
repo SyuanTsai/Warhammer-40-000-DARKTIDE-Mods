@@ -1096,4 +1096,4 @@ Full raw template and formatting: [source evidence](cryptic_disabled_allies_defe
 
 ## Comparison totals
 
-177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.
+187 rules: 90 Consistent / 4 Explicit contradiction / 90 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 553.
