@@ -76,3 +76,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Weakness Analysis Doctrine](cryptic_afflicted_increased_damage.md) / `cryptic_afflicted_increased_damage` | Talent |
 | [Ablative Motion Routines](cryptic_mobile_defense.md) / `cryptic_mobile_defense` | Talent |
 | [Power Overflow](cryptic_shared_toughness.md) / `cryptic_shared_toughness` | Talent |
+| [Target-Neutralization Feedback](cryptic_stun_suppression_immune.md) / `cryptic_stun_suppression_immune` | Talent |

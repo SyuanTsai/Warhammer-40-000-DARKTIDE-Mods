@@ -793,6 +793,18 @@ Full raw template and formatting: [source evidence](cryptic_shared_toughness.md#
 | Full-Toughness condition, fraction and recipients | When at full Toughness, 25% of excess Toughness Replenished is distributed to each Ally in Coherency; `ui / loc_talent_cryptic_shared_toughness_desc / 0f1a34d2` | While full and actual recovery is zero, each other Coherency unit receives `params.amount × 0.25` [Fixed source and line references](cryptic_shared_toughness.md#fixed-source-evidence) | Consistent | Each specifies a separate per-recipient amount, not a divided pool. |
 | Event eligibility and modifier stages | Does not specify zero actual recovery, positive wanted amount, sharing recursion or modifier handling; `ui / loc_talent_cryptic_shared_toughness_desc / 0f1a34d2` | Require non-shared reason, positive wanted amount, actual recovery 0 and current percent ≥1. Source amount includes sender bonuses; recipient flat recovery applies recipient bonuses and cap. Partial filling does not qualify [Fixed source and line references](cryptic_shared_toughness.md#fixed-source-evidence) | Not covered by the description | The original 20→5-each/15-total example and 2-point deficit with 18 overflow exception supplement the English. |
 
+
+<a id="cryptic_stun_suppression_immune"></a>
+
+## Target-Neutralization Feedback
+
+Full raw template and formatting: [source evidence](cryptic_stun_suppression_immune.md#original-english-template-and-reconstruction). Name hash `d14ec87d`. Every row uses `ui / loc_talent_cryptic_stun_suppression_immune_desc / 38272d6c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and immunity | Weakspot kills; Stun and Suppression Immunity for 5s; `ui / loc_talent_cryptic_stun_suppression_immune_desc / 38272d6c` | `on_kill` plus `on_weakspot_kill` grants `stun_immune` and `suppression_immune` for 5 seconds. [Fixed source and line references](cryptic_stun_suppression_immune.md#fixed-source-evidence) | Consistent | The stated trigger, duration and immunity types match the verified evidence. |
+| Refresh and limits | The description does not specify retriggering or list disabling actions; `ui / loc_talent_cryptic_stun_suppression_immune_desc / 38272d6c` | Retriggering refreshes 5 seconds; a 0-second trigger followed by one at 3 seconds lasts until 8 seconds. No damage reduction or general immunity to nets/pounces is granted. [Fixed source and line references](cryptic_stun_suppression_immune.md#fixed-source-evidence) | Not covered by the description | The omitted timing and scope details supplement the named immunity keywords; the English makes no explicit broader promise. |
+
 ## Comparison totals
 
 136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.

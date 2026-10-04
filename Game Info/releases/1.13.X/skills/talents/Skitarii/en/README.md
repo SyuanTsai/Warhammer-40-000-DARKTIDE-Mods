@@ -73,6 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="Weakness Analysis Doctrine talent icon"> [Weakness Analysis Doctrine](#cryptic_afflicted_increased_damage) | <ul><li>Hitting an Electrocuted, Burning, Soulblazed, Bleeding or Toxin-afflicted enemy with melee or ranged attacks grants 10% Damage for 8 seconds. The bonus can be used against other targets; qualifying hits refresh it without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="Ablative Motion Routines talent icon"> [Ablative Motion Routines](#cryptic_mobile_defense) | <ul><li>Take 25% less damage while sprinting with Stamina remaining, or while sliding. Sliding does not require remaining Stamina. The effect ends immediately when neither condition holds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="32" height="32" alt="Power Overflow talent icon"> [Power Overflow](#cryptic_shared_toughness) | <ul><li>When already at full Toughness and a recovery event restores nothing to you, each other ally in Coherency receives 25% of that event's intended recovery. It is applied separately to each ally, with their own recovery bonuses and cap.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="32" height="32" alt="Target-Neutralization Feedback talent icon"> [Target-Neutralization Feedback](#cryptic_stun_suppression_immune) | <ul><li>Weakspot kills grant 5 seconds of Stun and Suppression immunity.</li></ul> | Talent |
 
 ---
 
@@ -1027,3 +1028,17 @@
 - **Exceptions**: If you are missing 2 points and receive a 20-point recovery, the 18-point overflow is not shared. Recovery received through sharing cannot be passed on again. Each teammate's recovery bonuses and maximum Toughness still apply.
 
 [Details](cryptic_shared_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_stun_suppression_immune"></a>
+
+### Target-Neutralization Feedback
+
+<img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="72" height="72" alt="Target-Neutralization Feedback talent icon">
+
+- Weakspot kills grant 5 seconds of immunity to ordinary hit Stun and Suppression.
+- Another qualifying kill refreshes the 5-second duration. For example, a trigger at 0 seconds followed by another at 3 seconds keeps the effect active until 8 seconds.
+- This grants no damage reduction. It does not make you immune to nets, pounces or every form of forced control.
+
+[Details](cryptic_stun_suppression_immune.md) · [Back to index](#talent-index)
