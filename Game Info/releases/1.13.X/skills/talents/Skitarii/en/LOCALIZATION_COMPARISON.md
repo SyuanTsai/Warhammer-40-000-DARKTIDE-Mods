@@ -829,6 +829,18 @@ Full raw template and formatting: [source evidence](cryptic_push_stagger_stamina
 | Inclusive condition and effect | Your Pushes have +75% Impact when at or above 50% Stamina; `ui / loc_talent_cryptic_push_stagger_stamina_desc / 19866afe` | At current/maximum Stamina ≥0.5, `push_impact_modifier = 0.75` is active. [Fixed source and line references](cryptic_push_stagger_stamina.md#fixed-source-evidence) | Consistent | Both the inclusive boundary and the stat affected match. |
 | Dynamic condition and limits | The description does not specify the maximum-Stamina basis or enemy interruption thresholds; `ui / loc_talent_cryptic_push_stagger_stamina_desc / 19866afe` | The condition follows current Stamina; with 6 maximum bars, at least 3 are needed. Original Push Impact 100 becomes 175; enemy thresholds still determine interruption. [Fixed source and line references](cryptic_push_stagger_stamina.md#fixed-source-evidence) | Not covered by the description | These details explain the existing examples and control limits without adding a damage bonus or guaranteed interruption. |
 
+
+<a id="cryptic_no_braced_movement_penalty"></a>
+
+## Superior Tracking Litanies
+
+Full raw template and formatting: [source evidence](cryptic_no_braced_movement_penalty.md#original-english-template-and-reconstruction). Name hash `15be39ae`. Every row uses `ui / loc_talent_cryptic_no_braced_movement_penalty_desc / f793a029`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Movement penalty and Spread | -50% movement speed penalty while bracing or aiming down sights; additionally -45% Spread; `ui / loc_talent_cryptic_no_braced_movement_penalty_desc / f793a029` | Movement penalty is halved; `spread_modifier = -0.45` is unconditional. [Fixed source and line references](cryptic_no_braced_movement_penalty.md#fixed-source-evidence) | Consistent | The negative display values match a reduced penalty and reduced Spread; the text does not explicitly bind the additional Spread stat to bracing. |
+| Calculation and separate conditions | Does not explain the movement curve or the independent Spread condition; `ui / loc_talent_cryptic_no_braced_movement_penalty_desc / f793a029` | Original 60% speed becomes `1 − 40% × 0.5 = 80%`; Spread 10 becomes `10 × (1 − 45%) = 5.5` without other bonuses. [Fixed source and line references](cryptic_no_braced_movement_penalty.md#fixed-source-evidence) | Not covered by the description | The existing examples clarify the two effects without treating the movement change as a 1.5× speed multiplier. |
+
 ## Comparison totals
 
 136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.

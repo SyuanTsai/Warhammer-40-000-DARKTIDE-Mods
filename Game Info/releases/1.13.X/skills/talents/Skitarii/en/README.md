@@ -76,6 +76,7 @@
 | <img src="https://github.com/user-attachments/assets/127fa97e-a0cf-4421-bff2-7edb8edaed86" width="32" height="32" alt="Target-Neutralization Feedback talent icon"> [Target-Neutralization Feedback](#cryptic_stun_suppression_immune) | <ul><li>Weakspot kills grant 5 seconds of Stun and Suppression immunity.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="Binary Ballistics Protocol talent icon"> [Binary Ballistics Protocol](#cryptic_elite_kills_toughness) | <ul><li>Elite kills restore 15% of maximum Toughness over 3 seconds. Melee and ranged kills both qualify; retriggering refreshes the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6d7a17f5-be3e-4659-bc09-84cfb22bd20f" width="32" height="32" alt="Force Distribution Actuators talent icon"> [Force Distribution Actuators](#cryptic_push_stagger_stamina) | <ul><li>At or above 50% Stamina, Pushes gain 75% Impact. Exactly 50% qualifies.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="Superior Tracking Litanies talent icon"> [Superior Tracking Litanies](#cryptic_no_braced_movement_penalty) | <ul><li>Halves the movement-speed penalty while bracing or aiming down sights, and always reduces shooting Spread by 45%.</li></ul> | Talent |
 
 ---
 
@@ -1072,3 +1073,17 @@
 - This improves Push and stagger control. Whether a Push interrupts an enemy still depends on that enemy's Impact threshold.
 
 [Details](cryptic_push_stagger_stamina.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_no_braced_movement_penalty"></a>
+
+### Superior Tracking Litanies
+
+<img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="72" height="72" alt="Superior Tracking Litanies talent icon">
+
+- **Movement effect**: While bracing or aiming down sights, halve the original movement-speed penalty.
+- **Movement example**: If your speed was 60% of normal movement speed, the penalty was 40%. With this talent, speed becomes `1 − 40% × 0.5 = 80%` of normal speed.
+- **Spread effect**: Always reduces shooting Spread by 45%; bracing first is not required. If Spread is 10 under the same conditions with no other Spread bonuses, it becomes `10 × (1 − 45%) = 5.5`.
+
+[Details](cryptic_no_braced_movement_penalty.md) · [Back to index](#talent-index)
