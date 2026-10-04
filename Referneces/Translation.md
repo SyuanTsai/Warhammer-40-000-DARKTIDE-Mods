@@ -1851,3 +1851,6 @@
 
 - Punisher - 懲罰者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_damage_on_close_kill`，hash `5d0f2ffa`；英文／繁中RAW配對確認。
+
+- Born in Blood - 浴血而生
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_close_range_kills`，hash `22ea2fab`；英文／繁中RAW配對確認。
