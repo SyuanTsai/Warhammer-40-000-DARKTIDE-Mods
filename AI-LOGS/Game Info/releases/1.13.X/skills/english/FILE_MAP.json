@@ -6226,7 +6226,8 @@
         "broker_keystone_vultures_mark_increased_duration",
         "broker_keystone_vultures_mark_dodge_on_ranged_crit",
         "broker_keystone_adrenaline_junkie_sub_1",
-        "broker_keystone_adrenaline_junkie_sub_3"
+        "broker_keystone_adrenaline_junkie_sub_3",
+        "broker_passive_close_range_damage_on_dodge"
       ],
       "checks": []
     },
@@ -6268,7 +6269,12 @@
         "broker_keystone_vultures_mark_increased_duration",
         "broker_keystone_vultures_mark_dodge_on_ranged_crit",
         "broker_keystone_adrenaline_junkie_sub_1",
-        "broker_keystone_adrenaline_junkie_sub_3"
+        "broker_keystone_adrenaline_junkie_sub_3",
+        "broker_keystone_adrenaline_junkie_sub_5",
+        "broker_keystone_adrenaline_junkie_sub_4",
+        "broker_keystone_adrenaline_junkie_sub_2",
+        "broker_passive_longer_dodges",
+        "broker_passive_close_range_damage_on_dodge"
       ],
       "checks": []
     },
@@ -6310,7 +6316,12 @@
         "broker_keystone_vultures_mark_increased_duration",
         "broker_keystone_vultures_mark_dodge_on_ranged_crit",
         "broker_keystone_adrenaline_junkie_sub_1",
-        "broker_keystone_adrenaline_junkie_sub_3"
+        "broker_keystone_adrenaline_junkie_sub_3",
+        "broker_keystone_adrenaline_junkie_sub_5",
+        "broker_keystone_adrenaline_junkie_sub_4",
+        "broker_keystone_adrenaline_junkie_sub_2",
+        "broker_passive_longer_dodges",
+        "broker_passive_close_range_damage_on_dodge"
       ],
       "checks": []
     },
@@ -6352,7 +6363,12 @@
         "broker_keystone_vultures_mark_increased_duration",
         "broker_keystone_vultures_mark_dodge_on_ranged_crit",
         "broker_keystone_adrenaline_junkie_sub_1",
-        "broker_keystone_adrenaline_junkie_sub_3"
+        "broker_keystone_adrenaline_junkie_sub_3",
+        "broker_keystone_adrenaline_junkie_sub_5",
+        "broker_keystone_adrenaline_junkie_sub_4",
+        "broker_keystone_adrenaline_junkie_sub_2",
+        "broker_passive_longer_dodges",
+        "broker_passive_close_range_damage_on_dodge"
       ],
       "checks": []
     },
@@ -6811,9 +6827,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "877062e5577819c7cbf4379e7e78dd56ea46c831",
       "chinese_sha256": "7d500679eee912eff04e2f6f1df7b9203014ebc1af2e74ffd739c7f1f4d71346",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie_sub_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_3.md",
@@ -6840,9 +6863,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "83c2585c23d717e4fb791102554fc57b4d311a10",
       "chinese_sha256": "3a837e18a3c91b36756abec121c9a4f14aba5da4332280e89a0aff008ae18a7f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie_sub_4"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_5.md",
@@ -6851,9 +6881,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b3201bcf64bf5dc2c504221062ed8d4bd3a6d4b6",
       "chinese_sha256": "831b70de86e1bb953d1a4dc17afd129019a0f872ca7c6232c954bd055555d87f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie_sub_5"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_chemical_dependency.md",
@@ -7028,9 +7065,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "90161b9df5b32ee2ea77b7266ae46e545facde3e",
       "chinese_sha256": "8fb38c19c4d5bfaf6bb19ac309da67bd7334900cb36faa738ce14c00550df48e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_close_range_damage_on_dodge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_close_ranged_damage.md",
@@ -7233,9 +7277,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "94b66197241734cc7f0c2b47a8f3178614cffcdb",
       "chinese_sha256": "ca4e2e6b1a98fe4263a8a1b252b84b24b41af8b390652b70db91c0acc7fd064c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_longer_dodges"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_low_ammo_regen.md",
@@ -15560,6 +15611,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_3.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_5",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_5.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_4",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_4.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_2",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_2.md"
+    },
+    {
+      "id": "broker_passive_longer_dodges",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_longer_dodges.md"
+    },
+    {
+      "id": "broker_passive_close_range_damage_on_dodge",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_close_range_damage_on_dodge.md"
     }
   ],
   "pending_chinese_corrections": [

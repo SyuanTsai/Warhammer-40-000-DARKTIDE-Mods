@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 378 completed on 2026-10-04. [Receipt](scum_skills_374_378.json) and [FILE_MAP](FILE_MAP.json) record 378 accepted mechanisms. Next item: **379, Adrenaline Unbound**, `broker_keystone_adrenaline_junkie_sub_5`. The full goal remains active and unfinished.
+Checkpoint 383 completed on 2026-10-04. [Receipt](scum_skills_379_383.json) and [FILE_MAP](FILE_MAP.json) record 383 accepted mechanisms. Next item: **384, A Tertium Welcome**, `broker_passive_first_target_damage`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 268 mechanisms + 18 class-support files + 2 shared files = 288 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 30/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 67 = 31 Consistent / 2 Explicit contradictions / 29 Not covered / 1 No implementation / 4 Cannot confirm. Latest batch commit interval: 358s (5m 58s), 9b7f1a04f→2b6102974. Vulture's Dodge explicitly claims all Attacks while accepted coverage is melee/incapacitating_grab/ranged, recorded as one English scope contradiction. Universal Vulture's Push displacement remains unconfirmed; other absent limits are supplements. All shared timers, refresh examples and independent Critical stack grants retained.
+Remaining: 263 mechanisms + 18 class-support files + 2 shared files = 283 mapped files. Veteran, Arbites, Ogryn and Psyker class closeouts are accepted; do not repeat them. Scum has 35/115 accepted mechanisms; its shared-page class check remains for closeout. Scum comparison totals: 77 = 36 Consistent / 2 Explicit contradictions / 34 Not covered / 1 No implementation / 4 Cannot confirm. Latest batch commit interval: 287s (4m 47s), bbdaac469→e19d84249. All five English descriptions agree with the accepted conditions and values. Missing recovery basis, shared stack timing, Melee/tag restrictions and distance formulas are supplements. Original examples and source links are retained.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

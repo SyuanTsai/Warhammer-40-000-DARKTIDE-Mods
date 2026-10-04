@@ -436,4 +436,4 @@ Full raw template and formatting: [source evidence](broker_passive_close_range_d
 
 ## Comparison totals
 
-The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
+The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
