@@ -1051,6 +1051,19 @@ Full raw template and formatting: [source evidence](broker_stimm_celerity_5b.md#
 | Recipe statistics | +30% Reload Speed; −50% Recoil (component reconstruction); `ui / loc_talent_stat_reload_speed / 9020f1a1`; `ui / loc_talent_stat_recoil_modifier / 302c7f95` | `reload_speed = 0.3`; additive `recoil_modifier = −0.5` changes the base 1 to 0.5 [Fixed source and line references](broker_stimm_celerity_5b.md#fixed-source-evidence) | Consistent | Both named stats and numerical changes agree. |
 | Recoil scope, cost and duration | No unsteadiness/decay formula, recipe cost or shared lifetime; `ui / loc_talent_stat_reload_speed / 9020f1a1`; `ui / loc_talent_stat_recoil_modifier / 302c7f95` | Recoil gain uses the modifier and decay its reciprocal; displacement follows the weapon curve; one purchase at cost 5, with root/field lifetime [Fixed source and line references](broker_stimm_celerity_5b.md#fixed-source-evidence) | Not covered by the description | The 1.538-second reload and 0.1 gain/0.4 decay examples explain the verified effects. |
 
+
+<a id="broker_stimm_celerity_5c"></a>
+
+## Fervor
+
+Full raw template and formatting: [source evidence](broker_stimm_celerity_5c.md#original-english-template-and-reconstruction). Name hash `9b5b6688`. Every row uses `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Movement and Dodge modifiers | +10% Movement Speed; +10% Dodge Distance; +10% Dodge Speed; `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c` | Adds 0.1 to Movement Speed/Distance and multiplies Dodge Speed by 1.1 [Fixed source and line references](broker_stimm_celerity_5c.md#fixed-source-evidence) | Consistent | The three stat types and values agree. |
+| Recovery wording | +10% Dodge Recovery Speed; `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c` | `dodge_cooldown_reset_modifier = −0.1` shortens `consecutive_dodges_cooldown` wait to 0.9 of its base [Fixed source and line references](broker_stimm_celerity_5c.md#fixed-source-evidence) | Cannot confirm | The label does not define whether Speed is a literal rate or shorthand for the wait modifier. The verified 1 → 0.9 second effect is retained. |
+| Cost, lifetime and movement limits | No recipe cost, sharing lifetime, total-duration or basic-interval formula; `ui / loc_talent_stat_movement_speed / 090b8be4`; `ui / loc_talent_stat_dodge_distance_modifier / ac38ced9`; `ui / loc_talent_stat_dodge_speed_multiplier / f5994101`; `ui / loc_talent_stat_dodge_cooldown_reset_modifier / 1863559c` | One purchase at cost 5; provider recipes share with externally controlled field lifetime; Dodge duration also depends on distance, curves and fixed steps; basic Dodge interval is unchanged [Fixed source and line references](broker_stimm_celerity_5c.md#fixed-source-evidence) | Not covered by the description | The movement/distance examples and existing timing limits supplement the stat labels. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **84 Consistent**, **5 Explicit contradictions**, **84 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.

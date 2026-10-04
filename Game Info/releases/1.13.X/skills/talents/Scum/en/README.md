@@ -94,6 +94,7 @@
 | <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="Spur IV talent icon"> [Spur IV](#broker_stimm_celerity_4) | <ul><li>Gain 4% Attack Speed.</li><li>Reduce Stamina Cost by 20%.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="Spur V talent icon"> [Spur V](#broker_stimm_celerity_5a) | <ul><li>Gain another 4% Attack Speed, plus Stun and Slowdown Immunity.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="Reflex talent icon"> [Reflex](#broker_stimm_celerity_5b) | <ul><li>Gain 30% Reload Speed and reduce recoil unsteadiness gain by 50%.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="Fervor talent icon"> [Fervor](#broker_stimm_celerity_5c) | <ul><li>Gain 10% Movement Speed and Dodge Distance, multiply Dodge Speed by 1.1, and reduce effective-dodge recovery wait by 10%.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1473,3 +1474,21 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Recoil example**: A gain of 0.2 unsteadiness per shot becomes 0.2 × 0.5 = 0.1. Decay of 0.2 per second becomes 0.2 ÷ 0.5 = 0.4. Actual muzzle displacement still follows the weapon's recoil curve.
 
 [Details](broker_stimm_celerity_5b.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_5c"></a>
+
+### Fervor
+
+<img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="72" height="72" alt="Fervor talent icon">
+
+- **Recipe cost**: 5 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Movement and Dodge**: Gain 10% Movement Speed and Dodge Distance, and multiply Dodge Speed by 1.1.
+
+- **Movement example**: With no other bonuses, movement at 4m/s becomes 4 × 1.1 = 4.4m/s, and Dodge Distance 2.5m becomes 2.5 × 1.1 = 2.75m.
+
+- **Effective-dodge recovery**: After consecutive dodging stops, the wait to recover effective dodges is 10% shorter. A 1-second wait becomes 1 × (1 − 10%) = 0.9 seconds. This does not change the basic interval between two dodges.
+
+[Details](broker_stimm_celerity_5c.md) · [Back to index](#talent-index)

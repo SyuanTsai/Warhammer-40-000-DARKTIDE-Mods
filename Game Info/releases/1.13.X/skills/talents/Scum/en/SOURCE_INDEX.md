@@ -98,3 +98,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Spur IV](broker_stimm_celerity_4.md) / `broker_stimm_celerity_4` | Stimm recipe |
 | [Spur V](broker_stimm_celerity_5a.md) / `broker_stimm_celerity_5a` | Stimm recipe |
 | [Reflex](broker_stimm_celerity_5b.md) / `broker_stimm_celerity_5b` | Stimm recipe |
+| [Fervor](broker_stimm_celerity_5c.md) / `broker_stimm_celerity_5c` | Stimm recipe |
