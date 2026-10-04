@@ -68,6 +68,7 @@
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="Street Tough talent icon"> [Street Tough](#broker_passive_knockback_on_taking_melee_damage) | <ul><li>A qualifying Melee hit triggers nearby knockback and +10% Movement Speed for 3s; cooldown 8s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="Channelled Devastation talent icon"> [Channelled Devastation](#broker_passive_crit_grants_damage) | <ul><li>Each whole percentage point of current Critical Hit Chance grants 0.5% Melee Damage, up to 30 steps / 15%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="Battering Strikes talent icon"> [Battering Strikes](#broker_passive_melee_cleave_on_melee_kill) | <ul><li>Each Melee kill grants 10% Damage Cleave capacity for 5s, up to 5 stacks; retriggering refreshes the duration.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="Hyper-Violence talent icon"> [Hyper-Violence](#broker_passive_melee_damage_carry_over) | <ul><li>Kills grant 25% of overkill Damage as flat Melee Damage for 1s.</li></ul> | Talent |
 
 ---
 
@@ -1015,3 +1016,19 @@
 - **Scope**: This increases Damage Cleave capacity. It does not mean each enemy takes 50% more Damage, and it does not directly increase Stagger Cleave capacity.
 
 [Details](broker_passive_melee_cleave_on_melee_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_melee_damage_carry_over"></a>
+
+### Hyper-Violence
+
+<img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="72" height="72" alt="Hyper-Violence talent icon">
+
+- **Behavior**: On killing an enemy, 25% of the Damage exceeding its remaining Health becomes flat bonus Melee Damage for 1s. Special instant executions do not trigger this.
+
+- **Damage example**: Dealing 300 Damage to an enemy with 100 Health remaining gives 200 overkill Damage and 200 × 25% = 50 bonus Damage. If the next Melee attack would deal 100 at this calculation stage, it becomes 150. This is flat bonus Damage, not a 50% increase.
+
+- **Another kill**: During the effect, the current bonus is subtracted before calculating the new 25%. Only a higher new value replaces the bonus and restarts its timer. With 50 bonus Damage already active and 400 overkill Damage on the next kill, the new value is (400 − 50) × 25% = 87.5. If overkill is only 200, the new value of 37.5 is lower, so it neither replaces the bonus nor restarts the timer.
+
+[Details](broker_passive_melee_damage_carry_over.md) · [Back to index](#talent-index)

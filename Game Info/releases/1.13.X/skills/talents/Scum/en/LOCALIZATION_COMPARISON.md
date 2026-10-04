@@ -735,6 +735,18 @@ Full raw template and formatting: [source evidence](broker_passive_melee_cleave_
 | Melee kill stacks | Melee Kills grant +10% Melee Cleave for 5s; stacks 5 times; `ui / loc_talent_broker_passive_melee_cleave_on_melee_kill_desc / 3e88fbf2` | `on_melee_kill` adds a child with a 0.1 Damage hit-mass modifier, duration 5s and maximum 5 stacks [Fixed source and line references](broker_passive_melee_cleave_on_melee_kill.md#fixed-source-evidence) | Consistent | The trigger, per-stack magnitude, duration and cap match. |
 | Refresh and Cleave scope | No refresh rule or Cleave-capacity definition is stated; `ui / loc_talent_broker_passive_melee_cleave_on_melee_kill_desc / 3e88fbf2` | Retriggering refreshes duration; only `max_hit_mass_attack` is modified. Enemy mass, armour and weapon limits still determine targets hit [Fixed source and line references](broker_passive_melee_cleave_on_melee_kill.md#fixed-source-evidence) | Not covered by the description | The original 10→15 mass-capacity example and the distinctions from per-target Damage and Stagger Cleave clarify the statistic. |
 
+
+<a id="broker_passive_melee_damage_carry_over"></a>
+
+## Hyper-Violence
+
+Full raw template and formatting: [source evidence](broker_passive_melee_damage_carry_over.md#original-english-template-and-reconstruction). Name hash `14cf33e0`. Every row uses `ui / loc_talent_broker_passive_melee_damage_carry_over_desc / 821fa540`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Carry-over amount and duration | Kills grant +25% of the Damage/Health difference as Melee Damage for 1s; `ui / loc_talent_broker_passive_melee_damage_carry_over_desc / 821fa540` | Overkill Damage supplies a flat `melee_damage_bonus` at 25%, lasting 1s [Fixed source and line references](broker_passive_melee_damage_carry_over.md#fixed-source-evidence) | Consistent | The English's fraction of a Damage difference matches the flat bonus, not a percentage increase to the next attack. |
+| Trigger limits, replacement and calculation stage | No instant-execution exclusion or active-bonus handling is stated; `ui / loc_talent_broker_passive_melee_damage_carry_over_desc / 821fa540` | `on_kill` accepts attack types except `instakill`; subtracts the active bonus, replaces/restarts only for a higher value, and adds the flat bonus after general multiplier terms [Fixed source and line references](broker_passive_melee_damage_carry_over.md#fixed-source-evidence) | Not covered by the description | These explain the original 50, 87.5 and 37.5 examples and the fact that later Damage processing can still apply. |
+
 ## Comparison totals
 
 The 128 listed rules comprise **60 Consistent**, **3 Explicit contradictions**, **59 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
