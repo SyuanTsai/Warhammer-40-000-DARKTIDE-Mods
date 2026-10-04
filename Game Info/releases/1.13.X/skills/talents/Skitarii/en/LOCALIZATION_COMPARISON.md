@@ -177,6 +177,18 @@ Full raw template and formatting: [source evidence](cryptic_aura_weapon_improved
 | Amounts and aura recipients | Gain +25 Toughness; You and allies in Coherency gain +15% Cleave and +7.5% Rending; `ui / loc_talent_cryptic_aura_weapon_improved_desc / 6d4feb19` | Personal toughness =25; self-inclusive Coherency applies max_hit_mass_attack_modifier 0.15 and rending_multiplier 0.075 [Fixed source and line references](cryptic_aura_weapon_improved.md#fixed-source-evidence) | Consistent | All three values agree. Unlike the earlier Chinese omission noted in its record, this English wording explicitly includes the caster in the aura recipients. |
 | Cleave mass, armour stage and duplicate sources | No target-mass formula, final-damage formula or duplicate-source behavior; `ui / loc_talent_cryptic_aura_weapon_improved_desc / 6d4feb19` | Cleave increases attack hit-mass budget; Rending modifies armour calculation; coherency_id cryptic_aura_weapon_improved, priority 2, no repeated application of same source [Fixed source and line references](cryptic_aura_weapon_improved.md#fixed-source-evidence) | Not covered by the description | Preserve 10 ×1.15 =11.5 and the armour-only 100 ×0.5 =50 →100 ×(0.5+0.075) =57.5, with Rending coefficient 1 and a separate conversion when crossing multiplier 1. |
 
+
+<a id="cryptic_chordclaw"></a>
+
+## Chordclaw Strike
+
+Full raw template and formatting: [source evidence](cryptic_chordclaw.md#original-english-template-and-reconstruction). Name hash `e1996142`. Every row uses `ui / loc_talent_cryptic_chordclaw_desc / df29b524`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Heavy Attack, Critical Strike and Rending | Powerful Heavy Melee Attack using a Chordclaw; Guaranteed Critical Strike; +50% Rending; `ui / loc_talent_cryptic_chordclaw_desc / df29b524` | Default action_heavy_sticky_attack_1 has guaranteed_crit true and chordclaw_main; cryptic_chordclaw gives melee_rending_multiplier 0.5 [Fixed source and line references](cryptic_chordclaw.md#fixed-source-evidence) | Consistent | The attack type, guaranteed Critical Strike and Rending value agree. Powerful does not establish an exact Health damage value. |
+| Active bonuses, charges and timing | No +30% Melee Damage, Stun immunity, charge settings, duration or charging limit; `ui / loc_talent_cryptic_chordclaw_desc / df29b524` | Active melee_damage 0.3 and stun_immune; base 3 charges, cost 1/50 points, regeneration 1/s; maximum 10s and ends on weapon-slot switch; full charge 0.5s; talents alter attack pattern [Fixed source and line references](cryptic_chordclaw.md#fixed-source-evidence) | Not covered by the description | Preserve 100 ×(1+30%) =130 and with another same-stage 20% bonus, 100 ×(1+20%+30%) =150. Repeat use spends charges but does not repeat initial-activation-dependent effects. |
+
 ## Comparison totals
 
 21 rules: 10 Consistent / 0 Explicit contradiction / 10 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 473.

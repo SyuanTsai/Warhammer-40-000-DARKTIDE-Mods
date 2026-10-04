@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be" width="32" height="32" alt="Resurgence talent icon"> [Resurgence](#cryptic_coherency_regen_aura_improved) | <ul><li>Gain 25 Toughness; you and allies in Coherency retain at least 50% of the normal Coherency Toughness regeneration rate during combat.</li><li>The minimum regeneration multiplier applies even with enemies nearby.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="Ammunition Deposit talent icon"> [Ammunition Deposit](#cryptic_ammo_aura) | <ul><li>You gain 25 Toughness; players in the mission gain 15% Ammo Reserve capacity.</li><li>The Ammo Reserve effect has no Coherency-distance limit and does not stack from multiple allies selecting the talent.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/a48f1d74-488a-42d3-a59d-33d55135dad2" width="32" height="32" alt="Foe-Render Creed talent icon"> [Foe-Render Creed](#cryptic_aura_weapon_improved) | <ul><li>You gain 25 Toughness; you and allies in Coherency gain 15% more Cleave capacity and 7.5% Rending.</li><li>The Coherency chain includes the caster, so you also receive the Cleave and Rending bonuses.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="32" height="32" alt="Chordclaw Strike talent icon"> [Chordclaw Strike](#cryptic_chordclaw) | <ul><li>Each Chordclaw activation costs 1 charge; the Chordclaw Heavy Attack is a guaranteed Critical Strike with +50% Rending.</li><li>While active, the Chordclaw effect also gives +30% Melee Damage and Stun immunity; actual Health damage varies with the enemy and damage calculation.</li></ul> | Ability |
 
 ---
 
@@ -233,3 +234,18 @@
 - **Rending example**: Comparing only the armour stage, assume 100 damage before armour, an original armour multiplier of 0.5 and a Rending coefficient of 1 for this armour type. Damage changes from 100 × 0.5 = 50 to 100 × (0.5 + 0.075) = 57.5. Crossing an armour multiplier of 1 uses a different conversion; this is not a direct 7.5% damage increase on every hit.
 
 [Details](cryptic_aura_weapon_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_chordclaw"></a>
+
+### Chordclaw Strike
+
+<img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="72" height="72" alt="Chordclaw Strike talent icon">
+
+- **How it works**: Activating Chordclaw Strike costs 1 charge of Capacitance. The base capacity is 3 charges, which other talents can increase. The Chordclaw Heavy Attack is a guaranteed Critical Strike and has 50% more Rending.
+- **How it works**: The active Chordclaw effect also increases Melee Damage by 30% and grants Stun immunity. Rending affects damage calculations against protection; a guaranteed Critical Strike does not mean fixed Health damage against every enemy.
+- **Damage example**: Considering only the 30% melee bonus, with armour, Critical Strike and other conditions held fixed, 100 damage becomes 100 × (1 + 30%) = 130. With another 20% bonus already in the same stage, it is 100 × (1 + 20% + 30%) = 150. Rending and Critical Strike effects are calculated separately for the target.
+- **Charges and duration**: Each use consumes one 50-point Capacitance charge, taking 50s to restore without other recovery bonuses. The attack effect lasts at most 10s and ends when switching away from the Chordclaw. Repeated activations consume charges but do not retrigger ability effects that depend on the initial activation.
+
+[Details](cryptic_chordclaw.md) · [Back to index](#talent-index)
