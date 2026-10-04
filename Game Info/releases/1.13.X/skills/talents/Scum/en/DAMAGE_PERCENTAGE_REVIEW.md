@@ -56,3 +56,4 @@ The review covers Power, general Damage and additional Weakspot/Critical Damage,
 | [Jittery](broker_passive_improved_dodges_at_full_stamina.md) | Talent | Static check | Timing example: a 1s reset wait becomes 1 × (1 − 40%) = 0.6s. At 4 maximum Stamina, at least 4 × 75% = 3 points enables the bonus. |
 | [Critical Chance Boost](base_crit_chance_node_buff_low_1.md) | Talent | Static check | Chance example: 10% + 5% = 15%; an initial 25% becomes 30%. The bonus adds five percentage points. |
 | [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) | Talent | Static check | Damage example: base 100 Melee Damage becomes 110. With another 25% at the same stage: 100 × (1 + 25% + 10%) = 135. |
+| [Potent Tox](base_toxin_power_boost_1.md) | Talent | Static check | Power example: 500 × 1.1 = 550 before the Toxin Damage curve and enemy armour. This is not a fixed +10% final Damage increase for every tick. |

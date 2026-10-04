@@ -662,6 +662,18 @@ Full raw template and formatting: [source evidence](base_melee_damage_node_buff_
 | Melee Damage bonus | +10% Melee Damage; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | Tier 1 supplies `melee_damage = 0.1` [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Consistent | The statistic, Melee scope and value match. |
 | Damage combination | No combination formula is stated; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | The bonus is added in general `damage_stat_buffs` [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | The original 100→110 and 100 × (1 + 25% + 10%) = 135 examples explain the additive stage. |
 
+
+<a id="base_toxin_power_boost_1"></a>
+
+## Potent Tox
+
+Full raw template and formatting: [source evidence](base_toxin_power_boost_1.md#original-english-template-and-reconstruction). Name hash `d8d25992`. Every row uses `ui / loc_talent_toxin_damage_boost_desc / f89ff0b1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Toxin Strength | +10% Toxin Strength; `ui / loc_talent_toxin_damage_boost_desc / f89ff0b1` | Tier 1 grants `toxin_power = 0.1`, multiplying the Power entering the Toxin Damage curve [Fixed source and line references](base_toxin_power_boost_1.md#fixed-source-evidence) | Consistent | The wording describes strength and does not promise a fixed +10% final Damage per tick. |
+| Power calculation and unchanged properties | No Damage curve, armour, stack or duration details are stated; `ui / loc_talent_toxin_damage_boost_desc / f89ff0b1` | `toxin_variant` uses `toxin_power`; `Attack` modifies `power_level` before the Damage curve. Stacks and duration are unchanged [Fixed source and line references](base_toxin_power_boost_1.md#fixed-source-evidence) | Not covered by the description | These details explain the original 500→550 Power example and its final-Damage limit. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **49 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.

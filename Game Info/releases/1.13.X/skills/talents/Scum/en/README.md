@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="Jittery talent icon"> [Jittery](#broker_passive_improved_dodges_at_full_stamina) | <ul><li>At least 75% of maximum Stamina reduces the wait for consecutive Dodges to reset by 40%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="Critical Chance Boost talent icon"> [Critical Chance Boost](#base_crit_chance_node_buff_low_1) | <ul><li>Gain 5 percentage points of Critical Hit Chance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Gain 10% Melee Damage.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="Potent Tox talent icon"> [Potent Tox](#base_toxin_power_boost_1) | <ul><li>Gain 10% Toxin Power.</li></ul> | Talent |
 
 ---
 
@@ -915,3 +916,17 @@
 - **Damage example**: A base 100 Melee Damage becomes 110. With an existing 25% Damage bonus at the same stage, the result is 100 × (1 + 25% + 10%) = 135.
 
 [Details](base_melee_damage_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toxin_power_boost_1"></a>
+
+### Potent Tox
+
+<img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="72" height="72" alt="Potent Tox talent icon">
+
+- **Behavior**: Increases the Power used for Toxin Damage; it does not increase Toxin stacks or duration.
+
+- **Power example**: With Toxin input Power of 500, this effect alone gives 500 × 1.1 = 550, then the Toxin Damage curve and enemy armour determine Damage. Each Toxin tick cannot simply be treated as dealing a fixed 10% more Damage.
+
+[Details](base_toxin_power_boost_1.md) · [Back to index](#talent-index)
