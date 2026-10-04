@@ -10,6 +10,8 @@
 
 - [Psyker](talents/Psyker/en/README.md) · [Sources and technical index](talents/Psyker/en/SOURCE_INDEX.md)
 
+- [Scum](talents/Scum/en/README.md) · [Sources and technical index](talents/Scum/en/SOURCE_INDEX.md)
+
 - [Veteran](talents/Veteran/en/README.md) · [Sources and technical index](talents/Veteran/en/SOURCE_INDEX.md)
 
 Class pages contain player descriptions, calculations, exceptions and fixed implementation sources. Original English description comparisons preserve the same-version resource identifiers and distinguish missing details from explicit contradictions.
