@@ -6221,7 +6221,12 @@
         "broker_keystone_chemical_dependency",
         "broker_keystone_chemical_dependency_sub_1",
         "broker_keystone_chemical_dependency_sub_2",
-        "broker_keystone_chemical_dependency_sub_3"
+        "broker_keystone_chemical_dependency_sub_3",
+        "broker_keystone_vultures_mark_aoe_stagger",
+        "broker_keystone_vultures_mark_increased_duration",
+        "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+        "broker_keystone_adrenaline_junkie_sub_1",
+        "broker_keystone_adrenaline_junkie_sub_3"
       ],
       "checks": []
     },
@@ -6258,7 +6263,12 @@
         "broker_keystone_chemical_dependency",
         "broker_keystone_chemical_dependency_sub_1",
         "broker_keystone_chemical_dependency_sub_2",
-        "broker_keystone_chemical_dependency_sub_3"
+        "broker_keystone_chemical_dependency_sub_3",
+        "broker_keystone_vultures_mark_aoe_stagger",
+        "broker_keystone_vultures_mark_increased_duration",
+        "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+        "broker_keystone_adrenaline_junkie_sub_1",
+        "broker_keystone_adrenaline_junkie_sub_3"
       ],
       "checks": []
     },
@@ -6295,7 +6305,12 @@
         "broker_keystone_chemical_dependency",
         "broker_keystone_chemical_dependency_sub_1",
         "broker_keystone_chemical_dependency_sub_2",
-        "broker_keystone_chemical_dependency_sub_3"
+        "broker_keystone_chemical_dependency_sub_3",
+        "broker_keystone_vultures_mark_aoe_stagger",
+        "broker_keystone_vultures_mark_increased_duration",
+        "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+        "broker_keystone_adrenaline_junkie_sub_1",
+        "broker_keystone_adrenaline_junkie_sub_3"
       ],
       "checks": []
     },
@@ -6332,7 +6347,12 @@
         "broker_keystone_chemical_dependency",
         "broker_keystone_chemical_dependency_sub_1",
         "broker_keystone_chemical_dependency_sub_2",
-        "broker_keystone_chemical_dependency_sub_3"
+        "broker_keystone_chemical_dependency_sub_3",
+        "broker_keystone_vultures_mark_aoe_stagger",
+        "broker_keystone_vultures_mark_increased_duration",
+        "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+        "broker_keystone_adrenaline_junkie_sub_1",
+        "broker_keystone_adrenaline_junkie_sub_3"
       ],
       "checks": []
     },
@@ -6773,9 +6793,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "902c96ef9953a607127079eeb436e58025afb246",
       "chinese_sha256": "53fc99acbe73792fb4a6f3a679d536f35fe3ce37cd801b914cb5e58316a1b618",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie_sub_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_2.md",
@@ -6795,9 +6822,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "71014d1811a06b8316251ab5a2db2541e53f5ff5",
       "chinese_sha256": "294222db9c3878477a9847cbd681dd774e0011d8c9a43cbd33fea9b7c4f14d5e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_adrenaline_junkie_sub_3"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_adrenaline_junkie_sub_4.md",
@@ -6900,9 +6934,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f16d12732fb523530a99cc1ce65ecca118e7500d",
       "chinese_sha256": "4c08c2016000d77c01e8e5dfdb426e576dddc6cb019d7892a013199050ef5d77",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_vultures_mark_aoe_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_dodge_on_ranged_crit.md",
@@ -6911,9 +6952,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e5dc010bbf05bea3ae563220d9fc908d14e965e0",
       "chinese_sha256": "4d76494c42e1082f423c67a004c5e656ef604000a2e178ddfdab5d7458f6eca2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_vultures_mark_dodge_on_ranged_crit"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_increased_duration.md",
@@ -6922,9 +6970,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1f9fdfed3ddb1b279ccf1d34a9096ffc531820ae",
       "chinese_sha256": "371d14efd13136d476ee84ccd3a9039bcfdb8a1585e6bee3f97c8211ce44d71f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_keystone_vultures_mark_increased_duration"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_keystone_vultures_mark_on_kill.md",
@@ -15465,6 +15520,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_chemical_dependency_sub_3.md"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_aoe_stagger",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_aoe_stagger.md"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_increased_duration",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_increased_duration.md"
+    },
+    {
+      "id": "broker_keystone_vultures_mark_dodge_on_ranged_crit",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_vultures_mark_dodge_on_ranged_crit.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_1",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_1.md"
+    },
+    {
+      "id": "broker_keystone_adrenaline_junkie_sub_3",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_keystone_adrenaline_junkie_sub_3.md"
     }
   ],
   "pending_chinese_corrections": [

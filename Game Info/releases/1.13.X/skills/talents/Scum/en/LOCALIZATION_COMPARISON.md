@@ -376,4 +376,4 @@ Full raw template and formatting: [source evidence](broker_keystone_adrenaline_j
 
 ## Comparison totals
 
-The 56 listed rules comprise **26 Consistent**, **1 Explicit contradictions**, **25 Not covered by the description**, **1 No corresponding implementation evidence found** and **3 Cannot confirm**.
+The 67 listed rules comprise **31 Consistent**, **2 Explicit contradictions**, **29 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
