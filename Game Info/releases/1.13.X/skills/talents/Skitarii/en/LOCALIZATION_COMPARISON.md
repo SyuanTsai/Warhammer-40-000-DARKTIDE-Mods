@@ -769,6 +769,18 @@ Full raw template and formatting: [source evidence](cryptic_afflicted_increased_
 | Afflictions, hit types and values | +10% Damage for 8s when hitting an Electrocuted, Soulblazed, Burning, Bleeding, or Toxin afflicted enemy with a Melee or Ranged attack; `ui / loc_talent_cryptic_afflicted_increased_damage_desc / 70e7ba50` | Melee or ranged hits check target `electrocuted` group or `AFFLICTED_KEYWORDS` and grant the player `damage = 0.1` for 8 seconds [Fixed source and line references](cryptic_afflicted_increased_damage.md#fixed-source-evidence) | Consistent | The status conditions, attack types and effect values agree. |
 | Bonus scope, refreshing and addition | Does not explicitly limit the bonus to the afflicted target or state refreshing and arithmetic; `ui / loc_talent_cryptic_afflicted_increased_damage_desc / 70e7ba50` | The player can damage other targets with the timed bonus. Further qualifying hits refresh without stacks; base 100 with same-stage 25% gives `100 × (1 + 25% + 10%) = 135` [Fixed source and line references](cryptic_afflicted_increased_damage.md#fixed-source-evidence) | Not covered by the description | These details and the preserved example supplement the English. |
 
+
+<a id="cryptic_mobile_defense"></a>
+
+## Ablative Motion Routines
+
+Full raw template and formatting: [source evidence](cryptic_mobile_defense.md#original-english-template-and-reconstruction). Name hash `55f092c8`. Every row uses `ui / loc_talent_cryptic_mobile_defense_desc / 7c92ecd3`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Movement states and reduction | 25% Damage Resistance while Sprinting or Sliding; `ui / loc_talent_cryptic_mobile_defense_desc / 7c92ecd3` | `(is_sprinting and current_stamina > 0) or is_sliding` applies multiplier `0.75` [Fixed source and line references](cryptic_mobile_defense.md#fixed-source-evidence) | Consistent | The states and reduction value agree. |
+| Stamina condition, ending and independent reductions | Does not specify sprinting Stamina, sliding's separate branch, lingering duration or other reductions; `ui / loc_talent_cryptic_mobile_defense_desc / 7c92ecd3` | Sprinting requires positive Stamina; sliding does not. Effect ends when the condition fails. 100→75, or `100 × 0.75 × 0.70 = 52.5` with independent 30% [Fixed source and line references](cryptic_mobile_defense.md#fixed-source-evidence) | Not covered by the description | The omitted condition and original examples supplement the English. |
+
 ## Comparison totals
 
 126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.
