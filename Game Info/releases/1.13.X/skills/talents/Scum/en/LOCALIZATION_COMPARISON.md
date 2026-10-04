@@ -228,6 +228,18 @@ Full raw template and formatting: [source evidence](broker_ability_stimm_field_s
 | Expiry and stack amount | Once its duration ends, Stimm Supply explodes; 7 stacks of Chem Toxin; `ui / loc_talent_broker_ability_stimm_field_sub_2_desc / 59a6d46b` | Normal lifetime completion creates one field explosion; an eligible damaged target receives exactly 7 neurotoxin_interval_buff3 stacks. [Fixed source and line references](broker_ability_stimm_field_sub_2.md#fixed-source-evidence) | Consistent | The stated expiry and status amount agree with the accepted evidence. |
 | Radius, target conditions and recovery | Nearby Enemies; no radius, positive-Damage requirement, Toxin timing or recovery details; `ui / loc_talent_broker_ability_stimm_field_sub_2_desc / 59a6d46b` | The radius is 3 m. Positive explosion Damage and a target buff extension are required. Toxin has 2.6 s base duration, 0.35 s interval and 30-stack maximum. Ending the field resumes natural recovery; later Toxin Damage is separate. [Fixed source and line references](broker_ability_stimm_field_sub_2.md#fixed-source-evidence) | Not covered by the description | These clarify the nearby-target scope and status behavior without converting stacks into a fixed total Damage claim. |
 
+
+<a id="broker_passive_improved_dodges"></a>
+
+## Nimble
+
+Full raw template and formatting: [source evidence](broker_passive_improved_dodges.md#original-english-template-and-reconstruction). Name hash `322d89e8`. Every row uses `ui / loc_talent_broker_passive_improved_dodges_desc_02 / 1cc9786f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Speed and added Dodging time | Dodge Speed increased by +25%; time considered Dodging by +0.15s; `ui / loc_talent_broker_passive_improved_dodges_desc_02 / 1cc9786f` | The multiplicative Dodge speed stat is 1.25; the added dodge_linger_time is 0.15 seconds. [Fixed source and line references](broker_passive_improved_dodges.md#fixed-source-evidence) | Consistent | Both quantities and the stated speed/check-window effect types match. |
+| Attack-specific windows and scope | No Melee/grab versus Ranged windows, motion-duration or consecutive-Dodge details; `ui / loc_talent_broker_passive_improved_dodges_desc_02 / 1cc9786f` | Melee/grab checks use 0.25 + 0.15 = 0.40 s; Ranged checks use 0 + 0.15 = 0.15 s. An unchanged path takes approximately 0.8 times the original time, subject to curve/weapon modifiers; Dodge count and recovery are unchanged. [Fixed source and line references](broker_passive_improved_dodges.md#fixed-source-evidence) | Not covered by the description | These explain existing limits without implying every attack must be avoided. |
+
 ## Comparison totals
 
 The 35 listed rules comprise **16 Consistent**, **1 Explicit contradictions**, **15 Not covered by the description**, **1 No corresponding implementation evidence found** and **2 Cannot confirm**.

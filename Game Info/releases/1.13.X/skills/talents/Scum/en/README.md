@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="Practiced Deployment talent icon"> [Practiced Deployment](#broker_ability_stimm_field_sub_3) | <ul><li>Acquiring a usable Stimm or recovering a dedicated Stimm charge fills one Stimm Supply ability charge.</li><li>The effect polls every 0.5 seconds and respects the one-charge cap; an already-held Stimm does not trigger it when first selecting the talent.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794" width="32" height="32" alt="Fast Acting Stimms talent icon"> [Fast Acting Stimms](#broker_ability_stimm_field_sub_1) | <ul><li>Stimm Supply's field lasts 5 seconds; effects already received can linger for 15 seconds after leaving the area or when the field ends.</li><li>Natural cooldown resumes when the field ends. Lingering effects do not extend the cooldown pause: 5 + 60 = 65 seconds from deployment to full natural recovery.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="Booby Trap talent icon"> [Booby Trap](#broker_ability_stimm_field_sub_2) | <ul><li>When Stimm Supply's field completes its lifetime, it causes one frag explosion within 3 metres.</li><li>Enemies taking positive explosion Damage and having a buff extension receive 7 Toxin stacks. The explosion does not extend the cooldown pause.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="Nimble talent icon"> [Nimble](#broker_passive_improved_dodges) | <ul><li>Dodge movement speed increases by 25%.</li><li>After a Dodge, the additional 0.15-second Dodging window gives 0.40 seconds for Melee/grab checks and 0.15 seconds for Ranged checks; avoidance still depends on each attack's rules.</li></ul> | Keystone |
 
 ---
 
@@ -338,3 +339,19 @@
 - **Damage example:** excluding other bonuses and special Damage Reduction, an Unarmoured target within 0.5 metres of the centre takes 20 × 500 × 300 ÷ 10000 = 300 explosion Damage. With the corresponding armour multiplier of 0.25, this becomes 300 × 0.25 = 75. Subsequent Toxin Damage is calculated separately.
 
 [Details](broker_ability_stimm_field_sub_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_improved_dodges"></a>
+
+### Nimble
+
+<img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="72" height="72" alt="Nimble talent icon">
+
+- **Dodge speed:** Dodge movement speed increases by 25%. A speed of 4 metres per second at the same point in the motion becomes 4 × 1.25 = 5 metres per second. Actual action duration is still calculated across the full speed curve.
+
+- **Dodging checks:** after the Dodge ends, Melee and grab attacks continue considering you to be Dodging for 0.25 + 0.15 = 0.40 seconds, extended from 0.25 seconds. Ranged checks gain a 0.15-second window. Whether an attack misses still depends on its own checking rules.
+
+- **Scope:** the bonus changes movement speed during a Dodge and the attack system's Dodging checks. It does not increase the number of consecutive Dodges or their cooldown-recovery speed.
+
+[Details](broker_passive_improved_dodges.md) · [Back to index](#talent-index)

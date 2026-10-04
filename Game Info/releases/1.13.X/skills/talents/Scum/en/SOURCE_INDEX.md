@@ -30,3 +30,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Practiced Deployment](broker_ability_stimm_field_sub_3.md) / `broker_ability_stimm_field_sub_3` | Ability |
 | [Fast Acting Stimms](broker_ability_stimm_field_sub_1.md) / `broker_ability_stimm_field_sub_1` | Ability |
 | [Booby Trap](broker_ability_stimm_field_sub_2.md) / `broker_ability_stimm_field_sub_2` | Ability |
+| [Nimble](broker_passive_improved_dodges.md) / `broker_passive_improved_dodges` | Keystone |
