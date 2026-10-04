@@ -975,6 +975,18 @@ Full raw template and formatting: [source evidence](base_melee_damage_node_buff_
 | Node bonus | Melee Damage +10%; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | One-point node selects tier 1 melee_damage +0.1 [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Consistent | Stat and available tier's value agree. |
 | Tier and combination | No tier or duplicate-node rule; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | cost=max_points=1; later tier 2/3/4 values are not allocated. medium_4 clone has a separate identifier; original 100→110, both nodes→120, existing same-stage 25% plus one node→135 [Fixed source and line references](base_melee_damage_node_buff_medium_1.md#fixed-source-evidence) | Not covered by the description | These allocation and addition details supplement the wording. |
 
+
+<a id="base_melee_damage_node_buff_medium_4"></a>
+
+## Melee Damage Boost
+
+Full raw template and formatting: [source evidence](base_melee_damage_node_buff_medium_4.md#original-english-template-and-reconstruction). Name hash `cb9e7b48`. Every row uses `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Node bonus | Melee Damage +10%; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | One-point node selects tier 1 melee_damage +0.1 [Fixed source and line references](base_melee_damage_node_buff_medium_4.md#fixed-source-evidence) | Consistent | Stat and available tier's value agree. |
+| Tier and combination | No tier or duplicate-node rule; `ui / loc_talent_melee_damage_boost_medium_desc / 7b5da013` | cost=max_points=1; later tier 2/3/4 values are not allocated. medium_4 clone has a separate identifier; original 100→110, both nodes→120, existing same-stage 25% plus one node→135 [Fixed source and line references](base_melee_damage_node_buff_medium_4.md#fixed-source-evidence) | Not covered by the description | These allocation and addition details supplement the wording. |
+
 ## Comparison totals
 
 168 rules: 79 Consistent / 6 Explicit contradiction / 79 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 644.
