@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="Blazing Piety talent icon"> [Blazing Piety](#zealot_fanatic_rage) | <ul><li>Nearby enemy deaths and your Critical Hits build Fury. At 25 stacks, gain 15 percentage points of Critical Chance for 8 seconds; further qualifying events at full stacks refresh it.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="Stalwart talent icon"> [Stalwart](#zealot_fanatic_rage_toughness_on_max) | <ul><li>Entering Fury restores 50% of maximum Toughness once. At full Fury stacks, gain 25% Toughness Damage Reduction and restore 2% of maximum Toughness per second.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="Righteous Warrior talent icon"> [Righteous Warrior](#zealot_fanatic_rage_improved) | <ul><li>Blazing Piety grants another 10 percentage points of Critical Chance during Fury, for a total talent bonus of 25 points.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="Infectious Zeal talent icon"> [Infectious Zeal](#zealot_shared_fanatic_rage) | <ul><li>When Fury starts, other allies currently in Coherency gain 10 percentage points of Critical Chance for 8 seconds; refreshing your Fury does not extend their existing bonus.</li></ul> | Keystone |
 
 ---
 
@@ -478,3 +479,17 @@
 - **Critical Chance example**: An existing 5% becomes 5% + 15% + 10% = 30% when entering Fury with this upgrade. This adds probability; it does not multiply the original 5% by 1.25.
 
 [Details](zealot_fanatic_rage_improved.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_shared_fanatic_rage"></a>
+
+### Infectious Zeal
+
+<img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="72" height="72" alt="Infectious Zeal talent icon">
+
+- **Operation**: When Blazing Piety starts, other allies currently in Coherency gain 10 percentage points of Critical Chance for 8 seconds. You do not receive this shared bonus yourself.
+- **Critical Chance example**: An ally's existing 5% becomes 5% + 10% = 15% during the effect. Your Righteous Warrior does not also increase their 10-point bonus.
+- **Duration limits**: Later refreshing your own Fury does not extend the 8 seconds already given to allies. Allies who enter Coherency during the effect do not immediately receive it.
+
+[Details](zealot_shared_fanatic_rage.md) · [Back to index](#talent-index)

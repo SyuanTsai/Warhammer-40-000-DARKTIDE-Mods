@@ -370,6 +370,19 @@ Full raw template and formatting: [source evidence](zealot_fanatic_rage_improved
 | Additional Critical Chance | “+10% Critical Hit Chance from Blazing Piety.”; `ui / loc_talent_zealot_fanatic_rage_improved_desc / cde6c5ff` | Special rule adds conditional Critical Chance 0.10 on top of Fury's base 0.15. [Fixed source and line references](zealot_fanatic_rage_improved.md#fixed-source-evidence) | Consistent | The extra value and its source match. |
 | Fury condition and additive total | No explicit Fury-only condition or total chance example.; `ui / loc_talent_zealot_fanatic_rage_improved_desc / cde6c5ff` | Bonus applies only with Fury; 5%+15%+10%=30%, subject to other base values and modifiers; no extra stacks or cooldown. [Fixed source and line references](zealot_fanatic_rage_improved.md#fixed-source-evidence) | Not covered by the description | The probability calculation and duration condition explain the stated additional bonus. |
 
+
+<a id="zealot_shared_fanatic_rage"></a>
+
+## Infectious Zeal
+
+Full raw template and formatting: [source evidence](zealot_shared_fanatic_rage.md#original-english-template-and-reconstruction). Name hash `57b9d494`. Every row uses `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Shared bonus and recipients | Allies in Coherency have +10% Critical Hit Chance.; `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544` | Fury start applies +0.10 Critical Chance to other current Coherency allies. [Fixed source and line references](zealot_shared_fanatic_rage.md#fixed-source-evidence) | Consistent | Bonus value and recipient group agree. |
+| Availability while personal Fury is active | “while Blazing Piety is active”; `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544` | Separate shared Buff lasts 8s from application; personal Fury refresh does not rerun distribution, and new Coherency entrants are not continuously supplied. [Fixed source and line references](zealot_shared_fanatic_rage.md#fixed-source-evidence) | Explicit contradiction | The English ties availability to all personal activity, but accepted fixed-version behavior can let the ally bonus expire earlier. Actual game timing remains unobserved. |
+| Independent shared effect and probability | No caster exclusion, Righteous Warrior interaction, stack cap or cooldown details.; `ui / loc_talent_zealot_shared_fanatic_rage_new_desc / 95bbc544` | Caster excluded; shared max 1, no independent cooldown, fixed +10 points: 5%→15%; Righteous Warrior does not change it. [Fixed source and line references](zealot_shared_fanatic_rage.md#fixed-source-evidence) | Not covered by the description | These details qualify the shared bonus without introducing further English errata. |
+
 ## Comparison totals
 
 63 rules: 29 Consistent / 2 Explicit contradiction / 29 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 594.
