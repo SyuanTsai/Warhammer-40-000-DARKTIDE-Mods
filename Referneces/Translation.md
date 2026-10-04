@@ -448,6 +448,7 @@
 - Warp Nexus - 亞空間樞紐
 - Transfer Peril - 轉移反噬
 - Rending Shockwave - 撕扯震盪
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_aoe_charge`，hash `8af2f9ee`；英文／繁中RAW配對確認。
 - Focused Channelling - 專注引導
 - Blazing Spirit - 燃燒靈魂
 - Penetrating Flame - 穿透火焰

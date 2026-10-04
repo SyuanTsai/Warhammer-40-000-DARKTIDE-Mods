@@ -97,5 +97,6 @@
 | 無可核對圖示 [快速裝填](entries/快速裝填/README.md)<br>- Quickloader<br>[完整說明](entries/快速裝填/README.md) | <ul><li>持用適用步兵自動槍進入閃避狀態後，接下來 2 秒內提高 10%／12.5%／15%／20% 裝填速度；再次觸發會刷新計時。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/5b4b4b01-18ea-447d-99d6-e73dd2ebdcfd" width="32" height="32" alt="奪顱者祝福圖示"> [奪顱者](entries/奪顱者/README.md)<br>- Headtaker<br>[完整說明](entries/奪顱者/README.md) | <ul><li>持用裝有奪顱者的對應近戰武器，以未被 damage profile 排除的合格近戰命中加一層；每層提高近戰威力，最多五層，合格命中重設3.5秒共享閒置期限。重劍每層數值較高。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0" width="32" height="32" alt="勢頭祝福圖示"> [勢頭](entries/勢頭/README.md)<br>- Momentum<br>[完整說明](entries/勢頭/README.md) | <ul><li>同一次近戰攻擊處理到第 3 個或後續目標，且該目標送出本祝福可讀取的命中事件時，依 I–IV 恢復最大韌性的 12%／13%／14%／15%（實際值受韌性回復修正與缺額限制）。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16" width="32" height="32" alt="撕扯震盪祝福圖示"> [撕扯震盪](entries/撕扯震盪/README.md)<br>- Rending Shockwave<br>[完整說明](entries/撕扯震盪/README.md) | <ul><li>次要蓄力爆炸命中依蓄力比例施加每層 2.5% 脆弱；I–IV 滿蓄力請求 2／4／6／8 層，目標最多 16 層、持續 5 秒；完整說明包含延遲命中例外。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

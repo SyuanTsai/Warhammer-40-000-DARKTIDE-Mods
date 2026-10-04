@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-05",
+  "blessing": "rending-shockwave",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_rend_armor_on_aoe_charge"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-formal-peer-scope.json",
+    "scope_sha256": "e73e46e7c68f59568625da910bde01e1e77874db4d0dc67629a3261ecefe86d1",
+    "reviewed_file_count": 36,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "findings": [
+      "Reviewed all seven formal pages and the exact one-trait/one-binding mapping: the only binding is forcestaff_p1_m1, rendered as 虛空爆破力場法杖 陰陽 Mk III; the blessing map and force-staff reverse index agree.",
+      "The I–IV full-charge requests are 2/4/6/8 layers, rounded after charge scaling; each layer adds 2.5 percentage points of target Brittleness, with the shared rending_debuff capped at 16 layers for 5 seconds. The bilingual RAW strings, hashes, and all four static formatter reconstructions are consistent.",
+      "The primary projectile uses force_staff_ball; its impact profile has no speed_to_charge_settings, so the earlier nil-to-1 fallback remains impact charge 1. The profile has no skip_on_hit_proc, and force_staff_single_target is not in Attack’s no-proc table. The queued-event caveat remains explicitly static and conditional on the live action/item/held gates.",
+      "The complete proof covers action_stab, action_stab_heavy, action_swipe, and action_swipe_heavy; each has no use_charge and uses charge 1, with three actual profiles/overrides lacking skip_on_hit_proc. Push nil maps to zero and neither adds a layer nor refreshes the timer.",
+      "The target-stat cache caveat is accurate: new stacks become visible after target-stat recomputation; no same-hit or immediately-next-event guarantee is made. Positive requests at the 16-layer cap refresh the shared 5-second expiry without adding layers; zero requests do not refresh; owner switching gates new events but does not clear an existing target debuff.",
+      "Both armor examples match the armor-aware formula and clearly state their controlled assumptions: 30 to 40 (33.33% relative gain) at A=.30/r=.10, and 90 to 107.5 (19.44% relative gain) at A=.90/r=.40/o=.25. They distinguish Brittleness percentage points from final damage and do not claim weapon damage measurements.",
+      "The icon path, icon identifier, and Issue attachment URL are separate and match the verified image receipt. All 36 scope file hashes match; canonical config equals extension-draft.configuration and the focused source/link/GFM check receipt passes."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-config.json": "374d29bc6c85806432cbe2e2521573a3d3682bdccbac04f24a05f53b7d1a5a27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-draft.md": "200cdfe0f8214d5667e5bde751f04c3ee7ef0aee3c3b8a7661338b603213ff95",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-evidence.json": "c024e111302a42188b5c2d4f0a0e37f7559a21ad4749fb4ec2bc9e8f52be0113",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-primary-projectile-impact-profile-addendum.json": "19c2743b6b32184ca79060f9a952a36c3ec66798c0a021b1c5909b6f809755ae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-trigger-lifecycle-addendum.json": "27de75164e74bc9fb13812eed333dc9c58720d10f3c2fe957166a287d7ebd4ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-config.json": "2bdbc0a5a178af4d15850e42ae4598731108cc59348269392a7d8c3c80f0fbd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-extension-draft.json": "cb0f0c1084579c8beb8f77be69a2ed8cb7fa2e345e2b736b165d2bb8b77f00ba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-image.json": "e828ef89ebef2c5814d50e65e434d3463638d31a326ce6a3ca7b66cbf94b72d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-armor-consumer-review.json": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-complete-special-sweep-review.json": "6de4826cb961548581a214a83ea84e77c02fd7c623411d53717ddec4d7fdcada",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-first-effect-cache-review.json": "fefaf12d5ced7b44bed4a58853e1facb489171b0216e13cc6a2b754e0cd3527c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-focused-checks.json": "7c6f6ec294508fc2d652d5221564bcadf10c5b7a4bbefffe0b351f75f5c5c8aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-frozen-source-verification.json": "d4a5d85aeb57578adacf6e54d2e04bf3019c9b4a5b7056c47ac56ae76ff56d61",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-own-source-range-evidence.json": "4b310ab1c10bfeabd49b1ab3f8593bf90d89b91f52b31b28d83855a10f50933e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-own-tier-diff.json": "d44794669a353a6cd97bc8f3b39b07d451dda071d2c1d8a8be9cc016dcaa0947",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-resume-review.json": "ebcaa8f7d2f12cc736d839c05909d7c6a91da2e8757be2d630175d3cf7f01024",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-traits-review.json": "39c75e17790fb76b13955a578fdcc87702777cc7ddeaf43eaec54e5fcc710d20",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-ui-raw-verification.json": "ac0696fcfd7aaa798a0bc9073d5c9d64a8f89eb8e4c795c81801ede6fc5c90aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-ui-review.json": "aea0486c7d9b7efb8bb8dda3940558a8c207d8a5324bb17e9ab6b6dcabfdb81c",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ad91d2536b84ebe5975448e815b49aabe342e26cb23d918daa46ecdeba4fc02c",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/DAMAGE_PERCENTAGE_REVIEW.md": "6007991dc6cd8f6dafee8b5e7d3aaa6485065ba34f26858e001dd66a906e538b",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/LOCALIZATION_COMPARISON.md": "79e74fbb8f0d1dc299503fa04ef34b34419199d0232e962fe739efc7efd27c84",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/README.md": "8fdef399c2de7d7fb5d6aeac97c99181216fe25d4123d3ac0c51d85770cbca2d",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/SOURCE_INDEX.md": "f4df07e04d9bfc67a3e43f9d382334643638341c5ded68f7990eff7a90e5dec6",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/TIER_VALUES.md": "240d528ac2d931964c500e703f83c270e3265941e4052d1afee33f8e809187fe",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/WEAPON_COMPATIBILITY.md": "504aef7fcac44ec6e7ebc6133640cb1e21ee270779d648f13d002d35aadd298c",
+      "Game Info/releases/1.13.X/blessings/entries/撕扯震盪/weapon_trait_bespoke_forcestaff_p1_rend_armor_on_aoe_charge.md": "7a159318840fb65a61641919c89e5942a35ccaba295a94723d070480ed7853ae",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "e444ea4c5bc61e25e41e9cf42ae4ad77d49b11f8248ddea01ccc5ef016d2e719",
+      "Game Info/releases/1.13.X/blessings/README.md": "b001d01f94f18ce579cd4214d1238a3f83f3f56f3a479a60370e47f80009eeeb",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a2c7231e6b563db76dc49e32eb749ad54b2fd2d81a7d40c85c29160f53150cb9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "4f8aaa8b56d7fcd789bfa3c60270f28ac88f22a9793947708aeae6c50e0ce2d2",
+      "Referneces/Translation.md": "cad25f8674986fd1b58bb63b113233fe2babd864feb4ddfbdafebbff5a50fd06"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "rending-shockwave",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_010",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_010.png",
+      "attachment": "https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5984304687",
+      "acquired_date": "2026-10-05",
+      "sha256": "32187eaefb3d97224ccc98c54897fb33d04934c4f11269edae812ae433e5cfbd",
+      "content_type": "image/png",
+      "size": 4507,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "撕扯震盪祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Actual original/public identical image: centered grey impact/shockwave emblem with white vertical borders and top/bottom markers on transparent background; no crop, corruption or unexpected pixels"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 339,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 84,
+      "source_files": 31,
+      "bindings": 540,
+      "variants": 277,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 31,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 758,
+      "remote_references": 369,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 20,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-019-full-scan.json",
+        "sha256": "bc0dad144cdfb6fdefa851c7c927ee3cc726e7f83e18c9eb3335797fe62cc4d6",
+        "trigger": "round-019"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 77,
+    "not_started_name_groups": 77,
+    "partial_name_groups": 0,
+    "remaining_variants": 328,
+    "remaining_bindings": 645,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "bcdaa634dcd0bd5f1a81b59ea1c1275950917aecdc663ce713162f05d4991a4a"
+  },
+  "previous_local_commit": "0f25a60de86eb5dea7255f047907a20a6f97aa80",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-armor-consumer-review.json",
+      "sha256": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-complete-special-sweep-review.json",
+      "sha256": "6de4826cb961548581a214a83ea84e77c02fd7c623411d53717ddec4d7fdcada"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-first-effect-cache-review.json",
+      "sha256": "fefaf12d5ced7b44bed4a58853e1facb489171b0216e13cc6a2b754e0cd3527c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-focused-checks.json",
+      "sha256": "7c6f6ec294508fc2d652d5221564bcadf10c5b7a4bbefffe0b351f75f5c5c8aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-frozen-source-verification.json",
+      "sha256": "d4a5d85aeb57578adacf6e54d2e04bf3019c9b4a5b7056c47ac56ae76ff56d61"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-own-source-range-evidence.json",
+      "sha256": "4b310ab1c10bfeabd49b1ab3f8593bf90d89b91f52b31b28d83855a10f50933e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-own-tier-diff.json",
+      "sha256": "d44794669a353a6cd97bc8f3b39b07d451dda071d2c1d8a8be9cc016dcaa0947"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-resume-review.json",
+      "sha256": "ebcaa8f7d2f12cc736d839c05909d7c6a91da2e8757be2d630175d3cf7f01024"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-traits-review.json",
+      "sha256": "39c75e17790fb76b13955a578fdcc87702777cc7ddeaf43eaec54e5fcc710d20"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-ui-raw-verification.json",
+      "sha256": "ac0696fcfd7aaa798a0bc9073d5c9d64a8f89eb8e4c795c81801ede6fc5c90aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-primary-ui-review.json",
+      "sha256": "aea0486c7d9b7efb8bb8dda3940558a8c207d8a5324bb17e9ab6b6dcabfdb81c"
+    }
+  ],
+  "primary_review_method": "Reuse applicable fixed-SHA common mechanisms and own full tier/wrapper/UI/RAW evidence; review actual charge producers and live gate, target cap/timer/cache lifecycle and armor damage branches as differences; no full duplicate research",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-config.json",
+    "sha256": "2bdbc0a5a178af4d15850e42ae4598731108cc59348269392a7d8c3c80f0fbd8"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-config.json",
+      "sha256": "374d29bc6c85806432cbe2e2521573a3d3682bdccbac04f24a05f53b7d1a5a27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-evidence.json",
+      "sha256": "c024e111302a42188b5c2d4f0a0e37f7559a21ad4749fb4ec2bc9e8f52be0113"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-draft.md",
+      "sha256": "200cdfe0f8214d5667e5bde751f04c3ee7ef0aee3c3b8a7661338b603213ff95"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-trigger-lifecycle-addendum.json",
+      "sha256": "27de75164e74bc9fb13812eed333dc9c58720d10f3c2fe957166a287d7ebd4ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-agent-primary-projectile-impact-profile-addendum.json",
+      "sha256": "19c2743b6b32184ca79060f9a952a36c3ec66798c0a021b1c5909b6f809755ae"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rending-shockwave-formal-peer-scope.json",
+    "sha256": "e73e46e7c68f59568625da910bde01e1e77874db4d0dc67629a3261ecefe86d1",
+    "final_content_hashes_unchanged": true
+  }
+}
