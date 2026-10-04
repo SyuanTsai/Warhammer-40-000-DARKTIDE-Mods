@@ -116,3 +116,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Regain](broker_stimm_durability_5b.md) / `broker_stimm_durability_5b` | Stimm recipe |
 | [Kalma I](broker_stimm_concentration_1.md) / `broker_stimm_concentration_1` | Stimm recipe |
 | [Kalma II](broker_stimm_concentration_2.md) / `broker_stimm_concentration_2` | Stimm recipe |
+| [Kalma III](broker_stimm_concentration_3.md) / `broker_stimm_concentration_3` | Stimm recipe |
