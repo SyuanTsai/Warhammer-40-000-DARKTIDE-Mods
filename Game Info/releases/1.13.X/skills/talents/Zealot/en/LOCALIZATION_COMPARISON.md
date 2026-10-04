@@ -770,6 +770,18 @@ Full raw template and formatting: [source evidence](zealot_defensive_knockback.m
 | Retaliatory direction and cooldown | “Knock back the Attacker on taking a Melee Hit. 8s Cooldown.”; `ui / loc_talent_zealot_3_tier_3_ability_1_description / f3ca681a` | Melee-hit proc pushes toward the attacker with cooldown 8. [Fixed source and line references](zealot_defensive_knockback.md#fixed-source-evidence) | Consistent | Trigger direction and cooldown agree. |
 | Hit eligibility and push limits | No damage-result, living-attacker, disabled-state or geometry details.; `ui / loc_talent_zealot_3_tier_3_ability_1_description / f3ca681a` | on_player_hit_received checks Melee/is_damaging_result/alive attacker/not disabled. Server push uses radius 2.75, angles π×0.125/π×0.25, power_level 2000 and push_test; not 2000 damage. Original t0/t3/t8 example retained, triggering damage not undone. [Fixed source and line references](zealot_defensive_knockback.md#fixed-source-evidence) | Not covered by the description | These eligibility, push-resistance and timing limits supplement the knockback statement. |
 
+
+<a id="zealot_bled_enemies_take_more_damage"></a>
+
+## Blinded by Blood
+
+Full raw template and formatting: [source evidence](zealot_bled_enemies_take_more_damage.md#original-english-template-and-reconstruction). Name hash `79b878e0`. Every row uses `ui / loc_talent_zealot_bled_enemies_take_more_damage_desc / fb00baf2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Target vulnerability and duration | “Bleeding enemies increase their damage taken by +15% for 5s.”; `ui / loc_talent_zealot_bled_enemies_take_more_damage_desc / fb00baf2` | Enemy effect damage_taken_multiplier 1.15, duration 5. [Fixed source and line references](zealot_bled_enemies_take_more_damage.md#fixed-source-evidence) | Consistent | Recipient, stat stage, value and duration agree. |
+| Event owner, refresh and shared benefit | No explicit ownership, application-event or stacking rule.; `ui / loc_talent_zealot_bled_enemies_take_more_damage_desc / fb00baf2` | Bleed application/stack/max-stack-refresh events check enemy, reach owner_unit, and refresh one 5s effect. Allies benefit from target vulnerability. Original 100→115 and separate-stage 100×1.2×1.15=138 examples retained. [Fixed source and line references](zealot_bled_enemies_take_more_damage.md#fixed-source-evidence) | Not covered by the description | The text does not explicitly promise automatic vulnerability from every source; these event and calculation details supplement it. |
+
 ## Comparison totals
 
 127 rules: 59 Consistent / 5 Explicit contradiction / 59 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 624.
