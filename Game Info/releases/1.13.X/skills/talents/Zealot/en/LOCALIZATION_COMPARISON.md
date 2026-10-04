@@ -710,6 +710,18 @@ Full raw template and formatting: [source evidence](zealot_increase_ranged_close
 | Maximum bonus and distance falloff | “Up to +25% Base Ranged Damage, reduced the further you are from the target.”; `ui / loc_talent_zealot_ranged_damage_increased_to_close_desc / 7504148a` | Ranged-weapon slot condition grants damage_near 0.25 with a decreasing near-range weight. [Fixed source and line references](zealot_increase_ranged_close_damage.md#fixed-source-evidence) | Consistent | Maximum bonus and falloff direction agree. |
 | Slot condition and curve | No attack-path exclusion, distance breakpoints or exact curve.; `ui / loc_talent_zealot_ranged_damage_increased_to_close_desc / 7504148a` | slot_secondary only; t=clamp((d−12.5)/17.5,0,1), near weight 1−sqrt(t). Original base-100 examples give 125 and 112.5; same-stage addition, weapon falloff separate. [Fixed source and line references](zealot_increase_ranged_close_damage.md#fixed-source-evidence) | Not covered by the description | Ranged wording does not explicitly exclude other paths while that slot is held; these calculations and eligibility details supplement it. |
 
+
+<a id="zealot_uninterruptible_no_slow_heavies"></a>
+
+## Unfaltering
+
+Full raw template and formatting: [source evidence](zealot_uninterruptible_no_slow_heavies.md#original-english-template-and-reconstruction). Name hash `87775a98`. Every row uses `ui / loc_talent_zealot_uninterruptible_no_slow_heavies_desc / 9e2ba609`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charging protection and movement penalty | “Become Uninterruptible while charging Melee Attacks. Remove +100% of Heavy Melee Attack Movement Speed penalties.”; `ui / loc_talent_zealot_uninterruptible_no_slow_heavies_desc / 9e2ba609` | Windup grants uninterruptible/stun_immune and weapon_action_movespeed_reduction_multiplier 0. [Fixed source and line references](zealot_uninterruptible_no_slow_heavies.md#fixed-source-evidence) | Consistent | Charging protection and full removal of that action's penalty agree. |
+| Action condition and exceptions | No action.kind test, movement formula or control/bypass exceptions.; `ui / loc_talent_zealot_uninterruptible_no_slow_heavies_desc / 9e2ba609` | Only windup passes; (1−movement_mod)×reduction_multiplier removes the action slowdown. Original 5m/s→2.5m/s windup retains 5m/s with talent before other modifiers. Swing, external modifiers and exceptional control remain separate. [Fixed source and line references](zealot_uninterruptible_no_slow_heavies.md#fixed-source-evidence) | Not covered by the description | These limits and calculations supplement the charging effect. |
+
 ## Comparison totals
 
 117 rules: 54 Consistent / 5 Explicit contradiction / 54 Not covered by the description / 0 No implementation found / 4 Cannot confirm. Updated at checkpoint 619.

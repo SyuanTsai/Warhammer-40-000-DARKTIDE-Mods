@@ -66,6 +66,7 @@
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="Faithful Frenzy talent icon"> [Faithful Frenzy](#zealot_attack_speed) | <ul><li>Permanently grants +10% Melee Attack Speed and +5% Movement Speed.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="Faith's Fortitude talent icon"> [Faith's Fortitude](#zealot_additional_wounds) | <ul><li>Adds 2 Wounds while leaving maximum Health unchanged.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="Anoint in Blood talent icon"> [Anoint in Blood](#zealot_increase_ranged_close_damage) | <ul><li>While holding a Ranged weapon, nearby-target damage gains up to 25%; the bonus falls with distance and reaches zero at 30 metres.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="Unfaltering talent icon"> [Unfaltering](#zealot_uninterruptible_no_slow_heavies) | <ul><li>During Heavy Attack windup, prevents ordinary hit stun/interruption and removes the windup action's own movement slowdown.</li></ul> | Skill |
 
 ---
 
@@ -891,3 +892,17 @@
 - **Other bonuses**: This adds to same-stage damage bonuses. The weapon's own distance falloff is calculated separately; the fixed base 100 above is not measured weapon damage at every distance.
 
 [Details](zealot_increase_ranged_close_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_uninterruptible_no_slow_heavies"></a>
+
+### Unfaltering
+
+<img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="72" height="72" alt="Unfaltering talent icon">
+
+- **Operation**: During Heavy Attack windup, prevents ordinary hit stun and action interruption and removes that windup action's own movement slowdown. Once the attack swings, the windup condition no longer holds.
+- **Speed example**: Base Movement Speed 5 metres/second with a windup that normally multiplies it by 0.5 gives 2.5 metres/second. Removing that action's slowdown allows 5 metres/second. Other sources of speed modifiers are still calculated separately.
+- **Control exceptions**: This is not immunity to every knockback, net or pounce, and cannot stop attacks that explicitly ignore immunity.
+
+[Details](zealot_uninterruptible_no_slow_heavies.md) · [Back to index](#talent-index)
