@@ -334,6 +334,18 @@ Full raw template and formatting: [source evidence](zealot_resist_death_heal.md#
 | Trigger, healing condition and Melee multiplier | Until Death knocks nearby enemies back; while Unkillable heal based on dealt damage; Melee heals for 3 times that amount.; `ui / loc_talent_zealot_resist_death_heal_desc / 7e66622d` | Fatal trigger enables 3.5m non-damaging knockback; `unkillable` gates damage-based pool additions of 0.007×damage, ×3 for Melee. [Fixed source and line references](zealot_resist_death_heal.md#fixed-source-evidence) | Consistent | The English multiplier refers to healing amount. The accepted Chinese wrong-target correction is separate. |
 | Health cap, reusable pool and limits | “up to a maximum of 25% Max Health”; no explicit cumulative-total, pool-reset or modifier order; `ui / loc_talent_zealot_resist_death_heal_desc / 7e66622d` | Heal request caps at `max_health×0.25−current_health` before healing modifiers; accumulated pool is not deducted and resets only at passive start. [Fixed source and line references](zealot_resist_death_heal.md#fixed-source-evidence) | Not covered by the description | The cap basis, pool reuse, any-source Unkillable, resistance and exclusivity qualify the stated effects. |
 
+
+<a id="zealot_fanatic_rage"></a>
+
+## Blazing Piety
+
+Full raw template and formatting: [source evidence](zealot_fanatic_rage.md#original-english-template-and-reconstruction). Name hash `e87afd11`. Every row uses `ui / loc_talent_zealot_fanatic_rage_crit_desc / c80efade`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Fury threshold, radius, chance and duration | “+15% Critical Hit Chance for 8s”; 25 enemy deaths within 25m; Critical Hits also count.; `ui / loc_talent_zealot_fanatic_rage_crit_desc / c80efade` | Nearby opposing minion deaths and own crit hits add shared resource up to 25; Fury adds 0.15 Critical Chance for 8s. [Fixed source and line references](zealot_fanatic_rage.md#fixed-source-evidence) | Consistent | Both event sources, threshold and bonus values agree when the English sentences are read together. |
+| Event scope, refresh and decay | No killer requirement, shared timer, decay formula or expiry reset specified; `ui / loc_talent_zealot_fanatic_rage_crit_desc / c80efade` | Killer is not checked; own Melee/Ranged crits count. Events reset 8s timer, including at cap; sequential decay and Fury stop clearing resource apply. [Fixed source and line references](zealot_fanatic_rage.md#fixed-source-evidence) | Not covered by the description | These details and the additive Critical Chance example supplement the stated Fury behavior. |
+
 ## Comparison totals
 
 53 rules: 24 Consistent / 2 Explicit contradiction / 24 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 589.

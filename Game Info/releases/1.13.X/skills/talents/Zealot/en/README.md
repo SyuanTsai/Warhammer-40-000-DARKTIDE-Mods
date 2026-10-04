@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="Retributor's Stance talent icon"> [Retributor's Stance](#zealot_momentum_toughness_replenish) | <ul><li>During Inexorable Judgement's active bonus, replenish 0.5% maximum Toughness per second for each spent Momentum stack.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="Inebriate's Poise talent icon"> [Inebriate's Poise](#zealot_quickness_passive_dodge_stacks) | <ul><li>A successful Dodge grants 3 additional Momentum stacks for Inexorable Judgement, sharing the 20-stack cap.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="Holy Revenant talent icon"> [Holy Revenant](#zealot_resist_death_heal) | <ul><li>Until Death's fatal-damage trigger knocks back nearby enemies. While Unkillable, damage adds to a reusable healing pool; Melee converts at 3 times the ordinary rate.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="Blazing Piety talent icon"> [Blazing Piety](#zealot_fanatic_rage) | <ul><li>Nearby enemy deaths and your Critical Hits build Fury. At 25 stacks, gain 15 percentage points of Critical Chance for 8 seconds; further qualifying events at full stacks refresh it.</li></ul> | Keystone |
 
 ---
 
@@ -433,3 +434,18 @@
 - **Chinese original-text erratum**: The Chinese “healing equals 3 times Melee Damage” can be read as 100 damage healing 300 Health. In fact, the Melee conversion rate is 3 times the ordinary rate: 0.7% × 3 = 2.1%, then the accumulated pool and cap apply.
 
 [Details](zealot_resist_death_heal.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_fanatic_rage"></a>
+
+### Blazing Piety
+
+<img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="72" height="72" alt="Blazing Piety talent icon">
+
+- **Building stacks**: Each enemy death within 25 metres grants 1 stack. Your own Critical Hits also grant 1, for both Melee and Ranged attacks. You do not have to kill the nearby dying enemy yourself.
+- **Fury effect**: At 25 stacks, enter Fury and gain 15 percentage points of Critical Chance for 8 seconds. Further triggers at full stacks refresh duration.
+- **Critical Chance example**: An existing 5% becomes 5% + 15% = 20%, not 5% × 1.15. Nearby deaths and Critical Hits count separately, so a critical kill may satisfy both.
+- **Stack decay**: Before Fury, 8 seconds without a new trigger starts one-by-one stack decay. A new trigger resets the waiting period. Fury ending clears the count so it must be rebuilt.
+
+[Details](zealot_fanatic_rage.md) · [Back to index](#talent-index)
