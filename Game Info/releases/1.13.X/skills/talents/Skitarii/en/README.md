@@ -93,6 +93,7 @@
 | <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="Galvanized Coating talent icon"> [Galvanized Coating](#cryptic_stun_dr_power) | <ul><li>Always grants ordinary hit Stun immunity and 15% Damage Resistance. Qualifying melee damage events spend 7.5% of one Capacitance charge; defence remains with insufficient Capacitance.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="Moebian Conductor talent icon"> [Moebian Conductor](#cryptic_damage_on_ability) | <ul><li>Activating a Combat Ability grants 15% Damage for 10 seconds. Another activation refreshes the duration; spending multiple charges does not increase the bonus.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="Servo-Core Recharge Engine talent icon"> [Servo-Core Recharge Engine](#cryptic_weakspot_kills_restore_toughness) | <ul><li>Melee or ranged Weakspot kills immediately restore 5% of maximum Toughness.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="Adaptive Combat Calibration talent icon"> [Adaptive Combat Calibration](#cryptic_cleave_and_impact) | <ul><li>Above 50% Toughness, gain +30% Melee Cleave; at or below 50%, gain +30% Melee Impact.</li></ul> | Talent |
 
 ---
 
@@ -1326,3 +1327,18 @@
 - **Recovery example**: At 200 maximum Toughness, each trigger restores `200 × 5% = 10` points. Three consecutive qualifying kills can restore 30 points, capped at maximum Toughness.
 
 [Details](cryptic_weakspot_kills_restore_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_cleave_and_impact"></a>
+
+### Adaptive Combat Calibration
+
+<img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="72" height="72" alt="Adaptive Combat Calibration talent icon">
+
+- While above **50% of maximum Toughness**, gain **+30% Melee Cleave**. At or below **50%**, gain **+30% Melee Impact** instead.
+- With maximum Toughness **100**, current Toughness **51** enables Cleave; **50** or **49** enables Impact.
+- A Cleave baseline of **10** becomes `10 × 1.30 = 13`; an Impact baseline of **100** becomes `100 × 1.30 = 130`.
+- Cleave affects how many enemies the attack can penetrate; Impact affects stagger. They do not apply together and are not a direct 30% damage bonus.
+
+[Details](cryptic_cleave_and_impact.md) · [Back to index](#talent-index)

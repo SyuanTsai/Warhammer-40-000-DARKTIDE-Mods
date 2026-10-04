@@ -1034,6 +1034,18 @@ Full raw template and formatting: [source evidence](cryptic_weakspot_kills_resto
 | Weakspot kill and recovery | Weakspot Kills restore 5% Toughness; `ui / loc_talent_cryptic_weakspot_kills_restore_toughness_desc / 8c1c47d8` | `on_kill` plus `on_weakspot_hit` immediately applies `replenish_percentage = 0.05`; melee and ranged qualify. [Fixed source and line references](cryptic_weakspot_kills_restore_toughness.md#fixed-source-evidence) | Consistent | The trigger and fraction match, and the English does not impose an attack-type restriction. |
 | Recovery basis, timing and cap | Does not specify the percentage basis, duration, cooldown or cap; `ui / loc_talent_cryptic_weakspot_kills_restore_toughness_desc / 8c1c47d8` | Recovery is immediate, based on maximum Toughness, with no duration/cooldown. At maximum 200, each gives 10; three give up to 30, capped at maximum. [Fixed source and line references](cryptic_weakspot_kills_restore_toughness.md#fixed-source-evidence) | Not covered by the description | The original example explains the omitted recovery basis and limits. |
 
+
+<a id="cryptic_cleave_and_impact"></a>
+
+## Adaptive Combat Calibration
+
+Full raw template and formatting: [source evidence](cryptic_cleave_and_impact.md#original-english-template-and-reconstruction). Name hash `6ae25bc5`. Every row uses `ui / loc_talent_cryptic_melee_cleave_and_impact_desc / 6d23edd0`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Effects and threshold | “Melee Cleave while above … Toughness” and “Melee Impact while below”; +30% / 50% / +30%; `ui / loc_talent_cryptic_melee_cleave_and_impact_desc / 6d23edd0` | Current Toughness fraction selects Cleave above 0.5 and Impact at or below 0.5, each with a 0.3 modifier. [Fixed source and line references](cryptic_cleave_and_impact.md#fixed-source-evidence) | Consistent | The resource names the correct condition and effects with matching values. |
+| Exact boundary and effect scope | The exact 50% case and mechanical meanings of Cleave and Impact are not specified.; `ui / loc_talent_cryptic_melee_cleave_and_impact_desc / 6d23edd0` | Exactly 50% selects Impact. Cleave modifies enemy-mass penetration; Impact modifies stagger; the effects are mutually exclusive and do not grant damage. [Fixed source and line references](cryptic_cleave_and_impact.md#fixed-source-evidence) | Not covered by the description | These details supplement the concise wording; it does not explicitly exclude the equality case. |
+
 ## Comparison totals
 
 177 rules: 85 Consistent / 4 Explicit contradiction / 85 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 548.
