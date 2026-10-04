@@ -429,6 +429,18 @@ Full raw template and formatting: [source evidence](cryptic_overload_keystone.md
 | Coherency kills, overload threshold and group buff | You and allies in Coherency gain 1 stack per ordinary kill and 2 for Elite/Specialist kills; maximum 30, overload resets to 0; +15% Damage and +15% Toughness Damage Reduction for 8s; `ui / loc_talent_cryptic_overload_keystone_coherency_desc / 58d058f4` | Qualifying player-owned attacks in Coherency give 1 or 2; reaching at least 30 clears stacks and applies `damage = 0.15`, Toughness multiplier `0.85`, duration 8 [Fixed source and line references](cryptic_overload_keystone.md#fixed-source-evidence) | Consistent | The English conditions, numbers and beneficiaries match. |
 | Overflow, accumulation and trigger details | Does not specify overflow, a stack timer, recipient snapshot or which modifier creates an explosion; `ui / loc_talent_cryptic_overload_keystone_coherency_desc / 58d058f4` | No accumulation countdown; 29 +2 triggers once and discards excess. Group buff targets current non-companion Coherency members and refreshes 8s. The base trigger has no enemy-damage explosion; Critical Power Overload enables the enemy effect [Fixed source and line references](cryptic_overload_keystone.md#fixed-source-evidence) | Not covered by the description | The omitted details and original 115 /85 examples supplement the text. The unused Monster/Captain hit setting remains excluded from active behavior. |
 
+
+<a id="cryptic_overload_keystone_bigger_explosion"></a>
+
+## Critical Power Overload
+
+Full raw template and formatting: [source evidence](cryptic_overload_keystone_bigger_explosion.md#original-english-template-and-reconstruction). Name hash `bee5e91f`. Every row uses `ui / loc_talent_cryptic_overload_keystone_bigger_explosion_desc / 4bcf4f12`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Overload, Electrocution and increased damage taken | Overload applies Electrocution to enemies in melee range; enemies hit take 15% more damage for 8s; `ui / loc_talent_cryptic_overload_keystone_bigger_explosion_desc / 4bcf4f12` | Overload creates the enemy-filtered effect; the debuff uses `electrocuted`, `damage_taken_multiplier = 1.15`, duration 8 [Fixed source and line references](cryptic_overload_keystone_bigger_explosion.md#fixed-source-evidence) | Consistent | The trigger, affected enemies, status, amount and duration agree. |
+| Area, explosion damage and reapplication | Uses melee range without a numeric radius; does not describe explosion damage or stacking; `ui / loc_talent_cryptic_overload_keystone_bigger_explosion_desc / 4bcf4f12` | Radius/minimum radius 8m; the `buff` explosion has zero attack/Impact power and armour damage modifiers. Maximum 1 stack; reapplication refreshes 8s [Fixed source and line references](cryptic_overload_keystone_bigger_explosion.md#fixed-source-evidence) | Not covered by the description | The 8m radius, zero explosion damage and refresh behavior are supplementary details, not explicit contradictions. |
+
 ## Comparison totals
 
 72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.

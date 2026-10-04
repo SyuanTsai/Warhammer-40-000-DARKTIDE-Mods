@@ -46,3 +46,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Flensing Protocols](cryptic_dissector.md) / `cryptic_dissector` | Keystone |
 | [Redline Capacitors](cryptic_redline.md) / `cryptic_redline` | Keystone |
 | [Power Overload](cryptic_overload_keystone.md) / `cryptic_overload_keystone` | Keystone |
+| [Critical Power Overload](cryptic_overload_keystone_bigger_explosion.md) / `cryptic_overload_keystone_bigger_explosion` | Keystone |

@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="Flensing Protocols talent icon"> [Flensing Protocols](#cryptic_dissector) | <ul><li>Start with 6 stacks; each grants +2.5% Damage and 2.5% Toughness Damage Reduction. Taking Health or Toughness damage removes one stack at most once per second. Elite or Specialist kills restore up to 2 stacks and 15% of maximum Toughness.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="Redline Capacitors talent icon"> [Redline Capacitors](#cryptic_redline) | <ul><li>Each Combat Ability charge actually gained or spent adds one stack: +5% natural Capacitance generation and 5% Toughness Damage Reduction per stack, up to 4. New stacks refresh 12 seconds; stacks then decay one at a time. Maximum Combat Ability charges increase by 1.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="Power Overload talent icon"> [Power Overload](#cryptic_overload_keystone) | <ul><li>Kills by you or allies in Coherency give 1 stack, or 2 for Elites and Specialists. Reaching 30 triggers an overload and resets to zero. You and allies in Coherency gain +15% Damage and 15% Toughness Damage Reduction for 8 seconds.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="Critical Power Overload talent icon"> [Critical Power Overload](#cryptic_overload_keystone_bigger_explosion) | <ul><li>On Power Overload, enemies hit within 8 metres are Electrocuted and take 15% more damage for 8 seconds. Reapplication refreshes the duration; the area effect itself deals no explosion damage.</li></ul> | Keystone |
 
 ---
 
@@ -566,3 +567,17 @@
 - **Examples**: At 28 stacks, an Elite or Specialist kill adds 2 to reach 30, immediately triggering and resetting to zero. At 29, adding 2 still triggers only once; the amount beyond 30 does not carry over.
 
 [Details](cryptic_overload_keystone.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_bigger_explosion"></a>
+
+### Critical Power Overload
+
+<img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="72" height="72" alt="Critical Power Overload talent icon">
+
+- **Trigger**: On Power Overload, enemies hit within **8 metres** around you receive Electrocution and increased damage taken for **8 seconds**.
+- **Damage example**: An attack that would deal `100` to an affected enemy instead deals `100 × 1.15 = 115`, with no other modifiers. This increase comes from the enemy's damage taken; this area effect itself deals no explosion damage.
+- **Repeated triggers**: The same effect has at most **1 stack**. Another hit refreshes the 8-second duration; it does not increase the bonus to 30%.
+
+[Details](cryptic_overload_keystone_bigger_explosion.md) · [Back to index](#talent-index)
