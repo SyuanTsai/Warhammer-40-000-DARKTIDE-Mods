@@ -491,6 +491,18 @@ Full raw template and formatting: [source evidence](zealot_multi_hits_increase_d
 | Next-attack damage and count cap | “+5% Damage on your next Melee Attack for each Enemy Hit. Stacks 5 times.”; `ui / loc_talent_zealot_3_tier_2_ability_1_description / e1fe6b4c` | Sweep finish stores hit count; next Melee damage adds .05 per enemy, max .25. [Fixed source and line references](zealot_multi_hits_increase_damage.md#fixed-source-evidence) | Consistent | The next-attack timing, value and cap agree. |
 | Replacement, missed sweeps and calculation | No replacement, duration or missed-sweep rule.; `ui / loc_talent_zealot_3_tier_2_ability_1_description / e1fe6b4c` | Latest sweep count replaces the prior value, without accumulation or timer; miss sets0. Original 100→115/125 example applies. [Fixed source and line references](zealot_multi_hits_increase_damage.md#fixed-source-evidence) | Not covered by the description | These update rules and the existing example explain the next-attack bonus. |
 
+
+<a id="zealot_increased_damage_vs_resilient"></a>
+
+## Purge the Unclean
+
+Full raw template and formatting: [source evidence](zealot_increased_damage_vs_resilient.md#original-english-template-and-reconstruction). Name hash `57c6f92b`. Every row uses `ui / loc_talent_zealot_3_passive_2_description / 96b4257f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Damage and armour categories | “+20% Increased Damage against Infested & Unyielding Enemies.”; `ui / loc_talent_zealot_3_passive_2_description / 96b4257f` | Adds .2 to corresponding `disgustingly_resilient_damage` and `resistant_damage` armour-type stats. [Fixed source and line references](zealot_increased_damage_vs_resilient.md#fixed-source-evidence) | Consistent | Displayed value and named categories match the accepted effects. |
+| Hit-location classification and addition | No hit-location or bonus-combination formula.; `ui / loc_talent_zealot_3_passive_2_description / 96b4257f` | Actual hit armour type is used, not infected appearance; mutually exclusive categories do not stack to40%. Original examples100→120 or110→130 with same-type10%. [Fixed source and line references](zealot_increased_damage_vs_resilient.md#fixed-source-evidence) | Not covered by the description | Classification and additive calculation qualify the named-category bonus. |
+
 ## Comparison totals
 
 84 rules: 39 Consistent / 3 Explicit contradiction / 39 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 604.

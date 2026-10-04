@@ -51,3 +51,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Scourge](zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | Skill |
 | [Backstabber](zealot_backstab_damage.md) / `zealot_backstab_damage` | Skill |
 | [Disdain](zealot_multi_hits_increase_damage.md) / `zealot_multi_hits_increase_damage` | Skill |
+| [Purge the Unclean](zealot_increased_damage_vs_resilient.md) / `zealot_increased_damage_vs_resilient` | Skill |

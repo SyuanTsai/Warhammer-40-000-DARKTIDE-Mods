@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="Scourge talent icon"> [Scourge](#zealot_crits_apply_bleed) | <ul><li>Damaging Melee Critical Hits apply 2 Bleed stacks to living enemies. Melee hits on bleeding targets build +10 percentage points of Melee Critical Chance per stack, up to 3 for 3 seconds.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="Backstabber talent icon"> [Backstabber](#zealot_backstab_damage) | <ul><li>Deal 25% more damage on Melee Backstabs and Ranged Flanking hits.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="Disdain talent icon"> [Disdain](#zealot_multi_hits_increase_damage) | <ul><li>Each enemy hit by the previous Melee sweep adds 5% damage to the next Melee attack, up to 5 enemies/+25%.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="Purge the Unclean talent icon"> [Purge the Unclean](#zealot_increased_damage_vs_resilient) | <ul><li>Deal 20% more damage against Infested and Unyielding armour types, according to the hit location's armour.</li></ul> | Skill |
 
 ---
 
@@ -629,3 +630,16 @@
 - **Damage example**: With no other bonuses, 3 enemies hit by the previous attack make the next attack's 100 become 100 × (1 + 3 × 5%) = 115. Five or more give 125.
 
 [Details](zealot_multi_hits_increase_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_increased_damage_vs_resilient"></a>
+
+### Purge the Unclean
+
+<img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="72" height="72" alt="Purge the Unclean talent icon">
+
+- **Operation**: Deal 20% more damage against Infested and Unyielding armour types, judged from the hit location's armour type.
+- **Damage example**: Counting only this armour-type bonus, 100 becomes 100 × 1.20 = 120. With an existing 10% bonus of the same type, 110 becomes 100 × (1 + 10% + 20%) = 130, an actual increase of about 18.18%.
+
+[Details](zealot_increased_damage_vs_resilient.md) · [Back to index](#talent-index)
