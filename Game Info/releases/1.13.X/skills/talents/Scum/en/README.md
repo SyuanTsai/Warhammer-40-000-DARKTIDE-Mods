@@ -107,6 +107,7 @@
 | <img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="32" height="32" alt="Barrage I talent icon"> [Barrage I](#broker_stimm_durability_1) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="Barrage II talent icon"> [Barrage II](#broker_stimm_durability_2) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/a9df685a-a1fd-4431-b90a-b77559277f58" width="32" height="32" alt="Barrage III talent icon"> [Barrage III](#broker_stimm_durability_3) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="Barrage IV talent icon"> [Barrage IV](#broker_stimm_durability_4) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1732,3 +1733,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Recovery example**: With maximum Toughness 100 and recovery bonuses from this node and its prerequisites active, using the Stimm restores 100 × (3 × 6.25%) × (1 + 3 × 5%) = 21.5625; actual recovery is limited by missing Toughness.
 
 [Details](broker_stimm_durability_3.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_durability_4"></a>
+
+### Barrage IV
+
+<img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="72" height="72" alt="Barrage IV talent icon">
+
+- **Recipe cost**: 4 points. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Recovery on use**: Additionally restore 6.25% of maximum Toughness, affected by Toughness recovery bonuses and capped at maximum Toughness.
+
+- **Ongoing effects**: Gain 5% Toughness Replenishment and multiply Damage Taken by 0.96, giving 4% Damage Reduction from this node.
+
+- **Damage Reduction example**: Selecting Barrage I through this node gives 4 multiplicative Damage Reduction modifiers. An incoming 100 Damage becomes 100 × 0.96^4 ≈ 84.935.
+
+- **Recovery example**: With maximum Toughness 100 and recovery bonuses from this node and its prerequisites active, using the Stimm restores 100 × (4 × 6.25%) × (1 + 4 × 5%) = 30; actual recovery is limited by missing Toughness.
+
+[Details](broker_stimm_durability_4.md) · [Back to index](#talent-index)
