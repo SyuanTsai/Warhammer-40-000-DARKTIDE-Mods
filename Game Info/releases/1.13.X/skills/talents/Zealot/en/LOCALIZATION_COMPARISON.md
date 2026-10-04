@@ -612,6 +612,18 @@ Full raw template and formatting: [source evidence](zealot_ally_damage_taken_red
 | Ally range | “an Ally in Coherency”; `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711` | on_damage_taken broadcasts to side.valid_player_units; template checks damage_amount>0 and applies to attacked_unit without Coherency, distance or holder-equality checks. [Fixed source and line references](zealot_ally_damage_taken_reduced.md#fixed-source-evidence) | Explicit contradiction | The English imposes a range restriction absent from the accepted fixed execution path. Actual game range remains unobserved. |
 | Trigger damage, recipients and stacking | No Health-only condition, retroactive-damage rule or per-holder/multiple-holder detail.; `ui / loc_talent_zealot_3_tier_4_ability_3_description / 96972711` | Toughness-only damage fails; trigger hit already resolved. Each holder shares its cooldown across recipients; independent child instances multiply. Original 100→40 and t0/t4/t8 example retained. [Fixed source and line references](zealot_ally_damage_taken_reduced.md#fixed-source-evidence) | Not covered by the description | These timing and recipient details supplement the stated effect. |
 
+
+<a id="zealot_push_attacks_attack_speed"></a>
+
+## Punish Impiety
+
+Full raw template and formatting: [source evidence](zealot_push_attacks_attack_speed.md#original-english-template-and-reconstruction). Name hash `707ee4fe`. Every row uses `ui / loc_talent_zealot_push_attacks_attack_speed_desc / ab4ad805`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Push follow-up speed and duration | “Push followup attacks grant +10% Melee Attack Speed for 5s.”; `ui / loc_talent_zealot_push_attacks_attack_speed_desc / ab4ad805` | Valid follow-up's first hit grants melee_attack_speed 0.1 for 5 seconds. [Fixed source and line references](zealot_push_attacks_attack_speed.md#fixed-source-evidence) | Consistent | Attack type, stat and values agree. |
+| Hit condition, refresh and action timing | No explicit hit/miss handling, timer refresh or affected-action formula.; `ui / loc_talent_zealot_push_attacks_attack_speed_desc / ab4ad805` | on_push_finish/on_action_finish/on_sweep_start prepare valid; first on_hit triggers, miss clears on_sweep_finish. Listed actions use additive speed and total_time/time_scale; original 1s examples give 0.909s and 0.769s. [Fixed source and line references](zealot_push_attacks_attack_speed.md#fixed-source-evidence) | Not covered by the description | These proc and speed-calculation details supplement the description. |
+
 ## Comparison totals
 
 105 rules: 49 Consistent / 4 Explicit contradiction / 49 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 614.

@@ -61,3 +61,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Vicious Offering](zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | Skill |
 | [Duellist](zealot_increased_crit_and_weakspot_damage_after_dodge.md) / `zealot_increased_crit_and_weakspot_damage_after_dodge` | Skill |
 | [Shield of Contempt](zealot_ally_damage_taken_reduced.md) / `zealot_ally_damage_taken_reduced` | Skill |
+| [Punish Impiety](zealot_push_attacks_attack_speed.md) / `zealot_push_attacks_attack_speed` | Skill |

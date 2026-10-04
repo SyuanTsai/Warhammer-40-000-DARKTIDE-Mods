@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="Vicious Offering talent icon"> [Vicious Offering](#zealot_toughness_on_heavy_kills) | <ul><li>A Heavy Attack kill restores an extra 10% of maximum Toughness; merely hitting without a kill does not trigger it.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="Duellist talent icon"> [Duellist](#zealot_increased_crit_and_weakspot_damage_after_dodge) | <ul><li>A successful Dodge increases extra Weakspot/Critical damage by 50% for 3 seconds; another successful Dodge restarts the timer.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="32" height="32" alt="Shield of Contempt talent icon"> [Shield of Contempt](#zealot_ally_damage_taken_reduced) | <ul><li>After you or an ally takes Health damage, the injured player gains 60% damage reduction for 4 seconds; each holder shares an 8-second trigger cooldown.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="32" height="32" alt="Punish Impiety talent icon"> [Punish Impiety](#zealot_push_attacks_attack_speed) | <ul><li>A hit from the attack following a push grants +10% Melee Attack Speed for 5 seconds; another trigger restarts the timer.</li></ul> | Skill |
 
 ---
 
@@ -776,3 +777,16 @@
 - **Damage example**: Counting only this effect, subsequent damage of 100 becomes 100 × 0.4 = 40. A trigger at second 0 gives an effect ending around second 4 and can trigger again around second 8.
 
 [Details](zealot_ally_damage_taken_reduced.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_push_attacks_attack_speed"></a>
+
+### Punish Impiety
+
+<img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="72" height="72" alt="Punish Impiety talent icon">
+
+- **Trigger**: Hitting an enemy with the attack following a push grants +10% Melee Attack Speed for 5 seconds. Another trigger restarts the timer; a miss gives no bonus.
+- **Speed example**: Counting only this bonus, an affected 1-second action becomes 1 ÷ 1.1 ≈ 0.909 seconds. With an existing 20% same-stage attack-speed bonus, it becomes 1 ÷ (1 + 20% + 10%) ≈ 0.769 seconds.
+
+[Details](zealot_push_attacks_attack_speed.md) · [Back to index](#talent-index)
