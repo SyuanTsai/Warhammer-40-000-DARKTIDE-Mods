@@ -80,3 +80,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Binary Ballistics Protocol](cryptic_elite_kills_toughness.md) / `cryptic_elite_kills_toughness` | Talent |
 | [Force Distribution Actuators](cryptic_push_stagger_stamina.md) / `cryptic_push_stagger_stamina` | Talent |
 | [Superior Tracking Litanies](cryptic_no_braced_movement_penalty.md) / `cryptic_no_braced_movement_penalty` | Talent |
+| [Hydraulic Impact](cryptic_better_heavies.md) / `cryptic_better_heavies` | Talent |

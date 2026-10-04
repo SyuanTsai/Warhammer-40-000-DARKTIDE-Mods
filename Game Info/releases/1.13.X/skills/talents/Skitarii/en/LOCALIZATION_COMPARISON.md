@@ -841,6 +841,18 @@ Full raw template and formatting: [source evidence](cryptic_no_braced_movement_p
 | Movement penalty and Spread | -50% movement speed penalty while bracing or aiming down sights; additionally -45% Spread; `ui / loc_talent_cryptic_no_braced_movement_penalty_desc / f793a029` | Movement penalty is halved; `spread_modifier = -0.45` is unconditional. [Fixed source and line references](cryptic_no_braced_movement_penalty.md#fixed-source-evidence) | Consistent | The negative display values match a reduced penalty and reduced Spread; the text does not explicitly bind the additional Spread stat to bracing. |
 | Calculation and separate conditions | Does not explain the movement curve or the independent Spread condition; `ui / loc_talent_cryptic_no_braced_movement_penalty_desc / f793a029` | Original 60% speed becomes `1 − 40% × 0.5 = 80%`; Spread 10 becomes `10 × (1 − 45%) = 5.5` without other bonuses. [Fixed source and line references](cryptic_no_braced_movement_penalty.md#fixed-source-evidence) | Not covered by the description | The existing examples clarify the two effects without treating the movement change as a 1.5× speed multiplier. |
 
+
+<a id="cryptic_better_heavies"></a>
+
+## Hydraulic Impact
+
+Full raw template and formatting: [source evidence](cryptic_better_heavies.md#original-english-template-and-reconstruction). Name hash `245222e1`. Every row uses `ui / loc_talent_cryptic_better_heavies_desc / 668011b5`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Windup protection and heavy damage | Uninterruptible while charging melee attacks; gain +15% Heavy Melee Damage; `ui / loc_talent_cryptic_better_heavies_desc / 668011b5` | Windup enables `uninterruptible` and `stun_immune`; melee heavy profiles receive the always-supplied `melee_heavy_damage = 0.15`. [Fixed source and line references](cryptic_better_heavies.md#fixed-source-evidence) | Consistent | The two sentences distinguish windup protection from the heavy-attack damage stat. |
+| Scope and calculation | Does not specify full-charge requirements, damage intake or other disabling actions; `ui / loc_talent_cryptic_better_heavies_desc / 668011b5` | No `auto_completed_action` requirement for damage; protection is limited to windup. Damage still applies and nets/pounces are not covered. Base 100 with same-stage 25% becomes 140. [Fixed source and line references](cryptic_better_heavies.md#fixed-source-evidence) | Not covered by the description | These are the existing condition, exception and calculation details; the English explicitly promises neither all-control immunity nor full-charge-only damage. |
+
 ## Comparison totals
 
 136 rules: 65 Consistent / 3 Explicit contradiction / 65 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 528.
