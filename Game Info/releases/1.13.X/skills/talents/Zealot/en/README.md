@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="The Voice of Terra talent icon"> [The Voice of Terra](#zealot_toughness_while_shooting) | <ul><li>Shooting restores 10% of maximum Toughness per second, continuing about 0.5 seconds after firing stops; hits and kills are not required.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="Restoring Faith talent icon"> [Restoring Faith](#zealot_heal_part_of_damage_taken) | <ul><li>After taking Health damage, gradually heal 20% of that damage over about 4 seconds; Toughness damage is excluded.</li></ul> | Skill |
 | <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="Bleed for the Emperor talent icon"> [Bleed for the Emperor](#zealot_reduced_damage_on_wound) | <ul><li>If Health damage would cross the next Wound threshold, reduce that entire Health-damage amount by 40%; landing exactly on the threshold does not trigger it.</li></ul> | Skill |
+| <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="Vicious Offering talent icon"> [Vicious Offering](#zealot_toughness_on_heavy_kills) | <ul><li>A Heavy Attack kill restores an extra 10% of maximum Toughness; merely hitting without a kill does not trigger it.</li></ul> | Skill |
 
 ---
 
@@ -731,3 +732,17 @@
 - **Boundary**: Incoming damage 20 from 120 Health lands exactly at 100 and does not trigger this reduction.
 
 [Details](zealot_reduced_damage_on_wound.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_toughness_on_heavy_kills"></a>
+
+### Vicious Offering
+
+<img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="72" height="72" alt="Vicious Offering talent icon">
+
+- **Operation**: A Heavy Attack kill restores an extra 10% of maximum Toughness. Merely hitting without a kill does not trigger this talent.
+- **Restoration example**: With maximum Toughness 100 and no other restoration bonuses, this talent adds 10 restoration per qualifying kill. If only 4 Toughness is missing, it restores 4.
+- **Separation**: Normal Melee-kill Toughness restoration is calculated separately from this talent's extra restoration.
+
+[Details](zealot_toughness_on_heavy_kills.md) · [Back to index](#talent-index)

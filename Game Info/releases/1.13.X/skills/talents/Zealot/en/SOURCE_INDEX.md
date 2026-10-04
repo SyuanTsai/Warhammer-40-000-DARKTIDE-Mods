@@ -58,3 +58,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [The Voice of Terra](zealot_toughness_while_shooting.md) / `zealot_toughness_while_shooting` | Skill |
 | [Restoring Faith](zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | Skill |
 | [Bleed for the Emperor](zealot_reduced_damage_on_wound.md) / `zealot_reduced_damage_on_wound` | Skill |
+| [Vicious Offering](zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | Skill |
