@@ -6267,7 +6267,12 @@
         "broker_passive_melee_crit_instakill",
         "broker_passive_damage_vs_elites_monsters",
         "broker_passive_increased_weakspot_damage",
-        "broker_passive_stimm_increased_duration"
+        "broker_passive_stimm_increased_duration",
+        "broker_passive_stimm_cleanse_on_kill",
+        "broker_passive_dr_damage_tradeoff_on_stamina",
+        "broker_passive_low_ammo_regen",
+        "broker_passive_cleave_on_cleave",
+        "broker_stimm_activation_talent"
       ],
       "checks": []
     },
@@ -6354,7 +6359,12 @@
         "broker_passive_melee_crit_instakill",
         "broker_passive_damage_vs_elites_monsters",
         "broker_passive_increased_weakspot_damage",
-        "broker_passive_stimm_increased_duration"
+        "broker_passive_stimm_increased_duration",
+        "broker_passive_stimm_cleanse_on_kill",
+        "broker_passive_dr_damage_tradeoff_on_stamina",
+        "broker_passive_low_ammo_regen",
+        "broker_passive_cleave_on_cleave",
+        "broker_stimm_activation_talent"
       ],
       "checks": []
     },
@@ -6441,7 +6451,12 @@
         "broker_passive_melee_crit_instakill",
         "broker_passive_damage_vs_elites_monsters",
         "broker_passive_increased_weakspot_damage",
-        "broker_passive_stimm_increased_duration"
+        "broker_passive_stimm_increased_duration",
+        "broker_passive_stimm_cleanse_on_kill",
+        "broker_passive_dr_damage_tradeoff_on_stamina",
+        "broker_passive_low_ammo_regen",
+        "broker_passive_cleave_on_cleave",
+        "broker_stimm_activation_talent"
       ],
       "checks": []
     },
@@ -6528,7 +6543,12 @@
         "broker_passive_melee_crit_instakill",
         "broker_passive_damage_vs_elites_monsters",
         "broker_passive_increased_weakspot_damage",
-        "broker_passive_stimm_increased_duration"
+        "broker_passive_stimm_increased_duration",
+        "broker_passive_stimm_cleanse_on_kill",
+        "broker_passive_dr_damage_tradeoff_on_stamina",
+        "broker_passive_low_ammo_regen",
+        "broker_passive_cleave_on_cleave",
+        "broker_stimm_activation_talent"
       ],
       "checks": []
     },
@@ -7249,9 +7269,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e8d7d7217b8da03f9fbf8f671fbeb940c1316a7f",
       "chinese_sha256": "d65d5ed169b5ff096ffdd46fb1071fc402baced398986570bd19862b7a55bf13",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_cleave_on_cleave"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_close_range_damage_on_dodge.md",
@@ -7404,9 +7431,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0b1cbfab0bc9a6f602a48b97ebec1d1783aab341",
       "chinese_sha256": "af3830ccfc750ce18a8b8ca5af40e4ba539c7e72b167ceffcca9b756f7d15030",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_dr_damage_tradeoff_on_stamina"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_extended_mag.md",
@@ -7588,9 +7622,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7528f5b1f252eca3529d7affbe18370a8acf62e3",
       "chinese_sha256": "3739360bc2d3eed5fe60d7875c40aafb6add6a7f69e92fe4ff75b6a692830604",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_low_ammo_regen"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_attacks_apply_toxin.md",
@@ -7905,9 +7946,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ebbd0a2d68d835e1fb674e26dc79e16886eaed54",
       "chinese_sha256": "278b72792bf02d57467f538092e2f3d324ec3a91acef7a6dd8a4e87fbacea5a1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_passive_stimm_cleanse_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_increased_duration.md",
@@ -7988,9 +8036,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "70983bb7d603bc476abb2d3295ee0f3943058fc9",
       "chinese_sha256": "a2de8ee0bb7fe26385abc9a639e6c4ebc7023523d522d1e429c38ec9131348fb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "broker_stimm_activation_talent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md",
@@ -16411,6 +16466,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_increased_duration.md"
+    },
+    {
+      "id": "broker_passive_stimm_cleanse_on_kill",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_stimm_cleanse_on_kill.md"
+    },
+    {
+      "id": "broker_passive_dr_damage_tradeoff_on_stamina",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_dr_damage_tradeoff_on_stamina.md"
+    },
+    {
+      "id": "broker_passive_low_ammo_regen",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_low_ammo_regen.md"
+    },
+    {
+      "id": "broker_passive_cleave_on_cleave",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_cleave_on_cleave.md"
+    },
+    {
+      "id": "broker_stimm_activation_talent",
+      "scope": "Scum",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_activation_talent.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -981,4 +981,4 @@ Full raw template and formatting: [source evidence](broker_stimm_activation_tale
 
 ## Comparison totals
 
-The 159 listed rules comprise **74 Consistent**, **4 Explicit contradictions**, **74 Not covered by the description**, **1 No corresponding implementation evidence found** and **6 Cannot confirm**.
+The 172 listed rules comprise **79 Consistent**, **5 Explicit contradictions**, **79 Not covered by the description**, **1 No corresponding implementation evidence found** and **8 Cannot confirm**.
