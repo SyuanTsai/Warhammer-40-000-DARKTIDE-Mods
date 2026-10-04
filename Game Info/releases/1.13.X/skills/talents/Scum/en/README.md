@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="Battering Strikes talent icon"> [Battering Strikes](#broker_passive_melee_cleave_on_melee_kill) | <ul><li>Each Melee kill grants 10% Damage Cleave capacity for 5s, up to 5 stacks; retriggering refreshes the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="Hyper-Violence talent icon"> [Hyper-Violence](#broker_passive_melee_damage_carry_over) | <ul><li>Kills grant 25% of overkill Damage as flat Melee Damage for 1s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="Virulent Strain talent icon"> [Virulent Strain](#broker_passive_toxin_infected_enemies_take_increased_damage) | <ul><li>Adding Chem Toxin or a stack to an enemy makes it take 10% more Damage from all sources for up to 5s; retriggering refreshes.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="Toxin Mania talent icon"> [Toxin Mania](#broker_passive_damage_after_toxined_enemies) | <ul><li>Each Chem Toxin infected enemy within 12.5m grants 5% Damage, up to 15% at three enemies.</li></ul> | Talent |
 
 ---
 
@@ -1049,3 +1050,17 @@
 - **Damage example**: An initial 100 Damage becomes 110 with the vulnerability alone. With another 25% Damage bonus on the attacker, 100 × 1.25 × 1.1 = 137.5. If the target already has another 20% vulnerability at the same stage, that stage is 1 + 20% + 10% = ×1.3.
 
 [Details](broker_passive_toxin_infected_enemies_take_increased_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_damage_after_toxined_enemies"></a>
+
+### Toxin Mania
+
+<img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="72" height="72" alt="Toxin Mania talent icon">
+
+- **Calculation**: Each enemy infected with Chem Toxin within 12.5m grants 5% Damage, reaching the 15% cap at three enemies. You do not need to have applied the Toxin yourself. The bonus drops as enemies leave the area or lose Toxin.
+
+- **Damage example**: Two infected enemies nearby grant 10% Damage, taking base 100 to 110. With another 25% bonus at the same stage, 100 × (1 + 25% + 10%) = 135.
+
+[Details](broker_passive_damage_after_toxined_enemies.md) · [Back to index](#talent-index)

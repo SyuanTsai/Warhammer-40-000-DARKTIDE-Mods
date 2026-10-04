@@ -759,6 +759,18 @@ Full raw template and formatting: [source evidence](broker_passive_toxin_infecte
 | Infection and vulnerability | When infecting an Enemy with Chem Toxin, increase Damage taken by +10% from all sources for 5s; `ui / loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc / b7e6d44b` | Owner-forwarded Toxin Buff events add a `damage_taken_modifier = 0.1` debuff with duration 5s [Fixed source and line references](broker_passive_toxin_infected_enemies_take_increased_damage.md#fixed-source-evidence) | Consistent | The trigger, target-side statistic, all-source scope and nominal duration match. |
 | Ownership, refresh and early ending | No teammate ownership, stack-addition, refresh or early-end rules are stated; `ui / loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc / b7e6d44b` | Buff add/stack-add events use `additional_arguments.owner_unit`; maximum one refreshed debuff; after 0.1s, loss of Toxin ends it [Fixed source and line references](broker_passive_toxin_infected_enemies_take_increased_damage.md#fixed-source-evidence) | Not covered by the description | These limit and explain the stated effect without treating omitted details as English errors. The original attacker/target-stage examples are retained. |
 
+
+<a id="broker_passive_damage_after_toxined_enemies"></a>
+
+## Toxin Mania
+
+Full raw template and formatting: [source evidence](broker_passive_damage_after_toxined_enemies.md#original-english-template-and-reconstruction). Name hash `3cc33c95`. Every row uses `ui / loc_talent_broker_damage_after_toxined_enemies_desc / f70dc769`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Nearby infected-enemy bonus | +5% Base Damage for each Chem Toxin infected enemy nearby; up to +15%; `ui / loc_talent_broker_damage_after_toxined_enemies_desc / f70dc769` | General `damage = 0.05` per enemy; enemy-count multiplier clamped to 0–3 [Fixed source and line references](broker_passive_damage_after_toxined_enemies.md#fixed-source-evidence) | Consistent | The per-enemy bonus and cap match; the wording does not impose a Melee or Ranged attack restriction. |
+| Range, update and combination | No exact range, ownership requirement or combination formula is stated; `ui / loc_talent_broker_damage_after_toxined_enemies_desc / f70dc769` | Every 0.2s, a 12.5m broadphase query checks the Toxin keyword without owner filtering; the Damage bonus adds at the same stage [Fixed source and line references](broker_passive_damage_after_toxined_enemies.md#fixed-source-evidence) | Not covered by the description | These explain changes as enemies leave/lose Toxin and preserve the original two-enemy 100→110/135 example. |
+
 ## Comparison totals
 
 The 128 listed rules comprise **60 Consistent**, **3 Explicit contradictions**, **59 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
