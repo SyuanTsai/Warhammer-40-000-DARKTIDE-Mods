@@ -46,3 +46,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Eternal](zealot_quickness_increased_duration.md) / `zealot_quickness_increased_duration` | Keystone |
 | [On the Brink](zealot_corruption_resistance_stacking.md) / `zealot_corruption_resistance_stacking` | Keystone |
 | [Zealous Pilgrim](zealot_resist_death_ability.md) / `zealot_resist_death_ability` | Keystone |
+| [Fire and Fury](zealot_resist_death_fire.md) / `zealot_resist_death_fire` | Keystone |

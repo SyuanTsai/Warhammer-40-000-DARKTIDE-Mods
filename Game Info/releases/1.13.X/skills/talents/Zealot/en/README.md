@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="Eternal talent icon"> [Eternal](#zealot_quickness_increased_duration) | <ul><li>Inexorable Judgement's active bonus lasts 10 seconds instead of 6.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="On the Brink talent icon"> [On the Brink](#zealot_corruption_resistance_stacking) | <ul><li>Each complete missing Wound counted by Martyrdom reduces Corruption damage taken by 10%, up to 5 Wounds and 50%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="Zealous Pilgrim talent icon"> [Zealous Pilgrim](#zealot_resist_death_ability) | <ul><li>Ability use grants 4 seconds of Unkillable; Shroudfield starts it upon leaving Stealth, Chorus upon unwielding the relic. While Unkillable, gain 10% Damage and Attack Speed.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="Fire and Fury talent icon"> [Fire and Fury](#zealot_resist_death_fire) | <ul><li>While Unkillable, weapon hits apply Burn to living enemies: 3 stacks for Melee, 1 for Ranged, up to 12 from this talent.</li></ul> | Keystone |
 
 ---
 
@@ -551,3 +552,18 @@
 - **Damage and speed example**: Counting only this bonus, base damage 100 becomes 100 × 1.1 = 110. An affected 1-second action becomes 1 ÷ 1.1 ≈ 0.909 seconds. Other bonuses in the same stage add first.
 
 [Details](zealot_resist_death_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_resist_death_fire"></a>
+
+### Fire and Fury
+
+<img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="72" height="72" alt="Fire and Fury talent icon">
+
+- **Trigger**: While Unkillable, weapon hits against living enemies apply Burn. Each Melee hit adds 3 stacks, each Ranged hit 1. This talent can raise that enemy's Burn to at most 12; other sources can raise it higher.
+- **Burn duration**: It ticks approximately every 0.5 seconds. Additional Burn resets the 4-second retention period; after expiry, ticks continue while stacks decay one by one. At 12 or more stacks, this talent refreshes timing without adding stacks.
+- **Stack example**: From 0 stacks, 4 consecutive Melee hits reach 4 × 3 = 12. Another hit does not raise the count to 15 through this talent.
+- **Damage example**: Against a fixed Unarmoured hit location with no other modifiers, one Burn tick at 3 stacks deals 400 × (3 ÷ 31)² × [3 − 2 × (3 ÷ 31)] × 1.5 ≈ 15.77 damage; 12 stacks deal about 200.11. These are individual ticks, not fixed damage per second against every enemy.
+
+[Details](zealot_resist_death_fire.md) · [Back to index](#talent-index)

@@ -431,6 +431,18 @@ Full raw template and formatting: [source evidence](zealot_resist_death_ability.
 | Unkillable trigger, timing and offensive bonuses | Ability grants Unkillable for 4s; Shroudfield begins on Stealth exit, Chorus on relic unwielding; while Unkillable +10% Attack Speed and Damage.; `ui / loc_talent_zealot_resist_death_ability_offensive_desc / ccea0bcc` | Ordinary Ability event or respective end paths add 4s `unkillable`; offensive stats are conditional on the keyword. [Fixed source and line references](zealot_resist_death_ability.md#fixed-source-evidence) | Consistent | The explicit exceptions, duration, conditions and values match. |
 | Instances, exclusivity and calculation | No overlap, exclusivity, Until Death cooldown or combination formula.; `ui / loc_talent_zealot_resist_death_ability_offensive_desc / ccea0bcc` | No max_stacks creates separate 4s instances; Holy Revenant exclusive; Fire and Fury/Risen compatible; Until Death's 120s unchanged; damage 100→110, 1s→0.909s. [Fixed source and line references](zealot_resist_death_ability.md#fixed-source-evidence) | Not covered by the description | The accepted instance derivation, examples and selection limits supplement the stated effects. |
 
+
+<a id="zealot_resist_death_fire"></a>
+
+## Fire and Fury
+
+Full raw template and formatting: [source evidence](zealot_resist_death_fire.md#original-english-template-and-reconstruction). Name hash `af670dea`. Every row uses `ui / loc_talent_zealot_resist_death_fire_desc / 2ee3f440`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Unkillable weapon Burn and application cap | “While Unkillable your Weapon Attacks apply Burn up to 12 Maximum Stacks.”; `ui / loc_talent_zealot_resist_death_fire_desc / 2ee3f440` | Living-target Melee/Ranged hits with `unkillable` add shared Burn, capped at 12 for this talent. [Fixed source and line references](zealot_resist_death_fire.md#fixed-source-evidence) | Consistent | Condition, weapon-hit effect and talent cap match; English does not specify a global shared-Buff cap. |
+| Stack additions, timer, decay and damage | No additions by weapon type, timing or damage formula.; `ui / loc_talent_zealot_resist_death_fire_desc / 2ee3f440` | Melee +3/Ranged +1; shared cap 31; 4s refreshed retention/.5s ticks then gradual stack removal. Existing fixed-Unarmoured examples yield 15.77/200.11 per tick. [Fixed source and line references](zealot_resist_death_fire.md#fixed-source-evidence) | Not covered by the description | Accepted formulas, examples and any-source keyword/target restrictions explain Burn without further English errata. |
+
 ## Comparison totals
 
 74 rules: 34 Consistent / 3 Explicit contradiction / 34 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 599.
