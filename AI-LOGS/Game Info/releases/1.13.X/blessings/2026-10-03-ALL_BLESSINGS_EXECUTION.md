@@ -341,3 +341,7 @@
 - [撕扯震盪](2026-10-03-RENDING-SHOCKWAVE_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
 
 - [機魂再臨](2026-10-03-MACHINE-SPIRIT-RESURGENT_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 第20輪三項已Commit後完整掃描通過：momentum (`0f25a60de86eb5dea7255f047907a20a6f97aa80`)、rending-shockwave (`7169f74801e2a3aa7a03932d5b3746f97cb3e30c`)、machine-spirit-resurgent (`494f13c15879a035ae03ea3a1e2bbfa53150bb1a`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-020-full-scan.json`／SHA-256 `ea1f2d22dab98fffd677eceba82ef817a98252023f59ac0d331292071ec880c8`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [精煉殺意](2026-10-03-REFINED-LETHALITY_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。

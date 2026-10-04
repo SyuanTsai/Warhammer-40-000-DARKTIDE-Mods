@@ -7,11 +7,12 @@
 | <img src="https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80" width="32" height="32" alt="屠戮者祝福圖示"> [屠戮者](../../../entries/屠戮者/README.md)<br>- Decimator<br>[完整說明](../../../entries/屠戮者/README.md) | <ul><li>近戰揮擊命中敵人後取得一層，每層近戰威力增加2／3／4／5%，最多10層；命中刷新2秒，揮空清空。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a" width="32" height="32" alt="粉碎祝福圖示"> [粉碎](../../../entries/粉碎/README.md)<br>- Shred<br>[完整說明](../../../entries/粉碎/README.md) | <ul><li>近戰揮擊命中後每層增加2.5／3／3.5／4個百分點爆擊率，最多5層；命中刷新3.5秒，揮空清空。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](../../../entries/憤怒/README.md)<br>- Wrath<br>[完整說明](../../../entries/憤怒/README.md) | <ul><li>近戰揮擊命中後每層順劈+10%／15%／20%／25%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee" width="32" height="32" alt="精煉殺意祝福圖示"> [精煉殺意](../../../entries/精煉殺意/README.md)<br>- Refined Lethality<br>[完整說明](../../../entries/精煉殺意/README.md) | <ul><li>持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 骨鋸 外科醫師 型號4 | [屠戮者](../../../entries/屠戮者/weapon_trait_bespoke_saw_p1_chained_hits_increases_power.md)、[粉碎](../../../entries/粉碎/weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance.md)、[憤怒](../../../entries/憤怒/weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave.md) | I–IV |
+| 骨鋸 外科醫師 型號4 | [屠戮者](../../../entries/屠戮者/weapon_trait_bespoke_saw_p1_chained_hits_increases_power.md)、[粉碎](../../../entries/粉碎/weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance.md)、[憤怒](../../../entries/憤怒/weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave.md)、[精煉殺意](../../../entries/精煉殺意/weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

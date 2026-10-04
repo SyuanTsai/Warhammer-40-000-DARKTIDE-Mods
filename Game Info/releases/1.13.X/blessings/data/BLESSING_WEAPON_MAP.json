@@ -1226,6 +1226,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
       "effect": "持用機械神教動力劍布蘭克斯 Mk VI，以啟用特殊攻擊命中弱點並擊殺目標，且事件處理時仍持用此劍，即返還1道特殊充能（上限6）；I–IV級冷卻為5.5／4.5／3.5／2.5秒。"
+    },
+    {
+      "id": "refined-lethality",
+      "name_zh_tw": "精煉殺意",
+      "name_en": "Refined Lethality",
+      "name_key": "loc_trait_bespoke_increased_weakspot_damage_against_toxin_status",
+      "description_key": "loc_trait_bespoke_increased_weakspot_damage_against_toxin_status_desc",
+      "name_hash": "38e007cd",
+      "description_hash": "fbd338c3",
+      "page": "entries/精煉殺意/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
+      "effect": "持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。"
     }
   ],
   "weapons": [
@@ -18707,6 +18720,62 @@
       "icon": "https://github.com/user-attachments/assets/47fbf600-586e-4ed1-90de-36afbd08a350",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_251",
       "effect": "布蘭克斯 Mk VI 為唯一實作；僅特殊攻擊弱點擊殺符合，普通輕／重攻擊、推擊及推擊追擊不符合。"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status",
+      "blessing_id": "refined-lethality",
+      "weapon_id": "saw_p1",
+      "page": "entries/精煉殺意/weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_weakspot_damage_vs_toxin_status",
+        "tier_values_by_level": {
+          "I": 0.525,
+          "II": 0.55,
+          "III": 0.575,
+          "IV": 0.6
+        },
+        "value_unit": "additive fraction applied to the weakspot/finesse damage component against toxin-keyword targets",
+        "wrapper_fallback": 1.0,
+        "tier_overrides_replace_fallback": true,
+        "attack_type_required": "melee",
+        "requires_weakspot": true,
+        "requires_target_keyword": "toxin",
+        "proc_duration_or_stacks": false,
+        "trait_id": "weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status",
+        "mark_ids": [
+          "saw_p1_m1"
+        ],
+        "weapon_type_restriction": "saw_p1",
+        "own_tier_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 383,
+        "end_line": 422
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 51,
+        "end_line": 51
+      },
+      "description_key": "loc_trait_bespoke_increased_weakspot_damage_against_toxin_status_desc",
+      "description_hash": "fbd338c3",
+      "icon": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_245",
+      "effect": "持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。"
     }
   ],
   "bindings": [
@@ -26282,6 +26351,20 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
         "import_line": 15,
         "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "refined-lethality",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status",
+      "trait_item": "content/items/traits/bespoke_saw_p1/increased_weakspot_damage_against_toxin_status",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
       }
     }
   ]

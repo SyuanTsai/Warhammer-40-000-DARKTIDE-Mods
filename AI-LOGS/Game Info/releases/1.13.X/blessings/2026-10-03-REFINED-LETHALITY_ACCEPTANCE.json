@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-05",
+  "blessing": "refined-lethality",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/精煉殺意/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "refined-lethality",
+    "review_type": "formal_peer_review",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-formal-peer-scope.json",
+    "scope_sha256": "70c81077c9ae110b95795cb1afbb7f56c4ff9cbc24946c2b7e327b6a93d7d4f3",
+    "canonical_config_sha256": "81856324e59d63b6bf15824322496f4f49fc76b757ff38349ee21ab87ff9d835",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-addendum.json": "e3ed59f0ab959d678dc4e296132197d17a60818176b01aedf1dcbc297b1b8973",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-config.json": "7477229123ade7aa2454b032de01594df1268ee6ff0d78570686f460e86953af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-coverage.json": "36853cb567779f22a44a78eb00907a6b5d56b6d632bb4f6252a830a3b361e053",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-draft.md": "327063440609c61e3a30e1e68b474f3e84f17f97e764d0f77c40ec8fcec16ceb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-evidence.json": "b7e8e8a54f5ba76a3cdecc0db380abc164310ca8a61a66e7eca377c9f894a9e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-config.json": "81856324e59d63b6bf15824322496f4f49fc76b757ff38349ee21ab87ff9d835",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-extension-draft.json": "779fde440c4e48c900b9f8aa076a22565488100e9a7462d09159f2514120741f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-image.json": "b5de161b7a0167a2e3c9e7bbc4bc12e85b9c58bf5fa347580144945e23505e59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-focused-checks.json": "e145fbf97418ca76435cd8e0613a3680346f6fa87624278cd84e297fdba2d2ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-frozen-source-verification.json": "1f73b5f85f0f6fa6cbc429211f4e1ea16016d159e0776334577840c2199f1e93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-own-tier-diff.json": "b0d058588548a7feb89457d379b3df24a47f6437168b7b6f423e8dc396b1906e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-resume-review.json": "c4d5c31a541a987896d90d0debe3b0d86a0b2a33d3bf1d5efcbe8c9a37e502e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-traits-review.json": "e3b834bbf5ffb0d4cfe4a1016b2dd928aab502e9eaa972e8633f9bbf5642f38d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-ui-raw-verification.json": "78f656802fd0584fc62a3f879a02a83b1ed0265e87bb03e19a998eaab91bcf09",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-ui-review.json": "c657068109d51fa478402509afbd302995282a3ca146c5e248aacfd16d86a684",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "303d0f2a29b5c19b48768d44eecadd3e9c684331e46287a5fe63e30e010db491",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/DAMAGE_PERCENTAGE_REVIEW.md": "923bdc4725975bd1f0e27f6f04b47084ce193821346f9cd9e057d667ce1bf88c",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/LOCALIZATION_COMPARISON.md": "1dcb95b5e060e729a9029abec1568333742c788c2229056c3b72906cfe304043",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/README.md": "4194c09ddc60e43470dcc0fc32675e0f04533b702fd36aa9ae72fb0c947ee2f3",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/SOURCE_INDEX.md": "84a4346e29d38f1cc8915c150c5bfaed8c4cf5808838e5fc2bc9830aad13bf25",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/TIER_VALUES.md": "81606e5909149c4b0dccfa40630a254c66433018924bd973c9d803e66656f1da",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/WEAPON_COMPATIBILITY.md": "2cffd5603215363cd4e0e8b2530a7fe7116a38a3f775776e5291b16d9e9cde1c",
+      "Game Info/releases/1.13.X/blessings/entries/精煉殺意/weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status.md": "167aef2ce7ea2f8a486b0ed42b01b8cab9627680eb8ea0e4ff6cad380867c655",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "54380f6bfa4334355123e7ed9213a2410336f0aed313512f4a0c13731a106709",
+      "Game Info/releases/1.13.X/blessings/README.md": "a675010dc19ecc347ab42568308980a070b753b4b84b5ccf0780203541eae469",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "15565db723f499d24dd6aee059a40dbe06fad0e1faa495bad16b52ea8d3d845f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "8da02a19dabb7ae8ba01f3f442402dab9552d5044113fd27f1eec91b085ac41a",
+      "Referneces/Translation.md": "9ed444fe627af5b8128fb21f9b4ac5162ce1b57a7a9ed92f417df1e7646a6421"
+    },
+    "review_summary": {
+      "formal_content": "Reviewed all seven owned pages and the map/reverse-page/translation index entries. The sole inventory binding is saw_p1 / saw_p1_m1, displayed as 骨鋸 外科醫師 型號4; trait identity, icon reference, and shared/reverse links agree.",
+      "tier_and_wrapper": "The four own tiers are 0.525/0.55/0.575/0.60. The exact wrapper clones the held-slot conditional base; own values replace the 1.0 fallback. No own proc, stack, or duration is represented.",
+      "damage_formula": "The formal equation is F*(S+t): the tier adds to the assembled weakspot/finesse multiplier and affects the base finesse component, not the whole hit. Both controlled examples preserve other terms; the S=1 example and S=1.40 example arithmetic and stated relative increases are correct.",
+      "toxin_and_attack_routes": "The toxin weakspot consumer requires melee, weakspot, and the target toxin keyword at damage calculation. Normal coating inserts neurotoxin_interval_buff3; special-active coating inserts saw_rending_debuff; both carry toxin keyword. Attack damage is calculated before its queued coating callback, so first application cannot benefit its own hit. Direct and positive-damage sticky/rip hits each evaluate independently; no same-frame cache ordering guarantee is claimed. Toxin tick is an effect/buff attack and wound visuals are not keyword proof. Push itself and the toggle are excluded; actual melee follow-ups/special-active melee routes remain independently eligible.",
+      "raw_and_icon": "The EN/ZH description key, paired RAW hash, formatter source, and I–IV static reconstructions match the registered fractions and prefix; the note correctly says static reconstruction rather than gameplay screenshot. The issue-14 icon receipt confirms the referenced icon asset and verified display.",
+      "validation": "All 30 fixed scope files match their SHA-256 values. The scoped focused check reports 41 source ranges across 21 source files, 542 bindings/279 variants, and no new link or GFM errors."
+    },
+    "limitations": [
+      "No live gameplay test was performed; the docs correctly limit claims to source-confirmed conditions and do not promise that a later same-frame sticky hit sees the newly added toxin keyword."
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "refined-lethality",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_245",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_245.png",
+      "attachment": "https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5984602783",
+      "acquired_date": "2026-10-05",
+      "sha256": "6b7411e0f6a01a4cd36468cbfb29dcc9fa415ac6cc6cc5c5766e4ffc153dc51b",
+      "content_type": "image/png",
+      "size": 6706,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "精煉殺意祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Original/public PNG bytes identical; actual low-contrast grey/white centered emblem and surrounding blank area visually inspected at128x128, no additional crop or substituted artwork; fine details not inferred from low-contrast source"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 283,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 41,
+      "source_files": 21,
+      "bindings": 542,
+      "variants": 279,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 21,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 737,
+      "remote_references": 313,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 21,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-020-full-scan.json",
+        "sha256": "ea1f2d22dab98fffd677eceba82ef817a98252023f59ac0d331292071ec880c8",
+        "trigger": "round-020"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 75,
+    "not_started_name_groups": 75,
+    "partial_name_groups": 0,
+    "remaining_variants": 326,
+    "remaining_bindings": 643,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "623c142b47f21d69793690436fba9909d175f8fce0aa63bfc7280e4c03153af9"
+  },
+  "previous_local_commit": "494f13c15879a035ae03ea3a1e2bbfa53150bb1a",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-finesse-formula-review.json",
+      "sha256": "3519ed0df43089bde22ccc0392da8063bdc2e6b82d163e08a74b1d37a79a17e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-focused-checks.json",
+      "sha256": "e145fbf97418ca76435cd8e0613a3680346f6fa87624278cd84e297fdba2d2ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-frozen-source-verification.json",
+      "sha256": "1f73b5f85f0f6fa6cbc429211f4e1ea16016d159e0776334577840c2199f1e93"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-own-tier-diff.json",
+      "sha256": "b0d058588548a7feb89457d379b3df24a47f6437168b7b6f423e8dc396b1906e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-resume-review.json",
+      "sha256": "c4d5c31a541a987896d90d0debe3b0d86a0b2a33d3bf1d5efcbe8c9a37e502e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-traits-review.json",
+      "sha256": "e3b834bbf5ffb0d4cfe4a1016b2dd928aab502e9eaa972e8633f9bbf5642f38d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-ui-raw-verification.json",
+      "sha256": "78f656802fd0584fc62a3f879a02a83b1ed0265e87bb03e19a998eaab91bcf09"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-primary-ui-review.json",
+      "sha256": "c657068109d51fa478402509afbd302995282a3ca146c5e248aacfd16d86a684"
+    }
+  ],
+  "primary_review_method": "Reuse own full tiers/clone/base/UI/RAW and applicable held-stat/melee calculations; review additive finesse final assembly, both actual coating toxin producers, deferred target cache/first effect and sticky/DoT exceptions as differences; no duplicate full study",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-config.json",
+    "sha256": "81856324e59d63b6bf15824322496f4f49fc76b757ff38349ee21ab87ff9d835"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-config.json",
+      "sha256": "7477229123ade7aa2454b032de01594df1268ee6ff0d78570686f460e86953af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-evidence.json",
+      "sha256": "b7e8e8a54f5ba76a3cdecc0db380abc164310ca8a61a66e7eca377c9f894a9e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-draft.md",
+      "sha256": "327063440609c61e3a30e1e68b474f3e84f17f97e764d0f77c40ec8fcec16ceb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-coverage.json",
+      "sha256": "36853cb567779f22a44a78eb00907a6b5d56b6d632bb4f6252a830a3b361e053"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-agent-addendum.json",
+      "sha256": "e3ed59f0ab959d678dc4e296132197d17a60818176b01aedf1dcbc297b1b8973"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/refined-lethality-formal-peer-scope.json",
+    "sha256": "70c81077c9ae110b95795cb1afbb7f56c4ff9cbc24946c2b7e327b6a93d7d4f3",
+    "final_content_hashes_unchanged": true
+  }
+}
