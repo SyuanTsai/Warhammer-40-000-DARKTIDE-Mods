@@ -757,6 +757,18 @@ Full raw template and formatting: [source evidence](cryptic_crit_chance_based_on
 | Base and zero-charge bonus | Gain +6% Crit Chance, increased to +10% when at 0 charges; `ui / loc_talent_cryptic_crit_chance_based_on_charge_zero_desc / dd636885` | Permanent `critical_strike_chance = 0.06`; conditional `0.04` when `remaining_ability_charges <= 0`, total `0.10` [Fixed source and line references](cryptic_crit_chance_based_on_charge.md#fixed-source-evidence) | Consistent | The English increased to expresses the correct combined bonus. |
 | Percentage points and full-charge state | Does not specify percentage-point addition, partial progress or state transitions; `ui / loc_talent_cryptic_crit_chance_based_on_charge_zero_desc / dd636885` | Base 7.5% becomes 13.5% with a full charge or 17.5% with none. A charge at 90% progress still counts as zero; completing it removes the extra 4 points [Fixed source and line references](cryptic_crit_chance_based_on_charge.md#fixed-source-evidence) | Not covered by the description | The denominator and preserved examples supplement the English. |
 
+
+<a id="cryptic_afflicted_increased_damage"></a>
+
+## Weakness Analysis Doctrine
+
+Full raw template and formatting: [source evidence](cryptic_afflicted_increased_damage.md#original-english-template-and-reconstruction). Name hash `7e4a79f1`. Every row uses `ui / loc_talent_cryptic_afflicted_increased_damage_desc / 70e7ba50`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Afflictions, hit types and values | +10% Damage for 8s when hitting an Electrocuted, Soulblazed, Burning, Bleeding, or Toxin afflicted enemy with a Melee or Ranged attack; `ui / loc_talent_cryptic_afflicted_increased_damage_desc / 70e7ba50` | Melee or ranged hits check target `electrocuted` group or `AFFLICTED_KEYWORDS` and grant the player `damage = 0.1` for 8 seconds [Fixed source and line references](cryptic_afflicted_increased_damage.md#fixed-source-evidence) | Consistent | The status conditions, attack types and effect values agree. |
+| Bonus scope, refreshing and addition | Does not explicitly limit the bonus to the afflicted target or state refreshing and arithmetic; `ui / loc_talent_cryptic_afflicted_increased_damage_desc / 70e7ba50` | The player can damage other targets with the timed bonus. Further qualifying hits refresh without stacks; base 100 with same-stage 25% gives `100 × (1 + 25% + 10%) = 135` [Fixed source and line references](cryptic_afflicted_increased_damage.md#fixed-source-evidence) | Not covered by the description | These details and the preserved example supplement the English. |
+
 ## Comparison totals
 
 126 rules: 60 Consistent / 3 Explicit contradiction / 60 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 523.

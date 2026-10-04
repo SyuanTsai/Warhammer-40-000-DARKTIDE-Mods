@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="Galvanic Marking Array talent icon"> [Galvanic Marking Array](#cryptic_elite_kills_damage) | <ul><li>Killing an Elite with a ranged attack grants one stack of 5% Damage, up to 4 stacks. Triggers refresh a 15-second timer; without further kills, one stack decays every 15 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="32" height="32" alt="Auto-Repair Doctrines talent icon"> [Auto-Repair Doctrines](#cryptic_toughness_per_charge) | <ul><li>Continuously restores 3% of maximum Toughness per second, plus 0.5% per second for each full charge currently held. Partial charges do not count; recovery is capped at maximum Toughness.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="Last Stand Relay talent icon"> [Last Stand Relay](#cryptic_crit_chance_based_on_charge) | <ul><li>Always grants 6 percentage points of Critical Hit Chance. With no full charge remaining, adds another 4 points for a total of 10. Partial charge progress still counts as zero full charges.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="Weakness Analysis Doctrine talent icon"> [Weakness Analysis Doctrine](#cryptic_afflicted_increased_damage) | <ul><li>Hitting an Electrocuted, Burning, Soulblazed, Bleeding or Toxin-afflicted enemy with melee or ranged attacks grants 10% Damage for 8 seconds. The bonus can be used against other targets; qualifying hits refresh it without stacking.</li></ul> | Talent |
 
 ---
 
@@ -982,3 +983,17 @@
 - **Changes**: A charge being restored still counts as zero full charges even at **90% progress**. Once it becomes full, the extra 4 percentage points disappear.
 
 [Details](cryptic_crit_chance_based_on_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_afflicted_increased_damage"></a>
+
+### Weakness Analysis Doctrine
+
+<img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="72" height="72" alt="Weakness Analysis Doctrine talent icon">
+
+- **Trigger**: Hitting an enemy affected by **Electrocution, Burning, Soulblaze, Bleeding or Toxin** with a melee or ranged attack grants **10% Damage for 8 seconds**.
+- **Duration and scope**: After gaining the bonus, you can use it against other targets. Another qualifying hit restarts the 8-second countdown without adding stacks.
+- **Example**: At 100 base damage with an existing same-stage 25% bonus, `100 × (1 + 25% + 10%) = 135` damage.
+
+[Details](cryptic_afflicted_increased_damage.md) · [Back to index](#talent-index)
