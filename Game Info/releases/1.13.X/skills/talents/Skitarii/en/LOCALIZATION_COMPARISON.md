@@ -1202,6 +1202,18 @@ Full raw template and formatting: [source evidence](cryptic_passive_cooldown_reg
 | Base resource and recovery | 3 Base Charges; generate 2% Capacitance/second, 1 Charge at 100%; kills give 2%, Elite/Specialist kills 4%.; `ui / loc_talent_cryptic_passive_cooldown_regen_desc / cc7d6ab9` | The base cap is 3, charge cost 50 and natural recovery 1 point/second. Kill recovery restores 0.02 or 0.04 of one charge. [Fixed source and line references](cryptic_passive_cooldown_regen.md#fixed-source-evidence) | Consistent | The base capacity, cycle and rates match. |
 | General charge overview and ability-specific limits | Abilities require at least 1 charge to activate and spend up to 3; detailed costs and recovery restrictions are not given.; `ui / loc_talent_cryptic_passive_cooldown_regen_desc / cc7d6ab9` | Individual abilities use one charge, up to three or fractional/ongoing costs. Percentages use one charge. Advanced Combat Doctrine suppresses kill recovery and offsets base natural recovery with upkeep; display fields do not set runtime capacity. [Fixed source and line references](cryptic_passive_cooldown_regen.md#fixed-source-evidence) | Not covered by the description | The broad resource overview does not specify each ability's spending method; the existing ability documents supply those rules. |
 
+
+<a id="cryptic_servo_skull_order"></a>
+
+## Servo-Skull
+
+Full raw template and formatting: [source evidence](cryptic_servo_skull_order.md#original-english-template-and-reconstruction). Name hash `a5b45cea`. Every row uses `ui / loc_talent_cryptic_servo_skull_base_burn_desc / a5b8ce99`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Commands and empowerment | Double-tap Tag to order shooting/data interrogation; Blitz empowerment 8s; +100% Fire Rate, +25% Damage, 1 Burn stack (max 8), +15% target damage taken for 5s; 16s Cooldown.; `ui / loc_talent_cryptic_servo_skull_base_burn_desc / a5b8ce99` | Base Blitz grants temporary 8-second companion empowerment with 0.5 firing interval and 0.25 damage modifier. Living-target companion hits add the 0.15/5-second debuff and one Burn stack, capped at 8; base cooldown resource is 16 seconds. [Fixed source and line references](cryptic_servo_skull_order.md#fixed-source-evidence) | Consistent | The commands, recipient and reconstructed effect values match. |
+| Cooldown pause, commands and improved node | Cooldown recovery during empowerment, command threshold and replacement behavior are not specified.; `ui / loc_talent_cryptic_servo_skull_base_burn_desc / a5b8ce99` | Cooldown pauses for 8 seconds, then recovers 16 without other modifiers. Shooting commands require 0.3 Combat Ability charge except in training; hacking costs zero uses. Burn refreshes at cap; the improved node makes empowerment/on-hit effects permanent. [Fixed source and line references](cryptic_servo_skull_order.md#fixed-source-evidence) | Not covered by the description | The stated 16-second cooldown does not explicitly promise recovery during empowerment. These details explain the separate command resource and replacement. |
+
 ## Comparison totals
 
 197 rules: 95 Consistent / 4 Explicit contradiction / 95 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 558.

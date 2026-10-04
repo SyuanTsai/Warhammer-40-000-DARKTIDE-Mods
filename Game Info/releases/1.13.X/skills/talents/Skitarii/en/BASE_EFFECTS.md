@@ -28,3 +28,18 @@ These effects are supplied by the base character configuration. Combat Ability, 
 - While **Advanced Combat Doctrine** is active, kills do not trigger this additional recovery; the stance itself spends Capacitance.
 
 [Source evidence and example conditions](cryptic_passive_cooldown_regen.md)
+
+---
+
+<a id="cryptic_servo_skull_order"></a>
+
+## Servo-Skull
+
+- **Companion**: Your Servo-Skull follows you and shoots enemies in combat. Activating its ability halves its firing interval and increases its damage by **25%** for **8 seconds**.
+- **Empowered hits**: During empowerment, a Servo-Skull hit makes the target take **15% more damage** for **5 seconds** and applies **1 Burn stack**, up to **8**. At the cap, another hit refreshes the Burn duration.
+- **Uses and cooldown**: The ability has **1 use** and a **16-second** cooldown. Cooldown recovery pauses during the **8-second** empowerment; without other cooldown modifiers, approximately **16 seconds** of recovery remain after empowerment ends.
+- **Commands**: Double-tap the Tag input to order the Servo-Skull to attack a tagged enemy. Normally, at least **0.3 of one Capacitance charge** is required for a shooting command. Double-tapping can also order it to operate a hackable mission device; this does not spend the ability use.
+- **Cooldown example**: An **8-second** pause followed by **16 seconds** of recovery gives approximately `8 + 16 = 24` seconds from activation to availability.
+- **Damage and firing-rate example**: With no other effects, damage **100** becomes `100 × 1.25 = 125`; a **3-second** firing interval becomes `3 × 0.5 = 1.5` seconds.
+
+[Source evidence and example conditions](cryptic_servo_skull_order.md)
