@@ -1,0 +1,73 @@
+{
+  "id": "zealot_skills_565_569",
+  "date": "2026-10-04",
+  "scope": "Zealot",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display substitutions: zealot_talents.lua L64-L91, L802-L827, L839-L859. Original templates without placeholders used existing evidence directly. No Buff, event or calculation retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction. Qualitative Immolation control/armour performance and Stunstorm all-enemy control remain unconfirmed. Other omissions are supplements; Chinese Stagger/Stun note retained separately."
+  ],
+  "skills": [
+    {
+      "id": "zealot_flame_grenade",
+      "name": "Immolation Grenade",
+      "name_hash": "2064814c",
+      "description_hash": "5b720fa5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_flame_grenade.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_flame_grenade.md",
+      "commit": "45b406765"
+    },
+    {
+      "id": "zealot_throwing_knives",
+      "name": "Blades of Faith",
+      "name_hash": "7bb3e9eb",
+      "description_hash": "5c177ee2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_throwing_knives.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_throwing_knives.md",
+      "commit": "8906a6c12"
+    },
+    {
+      "id": "zealot_improved_stun_grenade",
+      "name": "Stunstorm Grenade",
+      "name_hash": "25c50f32",
+      "description_hash": "35fbc631",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_improved_stun_grenade.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_improved_stun_grenade.md",
+      "commit": "58bd4f140"
+    },
+    {
+      "id": "zealot_toughness_damage_reduction_coherency_improved",
+      "name": "Benediction",
+      "name_hash": "fc382324",
+      "description_hash": "90d53110",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_damage_reduction_coherency_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_damage_reduction_coherency_improved.md",
+      "commit": "66317584e"
+    },
+    {
+      "id": "zealot_corruption_healing_coherency_improved",
+      "name": "Beacon of Purity",
+      "name_hash": "f1ac826d",
+      "description_hash": "afc49dc9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_corruption_healing_coherency_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_corruption_healing_coherency_improved.md",
+      "commit": "3662713b5"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 474,
+    "from_commit": "5090cbd42",
+    "to_commit": "3662713b5",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

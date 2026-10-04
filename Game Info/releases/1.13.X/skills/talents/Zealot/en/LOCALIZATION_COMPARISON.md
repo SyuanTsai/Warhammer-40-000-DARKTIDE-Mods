@@ -71,4 +71,4 @@ Full raw template and formatting: [source evidence](zealot_corruption_healing_co
 
 ## Comparison totals
 
-Updated at five-item checkpoints.
+12 rules: 5 Consistent / 0 Explicit contradiction / 5 Not covered by the description / 0 No implementation found / 2 Cannot confirm. Updated at checkpoint 569.

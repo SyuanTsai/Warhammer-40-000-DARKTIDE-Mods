@@ -13839,9 +13839,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d5b4d4e9a81adc7de7c833ac426564173c0e246c",
       "chinese_sha256": "f61ffb6ae7582caef2fcf4ecac1d94c88a14e376530bad7941f639845b389990",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_corruption_healing_coherency_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_corruption_resistance_stacking.md",
@@ -13993,9 +14000,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bc6e17cbae956f9af16dac20e37e09fba9acf709",
       "chinese_sha256": "1079a754aff30e432e9b028fa89e590913acd3b78e8a32c64c9225d0209635ed",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_flame_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_fotf_refund_cooldown.md",
@@ -14037,9 +14051,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fe4f3bc997fae31bf824fc1c876042c0e9aa776b",
       "chinese_sha256": "d7522704957d9a84929959f62e975ea0e9588ca56fe248b77ac889647925b4e6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_improved_stun_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_improved_weapon_handling_after_dodge.md",
@@ -14477,9 +14498,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f9ee393e942e55a0d002642502bae20f1e426015",
       "chinese_sha256": "b0b565233380480196d0880377a228fab8dcc27cd79bff49d68e8f156052768c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_throwing_knives"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_damage_reduction_coherency_improved.md",
@@ -14488,9 +14516,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "799e167b4b3fdcf385f1811d79484a34bb0aba49",
       "chinese_sha256": "b8213f39a1b1af9bd2c0b7350bda0e48b7c4524e76120ed6a1a6b7d2a3018010",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "zealot_toughness_damage_reduction_coherency_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_in_melee.md",
@@ -19158,6 +19193,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_class.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_coherency_regen_aura.md"
+    },
+    {
+      "id": "zealot_flame_grenade",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_flame_grenade.md"
+    },
+    {
+      "id": "zealot_throwing_knives",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_throwing_knives.md"
+    },
+    {
+      "id": "zealot_improved_stun_grenade",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_improved_stun_grenade.md"
+    },
+    {
+      "id": "zealot_toughness_damage_reduction_coherency_improved",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_toughness_damage_reduction_coherency_improved.md"
+    },
+    {
+      "id": "zealot_corruption_healing_coherency_improved",
+      "scope": "Zealot",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Zealot/en/zealot_corruption_healing_coherency_improved.md"
     }
   ],
   "pending_chinese_corrections": [
