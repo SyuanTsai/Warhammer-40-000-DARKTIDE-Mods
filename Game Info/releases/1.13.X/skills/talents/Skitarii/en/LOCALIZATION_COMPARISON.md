@@ -321,6 +321,18 @@ Full raw template and formatting: [source evidence](cryptic_multi_hits_grant_pow
 | Single-attack target condition and recovery | Hitting 3 or more enemies with an Attack restores 1% Capacitance; `ui / loc_talent_cryptic_multi_hits_grant_power_desc / 998c8ded` | Third target sequence number triggers once; restore_ability_charge_percentage receives 0.01 [Fixed source and line references](cryptic_multi_hits_grant_power.md#fixed-source-evidence) | Consistent | The target threshold, single attack and percentage agree. |
 | Proc interval, cost basis and progress | No 0.25s interval, third-target implementation, cost basis or fractional-progress detail; `ui / loc_talent_cryptic_multi_hits_grant_power_desc / 998c8ded` | Positive target_number or fallback target_index must equal 3; current time must reach multi_hit_window_end_t; next eligible time t +0.25; recovery 0.01 ×cost per charge [Fixed source and line references](cryptic_multi_hits_grant_power.md#fixed-source-evidence) | Not covered by the description | An attack hitting 4 restores 0.5 points at cost 50; the fourth adds none. Eight adequately spaced procs restore 4 points. The interval is not a window for collecting separate hits. |
 
+
+<a id="cryptic_discharge"></a>
+
+## Voltaic Emitter
+
+Full raw template and formatting: [source evidence](cryptic_discharge.md#original-english-template-and-reconstruction). Name hash `0c5b9c4a`. Every row uses `ui / loc_talent_cryptic_discharge_desc / 1ffeaa91`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Main Discharge and charge-dependent effects | 12m Electrocution for 2s; at 2 charges or above, 30m ranged-enemy Weapon Malfunction for 12s; at 3 or above, 15s of attacks Electrocuting targets for 2s; enhanced Voltaic Expander; `ui / loc_talent_cryptic_discharge_desc / 1ffeaa91` | Enhanced Discharge radius 12m and 2s Electrocution; consumed-charge thresholds 2/3 enable the 30m Malfunction/default 12s and 15s on-hit/2s Electrocution effects [Fixed source and line references](cryptic_discharge.md#fixed-source-evidence) | Consistent | The effect directions, thresholds, values and enhanced version agree; qualifying weapon-state components and breed duration overrides are supplementary. |
+| Charge cost, target limits and damage resolution | No per-use cap, fractional progress, cost-event timing, initial-zero-power/tick detail or conditional arc detail; `ui / loc_talent_cryptic_discharge_desc / 1ffeaa91` | Full-charge use clamped 1–3; surplus and fractional progress retained; cost/event at action start; initial attack/Impact power 0 with subsequent 0.3–0.8s Electrocution ticks; non-killing hits apply the 15s buff; optional arcs use actual charge count [Fixed source and line references](cryptic_discharge.md#fixed-source-evidence) | Not covered by the description | Preserve the 185 −150 =35 resource/15s refill and conditional 10 ×4 =40 damage examples. No universal damage or tick count; optional 5-arc template cap is normally limited to 3 by actual use cost. |
+
 ## Comparison totals
 
 52 rules: 25 Consistent / 1 Explicit contradiction / 25 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 488.

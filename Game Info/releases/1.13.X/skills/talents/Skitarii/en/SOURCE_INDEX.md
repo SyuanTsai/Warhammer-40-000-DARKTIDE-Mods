@@ -37,3 +37,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Reactor Coil Recharge](cryptic_weakspot_kills_grant_power.md) / `cryptic_weakspot_kills_grant_power` | Ability |
 | [Augmented Power-Cycle](cryptic_increased_passive_cooldown_regen.md) / `cryptic_increased_passive_cooldown_regen` | Ability |
 | [Capacitor Reclamation Loop](cryptic_multi_hits_grant_power.md) / `cryptic_multi_hits_grant_power` | Ability |
+| [Voltaic Emitter](cryptic_discharge.md) / `cryptic_discharge` | Ability |

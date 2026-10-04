@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="Reactor Coil Recharge talent icon"> [Reactor Coil Recharge](#cryptic_weakspot_kills_grant_power) | <ul><li>Weakspot Kills restore 2% of the current Combat Ability's cost per charge. At 50 points per charge, each restores 1 point of Capacitance.</li><li>Recovery is retained as fractional progress; usable charge count increases only upon reaching another full charge.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="Augmented Power-Cycle talent icon"> [Augmented Power-Cycle](#cryptic_increased_passive_cooldown_regen) | <ul><li>Natural Capacitance recovery increases from 2% to 3% of one charge per second. At 50 points per charge, recovery rises from 1 to 1.5 points/s.</li><li>With no other costs or recovery modifiers, one charge refills in about 33.3s and three charges from empty in about 100s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="Capacitor Reclamation Loop talent icon"> [Capacitor Reclamation Loop](#cryptic_multi_hits_grant_power) | <ul><li>Hitting at least 3 enemies with one attack restores 1% of the current Combat Ability's cost per charge.</li><li>At 50 points per charge, each proc restores 0.5 points. After a proc, at least 0.25s must pass before another can trigger.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="Voltaic Emitter talent icon"> [Voltaic Emitter](#cryptic_discharge) | <ul><li>Activation consumes 1–3 full Capacitance charges, at most 3 per use. Extra charges and fractional progress towards the next charge are retained.</li><li>The main Discharge affects enemies within a fixed 12m radius, Electrocuting them for 2s and dealing ongoing damage.</li><li>Consuming at least 2 charges also causes Weapon Malfunction in qualifying enemies within 30m; consuming at least 3 grants 15s of attacks Electrocuting enemies for 2s.</li></ul> | Ability |
 
 ---
 
@@ -417,3 +418,20 @@
 - **How it works**: At least 0.25s must pass after recovery before another proc can trigger. Fractional Capacitance accumulates; 50 points forms one full charge.
 
 [Details](cryptic_multi_hits_grant_power.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_discharge"></a>
+
+### Voltaic Emitter
+
+<img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="72" height="72" alt="Voltaic Emitter talent icon">
+
+- **Charge consumption**: Activation consumes 1–3 currently full charges, at most 3 per use. With 4 or 5 charges, the extra charges remain; fractional progress below a full charge also remains.
+- **Discharge effect**: Enemies hit within 12m are Electrocuted for 2s and take ongoing Electrocution damage. The main Discharge radius is 12m whether 1, 2 or 3 charges are consumed.
+- **At least 2 charges consumed**: Also disrupts enemies within 30m that can receive Weapon Malfunction, normally for 12s. Some enemy durations differ.
+- **3 charges consumed**: For the next 15s, your melee or ranged attacks hitting enemies that remain alive Electrocute them for 2s.
+- **Consumption example**: At 185 points of Capacitance, you have 3 full charges and 70% progress towards a fourth. Activation consumes 3 × 50 = 150 points, leaving 35. With only natural recovery of 1 point/s, another usable charge takes (50 − 35) ÷ 1 = 15s.
+- **Damage example**: The initial area effect does not directly remove Health; damage comes from subsequent Electrocution. Assuming each tick deals 10 damage to a particular target and this instance resolves 4 ticks, the total is 10 × 4 = 40. Actual damage and tick count vary with the target and resolution timing.
+
+[Details](cryptic_discharge.md) · [Back to index](#talent-index)
