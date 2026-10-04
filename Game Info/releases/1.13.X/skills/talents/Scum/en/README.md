@@ -110,6 +110,7 @@
 | <img src="https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1" width="32" height="32" alt="Barrage IV talent icon"> [Barrage IV](#broker_stimm_durability_4) | <ul><li>On use, restore 6.25% of maximum Toughness; while the Stimm lasts, gain 5% Toughness Replenishment and 4% Damage Reduction.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/35bab219-731c-41ac-80a8-27af4a02f1c2" width="32" height="32" alt="Tank talent icon"> [Tank](#broker_stimm_durability_5a) | <ul><li>Gain an additional 30% Toughness Replenishment.</li></ul> | Stimm recipe |
 | <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="Regain talent icon"> [Regain](#broker_stimm_durability_5b) | <ul><li>During the Stimm effect, restore 5% of maximum Toughness per second.</li></ul> | Stimm recipe |
+| <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="Kalma I talent icon"> [Kalma I](#broker_stimm_concentration_1) | <ul><li>Gain 6.25% Combat Ability Regeneration.</li></ul> | Stimm recipe |
 
 ---
 
@@ -1791,3 +1792,23 @@ Recipes share a 30-point budget. Their selected effects act together after using
 - **Stopping conditions**: Recovery stops when the Stimm effect ends; it does not provide this recovery while knocked down.
 
 [Details](broker_stimm_durability_5b.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_stimm_concentration_1"></a>
+
+### Kalma I
+
+<img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="72" height="72" alt="Kalma I talent icon">
+
+- **Recipe cost**: 1 point. Once selected, it takes effect when using the dedicated Stimm, with a basic duration of 15 seconds.
+
+- **Regeneration rate**: Natural Combat Ability Regeneration gains 6.25%; prerequisite bonuses remain active and add at the same stage.
+
+- **Ongoing regeneration example**: Selecting Kalma I through this node gives a total 6.25% bonus. A base recovery of 1 second of cooldown per second becomes 1.0625 seconds per second, recovering 15 × 1.0625 = 15.9375 seconds over the 15-second Stimm effect.
+
+- **Remaining-time example**: With 60 seconds remaining and normal ability regeneration active, 44.0625 seconds remain after the 15-second Stimm: 60 − 15.9375 = 44.0625. Recovery then returns to its original rate.
+
+- **While paused**: If natural Combat Ability Regeneration is paused by a state or a field that has not yet ended, this speed bonus does not start the countdown on its own.
+
+[Details](broker_stimm_concentration_1.md) · [Back to index](#talent-index)
