@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="Redline Capacitors talent icon"> [Redline Capacitors](#cryptic_redline) | <ul><li>Each Combat Ability charge actually gained or spent adds one stack: +5% natural Capacitance generation and 5% Toughness Damage Reduction per stack, up to 4. New stacks refresh 12 seconds; stacks then decay one at a time. Maximum Combat Ability charges increase by 1.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="Power Overload talent icon"> [Power Overload](#cryptic_overload_keystone) | <ul><li>Kills by you or allies in Coherency give 1 stack, or 2 for Elites and Specialists. Reaching 30 triggers an overload and resets to zero. You and allies in Coherency gain +15% Damage and 15% Toughness Damage Reduction for 8 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="Critical Power Overload talent icon"> [Critical Power Overload](#cryptic_overload_keystone_bigger_explosion) | <ul><li>On Power Overload, enemies hit within 8 metres are Electrocuted and take 15% more damage for 8 seconds. Reapplication refreshes the duration; the area effect itself deals no explosion damage.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="Invigorating Overload talent icon"> [Invigorating Overload](#cryptic_overload_keystone_toughness_stamina) | <ul><li>Each Power Overload restores 20% of maximum Toughness and 20% of maximum Stamina to you and allies in Coherency. Resource caps apply; Toughness recovery also uses existing replenishment modifiers.</li></ul> | Keystone |
 
 ---
 
@@ -581,3 +582,17 @@
 - **Repeated triggers**: The same effect has at most **1 stack**. Another hit refreshes the 8-second duration; it does not increase the bonus to 30%.
 
 [Details](cryptic_overload_keystone_bigger_explosion.md) · [Back to index](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_toughness_stamina"></a>
+
+### Invigorating Overload
+
+<img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="72" height="72" alt="Invigorating Overload talent icon">
+
+- **Trigger**: On Power Overload, you and allies in Coherency each restore **20% of maximum Toughness** and **20% of maximum Stamina**.
+- **Recovery example**: At `100` maximum Toughness and `5` maximum Stamina bars, one overload restores `100 × 20% = 20` Toughness points and `5 × 20% = 1` Stamina bar. If only 12 Toughness points are missing, it restores only 12.
+- **Other bonuses**: Toughness recovery still uses your Toughness Replenishment bonuses. With only a +25% replenishment bonus, `20 × 1.25 = 25` points; recovery cannot exceed maximum Toughness.
+
+[Details](cryptic_overload_keystone_toughness_stamina.md) · [Back to index](#talent-index)

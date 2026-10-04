@@ -441,6 +441,18 @@ Full raw template and formatting: [source evidence](cryptic_overload_keystone_bi
 | Overload, Electrocution and increased damage taken | Overload applies Electrocution to enemies in melee range; enemies hit take 15% more damage for 8s; `ui / loc_talent_cryptic_overload_keystone_bigger_explosion_desc / 4bcf4f12` | Overload creates the enemy-filtered effect; the debuff uses `electrocuted`, `damage_taken_multiplier = 1.15`, duration 8 [Fixed source and line references](cryptic_overload_keystone_bigger_explosion.md#fixed-source-evidence) | Consistent | The trigger, affected enemies, status, amount and duration agree. |
 | Area, explosion damage and reapplication | Uses melee range without a numeric radius; does not describe explosion damage or stacking; `ui / loc_talent_cryptic_overload_keystone_bigger_explosion_desc / 4bcf4f12` | Radius/minimum radius 8m; the `buff` explosion has zero attack/Impact power and armour damage modifiers. Maximum 1 stack; reapplication refreshes 8s [Fixed source and line references](cryptic_overload_keystone_bigger_explosion.md#fixed-source-evidence) | Not covered by the description | The 8m radius, zero explosion damage and refresh behavior are supplementary details, not explicit contradictions. |
 
+
+<a id="cryptic_overload_keystone_toughness_stamina"></a>
+
+## Invigorating Overload
+
+Full raw template and formatting: [source evidence](cryptic_overload_keystone_toughness_stamina.md#original-english-template-and-reconstruction). Name hash `cbfe10b4`. Every row uses `ui / loc_talent_cryptic_overload_keystone_toughness_stamina_desc / 7c6a74c0`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Recipients, trigger and recovery values | You and allies in coherency restore 20% Toughness and 20% Stamina when the overload occurs; `ui / loc_talent_cryptic_overload_keystone_toughness_stamina_desc / 7c6a74c0` | Current Coherency members receive percentage restoration on overload; both settings are `0.2` [Fixed source and line references](cryptic_overload_keystone_toughness_stamina.md#fixed-source-evidence) | Consistent | The English beneficiaries, trigger and percentages agree. |
+| Maximum basis, caps and modifiers | Does not specify maximum-value basis, missing-resource caps or replenishment modifiers; `ui / loc_talent_cryptic_overload_keystone_toughness_stamina_desc / 7c6a74c0` | Toughness uses `max_toughness ×0.2`, with replenish modifiers and blocking conditions; Stamina uses maximum Stamina ×0.2 and clamps to the cap [Fixed source and line references](cryptic_overload_keystone_toughness_stamina.md#fixed-source-evidence) | Not covered by the description | Preserve the original 20 Toughness /1 Stamina bar and 20 /10-unit examples, deficit 12 and +25% replenishment example as supplements. |
+
 ## Comparison totals
 
 72 rules: 35 Consistent / 1 Explicit contradiction / 35 Not covered by the description / 0 No implementation found / 1 Cannot confirm. Updated at checkpoint 498.
