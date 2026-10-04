@@ -78,3 +78,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Splash Damage](broker_passive_toxin_spread_on_kills.md) / `broker_passive_toxin_spread_on_kills` | Talent |
 | [Extra Pouches](broker_passive_increased_blitz_ammo.md) / `broker_passive_increased_blitz_ammo` | Talent |
 | [Coated Weaponry](broker_passive_melee_attacks_apply_toxin.md) / `broker_passive_melee_attacks_apply_toxin` | Talent |
+| [Pocket Toxin](broker_passive_blitz_inflicts_toxin.md) / `broker_passive_blitz_inflicts_toxin` | Talent |

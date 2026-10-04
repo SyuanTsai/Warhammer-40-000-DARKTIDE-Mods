@@ -74,6 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="Splash Damage talent icon"> [Splash Damage](#broker_passive_toxin_spread_on_kills) | <ul><li>A Melee Elite kill spreads Chem Toxin within 4m to up to 10 selected enemies, filling this talent's contribution to 2 stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="Extra Pouches talent icon"> [Extra Pouches](#broker_passive_increased_blitz_ammo) | <ul><li>Gain 1 maximum Blitz charge.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="Coated Weaponry talent icon"> [Coated Weaponry](#broker_passive_melee_attacks_apply_toxin) | <ul><li>Melee Critical Hits add 1 Chem Toxin stack and refresh duration; shared cap 30.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="Pocket Toxin talent icon"> [Pocket Toxin](#broker_passive_blitz_inflicts_toxin) | <ul><li>Blitz explosion hits add Chem Toxin stacks: Blackout 3, Boom Bringer 6, Chem Grenade 10.</li></ul> | Talent |
 
 ---
 
@@ -1113,3 +1114,19 @@
 - **Decay**: After you stop replenishing Toxin, the base 2.6s wait elapses, then stacks decay one at a time with Toxin Damage ticks. Applying Toxin again restarts the waiting period.
 
 [Details](broker_passive_melee_attacks_apply_toxin.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_blitz_inflicts_toxin"></a>
+
+### Pocket Toxin
+
+<img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="72" height="72" alt="Pocket Toxin talent icon">
+
+- **Stacks applied**: Blackout's explosion adds 3 stacks, Boom Bringer adds 6, and Chem Grenade adds 10. A Blitz explosion must hit the enemy; this does not apply to every explosion.
+
+- **Stack example**: An enemy with 2 stacks of the same Toxin type hit by an explosion that adds 6 reaches 2 + 6 = 8 stacks. The cap is 30, and reapplication restarts the timer.
+
+- **Damage behavior**: The same Toxin resolves every 0.35s. Eight stacks give input Power 500 × 8 ÷ 30 ≈ 133.33, then the Toxin curve and armour determine Damage.
+
+[Details](broker_passive_blitz_inflicts_toxin.md) · [Back to index](#talent-index)

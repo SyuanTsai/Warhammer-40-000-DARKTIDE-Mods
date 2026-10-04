@@ -807,6 +807,18 @@ Full raw template and formatting: [source evidence](broker_passive_melee_attacks
 | Melee Critical Hit infection | Melee Critical Strikes infect Enemies with 1 stack of Chem Toxin; `ui / loc_talent_broker_passive_melee_attacks_apply_toxin_desc / 4108cdaa` | `on_hit` requires `on_crit_melee` and adds one `neurotoxin_interval_buff3` stack [Fixed source and line references](broker_passive_melee_attacks_apply_toxin.md#fixed-source-evidence) | Consistent | The trigger and per-hit stack addition match. |
 | Shared stacks, decay and Damage calculation | No shared cap, refresh, decay or Power calculation is stated; `ui / loc_talent_broker_passive_melee_attacks_apply_toxin_desc / 4108cdaa` | Cap 30; refresh; base 2.6s wait with `interval_stack_removal = true` and 0.35s ticks [Fixed source and line references](broker_passive_melee_attacks_apply_toxin.md#fixed-source-evidence) | Not covered by the description | These preserve the original three-stack input Power of 50 and the distinction between Power and final Damage. |
 
+
+<a id="broker_passive_blitz_inflicts_toxin"></a>
+
+## Pocket Toxin
+
+Full raw template and formatting: [source evidence](broker_passive_blitz_inflicts_toxin.md#original-english-template-and-reconstruction). Name hash `9f79e627`. Every row uses `ui / loc_talent_broker_passive_blitz_inflicts_toxin_desc_02 / 8757c0f2`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Blitz explosion types and stack counts | Blitz explosions infect enemies; Blackout 3, Boom Bringer 6, Chem Grenade 10; `ui / loc_talent_broker_passive_blitz_inflicts_toxin_desc_02 / 8757c0f2` | Server `on_hit` requires grenade-ability slot and explosion type; special-rule table selects 3/6/10 stacks [Fixed source and line references](broker_passive_blitz_inflicts_toxin.md#fixed-source-evidence) | Consistent | The English's Blitz restriction and separate values match. |
+| Ground liquid and shared Toxin behavior | No liquid-tick, shared-cap, refresh or Power calculation is stated; `ui / loc_talent_broker_passive_blitz_inflicts_toxin_desc_02 / 8757c0f2` | This passive is separate from Chem Grenade liquid; same-type Toxin stacks cap at 30 and refresh on application; ticks every 0.35s [Fixed source and line references](broker_passive_blitz_inflicts_toxin.md#fixed-source-evidence) | Not covered by the description | These retain the original 2 + 6 = 8 stack and 500 × 8 ÷ 30 ≈ 133.33 input-Power examples. |
+
 ## Comparison totals
 
 The 138 listed rules comprise **65 Consistent**, **3 Explicit contradictions**, **64 Not covered by the description**, **1 No corresponding implementation evidence found** and **5 Cannot confirm**.
