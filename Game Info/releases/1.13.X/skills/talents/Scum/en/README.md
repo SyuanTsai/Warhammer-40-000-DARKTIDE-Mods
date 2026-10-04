@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="In Your Face talent icon"> [In Your Face](#broker_passive_close_ranged_damage) | <ul><li>While wielding a Ranged weapon, gain 25% Damage within 12.5 metres, falling off to 10% at 30 metres and beyond.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc" width="32" height="32" alt="Precision Violence talent icon"> [Precision Violence](#broker_passive_restore_toughness_on_weakspot_kill) | <ul><li>Melee hits restore 4% of maximum Toughness; Critical or Weakspot hits instead restore 8%, and Critical Weakspot hits restore 12%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab" width="32" height="32" alt="Voice of Tertium talent icon"> [Voice of Tertium](#broker_passive_restore_toughness_on_close_ranged_kill) | <ul><li>Ranged kills within 12.5 metres restore 8% of maximum Toughness; Elite or Specialist kills instead restore 15%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="32" height="32" alt="Float Like a Butterfly talent icon"> [Float Like a Butterfly](#broker_passive_ninja_grants_crit_chance) | <ul><li>After a Successful Dodge or Perfect Block, gain 20 percentage points of Critical Strike Chance for 3 seconds.</li></ul> | Talent |
 
 ---
 
@@ -693,3 +694,16 @@
 - **Recovery example**: with 100 maximum Toughness, an ordinary Enemy restores 8 points, and an Elite or Specialist restores 15. At 95 current Toughness, either restores only the 5 missing points.
 
 [Details](broker_passive_restore_toughness_on_close_ranged_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="broker_passive_ninja_grants_crit_chance"></a>
+
+### Float Like a Butterfly
+
+<img src="https://github.com/user-attachments/assets/e4a8f21b-75d8-45dd-8cf1-84a42d41578f" width="72" height="72" alt="Float Like a Butterfly talent icon">
+
+- **Trigger and refresh**: a Successful Dodge or Perfect Block grants 20 percentage points of Critical Strike Chance for 3 seconds. Retriggering resets the duration without adding another bonus.
+- **Chance examples**: an initial 10% Critical Strike Chance becomes 10% + 20% = 30%; an initial 25% becomes 45%.
+
+[Details](broker_passive_ninja_grants_crit_chance.md) · [Back to index](#talent-index)

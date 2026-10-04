@@ -482,6 +482,18 @@ Full raw template and formatting: [source evidence](broker_passive_restore_tough
 | Ranged kills and replacement amount | Replenish +8% Toughness on Ranged Kill; Elites and Specials instead replenish +15%; `ui / loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc / 7f8728ae` | Qualifying kills use 0.08, or 0.15 for an Elite/Specialist, without adding the two. [Fixed source and line references](broker_passive_restore_toughness_on_close_ranged_kill.md#fixed-source-evidence) | Consistent | Ranged kills and the replacement wording agree with accepted evidence. |
 | Close-range and recovery constraints | No distance limit, positional check, or recovery basis is stated; `ui / loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc / 7f8728ae` | `on_ranged_close_kill` checks death, Ranged or `count_as_ranged_attack`, and squared hit-position/attacker distance ≤12.5². Recovery uses maximum Toughness and is capped by the deficit. [Fixed source and line references](broker_passive_restore_toughness_on_close_ranged_kill.md#fixed-source-evidence) | Not covered by the description | The omitted close-range requirement and recovery limits supplement the wording; no all-range claim is explicit. |
 
+
+<a id="broker_passive_ninja_grants_crit_chance"></a>
+
+## Float Like a Butterfly
+
+Full raw template and formatting: [source evidence](broker_passive_ninja_grants_crit_chance.md#original-english-template-and-reconstruction). Name hash `8d3c884d`. Every row uses `ui / loc_talent_broker_passive_ninja_grants_crit_chance_desc / 43d506f8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Triggers, chance bonus, and duration | Perfect Blocks and Successful Dodges grant +20% Critical Strike Chance for 3s; `ui / loc_talent_broker_passive_ninja_grants_crit_chance_desc / 43d506f8` | Both events independently activate the same 0.2 chance stat for 3 seconds; `proc_chance = 1`. [Fixed source and line references](broker_passive_ninja_grants_crit_chance.md#fixed-source-evidence) | Consistent | The English lists the matching triggers, bonus, and duration. |
+| Chance calculation and retriggering | No chance-combination, clamp, or retrigger details are stated; `ui / loc_talent_broker_passive_ninja_grants_crit_chance_desc / 43d506f8` | `CriticalStrike.chance` adds chance values and clamps to 0..1. `max_stacks = 1` and `allow_proc_while_active = true` allow a duration reset without another bonus. [Fixed source and line references](broker_passive_ninja_grants_crit_chance.md#fixed-source-evidence) | Not covered by the description | These qualify the percentage and preserve the original chance examples. |
+
 ## Comparison totals
 
 The 77 listed rules comprise **36 Consistent**, **2 Explicit contradictions**, **34 Not covered by the description**, **1 No corresponding implementation evidence found** and **4 Cannot confirm**.
