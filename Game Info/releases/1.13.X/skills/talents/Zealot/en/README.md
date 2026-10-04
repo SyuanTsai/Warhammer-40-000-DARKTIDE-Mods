@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="32" height="32" alt="Master-Crafted Shroudfield talent icon"> [Master-Crafted Shroudfield](#zealot_increased_duration) | <ul><li>Extend Shroudfield from 3 to 5 seconds. After leaving Stealth, gain 75% lower threat weight and 50% Melee Backstab damage for 5 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d" width="32" height="32" alt="Invigorating Revelation talent icon"> [Invigorating Revelation](#zealot_leaving_stealth_restores_toughness) | <ul><li>Entering Shroudfield restores 50% maximum Toughness. Leaving Stealth grants 30% damage reduction for 8 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="32" height="32" alt="Martyr's Purpose talent icon"> [Martyr's Purpose](#zealot_restore_stealth_cd_on_damage) | <ul><li>Lower current Health increases combat ability recharge. At 25% Health or less, gain up to 0.5 additional resource per second, equivalent to +50% regeneration when natural recharge is 1 resource/s.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="Pious Cut-Throat talent icon"> [Pious Cut-Throat](#zealot_backstab_kills_restore_cd) | <ul><li>A Melee Backstab or Weakspot hit grants extra cooldown recovery for 2 seconds, without requiring a kill. Restore 0.75 additional combat ability resource per second; further hits refresh duration.</li></ul> | Ability |
 
 ---
 
@@ -254,3 +255,17 @@
 - **Cooldown example**: At a steady 50% Health with normal natural recharge, total progress per second is 1 + 0.5 × 0.5 ÷ 0.75 ≈ 1.333 seconds, so a 30-second ability recharges in about 22.5 seconds. At 25% Health or less, 30 ÷ 1.5 = 20 seconds. Actual settlement occurs once per second, so timing may differ slightly.
 
 [Details](zealot_restore_stealth_cd_on_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="zealot_backstab_kills_restore_cd"></a>
+
+### Pious Cut-Throat
+
+<img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="72" height="72" alt="Pious Cut-Throat talent icon">
+
+- **Trigger**: A Melee Weakspot hit or a hit from behind grants additional combat ability recharge for the next 2 seconds. A kill is not required, and a Ranged Weakspot hit does not trigger it.
+- **Refresh**: Another trigger resets duration without stacking the recovery rate. A hit that is both a Weakspot and Backstab does not double it.
+- **Cooldown example**: Each second gives extra progress equivalent to 0.75 seconds of base cooldown. Two full settlements total 0.75 × 2 = 1.5 seconds. With natural recharge also running, that interval advances about 2 + 1.5 = 3.5 seconds of cooldown. Excess resource above full charges is not stored.
+
+[Details](zealot_backstab_kills_restore_cd.md) · [Back to index](#talent-index)

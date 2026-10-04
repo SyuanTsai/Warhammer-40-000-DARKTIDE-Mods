@@ -190,6 +190,18 @@ Full raw template and formatting: [source evidence](zealot_restore_stealth_cd_on
 | Missing-Health dependence and maximum | “Up to +50% Ability Cooldown Regeneration based on Missing Health. Max reached at 25% Current Health.”; `ui / loc_talent_zealot_damage_taken_restores_cd_new_description / 62f53f3a` | Every second: extra `0.5×clamp((1-health_percent)/0.75,0,1)` combat ability resource; maximum at 25% Health or lower. [Fixed source and line references](zealot_restore_stealth_cd_on_damage.md#fixed-source-evidence) | Consistent | The direction, cap threshold and maximum additional regeneration agree under the accepted natural 1 resource/s basis. |
 | Sampling, healing and elapsed recharge | No event requirement, sampling interval or full recharge time specified; `ui / loc_talent_zealot_damage_taken_restores_cd_new_description / 62f53f3a` | Periodic current-Health sampling, not an `on_damage` proc; healing lowers the bonus. Natural recharge and other effects remain separate. [Fixed source and line references](zealot_restore_stealth_cd_on_damage.md#fixed-source-evidence) | Not covered by the description | The existing 22.5s/20s examples and update timing explain the stated regeneration. |
 
+
+<a id="zealot_backstab_kills_restore_cd"></a>
+
+## Pious Cut-Throat
+
+Full raw template and formatting: [source evidence](zealot_backstab_kills_restore_cd.md#original-english-template-and-reconstruction). Name hash `5bf093a5`. Every row uses `ui / loc_talent_zealot_cooldown_on_backstab_weakspot_desc / 169457dc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger and recharge bonus | “+75% Ability Cooldown Regeneration for 2s after a Melee Backstab or Melee Weakspot hit.”; `ui / loc_talent_zealot_cooldown_on_backstab_weakspot_desc / 169457dc` | Melee hit plus Backstab OR Weakspot; extra 0.75 resource/s, duration 2s. [Fixed source and line references](zealot_backstab_kills_restore_cd.md#fixed-source-evidence) | Consistent | The current English describes hits, not the legacy internal name's kill requirement. |
+| Refresh, timer and resource cap | No stacking, custom timer phase or resource-cap details; `ui / loc_talent_zealot_cooldown_on_backstab_weakspot_desc / 169457dc` | Max 1; repeated hits refresh duration without necessarily resetting the timer. Two settlements add about 1.5 resource under the stated assumptions. [Fixed source and line references](zealot_backstab_kills_restore_cd.md#fixed-source-evidence) | Not covered by the description | These qualify recharge timing; they do not contradict the hit-based bonus. |
+
 ## Comparison totals
 
 33 rules: 14 Consistent / 2 Explicit contradiction / 14 Not covered by the description / 0 No implementation found / 3 Cannot confirm. Updated at checkpoint 579.
