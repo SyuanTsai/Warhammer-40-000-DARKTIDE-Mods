@@ -855,6 +855,18 @@ Full raw template and formatting: [source evidence](psyker_increased_warp_damage
 | Warp Damage bonus | +15% Damage on Warp-Attacks.; `ui / loc_talent_psyker_increased_warp_damage_desc / f4703bae` | `warp_damage = 0.15` is added for qualifying `warp_damage_types`. [Fixed source and line references](psyker_increased_warp_damage.md#fixed-source-evidence) | Consistent | The effect and displayed amount agree. |
 | Eligibility and additive stage | +15% Damage on Warp-Attacks.; `ui / loc_talent_psyker_increased_warp_damage_desc / f4703bae` | `damage_calculation` checks Damage type and adds the value within the same additive Damage stage. [Fixed source and line references](psyker_increased_warp_damage.md#fixed-source-evidence) | Not covered by the description | The English omits the internal eligibility check and calculation stage. |
 
+
+<a id="psyker_weapon_attacks_peril_equilibrium"></a>
+
+## Peril Equilibrium
+
+Full raw template and formatting: [source evidence](psyker_weapon_attacks_peril_equilibrium.md#original-english-template-and-reconstruction). Name hash `63ed565b`. Every row uses `ui / loc_talent_psyker_weapon_attacks_peril_equilibrium_desc / dc54df8c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Condition and generation | While below 75% Peril, non-warp hits Generate 2% Peril.; `ui / loc_talent_psyker_weapon_attacks_peril_equilibrium_desc / dc54df8c` | Qualifying non-Warp hits add 0.02 when current Peril is below 0.75. [Fixed source and line references](psyker_weapon_attacks_peril_equilibrium.md#fixed-source-evidence) | Consistent | The threshold, attack category and amount agree. |
+| Hit checks and processing | Non-warp hits Generate 2% Peril.; `ui / loc_talent_psyker_weapon_attacks_peril_equilibrium_desc / dc54df8c` | Requires your damaging melee/ranged hit; one counted proc is processed per update and clamps to 0.75 without `warp_charge_amount`. [Fixed source and line references](psyker_weapon_attacks_peril_equilibrium.md#fixed-source-evidence) | Not covered by the description | The text omits the eligibility checks, update scheduling, cap and modifier bypass. |
+
 ## Comparison totals
 
 The 148 listed rules comprise **69 Consistent**, **3 Explicit contradictions**, **70 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**.

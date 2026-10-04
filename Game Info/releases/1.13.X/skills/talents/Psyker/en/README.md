@@ -77,6 +77,7 @@
 | <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="By Crack of Bone talent icon"> [By Crack of Bone](#psyker_melee_weaving) | <ul><li>Melee Weakspot Kills remove 10 percentage points of Peril and reduce Peril generation by 20% for 4 seconds.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="Vulnerable Minds talent icon"> [Vulnerable Minds](#psyker_damage_vs_ogryns_and_monsters) | <ul><li>+20% Damage against Ogryns and Monstrosities.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="Focused Warp talent icon"> [Focused Warp](#psyker_increased_warp_damage) | <ul><li>+15% Damage on Warp Attacks.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="Peril Equilibrium talent icon"> [Peril Equilibrium](#psyker_weapon_attacks_peril_equilibrium) | <ul><li>Damaging non-Warp melee or ranged hits add 2 percentage points of Peril, up to 75%.</li></ul> | Talent |
 
 ---
 
@@ -1156,3 +1157,17 @@
 - **Damage example**: Compare only this Damage stage, with all other multipliers fixed at 1. With a baseline of 100 and no other bonuses, 100 × (1 + 15%) = 115. With an existing 25% bonus in the same stage, 125 becomes 100 × (1 + 25% + 15%) = 140.
 
 [Details](psyker_increased_warp_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_weapon_attacks_peril_equilibrium"></a>
+
+### Peril Equilibrium
+
+<img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="72" height="72" alt="Peril Equilibrium talent icon">
+
+- **How it works**: A non-Warp melee or ranged hit that deals Damage adds 2 percentage points of Peril, up to 75%. It stops adding Peril at 75% and does not lower Peril that is already above that threshold.
+
+- **Peril example**: Three successive triggers at 70% Peril give 70% → 72% → 74% → 75%. An initial 90% remains at 90%.
+
+[Details](psyker_weapon_attacks_peril_equilibrium.md) · [Back to index](#talent-index)
