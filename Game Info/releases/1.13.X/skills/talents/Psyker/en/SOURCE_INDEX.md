@@ -61,3 +61,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Perilous Combustion](psyker_elite_kills_add_warpfire.md) / `psyker_elite_kills_add_warpfire` | Talent |
 | [Battle Meditation](psyker_chance_to_vent_on_kill.md) / `psyker_chance_to_vent_on_kill` | Talent |
 | [Perfect Timing](psyker_crits_empower_next_attack.md) / `psyker_crits_empower_next_attack` | Talent |
+| [Wildfire](psyker_spread_warpfire_on_kill.md) / `psyker_spread_warpfire_on_kill` | Talent |

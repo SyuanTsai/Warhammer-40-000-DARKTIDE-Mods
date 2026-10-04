@@ -614,6 +614,18 @@ Full raw template and formatting: [source evidence](psyker_crits_empower_next_at
 | Critical trigger and damage stacks | +3% Damage for 10s on Critical Attack, stacking 5 times; `ui / loc_talent_psyker_damage_on_crit_stacking_desc / 62b2dfb3` | The verified Critical Hit path adds 0.03 damage per stack, with a 10s duration and maximum 5 stacks. [Fixed source and line references](psyker_crits_empower_next_attack.md#fixed-source-evidence) | Consistent | The stated amount, duration, cap and ordinary critical-hit trigger agree. |
 | Refresh, additive stage and special-hit limits | No refresh rule, damage-stage formula or per-projectile claim; `ui / loc_talent_psyker_damage_on_crit_stacking_desc / 62b2dfb3` | Retriggering refreshes the duration; damage bonuses add within the same stage; the proc checks crit flags, and special-hit event coverage remains untested. [Fixed source and line references](psyker_crits_empower_next_attack.md#fixed-source-evidence) | Not covered by the description | These details and existing test limits supplement the broad English wording. |
 
+
+<a id="psyker_spread_warpfire_on_kill"></a>
+
+## Wildfire
+
+Full raw template and formatting: [source evidence](psyker_spread_warpfire_on_kill.md#original-english-template-and-reconstruction). Name hash `19f630c7`. Every row uses `ui / loc_talent_psyker_warpfire_spread_desc / 7f4f685e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Death condition and upper limits | Dies while affected by your Soulblaze; each gains up to 4 and cannot gain more than the victim had; `ui / loc_talent_psyker_warpfire_spread_desc / 7f4f685e` | Death while carrying the owner's Soulblaze triggers spread, with stacks_on_death = min(pre-death stacks, 4). Soulblaze need not deliver the final hit. [Fixed source and line references](psyker_spread_warpfire_on_kill.md#fixed-source-evidence) | Consistent | The death condition is explicit, and the stated per-target ceilings do not require every target to receive four stacks. |
+| Shared pool and recipient checks | No total distribution budget, existing-stack check or exact radius; `ui / loc_talent_psyker_warpfire_spread_desc / 7f4f685e` | A single pool of up to 4 is shared one stack at a time within 5m; targets already at stacks_on_death are skipped. [Fixed source and line references](psyker_spread_warpfire_on_kill.md#fixed-source-evidence) | Not covered by the description | “Up to” does not promise an independent allocation. The shared pool and final recipient ceiling require supplementary explanation. |
+
 ## Comparison totals
 
 The 107 listed rules comprise **51 Consistent**, **2 Explicit contradictions**, **50 Not covered by the description**, **0 No corresponding implementation evidence found** and **4 Cannot confirm**.
