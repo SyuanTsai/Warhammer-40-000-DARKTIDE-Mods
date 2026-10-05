@@ -135,5 +135,6 @@
 | <img src="https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882" width="32" height="32" alt="轉移反噬祝福圖示"> [轉移反噬](entries/轉移反噬/README.md)<br>- Transfer Peril<br>[完整說明](entries/轉移反噬/README.md) | <ul><li>合格弱點命中排除目前反噬 7–10 個百分點（P1/P3）或 6.5–8 個百分點（P4）。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10" width="32" height="32" alt="不入虎穴，焉得虎子祝福圖示"> [不入虎穴，焉得虎子](entries/不入虎穴，焉得虎子/README.md)<br>- No Guts, No Glory<br>[完整說明](entries/不入虎穴，焉得虎子/README.md) | <ul><li>惡霸棍棒 P2 的特殊掌擊命中精英後，重設韌性恢復時間戳，並在本 tier 的 2／3／4／5 秒窗口內提供每秒韌性恢復額外修正 +50%；重複合格命中刷新窗口。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94" width="32" height="32" alt="護甲之禍祝福圖示"> [護甲之禍](entries/護甲之禍/README.md)<br>- Armourbane<br>[完整說明](entries/護甲之禍/README.md) | <ul><li>依充能在命中的小兵身上疊加脆弱；每層 2.5%，目標端最多 16 層並持續 5 秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c" width="32" height="32" alt="燃燒靈魂祝福圖示"> [燃燒靈魂](entries/燃燒靈魂/README.md)<br>- Blazing Spirit<br>[完整說明](entries/燃燒靈魂/README.md) | <ul><li>手持此祝福武器造成傷害的近戰暴擊可使敵人新增靈魂之火；I–IV 每次最多新增 1/2/3/4 層，上限為 3/6/9/12 層，目標已有層數會共用計算。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

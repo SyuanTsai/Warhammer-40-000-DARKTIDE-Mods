@@ -437,3 +437,7 @@
 - [不入虎穴，焉得虎子](2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
 
 - [護甲之禍](2026-10-03-ARMOURBANE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- 第32輪三項已Commit後完整掃描通過：transfer-peril (`8b693f772fad1a3e018a12d842d5905cba435813`)、no-guts-no-glory (`2def0da3d1d4e678179eb67148a495b63f06f984`)、armourbane (`0bf88738fd198b07d23fd02de595f622c519b6a2`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-032-full-scan.json`／SHA-256 `8552d16f740d090ec32d06c7a09895612d37d56e3533d8c8fbd3ca9078e23ffd`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [燃燒靈魂](2026-10-03-BLAZING-SPIRIT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

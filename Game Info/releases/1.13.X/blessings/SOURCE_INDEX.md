@@ -133,3 +133,4 @@
 | [轉移反噬](entries/轉移反噬/README.md) | [來源索引](entries/轉移反噬/SOURCE_INDEX.md) |
 | [不入虎穴，焉得虎子](entries/不入虎穴，焉得虎子/README.md) | [來源索引](entries/不入虎穴，焉得虎子/SOURCE_INDEX.md) |
 | [護甲之禍](entries/護甲之禍/README.md) | [來源索引](entries/護甲之禍/SOURCE_INDEX.md) |
+| [燃燒靈魂](entries/燃燒靈魂/README.md) | [來源索引](entries/燃燒靈魂/SOURCE_INDEX.md) |
