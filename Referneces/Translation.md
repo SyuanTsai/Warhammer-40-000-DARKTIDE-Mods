@@ -1932,3 +1932,6 @@
 
 - Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
   - 文件譯名；本體1.13.1繁中仍為「燃燒靈魂」。名稱鍵 `loc_trait_bespoke_warpfire_burn_on_crit`，hash `47a95669`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Superiority - 優勢（近戰力量）
+  - 文件譯名；本體1.13.1繁中仍為「優勢」。名稱鍵 `loc_trait_bespoke_elite_kills_grants_stackable_melee_power`，hash `8b0f014e`；保留同hash中英RAW原文與文件翻譯分層。

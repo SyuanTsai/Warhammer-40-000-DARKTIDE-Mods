@@ -1,0 +1,603 @@
+{
+  "date": "2026-10-06",
+  "blessing": "superiority-melee",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "superiority-melee",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-formal-peer-scope.json",
+    "scope_sha256": "03051cdd7975b76843041781aed268d4ab8c79d14a2034a336b3cab252ac94cb",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "reviewed_conclusions": [
+      "核對 8 個正式頁、2 個實作變體及 2 個實際 Mark 綁定；共享祝福映射、兩個武器反向索引、相同圖示附件與型號名稱一致。",
+      "I–IV 每層近戰 PowerLevel modifier 為 .04/.06/.08/.10；兩個 parent 的 tier stat 透過 child context 覆寫同名 .125 fallback，child offset -1 後有效上限為 3 層，兩者期限均為 5 秒且每次衰退移除一層。",
+      "on_kill 檢查目標已死亡且具有 elite 或 special 標籤；事件處理與 stat cache 更新後新層才供後續攻擊使用。事件來源 item／攻擊種類不作比較；實際持用欄位條件仍 gate proc 與 stat。達 cap 的合格事件仍刷新計時。",
+      "兩個實際 Mark 的普通／蓄力近戰、推擊後續及特殊模式近戰 sweep 可依死亡與目標標籤觸發。純 push 的 attack power 為 0；push-follow 是獨立後續 melee sweep。",
+      "P3 的特殊類別 process_hit 為空；Transonic P1 實際特殊資料沒有 push_template，故通用特殊命中鉤子不會產生本項額外推力或第二次傷害攻擊。",
+      "Tier IV 三層的受控例以 neutral 其餘加算項得到 1.30 modifier pool；curve-scaled PowerLevel 100 變成 130，說明明確限制為 PowerLevel 階段，不誤稱最終傷害提升 30%。",
+      "英／繁中 RAW 同 key/hash 配對，formatter 逐級重建為 +4/+6/+8/+10、5 秒、3 層；RAW 未涵蓋持用、來源武器與招式條件之處分類為文件未涵蓋，沒有捏造矛盾。"
+    ],
+    "differential_reuse": "沿用同一固定 source SHA 下已核准的 ProcBuff、ParentProcBuff、stack/timer/cache、held-slot、PowerLevel 消費及 weapon equip/switch 共通證據；本項兩個實際 wrapper、tier 覆寫、Mark 攻擊路由與特殊差異均依 scope 中本項證據核對其適用條件。",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-config.json": "39b4a48c4768833bce8c85d14ce3844dcc4044cbdb983e509001536f943ff75d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-draft.md": "1e4a4b1658455d521a0351b53cf7e9becff6e0f6a8818f14769eac7092b87bc8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-evidence.json": "7f3ca85f18ce37d393d494f9572712a30c7e46d9324b9417abcf72635d35f851",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-config.json": "d67759ca88845edc71b676d1a75f41f4c1d8af423be663437d15d69ebfcb4ff7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-extension-draft.json": "bc487a4a6fa3462126e3a6caec2006ba2abaf992aaadce0278843b8e14a5824d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/association-snapshot.json": "895314c22d63560eea32551210bd934f4c10963617620da7dc5c11c5a35e4a35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/attack-coverage.json": "a5f13adb72a8716248856f90874eae53d622a021d633146a063bd8d59271362b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/binding-inventory.json": "895314c22d63560eea32551210bd934f4c10963617620da7dc5c11c5a35e4a35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-freeze.json": "f966d19eb5b5f7f64e718ed133aa9c47a404c47b7d8f4613981490a70aebd3ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/DAMAGE_PERCENTAGE_REVIEW.md": "b0d332d0fe618f666ed730cc2c46ca47c81cddd029278c11980c9aa6f615b273",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/LOCALIZATION_COMPARISON.md": "4cccda4f32ca69889169498ab90bf3db9f21905031d830c74d3688433c51d805",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/README.md": "332173cbb727710d0f10b271fb853c470123e495a4259126d604927882a58a88",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/SOURCE_INDEX.md": "b28220f0642185a6988a966e311199fe82cb8a6892dc4e66b6ff58833026b29e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/TIER_VALUES.md": "69320b4fc5735cd238af906d286607a11bc00b327d0f487ba51f423949395a19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/WEAPON_COMPATIBILITY.md": "1caa725839e974533d8ade4ee052622a3b6338768216885b98ff0920f27cea3e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md": "e7b00e04f260d186afc311d329b1338d00c0f25f0fe802e0e5a85b0c652811c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md": "0719ef03b71102394ef94e692aa6f19c3538dfd31a698654696ed4f48fd216a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages-manifest.json": "e1275091e88d526b0c195a4c0ef16f9b0ceb49b7ad20bb4aa9547715ba7c55aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/inventory-original.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/item-metadata-original.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/localization-target-and-collision.json": "e54439992e3ab86bf496aa82474f92663687b43aaa1a1669e386dd053aac722f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/localized-keys-original.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/remaining-tasks-original.json": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-image.json": "83e0416d70e63d8877f1a652269ea7e167a251a5fd62972b523c8e5235972190",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-actual-special-tweak-absence-review.json": "4ae06468dee6e80770bb1bce68e10f4d586f63830f2922cef3189e50a37902f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-own-tier-wrapper-material-delta-review.json": "689adc00253d691adb5277d34bc68dbd5b0b64d8d0ce9dc1e1793dded90a4c01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-traits-review.json": "5558987cbe69faa50f5e89458245f076afe481b39f841ca4119e474df05c8ec6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-ui-raw-verification.json": "2e48caa955201c8e6adb02fa60b0e304d4c05936645d6bf5436c17acf306ba70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-ui-review.json": "233c87ed90213d0e2e021c6d4c7fab83dce1412c0ac16c65a8d8d536c633cd5d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-primary-duration-name-key-difference-correction-review.json": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/ROOT_EXEC_RECIPES.json": "970ac7bdd9060690c489eeb003b19e270bb3c55aaf5f5aee1985f2925c541509",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/narrative-draft.json": "495320b3fc978e970b73bc3301039425bc5d6d036befc7564f8ee5cc34afb04c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/selfcheck.json": "f81e6a6ffe6b0a9e52a92c03fe678881c4ab2c7cdcdcb64595a4eb58123ea5ec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/source-ranges.json": "7aaf1328e477b9f96171698f56cecd4994a92a4aa130147cbf8abc9d03855ba5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-actual-preview-receipt-001.json": "47bbedd63f48d174d9f78c0bac1c3e4d375ca947259eea48fe61b968ae77d145",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-config.json": "39b4a48c4768833bce8c85d14ce3844dcc4044cbdb983e509001536f943ff75d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-draft.md": "1e4a4b1658455d521a0351b53cf7e9becff6e0f6a8818f14769eac7092b87bc8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-evidence.json": "7f3ca85f18ce37d393d494f9572712a30c7e46d9324b9417abcf72635d35f851",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-image.json": "83e0416d70e63d8877f1a652269ea7e167a251a5fd62972b523c8e5235972190",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-actual-special-tweak-absence-review.json": "4ae06468dee6e80770bb1bce68e10f4d586f63830f2922cef3189e50a37902f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-final-content-review.json": "d149705fb2be482502dacaff2ef4d11992c84094fd138b2b4afcf3387be01cb5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-focused-checks.json": "a213f8b0fec27e284021abe915683b8ae01c88af3f42924ae6338d1b71795f75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-frozen-source-verification.json": "a25c02fd6a0c3bce0420331bb26ff74bbbca23133823c1f564e61a03fc39ab47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-native-special-subject-delta-review.json": "7eaccd8842b6af6e2e7de1ac7ea4b719e79c7ab802c171dd23c9703e017eba98",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-own-tier-wrapper-material-delta-review.json": "689adc00253d691adb5277d34bc68dbd5b0b64d8d0ce9dc1e1793dded90a4c01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-resume-review.json": "1d53870d4062fb3e0e42285de8f12956c5295635c94ee7177777bce6881ee2f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-traits-review.json": "5558987cbe69faa50f5e89458245f076afe481b39f841ca4119e474df05c8ec6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-raw-verification.json": "2e48caa955201c8e6adb02fa60b0e304d4c05936645d6bf5436c17acf306ba70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-review.json": "233c87ed90213d0e2e021c6d4c7fab83dce1412c0ac16c65a8d8d536c633cd5d",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-raw-verification.json": "becef6e654fc5cf0538ca9d87a3f1ff2464cd7df9ba6de0c916b305c4cf28f2d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3f6b45467c0f0cda9a126e094a3ee093e5a2dd0dffcb93d4d6de31f62c1f9c55",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/DAMAGE_PERCENTAGE_REVIEW.md": "b0d332d0fe618f666ed730cc2c46ca47c81cddd029278c11980c9aa6f615b273",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/LOCALIZATION_COMPARISON.md": "4cccda4f32ca69889169498ab90bf3db9f21905031d830c74d3688433c51d805",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/README.md": "332173cbb727710d0f10b271fb853c470123e495a4259126d604927882a58a88",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/SOURCE_INDEX.md": "b28220f0642185a6988a966e311199fe82cb8a6892dc4e66b6ff58833026b29e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/TIER_VALUES.md": "69320b4fc5735cd238af906d286607a11bc00b327d0f487ba51f423949395a19",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/WEAPON_COMPATIBILITY.md": "1caa725839e974533d8ade4ee052622a3b6338768216885b98ff0920f27cea3e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md": "e7b00e04f260d186afc311d329b1338d00c0f25f0fe802e0e5a85b0c652811c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md": "0719ef03b71102394ef94e692aa6f19c3538dfd31a698654696ed4f48fd216a8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/melee/README.md": "eafea57ab80229ceda22caf3a31c3f475eae79f80a65e5161bbc3bc79c75d26c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/README.md": "c71e60d95e98898d931ad6e9e827da306f356d6d793b5b177b7891ca9c60d3cf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "9d8a3d6b3a516455789820fa819d689b571dbac2bf6b3be12b7c4d5ce99703e9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "c0a0e6f4a54566449e46abbd14e41525e53ec3244753c9ab8039d3174872b981",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "262d487d75683669759a4b29ae769e5ffa069da2b49e0797993b903ede7310ec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/own-association-snapshot.json": "e5c92c908d4642820541d181043dc08d231105860c605fb688dad98d2783d775",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/actual-preview-001/Referneces/Translation.md": "8eef9136e18ae666b7ded3c8d1452f42c0645198e0379f2d70dbbc9115bc0a47",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3f6b45467c0f0cda9a126e094a3ee093e5a2dd0dffcb93d4d6de31f62c1f9c55",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/DAMAGE_PERCENTAGE_REVIEW.md": "b0d332d0fe618f666ed730cc2c46ca47c81cddd029278c11980c9aa6f615b273",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/LOCALIZATION_COMPARISON.md": "4cccda4f32ca69889169498ab90bf3db9f21905031d830c74d3688433c51d805",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/README.md": "332173cbb727710d0f10b271fb853c470123e495a4259126d604927882a58a88",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/SOURCE_INDEX.md": "b28220f0642185a6988a966e311199fe82cb8a6892dc4e66b6ff58833026b29e",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/TIER_VALUES.md": "69320b4fc5735cd238af906d286607a11bc00b327d0f487ba51f423949395a19",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/WEAPON_COMPATIBILITY.md": "1caa725839e974533d8ade4ee052622a3b6338768216885b98ff0920f27cea3e",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md": "e7b00e04f260d186afc311d329b1338d00c0f25f0fe802e0e5a85b0c652811c0",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md": "0719ef03b71102394ef94e692aa6f19c3538dfd31a698654696ed4f48fd216a8",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "eafea57ab80229ceda22caf3a31c3f475eae79f80a65e5161bbc3bc79c75d26c",
+      "Game Info/releases/1.13.X/blessings/README.md": "c71e60d95e98898d931ad6e9e827da306f356d6d793b5b177b7891ca9c60d3cf",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "9d8a3d6b3a516455789820fa819d689b571dbac2bf6b3be12b7c4d5ce99703e9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "c0a0e6f4a54566449e46abbd14e41525e53ec3244753c9ab8039d3174872b981",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "262d487d75683669759a4b29ae769e5ffa069da2b49e0797993b903ede7310ec",
+      "Referneces/Translation.md": "8eef9136e18ae666b7ded3c8d1452f42c0645198e0379f2d70dbbc9115bc0a47"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "superiority-melee",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_011.png",
+      "attachment": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6001632094",
+      "acquired_date": "2026-10-06",
+      "sha256": "bcad9bf6b51fc7642435860a0b9be0ef45d3aa194c412c5e0140eae889131e2a",
+      "content_type": "image/png",
+      "size": 5116,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "優勢祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG weapon_trait_011 pale central crossed motif with transparent border; actual source/public hash and size match. Superiority two name keys share same verified actual item.icon and public bytes."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 14,
+      "rows": 435,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 50,
+      "source_files": 26,
+      "bindings": 926,
+      "variants": 476,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1114,
+      "remote_references": 414,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 36,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-035-full-scan.json",
+        "sha256": "a8530afb460be140994fa79330b54dd04c71ec241fb658eb32473456ea055397",
+        "trigger": "round-035"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 29,
+    "not_started_name_groups": 29,
+    "partial_name_groups": 0,
+    "remaining_variants": 129,
+    "remaining_bindings": 259,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b1215f420788d6dc6d777bfe9dc2c1de81031aec1f0253a6eaa65a67f221b431"
+  },
+  "previous_local_commit": "213a9af29691d23f4a233cadcf67683991cabca1",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "name_key": "loc_trait_bespoke_elite_kills_grants_stackable_power",
+        "name_en": "Superiority",
+        "name_zh_tw": "優勢",
+        "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+        "description_hash": "cd2a709c",
+        "bindings": [
+          {
+            "weapon_id": "crowbar_p1",
+            "mark_id": "crowbar_p1_m1",
+            "trait_id": "weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power",
+            "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+            "weapon_name_en": "Crowbar",
+            "weapon_name_zh_tw": "撬棍",
+            "status": "different name key; excluded"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m1",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+            "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+            "weapon_name_en": "Blaze Force Sword",
+            "weapon_name_zh_tw": "烈焰力場劍",
+            "status": "different name key; excluded"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m2",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+            "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+            "weapon_name_en": "Blaze Force Sword",
+            "weapon_name_zh_tw": "烈焰力場劍",
+            "status": "different name key; excluded"
+          },
+          {
+            "weapon_id": "forcesword_p1",
+            "mark_id": "forcesword_p1_m3",
+            "trait_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+            "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+            "weapon_name_en": "Blaze Force Sword",
+            "weapon_name_zh_tw": "烈焰力場劍",
+            "status": "different name key; excluded"
+          }
+        ],
+        "status": "different name key/description; excluded from this exact group"
+      }
+    ],
+    "exact_bound_items": 2,
+    "unbound_exact_items": [],
+    "status": "exact name-key intersection only; no additional exact bindings"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-actual-special-tweak-absence-review.json",
+      "sha256": "4ae06468dee6e80770bb1bce68e10f4d586f63830f2922cef3189e50a37902f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-final-content-review.json",
+      "sha256": "d149705fb2be482502dacaff2ef4d11992c84094fd138b2b4afcf3387be01cb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-focused-checks.json",
+      "sha256": "a213f8b0fec27e284021abe915683b8ae01c88af3f42924ae6338d1b71795f75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-frozen-source-verification.json",
+      "sha256": "a25c02fd6a0c3bce0420331bb26ff74bbbca23133823c1f564e61a03fc39ab47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-native-special-subject-delta-review.json",
+      "sha256": "7eaccd8842b6af6e2e7de1ac7ea4b719e79c7ab802c171dd23c9703e017eba98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "689adc00253d691adb5277d34bc68dbd5b0b64d8d0ce9dc1e1793dded90a4c01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-resume-review.json",
+      "sha256": "1d53870d4062fb3e0e42285de8f12956c5295635c94ee7177777bce6881ee2f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-traits-review.json",
+      "sha256": "5558987cbe69faa50f5e89458245f076afe481b39f841ca4119e474df05c8ec6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-raw-verification.json",
+      "sha256": "2e48caa955201c8e6adb02fa60b0e304d4c05936645d6bf5436c17acf306ba70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-review.json",
+      "sha256": "233c87ed90213d0e2e021c6d4c7fab83dce1412c0ac16c65a8d8d536c633cd5d"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-config.json",
+    "sha256": "d67759ca88845edc71b676d1a75f41f4c1d8af423be663437d15d69ebfcb4ff7"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/association-snapshot.json",
+      "sha256": "895314c22d63560eea32551210bd934f4c10963617620da7dc5c11c5a35e4a35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/attack-coverage.json",
+      "sha256": "a5f13adb72a8716248856f90874eae53d622a021d633146a063bd8d59271362b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/binding-inventory.json",
+      "sha256": "895314c22d63560eea32551210bd934f4c10963617620da7dc5c11c5a35e4a35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages-manifest.json",
+      "sha256": "e1275091e88d526b0c195a4c0ef16f9b0ceb49b7ad20bb4aa9547715ba7c55aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b0d332d0fe618f666ed730cc2c46ca47c81cddd029278c11980c9aa6f615b273"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/LOCALIZATION_COMPARISON.md",
+      "sha256": "4cccda4f32ca69889169498ab90bf3db9f21905031d830c74d3688433c51d805"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/README.md",
+      "sha256": "332173cbb727710d0f10b271fb853c470123e495a4259126d604927882a58a88"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/SOURCE_INDEX.md",
+      "sha256": "b28220f0642185a6988a966e311199fe82cb8a6892dc4e66b6ff58833026b29e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/TIER_VALUES.md",
+      "sha256": "69320b4fc5735cd238af906d286607a11bc00b327d0f487ba51f423949395a19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/WEAPON_COMPATIBILITY.md",
+      "sha256": "1caa725839e974533d8ade4ee052622a3b6338768216885b98ff0920f27cea3e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md",
+      "sha256": "e7b00e04f260d186afc311d329b1338d00c0f25f0fe802e0e5a85b0c652811c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/優勢（近戰力量）/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md",
+      "sha256": "0719ef03b71102394ef94e692aa6f19c3538dfd31a698654696ed4f48fd216a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/inventory-original.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/item-metadata-original.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/localization-target-and-collision.json",
+      "sha256": "e54439992e3ab86bf496aa82474f92663687b43aaa1a1669e386dd053aac722f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/localized-keys-original.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/local-snapshots/remaining-tasks-original.json",
+      "sha256": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-image.json",
+      "sha256": "83e0416d70e63d8877f1a652269ea7e167a251a5fd62972b523c8e5235972190"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-actual-special-tweak-absence-review.json",
+      "sha256": "4ae06468dee6e80770bb1bce68e10f4d586f63830f2922cef3189e50a37902f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "689adc00253d691adb5277d34bc68dbd5b0b64d8d0ce9dc1e1793dded90a4c01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-traits-review.json",
+      "sha256": "5558987cbe69faa50f5e89458245f076afe481b39f841ca4119e474df05c8ec6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-ui-raw-verification.json",
+      "sha256": "2e48caa955201c8e6adb02fa60b0e304d4c05936645d6bf5436c17acf306ba70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-melee-primary-ui-review.json",
+      "sha256": "233c87ed90213d0e2e021c6d4c7fab83dce1412c0ac16c65a8d8d536c633cd5d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/root-receipts/superiority-primary-duration-name-key-difference-correction-review.json",
+      "sha256": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/ROOT_EXEC_RECIPES.json",
+      "sha256": "970ac7bdd9060690c489eeb003b19e270bb3c55aaf5f5aee1985f2925c541509"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/inputs/tool-snapshot/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/narrative-draft.json",
+      "sha256": "495320b3fc978e970b73bc3301039425bc5d6d036befc7564f8ee5cc34afb04c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/selfcheck.json",
+      "sha256": "f81e6a6ffe6b0a9e52a92c03fe678881c4ab2c7cdcdcb64595a4eb58123ea5ec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/source-ranges.json",
+      "sha256": "7aaf1328e477b9f96171698f56cecd4994a92a4aa130147cbf8abc9d03855ba5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-actual-preview-receipt-001.json",
+      "sha256": "47bbedd63f48d174d9f78c0bac1c3e4d375ca947259eea48fe61b968ae77d145"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-config.json",
+      "sha256": "39b4a48c4768833bce8c85d14ce3844dcc4044cbdb983e509001536f943ff75d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-draft.md",
+      "sha256": "1e4a4b1658455d521a0351b53cf7e9becff6e0f6a8818f14769eac7092b87bc8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "c71e60d95e98898d931ad6e9e827da306f356d6d793b5b177b7891ca9c60d3cf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "9d8a3d6b3a516455789820fa819d689b571dbac2bf6b3be12b7c4d5ce99703e9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "3f6b45467c0f0cda9a126e094a3ee093e5a2dd0dffcb93d4d6de31f62c1f9c55"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b0d332d0fe618f666ed730cc2c46ca47c81cddd029278c11980c9aa6f615b273"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\LOCALIZATION_COMPARISON.md",
+      "sha256": "4cccda4f32ca69889169498ab90bf3db9f21905031d830c74d3688433c51d805"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\README.md",
+      "sha256": "332173cbb727710d0f10b271fb853c470123e495a4259126d604927882a58a88"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\SOURCE_INDEX.md",
+      "sha256": "b28220f0642185a6988a966e311199fe82cb8a6892dc4e66b6ff58833026b29e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\TIER_VALUES.md",
+      "sha256": "69320b4fc5735cd238af906d286607a11bc00b327d0f487ba51f423949395a19"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\WEAPON_COMPATIBILITY.md",
+      "sha256": "1caa725839e974533d8ade4ee052622a3b6338768216885b98ff0920f27cea3e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md",
+      "sha256": "e7b00e04f260d186afc311d329b1338d00c0f25f0fe802e0e5a85b0c652811c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（近戰力量）\\weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md",
+      "sha256": "0719ef03b71102394ef94e692aa6f19c3538dfd31a698654696ed4f48fd216a8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "eafea57ab80229ceda22caf3a31c3f475eae79f80a65e5161bbc3bc79c75d26c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\機械神教動力劍\\README.md",
+      "sha256": "c0a0e6f4a54566449e46abbd14e41525e53ec3244753c9ab8039d3174872b981"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\穿音速雙刀\\README.md",
+      "sha256": "262d487d75683669759a4b29ae769e5ffa069da2b49e0797993b903ede7310ec"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\Referneces\\Translation.md",
+      "sha256": "8eef9136e18ae666b7ded3c8d1452f42c0645198e0379f2d70dbbc9115bc0a47"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-raw-verification.json",
+      "sha256": "becef6e654fc5cf0538ca9d87a3f1ff2464cd7df9ba6de0c916b305c4cf28f2d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-melee-group\\actual-preview-001\\own-association-snapshot.json",
+      "sha256": "e5c92c908d4642820541d181043dc08d231105860c605fb688dad98d2783d775"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/candidate-freeze.json",
+      "sha256": "f966d19eb5b5f7f64e718ed133aa9c47a404c47b7d8f4613981490a70aebd3ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-group/superiority-melee-agent-evidence.json",
+      "sha256": "7f3ca85f18ce37d393d494f9572712a30c7e46d9324b9417abcf72635d35f851"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-config.json",
+      "sha256": "39b4a48c4768833bce8c85d14ce3844dcc4044cbdb983e509001536f943ff75d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-evidence.json",
+      "sha256": "7f3ca85f18ce37d393d494f9572712a30c7e46d9324b9417abcf72635d35f851"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-agent-draft.md",
+      "sha256": "1e4a4b1658455d521a0351b53cf7e9becff6e0f6a8818f14769eac7092b87bc8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-actual-special-tweak-absence-review.json",
+      "sha256": "4ae06468dee6e80770bb1bce68e10f4d586f63830f2922cef3189e50a37902f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-final-content-review.json",
+      "sha256": "d149705fb2be482502dacaff2ef4d11992c84094fd138b2b4afcf3387be01cb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-frozen-source-verification.json",
+      "sha256": "a25c02fd6a0c3bce0420331bb26ff74bbbca23133823c1f564e61a03fc39ab47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-native-special-subject-delta-review.json",
+      "sha256": "7eaccd8842b6af6e2e7de1ac7ea4b719e79c7ab802c171dd23c9703e017eba98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "689adc00253d691adb5277d34bc68dbd5b0b64d8d0ce9dc1e1793dded90a4c01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-traits-review.json",
+      "sha256": "5558987cbe69faa50f5e89458245f076afe481b39f841ca4119e474df05c8ec6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-raw-verification.json",
+      "sha256": "2e48caa955201c8e6adb02fa60b0e304d4c05936645d6bf5436c17acf306ba70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-primary-ui-review.json",
+      "sha256": "233c87ed90213d0e2e021c6d4c7fab83dce1412c0ac16c65a8d8d536c633cd5d"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-melee-formal-peer-scope.json",
+    "sha256": "03051cdd7975b76843041781aed268d4ab8c79d14a2034a336b3cab252ac94cb",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

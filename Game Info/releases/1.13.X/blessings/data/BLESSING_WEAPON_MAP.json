@@ -1850,6 +1850,24 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
       "effect": "耐力越低，依型號步幅增加最多五階近戰威力；一般八型號與碎骨者克魯克 Mk IIa 使用不同每階值與耐力步幅。"
+    },
+    {
+      "id": "superiority-melee",
+      "name_zh_tw": "優勢（近戰力量）",
+      "name_en": "Superiority",
+      "name_key": "loc_trait_bespoke_elite_kills_grants_stackable_melee_power",
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_melee_power_desc",
+      "name_hash": "8b0f014e",
+      "description_hash": "20e73a3c",
+      "page": "entries/優勢（近戰力量）/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "effect": "事件處理時正持用相應武器欄位，且擊殺結果與目標標籤符合條件，便增加一層近戰威力計算修正；最多 3 層，每次合格事件刷新 5 秒逐層衰退計時。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "優勢",
+        "reason": "繁中 RAW 名稱「優勢」亦由不同 name key `loc_trait_bespoke_elite_kills_grants_stackable_power` 使用；本頁以「優勢（近戰力量）」標示此 key 的 melee PowerLevel 效果，與 Crowbar／Force Sword 的通用 Strength 祝福區分，保留遊戲 RAW。"
+      }
     }
   ],
   "weapons": [
@@ -29153,6 +29171,86 @@
       "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
       "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power",
+      "blessing_id": "superiority-melee",
+      "weapon_id": "powersword_p3",
+      "page": "entries/優勢（近戰力量）/weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier_per_stack": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_stacks": 3,
+        "child_duration_seconds": 5,
+        "stacks_removed_per_interval": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 81,
+        "end_line": 139
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_melee_power_desc",
+      "description_hash": "20e73a3c",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "effect": "機械神教動力劍 布蘭克斯 Mk VI（powersword_p3_m1）：持用此武器時處理到合格擊殺事件，便每層增加該 tier 的近戰威力計算修正；最多 3 層，5 秒計時刷新後逐層衰退。",
+      "buff_template_id": "weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power",
+      "blessing_id": "superiority-melee",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/優勢（近戰力量）/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier_per_stack": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_stacks": 3,
+        "child_duration_seconds": 5,
+        "stacks_removed_per_interval": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 164,
+        "end_line": 222
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_melee_power_desc",
+      "description_hash": "20e73a3c",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "effect": "穿音速雙刀 布蘭克斯 Mk XI（transonic_sword_transonic_knife_p1_m1）：持用此武器時處理到合格擊殺事件，便每層增加該 tier 的近戰威力計算修正；最多 3 層，5 秒計時刷新後逐層衰退。",
+      "buff_template_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power_parent"
     }
   ],
   "bindings": [
@@ -42090,6 +42188,34 @@
         "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
         "import_line": 16,
         "append_line": 1830
+      }
+    },
+    {
+      "blessing_id": "superiority-melee",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_elite_kills_grants_stackable_melee_power",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "superiority-melee",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]

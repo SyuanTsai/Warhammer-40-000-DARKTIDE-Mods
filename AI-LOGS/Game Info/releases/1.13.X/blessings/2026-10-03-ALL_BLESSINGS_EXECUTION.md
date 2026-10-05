@@ -465,3 +465,5 @@
 - 第35輪三項已Commit後完整掃描通過：inspiring-barrage-thumper (`4f5a1ecfe6aa846e8f1173c5694a226cffc4558d`)、unstable-power (`a4a119112129cf1bb068294d24cc815d292ed7fa`)、last-guard (`5b30c1a0f634eda31b245673cb19769976409230`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-035-full-scan.json`／SHA-256 `a8530afb460be140994fa79330b54dd04c71ec241fb658eb32473456ea055397`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [孤注一擲](2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json)：新增9變體、18型號關聯；共9變體、18關聯。
+
+- [優勢（近戰力量）](2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
