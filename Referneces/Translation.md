@@ -453,6 +453,7 @@
 - Execution - 處決
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_vs_stagger`，hash `2e42e848`；英文／繁中RAW配對確認。
 - Gloryhunter - 榮耀獵手
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_elite_kills`，hash `e31c381b`；英文／繁中RAW配對確認。
 - Surge - 湧動
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_double_shot_on_crit`，hash `7873018f`；英文／繁中RAW配對確認。
 - Warp Flurry - 亞空間亂舞

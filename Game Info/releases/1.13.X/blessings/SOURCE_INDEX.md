@@ -114,3 +114,4 @@
 | [快速裝彈](entries/快速裝彈/README.md) | [來源索引](entries/快速裝彈/SOURCE_INDEX.md) |
 | [死亡噴吐](entries/死亡噴吐/README.md) | [來源索引](entries/死亡噴吐/SOURCE_INDEX.md) |
 | [推進](entries/推進/README.md) | [來源索引](entries/推進/SOURCE_INDEX.md) |
+| [榮耀獵手](entries/榮耀獵手/README.md) | [來源索引](entries/榮耀獵手/SOURCE_INDEX.md) |

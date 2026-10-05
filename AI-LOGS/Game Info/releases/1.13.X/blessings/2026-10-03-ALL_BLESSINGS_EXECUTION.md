@@ -387,3 +387,5 @@
 - [死亡噴吐](2026-10-03-DEATHSPITTER_ACCEPTANCE.json)：新增9變體、21型號關聯；共9變體、21關聯。
 
 - [推進](2026-10-03-THRUST_ACCEPTANCE.json)：新增12變體、32型號關聯；共12變體、32關聯。
+
+- [榮耀獵手](2026-10-03-GLORYHUNTER_ACCEPTANCE.json)：新增11變體、18型號關聯；共11變體、18關聯。

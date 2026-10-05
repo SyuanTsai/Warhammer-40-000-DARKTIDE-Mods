@@ -1456,6 +1456,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
       "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。"
+    },
+    {
+      "id": "gloryhunter",
+      "name_zh_tw": "榮耀獵手",
+      "name_en": "Gloryhunter",
+      "name_key": "loc_trait_bespoke_toughness_on_elite_kills",
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "name_hash": "e31c381b",
+      "description_hash": "50e9547a",
+      "page": "entries/榮耀獵手/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "effect": "擊殺帶有 elite 標記的目標時，若擊殺事件的 attacking item 與目前持用的祝福物品相同，依此武器變體與等級恢復指定比例的最大韌性；實際恢復不超過當下缺少量。"
     }
   ],
   "weapons": [
@@ -23651,6 +23664,380 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
       "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
       "buff_template_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "bolter_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.1,
+        "II": 0.12,
+        "III": 0.14,
+        "IV": 0.16
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 192,
+        "end_line": 222
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 10%／12%／14%／16%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.18,
+        "II": 0.22,
+        "III": 0.26,
+        "IV": 0.3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 278,
+        "end_line": 308
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 18%／22%／26%／30%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_galvanic_rifle_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.1,
+        "II": 0.12,
+        "III": 0.14,
+        "IV": 0.16
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 442,
+        "end_line": 474
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 34,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 10%／12%／14%／16%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.175,
+        "II": 0.2,
+        "III": 0.225,
+        "IV": 0.25
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 489,
+        "end_line": 519
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 17.5%／20%／22.5%／25%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.1,
+        "II": 0.12,
+        "III": 0.14,
+        "IV": 0.16
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 953,
+        "end_line": 983
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 75,
+        "end_line": 75
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 10%／12%／14%／16%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.2,
+        "II": 0.25,
+        "III": 0.3,
+        "IV": 0.35
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 58,
+        "end_line": 88
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 20%／25%／30%／35%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_phosphor_pistol_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.175,
+        "II": 0.2,
+        "III": 0.225,
+        "IV": 0.25
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 50,
+        "end_line": 80
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 17.5%／20%／22.5%／25%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.175,
+        "II": 0.2,
+        "III": 0.225,
+        "IV": 0.25
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 10,
+        "end_line": 40
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 17.5%／20%／22.5%／25%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_shotgun_p3_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.1,
+        "II": 0.12,
+        "III": 0.14,
+        "IV": 0.16
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 868,
+        "end_line": 900
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 51,
+        "end_line": 53
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 10%／12%／14%／16%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.18,
+        "II": 0.22,
+        "III": 0.26,
+        "IV": 0.3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 410,
+        "end_line": 440
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 18%／22%／26%／30%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_toughness_on_elite_kills",
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/榮耀獵手/weapon_trait_bespoke_ogryn_thumper_p2_toughness_on_elite_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.2,
+        "II": 0.25,
+        "III": 0.3,
+        "IV": 0.35
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 9,
+        "end_line": 39
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_elite_kills_desc",
+      "description_hash": "50e9547a",
+      "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
+      "effect": "擊殺符合條件的 elite 時恢復最大韌性的 20%／25%／30%／35%（依等級）；受缺少韌性封頂。"
     }
   ],
   "bindings": [
@@ -33494,6 +33881,258 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
         "import_line": 12,
         "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/toughness_on_elite_kills",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/toughness_on_elite_kills",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/toughness_on_elite_kills",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/toughness_on_elite_kills",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/toughness_on_elite_kills",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "gloryhunter",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_toughness_on_elite_kills",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/toughness_on_elite_kills",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
       }
     }
   ]
