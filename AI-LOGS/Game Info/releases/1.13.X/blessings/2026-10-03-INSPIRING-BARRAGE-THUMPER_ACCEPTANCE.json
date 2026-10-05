@@ -1,0 +1,746 @@
+{
+  "date": "2026-10-06",
+  "blessing": "inspiring-barrage-thumper",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "inspiring-barrage-thumper",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-formal-peer-scope.json",
+    "scope_sha256": "fda9f2925c220c55f7748539914813895516fe105e53a270e1d820b4c4da9e14",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "prior_review_context": {
+      "previous_scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-formal-logic-delta-history/4-inspiring-barrage-thumper-formal-peer-scope.json",
+      "previous_scope_sha256": "f9f9e33a88f03c1b8f22315f2ea87a29a8ce176ac94f0025aeae42c01ede3868",
+      "previous_scope_file_count": 117,
+      "previous_scope_hashes_rechecked_against_current_files": true,
+      "unchanged_previous_scope_files": 113,
+      "changed_previous_scope_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-resume-review.json",
+        "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md"
+      ],
+      "added_scope_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-formal-player-logic-delta-review.json"
+      ],
+      "note": "The earlier review identified the n=last=m wording gap and did not accept it. Unchanged content was reused only after verifying the new fixed scope."
+    },
+    "delta_review": {
+      "proof_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-formal-player-logic-delta-review.json",
+      "proof_sha256": "c32bc365583de259d393395b7c256e066914693e1f790cf34f0399a1aab0e836",
+      "root_final_content_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-final-content-review.json",
+      "root_final_content_review_sha256": "be0ae5a601a67780d3a0a88780d0208db388bff0bbc9aea2aafd1c3899b2cf5c",
+      "source_gate": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua:2004-2013",
+      "finding": "The event gate is n > last OR n == m. The corrected player sentence now states that a reset to a lower value or to an equal value below m fails that event, while n=m remains eligible; later events pass at n>last or n=m. Canonical config and extension draft use the same corrected sentence.",
+      "formal_page": "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md",
+      "formal_page_change": "Only the chain-count condition bullet changed among the own formal pages. The other seven own pages and the unchanged mechanics, tier/formatter, binding and image evidence remain consistent with the prior content review."
+    },
+    "reviewed_conclusions": [
+      "All 118 file hashes in the current fixed scope match the files on disk.",
+      "The actual scope retains all 117 prior-scope paths; four existing files changed (canonical config, extension draft, primary resume, formal README), and one accepted delta proof was added.",
+      "The corrected n=last=m exception is logically consistent with the native gate n>last OR n=m, including the max-count branch after a reset.",
+      "Reused unchanged content review: the two actual Thumper bindings and weapon-specific combo behavior; one ammo event per shot action; tier recovery rates I-IV; direct toughness recovery formula and missing-toughness cap; exact RAW/formatter comparison; and existing image/UI and reverse associations.",
+      "The correction changes wording only; it does not change source behavior, math, RAW strings, tiers, binding scope, or other formal pages."
+    ],
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI Prompt/Game-Info-Workflow.md": "5a7c5b7e97186f2c62354267ff0d24010dadf342cb987f4b5b635108d31f94e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-config.json": "db370590821c1607d7ea603dcab654e66643d60e83ff19f7a084f9e40515ca9e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-draft.md": "35a94e0f0ad0045ef646797b4646254a26c2de71aa45e6040203508e3b52b81c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-evidence.json": "1fb53c44248e0be9605f08d277b8571917e072dc4b136abccb09b5ebf48b03b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-config.json": "f9a825a2491c863e915e40d12656a718897e86719f25d3dd639ec5acf95896fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-extension-draft.json": "799c9f4c41b5228db554003119354f43e35f05d05450116eb9bd8b8324b739ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/association-preview-receipt.json": "f95a62c9b8e364ab765959fd72717dd68d78e1e497698b45f4bbdbfd89703255",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/association-snapshot.json": "ca2410cf0e53f23afe2b42500255f863ac578a83835b313c0e526188ebd50c35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/DAMAGE_PERCENTAGE_REVIEW.md": "2a968a62546be1c8bc53c83bbfed4fd63cd9685914d0890be1e878a2a36e6505",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/LOCALIZATION_COMPARISON.md": "cbe777f838cc017a66fae0245271288dd4849b3ddaf39709e635d61bf7900941",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/SOURCE_INDEX.md": "d54e9381e6ea124628d3fcbd6aeb438f35a71bfe68027e47a2f7f7825dc05d06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/TIER_VALUES.md": "0767d992c9144e0306480ba9119b98aa3879390b3d00e335867d9119c35a5153",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/WEAPON_COMPATIBILITY.md": "290c59542afa1bd9648923298033e9d811242ce6cc134a5b74368630d7ad40eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire.md": "fe6e5e4247a9d0c7ff6d6ed7737885228d33d9106586784f970e417ca2ab26cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire.md": "42c366dae3b5f1b9a0f649e932eacc26098aff240262ab1b1c0585856e5f1410",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-page.md": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-preview-manifest.json": "a8587d9636f8983ae0c7764866d337233c815e15984f38d80839dc8398fd9c92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/coverage.json": "7c84e93a86a198ce9e8fe10d451fb6f633a576affc0201fb54c87dcfb32f6cab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/finalize_inspiring.py": "d88fc228b32bbd81345307bee4dc2a97ff004c50e0c43b3c9dd17a440c940be9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/freeze.json": "fec88b35b0e300ace91bedc5da65453b3073e570d916480ef3de1e842fa5806e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/binding-inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/blessing-map-before.json": "61824cb56493d56031bdb4f7b8f6b44f886f61b7deec85554176dc395eca2a39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/item-metadata-snapshot.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/localization-snapshot.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/preview-map-snapshot.json": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/preview-remaining-tasks-snapshot.json": "7f7e0c0026808b99c0847e50190790e6a871b3be69576db1225b4d5b18c5a9a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-image-upload-journal.json": "a7abbf242732ab960733c7ffea829afdd6ea39f7a95c57bce212977b14fea4a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-image.json": "317ca5ce6046cc1680a5f4c163c4d52d27603e62ec75eb0ee18bde809e24d3b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-current-held-slot-event-source-delta-review.json": "01e4e3d3b225b1f474d0878470d54b0431b1861bc534e738d2819e233ed073b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-event-record-reset-state-delta-review.json": "2c488848eb14e662ee73c511c1bd42394f989af2b84d88e9817fd186211af18b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-native-combo-material-delta-review.json": "3c6612e8204c313ff905f76853ed4d4b8fb9e7f3d4be61878ffe9bbc36787991",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-own-tier-wrapper-material-delta-review.json": "1f3534cc2396fb6131a7c6d805f9e2acfbe17b0eb5ff58c2457e1e0aa7a60c32",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-traits-review.json": "52f07c06eaf3ecc799023fc4b019f04c3a776df8f5321e2d5439692b1d78592c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-ui-raw-verification.json": "c7f880a5869692c0fef2226107abd4e47a36d718ca25d54bdd3aa8f1cbed0b56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-ui-review.json": "043265e08e5200032ca01d1f82686448d10187e982e6be0fb699ca94ed56c058",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-001.json": "c1f0fd7458ebfdafd6001cd0f4300cb80ebc81fcf93948953e82e4e50136d68a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-002.json": "bc39e6e841472f5596ad70b7e8342440ff904a7b2714e6bdc11f068d3f291bfe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-003.json": "fceb25e1b0a37ed5fb28f6e935d8c1543cc72910fc7b1212d51f8b37e7c63901",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-004.json": "a9ff61c3a2435ee10cfa71218aba4180ca4e4425ef31e9f7d61c33ffce4ed6a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-005.json": "79b683bc0a339f60bfb406e360dc79dcf9ef7b038748ec6dea7d380f1fd3c135",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-config.json": "db370590821c1607d7ea603dcab654e66643d60e83ff19f7a084f9e40515ca9e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-draft.md": "35a94e0f0ad0045ef646797b4646254a26c2de71aa45e6040203508e3b52b81c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-evidence.json": "1fb53c44248e0be9605f08d277b8571917e072dc4b136abccb09b5ebf48b03b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/name-collision-review.json": "b242b9c0caf2374348b49c2be749f0a47ddcba7a1f2a39f91322eeaf526a45f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/patch_event_source_delta_005.py": "5ab7cacb01dc50b51dce9a4b172602861ea0b6d431461db3c23f3eeb69333a13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/prepare_inspiring.py": "425f27834a7cc68cf436c1f1c3349e8231868adb9fd86c9accb8562f87f53a98",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/selfcheck-results.json": "cb6aa32eec2b17b954cf7de43f7006c9158e066c581cac72b9ab99d3e7c1e5ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/selfcheck_inspiring.py": "82f2d4c2a392429bd3efc67bb1168e637fbac28022cd1c21bd41d2d6b936c581",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-2.txt": "ff5ee50fde833598cc07c7da92728f555a52b9d15ca79b86cc3b343d71bf1649",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-3.txt": "24e9fbbe5b3ac76058629d70d32d10e6d995136ccc572b6baf471a8a3bddb2e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-4.txt": "cb57148ae4afa28e02dc4984832f417175e973bd04757822bcb8c642e37d0b83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe.txt": "42306723bc8c456b9a4bf12936ad2ebb2cb1bca61ec9574181362db74628639f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-range-index.json": "b4b43dd620df321991a4be3bc2edf0b16b0fd32bfa9b4860addee120d8e9527d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-ranges.json": "0e766704304800729e39ec907cbc5b1321b3511b9718254b248c6e1473077ff9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe.py": "16d38e8d5b076cdba87222404e99449d22ad6374b313d7dd04b68e1c6a9b8966",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_2.py": "16dc13d9f9ac7b964cb404e8c36b7464c1cf6ffd3700f75c6e4cc1c653e2a87f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_3.py": "82e238cdbf583f66d4588d231e6ae616bd40e1075a813c77c36d2152616acc13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_4.py": "287334aea73a6f7988718d654aa06b2dafb0b990cb5a9956b0bb5ed53f345749",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-image.json": "317ca5ce6046cc1680a5f4c163c4d52d27603e62ec75eb0ee18bde809e24d3b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-current-held-slot-event-source-delta-review.json": "01e4e3d3b225b1f474d0878470d54b0431b1861bc534e738d2819e233ed073b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-event-record-reset-state-delta-review.json": "2c488848eb14e662ee73c511c1bd42394f989af2b84d88e9817fd186211af18b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-final-content-review.json": "be0ae5a601a67780d3a0a88780d0208db388bff0bbc9aea2aafd1c3899b2cf5c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-focused-checks.json": "6ebfe60565c652b5524db7cb58f2bf723c56cf1c5d1e7a999ed14c2f2f9be4a5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-formal-player-logic-delta-review.json": "c32bc365583de259d393395b7c256e066914693e1f790cf34f0399a1aab0e836",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-frozen-source-verification.json": "3524b23b5ca2c97c2890a9f6280ff8913d52f79e736c323ae38b41ef540cdddb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-native-combo-material-delta-review.json": "3c6612e8204c313ff905f76853ed4d4b8fb9e7f3d4be61878ffe9bbc36787991",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-own-tier-wrapper-material-delta-review.json": "1f3534cc2396fb6131a7c6d805f9e2acfbe17b0eb5ff58c2457e1e0aa7a60c32",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-resume-review.json": "0233b7656f94eedbf88711bcb73ba81e65ac243066b0fd8766ddabda14defa85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-traits-review.json": "52f07c06eaf3ecc799023fc4b019f04c3a776df8f5321e2d5439692b1d78592c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-raw-verification.json": "c7f880a5869692c0fef2226107abd4e47a36d718ca25d54bdd3aa8f1cbed0b56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-review.json": "043265e08e5200032ca01d1f82686448d10187e982e6be0fb699ca94ed56c058",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-raw-verification.json": "62c4046e6ab3f878281c4fc7ca81305a38222408fa722e24a0cc0a8b1246e36d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/DAMAGE_PERCENTAGE_REVIEW.md": "2a968a62546be1c8bc53c83bbfed4fd63cd9685914d0890be1e878a2a36e6505",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/LOCALIZATION_COMPARISON.md": "cbe777f838cc017a66fae0245271288dd4849b3ddaf39709e635d61bf7900941",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/SOURCE_INDEX.md": "d54e9381e6ea124628d3fcbd6aeb438f35a71bfe68027e47a2f7f7825dc05d06",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/TIER_VALUES.md": "0767d992c9144e0306480ba9119b98aa3879390b3d00e335867d9119c35a5153",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/WEAPON_COMPATIBILITY.md": "290c59542afa1bd9648923298033e9d811242ce6cc134a5b74368630d7ad40eb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire.md": "fe6e5e4247a9d0c7ff6d6ed7737885228d33d9106586784f970e417ca2ab26cc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire.md": "42c366dae3b5f1b9a0f649e932eacc26098aff240262ab1b1c0585856e5f1410",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "8f2dc946e61e3c62f838f0af4a33775c8b90292b0414c1054b0297a86ebe40f4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "f11c1922f8c8dee3dd55e59156d21bfff5bd6c1499e15d05624990f5b0e42fd7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "45bcf24ca304f8866270c269a8c8e2d43880d83bfa03b611a6c5728c80ab5833",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "2d569299e13ed02e9aede96bdaac5fbe6c2086c5819486056226f44e8e0cc46e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "0d6403f2ac4e5878c174997a64d07c87365b65baef55307a1c7fea119c8df3b7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/own-association-snapshot.json": "ca2410cf0e53f23afe2b42500255f863ac578a83835b313c0e526188ebd50c35",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/actual-preview-005/Referneces/Translation.md": "99dbd97c4e69879b4b04a8c7db1e95ac13b599fd48a1a9f78ee06266218a9db6",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/DAMAGE_PERCENTAGE_REVIEW.md": "2a968a62546be1c8bc53c83bbfed4fd63cd9685914d0890be1e878a2a36e6505",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/LOCALIZATION_COMPARISON.md": "cbe777f838cc017a66fae0245271288dd4849b3ddaf39709e635d61bf7900941",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md": "827ddeb8e9b83cfc23b8958d3c301998df02f5cc001a4c9387ef339b35c1ab2a",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/SOURCE_INDEX.md": "434ad5ebaf8c259e392f02f524a36031434face8275a1bc52025f51099376afc",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/TIER_VALUES.md": "0767d992c9144e0306480ba9119b98aa3879390b3d00e335867d9119c35a5153",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/WEAPON_COMPATIBILITY.md": "290c59542afa1bd9648923298033e9d811242ce6cc134a5b74368630d7ad40eb",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire.md": "fe6e5e4247a9d0c7ff6d6ed7737885228d33d9106586784f970e417ca2ab26cc",
+      "Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire.md": "42c366dae3b5f1b9a0f649e932eacc26098aff240262ab1b1c0585856e5f1410",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "8f2dc946e61e3c62f838f0af4a33775c8b90292b0414c1054b0297a86ebe40f4",
+      "Game Info/releases/1.13.X/blessings/README.md": "f11c1922f8c8dee3dd55e59156d21bfff5bd6c1499e15d05624990f5b0e42fd7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "45bcf24ca304f8866270c269a8c8e2d43880d83bfa03b611a6c5728c80ab5833",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "2d569299e13ed02e9aede96bdaac5fbe6c2086c5819486056226f44e8e0cc46e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "0d6403f2ac4e5878c174997a64d07c87365b65baef55307a1c7fea119c8df3b7",
+      "Referneces/Translation.md": "99dbd97c4e69879b4b04a8c7db1e95ac13b599fd48a1a9f78ee06266218a9db6",
+      "scripts/game-info/validate_game_info.py": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/6b381aff-25ca-43bb-9878-356963df97f5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "inspiring-barrage-thumper",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_127",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_127.png",
+      "attachment": "https://github.com/user-attachments/assets/6b381aff-25ca-43bb-9878-356963df97f5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6000006585",
+      "acquired_date": "2026-10-06",
+      "sha256": "d2af7a055b6ed802ef4112082bd938285b16fe373ec10b2432522bed65b8427e",
+      "content_type": "image/png",
+      "size": 7371,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "激勵彈幕祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG: pale actual weapon_trait_127 rectangular icon motif, intact source pixels and transparency."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 14,
+      "rows": 449,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 61,
+      "source_files": 23,
+      "bindings": 897,
+      "variants": 461,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 23,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1103,
+      "remote_references": 431,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 35,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-034-full-scan.json",
+        "sha256": "e52565ec6a21637469cd9bb47af839d8aa23d9abe7472a9eb2ce40cc2335f2ef",
+        "trigger": "round-034"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 33,
+    "not_started_name_groups": 33,
+    "partial_name_groups": 0,
+    "remaining_variants": 144,
+    "remaining_bindings": 288,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "39f5f876ea76b2b3f4c035161f79f70ec061ce29bac278de4a55724c185cc345"
+  },
+  "previous_local_commit": "f3953359d33fa58ef347a04ec2836a6e06a0ad2c",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "name_key": "loc_trait_bespoke_toughness_on_continuous_fire",
+        "name_en": "Inspiring Barrage",
+        "name_zh_tw": "振奮彈幕",
+        "description_hash": "10c63621",
+        "status": "different key and description; not included"
+      }
+    ],
+    "exact_bound_items": 2,
+    "unbound_exact_items": [],
+    "status": "exact name-key intersection only"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-current-held-slot-event-source-delta-review.json",
+      "sha256": "01e4e3d3b225b1f474d0878470d54b0431b1861bc534e738d2819e233ed073b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-event-record-reset-state-delta-review.json",
+      "sha256": "2c488848eb14e662ee73c511c1bd42394f989af2b84d88e9817fd186211af18b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-final-content-review.json",
+      "sha256": "be0ae5a601a67780d3a0a88780d0208db388bff0bbc9aea2aafd1c3899b2cf5c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-focused-checks.json",
+      "sha256": "6ebfe60565c652b5524db7cb58f2bf723c56cf1c5d1e7a999ed14c2f2f9be4a5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-formal-player-logic-delta-review.json",
+      "sha256": "c32bc365583de259d393395b7c256e066914693e1f790cf34f0399a1aab0e836"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-frozen-source-verification.json",
+      "sha256": "3524b23b5ca2c97c2890a9f6280ff8913d52f79e736c323ae38b41ef540cdddb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-native-combo-material-delta-review.json",
+      "sha256": "3c6612e8204c313ff905f76853ed4d4b8fb9e7f3d4be61878ffe9bbc36787991"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "1f3534cc2396fb6131a7c6d805f9e2acfbe17b0eb5ff58c2457e1e0aa7a60c32"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-resume-review.json",
+      "sha256": "0233b7656f94eedbf88711bcb73ba81e65ac243066b0fd8766ddabda14defa85"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-traits-review.json",
+      "sha256": "52f07c06eaf3ecc799023fc4b019f04c3a776df8f5321e2d5439692b1d78592c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-raw-verification.json",
+      "sha256": "c7f880a5869692c0fef2226107abd4e47a36d718ca25d54bdd3aa8f1cbed0b56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-review.json",
+      "sha256": "043265e08e5200032ca01d1f82686448d10187e982e6be0fb699ca94ed56c058"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-config.json",
+    "sha256": "f9a825a2491c863e915e40d12656a718897e86719f25d3dd639ec5acf95896fb"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI Prompt/Game-Info-Workflow.md",
+      "sha256": "5a7c5b7e97186f2c62354267ff0d24010dadf342cb987f4b5b635108d31f94e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/association-preview-receipt.json",
+      "sha256": "f95a62c9b8e364ab765959fd72717dd68d78e1e497698b45f4bbdbfd89703255"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/association-snapshot.json",
+      "sha256": "ca2410cf0e53f23afe2b42500255f863ac578a83835b313c0e526188ebd50c35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2a968a62546be1c8bc53c83bbfed4fd63cd9685914d0890be1e878a2a36e6505"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/LOCALIZATION_COMPARISON.md",
+      "sha256": "cbe777f838cc017a66fae0245271288dd4849b3ddaf39709e635d61bf7900941"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/README.md",
+      "sha256": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/SOURCE_INDEX.md",
+      "sha256": "d54e9381e6ea124628d3fcbd6aeb438f35a71bfe68027e47a2f7f7825dc05d06"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/TIER_VALUES.md",
+      "sha256": "0767d992c9144e0306480ba9119b98aa3879390b3d00e335867d9119c35a5153"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/WEAPON_COMPATIBILITY.md",
+      "sha256": "290c59542afa1bd9648923298033e9d811242ce6cc134a5b74368630d7ad40eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire.md",
+      "sha256": "fe6e5e4247a9d0c7ff6d6ed7737885228d33d9106586784f970e417ca2ab26cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-generated-preview/Game Info/releases/1.13.X/blessings/entries/激勵彈幕/weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire.md",
+      "sha256": "42c366dae3b5f1b9a0f649e932eacc26098aff240262ab1b1c0585856e5f1410"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-page.md",
+      "sha256": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/candidate-preview-manifest.json",
+      "sha256": "a8587d9636f8983ae0c7764866d337233c815e15984f38d80839dc8398fd9c92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/coverage.json",
+      "sha256": "7c84e93a86a198ce9e8fe10d451fb6f633a576affc0201fb54c87dcfb32f6cab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/finalize_inspiring.py",
+      "sha256": "d88fc228b32bbd81345307bee4dc2a97ff004c50e0c43b3c9dd17a440c940be9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/binding-inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/blessing-map-before.json",
+      "sha256": "61824cb56493d56031bdb4f7b8f6b44f886f61b7deec85554176dc395eca2a39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/item-metadata-snapshot.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/localization-snapshot.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/preview-map-snapshot.json",
+      "sha256": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/preview-remaining-tasks-snapshot.json",
+      "sha256": "7f7e0c0026808b99c0847e50190790e6a871b3be69576db1225b4d5b18c5a9a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-image-upload-journal.json",
+      "sha256": "a7abbf242732ab960733c7ffea829afdd6ea39f7a95c57bce212977b14fea4a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-image.json",
+      "sha256": "317ca5ce6046cc1680a5f4c163c4d52d27603e62ec75eb0ee18bde809e24d3b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-current-held-slot-event-source-delta-review.json",
+      "sha256": "01e4e3d3b225b1f474d0878470d54b0431b1861bc534e738d2819e233ed073b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-event-record-reset-state-delta-review.json",
+      "sha256": "2c488848eb14e662ee73c511c1bd42394f989af2b84d88e9817fd186211af18b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-native-combo-material-delta-review.json",
+      "sha256": "3c6612e8204c313ff905f76853ed4d4b8fb9e7f3d4be61878ffe9bbc36787991"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "1f3534cc2396fb6131a7c6d805f9e2acfbe17b0eb5ff58c2457e1e0aa7a60c32"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-traits-review.json",
+      "sha256": "52f07c06eaf3ecc799023fc4b019f04c3a776df8f5321e2d5439692b1d78592c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-ui-raw-verification.json",
+      "sha256": "c7f880a5869692c0fef2226107abd4e47a36d718ca25d54bdd3aa8f1cbed0b56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inputs/r/inspiring-barrage-thumper-primary-ui-review.json",
+      "sha256": "043265e08e5200032ca01d1f82686448d10187e982e6be0fb699ca94ed56c058"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-005.json",
+      "sha256": "79b683bc0a339f60bfb406e360dc79dcf9ef7b038748ec6dea7d380f1fd3c135"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-config.json",
+      "sha256": "db370590821c1607d7ea603dcab654e66643d60e83ff19f7a084f9e40515ca9e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-draft.md",
+      "sha256": "35a94e0f0ad0045ef646797b4646254a26c2de71aa45e6040203508e3b52b81c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/name-collision-review.json",
+      "sha256": "b242b9c0caf2374348b49c2be749f0a47ddcba7a1f2a39f91322eeaf526a45f1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/patch_event_source_delta_005.py",
+      "sha256": "5ab7cacb01dc50b51dce9a4b172602861ea0b6d431461db3c23f3eeb69333a13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/prepare_inspiring.py",
+      "sha256": "425f27834a7cc68cf436c1f1c3349e8231868adb9fd86c9accb8562f87f53a98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/selfcheck-results.json",
+      "sha256": "cb6aa32eec2b17b954cf7de43f7006c9158e066c581cac72b9ab99d3e7c1e5ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/selfcheck_inspiring.py",
+      "sha256": "82f2d4c2a392429bd3efc67bb1168e637fbac28022cd1c21bd41d2d6b936c581"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-2.txt",
+      "sha256": "ff5ee50fde833598cc07c7da92728f555a52b9d15ca79b86cc3b343d71bf1649"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-3.txt",
+      "sha256": "24e9fbbe5b3ac76058629d70d32d10e6d995136ccc572b6baf471a8a3bddb2e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe-4.txt",
+      "sha256": "cb57148ae4afa28e02dc4984832f417175e973bd04757822bcb8c642e37d0b83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-probe.txt",
+      "sha256": "42306723bc8c456b9a4bf12936ad2ebb2cb1bca61ec9574181362db74628639f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-range-index.json",
+      "sha256": "b4b43dd620df321991a4be3bc2edf0b16b0fd32bfa9b4860addee120d8e9527d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source-ranges.json",
+      "sha256": "0e766704304800729e39ec907cbc5b1321b3511b9718254b248c6e1473077ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe.py",
+      "sha256": "16d38e8d5b076cdba87222404e99449d22ad6374b313d7dd04b68e1c6a9b8966"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_2.py",
+      "sha256": "16dc13d9f9ac7b964cb404e8c36b7464c1cf6ffd3700f75c6e4cc1c653e2a87f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_3.py",
+      "sha256": "82e238cdbf583f66d4588d231e6ae616bd40e1075a813c77c36d2152616acc13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/source_probe_4.py",
+      "sha256": "287334aea73a6f7988718d654aa06b2dafb0b990cb5a9956b0bb5ed53f345749"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-image.json",
+      "sha256": "317ca5ce6046cc1680a5f4c163c4d52d27603e62ec75eb0ee18bde809e24d3b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "scripts/game-info/validate_game_info.py",
+      "sha256": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f11c1922f8c8dee3dd55e59156d21bfff5bd6c1499e15d05624990f5b0e42fd7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "45bcf24ca304f8866270c269a8c8e2d43880d83bfa03b611a6c5728c80ab5833"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2a968a62546be1c8bc53c83bbfed4fd63cd9685914d0890be1e878a2a36e6505"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\LOCALIZATION_COMPARISON.md",
+      "sha256": "cbe777f838cc017a66fae0245271288dd4849b3ddaf39709e635d61bf7900941"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\README.md",
+      "sha256": "6fd9366a6c35b720f26236a156512a5b52f0af2a362abe6fcb09c2afaac745f5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\SOURCE_INDEX.md",
+      "sha256": "d54e9381e6ea124628d3fcbd6aeb438f35a71bfe68027e47a2f7f7825dc05d06"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\TIER_VALUES.md",
+      "sha256": "0767d992c9144e0306480ba9119b98aa3879390b3d00e335867d9119c35a5153"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\WEAPON_COMPATIBILITY.md",
+      "sha256": "290c59542afa1bd9648923298033e9d811242ce6cc134a5b74368630d7ad40eb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\weapon_trait_bespoke_ogryn_thumper_p1_toughness_on_continuous_fire.md",
+      "sha256": "fe6e5e4247a9d0c7ff6d6ed7737885228d33d9106586784f970e417ca2ab26cc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\激勵彈幕\\weapon_trait_bespoke_ogryn_thumper_p3_toughness_on_continuous_fire.md",
+      "sha256": "42c366dae3b5f1b9a0f649e932eacc26098aff240262ab1b1c0585856e5f1410"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "8f2dc946e61e3c62f838f0af4a33775c8b90292b0414c1054b0297a86ebe40f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "2d569299e13ed02e9aede96bdaac5fbe6c2086c5819486056226f44e8e0cc46e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\惡棍槍\\README.md",
+      "sha256": "0d6403f2ac4e5878c174997a64d07c87365b65baef55307a1c7fea119c8df3b7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "99dbd97c4e69879b4b04a8c7db1e95ac13b599fd48a1a9f78ee06266218a9db6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-raw-verification.json",
+      "sha256": "62c4046e6ab3f878281c4fc7ca81305a38222408fa722e24a0cc0a8b1246e36d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\inspiring-barrage-thumper-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "ca2410cf0e53f23afe2b42500255f863ac578a83835b313c0e526188ebd50c35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/freeze.json",
+      "sha256": "fec88b35b0e300ace91bedc5da65453b3073e570d916480ef3de1e842fa5806e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-001.json",
+      "sha256": "c1f0fd7458ebfdafd6001cd0f4300cb80ebc81fcf93948953e82e4e50136d68a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-002.json",
+      "sha256": "bc39e6e841472f5596ad70b7e8342440ff904a7b2714e6bdc11f068d3f291bfe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-003.json",
+      "sha256": "fceb25e1b0a37ed5fb28f6e935d8c1543cc72910fc7b1212d51f8b37e7c63901"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-actual-preview-receipt-004.json",
+      "sha256": "a9ff61c3a2435ee10cfa71218aba4180ca4e4425ef31e9f7d61c33ffce4ed6a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-group/inspiring-barrage-thumper-agent-evidence.json",
+      "sha256": "1fb53c44248e0be9605f08d277b8571917e072dc4b136abccb09b5ebf48b03b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-config.json",
+      "sha256": "db370590821c1607d7ea603dcab654e66643d60e83ff19f7a084f9e40515ca9e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-evidence.json",
+      "sha256": "1fb53c44248e0be9605f08d277b8571917e072dc4b136abccb09b5ebf48b03b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-agent-draft.md",
+      "sha256": "35a94e0f0ad0045ef646797b4646254a26c2de71aa45e6040203508e3b52b81c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-current-held-slot-event-source-delta-review.json",
+      "sha256": "01e4e3d3b225b1f474d0878470d54b0431b1861bc534e738d2819e233ed073b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-event-record-reset-state-delta-review.json",
+      "sha256": "2c488848eb14e662ee73c511c1bd42394f989af2b84d88e9817fd186211af18b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-final-content-review.json",
+      "sha256": "be0ae5a601a67780d3a0a88780d0208db388bff0bbc9aea2aafd1c3899b2cf5c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-frozen-source-verification.json",
+      "sha256": "3524b23b5ca2c97c2890a9f6280ff8913d52f79e736c323ae38b41ef540cdddb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-native-combo-material-delta-review.json",
+      "sha256": "3c6612e8204c313ff905f76853ed4d4b8fb9e7f3d4be61878ffe9bbc36787991"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "1f3534cc2396fb6131a7c6d805f9e2acfbe17b0eb5ff58c2457e1e0aa7a60c32"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-traits-review.json",
+      "sha256": "52f07c06eaf3ecc799023fc4b019f04c3a776df8f5321e2d5439692b1d78592c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-raw-verification.json",
+      "sha256": "c7f880a5869692c0fef2226107abd4e47a36d718ca25d54bdd3aa8f1cbed0b56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-ui-review.json",
+      "sha256": "043265e08e5200032ca01d1f82686448d10187e982e6be0fb699ca94ed56c058"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-primary-formal-player-logic-delta-review.json",
+      "sha256": "c32bc365583de259d393395b7c256e066914693e1f790cf34f0399a1aab0e836"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inspiring-barrage-thumper-formal-peer-scope.json",
+    "sha256": "fda9f2925c220c55f7748539914813895516fe105e53a270e1d820b4c4da9e14",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

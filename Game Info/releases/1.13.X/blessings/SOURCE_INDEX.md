@@ -139,3 +139,4 @@
 | [懲罰射擊](entries/懲罰射擊/README.md) | [來源索引](entries/懲罰射擊/SOURCE_INDEX.md) |
 | [燃燒靈魂（靈能法杖與雙手力場劍）](entries/燃燒靈魂（靈能法杖與雙手力場劍）/README.md) | [來源索引](entries/燃燒靈魂（靈能法杖與雙手力場劍）/SOURCE_INDEX.md) |
 | [專注引導](entries/專注引導/README.md) | [來源索引](entries/專注引導/SOURCE_INDEX.md) |
+| [激勵彈幕](entries/激勵彈幕/README.md) | [來源索引](entries/激勵彈幕/SOURCE_INDEX.md) |

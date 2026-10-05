@@ -552,6 +552,7 @@
 - Punishing Fire - 懲罰射擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave`，hash `e215d96e`；英文／繁中RAW配對確認。
 - Inspiring Barrage - 激勵彈幕
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire_alternative`，hash `02d303b6`；英文／繁中RAW配對確認。
   - 保留替代名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire_alternative`，hash `02d303b6`；本次雙鏈重型機槍項目使用非alternative鍵 `ee616ba9`，故玩家頁採「振奮彈幕」。兩筆均由1.13.1中英RAW精確配對，不據同名英文合併項目。
 - Expansive - 擴展性
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_weapon_special_power_bonus_after_one_shots`，hash `e639c6a3`；英文／繁中RAW配對確認。
