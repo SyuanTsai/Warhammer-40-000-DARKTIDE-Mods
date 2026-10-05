@@ -295,6 +295,7 @@
 - Slaughterer - 殺戮者
 - Rev it up -提速
 - Thrust - 推進
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time`，hash `080e50bd`；英文／繁中RAW配對確認。
 - Thunderous - 雷鳴
 - Wrath - 憤怒
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_cleave`，hash `fd5eeb07`；英文／繁中RAW配對確認。

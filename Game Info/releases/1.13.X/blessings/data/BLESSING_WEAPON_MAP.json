@@ -1443,6 +1443,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
       "effect": "持用九種實際適用遠程武器之一時，每個符合遠程近距離擊殺與 exact item 條件的擊殺事件增加一層通用威力修正；I–IV 每有效層 +5／+5.5／+6／+6.5 個百分點，最多五層。八種家族持續3.5秒；雙管霰彈槍 P2 持續5秒。直接特殊彈丸仍按遠程擊殺條件判斷，延遲 buff tick 不會自行觸發。"
+    },
+    {
+      "id": "thrust",
+      "name_zh_tw": "推進",
+      "name_en": "Thrust",
+      "name_key": "loc_trait_bespoke_power_bonus_based_on_charge_time",
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "name_hash": "080e50bd",
+      "description_hash": "f52eeed2",
+      "page": "entries/推進/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。"
     }
   ],
   "weapons": [
@@ -23066,6 +23079,578 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
       "effect": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
       "buff_template_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/推進/weapon_trait_bespoke_chainaxe_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "restriction_key": "chainaxe_p1",
+        "marks": [
+          "chainaxe_p1_m1",
+          "chainaxe_p1_m2"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 266,
+        "end_line": 315
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/推進/weapon_trait_bespoke_combataxe_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "restriction_key": "combataxe_p1",
+        "marks": [
+          "combataxe_p1_m1",
+          "combataxe_p1_m2",
+          "combataxe_p1_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 154,
+        "end_line": 203
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/推進/weapon_trait_bespoke_combataxe_p3_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "restriction_key": "combataxe_p3",
+        "marks": [
+          "combataxe_p3_m1",
+          "combataxe_p3_m2",
+          "combataxe_p3_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 124,
+        "end_line": 173
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/推進/weapon_trait_bespoke_combatsword_p2_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "restriction_key": "combatsword_p2",
+        "marks": [
+          "combatsword_p2_m1",
+          "combatsword_p2_m2",
+          "combatsword_p2_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 402,
+        "end_line": 451
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/推進/weapon_trait_bespoke_combatsword_p3_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "restriction_key": "combatsword_p3",
+        "marks": [
+          "combatsword_p3_m1",
+          "combatsword_p3_m2",
+          "combatsword_p3_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 299,
+        "end_line": 348
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/推進/weapon_trait_bespoke_ogryn_club_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "restriction_key": "ogryn_club_p1",
+        "marks": [
+          "ogryn_club_p1_m1",
+          "ogryn_club_p1_m2",
+          "ogryn_club_p1_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 9,
+        "end_line": 58
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 9
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/推進/weapon_trait_bespoke_ogryn_club_p2_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "restriction_key": "ogryn_club_p2",
+        "marks": [
+          "ogryn_club_p2_m1",
+          "ogryn_club_p2_m2",
+          "ogryn_club_p2_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 49,
+        "end_line": 98
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/推進/weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "restriction_key": "ogryn_combatblade_p1",
+        "marks": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 397,
+        "end_line": 448
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 114,
+        "end_line": 115
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/推進/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "restriction_key": "ogryn_pickaxe_2h_p1",
+        "marks": [
+          "ogryn_pickaxe_2h_p1_m1",
+          "ogryn_pickaxe_2h_p1_m2",
+          "ogryn_pickaxe_2h_p1_m3"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 9,
+        "end_line": 58
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_2h_p1",
+      "page": "entries/推進/weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "restriction_key": "powermaul_2h_p1",
+        "marks": [
+          "powermaul_2h_p1_m1",
+          "powermaul_2h_p1_m2"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        "start_line": 367,
+        "end_line": 416
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/推進/weapon_trait_bespoke_powermaul_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "restriction_key": "powermaul_p1",
+        "marks": [
+          "powermaul_p1_m1",
+          "powermaul_p1_m2"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 353,
+        "end_line": 402
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_windup_increases_power",
+      "blessing_id": "thrust",
+      "weapon_id": "powersword_p1",
+      "page": "entries/推進/weapon_trait_bespoke_powersword_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power",
+        "actual_buff_template_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power_parent",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "restriction_key": "powersword_p1",
+        "marks": [
+          "powersword_p1_m1",
+          "powersword_p1_m2"
+        ],
+        "per_effective_stack": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "max_effective_stacks": 3,
+        "own_tier_replaces_base_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 398,
+        "end_line": 449
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_desc",
+      "description_hash": "f52eeed2",
+      "icon": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "effect": "每次蓄力事件增加一層近戰力量修正，最多三層；I–IV 每層分別增加 5／10／15／20 個百分點，三層上限為 15／30／45／60 個百分點。",
+      "buff_template_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power_parent"
     }
   ],
   "bindings": [
@@ -32461,6 +33046,454 @@
         "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
         "import_line": 16,
         "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1661
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1919
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "thrust",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
       }
     }
   ]
