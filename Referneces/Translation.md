@@ -359,7 +359,8 @@
 - Murderous Tranquility - 兇殘之寧
 - Blazing Spirit - 燃燒靈魂
 - Unstable Power - 不穩定能量
-- Warp Slice - 亞空間斬擊
+- Warp Slice - 亞空間斬
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_wind_slash_crits`，hash `d4193c5e`；英文／繁中RAW配對確認。擊
 - Exorcist - 驅魔者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge`，hash `e6a1baba`；英文／繁中RAW配對確認。
 - Superiority - 優勢

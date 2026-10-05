@@ -131,5 +131,6 @@
 | <img src="https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f" width="32" height="32" alt="勢不可擋祝福圖示"> [勢不可擋](entries/勢不可擋/README.md)<br>- Unstoppable Force<br>[完整說明](entries/勢不可擋/README.md) | <ul><li>完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8" width="32" height="32" alt="穿透祝福圖示"> [穿透](entries/穿透/README.md)<br>- Pierce<br>[完整說明](entries/穿透/README.md) | <ul><li>依等級提供 +10% 至 +25% 近戰衝擊修正；手持時，實際呼叫 HitMass 的攻擊會降低一般活體敵人的質量消耗，特殊 Bash 另略過護甲中止判定。質量預算與 Breed 中止仍有效。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276" width="32" height="32" alt="精確定位祝福圖示"> [精確定位](entries/精確定位/README.md)<br>- Pinpointing target<br>[完整說明](entries/精確定位/README.md) | <ul><li>瞄準時每 0.4 秒增加一層威力，最多 5 層；每層增幅依武器家族而異。除擲彈兵臂鎧外，射擊後清空層數。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/7491abf4-faa1-4535-a72e-ab1bc5e989cc" width="32" height="32" alt="亞空間斬祝福圖示"> [亞空間斬](entries/亞空間斬/README.md)<br>- Warp Slice<br>[完整說明](entries/亞空間斬/README.md) | <ul><li>冷卻就緒時，特殊模式掃掠開始會消耗本次觸發並啟動冷卻；風斬效果建立時若保證暴擊關鍵字仍在快取，就會保存暴擊判定。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

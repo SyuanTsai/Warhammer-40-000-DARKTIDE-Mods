@@ -427,3 +427,5 @@
 - [穿透](2026-10-03-PIERCE_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
 
 - [精確定位](2026-10-03-PINPOINTING-TARGET_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。
+
+- [亞空間斬](2026-10-03-WARP-SLICE_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
