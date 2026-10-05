@@ -111,3 +111,4 @@
 | [強化電流弧](entries/強化電流弧/README.md) | [來源索引](entries/強化電流弧/SOURCE_INDEX.md) |
 | [恐怖阻擊](entries/恐怖阻擊/README.md) | [來源索引](entries/恐怖阻擊/SOURCE_INDEX.md) |
 | [震懾](entries/震懾/README.md) | [來源索引](entries/震懾/SOURCE_INDEX.md) |
+| [快速裝彈](entries/快速裝彈/README.md) | [來源索引](entries/快速裝彈/SOURCE_INDEX.md) |

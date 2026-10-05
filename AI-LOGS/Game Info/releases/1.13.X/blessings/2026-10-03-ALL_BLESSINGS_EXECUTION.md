@@ -379,3 +379,5 @@
 - [恐怖阻擊](2026-10-03-TERRIFYING-BARRAGE_ACCEPTANCE.json)：新增16變體、27型號關聯；共16變體、27關聯。
 
 - [震懾](2026-10-03-SHOCK-AND-AWE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。
+
+- [快速裝彈](2026-10-03-SPEEDLOAD_ACCEPTANCE.json)：新增12變體、23型號關聯；共12變體、23關聯。

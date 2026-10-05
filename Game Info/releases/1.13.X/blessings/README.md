@@ -113,5 +113,6 @@
 | <img src="https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7" width="32" height="32" alt="強化電流弧祝福圖示"> [強化電流弧](entries/強化電流弧/README.md)<br>- Enhanced Voltaic Arcs<br>[完整說明](entries/強化電流弧/README.md) | <ul><li>持用指定武器並符合條件快取時，增加電弧連鎖最大角、跳躍半徑及最大跳躍次數；這是目標搜尋加值，不是傷害百分比。</li></ul> | 近戰／遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](entries/恐怖阻擊/README.md) | <ul><li>持用帶有此祝福的遠程武器，在 12.5m 內以遠程或爆炸攻擊擊殺後，對攻擊者周圍 12m 區域施加本級 suppression 值 15／20／25／30；該值不是傷害。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7" width="32" height="32" alt="震懾祝福圖示"> [震懾](entries/震懾/README.md)<br>- Shock & Awe<br>[完整說明](entries/震懾/README.md) | <ul><li>符合條件的擊殺後，同一把持有該祝福的武器啟動 3 秒效果，使後續近戰揮擊 每次命中消耗的敵人命中質量降低 30%／40%／50%／60%。這是質量預算修正，不是傷害加成或固定目標數保證。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244" width="32" height="32" alt="快速裝彈祝福圖示"> [快速裝彈](entries/快速裝彈/README.md)<br>- Speedload<br>[完整說明](entries/快速裝彈/README.md) | <ul><li>一般符合條件的近距離遠程擊殺後，每個有效層增加+7%／+8%／+9%／+10%裝填速度；最多5層，並按武器 own child_duration 到期。針彈手槍另可由仍標記目標的近距離毒素死亡事件提出加層請求。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

@@ -1417,6 +1417,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
       "effect": "符合條件的擊殺後，同一把持有該祝福的武器啟動 3 秒效果，使後續近戰揮擊 每次命中消耗的敵人命中質量降低 30%／40%／50%／60%。這是質量預算修正，不是傷害加成或固定目標數保證。"
+    },
+    {
+      "id": "speedload",
+      "name_zh_tw": "快速裝彈",
+      "name_en": "Speedload",
+      "name_key": "loc_trait_bespoke_reload_speed_on_slide",
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "name_hash": "f4aa4527",
+      "description_hash": "0a6acca5",
+      "page": "entries/快速裝彈/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "effect": "一般符合條件的近距離遠程擊殺後，每個有效層增加+7%／+8%／+9%／+10%裝填速度；最多5層，並按武器 own child_duration 到期。針彈手槍另可由仍標記目標的近距離毒素死亡事件提出加層請求。"
     }
   ],
   "weapons": [
@@ -22020,6 +22033,558 @@
       "icon": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
       "effect": "兩型號共用同級質量修正及3秒效果；特殊啟動本身不觸發，後續揮擊各自檢查合格事件。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_autogun_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 2.5,
+          "II": 2.5,
+          "III": 2.5,
+          "IV": 2.5
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 442,
+        "end_line": 505
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 40,
+        "end_line": 42
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2.5秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p2",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_autogun_p2_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 2.5,
+          "II": 2.5,
+          "III": 2.5,
+          "IV": 2.5
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 220,
+        "end_line": 283
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2.5秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 2,
+          "II": 2,
+          "III": 2,
+          "IV": 2
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 145,
+        "end_line": 208
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 2,
+          "II": 2,
+          "III": 2,
+          "IV": 2
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 145,
+        "end_line": 208
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 104,
+        "end_line": 167
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 72,
+        "end_line": 135
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 144,
+        "end_line": 207
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 35,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "一般近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。另有針彈手槍標記毒素死亡支線。",
+      "buff_template_id": "weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 398,
+        "end_line": 461
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 478,
+        "end_line": 541
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 3,
+          "II": 3,
+          "III": 3,
+          "IV": 3
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 478,
+        "end_line": 541
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 4,
+          "II": 4,
+          "III": 4,
+          "IV": 4
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 74,
+        "end_line": 137
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後4秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide",
+      "blessing_id": "speedload",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/快速裝彈/weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "reload_speed_per_stack": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "max_effective_stacks": 5,
+        "child_duration_seconds_by_tier": {
+          "I": 4,
+          "II": 4,
+          "III": 4,
+          "IV": 4
+        },
+        "physical_child_capacity_including_placeholder": 6,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 74,
+        "end_line": 137
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_reload_speed_on_slide_desc",
+      "description_hash": "0a6acca5",
+      "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
+      "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後4秒到期。",
+      "buff_template_id": "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide_parent"
     }
   ],
   "bindings": [
@@ -30799,6 +31364,328 @@
         "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
         "import_line": 17,
         "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/reload_speed_on_slide",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/reload_speed_on_slide",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/reload_speed_on_slide",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/reload_speed_on_slide",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/reload_speed_on_slide",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/reload_speed_on_slide",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/reload_speed_on_slide",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/reload_speed_on_slide",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/reload_speed_on_slide",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "speedload",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/reload_speed_on_slide",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
       }
     }
   ]

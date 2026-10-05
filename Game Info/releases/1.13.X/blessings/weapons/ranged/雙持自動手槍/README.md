@@ -9,11 +9,12 @@
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](../../../entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](../../../entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5" width="32" height="32" alt="持續射擊祝福圖示"> [持續射擊](../../../entries/持續射擊/README.md)<br>- Sustained Fire<br>[完整說明](../../../entries/持續射擊/README.md) | <ul><li>持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>雙持 hip／zoom 為 hitscan 遠程攻擊；pistol whip 是近戰 sweep。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244" width="32" height="32" alt="快速裝彈祝福圖示"> [快速裝彈](../../../entries/快速裝彈/README.md)<br>- Speedload<br>[完整說明](../../../entries/快速裝彈/README.md) | <ul><li>近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2秒到期。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 雙持自動手槍 布蘭克斯 MkIII | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_dual_autopistols_p1_toughness_on_continuous_fire.md)、[掃射](../../../entries/掃射/weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking.md)、[連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_dual_autopistols_p1_followup_shots_ranged_damage.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill.md) | I–IV |
+| 雙持自動手槍 布蘭克斯 MkIII | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_dual_autopistols_p1_toughness_on_continuous_fire.md)、[掃射](../../../entries/掃射/weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking.md)、[連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_dual_autopistols_p1_followup_shots_ranged_damage.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_dual_autopistols_p1_reload_speed_on_slide.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
