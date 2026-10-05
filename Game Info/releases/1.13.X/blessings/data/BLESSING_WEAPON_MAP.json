@@ -1746,6 +1746,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
       "effect": "由裝有本祝福的武器造成致命一擊並擊殺後，立即回復目前最大韌性的指定比例，並以當前韌性缺損封頂；重型鐳射手槍 I–IV 為 10／12／14／16%，擲彈兵臂鎧 I–IV 為 24／28／32／36%。"
+    },
+    {
+      "id": "punishing-fire",
+      "name_zh_tw": "懲罰射擊",
+      "name_en": "Punishing Fire",
+      "name_key": "loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave",
+      "description_key": "loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave_desc",
+      "name_hash": "e215d96e",
+      "description_hash": "8ec0ae8a",
+      "page": "entries/懲罰射擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
+      "effect": "觸發後，遠程攻擊力量修正提高 +6%／+9%／+12%／+15%，持續 3 秒。"
     }
   ],
   "weapons": [
@@ -27963,6 +27976,86 @@
       "icon": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_124",
       "effect": "布拉斯托姆 Mk III 的一般／蓄力近戰掃擊、特殊動作直接拳擊及保留暴擊旗標的榴彈直擊／爆炸擊殺可觸發；特殊動作附加爆炸以非暴擊結算，單靠它擊殺不符合。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave",
+      "blessing_id": "punishing-fire",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "ranged_power_level_modifier": {
+          "I": 0.06,
+          "II": 0.09,
+          "III": 0.12,
+          "IV": 0.15
+        },
+        "required_target_number": 3,
+        "active_duration_seconds": 3,
+        "wrapper_fallback": 0.05,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 385,
+        "end_line": 446
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 44,
+        "end_line": 60
+      },
+      "description_key": "loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave_desc",
+      "description_hash": "8ec0ae8a",
+      "icon": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_130",
+      "effect": "觸發後，遠程攻擊力量修正提高 +6%／+9%／+12%／+15%，持續 3 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave",
+      "blessing_id": "punishing-fire",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "ranged_power_level_modifier": {
+          "I": 0.06,
+          "II": 0.09,
+          "III": 0.12,
+          "IV": 0.15
+        },
+        "required_target_number": 3,
+        "active_duration_seconds": 3,
+        "wrapper_fallback": 0.05,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 385,
+        "end_line": 446
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 45,
+        "end_line": 61
+      },
+      "description_key": "loc_trait_bespoke_shot_power_bonus_after_weapon_special_cleave_desc",
+      "description_hash": "8ec0ae8a",
+      "icon": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_130",
+      "effect": "觸發後，遠程攻擊力量修正提高 +6%／+9%／+12%／+15%，持續 3 秒。"
     }
   ],
   "bindings": [
@@ -40354,6 +40447,34 @@
         "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
         "import_line": 17,
         "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "punishing-fire",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/shot_power_bonus_after_weapon_special_cleave",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "punishing-fire",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/shot_power_bonus_after_weapon_special_cleave",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
       }
     }
   ]

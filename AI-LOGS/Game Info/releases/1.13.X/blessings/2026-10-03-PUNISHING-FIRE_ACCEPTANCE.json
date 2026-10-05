@@ -1,0 +1,549 @@
+{
+  "date": "2026-10-06",
+  "blessing": "punishing-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave",
+    "weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "punishing-fire",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-formal-peer-scope.json",
+    "scope_sha256": "bea8390bff940c5855d9bdb354127d0e85dbe3f235504694b657493cc53fbddc",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "reused_candidate_review": {
+      "scope_sha256": "2b8780125bf3b9fc2d6cc2211506a805640959968a01f3c31f7b61c8d40a3b3f",
+      "sha256": "447aeef4bc85eb309e5cb6eaadfda6ae8eb82d6048d56ee4f5fb9508cd32793c",
+      "reused_for": "Unchanged gameplay, tier, binding, RAW, example, and image content; prior rejection was limited to the curve/modifier ordering rule.",
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/punishing-fire-candidate-content-peer-review.json"
+    },
+    "delta_proof": {
+      "canonical_sha256": "169ddf209ad54df09d1f2c990aa6353e3a465fee5db20dce4a830404d7f3d2ad",
+      "sha256": "4eb59de401b81fd74f4996f0105e38872815c7de0bbeaa0ea19434358c2a504f",
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-formal-versus-prepeer-delta-review.json"
+    },
+    "reviewed_conclusions": [
+      "Verified the final formal scope SHA and all 84 file hashes; no missing or changed scoped files.",
+      "Reused the prior candidate review for unchanged formal text and association evidence: the seven other own pages match the reviewed candidate snapshot byte-for-byte. Tier values, Bash trigger and target_number>=3, same-item/slot gate, first-effect timing, refresh/no-stack behavior, held effect on weapon switch, and unequip removal remain as reviewed.",
+      "Verified the sole formal content delta in LOCALIZATION_COMPARISON.md: the corrected rule states that native power-type curve conversion occurs first, followed by multiplication by the additive sum of applicable global/ranged/weakspot/conditional modifiers. This matches fixed-source scripts/utilities/attack/power_level.lua:63–91 (curve at 66–84, modifier multiplication at 87–89) and the unchanged S_after=S_native×(1+q+p) formula.",
+      "The example S_native=500, q=0.20, p=0.15 remains 600→675, a 12.5% relative input increase, not 15% final damage. RAW hash, image 130 evidence, two actual Mark bindings, and reverse associations remain consistent."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-config.json": "4a90efe26e3424619bba96db2e5a15bb73a17f1109b3a0ac00254bb4341856c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-draft.md": "b8e47bc614dd3031f300c08d760e87a42bf2d55f3ca873cb8a7e9ca9ff6eaaec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-evidence.json": "bc3dcd818fb097f373e7573fcd920e2ab3354c75e1ee3ec41b0fd3565d39d32d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-config.json": "169ddf209ad54df09d1f2c990aa6353e3a465fee5db20dce4a830404d7f3d2ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-extension-draft.json": "8814c37949434d229d55d5c6fcc06b8617617826d7703ee1b346bac9f3d3ec47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/map-capture-snapshot-004.json": "54b8999240d6c895b89f3e659771046b6530edeaff63821c710110b6b1fbfd7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/remaining-tasks-capture-snapshot-004.json": "ae0af6f03e376256a7cac69e9e16b7c3738278ced7e761fa6302f7d4fec8d0b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-001.json": "45f4abeb2caa249b83af504652f2661bcfa1fd5de0a867e99f5a6af8231326e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-002.json": "8890c95a91ebf97ab6d99163585d18729cdf182ed93276f93828599369f7e82e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-003.json": "a5f1d028a9564f1b7243ce72d19b279ecb0fcb5c9d6de92b4357591f3e58060d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-004.json": "38aff6401749cab1b88d851498cf589ab267e49908274ade87645af9a9b04db4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-005.json": "f7761b9e6814f793cb49335cf166d004945f80ccc06319f32200009f4a03a1e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-006.json": "34a7e1de3adf45f56e5467c2e47afab4181e6998826bc7331b2ad0753b3e7eb1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-007.json": "3d4eafe3f9a12fe413687c8f7cf4289983d7ff041a44279fa9694fcebab2ed19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-002.json": "66e9c3e0924fc2dc475e5e4a44d499ce09f1abc616e0429b6574468178f9b70f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-003.json": "da89b8353cf4565aac3054dfe5c1818ada839d3db0344c81077adf1f8ed60096",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-004.json": "7f0a4660804e515301f57fd7177a46790cdbe1c1bd7581b7d47852058ce04349",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-005.json": "5f905a6a18c8747f9954328f52889fb08782708e7eb1ea958ef64b06fd0ad615",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-006.json": "db66796142f87104e83340381075f404d605944d122314b47d455d2134788bb0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-007.json": "133619904fb8536051115c157e8578a9d8808cde5cee906de137d9a6b02fefa0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest.json": "e5a561db0f35a8a52e279a2ac0f5b28a50082ec1fdaa5d5e3fc0ffaa1bf0145d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-config.json": "4a90efe26e3424619bba96db2e5a15bb73a17f1109b3a0ac00254bb4341856c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-coverage.json": "538481154e0582cfc51bcdafa508ec89433ae16985dfd38e5348a936475a741f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-draft.md": "b8e47bc614dd3031f300c08d760e87a42bf2d55f3ca873cb8a7e9ca9ff6eaaec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-evidence.json": "bc3dcd818fb097f373e7573fcd920e2ab3354c75e1ee3ec41b0fd3565d39d32d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-preflight.json": "5ad6d192f3b95a8ab11c492dcc676da0c1762540466887ee2fa5b7776afecc58",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/reassuringly-accurate-formal-peer-review.json": "ecea48b128391e77b0671e0d2a1b40b99e8253307c24bdcb9d94c18f45f62a99",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-image.json": "79b984bf4c375744f7cba81fedeef0a514b16f823dbe7a2a411e7cf1b08a7736",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-candidate-peer-scope.json": "2b8780125bf3b9fc2d6cc2211506a805640959968a01f3c31f7b61c8d40a3b3f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-final-content-review.json": "e2fd90c9c4b39739a131a4f1defea5742059cf0efcaec0fa76d231e2ed5a6ee0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-focused-checks.json": "b700f4977a4ec81c350110b8c62daeee674675a1d99abfb911e9e455519d9c08",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-formal-versus-prepeer-delta-review.json": "4eb59de401b81fd74f4996f0105e38872815c7de0bbeaa0ea19434358c2a504f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-frozen-source-verification.json": "5d1835c793a9a0f2a3aba33fcd3cc07a8f5ca313161450e72c36fea67445f289",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-native-raycast-power-consumer-delta-review.json": "c74b11bd146cab5c141f8f04b8f49b007be1a87c479ac98e2b4f1c246a8c093c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-own-tier-wrapper-target-number-delta-review.json": "94d9dea78a0a46fddb53425ff9dca6910f6b5feb9d730efd75ef067c5299dfe3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-power-scaling-order-delta-review.json": "ea100000d7aabd1c0bec7972fdaff4b884758053c45352c49b4eed71134d247f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-resume-review.json": "c081e0f0b6cd36450c9ee2a7a54df0a7633372f87a572ca279086f68cbc82a63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-traits-review.json": "da61093a52d1ba756cc406ea6e155a59b18fedebdec9269c1d1edc5d2b289fd0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-raw-verification.json": "e6061a9b385dead45a1c75927097dfacba64015add908ee54fe3f4c7716a2cc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-review.json": "75fd414c931ad583c74e92371d3593d9b91d44518244e7fde1dace2adb9462cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-raw-verification.json": "fddad1ace7b845f6ee4f9d129d0c89c9c9e954b3f4eb765e6bee4723af95463f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "373645a94f980734a77774a0c354240508314adffc385d49fe621a48c058037e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/DAMAGE_PERCENTAGE_REVIEW.md": "2e0c96c20ec55f67cffcd9c6de9c898bc38461fc7cc997f4dd12ae5a1878786e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/LOCALIZATION_COMPARISON.md": "85e47fb1625bc8a4be9a25d4503a85b381990dafe7cb1c3ee3366f882e86117d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/README.md": "ec7f9bd29f294dc5bc8b8283dbf714c811eac8c24e9ead4a340f42df2dbaeb14",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/SOURCE_INDEX.md": "a502d8ddcfc97303711e275172a7c5abd0fae1a8bf36c81c8e84e00cbf32204f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/TIER_VALUES.md": "f6d86ed2c073ffb0106f2b9b17ca9a14360d8a4c7b0e606d0b586665f57559e4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/WEAPON_COMPATIBILITY.md": "fe32a375ffe98df7aa44661c111774581496a4c220af724aaf33fed02ba38b94",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave.md": "20d292aef7331f8e6d7925bdc54fcbb2cc936f571811852fc6873e524c0a4969",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave.md": "19c431458ba0a81c45bdac9713000853d84f8f07c20edbae320c52045e8a58da",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/ranged/README.md": "51954e4bd9395c77900dee00e02dada862e6c4477018fe06bf20245d1f4777db",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/README.md": "f573a678b73a5ff261e7ca35d58692dc201c017a24f2cf496dfc014712bc259e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "eec044faf107c3d579d57f4906c0c620b70e3c62fc0dddd3c02c04604e7e8132",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "e2dd55b3b1273713254b721ee9925eadbac5704c104e816ecffa5b411a8b2b60",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "79afec3340aa4fe54bba2b1b5f4ca12e4a683d079947fcca1a4552d31b0b26b0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/own-association-snapshot.json": "63e3a7bd3152c3422adc9eb24eb7de604d9d8628389cda35c3ae8fca3977f13c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/actual-preview-007/Referneces/Translation.md": "cd325385dc69789a4ec347ba630a55b3c2e19b65f0ebfdc430b5c62ae57e96e0",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "373645a94f980734a77774a0c354240508314adffc385d49fe621a48c058037e",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/DAMAGE_PERCENTAGE_REVIEW.md": "2e0c96c20ec55f67cffcd9c6de9c898bc38461fc7cc997f4dd12ae5a1878786e",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/LOCALIZATION_COMPARISON.md": "85e47fb1625bc8a4be9a25d4503a85b381990dafe7cb1c3ee3366f882e86117d",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/README.md": "ec7f9bd29f294dc5bc8b8283dbf714c811eac8c24e9ead4a340f42df2dbaeb14",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/SOURCE_INDEX.md": "5c907f94c1c15faa916b2e83d045062b02f9a81b81c50fe4d7e6b360280b5c9a",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/TIER_VALUES.md": "f6d86ed2c073ffb0106f2b9b17ca9a14360d8a4c7b0e606d0b586665f57559e4",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/WEAPON_COMPATIBILITY.md": "fe32a375ffe98df7aa44661c111774581496a4c220af724aaf33fed02ba38b94",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave.md": "20d292aef7331f8e6d7925bdc54fcbb2cc936f571811852fc6873e524c0a4969",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰射擊/weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave.md": "19c431458ba0a81c45bdac9713000853d84f8f07c20edbae320c52045e8a58da",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "51954e4bd9395c77900dee00e02dada862e6c4477018fe06bf20245d1f4777db",
+      "Game Info/releases/1.13.X/blessings/README.md": "f573a678b73a5ff261e7ca35d58692dc201c017a24f2cf496dfc014712bc259e",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "eec044faf107c3d579d57f4906c0c620b70e3c62fc0dddd3c02c04604e7e8132",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "e2dd55b3b1273713254b721ee9925eadbac5704c104e816ecffa5b411a8b2b60",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "79afec3340aa4fe54bba2b1b5f4ca12e4a683d079947fcca1a4552d31b0b26b0",
+      "Referneces/Translation.md": "cd325385dc69789a4ec347ba630a55b3c2e19b65f0ebfdc430b5c62ae57e96e0"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "punishing-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_130",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_130.png",
+      "attachment": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5999518015",
+      "acquired_date": "2026-10-06",
+      "sha256": "507bc1d010a9b408c7a604aae94c1023c5dbeb41df1e26763fb4ec7f056dfed8",
+      "content_type": "image/png",
+      "size": 8660,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "懲罰射擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual public PNG: intact pale figure/weapon silhouette and curved action mark,128x128, no corrupt or missing image content; both actual trait item icons130 and matching source/public hash verified."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 13,
+      "rows": 421,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 55,
+      "source_files": 24,
+      "bindings": 887,
+      "variants": 452,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1071,
+      "remote_references": 413,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 34,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-033-full-scan.json",
+        "sha256": "38de1dc151104dc4c536bdc6be3c359d7bfeb63b4d5a3b2f5948741a89448bf3",
+        "trigger": "round-033"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 36,
+    "not_started_name_groups": 36,
+    "partial_name_groups": 0,
+    "remaining_variants": 153,
+    "remaining_bindings": 298,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "58729ef786a7395f7d240269e6a0c442273b14125f84e1642abe15dc4848875b"
+  },
+  "previous_local_commit": "7adcfbdd8b96e7feaafe9164bb6964eeea9fbd8f",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-candidate-peer-scope.json",
+      "sha256": "2b8780125bf3b9fc2d6cc2211506a805640959968a01f3c31f7b61c8d40a3b3f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-final-content-review.json",
+      "sha256": "e2fd90c9c4b39739a131a4f1defea5742059cf0efcaec0fa76d231e2ed5a6ee0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-focused-checks.json",
+      "sha256": "b700f4977a4ec81c350110b8c62daeee674675a1d99abfb911e9e455519d9c08"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-formal-versus-prepeer-delta-review.json",
+      "sha256": "4eb59de401b81fd74f4996f0105e38872815c7de0bbeaa0ea19434358c2a504f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-frozen-source-verification.json",
+      "sha256": "5d1835c793a9a0f2a3aba33fcd3cc07a8f5ca313161450e72c36fea67445f289"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-native-raycast-power-consumer-delta-review.json",
+      "sha256": "c74b11bd146cab5c141f8f04b8f49b007be1a87c479ac98e2b4f1c246a8c093c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-own-tier-wrapper-target-number-delta-review.json",
+      "sha256": "94d9dea78a0a46fddb53425ff9dca6910f6b5feb9d730efd75ef067c5299dfe3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-power-scaling-order-delta-review.json",
+      "sha256": "ea100000d7aabd1c0bec7972fdaff4b884758053c45352c49b4eed71134d247f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-resume-review.json",
+      "sha256": "c081e0f0b6cd36450c9ee2a7a54df0a7633372f87a572ca279086f68cbc82a63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-traits-review.json",
+      "sha256": "da61093a52d1ba756cc406ea6e155a59b18fedebdec9269c1d1edc5d2b289fd0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-raw-verification.json",
+      "sha256": "e6061a9b385dead45a1c75927097dfacba64015add908ee54fe3f4c7716a2cc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-review.json",
+      "sha256": "75fd414c931ad583c74e92371d3593d9b91d44518244e7fde1dace2adb9462cc"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-config.json",
+    "sha256": "169ddf209ad54df09d1f2c990aa6353e3a465fee5db20dce4a830404d7f3d2ad"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/map-capture-snapshot-004.json",
+      "sha256": "54b8999240d6c895b89f3e659771046b6530edeaff63821c710110b6b1fbfd7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/inputs/remaining-tasks-capture-snapshot-004.json",
+      "sha256": "ae0af6f03e376256a7cac69e9e16b7c3738278ced7e761fa6302f7d4fec8d0b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-007.json",
+      "sha256": "3d4eafe3f9a12fe413687c8f7cf4289983d7ff041a44279fa9694fcebab2ed19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-config.json",
+      "sha256": "4a90efe26e3424619bba96db2e5a15bb73a17f1109b3a0ac00254bb4341856c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-coverage.json",
+      "sha256": "538481154e0582cfc51bcdafa508ec89433ae16985dfd38e5348a936475a741f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-draft.md",
+      "sha256": "b8e47bc614dd3031f300c08d760e87a42bf2d55f3ca873cb8a7e9ca9ff6eaaec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-image.json",
+      "sha256": "79b984bf4c375744f7cba81fedeef0a514b16f823dbe7a2a411e7cf1b08a7736"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-native-raycast-power-consumer-delta-review.json",
+      "sha256": "c74b11bd146cab5c141f8f04b8f49b007be1a87c479ac98e2b4f1c246a8c093c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-own-tier-wrapper-target-number-delta-review.json",
+      "sha256": "94d9dea78a0a46fddb53425ff9dca6910f6b5feb9d730efd75ef067c5299dfe3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-traits-review.json",
+      "sha256": "da61093a52d1ba756cc406ea6e155a59b18fedebdec9269c1d1edc5d2b289fd0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-raw-verification.json",
+      "sha256": "e6061a9b385dead45a1c75927097dfacba64015add908ee54fe3f4c7716a2cc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-ui-review.json",
+      "sha256": "75fd414c931ad583c74e92371d3593d9b91d44518244e7fde1dace2adb9462cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f573a678b73a5ff261e7ca35d58692dc201c017a24f2cf496dfc014712bc259e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "eec044faf107c3d579d57f4906c0c620b70e3c62fc0dddd3c02c04604e7e8132"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "373645a94f980734a77774a0c354240508314adffc385d49fe621a48c058037e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2e0c96c20ec55f67cffcd9c6de9c898bc38461fc7cc997f4dd12ae5a1878786e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "85e47fb1625bc8a4be9a25d4503a85b381990dafe7cb1c3ee3366f882e86117d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\README.md",
+      "sha256": "ec7f9bd29f294dc5bc8b8283dbf714c811eac8c24e9ead4a340f42df2dbaeb14"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\SOURCE_INDEX.md",
+      "sha256": "a502d8ddcfc97303711e275172a7c5abd0fae1a8bf36c81c8e84e00cbf32204f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\TIER_VALUES.md",
+      "sha256": "f6d86ed2c073ffb0106f2b9b17ca9a14360d8a4c7b0e606d0b586665f57559e4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "fe32a375ffe98df7aa44661c111774581496a4c220af724aaf33fed02ba38b94"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\weapon_trait_bespoke_ogryn_thumper_p1_shot_power_bonus_after_weapon_special_cleave.md",
+      "sha256": "20d292aef7331f8e6d7925bdc54fcbb2cc936f571811852fc6873e524c0a4969"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\懲罰射擊\\weapon_trait_bespoke_ogryn_thumper_p3_shot_power_bonus_after_weapon_special_cleave.md",
+      "sha256": "19c431458ba0a81c45bdac9713000853d84f8f07c20edbae320c52045e8a58da"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "51954e4bd9395c77900dee00e02dada862e6c4477018fe06bf20245d1f4777db"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "e2dd55b3b1273713254b721ee9925eadbac5704c104e816ecffa5b411a8b2b60"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\惡棍槍\\README.md",
+      "sha256": "79afec3340aa4fe54bba2b1b5f4ca12e4a683d079947fcca1a4552d31b0b26b0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\Referneces\\Translation.md",
+      "sha256": "cd325385dc69789a4ec347ba630a55b3c2e19b65f0ebfdc430b5c62ae57e96e0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-raw-verification.json",
+      "sha256": "fddad1ace7b845f6ee4f9d129d0c89c9c9e954b3f4eb765e6bee4723af95463f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\punishing-fire-group\\actual-preview-007\\own-association-snapshot.json",
+      "sha256": "63e3a7bd3152c3422adc9eb24eb7de604d9d8628389cda35c3ae8fca3977f13c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-001.json",
+      "sha256": "45f4abeb2caa249b83af504652f2661bcfa1fd5de0a867e99f5a6af8231326e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-002.json",
+      "sha256": "8890c95a91ebf97ab6d99163585d18729cdf182ed93276f93828599369f7e82e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-003.json",
+      "sha256": "a5f1d028a9564f1b7243ce72d19b279ecb0fcb5c9d6de92b4357591f3e58060d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-004.json",
+      "sha256": "38aff6401749cab1b88d851498cf589ab267e49908274ade87645af9a9b04db4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-005.json",
+      "sha256": "f7761b9e6814f793cb49335cf166d004945f80ccc06319f32200009f4a03a1e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-actual-preview-receipt-006.json",
+      "sha256": "34a7e1de3adf45f56e5467c2e47afab4181e6998826bc7331b2ad0753b3e7eb1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-002.json",
+      "sha256": "66e9c3e0924fc2dc475e5e4a44d499ce09f1abc616e0429b6574468178f9b70f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-003.json",
+      "sha256": "da89b8353cf4565aac3054dfe5c1818ada839d3db0344c81077adf1f8ed60096"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-004.json",
+      "sha256": "7f0a4660804e515301f57fd7177a46790cdbe1c1bd7581b7d47852058ce04349"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-005.json",
+      "sha256": "5f905a6a18c8747f9954328f52889fb08782708e7eb1ea958ef64b06fd0ad615"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-006.json",
+      "sha256": "db66796142f87104e83340381075f404d605944d122314b47d455d2134788bb0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest-007.json",
+      "sha256": "133619904fb8536051115c157e8578a9d8808cde5cee906de137d9a6b02fefa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-candidate-manifest.json",
+      "sha256": "e5a561db0f35a8a52e279a2ac0f5b28a50082ec1fdaa5d5e3fc0ffaa1bf0145d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-evidence.json",
+      "sha256": "bc3dcd818fb097f373e7573fcd920e2ab3354c75e1ee3ec41b0fd3565d39d32d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/punishing-fire-agent-preflight.json",
+      "sha256": "5ad6d192f3b95a8ab11c492dcc676da0c1762540466887ee2fa5b7776afecc58"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-group/reassuringly-accurate-formal-peer-review.json",
+      "sha256": "ecea48b128391e77b0671e0d2a1b40b99e8253307c24bdcb9d94c18f45f62a99"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-config.json",
+      "sha256": "4a90efe26e3424619bba96db2e5a15bb73a17f1109b3a0ac00254bb4341856c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-evidence.json",
+      "sha256": "bc3dcd818fb097f373e7573fcd920e2ab3354c75e1ee3ec41b0fd3565d39d32d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-agent-draft.md",
+      "sha256": "b8e47bc614dd3031f300c08d760e87a42bf2d55f3ca873cb8a7e9ca9ff6eaaec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-candidate-peer-scope.json",
+      "sha256": "2b8780125bf3b9fc2d6cc2211506a805640959968a01f3c31f7b61c8d40a3b3f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-final-content-review.json",
+      "sha256": "e2fd90c9c4b39739a131a4f1defea5742059cf0efcaec0fa76d231e2ed5a6ee0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-frozen-source-verification.json",
+      "sha256": "5d1835c793a9a0f2a3aba33fcd3cc07a8f5ca313161450e72c36fea67445f289"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-primary-power-scaling-order-delta-review.json",
+      "sha256": "ea100000d7aabd1c0bec7972fdaff4b884758053c45352c49b4eed71134d247f"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punishing-fire-formal-peer-scope.json",
+    "sha256": "bea8390bff940c5855d9bdb354127d0e85dbe3f235504694b657493cc53fbddc",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
