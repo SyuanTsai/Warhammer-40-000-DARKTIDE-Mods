@@ -143,5 +143,6 @@
 | <img src="https://github.com/user-attachments/assets/3778f955-df91-47c2-997d-02817524ac32" width="32" height="32" alt="專注引導祝福圖示"> [專注引導](entries/專注引導/README.md)<br>- Focused Channelling<br>[完整說明](entries/專注引導/README.md) | <ul><li>持用對應力場法杖並進入其指定蓄能動作時，減輕蓄能移速懲罰 20%／30%／40%／50%，並在該條件下取得不可中斷及特定 stun immunity 關鍵字。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/6b381aff-25ca-43bb-9878-356963df97f5" width="32" height="32" alt="激勵彈幕祝福圖示"> [激勵彈幕](entries/激勵彈幕/README.md)<br>- Inspiring Barrage<br>[完整說明](entries/激勵彈幕/README.md) | <ul><li>每次通過連擊計數條件的射擊彈藥事件，都依等級及當下計數直接回復韌性；最大計算倍率為五。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0" width="32" height="32" alt="不穩定能量祝福圖示"> [不穩定能量](entries/不穩定能量/README.md)<br>- Unstable Power<br>[完整說明](entries/不穩定能量/README.md) | <ul><li>持用時，反噬每 20 個百分點使力量修正增加一階，最高四階；每階 +3.5／+4／+4.5／+5 個百分點。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db" width="32" height="32" alt="最後防線祝福圖示"> [最後防線](entries/最後防線/README.md)<br>- Last Guard<br>[完整說明](entries/最後防線/README.md) | <ul><li>當持用來源盾錘並以格擋實際耗盡耐力時，冷卻結束後觸發一次半徑5的自動推擊；I–IV冷卻為18／15／12／9秒，格擋消耗降低15／20／25／30%。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

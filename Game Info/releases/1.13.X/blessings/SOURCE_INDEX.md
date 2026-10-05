@@ -141,3 +141,4 @@
 | [專注引導](entries/專注引導/README.md) | [來源索引](entries/專注引導/SOURCE_INDEX.md) |
 | [激勵彈幕](entries/激勵彈幕/README.md) | [來源索引](entries/激勵彈幕/SOURCE_INDEX.md) |
 | [不穩定能量](entries/不穩定能量/README.md) | [來源索引](entries/不穩定能量/SOURCE_INDEX.md) |
+| [最後防線](entries/最後防線/README.md) | [來源索引](entries/最後防線/SOURCE_INDEX.md) |

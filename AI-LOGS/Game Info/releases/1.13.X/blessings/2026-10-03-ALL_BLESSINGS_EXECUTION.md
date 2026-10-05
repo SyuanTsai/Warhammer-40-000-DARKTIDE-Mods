@@ -459,3 +459,5 @@
 - [激勵彈幕](2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
 
 - [不穩定能量](2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json)：新增2變體、5型號關聯；共2變體、5關聯。
+
+- [最後防線](2026-10-03-LAST-GUARD_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
