@@ -1356,6 +1356,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/08663e44-f8da-4e08-a202-96dec24ee060",
       "effect": "持用且特殊狀態有效時，略過近戰揮擊護甲中止、將合資格活著角色的受擊質量降為四分之一，並增加近戰重擊傷害修正；仍保留質量上限、敵種中止與護甲傷害結算。"
+    },
+    {
+      "id": "chained-deathblow",
+      "name_zh_tw": "致命連擊",
+      "name_en": "Chained Deathblow",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_on_weakspot_kill",
+      "description_key": "loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc",
+      "name_hash": "5beacc86",
+      "description_hash": "ad662888",
+      "page": "entries/致命連擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
+      "effect": "弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。"
     }
   ],
   "weapons": [
@@ -20662,6 +20675,108 @@
       "icon": "https://github.com/user-attachments/assets/08663e44-f8da-4e08-a202-96dec24ee060",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_203",
       "effect": "持用且特殊狀態有效時，略過近戰揮擊護甲中止、將合資格活著角色的受擊質量降為四分之一，並增加近戰重擊傷害修正；仍保留質量上限、敵種中止與護甲傷害結算。 I–IV 重擊增量 4%／6%／8%／10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/致命連擊/weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weapon_id": "combatsword_p2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+        "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_crit_chance_on_weakspot_kill",
+        "mark_ids": [
+          "combatsword_p2_m1",
+          "combatsword_p2_m2",
+          "combatsword_p2_m3"
+        ],
+        "restriction_key": "combatsword_p2",
+        "melee_critical_strike_chance_by_tier": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "displayed_crit_chance_percent_by_tier": {
+          "I": 5,
+          "II": 10,
+          "III": 15,
+          "IV": 20
+        },
+        "active_duration_seconds": 3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 452,
+        "end_line": 503
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 44
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc",
+      "description_hash": "ad662888",
+      "icon": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_180",
+      "effect": "弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill",
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "powersword_p3",
+      "page": "entries/致命連擊/weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weapon_id": "powersword_p3",
+        "trait_id": "weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill",
+        "trait_item": "content/items/traits/bespoke_powersword_p3/increased_crit_chance_on_weakspot_kill",
+        "mark_ids": [
+          "powersword_p3_m1"
+        ],
+        "restriction_key": "powersword_p3",
+        "melee_critical_strike_chance_by_tier": {
+          "I": 0.05,
+          "II": 0.1,
+          "III": 0.15,
+          "IV": 0.2
+        },
+        "displayed_crit_chance_percent_by_tier": {
+          "I": 5,
+          "II": 10,
+          "III": 15,
+          "IV": 20
+        },
+        "active_duration_seconds": 3
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 183,
+        "end_line": 232
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 47,
+        "end_line": 60
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc",
+      "description_hash": "ad662888",
+      "icon": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_180",
+      "effect": "弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。"
     }
   ],
   "bindings": [
@@ -28917,6 +29032,62 @@
       "mark_id": "powersword_p3_m1",
       "variant_id": "weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special",
       "trait_item": "content/items/traits/bespoke_powersword_p3/infinite_armor_cleave_on_activated_attacks",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_crit_chance_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_crit_chance_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_crit_chance_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "chained-deathblow",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/increased_crit_chance_on_weakspot_kill",
       "trait_category": "bespoke_powersword_p3",
       "available_tiers": null,
       "source": {

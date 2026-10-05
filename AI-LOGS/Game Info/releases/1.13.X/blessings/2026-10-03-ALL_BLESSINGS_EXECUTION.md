@@ -369,3 +369,5 @@
 - 第23輪三項已Commit後完整掃描通過：bloodthirsty (`4545387bf0ed0ed20069c69f817705c227f37095`)、vicious-slice (`7baaf59c232650f58d7c721eaff85f54de0c39e8`)、deathblow (`726be759ffbb34154cb24acbd1d0ea057206eb92`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-023-full-scan.json`／SHA-256 `819cc762d72f3537b5e4acea1917240c9ad6056f1c46ec5059c153a9ece44106`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [破甲](2026-10-03-SUNDER_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
+
+- [致命連擊](2026-10-03-CHAINED-DEATHBLOW_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

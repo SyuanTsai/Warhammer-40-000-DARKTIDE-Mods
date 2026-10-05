@@ -109,5 +109,6 @@
 | <img src="https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b" width="32" height="32" alt="兇狠切割祝福圖示"> [兇狠切割](entries/兇狠切割/README.md)<br>- Vicious Slice<br>[完整說明](entries/兇狠切割/README.md) | <ul><li>持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891" width="32" height="32" alt="致命一擊祝福圖示"> [致命一擊](entries/致命一擊/README.md)<br>- Deathblow<br>[完整說明](entries/致命一擊/README.md) | <ul><li>持用圖妥斯基重劍時，I–IV 增加近戰弱點傷害修正 7.5%／10%／12.5%／15%；每次揮擊前三個角色擊殺中的非歐格林弱點擊殺，可在傷害結算後回退該目標的命中質量並解除後續中止。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/08663e44-f8da-4e08-a202-96dec24ee060" width="32" height="32" alt="破甲祝福圖示"> [破甲](entries/破甲/README.md)<br>- Sunder<br>[完整說明](entries/破甲/README.md) | <ul><li>持用且特殊狀態有效時，略過近戰揮擊護甲中止、將合資格活著角色的受擊質量降為四分之一，並增加近戰重擊傷害修正；仍保留質量上限、敵種中止與護甲傷害結算。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4" width="32" height="32" alt="致命連擊祝福圖示"> [致命連擊](entries/致命連擊/README.md)<br>- Chained Deathblow<br>[完整說明](entries/致命連擊/README.md) | <ul><li>弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

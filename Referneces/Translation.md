@@ -340,6 +340,7 @@
 - Skullcrusher - 粉碎者
 - Thunderstrike - 雷霆打擊
 - Chained Deathblow - 致命連擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_on_weakspot_kill`，hash `5beacc86`；英文／繁中RAW配對確認。
 - Deathblow - 致命一擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill`，hash `7d810db1`；英文／繁中RAW配對確認。
 - Perfect Strike - 完美一擊
