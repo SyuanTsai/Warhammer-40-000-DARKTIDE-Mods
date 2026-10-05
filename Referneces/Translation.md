@@ -465,6 +465,7 @@
 - Warp Flurry - 亞空間亂舞
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_faster_charge_on_chained_secondary_attacks`，hash `4cf5de54`；英文／繁中RAW配對確認。
 - Warp Nexus - 亞空間樞紐
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_scaled_on_peril`，hash `847eaa2c`；英文／繁中RAW配對確認。
 - Transfer Peril - 轉移反噬
 - Rending Shockwave - 撕扯震盪
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_aoe_charge`，hash `8af2f9ee`；英文／繁中RAW配對確認。

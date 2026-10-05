@@ -122,3 +122,4 @@
 | [提速](entries/提速/README.md) | [來源索引](entries/提速/SOURCE_INDEX.md) |
 | [毀滅打擊](entries/毀滅打擊/README.md) | [來源索引](entries/毀滅打擊/SOURCE_INDEX.md) |
 | [雷鳴](entries/雷鳴/README.md) | [來源索引](entries/雷鳴/SOURCE_INDEX.md) |
+| [亞空間樞紐](entries/亞空間樞紐/README.md) | [來源索引](entries/亞空間樞紐/SOURCE_INDEX.md) |

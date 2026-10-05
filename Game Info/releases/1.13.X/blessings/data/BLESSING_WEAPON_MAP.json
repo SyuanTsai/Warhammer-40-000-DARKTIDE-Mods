@@ -1560,6 +1560,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
       "effect": "對持用之實際安裝武器所送出的合格命中，對受擊目標施加 1–4 層脆弱；每層增加目標 2.5% rending 修正，目標減益最多 16 層並持續 5 秒。"
+    },
+    {
+      "id": "warp-nexus",
+      "name_zh_tw": "亞空間樞紐",
+      "name_en": "Warp Nexus",
+      "name_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril",
+      "description_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril_desc",
+      "name_hash": "847eaa2c",
+      "description_hash": "165aa31c",
+      "page": "entries/亞空間樞紐/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "effect": "手持支援的力場法杖時，祝福依 raw 反噬比例每滿 20% 增加一階致命一擊機率，最高四階；每階按所選等級增加 3.5、4、4.5 或 5 個百分點。"
     }
   ],
   "weapons": [
@@ -26229,6 +26242,182 @@
       "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
       "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含蓄力／啟用後實際 powered sweep。詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus",
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_chance_per_step_by_tier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "card_maximum_critical_chance_percentage_points": {
+          "I": 14.0,
+          "II": 16.0,
+          "III": 18.0,
+          "IV": 20.0
+        },
+        "tier_override_replaces_wrapper_conditional_base": true,
+        "raw_peril_formula": "min(4, floor(raw_current_percentage / 0.20))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 235,
+        "end_line": 288
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril_desc",
+      "description_hash": "165aa31c",
+      "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "虛空爆破力場法杖 陰陽 Mk III手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p2_warp_charge_critical_strike_chance_bonus",
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p2",
+      "page": "entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p2_warp_charge_critical_strike_chance_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_chance_per_step_by_tier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "card_maximum_critical_chance_percentage_points": {
+          "I": 14.0,
+          "II": 16.0,
+          "III": 18.0,
+          "IV": 20.0
+        },
+        "tier_override_replaces_wrapper_conditional_base": true,
+        "raw_peril_formula": "min(4, floor(raw_current_percentage / 0.20))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+        "start_line": 127,
+        "end_line": 180
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril_desc",
+      "description_hash": "165aa31c",
+      "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "烈焰力場法杖 裂隙避難所 Mk II手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p3_warp_charge_critical_strike_chance_bonus",
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p3",
+      "page": "entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p3_warp_charge_critical_strike_chance_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_chance_per_step_by_tier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "card_maximum_critical_chance_percentage_points": {
+          "I": 14.0,
+          "II": 16.0,
+          "III": 18.0,
+          "IV": 20.0
+        },
+        "tier_override_replaces_wrapper_conditional_base": true,
+        "raw_peril_formula": "min(4, floor(raw_current_percentage / 0.20))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start_line": 126,
+        "end_line": 179
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril_desc",
+      "description_hash": "165aa31c",
+      "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "電流力場法杖 諾瑪努斯 Mk VI手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_warp_charge_critical_strike_chance_bonus",
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p4_warp_charge_critical_strike_chance_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_chance_per_step_by_tier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "card_maximum_critical_chance_percentage_points": {
+          "I": 14.0,
+          "II": 16.0,
+          "III": 18.0,
+          "IV": 20.0
+        },
+        "tier_override_replaces_wrapper_conditional_base": true,
+        "raw_peril_formula": "min(4, floor(raw_current_percentage / 0.20))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 235,
+        "end_line": 288
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_increased_crit_chance_scaled_on_peril_desc",
+      "description_hash": "165aa31c",
+      "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "虛空打擊力場法杖 陰陽 Mk IV手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。"
     }
   ],
   "bindings": [
@@ -37766,6 +37955,62 @@
         "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
         "import_line": 17,
         "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/increased_crit_chance_scaled_on_peril",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p2",
+      "mark_id": "forcestaff_p2_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p2_warp_charge_critical_strike_chance_bonus",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p2/increased_crit_chance_scaled_on_peril",
+      "trait_category": "bespoke_forcestaff_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1225
+      }
+    },
+    {
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p3_warp_charge_critical_strike_chance_bonus",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/increased_crit_chance_scaled_on_peril",
+      "trait_category": "bespoke_forcestaff_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "append_line": 1301
+      }
+    },
+    {
+      "blessing_id": "warp-nexus",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_warp_charge_critical_strike_chance_bonus",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/increased_crit_chance_scaled_on_peril",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
       }
     }
   ]

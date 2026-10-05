@@ -409,3 +409,5 @@
 - 第28輪三項已Commit後完整掃描通過：rampage (`602b7665a2ea027369bd86aee465f980ba0875f7`)、rev-it-up (`e4daf398411e6abb8c9e8a01c7cadb2aa2dd7720`)、devastating-strike (`451bffe1ef553ea9ff45fef6e468a49b6035b049`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-028-full-scan.json`／SHA-256 `e5b5b527340200a372160679bc723ccacd34b98076383e6688bc36f9ef75d206`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [雷鳴](2026-10-03-THUNDEROUS_ACCEPTANCE.json)：新增9變體、20型號關聯；共9變體、20關聯。
+
+- [亞空間樞紐](2026-10-03-WARP-NEXUS_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。

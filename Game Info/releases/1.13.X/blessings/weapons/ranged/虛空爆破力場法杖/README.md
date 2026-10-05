@@ -10,11 +10,12 @@
 | <img src="https://github.com/user-attachments/assets/a24dfe97-3d90-44b2-afb5-99309f88e6f4" width="32" height="32" alt="亞空間亂舞祝福圖示"> [亞空間亂舞](../../../entries/亞空間亂舞/README.md)<br>- Warp Flurry<br>[完整說明](../../../entries/亞空間亂舞/README.md) | <ul><li>action_trigger_explosion 開始時累積；只適用虛空爆破力場法杖 陰陽 Mk III。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/3e607592-cc64-489a-9554-99198c287b16" width="32" height="32" alt="撕扯震盪祝福圖示"> [撕扯震盪](../../../entries/撕扯震盪/README.md)<br>- Rending Shockwave<br>[完整說明](../../../entries/撕扯震盪/README.md) | <ul><li>次要蓄力爆炸命中依蓄力比例施加每層 2.5% 脆弱；I–IV 滿蓄力請求 2／4／6／8 層，目標最多 16 層、持續 5 秒；完整說明包含延遲命中例外。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>普通施放是投射物遠程攻擊；蓄力特殊爆炸以 explosion 類型結算；杖擊／揮擊為近戰。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7" width="32" height="32" alt="亞空間樞紐祝福圖示"> [亞空間樞紐](../../../entries/亞空間樞紐/README.md)<br>- Warp Nexus<br>[完整說明](../../../entries/亞空間樞紐/README.md) | <ul><li>虛空爆破力場法杖 陰陽 Mk III手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 虛空爆破力場法杖 陰陽 Mk III | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting.md)、[湧動](../../../entries/湧動/weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_forcestaff_p1_followup_shots_ranged_damage.md)、[亞空間亂舞](../../../entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks.md)、[撕扯震盪](../../../entries/撕扯震盪/weapon_trait_bespoke_forcestaff_p1_rend_armor_on_aoe_charge.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill.md) | I–IV |
+| 虛空爆破力場法杖 陰陽 Mk III | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting.md)、[湧動](../../../entries/湧動/weapon_trait_bespoke_forcestaff_p1_double_shot_on_crit.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_forcestaff_p1_followup_shots_ranged_damage.md)、[亞空間亂舞](../../../entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks.md)、[撕扯震盪](../../../entries/撕扯震盪/weapon_trait_bespoke_forcestaff_p1_rend_armor_on_aoe_charge.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill.md)、[亞空間樞紐](../../../entries/亞空間樞紐/weapon_trait_bespoke_forcestaff_p1_warp_charge_critical_strike_chance_bonus.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
