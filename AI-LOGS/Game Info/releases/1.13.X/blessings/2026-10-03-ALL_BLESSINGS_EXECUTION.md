@@ -381,3 +381,7 @@
 - [震懾](2026-10-03-SHOCK-AND-AWE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。
 
 - [快速裝彈](2026-10-03-SPEEDLOAD_ACCEPTANCE.json)：新增12變體、23型號關聯；共12變體、23關聯。
+
+- 第25輪三項已Commit後完整掃描通過：terrifying-barrage (`90acdaf876e1771661be11186d1eb761bd6aef69`)、shock-and-awe (`072850b24ede497dabc49e041ecf0539983440a1`)、speedload (`4ce76c74bf8b4c920f44e39550368568e794a400`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-025-full-scan.json`／SHA-256 `cfbc8a780a445f772a203a79188335cb0760e20400812520e8b78e3fb166d262`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [死亡噴吐](2026-10-03-DEATHSPITTER_ACCEPTANCE.json)：新增9變體、21型號關聯；共9變體、21關聯。

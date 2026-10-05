@@ -1430,6 +1430,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244",
       "effect": "一般符合條件的近距離遠程擊殺後，每個有效層增加+7%／+8%／+9%／+10%裝填速度；最多5層，並按武器 own child_duration 到期。針彈手槍另可由仍標記目標的近距離毒素死亡事件提出加層請求。"
+    },
+    {
+      "id": "deathspitter",
+      "name_zh_tw": "死亡噴吐",
+      "name_en": "Deathspitter",
+      "name_key": "loc_trait_bespoke_increase_power_on_close_kill",
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "name_hash": "00d6e1d9",
+      "description_hash": "fe798d47",
+      "page": "entries/死亡噴吐/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "effect": "持用九種實際適用遠程武器之一時，每個符合遠程近距離擊殺與 exact item 條件的擊殺事件增加一層通用威力修正；I–IV 每有效層 +5／+5.5／+6／+6.5 個百分點，最多五層。八種家族持續3.5秒；雙管霰彈槍 P2 持續5秒。直接特殊彈丸仍按遠程擊殺條件判斷，延遲 buff tick 不會自行觸發。"
     }
   ],
   "weapons": [
@@ -1591,26 +1604,41 @@
         {
           "id": "ogryn_heavystubber_p1_m1",
           "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m1",
-          "name": "克魯克Mk V二聯重機槍",
-          "name_en": "Krourk Mk V Twin-Linked Heavy Stubber",
+          "name": "雙鏈重型機槍 克魯克 Mk V",
+          "name_en": "Twin-Linked Heavy Stubber Krourk Mk V",
           "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
-          "trait_category": "bespoke_ogryn_heavystubber_p1"
+          "trait_category": "bespoke_ogryn_heavystubber_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_heavystubber_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_heavystubber_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_heavystubber_p1_m1"
+          }
         },
         {
           "id": "ogryn_heavystubber_p1_m2",
           "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m2",
-          "name": "戈爾工Mk IV二聯重機槍",
-          "name_en": "Gorgonum Mk IV Twin-Linked Heavy Stubber",
+          "name": "雙鏈重型機槍 戈爾貢努姆 Mk IV",
+          "name_en": "Twin-Linked Heavy Stubber Gorgonum Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
-          "trait_category": "bespoke_ogryn_heavystubber_p1"
+          "trait_category": "bespoke_ogryn_heavystubber_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_heavystubber_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_heavystubber_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_heavystubber_p1_m2"
+          }
         },
         {
           "id": "ogryn_heavystubber_p1_m3",
           "item": "content/items/weapons/player/ranged/ogryn_heavystubber_p1_m3",
-          "name": "阿克利斯MK V二聯重機槍",
-          "name_en": "Achlys Mk VII Twin-Linked Heavy Stubber",
+          "name": "雙鏈重型機槍 阿克利斯 Mk VII",
+          "name_en": "Twin-Linked Heavy Stubber Achlys Mk VII",
           "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
-          "trait_category": "bespoke_ogryn_heavystubber_p1"
+          "trait_category": "bespoke_ogryn_heavystubber_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_heavystubber_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_heavystubber_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_heavystubber_p1_m3"
+          }
         }
       ]
     },
@@ -22585,6 +22613,459 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_117",
       "effect": "近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後4秒到期。",
       "buff_template_id": "weapon_trait_bespoke_stubrevolver_p1_reload_speed_on_slide_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p1",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_autogun_p1/increase_power_on_close_kill",
+        "restriction_key": "autogun_p1",
+        "actual_parent_template": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill_child",
+        "marks": [
+          "autogun_p1_m1",
+          "autogun_p1_m2",
+          "autogun_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 128,
+        "end_line": 191
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "步兵自動槍 阿格里皮娜 Mk I、步兵自動槍 弗拉克斯 Mk V、步兵自動槍 哥倫努 Mk VIII：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p2",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_autogun_p2/increase_power_on_close_kill",
+        "restriction_key": "autogun_p2",
+        "actual_parent_template": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill_child",
+        "marks": [
+          "autogun_p2_m1",
+          "autogun_p2_m2",
+          "autogun_p2_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "槍托自動槍 弗拉克斯 Mk II、槍托自動槍 格拉亞 Mk IV、槍托自動槍 阿格里皮娜 Mk VIII：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_lasgun_p3/increase_power_on_close_kill",
+        "restriction_key": "lasgun_p3",
+        "actual_parent_template": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill_child",
+        "marks": [
+          "lasgun_p3_m1",
+          "lasgun_p3_m2",
+          "lasgun_p3_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "偵察鐳射槍 奧克塔蘭 Mk VIc、偵察鐳射槍 奧克塔蘭 Mk XII、偵察鐳射槍 奧克塔蘭 Mk XIV：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/increase_power_on_close_kill",
+        "restriction_key": "ogryn_heavystubber_p1",
+        "actual_parent_template": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill_child",
+        "marks": [
+          "ogryn_heavystubber_p1_m1",
+          "ogryn_heavystubber_p1_m2",
+          "ogryn_heavystubber_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 216,
+        "end_line": 279
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "雙鏈重型機槍 克魯克 Mk V、雙鏈重型機槍 戈爾貢努姆 Mk IV、雙鏈重型機槍 阿克利斯 Mk VII：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_power_on_close_kill",
+        "restriction_key": "shotgun_p1",
+        "actual_parent_template": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill_child",
+        "marks": [
+          "shotgun_p1_m1",
+          "shotgun_p1_m2",
+          "shotgun_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "戰鬥霰彈槍 紮羅娜 Mk VI、戰鬥霰彈槍 阿格里皮娜 Mk VII、戰鬥霰彈槍 奧克塔蘭 Mk IX：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 5.0,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_shotgun_p2/increase_power_on_close_kill",
+        "restriction_key": "shotgun_p2",
+        "actual_parent_template": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill_child",
+        "marks": [
+          "shotgun_p2_m1",
+          "shotgun_p2_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 39,
+        "end_line": 102
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "雙管霰彈槍 十字星 Mk XI、雙管霰彈槍 克魯克 Mk IV：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_shotgun_p3/increase_power_on_close_kill",
+        "restriction_key": "shotgun_p3",
+        "actual_parent_template": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill_child",
+        "marks": [
+          "shotgun_p3_m1"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "獵人霰彈槍 奧克塔蘭 Mk III：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_shotgun_p4/increase_power_on_close_kill",
+        "restriction_key": "shotgun_p4",
+        "actual_parent_template": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill_child",
+        "marks": [
+          "shotgun_p4_m1",
+          "shotgun_p4_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 10,
+        "end_line": 73
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "滅絕者霰彈槍 鐵腕 Mk III、滅絕者霰彈槍 鐵腕 Mk VIII：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill",
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/死亡噴吐/weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "stat_values_by_tier": {
+          "I": 0.05,
+          "II": 0.055,
+          "III": 0.06,
+          "IV": 0.065
+        },
+        "max_effective_stacks": 5,
+        "duration_seconds": 3.5,
+        "max_power_level_modifier_added": 0.325,
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill",
+        "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/increase_power_on_close_kill",
+        "restriction_key": "shotpistol_shield_p1",
+        "actual_parent_template": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill_child",
+        "marks": [
+          "shotpistol_shield_p1_m1"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 610,
+        "end_line": 673
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_close_kill_desc",
+      "description_hash": "fe798d47",
+      "icon": "https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_052",
+      "effect": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。",
+      "buff_template_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill_parent"
     }
   ],
   "bindings": [
@@ -31686,6 +32167,300 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_power_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increase_power_on_close_kill",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increase_power_on_close_kill",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increase_power_on_close_kill",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "deathspitter",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/increase_power_on_close_kill",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]

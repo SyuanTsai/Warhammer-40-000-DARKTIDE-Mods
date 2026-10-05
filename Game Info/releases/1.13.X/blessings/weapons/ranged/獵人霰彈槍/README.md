@@ -9,11 +9,12 @@
 | <img src="https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659" width="32" height="32" alt="浴血而生祝福圖示"> [浴血而生](../../../entries/浴血而生/README.md)<br>- Born in Blood<br>[完整說明](../../../entries/浴血而生/README.md) | <ul><li>奧克塔蘭 Mk III普通、裝填後及瞄準彈丸為遠程攻擊；特殊按鍵切換狀態，此型號沒有接入特殊彈殼。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>hip／zoom 霰彈以 ranged 結算；特殊鍵只切換狀態。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244" width="32" height="32" alt="快速裝彈祝福圖示"> [快速裝彈](../../../entries/快速裝彈/README.md)<br>- Speedload<br>[完整說明](../../../entries/快速裝彈/README.md) | <ul><li>近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後3秒到期。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e" width="32" height="32" alt="死亡噴吐祝福圖示"> [死亡噴吐](../../../entries/死亡噴吐/README.md)<br>- Deathspitter<br>[完整說明](../../../entries/死亡噴吐/README.md) | <ul><li>獵人霰彈槍 奧克塔蘭 Mk III：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 獵人霰彈槍 奧克塔蘭 Mk III | [飛鏢彈](../../../entries/飛鏢彈/weapon_trait_bespoke_shotgun_p3_bleed_on_crit.md)、[散彈](../../../entries/散彈/weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot.md)、[浴血而生](../../../entries/浴血而生/weapon_trait_bespoke_shotgun_p3_toughness_on_close_range_kills.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide.md) | I–IV |
+| 獵人霰彈槍 奧克塔蘭 Mk III | [飛鏢彈](../../../entries/飛鏢彈/weapon_trait_bespoke_shotgun_p3_bleed_on_crit.md)、[散彈](../../../entries/散彈/weapon_trait_bespoke_shotgun_p3_crit_chance_on_hitting_multiple_with_one_shot.md)、[浴血而生](../../../entries/浴血而生/weapon_trait_bespoke_shotgun_p3_toughness_on_close_range_kills.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_shotgun_p3_reload_speed_on_slide.md)、[死亡噴吐](../../../entries/死亡噴吐/weapon_trait_bespoke_shotgun_p3_increase_power_on_close_kill.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

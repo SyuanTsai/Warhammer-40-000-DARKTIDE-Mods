@@ -415,6 +415,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_weakspot_damage`，hash `dbf6f0e3`；英文／繁中RAW配對確認。
 - Fire Frenzy - 烈火熱焰
 - Deathspitter - 死亡噴吐
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_close_kill`，hash `00d6e1d9`；英文／繁中RAW配對確認。
 - Stripped Down - 輕裝
 - Speedload - 快速裝彈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_slide`，hash `f4aa4527`；英文／繁中RAW配對確認。
