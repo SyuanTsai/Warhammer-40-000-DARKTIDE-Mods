@@ -469,3 +469,7 @@
 - [優勢（近戰力量）](2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
 
 - [反守為攻](2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 第36輪三項已Commit後完整掃描通過：all-or-nothing (`213a9af29691d23f4a233cadcf67683991cabca1`)、superiority-melee (`f3c9a2af758234bec7ab97765340e43b7e80cc6f`)、offensive-defence (`50270654d2ec7b183e1260e5b15435dd1ce4defd`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-036-full-scan.json`／SHA-256 `6087ffd4aed9675edcd4ecab52535282cdd6c838d76ccc875e7dff58e0e8e9e5`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [優勢（通用力量）](2026-10-03-SUPERIORITY_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

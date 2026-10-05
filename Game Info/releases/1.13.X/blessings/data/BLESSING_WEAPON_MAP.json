@@ -1881,6 +1881,24 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
       "effect": "持用來源盾錘格擋來襲攻擊時累積格擋消耗，I–IV每層提高+4／+6／+8／+10%近戰威力修正，最多五層；掃掠完成時消耗一層，格擋或掃掠完成會刷新3.5秒共用期限。"
+    },
+    {
+      "id": "superiority",
+      "name_zh_tw": "優勢（通用力量）",
+      "name_en": "Superiority",
+      "name_key": "loc_trait_bespoke_elite_kills_grants_stackable_power",
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+      "name_hash": "d2dd2363",
+      "description_hash": "cd2a709c",
+      "page": "entries/優勢（通用力量）/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "effect": "精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "優勢",
+        "reason": "本體同 hash 名稱仍是「優勢」；文件加「通用力量」區分使用另一名稱鍵、另一武器範圍的近戰力量同名祝福，未改 RAW 名稱或 key。"
+      }
     }
   ],
   "weapons": [
@@ -29360,6 +29378,110 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_231",
       "effect": "布蘭克斯 Mk VI／Mk XI：一般格擋與特殊蓄勢／0.4秒窗口內接到的格擋可累積原始 block_cost；向外 weapon_shout 不讀本項近戰威力修正，也不消耗掃掠層；push-follow是掃掠。",
       "buff_template_id": "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power",
+      "blessing_id": "superiority",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/優勢（通用力量）/weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier": {
+          "I": 0.05,
+          "II": 0.075,
+          "III": 0.1,
+          "IV": 0.125
+        },
+        "max_effective_stacks": 3,
+        "child_duration_seconds": 7,
+        "decay_stacks_per_interval": 1,
+        "displayed_per_stack": [
+          "+5%",
+          "+7.5%",
+          "+10%",
+          "+12.5%"
+        ],
+        "max_displayed_bonus": [
+          "+15%",
+          "+22.5%",
+          "+30%",
+          "+37.5%"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 485,
+        "end_line": 544
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 78,
+        "end_line": 96
+      },
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+      "description_hash": "cd2a709c",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "effect": "精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。",
+      "buff_template_id": "weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+      "blessing_id": "superiority",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/優勢（通用力量）/weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier": {
+          "I": 0.05,
+          "II": 0.075,
+          "III": 0.1,
+          "IV": 0.125
+        },
+        "max_effective_stacks": 3,
+        "child_duration_seconds": 7,
+        "decay_stacks_per_interval": 1,
+        "displayed_per_stack": [
+          "+5%",
+          "+7.5%",
+          "+10%",
+          "+12.5%"
+        ],
+        "max_displayed_bonus": [
+          "+15%",
+          "+22.5%",
+          "+30%",
+          "+37.5%"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 373,
+        "end_line": 432
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 47
+      },
+      "description_key": "loc_trait_bespoke_elite_kills_grants_stackable_power_desc",
+      "description_hash": "cd2a709c",
+      "icon": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "effect": "精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。",
+      "buff_template_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power_parent"
     }
   ],
   "bindings": [
@@ -42381,6 +42503,62 @@
         "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
         "import_line": 16,
         "append_line": 1830
+      }
+    },
+    {
+      "blessing_id": "superiority",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "superiority",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "superiority",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "superiority",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/elite_kills_grants_stackable_power",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
       }
     }
   ]

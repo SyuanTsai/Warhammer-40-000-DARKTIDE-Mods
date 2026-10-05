@@ -1,0 +1,582 @@
+{
+  "date": "2026-10-06",
+  "blessing": "superiority",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power",
+    "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "superiority",
+    "slug": "superiority",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "status": "accepted_non_author_formal_peer",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-formal-peer-scope.json",
+    "scope_sha256": "ec738d0e4a8e5d21a17e2be63142d4e9d27bf4a67a584221451b87211ea187eb",
+    "scope_file_count": 81,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json": "970ac7bdd9060690c489eeb003b19e270bb3c55aaf5f5aee1985f2925c541509",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-config.json": "99eab3de9c02f5431ba1b0df2c81bdbe0ce252c6e5ac14343127af761b05514e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-draft.md": "83cf49b58252f4c308e0226d7d2c9c8245e3b13685406cc76d578a40cb433744",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-evidence.json": "8eacdef1ae4cfd14c99eb136a2125ca91419df546b30c56e3ba93621b8b21f33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-config.json": "c27d76bc52f762df9020d541ce01a50f0c2088ebd80782bb376e2a670470a446",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-extension-draft.json": "4a4b1953cce80b3d951990f790ad5d2387bcef07605097d9c780acd054b0db07",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/inputs/BLESSING_WEAPON_MAP-snapshot-008.json": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/inputs/remaining-tasks-snapshot-008.json": "c5222551f6f2f282604f2a934d95040947f84451e82ccbc7bfd9e2ab3a1e87dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-001.json": "d565ffdb600e38d2da8f952f763cde729016222c6fdea6787bc5287e2de9dc79",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-002.json": "fd544ce0de383a2d54a15faedaf0dba86ca25c6df5da464b77cb77628f1b18c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-003.json": "b614bc07fdcd4609123babda9e75f60a1b2aac4d9479bbcef4effd6a746cadbe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-004.json": "52e536e6c9250ba807dc6ef71abb4d41c0983609a382c85305f80b17aa36c00c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-005.json": "77bb6ada785b5b56685dbbe80b6845ae61fb76edde9736051109151d05f28e6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-006.json": "36c7dbd06ac9bd4b65cbc1d40596c43d17e46d4d352fcfd98a262e23356a0e28",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-007.json": "3001d0367e3b034790e8295f677e2db705a60ae197a752bcff2b89d2f3f9003d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-008.json": "f62dc75759b7187cda3fc24ad334929420da2773478d52fc7eb339bfc5a752d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-candidate-manifest.json": "4dc62f675987b12e7e65ced35d4f9e00e45612e06fd1bcc8b129cde5b34b4f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-config.json": "99eab3de9c02f5431ba1b0df2c81bdbe0ce252c6e5ac14343127af761b05514e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-coverage.json": "ceec95b32b7123483fa519a3db57b4408cced24b34d2bb666c2033845826d84a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-draft.md": "83cf49b58252f4c308e0226d7d2c9c8245e3b13685406cc76d578a40cb433744",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-evidence.json": "8eacdef1ae4cfd14c99eb136a2125ca91419df546b30c56e3ba93621b8b21f33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-preflight.json": "c93786e93275c2e18d52c26e6beace7d30091359383a694a5e7e57886a01625d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-image.json": "4ea7c5fe77dcd3e460db77aba929ba91b802fa950c5ea7771de1c0ef651aef27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-duration-name-key-difference-correction-review.json": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-final-content-review.json": "565da2495e9bf2145bb69622b7dea272e9fedee834329108e71e28513243edbe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-focused-checks.json": "2da644141fab26dd05fdb882f938c45fd3e0767b902d7bb83b67ad9a1f7c9479",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-frozen-source-verification.json": "0f1a55596deb2cd45f4d661d21ff5d8adddea7921a0bffcb797a1da5c89bcc0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-own-tier-wrapper-material-delta-review.json": "76c780e0052ccef359c04bba8dd6e561972f8a6c7d9b36fd265220b1a7e050bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-resume-review.json": "f028bd17b15a22cc6ee4afe3c81d23fc4d8ee858a0448dcf2d9b6cacb8d2ca45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-special-sticky-global-power-difference-review.json": "c98d87f7281d5d978b6d23e4d69b81049de9bedc7fd6ba69f2ec5e87d72c1fda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-traits-review.json": "e50f7fd7c663be1b566b6a1d8db5b6907999685e809264bdfaf265f84be590e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-raw-verification.json": "859dbb07409ec3428607d86b12d2d84054b8a15587b688e7bc1f51165547d0f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-review.json": "75936b87ddf512ca13c62f83f5b4157776be574ba56625cde8598b4ae9d60c5b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-raw-verification.json": "3d79eea3cc23718115325fe41fe20da3e385d847b9752b15f8203516e9d3870c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ed88ff0f5d35c402184dcb73d6cc075e2f6deb86f64379f6957c78784ec0256a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/DAMAGE_PERCENTAGE_REVIEW.md": "7ea5f3801dff0757c938f452d6541938661c20269ad0532ac16fb695a9ae7a8c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/LOCALIZATION_COMPARISON.md": "926be30687c5a1107b78dc3e21073bd9b5509903343bf5de5a3d8872a605cd87",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/README.md": "a0de4e5d19243c9be34b9f9a164104eb937068ca5b65d0c665a8dd4f5fc66d63",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/SOURCE_INDEX.md": "792834055be0e60a0072f6c937edffa066fc626f122ac99c533eed721b7675db",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/TIER_VALUES.md": "4b19326eb767244e2b2148eaaa84baed2378ab5d19d78f45534b17a12601005d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/WEAPON_COMPATIBILITY.md": "215df98279dd1f0f944d1c128713c1311960b1cae1814dbde82ae4bde719757d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power.md": "205f9fec62d52d17ed7120186df99f983a730400c38b6eafa0716d7fa626a954",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power.md": "ea0263a204bab684f444e5ad40280d263704af4f54ec7dd2475bd56f0169eba7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/melee/README.md": "39c73418b57c430773d7e3270280b922ad9a32c5c7a82a3c02b1708ab5d311e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/README.md": "cec17370ff2330dfacd574a4afe309ede1ace1029e0b4a47a8488e479144b7f4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "eb05f5611a7e472367e6a7770d4f0f4cda68e80f230f20e2bb2d998e5234fd14",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "84edfdf3080f9e453aa9f44bfecb4b7c7fa328c5a5bc7c3eb84a05085e78fd26",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "fae77a207d518732c8c9e2678fa0e6c909bbc7eabead08733c6059cfa06c1678",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/own-association-snapshot.json": "0862b2df04cab6a8848348245ba46255aa508b80c276e33b0cee226942c2df37",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/actual-preview-008/Referneces/Translation.md": "eaa8559506aefe92fb9b58052866aab8d356cdac9bb407a7808067608c64c80b",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ed88ff0f5d35c402184dcb73d6cc075e2f6deb86f64379f6957c78784ec0256a",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/DAMAGE_PERCENTAGE_REVIEW.md": "7ea5f3801dff0757c938f452d6541938661c20269ad0532ac16fb695a9ae7a8c",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/LOCALIZATION_COMPARISON.md": "926be30687c5a1107b78dc3e21073bd9b5509903343bf5de5a3d8872a605cd87",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/README.md": "a0de4e5d19243c9be34b9f9a164104eb937068ca5b65d0c665a8dd4f5fc66d63",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/SOURCE_INDEX.md": "792834055be0e60a0072f6c937edffa066fc626f122ac99c533eed721b7675db",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/TIER_VALUES.md": "4b19326eb767244e2b2148eaaa84baed2378ab5d19d78f45534b17a12601005d",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/WEAPON_COMPATIBILITY.md": "215df98279dd1f0f944d1c128713c1311960b1cae1814dbde82ae4bde719757d",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power.md": "205f9fec62d52d17ed7120186df99f983a730400c38b6eafa0716d7fa626a954",
+      "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power.md": "ea0263a204bab684f444e5ad40280d263704af4f54ec7dd2475bd56f0169eba7",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "39c73418b57c430773d7e3270280b922ad9a32c5c7a82a3c02b1708ab5d311e7",
+      "Game Info/releases/1.13.X/blessings/README.md": "cec17370ff2330dfacd574a4afe309ede1ace1029e0b4a47a8488e479144b7f4",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "eb05f5611a7e472367e6a7770d4f0f4cda68e80f230f20e2bb2d998e5234fd14",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "84edfdf3080f9e453aa9f44bfecb4b7c7fa328c5a5bc7c3eb84a05085e78fd26",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "fae77a207d518732c8c9e2678fa0e6c909bbc7eabead08733c6059cfa06c1678",
+      "Referneces/Translation.md": "eaa8559506aefe92fb9b58052866aab8d356cdac9bb407a7808067608c64c80b"
+    },
+    "canonical_config_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-config.json",
+    "canonical_config_sha256": "c27d76bc52f762df9020d541ce01a50f0c2088ebd80782bb376e2a670470a446",
+    "formal_page_count": 8,
+    "formal_pages": [
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/DAMAGE_PERCENTAGE_REVIEW.md",
+        "sha256": "7ea5f3801dff0757c938f452d6541938661c20269ad0532ac16fb695a9ae7a8c"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/LOCALIZATION_COMPARISON.md",
+        "sha256": "926be30687c5a1107b78dc3e21073bd9b5509903343bf5de5a3d8872a605cd87"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/README.md",
+        "sha256": "a0de4e5d19243c9be34b9f9a164104eb937068ca5b65d0c665a8dd4f5fc66d63"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/SOURCE_INDEX.md",
+        "sha256": "792834055be0e60a0072f6c937edffa066fc626f122ac99c533eed721b7675db"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/TIER_VALUES.md",
+        "sha256": "4b19326eb767244e2b2148eaaa84baed2378ab5d19d78f45534b17a12601005d"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/WEAPON_COMPATIBILITY.md",
+        "sha256": "215df98279dd1f0f944d1c128713c1311960b1cae1814dbde82ae4bde719757d"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power.md",
+        "sha256": "205f9fec62d52d17ed7120186df99f983a730400c38b6eafa0716d7fa626a954"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/優勢（通用力量）/weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power.md",
+        "sha256": "ea0263a204bab684f444e5ad40280d263704af4f54ec7dd2475bd56f0169eba7"
+      }
+    ],
+    "verified_root_content_reviews": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-final-content-review.json",
+        "sha256": "565da2495e9bf2145bb69622b7dea272e9fedee834329108e71e28513243edbe"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-special-sticky-global-power-difference-review.json",
+        "sha256": "c98d87f7281d5d978b6d23e4d69b81049de9bedc7fd6ba69f2ec5e87d72c1fda"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-duration-name-key-difference-correction-review.json",
+        "sha256": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-own-tier-wrapper-material-delta-review.json",
+        "sha256": "76c780e0052ccef359c04bba8dd6e561972f8a6c7d9b36fd265220b1a7e050bc"
+      }
+    ],
+    "findings": [
+      "All 81 fixed scope paths match their exact frozen SHA-256; the accepted root content receipts and corrected canonical configuration are within that immutable scope.",
+      "Own I–IV global power values are .05/.075/.10/.125 and child duration is 7 seconds; this is consistent with the general Superiority entry and distinct from the melee-qualified sibling. Effective cap is three, with the internal placeholder/offset not presented as a fourth player-visible stack.",
+      "The kill helper uses died plus elite OR special; the held-slot gate and absence of event-source-item equality are stated accurately. Attack resolution precedes event handling and cache refresh, so a kill does not retroactively strengthen its own attack.",
+      "Seven-second refresh/one-stack decay, timer continuation while unwielded, return before decay, and parent removal on item removal are accurately distinguished.",
+      "Crowbar BASE_ACTIONS aliases, push-follow versus pure push, sticky hits and dodge-exit attack=0/impact behavior are described separately. Force Sword M1/M2 special-active sticky routes and M3 active-cleave distinction are retained; fling damage_type is not confused with ranged attack_type.",
+      "RAW text and same-hash locale pairing are preserved; formatter values, percentage-point versus relative increase, power-level formula, and limits on final HP damage are stated consistently in the checked examples and source review.",
+      "No unresolved contradiction or material scope gap found; RAW omissions on held/source-item/cache/action-route details are not mislabeled as errata."
+    ],
+    "review_method": "Compared the eight current formal pages and canonical config against the exact fixed scope; verified all 81 file hashes and the four accepted content-difference receipts. Reviewed player mechanics, tier values/duration/stack behavior, actual Crowbar and Force Sword route differences, RAW localization table, formulas, examples, and source-index citations. Hash verification supplements this content review.",
+    "independent_peer_review": "accepted; author and reviewer are different agents"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "superiority",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_011.png",
+      "attachment": "https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6001632094",
+      "acquired_date": "2026-10-06",
+      "sha256": "bcad9bf6b51fc7642435860a0b9be0ef45d3aa194c412c5e0140eae889131e2a",
+      "content_type": "image/png",
+      "size": 5116,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "優勢祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG weapon_trait_011 pale central crossed motif with transparent border; actual source/public hash and size match. Superiority two name keys share same verified actual item.icon and public bytes."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 14,
+      "rows": 488,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 90,
+      "source_files": 27,
+      "bindings": 934,
+      "variants": 480,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 27,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1161,
+      "remote_references": 465,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 37,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-036-full-scan.json",
+        "sha256": "6087ffd4aed9675edcd4ecab52535282cdd6c838d76ccc875e7dff58e0e8e9e5",
+        "trigger": "round-036"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 27,
+    "not_started_name_groups": 27,
+    "partial_name_groups": 0,
+    "remaining_variants": 125,
+    "remaining_bindings": 251,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b7a8f704ec3c0331a44e5f020169ebb0a072baadf2f609278eb074f148777311"
+  },
+  "previous_local_commit": "50270654d2ec7b183e1260e5b15435dd1ce4defd",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-duration-name-key-difference-correction-review.json",
+      "sha256": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-final-content-review.json",
+      "sha256": "565da2495e9bf2145bb69622b7dea272e9fedee834329108e71e28513243edbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-focused-checks.json",
+      "sha256": "2da644141fab26dd05fdb882f938c45fd3e0767b902d7bb83b67ad9a1f7c9479"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-frozen-source-verification.json",
+      "sha256": "0f1a55596deb2cd45f4d661d21ff5d8adddea7921a0bffcb797a1da5c89bcc0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "76c780e0052ccef359c04bba8dd6e561972f8a6c7d9b36fd265220b1a7e050bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-resume-review.json",
+      "sha256": "f028bd17b15a22cc6ee4afe3c81d23fc4d8ee858a0448dcf2d9b6cacb8d2ca45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-special-sticky-global-power-difference-review.json",
+      "sha256": "c98d87f7281d5d978b6d23e4d69b81049de9bedc7fd6ba69f2ec5e87d72c1fda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-traits-review.json",
+      "sha256": "e50f7fd7c663be1b566b6a1d8db5b6907999685e809264bdfaf265f84be590e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-raw-verification.json",
+      "sha256": "859dbb07409ec3428607d86b12d2d84054b8a15587b688e7bc1f51165547d0f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-review.json",
+      "sha256": "75936b87ddf512ca13c62f83f5b4157776be574ba56625cde8598b4ae9d60c5b"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-config.json",
+    "sha256": "c27d76bc52f762df9020d541ce01a50f0c2088ebd80782bb376e2a670470a446"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-traits-review.json",
+      "sha256": "e50f7fd7c663be1b566b6a1d8db5b6907999685e809264bdfaf265f84be590e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-review.json",
+      "sha256": "75936b87ddf512ca13c62f83f5b4157776be574ba56625cde8598b4ae9d60c5b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-ui-raw-verification.json",
+      "sha256": "859dbb07409ec3428607d86b12d2d84054b8a15587b688e7bc1f51165547d0f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "76c780e0052ccef359c04bba8dd6e561972f8a6c7d9b36fd265220b1a7e050bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-duration-name-key-difference-correction-review.json",
+      "sha256": "5d15bbdf12e0c88b1941cbe9a72c06ccfd24f27251a7f30f1eebc20b671e6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-image.json",
+      "sha256": "4ea7c5fe77dcd3e460db77aba929ba91b802fa950c5ea7771de1c0ef651aef27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json",
+      "sha256": "970ac7bdd9060690c489eeb003b19e270bb3c55aaf5f5aee1985f2925c541509"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/inputs/BLESSING_WEAPON_MAP-snapshot-008.json",
+      "sha256": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/inputs/remaining-tasks-snapshot-008.json",
+      "sha256": "c5222551f6f2f282604f2a934d95040947f84451e82ccbc7bfd9e2ab3a1e87dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-draft.md",
+      "sha256": "83cf49b58252f4c308e0226d7d2c9c8245e3b13685406cc76d578a40cb433744"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-coverage.json",
+      "sha256": "ceec95b32b7123483fa519a3db57b4408cced24b34d2bb666c2033845826d84a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-candidate-manifest.json",
+      "sha256": "4dc62f675987b12e7e65ced35d4f9e00e45612e06fd1bcc8b129cde5b34b4f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-preflight.json",
+      "sha256": "c93786e93275c2e18d52c26e6beace7d30091359383a694a5e7e57886a01625d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-config.json",
+      "sha256": "99eab3de9c02f5431ba1b0df2c81bdbe0ce252c6e5ac14343127af761b05514e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-008.json",
+      "sha256": "f62dc75759b7187cda3fc24ad334929420da2773478d52fc7eb339bfc5a752d3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "cec17370ff2330dfacd574a4afe309ede1ace1029e0b4a47a8488e479144b7f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "eb05f5611a7e472367e6a7770d4f0f4cda68e80f230f20e2bb2d998e5234fd14"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "ed88ff0f5d35c402184dcb73d6cc075e2f6deb86f64379f6957c78784ec0256a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "7ea5f3801dff0757c938f452d6541938661c20269ad0532ac16fb695a9ae7a8c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\LOCALIZATION_COMPARISON.md",
+      "sha256": "926be30687c5a1107b78dc3e21073bd9b5509903343bf5de5a3d8872a605cd87"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\README.md",
+      "sha256": "a0de4e5d19243c9be34b9f9a164104eb937068ca5b65d0c665a8dd4f5fc66d63"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\SOURCE_INDEX.md",
+      "sha256": "792834055be0e60a0072f6c937edffa066fc626f122ac99c533eed721b7675db"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\TIER_VALUES.md",
+      "sha256": "4b19326eb767244e2b2148eaaa84baed2378ab5d19d78f45534b17a12601005d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\WEAPON_COMPATIBILITY.md",
+      "sha256": "215df98279dd1f0f944d1c128713c1311960b1cae1814dbde82ae4bde719757d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\weapon_trait_bespoke_crowbar_p1_elite_kills_grants_stackable_power.md",
+      "sha256": "205f9fec62d52d17ed7120186df99f983a730400c38b6eafa0716d7fa626a954"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\優勢（通用力量）\\weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power.md",
+      "sha256": "ea0263a204bab684f444e5ad40280d263704af4f54ec7dd2475bd56f0169eba7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "39c73418b57c430773d7e3270280b922ad9a32c5c7a82a3c02b1708ab5d311e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\撬棍\\README.md",
+      "sha256": "84edfdf3080f9e453aa9f44bfecb4b7c7fa328c5a5bc7c3eb84a05085e78fd26"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\烈焰力場劍\\README.md",
+      "sha256": "fae77a207d518732c8c9e2678fa0e6c909bbc7eabead08733c6059cfa06c1678"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\Referneces\\Translation.md",
+      "sha256": "eaa8559506aefe92fb9b58052866aab8d356cdac9bb407a7808067608c64c80b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-raw-verification.json",
+      "sha256": "3d79eea3cc23718115325fe41fe20da3e385d847b9752b15f8203516e9d3870c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\superiority-group\\actual-preview-008\\own-association-snapshot.json",
+      "sha256": "0862b2df04cab6a8848348245ba46255aa508b80c276e33b0cee226942c2df37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-001.json",
+      "sha256": "d565ffdb600e38d2da8f952f763cde729016222c6fdea6787bc5287e2de9dc79"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-002.json",
+      "sha256": "fd544ce0de383a2d54a15faedaf0dba86ca25c6df5da464b77cb77628f1b18c5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-003.json",
+      "sha256": "b614bc07fdcd4609123babda9e75f60a1b2aac4d9479bbcef4effd6a746cadbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-004.json",
+      "sha256": "52e536e6c9250ba807dc6ef71abb4d41c0983609a382c85305f80b17aa36c00c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-005.json",
+      "sha256": "77bb6ada785b5b56685dbbe80b6845ae61fb76edde9736051109151d05f28e6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-006.json",
+      "sha256": "36c7dbd06ac9bd4b65cbc1d40596c43d17e46d4d352fcfd98a262e23356a0e28"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-actual-preview-receipt-007.json",
+      "sha256": "3001d0367e3b034790e8295f677e2db705a60ae197a752bcff2b89d2f3f9003d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-group/superiority-agent-evidence.json",
+      "sha256": "8eacdef1ae4cfd14c99eb136a2125ca91419df546b30c56e3ba93621b8b21f33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-config.json",
+      "sha256": "99eab3de9c02f5431ba1b0df2c81bdbe0ce252c6e5ac14343127af761b05514e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-evidence.json",
+      "sha256": "8eacdef1ae4cfd14c99eb136a2125ca91419df546b30c56e3ba93621b8b21f33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-agent-draft.md",
+      "sha256": "83cf49b58252f4c308e0226d7d2c9c8245e3b13685406cc76d578a40cb433744"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-final-content-review.json",
+      "sha256": "565da2495e9bf2145bb69622b7dea272e9fedee834329108e71e28513243edbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-frozen-source-verification.json",
+      "sha256": "0f1a55596deb2cd45f4d661d21ff5d8adddea7921a0bffcb797a1da5c89bcc0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-primary-special-sticky-global-power-difference-review.json",
+      "sha256": "c98d87f7281d5d978b6d23e4d69b81049de9bedc7fd6ba69f2ec5e87d72c1fda"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/superiority-formal-peer-scope.json",
+    "sha256": "ec738d0e4a8e5d21a17e2be63142d4e9d27bf4a67a584221451b87211ea187eb",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

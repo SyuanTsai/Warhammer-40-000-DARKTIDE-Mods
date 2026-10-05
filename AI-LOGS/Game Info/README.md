@@ -352,3 +352,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [優勢（近戰力量）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json)
 
 - [反守為攻全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE.json)
+
+- [優勢（通用力量）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SUPERIORITY_ACCEPTANCE.json)
