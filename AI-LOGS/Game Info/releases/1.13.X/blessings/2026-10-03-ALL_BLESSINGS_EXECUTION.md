@@ -357,3 +357,7 @@
 - [完美一擊](2026-10-03-PERFECT-STRIKE_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。
 
 - [強力一擊](2026-10-03-HAYMAKER_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。
+
+- 第22輪三項已Commit後完整掃描通過：power-cycler (`96e23e71d1aef9b80812289a30a4c4a8d98fdad7`)、perfect-strike (`55a68fe7669c3c2c17360c9b57cb2dc01287041d`)、haymaker (`6be2a077c27b418cb390f6a611f07a49eae35f7e`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-022-full-scan.json`／SHA-256 `858e80014ef3561b83222f46b2b996ed3e3bb4cab6009e84b04d85eb44a9b2ad`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [嗜血](2026-10-03-BLOODTHIRSTY_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。

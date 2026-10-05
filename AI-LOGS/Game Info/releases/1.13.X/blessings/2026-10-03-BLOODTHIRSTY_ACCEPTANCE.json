@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-05",
+  "blessing": "bloodthirsty",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/嗜血/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+    "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+    "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+    "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+    "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill"
+  ],
+  "added_binding_count": 10,
+  "total_variants": 5,
+  "total_bindings": 10,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "bloodthirsty",
+    "name_zh_tw": "嗜血",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_manifest": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-formal-peer-scope.json",
+    "scope_manifest_sha256": "c657d1489161cbea86d27d55ef3548f9762530d125bca331201a7e5cb030149c",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-078-image.json": "0849ee86dd65c2e0c357961770c05fb79cb6c3e819bae116cb29ad1ce255f81d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-085-image.json": "10114b78f0e1f84407b7e892e3106a575696aa06c506c3d9aac86ab1cdb6b10d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-config.json": "a619835219dc4020427572ed83301b38e2579c0be38569355bdb48a7e6954f5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-coverage.json": "6499efb45dfbb19ea60f0c07993b6757cd927f3b943bb87b93ee046c58dd7353",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-draft.md": "026f94255ed1e7afa9bac826e00df0a42bf63ca177566d0886c30d472ce278a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-evidence.json": "57991232a01dad6c4fdfee3f71a533b05969d7ed934f82ca45dc4ad0d4c34f05",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-config.json": "aa603db8b332808243b3b76804c2905b8e102170e660bd869b179beaa14144cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-extension-draft.json": "351970a65a2c21c4ec9f5b23debd4cd20674bb82cffbd922cec69da0e44937b4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-image.json": "8d506c50ce32ce9a5813b58dabd152197c4499dfac18f91dedef987a3787fdf4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-example-premise-correction.json": "4079a5bc5c6dfbeb80a7434b4b4c80a18170cb891fc372b58e50873819b31f1d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-focused-checks.json": "9a6d17b93823a1be8ccdb6c6cd303da9dc9963d914249975184c5aa4811700a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-frozen-source-verification.json": "a6373cf85cce9ed06b86de370600a032ca8e891b1caedcb1ea6ad46b7156ba90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-kill-event-diff-review.json": "85ec8e076d5ef5a6a27286dd356be45a92c76e5a50c423917c38707982c5d21e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-own-tier-diff.json": "5c5ebd77ef59ad71b5a088c27bfaf56d90707ad3907bcf61df13ae8a71cc1796",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-removal-consumer-diff-review.json": "6f0d7c7cf4a901ca70e816663a73020ae3cc1789096e33f9712b0d2386738c84",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-resume-review.json": "58275bb282930b1aa5311dc3731a896f44af3a20b5a618c65dbfa1f67a205590",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-sticky-item-consumer-review.json": "e4de5e64d28d07d326b28f794c3d3d75da71e6d2d59d2a475cf43a5d165b45f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-traits-review.json": "1e8b99e8d7c32b30e63f3b29838e4e4f53937d7aecb668024e424f7a7118713f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-raw-verification.json": "a186add299320c4113fc5901d3a084a6b361430e5dddfd4383fa272cfb863a33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-review.json": "50dccd1b081df40b082083f67422d03cb8ef284554ae3ed53733da06852a609b",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3e895193ff9873b8c10c8af6a7f59513f19e4b9304ead6f2329111d4a77e9de4",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/DAMAGE_PERCENTAGE_REVIEW.md": "0c6a52e171f67cc7636bc765cc77ab60ce1d23fddef1bcb7f8c196d7f8adafda",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/LOCALIZATION_COMPARISON.md": "3144a63b73d59ab6b02a23ec2995f442115f3ea448bc06efb5211d7b865230e8",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/README.md": "80fe4c6b5b27e0d93fcdc3f3a06c26e497e8b9fd4b974e51601c00b748314809",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/SOURCE_INDEX.md": "e8d071839b81c116e41af7728dff360d9eaaaaab129e0a4044b9f771d1f8784f",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/TIER_VALUES.md": "bc8481a1225cda20e590772f1813729877ea73f359e5b0f6807bc51eda9ff40c",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/WEAPON_COMPATIBILITY.md": "82b11742ab32f4dba2188b052e3badfd61306a41a59262501ec1a963f84b75f6",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill.md": "0e5d8fc16bafba980cdb7f40ee389698f0c2dcc32d08ed18e19b8304cb1b63b7",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill.md": "c895499bac80a69adc82d627cbf8982a81fe1912d290805b20a6a0dae6fdb788",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill.md": "0d33828ebd6a461975dedeef5c88edf57a928e7c2ea767269b0cd1e46fe4b2e3",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill.md": "c34d46bb09ac6d08a27c1f4549a03d84a5b5e0b1fc9963292ca392e1a09521cd",
+      "Game Info/releases/1.13.X/blessings/entries/嗜血/weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill.md": "4523386e98961d7c227380b9d9e97b196553894d07f835d15f7a28d5a562e20c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "0bfe8cc6bbaeb087d81616383bf8a3ec4a98dd8f6d5e1f12f2e5ce1cd845b516",
+      "Game Info/releases/1.13.X/blessings/README.md": "9f3ed4845b7ee328a2bdaf603f2646b94b149cdfff5d4794956cb15cf948994a",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "13c60068ef23c1aa9406570813832d2bb1b9eb029af3753465dbdbff22d0778a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "0ea35fb869572444fef045143917547cdc3da29c845adeb993679da87c2123ff",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "5f08682b50dbc289e23a77d7b8cef5cae54f558db64df960556538acd9bcb0ba",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "70b8e98c4315ff779ed9cade3bfcea60e821a21119e9e83188a75bb91a27e885",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "7c234852de7cccc629ab5a5da37bb3742aa58e74be4e0134ffbe4671de05e55f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重型開膛劍/README.md": "e68e6033097a653e4af19e110c0337230d621fcdeb69b3159a88df26451edae1",
+      "Referneces/Translation.md": "cc4a5c3461ff61baaf10bdfe5fa30bce0648b5f3fb56e04e8a276141d22c3a07"
+    },
+    "review_summary": [
+      "核對固定scope列出的42檔SHA全部相符。",
+      "五個實作與10個Mark的trait ID、實際item限制、UI組成名稱及共享map／五份武器反向頁一致；圖示070、078、085與對應附件收據一致。",
+      "完整I–IV與wrapper分流正確：鏈斧每層+10個百分點、最多10層；布蘭克斯每層+5個百分點、最多8層；其餘三種是上限一層的近戰必定爆擊關鍵字，RAW逐級數值差異已列明。",
+      "觸發依持用槽、完整道具匹配、擊殺結果與實際profile的weapon_special旗標；on_kill不受skip_on_hit_proc的on_hit閘門阻擋。ActionSweep實際sticky/direct Attack.execute之道具與近戰參數來源已列且符合該限制；逐武器profile分流一致。",
+      "新效果於擊殺事件處理與屬性／關鍵字快取刷新後生效；兩個百分比子效果在橫掃開始判定後排入消耗，揮空仍消耗；三個關鍵字效果在爆擊事件時消耗且不要求命中，切槽後遠程爆擊事件可能消耗。",
+      "同一內部stacking instance共用初次五秒起點，後續加層不刷新；切槽不立即清除。對本項獨立內部獎勵，移除外部觸發效果不刪除既有子效果，新觸發停止、舊效果依自身期限或消耗結束；適用範圍未泛化到其他Parent類型。",
+      "更正後的加層算例前提成立：同一Sweep／同一事件批次的兩個特殊擊殺可分別加四層；BuffExtension當批只遍歷原有Buff陣列，且ProcBuff逐一處理事件，剛建立的子效果不回頭消耗已排入的本Sweep起始事件。兩次加層後為八層／85%；下一Sweep完成爆擊判定後消耗。新Sweep開始本身會消耗舊效果，不能用來支持跨Sweep累加。",
+      "爆擊率公式順序及算例正確：先clamp基礎值與修正總和，再乘(1−轉換比例)；I／IV算例清楚區分百分點、封頂與最終傷害。",
+      "RAW名稱／描述雙語配對、格式器、兩種完整I–IV靜態重建、原始尾端空白說明及三種keyword實作的勘誤互相一致；全域focused來源、連結、GFM與shared-map檢查收據均通過。"
+    ],
+    "delta_review": {
+      "source_reference_delta": "SOURCE_INDEX新增ActionSweep 739–786與1498–1499，且由sticky-item-consumer-review逐範圍驗證。普通／active sticky與direct sweep實際以melee及self._weapon.item送Attack.execute，補強道具匹配證據，沒有改變機制結論。",
+      "example_correction": "README由跨三秒再觸發改為明示同一次Sweep／同一批次兩次合格擊殺；ActionSweep queue、BuffExtension當批遍歷與ProcBuff逐事件處理順序支持4+4層、85%及下次Sweep消耗。",
+      "canonical_config_sha256": "aa603db8b332808243b3b76804c2905b8e102170e660bd869b179beaa14144cb",
+      "new_receipts": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-sticky-item-consumer-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-example-premise-correction.json"
+      ],
+      "focused_checks": "99 ranges / 37 source files; 21 Markdown files, 0 new link errors, GFM 412 rows; global shared-map consistency passed."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "bloodthirsty",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_070",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_070.png",
+      "attachment": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985820317",
+      "acquired_date": "2026-10-05",
+      "sha256": "baaabb54c4d574f9f808c76ab1a9331a77c8b9dbb96853faf2bc5d7b06f618c2",
+      "content_type": "image/png",
+      "size": 6056,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "嗜血祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "原圖128×128；中央偏左可見灰白圓形輪廓與斜向形塊，透明邊緣；僅作圖示辨識，不推定細節。"
+    },
+    "additional_variant_images": [
+      {
+        "id": "bloodthirsty-078",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_078",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_078.png",
+        "attachment": "https://github.com/user-attachments/assets/6075bf97-6e86-4361-b3a4-6e3b9c42ab8a",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985822838",
+        "acquired_date": "2026-10-05",
+        "sha256": "3703d5027a8ee8503524eb574b84cd05fd958e36d205642d42a6be90c81863e2",
+        "content_type": "image/png",
+        "size": 7047,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "嗜血祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_notes": "原圖128×128；灰白橫向形塊與上下灰色區域，透明邊緣；僅作圖示辨識，不推定細節。",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "bloodthirsty-085",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_085.png",
+        "attachment": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985825037",
+        "acquired_date": "2026-10-05",
+        "sha256": "7881d84f8d5c4fdc7e0d7b4c612211a9bbb045a38cc94da140619c7cb090caf2",
+        "content_type": "image/png",
+        "size": 4679,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "嗜血祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_notes": "原圖128×128；上方白色區域及下方灰色漸層形塊，透明邊緣；僅作圖示辨識，不推定細節。",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_070",
+        "attachment": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_070",
+        "attachment": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_078",
+        "attachment": "https://github.com/user-attachments/assets/6075bf97-6e86-4361-b3a4-6e3b9c42ab8a",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
+        "attachment": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
+        "attachment": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
+        "verified_binding_count": 1
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 19,
+      "rows": 412,
+      "lists": 98,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 99,
+      "source_files": 37,
+      "bindings": 581,
+      "variants": 298,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 37,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 926,
+      "remote_references": 453,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 23,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-022-full-scan.json",
+        "sha256": "858e80014ef3561b83222f46b2b996ed3e3bb4cab6009e84b04d85eb44a9b2ad",
+        "trigger": "round-022"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 69,
+    "not_started_name_groups": 69,
+    "partial_name_groups": 0,
+    "remaining_variants": 307,
+    "remaining_bindings": 604,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "ebbacfa11f9370148b1566d80e0d270992a9ed37b9e39c4f070593c369a3bb9c"
+  },
+  "previous_local_commit": "6be2a077c27b418cb390f6a611f07a49eae35f7e",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-example-premise-correction.json",
+      "sha256": "4079a5bc5c6dfbeb80a7434b4b4c80a18170cb891fc372b58e50873819b31f1d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-focused-checks.json",
+      "sha256": "9a6d17b93823a1be8ccdb6c6cd303da9dc9963d914249975184c5aa4811700a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-frozen-source-verification.json",
+      "sha256": "a6373cf85cce9ed06b86de370600a032ca8e891b1caedcb1ea6ad46b7156ba90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-kill-event-diff-review.json",
+      "sha256": "85ec8e076d5ef5a6a27286dd356be45a92c76e5a50c423917c38707982c5d21e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-own-tier-diff.json",
+      "sha256": "5c5ebd77ef59ad71b5a088c27bfaf56d90707ad3907bcf61df13ae8a71cc1796"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-removal-consumer-diff-review.json",
+      "sha256": "6f0d7c7cf4a901ca70e816663a73020ae3cc1789096e33f9712b0d2386738c84"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-resume-review.json",
+      "sha256": "58275bb282930b1aa5311dc3731a896f44af3a20b5a618c65dbfa1f67a205590"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-sticky-item-consumer-review.json",
+      "sha256": "e4de5e64d28d07d326b28f794c3d3d75da71e6d2d59d2a475cf43a5d165b45f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-traits-review.json",
+      "sha256": "1e8b99e8d7c32b30e63f3b29838e4e4f53937d7aecb668024e424f7a7118713f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-raw-verification.json",
+      "sha256": "a186add299320c4113fc5901d3a084a6b361430e5dddfd4383fa272cfb863a33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-review.json",
+      "sha256": "50dccd1b081df40b082083f67422d03cb8ef284554ae3ed53733da06852a609b"
+    }
+  ],
+  "primary_review_method": "Difference review of own5 full tiers/wrappers10actualbindings, fixedSHA common evidence reuse; critical formula/consumer order, independent internal reward rather than controlled child removal, actual special flags and ordinary sticky exceptions, RAW exact ladders and max1 mismatch.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-config.json",
+    "sha256": "aa603db8b332808243b3b76804c2905b8e102170e660bd869b179beaa14144cb"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-traits-review.json",
+      "sha256": "1e8b99e8d7c32b30e63f3b29838e4e4f53937d7aecb668024e424f7a7118713f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-own-tier-diff.json",
+      "sha256": "5c5ebd77ef59ad71b5a088c27bfaf56d90707ad3907bcf61df13ae8a71cc1796"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-review.json",
+      "sha256": "50dccd1b081df40b082083f67422d03cb8ef284554ae3ed53733da06852a609b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-ui-raw-verification.json",
+      "sha256": "a186add299320c4113fc5901d3a084a6b361430e5dddfd4383fa272cfb863a33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-primary-kill-event-diff-review.json",
+      "sha256": "85ec8e076d5ef5a6a27286dd356be45a92c76e5a50c423917c38707982c5d21e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-image.json",
+      "sha256": "8d506c50ce32ce9a5813b58dabd152197c4499dfac18f91dedef987a3787fdf4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-078-image.json",
+      "sha256": "0849ee86dd65c2e0c357961770c05fb79cb6c3e819bae116cb29ad1ce255f81d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-085-image.json",
+      "sha256": "10114b78f0e1f84407b7e892e3106a575696aa06c506c3d9aac86ab1cdb6b10d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-config.json",
+      "sha256": "a619835219dc4020427572ed83301b38e2579c0be38569355bdb48a7e6954f5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-evidence.json",
+      "sha256": "57991232a01dad6c4fdfee3f71a533b05969d7ed934f82ca45dc4ad0d4c34f05"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-draft.md",
+      "sha256": "026f94255ed1e7afa9bac826e00df0a42bf63ca177566d0886c30d472ce278a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-agent-coverage.json",
+      "sha256": "6499efb45dfbb19ea60f0c07993b6757cd927f3b943bb87b93ee046c58dd7353"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bloodthirsty-formal-peer-scope.json",
+    "sha256": "c657d1489161cbea86d27d55ef3548f9762530d125bca331201a7e5cb030149c",
+    "final_content_hashes_unchanged": true
+  }
+}

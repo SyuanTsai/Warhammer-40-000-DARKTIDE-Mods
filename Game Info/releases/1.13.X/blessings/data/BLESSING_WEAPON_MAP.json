@@ -1304,6 +1304,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/9a68dfab-1a01-42c6-a9fa-ffe4d8295036",
       "effect": "持用此武器，以重擊命中後增加一層；合格重擊按已有層數取得每層 1／2／3／4 個百分點的秒殺機率，最多五層、上限 5%／10%／15%／20%。"
+    },
+    {
+      "id": "bloodthirsty",
+      "name_zh_tw": "嗜血",
+      "name_en": "Bloodthirsty",
+      "name_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill",
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "name_hash": "0afad738",
+      "description_hash": "9efa2a9e",
+      "page": "entries/嗜血/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+      "effect": "相符武器以實際標為特殊攻擊的傷害擊殺敵人後，取得 5 秒內部效果。鏈斧與布蘭克斯動力劍增加近戰爆擊率；重型開膛劍、突擊鏈鋸劍與烈焰力場劍給一次近戰必定爆擊關鍵字。後三種實作的各級實際效果相同，並非 RAW 顯示的逐級爆擊率。"
     }
   ],
   "weapons": [
@@ -19655,6 +19668,726 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_195",
       "effect": "持用此武器，以重擊命中後增加一層；合格重擊按已有層數取得每層 1／2／3／4 個百分點的秒殺機率，最多五層、上限 5%／10%／15%／20%。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_club_p2_heavy_chained_hits_increases_killing_blow_chance_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/嗜血/weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.num_stacks_on_proc",
+        "num_stacks_on_proc_by_weapon": {
+          "chainaxe_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_2h_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "forcesword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "powersword_p3": {
+            "I": 2,
+            "II": 4,
+            "III": 6,
+            "IV": 8
+          }
+        },
+        "displayed_percent_fraction_by_weapon": {
+          "chainaxe_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_2h_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "forcesword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "powersword_p3": {
+            "I": 0.1,
+            "II": 0.2,
+            "III": 0.3,
+            "IV": 0.4
+          }
+        },
+        "tier_values_are_requested_internal_stack_counts": true,
+        "formatters": {
+          "chainaxe_p1,chainsword_2h_p1,chainsword_p1,forcesword_p1": "abs(num_stacks_on_proc)*10 percentage",
+          "powersword_p3": "abs(num_stacks_on_proc)*5 percentage"
+        },
+        "own_wrapper_effect_templates": {
+          "chainaxe_p1": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+          "chainsword_2h_p1": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "chainsword_p1": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "forcesword_p1": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "powersword_p3": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped"
+        },
+        "effect_types": {
+          "chainaxe_p1": "melee_critical_strike_chance +0.10 per actual effect stack",
+          "chainsword_2h_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "chainsword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "forcesword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "powersword_p3": "melee_critical_strike_chance +0.05 per actual effect stack"
+        },
+        "own_tier_replaces_wrapper_fallback": true,
+        "trait_id": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+        "mark_ids": [
+          "chainaxe_p1_m1",
+          "chainaxe_p1_m2"
+        ],
+        "tier_values_by_level": {
+          "I": 0.4,
+          "II": 0.6,
+          "III": 0.8,
+          "IV": 1.0
+        },
+        "num_stacks_on_proc_by_level": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "value_unit": "RAW formatter output is a displayed percentage; raw override requests these internal stack counts",
+        "weapon_type_restriction": "chainaxe_p1",
+        "wrapper_fallback_num_stacks": 1,
+        "own_tier_replaces_fallback": true,
+        "internal_effect_template": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+        "internal_effect_kind": "percentage_per_stack_0.10"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 10,
+        "end_line": 52
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "description_hash": "9efa2a9e",
+      "icon": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_070",
+      "effect": "突擊鏈斧 奧瑞斯特斯 Mk IV／Mk XII：特殊標記擊殺增加近戰爆擊率；I–IV 每次獲得 4／6／8／10 層，每層增加 10 個百分點，5 秒內可由後續特殊標記擊殺再加層，最多 10 層，下一次橫掃開始時消耗。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/嗜血/weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.num_stacks_on_proc",
+        "num_stacks_on_proc_by_weapon": {
+          "chainaxe_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_2h_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "forcesword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "powersword_p3": {
+            "I": 2,
+            "II": 4,
+            "III": 6,
+            "IV": 8
+          }
+        },
+        "displayed_percent_fraction_by_weapon": {
+          "chainaxe_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_2h_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "forcesword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "powersword_p3": {
+            "I": 0.1,
+            "II": 0.2,
+            "III": 0.3,
+            "IV": 0.4
+          }
+        },
+        "tier_values_are_requested_internal_stack_counts": true,
+        "formatters": {
+          "chainaxe_p1,chainsword_2h_p1,chainsword_p1,forcesword_p1": "abs(num_stacks_on_proc)*10 percentage",
+          "powersword_p3": "abs(num_stacks_on_proc)*5 percentage"
+        },
+        "own_wrapper_effect_templates": {
+          "chainaxe_p1": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+          "chainsword_2h_p1": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "chainsword_p1": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "forcesword_p1": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "powersword_p3": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped"
+        },
+        "effect_types": {
+          "chainaxe_p1": "melee_critical_strike_chance +0.10 per actual effect stack",
+          "chainsword_2h_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "chainsword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "forcesword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "powersword_p3": "melee_critical_strike_chance +0.05 per actual effect stack"
+        },
+        "own_tier_replaces_wrapper_fallback": true,
+        "trait_id": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+        "mark_ids": [
+          "chainsword_2h_p1_m1",
+          "chainsword_2h_p1_m2"
+        ],
+        "tier_values_by_level": {
+          "I": 0.4,
+          "II": 0.6,
+          "III": 0.8,
+          "IV": 1.0
+        },
+        "num_stacks_on_proc_by_level": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "value_unit": "RAW formatter output is a displayed percentage; raw override requests these internal stack counts",
+        "weapon_type_restriction": "chainsword_2h_p1",
+        "wrapper_fallback_num_stacks": 1,
+        "own_tier_replaces_fallback": true,
+        "internal_effect_template": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+        "internal_effect_kind": "guaranteed_melee_critical_strike"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 10,
+        "end_line": 52
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "description_hash": "9efa2a9e",
+      "icon": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_070",
+      "effect": "重型開膛劍 泰格魯斯 Mk III／Mk XV：特殊標記擊殺後取得一次近戰必定爆擊效果；各級要求層數均受一層上限限制，故實際不隨 RAW 爆擊率級距改變；效果於 5 秒到期或產生爆擊事件時消耗。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/嗜血/weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.num_stacks_on_proc",
+        "num_stacks_on_proc_by_weapon": {
+          "chainaxe_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_2h_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "forcesword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "powersword_p3": {
+            "I": 2,
+            "II": 4,
+            "III": 6,
+            "IV": 8
+          }
+        },
+        "displayed_percent_fraction_by_weapon": {
+          "chainaxe_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_2h_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "forcesword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "powersword_p3": {
+            "I": 0.1,
+            "II": 0.2,
+            "III": 0.3,
+            "IV": 0.4
+          }
+        },
+        "tier_values_are_requested_internal_stack_counts": true,
+        "formatters": {
+          "chainaxe_p1,chainsword_2h_p1,chainsword_p1,forcesword_p1": "abs(num_stacks_on_proc)*10 percentage",
+          "powersword_p3": "abs(num_stacks_on_proc)*5 percentage"
+        },
+        "own_wrapper_effect_templates": {
+          "chainaxe_p1": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+          "chainsword_2h_p1": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "chainsword_p1": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "forcesword_p1": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "powersword_p3": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped"
+        },
+        "effect_types": {
+          "chainaxe_p1": "melee_critical_strike_chance +0.10 per actual effect stack",
+          "chainsword_2h_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "chainsword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "forcesword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "powersword_p3": "melee_critical_strike_chance +0.05 per actual effect stack"
+        },
+        "own_tier_replaces_wrapper_fallback": true,
+        "trait_id": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+        "mark_ids": [
+          "chainsword_p1_m1",
+          "chainsword_p1_m2"
+        ],
+        "tier_values_by_level": {
+          "I": 0.4,
+          "II": 0.6,
+          "III": 0.8,
+          "IV": 1.0
+        },
+        "num_stacks_on_proc_by_level": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "value_unit": "RAW formatter output is a displayed percentage; raw override requests these internal stack counts",
+        "weapon_type_restriction": "chainsword_p1",
+        "wrapper_fallback_num_stacks": 1,
+        "own_tier_replaces_fallback": true,
+        "internal_effect_template": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+        "internal_effect_kind": "guaranteed_melee_critical_strike"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 286,
+        "end_line": 328
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "description_hash": "9efa2a9e",
+      "icon": "https://github.com/user-attachments/assets/6075bf97-6e86-4361-b3a4-6e3b9c42ab8a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_078",
+      "effect": "突擊鏈鋸劍 卡迪亞 Mk IV／Mk XIIIg：特殊標記擊殺後取得一次近戰必定爆擊效果；各級要求層數均受一層上限限制，故實際不隨 RAW 爆擊率級距改變；效果於 5 秒到期或產生爆擊事件時消耗。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/嗜血/weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.num_stacks_on_proc",
+        "num_stacks_on_proc_by_weapon": {
+          "chainaxe_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_2h_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "forcesword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "powersword_p3": {
+            "I": 2,
+            "II": 4,
+            "III": 6,
+            "IV": 8
+          }
+        },
+        "displayed_percent_fraction_by_weapon": {
+          "chainaxe_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_2h_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "forcesword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "powersword_p3": {
+            "I": 0.1,
+            "II": 0.2,
+            "III": 0.3,
+            "IV": 0.4
+          }
+        },
+        "tier_values_are_requested_internal_stack_counts": true,
+        "formatters": {
+          "chainaxe_p1,chainsword_2h_p1,chainsword_p1,forcesword_p1": "abs(num_stacks_on_proc)*10 percentage",
+          "powersword_p3": "abs(num_stacks_on_proc)*5 percentage"
+        },
+        "own_wrapper_effect_templates": {
+          "chainaxe_p1": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+          "chainsword_2h_p1": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "chainsword_p1": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "forcesword_p1": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "powersword_p3": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped"
+        },
+        "effect_types": {
+          "chainaxe_p1": "melee_critical_strike_chance +0.10 per actual effect stack",
+          "chainsword_2h_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "chainsword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "forcesword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "powersword_p3": "melee_critical_strike_chance +0.05 per actual effect stack"
+        },
+        "own_tier_replaces_wrapper_fallback": true,
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+        "mark_ids": [
+          "forcesword_p1_m1",
+          "forcesword_p1_m2",
+          "forcesword_p1_m3"
+        ],
+        "tier_values_by_level": {
+          "I": 0.4,
+          "II": 0.6,
+          "III": 0.8,
+          "IV": 1.0
+        },
+        "num_stacks_on_proc_by_level": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "value_unit": "RAW formatter output is a displayed percentage; raw override requests these internal stack counts",
+        "weapon_type_restriction": "forcesword_p1",
+        "wrapper_fallback_num_stacks": 1,
+        "own_tier_replaces_fallback": true,
+        "internal_effect_template": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+        "internal_effect_kind": "guaranteed_melee_critical_strike"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 10,
+        "end_line": 52
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "description_hash": "9efa2a9e",
+      "icon": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
+      "effect": "烈焰力場劍 朦朧 Mk II／戴莫斯 Mk IV／伊利斯 Mk V：特殊標記擊殺後取得一次近戰必定爆擊效果；各級要求層數均受一層上限限制，故實際不隨 RAW 爆擊率級距改變；效果於 5 秒到期或產生爆擊事件時消耗。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill",
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "powersword_p3",
+      "page": "entries/嗜血/weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "buff_data.num_stacks_on_proc",
+        "num_stacks_on_proc_by_weapon": {
+          "chainaxe_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_2h_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "chainsword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "forcesword_p1": {
+            "I": 4,
+            "II": 6,
+            "III": 8,
+            "IV": 10
+          },
+          "powersword_p3": {
+            "I": 2,
+            "II": 4,
+            "III": 6,
+            "IV": 8
+          }
+        },
+        "displayed_percent_fraction_by_weapon": {
+          "chainaxe_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_2h_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "chainsword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "forcesword_p1": {
+            "I": 0.4,
+            "II": 0.6,
+            "III": 0.8,
+            "IV": 1.0
+          },
+          "powersword_p3": {
+            "I": 0.1,
+            "II": 0.2,
+            "III": 0.3,
+            "IV": 0.4
+          }
+        },
+        "tier_values_are_requested_internal_stack_counts": true,
+        "formatters": {
+          "chainaxe_p1,chainsword_2h_p1,chainsword_p1,forcesword_p1": "abs(num_stacks_on_proc)*10 percentage",
+          "powersword_p3": "abs(num_stacks_on_proc)*5 percentage"
+        },
+        "own_wrapper_effect_templates": {
+          "chainaxe_p1": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill_effect_percentage",
+          "chainsword_2h_p1": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "chainsword_p1": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "forcesword_p1": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill_effect",
+          "powersword_p3": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped"
+        },
+        "effect_types": {
+          "chainaxe_p1": "melee_critical_strike_chance +0.10 per actual effect stack",
+          "chainsword_2h_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "chainsword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "forcesword_p1": "guaranteed_melee_critical_strike keyword, max_stacks=1",
+          "powersword_p3": "melee_critical_strike_chance +0.05 per actual effect stack"
+        },
+        "own_tier_replaces_wrapper_fallback": true,
+        "trait_id": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill",
+        "mark_ids": [
+          "powersword_p3_m1"
+        ],
+        "tier_values_by_level": {
+          "I": 0.1,
+          "II": 0.2,
+          "III": 0.3,
+          "IV": 0.4
+        },
+        "num_stacks_on_proc_by_level": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "value_unit": "RAW formatter output is a displayed percentage; raw override requests these internal stack counts",
+        "weapon_type_restriction": "powersword_p3",
+        "wrapper_fallback_num_stacks": 1,
+        "own_tier_replaces_fallback": true,
+        "internal_effect_template": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill_effect_percentage_capped",
+        "internal_effect_kind": "percentage_per_stack_0.05"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 140,
+        "end_line": 182
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 44,
+        "end_line": 46
+      },
+      "description_key": "loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc",
+      "description_hash": "9efa2a9e",
+      "icon": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
+      "effect": "機械神教動力劍 布蘭克斯 Mk VI：特殊標記擊殺增加近戰爆擊率；I–IV 每次獲得 2／4／6／8 層，每層增加 5 個百分點，最多 8 層，下一次橫掃開始時消耗。"
     }
   ],
   "bindings": [
@@ -27650,6 +28383,146 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
         "import_line": 15,
         "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "bloodthirsty",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_guaranteed_melee_crit_on_activated_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/guaranteed_melee_crit_on_activated_kill",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
       }
     }
   ]
