@@ -123,5 +123,6 @@
 | <img src="https://github.com/user-attachments/assets/8cdb466d-9982-426e-813a-155007e3091a" width="32" height="32" alt="暴走祝福圖示"> [暴走](entries/暴走/README.md)<br>- Rampage<br>[完整說明](entries/暴走/README.md) | <ul><li>同一近戰攻擊命中至少三個目標後，依武器與等級取得近戰攻擊威力修正3.5秒；觸發命中先結算。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97" width="32" height="32" alt="提速祝福圖示"> [提速](entries/提速/README.md)<br>- Rev it Up<br>[完整說明](entries/提速/README.md) | <ul><li>成功啟動武器特殊動作後，持用該武器時依等級取得+17%至+20%移動速度加算值，持續2秒；重觸發刷新但不累積層數。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd" width="32" height="32" alt="毀滅打擊祝福圖示"> [毀滅打擊](entries/毀滅打擊/README.md)<br>- Devastating Strike<br>[完整說明](entries/毀滅打擊/README.md) | <ul><li>造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb" width="32" height="32" alt="雷鳴祝福圖示"> [雷鳴](entries/雷鳴/README.md)<br>- Thunderous<br>[完整說明](entries/雷鳴/README.md) | <ul><li>對持用之實際安裝武器所送出的合格命中，對受擊目標施加 1–4 層脆弱；每層增加目標 2.5% rending 修正，目標減益最多 16 層並持續 5 秒。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

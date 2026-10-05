@@ -1547,6 +1547,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
       "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "thunderous",
+      "name_zh_tw": "雷鳴",
+      "name_en": "Thunderous",
+      "name_key": "loc_trait_bespoke_targets_receive_rending_debuff",
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "name_hash": "f3d437f2",
+      "description_hash": "409c5f8e",
+      "page": "entries/雷鳴/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "effect": "對持用之實際安裝武器所送出的合格命中，對受擊目標施加 1–4 層脆弱；每層增加目標 2.5% rending 修正，目標減益最多 16 層並持續 5 秒。"
     }
   ],
   "weapons": [
@@ -25852,6 +25865,370 @@
       "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
       "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "兩個實際型號含輕／重掃掠與推擊後追擊；鏈鋸黏附後的鋸齒追加段使用已核實的略過命中事件設定，不再增加雷鳴層數，初始命中仍按自身設定判斷。",
+        "verified_on_hit_skipped_additional_profiles": 9
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 316,
+        "end_line": 385
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；鏈鋸黏附追加段另受 skip_on_hit_proc 過濾；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "三個實際型號含輕／重掃掠、推擊後追擊，以及接入的上勾／刺擊特殊掃掠；特殊動作仍按同一一般命中條件判斷。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 204,
+        "end_line": 273
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含實際 uppercut/stab 特殊掃掠；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "三個實際型號含普通攻擊、上勾，以及依該型號接入的折疊特殊掃掠；直接命中沿用實際持用武器物品。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 90,
+        "end_line": 160
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含實際上勾與折疊特殊掃掠；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/雷鳴/weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "三個實際型號含武器特攻掌擊掃掠與接入的拳擊／推擊後追擊；每次目標命中仍受一般物品與 Minion 條件限制。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 99,
+        "end_line": 169
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含實際武器特攻掌擊／拳擊掃掠；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "三個實際型號含輕／重掃掠、滑步變體、推擊後追擊及接入的鉤擊特殊掃掠；各命中分別按實際事件條件判斷。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 416,
+        "end_line": 486
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 33,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含實際鉤擊特殊掃掠；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_2h_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "兩個實際型號含直接輕／重／蓄力與推擊後掃掠；啟用特殊後另有保留原武器物品的爆炸命中，符合條件時可獨立增加目標層數。",
+        "powered_explosion_uses_weapon_item": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        "start_line": 296,
+        "end_line": 366
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；重擊特殊另有攜帶原武器物品的爆炸 Attack；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/雷鳴/weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "此型號實際綁定一般命中版本的 wrapper；蓄力特殊掃掠及推擊後追擊不因攻擊種類而被本祝福排除。",
+        "wrapper_source_line": 106
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 414,
+        "end_line": 483
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 106,
+        "end_line": 108
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；P2 綁定的是一般命中 wrapper，特殊掃掠仍按一般事件判斷；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/雷鳴/weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "此型號掃掠可接續連鎖電弧；電弧命中保留原武器物品，符合目標與命中條件時可獨立增加層數。",
+        "arc_chain_uses_weapon_item": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 271,
+        "end_line": 340
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 101,
+        "end_line": 101
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；連鎖電弧 Attack 保留 P3 原武器物品；詳見型號差異。"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff",
+      "blessing_id": "thunderous",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/雷鳴/weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stacks_added_per_qualifying_hit_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_modifier_per_effective_target_stack": 0.025,
+        "own_target_stack_override_verified": true,
+        "wrapper_is_exact_ordinary_base_clone": true,
+        "special_route_note": "兩個實際型號含普通／蓄力與啟用後的掃掠、推擊後追擊，以及各自接入的特殊攻擊；仍須逐次符合命中條件。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 308,
+        "end_line": 378
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 33,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_targets_receive_rending_debuff_desc",
+      "description_hash": "409c5f8e",
+      "icon": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "effect": "符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；含蓄力／啟用後實際 powered sweep。詳見型號差異。"
     }
   ],
   "bindings": [
@@ -37109,6 +37486,286 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
         "import_line": 15,
         "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1661
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1919
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/targets_receive_rending_debuff",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/targets_receive_rending_debuff",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "thunderous",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/targets_receive_rending_debuff",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
       }
     }
   ]

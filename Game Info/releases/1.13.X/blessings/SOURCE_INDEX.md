@@ -121,3 +121,4 @@
 | [暴走](entries/暴走/README.md) | [來源索引](entries/暴走/SOURCE_INDEX.md) |
 | [提速](entries/提速/README.md) | [來源索引](entries/提速/SOURCE_INDEX.md) |
 | [毀滅打擊](entries/毀滅打擊/README.md) | [來源索引](entries/毀滅打擊/SOURCE_INDEX.md) |
+| [雷鳴](entries/雷鳴/README.md) | [來源索引](entries/雷鳴/SOURCE_INDEX.md) |

@@ -298,6 +298,7 @@
 - Thrust - 推進
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time`，hash `080e50bd`；英文／繁中RAW配對確認。
 - Thunderous - 雷鳴
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_targets_receive_rending_debuff`，hash `f3d437f2`；英文／繁中RAW配對確認。
 - Wrath - 憤怒
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_cleave`，hash `fd5eeb07`；英文／繁中RAW配對確認。
 - Shred - 粉碎
