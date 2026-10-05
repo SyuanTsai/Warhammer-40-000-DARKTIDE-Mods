@@ -1,0 +1,587 @@
+{
+  "date": "2026-10-06",
+  "blessing": "transfer-peril",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/轉移反噬/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits",
+    "weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits",
+    "weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 3,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "transfer-peril",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-formal-peer-scope.json",
+    "scope_sha256": "e9741031b746037d65d1a4656a6fb2fcf7bd670d595a549fb7b574300e07ffa2",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-config.json": "abf73cdce659dbdadbda1115ee5580fef97b64e2fe2c9870ed694e5b9e766a37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-draft.md": "514b299c388e74defc7bf961e8a9f10f7439731b86af90a9f2beac463f7de019",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-evidence.json": "dfc5b334644145a8e027938e5314657719d065f05844f0e71f54f1c6c289b65e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-config.json": "3544bb4d647559b4e41aa11714c702f93f504f43bac9239f068a8144f777f250",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-extension-draft.json": "fe95518375667b0150fd23389371db972c7907ceba8ccd06c8e3723ab83da8c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/inputs/remaining-tasks-snapshot-007.json": "6a78208175fc07eabd24d1e35c43bfb2c4a3d2be7a4dff5f906bae4a67c860f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-002.json": "48d7347a3f9426bdb02abd8f4683e98fb809dd3b9e011223f5a5962ccdb0a63c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-003.json": "00085b6b6f76e548e44eb40cd8c315576ae9250fbd5031a45e46d3e00007557f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-004.json": "235862de2c2b9c0756ac3a0544a14d8be55de663ffbd2cf3a4039ff04f419d14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-005.json": "0d447e9cbce374b9e3c5eb9fd7ba9f028c2c13a8c37b05c458ae3d24217ab8a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-006.json": "3dc9272d6a8af5e124f0ef2e4cd9d31e725dc745caacb03114c1708b3f58ce0e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-007.json": "046efb2a5e0990d3620dc9db16be4eb68e7a64d63edbb4fa3b7e6df53f670336",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-config.json": "abf73cdce659dbdadbda1115ee5580fef97b64e2fe2c9870ed694e5b9e766a37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-draft.md": "514b299c388e74defc7bf961e8a9f10f7439731b86af90a9f2beac463f7de019",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-evidence.json": "dfc5b334644145a8e027938e5314657719d065f05844f0e71f54f1c6c289b65e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-003.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-004.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-005.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-006.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-007.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-attack-coverage.json": "64e20ca1d8cbad2d31571b17be57d3e1b8fe5312585499fc9823a84e034c3525",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-003.md": "3006a42e45ec9548ee8d1e501eed96cfb622e3353cde6f52638f9aec3f3353f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-004.md": "8fed4fc1568c6021f5b29a153746483b558258cd6083c7441a6fd1b7a514683a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-005.md": "af1bf1a2dadb4e23b64ac02eb52b3d53ac118a7220f1ed20af6b584c5912d81f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-006.md": "af1bf1a2dadb4e23b64ac02eb52b3d53ac118a7220f1ed20af6b584c5912d81f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-007.md": "7a42021a6a13a24ac3d678272db029f5a2cf27887c44e1d5d0c3f7dcb7247221",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview.md": "42ede85cd5f36888f57cf5eb3e44236a1d5101753a503f78f36c5057aa5e1b91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-image.json": "f2703ebe7fc0283d001f33765371dd07e4757e8b465bcec407ab0020a39f066e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review-before-immutable-preview-input-fix.json": "c5499c7ea2b81d8e17f03e543513b6f0980fc30d6466c9050f9eb0811c9f4a26",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review.json": "616442a0e59978258c8e972548b399ffeac45d46b117d17c8fc2b6cd74d844fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-focused-checks.json": "8b80a89e54cb3e12f04ba018ac1a5f57c7e01138f37dd52f1621b7f6aff4764c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-frozen-source-verification.json": "8210f875b8a988eb27f404380ecb7f2391103b2a5f01389802806d5062b44e0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-hit-event-center-mass-weakspot-delta-review.json": "f105b5b4535902d5c4f2487078db372c3ef6bb9c764ff4136df442873b8dd700",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-own-tier-wrapper-content-review.json": "b815b60367e843b7d5080c19844d76a7e52b4c99c51eb2c8fe038a54de635b86",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-peril-state-removal-delta-review.json": "a9be6a1d86830ca33775896de4b7b684cbc9f66592b49d3da0336d873fafba0c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-projectile-special-consumer-delta-review.json": "a53e9613ca8e0df38ee7351af53f68982676561b9682b4153c20c810d324cff6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-resume-review.json": "c914ac36e1f91785cc7134b6445308cd935f17d728b6272b1f301963c9a55349",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-traits-review.json": "1c96f22cbe0c7c2e631c86d6454d72e2c693c062e4576d63af28639a1bbbe355",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-raw-verification.json": "254d4e15be1592ebe57b8eb1394bb722de40f3d40ebda53284aa382e918ad5b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-review.json": "6625ead3889682cc6c2975abb7ac1fcb12579259b33bd67dce74f423db9abd55",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-vent-aggregation-formatter-delta-review.json": "b1d60ad047f05c6a360c1ca7eb6c28a0d284151395bdaf5b1b5e173482415abc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-frozen-source-verification.json": "96dd474403dac1ef05f42902a2d87fb34581a52b611a4c22aeda6e72cbd70533",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-raw-verification.json": "eed8ecf569be0daa0e248438d245fbaf98aaa80796bc40147c1119d9ef15e63f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e0c71e8c01a050c63af37264b0e381b05a10a02e5fbe51804033783b35ea9f89",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/DAMAGE_PERCENTAGE_REVIEW.md": "1fdf039e8ad7a45c76dae21785003dd4e373c078432e776486d1f894fd15adde",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/LOCALIZATION_COMPARISON.md": "7cbae560456472ca83acbae283342d403dd6f6f343e1d583295de6b42ed32b01",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/README.md": "7a42021a6a13a24ac3d678272db029f5a2cf27887c44e1d5d0c3f7dcb7247221",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/SOURCE_INDEX.md": "fd38c77bff8d2407f5d7a768029e4aa0bf92574671563f1376dd5e60b7fa631e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/TIER_VALUES.md": "0c4bfbdfdab29ee97f4400ecabfa57a408bb0e73c9cc079fa03551d98d2d3e25",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/WEAPON_COMPATIBILITY.md": "ba318c4f6819cd74e3b2ca0aa29aa64171951e49588028325a4c13709b46cbc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits.md": "e2287da01fc0e8c44268f42982dea6929a3788a33adfc5bfcb7c5e511dc2a2d1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits.md": "f9e665464c88f0ddf4fbcc37629095980dbb6fb5449c1492cdcbab14a95ff708",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits.md": "d92a409e0d098b57f8dc15bfaf2c3a0682f8948309d6fb132eee29f32b569774",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/ranged/README.md": "8220d17a80d106247936bee49dc4c5d20cc44034c0d5758dd20cc0e7ab8fe4f4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/README.md": "754a744ed3ed0bcb04ff582c855c7ed8c5ab68711a758e637807c813b1123e2c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "83181d333e3f1aa04e29be4182b9e602a4c71fa9731e715338a4b22755565471",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "a6558ecf7e16999a6517887e743cc1b38603cf810ef73658a8d28bd698a4a72f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "f4e248fda077a529b184ee3ed4aa3d6c504b0fe658a56efd332ea8591f1d8c52",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "c8ec82a4d55f8daa80eea80c090506ebffa66164c957c0aa840123e0d49c5560",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/own-association-snapshot.json": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/actual-preview-007/Referneces/Translation.md": "9a30967a5b994fd50c65d03a963f056da04c12c2f01db8bb2be1ad5b0b8d5a08",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e0c71e8c01a050c63af37264b0e381b05a10a02e5fbe51804033783b35ea9f89",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/DAMAGE_PERCENTAGE_REVIEW.md": "1fdf039e8ad7a45c76dae21785003dd4e373c078432e776486d1f894fd15adde",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/LOCALIZATION_COMPARISON.md": "7cbae560456472ca83acbae283342d403dd6f6f343e1d583295de6b42ed32b01",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/README.md": "7a42021a6a13a24ac3d678272db029f5a2cf27887c44e1d5d0c3f7dcb7247221",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/SOURCE_INDEX.md": "1adc6e14c3ded3f0bfd49ea085c5cf57eda5dddf90fbc0316c252cb821b081a0",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/TIER_VALUES.md": "0c4bfbdfdab29ee97f4400ecabfa57a408bb0e73c9cc079fa03551d98d2d3e25",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/WEAPON_COMPATIBILITY.md": "ba318c4f6819cd74e3b2ca0aa29aa64171951e49588028325a4c13709b46cbc4",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits.md": "e2287da01fc0e8c44268f42982dea6929a3788a33adfc5bfcb7c5e511dc2a2d1",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits.md": "f9e665464c88f0ddf4fbcc37629095980dbb6fb5449c1492cdcbab14a95ff708",
+      "Game Info/releases/1.13.X/blessings/entries/轉移反噬/weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits.md": "d92a409e0d098b57f8dc15bfaf2c3a0682f8948309d6fb132eee29f32b569774",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "8220d17a80d106247936bee49dc4c5d20cc44034c0d5758dd20cc0e7ab8fe4f4",
+      "Game Info/releases/1.13.X/blessings/README.md": "754a744ed3ed0bcb04ff582c855c7ed8c5ab68711a758e637807c813b1123e2c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "83181d333e3f1aa04e29be4182b9e602a4c71fa9731e715338a4b22755565471",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "a6558ecf7e16999a6517887e743cc1b38603cf810ef73658a8d28bd698a4a72f",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "f4e248fda077a529b184ee3ed4aa3d6c504b0fe658a56efd332ea8591f1d8c52",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "c8ec82a4d55f8daa80eea80c090506ebffa66164c957c0aa840123e0d49c5560",
+      "Referneces/Translation.md": "9a30967a5b994fd50c65d03a963f056da04c12c2f01db8bb2be1ad5b0b8d5a08"
+    },
+    "review_summary": "All 95 fixed-scope hashes match. Reviewed the nine formal pages, three variants, three bindings and reverse associations. P1/P3 I–IV subtract 7/8/9/10 percentage points; P4 subtracts 6.5/7/7.5/8 points, with normalized peril clamped to [0,1]. The held plus same-item weakspot on-hit gate, lack of an extra ranged/kill gate, shared boolean coalescing and next-Buff-update processing are accurately stated. Holster preserves an accepted flag while installed; true unequip removes the on-equip Buff. The exploding-state interrupt is correctly limited to peril still exploding at drain time. Direct projectiles preserve the original item and target hit-zone; P4 direct-hit versus stopped/non-damageable collision explosion branches are distinguished; P1/P4 center_mass selection and P3 center_mass lightning remain subject to breed weakspot mapping/guaranteed-weakspot rules. Actual staff special melee sweeps can qualify on their own weakspot flag, while pure push and manual vent do not. RAW/four-tier formatting, five-column rule comparisons, percentage-point examples, actual UI bindings and icon 002 receipt are consistent. No issue found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "transfer-peril",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_002.png",
+      "attachment": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5995762052",
+      "acquired_date": "2026-10-05",
+      "sha256": "fd620ab8ae6f009027e3c021b233b01b19b00dd71c30b66aceeba895c234e157",
+      "content_type": "image/png",
+      "size": 4420,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "轉移反噬祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Root viewed public downloaded original PNG matching actual item.icon002"
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 16,
+      "rows": 470,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 87,
+      "source_files": 41,
+      "bindings": 872,
+      "variants": 443,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 41,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1068,
+      "remote_references": 465,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 32,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-031-full-scan.json",
+        "sha256": "4506605986b6aef05339158f61067a77d1a009648974c5ca64e19fffdb129a15",
+        "trigger": "round-031"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 42,
+    "not_started_name_groups": 42,
+    "partial_name_groups": 0,
+    "remaining_variants": 162,
+    "remaining_bindings": 313,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a61d0ba008c09b503bc71da53f3d22474624c64f3c608e0d414618275b7b627f"
+  },
+  "previous_local_commit": "f5b6ff3023a2b40c55f65cf9399ee4f6b6247960",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review-before-immutable-preview-input-fix.json",
+      "sha256": "c5499c7ea2b81d8e17f03e543513b6f0980fc30d6466c9050f9eb0811c9f4a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review.json",
+      "sha256": "616442a0e59978258c8e972548b399ffeac45d46b117d17c8fc2b6cd74d844fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-focused-checks.json",
+      "sha256": "8b80a89e54cb3e12f04ba018ac1a5f57c7e01138f37dd52f1621b7f6aff4764c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-frozen-source-verification.json",
+      "sha256": "8210f875b8a988eb27f404380ecb7f2391103b2a5f01389802806d5062b44e0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-hit-event-center-mass-weakspot-delta-review.json",
+      "sha256": "f105b5b4535902d5c4f2487078db372c3ef6bb9c764ff4136df442873b8dd700"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-own-tier-wrapper-content-review.json",
+      "sha256": "b815b60367e843b7d5080c19844d76a7e52b4c99c51eb2c8fe038a54de635b86"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-peril-state-removal-delta-review.json",
+      "sha256": "a9be6a1d86830ca33775896de4b7b684cbc9f66592b49d3da0336d873fafba0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-projectile-special-consumer-delta-review.json",
+      "sha256": "a53e9613ca8e0df38ee7351af53f68982676561b9682b4153c20c810d324cff6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-resume-review.json",
+      "sha256": "c914ac36e1f91785cc7134b6445308cd935f17d728b6272b1f301963c9a55349"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-traits-review.json",
+      "sha256": "1c96f22cbe0c7c2e631c86d6454d72e2c693c062e4576d63af28639a1bbbe355"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-raw-verification.json",
+      "sha256": "254d4e15be1592ebe57b8eb1394bb722de40f3d40ebda53284aa382e918ad5b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-review.json",
+      "sha256": "6625ead3889682cc6c2975abb7ac1fcb12579259b33bd67dce74f423db9abd55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-vent-aggregation-formatter-delta-review.json",
+      "sha256": "b1d60ad047f05c6a360c1ca7eb6c28a0d284151395bdaf5b1b5e173482415abc"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-config.json",
+    "sha256": "3544bb4d647559b4e41aa11714c702f93f504f43bac9239f068a8144f777f250"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/inputs/remaining-tasks-snapshot-007.json",
+      "sha256": "6a78208175fc07eabd24d1e35c43bfb2c4a3d2be7a4dff5f906bae4a67c860f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-config.json",
+      "sha256": "abf73cdce659dbdadbda1115ee5580fef97b64e2fe2c9870ed694e5b9e766a37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-draft.md",
+      "sha256": "514b299c388e74defc7bf961e8a9f10f7439731b86af90a9f2beac463f7de019"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-attack-coverage.json",
+      "sha256": "64e20ca1d8cbad2d31571b17be57d3e1b8fe5312585499fc9823a84e034c3525"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-image.json",
+      "sha256": "f2703ebe7fc0283d001f33765371dd07e4757e8b465bcec407ab0020a39f066e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-hit-event-center-mass-weakspot-delta-review.json",
+      "sha256": "f105b5b4535902d5c4f2487078db372c3ef6bb9c764ff4136df442873b8dd700"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-own-tier-wrapper-content-review.json",
+      "sha256": "b815b60367e843b7d5080c19844d76a7e52b4c99c51eb2c8fe038a54de635b86"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-peril-state-removal-delta-review.json",
+      "sha256": "a9be6a1d86830ca33775896de4b7b684cbc9f66592b49d3da0336d873fafba0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-traits-review.json",
+      "sha256": "1c96f22cbe0c7c2e631c86d6454d72e2c693c062e4576d63af28639a1bbbe355"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-raw-verification.json",
+      "sha256": "254d4e15be1592ebe57b8eb1394bb722de40f3d40ebda53284aa382e918ad5b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-ui-review.json",
+      "sha256": "6625ead3889682cc6c2975abb7ac1fcb12579259b33bd67dce74f423db9abd55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-vent-aggregation-formatter-delta-review.json",
+      "sha256": "b1d60ad047f05c6a360c1ca7eb6c28a0d284151395bdaf5b1b5e173482415abc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-nexus-primary-frozen-source-verification.json",
+      "sha256": "96dd474403dac1ef05f42902a2d87fb34581a52b611a4c22aeda6e72cbd70533"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-projectile-special-consumer-delta-review.json",
+      "sha256": "a53e9613ca8e0df38ee7351af53f68982676561b9682b4153c20c810d324cff6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-007.md",
+      "sha256": "7a42021a6a13a24ac3d678272db029f5a2cf27887c44e1d5d0c3f7dcb7247221"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-007.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-007.json",
+      "sha256": "046efb2a5e0990d3620dc9db16be4eb68e7a64d63edbb4fa3b7e6df53f670336"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "754a744ed3ed0bcb04ff582c855c7ed8c5ab68711a758e637807c813b1123e2c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "83181d333e3f1aa04e29be4182b9e602a4c71fa9731e715338a4b22755565471"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "e0c71e8c01a050c63af37264b0e381b05a10a02e5fbe51804033783b35ea9f89"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "1fdf039e8ad7a45c76dae21785003dd4e373c078432e776486d1f894fd15adde"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\LOCALIZATION_COMPARISON.md",
+      "sha256": "7cbae560456472ca83acbae283342d403dd6f6f343e1d583295de6b42ed32b01"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\README.md",
+      "sha256": "7a42021a6a13a24ac3d678272db029f5a2cf27887c44e1d5d0c3f7dcb7247221"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\SOURCE_INDEX.md",
+      "sha256": "fd38c77bff8d2407f5d7a768029e4aa0bf92574671563f1376dd5e60b7fa631e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\TIER_VALUES.md",
+      "sha256": "0c4bfbdfdab29ee97f4400ecabfa57a408bb0e73c9cc079fa03551d98d2d3e25"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\WEAPON_COMPATIBILITY.md",
+      "sha256": "ba318c4f6819cd74e3b2ca0aa29aa64171951e49588028325a4c13709b46cbc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits.md",
+      "sha256": "e2287da01fc0e8c44268f42982dea6929a3788a33adfc5bfcb7c5e511dc2a2d1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits.md",
+      "sha256": "f9e665464c88f0ddf4fbcc37629095980dbb6fb5449c1492cdcbab14a95ff708"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\轉移反噬\\weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits.md",
+      "sha256": "d92a409e0d098b57f8dc15bfaf2c3a0682f8948309d6fb132eee29f32b569774"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "8220d17a80d106247936bee49dc4c5d20cc44034c0d5758dd20cc0e7ab8fe4f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空打擊力場法杖\\README.md",
+      "sha256": "a6558ecf7e16999a6517887e743cc1b38603cf810ef73658a8d28bd698a4a72f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空爆破力場法杖\\README.md",
+      "sha256": "f4e248fda077a529b184ee3ed4aa3d6c504b0fe658a56efd332ea8591f1d8c52"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電流力場法杖\\README.md",
+      "sha256": "c8ec82a4d55f8daa80eea80c090506ebffa66164c957c0aa840123e0d49c5560"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\Referneces\\Translation.md",
+      "sha256": "9a30967a5b994fd50c65d03a963f056da04c12c2f01db8bb2be1ad5b0b8d5a08"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-raw-verification.json",
+      "sha256": "eed8ecf569be0daa0e248438d245fbaf98aaa80796bc40147c1119d9ef15e63f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\transfer-peril-group\\actual-preview-007\\own-association-snapshot.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-002.json",
+      "sha256": "48d7347a3f9426bdb02abd8f4683e98fb809dd3b9e011223f5a5962ccdb0a63c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-003.json",
+      "sha256": "00085b6b6f76e548e44eb40cd8c315576ae9250fbd5031a45e46d3e00007557f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-004.json",
+      "sha256": "235862de2c2b9c0756ac3a0544a14d8be55de663ffbd2cf3a4039ff04f419d14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-005.json",
+      "sha256": "0d447e9cbce374b9e3c5eb9fd7ba9f028c2c13a8c37b05c458ae3d24217ab8a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-actual-preview-receipt-006.json",
+      "sha256": "3dc9272d6a8af5e124f0ef2e4cd9d31e725dc745caacb03114c1708b3f58ce0e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-agent-evidence.json",
+      "sha256": "dfc5b334644145a8e027938e5314657719d065f05844f0e71f54f1c6c289b65e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-003.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-004.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-005.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot-006.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-association-snapshot.json",
+      "sha256": "a8ac3a12d6f6918ba5ee8d7c29cc3335a66196370ebc5f1b99423be784c75863"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-003.md",
+      "sha256": "3006a42e45ec9548ee8d1e501eed96cfb622e3353cde6f52638f9aec3f3353f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-004.md",
+      "sha256": "8fed4fc1568c6021f5b29a153746483b558258cd6083c7441a6fd1b7a514683a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-005.md",
+      "sha256": "af1bf1a2dadb4e23b64ac02eb52b3d53ac118a7220f1ed20af6b584c5912d81f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview-006.md",
+      "sha256": "af1bf1a2dadb4e23b64ac02eb52b3d53ac118a7220f1ed20af6b584c5912d81f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-group/transfer-peril-candidate-formal-preview.md",
+      "sha256": "42ede85cd5f36888f57cf5eb3e44236a1d5101753a503f78f36c5057aa5e1b91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-config.json",
+      "sha256": "abf73cdce659dbdadbda1115ee5580fef97b64e2fe2c9870ed694e5b9e766a37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-evidence.json",
+      "sha256": "dfc5b334644145a8e027938e5314657719d065f05844f0e71f54f1c6c289b65e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-agent-draft.md",
+      "sha256": "514b299c388e74defc7bf961e8a9f10f7439731b86af90a9f2beac463f7de019"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review-before-immutable-preview-input-fix.json",
+      "sha256": "c5499c7ea2b81d8e17f03e543513b6f0980fc30d6466c9050f9eb0811c9f4a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-final-content-review.json",
+      "sha256": "616442a0e59978258c8e972548b399ffeac45d46b117d17c8fc2b6cd74d844fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-primary-frozen-source-verification.json",
+      "sha256": "8210f875b8a988eb27f404380ecb7f2391103b2a5f01389802806d5062b44e0a"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/transfer-peril-formal-peer-scope.json",
+    "sha256": "e9741031b746037d65d1a4656a6fb2fcf7bd670d595a549fb7b574300e07ffa2",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

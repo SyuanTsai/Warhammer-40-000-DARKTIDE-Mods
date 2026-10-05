@@ -130,3 +130,4 @@
 | [穿透](entries/穿透/README.md) | [來源索引](entries/穿透/SOURCE_INDEX.md) |
 | [精確定位](entries/精確定位/README.md) | [來源索引](entries/精確定位/SOURCE_INDEX.md) |
 | [亞空間斬](entries/亞空間斬/README.md) | [來源索引](entries/亞空間斬/SOURCE_INDEX.md) |
+| [轉移反噬](entries/轉移反噬/README.md) | [來源索引](entries/轉移反噬/SOURCE_INDEX.md) |

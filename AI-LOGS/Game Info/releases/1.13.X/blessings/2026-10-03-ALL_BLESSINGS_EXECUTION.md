@@ -429,3 +429,7 @@
 - [精確定位](2026-10-03-PINPOINTING-TARGET_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。
 
 - [亞空間斬](2026-10-03-WARP-SLICE_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- 第31輪三項已Commit後完整掃描通過：pierce (`68936d2b5a32b8364c3973ccf01f974ea9a8f4a7`)、pinpointing-target (`6fc1b0416ccc2cf2b8c60c17def16503e516e43b`)、warp-slice (`f5b6ff3023a2b40c55f65cf9399ee4f6b6247960`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-031-full-scan.json`／SHA-256 `4506605986b6aef05339158f61067a77d1a009648974c5ca64e19fffdb129a15`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [轉移反噬](2026-10-03-TRANSFER-PERIL_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。

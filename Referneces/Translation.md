@@ -472,6 +472,7 @@
 - Warp Nexus - 亞空間樞紐
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_scaled_on_peril`，hash `847eaa2c`；英文／繁中RAW配對確認。
 - Transfer Peril - 轉移反噬
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_peril_vent_on_weakspot_hit`，hash `ad0c7fb2`；英文／繁中RAW配對確認。
 - Rending Shockwave - 撕扯震盪
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_aoe_charge`，hash `8af2f9ee`；英文／繁中RAW配對確認。
 - Focused Channelling - 專注引導

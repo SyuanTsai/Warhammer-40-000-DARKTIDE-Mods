@@ -1668,6 +1668,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/7491abf4-faa1-4535-a72e-ab1bc5e989cc",
       "effect": "冷卻就緒時，特殊模式掃掠開始會消耗本次觸發並啟動冷卻；風斬效果建立時若保證暴擊關鍵字仍在快取，就會保存暴擊判定。"
+    },
+    {
+      "id": "transfer-peril",
+      "name_zh_tw": "轉移反噬",
+      "name_en": "Transfer Peril",
+      "name_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit",
+      "description_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit_desc",
+      "name_hash": "ad0c7fb2",
+      "description_hash": "70e57225",
+      "page": "entries/轉移反噬/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+      "effect": "合格弱點命中排除目前反噬 7–10 個百分點（P1/P3）或 6.5–8 個百分點（P4）。"
     }
   ],
   "weapons": [
@@ -27435,6 +27448,138 @@
       "icon": "https://github.com/user-attachments/assets/7491abf4-faa1-4535-a72e-ab1bc5e989cc",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_221",
       "effect": "冷卻就緒時，特殊模式掃掠開始會消耗本次觸發並啟動冷卻；風斬效果建立時若保證暴擊關鍵字仍在快取，就會保存暴擊判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits",
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/轉移反噬/weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_fraction": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "tier_percent_points": {
+          "I": 7,
+          "II": 8,
+          "III": 9,
+          "IV": 10
+        },
+        "wrapper_fallback": 0.05,
+        "tier_overrides_replace_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 10,
+        "end_line": 39
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit_desc",
+      "description_hash": "70e57225",
+      "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "effect": "排除目前反噬 7、8、9、10 個百分點（I–IV），依弱點命中事件生效。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits",
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p3",
+      "page": "entries/轉移反噬/weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_fraction": {
+          "I": 0.07,
+          "II": 0.08,
+          "III": 0.09,
+          "IV": 0.1
+        },
+        "tier_percent_points": {
+          "I": 7,
+          "II": 8,
+          "III": 9,
+          "IV": 10
+        },
+        "wrapper_fallback": 0.05,
+        "tier_overrides_replace_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start_line": 355,
+        "end_line": 384
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start_line": 50,
+        "end_line": 52
+      },
+      "description_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit_desc",
+      "description_hash": "70e57225",
+      "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "effect": "排除目前反噬 7、8、9、10 個百分點（I–IV），依弱點命中事件生效。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits",
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/轉移反噬/weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_fraction": {
+          "I": 0.065,
+          "II": 0.07,
+          "III": 0.075,
+          "IV": 0.08
+        },
+        "tier_percent_points": {
+          "I": 6.5,
+          "II": 7,
+          "III": 7.5,
+          "IV": 8
+        },
+        "wrapper_fallback": 0.05,
+        "tier_overrides_replace_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 10,
+        "end_line": 39
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_peril_vent_on_weakspot_hit_desc",
+      "description_hash": "70e57225",
+      "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "effect": "排除目前反噬 6.5、7、7.5、8 個百分點（I–IV），依弱點命中事件生效。"
     }
   ],
   "bindings": [
@@ -39602,6 +39747,48 @@
         "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
         "import_line": 15,
         "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_vents_warpcharge_on_weakspot_hits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/peril_vent_on_weakspot_hit",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p3_vents_warpcharge_on_weakspot_hits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/peril_vent_on_weakspot_hit",
+      "trait_category": "bespoke_forcestaff_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "append_line": 1301
+      }
+    },
+    {
+      "blessing_id": "transfer-peril",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_vents_warpcharge_on_weakspot_hits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/peril_vent_on_weakspot_hit",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
       }
     }
   ]
