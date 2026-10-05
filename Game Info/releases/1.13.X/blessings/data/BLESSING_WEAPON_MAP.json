@@ -1586,6 +1586,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
       "effect": "手持相符武器、正在衝刺且剩餘耐力比例達到門檻時，條件式加入 ranged Dodge keyword；效果限會使用可閃避 ranged Dodge 判定的攻擊，不是速度加成或通用傷害免疫。"
+    },
+    {
+      "id": "roaring-advance",
+      "name_zh_tw": "咆哮突進",
+      "name_en": "Roaring Advance",
+      "name_key": "loc_trait_bespoke_movement_speed_on_continuous_fire",
+      "description_key": "loc_trait_bespoke_movement_speed_on_continuous_fire_desc",
+      "name_hash": "3b53eda2",
+      "description_hash": "0d64e8ec",
+      "page": "entries/咆哮突進/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+      "effect": "持續射擊達到每彈匣最大容量5%的射擊門檻時，削弱既有移動減速，最多五層。"
     }
   ],
   "weapons": [
@@ -26575,6 +26588,166 @@
       "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
       "effect": "針彈手槍族：持有該族相符武器、正在衝刺且目前剩餘耐力比例達到所選等級門檻時，條件式加入 ranged Dodge keyword。效果僅適用實際採用可閃避 ranged Dodge 判定的攻擊，不增加移動速度，也不是通用傷害免疫。涵蓋 Mark：needlepistol_p1_m1, needlepistol_p1_m2。"
+    },
+    {
+      "id": "weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire",
+      "blessing_id": "roaring-advance",
+      "weapon_id": "arc_rifle_p1",
+      "page": "entries/咆哮突進/weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire",
+        "actual_buff_template_id": "weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "restriction_key": "arc_rifle_p1",
+        "marks": [
+          "arc_rifle_p1_m1"
+        ],
+        "per_stack_remaining_slow_multiplier": {
+          "I": 0.9,
+          "II": 0.85,
+          "III": 0.8,
+          "IV": 0.75
+        },
+        "per_stack_slow_reduction_percent": {
+          "I": 10,
+          "II": 15,
+          "III": 20,
+          "IV": 25
+        },
+        "max_effective_stacks": 5,
+        "own_tier_replaces_base_fallback": true,
+        "step_formula": "max(1,floor(max_ammo_in_clips*0.05))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua",
+        "start_line": 312,
+        "end_line": 367
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 38
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_continuous_fire_desc",
+      "description_hash": "0d64e8ec",
+      "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_113",
+      "effect": "每達到以彈匣最大容量計算的5%射擊門檻，逐步削弱既有移動減速；最多5層。 I–IV每層削減原有減速幅度10／15／20／25%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+      "blessing_id": "roaring-advance",
+      "weapon_id": "autogun_p2",
+      "page": "entries/咆哮突進/weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+        "actual_buff_template_id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "restriction_key": "autogun_p2",
+        "marks": [
+          "autogun_p2_m1",
+          "autogun_p2_m2",
+          "autogun_p2_m3"
+        ],
+        "per_stack_remaining_slow_multiplier": {
+          "I": 0.9,
+          "II": 0.85,
+          "III": 0.8,
+          "IV": 0.75
+        },
+        "per_stack_slow_reduction_percent": {
+          "I": 10,
+          "II": 15,
+          "III": 20,
+          "IV": 25
+        },
+        "max_effective_stacks": 5,
+        "own_tier_replaces_base_fallback": true,
+        "step_formula": "max(1,floor(max_ammo_in_clips*0.05))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 378,
+        "end_line": 433
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_continuous_fire_desc",
+      "description_hash": "0d64e8ec",
+      "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_113",
+      "effect": "每達到以彈匣最大容量計算的5%射擊門檻，逐步削弱既有移動減速；最多5層。 I–IV每層削減原有減速幅度10／15／20／25%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+      "blessing_id": "roaring-advance",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/咆哮突進/weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "restriction_key": "ogryn_heavystubber_p1",
+        "marks": [
+          "ogryn_heavystubber_p1_m1",
+          "ogryn_heavystubber_p1_m2",
+          "ogryn_heavystubber_p1_m3"
+        ],
+        "per_stack_remaining_slow_multiplier": {
+          "I": 0.93,
+          "II": 0.92,
+          "III": 0.91,
+          "IV": 0.9
+        },
+        "per_stack_slow_reduction_percent": {
+          "I": 7,
+          "II": 8,
+          "III": 9,
+          "IV": 10
+        },
+        "max_effective_stacks": 5,
+        "own_tier_replaces_base_fallback": true,
+        "step_formula": "max(1,floor(max_ammo_in_clips*0.05))"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 160,
+        "end_line": 215
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 34,
+        "end_line": 40
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_continuous_fire_desc",
+      "description_hash": "0d64e8ec",
+      "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_113",
+      "effect": "每達到以彈匣最大容量計算的5%射擊門檻，逐步削弱既有移動減速；最多5層。 I–IV每層削減原有減速幅度7／8／9／10%。"
     }
   ],
   "bindings": [
@@ -38322,6 +38495,104 @@
         "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
         "import_line": 17,
         "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "arc_rifle_p1",
+      "mark_id": "arc_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_arc_rifle_p1/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_arc_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+        "import_line": 20,
+        "append_line": 1061
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "roaring-advance",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/movement_speed_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
       }
     }
   ]

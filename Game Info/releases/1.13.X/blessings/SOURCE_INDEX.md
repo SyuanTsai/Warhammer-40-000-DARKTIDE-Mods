@@ -124,3 +124,4 @@
 | [雷鳴](entries/雷鳴/README.md) | [來源索引](entries/雷鳴/SOURCE_INDEX.md) |
 | [亞空間樞紐](entries/亞空間樞紐/README.md) | [來源索引](entries/亞空間樞紐/SOURCE_INDEX.md) |
 | [輕裝](entries/輕裝/README.md) | [來源索引](entries/輕裝/SOURCE_INDEX.md) |
+| [咆哮突進](entries/咆哮突進/README.md) | [來源索引](entries/咆哮突進/SOURCE_INDEX.md) |
