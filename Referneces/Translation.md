@@ -397,6 +397,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punch`，hash `e6773a0a`；英文／繁中RAW配對確認。
 - Confident Strike - 堅定打擊
 - No Guts, No Glory - 不入虎穴，焉得虎子
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_regen_on_punching_elites`，hash `5da2fc91`；英文／繁中RAW配對確認。
 - Bash - 猛撞
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_push`，hash `71cd141b`；英文／繁中RAW配對確認。
 - Tenderiser - 肉槌

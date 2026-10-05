@@ -1681,6 +1681,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
       "effect": "合格弱點命中排除目前反噬 7–10 個百分點（P1/P3）或 6.5–8 個百分點（P4）。"
+    },
+    {
+      "id": "no-guts-no-glory",
+      "name_zh_tw": "不入虎穴，焉得虎子",
+      "name_en": "No Guts, No Glory",
+      "name_key": "loc_trait_bespoke_toughness_regen_on_punching_elites",
+      "description_key": "loc_trait_bespoke_toughness_regen_on_punching_elites_desc",
+      "name_hash": "5da2fc91",
+      "description_hash": "876ccdea",
+      "page": "entries/不入虎穴，焉得虎子/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
+      "effect": "惡霸棍棒 P2 的特殊掌擊命中精英後，重設韌性恢復時間戳，並在本 tier 的 2／3／4／5 秒窗口內提供每秒韌性恢復額外修正 +50%；重複合格命中刷新窗口。"
     }
   ],
   "weapons": [
@@ -27580,6 +27593,49 @@
       "icon": "https://github.com/user-attachments/assets/c87f7d38-0583-4a95-9bf5-f6face936882",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
       "effect": "排除目前反噬 6.5、7、7.5、8 個百分點（I–IV），依弱點命中事件生效。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites",
+      "blessing_id": "no-guts-no-glory",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/不入虎穴，焉得虎子/weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_extra_regen_rate": 0.5,
+        "active_duration_seconds_by_tier": {
+          "I": 2,
+          "II": 3,
+          "III": 4,
+          "IV": 5
+        },
+        "formatter_percent_by_tier": {
+          "I": 50,
+          "II": 50,
+          "III": 50,
+          "IV": 50
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 417,
+        "end_line": 472
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_toughness_regen_on_punching_elites_desc",
+      "description_hash": "876ccdea",
+      "icon": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_212",
+      "effect": "布倫特專用 Mk I、布倫特得意之作 Mk II、布倫特猛擊 Mk IIIb 共用左右掌擊特殊掃掠與相同 I–IV 數值。"
     }
   ],
   "bindings": [
@@ -39789,6 +39845,48 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
         "import_line": 13,
         "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "no-guts-no-glory",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_regen_on_weapon_special_elites",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "no-guts-no-glory",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_regen_on_weapon_special_elites",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "no-guts-no-glory",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_regen_on_weapon_special_elites",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_regen_on_weapon_special_elites",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
       }
     }
   ]

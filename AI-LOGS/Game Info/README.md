@@ -324,3 +324,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [亞空間斬全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-WARP-SLICE_ACCEPTANCE.json)
 
 - [轉移反噬全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-TRANSFER-PERIL_ACCEPTANCE.json)
+
+- [不入虎穴，焉得虎子全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE.json)
