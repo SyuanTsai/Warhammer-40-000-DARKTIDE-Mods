@@ -1629,6 +1629,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
       "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
+    },
+    {
+      "id": "pierce",
+      "name_zh_tw": "穿透",
+      "name_en": "Pierce",
+      "name_key": "loc_trait_bespoke_pass_trough_armor_on_weapon_special",
+      "description_key": "loc_trait_bespoke_pass_trough_armor_on_weapon_special_and_stagger_desc",
+      "name_hash": "6c818ab6",
+      "description_hash": "feca3f1b",
+      "page": "entries/穿透/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+      "effect": "依等級提供 +10% 至 +25% 近戰衝擊修正；手持時，實際呼叫 HitMass 的攻擊會降低一般活體敵人的質量消耗，特殊 Bash 另略過護甲中止判定。質量預算與 Breed 中止仍有效。"
     }
   ],
   "weapons": [
@@ -27052,6 +27065,132 @@
       "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_094",
       "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special",
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "melee_impact_modifier": 0.1
+        },
+        "II": {
+          "melee_impact_modifier": 0.15
+        },
+        "III": {
+          "melee_impact_modifier": 0.2
+        },
+        "IV": {
+          "melee_impact_modifier": 0.25
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 447,
+        "end_line": 488
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 61,
+        "end_line": 63
+      },
+      "description_key": "loc_trait_bespoke_pass_trough_armor_on_weapon_special_and_stagger_desc",
+      "description_hash": "feca3f1b",
+      "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_133",
+      "effect": "反衝者 洛倫茲 Mk V：腰射／瞄準 pellets 和特殊 Bash 讀取此項的實際修正；一般敵人質量扣除降低，護甲中止另於 Bash 被略過，預算與 Breed 中止仍保留。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special",
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/穿透/weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "melee_impact_modifier": 0.1
+        },
+        "II": {
+          "melee_impact_modifier": 0.15
+        },
+        "III": {
+          "melee_impact_modifier": 0.2
+        },
+        "IV": {
+          "melee_impact_modifier": 0.25
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 182,
+        "end_line": 221
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_pass_trough_armor_on_weapon_special_and_stagger_desc",
+      "description_hash": "feca3f1b",
+      "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_133",
+      "effect": "震盪槍 洛倫茲 Mk VI：特殊 Bash 讀取 melee 衝擊、降低一般敵人 HitMass 並略過護甲中止；普通／瞄準彈體及爆炸沒有 HitMass consumer，不套用該質量修正。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special",
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/穿透/weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "melee_impact_modifier": 0.1
+        },
+        "II": {
+          "melee_impact_modifier": 0.15
+        },
+        "III": {
+          "melee_impact_modifier": 0.2
+        },
+        "IV": {
+          "melee_impact_modifier": 0.25
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 447,
+        "end_line": 488
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 62,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_bespoke_pass_trough_armor_on_weapon_special_and_stagger_desc",
+      "description_hash": "feca3f1b",
+      "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_133",
+      "effect": "惡棍槍 洛倫茲 Mk VII：腰射／瞄準 hit-scan 和特殊 Bash 讀取此項的實際修正；一般敵人質量扣除降低，護甲中止另於 Bash 被略過，預算與 Breed 中止仍保留。"
     }
   ],
   "bindings": [
@@ -39093,6 +39232,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
         "import_line": 15,
         "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/pass_past_armor_on_weapon_special",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_pass_past_armor_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/pass_past_armor_on_weapon_special",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "pierce",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_pass_past_armor_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/pass_past_armor_on_weapon_special",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
       }
     }
   ]

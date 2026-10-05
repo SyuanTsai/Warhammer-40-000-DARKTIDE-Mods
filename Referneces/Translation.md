@@ -540,6 +540,7 @@
 - Can opener - 開罐器
 - Born in blood - 浴血而生
 - Pierce - 穿透
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_trough_armor_on_weapon_special`，hash `6c818ab6`；英文／繁中RAW配對確認。
 - Punishing Fire - 懲罰射擊
 - Inspiring Barrage - 激勵彈幕
   - 保留替代名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire_alternative`，hash `02d303b6`；本次雙鏈重型機槍項目使用非alternative鍵 `ee616ba9`，故玩家頁採「振奮彈幕」。兩筆均由1.13.1中英RAW精確配對，不據同名英文合併項目。

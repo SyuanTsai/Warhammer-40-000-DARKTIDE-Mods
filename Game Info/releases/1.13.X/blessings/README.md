@@ -129,5 +129,6 @@
 | <img src="https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e" width="32" height="32" alt="咆哮突進祝福圖示"> [咆哮突進](entries/咆哮突進/README.md)<br>- Roaring Advance<br>[完整說明](entries/咆哮突進/README.md) | <ul><li>持續射擊達到每彈匣最大容量5%的射擊門檻時，削弱既有移動減速，最多五層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917" width="32" height="32" alt="踉蹌祝福圖示"> [踉蹌](entries/踉蹌/README.md)<br>- Falter<br>[完整說明](entries/踉蹌/README.md) | <ul><li>合格弱點命中必先將通用踉蹌減免乘 .5（finesse），再依等級乘 .4/.3/.2/.1；持用自動槍或步兵鐳射槍時，遠程攻擊的踉蹌強度輸入另加 .3。這些是踉蹌輸入，實際結果仍受目標與攻擊profile分支及踉蹌曲線影響。</li></ul> | 近戰／遠程 |
 | <img src="https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f" width="32" height="32" alt="勢不可擋祝福圖示"> [勢不可擋](entries/勢不可擋/README.md)<br>- Unstoppable Force<br>[完整說明](entries/勢不可擋/README.md) | <ul><li>完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8" width="32" height="32" alt="穿透祝福圖示"> [穿透](entries/穿透/README.md)<br>- Pierce<br>[完整說明](entries/穿透/README.md) | <ul><li>依等級提供 +10% 至 +25% 近戰衝擊修正；手持時，實際呼叫 HitMass 的攻擊會降低一般活體敵人的質量消耗，特殊 Bash 另略過護甲中止判定。質量預算與 Breed 中止仍有效。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
