@@ -424,20 +424,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [LoadoutNames](https://www.nexusmods.com/warhammer40kdarktide/mods/286)
     替天賦命名。
-- MOD 網站最後更新日期：Last updated 30 September 2026, 2:51AM
-- MOD 版本：1.8
-- MOD 檔案名稱：LoadoutNames 286 1.8 2026-09-29T18-51Z EGv9eGJJR.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：2026-10-05T02:24:26Z（Nexus API 原文；Asia/Taipei：2026-10-05 10:24:26）
+- MOD 版本：1.9
+- MOD 檔案名稱：LoadoutNames 286 1.9 2026-10-05T02-24Z X0p3C0jFM.zip
+- 手動維護最後下載日期：2026-10-05
 - Nexus MOD ID: 286
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/286
-- Nexus page version: 1.8
-- Nexus last updated: 2026-09-29T18:51Z
-- Main file ID: 8565
-- Main file version: 1.8
-- Main file uploaded at UTC: 2026-09-29T18:51Z
-- Archive filename: LoadoutNames 286 1.8 2026-09-29T18-51Z EGv9eGJJR.zip
-- Archive size bytes: 5290
-- Archive SHA-256: bfdde57d5cacdd3e7a3bbb09a49e859abe5f60caaa567fd8f01e2db4e979d7ac
+- Nexus page version: 1.9
+- Nexus last updated: 2026-10-05T02:24:26Z
+- Main file ID: 8793
+- Main file version: 1.9
+- Main file uploaded at UTC: 2026-10-05T02:24:25Z
+- Archive filename: LoadoutNames 286 1.9 2026-10-05T02-24Z X0p3C0jFM.zip
+- Archive size bytes: 5402
+- Archive SHA-256: dfec0bc073982dc65c51c9ac117ca78c751d961b9a0c4f3e28a18a4e879a8dd4
 - Acquisition method: manual-queue
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
