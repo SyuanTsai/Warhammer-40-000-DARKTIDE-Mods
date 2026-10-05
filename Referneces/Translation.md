@@ -303,6 +303,7 @@
 - Shred - 粉碎
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_crit_chance`，hash `39e910d6`；英文／繁中RAW配對確認。
 - Savage Sweep - 野蠻橫掃
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_attack_cleave_on_multiple_hits`，hash `82900835`；英文／繁中RAW配對確認。
 - Rampage - 暴走
 - Devastating Strike - 毀滅打擊
 - Decimator - 屠戮者

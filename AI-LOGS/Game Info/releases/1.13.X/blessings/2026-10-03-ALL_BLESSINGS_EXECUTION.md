@@ -395,3 +395,5 @@
 - [烈火熱焰](2026-10-03-FIRE-FRENZY_ACCEPTANCE.json)：新增7變體、17型號關聯；共7變體、17關聯。
 
 - [殺戮者](2026-10-03-SLAUGHTERER_ACCEPTANCE.json)：新增7變體、17型號關聯；共7變體、17關聯。
+
+- [野蠻橫掃](2026-10-03-SAVAGE-SWEEP_ACCEPTANCE.json)：新增6變體、14型號關聯；共6變體、14關聯。

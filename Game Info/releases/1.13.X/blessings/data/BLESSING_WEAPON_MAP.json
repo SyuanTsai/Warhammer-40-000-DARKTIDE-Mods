@@ -1495,6 +1495,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
       "effect": "持用裝有本祝福的武器，並以這把武器造成近戰擊殺後增加一層通用威力修正；I–IV 每層 +5／+6／+7／+8 個百分點，最多五層，持續4.5秒並由後續合格擊殺刷新。純推擊、力場劍甩飛和碾壓者的額外範圍爆炸不會增加層數；既有層數的受益分支見完整說明。"
+    },
+    {
+      "id": "savage-sweep",
+      "name_zh_tw": "野蠻橫掃",
+      "name_en": "Savage Sweep",
+      "name_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits",
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "name_hash": "82900835",
+      "description_hash": "16ef5b9c",
+      "page": "entries/野蠻橫掃/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "effect": "同一近戰攻擊中合格目標序號達到3或以上時，合格命中啟動／刷新3秒效果；五個實作增加近戰攻擊側順劈上限140%／160%／180%／200%，穿音速雙刀增加120%／130%／140%／150%。"
     }
   ],
   "weapons": [
@@ -24760,6 +24773,350 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
       "effect": "強化直接揮擊的合格近戰擊殺可增加層數；爆炸肢解表現不是額外範圍爆炸攻擊。",
       "buff_template_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "restriction_key": "chainsword_2h_p1",
+        "marks": [
+          "chainsword_2h_p1_m1",
+          "chainsword_2h_p1_m2"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.4,
+          "II": 1.6,
+          "III": 1.8,
+          "IV": 2.0
+        },
+        "display_cleave_percent": {
+          "I": 140,
+          "II": 160,
+          "III": 180,
+          "IV": 200
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_167",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 266,
+        "end_line": 326
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +140%/+160%/+180%/+200%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "restriction_key": "chainsword_p1",
+        "marks": [
+          "chainsword_p1_m1",
+          "chainsword_p1_m2"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.4,
+          "II": 1.6,
+          "III": 1.8,
+          "IV": 2.0
+        },
+        "display_cleave_percent": {
+          "I": 140,
+          "II": 160,
+          "III": 180,
+          "IV": 200
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_080",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_080"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 10,
+        "end_line": 70
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/4c9ee18d-a527-4768-b696-e65948c74a0c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_080",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +140%/+160%/+180%/+200%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "restriction_key": "combatsword_p1",
+        "marks": [
+          "combatsword_p1_m1",
+          "combatsword_p1_m2",
+          "combatsword_p1_m3"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.4,
+          "II": 1.6,
+          "III": 1.8,
+          "IV": 2.0
+        },
+        "display_cleave_percent": {
+          "I": 140,
+          "II": 160,
+          "III": 180,
+          "IV": 200
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_167",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 110,
+        "end_line": 170
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +140%/+160%/+180%/+200%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "restriction_key": "combatsword_p2",
+        "marks": [
+          "combatsword_p2_m1",
+          "combatsword_p2_m2",
+          "combatsword_p2_m3"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.4,
+          "II": 1.6,
+          "III": 1.8,
+          "IV": 2.0
+        },
+        "display_cleave_percent": {
+          "I": 140,
+          "II": 160,
+          "III": 180,
+          "IV": 200
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_167",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 10,
+        "end_line": 70
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +140%/+160%/+180%/+200%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "restriction_key": "ogryn_combatblade_p1",
+        "marks": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.4,
+          "II": 1.6,
+          "III": 1.8,
+          "IV": 2.0
+        },
+        "display_cleave_percent": {
+          "I": 140,
+          "II": 160,
+          "III": 180,
+          "IV": 200
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_090",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_090"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 120,
+        "end_line": 180
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 33,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/5a2e3d73-c28c-48f3-badf-55d8903a425a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_090",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +140%/+160%/+180%/+200%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits",
+      "blessing_id": "savage-sweep",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/野蠻橫掃/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_template_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "restriction_key": "transonic_sword_transonic_knife_p1",
+        "marks": [
+          "transonic_sword_transonic_knife_p1_m1"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 1.2,
+          "II": 1.3,
+          "III": 1.4,
+          "IV": 1.5
+        },
+        "display_cleave_percent": {
+          "I": 120,
+          "II": 130,
+          "III": 140,
+          "IV": 150
+        },
+        "tier_override_replaces_proc_fallback": true,
+        "base_proc_fallback": 0.5,
+        "required_num_hits": 3,
+        "active_duration_seconds": 3,
+        "icon_id": "weapon_trait_167",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 223,
+        "end_line": 283
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 48,
+        "end_line": 48
+      },
+      "description_key": "loc_trait_bespoke_increased_attack_cleave_on_multiple_hits_desc",
+      "description_hash": "16ef5b9c",
+      "icon": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+      "effect": "同一近戰攻擊中有效目標序號達3或以上的命中啟動／刷新3秒效果；近戰攻擊側順劈上限增加 +120%/+130%/+140%/+150%。"
     }
   ],
   "bindings": [
@@ -35331,6 +35688,202 @@
         "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
         "import_line": 17,
         "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "savage-sweep",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/increased_attack_cleave_on_multiple_hits",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]
