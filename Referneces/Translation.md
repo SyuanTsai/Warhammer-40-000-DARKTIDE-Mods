@@ -478,6 +478,7 @@
 - Rending Shockwave - 撕扯震盪
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_rend_armor_on_aoe_charge`，hash `8af2f9ee`；英文／繁中RAW配對確認。
 - Focused Channelling - 專注引導
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_uninterruptable_while_charging`，hash `768a0f8c`；英文／繁中RAW配對確認。
 - Blazing Spirit - 燃燒靈魂
 - Penetrating Flame - 穿透火焰
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_from_dot_burning`，hash `e02d8784`；英文／繁中RAW配對確認。

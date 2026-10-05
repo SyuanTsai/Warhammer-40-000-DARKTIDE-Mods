@@ -338,3 +338,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [懲罰射擊全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNISHING-FIRE_ACCEPTANCE.json)
 
 - [燃燒靈魂（靈能法杖與雙手力場劍）全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT-WARPFIRE_ACCEPTANCE.json)
+
+- [專注引導全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE.json)

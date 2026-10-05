@@ -451,3 +451,5 @@
 - [懲罰射擊](2026-10-03-PUNISHING-FIRE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
 
 - [燃燒靈魂（靈能法杖與雙手力場劍）](2026-10-03-BLAZING-SPIRIT-WARPFIRE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。
+
+- [專注引導](2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。
