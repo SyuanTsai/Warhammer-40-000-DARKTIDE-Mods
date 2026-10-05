@@ -1599,6 +1599,23 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
       "effect": "持續射擊達到每彈匣最大容量5%的射擊門檻時，削弱既有移動減速，最多五層。"
+    },
+    {
+      "id": "falter",
+      "name_zh_tw": "踉蹌",
+      "name_en": "Falter",
+      "name_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot",
+      "description_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc",
+      "name_hash": "98c4c535",
+      "description_hash": "cab0effd",
+      "page": "entries/踉蹌/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "effect": "合格弱點命中必先將通用踉蹌減免乘 .5（finesse），再依等級乘 .4/.3/.2/.1；持用自動槍或步兵鐳射槍時，遠程攻擊的踉蹌強度輸入另加 .3。這些是踉蹌輸入，實際結果仍受目標與攻擊profile分支及踉蹌曲線影響。",
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -26748,6 +26765,178 @@
       "icon": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_113",
       "effect": "每達到以彈匣最大容量計算的5%射擊門檻，逐步削弱既有移動減速；最多5層。 I–IV每層削減原有減速幅度7／8／9／10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot",
+      "blessing_id": "falter",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/踉蹌/weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weakspot_stagger_reduction_modifier_by_tier": {
+          "I": 0.4,
+          "II": 0.3,
+          "III": 0.2,
+          "IV": 0.1
+        },
+        "ranged_impact_modifier": 0.3,
+        "static_text_percent_by_tier": {
+          "I": 60,
+          "II": 70,
+          "III": 80,
+          "IV": 90
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 297,
+        "end_line": 352
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc",
+      "description_hash": "cab0effd",
+      "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
+      "effect": "電擊錘普通直擊依命中與profile處理；蓄能上勾忽略踉蹌減免，間隔tick無弱點或遠程類型。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot",
+      "blessing_id": "falter",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/踉蹌/weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weakspot_stagger_reduction_modifier_by_tier": {
+          "I": 0.4,
+          "II": 0.3,
+          "III": 0.2,
+          "IV": 0.1
+        },
+        "ranged_impact_modifier": 0.3,
+        "static_text_percent_by_tier": {
+          "I": 60,
+          "II": 70,
+          "III": 80,
+          "IV": 90
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 484,
+        "end_line": 539
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc",
+      "description_hash": "cab0effd",
+      "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
+      "effect": "法務官電擊鎚重型蓄力例外忽略減免；純推與特殊直擊依各自類型、profile判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot",
+      "blessing_id": "falter",
+      "weapon_id": "autogun_p3",
+      "page": "entries/踉蹌/weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weakspot_stagger_reduction_modifier_by_tier": {
+          "I": 0.4,
+          "II": 0.3,
+          "III": 0.2,
+          "IV": 0.1
+        },
+        "ranged_impact_modifier": 0.3,
+        "static_text_percent_by_tier": {
+          "I": 60,
+          "II": 70,
+          "III": 80,
+          "IV": 90
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 164,
+        "end_line": 219
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc",
+      "description_hash": "cab0effd",
+      "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
+      "effect": "遠程射擊踉蹌輸入+30%；刺刀／槍托的專用profile忽略減免。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot",
+      "blessing_id": "falter",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/踉蹌/weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weakspot_stagger_reduction_modifier_by_tier": {
+          "I": 0.4,
+          "II": 0.3,
+          "III": 0.2,
+          "IV": 0.1
+        },
+        "ranged_impact_modifier": 0.3,
+        "static_text_percent_by_tier": {
+          "I": 60,
+          "II": 70,
+          "III": 80,
+          "IV": 90
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 210,
+        "end_line": 265
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 46,
+        "end_line": 46
+      },
+      "description_key": "loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc",
+      "description_hash": "cab0effd",
+      "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
+      "effect": "遠程射擊踉蹌輸入+30%；手電筒切換不產生攻擊。"
     }
   ],
   "bindings": [
@@ -38593,6 +38782,132 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
         "import_line": 16,
         "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "falter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/negate_stagger_reduction_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
       }
     }
   ]

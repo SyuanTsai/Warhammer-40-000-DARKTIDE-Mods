@@ -417,3 +417,5 @@
 - 第29輪三項已Commit後完整掃描通過：thunderous (`6fca914dc35e84c2576eaba45d775ea09a0f633c`)、warp-nexus (`adf8aeface85632e8b6180643e4940518dfca7ee`)、stripped-down (`aaadf6e8bfbd12169fe951f12e781db255bbe2b4`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-029-full-scan.json`／SHA-256 `1d9e05d901fdfec4f358022f9f3a877219925a33117956521b708c54f9d2cc2b`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [咆哮突進](2026-10-03-ROARING-ADVANCE_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。
+
+- [踉蹌](2026-10-03-FALTER_ACCEPTANCE.json)：新增4變體、9型號關聯；共4變體、9關聯。

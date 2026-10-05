@@ -368,6 +368,7 @@
 - High Voltage - 高壓電
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_damage_bonus_vs_electrocuded`，hash `7c8a57a6`；英文／繁中RAW配對確認。
 - Falter - 踉蹌
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_negate_stagger_reduction_on_weakspot`，hash `98c4c535`；英文／繁中RAW配對確認。
 - Overwhelming Force - 壓倒性的武力
 - Counterattack - 反擊
   - 本體1.13.1名稱鍵 `loc_attack_speed_on_perfect_block`，hash `26defa8a`；英文／繁中RAW配對確認。
