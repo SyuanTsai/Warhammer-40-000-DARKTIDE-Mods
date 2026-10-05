@@ -419,3 +419,5 @@
 - [咆哮突進](2026-10-03-ROARING-ADVANCE_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。
 
 - [踉蹌](2026-10-03-FALTER_ACCEPTANCE.json)：新增4變體、9型號關聯；共4變體、9關聯。
+
+- [勢不可擋](2026-10-03-UNSTOPPABLE-FORCE_ACCEPTANCE.json)：新增3變體、5型號關聯；共3變體、5關聯。

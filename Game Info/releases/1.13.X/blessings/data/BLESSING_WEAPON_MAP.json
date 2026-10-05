@@ -1616,6 +1616,19 @@
         "melee",
         "ranged"
       ]
+    },
+    {
+      "id": "unstoppable-force",
+      "name_zh_tw": "勢不可擋",
+      "name_en": "Unstoppable Force",
+      "name_key": "loc_trait_bespoke_pass_past_armor_on_heavy_attack",
+      "description_key": "loc_trait_bespoke_pass_past_armor_and_damage_on_heavy_attack_desc",
+      "name_hash": "281bde35",
+      "description_hash": "ca7dd319",
+      "page": "entries/勢不可擋/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+      "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
     }
   ],
   "weapons": [
@@ -26937,6 +26950,108 @@
       "icon": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
       "effect": "遠程射擊踉蹌輸入+30%；手電筒切換不產生攻擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack",
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/勢不可擋/weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.025,
+        "II": 0.05,
+        "III": 0.075,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 445,
+        "end_line": 484
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 77
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_and_damage_on_heavy_attack_desc",
+      "description_hash": "ca7dd319",
+      "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_094",
+      "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack",
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/勢不可擋/weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.025,
+        "II": 0.05,
+        "III": 0.075,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 221,
+        "end_line": 260
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 76,
+        "end_line": 110
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_and_damage_on_heavy_attack_desc",
+      "description_hash": "ca7dd319",
+      "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_094",
+      "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack",
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/勢不可擋/weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.025,
+        "II": 0.05,
+        "III": 0.075,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 307,
+        "end_line": 346
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 100,
+        "end_line": 134
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_and_damage_on_heavy_attack_desc",
+      "description_hash": "ca7dd319",
+      "icon": "https://github.com/user-attachments/assets/e812753b-127d-4719-b188-f0fe269f449f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_094",
+      "effect": "完全蓄力重型近戰攻擊的傷害計算增加 2.5%–10%，並忽略敵人命中質量；祝福武器持用時，重型掃掠另可暫時通過裝甲中止判定。"
     }
   ],
   "bindings": [
@@ -38908,6 +39023,76 @@
         "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
         "import_line": 15,
         "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_pass_past_armor_on_heavy_attack",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/pass_past_armor_on_heavy_attack",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/pass_past_armor_on_heavy_attack",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/pass_past_armor_on_heavy_attack",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_pass_past_armor_on_heavy_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/pass_past_armor_on_heavy_attack",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "unstoppable-force",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_pass_past_armor_on_heavy_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/pass_past_armor_on_heavy_attack",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
       }
     }
   ]

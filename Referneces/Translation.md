@@ -401,6 +401,7 @@
 - Tenderiser - 肉槌
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_power_on_weapon_special_follow_up_hits`，hash `b746cc13`；英文／繁中RAW配對確認。
 - Unstoppable Force - 勢不可擋
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_past_armor_on_heavy_attack`，hash `281bde35`；英文／繁中RAW配對確認。
 - Torment - 凌遲
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_weapon_special_hit`，hash `6c7642c3`；英文／繁中RAW配對確認。
 - Slow and Steady - 緩慢而確實
