@@ -10,11 +10,12 @@
 | <img src="https://github.com/user-attachments/assets/a5bb3fdd-036e-4b45-b53c-bfea7b800645" width="32" height="32" alt="高壓電祝福圖示"> [高壓電](../../../entries/高壓電/README.md)<br>- High Voltage<br>[完整說明](../../../entries/高壓電/README.md) | <ul><li>射擊及盾擊不自行施加電擊；重盾擊傷害可對已有電擊目標受益。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244" width="32" height="32" alt="快速裝彈祝福圖示"> [快速裝彈](../../../entries/快速裝彈/README.md)<br>- Speedload<br>[完整說明](../../../entries/快速裝彈/README.md) | <ul><li>近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後4秒到期。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/5057bc6d-9f7b-44e9-a6dd-afb72af7cf3e" width="32" height="32" alt="死亡噴吐祝福圖示"> [死亡噴吐](../../../entries/死亡噴吐/README.md)<br>- Deathspitter<br>[完整說明](../../../entries/死亡噴吐/README.md) | <ul><li>衝覆者霰彈手槍和防暴盾牌 審判 Mk IV：每個合格近距離遠程擊殺事件增加一層；I–IV 每層 +5／+5.5／+6／+6.5 個百分點，最多五層；持續 3.5 秒，重新觸發刷新共同期限。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d" width="32" height="32" alt="烈火熱焰祝福圖示"> [烈火熱焰](../../../entries/烈火熱焰/README.md)<br>- Fire Frenzy<br>[完整說明](../../../entries/烈火熱焰/README.md) | <ul><li>此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting.md)、[大口徑彈藥](../../../entries/大口徑彈藥/weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit.md)、[散彈](../../../entries/散彈/weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot.md)、[高壓電](../../../entries/高壓電/weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide.md)、[死亡噴吐](../../../entries/死亡噴吐/weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill.md) | I–IV |
+| 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting.md)、[大口徑彈藥](../../../entries/大口徑彈藥/weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit.md)、[散彈](../../../entries/散彈/weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_on_hitting_multiple_with_one_shot.md)、[高壓電](../../../entries/高壓電/weapon_trait_bespoke_shotpistol_shield_p1_damage_bonus_vs_electrocuted.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_shotpistol_shield_p1_reload_speed_on_slide.md)、[死亡噴吐](../../../entries/死亡噴吐/weapon_trait_bespoke_shotpistol_shield_p1_increase_power_on_close_kill.md)、[烈火熱焰](../../../entries/烈火熱焰/weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

@@ -415,6 +415,7 @@
 - Punishing Salvo - 懲罰齊射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_followup_shots_ranged_weakspot_damage`，hash `dbf6f0e3`；英文／繁中RAW配對確認。
 - Fire Frenzy - 烈火熱焰
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_close_damage_on_close_kill`，hash `41f0c1d1`；英文／繁中RAW配對確認。
 - Deathspitter - 死亡噴吐
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_close_kill`，hash `00d6e1d9`；英文／繁中RAW配對確認。
 - Stripped Down - 輕裝

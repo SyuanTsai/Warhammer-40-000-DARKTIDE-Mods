@@ -1469,6 +1469,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
       "effect": "擊殺帶有 elite 標記的目標時，若擊殺事件的 attacking item 與目前持用的祝福物品相同，依此武器變體與等級恢復指定比例的最大韌性；實際恢復不超過當下缺少量。"
+    },
+    {
+      "id": "fire-frenzy",
+      "name_zh_tw": "烈火熱焰",
+      "name_en": "Fire Frenzy",
+      "name_key": "loc_trait_bespoke_increase_close_damage_on_close_kill",
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "name_hash": "41f0c1d1",
+      "description_hash": "72a8e537",
+      "page": "entries/烈火熱焰/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "effect": "持有本祝福武器時，合格近距離遠程擊殺建立或刷新最多5層的近端傷害加成；I–IV 每層分別增加7%／8%／9%／10%，期限共用3.5秒。觸發限制與傷害受益距離分開判斷。"
     }
   ],
   "weapons": [
@@ -24038,6 +24051,251 @@
       "icon": "https://github.com/user-attachments/assets/a6ae35d2-8afe-4bf2-8640-e32f423bbc64",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_120",
       "effect": "擊殺符合條件的 elite 時恢復最大韌性的 20%／25%／30%／35%（依等級）；受缺少韌性封頂。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p1",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 192,
+        "end_line": 255
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p2",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 74,
+        "end_line": 137
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "bolter_p1",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 310,
+        "end_line": 373
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 31
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 74,
+        "end_line": 137
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 74,
+        "end_line": 137
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 674,
+        "end_line": 737
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 33,
+        "end_line": 35
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill",
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "ogryn_rippergun_p1",
+      "page": "entries/烈火熱焰/weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": 0.07,
+        "II": 0.08,
+        "III": 0.09,
+        "IV": 0.1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_rippergun_p1.lua",
+        "start_line": 61,
+        "end_line": 124
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_rippergun_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_increase_close_damage_on_close_kill_desc",
+      "description_hash": "72a8e537",
+      "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill_parent"
     }
   ],
   "bindings": [
@@ -34133,6 +34391,244 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
         "import_line": 16,
         "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 913
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 908
+      }
+    },
+    {
+      "blessing_id": "fire-frenzy",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/increase_close_damage_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 891
       }
     }
   ]
