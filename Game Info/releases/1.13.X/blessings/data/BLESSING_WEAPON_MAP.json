@@ -1868,6 +1868,19 @@
         "raw_zh_tw": "優勢",
         "reason": "繁中 RAW 名稱「優勢」亦由不同 name key `loc_trait_bespoke_elite_kills_grants_stackable_power` 使用；本頁以「優勢（近戰力量）」標示此 key 的 melee PowerLevel 效果，與 Crowbar／Force Sword 的通用 Strength 祝福區分，保留遊戲 RAW。"
       }
+    },
+    {
+      "id": "offensive-defence",
+      "name_zh_tw": "反守為攻",
+      "name_en": "Offensive Defence",
+      "name_key": "loc_trait_damage_bonus_on_block",
+      "description_key": "loc_trait_damage_bonus_on_block_desc",
+      "name_hash": "a2a3e589",
+      "description_hash": "62809d8e",
+      "page": "entries/反守為攻/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
+      "effect": "持用來源盾錘格擋來襲攻擊時累積格擋消耗，I–IV每層提高+4／+6／+8／+10%近戰威力修正，最多五層；掃掠完成時消耗一層，格擋或掃掠完成會刷新3.5秒共用期限。"
     }
   ],
   "weapons": [
@@ -29251,6 +29264,102 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
       "effect": "穿音速雙刀 布蘭克斯 Mk XI（transonic_sword_transonic_knife_p1_m1）：持用此武器時處理到合格擊殺事件，便每層增加該 tier 的近戰威力計算修正；最多 3 層，5 秒計時刷新後逐層衰退。",
       "buff_template_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_elite_kills_grants_stackable_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus",
+      "blessing_id": "offensive-defence",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "page": "entries/反守為攻/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier_per_layer_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "displayed_percent_per_layer_by_tier": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "effective_layer_cap": 5,
+        "child_duration_seconds": 3.5,
+        "on_block_counter_to_layer_rule": "clamp(floor(T)+(T>0 ? 1 : 0),0,5)",
+        "on_sweep_finish_delta": "T=max(T-1,0); k=max(k-1,0)",
+        "power_pool": "melee_power_level_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua",
+        "start_line": 282,
+        "end_line": 341
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_damage_bonus_on_block_desc",
+      "description_hash": "62809d8e",
+      "icon": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_231",
+      "effect": "歐洛克斯與果羅姆板盾：一般格擋累積原始 block_cost；特殊格擋為零成本，因此本身不增加T；push-follow是掃掠並在完成時消耗一層。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus",
+      "blessing_id": "offensive-defence",
+      "weapon_id": "powermaul_shield_p1",
+      "page": "entries/反守為攻/weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_power_level_modifier_per_layer_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "displayed_percent_per_layer_by_tier": {
+          "I": 4,
+          "II": 6,
+          "III": 8,
+          "IV": 10
+        },
+        "effective_layer_cap": 5,
+        "child_duration_seconds": 3.5,
+        "on_block_counter_to_layer_rule": "clamp(floor(T)+(T>0 ? 1 : 0),0,5)",
+        "on_sweep_finish_delta": "T=max(T-1,0); k=max(k-1,0)",
+        "power_pool": "melee_power_level_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_shield_p1.lua",
+        "start_line": 203,
+        "end_line": 262
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_shield_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_damage_bonus_on_block_desc",
+      "description_hash": "62809d8e",
+      "icon": "https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_231",
+      "effect": "布蘭克斯 Mk VI／Mk XI：一般格擋與特殊蓄勢／0.4秒窗口內接到的格擋可累積原始 block_cost；向外 weapon_shout 不讀本項近戰威力修正，也不消耗掃掠層；push-follow是掃掠。",
+      "buff_template_id": "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus_parent"
     }
   ],
   "bindings": [
@@ -42216,6 +42325,62 @@
         "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
         "import_line": 16,
         "append_line": 3179
+      }
+    },
+    {
+      "blessing_id": "offensive-defence",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/block_grants_power_bonus",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1773
+      }
+    },
+    {
+      "blessing_id": "offensive-defence",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_grants_power_bonus",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/block_grants_power_bonus",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "offensive-defence",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/block_grants_power_bonus",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1612
+      }
+    },
+    {
+      "blessing_id": "offensive-defence",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_block_grants_power_bonus",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/block_grants_power_bonus",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1830
       }
     }
   ]

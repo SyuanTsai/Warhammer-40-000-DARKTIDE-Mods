@@ -414,6 +414,7 @@
 - Last Guard - 最後防線
   - 本體1.13.1名稱鍵 `loc_trait_block_break_pushes`，hash `9825f3c4`；英文／繁中RAW配對確認。
 - Offensive Defence - 反守為攻
+  - 本體1.13.1名稱鍵 `loc_trait_damage_bonus_on_block`，hash `a2a3e589`；英文／繁中RAW配對確認。
 - Shock & Awe / Shock and Awe - 震懾
 
 ### 遠程武器祝福

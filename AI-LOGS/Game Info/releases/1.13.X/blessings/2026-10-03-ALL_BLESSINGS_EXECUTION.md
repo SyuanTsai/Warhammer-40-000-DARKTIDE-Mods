@@ -467,3 +467,5 @@
 - [孤注一擲](2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json)：新增9變體、18型號關聯；共9變體、18關聯。
 
 - [優勢（近戰力量）](2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
+
+- [反守為攻](2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

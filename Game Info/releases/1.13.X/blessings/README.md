@@ -146,5 +146,6 @@
 | <img src="https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db" width="32" height="32" alt="最後防線祝福圖示"> [最後防線](entries/最後防線/README.md)<br>- Last Guard<br>[完整說明](entries/最後防線/README.md) | <ul><li>當持用來源盾錘並以格擋實際耗盡耐力時，冷卻結束後觸發一次半徑5的自動推擊；I–IV冷卻為18／15／12／9秒，格擋消耗降低15／20／25／30%。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f" width="32" height="32" alt="孤注一擲祝福圖示"> [孤注一擲](entries/孤注一擲/README.md)<br>- All or Nothing<br>[完整說明](entries/孤注一擲/README.md) | <ul><li>耐力越低，依型號步幅增加最多五階近戰威力；一般八型號與碎骨者克魯克 Mk IIa 使用不同每階值與耐力步幅。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9" width="32" height="32" alt="優勢（近戰力量）祝福圖示"> [優勢（近戰力量）](entries/優勢（近戰力量）/README.md)<br>- Superiority<br>[完整說明](entries/優勢（近戰力量）/README.md) | <ul><li>事件處理時正持用相應武器欄位，且擊殺結果與目標標籤符合條件，便增加一層近戰威力計算修正；最多 3 層，每次合格事件刷新 5 秒逐層衰退計時。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7" width="32" height="32" alt="反守為攻祝福圖示"> [反守為攻](entries/反守為攻/README.md)<br>- Offensive Defence<br>[完整說明](entries/反守為攻/README.md) | <ul><li>持用來源盾錘格擋來襲攻擊時累積格擋消耗，I–IV每層提高+4／+6／+8／+10%近戰威力修正，最多五層；掃掠完成時消耗一層，格擋或掃掠完成會刷新3.5秒共用期限。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
