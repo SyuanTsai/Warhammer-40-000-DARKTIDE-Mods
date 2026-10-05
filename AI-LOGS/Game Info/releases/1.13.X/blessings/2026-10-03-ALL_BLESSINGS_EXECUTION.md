@@ -411,3 +411,5 @@
 - [雷鳴](2026-10-03-THUNDEROUS_ACCEPTANCE.json)：新增9變體、20型號關聯；共9變體、20關聯。
 
 - [亞空間樞紐](2026-10-03-WARP-NEXUS_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。
+
+- [輕裝](2026-10-03-STRIPPED-DOWN_ACCEPTANCE.json)：新增4變體、11型號關聯；共4變體、11關聯。

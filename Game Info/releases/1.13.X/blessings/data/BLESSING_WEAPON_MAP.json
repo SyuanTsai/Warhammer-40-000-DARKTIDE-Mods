@@ -1573,6 +1573,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
       "effect": "手持支援的力場法杖時，祝福依 raw 反噬比例每滿 20% 增加一階致命一擊機率，最高四階；每階按所選等級增加 3.5、4、4.5 或 5 個百分點。"
+    },
+    {
+      "id": "stripped-down",
+      "name_zh_tw": "輕裝",
+      "name_en": "Stripped Down",
+      "name_key": "loc_trait_bespoke_increased_sprint_speed",
+      "description_key": "loc_trait_bespoke_increased_sprint_speed_desc",
+      "name_hash": "05774d98",
+      "description_hash": "4f33ede2",
+      "page": "entries/輕裝/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "effect": "手持相符武器、正在衝刺且剩餘耐力比例達到門檻時，條件式加入 ranged Dodge keyword；效果限會使用可閃避 ranged Dodge 判定的攻擊，不是速度加成或通用傷害免疫。"
     }
   ],
   "weapons": [
@@ -26418,6 +26431,150 @@
       "icon": "https://github.com/user-attachments/assets/7b314280-0bfe-4a53-8bf5-a278d868bfb7",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
       "effect": "虛空打擊力場法杖 陰陽 Mk IV手持時，依原始反噬比例每滿 20% 增加一階致命一擊機率；每階按所選等級增加 3.5／4／4.5／5 個百分點，至多四階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p1",
+      "page": "entries/輕裝/weapon_trait_bespoke_autogun_p1_increased_sprint_speed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "conditional_threshold": {
+          "I": 0.8,
+          "II": 0.7,
+          "III": 0.6,
+          "IV": 0.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 546,
+        "end_line": 575
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 43
+      },
+      "description_key": "loc_trait_bespoke_increased_sprint_speed_desc",
+      "description_hash": "4f33ede2",
+      "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
+      "effect": "步兵自動槍族：持有該族相符武器、正在衝刺且目前剩餘耐力比例達到所選等級門檻時，條件式加入 ranged Dodge keyword。效果僅適用實際採用可閃避 ranged Dodge 判定的攻擊，不增加移動速度，也不是通用傷害免疫。涵蓋 Mark：autogun_p1_m1, autogun_p1_m2, autogun_p1_m3。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p2",
+      "page": "entries/輕裝/weapon_trait_bespoke_autogun_p2_increased_sprint_speed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "conditional_threshold": {
+          "I": 0.8,
+          "II": 0.7,
+          "III": 0.6,
+          "IV": 0.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 284,
+        "end_line": 313
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_increased_sprint_speed_desc",
+      "description_hash": "4f33ede2",
+      "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
+      "effect": "槍托自動槍族：持有該族相符武器、正在衝刺且目前剩餘耐力比例達到所選等級門檻時，條件式加入 ranged Dodge keyword。效果僅適用實際採用可閃避 ranged Dodge 判定的攻擊，不增加移動速度，也不是通用傷害免疫。涵蓋 Mark：autogun_p2_m1, autogun_p2_m2, autogun_p2_m3。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+      "blessing_id": "stripped-down",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/輕裝/weapon_trait_bespoke_lasgun_p3_increased_sprint_speed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "conditional_threshold": {
+          "I": 0.8,
+          "II": 0.7,
+          "III": 0.6,
+          "IV": 0.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 168,
+        "end_line": 197
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_increased_sprint_speed_desc",
+      "description_hash": "4f33ede2",
+      "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
+      "effect": "偵察鐳射槍族：持有該族相符武器、正在衝刺且目前剩餘耐力比例達到所選等級門檻時，條件式加入 ranged Dodge keyword。效果僅適用實際採用可閃避 ranged Dodge 判定的攻擊，不增加移動速度，也不是通用傷害免疫。涵蓋 Mark：lasgun_p3_m1, lasgun_p3_m2, lasgun_p3_m3。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed",
+      "blessing_id": "stripped-down",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/輕裝/weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "conditional_threshold": {
+          "I": 0.8,
+          "II": 0.7,
+          "III": 0.6,
+          "IV": 0.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 459,
+        "end_line": 488
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_increased_sprint_speed_desc",
+      "description_hash": "4f33ede2",
+      "icon": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
+      "effect": "針彈手槍族：持有該族相符武器、正在衝刺且目前剩餘耐力比例達到所選等級門檻時，條件式加入 ranged Dodge keyword。效果僅適用實際採用可閃避 ranged Dodge 判定的攻擊，不增加移動速度，也不是通用傷害免疫。涵蓋 Mark：needlepistol_p1_m1, needlepistol_p1_m2。"
     }
   ],
   "bindings": [
@@ -38011,6 +38168,160 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
         "import_line": 13,
         "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/increased_sprint_speed",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increased_sprint_speed",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increased_sprint_speed",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/increased_sprint_speed",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/increased_sprint_speed",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "stripped-down",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/increased_sprint_speed",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
       }
     }
   ]

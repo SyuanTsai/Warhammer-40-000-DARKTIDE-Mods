@@ -1,0 +1,536 @@
+{
+  "date": "2026-10-05",
+  "blessing": "stripped-down",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/輕裝/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+    "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+    "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+    "weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed"
+  ],
+  "added_binding_count": 11,
+  "total_variants": 4,
+  "total_bindings": 11,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "stripped-down",
+    "review_type": "non_author_formal_peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-formal-peer-scope.json",
+    "scope_sha256": "d003a36262260cbf1dc80a9e2565949bd66999d0be377fc6d0346e4b8d5e57cb",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-config.json": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-draft.md": "0406d19f5918d6099cf7318a45b0551d9e7cb68c38e129a535f345d6a00b94e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-evidence.json": "13e84139c6f326d31ae5bb00ca60ac6c62603edd297e2138021abe9622c16358",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-config.json": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-extension-draft.json": "de31aebc91d6585e5c387ac37865de01b92766445be4501f461844285e8891fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/action-coverage.json": "870a42c2b0b7af43190054bf5241700955c5e1f26d19699cad636167d191f2b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/association-snapshot.json": "5ac57fa5a68bfe95a8ccc00e2b9e0f2f410caddb7600acc3bcc7074a82844a40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/binding-inventory.json": "845fdcfbe4eade166d58c68fdbe2fb91c33886ca4e3903d547bc1708cabf561b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-freeze.json": "acb650af570afbfb422c0824b51faa4ceee90b96f55269191b297effe6dc3f18",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-generated-preview-manifest.json": "82aab058861c225aa10038831f60fc1d71abdfc46f5321d61aa77dd4ecbdddeb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-page.md": "5240b6ca1c9d938e19d806307d6287fdca346ed844ab68e08c9d72c1f39737e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-source-index.md": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/coverage.json": "201f32190d96566b3adad9b4b601d6a0c555ee76f3f97b35bced9590779e6d6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/binding-inventory.json": "845fdcfbe4eade166d58c68fdbe2fb91c33886ca4e3903d547bc1708cabf561b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/image-receipt.json": "5c496ba327cb9822bd2b23c57ab625fc9cc4e495117610cc5a191278b34b1993",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/item-metadata.json": "82af8c935418558b88e3653572a10691d850fdbd0ee85132a32c60ad5831bbde",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/localized-keys.json": "7dc6e91364f2a59b9c11ec040d5e0fc5b81cf259cca9980ffde9176e01b40331",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-own-tier-wrapper-review.json": "394e4e2acc3331abc661d3cbdb87dcf8197911d81431434bc0da4826d9ef6f37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-raw-implementation-content-review.json": "46ad19fc3ca1357a1c97a0cd9562165858ad241dd59028e9d6ca5dd14ce24690",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-traits-review.json": "51356226f9b47e7007f6d53fd4f7e782a22528b62c56f00dec6be1955291023f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-ui-raw-verification.json": "c9649d674b8f9041977f356f35e6e752b0666ffc349f58b70a4302a4f93b0e02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-ui-review.json": "d9caacd51f8e9c2ea3ea3dfbccfd1b735413989da7d801316d24e79a146e1b42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/source-ranges.json": "bbca54a1ea57c3806ce494d81e478419f79e50865e6ecf9016bc3a8e172aab73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-003.json": "244a1be559429ca162e0e56af6f8e0afc0357756acc6302686f98de717cff1ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-004.json": "cc78cbf38411bb03f266ba0cc4b7f1b0b87f9dbaecb839ec5e66df170237d877",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-005.json": "8203841744d787dd8f4885a58801c74141c40d3eb8c5daf558bb1cf3cfd6e2cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-006.json": "a8b20eef6fc0acb0287b73a3c13f3dd86bb91b25ba54fca5ddb97c7886f2910e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-config.json": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-draft.md": "0406d19f5918d6099cf7318a45b0551d9e7cb68c38e129a535f345d6a00b94e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-evidence.json": "13e84139c6f326d31ae5bb00ca60ac6c62603edd297e2138021abe9622c16358",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-selfcheck.json": "8a5cba65e85f90e865613808cf362eb8229a5a2287add68e9a936795f8fc177d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-image.json": "5c496ba327cb9822bd2b23c57ab625fc9cc4e495117610cc5a191278b34b1993",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-focused-checks.json": "7bfd41074a48ebaaf16da5e30eaafbe7eb17415905acd80eb769313e4434a39c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-frozen-source-verification.json": "531f604abca70f1165d0dc03902b935605394ebf95fa003049020034e44120d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-own-tier-wrapper-review.json": "394e4e2acc3331abc661d3cbdb87dcf8197911d81431434bc0da4826d9ef6f37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ranged-dodge-consumer-delta-content-review.json": "113e14457ea4828ff2b6d7ae2fcb1c9b57d295a51db0bb1b355e3c3cc2bbbdb2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-RAW-implementation-content-review.json": "46ad19fc3ca1357a1c97a0cd9562165858ad241dd59028e9d6ca5dd14ce24690",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-reported-content-delta-closure.json": "ce8d306f093a7e5241924258adfbd5403a1b862fdde76e5d911fd87b2dbcb55f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-resume-review.json": "b11ff8809a4fa1d50377398490361ab29cdf1b985dbce83ff669d56694049846",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-traits-review.json": "51356226f9b47e7007f6d53fd4f7e782a22528b62c56f00dec6be1955291023f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-raw-verification.json": "c9649d674b8f9041977f356f35e6e752b0666ffc349f58b70a4302a4f93b0e02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-review.json": "d9caacd51f8e9c2ea3ea3dfbccfd1b735413989da7d801316d24e79a146e1b42",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-raw-verification.json": "541c9bec3c38a213e3187764cb135ee38169b4de6ce3727003b2f51425347942",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e9d2c3d207fd1fcbb3114d3da4d87191045551610964eddd2059fdf425650247",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/DAMAGE_PERCENTAGE_REVIEW.md": "ee9829f939ce039d7b4dc6ddcab35291a7a48599cb75aceaf28903895b6d3643",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/LOCALIZATION_COMPARISON.md": "0d91188b735b8c8adf5faffe4688364b50674dcdf5e28c2c0568a45cf6ded3c1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/README.md": "f801a12add9267ae1572c1b6b7155389e5754be9877b971e3872c0c401388b10",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/SOURCE_INDEX.md": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/TIER_VALUES.md": "a97cde6ef895e90ffbb1678cbaea5b8fbe91bca12ebc09506b987eea61527ffc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/輕裝/WEAPON_COMPATIBILITY.md": "04413ab0e74dfec8fd7705fdb832a46d9c90574a5b83481bb95d9fbaf16a5b7d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "5e382232ddc68fd518a1ec268417d5ab0a9ef8c540ebb4b0cc07d8fb31fcbd9c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "3008a0d7eaebd7297d6681ebb50d309665e83ba29d6f445ef6ff041835363eeb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3496db6daf004af3351dd395d8ec0add346b1c758456bf9fe92f39b33d58fa1a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "16f3cf94c4520bff4a29d140e76d7f8bf5d5a6506032bfa196a23dd2e42877db",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "0c294c97017e4549f09ac7eff701fdae248c132993084bb8c98b7d539ec1125d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "b62bfbcdc85f83f3dbe7fc8088a44faa501e7f427f654a971a0afe94af0f71a3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "4700fa24fee82ae25d16cdffbb34e1fcc6471d2589fcd258c64c9b34b70f7bd9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/own-association-snapshot.json": "1fec1e7f3c23a19a2292b06b47e4b83d3b64283b527b53f6f437a350786fd1d0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-004/Referneces/Translation.md": "e2058f9ace38888f6f1762fc58cac3c7c9e9ab569074d7e47653347c0a8895cb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-raw-verification.json": "541c9bec3c38a213e3187764cb135ee38169b4de6ce3727003b2f51425347942",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "dcad4df3c2f0db34a66f067e27d2a3b9c198dbf4d11db832a394f01d138cf8b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/DAMAGE_PERCENTAGE_REVIEW.md": "0cc923b5f5f1b726679fcd78333b8565a8d2d7fdea51c8a95df57336182ba2c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/LOCALIZATION_COMPARISON.md": "0d91188b735b8c8adf5faffe4688364b50674dcdf5e28c2c0568a45cf6ded3c1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/README.md": "5240b6ca1c9d938e19d806307d6287fdca346ed844ab68e08c9d72c1f39737e2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/SOURCE_INDEX.md": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/TIER_VALUES.md": "a97cde6ef895e90ffbb1678cbaea5b8fbe91bca12ebc09506b987eea61527ffc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/WEAPON_COMPATIBILITY.md": "eacbc2f0e1e70c5677f7a83df0d4490da3b86be884ec7919c525a6f963f4c7d9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_autogun_p1_increased_sprint_speed.md": "4dcf2c8e7f2d392fe9eb60f85aa804c883699e38ad295b8c7ae2212e74c902b0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_autogun_p2_increased_sprint_speed.md": "4eed90e61e2ec967e9b3718fe73a24655aca8334fe9fdf9af9711ff37589812f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_lasgun_p3_increased_sprint_speed.md": "45ffe086483b0205b50b5d5b295c0c3073b499a760bee46d2d16213da3dd5d83",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed.md": "638ddc1e7529fd6cd4c0a59641225c0e3feab27b1026fabc4b9b2ec40f928575",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "1933d6f3faafaf0d0b0ee9e82da8581ef3a9d884ea81ad873e0361e3455d6bce",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "63a8a295337091ed787c74c480b92d8e1c9ec4b03ce72be37fd15b82803f970e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "ac32af2b8dcdecda170fe85c3038ef5b2705111ef7b5ef2aa1b0134eee38ccdb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "3a5a023f2d93709e02a0cd371877d7f8eaac924d32a98a66ae30c44d1bc6c3df",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/actual-preview-006/own-association-snapshot.json": "40423356c3f80ad6dc2b8268b3dad0d45f0e6b70b54566aee655922d0442d822",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "dcad4df3c2f0db34a66f067e27d2a3b9c198dbf4d11db832a394f01d138cf8b8",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/DAMAGE_PERCENTAGE_REVIEW.md": "0cc923b5f5f1b726679fcd78333b8565a8d2d7fdea51c8a95df57336182ba2c0",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/LOCALIZATION_COMPARISON.md": "0d91188b735b8c8adf5faffe4688364b50674dcdf5e28c2c0568a45cf6ded3c1",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/README.md": "5240b6ca1c9d938e19d806307d6287fdca346ed844ab68e08c9d72c1f39737e2",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/SOURCE_INDEX.md": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/TIER_VALUES.md": "a97cde6ef895e90ffbb1678cbaea5b8fbe91bca12ebc09506b987eea61527ffc",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/WEAPON_COMPATIBILITY.md": "eacbc2f0e1e70c5677f7a83df0d4490da3b86be884ec7919c525a6f963f4c7d9",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_autogun_p1_increased_sprint_speed.md": "4dcf2c8e7f2d392fe9eb60f85aa804c883699e38ad295b8c7ae2212e74c902b0",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_autogun_p2_increased_sprint_speed.md": "4eed90e61e2ec967e9b3718fe73a24655aca8334fe9fdf9af9711ff37589812f",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_lasgun_p3_increased_sprint_speed.md": "45ffe086483b0205b50b5d5b295c0c3073b499a760bee46d2d16213da3dd5d83",
+      "Game Info/releases/1.13.X/blessings/entries/輕裝/weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed.md": "638ddc1e7529fd6cd4c0a59641225c0e3feab27b1026fabc4b9b2ec40f928575",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "5e382232ddc68fd518a1ec268417d5ab0a9ef8c540ebb4b0cc07d8fb31fcbd9c",
+      "Game Info/releases/1.13.X/blessings/README.md": "3008a0d7eaebd7297d6681ebb50d309665e83ba29d6f445ef6ff041835363eeb",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3496db6daf004af3351dd395d8ec0add346b1c758456bf9fe92f39b33d58fa1a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "1933d6f3faafaf0d0b0ee9e82da8581ef3a9d884ea81ad873e0361e3455d6bce",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "63a8a295337091ed787c74c480b92d8e1c9ec4b03ce72be37fd15b82803f970e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "ac32af2b8dcdecda170fe85c3038ef5b2705111ef7b5ef2aa1b0134eee38ccdb",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "3a5a023f2d93709e02a0cd371877d7f8eaac924d32a98a66ae30c44d1bc6c3df",
+      "Referneces/Translation.md": "e2058f9ace38888f6f1762fc58cac3c7c9e9ab569074d7e47653347c0a8895cb"
+    },
+    "scope_hash_verification": {
+      "file_count": 97,
+      "matched": 97,
+      "mismatched": 0
+    },
+    "reviewed_delta": {
+      "stale_workflow_status_removed": true,
+      "traditional_chinese_raw_quote_exact_without_inserted_space": true,
+      "four_variant_effect_summaries_localized_in_chinese": true,
+      "affected_formal_and_reverse_files_match_passing_preview": true,
+      "formal_entry_pages": 10,
+      "variant_count": 4,
+      "binding_count": 11,
+      "variant_ids": [
+        "weapon_trait_bespoke_autogun_p1_increased_sprint_speed",
+        "weapon_trait_bespoke_autogun_p2_increased_sprint_speed",
+        "weapon_trait_bespoke_lasgun_p3_increased_sprint_speed",
+        "weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed"
+      ],
+      "map_mark_count": 11,
+      "map_kind": "ranged",
+      "actual_preview_006_passed": true,
+      "preview_generated_files": 15,
+      "preview_generated_file_hash_mismatches": 0,
+      "focused_source_ranges": 51,
+      "focused_source_files": 31,
+      "focused_mapping_and_global_consistency": true,
+      "focused_links_new_errors": 0,
+      "focused_gfm_files": 14,
+      "image_icon": "weapon_trait_056",
+      "image_receipt_sha256": "5c496ba327cb9822bd2b23c57ab625fc9cc4e495117610cc5a191278b34b1993",
+      "unchanged_core_and_tier_wrapper_review_reused": true
+    },
+    "review_conclusion": "All three previously reported text issues are corrected. The final ten-page set, four variants/eleven bindings, localized shared and reverse summaries, map partition, preview, and image evidence match the fixed scope."
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "stripped-down",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_056",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_056.png",
+      "attachment": "https://github.com/user-attachments/assets/7b70f115-a9ff-4025-9533-f2626ca9266a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5992871418",
+      "acquired_date": "2026-10-05",
+      "sha256": "dba38fb2ad1b5db8120e69d91f4d8f42d3eb5cd12637259ff14ee5f5b35d41c3",
+      "content_type": "image/png",
+      "size": 2191,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "輕裝祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_verification": "Root viewed actual public128x128 PNG, white wide beveled rectangular shape on black background; original pixels preserved."
+    },
+    "attachment_reused_from_verified_receipt": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 18,
+      "rows": 458,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 51,
+      "source_files": 31,
+      "bindings": 839,
+      "variants": 422,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 31,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1135,
+      "remote_references": 459,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 29,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author-preview-own-long-path-enumeration-coverage-full-scan.json",
+        "sha256": "02a1e5d0eb7a02e1b9e176f8ba6e87921207ac2ab4c67e9235b2d46207eeb0c6",
+        "trigger": "author-preview-own-long-path-enumeration-coverage"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 49,
+    "not_started_name_groups": 49,
+    "partial_name_groups": 0,
+    "remaining_variants": 183,
+    "remaining_bindings": 346,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "cee3fc446bf4a0341df1e8d7cb8c61ac51bda27acc94e6e045fba38c64f8d8dd"
+  },
+  "previous_local_commit": "adf8aeface85632e8b6180643e4940518dfca7ee",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-focused-checks.json",
+      "sha256": "7bfd41074a48ebaaf16da5e30eaafbe7eb17415905acd80eb769313e4434a39c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-frozen-source-verification.json",
+      "sha256": "531f604abca70f1165d0dc03902b935605394ebf95fa003049020034e44120d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-own-tier-wrapper-review.json",
+      "sha256": "394e4e2acc3331abc661d3cbdb87dcf8197911d81431434bc0da4826d9ef6f37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ranged-dodge-consumer-delta-content-review.json",
+      "sha256": "113e14457ea4828ff2b6d7ae2fcb1c9b57d295a51db0bb1b355e3c3cc2bbbdb2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-RAW-implementation-content-review.json",
+      "sha256": "46ad19fc3ca1357a1c97a0cd9562165858ad241dd59028e9d6ca5dd14ce24690"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-reported-content-delta-closure.json",
+      "sha256": "ce8d306f093a7e5241924258adfbd5403a1b862fdde76e5d911fd87b2dbcb55f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-resume-review.json",
+      "sha256": "b11ff8809a4fa1d50377398490361ab29cdf1b985dbce83ff669d56694049846"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-traits-review.json",
+      "sha256": "51356226f9b47e7007f6d53fd4f7e782a22528b62c56f00dec6be1955291023f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-raw-verification.json",
+      "sha256": "c9649d674b8f9041977f356f35e6e752b0666ffc349f58b70a4302a4f93b0e02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-review.json",
+      "sha256": "d9caacd51f8e9c2ea3ea3dfbccfd1b735413989da7d801316d24e79a146e1b42"
+    }
+  ],
+  "primary_review_method": "Content review centered on actual own full tiers/wrapper/formatter/native producer+consumer and difference applicability; common held/event/cache/lifetime mechanisms unchanged and reused. Original frozen author trio remains separate. Single approved canonical generates formal pages and shared indexes; formal nonauthor peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-config.json",
+    "sha256": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/binding-inventory.json",
+      "sha256": "845fdcfbe4eade166d58c68fdbe2fb91c33886ca4e3903d547bc1708cabf561b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/image-receipt.json",
+      "sha256": "5c496ba327cb9822bd2b23c57ab625fc9cc4e495117610cc5a191278b34b1993"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/item-metadata.json",
+      "sha256": "82af8c935418558b88e3653572a10691d850fdbd0ee85132a32c60ad5831bbde"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/localized-keys.json",
+      "sha256": "7dc6e91364f2a59b9c11ec040d5e0fc5b81cf259cca9980ffde9176e01b40331"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-own-tier-wrapper-review.json",
+      "sha256": "394e4e2acc3331abc661d3cbdb87dcf8197911d81431434bc0da4826d9ef6f37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-raw-implementation-content-review.json",
+      "sha256": "46ad19fc3ca1357a1c97a0cd9562165858ad241dd59028e9d6ca5dd14ce24690"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-traits-review.json",
+      "sha256": "51356226f9b47e7007f6d53fd4f7e782a22528b62c56f00dec6be1955291023f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-ui-raw-verification.json",
+      "sha256": "c9649d674b8f9041977f356f35e6e752b0666ffc349f58b70a4302a4f93b0e02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/inputs/primary-ui-review.json",
+      "sha256": "d9caacd51f8e9c2ea3ea3dfbccfd1b735413989da7d801316d24e79a146e1b42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-006.json",
+      "sha256": "a8b20eef6fc0acb0287b73a3c13f3dd86bb91b25ba54fca5ddb97c7886f2910e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "dcad4df3c2f0db34a66f067e27d2a3b9c198dbf4d11db832a394f01d138cf8b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "0cc923b5f5f1b726679fcd78333b8565a8d2d7fdea51c8a95df57336182ba2c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\LOCALIZATION_COMPARISON.md",
+      "sha256": "0d91188b735b8c8adf5faffe4688364b50674dcdf5e28c2c0568a45cf6ded3c1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\README.md",
+      "sha256": "5240b6ca1c9d938e19d806307d6287fdca346ed844ab68e08c9d72c1f39737e2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\SOURCE_INDEX.md",
+      "sha256": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\TIER_VALUES.md",
+      "sha256": "a97cde6ef895e90ffbb1678cbaea5b8fbe91bca12ebc09506b987eea61527ffc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\WEAPON_COMPATIBILITY.md",
+      "sha256": "eacbc2f0e1e70c5677f7a83df0d4490da3b86be884ec7919c525a6f963f4c7d9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\weapon_trait_bespoke_autogun_p1_increased_sprint_speed.md",
+      "sha256": "4dcf2c8e7f2d392fe9eb60f85aa804c883699e38ad295b8c7ae2212e74c902b0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\weapon_trait_bespoke_autogun_p2_increased_sprint_speed.md",
+      "sha256": "4eed90e61e2ec967e9b3718fe73a24655aca8334fe9fdf9af9711ff37589812f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\weapon_trait_bespoke_lasgun_p3_increased_sprint_speed.md",
+      "sha256": "45ffe086483b0205b50b5d5b295c0c3073b499a760bee46d2d16213da3dd5d83"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\輕裝\\weapon_trait_bespoke_needlepistol_p1_increased_sprint_speed.md",
+      "sha256": "638ddc1e7529fd6cd4c0a59641225c0e3feab27b1026fabc4b9b2ec40f928575"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\偵察鐳射槍\\README.md",
+      "sha256": "1933d6f3faafaf0d0b0ee9e82da8581ef3a9d884ea81ad873e0361e3455d6bce"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\槍托自動槍\\README.md",
+      "sha256": "63a8a295337091ed787c74c480b92d8e1c9ec4b03ce72be37fd15b82803f970e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\步兵自動槍\\README.md",
+      "sha256": "ac32af2b8dcdecda170fe85c3038ef5b2705111ef7b5ef2aa1b0134eee38ccdb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\針彈手槍\\README.md",
+      "sha256": "3a5a023f2d93709e02a0cd371877d7f8eaac924d32a98a66ae30c44d1bc6c3df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-raw-verification.json",
+      "sha256": "541c9bec3c38a213e3187764cb135ee38169b4de6ce3727003b2f51425347942"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\stripped-down-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "40423356c3f80ad6dc2b8268b3dad0d45f0e6b70b54566aee655922d0442d822"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/action-coverage.json",
+      "sha256": "870a42c2b0b7af43190054bf5241700955c5e1f26d19699cad636167d191f2b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/association-snapshot.json",
+      "sha256": "5ac57fa5a68bfe95a8ccc00e2b9e0f2f410caddb7600acc3bcc7074a82844a40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/binding-inventory.json",
+      "sha256": "845fdcfbe4eade166d58c68fdbe2fb91c33886ca4e3903d547bc1708cabf561b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-freeze.json",
+      "sha256": "acb650af570afbfb422c0824b51faa4ceee90b96f55269191b297effe6dc3f18"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-generated-preview-manifest.json",
+      "sha256": "82aab058861c225aa10038831f60fc1d71abdfc46f5321d61aa77dd4ecbdddeb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-page.md",
+      "sha256": "5240b6ca1c9d938e19d806307d6287fdca346ed844ab68e08c9d72c1f39737e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/candidate-source-index.md",
+      "sha256": "3182b55c7e482ded1481ad30c0d951c4df6cdf7475abec8c8ab0514f77f470a5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/coverage.json",
+      "sha256": "201f32190d96566b3adad9b4b601d6a0c555ee76f3f97b35bced9590779e6d6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/source-ranges.json",
+      "sha256": "bbca54a1ea57c3806ce494d81e478419f79e50865e6ecf9016bc3a8e172aab73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-003.json",
+      "sha256": "244a1be559429ca162e0e56af6f8e0afc0357756acc6302686f98de717cff1ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-004.json",
+      "sha256": "cc78cbf38411bb03f266ba0cc4b7f1b0b87f9dbaecb839ec5e66df170237d877"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-actual-preview-receipt-005.json",
+      "sha256": "8203841744d787dd8f4885a58801c74141c40d3eb8c5daf558bb1cf3cfd6e2cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-config.json",
+      "sha256": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-draft.md",
+      "sha256": "0406d19f5918d6099cf7318a45b0551d9e7cb68c38e129a535f345d6a00b94e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-agent-evidence.json",
+      "sha256": "13e84139c6f326d31ae5bb00ca60ac6c62603edd297e2138021abe9622c16358"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-group/stripped-down-selfcheck.json",
+      "sha256": "8a5cba65e85f90e865613808cf362eb8229a5a2287add68e9a936795f8fc177d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-config.json",
+      "sha256": "1bb1d05257115f03dbdc1ae6eaa883cb630a6ab50e38b873cb8d3d18ba9a42ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-evidence.json",
+      "sha256": "13e84139c6f326d31ae5bb00ca60ac6c62603edd297e2138021abe9622c16358"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-agent-draft.md",
+      "sha256": "0406d19f5918d6099cf7318a45b0551d9e7cb68c38e129a535f345d6a00b94e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-frozen-source-verification.json",
+      "sha256": "531f604abca70f1165d0dc03902b935605394ebf95fa003049020034e44120d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-own-tier-wrapper-review.json",
+      "sha256": "394e4e2acc3331abc661d3cbdb87dcf8197911d81431434bc0da4826d9ef6f37"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ranged-dodge-consumer-delta-content-review.json",
+      "sha256": "113e14457ea4828ff2b6d7ae2fcb1c9b57d295a51db0bb1b355e3c3cc2bbbdb2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-RAW-implementation-content-review.json",
+      "sha256": "46ad19fc3ca1357a1c97a0cd9562165858ad241dd59028e9d6ca5dd14ce24690"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-reported-content-delta-closure.json",
+      "sha256": "ce8d306f093a7e5241924258adfbd5403a1b862fdde76e5d911fd87b2dbcb55f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-traits-review.json",
+      "sha256": "51356226f9b47e7007f6d53fd4f7e782a22528b62c56f00dec6be1955291023f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-raw-verification.json",
+      "sha256": "c9649d674b8f9041977f356f35e6e752b0666ffc349f58b70a4302a4f93b0e02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-primary-ui-review.json",
+      "sha256": "d9caacd51f8e9c2ea3ea3dfbccfd1b735413989da7d801316d24e79a146e1b42"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/stripped-down-formal-peer-scope.json",
+    "sha256": "d003a36262260cbf1dc80a9e2565949bd66999d0be377fc6d0346e4b8d5e57cb",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
