@@ -403,3 +403,5 @@
 - [暴走](2026-10-03-RAMPAGE_ACCEPTANCE.json)：新增8變體、18型號關聯；共8變體、18關聯。
 
 - [提速](2026-10-03-REV-IT-UP_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- [毀滅打擊](2026-10-03-DEVASTATING-STRIKE_ACCEPTANCE.json)：新增5變體、11型號關聯；共5變體、11關聯。

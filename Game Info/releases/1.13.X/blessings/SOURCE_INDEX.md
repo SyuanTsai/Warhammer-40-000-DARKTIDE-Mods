@@ -120,3 +120,4 @@
 | [野蠻橫掃](entries/野蠻橫掃/README.md) | [來源索引](entries/野蠻橫掃/SOURCE_INDEX.md) |
 | [暴走](entries/暴走/README.md) | [來源索引](entries/暴走/SOURCE_INDEX.md) |
 | [提速](entries/提速/README.md) | [來源索引](entries/提速/SOURCE_INDEX.md) |
+| [毀滅打擊](entries/毀滅打擊/README.md) | [來源索引](entries/毀滅打擊/SOURCE_INDEX.md) |

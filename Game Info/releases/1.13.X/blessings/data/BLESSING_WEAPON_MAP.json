@@ -1534,6 +1534,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
       "effect": "成功啟動武器特殊動作後，持用該武器時依等級取得+17%至+20%移動速度加算值，持續2秒；重觸發刷新但不累積層數。"
+    },
+    {
+      "id": "devastating-strike",
+      "name_zh_tw": "毀滅打擊",
+      "name_en": "Devastating Strike",
+      "name_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit",
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "name_hash": "1a966f66",
+      "description_hash": "f824963f",
+      "page": "entries/毀滅打擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
     }
   ],
   "weapons": [
@@ -25553,6 +25566,292 @@
       "icon": "https://github.com/user-attachments/assets/3d06a9eb-af04-4e0c-aa02-f56d047dea16",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_079",
       "effect": "依等級讓移動速度加算值增加 +17% 至 +20%，持續 2 秒；限持用本武器並成功啟動特殊動作時。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+      "blessing_id": "devastating-strike",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/毀滅打擊/weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_template_id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "restriction_key": "chainsword_p1",
+        "marks": [
+          "chainsword_p1_m1",
+          "chainsword_p1_m2"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 0.65,
+          "II": 0.7,
+          "III": 0.75,
+          "IV": 0.8
+        },
+        "display_percent": {
+          "I": 65,
+          "II": 70,
+          "III": 75,
+          "IV": 80
+        },
+        "tier_override_replaces_base_fallback": true,
+        "base_proc_fallback": 0.5,
+        "active_duration_seconds": 5,
+        "cooldown_duration": null,
+        "icon_id": "weapon_trait_076",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_076"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 136,
+        "end_line": 185
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "description_hash": "f824963f",
+      "icon": "https://github.com/user-attachments/assets/4b5a4b99-a917-4442-87f2-efe241c4049a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_076",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+      "blessing_id": "devastating-strike",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/毀滅打擊/weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_template_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "restriction_key": "combatsword_p1",
+        "marks": [
+          "combatsword_p1_m1",
+          "combatsword_p1_m2",
+          "combatsword_p1_m3"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 0.65,
+          "II": 0.7,
+          "III": 0.75,
+          "IV": 0.8
+        },
+        "display_percent": {
+          "I": 65,
+          "II": 70,
+          "III": 75,
+          "IV": 80
+        },
+        "tier_override_replaces_base_fallback": true,
+        "base_proc_fallback": 0.5,
+        "active_duration_seconds": 5,
+        "cooldown_duration": null,
+        "icon_id": "weapon_trait_072",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 236,
+        "end_line": 285
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "description_hash": "f824963f",
+      "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+      "blessing_id": "devastating-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/毀滅打擊/weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_template_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "restriction_key": "ogryn_combatblade_p1",
+        "marks": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 0.65,
+          "II": 0.7,
+          "III": 0.75,
+          "IV": 0.8
+        },
+        "display_percent": {
+          "I": 65,
+          "II": 70,
+          "III": 75,
+          "IV": 80
+        },
+        "tier_override_replaces_base_fallback": true,
+        "base_proc_fallback": 0.5,
+        "active_duration_seconds": 5,
+        "cooldown_duration": null,
+        "icon_id": "weapon_trait_086",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_086"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 261,
+        "end_line": 310
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 111,
+        "end_line": 111
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "description_hash": "f824963f",
+      "icon": "https://github.com/user-attachments/assets/fd584eb5-b5c8-4dfa-aa0b-37472808ac06",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_086",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+      "blessing_id": "devastating-strike",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/毀滅打擊/weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_template_id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "restriction_key": "powersword_2h_p1",
+        "marks": [
+          "powersword_2h_p1_m1",
+          "powersword_2h_p1_m2"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 0.65,
+          "II": 0.7,
+          "III": 0.75,
+          "IV": 0.8
+        },
+        "display_percent": {
+          "I": 65,
+          "II": 70,
+          "III": 75,
+          "IV": 80
+        },
+        "tier_override_replaces_base_fallback": true,
+        "base_proc_fallback": 0.5,
+        "active_duration_seconds": 5,
+        "cooldown_duration": null,
+        "icon_id": "weapon_trait_072",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 343,
+        "end_line": 392
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 191,
+        "end_line": 194
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "description_hash": "f824963f",
+      "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit",
+      "blessing_id": "devastating-strike",
+      "weapon_id": "powersword_p3",
+      "page": "entries/毀滅打擊/weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit",
+        "actual_buff_template_id": "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "restriction_key": "powersword_p3",
+        "marks": [
+          "powersword_p3_m1"
+        ],
+        "stat_key": "max_hit_mass_attack_modifier",
+        "tier_stat_values": {
+          "I": 0.65,
+          "II": 0.7,
+          "III": 0.75,
+          "IV": 0.8
+        },
+        "display_percent": {
+          "I": 65,
+          "II": 70,
+          "III": 75,
+          "IV": 80
+        },
+        "tier_override_replaces_base_fallback": true,
+        "base_proc_fallback": 0.5,
+        "active_duration_seconds": 5,
+        "cooldown_duration": null,
+        "icon_id": "weapon_trait_072",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_072"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 273,
+        "end_line": 322
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 62,
+        "end_line": 62
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_crit_desc",
+      "description_hash": "f824963f",
+      "icon": "https://github.com/user-attachments/assets/bff62972-f31b-4ea9-a311-5dde971011cd",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_072",
+      "effect": "造成正傷害的近戰爆擊使本祝福武器的攻擊側最大命中質量提高；效果持續5秒，合格事件可刷新。"
     }
   ],
   "bindings": [
@@ -36656,6 +36955,160 @@
         "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
         "import_line": 14,
         "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "devastating-strike",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_infinite_melee_cleave_on_crit",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/infinite_melee_cleave_on_crit",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
       }
     }
   ]
