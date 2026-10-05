@@ -1,0 +1,12 @@
+Field Awareness 1.4.7
+2026-10-01: Put Maximum-stack flashing second below Debuff stack numbers. Menu order only; defaults and runtime rendering retained. Prepared while user tests 1.4.6; not installed or published.
+2026-10-01: All Field defaults approved for the first-install test; main 45%, Light 25%, behind-wall Off, brittleness/vulnerability Off. Outline switches hide their dependent controls. Prepared only; installation/publication pending review.
+2026-10-01: Green crosshair moved to HUD; separate 0-100% enemy outline intensity, default 100%; behind-wall Light 66% unchanged. Test build; defaults review and gameplay validation pending.
+2026-09-30: Out-of-line-of-sight outlines default Off; visible colored outlines remain enabled. Light intensity defaults to 66%. Out of line of sight orange glow defaults Off; On adds orange and Off uses the live-confirmed color-only layer. Experimental setting/logs retired. Individual upload package prepared.
+2026-09-29: Added Prophet of Decay floor-attack rings from the active boss effect and replicated safe-zone index. Green outlines the safe annulus; orange outlines and ticks mark the surrounding damaging floor. The arena's permanent goop is scenery.
+2026-09-29: Fixed deployed medical crate and Hive Scum stim-field circles by reading the native radius from proximity_check_params.
+2026-09-29: Grouped world markers and warnings, moved the static crosshair out of Teammate Displays, and simplified menu section titles and marker choice labels. Existing setting IDs and defaults are unchanged.
+Standalone distribution; requires Darktide Mod Framework.
+
+Efficiency audit, September 28, 2026: Streams bundled PNGs in 32 KiB chunks; loads boss artwork only when requested; reuses shared endpoint projections and bounded raster scratch; releases geometry caches at lifecycle resets.
+Field defaults completed: main outlines 45%, behind walls Off, Light 25%, orange Off; brittleness and vulnerability icons Off; stack numbers first beneath icons. Flashing uses live native caps. Darktide-only clasped-hands friend icon On.

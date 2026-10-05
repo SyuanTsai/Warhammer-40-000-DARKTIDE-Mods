@@ -1093,6 +1093,13 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - Archive SHA-256: `6df8cd4aa91587626883aab641f954ddb7072f7926834f90f0c49e87df5f1f19`
 - Acquisition method: `manual-queue`
 
+### [Field_Awareness](https://www.nexusmods.com/warhammer40kdarktide/mods/1359)
+    顯示特定怪物的輪廓與攻擊區域(可視範圍內)
+- MOD 網站最後更新日期：Last updated 02 October 2026, 2:39AM
+- MOD 版本：1.4.7
+- MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
+- 手動維護最後下載日期：2026-10-05
+
 
 # 移除的MOD
 
