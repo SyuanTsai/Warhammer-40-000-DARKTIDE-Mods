@@ -342,3 +342,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [專注引導全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE.json)
 
 - [激勵彈幕全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE.json)
+
+- [不穩定能量全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json)

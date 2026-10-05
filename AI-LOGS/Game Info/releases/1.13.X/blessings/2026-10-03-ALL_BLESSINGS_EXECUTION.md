@@ -457,3 +457,5 @@
 - 第34輪三項已Commit後完整掃描通過：punishing-fire (`ee5596d263c89f976da4f0dd71e1f739e2f9069b`)、blazing-spirit-warpfire (`5f2deb20f6a1ea87c02f0fa1e633f654941450e4`)、focused-channelling (`f3953359d33fa58ef347a04ec2836a6e06a0ad2c`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-034-full-scan.json`／SHA-256 `e52565ec6a21637469cd9bb47af839d8aa23d9abe7472a9eb2ce40cc2335f2ef`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [激勵彈幕](2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
+
+- [不穩定能量](2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json)：新增2變體、5型號關聯；共2變體、5關聯。

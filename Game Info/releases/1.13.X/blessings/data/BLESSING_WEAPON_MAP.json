@@ -1811,6 +1811,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/6b381aff-25ca-43bb-9878-356963df97f5",
       "effect": "每次通過連擊計數條件的射擊彈藥事件，都依等級及當下計數直接回復韌性；最大計算倍率為五。"
+    },
+    {
+      "id": "unstable-power",
+      "name_zh_tw": "不穩定能量",
+      "name_en": "Unstable Power",
+      "name_key": "loc_trait_bespoke_warp_charge_power_bonus",
+      "description_key": "loc_trait_bespoke_warp_charge_power_bonus_desc",
+      "name_hash": "2410af29",
+      "description_hash": "b554975d",
+      "page": "entries/不穩定能量/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+      "effect": "持用時，反噬每 20 個百分點使力量修正增加一階，最高四階；每階 +3.5／+4／+4.5／+5 個百分點。"
     }
   ],
   "weapons": [
@@ -28505,6 +28518,110 @@
       "icon": "https://github.com/user-attachments/assets/6b381aff-25ca-43bb-9878-356963df97f5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_127",
       "effect": "惡棍槍 洛倫茲 Mk VII：腰射與瞄準皆為 hitscan、每動作消耗一發；沒有 keep_combo_on_start，瞄準不持有連擊，預設逾時重設 0.2 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus",
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/不穩定能量/weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_power_level_modifier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "wrapper_fallback_power_level_modifier": 0.05,
+        "override_replaces_fallback": true,
+        "peril_step_interval": 0.2,
+        "max_steps": 4,
+        "displayed_value_by_tier": [
+          "+3.5%",
+          "+4%",
+          "+4.5%",
+          "+5%"
+        ],
+        "maximum_runtime_modifier_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 53,
+        "end_line": 92
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_warp_charge_power_bonus_desc",
+      "description_hash": "b554975d",
+      "icon": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "持用時，每 20 個百分點反噬增加 3.5／4／4.5／5 個百分點力量修正，最高 4 階。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus",
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/不穩定能量/weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_power_level_modifier": {
+          "I": 0.035,
+          "II": 0.04,
+          "III": 0.045,
+          "IV": 0.05
+        },
+        "wrapper_fallback_power_level_modifier": 0.05,
+        "override_replaces_fallback": true,
+        "peril_step_interval": 0.2,
+        "max_steps": 4,
+        "displayed_value_by_tier": [
+          "+14%",
+          "+16%",
+          "+18%",
+          "+20%"
+        ],
+        "maximum_runtime_modifier_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 96,
+        "end_line": 138
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_warp_charge_power_bonus_desc",
+      "description_hash": "b554975d",
+      "icon": "https://github.com/user-attachments/assets/dba7c355-1bf0-46d3-ab64-a9bcffefe3e0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_064",
+      "effect": "持用時，每 20 個百分點反噬增加 3.5／4／4.5／5 個百分點力量修正，最高 4 階。"
     }
   ],
   "bindings": [
@@ -41064,6 +41181,76 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
         "import_line": 16,
         "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/warp_charge_power_bonus",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_warp_charge_power_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/warp_charge_power_bonus",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/warp_charge_power_bonus",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/warp_charge_power_bonus",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "unstable-power",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_warp_charge_power_bonus",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/warp_charge_power_bonus",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
       }
     }
   ]

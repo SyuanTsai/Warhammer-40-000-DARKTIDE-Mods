@@ -360,6 +360,7 @@
 - Blazing Spirit - 燃燒靈魂
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_warp_burninating_on_crit`，hash `f33675ec`；英文／繁中RAW配對確認。
 - Unstable Power - 不穩定能量
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_warp_charge_power_bonus`，hash `2410af29`；英文／繁中RAW配對確認。
 - Warp Slice - 亞空間斬
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_wind_slash_crits`，hash `d4193c5e`；英文／繁中RAW配對確認。擊
 - Exorcist - 驅魔者
