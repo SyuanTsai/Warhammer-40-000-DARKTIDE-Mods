@@ -1369,6 +1369,28 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
       "effect": "弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。"
+    },
+    {
+      "id": "enhanced-voltaic-arcs",
+      "name_zh_tw": "強化電流弧",
+      "name_en": "Enhanced Voltaic Arcs",
+      "name_key": "loc_trait_bespoke_enhanced_arc_jumps_angle",
+      "description_key": "loc_trait_bespoke_enhanced_arc_jumps_angle_desc",
+      "name_hash": "ecc50357",
+      "description_hash": "d4a89390",
+      "page": "entries/強化電流弧/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
+      "effect": "持用指定武器並符合條件快取時，增加電弧連鎖最大角、跳躍半徑及最大跳躍次數；這是目標搜尋加值，不是傷害百分比。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "Enhanced Voltaic Arcs",
+        "reason": "本文件採用「強化電流弧」作文件譯名；同一來源雜湊下，名稱與描述的 RAW locale 0/16 均為英文「Enhanced Voltaic Arcs」及原英文描述。本文件譯名與文件譯文不是遊戲內繁體中文 RAW。"
+      },
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -1963,10 +1985,15 @@
         {
           "id": "arc_rifle_p1_m1",
           "item": "content/items/weapons/player/ranged/arc_rifle_p1_m1",
-          "name": "庫巴爾電弧步槍",
-          "name_en": "Kobal Arc Rifle",
+          "name": "電弧步槍 布蘭克斯 Mk IV",
+          "name_en": "Arc Rifle Branx Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
-          "trait_category": "bespoke_arc_rifle_p1"
+          "trait_category": "bespoke_arc_rifle_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_arc_rifle_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_arc_rifle_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_arc_rifle_p1_m1"
+          }
         }
       ]
     },
@@ -20777,6 +20804,170 @@
       "icon": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_180",
       "effect": "弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。"
+    },
+    {
+      "id": "weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle",
+      "blessing_id": "enhanced-voltaic-arcs",
+      "weapon_id": "arc_rifle_p1",
+      "page": "entries/強化電流弧/weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_keys": {
+          "angle": "chain_lightning_arc_rifle_max_angle",
+          "jumps": "chain_lightning_arc_rifle_max_jumps",
+          "radius": "chain_lightning_arc_rifle_max_radius"
+        },
+        "tier_values": [
+          {
+            "tier": "I",
+            "angle_deg": 3,
+            "angle_display": 3,
+            "jumps": 1,
+            "radius": 0.3
+          },
+          {
+            "tier": "II",
+            "angle_deg": 5,
+            "angle_display": 5,
+            "jumps": 1,
+            "radius": 0.5
+          },
+          {
+            "tier": "III",
+            "angle_deg": 7.5,
+            "angle_display": 7,
+            "jumps": 1,
+            "radius": 0.75
+          },
+          {
+            "tier": "IV",
+            "angle_deg": 10,
+            "angle_display": 10,
+            "jumps": 1,
+            "radius": 1
+          }
+        ],
+        "native_max_jumps": {
+          "hip": 1,
+          "braced": 2
+        },
+        "max_jumps_after_trait": {
+          "I": {
+            "hip": 2,
+            "braced": 3
+          },
+          "II": {
+            "hip": 2,
+            "braced": 3
+          },
+          "III": {
+            "hip": 2,
+            "braced": 3
+          },
+          "IV": {
+            "hip": 2,
+            "braced": 3
+          }
+        },
+        "link_damage_profile": "arc_rifle_arc_chain_lightning_link_damage"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua",
+        "start_line": 368,
+        "end_line": 441
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "start_line": 39,
+        "end_line": 48
+      },
+      "description_key": "loc_trait_bespoke_enhanced_arc_jumps_angle_desc",
+      "description_hash": "d4a89390",
+      "icon": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_249",
+      "effect": "持用電弧步槍 布蘭克斯 Mk IV 時，角度 I–IV 加 +3°／+5°／+7.5°／+10°、半徑加 +0.3／+0.5／+0.75／+1、max_jumps 各加 1。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle",
+      "blessing_id": "enhanced-voltaic-arcs",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/強化電流弧/weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_keys": {
+          "angle": "chain_lightning_powermaul_max_angle",
+          "jumps": "chain_lightning_powermaul_max_jumps",
+          "radius": "chain_lightning_powermaul_max_radius"
+        },
+        "tier_values": [
+          {
+            "tier": "I",
+            "angle_deg": 5,
+            "angle_display": 5,
+            "jumps": 1,
+            "radius": 0.5
+          },
+          {
+            "tier": "II",
+            "angle_deg": 7.5,
+            "angle_display": 7,
+            "jumps": 1,
+            "radius": 1
+          },
+          {
+            "tier": "III",
+            "angle_deg": 10,
+            "angle_display": 10,
+            "jumps": 2,
+            "radius": 1.5
+          },
+          {
+            "tier": "IV",
+            "angle_deg": 12.5,
+            "angle_display": 12,
+            "jumps": 2,
+            "radius": 2
+          }
+        ],
+        "native_max_jumps": {
+          "special_active_sweeps": 2
+        },
+        "max_jumps_after_trait": {
+          "I": 3,
+          "II": 3,
+          "III": 4,
+          "IV": 4
+        },
+        "link_damage_profile": "powermaul_p3_arc_chain_lightning_link_damage",
+        "sweep_gate": "special_active_at_start"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 372,
+        "end_line": 445
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 103,
+        "end_line": 112
+      },
+      "description_key": "loc_trait_bespoke_enhanced_arc_jumps_angle_desc",
+      "description_hash": "d4a89390",
+      "icon": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_249",
+      "effect": "持用電弧鎚 布蘭克斯 Mk III 時，角度 I–IV 加 +5°／+7.5°／+10°／+12.5°、半徑加 +0.5／+1／+1.5／+2、max_jumps 加 1／1／2／2；掃擊路徑另受 special-active gate 限制。"
     }
   ],
   "bindings": [
@@ -29094,6 +29285,34 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
         "import_line": 15,
         "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "enhanced-voltaic-arcs",
+      "weapon_id": "arc_rifle_p1",
+      "mark_id": "arc_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle",
+      "trait_item": "content/items/traits/bespoke_arc_rifle_p1/enhanced_arc_jumps_angle",
+      "trait_category": "bespoke_arc_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+        "import_line": 20,
+        "append_line": 1061
+      }
+    },
+    {
+      "blessing_id": "enhanced-voltaic-arcs",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/enhanced_arc_jumps_angle",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
       }
     }
   ]

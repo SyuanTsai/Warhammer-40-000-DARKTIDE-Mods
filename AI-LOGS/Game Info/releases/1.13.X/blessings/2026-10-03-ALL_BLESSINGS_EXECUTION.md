@@ -371,3 +371,5 @@
 - [破甲](2026-10-03-SUNDER_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
 
 - [致命連擊](2026-10-03-CHAINED-DEATHBLOW_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- [強化電流弧](2026-10-03-ENHANCED-VOLTAIC-ARCS_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。

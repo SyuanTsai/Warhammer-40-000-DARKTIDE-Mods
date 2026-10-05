@@ -5,7 +5,7 @@
 - 實作：`weapon_trait_bespoke_arc_rifle_p1_toughness_on_continuous_fire`。
 - 等級覆寫：[trait](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua#L442-L482)。
 - Buff接入：[繼承與覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua#L49)。
-- 適用型號：庫巴爾電弧步槍。
+- 適用型號：電弧步槍 布蘭克斯 Mk IV。
 
 ## 機制與公式
 

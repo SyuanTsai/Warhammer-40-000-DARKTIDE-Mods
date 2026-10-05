@@ -5,7 +5,7 @@
 - 實作：`weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage`。
 - 等級覆寫：[trait](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua#L10-L59)。
 - Buff接入：[繼承與覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua#L12-L14)。
-- 適用型號：庫巴爾電弧步槍。
+- 適用型號：電弧步槍 布蘭克斯 Mk IV。
 
 ## 機制與公式
 

@@ -1889,3 +1889,6 @@
 
 - Vicious Slice - 兇狠切割
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_stagger_per_hit_in_sweep`，hash `c20ffbce`；英文／繁中RAW配對確認。
+
+- Enhanced Voltaic Arcs - 強化電流弧
+  - 文件譯名；本體1.13.1繁中仍為「Enhanced Voltaic Arcs」。名稱鍵 `loc_trait_bespoke_enhanced_arc_jumps_angle`，hash `ecc50357`；保留同hash中英RAW原文與文件翻譯分層。

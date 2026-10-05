@@ -18,7 +18,7 @@
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 穿音速雙刀 布蘭克斯 Mk XI |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 動力劍 斯干達 Mk III、動力劍 阿克利斯 Mk VI |
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 偵察鐳射槍 奧克塔蘭 Mk VIc、偵察鐳射槍 奧克塔蘭 Mk XII、偵察鐳射槍 奧克塔蘭 Mk XIV |
-| [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
+| [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 電弧步槍 布蘭克斯 Mk IV |
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 槍托自動槍 弗拉克斯 Mk II、槍托自動槍 格拉亞 Mk IV、槍托自動槍 阿格里皮娜 Mk VIII |
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 矛頭爆矢槍 洛克 Mk IIb、矛頭爆矢槍 洛克 Mk III |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 重伐木槍 克魯克 Mk IIa、重伐木槍 戈爾貢努姆 Mk IIIa、重伐木槍 阿克利斯 Mk II |

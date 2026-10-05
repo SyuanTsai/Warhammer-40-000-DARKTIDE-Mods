@@ -77,6 +77,6 @@
 | 武器 | 適用型號 | 等級 | 效果差異 |
 |---|---|---|---|
 | [雙鏈重型機槍](../../weapons/ranged/雙鏈重型機槍/README.md) | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 | I–IV | 每次新暴擊判定最多轉移2／3／4／5發 |
-| [電弧步槍](../../weapons/ranged/電弧步槍/README.md) | 庫巴爾電弧步槍 | I–IV | I–IV每次新暴擊判定最多轉移1發；連鎖傷害不額外補彈 |
+| [電弧步槍](../../weapons/ranged/電弧步槍/README.md) | 電弧步槍 布蘭克斯 Mk IV | I–IV | I–IV每次新暴擊判定最多轉移1發；連鎖傷害不額外補彈 |
 
 [逐型號對應](WEAPON_COMPATIBILITY.md)｜[等級數值](TIER_VALUES.md)｜[原文比較](LOCALIZATION_COMPARISON.md)｜[百分比檢核](DAMAGE_PERCENTAGE_REVIEW.md)｜[返回目錄](../../README.md)
