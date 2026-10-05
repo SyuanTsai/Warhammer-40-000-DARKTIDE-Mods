@@ -1924,3 +1924,6 @@
 
 - Rev it Up - 提速
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_movement_speed_on_activation`，hash `5d0fe023`；英文／繁中RAW配對確認。
+
+- Blazing Spirit - 燃燒靈魂（靈能法杖與雙手力場劍）
+  - 文件譯名；本體1.13.1繁中仍為「燃燒靈魂」。名稱鍵 `loc_trait_bespoke_warpfire_burn_on_crit`，hash `47a95669`；保留同hash中英RAW原文與文件翻譯分層。

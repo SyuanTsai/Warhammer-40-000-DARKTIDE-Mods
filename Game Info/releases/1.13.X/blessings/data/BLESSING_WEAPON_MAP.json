@@ -1759,6 +1759,32 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
       "effect": "觸發後，遠程攻擊力量修正提高 +6%／+9%／+12%／+15%，持續 3 秒。"
+    },
+    {
+      "id": "blazing-spirit-warpfire",
+      "name_zh_tw": "燃燒靈魂（靈能法杖與雙手力場劍）",
+      "name_en": "Blazing Spirit",
+      "name_key": "loc_trait_bespoke_warpfire_burn_on_crit",
+      "description_key": "loc_trait_bespoke_warpfire_burn_on_crit_desc",
+      "name_hash": "47a95669",
+      "description_hash": "d687cdb8",
+      "page": "entries/燃燒靈魂（靈能法杖與雙手力場劍）/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+      "effect": "本祝福在綁定武器的合格暴擊命中後，按武器家族請求靈魂之火層數；目標同名層數共同計算，法杖沿用6層上限，雙手力場巨劍另有特殊斬擊請求值與逐級總上限。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "燃燒靈魂",
+        "reason": "同一來源資源、hash `47a95669` 的本體 RAW 名稱仍為 `Blazing Spirit／燃燒靈魂`。另一個祝福已使用此 RAW 繁中名；為讓這個不同 name_key、trait 群與武器效果在文件目錄可區分，文件標題加上「靈能法杖與雙手力場劍」限定詞。這只是文件識別譯名，不是本體 RAW 的繁中翻譯；保留原名稱鍵與中英 RAW 文字。"
+      },
+      "description_keys": [
+        "loc_trait_bespoke_warpfire_burn_on_crit_desc",
+        "loc_trait_bespoke_warpfire_burn_on_crit_special_desc"
+      ],
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -28056,6 +28082,148 @@
       "icon": "https://github.com/user-attachments/assets/63d34e16-454f-4ece-8051-9c473c0a1619",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_130",
       "effect": "觸發後，遠程攻擊力量修正提高 +6%／+9%／+12%／+15%，持續 3 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits",
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "requested_stacks": 1,
+          "target_cap": 6
+        },
+        "II": {
+          "requested_stacks": 2,
+          "target_cap": 6
+        },
+        "III": {
+          "requested_stacks": 3,
+          "target_cap": 6
+        },
+        "IV": {
+          "requested_stacks": 4,
+          "target_cap": 6
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 196,
+        "end_line": 234
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_warpfire_burn_on_crit_desc",
+      "description_hash": "d687cdb8",
+      "icon": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_061",
+      "effect": "虛空爆破力場法杖手持時，普通遠程或蓄力爆炸的逐目標命中需暴擊；I–IV 每次請求1／2／3／4層，沿用目標上限6層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits",
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "requested_stacks": 1,
+          "target_cap": 6
+        },
+        "II": {
+          "requested_stacks": 2,
+          "target_cap": 6
+        },
+        "III": {
+          "requested_stacks": 3,
+          "target_cap": 6
+        },
+        "IV": {
+          "requested_stacks": 4,
+          "target_cap": 6
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 196,
+        "end_line": 234
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_warpfire_burn_on_crit_desc",
+      "description_hash": "d687cdb8",
+      "icon": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_061",
+      "effect": "虛空打擊力場法杖手持時，普通或蓄力投射物／爆炸的逐目標命中需暴擊；I–IV 每次請求1／2／3／4層，沿用目標上限6層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit",
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/燃燒靈魂（靈能法杖與雙手力場劍）/weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "melee_requested_stacks": 1,
+          "warpshock_slash_requested_stacks": 1,
+          "target_cap": 3
+        },
+        "II": {
+          "melee_requested_stacks": 2,
+          "warpshock_slash_requested_stacks": 1,
+          "target_cap": 6
+        },
+        "III": {
+          "melee_requested_stacks": 3,
+          "warpshock_slash_requested_stacks": 2,
+          "target_cap": 9
+        },
+        "IV": {
+          "melee_requested_stacks": 4,
+          "warpshock_slash_requested_stacks": 3,
+          "target_cap": 12
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 136,
+        "end_line": 204
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_warpfire_burn_on_crit_special_desc",
+      "description_hash": "b5a14e87",
+      "icon": "https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_061",
+      "effect": "誓約 Mk VI／Mk VIII 烈焰力場巨劍手持時，正傷害近戰暴擊每次請求1／2／3／4層；真正 Warpshock Slash 暴擊改請求1／1／2／3層，I–IV目標上限3／6／9／12。"
     }
   ],
   "bindings": [
@@ -40475,6 +40643,62 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
         "import_line": 16,
         "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/warpfire_burn_on_crit",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_warp_burninating_on_crits",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/warpfire_burn_on_crit",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/warp_burninating_on_crit",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "blazing-spirit-warpfire",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_warp_burninating_on_crit",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/warp_burninating_on_crit",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
       }
     }
   ]
