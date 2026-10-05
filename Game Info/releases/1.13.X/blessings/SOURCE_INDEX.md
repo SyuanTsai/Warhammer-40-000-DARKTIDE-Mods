@@ -132,3 +132,4 @@
 | [亞空間斬](entries/亞空間斬/README.md) | [來源索引](entries/亞空間斬/SOURCE_INDEX.md) |
 | [轉移反噬](entries/轉移反噬/README.md) | [來源索引](entries/轉移反噬/SOURCE_INDEX.md) |
 | [不入虎穴，焉得虎子](entries/不入虎穴，焉得虎子/README.md) | [來源索引](entries/不入虎穴，焉得虎子/SOURCE_INDEX.md) |
+| [護甲之禍](entries/護甲之禍/README.md) | [來源索引](entries/護甲之禍/SOURCE_INDEX.md) |

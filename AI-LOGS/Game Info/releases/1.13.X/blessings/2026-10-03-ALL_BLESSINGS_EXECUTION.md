@@ -435,3 +435,5 @@
 - [轉移反噬](2026-10-03-TRANSFER-PERIL_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
 
 - [不入虎穴，焉得虎子](2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [護甲之禍](2026-10-03-ARMOURBANE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。

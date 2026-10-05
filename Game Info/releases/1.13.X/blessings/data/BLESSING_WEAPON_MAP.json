@@ -1694,6 +1694,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
       "effect": "惡霸棍棒 P2 的特殊掌擊命中精英後，重設韌性恢復時間戳，並在本 tier 的 2／3／4／5 秒窗口內提供每秒韌性恢復額外修正 +50%；重複合格命中刷新窗口。"
+    },
+    {
+      "id": "armourbane",
+      "name_zh_tw": "護甲之禍",
+      "name_en": "Armourbane",
+      "name_key": "loc_trait_bespoke_rend_armor_on_charged_shots",
+      "description_key": "loc_trait_bespoke_rend_armor_on_charged_shots_desc",
+      "name_hash": "c3565b9b",
+      "description_hash": "363a7233",
+      "page": "entries/護甲之禍/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94",
+      "effect": "依充能在命中的小兵身上疊加脆弱；每層 2.5%，目標端最多 16 層並持續 5 秒。"
     }
   ],
   "weapons": [
@@ -27636,6 +27649,55 @@
       "icon": "https://github.com/user-attachments/assets/0f9d8b8f-e684-4a43-8301-20f9a41a3b10",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_212",
       "effect": "布倫特專用 Mk I、布倫特得意之作 Mk II、布倫特猛擊 Mk IIIb 共用左右掌擊特殊掃掠與相同 I–IV 數值。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots",
+      "blessing_id": "armourbane",
+      "weapon_id": "lasgun_p2",
+      "page": "entries/護甲之禍/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "minimum_stacks_at_charge_threshold": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "maximum_stacks_at_charge_threshold": {
+          "I": 6,
+          "II": 8,
+          "III": 10,
+          "IV": 12
+        },
+        "charge_thresholds": {
+          "minimum": 0.25,
+          "maximum": 0.75
+        },
+        "rending_multiplier_per_stack": 0.025,
+        "target_buff_max_stacks": 16,
+        "target_buff_duration_seconds": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua",
+        "start_line": 301,
+        "end_line": 421
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua",
+        "start_line": 59,
+        "end_line": 59
+      },
+      "description_key": "loc_trait_bespoke_rend_armor_on_charged_shots_desc",
+      "description_hash": "363a7233",
+      "icon": "https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_108",
+      "effect": "冥潮鐳射槍：腰射與瞄準 hitscan 依充能加脆弱；盧修斯 MK IIIa／MK V 的特殊刺刀為刺擊，Mk IV 為揮砍。"
     }
   ],
   "bindings": [
@@ -39887,6 +39949,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
         "import_line": 15,
         "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "armourbane",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/rend_armor_on_charged_shots",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1335
+      }
+    },
+    {
+      "blessing_id": "armourbane",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/rend_armor_on_charged_shots",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1329
+      }
+    },
+    {
+      "blessing_id": "armourbane",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/rend_armor_on_charged_shots",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1246
       }
     }
   ]
