@@ -101,3 +101,4 @@
 | [迅雷反射](entries/迅雷反射/README.md) | [來源索引](entries/迅雷反射/SOURCE_INDEX.md) |
 | [仁慈殺手](entries/仁慈殺手/README.md) | [來源索引](entries/仁慈殺手/SOURCE_INDEX.md) |
 | [能量循環](entries/能量循環/README.md) | [來源索引](entries/能量循環/SOURCE_INDEX.md) |
+| [完美一擊](entries/完美一擊/README.md) | [來源索引](entries/完美一擊/SOURCE_INDEX.md) |

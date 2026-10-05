@@ -1278,6 +1278,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
       "effect": "持用此劍且充能狀態有效時，I／II 最多增加 1 次、III／IV 最多增加 2 次連續充能揮擊；每個有效連擊步向近戰衝擊修正加入 2.5%／5%／7.5%／10%，不增加傷害。"
+    },
+    {
+      "id": "perfect-strike",
+      "name_zh_tw": "完美一擊",
+      "name_en": "Perfect Strike",
+      "name_key": "loc_trait_bespoke_pass_past_armor_on_crit",
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "name_hash": "0893680f",
+      "description_hash": "0719aab6",
+      "page": "entries/完美一擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
     }
   ],
   "weapons": [
@@ -19064,6 +19077,433 @@
       "icon": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_205",
       "effect": "持用此劍且充能狀態有效時，I／II 最多增加 1 次、III／IV 最多增加 2 次連續充能揮擊；每個有效連擊步向近戰衝擊修正加入 2.5%／5%／7.5%／10%，不增加傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/完美一擊/weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "chainsword_2h_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 427,
+        "end_line": 466
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/完美一擊/weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "combatsword_p2"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 286,
+        "end_line": 325
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/完美一擊/weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "ogryn_club_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 262,
+        "end_line": 301
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/完美一擊/weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "ogryn_club_p2"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 9,
+        "end_line": 48
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_powermaul_p1",
+      "page": "entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "ogryn_powermaul_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua",
+        "start_line": 273,
+        "end_line": 312
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "page": "entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "ogryn_powermaul_slabshield_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua",
+        "start_line": 202,
+        "end_line": 241
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_pass_past_armor_on_crit",
+      "blessing_id": "perfect-strike",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/完美一擊/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_pass_past_armor_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "defined_tiers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "stat_key": "melee_critical_strike_damage",
+        "tier_values_by_level": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "value_unit": "additive fraction to the shared finesse multiplier, only consumed for melee critical damage",
+        "wrapper_fallback": 0.025,
+        "tier_overrides_replace_fallback": true,
+        "requires_melee_critical": true,
+        "conditional_keywords": [
+          "use_reduced_hit_mass",
+          "ignore_armor_aborts_attack"
+        ],
+        "proc_duration_or_stacks": false,
+        "separate_hit_mass_effect": true,
+        "bonus_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "base_fallback_replaced": true,
+        "restriction_key": "transonic_sword_transonic_knife_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 348,
+        "end_line": 387
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 50,
+        "end_line": 50
+      },
+      "description_key": "loc_trait_bespoke_pass_past_armor_on_crit_new_desc",
+      "description_hash": "0719aab6",
+      "icon": "https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_181",
+      "effect": "持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。"
     }
   ],
   "bindings": [
@@ -26751,6 +27191,216 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
         "import_line": 12,
         "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_powermaul_p1",
+      "mark_id": "ogryn_powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_powermaul_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 2346
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1773
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "perfect-strike",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_pass_past_armor_on_crit",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/pass_past_armor_on_crit",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]

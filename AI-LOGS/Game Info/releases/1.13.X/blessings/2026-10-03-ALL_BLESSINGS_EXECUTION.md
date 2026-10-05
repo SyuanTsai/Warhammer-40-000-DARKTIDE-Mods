@@ -353,3 +353,5 @@
 - 第21輪三項已Commit後完整掃描通過：refined-lethality (`3382779064876342449517ce95cd430e5f12b1b6`)、marksman-reflex (`7ad575c54e9b1eeb277870d9c1a416078b4e628c`)、mercy-killer (`b526b1e119958bfccfe55b1c67e4b5b5cff2b62a`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-021-full-scan.json`／SHA-256 `46b98052df35ac215de6219c04c3e53b2d51bdbb5fdf9b3d9450434ad0acd720`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [能量循環](2026-10-03-POWER-CYCLER_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- [完美一擊](2026-10-03-PERFECT-STRIKE_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。
