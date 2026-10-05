@@ -1642,6 +1642,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
       "effect": "依等級提供 +10% 至 +25% 近戰衝擊修正；手持時，實際呼叫 HitMass 的攻擊會降低一般活體敵人的質量消耗，特殊 Bash 另略過護甲中止判定。質量預算與 Breed 中止仍有效。"
+    },
+    {
+      "id": "pinpointing-target",
+      "name_zh_tw": "精確定位",
+      "name_en": "Pinpointing target",
+      "name_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged",
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged_desc",
+      "name_hash": "e44ee018",
+      "description_hash": "c22ab880",
+      "page": "entries/精確定位/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "effect": "瞄準時每 0.4 秒增加一層威力，最多 5 層；每層增幅依武器家族而異。除擲彈兵臂鎧外，射擊後清空層數。"
     }
   ],
   "weapons": [
@@ -27191,6 +27204,183 @@
       "icon": "https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_133",
       "effect": "惡棍槍 洛倫茲 Mk VII：腰射／瞄準 hit-scan 和特殊 Bash 讀取此項的實際修正；一般敵人質量扣除降低，護甲中止另於 Bash 被略過，預算與 Breed 中止仍保留。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming",
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/精確定位/weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_step_power_percent_by_tier": {
+          "I": 1.0,
+          "II": 1.5,
+          "III": 2.0,
+          "IV": 2.5
+        },
+        "max_power_percent_by_tier": {
+          "I": 5.0,
+          "II": 7.5,
+          "III": 10.0,
+          "IV": 12.5
+        },
+        "max_steps": 5,
+        "seconds_per_step": 0.4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 288,
+        "end_line": 373
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged_desc",
+      "description_hash": "c22ab880",
+      "icon": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_149",
+      "effect": "每層 +1／1.5／2／2.5%；hip-fire不累積，特殊bash結束瞄準。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power",
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/精確定位/weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_step_power_percent_by_tier": {
+          "I": 5.0,
+          "II": 6.0,
+          "III": 7.0,
+          "IV": 8.0
+        },
+        "max_power_percent_by_tier": {
+          "I": 25.0,
+          "II": 30.0,
+          "III": 35.0,
+          "IV": 40.0
+        },
+        "max_steps": 5,
+        "seconds_per_step": 0.4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 190,
+        "end_line": 247
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged_desc",
+      "description_hash": "c22ab880",
+      "icon": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_149",
+      "effect": "每層 +5／6／7／8%；發射後0.8秒沿用舊層數，榴彈離手保留當時威力修正。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming",
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/精確定位/weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_step_power_percent_by_tier": {
+          "I": 1.0,
+          "II": 2.0,
+          "III": 3.0,
+          "IV": 4.0
+        },
+        "max_power_percent_by_tier": {
+          "I": 5.0,
+          "II": 10.0,
+          "III": 15.0,
+          "IV": 20.0
+        },
+        "max_steps": 5,
+        "seconds_per_step": 0.4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 258,
+        "end_line": 343
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 22,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged_desc",
+      "description_hash": "c22ab880",
+      "icon": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_149",
+      "effect": "每層 +1／2／3／4%；特殊鞭擊與後續近戰結束瞄準。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power",
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/精確定位/weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_step_power_percent_by_tier": {
+          "I": 5.0,
+          "II": 6.0,
+          "III": 7.0,
+          "IV": 8.0
+        },
+        "max_power_percent_by_tier": {
+          "I": 25.0,
+          "II": 30.0,
+          "III": 35.0,
+          "IV": 40.0
+        },
+        "max_steps": 5,
+        "seconds_per_step": 0.4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 524,
+        "end_line": 609
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_based_on_charge_time_ranged_desc",
+      "description_hash": "c22ab880",
+      "icon": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_149",
+      "effect": "每層 +5／6／7／8%；格擋瞄準可接射擊，整發霰彈只清除一次。",
+      "buff_template_id": "weapon_trait_bespoke_shotpistol_shield_p1_increases_power_while_aiming"
     }
   ],
   "bindings": [
@@ -39274,6 +39464,62 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
         "import_line": 16,
         "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/power_bonus_based_on_charge_time_ranged",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/power_bonus_based_on_charge_time_ranged",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
+      }
+    },
+    {
+      "blessing_id": "pinpointing-target",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/power_bonus_based_on_charge_time",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]

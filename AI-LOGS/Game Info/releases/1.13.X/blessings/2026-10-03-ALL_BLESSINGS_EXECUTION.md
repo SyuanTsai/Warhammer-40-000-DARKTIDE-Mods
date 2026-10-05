@@ -425,3 +425,5 @@
 - 第30輪三項已Commit後完整掃描通過：roaring-advance (`8fe8fa68383bfee39d6827aabff289409453cf7d`)、falter (`61100f7fd3ae74853f15fb22eb1e4830df3170a0`)、unstoppable-force (`9aed3386913f9d74a1f4bbe2df5c193105264060`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-030-full-scan.json`／SHA-256 `25943f52efd67fd459cb760bd70a006dd9ee356340a0ccea9620905b622cf9ec`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [穿透](2026-10-03-PIERCE_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
+
+- [精確定位](2026-10-03-PINPOINTING-TARGET_ACCEPTANCE.json)：新增4變體、4型號關聯；共4變體、4關聯。

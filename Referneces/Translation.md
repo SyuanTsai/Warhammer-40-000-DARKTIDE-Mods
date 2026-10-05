@@ -534,6 +534,7 @@
 - Disruptive - 顛覆性力量
 - Explosive Offensive - 爆炸使我強大
 - Pinpointing target - 精確定位
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time_ranged`，hash `e44ee018`；英文／繁中RAW配對確認。
 - Charmed Reload - 魔力彈藥
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_refill_from_reserve_on_crit`，hash `0c513155`；英文／繁中RAW配對確認。
 - Overwhelming Fire - 壓倒性火力
