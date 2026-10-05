@@ -1,0 +1,410 @@
+{
+  "date": "2026-10-05",
+  "blessing": "slaughterer",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/殺戮者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_powersword_p1_increase_power_on_kill",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill"
+  ],
+  "added_binding_count": 17,
+  "total_variants": 7,
+  "total_bindings": 17,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "slaughterer-formal-nonauthor-review",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-formal-peer-scope.json",
+    "scope_sha256": "9ebb2e25f55c77a409a0bd2ff2e5da16fafca6fa71d33d03fd5b6e735f033bdf",
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/slaughterer-trigger-benefit-candidate-precheck.json": "f11eeed078c3a1a61775fc4ca0118b7ce2258255d742affa7dbd8b0147f6673f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-config.json": "c62e8b008acc542345c5e8fb50b2002d276b81a146166c65e09ff01c95e7b012",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-draft.md": "f8abf754031a815504bf567c5872c8e90c2c98ae78d061f11fafe2bab13cb797",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-evidence.json": "410e671f848114cca943b47e1f60d95a7c9d2add61b21dcafef89a39ad7ee90b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-config.json": "f69f7af12beb285290ae135a07776ea18b5d7760edad32a18f99e9e81e2f361e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-extension-draft.json": "0690d799843d18602e6b46e008d92a171f60affd9cb5901c9628dff7292090c1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-config.json": "c62e8b008acc542345c5e8fb50b2002d276b81a146166c65e09ff01c95e7b012",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-draft.md": "f8abf754031a815504bf567c5872c8e90c2c98ae78d061f11fafe2bab13cb797",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-evidence.json": "410e671f848114cca943b47e1f60d95a7c9d2add61b21dcafef89a39ad7ee90b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-selfcheck.json": "7353f0f1b6105ca825718880e11868fbadd9e4fc5b818102f54470835d932537",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-association-snapshot.json": "c7f8dd21dfa18d77ab987a051cef3ad5499948c0d46c62d04a9ef8af022ff608",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-attack-coverage.json": "114e66af695d94f21cbb4907eb9ffc78d5eb8fa5b81cd7dd1c0df0fd5cad3894",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-candidate-formal-preview.md": "8edde0116d2f4e09b2888e29c3ad9df97d90bd8f6e203b6943f8652147e782e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-candidate-nonauthor-precheck.json": "9772a972df91e51fb166fab4af46bc794a598c6e89fb0b346507f30bfd5ac944",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-trigger-benefit-delta-review.json": "e5f85cbc04823bb30d4898c95912439fd3713836e9ddea7ea6753644de7bb078",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-image.json": "91f557db3a7813e589b64f7bd4b9af8c4f3bdce599a33d369a7df2c47be8aad2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-canonical-before-benefit-delta.json": "dfebf2b3524d7b6e787dfa78f899cc6754908f6ad4a7c809bfcf2765758e8f44",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-canonical-before-summary-delta.json": "faf5b7f45ceee4d9a89bee57e16353c5408305eeda105557dad2f04df1bfd852",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-focused-checks.json": "964c7f32885de26718e6e8ff21d8c5025dd53ce7e399ba761a8b1e816fc3c737",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-frozen-source-verification.json": "9c277dab6f5469fc35b271ac928ff364d737e4161d680d32215d83fde1a2a71b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-own-tier-wrapper-diff-review.json": "aebd285520c0d4ee0ec202b27498cfc34b0a45f3f8ac526e58a981d4511a1fe2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-player-preview.md": "9a7fc1ff3065f8b577c08dcdb3b366f701ff31669cf726200b73e132bb0563af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-resume-review.json": "ad1dd6c074e65688f69759042a24f99b69f88953f785326948b4ec068ce60b50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-review-count-units-delta.json": "a2189dae4df98c9323f8c2f9fcb7a23afe28c96a7d4420533bf85af82f83c5e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-summary-difference-review.json": "cc374c82e830264928f42d49125d0aa71a3cad1fab743482f4cbea14aa312e27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-traits-review.json": "73965a7b0006a4e37cb82c447c9e46b087014680d1b9457940c6f13dd85db5db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-trigger-benefit-delta-review.json": "3d8197f032e11864ae8f7435c7c5880eba3c1185ca165bdd2725b444c914e000",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-raw-verification.json": "38405a70b900007d19bfde1b902dd34739231c953290f712566256dd587927a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-review.json": "94aa690b4e16e88cd9f133b8b52d127a0a402c55ffe50264e28623113e67ea7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "d2b545f052f5e1e52ba89d7e51a32162a0d63cf04cc55c3b2cd3c1d087f2e425",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/DAMAGE_PERCENTAGE_REVIEW.md": "5d17a3cc5e1a3f3785c35d439453f5e0194e57675c929b08aa0acb7797adc251",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/LOCALIZATION_COMPARISON.md": "780935e7c69d470fcf88aa24826d5b5f97eda4dc9e76320d14d1c1e8df5c3d9c",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/README.md": "fb380c5574c2f33bd07838640d058cd7f97fe852b8092caffc39de36d1e17604",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/SOURCE_INDEX.md": "dd34f1d4d6598732a191e5a4ab5cbfb1bc41cfb7c100363b22ff0849bce173aa",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/TIER_VALUES.md": "57f75d4d29a6bb8af8ee74e60901e6df2c23e9bbc1f67b924025a0e84079ccc0",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/WEAPON_COMPATIBILITY.md": "ba92c8da84f77850a82fb935781d1d156e3d78d645df34dee3065e093397e64c",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill.md": "f511ee60995be8c5d9ae24409dbefc6ac0e075615edd0c9d379b4b4fac78eda7",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_forcesword_p1_increase_power_on_kill.md": "83a9f294ff7b9569347b6cc703c09377c7f68aff8ccdd69d2442d20b3a215a23",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill.md": "19bab9d996f9dc2963432c70cf57442c33012789ce9a3a1f70af7b2e55b87702",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill.md": "ffd6481e00fd92a5170d2055bf32e7f100f2e31cb8d916cf8fb761a2141f2997",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill.md": "abae9e9c1b915ddaf405cb46a74dc889e2c4160a627afe3066f29257d7ed9c39",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_powersword_p1_increase_power_on_kill.md": "3bd92ce692c3d1bd835c034c2a57e25b6ab3a3b85a7279fe8144cffea55627f8",
+      "Game Info/releases/1.13.X/blessings/entries/殺戮者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill.md": "0266ef9d24ed5e20fa2f1e8ce000dbbb0f3f9f0039dd3b8d7c83fcdf2f9c7343",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "e77904a34a087bdf2651b392255bd0a57282ce305af1f25e824bb4ca8e3c4a6f",
+      "Game Info/releases/1.13.X/blessings/README.md": "b1432cafa37847be85014db76e502611ad023d0981bf794e9661964bad2f4d33",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "cfcd202be2e56cb8a3c7bfec89998622ea15737b2e937ae8953bf64554bcf614",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力劍/README.md": "00054882e3329e70c105787f71aafc9cb3dce314d9d88539791fb1c653fe969e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "f529e9755f8e423ace11b71e2e4afd5f0b335da861e7f24db0c4f4b43da74ddb",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "64a4138e7913e8da681c573f856f2d3e3b73f591f989f9cf1ca4e2d39d45a3e7",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "b72868faee37feaaf7b5ffa71cf8e16d9c69f1c8dc7a956166d06eb8dd6944d4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "8bc45a45323efed767ba17828c69aa63af905b450735c66ff44e22d2d8903f6b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "6230a516c8e75b70e10ae934c31adf835947e205e73a1b3fbc075f34086e1417",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "66eec1ab47ed650f9aec815df5a4d2bfc79a43a4f48ac016aacdf61ac9f4aef7",
+      "Referneces/Translation.md": "6114a6c7c7a9a94cb9b100f5bdd63993fa08a8d08f93f5fe43da784d1f067370"
+    },
+    "verified_scope_file_count": 62,
+    "all_scope_hashes_match": true,
+    "canonical_config_sha256": "f69f7af12beb285290ae135a07776ea18b5d7760edad32a18f99e9e81e2f361e",
+    "count_unit_delta": {
+      "proof_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-review-count-units-delta.json",
+      "proof_sha256": "a2189dae4df98c9323f8c2f9fcb7a23afe28c96a7d4420533bf85af82f83c5e3",
+      "formal_file": "Game Info/releases/1.13.X/blessings/entries/殺戮者/DAMAGE_PERCENTAGE_REVIEW.md",
+      "corrected_statement": "另核對34段觸發／受益差異來源；這些證據另覆蓋17個純推擊、3條力場甩飛，以及31個碾壓者／雷鎚強化揮掃接線記錄；已有層數對通用威力消費端與新層的 melee gate 分開檢查。",
+      "review": "The text now distinguishes 34 source ranges from the separate 17 pure-push, 3 Force Sword fling, and 31 Powermaul/Thunderhammer powered-sweep route records. Numeric/source/behavior content is unchanged."
+    },
+    "reviewed_findings": [
+      "The main page and seven variant pages use the accepted canonical player content. The trigger is a same-weapon melee kill; a killing hit resolves before the kill event and cannot retroactively use the new layer.",
+      "All seven actual trait variants and seventeen actual bindings match the canonical config, shared map, and reverse weapon indexes; each own I–IV value is .05/.06/.07/.08 power_level_modifier per effective layer.",
+      "The shared child structure has one zero-effective placeholder and up to five effective layers. The fallback .20 is overridden by each own same-key value; the shared 4.5-second timer refreshes at cap, expiry removes the effective layers, and held-slot conditions gate the trigger/stat as documented.",
+      "The RAW EN/ZH templates are paired to the verified key/hash and reconstruct to +5/+6/+7/+8% Strength, 4.5 seconds, and five stacks. Formatter and localization comparison distinguish the raw text from runtime trigger restrictions.",
+      "The formula and examples use the post-power-type-curve input and additive modifier pool: IV at five stacks changes 500 to 700 when q=0; with q=.20 it changes 600 to 800, a 33.33% relative input increase. Neither case claims a fixed final health-damage increase.",
+      "Pure push and Force Sword P1 fling cannot create layers. Existing generic power can still affect push/fling impact calculations under the held/cache conditions; health damage is zero on those paths, and shield fixed-stagger overrides limit outcomes.",
+      "Powermaul direct powered sweeps can qualify for a layer; its separate explosion attack cannot create one, though a previously cached held layer may affect it. The pages do not claim same-action newly gained layers already affect the blast.",
+      "Thunderhammer powered hits remain direct melee; gibbing_type=explosion is not a separate explosion Attack. Icon URL, reverse indexes, map relation, source links, and focused checks are consistent with the actual seven variants/seventeen bindings."
+    ],
+    "validation_receipts": {
+      "candidate_precheck_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/slaughterer-trigger-benefit-candidate-precheck.json",
+      "candidate_precheck_sha256": "f11eeed078c3a1a61775fc4ca0118b7ce2258255d742affa7dbd8b0147f6673f",
+      "source_ranges_verified": 34,
+      "focused_checks_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-focused-checks.json",
+      "focused_checks_sha256": "964c7f32885de26718e6e8ff21d8c5025dd53ce7e399ba761a8b1e816fc3c737",
+      "image_receipt_sha256": "91f557db3a7813e589b64f7bd4b9af8c4f3bdce599a33d369a7df2c47be8aad2"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "slaughterer",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_073.png",
+      "attachment": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5989560342",
+      "acquired_date": "2026-10-05",
+      "sha256": "611746f4ab35c4b033a5b6808c79def676b768ab5c5cdef81882f4d2de9d6662",
+      "content_type": "image/png",
+      "size": 3218,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "殺戮者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": "Root viewed original weapon_trait_073: block-shaped pale head/torso, pointed horizontal crossbar and two vertical white bars on transparent background. Public 128x128 PNG matches original SHA256."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 24,
+      "tables": 23,
+      "rows": 496,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 119,
+      "source_files": 59,
+      "bindings": 755,
+      "variants": 383,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 23,
+      "source_object_cache": {
+        "cache_hits": 59,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 26,
+      "local_references": 1116,
+      "remote_references": 519,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 27,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-026-full-scan.json",
+        "sha256": "6d30b95ea9426272877123a45158eb2317c6aaae898ea7b6fc80831a55881425",
+        "trigger": "round-026"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 56,
+    "not_started_name_groups": 56,
+    "partial_name_groups": 0,
+    "remaining_variants": 222,
+    "remaining_bindings": 430,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "3925684dacfb505f30d3702cb4ea7f574ac75f895b034b1fc23317fce24ac03b"
+  },
+  "previous_local_commit": "1cb1c1bdcd0b38be3c9361709f23a26e48385f57",
+  "outside_intersection_review": {
+    "status": "complete",
+    "exact_trait_items_outside_named_17_bindings": [],
+    "same_name_candidates_outside_scope": [],
+    "boundary": "Do not infer that another item can trigger the same parent; exact attacking item and held item gates are required."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-canonical-before-benefit-delta.json",
+      "sha256": "dfebf2b3524d7b6e787dfa78f899cc6754908f6ad4a7c809bfcf2765758e8f44"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-canonical-before-summary-delta.json",
+      "sha256": "faf5b7f45ceee4d9a89bee57e16353c5408305eeda105557dad2f04df1bfd852"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-focused-checks.json",
+      "sha256": "964c7f32885de26718e6e8ff21d8c5025dd53ce7e399ba761a8b1e816fc3c737"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-frozen-source-verification.json",
+      "sha256": "9c277dab6f5469fc35b271ac928ff364d737e4161d680d32215d83fde1a2a71b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "aebd285520c0d4ee0ec202b27498cfc34b0a45f3f8ac526e58a981d4511a1fe2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-resume-review.json",
+      "sha256": "ad1dd6c074e65688f69759042a24f99b69f88953f785326948b4ec068ce60b50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-review-count-units-delta.json",
+      "sha256": "a2189dae4df98c9323f8c2f9fcb7a23afe28c96a7d4420533bf85af82f83c5e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-summary-difference-review.json",
+      "sha256": "cc374c82e830264928f42d49125d0aa71a3cad1fab743482f4cbea14aa312e27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-traits-review.json",
+      "sha256": "73965a7b0006a4e37cb82c447c9e46b087014680d1b9457940c6f13dd85db5db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-trigger-benefit-delta-review.json",
+      "sha256": "3d8197f032e11864ae8f7435c7c5880eba3c1185ca165bdd2725b444c914e000"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-raw-verification.json",
+      "sha256": "38405a70b900007d19bfde1b902dd34739231c953290f712566256dd587927a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-review.json",
+      "sha256": "94aa690b4e16e88cd9f133b8b52d127a0a402c55ffe50264e28623113e67ea7b"
+    }
+  ],
+  "primary_review_method": "Focused own-tier/wrapper/native route and RAW review using fixed-SHA shared conditions; original205 blocks plus34native trigger-versus-benefit delta. All source hashes and actual bindings verified; original trio preserved. Formal peer must be nonauthor.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-config.json",
+    "sha256": "f69f7af12beb285290ae135a07776ea18b5d7760edad32a18f99e9e81e2f361e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323"
+    },
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-traits-review.json",
+      "sha256": "73965a7b0006a4e37cb82c447c9e46b087014680d1b9457940c6f13dd85db5db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-review.json",
+      "sha256": "94aa690b4e16e88cd9f133b8b52d127a0a402c55ffe50264e28623113e67ea7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-ui-raw-verification.json",
+      "sha256": "38405a70b900007d19bfde1b902dd34739231c953290f712566256dd587927a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-image.json",
+      "sha256": "91f557db3a7813e589b64f7bd4b9af8c4f3bdce599a33d369a7df2c47be8aad2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-config.json",
+      "sha256": "c62e8b008acc542345c5e8fb50b2002d276b81a146166c65e09ff01c95e7b012"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-draft.md",
+      "sha256": "f8abf754031a815504bf567c5872c8e90c2c98ae78d061f11fafe2bab13cb797"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-attack-coverage.json",
+      "sha256": "114e66af695d94f21cbb4907eb9ffc78d5eb8fa5b81cd7dd1c0df0fd5cad3894"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-association-snapshot.json",
+      "sha256": "c7f8dd21dfa18d77ab987a051cef3ad5499948c0d46c62d04a9ef8af022ff608"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-candidate-formal-preview.md",
+      "sha256": "8edde0116d2f4e09b2888e29c3ad9df97d90bd8f6e203b6943f8652147e782e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-selfcheck.json",
+      "sha256": "7353f0f1b6105ca825718880e11868fbadd9e4fc5b818102f54470835d932537"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-agent-evidence.json",
+      "sha256": "410e671f848114cca943b47e1f60d95a7c9d2add61b21dcafef89a39ad7ee90b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-candidate-nonauthor-precheck.json",
+      "sha256": "9772a972df91e51fb166fab4af46bc794a598c6e89fb0b346507f30bfd5ac944"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-group/slaughterer-trigger-benefit-delta-review.json",
+      "sha256": "e5f85cbc04823bb30d4898c95912439fd3713836e9ddea7ea6753644de7bb078"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-config.json",
+      "sha256": "c62e8b008acc542345c5e8fb50b2002d276b81a146166c65e09ff01c95e7b012"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-evidence.json",
+      "sha256": "410e671f848114cca943b47e1f60d95a7c9d2add61b21dcafef89a39ad7ee90b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-agent-draft.md",
+      "sha256": "f8abf754031a815504bf567c5872c8e90c2c98ae78d061f11fafe2bab13cb797"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "aebd285520c0d4ee0ec202b27498cfc34b0a45f3f8ac526e58a981d4511a1fe2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-trigger-benefit-delta-review.json",
+      "sha256": "3d8197f032e11864ae8f7435c7c5880eba3c1185ca165bdd2725b444c914e000"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-frozen-source-verification.json",
+      "sha256": "9c277dab6f5469fc35b271ac928ff364d737e4161d680d32215d83fde1a2a71b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-player-preview.md",
+      "sha256": "9a7fc1ff3065f8b577c08dcdb3b366f701ff31669cf726200b73e132bb0563af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-summary-difference-review.json",
+      "sha256": "cc374c82e830264928f42d49125d0aa71a3cad1fab743482f4cbea14aa312e27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/slaughterer-trigger-benefit-candidate-precheck.json",
+      "sha256": "f11eeed078c3a1a61775fc4ca0118b7ce2258255d742affa7dbd8b0147f6673f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-primary-review-count-units-delta.json",
+      "sha256": "a2189dae4df98c9323f8c2f9fcb7a23afe28c96a7d4420533bf85af82f83c5e3"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slaughterer-formal-peer-scope.json",
+    "sha256": "9ebb2e25f55c77a409a0bd2ff2e5da16fafca6fa71d33d03fd5b6e735f033bdf",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

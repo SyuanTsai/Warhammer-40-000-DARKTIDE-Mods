@@ -293,6 +293,7 @@
 - Headtaker - 奪顱者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_hit`，hash `c9a0bfb2`；英文／繁中RAW配對確認。
 - Slaughterer - 殺戮者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_kill`，hash `cee6f091`；英文／繁中RAW配對確認。
 - Rev it up -提速
 - Thrust - 推進
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_based_on_charge_time`，hash `080e50bd`；英文／繁中RAW配對確認。

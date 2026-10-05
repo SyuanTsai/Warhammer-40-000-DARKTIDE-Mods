@@ -1482,6 +1482,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
       "effect": "持有本祝福武器時，合格近距離遠程擊殺建立或刷新最多5層的近端傷害加成；I–IV 每層分別增加7%／8%／9%／10%，期限共用3.5秒。觸發限制與傷害受益距離分開判斷。"
+    },
+    {
+      "id": "slaughterer",
+      "name_zh_tw": "殺戮者",
+      "name_en": "Slaughterer",
+      "name_key": "loc_trait_bespoke_increase_power_on_kill",
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "name_hash": "cee6f091",
+      "description_hash": "dd3de970",
+      "page": "entries/殺戮者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "effect": "持用裝有本祝福的武器，並以這把武器造成近戰擊殺後增加一層通用威力修正；I–IV 每層 +5／+6／+7／+8 個百分點，最多五層，持續4.5秒並由後續合格擊殺刷新。純推擊、力場劍甩飛和碾壓者的額外範圍爆炸不會增加層數；既有層數的受益分支見完整說明。"
     }
   ],
   "weapons": [
@@ -24296,6 +24309,457 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
       "effect": "此型號合格近距離遠程擊殺後，每層近端傷害加成為 I–IV +7%/+8%/+9%/+10%，最多5層，3.5秒由新擊殺刷新。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_chainaxe_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "marks": [
+          "chainaxe_p1_m1",
+          "chainaxe_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 206,
+        "end_line": 265
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "黏附追加傷害若另行造成近戰擊殺，也可增加層數；純推擊不能增加層數。",
+      "buff_template_id": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_forcesword_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "marks": [
+          "forcesword_p1_m1",
+          "forcesword_p1_m2",
+          "forcesword_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 209,
+        "end_line": 268
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "推擊後甩飛走遠程路徑，不能增加層數；既有層數可參與其衝擊計算，但不產生生命傷害。",
+      "buff_template_id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "marks": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 60,
+        "end_line": 119
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 31
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "特殊上勾拳與推擊後續揮擊都是近戰揮掃，合格擊殺可增加層數；純推擊不能增加層數。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "marks": [
+          "ogryn_pickaxe_2h_p1_m1",
+          "ogryn_pickaxe_2h_p1_m2",
+          "ogryn_pickaxe_2h_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 196,
+        "end_line": 255
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "特殊攻擊與推擊後續揮擊仍由近戰揮掃結算，合格擊殺可增加層數；純推擊不能增加層數。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "powermaul_2h_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "marks": [
+          "powermaul_2h_p1_m1",
+          "powermaul_2h_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        "start_line": 417,
+        "end_line": 478
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "強化直接揮擊的合格近戰擊殺可增加層數；另行結算的範圍爆炸可受既有層數加成，但其擊殺不會增加層數。",
+      "buff_template_id": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "powersword_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_powersword_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_powersword_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "marks": [
+          "powersword_p1_m1",
+          "powersword_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 165,
+        "end_line": 224
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "蓄能啟動本身不造成命中；之後揮斬與推擊後續斬擊的合格近戰擊殺可增加層數。",
+      "buff_template_id": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill",
+      "blessing_id": "slaughterer",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/殺戮者/weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "power_level_modifier",
+        "per_effective_stack_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_stack_cap": 5,
+        "child_duration_seconds": 4.5,
+        "max_added_modifier_by_tier": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "base_child_fallback_modifier": 0.2,
+        "initial_placeholder_count": 1,
+        "child_stack_offset": -1,
+        "physical_child_capacity": 6,
+        "stacks_to_remove_on_expiry": 5,
+        "cooldown_duration_seconds": null,
+        "parent_allows_proc_while_active": true,
+        "parent_and_child_use_held_slot_gate": true,
+        "trigger": "on_kill with attack_result=died, attack_type=melee and exact attacking item match",
+        "trait_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill",
+        "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/increase_power_on_kill",
+        "actual_parent_template": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill_parent",
+        "actual_child_template": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill_child",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "marks": [
+          "thunderhammer_2h_p1_m1",
+          "thunderhammer_2h_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 489,
+        "end_line": 548
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 40,
+        "end_line": 41
+      },
+      "description_key": "loc_trait_bespoke_increase_power_on_kill_desc",
+      "description_hash": "dd3de970",
+      "icon": "https://github.com/user-attachments/assets/49d940eb-8e9b-4d06-b9ea-f8692ee158ef",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_073",
+      "effect": "強化直接揮擊的合格近戰擊殺可增加層數；爆炸肢解表現不是額外範圍爆炸攻擊。",
+      "buff_template_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill_parent"
     }
   ],
   "bindings": [
@@ -34629,6 +35093,244 @@
         "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
         "import_line": 15,
         "append_line": 891
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/increase_power_on_kill",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/increase_power_on_kill",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/increase_power_on_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/increase_power_on_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/increase_power_on_kill",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/increase_power_on_kill",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/increase_power_on_kill",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1661
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/increase_power_on_kill",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1919
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/increase_power_on_kill",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/increase_power_on_kill",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/increase_power_on_kill",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "slaughterer",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_increase_power_on_kill",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/increase_power_on_kill",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
       }
     }
   ]

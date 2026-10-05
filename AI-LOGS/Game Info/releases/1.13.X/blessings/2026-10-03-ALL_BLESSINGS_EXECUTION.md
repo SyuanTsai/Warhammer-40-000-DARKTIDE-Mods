@@ -393,3 +393,5 @@
 - 第26輪三項已Commit後完整掃描通過：deathspitter (`9880b9e825928ea14d56e0341d70bea6dff0d184`)、thrust (`a65c2f1fb60662de424c54b228c8afeb63e56789`)、gloryhunter (`4c9b0b740ebe9ba22093f4be507240254e1adaf4`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-026-full-scan.json`／SHA-256 `6d30b95ea9426272877123a45158eb2317c6aaae898ea7b6fc80831a55881425`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [烈火熱焰](2026-10-03-FIRE-FRENZY_ACCEPTANCE.json)：新增7變體、17型號關聯；共7變體、17關聯。
+
+- [殺戮者](2026-10-03-SLAUGHTERER_ACCEPTANCE.json)：新增7變體、17型號關聯；共7變體、17關聯。
