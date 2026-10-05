@@ -401,3 +401,5 @@
 - 第27輪三項已Commit後完整掃描通過：fire-frenzy (`1cb1c1bdcd0b38be3c9361709f23a26e48385f57`)、slaughterer (`3c9c95a24a326a7aab7119ac2ce43c0b186c710f`)、savage-sweep (`5bd12edbe3deb4069f1bbfde2bf7c89e5d2b4191`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-027-full-scan.json`／SHA-256 `ba10d404ebb2c6371f6902ea8c8d3aa5ece47625f9f6d7fba69bfd72fe47112f`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [暴走](2026-10-03-RAMPAGE_ACCEPTANCE.json)：新增8變體、18型號關聯；共8變體、18關聯。
+
+- [提速](2026-10-03-REV-IT-UP_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。

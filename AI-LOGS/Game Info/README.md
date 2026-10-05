@@ -300,3 +300,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [野蠻橫掃全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SAVAGE-SWEEP_ACCEPTANCE.json)
 
 - [暴走全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RAMPAGE_ACCEPTANCE.json)
+
+- [提速全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-REV-IT-UP_ACCEPTANCE.json)

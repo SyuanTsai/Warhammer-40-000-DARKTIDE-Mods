@@ -1521,6 +1521,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8cdb466d-9982-426e-813a-155007e3091a",
       "effect": "同一近戰攻擊命中至少三個目標後，依武器與等級取得近戰攻擊威力修正3.5秒；觸發命中先結算。"
+    },
+    {
+      "id": "rev-it-up",
+      "name_zh_tw": "提速",
+      "name_en": "Rev it Up",
+      "name_key": "loc_trait_bespoke_movement_speed_on_activation",
+      "description_key": "loc_trait_bespoke_movement_speed_on_activation_desc",
+      "name_hash": "5d0fe023",
+      "description_hash": "863b83e4",
+      "page": "entries/提速/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+      "effect": "成功啟動武器特殊動作後，持用該武器時依等級取得+17%至+20%移動速度加算值，持續2秒；重觸發刷新但不累積層數。"
     }
   ],
   "weapons": [
@@ -25402,6 +25415,144 @@
       "icon": "https://github.com/user-attachments/assets/8cdb466d-9982-426e-813a-155007e3091a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_166",
       "effect": "同一近戰攻擊命中至少三個目標後，威力修正 I–IV 9%/12%/15%/18%，持續3.5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation",
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainaxe_p1",
+      "page": "entries/提速/weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "movement_speed": 0.17,
+          "active_duration": 2
+        },
+        "II": {
+          "movement_speed": 0.18,
+          "active_duration": 2
+        },
+        "III": {
+          "movement_speed": 0.19,
+          "active_duration": 2
+        },
+        "IV": {
+          "movement_speed": 0.2,
+          "active_duration": 2
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainaxe_p1.lua",
+        "start_line": 92,
+        "end_line": 145
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainaxe_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_activation_desc",
+      "description_hash": "863b83e4",
+      "icon": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_200",
+      "effect": "依等級讓移動速度加算值增加 +17% 至 +20%，持續 2 秒；限持用本武器並成功啟動特殊動作時。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation",
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/提速/weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "movement_speed": 0.17,
+          "active_duration": 2
+        },
+        "II": {
+          "movement_speed": 0.18,
+          "active_duration": 2
+        },
+        "III": {
+          "movement_speed": 0.19,
+          "active_duration": 2
+        },
+        "IV": {
+          "movement_speed": 0.2,
+          "active_duration": 2
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 92,
+        "end_line": 145
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_activation_desc",
+      "description_hash": "863b83e4",
+      "icon": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_200",
+      "effect": "依等級讓移動速度加算值增加 +17% 至 +20%，持續 2 秒；限持用本武器並成功啟動特殊動作時。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation",
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/提速/weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "I": {
+          "movement_speed": 0.17,
+          "active_duration": 2
+        },
+        "II": {
+          "movement_speed": 0.18,
+          "active_duration": 2
+        },
+        "III": {
+          "movement_speed": 0.19,
+          "active_duration": 2
+        },
+        "IV": {
+          "movement_speed": 0.2,
+          "active_duration": 2
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 368,
+        "end_line": 421
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_activation_desc",
+      "description_hash": "863b83e4",
+      "icon": "https://github.com/user-attachments/assets/3d06a9eb-af04-4e0c-aa02-f56d047dea16",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_079",
+      "effect": "依等級讓移動速度加算值增加 +17% 至 +20%，持續 2 秒；限持用本武器並成功啟動特殊動作時。"
     }
   ],
   "bindings": [
@@ -36421,6 +36572,90 @@
         "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
         "import_line": 16,
         "append_line": 3179
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2076
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainaxe_p1",
+      "mark_id": "chainaxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainaxe_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_axes/chainaxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1284
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "rev-it-up",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activation",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
       }
     }
   ]
