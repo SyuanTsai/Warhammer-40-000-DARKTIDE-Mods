@@ -9,11 +9,12 @@
 | <img src="https://github.com/user-attachments/assets/32e5f2ee-798c-4a48-9b8d-5a2727edf70a" width="32" height="32" alt="處決祝福圖示"> [處決](../../../entries/處決/README.md)<br>- Execution<br>[完整說明](../../../entries/處決/README.md) | <ul><li>特殊強化及實際間隔電擊傷害，各自按當時目標狀態與持用條件判定。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb" width="32" height="32" alt="雷鳴祝福圖示"> [雷鳴](../../../entries/雷鳴/README.md)<br>- Thunderous<br>[完整說明](../../../entries/雷鳴/README.md) | <ul><li>符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；P2 綁定的是一般命中 wrapper，特殊掃掠仍按一般事件判斷；詳見型號差異。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917" width="32" height="32" alt="踉蹌祝福圖示"> [踉蹌](../../../entries/踉蹌/README.md)<br>- Falter<br>[完整說明](../../../entries/踉蹌/README.md) | <ul><li>法務官電擊鎚重型蓄力例外忽略減免；純推與特殊直擊依各自類型、profile判定。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f" width="32" height="32" alt="孤注一擲祝福圖示"> [孤注一擲](../../../entries/孤注一擲/README.md)<br>- All or Nothing<br>[完整說明](../../../entries/孤注一擲/README.md) | <ul><li>每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 法務官電擊鎚 布蘭克斯 Mk III | [閃電反射](../../../entries/閃電反射/weapon_trait_bespoke_powermaul_p2_block_has_chance_to_stun.md)、[高壓電](../../../entries/高壓電/weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted.md)、[處決](../../../entries/處決/weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage.md)、[雷鳴](../../../entries/雷鳴/weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff.md)、[踉蹌](../../../entries/踉蹌/weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md) | I–IV |
+| 法務官電擊鎚 布蘭克斯 Mk III | [閃電反射](../../../entries/閃電反射/weapon_trait_bespoke_powermaul_p2_block_has_chance_to_stun.md)、[高壓電](../../../entries/高壓電/weapon_trait_bespoke_powermaul_p2_damage_bonus_vs_electrocuted.md)、[處決](../../../entries/處決/weapon_trait_bespoke_powermaul_p2_stagger_bonus_damage.md)、[雷鳴](../../../entries/雷鳴/weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff.md)、[踉蹌](../../../entries/踉蹌/weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md)、[孤注一擲](../../../entries/孤注一擲/weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

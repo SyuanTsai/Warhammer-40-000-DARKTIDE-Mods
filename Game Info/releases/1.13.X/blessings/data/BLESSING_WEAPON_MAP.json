@@ -1837,6 +1837,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db",
       "effect": "當持用來源盾錘並以格擋實際耗盡耐力時，冷卻結束後觸發一次半徑5的自動推擊；I–IV冷卻為18／15／12／9秒，格擋消耗降低15／20／25／30%。"
+    },
+    {
+      "id": "all-or-nothing",
+      "name_zh_tw": "孤注一擲",
+      "name_en": "All or Nothing",
+      "name_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina",
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "name_hash": "c92a8c2a",
+      "description_hash": "ded4b2a1",
+      "page": "entries/孤注一擲/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "effect": "耐力越低，依型號步幅增加最多五階近戰威力；一般八型號與碎骨者克魯克 Mk IIa 使用不同每階值與耐力步幅。"
     }
   ],
   "weapons": [
@@ -28735,6 +28748,411 @@
       "icon": "https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_230",
       "effect": "兩個板盾 Mark 的一般格擋可觸發；weapon special 使用零格擋消耗，該特殊格擋不會觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 461,
+        "end_line": 505
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 54,
+        "end_line": 56
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p2",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p2.lua",
+        "start_line": 277,
+        "end_line": 319
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 237,
+        "end_line": 279
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 187,
+        "end_line": 229
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.125,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.03,
+          "II": 0.04,
+          "III": 0.05,
+          "IV": 0.06
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 113,
+        "end_line": 155
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 27
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 12.5 個百分點耐力增加一階，最多五階；I–IV 每階為 3%/4%/5%/6%，卡面上限為 +15%/+20%/+25%/+30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 153,
+        "end_line": 195
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 307,
+        "end_line": 349
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 102,
+        "end_line": 102
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 111,
+        "end_line": 153
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 71,
+        "end_line": 71
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina",
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_shield_p1",
+      "page": "entries/孤注一擲/weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stamina_fraction_step": 0.2,
+        "max_steps": 5,
+        "per_step_melee_power_modifier_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "card_maximum_melee_power_percent_by_tier": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "formula": "min(5, max(0, floor((1-current_stamina_fraction)/step))) * per_step_melee_power_modifier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_shield_p1.lua",
+        "start_line": 444,
+        "end_line": 486
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_shield_p1_buff_templates.lua",
+        "start_line": 215,
+        "end_line": 217
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_scaled_on_stamina_desc",
+      "description_hash": "ded4b2a1",
+      "icon": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "effect": "每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。"
     }
   ],
   "bindings": [
@@ -41420,6 +41838,258 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
         "import_line": 17,
         "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1452
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "append_line": 1493
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "append_line": 1360
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1612
+      }
+    },
+    {
+      "blessing_id": "all-or-nothing",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/power_bonus_scaled_on_stamina",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1830
       }
     }
   ]

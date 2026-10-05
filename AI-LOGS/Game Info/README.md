@@ -346,3 +346,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [不穩定能量全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json)
 
 - [最後防線全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LAST-GUARD_ACCEPTANCE.json)
+
+- [孤注一擲全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json)

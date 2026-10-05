@@ -1,0 +1,739 @@
+{
+  "date": "2026-10-06",
+  "blessing": "all-or-nothing",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina",
+    "weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina"
+  ],
+  "added_binding_count": 18,
+  "total_variants": 9,
+  "total_bindings": 18,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "all-or-nothing",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-formal-peer-scope.json",
+    "scope_sha256": "a509de3ccf57093ee1da3c4dfe33ea2ce6ee59f70af7bc619ebb50274bfe804a",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "root_content_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-final-content-review.json",
+      "sha256": "4065b2996a0b57f74f09ba36456c801694c10a6e4aec6502f9d88e1427a18e19",
+      "accepted": true
+    },
+    "image_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-image.json",
+      "sha256": "dcaa4b152bf406d629c4a725e80348ef87c56626aff009e40c02d9a420087829",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "attachment": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "content_sha256": "b96e186565837149d04a5bf8303df805c85c5602933bcbe35bcc50cbe4f7ea7e",
+      "dimensions": [
+        128,
+        128
+      ],
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    },
+    "reviewed_conclusions": [
+      "All 130 fixed-scope file hashes match disk; all 15 own formal pages, 9 implementations, 18 actual bindings, RAW/UI/image evidence and related associations are included.",
+      "Eight ordinary weapon variants use stamina-deficit step .20 and five-step cap with per-step tier p=.05/.06/.07/.08; Ogryn Hammer Krourk Mk IIa uses .125 and p=.03/.04/.05/.06, still capped at five steps. At stamina fraction .375, hammer deficit .625 reaches exactly five steps, not more.",
+      "Each own full conditional melee-power table replaces the base global .1 fallback through tier override selection; it is not an additive hidden bonus. The ordinary base stepped count is physically one with offset -1, yielding zero at full stamina; the blessing has no hit-driven stacks, timer or cooldown.",
+      "The power bonus reads the current stamina fraction and becomes available through Buff/stat-cache updates while the item is held. A stamina change between cache updates is not promised to affect the same action. True unequip removes the source Buff.",
+      "All 18 actual Mark action tables are represented: ordinary/heavy/charged/special and push-follow Sweep attacks use melee power; pure push is a push attack; Powermaul P3 chain arc and special push-follow shout use their own non-melee routes; Shield special block/shout is not a melee Sweep. No projectile/shot hit route is claimed.",
+      "Examples are correct: at f=.59, deficit .41 with .20 steps gives k=2 and IV power modifier 2*.08=.16; at f=.375 on Krourk with .125 steps gives k=5 and IV .30. The prose explicitly distinguishes power input from final HP damage, impact or cleave results.",
+      "The fixed RAW English/Traditional Chinese strings share the recorded localization resource hash; each implementation’s formatter reconstructs the displayed maxima. RAW omits quantization and attack-type details, which are correctly treated as uncovered; no false mistranslation claim is made.",
+      "Actual icon 190 receipt verifies the public attachment bytes, 128x128 dimensions and visual review; weapon/item bindings are supported by the scoped UI and reverse association data."
+    ],
+    "formal_page_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/DAMAGE_PERCENTAGE_REVIEW.md": "b84674168537ef8f00822e29400f1c4cd46efbfb92886b54d1425212bc965b4e",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/LOCALIZATION_COMPARISON.md": "52219eaa35268507c6c2dad74ddd5a058cbb40ad5e5bb8599ea63566ab9422d4",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/SOURCE_INDEX.md": "94d7cd5d4a0477098fdf09cf6cdf2bfffe458b4a93812afe4be4553eeeae7ce5",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/TIER_VALUES.md": "43bcb9b023533fadb6833bf93805e239ffea765a9c8f5e80e13fcac400d70971",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/WEAPON_COMPATIBILITY.md": "01ad4f9caf065c5fa104f7927a6e27a516522c8ab50ead5fac2ba23cf596677c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina.md": "78814f21bbab0ed040797cbe0c3c1c725926a462fb7edf2c68874af5a428fd07",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina.md": "85c9ae6ebb9ea69fc2da169a25e4cd33686966cc5c60144f3eda82e18c99b058",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina.md": "5825573bfa08728e2136fb82d6a28113ac9cf19d386b20ad2fc0895e7af393d5",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md": "00f297343cb1d0fa8d17eefb493e02385d370aa93e12b97eb5cd531274a50e09",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina.md": "095871b6cdf015dcc9006a900c3755ef0fd2c2b28eadd1c1708e8f5e1fb139e4",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina.md": "21105895d2732d37dac6cf80aa0ef5538bfc175b570d2420f3db63683b7ca48c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md": "f90bf4caca748783c96e9defd1fca983e0f8f1e54a4669d2c4944dcdc63e6262",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md": "22836de8d3ae765e34703c26ef1d6f378b273f8199fece2c9e11c51d0314b15c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina.md": "38b7845ee0daadf637da7b0b078ecad31818ff806729a60713ed952bd915c88f"
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-config.json": "c38104a5cad84b03f7eedb700f3f816eedc8f8fda0156f4bde4f332de6240cba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-draft.md": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-evidence.json": "a9e2a03515aed8905794462326aeacfc4bc7bfb04b71d287f931eba1a172d357",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-config.json": "2b3467eb8cb92d9b1ff6b2378adb841d3a88adfc152ed18a448a5def1f750bab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-extension-draft.json": "dec8c82f990f911169442f191d010aa6e9c1605d3d69749d40df06b7fb7cb4d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-actual-preview-receipt-001.json": "e65204dd5e71e76b6c9e12938cd318e957ff6213be79c3439ae89b3912ab6fca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-actual-preview-receipt-002.json": "dda4d1ca916457658b716f1785a9cc0c9f8973bb0f0a711b5adb2e8d6cc3cd0d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-config.json": "c38104a5cad84b03f7eedb700f3f816eedc8f8fda0156f4bde4f332de6240cba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-draft.md": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-evidence.json": "a9e2a03515aed8905794462326aeacfc4bc7bfb04b71d287f931eba1a172d357",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-attack-matrix.json": "43d689a9d3a0d1517fd6cc7c10893562faace2be4c31ebc3b4fb5e5df3235a20",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-selfcheck.json": "221882e2bbe4a89c060859b5873d017d95b90ff807be0e70a7c004c7fc042af4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/association.json": "ad5fc8369fac72903beb04077af7117c93dc37e01eed0e1cd863d1cf0a1d6144",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack-consumer-ranges.json": "30a19f593521b30d7bd3b54b40959d18c6aa508e77e873693c5c3718b58fc145",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack-mode-coverage.json": "3e808f842da504c1f6b4079cddd81035b0858fa8be2b709c982cf16d66101300",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack_coverage.json": "f700bc9c4234c333613fe0af0aace084f35849c606bc6fb241d37bc48d0b9b8f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-page-preview-002.md": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-page-preview.md": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-preview-manifest.json": "a60e076402801799a34dc7cf51e26154248e0bceff043cf062bd3554c8a1852b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/core-source-ranges.json": "eded4118cc3abb5e6b3c52fa38c8ea5798783978038ac82f07d2b46c1e60d70e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/draft.md": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/route-scan.json": "bf3a7ad03ff68ce6c8edd255ed63d60cc483d16b701e244a3a716ed5920fc7cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/secondary-source-blocks.json": "08acf18d7e6c31e4f74ee8bc3059eb2f396644970a2c7428b88b03dd977742b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/special-route-ranges.json": "bd295d0ab00e2af7932b5d8128ef7e4852e0fd708bbf18a278592366999ca04c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/stat-cache-ranges.json": "241bf3c62821ab4a3867ac8abfe57f5cd4231e96530f7006b915449936508394",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-image.json": "dcaa4b152bf406d629c4a725e80348ef87c56626aff009e40c02d9a420087829",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-final-content-review.json": "4065b2996a0b57f74f09ba36456c801694c10a6e4aec6502f9d88e1427a18e19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-focused-checks.json": "3e82f6a922a6653fbe1b4c6a319cade1d011e95e0502f6ba598b93233c7fadc8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-frozen-source-verification.json": "d36c49424052831d97b13359444a4183ca478278ac50f02499ddbf98a5e7f90e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-own-tier-wrapper-material-delta-review.json": "7643e64b6ad77361bda0e4593b68abcc56dc2ce4268bda8ef6924488ffa13716",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-resume-review.json": "c02cfaa07e6c533042ed8d2b82606ee7fd0e22bd688612d19fc3b4825b22a8b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-traits-review.json": "6af4db488c256f0ccbaf5037fe4ed7c014dd465652f7eaba4d42bb97a641e7e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-raw-verification.json": "441bd2b261e3d42bd59b09a0bc9f6b96e784e1fe861dc61a67ce1e1a0aca5a7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-review.json": "bda77889b3654144aa973e6be07789f288e66c27fc155f0b9df5b7d077be99d1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-raw-verification.json": "b15367515d250154a980ffaf2ed6fdee3be54397c7278a054d41885025e540f8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/DAMAGE_PERCENTAGE_REVIEW.md": "b84674168537ef8f00822e29400f1c4cd46efbfb92886b54d1425212bc965b4e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/LOCALIZATION_COMPARISON.md": "52219eaa35268507c6c2dad74ddd5a058cbb40ad5e5bb8599ea63566ab9422d4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/SOURCE_INDEX.md": "f276d5a4a9c0b2ad5f943c2757b598b5b062033f98a498d913fc6acfcaf44761",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/TIER_VALUES.md": "43bcb9b023533fadb6833bf93805e239ffea765a9c8f5e80e13fcac400d70971",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/WEAPON_COMPATIBILITY.md": "01ad4f9caf065c5fa104f7927a6e27a516522c8ab50ead5fac2ba23cf596677c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina.md": "78814f21bbab0ed040797cbe0c3c1c725926a462fb7edf2c68874af5a428fd07",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina.md": "85c9ae6ebb9ea69fc2da169a25e4cd33686966cc5c60144f3eda82e18c99b058",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina.md": "5825573bfa08728e2136fb82d6a28113ac9cf19d386b20ad2fc0895e7af393d5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md": "00f297343cb1d0fa8d17eefb493e02385d370aa93e12b97eb5cd531274a50e09",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina.md": "095871b6cdf015dcc9006a900c3755ef0fd2c2b28eadd1c1708e8f5e1fb139e4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina.md": "21105895d2732d37dac6cf80aa0ef5538bfc175b570d2420f3db63683b7ca48c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md": "f90bf4caca748783c96e9defd1fca983e0f8f1e54a4669d2c4944dcdc63e6262",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md": "22836de8d3ae765e34703c26ef1d6f378b273f8199fece2c9e11c51d0314b15c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina.md": "38b7845ee0daadf637da7b0b078ecad31818ff806729a60713ed952bd915c88f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/melee/README.md": "9aba2ced2b032e4a1cb4ebd84b193eca1035ff2edcf35c8e5920c464b8f9cfb1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/README.md": "f56a37132aad68f3b62acc5fa006de9182a09de6aef6fc449c58f53dea616917",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1d30d105da791f291dc8fddf9263d0e4fb4cd6be8f3f22d5263dfa9daeae3c32",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "6bcb9bf9814030c4dc8cf6c1e43bdbc4e230d6529b331157dab1fd2ee17c9956",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "239356db50256be29614e1206b2a9860743271e91440b398dfdd044f5d4cd59c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "8d3703a6e12568decdf5fd17c247bee76d39f299e9b9a0b981c8220aef10db7c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "efe34b04112b6ada246d5d48bc5d6bdc9df2b7099dd14e888e9c14d9164840a5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "b1cd00c00d0eaedf898c4e5ae9160a8828d1f2978a96884d151f8e0a8e0d4dc3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "861bb2105cd67a4ebd7e5617d9c8b777283d0cef61dd37099fa22dd1687c1c1a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "06e6ca2710ad6a384276f946d0bcb012d8971b68bfb3af6ae448d506ff41d919",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "606292ed30311aa5ff7629965633c5c3e9b67f96346e4d8bc26387ee6987af24",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "5ecfcd4b12e72ee3d66ea13bf3f80689c9e977b0d2930179a9db07e44985fb7c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/own-association-snapshot.json": "ad5fc8369fac72903beb04077af7117c93dc37e01eed0e1cd863d1cf0a1d6144",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/actual-preview-002/Referneces/Translation.md": "e5f01094b90f47afc5f28a9511fb19785f32e51737dfd6620d06c447bd6e0861",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-actual-preview-receipt-002.json": "dda4d1ca916457658b716f1785a9cc0c9f8973bb0f0a711b5adb2e8d6cc3cd0d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-attack-matrix.json": "43d689a9d3a0d1517fd6cc7c10893562faace2be4c31ebc3b4fb5e5df3235a20",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-image.json": "dcaa4b152bf406d629c4a725e80348ef87c56626aff009e40c02d9a420087829",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-primary-own-tier-wrapper-material-delta-review.json": "7643e64b6ad77361bda0e4593b68abcc56dc2ce4268bda8ef6924488ffa13716",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-primary-traits-review.json": "6af4db488c256f0ccbaf5037fe4ed7c014dd465652f7eaba4d42bb97a641e7e3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-primary-ui-raw-verification.json": "441bd2b261e3d42bd59b09a0bc9f6b96e784e1fe861dc61a67ce1e1a0aca5a7d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/all-or-nothing-primary-ui-review.json": "bda77889b3654144aa973e6be07789f288e66c27fc155f0b9df5b7d077be99d1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/apply_rule_sources.py": "d9ede96f3399c3f7361ea52b267defbab7f3c3d329b0655e8abee0a9755c1f7e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/attack-consumer-ranges.json": "30a19f593521b30d7bd3b54b40959d18c6aa508e77e873693c5c3718b58fc145",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/attack-mode-coverage.json": "3e808f842da504c1f6b4079cddd81035b0858fa8be2b709c982cf16d66101300",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/build_attack_matrix.py": "10daac96a16d0d0739731253ff2be49a620b40eecedfd539c43b6d3e2e17b914",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/collect_secondary.py": "68edc24b8b7e7db5d0fbb9c48be4493d3c34fc31a4d9a151d4530764ac486ce9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/core-source-ranges.json": "eded4118cc3abb5e6b3c52fa38c8ea5798783978038ac82f07d2b46c1e60d70e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/route-scan.json": "bf3a7ad03ff68ce6c8edd255ed63d60cc483d16b701e244a3a716ed5920fc7cd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/route_scan.py": "68c874fdf12fc4306c5657619afc78055c184469e8b8ae564e8acfa8b01f3caf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/secondary-source-blocks.json": "08acf18d7e6c31e4f74ee8bc3059eb2f396644970a2c7428b88b03dd977742b5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/special-route-ranges.json": "bd295d0ab00e2af7932b5d8128ef7e4852e0fd708bbf18a278592366999ca04c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/stamina-template-lines.txt": "29efb183ab51ac4cdb01729d423e2fbe34ef94639d165e8a5299b7a22fc15eb0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/stat-cache-ranges.json": "241bf3c62821ab4a3867ac8abfe57f5cd4231e96530f7006b915449936508394",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/template-preambles.txt": "92e9253add530f0c18a0a81a3a96da87e8e9bcbb707ce942333300c5845ff013",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/inputs/tools/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/DAMAGE_PERCENTAGE_REVIEW.md": "b84674168537ef8f00822e29400f1c4cd46efbfb92886b54d1425212bc965b4e",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/LOCALIZATION_COMPARISON.md": "52219eaa35268507c6c2dad74ddd5a058cbb40ad5e5bb8599ea63566ab9422d4",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/README.md": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/SOURCE_INDEX.md": "94d7cd5d4a0477098fdf09cf6cdf2bfffe458b4a93812afe4be4553eeeae7ce5",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/TIER_VALUES.md": "43bcb9b023533fadb6833bf93805e239ffea765a9c8f5e80e13fcac400d70971",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/WEAPON_COMPATIBILITY.md": "01ad4f9caf065c5fa104f7927a6e27a516522c8ab50ead5fac2ba23cf596677c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina.md": "78814f21bbab0ed040797cbe0c3c1c725926a462fb7edf2c68874af5a428fd07",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina.md": "85c9ae6ebb9ea69fc2da169a25e4cd33686966cc5c60144f3eda82e18c99b058",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina.md": "5825573bfa08728e2136fb82d6a28113ac9cf19d386b20ad2fc0895e7af393d5",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md": "00f297343cb1d0fa8d17eefb493e02385d370aa93e12b97eb5cd531274a50e09",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina.md": "095871b6cdf015dcc9006a900c3755ef0fd2c2b28eadd1c1708e8f5e1fb139e4",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina.md": "21105895d2732d37dac6cf80aa0ef5538bfc175b570d2420f3db63683b7ca48c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md": "f90bf4caca748783c96e9defd1fca983e0f8f1e54a4669d2c4944dcdc63e6262",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md": "22836de8d3ae765e34703c26ef1d6f378b273f8199fece2c9e11c51d0314b15c",
+      "Game Info/releases/1.13.X/blessings/entries/孤注一擲/weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina.md": "38b7845ee0daadf637da7b0b078ecad31818ff806729a60713ed952bd915c88f",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "9aba2ced2b032e4a1cb4ebd84b193eca1035ff2edcf35c8e5920c464b8f9cfb1",
+      "Game Info/releases/1.13.X/blessings/README.md": "f56a37132aad68f3b62acc5fa006de9182a09de6aef6fc449c58f53dea616917",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1d30d105da791f291dc8fddf9263d0e4fb4cd6be8f3f22d5263dfa9daeae3c32",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "6bcb9bf9814030c4dc8cf6c1e43bdbc4e230d6529b331157dab1fd2ee17c9956",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "239356db50256be29614e1206b2a9860743271e91440b398dfdd044f5d4cd59c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "8d3703a6e12568decdf5fd17c247bee76d39f299e9b9a0b981c8220aef10db7c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "efe34b04112b6ada246d5d48bc5d6bdc9df2b7099dd14e888e9c14d9164840a5",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "b1cd00c00d0eaedf898c4e5ae9160a8828d1f2978a96884d151f8e0a8e0d4dc3",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "861bb2105cd67a4ebd7e5617d9c8b777283d0cef61dd37099fa22dd1687c1c1a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "06e6ca2710ad6a384276f946d0bcb012d8971b68bfb3af6ae448d506ff41d919",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "606292ed30311aa5ff7629965633c5c3e9b67f96346e4d8bc26387ee6987af24",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "5ecfcd4b12e72ee3d66ea13bf3f80689c9e977b0d2930179a9db07e44985fb7c",
+      "Referneces/Translation.md": "e5f01094b90f47afc5f28a9511fb19785f32e51737dfd6620d06c447bd6e0861"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "all-or-nothing",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_190",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_190.png",
+      "attachment": "https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6001898212",
+      "acquired_date": "2026-10-06",
+      "sha256": "b96e186565837149d04a5bf8303df805c85c5602933bcbe35bcc50cbe4f7ea7e",
+      "content_type": "image/png",
+      "size": 5012,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "孤注一擲祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG pale opposed shape motif and transparency; source/public bytes verified samehash and128 dimensions."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 29,
+      "tables": 28,
+      "rows": 846,
+      "lists": 113,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 376,
+      "source_files": 56,
+      "bindings": 924,
+      "variants": 474,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 56,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1369,
+      "remote_references": 843,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 36,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-035-full-scan.json",
+        "sha256": "a8530afb460be140994fa79330b54dd04c71ec241fb658eb32473456ea055397",
+        "trigger": "round-035"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 30,
+    "not_started_name_groups": 30,
+    "partial_name_groups": 0,
+    "remaining_variants": 131,
+    "remaining_bindings": 261,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d2045fd276df435f433a51079255e543d0f60ee1683b7996e7833a351ba99a69"
+  },
+  "previous_local_commit": "5b30c1a0f634eda31b245673cb19769976409230",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in exact inventory name_key intersection; primary UI receipt outside_exact_items is empty"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-final-content-review.json",
+      "sha256": "4065b2996a0b57f74f09ba36456c801694c10a6e4aec6502f9d88e1427a18e19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-focused-checks.json",
+      "sha256": "3e82f6a922a6653fbe1b4c6a319cade1d011e95e0502f6ba598b93233c7fadc8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-frozen-source-verification.json",
+      "sha256": "d36c49424052831d97b13359444a4183ca478278ac50f02499ddbf98a5e7f90e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "7643e64b6ad77361bda0e4593b68abcc56dc2ce4268bda8ef6924488ffa13716"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-resume-review.json",
+      "sha256": "c02cfaa07e6c533042ed8d2b82606ee7fd0e22bd688612d19fc3b4825b22a8b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-traits-review.json",
+      "sha256": "6af4db488c256f0ccbaf5037fe4ed7c014dd465652f7eaba4d42bb97a641e7e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-raw-verification.json",
+      "sha256": "441bd2b261e3d42bd59b09a0bc9f6b96e784e1fe861dc61a67ce1e1a0aca5a7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-review.json",
+      "sha256": "bda77889b3654144aa973e6be07789f288e66c27fc155f0b9df5b7d077be99d1"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-config.json",
+    "sha256": "2b3467eb8cb92d9b1ff6b2378adb841d3a88adfc152ed18a448a5def1f750bab"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-attack-matrix.json",
+      "sha256": "43d689a9d3a0d1517fd6cc7c10893562faace2be4c31ebc3b4fb5e5df3235a20"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-image.json",
+      "sha256": "dcaa4b152bf406d629c4a725e80348ef87c56626aff009e40c02d9a420087829"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "7643e64b6ad77361bda0e4593b68abcc56dc2ce4268bda8ef6924488ffa13716"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-primary-traits-review.json",
+      "sha256": "6af4db488c256f0ccbaf5037fe4ed7c014dd465652f7eaba4d42bb97a641e7e3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-primary-ui-raw-verification.json",
+      "sha256": "441bd2b261e3d42bd59b09a0bc9f6b96e784e1fe861dc61a67ce1e1a0aca5a7d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\all-or-nothing-primary-ui-review.json",
+      "sha256": "bda77889b3654144aa973e6be07789f288e66c27fc155f0b9df5b7d077be99d1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\apply_rule_sources.py",
+      "sha256": "d9ede96f3399c3f7361ea52b267defbab7f3c3d329b0655e8abee0a9755c1f7e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\attack-consumer-ranges.json",
+      "sha256": "30a19f593521b30d7bd3b54b40959d18c6aa508e77e873693c5c3718b58fc145"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\attack-mode-coverage.json",
+      "sha256": "3e808f842da504c1f6b4079cddd81035b0858fa8be2b709c982cf16d66101300"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\build_attack_matrix.py",
+      "sha256": "10daac96a16d0d0739731253ff2be49a620b40eecedfd539c43b6d3e2e17b914"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\collect_secondary.py",
+      "sha256": "68edc24b8b7e7db5d0fbb9c48be4493d3c34fc31a4d9a151d4530764ac486ce9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\core-source-ranges.json",
+      "sha256": "eded4118cc3abb5e6b3c52fa38c8ea5798783978038ac82f07d2b46c1e60d70e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\route-scan.json",
+      "sha256": "bf3a7ad03ff68ce6c8edd255ed63d60cc483d16b701e244a3a716ed5920fc7cd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\route_scan.py",
+      "sha256": "68c874fdf12fc4306c5657619afc78055c184469e8b8ae564e8acfa8b01f3caf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\secondary-source-blocks.json",
+      "sha256": "08acf18d7e6c31e4f74ee8bc3059eb2f396644970a2c7428b88b03dd977742b5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\special-route-ranges.json",
+      "sha256": "bd295d0ab00e2af7932b5d8128ef7e4852e0fd708bbf18a278592366999ca04c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\stamina-template-lines.txt",
+      "sha256": "29efb183ab51ac4cdb01729d423e2fbe34ef94639d165e8a5299b7a22fc15eb0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\stat-cache-ranges.json",
+      "sha256": "241bf3c62821ab4a3867ac8abfe57f5cd4231e96530f7006b915449936508394"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\template-preambles.txt",
+      "sha256": "92e9253add530f0c18a0a81a3a96da87e8e9bcbb707ce942333300c5845ff013"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\inputs\\tools\\verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\all-or-nothing-actual-preview-receipt-002.json",
+      "sha256": "dda4d1ca916457658b716f1785a9cc0c9f8973bb0f0a711b5adb2e8d6cc3cd0d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f56a37132aad68f3b62acc5fa006de9182a09de6aef6fc449c58f53dea616917"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "1d30d105da791f291dc8fddf9263d0e4fb4cd6be8f3f22d5263dfa9daeae3c32"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "5d84cd21461f6033299b5d4e4b2ec8cac27bab4d4fe47f377e7afb1746ddf8ea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b84674168537ef8f00822e29400f1c4cd46efbfb92886b54d1425212bc965b4e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\LOCALIZATION_COMPARISON.md",
+      "sha256": "52219eaa35268507c6c2dad74ddd5a058cbb40ad5e5bb8599ea63566ab9422d4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\README.md",
+      "sha256": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\SOURCE_INDEX.md",
+      "sha256": "f276d5a4a9c0b2ad5f943c2757b598b5b062033f98a498d913fc6acfcaf44761"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\TIER_VALUES.md",
+      "sha256": "43bcb9b023533fadb6833bf93805e239ffea765a9c8f5e80e13fcac400d70971"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\WEAPON_COMPATIBILITY.md",
+      "sha256": "01ad4f9caf065c5fa104f7927a6e27a516522c8ab50ead5fac2ba23cf596677c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_combataxe_p1_power_bonus_scaled_on_stamina.md",
+      "sha256": "78814f21bbab0ed040797cbe0c3c1c725926a462fb7edf2c68874af5a428fd07"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_combataxe_p2_power_bonus_scaled_on_stamina.md",
+      "sha256": "85c9ae6ebb9ea69fc2da169a25e4cd33686966cc5c60144f3eda82e18c99b058"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_combataxe_p3_power_bonus_scaled_on_stamina.md",
+      "sha256": "5825573bfa08728e2136fb82d6a28113ac9cf19d386b20ad2fc0895e7af393d5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_crowbar_p1_power_bonus_scaled_on_stamina.md",
+      "sha256": "00f297343cb1d0fa8d17eefb493e02385d370aa93e12b97eb5cd531274a50e09"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_scaled_on_stamina.md",
+      "sha256": "095871b6cdf015dcc9006a900c3755ef0fd2c2b28eadd1c1708e8f5e1fb139e4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_scaled_on_stamina.md",
+      "sha256": "21105895d2732d37dac6cf80aa0ef5538bfc175b570d2420f3db63683b7ca48c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_powermaul_p2_power_bonus_scaled_on_stamina.md",
+      "sha256": "f90bf4caca748783c96e9defd1fca983e0f8f1e54a4669d2c4944dcdc63e6262"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md",
+      "sha256": "22836de8d3ae765e34703c26ef1d6f378b273f8199fece2c9e11c51d0314b15c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\孤注一擲\\weapon_trait_bespoke_powermaul_shield_p1_power_bonus_scaled_on_stamina.md",
+      "sha256": "38b7845ee0daadf637da7b0b078ecad31818ff806729a60713ed952bd915c88f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "9aba2ced2b032e4a1cb4ebd84b193eca1035ff2edcf35c8e5920c464b8f9cfb1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "6bcb9bf9814030c4dc8cf6c1e43bdbc4e230d6529b331157dab1fd2ee17c9956"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰術斧\\README.md",
+      "sha256": "239356db50256be29614e1206b2a9860743271e91440b398dfdd044f5d4cd59c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰鬥斧\\README.md",
+      "sha256": "8d3703a6e12568decdf5fd17c247bee76d39f299e9b9a0b981c8220aef10db7c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戴維爾戰鎬\\README.md",
+      "sha256": "efe34b04112b6ada246d5d48bc5d6bdc9df2b7099dd14e888e9c14d9164840a5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\撬棍\\README.md",
+      "sha256": "b1cd00c00d0eaedf898c4e5ae9160a8828d1f2978a96884d151f8e0a8e0d4dc3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚\\README.md",
+      "sha256": "861bb2105cd67a4ebd7e5617d9c8b777283d0cef61dd37099fa22dd1687c1c1a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚和鎮壓護盾\\README.md",
+      "sha256": "06e6ca2710ad6a384276f946d0bcb012d8971b68bfb3af6ae448d506ff41d919"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碎骨者\\README.md",
+      "sha256": "606292ed30311aa5ff7629965633c5c3e9b67f96346e4d8bc26387ee6987af24"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電弧鎚\\README.md",
+      "sha256": "5ecfcd4b12e72ee3d66ea13bf3f80689c9e977b0d2930179a9db07e44985fb7c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\Referneces\\Translation.md",
+      "sha256": "e5f01094b90f47afc5f28a9511fb19785f32e51737dfd6620d06c447bd6e0861"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-raw-verification.json",
+      "sha256": "b15367515d250154a980ffaf2ed6fdee3be54397c7278a054d41885025e540f8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\all-or-nothing-group\\actual-preview-002\\own-association-snapshot.json",
+      "sha256": "ad5fc8369fac72903beb04077af7117c93dc37e01eed0e1cd863d1cf0a1d6144"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-actual-preview-receipt-001.json",
+      "sha256": "e65204dd5e71e76b6c9e12938cd318e957ff6213be79c3439ae89b3912ab6fca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-actual-preview-receipt-002.json",
+      "sha256": "dda4d1ca916457658b716f1785a9cc0c9f8973bb0f0a711b5adb2e8d6cc3cd0d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-config.json",
+      "sha256": "c38104a5cad84b03f7eedb700f3f816eedc8f8fda0156f4bde4f332de6240cba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-draft.md",
+      "sha256": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-agent-evidence.json",
+      "sha256": "a9e2a03515aed8905794462326aeacfc4bc7bfb04b71d287f931eba1a172d357"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-attack-matrix.json",
+      "sha256": "43d689a9d3a0d1517fd6cc7c10893562faace2be4c31ebc3b4fb5e5df3235a20"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/all-or-nothing-selfcheck.json",
+      "sha256": "221882e2bbe4a89c060859b5873d017d95b90ff807be0e70a7c004c7fc042af4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/association.json",
+      "sha256": "ad5fc8369fac72903beb04077af7117c93dc37e01eed0e1cd863d1cf0a1d6144"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack-consumer-ranges.json",
+      "sha256": "30a19f593521b30d7bd3b54b40959d18c6aa508e77e873693c5c3718b58fc145"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack-mode-coverage.json",
+      "sha256": "3e808f842da504c1f6b4079cddd81035b0858fa8be2b709c982cf16d66101300"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/attack_coverage.json",
+      "sha256": "f700bc9c4234c333613fe0af0aace084f35849c606bc6fb241d37bc48d0b9b8f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-page-preview-002.md",
+      "sha256": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-page-preview.md",
+      "sha256": "56f32c1df31114599987fde3d1c850b402b86963d63c4ea3c12fa202e6fabf6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/candidate-preview-manifest.json",
+      "sha256": "a60e076402801799a34dc7cf51e26154248e0bceff043cf062bd3554c8a1852b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/core-source-ranges.json",
+      "sha256": "eded4118cc3abb5e6b3c52fa38c8ea5798783978038ac82f07d2b46c1e60d70e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/draft.md",
+      "sha256": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/route-scan.json",
+      "sha256": "bf3a7ad03ff68ce6c8edd255ed63d60cc483d16b701e244a3a716ed5920fc7cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/secondary-source-blocks.json",
+      "sha256": "08acf18d7e6c31e4f74ee8bc3059eb2f396644970a2c7428b88b03dd977742b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/special-route-ranges.json",
+      "sha256": "bd295d0ab00e2af7932b5d8128ef7e4852e0fd708bbf18a278592366999ca04c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-group/stat-cache-ranges.json",
+      "sha256": "241bf3c62821ab4a3867ac8abfe57f5cd4231e96530f7006b915449936508394"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-config.json",
+      "sha256": "c38104a5cad84b03f7eedb700f3f816eedc8f8fda0156f4bde4f332de6240cba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-evidence.json",
+      "sha256": "a9e2a03515aed8905794462326aeacfc4bc7bfb04b71d287f931eba1a172d357"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-agent-draft.md",
+      "sha256": "5fbc5508bdbdfd7d13d283a8a5bd39a237bbc22db6fcb95521641ab1ca018546"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-final-content-review.json",
+      "sha256": "4065b2996a0b57f74f09ba36456c801694c10a6e4aec6502f9d88e1427a18e19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-frozen-source-verification.json",
+      "sha256": "d36c49424052831d97b13359444a4183ca478278ac50f02499ddbf98a5e7f90e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "7643e64b6ad77361bda0e4593b68abcc56dc2ce4268bda8ef6924488ffa13716"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-traits-review.json",
+      "sha256": "6af4db488c256f0ccbaf5037fe4ed7c014dd465652f7eaba4d42bb97a641e7e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-raw-verification.json",
+      "sha256": "441bd2b261e3d42bd59b09a0bc9f6b96e784e1fe861dc61a67ce1e1a0aca5a7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-primary-ui-review.json",
+      "sha256": "bda77889b3654144aa973e6be07789f288e66c27fc155f0b9df5b7d077be99d1"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-formal-peer-scope.json",
+    "sha256": "a509de3ccf57093ee1da3c4dfe33ea2ce6ee59f70af7bc619ebb50274bfe804a",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
