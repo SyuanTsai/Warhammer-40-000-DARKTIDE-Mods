@@ -112,5 +112,6 @@
 | <img src="https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4" width="32" height="32" alt="致命連擊祝福圖示"> [致命連擊](entries/致命連擊/README.md)<br>- Chained Deathblow<br>[完整說明](entries/致命連擊/README.md) | <ul><li>弱點擊殺後，在祝福武器仍被持用且事件／屬性快取更新後，近戰爆擊率提高 I–IV 級 +5／+10／+15／+20 個百分點，維持 3 秒；再次合格擊殺會刷新時間，不疊加加值。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7" width="32" height="32" alt="強化電流弧祝福圖示"> [強化電流弧](entries/強化電流弧/README.md)<br>- Enhanced Voltaic Arcs<br>[完整說明](entries/強化電流弧/README.md) | <ul><li>持用指定武器並符合條件快取時，增加電弧連鎖最大角、跳躍半徑及最大跳躍次數；這是目標搜尋加值，不是傷害百分比。</li></ul> | 近戰／遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](entries/恐怖阻擊/README.md) | <ul><li>持用帶有此祝福的遠程武器，在 12.5m 內以遠程或爆炸攻擊擊殺後，對攻擊者周圍 12m 區域施加本級 suppression 值 15／20／25／30；該值不是傷害。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7" width="32" height="32" alt="震懾祝福圖示"> [震懾](entries/震懾/README.md)<br>- Shock & Awe<br>[完整說明](entries/震懾/README.md) | <ul><li>符合條件的擊殺後，同一把持有該祝福的武器啟動 3 秒效果，使後續近戰揮擊 每次命中消耗的敵人命中質量降低 30%／40%／50%／60%。這是質量預算修正，不是傷害加成或固定目標數保證。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

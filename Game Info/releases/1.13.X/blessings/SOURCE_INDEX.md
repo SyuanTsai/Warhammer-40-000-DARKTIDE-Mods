@@ -110,3 +110,4 @@
 | [致命連擊](entries/致命連擊/README.md) | [來源索引](entries/致命連擊/SOURCE_INDEX.md) |
 | [強化電流弧](entries/強化電流弧/README.md) | [來源索引](entries/強化電流弧/SOURCE_INDEX.md) |
 | [恐怖阻擊](entries/恐怖阻擊/README.md) | [來源索引](entries/恐怖阻擊/SOURCE_INDEX.md) |
+| [震懾](entries/震懾/README.md) | [來源索引](entries/震懾/SOURCE_INDEX.md) |

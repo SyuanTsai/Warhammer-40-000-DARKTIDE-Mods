@@ -1893,3 +1893,6 @@
 
 - Enhanced Voltaic Arcs - 強化電流弧
   - 文件譯名；本體1.13.1繁中仍為「Enhanced Voltaic Arcs」。名稱鍵 `loc_trait_bespoke_enhanced_arc_jumps_angle`，hash `ecc50357`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Shock & Awe - 震懾
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_hit_mass_consumption_reduction_on_kill`，hash `60f2b6ce`；英文／繁中RAW配對確認。

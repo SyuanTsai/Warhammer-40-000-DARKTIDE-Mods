@@ -1404,6 +1404,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
       "effect": "持用帶有此祝福的遠程武器，在 12.5m 內以遠程或爆炸攻擊擊殺後，對攻擊者周圍 12m 區域施加本級 suppression 值 15／20／25／30；該值不是傷害。"
+    },
+    {
+      "id": "shock-and-awe",
+      "name_zh_tw": "震懾",
+      "name_en": "Shock & Awe",
+      "name_key": "loc_trait_bespoke_hit_mass_consumption_reduction_on_kill",
+      "description_key": "loc_trait_bespoke_hit_mass_consumption_reduction_on_kill_desc",
+      "name_hash": "60f2b6ce",
+      "description_hash": "5fa04ac9",
+      "page": "entries/震懾/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+      "effect": "符合條件的擊殺後，同一把持有該祝福的武器啟動 3 秒效果，使後續近戰揮擊 每次命中消耗的敵人命中質量降低 30%／40%／50%／60%。這是質量預算修正，不是傷害加成或固定目標數保證。"
     }
   ],
   "weapons": [
@@ -21845,6 +21858,168 @@
       "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
       "effect": "各型號 hip／zoom 為 hitscan 遠程攻擊；pistol whip 及追擊是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/震懾/weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/hit_mass_consumption_reduction_on_kill",
+        "tier_consumed_hit_mass_modifier": {
+          "I": 0.7,
+          "II": 0.6,
+          "III": 0.5,
+          "IV": 0.4
+        },
+        "reduction_percent": {
+          "I": 30,
+          "II": 40,
+          "III": 50,
+          "IV": 60
+        },
+        "active_duration_seconds": 3,
+        "proc_event": "on_hit",
+        "check": "on_item_match AND attack_result == died",
+        "held_slot_condition": true,
+        "cooldown_seconds": null,
+        "allow_proc_while_active": true,
+        "max_stacks_configured": false,
+        "actual_buff_template": "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "actual_icon_path": "content/ui/textures/icons/traits/weapon_trait_100"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 250,
+        "end_line": 306
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 86,
+        "end_line": 99
+      },
+      "description_key": "loc_trait_bespoke_hit_mass_consumption_reduction_on_kill_desc",
+      "description_hash": "5fa04ac9",
+      "icon": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
+      "effect": "I–IV 質量消耗減少30%／40%／50%／60%，擊殺後3秒；特殊重擊也按合格命中事件觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "saw_p1",
+      "page": "entries/震懾/weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+        "trait_item": "content/items/traits/bespoke_saw_p1/hit_mass_consumption_reduction_on_kill",
+        "tier_consumed_hit_mass_modifier": {
+          "I": 0.7,
+          "II": 0.6,
+          "III": 0.5,
+          "IV": 0.4
+        },
+        "reduction_percent": {
+          "I": 30,
+          "II": 40,
+          "III": 50,
+          "IV": 60
+        },
+        "active_duration_seconds": 3,
+        "proc_event": "on_hit",
+        "check": "on_item_match AND attack_result == died",
+        "held_slot_condition": true,
+        "cooldown_seconds": null,
+        "allow_proc_while_active": true,
+        "max_stacks_configured": false,
+        "actual_buff_template": "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "actual_icon_path": "content/ui/textures/icons/traits/weapon_trait_246"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 423,
+        "end_line": 479
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 52,
+        "end_line": 65
+      },
+      "description_key": "loc_trait_bespoke_hit_mass_consumption_reduction_on_kill_desc",
+      "description_hash": "5fa04ac9",
+      "icon": "https://github.com/user-attachments/assets/6c1e408b-d8d7-4ce3-9782-198b9e3b0970",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_246",
+      "effect": "同級質量修正與3秒效果；初次重擊可觸發，普通及穿甲的延遲撕扯擊殺不觸發；本型號使用圖示246。"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/震懾/weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/hit_mass_consumption_reduction_on_kill",
+        "tier_consumed_hit_mass_modifier": {
+          "I": 0.7,
+          "II": 0.6,
+          "III": 0.5,
+          "IV": 0.4
+        },
+        "reduction_percent": {
+          "I": 30,
+          "II": 40,
+          "III": 50,
+          "IV": 60
+        },
+        "active_duration_seconds": 3,
+        "proc_event": "on_hit",
+        "check": "on_item_match AND attack_result == died",
+        "held_slot_condition": true,
+        "cooldown_seconds": null,
+        "allow_proc_while_active": true,
+        "max_stacks_configured": false,
+        "actual_buff_template": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "actual_buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "actual_icon_path": "content/ui/textures/icons/traits/weapon_trait_100"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 10,
+        "end_line": 66
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_hit_mass_consumption_reduction_on_kill_desc",
+      "description_hash": "5fa04ac9",
+      "icon": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
+      "effect": "兩型號共用同級質量修正及3秒效果；特殊啟動本身不觸發，後續揮擊各自檢查合格事件。"
     }
   ],
   "bindings": [
@@ -30568,6 +30743,62 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/hit_mass_consumption_reduction_on_kill",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+      "trait_item": "content/items/traits/bespoke_saw_p1/hit_mass_consumption_reduction_on_kill",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/hit_mass_consumption_reduction_on_kill",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "shock-and-awe",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/hit_mass_consumption_reduction_on_kill",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
       }
     }
   ]

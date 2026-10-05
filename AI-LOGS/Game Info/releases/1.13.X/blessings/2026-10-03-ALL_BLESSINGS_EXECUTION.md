@@ -377,3 +377,5 @@
 - 第24輪三項已Commit後完整掃描通過：sunder (`eb39d3ac943946af975692f79664273d4bf640c8`)、chained-deathblow (`8908298068082ccb55a4af6e3d2ecab6c3fc2127`)、enhanced-voltaic-arcs (`16ef2bf519f0d81d6edc53eca02dbb4d8e12f422`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-024-full-scan.json`／SHA-256 `c417cbd6d35555af07a27d085edc56ea44dd137f4419d934018175d01f11a3ba`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [恐怖阻擊](2026-10-03-TERRIFYING-BARRAGE_ACCEPTANCE.json)：新增16變體、27型號關聯；共16變體、27關聯。
+
+- [震懾](2026-10-03-SHOCK-AND-AWE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。
