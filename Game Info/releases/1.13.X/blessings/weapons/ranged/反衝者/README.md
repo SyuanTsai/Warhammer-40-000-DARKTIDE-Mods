@@ -6,11 +6,12 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](../../../entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](../../../entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898" width="32" height="32" alt="精確打擊祝福圖示"> [精確打擊](../../../entries/精確打擊/README.md)<br>- Surgical<br>[完整說明](../../../entries/精確打擊/README.md) | <ul><li>每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>hip／zoom 霰彈以 ranged 結算；bash 是近戰 sweep。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 反衝者 洛倫茲 Mk V | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md) | I–IV |
+| 反衝者 洛倫茲 Mk V | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

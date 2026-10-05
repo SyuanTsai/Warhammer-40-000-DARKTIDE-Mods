@@ -8,11 +8,12 @@
 | <img src="https://github.com/user-attachments/assets/c8817fbb-dac1-4242-be45-082494de8f2c" width="32" height="32" alt="湧動祝福圖示"> [湧動](../../../entries/湧動/README.md)<br>- Surge<br>[完整說明](../../../entries/湧動/README.md) | <ul><li>一般主要射擊可追加一枚；蓄力連鎖閃電只獲得遠程致命一擊機率加成。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5" width="32" height="32" alt="持續射擊祝福圖示"> [持續射擊](../../../entries/持續射擊/README.md)<br>- Sustained Fire<br>[完整說明](../../../entries/持續射擊/README.md) | <ul><li>持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a24dfe97-3d90-44b2-afb5-99309f88e6f4" width="32" height="32" alt="亞空間亂舞祝福圖示"> [亞空間亂舞](../../../entries/亞空間亂舞/README.md)<br>- Warp Flurry<br>[完整說明](../../../entries/亞空間亂舞/README.md) | <ul><li>action_shoot_charged 開始時累積；只適用電流力場法杖 諾瑪努斯 Mk VI。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>普通施放投射物及蓄力 chain lightning 都是 ranged；杖擊／揮擊為近戰。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 電流力場法杖 諾瑪努斯 Mk VI | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting.md)、[湧動](../../../entries/湧動/weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_forcestaff_p3_followup_shots_ranged_damage.md)、[亞空間亂舞](../../../entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p3_faster_charge_on_chained_secondary_attacks.md) | I–IV |
+| 電流力場法杖 諾瑪努斯 Mk VI | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting.md)、[湧動](../../../entries/湧動/weapon_trait_bespoke_forcestaff_p3_double_shot_on_crit.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_forcestaff_p3_followup_shots_ranged_damage.md)、[亞空間亂舞](../../../entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p3_faster_charge_on_chained_secondary_attacks.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

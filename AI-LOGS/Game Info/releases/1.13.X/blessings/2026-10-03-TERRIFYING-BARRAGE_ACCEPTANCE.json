@@ -1,0 +1,410 @@
+{
+  "date": "2026-10-05",
+  "blessing": "terrifying-barrage",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_autogun_p2_suppression_on_close_kill",
+    "weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_bolter_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_forcestaff_p2_suppression_on_close_kill",
+    "weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill",
+    "weapon_trait_bespoke_forcestaff_p4_suppression_on_close_kill",
+    "weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_ogryn_thumper_p3_suppression_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill",
+    "weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill"
+  ],
+  "added_binding_count": 27,
+  "total_variants": 16,
+  "total_bindings": 27,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-formal-peer-scope.json",
+    "scope_sha256": "06b22b05cacb0b2e391418a02f0561d5ad0bc4e919fbe11d67bd889b93be20f1",
+    "scope_file_count": 74,
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-config.json": "808a55447e612f988e0ba611e434cc6ed25c111879820e02a44ba2eb76160238",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-config.json": "89e5676499ed48a0d8cbc1f587565627a02bead3b2a22f54fae4adf16b062c8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-draft.md": "b47c8ca765d72bb9e84de9a05064e7111527074a8edae6750045d61db7912c0f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-evidence.json": "eb736491b796c962a0478ea6b8aa13f8aabf83c5e2c5cbea02dd074a3b945d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-config.json": "47808781a3901ad321497120f87ce2ff66a34473d6743ab677e27f3e9fc3e6da",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-extension-draft.json": "2ce4b4f06bc70af991576f1c1919931c163cef3a0c605cbe01f091cd003a97f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-config.json": "89e5676499ed48a0d8cbc1f587565627a02bead3b2a22f54fae4adf16b062c8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-draft.md": "b47c8ca765d72bb9e84de9a05064e7111527074a8edae6750045d61db7912c0f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-evidence.json": "eb736491b796c962a0478ea6b8aa13f8aabf83c5e2c5cbea02dd074a3b945d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-association-snapshot.json": "760ce6ccf06bc72ba753e52d6dac73965a918a45a1c57aed10f3f4e747a4aa8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-attack-coverage.json": "4d5dc7c4924f8704e4ac3137528ea53f8e4f71438a3b83b2bfc0834a306367aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-candidate-preview.md": "d149c65c40f4076a5c0f97b6c7149c1095a45c4cf36da7cfe01431eed65a0e1d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-image.json": "2d2a6a922de34afe28eff28f75b305e04e87e326802e5141a3028ecdc3bd572c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-activation-gate-diff-review.json": "417f35184174f9ad2a3eb01fc9345e1f707715923a14d2e460cc5fdd0f6d0754",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-area-cover-diff-review.json": "5894b8f8255454a68a6de2c583ebc92ec4860857496600afb0cb4521cb38e101",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-first-activation-review.json": "a877f9a347f26d8c95964a55e1a7e8cb489795cd9f308cb6467a8cc2f5fbc855",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-focused-checks.json": "b20f4577717caa9f1e3c91919bb1c490b4ad0adadc510fe256a42cf60e596a55",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-frozen-source-verification.json": "7a6b64c3cede606fa477e50f33de535e860f10a553aaeeed722efb9250c4b686",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-own-tier-diff.json": "adf1f086a31364926fc5ab36773a8c32d56dfd23cc523e18c7b701b4f377c2ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-resume-review.json": "a66f6ad683c46de0dc0e3d140e678374d67aa4c4b9eb705b5b4790dd3f28cc96",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-traits-review.json": "21645fc67998611d7fa0f3d6006499ca937ac233e6d5ea3eac652df1cdff7598",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-raw-verification.json": "c93be383cb21e5a1f2e1f1ba63051ac9da7d217b2b702cc13f68db449bb98b66",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-review.json": "288481a643500e591175527e10e50c0fa03af8cc834548ecfa837a760514c8f8",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4dca5b39121e107de5f9d182d181374ea673c2b70007b0f4295348ce60ca7d96",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/DAMAGE_PERCENTAGE_REVIEW.md": "667085fde725d8c7218e0de66e375771b6c206740bea413a81984c90513e7fbd",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/LOCALIZATION_COMPARISON.md": "c4221e9805745b85f47748613c3df4f58dc4d51960e56feafc505520aa24945a",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/README.md": "ece428e566dfe91fc2caa95fc8fd522ba5349019c4eabeef23c4ad2118f09973",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/SOURCE_INDEX.md": "9863d6dd3ae64ef35f224563d84a784f3ec91d1a23d02ed68d4fd12b59af4b86",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/TIER_VALUES.md": "0fabe1a1f21f3eac75f5e8d2d8bf29b71a007df81c3ca7e162b3ffeebc2b6d09",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/WEAPON_COMPATIBILITY.md": "bf16439dd46fea852ebb6126f1a2583644de1a48361fc79267ac2ac12657eaf1",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_autogun_p1_suppression_on_close_kill.md": "6bf971f6126c97c6dd3b42f471a1fa0b36d592f1821beea27ebd1b52b9c4a180",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_autogun_p2_suppression_on_close_kill.md": "32c5c5118ef939c16fe2eeacac15b1f0cbfa43c7432e5f23f5e3cbf5235f2890",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill.md": "84ef9c627e04336dc51e0650d114ee4bd9dff5794de433cd9a503407df609297",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_bolter_p1_suppression_on_close_kill.md": "771983f3ef65cf8f7baf8311778b83b1d56cc3aa910bcc84c3f6741fbb70e955",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill.md": "654caa91f6925462654ffa1879706dd2ea88782e837a2045ca6d009081b56c77",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill.md": "fa575b2ba56b3762dc59868f3ef93cd32964cd1968eee5410fc254c5806474ef",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p2_suppression_on_close_kill.md": "c9bd3dde2b344966ea54298db81dee4ee82bb111deae05de9f18a9f14ff09218",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill.md": "c062029afa8801f6a7b60f7968627a987e00169f45fe150e4b10162b1d910284",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p4_suppression_on_close_kill.md": "eb79089a4554b55f3fa1f7b43943e39e78bbff28669db2d221f3cd8ada1c6fd7",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill.md": "c1272c60210f9433906d7fa2e2cf90a94269bcd80eaaad4906ea2863c21c8655",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill.md": "04b328718b448b3172af139c593801d3a3d66d7adcdce7b8d35ee3aa8a45565d",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p3_suppression_on_close_kill.md": "92d2714484e8768ae08bacb45814dd40ebd4d2fc5909490c14f53e8b436d8ead",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill.md": "a626bd439e89fd4822e3dddc415f39ac320d740951802f17ef523b9b1dfb68bd",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill.md": "e2ae204318e20ce656dca8c2d57a6fc85c1042f18553d6b18381c898cae8daaa",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill.md": "35333148fd8c5036fbf69a651b778d5f0ef9e070ccceddc39524c9679692eefa",
+      "Game Info/releases/1.13.X/blessings/entries/恐怖阻擊/weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill.md": "23825780e870f257e7d5650a2bece0829e6bc70b0582da97e4498cb458044dd1",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "2e5ce83eb5586bec4c2edb53220b7e82b1d525ff5894c3ed34d1f6c15331b503",
+      "Game Info/releases/1.13.X/blessings/README.md": "6fd68bbdd271022e37dcb7a285aabb0f1a842e141facd7dcd2f910838b4ba3e5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "82579243ca0bfd65dbe60cd4011bf9db8eb739fbf9b11903749d433742701550",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "acfb3c6c390c11fddc9b7b2811202a19a928048ee3fef4c4475b33af78e59be1",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "d75c6004e7f683ac124a9c4a908645629c3eb16b519f0a6fc336e4309fe40c2b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "72a80aae2479a66b06b955eb3ef1603df14cb4d9659720afab1a6ff5e9afb621",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "8798afa5206a17297af96b259c982c692492fd5513749c3f49cb6d6b3cd64668",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂槍/README.md": "1d1680a8c4272d65331e3fce2afafd283c4cc2690d0081065075a347836fe2fb",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "9a16ae14e08566faac09f8b1500769d20f3bb3d18886c7e390fa2dcc6d9f6b68",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "1a71d276ee1150ecbfae3f2647ec116b0f6ce4d145697a3e89d2b426cd033aa2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "a004cecca7f8d68b536a3ed331295449af05cbf9147c5f72d9446d344c1730e4",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "18f199aa1386ee9bd2fea801b9e31a03b88632bb66103be625548e26e7a6f15b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "fb6e235245948f1e06b1c68c0a768272479cd146ecb16a04918a4b946c7bee41",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "92bc1a18e7d6f8a8ac9acd2ac75742c879bc38a9cde286be31536722ef3f0700",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "4bf7734e84e35f46fc18e37595de97e6f21ce64b9c881985b890f3f4afd51026",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "664b0e1a91a46290745ab9dba978879a84d3ae4b44478257a4c0f0cdf93c9299",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "d2696d448197b10b078f78960317ed322e3b2fac805360eb7479a5fe38441085",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "02ca0c2489579b3a5dd9eb709f5639e4b08b1913b2e5fdd5bb2338d5570ca249",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "e6c3f86930ac47e83ef93887c28876725a39504aac5610ea3d941c1371980d39",
+      "Referneces/Translation.md": "382dea44452d6df73b3f014b25672728215de10fc64f4ee6943abf2c5c009446"
+    },
+    "reviewed_findings": [
+      "Verified all fixed scope files against the scope SHA map; all 74 hashes match.",
+      "Reviewed the seven formal documents and sixteen variant pages: I–IV actual suppression value is 15/20/25/30 with a 12 m area, while the exact shared RAW formatter displays 5/6/7/8 m in both locales; the numerical mismatch is clearly identified as an erratum.",
+      "The bilingual “近戰擊殺” wording is separated as a terminology correction. The player text correctly limits eligibility to death events from ranged/count-as-ranged or explosion attacks, matching item, held gate, and the 12.5 m hit-position-to-attacker check; melee and push routes are excluded.",
+      "First eligible event can proc immediately; cooldown_duration=0 is non-nil and active_duration=1.5 s blocks another proc during the active gate, including the next eligible event in the same processing batch. This timer is not target suppression duration.",
+      "The area uses attacker position at proc time, 12 m radius, no falloff and instant aggro. The cover-release side effect is separately gated by an actual cover extension within strict 6 m and lasts 3–8 s; target suppression acceptance, thresholds, caps, and decay remain conditional.",
+      "Reviewed the actual coverage distinctions: P3 chain lightning is ranged; Force Staff P1 charged explosion and P4 heavy projectile impact use explosion; Flamer P2 direct fire can be ranged while delayed flamer_assault ticks do not satisfy the ranged predicate; melee sweeps, push, weapon-mode toggles, and reload actions do not themselves qualify.",
+      "The 16 own tier/wrapper receipt, RAW reconstruction, actual 16 variants / 27 bindings, weapon reverse indexes, global map, and image 054 receipt are consistent with the reviewed claim and fixed scope."
+    ],
+    "validation": {
+      "scope_hashes_match": true,
+      "formal_focused_checks": "source 321 ranges/86 files; global 322 variants/623 bindings consistent; links new errors 0; GFM 43 files passed",
+      "image_receipt": "public HTTP 200, content hash and 128x128 display verified"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "terrifying-barrage",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_054.png",
+      "attachment": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987403671",
+      "acquired_date": "2026-10-05",
+      "sha256": "75d9e3a3f3692334e6b2d398bb81c8fc49894cbd52557868d9794bb162064e76",
+      "content_type": "image/png",
+      "size": 4059,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "恐怖阻擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed public downloaded128x128 PNG; palegray/white motif and transparent background intact, only identification without gameplay inference."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 43,
+      "tables": 41,
+      "rows": 805,
+      "lists": 120,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 321,
+      "source_files": 86,
+      "bindings": 623,
+      "variants": 322,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 41,
+      "source_object_cache": {
+        "cache_hits": 86,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 44,
+      "local_references": 1323,
+      "remote_references": 852,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 25,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-024-full-scan.json",
+        "sha256": "c417cbd6d35555af07a27d085edc56ea44dd137f4419d934018175d01f11a3ba",
+        "trigger": "round-024"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 63,
+    "not_started_name_groups": 63,
+    "partial_name_groups": 0,
+    "remaining_variants": 283,
+    "remaining_bindings": 562,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a0af983d2693f0ad2afe12007ef15b4909dafef1b49567e4acf3d45cf4b27436"
+  },
+  "previous_local_commit": "16ef2bf519f0d81d6edc53eca02dbb4d8e12f422",
+  "outside_intersection_review": {
+    "status": "excluded_from_exact_inventory_scope",
+    "items": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/suppression_on_close_kill",
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_suppression_on_close_kill",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ]
+      },
+      {
+        "item": "content/items/traits/bespoke_ogryn_heavystubber_p1/suppression_on_close_kill",
+        "trait": "weapon_trait_bespoke_heavystubber_p1_suppression_on_close_kill",
+        "restriction": [
+          "heavystubber_p1"
+        ]
+      }
+    ],
+    "conclusion": "Two same-key items outside the 16-variant/27-binding inventory intersection; no binding or behavior inferred for them."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-activation-gate-diff-review.json",
+      "sha256": "417f35184174f9ad2a3eb01fc9345e1f707715923a14d2e460cc5fdd0f6d0754"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-area-cover-diff-review.json",
+      "sha256": "5894b8f8255454a68a6de2c583ebc92ec4860857496600afb0cb4521cb38e101"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-first-activation-review.json",
+      "sha256": "a877f9a347f26d8c95964a55e1a7e8cb489795cd9f308cb6467a8cc2f5fbc855"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-focused-checks.json",
+      "sha256": "b20f4577717caa9f1e3c91919bb1c490b4ad0adadc510fe256a42cf60e596a55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-frozen-source-verification.json",
+      "sha256": "7a6b64c3cede606fa477e50f33de535e860f10a553aaeeed722efb9250c4b686"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-own-tier-diff.json",
+      "sha256": "adf1f086a31364926fc5ab36773a8c32d56dfd23cc523e18c7b701b4f377c2ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-resume-review.json",
+      "sha256": "a66f6ad683c46de0dc0e3d140e678374d67aa4c4b9eb705b5b4790dd3f28cc96"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-traits-review.json",
+      "sha256": "21645fc67998611d7fa0f3d6006499ca937ac233e6d5ea3eac652df1cdff7598"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-raw-verification.json",
+      "sha256": "c93be383cb21e5a1f2e1f1ba63051ac9da7d217b2b702cc13f68db449bb98b66"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-review.json",
+      "sha256": "288481a643500e591175527e10e50c0fa03af8cc834548ecfa837a760514c8f8"
+    }
+  ],
+  "primary_review_method": "Actual own16 fulltiers/wrappers/27binding/RAWformatters and differing attack routes checked against frozen receipts; existing commonmechanisms reused under own conditions. New initial activation boundary verified; no wholesale duplicate author research.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-config.json",
+    "sha256": "47808781a3901ad321497120f87ce2ff66a34473d6743ab677e27f3e9fc3e6da"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathblow-config.json",
+      "sha256": "808a55447e612f988e0ba611e434cc6ed25c111879820e02a44ba2eb76160238"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-traits-review.json",
+      "sha256": "21645fc67998611d7fa0f3d6006499ca937ac233e6d5ea3eac652df1cdff7598"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-review.json",
+      "sha256": "288481a643500e591175527e10e50c0fa03af8cc834548ecfa837a760514c8f8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-ui-raw-verification.json",
+      "sha256": "c93be383cb21e5a1f2e1f1ba63051ac9da7d217b2b702cc13f68db449bb98b66"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-own-tier-diff.json",
+      "sha256": "adf1f086a31364926fc5ab36773a8c32d56dfd23cc523e18c7b701b4f377c2ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-image.json",
+      "sha256": "2d2a6a922de34afe28eff28f75b305e04e87e326802e5141a3028ecdc3bd572c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-activation-gate-diff-review.json",
+      "sha256": "417f35184174f9ad2a3eb01fc9345e1f707715923a14d2e460cc5fdd0f6d0754"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-area-cover-diff-review.json",
+      "sha256": "5894b8f8255454a68a6de2c583ebc92ec4860857496600afb0cb4521cb38e101"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-config.json",
+      "sha256": "89e5676499ed48a0d8cbc1f587565627a02bead3b2a22f54fae4adf16b062c8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-draft.md",
+      "sha256": "b47c8ca765d72bb9e84de9a05064e7111527074a8edae6750045d61db7912c0f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-candidate-preview.md",
+      "sha256": "d149c65c40f4076a5c0f97b6c7149c1095a45c4cf36da7cfe01431eed65a0e1d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-attack-coverage.json",
+      "sha256": "4d5dc7c4924f8704e4ac3137528ea53f8e4f71438a3b83b2bfc0834a306367aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-association-snapshot.json",
+      "sha256": "760ce6ccf06bc72ba753e52d6dac73965a918a45a1c57aed10f3f4e747a4aa8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-config.json",
+      "sha256": "89e5676499ed48a0d8cbc1f587565627a02bead3b2a22f54fae4adf16b062c8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-config.json",
+      "sha256": "89e5676499ed48a0d8cbc1f587565627a02bead3b2a22f54fae4adf16b062c8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-evidence.json",
+      "sha256": "eb736491b796c962a0478ea6b8aa13f8aabf83c5e2c5cbea02dd074a3b945d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-evidence.json",
+      "sha256": "eb736491b796c962a0478ea6b8aa13f8aabf83c5e2c5cbea02dd074a3b945d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-group/terrifying-barrage-agent-draft.md",
+      "sha256": "b47c8ca765d72bb9e84de9a05064e7111527074a8edae6750045d61db7912c0f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-agent-draft.md",
+      "sha256": "b47c8ca765d72bb9e84de9a05064e7111527074a8edae6750045d61db7912c0f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-primary-first-activation-review.json",
+      "sha256": "a877f9a347f26d8c95964a55e1a7e8cb489795cd9f308cb6467a8cc2f5fbc855"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/terrifying-barrage-formal-peer-scope.json",
+    "sha256": "06b22b05cacb0b2e391418a02f0561d5ad0bc4e919fbe11d67bd889b93be20f1",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

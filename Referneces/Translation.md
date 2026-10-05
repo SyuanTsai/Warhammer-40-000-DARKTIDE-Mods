@@ -418,6 +418,7 @@
 - Stripped Down - 輕裝
 - Speedload - 快速裝彈
 - Terrifying Barrage - 恐怖阻擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_on_close_kill`，hash `1978bbc9`；英文／繁中RAW配對確認。
 - Roaring Advance - 咆哮突進
 - Ceaseless Barrage - 持續阻擊
 - Inspiring Barrage - 振奮彈幕

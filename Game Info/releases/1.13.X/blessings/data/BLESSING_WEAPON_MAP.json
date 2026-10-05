@@ -1391,6 +1391,19 @@
         "melee",
         "ranged"
       ]
+    },
+    {
+      "id": "terrifying-barrage",
+      "name_zh_tw": "恐怖阻擊",
+      "name_en": "Terrifying Barrage",
+      "name_key": "loc_trait_bespoke_suppression_on_close_kill",
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "name_hash": "1978bbc9",
+      "description_hash": "9bf6f6a0",
+      "page": "entries/恐怖阻擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "effect": "持用帶有此祝福的遠程武器，在 12.5m 內以遠程或爆炸攻擊擊殺後，對攻擊者周圍 12m 區域施加本級 suppression 值 15／20／25／30；該值不是傷害。"
     }
   ],
   "weapons": [
@@ -20968,6 +20981,870 @@
       "icon": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_249",
       "effect": "持用電弧鎚 布蘭克斯 Mk III 時，角度 I–IV 加 +5°／+7.5°／+10°／+12.5°、半徑加 +0.5／+1／+1.5／+2、max_jumps 加 1／1／2／2；掃擊路徑另受 special-active gate 限制。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_autogun_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "autogun_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 310,
+        "end_line": 361
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 為 hitscan 遠程攻擊；手電筒切換不造成攻擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p2",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_autogun_p2_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "autogun_p2",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 168,
+        "end_line": 219
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 為 hitscan 遠程攻擊；槍托推擊是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "autopistol_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 209,
+        "end_line": 260
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "hip／zoom 為 hitscan 遠程攻擊；手電筒切換不造成攻擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "bolter_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_bolter_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "bolter_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 374,
+        "end_line": 425
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 為 hitscan 遠程攻擊；推擊是獨立推擊路徑。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "dual_autopistols_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 209,
+        "end_line": 260
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 30,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "雙持 hip／zoom 為 hitscan 遠程攻擊；pistol whip 是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "forcestaff_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua",
+        "start_line": 40,
+        "end_line": 91
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "普通施放是投射物遠程攻擊；蓄力特殊爆炸以 explosion 類型結算；杖擊／揮擊為近戰。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p2_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p2",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p2_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "forcestaff_p2",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+        "start_line": 11,
+        "end_line": 62
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "普通火焰與蓄力火焰的直接攻擊為 ranged；延遲 flamer_assault 燃燒 tick 是 buff 類型且其 damage profile 不標 count_as_ranged_attack，故 tick 不符合遠程擊殺分支；杖擊／揮擊為近戰。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p3",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "forcestaff_p3",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p3.lua",
+        "start_line": 10,
+        "end_line": 61
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p3_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "普通施放投射物及蓄力 chain lightning 都是 ranged；杖擊／揮擊為近戰。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p4_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p4",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_forcestaff_p4_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "forcestaff_p4",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p4.lua",
+        "start_line": 40,
+        "end_line": 91
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p4_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "普通及蓄力都發射投射物；蓄力重型彈的直接命中為 ranged，命中後另觸發 explosion。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_rippergun_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "ogryn_rippergun_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_rippergun_p1.lua",
+        "start_line": 9,
+        "end_line": 60
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_rippergun_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 霰彈以 ranged 結算；刺擊是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "ogryn_thumper_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 73,
+        "end_line": 124
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "hip／zoom 霰彈以 ranged 結算；bash 是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p3_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "ogryn_thumper_p3",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 73,
+        "end_line": 124
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "目前 binding 的實際 template 是 ogryn_thumper_p1_m3；hip／zoom hitscan 以 ranged 結算，bash 是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "shotgun_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 168,
+        "end_line": 219
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 霰彈以 ranged 結算；weapon special 是裝填特殊彈，之後的射擊才造成攻擊。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "shotgun_p2",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 167,
+        "end_line": 218
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 霰彈以 ranged 結算；特殊 bash 是近戰 sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "shotgun_p3",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 168,
+        "end_line": 219
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "hip／zoom 霰彈以 ranged 結算；特殊鍵只切換狀態。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill",
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/恐怖阻擊/weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_value_by_tier": {
+          "I": 15,
+          "II": 20,
+          "III": 25,
+          "IV": 30
+        },
+        "actual_suppression_area_radius_m": 12,
+        "eligible_close_kill_distance_m": 12.5,
+        "active_retrigger_gate_seconds": 1.5,
+        "base_cooldown_seconds": 0,
+        "formatter_range_by_tier_m": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "suppression_falloff": false,
+        "instant_aggro": true,
+        "actual_weapon_id": "stubrevolver_p1",
+        "cover_disable_radius_m": 6,
+        "cover_release_duration_seconds": [
+          3,
+          8
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 138,
+        "end_line": 189
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_close_kill_desc",
+      "description_hash": "9bf6f6a0",
+      "icon": "https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_054",
+      "effect": "各型號 hip／zoom 為 hitscan 遠程攻擊；pistol whip 及追擊是近戰 sweep。"
     }
   ],
   "bindings": [
@@ -29313,6 +30190,384 @@
         "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
         "import_line": 16,
         "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p1",
+      "mark_id": "forcestaff_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_forcestaff_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1164
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p2",
+      "mark_id": "forcestaff_p2_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_forcestaff_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1225
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p3",
+      "mark_id": "forcestaff_p3_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p3_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p3/suppression_on_close_kill",
+      "trait_category": "bespoke_forcestaff_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "import_line": 13,
+        "append_line": 1301
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "forcestaff_p4",
+      "mark_id": "forcestaff_p4_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p4_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p4/suppression_on_close_kill",
+      "trait_category": "bespoke_forcestaff_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "import_line": 13,
+        "append_line": 1153
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 913
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 908
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 891
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/suppression_on_close_kill",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/suppression_on_close_kill",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "terrifying-barrage",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_suppression_on_close_kill",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/suppression_on_close_kill",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
       }
     }
   ]

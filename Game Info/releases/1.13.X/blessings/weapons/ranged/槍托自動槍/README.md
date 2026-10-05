@@ -6,13 +6,14 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6c280f68-08ec-4f4b-a377-34050fcf4a27" width="32" height="32" alt="振奮彈幕祝福圖示"> [振奮彈幕](../../../entries/振奮彈幕/README.md)<br>- Inspiring Barrage<br>[完整說明](../../../entries/振奮彈幕/README.md) | <ul><li>每步基礎恢復1／2／3／4%最大韌性，倍率最多5；門檻10%總彈匣容量的射擊次數</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5" width="32" height="32" alt="遊擊祝福圖示"> [遊擊](../../../entries/遊擊/README.md)<br>- Hit & Run<br>[完整說明](../../../entries/遊擊/README.md) | <ul><li>使用此武器在12.5公尺內完成遠程擊殺，短暫獲得遠程閃避判定；I–IV持續0.7／0.8／0.9／1.0秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>各型號 hip／zoom 為 hitscan 遠程攻擊；槍托推擊是近戰 sweep。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 槍托自動槍 弗拉克斯 Mk II | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
-| 槍托自動槍 格拉亞 Mk IV | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
-| 槍托自動槍 阿格里皮娜 Mk VIII | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md) | I–IV |
+| 槍托自動槍 弗拉克斯 Mk II | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_autogun_p2_suppression_on_close_kill.md) | I–IV |
+| 槍托自動槍 格拉亞 Mk IV | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_autogun_p2_suppression_on_close_kill.md) | I–IV |
+| 槍托自動槍 阿格里皮娜 Mk VIII | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autogun_p2_toughness_on_continuous_fire.md)、[遊擊](../../../entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_autogun_p2_suppression_on_close_kill.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

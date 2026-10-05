@@ -109,3 +109,4 @@
 | [破甲](entries/破甲/README.md) | [來源索引](entries/破甲/SOURCE_INDEX.md) |
 | [致命連擊](entries/致命連擊/README.md) | [來源索引](entries/致命連擊/SOURCE_INDEX.md) |
 | [強化電流弧](entries/強化電流弧/README.md) | [來源索引](entries/強化電流弧/SOURCE_INDEX.md) |
+| [恐怖阻擊](entries/恐怖阻擊/README.md) | [來源索引](entries/恐怖阻擊/SOURCE_INDEX.md) |
