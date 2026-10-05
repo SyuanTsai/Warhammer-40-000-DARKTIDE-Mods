@@ -629,20 +629,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [BornReady](https://www.nexusmods.com/warhammer40kdarktide/mods/96)
     預先載入
-- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
-- MOD 版本：1.7
-- MOD 檔案名稱：BornReady 96 1.7 2026-08-23T21-04Z mz1PFzZkA.zip
-- 手動維護最後下載日期：2026-08-30
+- MOD 網站最後更新日期：2026-10-05T02:24:26Z（Nexus API 原文；Asia/Taipei：2026-10-05 10:24:26）
+- MOD 版本：1.8
+- MOD 檔案名稱：BornReady 96 1.8 2026-10-05T02-24Z ke28WelNA.zip
+- 手動維護最後下載日期：2026-10-05
 - Nexus MOD ID: `96`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/96`
-- Nexus page version: `1.7`
-- Nexus last updated: `2026-08-23T21:04:00.0000000+00:00`
-- Main file ID: `7660`
-- Main file version: `1.7`
-- Main file uploaded at UTC: `2026-08-23T21:04:00.0000000+00:00`
-- Archive filename: `BornReady 96 1.7 2026-08-23T21-04Z mz1PFzZkA.zip`
-- Archive size bytes: `4907`
-- Archive SHA-256: `e3e378ea6be5aa4cb6a5bdc0cba77bd331cda73ab0ed13cf28fb81478bf9a005`
+- Nexus page version: `1.8`
+- Nexus last updated: `2026-10-05T02:24:26Z`
+- Main file ID: `8794`
+- Main file version: `1.8`
+- Main file uploaded at UTC: `2026-10-05T02:24:26Z`
+- Archive filename: `BornReady 96 1.8 2026-10-05T02-24Z ke28WelNA.zip`
+- Archive size bytes: `4878`
+- Archive SHA-256: `fae262e55ffb95543796762a964b8b04a36420a7357c5c94a752eb349fe328f3`
 - Acquisition method: `manual-queue`
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
