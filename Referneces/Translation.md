@@ -377,6 +377,7 @@
 - Supercharge - 超級充能
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_activated_attacks`，hash `ede57171`；英文／繁中RAW配對確認。
 - Power Cycler - 能量循環
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_extended_activation_duration_on_chained_attacks`，hash `739921c8`；英文／繁中RAW配對確認。
 - Sunder - 破甲
 - Sucker Punch - 突然襲擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punch`，hash `e6773a0a`；英文／繁中RAW配對確認。

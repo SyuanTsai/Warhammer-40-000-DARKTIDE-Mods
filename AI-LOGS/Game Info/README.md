@@ -262,3 +262,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [迅雷反射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MARKSMAN-REFLEX_ACCEPTANCE.json)
 
 - [仁慈殺手全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-MERCY-KILLER_ACCEPTANCE.json)
+
+- [能量循環全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-POWER-CYCLER_ACCEPTANCE.json)

@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-05",
+  "blessing": "power-cycler",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/能量循環/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "power-cycler",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-formal-peer-scope.json",
+    "scope_sha256": "05e294c6f79ae413ff70aef871de66090c5262764dbaa64fc70c9838454133c0",
+    "scope_file_count": 32,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-boundary-addendum.json": "0dc35c7be4d503d793eacb74d5a5ce731fa039767e9891211f56614bf19e4710",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-config.json": "371e6eb9f27e2a16250d49a0a5a0378604c36f9c324578dd0c32151ee4dc816e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-draft.md": "6d3fd121f22a19c479d6aeea97788abc47e72b6e3c0b78675d7d1b8cb86bdb53",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-evidence.json": "3cc4b0b17582c5a45be58d1b906af1b6900a500ef7dd7d4b3b5a15e7af2a9c62",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-config.json": "189741cfd8f116e44254555ece8905940dfb6cea597716e45c3092b0da4ea78b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-extension-draft.json": "026b404acb105376ed727b0a526ed32312b63a940934e901844b971f0057103b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-image.json": "f00c50ee4c27f1020bbb6dd5447138fb84f7643b6fa8f45b9da06b2810c91c57",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-action-routing-review.json": "67c3505795baa4c955322c160e8858d6d79409488943c6ef77868372f3961299",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-counter-boundary-review.json": "b694d4166f7789fb443007ce1367380a065d9c14ee7e1d67370c921d54838fe7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-focused-checks.json": "7f77f0002f1bdc3c39ade9289121843bc296161f50ca5639ab29254598ba7667",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-frozen-source-verification.json": "8964edd65ab60f2b5e8c5102ac22ca9fd760c2c0f243c261bfe80836196f243a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-own-tier-diff.json": "ab9a8176e64d793428e14487b8a0166df39ad3483723b11b6ca7966b8205ad01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-resume-review.json": "74097643cc5b311be08e72ba7758a171090d945e88344df063af121185b159a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-stat-consumer-review.json": "01b54494d6a9e4514b343ba5437ecaeabd6f0ba00164d7da561b9379b63b3d91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-traits-review.json": "57d176d26bdfb024fb7e32e76c77b49cd0bb349a6fea3e5a4ee3702a630ad835",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-ui-raw-verification.json": "5ab12ba6e7dabb67daad2c4f2422dfdff018a28ee665188a81ea23443984248c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-ui-review.json": "5d759d4bb87daf0a262de922a442d83a88a2f7c809babac127a5d4d6a23292df",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "45a9b53377ba13df095694eb2281e31dd862a98313bcfd51b542669fb721f0af",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/DAMAGE_PERCENTAGE_REVIEW.md": "f3f5b9faaff8cc339f44600a51b9d345735dd57fdc9ac54704e8994524a59c65",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/LOCALIZATION_COMPARISON.md": "19e8c74c513f8e5e03dd897867f24f24f770485d64d44e061d67f2eefa53e769",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/README.md": "cd030a1f43e4ff937164cdcbdddb364316a152f42aca84b851148a56cc09da2e",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/SOURCE_INDEX.md": "7d05f08e25998f04f1eaed99a4f597ce30d0486bb155124e259baf6c58dfb570",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/TIER_VALUES.md": "cc3825ea620e65dccd4296a78ea65b5518bde57ee6a28dcc9073e24e68a9e93b",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/WEAPON_COMPATIBILITY.md": "c88063c33bb9ad2edb43d30b9e3d6b7a7dd1b9f3fdde68011eff67103481bb54",
+      "Game Info/releases/1.13.X/blessings/entries/能量循環/weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks.md": "f1b753f1ad76436605cad37a6ce44656f7c15fbbe0660066d79234b0a5278c27",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "153aa74ddd73820fa315a4748c4663b94cd8e6122a64aca9448f1dd260956bb2",
+      "Game Info/releases/1.13.X/blessings/README.md": "8f6d0f17c7dc4176852e2dc98cc4e47c6e6a68ea5e2bf9b8e469f01d3f262b99",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "378c1c4dd575cfaa7adaa0aa76cfafaaffe14295e867eb17854cb6d7fc12b7f6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力劍/README.md": "363e3a3cb1944d3b56428468fb2236aa854024657cfad02f7ba7afaf28378e62",
+      "Referneces/Translation.md": "6d610a9ddd64a9c380aef72c2cf66b37939ff319678b6d764f5a50eec7f1ac00"
+    },
+    "review_summary": "Rechecked the revised seven-row localization comparison and synchronization with the canonical config, extension draft, and resume receipt. All 32 current fixed-scope hashes match.",
+    "review_conclusions": [
+      {
+        "area": "Inventory, tier and wrapper",
+        "result": "PASS",
+        "details": "One actual P1 trait variant is linked to powersword_p1_m1 and powersword_p1_m2. The complete I–IV tier values, wrapper clone, base conditional gate, same-key replacement and combo-step aggregation agree with the approved receipts and formal tables."
+      },
+      {
+        "area": "First effect and dynamic counter",
+        "result": "PASS",
+        "details": "Actual M1/M2 special→windup→sweep routes and action-start-then-combo-update ordering support the stated cache condition. The +10% first-step example explicitly assumes s=1 has reached the cache before the hit; the pages do not guarantee it for an isolated first swing."
+      },
+      {
+        "area": "Duration, charge consumption, push and reactivation",
+        "result": "PASS",
+        "details": "Three seconds runs from the latest activation/hit/qualifying window refresh. Each active damage window with a hit or abort consumes one, not one per enemy; a pure push clears combo and can lower the current 1+s threshold; reactivation refreshes time without restoring spent charges; P1 unwield clears state and the P3 exception is expressly out of scope."
+      },
+      {
+        "area": "Impact formula and newly added source",
+        "result": "PASS",
+        "details": "The added StaggerCalculation reference at lines 67–78 matches fixed-SHA source hash 51b57d12d7e17cd099676345bce30b835d48e5610f7a16c6b3f7ca7a3aceb342. Line 75 applies the assembled stagger modifier to impact power before lines 77–78 convert it through the downstream percentage/range curve. The 100→110/120 example is correctly bounded as pre-curve impact input, not final stagger or damage."
+      },
+      {
+        "area": "RAW reconstruction and comparison",
+        "result": "PASS",
+        "details": "The exact bilingual I–IV formatter reconstructions match the paired name/description resources and output values. RAW omissions are classified as not covered, with no unsupported errata claim."
+      },
+      {
+        "area": "Image and relationships",
+        "result": "PASS",
+        "details": "Icon ID/path/attachment are separated and match the image receipt. The blessing map has the actual shared P1 trait and exactly two M1/M2 bindings; both reverse weapon rows and shared indexes point to the correct formal pages and summary."
+      }
+    ],
+    "reviewed_delta": [
+      "The previous ambiguous '1/2 conditional activations per effective step' formulation is replaced with an explicit fixed +1 per effective step and the 1/2 step cap. Two rows now cover first-effect/refresh timing and reactivation/switching as RAW omissions; canonical rules and extension-draft rules are identical, and the resume receipt points to the current canonical hash."
+    ],
+    "not_gameplay_test": true,
+    "followup_delta_review": {
+      "changed_formal_path": "Game Info/releases/1.13.X/blessings/entries/能量循環/LOCALIZATION_COMPARISON.md",
+      "changed_formal_sha256": "19e8c74c513f8e5e03dd897867f24f24f770485d64d44e061d67f2eefa53e769",
+      "canonical_rules_equal_extension_draft": true,
+      "resume_canonical_sha256": "189741cfd8f116e44254555ece8905940dfb6cea597716e45c3092b0da4ea78b",
+      "conclusion": "The seven Traditional Chinese comparison rules clarify that every effective step adds exactly one available charged sweep, with a tier cap of one or two. The refresh/expiry and reactivation/switch details are explicitly classified as not covered by RAW. The wording matches the approved player/math behavior and adds no unsupported contradiction.",
+      "issues": []
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "power-cycler",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_205",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_205.png",
+      "attachment": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5985274075",
+      "acquired_date": "2026-10-05",
+      "sha256": "9e5ff3d3ed243ed7367a9d8867a26f3477b5e5c3b7d26246eafde1602a4bf901",
+      "content_type": "image/png",
+      "size": 3944,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "能量循環祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "目視128×128公開下載原圖；中央為淡灰／白色塊狀圖案、周圍透明區。原圖對比低，細部圖樣不據此推斷；保留原始圖檔。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 11,
+      "rows": 284,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 30,
+      "source_files": 18,
+      "bindings": 549,
+      "variants": 283,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 18,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 764,
+      "remote_references": 309,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 22,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-021-full-scan.json",
+        "sha256": "46b98052df35ac215de6219c04c3e53b2d51bdbb5fdf9b3d9450434ad0acd720",
+        "trigger": "round-021"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 72,
+    "not_started_name_groups": 72,
+    "partial_name_groups": 0,
+    "remaining_variants": 322,
+    "remaining_bindings": 636,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "e159873b3359c64df640dfe54b98784c99f88372aa5673300836dfc804629b38"
+  },
+  "previous_local_commit": "b526b1e119958bfccfe55b1c67e4b5b5cff2b62a",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in primary UI exact-name metadata outside actual inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-action-routing-review.json",
+      "sha256": "67c3505795baa4c955322c160e8858d6d79409488943c6ef77868372f3961299"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json",
+      "sha256": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-counter-boundary-review.json",
+      "sha256": "b694d4166f7789fb443007ce1367380a065d9c14ee7e1d67370c921d54838fe7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-focused-checks.json",
+      "sha256": "7f77f0002f1bdc3c39ade9289121843bc296161f50ca5639ab29254598ba7667"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-frozen-source-verification.json",
+      "sha256": "8964edd65ab60f2b5e8c5102ac22ca9fd760c2c0f243c261bfe80836196f243a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-own-tier-diff.json",
+      "sha256": "ab9a8176e64d793428e14487b8a0166df39ad3483723b11b6ca7966b8205ad01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-resume-review.json",
+      "sha256": "74097643cc5b311be08e72ba7758a171090d945e88344df063af121185b159a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-stat-consumer-review.json",
+      "sha256": "01b54494d6a9e4514b343ba5437ecaeabd6f0ba00164d7da561b9379b63b3d91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-traits-review.json",
+      "sha256": "57d176d26bdfb024fb7e32e76c77b49cd0bb349a6fea3e5a4ee3702a630ad835"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-ui-raw-verification.json",
+      "sha256": "5ab12ba6e7dabb67daad2c4f2422dfdff018a28ee665188a81ea23443984248c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-ui-review.json",
+      "sha256": "5d759d4bb87daf0a262de922a442d83a88a2f7c809babac127a5d4d6a23292df"
+    }
+  ],
+  "primary_review_method": "Reuse fixedSHA stepped/count/per-key conditional consumers under actual full tier/wrapper predicates; actual14 P1 action profiles, own native class, counter/refresh/threshold/switch differences and first-effect cache insertion independently reviewed. Frozen narrow addendum confirms boundary wording, no repeated full agent research.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-config.json",
+    "sha256": "189741cfd8f116e44254555ece8905940dfb6cea597716e45c3092b0da4ea78b"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-config.json",
+      "sha256": "371e6eb9f27e2a16250d49a0a5a0378604c36f9c324578dd0c32151ee4dc816e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-evidence.json",
+      "sha256": "3cc4b0b17582c5a45be58d1b906af1b6900a500ef7dd7d4b3b5a15e7af2a9c62"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-draft.md",
+      "sha256": "6d3fd121f22a19c479d6aeea97788abc47e72b6e3c0b78675d7d1b8cb86bdb53"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-agent-boundary-addendum.json",
+      "sha256": "0dc35c7be4d503d793eacb74d5a5ce731fa039767e9891211f56614bf19e4710"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-formal-peer-scope.json",
+    "sha256": "05e294c6f79ae413ff70aef871de66090c5262764dbaa64fc70c9838454133c0",
+    "final_content_hashes_unchanged": true
+  }
+}

@@ -1265,6 +1265,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
       "effect": "持用時對已有流血狀態的目標造成近戰弱點命中，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；流血層數不縮放這個加值，最終傷害增幅另按公式計算。"
+    },
+    {
+      "id": "power-cycler",
+      "name_zh_tw": "能量循環",
+      "name_en": "Power Cycler",
+      "name_key": "loc_trait_bespoke_extended_activation_duration_on_chained_attacks",
+      "description_key": "loc_trait_bespoke_extended_activation_duration_and_stagger_on_chained_attacks_desc",
+      "name_hash": "739921c8",
+      "description_hash": "f49f49e5",
+      "page": "entries/能量循環/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
+      "effect": "持用此劍且充能狀態有效時，I／II 最多增加 1 次、III／IV 最多增加 2 次連續充能揮擊；每個有效連擊步向近戰衝擊修正加入 2.5%／5%／7.5%／10%，不增加傷害。"
     }
   ],
   "weapons": [
@@ -18995,6 +19008,62 @@
       "icon": "https://github.com/user-attachments/assets/b9fd0379-1424-48e1-8f8b-d7fbef8c9388",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_196",
       "effect": "持用時對已有流血狀態的目標造成近戰弱點命中，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；流血層數不縮放這個加值，最終傷害增幅另按公式計算。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks",
+      "blessing_id": "power-cycler",
+      "weapon_id": "powersword_p1",
+      "page": "entries/能量循環/weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "extra_chained_energised_hits_by_tier": {
+          "I": 1,
+          "II": 1,
+          "III": 2,
+          "IV": 2
+        },
+        "melee_impact_modifier_per_effective_combo_step_by_tier": {
+          "I": 0.025,
+          "II": 0.05,
+          "III": 0.075,
+          "IV": 0.1
+        },
+        "max_effective_combo_steps_by_tier": {
+          "I": 1,
+          "II": 1,
+          "III": 2,
+          "IV": 2
+        },
+        "native_energised_sweeps_per_activation": 1,
+        "active_duration_seconds": 3,
+        "maximum_energised_sweeps_if_each_window_consumes_one_activation": {
+          "I": 2,
+          "II": 2,
+          "III": 3,
+          "IV": 3
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 336,
+        "end_line": 397
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_extended_activation_duration_and_stagger_on_chained_attacks_desc",
+      "description_hash": "f49f49e5",
+      "icon": "https://github.com/user-attachments/assets/05e48334-0184-4507-ba85-700d7d36844b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_205",
+      "effect": "持用此劍且充能狀態有效時，I／II 最多增加 1 次、III／IV 最多增加 2 次連續充能揮擊；每個有效連擊步向近戰衝擊修正加入 2.5%／5%／7.5%／10%，不增加傷害。"
     }
   ],
   "bindings": [
@@ -26654,6 +26723,34 @@
         "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
         "import_line": 14,
         "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "power-cycler",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/extended_activation_duration_on_chained_attacks",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "power-cycler",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_extended_activation_duration_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/extended_activation_duration_on_chained_attacks",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
       }
     }
   ]
