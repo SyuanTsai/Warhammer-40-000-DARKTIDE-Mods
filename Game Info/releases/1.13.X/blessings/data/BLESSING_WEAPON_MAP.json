@@ -1317,6 +1317,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585",
       "effect": "相符武器以實際標為特殊攻擊的傷害擊殺敵人後，取得 5 秒內部效果。鏈斧與布蘭克斯動力劍增加近戰爆擊率；重型開膛劍、突擊鏈鋸劍與烈焰力場劍給一次近戰必定爆擊關鍵字。後三種實作的各級實際效果相同，並非 RAW 顯示的逐級爆擊率。"
+    },
+    {
+      "id": "vicious-slice",
+      "name_zh_tw": "兇狠切割",
+      "name_en": "Vicious Slice",
+      "name_key": "loc_trait_bespoke_increase_stagger_per_hit_in_sweep",
+      "description_key": "loc_trait_bespoke_increase_stagger_per_hit_in_sweep_desc",
+      "name_hash": "c20ffbce",
+      "description_hash": "7b8e9296",
+      "page": "entries/兇狠切割/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b",
+      "effect": "持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。"
     }
   ],
   "weapons": [
@@ -20388,6 +20401,110 @@
       "icon": "https://github.com/user-attachments/assets/b8260f93-8c0d-4eb7-bf12-4f23cfc2aa8f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_085",
       "effect": "機械神教動力劍 布蘭克斯 Mk VI：特殊標記擊殺增加近戰爆擊率；I–IV 每次獲得 2／4／6／8 層，每層增加 5 個百分點，最多 8 層，下一次橫掃開始時消耗。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep",
+      "blessing_id": "vicious-slice",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/兇狠切割/weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_key": "melee_impact_modifier",
+        "stat_type": "additive_multiplier",
+        "stat_base_value": 1,
+        "per_effective_stack_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "maximum_effective_stacks": 5,
+        "physical_placeholder_children": 1,
+        "child_stack_offset": -1,
+        "maximum_physical_children": 6,
+        "on_hit_stack_request": 1,
+        "clear_child_events": [
+          "on_sweep_start",
+          "on_sweep_finish"
+        ],
+        "child_duration_seconds": null,
+        "cooldown_seconds": null,
+        "held_slot_gate": true,
+        "runtime_check_api_difference": "wrapper specific_check_proc_func singular is not read by runtime plural specific_check_proc_funcs; on-hit item-match and active check are absent.",
+        "runtime_callback_api": "specific_proc_func singular is read and invokes sweep-start/sweep-finish callbacks.",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep",
+        "trait_item": "content/items/traits/bespoke_combatsword_p1/increase_stagger_per_hit_in_sweep",
+        "restriction_key": "combatsword_p1",
+        "marks": [
+          {
+            "mark_id": "combatsword_p1_m1",
+            "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk I",
+            "name_en": "\"Devil's Claw\" Sword Catachan Mk I",
+            "metadata_item": "content/items/weapons/player/melee/combatsword_p1_m1",
+            "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+            "import_line": 14,
+            "ukeys_line": 1504,
+            "append_line": 1506,
+            "loc_ids": [
+              "loc_weapon_family_combatsword_p1_m1",
+              "loc_weapon_pattern_combatsword_p1_m1",
+              "loc_weapon_mark_combatsword_p1_m1"
+            ]
+          },
+          {
+            "mark_id": "combatsword_p1_m2",
+            "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk IV",
+            "name_en": "\"Devil's Claw\" Sword Catachan Mk IV",
+            "metadata_item": "content/items/weapons/player/melee/combatsword_p1_m2",
+            "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+            "import_line": 14,
+            "ukeys_line": 1437,
+            "append_line": 1439,
+            "loc_ids": [
+              "loc_weapon_family_combatsword_p1_m2",
+              "loc_weapon_pattern_combatsword_p1_m2",
+              "loc_weapon_mark_combatsword_p1_m2"
+            ]
+          },
+          {
+            "mark_id": "combatsword_p1_m3",
+            "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk VII",
+            "name_en": "\"Devil's Claw\" Sword Catachan Mk VII",
+            "metadata_item": "content/items/weapons/player/melee/combatsword_p1_m3",
+            "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+            "import_line": 15,
+            "ukeys_line": 1346,
+            "append_line": 1348,
+            "loc_ids": [
+              "loc_weapon_family_combatsword_p1_m3",
+              "loc_weapon_pattern_combatsword_p1_m3",
+              "loc_weapon_mark_combatsword_p1_m3"
+            ]
+          }
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 472,
+        "end_line": 511
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_bespoke_increase_stagger_per_hit_in_sweep_desc",
+      "description_hash": "7b8e9296",
+      "icon": "https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_173",
+      "effect": "持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep_parent"
     }
   ],
   "bindings": [
@@ -28523,6 +28640,48 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
         "import_line": 15,
         "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "vicious-slice",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increase_stagger_per_hit_in_sweep",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "vicious-slice",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increase_stagger_per_hit_in_sweep",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "vicious-slice",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/increase_stagger_per_hit_in_sweep",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
       }
     }
   ]

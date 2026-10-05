@@ -104,3 +104,4 @@
 | [完美一擊](entries/完美一擊/README.md) | [來源索引](entries/完美一擊/SOURCE_INDEX.md) |
 | [強力一擊](entries/強力一擊/README.md) | [來源索引](entries/強力一擊/SOURCE_INDEX.md) |
 | [嗜血](entries/嗜血/README.md) | [來源索引](entries/嗜血/SOURCE_INDEX.md) |
+| [兇狠切割](entries/兇狠切割/README.md) | [來源索引](entries/兇狠切割/SOURCE_INDEX.md) |

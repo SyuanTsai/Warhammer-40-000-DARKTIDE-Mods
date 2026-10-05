@@ -1,0 +1,261 @@
+{
+  "date": "2026-10-05",
+  "blessing": "vicious-slice",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/兇狠切割/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "vicious-slice",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-formal-peer-scope.json",
+    "scope_sha256": "f607785465bc2585329eb6cfa8e975ea506ae873397fbfb3e04e49d5956158c8",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "reviewed_file_count": 30,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-config.json": "c9a5ba0f8610a7c22badd34b46ae5ef4e27e7f630f551ac858499b1dbb80279a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-draft.md": "3713889853e2cb469078b7f98e650eb975c839256d105e0cab37eace9488f441",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-evidence.json": "ec6fa1aa79203a2ec3e458388ceaacb27a1b370cbf97b6df28e27d38ffc3a650",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-config.json": "d34642ab9ea3a511daabf03c1699d401f14a317ed1deaf42bf8ac3002f98c661",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-extension-draft.json": "8759b634bb321a03ecdd11be54f646548911e38694030624b38a935ee1a3720f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-image.json": "d1c38a9b05f697ccdea1fb210487a6c51d01fcceb53495a3680a1f482e4441aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-focused-checks.json": "3371a97bbacaddcd619622dad97b815fadc5dbbf8c01522d1ecde66d50da5cdb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-frozen-source-verification.json": "8e43793df3621d2fdc3173d65b7a871531893e1ba46f9b3a49cf4e3e1954698e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-own-tier-diff.json": "d45b1d0a1bea39ee16e4fc89eda7d35e2c846189febed77b87b31ca611a65970",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-packet-timer-diff-review.json": "34ca8eabc323d7e11ebbbfb1950eba6943bc8d3c74885252faebcd921932ce9e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-proc-api-diff-review.json": "d31b9e17170add2977fd3ff93f015d53dd58beeeced910fe7b3ca818e78d803e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-resume-review.json": "a04df494999dc57d83bad7483b2653da68ff3a8ac1581e77ece9188c8d4d916d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-stat-consumer-diff-review.json": "035b86b100e6b327339fa0b6ba5395ce989d8073a2078471fe8c2fd9355e382f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-traits-review.json": "89728cccfe6c77c960245f53c65add7637f2bc56c466f07bfb0d0b49e07ab7db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-raw-verification.json": "3701b4d14c4d3a08b300853c59d168863a2e6dd212e12daf1bdd2ce179f3253b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-review.json": "064246d0c0078f6e178d288e3fbecc6dfb946d567922d225012d083a99419264",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "bb002d517f06166d3025be723eca021d6ad4d993fb0d6b6b309b0e45d0996998",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/DAMAGE_PERCENTAGE_REVIEW.md": "48257efb8f4ea242f2a9b49592f5665d0d930bddb924f37460a9a154a3f4ea6e",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/LOCALIZATION_COMPARISON.md": "d392c7e7c81c0d370f7d19da1f226eab03a0c5ade204922f1e49643043c5d524",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/README.md": "00a43ab2b5838c1ab745014982a1e8653d89b46769bf626600dcdd914cd387ed",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/SOURCE_INDEX.md": "e3a5373e97297c6cfe43ee90167a94157a6c9cb3183595a9e0d4db68c7091712",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/TIER_VALUES.md": "41793b2b24a199afa2c49ad8db14b9ad1c410ab6a41300331019a60de64f46f7",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/WEAPON_COMPATIBILITY.md": "e3e4450353a6a32436aad38d6d16888930700a6c1ca757a16ac7cebd33d2193a",
+      "Game Info/releases/1.13.X/blessings/entries/兇狠切割/weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep.md": "abf17760993cbcf2e4a2029bd6181346bd2478aa794abe35d59ac11edcef95f5",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "c13fb7d5997f05e5854f1f3dcfe9afdd6cd936ff5c7bacb929760cc828e0ccba",
+      "Game Info/releases/1.13.X/blessings/README.md": "a8cb3ad3b072e02eabf572b2ffc81d1c3a9586622ac3b6e21570d134601fc8b1",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "b26f797201f7b6d41661ab860aa2854b5f6070d71efe05b9a4d79a76763dcb46",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "68f1f553eb885e514434ac35aecf28362b3bc976613ae280c853044f72a26398",
+      "Referneces/Translation.md": "93d28c4580199269a209e52ebc1612f64032c4f0e0396d961a5bf64153c8947e"
+    },
+    "findings": [
+      "已核 scope SHA 與全部 30 個檔案 SHA-256；每個磁碟雜湊都與固定映射相符，canonical 與 extension draft.configuration 相同。",
+      "七份正式頁、單一 combatsword_p1 trait、三個實際 Mark 綁定，以及共享 map／反向武器索引一致；型號為卡塔昌 Mk I、Mk IV、Mk VII。圖示識別 ID、遊戲路徑、附件 URL 分欄一致，並符合 image receipt。",
+      "I–IV 每個有效子層為 .14/.16/.18/.20，最多五個有效層；一個實體佔位層因 offset -1 不貢獻統計。tier override 只替換子層已列出的 melee_impact_modifier，父模板沒有該 stat key，故沒有常駐父層加成或 fallback 疊加。",
+      "正式頁準確區分錯誤的 singular specific_check_proc_func（runtime 讀 plural specific_check_proc_funcs，故 item-match／active 檢查未執行）與有效的 singular specific_proc_func 回呼；持用 gate 仍生效，掃掠開始／結束回呼仍可清層。",
+      "整批事件先依 on_hit 數量加子層，再由同批任何 sweep-start／sweep-finish 清除；傷害與踉蹌先於增益事件及 stat-cache 更新，因此觸發命中不回溯受益，亦未承諾同幀按目標逐次取得新層。",
+      "Own wrapper 無 child_duration、child_duration_after_remove 或 cooldown；計時起點不啟動，不套用其他祝福的五秒期限。掃掠開始／結束清層，移除父增益會拆除子層；切換只關閉持用條件，並非自動卸除。",
+      "三個 Mark 的輕擊、重擊、推擊追擊、成功格擋後反擊均有近戰橫掃路徑。純推擊可送出 on-hit 加層請求，但其獨立推擊分支不使用 melee_impact_modifier，也不造成生命傷害。",
+      "RAW 英／繁中資源與 hash 配對，四級 formatter 重建 +14%/+16%/+18%/+20% 正確；逐規則表將實際觸發範圍矛盾與未涵蓋的清層／期限分開。公式與算例把同類衝擊修正相加，明確不視為傷害或最終踉蹌等比例提升。",
+      "當項 focused source/link/GFM 檢查回條為 complete/accepted；未發現需修改正式頁的實質問題。"
+    ],
+    "verification": "Reviewed the fixed formal pages, actual three-Mark binding and reverse references, bilingual RAW reconstruction, tier/stat and batch timing differences, pure-push boundary, lifecycle, math examples, and image identity. All scoped hashes match; no substantive issue remains."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "vicious-slice",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_173",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_173.png",
+      "attachment": "https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5986544187",
+      "acquired_date": "2026-10-05",
+      "sha256": "69d238bc21b521d56002a0895bf8bbeadfd778af3e8297b0fe807093c763e74c",
+      "content_type": "image/png",
+      "size": 3019,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "兇狠切割祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_notes": "Root viewed publicly downloaded128x128PNG: broad faintgray/white central rectangular form with transparent surrounding area. No fine graphic inference; original unchanged and attachment bytes match source."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 324,
+      "lists": 86,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 55,
+      "source_files": 21,
+      "bindings": 584,
+      "variants": 299,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 21,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 802,
+      "remote_references": 347,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 23,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-022-full-scan.json",
+        "sha256": "858e80014ef3561b83222f46b2b996ed3e3bb4cab6009e84b04d85eb44a9b2ad",
+        "trigger": "round-022"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 68,
+    "not_started_name_groups": 68,
+    "partial_name_groups": 0,
+    "remaining_variants": 306,
+    "remaining_bindings": 601,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "da2768991efadfd9dfbc5087c8645c077591e77d3691eecf61e7e88445d2af65"
+  },
+  "previous_local_commit": "4545387bf0ed0ed20069c69f817705c227f37095",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-focused-checks.json",
+      "sha256": "3371a97bbacaddcd619622dad97b815fadc5dbbf8c01522d1ecde66d50da5cdb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-frozen-source-verification.json",
+      "sha256": "8e43793df3621d2fdc3173d65b7a871531893e1ba46f9b3a49cf4e3e1954698e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-own-tier-diff.json",
+      "sha256": "d45b1d0a1bea39ee16e4fc89eda7d35e2c846189febed77b87b31ca611a65970"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-packet-timer-diff-review.json",
+      "sha256": "34ca8eabc323d7e11ebbbfb1950eba6943bc8d3c74885252faebcd921932ce9e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-proc-api-diff-review.json",
+      "sha256": "d31b9e17170add2977fd3ff93f015d53dd58beeeced910fe7b3ca818e78d803e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-resume-review.json",
+      "sha256": "a04df494999dc57d83bad7483b2653da68ff3a8ac1581e77ece9188c8d4d916d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-stat-consumer-diff-review.json",
+      "sha256": "035b86b100e6b327339fa0b6ba5395ce989d8073a2078471fe8c2fd9355e382f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-traits-review.json",
+      "sha256": "89728cccfe6c77c960245f53c65add7637f2bc56c466f07bfb0d0b49e07ab7db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-raw-verification.json",
+      "sha256": "3701b4d14c4d3a08b300853c59d168863a2e6dd212e12daf1bdd2ce179f3253b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-review.json",
+      "sha256": "064246d0c0078f6e178d288e3fbecc6dfb946d567922d225012d083a99419264"
+    }
+  ],
+  "primary_review_method": "Evidence/difference review of actualcustomparent/child/API and3actualMark routes, reuse unchanged fixedSHA generic conditionalBuff/stat/event consumers only under own conditions. Timerstart remains0, addthenallclearpacket semantics distinct from ActivatedParentHaymaker.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-config.json",
+    "sha256": "d34642ab9ea3a511daabf03c1699d401f14a317ed1deaf42bf8ac3002f98c661"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-own-tier-diff.json",
+      "sha256": "d45b1d0a1bea39ee16e4fc89eda7d35e2c846189febed77b87b31ca611a65970"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-proc-api-diff-review.json",
+      "sha256": "d31b9e17170add2977fd3ff93f015d53dd58beeeced910fe7b3ca818e78d803e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-stat-consumer-diff-review.json",
+      "sha256": "035b86b100e6b327339fa0b6ba5395ce989d8073a2078471fe8c2fd9355e382f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-traits-review.json",
+      "sha256": "89728cccfe6c77c960245f53c65add7637f2bc56c466f07bfb0d0b49e07ab7db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-review.json",
+      "sha256": "064246d0c0078f6e178d288e3fbecc6dfb946d567922d225012d083a99419264"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-primary-ui-raw-verification.json",
+      "sha256": "3701b4d14c4d3a08b300853c59d168863a2e6dd212e12daf1bdd2ce179f3253b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-image.json",
+      "sha256": "d1c38a9b05f697ccdea1fb210487a6c51d01fcceb53495a3680a1f482e4441aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-config.json",
+      "sha256": "c9a5ba0f8610a7c22badd34b46ae5ef4e27e7f630f551ac858499b1dbb80279a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-evidence.json",
+      "sha256": "ec6fa1aa79203a2ec3e458388ceaacb27a1b370cbf97b6df28e27d38ffc3a650"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-agent-draft.md",
+      "sha256": "3713889853e2cb469078b7f98e650eb975c839256d105e0cab37eace9488f441"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/vicious-slice-formal-peer-scope.json",
+    "sha256": "f607785465bc2585329eb6cfa8e975ea506ae873397fbfb3e04e49d5956158c8",
+    "final_content_hashes_unchanged": true
+  }
+}

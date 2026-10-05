@@ -1883,3 +1883,6 @@
 
 - Refined Lethality - 精煉殺意
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_weakspot_damage_against_toxin_status`，hash `38e007cd`；英文／繁中RAW配對確認。
+
+- Vicious Slice - 兇狠切割
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_stagger_per_hit_in_sweep`，hash `c20ffbce`；英文／繁中RAW配對確認。
