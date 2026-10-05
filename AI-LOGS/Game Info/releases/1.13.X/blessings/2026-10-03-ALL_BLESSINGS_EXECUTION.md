@@ -355,3 +355,5 @@
 - [能量循環](2026-10-03-POWER-CYCLER_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
 
 - [完美一擊](2026-10-03-PERFECT-STRIKE_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。
+
+- [強力一擊](2026-10-03-HAYMAKER_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。

@@ -325,6 +325,7 @@
 - Precognition - 未卜先知
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_dodge_grants_finesse_bonus`，hash `621fe25c`；英文／繁中RAW配對確認。
 - Haymaker - 強力一擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_heavy_chained_hits_increases_killing_blow_chance`，hash `e93686b2`；英文／繁中RAW配對確認。
 - Smackdown - 擊倒
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_after_punching_staggered_enemy`，hash `90a360d3`；英文／繁中RAW配對確認。
 - Mercy Killer - 仁慈殺手
