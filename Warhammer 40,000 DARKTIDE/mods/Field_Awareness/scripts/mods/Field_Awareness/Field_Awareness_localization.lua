@@ -286,7 +286,7 @@ return {
 
     ["color_renegade_melee"] = {
         ["en"] = "Scab Melee",
-        ["zh-tw"] = "血痂近戰兵",
+        ["zh-tw"] = "血痂格鬥兵",
     },
 
     ["color_renegade_melee_r"] = {
@@ -366,7 +366,7 @@ return {
 
     ["color_renegade_rifleman"] = {
         ["en"] = "Scab Rifleman",
-        ["zh-tw"] = "血痂步槍兵",
+        ["zh-tw"] = "血痂射手",
     },
 
     ["color_renegade_rifleman_r"] = {
@@ -711,7 +711,7 @@ return {
 
     ["pox_bomber_gas_enabled"] = {
         ["en"] = "Pox Bomber gas",
-        ["zh-tw"] = "瘟疫轟炸者毒氣",
+        ["zh-tw"] = "劇毒轟炸者毒氣",
     },
 
     ["toxic_gas_enabled"] = {
@@ -751,7 +751,7 @@ return {
 
     ["smoke_visuals_enabled_description"] = {
         ["en"] = "Keeps Pox Bomber grenade gas low to the ground. Mission pox gas has its own separate control. Also adjusts selected grenade gas and the Veteran smoke grenade's initial blast. Changes apply to newly spawned clouds; green ground hexagons have a separate setting.",
-        ["zh-tw"] = "讓瘟疫轟炸者手榴彈的毒氣貼近地面。任務瘟疫毒氣要另外設定。這項功能也會調整你選擇的手榴彈毒氣，以及老兵煙霧彈剛爆開時的效果。更改後只會影響新產生的煙霧；綠色地面六角標記有另外的設定。",
+        ["zh-tw"] = "讓劇毒轟炸者手榴彈的毒氣貼近地面。任務瘟疫毒氣要另外設定。這項功能也會調整你選擇的手榴彈毒氣，以及老兵煙霧彈剛爆開時的效果。更改後只會影響新產生的煙霧；綠色地面六角標記有另外的設定。",
     },
 
     ["beast_hexagons_enabled"] = {
@@ -781,12 +781,12 @@ return {
 
     ["smoke_visuals_enabled"] = {
         ["en"] = "Pox Bomber low-lying gas",
-        ["zh-tw"] = "瘟疫轟炸者貼地毒氣",
+        ["zh-tw"] = "劇毒轟炸者貼地毒氣",
     },
 
     ["pox_gas_low_enabled"] = {
         ["en"] = "Low-lying Pox Bomber clouds",
-        ["zh-tw"] = "瘟疫轟炸者貼地毒霧",
+        ["zh-tw"] = "劇毒轟炸者貼地毒霧",
     },
 
     ["grenade_gas_low_enabled"] = {
@@ -836,7 +836,7 @@ return {
 
     ["color_chaos_armored_infected"] = {
         ["en"] = "Armored Infected",
-        ["zh-tw"] = "重甲感染者",
+        ["zh-tw"] = "重甲呻吟者",
     },
 
     ["color_chaos_armored_infected_r"] = {
@@ -976,7 +976,7 @@ return {
 
     ["color_chaos_mutator_daemonhost"] = {
         ["en"] = "Mutator Daemonhost",
-        ["zh-tw"] = "惡魔宿主（詞條變體）",
+        ["zh-tw"] = "魔縛惡魔宿主",
     },
 
     ["color_chaos_mutator_daemonhost_r"] = {
@@ -1016,7 +1016,7 @@ return {
 
     ["color_chaos_newly_infected"] = {
         ["en"] = "Newly Infected",
-        ["zh-tw"] = "新近感染者",
+        ["zh-tw"] = "呻吟者",
     },
 
     ["color_chaos_newly_infected_r"] = {
@@ -1096,7 +1096,7 @@ return {
 
     ["color_chaos_ogryn_houndmaster"] = {
         ["en"] = "Ogryn Houndmaster",
-        ["zh-tw"] = "歐格林馴犬師",
+        ["zh-tw"] = "獸群領主",
     },
 
     ["color_chaos_ogryn_houndmaster_r"] = {
@@ -1196,7 +1196,7 @@ return {
 
     ["color_cultist_assault"] = {
         ["en"] = "Dreg Assault",
-        ["zh-tw"] = "渣滓突擊兵",
+        ["zh-tw"] = "渣滓潛行者",
     },
 
     ["color_cultist_assault_r"] = {
@@ -1276,7 +1276,7 @@ return {
 
     ["color_cultist_grenadier"] = {
         ["en"] = "Pox Bomber",
-        ["zh-tw"] = "瘟疫轟炸者",
+        ["zh-tw"] = "劇毒轟炸者",
     },
 
     ["color_cultist_grenadier_r"] = {
@@ -1316,7 +1316,7 @@ return {
 
     ["color_cultist_melee"] = {
         ["en"] = "Dreg Melee",
-        ["zh-tw"] = "渣滓近戰兵",
+        ["zh-tw"] = "渣滓格鬥兵",
     },
 
     ["color_cultist_melee_r"] = {
@@ -1396,7 +1396,7 @@ return {
 
     ["color_cultist_shocktrooper"] = {
         ["en"] = "Dreg Shocktrooper",
-        ["zh-tw"] = "渣滓強襲兵",
+        ["zh-tw"] = "渣滓霰彈槍手",
     },
 
     ["color_cultist_shocktrooper_r"] = {
@@ -1436,7 +1436,7 @@ return {
 
     ["color_renegade_assault"] = {
         ["en"] = "Scab Assault",
-        ["zh-tw"] = "血痂突擊兵",
+        ["zh-tw"] = "血痂潛行者",
     },
 
     ["color_renegade_assault_r"] = {
@@ -1636,7 +1636,7 @@ return {
 
     ["color_renegade_shocktrooper"] = {
         ["en"] = "Scab Shocktrooper",
-        ["zh-tw"] = "血痂強襲兵",
+        ["zh-tw"] = "血痂霰彈槍手",
     },
 
     ["color_renegade_shocktrooper_b"] = {
