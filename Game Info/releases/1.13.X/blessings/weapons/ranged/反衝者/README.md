@@ -8,11 +8,12 @@
 | <img src="https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898" width="32" height="32" alt="精確打擊祝福圖示"> [精確打擊](../../../entries/精確打擊/README.md)<br>- Surgical<br>[完整說明](../../../entries/精確打擊/README.md) | <ul><li>每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>hip／zoom 霰彈以 ranged 結算；bash 是近戰 sweep。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/c0ab5584-32f4-4ae4-af3e-881f93db2fd8" width="32" height="32" alt="穿透祝福圖示"> [穿透](../../../entries/穿透/README.md)<br>- Pierce<br>[完整說明](../../../entries/穿透/README.md) | <ul><li>反衝者 洛倫茲 Mk V：腰射／瞄準 pellets 和特殊 Bash 讀取此項的實際修正；一般敵人質量扣除降低，護甲中止另於 Bash 被略過，預算與 Breed 中止仍保留。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43" width="32" height="32" alt="擴展性祝福圖示"> [擴展性](../../../entries/擴展性/README.md)<br>- Expansive<br>[完整說明](../../../entries/擴展性/README.md) | <ul><li>反衝者 洛倫茲 Mk V：腰射與瞄準各以32顆 pellet 的單次射擊命中單位數觸發。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 反衝者 洛倫茲 Mk V | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill.md)、[穿透](../../../entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md) | I–IV |
+| 反衝者 洛倫茲 Mk V | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_ogryn_thumper_p1_suppression_on_close_kill.md)、[穿透](../../../entries/穿透/weapon_trait_bespoke_ogryn_thumper_p1_pass_past_armor_on_weapon_special.md)、[擴展性](../../../entries/擴展性/weapon_trait_bespoke_ogryn_thumper_p1_weapon_special_power_bonus_after_one_shots.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

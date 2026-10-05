@@ -1,0 +1,451 @@
+{
+  "date": "2026-10-06",
+  "blessing": "expansive",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/擴展性/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p1_weapon_special_power_bonus_after_one_shots",
+    "weapon_trait_bespoke_ogryn_thumper_p3_weapon_special_power_bonus_after_one_shots"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "expansive",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-formal-peer-scope.json",
+    "scope_sha256": "70bd041c65af0fa2deac166f88a5983b6f2acfd528aa98dfa767dc128189b98d",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "reviewed_conclusions": [
+      "Confirmed both live variants and actual UI bindings: ogryn_thumper_p1→ogryn_thumper_p1_m1 (Kickback Lorenz Mk V) and ogryn_thumper_p3→ogryn_thumper_p1_m3 (Thugshot Lorenz Mk VII); the category suffix is not treated as a Mark ID.",
+      "Confirmed I–IV melee_power_level_modifier .30/.34/.38/.42 and active duration 3.5s override the wrapper fallback; each independent on_equip ProcBuff listens for on_shoot, checks the slot at event time and requires num_hit_units>=3, with no kill condition, cooldown, stacking, or persistent held-stat gate.",
+      "Confirmed the P1 pellet route counts distinct damageable hit units once after the shot, despite 32 pellets; the P3 actual shoot_hit_scan route counts resolvable direct hits despite the card projectile label. The actual Bash/sweep routes are melee and do not trigger on_shoot; no unrelated charge, throw, or delayed projectile route is inferred.",
+      "Confirmed damage for the triggering shot resolves before queued event processing and stat-cache refresh; the later melee power-level read receives the effect. A repeat refreshes the single 3.5s timer; switching to melee preserves it while the Thumper remains equipped, and unequipping removes the on_equip buff.",
+      "Confirmed the melee modifier enters the melee PowerLevel consumer only. Under the stated neutral-other-modifiers premise, P_scaled=100 and IV .42 gives 142 melee power-level input; this is not a guaranteed 42% final HP-damage increase.",
+      "Confirmed RAW hash 8bb6569b bilingual strings, four-tier formatter values and 3.5s reconstruction; English formatting preserves no space after the percentage placeholder and two spaces before the time value. The literal 3+ is not an extra kill or one-hit-kill condition.",
+      "Confirmed image 131 receipt, public download/hash/dimensions and visual acceptance, plus both weapon reverse pages and shared association entries match the actual two bindings."
+    ],
+    "differential_reuse": "Reused the root-reviewed pinned ProcBuff queue/timer/cache and PowerLevel consumer only for the exact matching wrappers and attack_type path recorded in the scoped evidence; own wrapper and both actual hit producers were independently checked. The author preview and root source/UI/RAW/image receipts were treated as corroborating evidence, not substitutes for reading the formal pages.",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-config.json": "855d0f029173e4470279d2a3ec34d9cb4e87707ecacd57255afb59a128e9c4f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-draft.md": "2c7026056d271bdf92ab223e94d5287dfdd92744c7eefe5f5e1c0348cf791ca2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-evidence.json": "745210e33b5aaa41661f11f0e1585be46e9048339a1badc6f98aed77fe181fce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-config.json": "57ba04e93a510ecf86086b0c818e0f31e6916fccdb4da6f61e44cf665a081867",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-extension-draft.json": "8f8a9d0140d1e39f57d7aed4ef35a7650d7f8c031000423b7d02a33816f4cb2a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-association-snapshot.json": "151dbed9849edf13293066a6a4a0cb41209259d012215ed35da0f7b0b48cd51d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/candidate-page.md": "9ff33707094cb0769a8ffb80c365000610a27e7e8b3b454231e85e606801f0b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/candidate-preview-manifest.json": "0c7ca03906c8e7c0d5a424952ff4b9f21de3c835488f53b0305936eb675ead96",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/coverage.json": "4fee7109bb829a8ac19657b22de81bda1dfff7670d79277306d4195d9615a60a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-actual-preview-receipt-001.json": "a1337e6f69e5ac11b7a2d08ad57bd9367f4ae23ab54d5db21a0d65f671aee87e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-actual-preview-receipt-002.json": "9b66d4e1c6748c7274d0e02681f904a0e27fc9bb21cf62b2beac8ff07a0c2b3d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-config.json": "855d0f029173e4470279d2a3ec34d9cb4e87707ecacd57255afb59a128e9c4f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-draft.md": "2c7026056d271bdf92ab223e94d5287dfdd92744c7eefe5f5e1c0348cf791ca2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-evidence.json": "745210e33b5aaa41661f11f0e1585be46e9048339a1badc6f98aed77fe181fce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-freeze.json": "e376acf5630952fe594625dc6b125b1b07fdd4178d6acd8afcfd39b9fad2aaa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/binding-inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/item-metadata-snapshot.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/localization-snapshot.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/remaining-tasks-snapshot.json": "eddd64d4fc0e441dd757c1141d8ab889444fbdd0bca8b67e6965b6b3ed9f39d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-image-upload-journal.json": "55c9a7f5782b948f34127c3ed2607f595ff1d06955b75b8a9f469974ccee639d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-image.json": "84ca22dea54a0a5355d04847e1d28a0330a7529b92c9c7f51d14bd931f97c472",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-own-tier-wrapper-shot-hit-delta-review.json": "c45fde712ca87abc7cf94fb94f69a96075f908f6fafe90a0740ce933f72899b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-traits-review.json": "ceda1387e05b6afebe8c016201ee467ff81c49e1a1a6b3ca73f570f0f66fcbc0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-ui-raw-verification.json": "fda638d5c4a23df927810e815975e2578f15fd03663effa77a6847062da266a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-ui-review.json": "e38e6b1b090cdb72a885f1e706aba8858fbfa2d68380e9d2d334c3d840ff7550",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/selfcheck-results.json": "37500731d1f3f4bd1941e8e9e0a978f7ea24cbc49036aeca59e55a06a718f110",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/source-ranges.json": "eab45ef366222af6c196a28be59b075ac910364192aeb3d5c0f7b2e6e3c32dfa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-image.json": "84ca22dea54a0a5355d04847e1d28a0330a7529b92c9c7f51d14bd931f97c472",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-final-content-review.json": "d7805eea6b65c4c479d035864eeb6450b5290a686b49ec6ef46866abb2f69dc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-focused-checks.json": "3179c1596d8bd275aa03ad6a7cfd8fe6971376517894d9e697e3c46f228c461c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-frozen-source-verification.json": "2c964e9fae37d97e45f43949f2530c1e817ed673755c74bada7fd77e889916af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-own-tier-wrapper-shot-hit-delta-review.json": "c45fde712ca87abc7cf94fb94f69a96075f908f6fafe90a0740ce933f72899b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-resume-review.json": "f08785f0204de3d9a97fc3a53f9f89d67c470e7d52570fe3c32ce9728f6bff8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-traits-review.json": "ceda1387e05b6afebe8c016201ee467ff81c49e1a1a6b3ca73f570f0f66fcbc0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-raw-verification.json": "fda638d5c4a23df927810e815975e2578f15fd03663effa77a6847062da266a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-review.json": "e38e6b1b090cdb72a885f1e706aba8858fbfa2d68380e9d2d334c3d840ff7550",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-raw-verification.json": "fd16f9fce7c3b9b8b0de936a7af560f822cf094161f1b002ab2a6a5d91a06cd5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ed5350eee4b4391cf80c002b547915a99bccb98c8c4da324e2fc9880ed33e539",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/DAMAGE_PERCENTAGE_REVIEW.md": "f8418e74d7969d14ac1e9c91cd0a808cd056b1ae1ad5c98d3ac410a133bfa1e4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/LOCALIZATION_COMPARISON.md": "97275182c24cac8a0f7501a2d295d1c9e67499baec3b7e610e8a0d37adc1b517",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/README.md": "9ff33707094cb0769a8ffb80c365000610a27e7e8b3b454231e85e606801f0b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/SOURCE_INDEX.md": "922ece73de84e58ee8bc83e0c7e98673115b808440c08e92dbe3d101eb339d0c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/TIER_VALUES.md": "7bfef93cfaabd1af7903403a8623a2375ecfd23d0d338b75d141841cd9f61541",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/WEAPON_COMPATIBILITY.md": "3591ed4526f10fdd845a5856ec1d62263d1c409be023c861559d97cff206bf83",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/weapon_trait_bespoke_ogryn_thumper_p1_weapon_special_power_bonus_after_one_shots.md": "9741fdd9b12a6ecbf38809e423fa2c3b5884f08778b73b9c4dd90ae1649a09f9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/entries/擴展性/weapon_trait_bespoke_ogryn_thumper_p3_weapon_special_power_bonus_after_one_shots.md": "0bfd6d304c95039dcae7da87e1801dc7da9496a4a2a59ff477babe4486c58baa",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/ranged/README.md": "cb7089f1a1c684e77cf65b7e20cfcd3c56da4cd8a72c211254f27d5683a26c37",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/README.md": "14ec514bac67ad88088e13cd02f2cdbeeb5ead3fd91dc0dd4c1535322f931de7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a82fde703b98b0a2fd80f8236a9b6a183dc7f8d649ed6913893f08342cb6b27c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "d2f0fd82e8bd682f1c9fb2998dfd69ade493d79202013ad7df293a1ac8323596",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "beea940a9af67754a2ad1de70a68404603136de3185d67fd2d566fb2ceaec913",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/own-association-snapshot.json": "adabb7d1c1e9ac0b1758d804e2350240ad3104aa1907699ee6eafaacaad4d473",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-preview-002/Referneces/Translation.md": "fd902eddfa6155fed87893354a545571dc39929bd4527ba990220e58dbf70626",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ed5350eee4b4391cf80c002b547915a99bccb98c8c4da324e2fc9880ed33e539",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/DAMAGE_PERCENTAGE_REVIEW.md": "f8418e74d7969d14ac1e9c91cd0a808cd056b1ae1ad5c98d3ac410a133bfa1e4",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/LOCALIZATION_COMPARISON.md": "97275182c24cac8a0f7501a2d295d1c9e67499baec3b7e610e8a0d37adc1b517",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/README.md": "9ff33707094cb0769a8ffb80c365000610a27e7e8b3b454231e85e606801f0b8",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/SOURCE_INDEX.md": "922ece73de84e58ee8bc83e0c7e98673115b808440c08e92dbe3d101eb339d0c",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/TIER_VALUES.md": "7bfef93cfaabd1af7903403a8623a2375ecfd23d0d338b75d141841cd9f61541",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/WEAPON_COMPATIBILITY.md": "3591ed4526f10fdd845a5856ec1d62263d1c409be023c861559d97cff206bf83",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/weapon_trait_bespoke_ogryn_thumper_p1_weapon_special_power_bonus_after_one_shots.md": "9741fdd9b12a6ecbf38809e423fa2c3b5884f08778b73b9c4dd90ae1649a09f9",
+      "Game Info/releases/1.13.X/blessings/entries/擴展性/weapon_trait_bespoke_ogryn_thumper_p3_weapon_special_power_bonus_after_one_shots.md": "0bfd6d304c95039dcae7da87e1801dc7da9496a4a2a59ff477babe4486c58baa",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "cb7089f1a1c684e77cf65b7e20cfcd3c56da4cd8a72c211254f27d5683a26c37",
+      "Game Info/releases/1.13.X/blessings/README.md": "14ec514bac67ad88088e13cd02f2cdbeeb5ead3fd91dc0dd4c1535322f931de7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a82fde703b98b0a2fd80f8236a9b6a183dc7f8d649ed6913893f08342cb6b27c",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "d2f0fd82e8bd682f1c9fb2998dfd69ade493d79202013ad7df293a1ac8323596",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "beea940a9af67754a2ad1de70a68404603136de3185d67fd2d566fb2ceaec913",
+      "Referneces/Translation.md": "fd902eddfa6155fed87893354a545571dc39929bd4527ba990220e58dbf70626"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "expansive",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_131",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_131.png",
+      "attachment": "https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5999832182",
+      "acquired_date": "2026-10-06",
+      "sha256": "3b654b0ab6c22eebe4f307a34ca0ced37baa86bd258d2739f863369379487c14",
+      "content_type": "image/png",
+      "size": 8270,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "擴展性祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed actual public PNG: pale rectangular weapon_trait_131 motif and lower semicircle match identified source; transparency/background intact."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 14,
+      "rows": 426,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 60,
+      "source_files": 26,
+      "bindings": 883,
+      "variants": 448,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1051,
+      "remote_references": 412,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 33,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/raw-template-trailing-space-current-fix-full-scan.json",
+        "sha256": "b634f7e71ebf4d82a1c45a226decef194c9975ee6867665560daa4b9c8e5b98a",
+        "trigger": "raw-template-trailing-space-current-fix"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 38,
+    "not_started_name_groups": 38,
+    "partial_name_groups": 0,
+    "remaining_variants": 157,
+    "remaining_bindings": 302,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b463bdb3a627c791c9c2dafc5c4a1eabb5b7789b076166ae57b65d04b6256477"
+  },
+  "previous_local_commit": "19153dd36c27d2c628b546b7e27167cbf3a24039",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "No additional exact-name-key items outside the two exact inventory/UI bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-final-content-review.json",
+      "sha256": "d7805eea6b65c4c479d035864eeb6450b5290a686b49ec6ef46866abb2f69dc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-focused-checks.json",
+      "sha256": "3179c1596d8bd275aa03ad6a7cfd8fe6971376517894d9e697e3c46f228c461c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-frozen-source-verification.json",
+      "sha256": "2c964e9fae37d97e45f43949f2530c1e817ed673755c74bada7fd77e889916af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-own-tier-wrapper-shot-hit-delta-review.json",
+      "sha256": "c45fde712ca87abc7cf94fb94f69a96075f908f6fafe90a0740ce933f72899b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-resume-review.json",
+      "sha256": "f08785f0204de3d9a97fc3a53f9f89d67c470e7d52570fe3c32ce9728f6bff8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-traits-review.json",
+      "sha256": "ceda1387e05b6afebe8c016201ee467ff81c49e1a1a6b3ca73f570f0f66fcbc0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-raw-verification.json",
+      "sha256": "fda638d5c4a23df927810e815975e2578f15fd03663effa77a6847062da266a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-review.json",
+      "sha256": "e38e6b1b090cdb72a885f1e706aba8858fbfa2d68380e9d2d334c3d840ff7550"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-config.json",
+    "sha256": "57ba04e93a510ecf86086b0c818e0f31e6916fccdb4da6f61e44cf665a081867"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/actual-association-snapshot.json",
+      "sha256": "151dbed9849edf13293066a6a4a0cb41209259d012215ed35da0f7b0b48cd51d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/candidate-page.md",
+      "sha256": "9ff33707094cb0769a8ffb80c365000610a27e7e8b3b454231e85e606801f0b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/candidate-preview-manifest.json",
+      "sha256": "0c7ca03906c8e7c0d5a424952ff4b9f21de3c835488f53b0305936eb675ead96"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/coverage.json",
+      "sha256": "4fee7109bb829a8ac19657b22de81bda1dfff7670d79277306d4195d9615a60a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-actual-preview-receipt-002.json",
+      "sha256": "9b66d4e1c6748c7274d0e02681f904a0e27fc9bb21cf62b2beac8ff07a0c2b3d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-config.json",
+      "sha256": "855d0f029173e4470279d2a3ec34d9cb4e87707ecacd57255afb59a128e9c4f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-draft.md",
+      "sha256": "2c7026056d271bdf92ab223e94d5287dfdd92744c7eefe5f5e1c0348cf791ca2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/binding-inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/item-metadata-snapshot.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/localization-snapshot.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/remaining-tasks-snapshot.json",
+      "sha256": "eddd64d4fc0e441dd757c1141d8ab889444fbdd0bca8b67e6965b6b3ed9f39d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-image-upload-journal.json",
+      "sha256": "55c9a7f5782b948f34127c3ed2607f595ff1d06955b75b8a9f469974ccee639d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-image.json",
+      "sha256": "84ca22dea54a0a5355d04847e1d28a0330a7529b92c9c7f51d14bd931f97c472"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-own-tier-wrapper-shot-hit-delta-review.json",
+      "sha256": "c45fde712ca87abc7cf94fb94f69a96075f908f6fafe90a0740ce933f72899b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-traits-review.json",
+      "sha256": "ceda1387e05b6afebe8c016201ee467ff81c49e1a1a6b3ca73f570f0f66fcbc0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-ui-raw-verification.json",
+      "sha256": "fda638d5c4a23df927810e815975e2578f15fd03663effa77a6847062da266a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/inputs/root-receipts/expansive-primary-ui-review.json",
+      "sha256": "e38e6b1b090cdb72a885f1e706aba8858fbfa2d68380e9d2d334c3d840ff7550"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/selfcheck-results.json",
+      "sha256": "37500731d1f3f4bd1941e8e9e0a978f7ea24cbc49036aeca59e55a06a718f110"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/source-ranges.json",
+      "sha256": "eab45ef366222af6c196a28be59b075ac910364192aeb3d5c0f7b2e6e3c32dfa"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "14ec514bac67ad88088e13cd02f2cdbeeb5ead3fd91dc0dd4c1535322f931de7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "a82fde703b98b0a2fd80f8236a9b6a183dc7f8d649ed6913893f08342cb6b27c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "ed5350eee4b4391cf80c002b547915a99bccb98c8c4da324e2fc9880ed33e539"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "f8418e74d7969d14ac1e9c91cd0a808cd056b1ae1ad5c98d3ac410a133bfa1e4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\LOCALIZATION_COMPARISON.md",
+      "sha256": "97275182c24cac8a0f7501a2d295d1c9e67499baec3b7e610e8a0d37adc1b517"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\README.md",
+      "sha256": "9ff33707094cb0769a8ffb80c365000610a27e7e8b3b454231e85e606801f0b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\SOURCE_INDEX.md",
+      "sha256": "922ece73de84e58ee8bc83e0c7e98673115b808440c08e92dbe3d101eb339d0c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\TIER_VALUES.md",
+      "sha256": "7bfef93cfaabd1af7903403a8623a2375ecfd23d0d338b75d141841cd9f61541"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\WEAPON_COMPATIBILITY.md",
+      "sha256": "3591ed4526f10fdd845a5856ec1d62263d1c409be023c861559d97cff206bf83"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\weapon_trait_bespoke_ogryn_thumper_p1_weapon_special_power_bonus_after_one_shots.md",
+      "sha256": "9741fdd9b12a6ecbf38809e423fa2c3b5884f08778b73b9c4dd90ae1649a09f9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\entries\\擴展性\\weapon_trait_bespoke_ogryn_thumper_p3_weapon_special_power_bonus_after_one_shots.md",
+      "sha256": "0bfd6d304c95039dcae7da87e1801dc7da9496a4a2a59ff477babe4486c58baa"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "cb7089f1a1c684e77cf65b7e20cfcd3c56da4cd8a72c211254f27d5683a26c37"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "d2f0fd82e8bd682f1c9fb2998dfd69ade493d79202013ad7df293a1ac8323596"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\惡棍槍\\README.md",
+      "sha256": "beea940a9af67754a2ad1de70a68404603136de3185d67fd2d566fb2ceaec913"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\Referneces\\Translation.md",
+      "sha256": "fd902eddfa6155fed87893354a545571dc39929bd4527ba990220e58dbf70626"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-raw-verification.json",
+      "sha256": "fd16f9fce7c3b9b8b0de936a7af560f822cf094161f1b002ab2a6a5d91a06cd5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\expansive-group\\actual-preview-002\\own-association-snapshot.json",
+      "sha256": "adabb7d1c1e9ac0b1758d804e2350240ad3104aa1907699ee6eafaacaad4d473"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-actual-preview-receipt-001.json",
+      "sha256": "a1337e6f69e5ac11b7a2d08ad57bd9367f4ae23ab54d5db21a0d65f671aee87e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-agent-evidence.json",
+      "sha256": "745210e33b5aaa41661f11f0e1585be46e9048339a1badc6f98aed77fe181fce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-group/expansive-freeze.json",
+      "sha256": "e376acf5630952fe594625dc6b125b1b07fdd4178d6acd8afcfd39b9fad2aaa9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-config.json",
+      "sha256": "855d0f029173e4470279d2a3ec34d9cb4e87707ecacd57255afb59a128e9c4f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-evidence.json",
+      "sha256": "745210e33b5aaa41661f11f0e1585be46e9048339a1badc6f98aed77fe181fce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-agent-draft.md",
+      "sha256": "2c7026056d271bdf92ab223e94d5287dfdd92744c7eefe5f5e1c0348cf791ca2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-final-content-review.json",
+      "sha256": "d7805eea6b65c4c479d035864eeb6450b5290a686b49ec6ef46866abb2f69dc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-frozen-source-verification.json",
+      "sha256": "2c964e9fae37d97e45f43949f2530c1e817ed673755c74bada7fd77e889916af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-own-tier-wrapper-shot-hit-delta-review.json",
+      "sha256": "c45fde712ca87abc7cf94fb94f69a96075f908f6fafe90a0740ce933f72899b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-traits-review.json",
+      "sha256": "ceda1387e05b6afebe8c016201ee467ff81c49e1a1a6b3ca73f570f0f66fcbc0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-raw-verification.json",
+      "sha256": "fda638d5c4a23df927810e815975e2578f15fd03663effa77a6847062da266a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-primary-ui-review.json",
+      "sha256": "e38e6b1b090cdb72a885f1e706aba8858fbfa2d68380e9d2d334c3d840ff7550"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/expansive-formal-peer-scope.json",
+    "sha256": "70bd041c65af0fa2deac166f88a5983b6f2acfd528aa98dfa767dc128189b98d",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
