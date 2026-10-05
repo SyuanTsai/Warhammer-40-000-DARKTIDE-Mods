@@ -107,5 +107,6 @@
 | <img src="https://github.com/user-attachments/assets/9a68dfab-1a01-42c6-a9fa-ffe4d8295036" width="32" height="32" alt="強力一擊祝福圖示"> [強力一擊](entries/強力一擊/README.md)<br>- Haymaker<br>[完整說明](entries/強力一擊/README.md) | <ul><li>持用此武器，以重擊命中後增加一層；合格重擊按已有層數取得每層 1／2／3／4 個百分點的秒殺機率，最多五層、上限 5%／10%／15%／20%。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/13485cb7-1f86-45d4-b7a7-cb0be0e65585" width="32" height="32" alt="嗜血祝福圖示"> [嗜血](entries/嗜血/README.md)<br>- Bloodthirsty<br>[完整說明](entries/嗜血/README.md) | <ul><li>相符武器以實際標為特殊攻擊的傷害擊殺敵人後，取得 5 秒內部效果。鏈斧與布蘭克斯動力劍增加近戰爆擊率；重型開膛劍、突擊鏈鋸劍與烈焰力場劍給一次近戰必定爆擊關鍵字。後三種實作的各級實際效果相同，並非 RAW 顯示的逐級爆擊率。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b" width="32" height="32" alt="兇狠切割祝福圖示"> [兇狠切割](entries/兇狠切割/README.md)<br>- Vicious Slice<br>[完整說明](entries/兇狠切割/README.md) | <ul><li>持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891" width="32" height="32" alt="致命一擊祝福圖示"> [致命一擊](entries/致命一擊/README.md)<br>- Deathblow<br>[完整說明](entries/致命一擊/README.md) | <ul><li>持用圖妥斯基重劍時，I–IV 增加近戰弱點傷害修正 7.5%／10%／12.5%／15%；每次揮擊前三個角色擊殺中的非歐格林弱點擊殺，可在傷害結算後回退該目標的命中質量並解除後續中止。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

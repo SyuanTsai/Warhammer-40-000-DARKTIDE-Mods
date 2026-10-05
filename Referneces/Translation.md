@@ -341,6 +341,7 @@
 - Thunderstrike - 雷霆打擊
 - Chained Deathblow - 致命連擊
 - Deathblow - 致命一擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill`，hash `7d810db1`；英文／繁中RAW配對確認。
 - Perfect Strike - 完美一擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_pass_past_armor_on_crit`，hash `0893680f`；英文／繁中RAW配對確認。
 - Bladed Momentum - 利刃攻勢

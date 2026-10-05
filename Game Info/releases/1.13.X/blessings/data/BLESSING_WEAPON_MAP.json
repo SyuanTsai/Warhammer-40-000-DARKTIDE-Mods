@@ -1330,6 +1330,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/f9d23b25-7f50-4ce8-8e49-00770ecc048b",
       "effect": "持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。"
+    },
+    {
+      "id": "deathblow",
+      "name_zh_tw": "致命一擊",
+      "name_en": "Deathblow",
+      "name_key": "loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill",
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc",
+      "name_hash": "7d810db1",
+      "description_hash": "399cce97",
+      "page": "entries/致命一擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891",
+      "effect": "持用圖妥斯基重劍時，I–IV 增加近戰弱點傷害修正 7.5%／10%／12.5%／15%；每次揮擊前三個角色擊殺中的非歐格林弱點擊殺，可在傷害結算後回退該目標的命中質量並解除後續中止。"
     }
   ],
   "weapons": [
@@ -20505,6 +20518,44 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_173",
       "effect": "持用此劍時，每個送達命中事件請求一層近戰衝擊增量，I–IV 每層 14%／16%／18%／20%、最多五層；橫掃開始或結束事件清層，不增加生命傷害。",
       "buff_template_id": "weapon_trait_bespoke_combatsword_p1_increase_stagger_per_hit_in_sweep_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill",
+      "blessing_id": "deathblow",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/致命一擊/weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_weakspot_damage_added_by_tier": {
+          "I": 0.075,
+          "II": 0.1,
+          "III": 0.125,
+          "IV": 0.15
+        },
+        "eligible_sweep_kill_counter_limit": 3,
+        "tier_key_replaces_base_conditional_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 246,
+        "end_line": 285
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc",
+      "description_hash": "399cce97",
+      "icon": "https://github.com/user-attachments/assets/727852d8-6e95-4327-9114-a8b78126a891",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178",
+      "effect": "持用圖妥斯基重劍時，I–IV 增加近戰弱點傷害修正 7.5%／10%／12.5%／15%；每次揮擊前三個角色擊殺中的非歐格林弱點擊殺，可在傷害結算後回退該目標的命中質量並解除後續中止。"
     }
   ],
   "bindings": [
@@ -28682,6 +28733,48 @@
         "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
         "import_line": 15,
         "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "deathblow",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
       }
     }
   ]

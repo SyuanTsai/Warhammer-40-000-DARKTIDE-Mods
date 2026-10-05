@@ -363,3 +363,5 @@
 - [嗜血](2026-10-03-BLOODTHIRSTY_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。
 
 - [兇狠切割](2026-10-03-VICIOUS-SLICE_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
+
+- [致命一擊](2026-10-03-DEATHBLOW_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
