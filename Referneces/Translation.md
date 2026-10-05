@@ -493,6 +493,7 @@
 - Desperado - 亡命之徒
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_successful_dodge`，hash `54cd474d`；英文／繁中RAW配對確認。
 - Reassuringly Accurate - 慰藉精準
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_crit_kills`，hash `f59c278d`；英文／繁中RAW配對確認。
 - Flechette - 飛鏢彈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_ranged`，hash `d1d03cff`；英文／繁中RAW配對確認。
 - Man-Stopper - 大口徑彈藥

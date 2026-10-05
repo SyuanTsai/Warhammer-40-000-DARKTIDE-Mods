@@ -443,3 +443,5 @@
 - [燃燒靈魂](2026-10-03-BLAZING-SPIRIT_ACCEPTANCE.json)：新增1變體、3型號關聯；共1變體、3關聯。
 
 - [擴展性](2026-10-03-EXPANSIVE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
+
+- [慰藉精準](2026-10-03-REASSURINGLY-ACCURATE_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。

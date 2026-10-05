@@ -135,3 +135,4 @@
 | [護甲之禍](entries/護甲之禍/README.md) | [來源索引](entries/護甲之禍/SOURCE_INDEX.md) |
 | [燃燒靈魂](entries/燃燒靈魂/README.md) | [來源索引](entries/燃燒靈魂/SOURCE_INDEX.md) |
 | [擴展性](entries/擴展性/README.md) | [來源索引](entries/擴展性/SOURCE_INDEX.md) |
+| [慰藉精準](entries/慰藉精準/README.md) | [來源索引](entries/慰藉精準/SOURCE_INDEX.md) |

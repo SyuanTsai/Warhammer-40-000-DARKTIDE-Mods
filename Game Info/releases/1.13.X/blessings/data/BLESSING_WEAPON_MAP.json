@@ -1733,6 +1733,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43",
       "effect": "一次遠程開火直接命中至少三個目標單位後，提升近戰威力層級修正；I–IV為+30%／+34%／+38%／+42%，每次持續3.5秒。"
+    },
+    {
+      "id": "reassuringly-accurate",
+      "name_zh_tw": "慰藉精準",
+      "name_en": "Reassuringly Accurate",
+      "name_key": "loc_trait_bespoke_toughness_on_crit_kills",
+      "description_key": "loc_trait_bespoke_toughness_on_crit_kills_desc",
+      "name_hash": "f59c278d",
+      "description_hash": "f3f6d906",
+      "page": "entries/慰藉精準/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
+      "effect": "由裝有本祝福的武器造成致命一擊並擊殺後，立即回復目前最大韌性的指定比例，並以當前韌性缺損封頂；重型鐳射手槍 I–IV 為 10／12／14／16%，擲彈兵臂鎧 I–IV 為 24／28／32／36%。"
     }
   ],
   "weapons": [
@@ -27866,6 +27879,90 @@
       "icon": "https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_131",
       "effect": "惡棍槍 洛倫茲 Mk VII：腰射與瞄準實際走 hitscan，依直接命中單位數觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills",
+      "blessing_id": "reassuringly-accurate",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.1,
+          "II": 0.12,
+          "III": 0.14,
+          "IV": 0.16
+        },
+        "formatted_percent_by_tier": {
+          "I": 10,
+          "II": 12,
+          "III": 14,
+          "IV": 16
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 340,
+        "end_line": 370
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_crit_kills_desc",
+      "description_hash": "f3f6d906",
+      "icon": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_124",
+      "effect": "奧克塔蘭MG Mk II 的一般與瞄準射擊都走命中掃描；只有同一件武器的實際致命一擊擊殺才回復韌性。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills",
+      "blessing_id": "reassuringly-accurate",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.24,
+          "II": 0.28,
+          "III": 0.32,
+          "IV": 0.36
+        },
+        "formatted_percent_by_tier": {
+          "I": 24,
+          "II": 28,
+          "III": 32,
+          "IV": 36
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 89,
+        "end_line": 119
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_crit_kills_desc",
+      "description_hash": "f3f6d906",
+      "icon": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_124",
+      "effect": "布拉斯托姆 Mk III 的一般／蓄力近戰掃擊、特殊動作直接拳擊及保留暴擊旗標的榴彈直擊／爆炸擊殺可觸發；特殊動作附加爆炸以非暴擊結算，單靠它擊殺不符合。"
     }
   ],
   "bindings": [
@@ -40229,6 +40326,34 @@
         "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
         "import_line": 16,
         "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "reassuringly-accurate",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/toughness_on_crit_kills",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "reassuringly-accurate",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/toughness_on_crit_kills",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
       }
     }
   ]

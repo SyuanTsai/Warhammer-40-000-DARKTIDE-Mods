@@ -1,0 +1,658 @@
+{
+  "date": "2026-10-06",
+  "blessing": "reassuringly-accurate",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills",
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "reassuringly-accurate",
+    "name_zh_tw": "慰藉精準",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-formal-peer-scope.json",
+    "scope_sha256": "29962bd1d413c5c22c65ce24fa74f5b04e852349bea463f44ff9f1bb0007862d",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-config.json": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-draft.md": "c389a862131ff5ce222cc8cd42db616fb9a111fecfdfdadba82278205b3edc6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-evidence.json": "7942bebeb598b37f24eaca8b3352bb58776944f6236e3e751c527c4f177cf816",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-config.json": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-extension-draft.json": "d655a1bf606bf20bba513cff7d2ef0e89f02cf56f51af59194146d47b9850fed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-raw-verification.json": "37c677ab754d839f9b0ce2ee84ad2daae6633fe2959029056931b91ca617ee21",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/focused-manifest.json": "68f4f1fc1b4c95555c2077aa97aeb161ecc724bb6a7121b6e97162ea80c5e6f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "77f08a04b5eddabb180b5f81f6d5c3e1d5f4c8573dd473e05db7863b9926d189",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/DAMAGE_PERCENTAGE_REVIEW.md": "62a867846c9217090f25336e15b0e0891c1a49315db020ffc6d7972540bb1aed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/LOCALIZATION_COMPARISON.md": "29d7bd151391a8f859edbcb2042e5009ba6c77f84751e39ea65da84111aefa71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md": "94b095d4c5200dfa3613d5cc5276e34d926f061fb620fb27c4e2eafe8d1d0ea2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/SOURCE_INDEX.md": "8e0ec11a1de9c114d25bf7babf20b3b4fc7d0e95f3191fd80e1379579be554f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/TIER_VALUES.md": "c578db777c07755553fc34b2c40cd514e4643dce30e6f9d70d8e3e133a770b4c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/WEAPON_COMPATIBILITY.md": "a5b09373d2c166347c1681a95830017add2949e30900435333c87b12e004be2c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md": "3bce02fd2e7c1679d52e1ac51ba2e22e8ce22c8dbf44eba4159725f5cd9ffbe1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md": "b9cf1f53f19030a7e8d9b6992f13260846cd4ba357b2ffa25fd889d3e5625652",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "dcfcbfb60e1b21a9b28e40f74dc14738cdb41a10ea44c9d8124a2e436206bdba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "645dcfd3d434235338e711daf2eb7a1191aa17808917e0f50f47bfe9294d650c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "69f3184e524325b7f90ec91ba6696298a7f97e9076fbebd6108b0a9a728a7f43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "f98fde2f9b6b732bf5ef344443f802cf3661f5a290e339ff569e46ec4db51a11",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "05d05b9a87d80f7154237437240b3493b3ffd81ebfdd8da34395080f154f3961",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/own-association-snapshot.json": "d5f2efb00386af9754b448d5bc7780c365ce4e8f9a93d8ac5c25026af147f71e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Referneces/Translation.md": "e917657762c1d86d653f46f9780c751450516218ed7710ffd36fd079d577babc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/build_reassuringly_accurate_package.py": "c91c97c3f1c2148a4987d0c4be4609ac3fe5b3f41a94d334e12c3cf72174a78a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/fix_reassuringly_accurate.py": "26b04c06c8429228d9d2a1c990fe417d4ebf8dc87b1a4f9e187afd9d90bd5e50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-002.json": "1eb9acd139703abad0b9525c8692037b0fcea991c4fb82285979229ecc55d8dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-003.json": "b2880e6408b9159eb8c3141bd30e74d4675172d265d7118eb283834dfcf52390",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-004.json": "2a5d49d879e58233cfcbe8cf0a0e45ffd1d470b1dda2f433a15e056a953623ab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-config.json": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-draft.md": "c389a862131ff5ce222cc8cd42db616fb9a111fecfdfdadba82278205b3edc6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-evidence.json": "7942bebeb598b37f24eaca8b3352bb58776944f6236e3e751c527c4f177cf816",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-freeze.json": "ac00f14318b03327fdaceecc380ef1a8359c20456b14d98a33bbc8cc6fae0834",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-selfcheck.json": "65f9a50265861fa6a1e80fb83be79d22ef12ca16d656e3c68a4d344c0af232d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-attack-coverage.json": "b564969d37f2dfe0af31ca0ecc7013538929ecceb514b342a03c4b0f265e8a7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/sync_reassuringly_accurate_draft.py": "6961757a2bfed24416a4515ceb9cad55120bb08edba4c733a0f1aa965232ce76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-image.json": "e97d57082f9641c7c88bbe7ad96fec0426e623963736ad542441cf2c54cae227",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-final-content-review.json": "435c075a19d7ffe170950fb09f9c3682db11f6e39b2e6312194199d721312473",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-focused-checks.json": "275cff5f3b8884f03f3367d015e4a741da0bc6b7ee0de7adb7ec12e698ee107e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-force-assist-exception-delta-review.json": "5a6c9ce4560a0c9e84c8595138e651cfa16710c46605e52b8ed642b5ac8a2122",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-frozen-source-verification.json": "9eb9d6ad5af1327d1b4cb053e006c54bda971d2f909694734a7427c29acb79e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-own-tier-wrapper-crit-kill-delta-review.json": "85fb8401a9ac0d9ba84ec95e0d35c9c334790de6d376a55073f6e5678035004c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-recovery-state-reuse-delta-review.json": "41a1a004312f927e51de037cdca18e431f8550bd8eaa149d60ae8822cf9f5e94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-resume-review.json": "beebe9431623f157a954b69d1f9341777e9c3c0d4ec8e7cd177f3d3aef2b3123",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-traits-review.json": "9ef3c7c9ed1c6d768e6849f43d15e6022932e50d97e59496113e4479c5632c90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-raw-verification.json": "2b5afb7c56360af1e978d8793aa61294e01c8aff2d300b9047e618ab54315959",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-review.json": "887836bdd3fdc88b7930af2c2f6583188661771a328e7c93a3c4a9d866ca085b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-raw-verification.json": "37c677ab754d839f9b0ce2ee84ad2daae6633fe2959029056931b91ca617ee21",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "77f08a04b5eddabb180b5f81f6d5c3e1d5f4c8573dd473e05db7863b9926d189",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/DAMAGE_PERCENTAGE_REVIEW.md": "62a867846c9217090f25336e15b0e0891c1a49315db020ffc6d7972540bb1aed",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/LOCALIZATION_COMPARISON.md": "29d7bd151391a8f859edbcb2042e5009ba6c77f84751e39ea65da84111aefa71",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md": "94b095d4c5200dfa3613d5cc5276e34d926f061fb620fb27c4e2eafe8d1d0ea2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/SOURCE_INDEX.md": "8e0ec11a1de9c114d25bf7babf20b3b4fc7d0e95f3191fd80e1379579be554f7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/TIER_VALUES.md": "c578db777c07755553fc34b2c40cd514e4643dce30e6f9d70d8e3e133a770b4c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/WEAPON_COMPATIBILITY.md": "a5b09373d2c166347c1681a95830017add2949e30900435333c87b12e004be2c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md": "3bce02fd2e7c1679d52e1ac51ba2e22e8ce22c8dbf44eba4159725f5cd9ffbe1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md": "b9cf1f53f19030a7e8d9b6992f13260846cd4ba357b2ffa25fd889d3e5625652",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "dcfcbfb60e1b21a9b28e40f74dc14738cdb41a10ea44c9d8124a2e436206bdba",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "645dcfd3d434235338e711daf2eb7a1191aa17808917e0f50f47bfe9294d650c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "69f3184e524325b7f90ec91ba6696298a7f97e9076fbebd6108b0a9a728a7f43",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "f98fde2f9b6b732bf5ef344443f802cf3661f5a290e339ff569e46ec4db51a11",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "05d05b9a87d80f7154237437240b3493b3ffd81ebfdd8da34395080f154f3961",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/own-association-snapshot.json": "d5f2efb00386af9754b448d5bc7780c365ce4e8f9a93d8ac5c25026af147f71e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Referneces/Translation.md": "e917657762c1d86d653f46f9780c751450516218ed7710ffd36fd079d577babc",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "54b8999240d6c895b89f3e659771046b6530edeaff63821c710110b6b1fbfd7f",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/DAMAGE_PERCENTAGE_REVIEW.md": "62a867846c9217090f25336e15b0e0891c1a49315db020ffc6d7972540bb1aed",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/LOCALIZATION_COMPARISON.md": "29d7bd151391a8f859edbcb2042e5009ba6c77f84751e39ea65da84111aefa71",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md": "94b095d4c5200dfa3613d5cc5276e34d926f061fb620fb27c4e2eafe8d1d0ea2",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/SOURCE_INDEX.md": "8e0ec11a1de9c114d25bf7babf20b3b4fc7d0e95f3191fd80e1379579be554f7",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/TIER_VALUES.md": "c578db777c07755553fc34b2c40cd514e4643dce30e6f9d70d8e3e133a770b4c",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/WEAPON_COMPATIBILITY.md": "a5b09373d2c166347c1681a95830017add2949e30900435333c87b12e004be2c",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md": "3bce02fd2e7c1679d52e1ac51ba2e22e8ce22c8dbf44eba4159725f5cd9ffbe1",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md": "b9cf1f53f19030a7e8d9b6992f13260846cd4ba357b2ffa25fd889d3e5625652",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "19718f455f940780cee24443484e4578c227ffba9572cc9e1ab86b88650d7604",
+      "Game Info/releases/1.13.X/blessings/README.md": "016ecf995d2e463d8ccce8711162f22dc22df936c83b42aa98f586ed004ef63c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "b18deaf20c75779ae339c48655595bf687d8a9e6e3cea1326fc52ea1266537ab",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "f98fde2f9b6b732bf5ef344443f802cf3661f5a290e339ff569e46ec4db51a11",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "05d05b9a87d80f7154237437240b3493b3ffd81ebfdd8da34395080f154f3961",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "Referneces/Translation.md": "de4f2509662bcd14ee78b73e7b282a7181ddc7444fee217fc4a95d856ee933f2",
+      "scripts/game-info/decode_strings.py": "fcc7fbac2b2e4cf51440388b496eafa85ac10cbea549c0af6dce03d90a18c230",
+      "scripts/game-info/validate_game_info.py": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    },
+    "scope_integrity": {
+      "expected_files": 98,
+      "missing_files": [],
+      "hash_mismatches": [],
+      "all_exact_hashes_match": true
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md",
+      "Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md"
+    ],
+    "content_review": [
+      {
+        "topic": "Own tiers and wrappers",
+        "result": "Both actual trait variants have their own I–IV values: Laspistol 10/12/14/16%; Gauntlet 24/28/32/36%. Each own wrapper clones the crit-kill base without adding a different tier override. The base requires on_kill, held slot, exact attacking-item match, and actual critical flag plus attack_result=died; it has no ranged-only gate, cooldown, duration, or per-layer effect."
+      },
+      {
+        "topic": "Recovery and limits",
+        "result": "The callback directly requests recover_percentage_toughness with the tier fraction and ignore_stat_buffs=true. The own wrappers have no toughness_regain_multiplier producer, so the default multiplier is 1. Recovery budget is current maximum Toughness M times tier fraction p, capped by current missing Toughness D: R=min(M×p,D). Maximum can include current bonuses; recovery does not increase the maximum, and ordinary replenishment stat multipliers are ignored."
+      },
+      {
+        "topic": "Recovery state gates",
+        "result": "The native recovery rejects dead or prevent-replenish states. Knocked-down is normally rejected, with a force_assist component bypass for the knocked-down gate only; this does not bypass the separate alive/prevent-replenish checks. The README and math page describe that exception without treating ordinary assist as equivalent."
+      },
+      {
+        "topic": "Event timing and repeated kills",
+        "result": "Each eligible kill event independently calls the recovery callback; the event path is not a coalesced boolean and has no activation cooldown or active duration. The examples correctly require sufficient missing Toughness before each full-budget recovery and distinguish the maximum-Toughness denominator from missing-Toughness capping."
+      },
+      {
+        "topic": "Actual weapon routes",
+        "result": "The two exact bindings are Heavy Laspistol Accatran MG Mk II (laspistol_p1_m1) and Grenadier Gauntlet Blastoom Mk III (ogryn_gauntlet_p1_m1). Laspistol hip and aimed hit-scan attacks retain critical and item context; push omits a critical flag and Attack defaults it to false. Gauntlet ordinary light/heavy and the direct special punch use melee attack paths that can carry critical context; its separate secondary blast explicitly uses critical=false. Grenade direct impact and fuse/impact explosions preserve launch-time critical/item/owner context, while the held-slot gate is evaluated during event processing."
+      },
+      {
+        "topic": "RAW and formatter",
+        "result": "The same description key/hash f3f6d906 is preserved in English and Traditional Chinese. The own formatters display the tier fraction as +10/+12/+14/+16% for the Laspistol and +24/+28/+32/+36% for the Gauntlet; each static I–IV sentence substitutes only the placeholder and keeps the source wording. Omitted item, attack-route, denominator, cap, and state conditions are classified as documentation omissions, not translation contradictions."
+      },
+      {
+        "topic": "UI, image, and indexes",
+        "result": "The UI receipt resolves both family/pattern/mark names and exact trait-item append points, with no outside exact-name candidates. Both actual item.icon values use weapon_trait_124; the attached PNG is 128×128, HTTP 200, hash-verified and visually reviewed. The snapshot and current formal copies of all eight own pages have identical hashes; the map entry, reverse weapon pages, and indexes are in the fixed scope."
+      },
+      {
+        "topic": "Focused validation",
+        "result": "The frozen-source receipt verifies 50 normalized UTF-8/LF source ranges across 26 files at the fixed 1.13.1 commit; I independently recomputed those 50 range hashes with no mismatches. Focused check receipt reports 54 ranges/28 files, 885 bindings/450 variants globally, map consistency verified, 14 link-checked Markdown files with zero errors, and 14 GFM files."
+      }
+    ],
+    "validation": {
+      "scope_hashes_match": true,
+      "source_ranges_verified": 50,
+      "source_range_hash_mismatches": 0,
+      "live_formal_pages_match_preview_snapshot": 8,
+      "variant_count": 2,
+      "binding_count": 2,
+      "raw_and_image_receipts_verified": true,
+      "focused_links_new_errors": 0,
+      "gfm_files": 14
+    },
+    "parent_primary_acceptance": false,
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "reassuringly-accurate",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_124",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_124.png",
+      "attachment": "https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5999625663",
+      "acquired_date": "2026-10-06",
+      "sha256": "7ec092a1dd5aeddd3970e67d1b6085782fa07562585203e5d2fc9510fe693d61",
+      "content_type": "image/png",
+      "size": 4951,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "慰藉精準祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected public PNG: actual pale circular/hexagonal particles over a gray gradient, not an empty or corrupt image; source and public bytes identical,128x128, both actual item.icon124 entries matched."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 14,
+      "rows": 429,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 54,
+      "source_files": 28,
+      "bindings": 885,
+      "variants": 450,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 28,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1080,
+      "remote_references": 417,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 33,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/raw-template-trailing-space-current-fix-full-scan.json",
+        "sha256": "b634f7e71ebf4d82a1c45a226decef194c9975ee6867665560daa4b9c8e5b98a",
+        "trigger": "raw-template-trailing-space-current-fix"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 37,
+    "not_started_name_groups": 37,
+    "partial_name_groups": 0,
+    "remaining_variants": 155,
+    "remaining_bindings": 300,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "ae0af6f03e376256a7cac69e9e16b7c3738278ced7e761fa6302f7d4fec8d0b5"
+  },
+  "previous_local_commit": "3a2aa9f9c3d86b7d5617e3c0cb17078657f16bca",
+  "outside_intersection_review": {
+    "complete": true,
+    "outside_exact_items": [],
+    "conclusion": "The fixed inventory contains exactly the two listed trait variants and their two bindings; no additional exact name_key items were found."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-final-content-review.json",
+      "sha256": "435c075a19d7ffe170950fb09f9c3682db11f6e39b2e6312194199d721312473"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-focused-checks.json",
+      "sha256": "275cff5f3b8884f03f3367d015e4a741da0bc6b7ee0de7adb7ec12e698ee107e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-force-assist-exception-delta-review.json",
+      "sha256": "5a6c9ce4560a0c9e84c8595138e651cfa16710c46605e52b8ed642b5ac8a2122"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-frozen-source-verification.json",
+      "sha256": "9eb9d6ad5af1327d1b4cb053e006c54bda971d2f909694734a7427c29acb79e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-own-tier-wrapper-crit-kill-delta-review.json",
+      "sha256": "85fb8401a9ac0d9ba84ec95e0d35c9c334790de6d376a55073f6e5678035004c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-recovery-state-reuse-delta-review.json",
+      "sha256": "41a1a004312f927e51de037cdca18e431f8550bd8eaa149d60ae8822cf9f5e94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-resume-review.json",
+      "sha256": "beebe9431623f157a954b69d1f9341777e9c3c0d4ec8e7cd177f3d3aef2b3123"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-traits-review.json",
+      "sha256": "9ef3c7c9ed1c6d768e6849f43d15e6022932e50d97e59496113e4479c5632c90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-raw-verification.json",
+      "sha256": "2b5afb7c56360af1e978d8793aa61294e01c8aff2d300b9047e618ab54315959"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-review.json",
+      "sha256": "887836bdd3fdc88b7930af2c2f6583188661771a328e7c93a3c4a9d866ca085b"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-config.json",
+    "sha256": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-raw-verification.json",
+      "sha256": "37c677ab754d839f9b0ce2ee84ad2daae6633fe2959029056931b91ca617ee21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md",
+      "sha256": "645dcfd3d434235338e711daf2eb7a1191aa17808917e0f50f47bfe9294d650c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+      "sha256": "69f3184e524325b7f90ec91ba6696298a7f97e9076fbebd6108b0a9a728a7f43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "sha256": "77f08a04b5eddabb180b5f81f6d5c3e1d5f4c8573dd473e05db7863b9926d189"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "62a867846c9217090f25336e15b0e0891c1a49315db020ffc6d7972540bb1aed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/LOCALIZATION_COMPARISON.md",
+      "sha256": "29d7bd151391a8f859edbcb2042e5009ba6c77f84751e39ea65da84111aefa71"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/README.md",
+      "sha256": "94b095d4c5200dfa3613d5cc5276e34d926f061fb620fb27c4e2eafe8d1d0ea2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/SOURCE_INDEX.md",
+      "sha256": "8e0ec11a1de9c114d25bf7babf20b3b4fc7d0e95f3191fd80e1379579be554f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/TIER_VALUES.md",
+      "sha256": "c578db777c07755553fc34b2c40cd514e4643dce30e6f9d70d8e3e133a770b4c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/WEAPON_COMPATIBILITY.md",
+      "sha256": "a5b09373d2c166347c1681a95830017add2949e30900435333c87b12e004be2c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md",
+      "sha256": "3bce02fd2e7c1679d52e1ac51ba2e22e8ce22c8dbf44eba4159725f5cd9ffbe1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/慰藉精準/weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md",
+      "sha256": "b9cf1f53f19030a7e8d9b6992f13260846cd4ba357b2ffa25fd889d3e5625652"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md",
+      "sha256": "dcfcbfb60e1b21a9b28e40f74dc14738cdb41a10ea44c9d8124a2e436206bdba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md",
+      "sha256": "f98fde2f9b6b732bf5ef344443f802cf3661f5a290e339ff569e46ec4db51a11"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md",
+      "sha256": "05d05b9a87d80f7154237437240b3493b3ffd81ebfdd8da34395080f154f3961"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/Referneces/Translation.md",
+      "sha256": "e917657762c1d86d653f46f9780c751450516218ed7710ffd36fd079d577babc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/focused-manifest.json",
+      "sha256": "68f4f1fc1b4c95555c2077aa97aeb161ecc724bb6a7121b6e97162ea80c5e6f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/actual-preview-004/own-association-snapshot.json",
+      "sha256": "d5f2efb00386af9754b448d5bc7780c365ce4e8f9a93d8ac5c25026af147f71e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/build_reassuringly_accurate_package.py",
+      "sha256": "c91c97c3f1c2148a4987d0c4be4609ac3fe5b3f41a94d334e12c3cf72174a78a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/fix_reassuringly_accurate.py",
+      "sha256": "26b04c06c8429228d9d2a1c990fe417d4ebf8dc87b1a4f9e187afd9d90bd5e50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-004.json",
+      "sha256": "2a5d49d879e58233cfcbe8cf0a0e45ffd1d470b1dda2f433a15e056a953623ab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-config.json",
+      "sha256": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-draft.md",
+      "sha256": "c389a862131ff5ce222cc8cd42db616fb9a111fecfdfdadba82278205b3edc6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-selfcheck.json",
+      "sha256": "65f9a50265861fa6a1e80fb83be79d22ef12ca16d656e3c68a4d344c0af232d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-attack-coverage.json",
+      "sha256": "b564969d37f2dfe0af31ca0ecc7013538929ecceb514b342a03c4b0f265e8a7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/sync_reassuringly_accurate_draft.py",
+      "sha256": "6961757a2bfed24416a4515ceb9cad55120bb08edba4c733a0f1aa965232ce76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-image.json",
+      "sha256": "e97d57082f9641c7c88bbe7ad96fec0426e623963736ad542441cf2c54cae227"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-force-assist-exception-delta-review.json",
+      "sha256": "5a6c9ce4560a0c9e84c8595138e651cfa16710c46605e52b8ed642b5ac8a2122"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-own-tier-wrapper-crit-kill-delta-review.json",
+      "sha256": "85fb8401a9ac0d9ba84ec95e0d35c9c334790de6d376a55073f6e5678035004c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-recovery-state-reuse-delta-review.json",
+      "sha256": "41a1a004312f927e51de037cdca18e431f8550bd8eaa149d60ae8822cf9f5e94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-traits-review.json",
+      "sha256": "9ef3c7c9ed1c6d768e6849f43d15e6022932e50d97e59496113e4479c5632c90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-raw-verification.json",
+      "sha256": "2b5afb7c56360af1e978d8793aa61294e01c8aff2d300b9047e618ab54315959"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-ui-review.json",
+      "sha256": "887836bdd3fdc88b7930af2c2f6583188661771a328e7c93a3c4a9d866ca085b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json",
+      "sha256": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "scripts/game-info/decode_strings.py",
+      "sha256": "fcc7fbac2b2e4cf51440388b496eafa85ac10cbea549c0af6dce03d90a18c230"
+    },
+    {
+      "path": "scripts/game-info/validate_game_info.py",
+      "sha256": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "645dcfd3d434235338e711daf2eb7a1191aa17808917e0f50f47bfe9294d650c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "69f3184e524325b7f90ec91ba6696298a7f97e9076fbebd6108b0a9a728a7f43"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "77f08a04b5eddabb180b5f81f6d5c3e1d5f4c8573dd473e05db7863b9926d189"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "62a867846c9217090f25336e15b0e0891c1a49315db020ffc6d7972540bb1aed"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\LOCALIZATION_COMPARISON.md",
+      "sha256": "29d7bd151391a8f859edbcb2042e5009ba6c77f84751e39ea65da84111aefa71"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\README.md",
+      "sha256": "94b095d4c5200dfa3613d5cc5276e34d926f061fb620fb27c4e2eafe8d1d0ea2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\SOURCE_INDEX.md",
+      "sha256": "8e0ec11a1de9c114d25bf7babf20b3b4fc7d0e95f3191fd80e1379579be554f7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\TIER_VALUES.md",
+      "sha256": "c578db777c07755553fc34b2c40cd514e4643dce30e6f9d70d8e3e133a770b4c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\WEAPON_COMPATIBILITY.md",
+      "sha256": "a5b09373d2c166347c1681a95830017add2949e30900435333c87b12e004be2c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\weapon_trait_bespoke_laspistol_p1_toughness_on_crit_kills.md",
+      "sha256": "3bce02fd2e7c1679d52e1ac51ba2e22e8ce22c8dbf44eba4159725f5cd9ffbe1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\慰藉精準\\weapon_trait_bespoke_ogryn_gauntlet_p1_toughness_on_crit_kills.md",
+      "sha256": "b9cf1f53f19030a7e8d9b6992f13260846cd4ba357b2ffa25fd889d3e5625652"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "dcfcbfb60e1b21a9b28e40f74dc14738cdb41a10ea44c9d8124a2e436206bdba"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\擲彈兵臂鎧\\README.md",
+      "sha256": "f98fde2f9b6b732bf5ef344443f802cf3661f5a290e339ff569e46ec4db51a11"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重型鐳射手槍\\README.md",
+      "sha256": "05d05b9a87d80f7154237437240b3493b3ffd81ebfdd8da34395080f154f3961"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "e917657762c1d86d653f46f9780c751450516218ed7710ffd36fd079d577babc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-raw-verification.json",
+      "sha256": "37c677ab754d839f9b0ce2ee84ad2daae6633fe2959029056931b91ca617ee21"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\reassuringly-accurate-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "d5f2efb00386af9754b448d5bc7780c365ce4e8f9a93d8ac5c25026af147f71e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-002.json",
+      "sha256": "1eb9acd139703abad0b9525c8692037b0fcea991c4fb82285979229ecc55d8dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-actual-preview-receipt-003.json",
+      "sha256": "b2880e6408b9159eb8c3141bd30e74d4675172d265d7118eb283834dfcf52390"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-evidence.json",
+      "sha256": "7942bebeb598b37f24eaca8b3352bb58776944f6236e3e751c527c4f177cf816"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-group/reassuringly-accurate-agent-freeze.json",
+      "sha256": "ac00f14318b03327fdaceecc380ef1a8359c20456b14d98a33bbc8cc6fae0834"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-config.json",
+      "sha256": "db289cf2dc463de752594e7ca5f99753d624649b2d84eb1b7d4bdc77342fcc5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-evidence.json",
+      "sha256": "7942bebeb598b37f24eaca8b3352bb58776944f6236e3e751c527c4f177cf816"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-agent-draft.md",
+      "sha256": "c389a862131ff5ce222cc8cd42db616fb9a111fecfdfdadba82278205b3edc6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-final-content-review.json",
+      "sha256": "435c075a19d7ffe170950fb09f9c3682db11f6e39b2e6312194199d721312473"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-primary-frozen-source-verification.json",
+      "sha256": "9eb9d6ad5af1327d1b4cb053e006c54bda971d2f909694734a7427c29acb79e4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/reassuringly-accurate-formal-peer-scope.json",
+    "sha256": "29962bd1d413c5c22c65ce24fa74f5b04e852349bea463f44ff9f1bb0007862d",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

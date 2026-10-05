@@ -137,5 +137,6 @@
 | <img src="https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94" width="32" height="32" alt="護甲之禍祝福圖示"> [護甲之禍](entries/護甲之禍/README.md)<br>- Armourbane<br>[完整說明](entries/護甲之禍/README.md) | <ul><li>依充能在命中的小兵身上疊加脆弱；每層 2.5%，目標端最多 16 層並持續 5 秒。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/4b357641-8303-4988-8ccc-fab39761e94c" width="32" height="32" alt="燃燒靈魂祝福圖示"> [燃燒靈魂](entries/燃燒靈魂/README.md)<br>- Blazing Spirit<br>[完整說明](entries/燃燒靈魂/README.md) | <ul><li>手持此祝福武器造成傷害的近戰暴擊可使敵人新增靈魂之火；I–IV 每次最多新增 1/2/3/4 層，上限為 3/6/9/12 層，目標已有層數會共用計算。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/7f167afe-444d-4afa-a9bb-3ef3db76fc43" width="32" height="32" alt="擴展性祝福圖示"> [擴展性](entries/擴展性/README.md)<br>- Expansive<br>[完整說明](entries/擴展性/README.md) | <ul><li>一次遠程開火直接命中至少三個目標單位後，提升近戰威力層級修正；I–IV為+30%／+34%／+38%／+42%，每次持續3.5秒。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/22eb124d-e729-4b45-b8ed-31e47d3e1085" width="32" height="32" alt="慰藉精準祝福圖示"> [慰藉精準](entries/慰藉精準/README.md)<br>- Reassuringly Accurate<br>[完整說明](entries/慰藉精準/README.md) | <ul><li>由裝有本祝福的武器造成致命一擊並擊殺後，立即回復目前最大韌性的指定比例，並以當前韌性缺損封頂；重型鐳射手槍 I–IV 為 10／12／14／16%，擲彈兵臂鎧 I–IV 為 24／28／32／36%。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
