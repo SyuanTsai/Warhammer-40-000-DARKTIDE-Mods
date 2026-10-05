@@ -305,6 +305,7 @@
 - Savage Sweep - 野蠻橫掃
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_attack_cleave_on_multiple_hits`，hash `82900835`；英文／繁中RAW配對確認。
 - Rampage - 暴走
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_melee_damage_on_multiple_hits`，hash `ab832d02`；英文／繁中RAW配對確認。
 - Devastating Strike - 毀滅打擊
 - Decimator - 屠戮者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_power`，hash `77cc5d18`；英文／繁中RAW配對確認。

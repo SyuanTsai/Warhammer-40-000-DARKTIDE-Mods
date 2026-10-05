@@ -118,3 +118,4 @@
 | [烈火熱焰](entries/烈火熱焰/README.md) | [來源索引](entries/烈火熱焰/SOURCE_INDEX.md) |
 | [殺戮者](entries/殺戮者/README.md) | [來源索引](entries/殺戮者/SOURCE_INDEX.md) |
 | [野蠻橫掃](entries/野蠻橫掃/README.md) | [來源索引](entries/野蠻橫掃/SOURCE_INDEX.md) |
+| [暴走](entries/暴走/README.md) | [來源索引](entries/暴走/SOURCE_INDEX.md) |
