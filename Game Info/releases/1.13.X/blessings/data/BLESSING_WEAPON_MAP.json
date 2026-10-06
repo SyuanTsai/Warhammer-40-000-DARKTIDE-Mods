@@ -2200,6 +2200,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
       "effect": "每次符合持用來源物品、Minion目標與弱點事件條件的命中，替目標增加脆弱層；各系層數不同。"
+    },
+    {
+      "id": "between-the-eyes",
+      "name_zh_tw": "正中眉心",
+      "name_en": "Between the Eyes",
+      "name_key": "loc_trait_bespoke_suppression_negation_on_weakspot",
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "name_hash": "d3144a13",
+      "description_hash": "ec414ad5",
+      "page": "entries/正中眉心/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "effect": "弱點命中後清除目前壓制並獲得壓制免疫；免疫持續時間依等級為 2.4／2.8／3.2／3.6 秒。"
     }
   ],
   "weapons": [
@@ -34011,6 +34024,234 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
       "effect": "此系每次合格弱點命中增加 2／4／6／8 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
       "buff_template_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "autogun_p3",
+      "page": "entries/正中眉心/weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 104,
+        "end_line": 133
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/正中眉心/weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 9,
+        "end_line": 38
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/正中眉心/weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 96,
+        "end_line": 125
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 41,
+        "end_line": 41
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/正中眉心/weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 230,
+        "end_line": 259
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/正中眉心/weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 248,
+        "end_line": 277
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot",
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/正中眉心/weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "active_duration_seconds": {
+          "I": 2.4,
+          "II": 2.8,
+          "III": 3.2,
+          "IV": 3.6
+        },
+        "refresh": "single proc timer",
+        "stack_count": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 535,
+        "end_line": 564
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 66,
+        "end_line": 66
+      },
+      "description_key": "loc_trait_bespoke_suppression_negation_on_weakspot_desc",
+      "description_hash": "ec414ad5",
+      "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
     }
   ],
   "bindings": [
@@ -49482,6 +49723,202 @@
         "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
         "import_line": 15,
         "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "between-the-eyes",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/suppression_negation_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
       }
     }
   ]

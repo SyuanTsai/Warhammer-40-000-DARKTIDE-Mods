@@ -468,6 +468,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_first_shot`，hash `ea6a5633`；英文／繁中RAW配對確認。
 - Headhunter - 獵頭者
 - Between the Eyes - 正中眉心
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_negation_on_weakspot`，hash `d3144a13`；英文／繁中RAW配對確認。
 - Blaze Away - 連續發射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire`，hash `f52898c5`；英文／繁中RAW配對確認。
 - Powderburn - 火藥灼傷

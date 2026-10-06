@@ -170,5 +170,6 @@
 | <img src="https://github.com/user-attachments/assets/309e0a2e-5b01-4af4-bde2-cddcbd580233" width="32" height="32" alt="錘擊祝福圖示"> [錘擊](entries/錘擊/README.md)<br>- Hammerblow<br>[完整說明](entries/錘擊/README.md) | <ul><li>合格命中增加近戰衝擊層數，最多五層，每層依等級提高 melee_impact_modifier。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41" width="32" height="32" alt="斬首者祝福圖示"> [斬首者](entries/斬首者/README.md)<br>- Decapitator<br>[完整說明](entries/斬首者/README.md) | <ul><li>符合條件的一擊擊殺會依武器實作增加近戰靈巧威力；最多五層；合格擊殺會刷新共用五秒倒數。實際修改 finesse stat，不是護甲 Rending。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966" width="32" height="32" alt="詭異打擊祝福圖示"> [詭異打擊](entries/詭異打擊/README.md)<br>- Uncanny Strike<br>[完整說明](entries/詭異打擊/README.md) | <ul><li>每次符合持用來源物品、Minion目標與弱點事件條件的命中，替目標增加脆弱層；各系層數不同。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333" width="32" height="32" alt="正中眉心祝福圖示"> [正中眉心](entries/正中眉心/README.md)<br>- Between the Eyes<br>[完整說明](entries/正中眉心/README.md) | <ul><li>弱點命中後清除目前壓制並獲得壓制免疫；免疫持續時間依等級為 2.4／2.8／3.2／3.6 秒。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

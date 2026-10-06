@@ -168,3 +168,4 @@
 | [錘擊](entries/錘擊/README.md) | [來源索引](entries/錘擊/SOURCE_INDEX.md) |
 | [斬首者](entries/斬首者/README.md) | [來源索引](entries/斬首者/SOURCE_INDEX.md) |
 | [詭異打擊](entries/詭異打擊/README.md) | [來源索引](entries/詭異打擊/SOURCE_INDEX.md) |
+| [正中眉心](entries/正中眉心/README.md) | [來源索引](entries/正中眉心/SOURCE_INDEX.md) |
