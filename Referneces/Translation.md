@@ -376,6 +376,7 @@
 - Falter - 踉蹌
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_negate_stagger_reduction_on_weakspot`，hash `98c4c535`；英文／繁中RAW配對確認。
 - Overwhelming Force - 壓倒性的武力
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggering_hits_has_chance_to_stun`，hash `8c6306ed`；英文／繁中RAW配對確認。
 - Counterattack - 反擊
   - 本體1.13.1名稱鍵 `loc_attack_speed_on_perfect_block`，hash `26defa8a`；英文／繁中RAW配對確認。
 - Cranial Grounding - 顱骨落地

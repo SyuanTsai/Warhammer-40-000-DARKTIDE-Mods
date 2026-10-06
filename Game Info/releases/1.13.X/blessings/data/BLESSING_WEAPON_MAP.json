@@ -1964,6 +1964,23 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
       "effect": "命中目標時，依本次傷害計算前目標的原生踉蹌計數，將每個計數的 I–IV 加算值加入傷害加算池；最多讀取七個計數。"
+    },
+    {
+      "id": "overwhelming-force",
+      "name_zh_tw": "壓倒性的武力",
+      "name_en": "Overwhelming Force",
+      "name_key": "loc_trait_bespoke_staggering_hits_has_chance_to_stun",
+      "description_key": "loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc",
+      "name_hash": "8c6306ed",
+      "description_hash": "01e2b5b0",
+      "page": "entries/壓倒性的武力/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f",
+      "effect": "合格踉蹌命中有機率使目標眩暈；電弧鎚另要求目標為精英或專家。",
+      "description_keys": [
+        "loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc",
+        "loc_trait_bespoke_staggering_hits_has_chance_to_stun_elites_specials_desc"
+      ]
     }
   ],
   "weapons": [
@@ -30209,6 +30226,90 @@
       "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
       "effect": "一般與格擋中 pellet 射擊、特殊槍托重擊有傷害；純盾推擊不產生生命值傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_staggering_hits_has_chance_to_stun",
+      "blessing_id": "overwhelming-force",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/壓倒性的武力/weapon_trait_bespoke_powermaul_p1_staggering_hits_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "chance": {
+          "I": 0.1,
+          "II": 0.15,
+          "III": 0.2,
+          "IV": 0.25
+        },
+        "cooldown_seconds": {
+          "I": 5,
+          "II": 4.5,
+          "III": 4,
+          "IV": 3.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 521,
+        "end_line": 574
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 78,
+        "end_line": 102
+      },
+      "description_key": "loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc",
+      "description_hash": "01e2b5b0",
+      "icon": "https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_224",
+      "effect": "阿格尼 Mk Ia、軍務部 Mk III：持用時，full 且 stagger 的 on_hit 依 I–IV 機率套用眩暈；無額外攻擊類型或目標標籤門檻。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_staggering_hits_has_chance_to_stun",
+      "blessing_id": "overwhelming-force",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/壓倒性的武力/weapon_trait_bespoke_powermaul_p3_staggering_hits_has_chance_to_stun.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "chance": {
+          "I": 0.1,
+          "II": 0.15,
+          "III": 0.2,
+          "IV": 0.25
+        },
+        "cooldown_seconds": {
+          "I": 5,
+          "II": 4.5,
+          "III": 4,
+          "IV": 3.5
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 218,
+        "end_line": 270
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 75,
+        "end_line": 100
+      },
+      "description_key": "loc_trait_bespoke_staggering_hits_has_chance_to_stun_elites_specials_desc",
+      "description_hash": "d63b42e3",
+      "icon": "https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_224",
+      "effect": "布蘭克斯 Mk III：full 且 stagger 的 on_hit 依相同機率套用眩暈，另須目標標籤為 elite 或 special。"
     }
   ],
   "bindings": [
@@ -43748,6 +43849,48 @@
         "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
         "import_line": 16,
         "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "overwhelming-force",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_staggering_hits_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/staggering_hits_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "overwhelming-force",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_staggering_hits_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/staggering_hits_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "overwhelming-force",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_staggering_hits_has_chance_to_stun",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/staggering_hits_has_chance_to_stun",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
       }
     }
   ]

@@ -10,11 +10,12 @@
 | <img src="https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7" width="32" height="32" alt="強化電流弧祝福圖示"> [強化電流弧](../../../entries/強化電流弧/README.md)<br>- Enhanced Voltaic Arcs<br>[完整說明](../../../entries/強化電流弧/README.md) | <ul><li>持用電弧鎚 布蘭克斯 Mk III 時，角度 I–IV 加 +5°／+7.5°／+10°／+12.5°、半徑加 +0.5／+1／+1.5／+2、max_jumps 加 1／1／2／2；掃擊路徑另受 special-active gate 限制。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb" width="32" height="32" alt="雷鳴祝福圖示"> [雷鳴](../../../entries/雷鳴/README.md)<br>- Thunderous<br>[完整說明](../../../entries/雷鳴/README.md) | <ul><li>符合條件的每次命中對該目標增加 I–IV 1/2/3/4 層脆弱（每層 2.5%，最多 16 層，5 秒）；連鎖電弧 Attack 保留 P3 原武器物品；詳見型號差異。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c75cc4c6-fc23-4772-bc04-ebba0b0c4c8f" width="32" height="32" alt="孤注一擲祝福圖示"> [孤注一擲](../../../entries/孤注一擲/README.md)<br>- All or Nothing<br>[完整說明](../../../entries/孤注一擲/README.md) | <ul><li>每少 20 個百分點耐力增加一階，最多五階；I–IV 每階為 5%/6%/7%/8%，卡面上限為 +25%/+30%/+35%/+40%。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f" width="32" height="32" alt="壓倒性的武力祝福圖示"> [壓倒性的武力](../../../entries/壓倒性的武力/README.md)<br>- Overwhelming Force<br>[完整說明](../../../entries/壓倒性的武力/README.md) | <ul><li>布蘭克斯 Mk III：full 且 stagger 的 on_hit 依相同機率套用眩暈，另須目標標籤為 elite 或 special。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 電弧鎚 布蘭克斯 Mk III | [電靈超載](../../../entries/電靈超載/weapon_trait_bespoke_powermaul_p3_arc_has_killing_blow_chance.md)、[閃電反射](../../../entries/閃電反射/weapon_trait_bespoke_powermaul_p3_block_has_chance_to_stun.md)、[處決](../../../entries/處決/weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage.md)、[強化電流弧](../../../entries/強化電流弧/weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle.md)、[雷鳴](../../../entries/雷鳴/weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff.md)、[孤注一擲](../../../entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md) | I–IV |
+| 電弧鎚 布蘭克斯 Mk III | [電靈超載](../../../entries/電靈超載/weapon_trait_bespoke_powermaul_p3_arc_has_killing_blow_chance.md)、[閃電反射](../../../entries/閃電反射/weapon_trait_bespoke_powermaul_p3_block_has_chance_to_stun.md)、[處決](../../../entries/處決/weapon_trait_bespoke_powermaul_p3_stagger_bonus_damage.md)、[強化電流弧](../../../entries/強化電流弧/weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle.md)、[雷鳴](../../../entries/雷鳴/weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff.md)、[孤注一擲](../../../entries/孤注一擲/weapon_trait_bespoke_powermaul_p3_power_bonus_scaled_on_stamina.md)、[壓倒性的武力](../../../entries/壓倒性的武力/weapon_trait_bespoke_powermaul_p3_staggering_hits_has_chance_to_stun.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

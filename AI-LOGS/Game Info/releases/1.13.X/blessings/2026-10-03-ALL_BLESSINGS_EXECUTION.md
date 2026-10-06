@@ -489,3 +489,5 @@
 - 第38輪三項已Commit後完整掃描通過：ruthless-backstab (`7e371955c479d4f769cd0b98cf2bbd36ac9b5ef8`)、bladed-momentum (`73c73ab9766b5c3ee3acb15d6c1c3b505c974422`)、hand-cannon (`e40f30a8903c2fd8527f9faaaffd4415f4910859`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-038-full-scan.json`／SHA-256 `f1e1e03d8d402ed6b574f3020fac1a0aefc4f3672ff224738fa61149e327c98b`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [刻不容緩](2026-10-03-NO-RESPITE_ACCEPTANCE.json)：新增8變體、18型號關聯；共8變體、18關聯。
+
+- [壓倒性的武力](2026-10-03-OVERWHELMING-FORCE_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
