@@ -1,5 +1,7 @@
 # 堅毅獵手(Patient Hunter)：原始碼依據
 
+[English](en/broker_keystone_vultures_mark_increased_duration.md)
+
 [返回玩家說明](README.md#broker_keystone_vultures_mark_increased_duration)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_vultures_mark_increased_duration)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 算例條件與待確認事項
 
 - **時間算例**：第一層在 0 秒取得，第二層在 6 秒取得後，計時重設為 12 秒；若之後無新印記，現有層數在第 18 秒到期。
-- **上限算例**：已有 3 層時，第 4 次合格擊殺不增加第 4 層，但會刷新 12 秒計時。
+- **上限算例**：已有 3 層時，第 4 次合格擊殺不增加第 4 層，但會重設 12 秒計時。
 - 延長的是印記 buff 的共享時長；不提高 3 層上限，也不改變每層屬性加成或滿層回韌性的條件。
 - 此項不延長兀鷲閃避升級所觸發的短暫閃避 buff。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
@@ -36,7 +38,7 @@
 ## 原文核對
 
 - 對應 hash：`2a61076a`。
-- 繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增／刷新堆疊會重設共享計時。
+- 繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增堆疊或重設持續時間會重設共享計時。
 
 ## 圖示來源
 

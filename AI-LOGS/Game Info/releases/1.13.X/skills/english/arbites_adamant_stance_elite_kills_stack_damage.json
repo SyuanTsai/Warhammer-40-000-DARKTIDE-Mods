@@ -1,0 +1,31 @@
+{
+  "id": "adamant_stance_elite_kills_stack_damage",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Writ of Execution",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_elite_kills_stack_damage.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_elite_kills_stack_damage.md",
+  "name_key": "loc_talent_adamant_stance_elite_kills_stack_damage",
+  "name_hash": "e294998f",
+  "description_key": "loc_talent_adamant_stance_elite_kills_stack_damage_desc",
+  "description_hash": "4b6af938",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 4,
+      "Not covered by the description": 2
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L292-L319. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_elite_kills_stack_damage.md"
+}

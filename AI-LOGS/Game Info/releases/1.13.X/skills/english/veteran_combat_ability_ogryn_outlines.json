@@ -1,0 +1,186 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for selected display parameters and the specific unused damage-stat discrepancy.",
+  "static_reconstruction": "Executioner's Stance now outlines all Ogryn, Captain, and Monstrosity Enemies and has its duration increased to 9s.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 5,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name, full raw description and referenced ability-name records",
+    "Existing icon audit",
+    "veteran_talents.lua:373-405 (selected rule and display parameters)",
+    "veteran_buff_templates.lua:342-356 (specific empty conditional stat table)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier and accepted stance evidence for nine-second master/owner variants, category eligibility, strict candidate range, owner-kill refresh, and separate five-second shared recipients. Accepted formatter reused. No complete action, outline, kill or stat-settlement analysis repeated.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Actual outline visibility, enemy outcomes, damage measurements, frame timing and final game UI observation."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated complete implementation analysis (outside clarified review scope)"
+  ],
+  "id": "veteran_combat_ability_ogryn_outlines",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "The Bigger they Are ...",
+  "name_key": "loc_talent_ranger_volley_fire_big_game_hunter",
+  "name_hash": "10c563cd",
+  "name_entry_index": 1096,
+  "description_key": "loc_talent_veteran_combat_ability_ogryn_outlines_damage_description",
+  "description_hash": "3a6dce0c",
+  "description_entry_index": 3789,
+  "raw_template": "{talent_name:%s} now outlines all Ogryn, Captain, and Monstrosity Enemies and has its duration increased to {duration:%s}s.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 3
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 1250,
+      "unique_source_ranges": 257,
+      "source_files": 44
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 726,
+      "local_references": 6712,
+      "remote_references": 10197,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 22,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 8,
+        "scroll": true
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 3,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 44,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 7454,
+      "sha256": "80d1684087d27f4718751def4c2784408a073421219704f813b5b525b70061dc",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Exact original English name, duration reconstruction and unused damage field",
+      "result": "passed",
+      "parameter_fields": 3,
+      "duration_seconds": 9,
+      "raw_damage_placeholder": false,
+      "retained_damage_format_value": 0.25,
+      "added_species_stat_table": "empty",
+      "English_damage_erratum": false
+    },
+    {
+      "check": "Four static duration, range and isolated modifier examples",
+      "result": "passed",
+      "nominal_duration_gain_seconds": 3,
+      "nominal_duration_gain_fraction": 0.5,
+      "remaining_at_kill_seconds": 2,
+      "refreshed_expiry_seconds": 16,
+      "distance_49m_squared_ratio": 0.9604,
+      "distance_50m_squared_ratio": 1,
+      "candidate_boundary": "strictly less than 50 metres",
+      "fixed_inherited_damage_units": 100,
+      "isolated_result_damage_units": 100
+    },
+    {
+      "check": "Separate owner and shared recipient duration/category text",
+      "result": "passed",
+      "owner_seconds": 9,
+      "shared_recipient_seconds": 5,
+      "added_large_categories_shared": false
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 24,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 22
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/the-bigger-they-are-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md",
+  "commit": "93c7c476663d430005a5cd3b88c23af0d4bae170",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Expanded the combined number/percentage/name formatter citation to lines 379-427, including the percentage function. Values, descriptions and comparison verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ],
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md"
+    }
+  ]
+}

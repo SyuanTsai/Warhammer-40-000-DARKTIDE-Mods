@@ -1,5 +1,7 @@
 # 振奮啟示(Invigorating Revelation)：原始碼依據
 
+[English](en/zealot_leaving_stealth_restores_toughness.md)
+
 [返回玩家說明](README.md#zealot_leaving_stealth_restores_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_leaving_stealth_restores_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -30,7 +32,7 @@
 - **恢復與減傷算例**：最大韌性 100、目前 20，進入時補 100 × 50% = 50 點至 70；若只缺 30 點就只補 30 點。離開後原本 100 點傷害變成 100 × 0.7 = 70；另有獨立 25% 減傷時為 52.5 點。
 - 通用 damage_taken_multiplier 與敵人攻擊傷害、護甲、格擋、韌性轉移等其他階段仍共同結算，不能保證最終受到的每種傷害都恰好少 30%。
 - 離開潛行後的 8 秒計時從該 buff 加入時起算；若效果遭外部移除或被其他能力互動，實際存續會改變。
-- 目前 inventory 文字指明韌性恢復及離開潛行減傷，固定 SHA 的時序一致；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 目前 inventory 文字指明韌性恢復及離開潛行減傷，固定 SHA 的時序一致；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

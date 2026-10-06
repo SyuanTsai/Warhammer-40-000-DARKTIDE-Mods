@@ -1,5 +1,7 @@
 # 兀鷲閃避(Vulture's Dodge)：原始碼依據
 
+[English](en/broker_keystone_vultures_mark_dodge_on_ranged_crit.md)
+
 [返回玩家說明](README.md#broker_keystone_vultures_mark_dodge_on_ranged_crit)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_vultures_mark_dodge_on_ranged_crit)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -26,7 +28,7 @@
 
 ## 算例條件與待確認事項
 
-- **時間算例**：第 0 秒發生遠程爆擊時，判定 buff 為 1 秒；若第 0.6 秒再次遠程爆擊，計時刷新，效果延至第 1.6 秒。
+- **時間算例**：第 0 秒發生遠程暴擊時，判定 buff 為 1 秒；若第 0.6 秒再次遠程暴擊，計時重設，效果延至第 1.6 秒。
 - **判定算例**：buff 活躍時，Dodge.is_dodging 對 melee、incapacitating_grab 與 ranged 類型會由對應 keyword 回傳為閃避。
 - 實際攻擊是否被閃避，取決於該攻擊是否呼叫並採用 Dodge.is_dodging 判定；此 buff 本身不改變攻擊傷害或移動狀態。
 - 此 buff 沒有 count_as_dodge_vs_all；它只命中 Dodge.is_dodging 的 melee、incapacitating_grab（使用 melee 規則）及 ranged 分支，其他攻擊類型若不採這些分支不會因此算作閃避。

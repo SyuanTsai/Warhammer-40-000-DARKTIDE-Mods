@@ -1,5 +1,7 @@
 # 破骨者之環(Bonebreaker's Aura)：原始碼依據
 
+[English](en/ogryn_melee_damage_coherency_improved.md)
+
 [返回玩家說明](README.md#ogryn_melee_damage_coherency_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_melee_damage_coherency_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -34,7 +36,7 @@
 ## 原文核對
 
 - 對應 hash：`68da370d`。
-- 同 hash 68da370d 的繁中與英文都寫明你和協同盟友獲得近戰攻擊傷害加成，並指出此節點強化基礎近戰光環；設定值由基礎 7.5% 改為強化版 10%，因此不將兩者相加。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 同 hash 68da370d 的繁中與英文都寫明你和協同盟友獲得近戰攻擊傷害加成，並指出此節點強化基礎近戰光環；設定值由基礎 7.5% 改為強化版 10%，因此不將兩者相加。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 
 ## 圖示來源
 

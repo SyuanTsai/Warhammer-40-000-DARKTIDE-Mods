@@ -127,20 +127,6 @@ mod.get_marker_pickup_type_by_unit = function(marker_unit)
 	return Unit.get_data(marker_unit, "pickup_type")
 end
 
-mod.is_heretical_idol_unit = function(unit)
-	if not unit or type(unit) ~= "userdata" then
-		return false
-	end
-
-	if not ScriptUnit.has_extension(unit, "destructible_system") then
-		return false
-	end
-
-	local destructible_extension = ScriptUnit.extension(unit, "destructible_system")
-
-	return destructible_extension ~= nil and destructible_extension._collectible_data ~= nil
-end
-
 mod.current_heretical_idol_markers = {}
 
 mod.add_heretical_idol_marker = function(self, unit, section_id)
@@ -180,15 +166,6 @@ mod.update_marker_icon = function(self, marker)
 	if marker then
 		local max_distance = get_max_distance()
 
-		if
-			marker.type
-			and marker.type == "interaction"
-			and (mod.is_heretical_idol_unit(marker.unit) or mod.is_totem_unit(marker.unit))
-		then
-			marker.markers_aio_type = "heretical_idol"
-			marker.aio_suppress = true
-		end
-
 		if marker.type and (marker.type == "heretical_idol") then
 			marker.markers_aio_type = "heretical_idol"
 			marker.widget.alpha_multiplier = 0
@@ -206,6 +183,9 @@ mod.update_marker_icon = function(self, marker)
 			mod.set_colour(marker.widget.style.ring.color, mod.lookup_colour(fs.idol_border_colour))
 
 			mod.set_colour(marker.widget.style.background.color, mod.lookup_colour(fs.marker_background_colour))
+
+			marker.template.check_line_of_sight = fs.event_require_line_of_sight
+			
 			marker.template.screen_clamp = fs.heretical_idol_keep_on_screen
 			marker.block_screen_clamp = false
 

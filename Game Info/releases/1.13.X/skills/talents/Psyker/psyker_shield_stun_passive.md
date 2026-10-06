@@ -1,5 +1,7 @@
 # 衰弱界線(Enervating Threshold)：原始碼依據
 
+[English](en/psyker_shield_stun_passive.md)
+
 [返回玩家說明](README.md#psyker_shield_stun_passive)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_shield_stun_passive)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -26,7 +28,7 @@
 - 忽略隨機抽樣誤差，目標確實觸碰/穿越自己的護盾。 一般敵人單次觸發率20%；special或monster標記目標使用100%機率。 一般敵人平均約五次有效觸碰中一次電擊；專家或巨獸每次都會觸發。
 - 程式碼按敵人標籤分類；並非所有「精英」敵人都必然是special或monster。
 - 事件依護盾接觸/穿越觸發，不等於敵人在任意距離靠近就觸發。
-- source標註普通敵人與特殊敵人的具體定義是tag；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- source標註普通敵人與特殊敵人的具體定義是tag；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 local ui_lib = mod:io_dofile("uptime/scripts/mods/uptime/libs/ui")
 
@@ -235,7 +235,8 @@ function resize_tooltip(self, widget, ui_renderer)
     style.title.size[2] = title_height
     text_vertical_offset = text_vertical_offset + title_height + 10
 
-    local description_height = get_text_height(ui_renderer, content.description, style.description, dummy_tooltip_text_size)
+    local description_height = get_text_height(ui_renderer, content.description, style.description,
+        dummy_tooltip_text_size)
 
     style.description.offset[2] = text_vertical_offset
     style.description.size[2] = description_height
@@ -244,7 +245,6 @@ function resize_tooltip(self, widget, ui_renderer)
     text_vertical_offset = text_vertical_offset + 14
 
     self:_set_scenegraph_size(widget.scenegraph_id, nil, text_vertical_offset, self._ui_overlay_scenegraph)
-
 end
 
 return {

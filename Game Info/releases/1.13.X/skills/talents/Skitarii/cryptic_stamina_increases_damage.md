@@ -1,5 +1,7 @@
 # 原初動力導流(Channelled Motive Force)：原始碼依據
 
+[English](en/cryptic_stamina_increases_damage.md)
+
 [返回玩家說明](README.md#cryptic_stamina_increases_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_stamina_increases_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 每次update累計last-current正差，max_stamina變化時排除該次差值；>=1扣除1後新增單層刷新Buff，餘額保留。damage=0.15與同階段damage_stat_buffs加算。
+- 每次update累計last-current正差，max_stamina變化時排除該次差值；>=1扣除1後新增單層重新計時Buff，餘額保留。damage=0.15與同階段damage_stat_buffs加算。
 
 ## 原始碼依據
 

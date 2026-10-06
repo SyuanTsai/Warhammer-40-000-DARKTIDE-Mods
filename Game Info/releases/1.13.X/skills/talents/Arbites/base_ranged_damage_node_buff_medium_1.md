@@ -1,5 +1,7 @@
 # 遠程傷害增幅(Ranged Damage Boost)：原始碼依據
 
+[English](en/base_ranged_damage_node_buff_medium_1.md)
+
 [返回玩家說明](README.md#base_ranged_damage_node_buff_medium_1)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_ranged_damage_node_buff_medium_1)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

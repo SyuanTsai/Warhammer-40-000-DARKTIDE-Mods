@@ -1,5 +1,7 @@
 # 低調(Low Profile)：原始碼依據
 
+[English](en/veteran_reduced_threat_after_combat_ability.md)
+
 [返回玩家說明](README.md#veteran_reduced_threat_after_combat_ability)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -13,7 +15,7 @@ talent裝載共同能力觸發buff與special rule。非stealth能力由共用on_
 
 自訂StealthBonusesBuff在隱身存在時不倒數，離開隱身後設10秒截止；非隱身能力則在首次更新直接開始10秒。敵人選敵權重乘.1，這是評分倍率，不是被攻擊的機率。
 
-共用refresh_duration_on_stack只呼叫set_start_time；自訂類別沒有在刷新時重置_stop_t或_in_invisibility。因此已離開隱身／已開始倒數後，再次施放不會把該實例延長為另一個完整10秒；不能只看refresh旗標推導實際時間。
+共用refresh_duration_on_stack只呼叫set_start_time；自訂類別沒有在重新計時時重置_stop_t或_in_invisibility。因此已離開隱身／已開始倒數後，再次施放不會把該實例延長為另一個完整10秒；不能只看refresh旗標推導實際時間。
 
 ## 原始碼依據
 

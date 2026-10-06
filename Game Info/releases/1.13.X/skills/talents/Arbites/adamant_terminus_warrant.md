@@ -1,5 +1,7 @@
 # 終點站令狀(Terminus Warrant)：原始碼依據
 
+[English](en/adamant_terminus_warrant.md)
+
 [返回玩家說明](README.md#adamant_terminus_warrant)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_terminus_warrant)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 
 - 遠程弱點命中 5 次且各次符合計數條件，取得 15 層；再以一般命中取得 5 層達到 20。切至近戰武器時消耗全部層數並取得 12 秒固定近戰增益。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
-- 核心上限為 20 層；升級另提供全隊韌性恢復、逐秒冷卻恢復，或近戰與遠程攻速及爆擊機率，見相應來源子文件。
+- 核心上限為 20 層；升級另提供全隊韌性恢復、逐秒冷卻恢復，或近戰與遠程攻速及爆擊率，見相應來源子文件。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

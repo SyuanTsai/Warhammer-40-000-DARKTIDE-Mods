@@ -1,0 +1,73 @@
+{
+  "id": "scum_skills_404_408",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display mappings only: broker_talents.lua L875-L906, L1180-L1198, L2345-L2387, L3064-L3116 and L1821-L1863. Existing mechanism and formatter evidence reused."
+  ],
+  "questions": [
+    "Street Tough: universal backward knockback for all nearby enemies and states remains unconfirmed against accepted Stagger limits."
+  ],
+  "skills": [
+    {
+      "id": "broker_passive_reduce_swap_time",
+      "name": "Sticky Hands",
+      "name_hash": "ac99c027",
+      "description_hash": "dd6f6b11",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reduce_swap_time.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduce_swap_time.md",
+      "commit": "25aef99c2"
+    },
+    {
+      "id": "broker_passive_reduced_toughness_damage_during_reload",
+      "name": "Calling for a Time Out",
+      "name_hash": "dcbae74b",
+      "description_hash": "b4e891ca",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_reduced_toughness_damage_during_reload.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_reduced_toughness_damage_during_reload.md",
+      "commit": "9b1e4e6d3"
+    },
+    {
+      "id": "broker_passive_knockback_on_taking_melee_damage",
+      "name": "Street Tough",
+      "name_hash": "e7b80789",
+      "description_hash": "f7be7408",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_knockback_on_taking_melee_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_knockback_on_taking_melee_damage.md",
+      "commit": "d8018b1c2"
+    },
+    {
+      "id": "broker_passive_crit_grants_damage",
+      "name": "Channelled Devastation",
+      "name_hash": "b59bc562",
+      "description_hash": "ef095720",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_crit_grants_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_crit_grants_damage.md",
+      "commit": "36e34990c"
+    },
+    {
+      "id": "broker_passive_melee_cleave_on_melee_kill",
+      "name": "Battering Strikes",
+      "name_hash": "496ac07d",
+      "description_hash": "3e88fbf2",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_cleave_on_melee_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_cleave_on_melee_kill.md",
+      "commit": "f39393a1b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 273,
+    "from_commit": "16f675fa3",
+    "to_commit": "f39393a1b",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

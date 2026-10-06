@@ -1,5 +1,7 @@
 # 重要干擾(Valuable Distraction)：原始碼依據
 
+[English](en/ogryn_taunt_damage_taken_increase.md)
+
 [返回玩家說明](README.md#ogryn_taunt_damage_taken_increase)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_taunt_damage_taken_increase)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -36,7 +38,7 @@
 ## 原文核對
 
 - 對應 hash：`07b19158`。
-- 繁中原文說被忠誠守護者影響的敵人「承受所有來源的基礎傷害增加20%」；英文原文同樣說受影響敵人承受所有來源的基礎傷害增加20%。程式套用1.2承傷倍率與15秒刷新，是原文未展開的計算方式；兩種描述沒有明確衝突，文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文說被忠誠守護者影響的敵人「承受所有來源的基礎傷害增加20%」；英文原文同樣說受影響敵人承受所有來源的基礎傷害增加20%。程式套用1.2承傷倍率與15秒重新計時，是原文未展開的計算方式；兩種描述沒有明確衝突，文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

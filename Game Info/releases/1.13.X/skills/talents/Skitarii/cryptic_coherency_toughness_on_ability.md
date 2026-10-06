@@ -1,5 +1,7 @@
 # 電能修復(Voltaic Restoration)：原始碼依據
 
+[English](en/cryptic_coherency_toughness_on_ability.md)
+
 [返回玩家說明](README.md#cryptic_coherency_toughness_on_ability)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_coherency_toughness_on_ability)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 ## 原文核對
 
 - 對應 hash：`5c2bb368`。
-- 繁中與英文一致；補充戰鬥能力與各自最大韌性。
+- 繁中與英文一致；補充戰鬥技能與各自最大韌性。
 
 ## 圖示來源
 

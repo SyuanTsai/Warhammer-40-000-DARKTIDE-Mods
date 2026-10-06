@@ -1,5 +1,7 @@
 # 電能驅動(Voltaic Motivator)：原始碼依據
 
+[English](en/cryptic_discharge_attack_speed_increase.md)
+
 [返回玩家說明](README.md#cryptic_discharge_attack_speed_increase)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_discharge_attack_speed_increase)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 
 - Discharge action 在非 base 版本、且天賦 special rule 已選時，每次都加入攻擊速度 buff，並將 lerp 值設為消耗充能數 / 最大充能數；程式未以 num_charges_used_required=2 作執行門檻。
 - Buff 固定 stat_buffs.attack_speed=0.05，另以 lerp 0–(0.05 × 3) 依消耗份數提供 0.05 × n；總值為 0.05 + 0.05n，持續 15 秒。
-- format_values 中顯示的 charge=2 取自 num_charges_used_required，但此欄位沒有被 Action 或 buff 作為門檻讀取。依固定來源執行碼，1 道消耗時也能觸發基礎加成；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- format_values 中顯示的 charge=2 取自 num_charges_used_required，但此欄位沒有被 Action 或 buff 作為門檻讀取。依固定來源執行碼，1 道消耗時也能觸發基礎加成；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 本機中英原文均無至少2份的門檻；未使用的format_values.charge=2不等於現行玩家文字有此限制。
 
 ## 原始碼依據

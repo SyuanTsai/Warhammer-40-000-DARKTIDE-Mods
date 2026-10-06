@@ -1,5 +1,7 @@
 # 動能分配器(Kinetic Energy Distributors)：原始碼依據
 
+[English](en/cryptic_toughness_on_damage_taken.md)
+
 [返回玩家說明](README.md#cryptic_toughness_on_damage_taken)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_toughness_on_damage_taken)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 生成器allow_proc_while_active=true；本模板設定cooldown=10，但ProcBuff只讀cooldown_duration，本固定來源中10秒未進入冷卻判定。
-- on_damage_taken需要attacked_unit==self與damage_amount>0，刷新toughness_left_to_restore=0.25與active5秒。
+- on_damage_taken需要attacked_unit==self與damage_amount>0，重新計時toughness_left_to_restore=0.25與active5秒。
 - Damage.deal_damage把生命damage分量存為damage_amount；韌性另存toughness_damage_amount，本條件只看前者。
 
 ## 原始碼依據

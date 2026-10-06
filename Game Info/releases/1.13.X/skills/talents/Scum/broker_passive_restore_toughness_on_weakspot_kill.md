@@ -1,5 +1,7 @@
 # 精準暴力(Precision Violence)：原始碼依據
 
+[English](en/broker_passive_restore_toughness_on_weakspot_kill.md)
+
 [返回玩家說明](README.md#broker_passive_restore_toughness_on_weakspot_kill)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_restore_toughness_on_weakspot_kill)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -24,8 +26,8 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有爆擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
-- 多目標例子假設target_index依序增加且命中資料符合列出的部位／爆擊條件；順劈結算與事件排序未做遊戲內測試。
+- **恢復算例**：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有暴擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
+- 多目標例子假設target_index依序增加且命中資料符合列出的部位／暴擊條件；順劈結算與事件排序未做遊戲內測試。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

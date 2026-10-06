@@ -1,5 +1,7 @@
 # 無形專注(Immaterial Focus)：原始碼依據
 
+[English](en/psyker_damage_resistance_stun_immunity.md)
+
 [返回玩家說明](README.md#psyker_damage_resistance_stun_immunity)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_damage_resistance_stun_immunity)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- damage_taken_multiplier=.9無條件；conditional keyword stun_immune 由current>=.97判定，從true變false時加入4秒buff，max_stacks1刷新。stun免疫不可推成抓取或所有控制免疫。
+- damage_taken_multiplier=.9無條件；conditional keyword stun_immune 由current>=.97判定，從true變false時加入4秒buff，max_stacks1重新計時。stun免疫不可推成抓取或所有控制免疫。
 
 ## 原始碼依據
 

@@ -1,5 +1,7 @@
 # 懲戒者姿態(Retributor's Stance)：原始碼依據
 
+[English](en/zealot_momentum_toughness_replenish.md)
+
 [返回玩家說明](README.md#zealot_momentum_toughness_replenish)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_momentum_toughness_replenish)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,9 +11,9 @@
 
 ## 原始碼確認與程式推導
 
-- 技能節點授予 `zealot_momentum_toughness_replenish` 特殊規則。Quickness active buff 啟動時讀取此規則；啟用後每次更新以 `0.005 × active stack_count × dt` 呼叫百分比韌性回復。
-- 回復以最大韌性百分比按時間累積，並且只在 Quickness active buff 生效期間執行；基礎 active 效果每層持續 6 秒。每層相當於每秒 0.5% 最大韌性回復；層數越多，回復率越高。
-- 此節點沒有單獨觸發器或層數，它修改主 Quickness 的 active buff；增益終止後即停止週期回復。
+- 技能節點授予 `zealot_momentum_toughness_replenish` 特殊規則。Quickness active buff 啟動時讀取此規則；啟用後每次更新以 `0.005 × active stack_count × dt` 呼叫百分比韌性恢復。
+- 恢復以最大韌性百分比按時間累積，並且只在 Quickness active buff 生效期間執行；基礎 active 效果每層持續 6 秒。每層相當於每秒 0.5% 最大韌性恢復；層數越多，恢復率越高。
+- 此節點沒有單獨觸發器或層數，它修改主 Quickness 的 active buff；增益終止後即停止週期恢復。
 
 ## 原始碼依據
 
@@ -25,14 +27,14 @@
 ## 算例條件與待確認事項
 
 - **恢復算例**：最大韌性 100、以 20 層啟動時，每秒補 100 × 20 × 0.5% = 10 點；完整 6 秒最多 60 點。搭配延長至 10 秒時最多 100 點，均受恢復加成與目前缺額限制。
-- 示例是未受傷且韌性未滿時的理論回復量；到達韌性上限後不會超額儲存。
-- 文案中的「每秒」來自每幀乘 dt 的比例回復，不是固定一秒跳一次。
+- 示例是未受傷且韌性未滿時的理論恢復量；到達韌性上限後不會超額儲存。
+- 文案中的「每秒」來自每幀乘 dt 的比例恢復，不是固定一秒跳一次。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`11690b77`。
-- 兩種語言都表示 Quickness 層數會帶來韌性回復；逐層每秒 0.5% 與只在 active buff 期間生效是實作細節。
+- 兩種語言都表示 Quickness 層數會帶來韌性恢復；逐層每秒 0.5% 與只在 active buff 期間生效是實作細節。
 
 ## 圖示來源
 

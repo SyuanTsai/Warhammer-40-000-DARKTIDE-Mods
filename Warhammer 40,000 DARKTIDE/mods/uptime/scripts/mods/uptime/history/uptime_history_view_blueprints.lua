@@ -1,22 +1,25 @@
 --[[
   Uptime History View Blueprints
-  
+
   This file defines the UI blueprints for the uptime history view, including
   button styles, text styles, and interaction behaviors.
 --]]
 
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 
 -- ===== Required Dependencies =====
 local UISoundEvents = mod:original_require("scripts/settings/ui/ui_sound_events")
 local UIFontSettings = mod:original_require("scripts/managers/ui/ui_font_settings")
-local OptionsViewSettings = mod:original_require("scripts/ui/views/options_view/options_view_settings")
 local ButtonPassTemplates = mod:original_require("scripts/ui/pass_templates/button_pass_templates")
+local TextUtilities = mod:original_require("scripts/utilities/ui/text")
+local UptimeHistoryViewSettings = mod:io_dofile("uptime/scripts/mods/uptime/history/uptime_history_view_settings")
 
 -- ===== Grid and Size Settings =====
-local grid_size = OptionsViewSettings.grid_size
+local grid_size = UptimeHistoryViewSettings.grid_size
 local grid_width = grid_size[1]
-local settings_value_height = 75
+local settings_value_height = 210
+local text_horizontal_margin = 10
+local text_width = grid_width - text_horizontal_margin * 2
 
 -- ===== Button Style Definitions =====
 -- Hotspot style (handles button interactions)
@@ -37,9 +40,18 @@ local list_button_icon_size = {
 
 -- Primary text style for buttons
 local list_button_with_icon_text_style = table.clone(UIFontSettings.list_button)
-list_button_with_icon_text_style.offset[1] = 10
-list_button_with_icon_text_style.offset[2] = -10
+list_button_with_icon_text_style.offset = {
+    text_horizontal_margin,
+    0,
+    0
+}
+list_button_with_icon_text_style.size = {
+    text_width,
+    settings_value_height
+}
 list_button_with_icon_text_style.font_size = 20
+list_button_with_icon_text_style.vertical_alignment = "top"
+list_button_with_icon_text_style.text_vertical_alignment = "top"
 
 -- Icon style for buttons
 local list_button_with_icon_icon_style = {
@@ -52,10 +64,63 @@ local list_button_with_icon_icon_style = {
     offset = { 9, 0, 3 },
 }
 
--- Secondary text style for buttons (second line)
+-- Previous secondary text style, retained as the colour source for subtitle text
 local list_button_with_icon_text_style2 = table.clone(UIFontSettings.list_button_second_row)
-list_button_with_icon_text_style2.offset[1] = 10
-list_button_with_icon_text_style2.offset[2] = 22
+
+-- Previous note text style, retained as the colour source for note text
+local list_button_with_icon_note_text_style = table.clone(UIFontSettings.list_button_second_row)
+list_button_with_icon_note_text_style.font_size = 16
+
+local title_text_color = list_button_with_icon_text_style.text_color
+    or list_button_with_icon_text_style.default_text_color
+    or Color.terminal_text_header(255, true)
+
+local subtitle_text_color = list_button_with_icon_text_style2.text_color
+    or list_button_with_icon_text_style2.default_text_color
+    or Color.terminal_text_body(255, true)
+
+local note_text_color = list_button_with_icon_note_text_style.text_color
+    or list_button_with_icon_note_text_style.default_text_color
+    or Color.terminal_text_body(255, true)
+
+local function clean_text(text)
+    if not text then
+        return nil
+    end
+
+    text = tostring(text)
+
+    if text == "" then
+        return nil
+    end
+
+    return text
+end
+
+local function color_text(text, color)
+    return TextUtilities.apply_color_to_text(text, color)
+end
+
+local function history_entry_text(entry)
+    local lines = {}
+
+    local title = clean_text(entry.title)
+    if title then
+        lines[#lines + 1] = color_text(title, title_text_color)
+    end
+
+    local subtitle = clean_text(entry.subtitle)
+    if subtitle then
+        lines[#lines + 1] = color_text(subtitle, subtitle_text_color)
+    end
+
+    local note = clean_text(entry.note)
+    if note then
+        lines[#lines + 1] = color_text(note, note_text_color)
+    end
+
+    return table.concat(lines, "\n")
+end
 
 -- ===== Blueprint Definitions =====
 local blueprints = {
@@ -125,21 +190,12 @@ local blueprints = {
                 end
             },
 
-            -- Primary text
+            -- Combined title, subtitle, and optional note text
             {
                 pass_type = "text",
                 style_id = "text",
                 value_id = "text",
                 style = table.clone(list_button_with_icon_text_style),
-                change_function = ButtonPassTemplates.list_button_label_change_function
-            },
-
-            -- Secondary text (second line)
-            {
-                pass_type = "text",
-                style_id = "text2",
-                value_id = "text2",
-                style = table.clone(list_button_with_icon_text_style2),
                 change_function = ButtonPassTemplates.list_button_label_change_function
             }
         },
@@ -154,9 +210,8 @@ local blueprints = {
                 callback(parent, callback_name, widget, entry)()
             end
 
-            -- Set up text content
-            content.text = entry.title
-            content.text2 = entry.subtitle
+            -- Set up concatenated text content
+            content.text = history_entry_text(entry)
 
             -- Set up icon and entry reference
             content.icon = entry.icon

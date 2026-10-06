@@ -1,5 +1,7 @@
 # 精確瞄準(True Aim)：原始碼依據
 
+[English](en/psyker_guaranteed_crit_on_multiple_weakspot_hits.md)
+
 [返回玩家說明](README.md#psyker_guaranteed_crit_on_multiple_weakspot_hits)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_guaranteed_crit_on_multiple_weakspot_hits)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -19,8 +21,8 @@
 
 ## 算例條件與待確認事項
 
-- **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程爆擊消耗這組效果。爆擊傷害仍依武器、部位與目標計算，不是固定雙倍。
-- 連發武器是否保留同次爆擊序列依各武器共用爆擊設定，不把一次消耗等同只一顆子彈。
+- **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程暴擊消耗這組效果。暴擊傷害仍依武器、部位與目標計算，不是固定雙倍。
+- 連發武器是否保留同次暴擊序列依各武器共用暴擊設定，不把一次消耗等同只一顆子彈。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

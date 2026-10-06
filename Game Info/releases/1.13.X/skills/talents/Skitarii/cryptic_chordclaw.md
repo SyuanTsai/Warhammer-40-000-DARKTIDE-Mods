@@ -1,5 +1,7 @@
 # 弦爪重擊(Chordclaw Strike)：原始碼依據
 
+[English](en/cryptic_chordclaw.md)
+
 [返回玩家說明](README.md#cryptic_chordclaw)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_chordclaw)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -39,7 +41,7 @@
 ## 原文核對
 
 - 對應 hash：`df29b524`。
-- 繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及暈眩免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
+- 繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及眩暈免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
 
 ## 圖示來源
 

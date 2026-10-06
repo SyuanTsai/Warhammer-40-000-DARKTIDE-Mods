@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_559_563",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display/name mappings: cryptic_talents.lua L2275-L2292, L1761-L1775, L58-L104, L1531-L1586, L569-L614; missing display-only values: talent_settings_cryptic.lua L11-L22. Common formatter and Capacitance keyword reused. Existing precision-stance document consulted for resource overview comparison; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction. Corruption-cost eligibility/modifiers, sequential decay, retained charge resources, ability-specific resource costs and Servo-Skull cooldown pause/command checks are supplements. Electrical tick totals remain variable and unobserved."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_corruption_resistance_doom",
+      "name": "Ablative Wards",
+      "name_hash": "9093d8ea",
+      "description_hash": "ed668132",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_corruption_resistance_doom.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_corruption_resistance_doom.md",
+      "commit": "134a1e7c9"
+    },
+    {
+      "id": "cryptic_ranged_kills_tdr",
+      "name": "Threat Detection Imperative",
+      "name_hash": "9998676d",
+      "description_hash": "3a7d18c1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_ranged_kills_tdr.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_ranged_kills_tdr.md",
+      "commit": "664c33866"
+    },
+    {
+      "id": "cryptic_discharge_base",
+      "name": "Voltaic Expander",
+      "name_hash": "8454232a",
+      "description_hash": "a2ee7263",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_base.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_base.md",
+      "commit": "c98283127"
+    },
+    {
+      "id": "cryptic_passive_cooldown_regen",
+      "name": "Motive Engine",
+      "name_hash": "f57f4b1c",
+      "description_hash": "cc7d6ab9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_passive_cooldown_regen.md",
+      "commit": "365c0bb93"
+    },
+    {
+      "id": "cryptic_servo_skull_order",
+      "name": "Servo-Skull",
+      "name_hash": "a5b45cea",
+      "description_hash": "a5b8ce99",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_servo_skull_order.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_servo_skull_order.md",
+      "commit": "1dfa44aaa"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 542,
+    "from_commit": "84fc8ecaf",
+    "to_commit": "1dfa44aaa",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

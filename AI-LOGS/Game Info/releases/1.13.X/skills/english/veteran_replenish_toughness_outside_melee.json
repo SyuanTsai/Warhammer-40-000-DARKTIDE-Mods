@@ -1,0 +1,117 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "When you haven't been the target of a Melee Attack for 5s, you start to replenish 5% Toughness per second.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 1
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Catch a Breath dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:2379-2402, English placeholder display settings only"
+  ],
+  "reused_evidence": [
+    "Accepted received-melee-hit timer, strict five-second threshold and server percentage recovery",
+    "Accepted 0.05 of maximum Toughness per second and cap at missing amount",
+    "Accepted settings range/time not consumed by this buff",
+    "Accepted percentage/number formatting",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 4850 bytes, SHA256 ea619e752b39d37a932b3b33431f42db71a2170e60e774f82de2aa6c1c6bd91b",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only text draft checked exact English pairs and judged target versus landed-hit wording too ambiguous for an erratum. Primary retained that Cannot confirm verdict and checked missing placeholder display settings; final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "waiting_seconds": 5,
+    "recovery_fraction_per_second": 0.05,
+    "maximum_toughness": 100,
+    "requested_per_second": 5,
+    "two_active_seconds_requested": 10,
+    "current_toughness": 98,
+    "missing_amount_cap": 2
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "English intended scope of target of a Melee Attack for attempted or missed attacks.",
+    "Exact game update timing, missed-attack cases and final game UI.",
+    "Purpose of unused range/time settings outside this buff."
+  ],
+  "unperformed": [
+    "Repeated full implementation analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game hit/missed-attack/timing/recovery/UI measurements"
+  ],
+  "id": "veteran_replenish_toughness_outside_melee",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Catch a Breath",
+  "name_key": "loc_talent_veteran_replenish_toughness_outside_melee",
+  "name_hash": "f5a9fbb6",
+  "description_key": "loc_talent_veteran_replenish_toughness_outside_melee_hit_desc",
+  "description_hash": "8db6388a",
+  "raw_template": "When you haven't been the target of a Melee Attack for {duration:%s}s, you start to replenish {toughness:%s} Toughness per second.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 137,
+        "Explicit contradiction": 7,
+        "Not covered by the description": 175,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 5
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 387,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 52,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/catch-a-breath-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_outside_melee.md",
+  "commit": "3ffc927e1672777f5eb81d37baa976e2cc98dce7"
+}

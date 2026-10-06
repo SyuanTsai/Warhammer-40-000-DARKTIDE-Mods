@@ -1,5 +1,7 @@
 # 秉賦為先(Priority Endowment)：原始碼依據
 
+[English](en/adamant_clip_size.md)
+
 [返回玩家說明](README.md#adamant_clip_size)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_clip_size)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 原文核對
 
 - 對應 hash：`5f584f5e`。
-- 繁中「無條件進位」與英文 rounded up一致，動態容量更新也使用ceil；未列當前彈量換算不算錯。
+- 繁中「無條件進位」與英文 rounded up一致，動態容量更新也使用ceil；未列目前彈量換算不算錯。
 
 ## 圖示來源
 

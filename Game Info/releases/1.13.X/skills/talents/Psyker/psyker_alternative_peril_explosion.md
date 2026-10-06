@@ -1,5 +1,7 @@
 # 結晶意志(Crystalline Will)：原始碼依據
 
+[English](en/psyker_alternative_peril_explosion.md)
+
 [返回玩家說明](README.md#psyker_alternative_peril_explosion)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_alternative_peril_explosion)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 
 - **傷害與範圍算例**：只比較這兩項修正，原本 100 點爆炸傷害變成 100 × 2 = 200 點；原爆炸半徑 10 公尺變成 10 × 1.25 = 12.5 公尺。實際傷害仍受距離衰減與敵人護甲影響。
 - 源碼延遲判斷寫成t <= damage_t（不是>=）；是否會因更新幀延遲而漏結算及連續爆炸殘留旗標，未遊戲實測。
-- 傷痕移除對當前生命上限與治療站恢復的完整互動，不從天賦敘述推定。
+- 傷痕移除對目前生命上限與治療站恢復的完整互動，不從天賦敘述推定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -1,5 +1,7 @@
 # 超巨量傷害箱(Bigger Box of Hurt)：原始碼依據
 
+[English](en/ogryn_big_box_of_hurt_more_bombs.md)
+
 [返回玩家說明](README.md#ogryn_big_box_of_hurt_more_bombs)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_big_box_of_hurt_more_bombs)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -34,7 +36,7 @@
 ## 原文核對
 
 - 對應 hash：`858b20e9`。
-- 同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手雷；天賦設定明確把 3 加到手雷箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手雷；天賦設定明確把 3 加到手雷箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 
 ## 圖示來源
 

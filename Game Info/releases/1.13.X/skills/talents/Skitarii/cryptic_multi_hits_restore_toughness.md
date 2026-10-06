@@ -1,5 +1,7 @@
 # 歐姆尼賽亞充能聖歌(Omnissian Recharge Litany)：原始碼依據
 
+[English](en/cryptic_multi_hits_restore_toughness.md)
+
 [返回玩家說明](README.md#cryptic_multi_hits_restore_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_multi_hits_restore_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 判定target_number>0則採target_number，否則target_index，需等於3；0.25秒multi_hit_window限制觸發，沒有damage type過濾。
-- update按0.1/3*dt呼叫replenish_percentage，allow_proc_while_active刷新active start。
+- update按0.1/3*dt呼叫replenish_percentage，allow_proc_while_active重新計時active start。
 
 ## 原始碼依據
 

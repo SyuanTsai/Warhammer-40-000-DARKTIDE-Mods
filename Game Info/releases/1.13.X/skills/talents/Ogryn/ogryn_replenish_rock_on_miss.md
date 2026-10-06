@@ -1,5 +1,7 @@
 # 那下不算！(That One Didn't Count)：原始碼依據
 
+[English](en/ogryn_replenish_rock_on_miss.md)
+
 [返回玩家說明](README.md#ogryn_replenish_rock_on_miss)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_replenish_rock_on_miss)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 
 ## 算例條件與待確認事項
 
-- **充能算例**：投出最後一顆後若該次符合條件，會回復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。
+- **充能算例**：投出最後一顆後若該次符合條件，會恢復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。
 - **冷卻算例**：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
 - 觸發以投射物結束時回報的命中與弱點計數為準；普通敵人命中但沒有弱點命中不等於未命中。
 - 此效果每次補 1 顆，不會超過岩石能力目前的充能上限。

@@ -1,5 +1,7 @@
 # 腎上腺素狂暴(Adrenaline Frenzy)：原始碼依據
 
+[English](en/broker_keystone_adrenaline_junkie.md)
+
 [返回玩家說明](README.md#broker_keystone_adrenaline_junkie)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_adrenaline_junkie)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -45,7 +47,7 @@
 ## 原文核對
 
 - 對應 hash：`b4493ff1`。
-- 繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與刷新細節由固定版本的 buff 消費邏輯補足。
+- 繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與重新計時細節由固定版本的 buff 消費邏輯補足。
 
 ## 圖示來源
 

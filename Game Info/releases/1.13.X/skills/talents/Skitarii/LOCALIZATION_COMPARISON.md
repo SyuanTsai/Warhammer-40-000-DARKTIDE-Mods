@@ -1,9 +1,11 @@
 # 護教軍：遊戲本體繁中描述比對
 
+[English](en/LOCALIZATION_COMPARISON.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋97／97組同鍵／hash中英描述；4項明確繁中勘誤已放在對應技能下。其他項目的機制省略、措辭易誤讀或跨來源落差另列，不當成繁中錯誤。
@@ -16,7 +18,7 @@
 | [電弧手榴彈](#cryptic_grenade_ability_arc_grenade) | 文字與程式目標排序待遊戲內核對 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
 | [超載電弧手榴彈](#cryptic_arc_grenades_brittleness) | 未見明確矛盾；補充連鎖與脆弱計算 |
-| [強化電弧手榴彈](#cryptic_arc_grenades_weapon_malfunction) | 未見明確矛盾；補充刷新與目標限制 |
+| [強化電弧手榴彈](#cryptic_arc_grenades_weapon_malfunction) | 未見明確矛盾；補充重新計時與目標限制 |
 | [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase) | 未見明確矛盾；補充機制與算例 |
 | [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
@@ -119,7 +121,7 @@
 ## 滌罪伺服頭骨(Purgator Servo-Skull)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`；hash：`e66555ce`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手雷能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_flamethrower.md)。
 
 <a id="cryptic_servo_skull_inject_ally"></a>
@@ -154,7 +156,7 @@
 ## 強化電弧手榴彈(Enhanced Arc Grenades)
 
 - 描述鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction_larger_desc`；hash：`6282ba9c`。
-- 結論：未見明確矛盾；補充刷新與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25606770 版本對應為1.13.1。
+- 結論：未見明確矛盾；補充重新計時與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_arc_grenades_weapon_malfunction.md)。
 
 <a id="cryptic_force_field_duration_increase"></a>
@@ -168,7 +170,7 @@
 ## 動能排斥(Kinetic Repulsion)
 
 - 描述鍵：`loc_talent_cryptic_force_field_capacitance_restore`；hash：`e9096586`。
-- 結論：未見明確矛盾；補充機制與算例。固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
 - [原始碼推導與限制](cryptic_force_field_capacitance_restore.md)。
 
 <a id="cryptic_servo_skull_improved_tagging"></a>
@@ -196,7 +198,7 @@
 ## 彈藥存放(Ammunition Deposit)
 
 - 描述鍵：`loc_talent_cryptic_ammo_aura_toughness_desc`；hash：`cc394399`。
-- 結論：待遊戲內核對。繁中描述列出自身韌性及自己與協同隊友的儲備彈藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
+- 結論：待遊戲內核對。繁中描述列出自身韌性及自己與協同隊友的儲備用彈藥藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
 - [原始碼推導與限制](cryptic_ammo_aura.md)。
 
 <a id="cryptic_aura_weapon_improved"></a>
@@ -210,7 +212,7 @@
 ## 弦爪重擊(Chordclaw Strike)
 
 - 描述鍵：`loc_talent_cryptic_chordclaw_desc`；hash：`df29b524`。
-- 結論：未見明確矛盾。繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及暈眩免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
+- 結論：未見明確矛盾。繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及眩暈免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
 - [原始碼推導與限制](cryptic_chordclaw.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
@@ -268,7 +270,7 @@
 ## 通量導管蓄積(Flux Conduit Build-Up)
 
 - 描述鍵：`loc_talent_cryptic_crits_grant_power_desc`；hash：`10f2fa54`。
-- 結論：未見明確矛盾。inventory 的繁中與英文都寫明暴擊觸發、產生電容量並持續4秒，與來源每次暴擊啟動4秒回復期間一致。累積方式及回復率折算是程式細節，原文省略不構成矛盾。
+- 結論：未見明確矛盾。inventory 的繁中與英文都寫明暴擊觸發、產生電容量並持續4秒，與來源每次暴擊啟動4秒恢復期間一致。累積方式及恢復率折算是程式細節，原文省略不構成矛盾。
 - [原始碼推導與限制](cryptic_crits_grant_power.md)。
 
 <a id="cryptic_weakspot_kills_grant_power"></a>
@@ -310,7 +312,7 @@
 ## 鋼鐵富足(Satiated Steel)
 
 - 描述鍵：`loc_talent_cryptic_chordclaw_capacitance_restoration_desc`；hash：`18058d13`。
-- 結論：未見明確矛盾。inventory 中英都表示弦爪擊殺後於5秒內恢復25%電容量，與來源觸發類型、25%總量及5秒回復視窗相符。觸發限於指定弦爪傷害類型，以及再觸發刷新而不疊倍率，是原文省略而非明確矛盾。
+- 結論：未見明確矛盾。inventory 中英都表示弦爪擊殺後於5秒內恢復25%電容量，與來源觸發類型、25%總量及5秒恢復視窗相符。觸發限於指定弦爪傷害類型，以及再觸發重新計時而不疊倍率，是原文省略而非明確矛盾。
 - [原始碼推導與限制](cryptic_chordclaw_capacitance_restoration.md)。
 
 <a id="cryptic_chordclaw_consecutive_bonus"></a>
@@ -338,14 +340,14 @@
 ## 削切協議(Flensing Protocols)
 
 - 描述鍵：`loc_talent_cryptic_dissector_desc`；hash：`3e2c62db`。
-- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明上限6層、每層傷害與韌性減傷2.5%、受傷每秒最多失1層、精英／專家擊殺補2層並回復15%韌性。固定版支持數值與觸發；啟用時從滿層開始，以及滿層擊殺仍回韌性，是UI未展開的實作細節，不屬誤譯。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明上限6層、每層傷害與韌性減傷2.5%、受傷每秒最多失1層、精英／專家擊殺補2層並恢復15%韌性。固定版支持數值與觸發；啟用時從滿層開始，以及滿層擊殺仍回韌性，是UI未展開的實作細節，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector.md)。
 
 <a id="cryptic_redline"></a>
 ## 極限電容(Redline Capacitors)
 
 - 描述鍵：`loc_talent_cryptic_redline_charge_stacking_clarified_desc`；hash：`22a7f709`。
-- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接回復是否吃倍率由實際回復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接恢復是否吃倍率由實際恢復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
 - [原始碼推導與限制](cryptic_redline.md)。
 
 <a id="cryptic_overload_keystone"></a>
@@ -380,7 +382,7 @@
 ## 伺服肌腱湧動(Servo-Sinew Surge)
 
 - 描述鍵：`loc_talent_cryptic_dissector_crit_attack_speed_desc`；hash：`7ddcfcd5`。
-- 結論：未見明確矛盾；補充計算與限制。繁中與英文均明確寫明每層增加暴擊率與近戰攻擊速度；固定版兩項都是每層1.5%，無誤譯。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文均明確寫明每層增加爆擊率與近戰攻擊速度；固定版兩項都是每層1.5%，無誤譯。
 - [原始碼推導與限制](cryptic_dissector_crit_attack_speed.md)。
 
 <a id="cryptic_dissector_max_stacks"></a>
@@ -394,7 +396,7 @@
 ## 進階能量管理(Advanced Power Management)
 
 - 描述鍵：`loc_talent_cryptic_redline_strength_clarified_desc`；hash：`4e708242`。
-- 結論：未見明確矛盾。本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並刷新10秒。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
+- 結論：未見明確矛盾。本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並重設10秒倒數。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
 - [原始碼推導與限制](cryptic_redline_strength.md)。
 
 <a id="cryptic_redline_rending"></a>
@@ -431,7 +433,7 @@
 ## 崇高意圖(Higher Purpose)
 
 - 描述鍵：`loc_talent_cryptic_dissector_power_desc`；hash：`2baab5a1`。
-- 結論：未見明確矛盾；補充計算與限制。繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家回復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
 - [原始碼推導與限制](cryptic_dissector_power.md)。
 
 <a id="cryptic_redline_toughness"></a>
@@ -480,7 +482,7 @@
 ## 熵能轉移(Entropic Transfer)
 
 - 描述鍵：`loc_talent_cryptic_electrocution_toughness_desc`；hash：`f4493647`。
-- 結論：未見明確矛盾。中英條件一致；新增與刷新電擊、持續恢復速率為補充。
+- 結論：未見明確矛盾。中英條件一致；新增電擊與重設其持續時間、持續恢復速率為補充。
 - [原始碼推導與限制](cryptic_electrocution_toughness.md)。
 
 <a id="cryptic_electrocution_defense"></a>
@@ -552,7 +554,7 @@
 ## 弱點分析教義(Weakness Analysis Doctrine)
 
 - 描述鍵：`loc_talent_cryptic_afflicted_increased_damage_desc`；hash：`70e7ba50`。
-- 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與刷新方式。
+- 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與重新計時方式。
 - [原始碼推導與限制](cryptic_afflicted_increased_damage.md)。
 
 <a id="cryptic_mobile_defense"></a>
@@ -573,14 +575,14 @@
 ## 目標殲滅回饋(Target-Neutralization Feedback)
 
 - 描述鍵：`loc_talent_cryptic_stun_suppression_immune_desc`；hash：`38272d6c`。
-- 結論：未見明確矛盾。中英「眩暈／Stun」為概括詞；以實際keyword區分一般受擊硬直與強制控制，不列誤譯。
+- 結論：未見明確矛盾。中英「眩暈／Stun」為概括詞；以實際keyword區分一般受擊僵直與強制控制，不列誤譯。
 - [原始碼推導與限制](cryptic_stun_suppression_immune.md)。
 
 <a id="cryptic_elite_kills_toughness"></a>
 ## 二元彈道協議(Binary Ballistics Protocol)
 
 - 描述鍵：`loc_talent_cryptic_elite_kills_toughness_desc`；hash：`46309d46`。
-- 結論：未見明確矛盾。繁中與英文一致；補充持續恢復與刷新。
+- 結論：未見明確矛盾。繁中與英文一致；補充持續恢復與重新計時。
 - [原始碼推導與限制](cryptic_elite_kills_toughness.md)。
 
 <a id="cryptic_push_stagger_stamina"></a>
@@ -636,7 +638,7 @@
 ## 槍械技師(Gunsmith)
 
 - 描述鍵：`loc_talent_cryptic_auto_reload_desc`；hash：`612ee334`。
-- 結論：未見明確矛盾。中英一致；補充首批第6秒、向上取整及備彈來源。
+- 結論：未見明確矛盾。中英一致；補充首批第6秒、向上取整及備用彈藥來源。
 - [原始碼推導與限制](cryptic_auto_reload.md)。
 
 <a id="cryptic_ranged_vs_bfg"></a>
@@ -664,7 +666,7 @@
 ## 電能修復(Voltaic Restoration)
 
 - 描述鍵：`loc_talent_cryptic_coherency_toughness_on_ability_desc`；hash：`5c2bb368`。
-- 結論：未見明確矛盾。繁中與英文一致；補充戰鬥能力與各自最大韌性。
+- 結論：未見明確矛盾。繁中與英文一致；補充戰鬥技能與各自最大韌性。
 - [原始碼推導與限制](cryptic_coherency_toughness_on_ability.md)。
 
 <a id="cryptic_revive_speed_and_dr"></a>
@@ -678,7 +680,7 @@
 ## 彈藥補給艙(Ammunition-Restoration Pod)
 
 - 描述鍵：`loc_talent_cryptic_passive_ammo_replenishment_desc`；hash：`41aa3ba1`。
-- 結論：未見明確矛盾。雙語一致；補充小數累計及備彈/彈匣區分。
+- 結論：未見明確矛盾。雙語一致；補充小數累計及備用彈藥/彈匣區分。
 - [原始碼推導與限制](cryptic_passive_ammo_replenishment.md)。
 
 <a id="cryptic_stacking_melee_damage"></a>
@@ -727,7 +729,7 @@
 ## 卓越防禦記憶模組(Superior Defence Engrams)
 
 - 描述鍵：`loc_talent_cryptic_ranged_stacking_toughness_desc`；hash：`057bb0ce`。
-- 結論：未見明確矛盾。中英文一致；補充刷新與上限。
+- 結論：未見明確矛盾。中英文一致；補充重新計時與上限。
 - [原始碼推導與限制](cryptic_ranged_stacking_toughness.md)。
 
 <a id="cryptic_specials_marking"></a>
@@ -748,7 +750,7 @@
 ## 數據感應協定(Data Sensor Protocol)
 
 - 描述鍵：`loc_talent_cryptic_ally_coherency_defenses_desc`；hash：`307b308a`。
-- 結論：受益對象用語有誤。繁中把they翻成盟友，省掉自己作為受益者，並易誤讀為傷害後讓其他隊友恢復。實際回復給受傷者本人。
+- 結論：受益對象用語有誤。繁中把they翻成盟友，省掉自己作為受益者，並易誤讀為傷害後讓其他隊友恢復。實際恢復給受傷者本人。
 - 繁中原文短引：當你或協同中的盟友受到韌性傷害時，盟友恢復{stamina:%s}耐力。冷卻時間{stamina_cd:%s}秒。
 - 同源英文：When you or an Ally in Coherency take toughness damage, they restore {stamina:%s} Stamina. {stamina_cd:%s}s Cooldown.
 - [原始碼推導與限制](cryptic_ally_coherency_defenses.md)。

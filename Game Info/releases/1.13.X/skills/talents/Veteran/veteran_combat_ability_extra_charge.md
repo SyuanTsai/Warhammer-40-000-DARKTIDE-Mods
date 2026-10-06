@@ -1,5 +1,7 @@
 # 掩護射擊(Overwatch)：原始碼依據
 
+[English](en/veteran_combat_ability_extra_charge.md)
+
 來源版本：Release 1.13.1；完整 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 
 [返回玩家說明](README.md#veteran_combat_ability_extra_charge)｜[來源與限制](../../../README.md)

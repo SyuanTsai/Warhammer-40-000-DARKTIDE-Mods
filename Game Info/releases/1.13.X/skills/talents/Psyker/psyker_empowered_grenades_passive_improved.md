@@ -1,5 +1,7 @@
 # 生物磁石(Bio-Lodestone)：原始碼依據
 
+[English](en/psyker_empowered_grenades_passive_improved.md)
+
 [返回玩家說明](README.md#psyker_empowered_grenades_passive_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_empowered_grenades_passive_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 - **機率算例**：每次都有空位可儲存時，100 次擊殺的期望取得次數由 100 × 10% = 10 次，提高至 100 × 15% = 15 次。隨機結果不保證剛好等於期望值。
 - 如果充能已滿，成功 proc 會受 charge cap 限制而不增加可儲存層數。
 - 期望值例子假設每次擊殺有空位且機率獨立；遊戲隨機結果不保證平均值。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

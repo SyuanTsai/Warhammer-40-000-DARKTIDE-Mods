@@ -1,5 +1,7 @@
 # 快速且致命(Quick and Deadly)：原始碼依據
 
+[English](en/broker_passive_close_range_damage_on_dodge.md)
+
 [返回玩家說明](README.md#broker_passive_close_range_damage_on_dodge)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_close_range_damage_on_dodge)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_successful_dodge 啟用 active_duration=3 的 damage_near=.15，未設 cooldown；ProcBuff成功觸發更新active_start_time，故刷新不疊幅。
+- on_successful_dodge 啟用 active_duration=3 的 damage_near=.15，未設 cooldown；ProcBuff成功觸發更新active_start_time，故重新計時不疊幅。
 - 傷害流程不限定遠程，依distance將damage_near與damage_far以sqrt(clamp((d−12.5)/17.5))插值，再加入damage_stat_buffs。近戰距離通常在近端，不能誤寫遠程限定。
 
 ## 原始碼依據

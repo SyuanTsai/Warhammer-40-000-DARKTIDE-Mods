@@ -1,5 +1,7 @@
 # 強化亡命之徒(Enhanced Desperado)：原始碼依據
 
+[English](en/broker_ability_focus_improved.md)
+
 [返回玩家說明](README.md#broker_ability_focus_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_focus_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 
 - 此節點接到 broker_ability_focus_improved，沿用 broker_focus 共用模板並改掛強化版狀態 buff。buff 加入 sprint_movement_speed=0.20、sprinting_cost_multiplier=0、count_as_dodge_vs_ranged 與 suppression_immune；衝刺速度屬加算修正，例算為基礎 100 × (1+0.20)=120。
 - 近距離標記依敵方單位位置與玩家位置計算，距離門檻取 ranged_close=12.5 公尺，並限於具有列入名單敵人標籤的單位。狀態開始時記錄起始時間；擊殺事件須為死亡結果、遠程攻擊（或武器設定視為遠程）且命中點距攻擊者不超過 12.5 公尺。
-- 延長函式以自啟動時間除以 duration_max=20 取整，將 duration_extend=1 秒除以 duration_divisor=5 的相應次方；因此經過 20 秒後為 0.2 秒、40 秒後為 0.04 秒。 buff 起始時間最多推至當前時刻，避免取得已經過去的持續時間。
+- 延長函式以自啟動時間除以 duration_max=20 取整，將 duration_extend=1 秒除以 duration_divisor=5 的相應次方；因此經過 20 秒後為 0.2 秒、40 秒後為 0.04 秒。 buff 起始時間最多推至目前時刻，避免取得已經過去的持續時間。
 - 開始時把彈匣子彈移回儲備並裝滿彈匣，同時開啟免費彈藥轉移；停止時關閉免費轉移並整理彈匣。強化版的擊殺處理才延長時間；依天賦規則附加的其他效果另由相應分支節點決定。
 - 遠程擊殺以近距離擊殺檢查；針槍追蹤另有獨立條件：只記錄指定針槍、狀態期間遠程命中且目標仍存活的敵人；死亡事件須由 toxin 傷害造成，且死亡位置距 params.attacking_unit 的位置不超過 12.5 公尺。這是已追蹤的針槍毒素死亡例外，不能概括為所有中毒死亡。
 - 能力為單次充能，資源每秒自然恢復 1、每次消耗 45；在狀態 buff 存在時暫停充能，離開狀態才恢復。
@@ -36,7 +38,7 @@
 
 - **算例**：只計此技能時，100 × (1 + 20%) = 120 衝刺速度；每次擊殺延長量在 20 秒後為 1 ÷ 5 = 0.2 秒，在 40 秒後為 1 ÷ 5² = 0.04 秒。
 - 12.5 公尺近距離檢查使用攻擊者位置與命中點／死亡位置；不可把「毒素擊殺」單獨當成充分條件。
-- 文本列有基礎冷卻，但實際冷卻還受狀態持續時間暫停影響；若擊殺延長狀態，恢復時間相應往後。
+- 文字列有基礎冷卻，但實際冷卻還受狀態持續時間暫停影響；若擊殺延長狀態，恢復時間相應往後。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

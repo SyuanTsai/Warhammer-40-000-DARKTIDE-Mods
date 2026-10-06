@@ -628,6 +628,1942 @@
       "storage": "local"
     },
     {
+      "id": "releases/1.13.X/skills/english/README",
+      "kind": "translation",
+      "scope": "releases/1.13.X/skills/english",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/README.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/FILE_MAP",
+      "kind": "inventory",
+      "scope": "releases/1.13.X/skills/english",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/FILE_MAP.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_replenish_grenades",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_grenades.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_weakspot_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_replenish_toughness_on_weakspot_kill",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_on_weakspot_kill.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_snipers_focus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_extra_charge",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_extra_charge.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_snipers_focus_increased_stacks",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_increased_stacks.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_snipers_focus_rending_bonus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_rending_bonus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_snipers_focus_toughness_bonus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_toughness_bonus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_invisibility_on_combat_ability",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_invisibility_on_combat_ability.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_toughness_bonus_leaving_invisibility",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_toughness_bonus_leaving_invisibility.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_reduced_threat_after_combat_ability",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduced_threat_after_combat_ability.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_close_damage_after_combat_ability",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_close_damage_after_combat_ability.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_weakspot_power_after_combat_ability",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_power_after_combat_ability.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_stagger_nearby_enemies",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stagger_nearby_enemies.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_increase_and_restore_toughness_to_coherency",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_increase_and_restore_toughness_to_coherency.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_revive_nearby_allies",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_revive_nearby_allies.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_elite_kills_reduce_cooldown",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_elite_kills_reduce_cooldown.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_stance",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stance.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_elite_and_special_outlines",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_elite_and_special_outlines.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_coherency_outlines",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_coherency_outlines.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_ranged_roamer_outlines",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ranged_roamer_outlines.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_combat_ability_ogryn_outlines",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ogryn_outlines.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_attack_speed",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_attack_speed.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_reduce_swap_time",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduce_swap_time.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_extra_grenade",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_extra_grenade.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_improved_grenades",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_grenades.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_smoke_grenade",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_smoke_grenade.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_krak_grenade",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_krak_grenade.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_grenade_apply_bleed",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_grenade_apply_bleed.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_damage_coherency",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_coherency.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_movement_speed_coherency",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_coherency.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill_improved",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill_improved.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_ammo_increase",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ammo_increase.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_clip_size",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_clip_size.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_faster_reload_on_non_empty_clips",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_faster_reload_on_non_empty_clips.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_reload_speed_on_elite_kill",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reload_speed_on_elite_kill.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_rending_bonus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_rending_bonus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_reduced_toughness_damage_in_coherency",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduced_toughness_damage_in_coherency.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_tdr_on_high_toughness",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_tdr_on_high_toughness.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increase_damage_vs_elites",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_damage_vs_elites.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_big_game_hunter",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_big_game_hunter.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_damage_when_flanking",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_when_flanking.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_melee_crit_chance_and_melee_finesse",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_melee_crit_chance_and_melee_finesse.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_all_kills_replenish_toughness",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_all_kills_replenish_toughness.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increase_damage_after_sprinting",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_damage_after_sprinting.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_crits_apply_rending",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_crits_apply_rending.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_movement_speed_towards_downed",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_towards_downed.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_dodging_grants_crit",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_dodging_grants_crit.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_kill_grants_damage_to_other_slot",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_kill_grants_damage_to_other_slot.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_hits_cause_bleed",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_hits_cause_bleed.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_continous_hits_apply_rending",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_continous_hits_apply_rending.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_replenish_toughness_outside_melee",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_outside_melee.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_bonus_crit_chance_on_ammo",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_bonus_crit_chance_on_ammo.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_ranged_power_out_of_melee",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ranged_power_out_of_melee.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_no_ammo_consumption_on_lasweapon_crit",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_no_ammo_consumption_on_lasweapon_crit.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_ranged_cleave",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_ranged_cleave.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_allies_in_coherency_share_toughness_gain",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_allies_in_coherency_share_toughness_gain.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_better_deployables",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_better_deployables.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_replenish_toughness_and_boost_allies",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_and_boost_allies.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_ally_kills_increase_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ally_kills_increase_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_elite_kills_replenish_toughness",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_elite_kills_replenish_toughness.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increased_damage_based_on_range",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_based_on_range.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_ads_drain_stamina",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ads_drain_stamina.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_dodging_grants_stamina",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_dodging_grants_stamina.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_increase_suppression",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_suppression.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/base_toughness_node_buff_medium_2",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_toughness_node_buff_medium_2.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/base_melee_damage_node_buff_high_2",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_melee_damage_node_buff_high_2.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/base_toughness_damage_reduction_node_buff_medium_1",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_toughness_damage_reduction_node_buff_medium_1.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_aura_elite_kills_restore_grenade",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_elite_kills_restore_grenade.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_weapon_switch_passive",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_weapon_switch_passive.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_weapon_switch_replenish_toughness",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_weapon_switch_replenish_toughness.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_weapon_switch_replenish_ammo",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_weapon_switch_replenish_ammo.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_weapon_switch_replenish_stamina",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_weapon_switch_replenish_stamina.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_improved_tag",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_improved_tag_more_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_more_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_improved_tag_dead_bonus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_dead_bonus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_improved_tag_dead_coherency_bonus",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_dead_coherency_bonus.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_unused_definitions",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_unused_definitions.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_aura_gain_ammo_on_elite_kill.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_base_ranged_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_base_ranged_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_cover_peeking",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_cover_peeking.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_frag_grenade",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_frag_grenade.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_supression_immunity",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_supression_immunity.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_survivalist_passive",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_survivalist_passive.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_whistle",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_whistle.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_grenade_improved",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_grenade_improved.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_shock_mine",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_shock_mine.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_companion_coherency",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_coherency.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_reload_speed_aura",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_reload_speed_aura.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_charge",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_area_buff_drone_improved",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_area_buff_drone_improved.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_stance",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_stance_elite_kills_stack_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_elite_kills_stack_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_stance_dog_bloodlust",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_dog_bloodlust.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_drone_buff_talent",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_buff_talent.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_drone_debuff_talent",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_debuff_talent.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_charge_toughness",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_toughness.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_charge_cooldown_reduction",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_cooldown_reduction.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_charge_longer_distance",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_longer_distance.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_dog_damage_after_ability",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_dog_damage_after_ability.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_execution_order",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_terminus_warrant",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_disable_companion",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_disable_companion.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_toughness_regen_per_stack",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_toughness_regen_per_stack.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_stun_immune_and_block_all",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stun_immune_and_block_all.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_offensive",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_offensive.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_ability_damage",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_ability_damage.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_stagger_on_low_high",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stagger_on_low_high.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_cdr",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_cdr.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_support",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_support.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_execution_order_crit",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_crit.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_execution_order_cdr",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_cdr.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_execution_order_rending",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_rending.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_execution_order_permastack",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_permastack.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_pinning_dog_bonus_moving_towards",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_pinning_dog_bonus_moving_towards.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_companion_focus_ranged",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_ranged.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_companion_focus_elite",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_elite.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_improved_combined",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_improved_combined.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_toughness_regen_near_companion",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_toughness_regen_near_companion.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_122_125",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_126_130",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_131_135",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_136_140",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_141_145",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_146_150",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_151_155",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_156_160",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_161_165",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_skills_166_170",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_blitz_175",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_blitz_175.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_176_180",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_181_185",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_186_190",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_186_190.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_191_195",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_196_200",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_201_205",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_206_210",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_211_215",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_216_220",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_221_225",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_221_225.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_226_230",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_231_235",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_236_240",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_241_245",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_241_245.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_246_250",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_246_250.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_251_255",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_256_260",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_261_265",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_261_265.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_skills_266_267",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_266_267.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/ogryn_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_268_272",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_268_272.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_273_277",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_278_282",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_283_287",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_288_292",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_293_297",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_293_297.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_298_302",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_298_302.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_303_307",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_303_307.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_308_312",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_308_312.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_313_317",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_313_317.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_318_322",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_318_322.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_323_327",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_323_327.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_328_332",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_328_332.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_333_337",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_333_337.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_338_342",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_338_342.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_343_347",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_343_347.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_skills_348",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_348.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/psyker_class",
+      "kind": "class_acceptance",
+      "scope": "releases/1.13.X/skills/english/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_349_353",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_349_353.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_354_358",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_354_358.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_359_363",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_359_363.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_364_368",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_364_368.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_369_373",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_369_373.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_374_378",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_374_378.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_379_383",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_379_383.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_384_388",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_384_388.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_389_393",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_389_393.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_394_398",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_394_398.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_399_403",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_399_403.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_404_408",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_404_408.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_409_413",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_409_413.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_414_418",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_414_418.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_419_423",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_419_423.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_424_428",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_424_428.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_429_433",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_429_433.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_434_438",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_434_438.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_439_443",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_439_443.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_444_448",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_444_448.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_449_453",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_449_453.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_454_458",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_454_458.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_skills_459_463",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_skills_459_463.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/scum_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/scum_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_464_468",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_464_468.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_469_473",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_469_473.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_474_478",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_474_478.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_479_483",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_479_483.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_484_488",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_484_488.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_489_493",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_489_493.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_494_498",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_494_498.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_499_503",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_499_503.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_504_508",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_504_508.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_509_513",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_509_513.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_514_518",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_514_518.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_519_523",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_519_523.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_524_528",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_524_528.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_529_533",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_529_533.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_534_538",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_534_538.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_539_543",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_539_543.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_544_548",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_544_548.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_549_553",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_549_553.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_554_558",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_554_558.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_skills_559_563",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_skills_559_563.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/skitarii_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/skitarii_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_565_569",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_565_569.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_570_574",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_570_574.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_575_579",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_575_579.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_580_584",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_580_584.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_585_589",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_585_589.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_590_594",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_590_594.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_595_599",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_595_599.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_600_604",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_600_604.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_605_609",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_605_609.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_610_614",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_610_614.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_615_619",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_615_619.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_620_624",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_620_624.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_625_629",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_625_629.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_630_634",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_630_634.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_635_639",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_635_639.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_640_644",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_640_644.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_skills_645_646",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_skills_645_646.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/zealot_class",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/zealot_class.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/shared_completion",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/shared",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/shared_completion.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_RECONCILIATION",
+      "kind": "audit",
+      "scope": "1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_RECONCILIATION.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING",
+      "kind": "audit",
+      "scope": "1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-04-SKILL_DOCUMENT_NAME_CORRECTIONS",
+      "kind": "audit",
+      "scope": "1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-SKILL_DOCUMENT_NAME_CORRECTIONS.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
       "id": "2026-10-03-blessings-execution",
       "kind": "plan",
       "scope": "1.13.X/blessings",
@@ -2174,11 +4110,6 @@
       "scope": "releases/1.13.X/source",
       "task": "replace both cloud ZIPs after record separation",
       "details": "AI-LOGS/Game Info/releases/1.13.X/CLOUD_ARCHIVES.json"
-    },
-    {
-      "scope": "releases/1.13.X/blessings",
-      "task": "translate all blessings sequentially with Luna collaboration and per-blessing acceptance/local commit",
-      "details": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ALL_BLESSINGS_EXECUTION.md"
     }
   ]
 }

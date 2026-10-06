@@ -1,5 +1,7 @@
 # 二元彈道協議(Binary Ballistics Protocol)：原始碼依據
 
+[English](en/cryptic_elite_kills_toughness.md)
+
 [返回玩家說明](README.md#cryptic_elite_kills_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_elite_kills_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 ## 原文核對
 
 - 對應 hash：`46309d46`。
-- 繁中與英文一致；補充持續恢復與刷新。
+- 繁中與英文一致；補充持續恢復與重新計時。
 
 ## 圖示來源
 

@@ -1,5 +1,7 @@
 # 法務官手榴彈(Arbites Grenade)：原始碼依據
 
+[English](en/adamant_grenade.md)
+
 [返回基礎效果](BASE_EFFECTS.md#adamant_grenade)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -8,7 +10,7 @@
 
 ## 原始碼確認與程式推導
 
-- adamant_archetype.base_talents 將 adamant_grenade 配在手榴彈欄位。能力設定 only_uses_charges=true，max_charges 讀取 base_charges=3，並無固定 cooldown 欄位。
+- adamant_archetype.base_talents 將 adamant_grenade 配在手雷欄位。能力設定 only_uses_charges=true，max_charges 讀取 base_charges=3，並無固定 cooldown 欄位。
 - adamant_grenade 投射物設定 fuse_time=2、impact_fuse_time=0、impact_triggered=true，爆炸採 ExplosionTemplates.adamant_grenade；爆炸設定 radius=10、close_radius=2.5、static_power_level=500，並開啟傷害衰減。
 - 直接碰撞另引用 adamant_grenade_impact 傷害設定；爆炸傷害使用 adamant_grenade 與 close_adamant_grenade profile。近距離外的最終生命傷害不能只用 500 power 或半徑推成固定傷害數字。
 - ProjectileDamageExtension的impact_triggered分支在碰撞後將引信設為impact_fuse_time=0；不能將fuse_time2直接寫成投出2秒就爆炸。未撞擊保險流程先等待max_lifetime=4，再開始2秒引信，約6秒，另受更新與延遲補償影響。

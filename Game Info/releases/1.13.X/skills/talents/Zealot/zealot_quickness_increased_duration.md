@@ -1,5 +1,7 @@
 # 永恆(Eternal)：原始碼依據
 
+[English](en/zealot_quickness_increased_duration.md)
+
 [返回玩家說明](README.md#zealot_quickness_increased_duration)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_quickness_increased_duration)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -23,7 +25,7 @@
 
 ## 算例條件與待確認事項
 
-- **持續算例**：第 0 秒命中啟動後，原本約第 6 秒結束，改為約第 10 秒結束；期間命中仍不會刷新本輪加成。持續時間增加 4 秒，層數與每層加成不變。
+- **持續算例**：第 0 秒命中啟動後，原本約第 6 秒結束，改為約第 10 秒結束；期間命中仍不會重設本輪加成的持續時間。持續時間增加 4 秒，層數與每層加成不變。
 - 只延長 Quickness active buff；不改每層效果數值或層數獲得速度。
 - 10 秒效果若搭配 Momentum 回韌性節點，理論回韌時間也相應延長；實際仍受韌性上限和傷害影響。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

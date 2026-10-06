@@ -1,0 +1,113 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "+15% Base Damage (Elite Enemies).",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Superiority Complex dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:893-916, display field and installed buff reference only"
+  ],
+  "reused_evidence": [
+    "Existing owner passive lifecycle, one effective stack, Elite-tag shared-path scope and Specialist-only exclusion",
+    "Accepted shared additive damage placement, subsequent modifiers, percentage formatter and buff-value lookup evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 6380 bytes, SHA256 f51bb58c4c6269272c653a56e3db0eb9a985a139f0270260ab05ae9de91827e3; historical icon node audit cites the previous source parent, current mechanism citations remain at the fixed target SHA",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "read-only draft checked exact pairs, owner passive, Elite/Specialist distinction, ordinary attack scope, additive placement and special-source limit; primary reviewed final text and independent comparison"
+  },
+  "static_examples": {
+    "additive_stage_baseline_damage": 100,
+    "elite_no_other_bonus_damage": 115,
+    "existing_25_percent_before_damage": 125,
+    "existing_25_percent_after_damage": 140,
+    "relative_gain_over_125_percent": 12,
+    "specialist_only_or_nonelite_damage": 100
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Every special damage source’s use of the same shared attacker-stat path.",
+    "Final game UI and in-game complete damage outcomes."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game damage/UI measurements"
+  ],
+  "id": "veteran_increase_damage_vs_elites",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Superiority Complex",
+  "name_key": "loc_talent_veteran_increase_damage_vs_elites",
+  "name_hash": "2b206efd",
+  "description_key": "loc_talent_veteran_increase_damage_vs_elites_desc",
+  "description_hash": "db5e86d9",
+  "raw_template": "{damage:%s} Base Damage (Elite Enemies).",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 105,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 146,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 304,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 40,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/superiority-complex-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_damage_vs_elites.md",
+  "commit": "f35926c47277a3019eb4af6498c6b08097a97a9b"
+}

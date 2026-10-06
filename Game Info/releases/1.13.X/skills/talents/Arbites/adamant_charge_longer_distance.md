@@ -1,5 +1,7 @@
 # 交鋒(Engage)：原始碼依據
 
+[English](en/adamant_charge_longer_distance.md)
+
 [返回玩家說明](README.md#adamant_charge_longer_distance)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_charge_longer_distance)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 
 - 衝鋒模板 3.75 公尺 + 升級 3.75 公尺 = 7.5 公尺上限距離。
 - 7.5 公尺是距離計算值；實際跑完的位移可能受碰撞、路徑或玩家取消影響。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

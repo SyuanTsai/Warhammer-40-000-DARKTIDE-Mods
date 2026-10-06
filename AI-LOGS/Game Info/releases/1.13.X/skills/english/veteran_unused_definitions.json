@@ -1,0 +1,118 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "id": "veteran_unused_definitions",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "kind": "class_support_translation",
+  "status": "accepted_with_caveats",
+  "source": "Game Info/releases/1.13.X/skills/talents/Veteran/UNUSED_DEFINITIONS.md",
+  "english": "Game Info/releases/1.13.X/skills/talents/Veteran/en/UNUSED_DEFINITIONS.md",
+  "review_mode": "Translate accepted fixed-source classification; preserve exact ordered IDs/source URLs and independently check English terminology/navigation.",
+  "classification": {
+    "tree_nodes": 77,
+    "veteran_tree_definitions": 74,
+    "shared_stat_definitions": 3,
+    "veteran_specific_definitions": 99,
+    "class_base_definitions": 6,
+    "listed_other_definitions": 19,
+    "scope": "No independent current tree node directly references these IDs; underlying effects/buffs are not asserted unused."
+  },
+  "primary_direct_reads": [
+    "Complete Chinese classification document",
+    "Existing English Grenadier and Executioner's Stance names/anchors",
+    "Complete translated English classification and changed navigation"
+  ],
+  "reused_evidence": [
+    "Accepted fixed-SHA Chinese tree/base/definition classification",
+    "Previously accepted same-version English names and source citations"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Child checked the 19-row scope, 77=74+3 and 99=74+6+19 counts, boundary wording, and exact same-build Grenadier/Executioner's Stance names/anchors. No translation issue found. Primary reviews full staged diff before commit."
+  },
+  "name_references": [
+    {
+      "name": "Grenadier",
+      "key": "loc_talent_veteran_extra_grenade",
+      "hash": "034b1131",
+      "entry_index": 206,
+      "anchor": "veteran_extra_grenade"
+    },
+    {
+      "name": "Executioner's Stance",
+      "key": "loc_talent_veteran_combat_ability_elite_and_special_outlines",
+      "hash": "1a42be01",
+      "entry_index": 1714,
+      "anchor": "veteran_combat_ability_elite_and_special_outlines"
+    }
+  ],
+  "checks": [
+    {
+      "Chinese_preservation": "passed",
+      "English_prose_and_privacy": "passed",
+      "ordered_ID_source_pairs": 19,
+      "classification_arithmetic": "77=74+3;99=74+6+19; passed",
+      "changed_document_navigation": {
+        "files": 4,
+        "local_references": 402,
+        "errors": []
+      },
+      "fixed_source_classification": "accepted Chinese evidence reused; no repeated tree/source analysis"
+    },
+    {
+      "check": "actual marked parse and HTML generation",
+      "result": "passed",
+      "documents": [
+        {
+          "name": "UNUSED_DEFINITIONS.md",
+          "tables": [
+            {
+              "columns": 3,
+              "rows": 19
+            }
+          ],
+          "html_generated": true
+        },
+        {
+          "name": "README.md",
+          "tables": [
+            {
+              "columns": 3,
+              "rows": 77
+            }
+          ],
+          "html_generated": true
+        },
+        {
+          "name": "SOURCE_INDEX.md",
+          "tables": [
+            {
+              "columns": 2,
+              "rows": 77
+            }
+          ],
+          "html_generated": true
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "unperformed": [
+    "Repeated full tree/definition source analysis",
+    "Cross-version comparison",
+    "In-game execution"
+  ],
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/UNUSED_DEFINITIONS.md"
+}

@@ -1,5 +1,7 @@
 # 迅捷碎片(Quick Shards)：原始碼依據
 
+[English](en/psyker_throwing_knives_cast_speed.md)
+
 [返回玩家說明](README.md#psyker_throwing_knives_cast_speed)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_throwing_knives_cast_speed)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。psyker_throwing_knives_cast_speed 的 passive 只連到 psyker_reduced_throwing_knife_cooldown；該常駐 buff 將 grenade_ability_resource_regen_modifier 設為 0.3，且該 stat 是 additive_multiplier，所以總倍率為 1+0.3=1.3。Assail 每次成本 3 點資源、基礎恢復率 1 點/秒；共用 PlayerUnitAbilityExtension 按 (base regen + flat regen) × regen modifier 更新資源，因此單次恢復時間是 3÷(1×1.3)=2.3077 秒，較 3 秒基準少約 23.08%。格式參數 speed/stacks/duration 另指向 psyker_throwing_knife_stacking_speed_buff；雖然原始碼保留一個 on_shoot_projectile proc template 及其 8 秒、5 層、每層 5% 的數值，但此天賦只掛載 resource regen buff，該 proc template 沒有從當前技能節點接入，不是 Quick Shards 的實際效果。
+- 固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。psyker_throwing_knives_cast_speed 的 passive 只連到 psyker_reduced_throwing_knife_cooldown；該常駐 buff 將 grenade_ability_resource_regen_modifier 設為 0.3，且該 stat 是 additive_multiplier，所以總倍率為 1+0.3=1.3。Assail 每次成本 3 點資源、基礎恢復率 1 點/秒；共用 PlayerUnitAbilityExtension 按 (base regen + flat regen) × regen modifier 更新資源，因此單次恢復時間是 3÷(1×1.3)=2.3077 秒，較 3 秒基準少約 23.08%。格式參數 speed/stacks/duration 另指向 psyker_throwing_knife_stacking_speed_buff；雖然原始碼保留一個 on_shoot_projectile proc template 及其 8 秒、5 層、每層 5% 的數值，但此天賦只掛載 resource regen buff，該 proc template 沒有從目前技能節點接入，不是 Quick Shards 的實際效果。
 
 ## 原始碼依據
 

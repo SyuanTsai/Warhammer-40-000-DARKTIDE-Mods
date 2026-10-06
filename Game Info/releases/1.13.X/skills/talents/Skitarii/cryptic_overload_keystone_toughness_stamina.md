@@ -1,5 +1,7 @@
 # 振奮過載(Invigorating Overload)：原始碼依據
 
+[English](en/cryptic_overload_keystone_toughness_stamina.md)
+
 [返回玩家說明](README.md#cryptic_overload_keystone_toughness_stamina)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_overload_keystone_toughness_stamina)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 算例條件與待確認事項
 
 - 靜態推演：若最大韌性100、最大耐力50且兩者都至少缺20與10點，單次超載恢復20點韌性及10點耐力；若只缺12點韌性，最多只補12點。
-- 百分比以各自最大值為基準，不是以當前值為基準；已滿資源不會溢出上限。
+- 百分比以各自最大值為基準，不是以目前值為基準；已滿資源不會溢出上限。
 - 韌性恢復會受其他韌性補充修正和阻擋條件影響；耐力最大值可能因武器或其他加成改變。
 - 以上為固定版程式碼的靜態推演，未在遊戲內實測。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

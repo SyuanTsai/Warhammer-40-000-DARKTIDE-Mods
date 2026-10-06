@@ -1,5 +1,7 @@
 # 走一走治百病(Walk It Off)：原始碼依據
 
+[English](en/adamant_stamina_spent_replenish_toughness.md)
+
 [返回玩家說明](README.md#adamant_stamina_spent_replenish_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_stamina_spent_replenish_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 原文核對
 
 - 對應 hash：`5bfeac39`。
-- 繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；刷新不疊速是原文未寫的機制。
+- 繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；重新計時不疊速是原文未寫的機制。
 
 ## 圖示來源
 

@@ -1,5 +1,7 @@
 # 針鋒相對(Targeted Brutality)：原始碼依據
 
+[English](en/adamant_charge_cooldown_reduction.md)
+
 [返回玩家說明](README.md#adamant_charge_cooldown_reduction)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_charge_cooldown_reduction)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 
 - 6 次一般命中×0.5 秒 + 3 次高階目標命中×1 秒=6 秒；受 5 秒上限限制，最多返還 5 秒。
 - 計算只取衝鋒造成的有效命中，並在衝鋒結束時一次返還；單次返還上限固定為 5 秒。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

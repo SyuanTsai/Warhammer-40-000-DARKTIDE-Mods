@@ -1,5 +1,7 @@
 # 趁火打劫(Exploit Weakness)：原始碼依據
 
+[English](en/veteran_crits_apply_rending.md)
+
 [返回玩家說明](README.md#veteran_crits_apply_rending)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-關鍵不一致：天賦 veteran_crits_apply_rending 指向 veteran_melee_crits_increase_damage，後者在近戰暴擊時給使用者 damage = 0.20、持續 6 秒；另一個名為 veteran_crits_apply_rending 的 buff 確實會給命中敵人施加 rending_debuff_medium，但本天賦沒有引用它。主文依實際 talent→buff 連結記錄 +20% 傷害，不把名稱當機制證據。[天賦引用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1102-L1135) → [實際引用 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L781-L798)；[未被該天賦引用的撕裂 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2567-L2589)。
+關鍵不一致：天賦 veteran_crits_apply_rending 指向 veteran_melee_crits_increase_damage，後者在近戰爆擊時給使用者 damage = 0.20、持續 6 秒；另一個名為 veteran_crits_apply_rending 的 buff 確實會給命中敵人施加 rending_debuff_medium，但本天賦沒有引用它。主文依實際 talent→buff 連結記錄 +20% 傷害，不把名稱當機制證據。[天賦引用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1102-L1135) → [實際引用 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L781-L798)；[未被該天賦引用的撕裂 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2567-L2589)。
 
 ## 原始碼依據
 

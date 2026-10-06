@@ -1,5 +1,7 @@
 # 亞空間加速(Warp Speed)：原始碼依據
 
+[English](en/psyker_overcharge_increased_movement_speed.md)
+
 [返回玩家說明](README.md#psyker_overcharge_increased_movement_speed)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_overcharge_increased_movement_speed)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -23,7 +25,7 @@
 
 - 無其他加成，5 × (1 + 20%) = 6 公尺／秒。
 - 程式碼證明的是 movement_speed stat 欄位；角色最後位移速度仍可能同時受其它移速來源/上限影響。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

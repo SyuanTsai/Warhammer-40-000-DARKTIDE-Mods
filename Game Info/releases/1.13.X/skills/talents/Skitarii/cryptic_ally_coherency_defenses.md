@@ -1,5 +1,7 @@
 # 數據感應協定(Data Sensor Protocol)：原始碼依據
 
+[English](en/cryptic_ally_coherency_defenses.md)
+
 [返回玩家說明](README.md#cryptic_ally_coherency_defenses)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_ally_coherency_defenses)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -33,7 +35,7 @@
 ## 原文核對
 
 - 對應 hash：`307b308a`。
-- 繁中把they翻成盟友，省掉自己作為受益者，並易誤讀為傷害後讓其他隊友恢復。實際回復給受傷者本人。
+- 繁中把they翻成盟友，省掉自己作為受益者，並易誤讀為傷害後讓其他隊友恢復。實際恢復給受傷者本人。
 
 ## 圖示來源
 

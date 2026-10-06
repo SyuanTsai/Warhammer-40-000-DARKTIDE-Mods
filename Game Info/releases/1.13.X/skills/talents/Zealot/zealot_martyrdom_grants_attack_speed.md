@@ -1,5 +1,7 @@
 # 狂燥之心(Maniac)：原始碼依據
 
+[English](en/zealot_martyrdom_grants_attack_speed.md)
+
 [返回玩家說明](README.md#zealot_martyrdom_grants_attack_speed)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_martyrdom_grants_attack_speed)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 
 - **速度算例**：3 層增加 3 × 6% = 18% 近戰攻速，受影響的 1 秒動作變成 1 ÷ 1.18 ≈ 0.847 秒；5 層為 1 ÷ 1.3 ≈ 0.769 秒。其他同階段攻速先相加。
 - 示例未計入其他攻擊速度修正及最終動作速度計算。
-- 失去的傷口格數依當前最大生命與最大傷口數計算；不代表每缺固定百分比血量增加一層。
+- 失去的傷口格數依目前最大生命與最大傷口數計算；不代表每缺固定百分比血量增加一層。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

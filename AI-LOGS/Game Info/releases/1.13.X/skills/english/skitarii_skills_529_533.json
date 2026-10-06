@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_529_533",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L1881-L1886, L1825-L1834, L2526-L2536, L2456-L2469, L2208-L2214. Minimal percentage formatter L379-L403 in talent_layout_parser.lua resolves value_manipulation without an extra x100. Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "No explicit English contradiction or new unresolved question. Immunity scope, recovery basis/refresh, dynamic Stamina threshold, separate Spread condition and windup limits are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_stun_suppression_immune",
+      "name": "Target-Neutralization Feedback",
+      "name_hash": "d14ec87d",
+      "description_hash": "38272d6c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_stun_suppression_immune.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_stun_suppression_immune.md",
+      "commit": "346027f74"
+    },
+    {
+      "id": "cryptic_elite_kills_toughness",
+      "name": "Binary Ballistics Protocol",
+      "name_hash": "73cdec4e",
+      "description_hash": "46309d46",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_elite_kills_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_elite_kills_toughness.md",
+      "commit": "70f4f3d08"
+    },
+    {
+      "id": "cryptic_push_stagger_stamina",
+      "name": "Force Distribution Actuators",
+      "name_hash": "ec311974",
+      "description_hash": "19866afe",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_push_stagger_stamina.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_push_stagger_stamina.md",
+      "commit": "92d837732"
+    },
+    {
+      "id": "cryptic_no_braced_movement_penalty",
+      "name": "Superior Tracking Litanies",
+      "name_hash": "15be39ae",
+      "description_hash": "f793a029",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_no_braced_movement_penalty.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_no_braced_movement_penalty.md",
+      "commit": "3e9666072"
+    },
+    {
+      "id": "cryptic_better_heavies",
+      "name": "Hydraulic Impact",
+      "name_hash": "245222e1",
+      "description_hash": "668011b5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_better_heavies.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_better_heavies.md",
+      "commit": "917e52002"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 523,
+    "from_commit": "bec66a6a1",
+    "to_commit": "917e52002",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

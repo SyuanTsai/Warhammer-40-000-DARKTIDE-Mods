@@ -1,5 +1,7 @@
 # 死亡禱文(Invocation of Death)：原始碼依據
 
+[English](en/zealot_crits_grant_cd.md)
+
 [返回玩家說明](README.md#zealot_crits_grant_cd)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_crits_grant_cd)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,9 +31,9 @@
 ## 算例條件與待確認事項
 
 - **冷卻算例**：每秒額外恢復相當於 1 秒基礎冷卻的進度。單次完整效果通常在約第 1、2、3 秒各恢復一次，共額外 3 秒；自然回充正常時，這 3 秒合計約推進 6 秒冷卻。
-- 每次命中的暴擊機率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
+- 每次命中的爆擊率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
 - buff 內部為 3.25 秒，但格式 num_decimals=0，不能只依介面整數顯示推出執行長度正好 3 秒。
-- 相同 buff 重複添加會刷新 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
+- 相同 buff 重複添加會重新計時 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

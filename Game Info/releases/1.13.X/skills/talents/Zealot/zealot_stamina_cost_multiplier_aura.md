@@ -1,5 +1,7 @@
 # 熱忱(Zealous)：原始碼依據
 
+[English](en/zealot_stamina_cost_multiplier_aura.md)
+
 [返回玩家說明](README.md#zealot_stamina_cost_multiplier_aura)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_stamina_cost_multiplier_aura)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -14,7 +16,7 @@
 - 協同 selector 以 coherency_id 對光環去重且優先數字小者；此 aura 的 ID 是 zealot_stamina_cost_multiplier_aura、priority=1。coherency daisy chain 包括自身。
 - 模板 related_talents 指向 zealot_toughness_damage_reduction_coherency_improved。Tactical overlay 同時以 buff_template_name 或 related_talents 名稱比對 talent，採用第一個匹配即停止；若先迭代到恩賜定義，overlay 可能顯示錯誤標題或描述。這是顯示 metadata 疑點，不改變此 template 的耐力 stat buffs。
 - 接收端若帶有 prevent_coherency_buffs_from_other_players keyword，通用 coherency selector 只採用同一位玩家來源的 aura；這是接收端例外，本次三個 Zealot aura 定義沒有賦予該 keyword。
-- Stamina.drain 與 drain_pecentage 均將消耗乘 stamina_cost_multiplier；Stamina.update 把 regeneration_delay 與 stat 加算，通過等待時間後才依每秒速率回復。
+- Stamina.drain 與 drain_pecentage 均將消耗乘 stamina_cost_multiplier；Stamina.update 把 regeneration_delay 與 stat 加算，通過等待時間後才依每秒速率恢復。
 - tactical_overlay 的 buff lookup 會以 buff 名或 related_talents 比對；此處 related_talents 指向恩賜，因此可能造成顯示對應疑點。未做 UI 實測，不將其視為光環效果錯誤。
 
 ## 原始碼依據
@@ -35,7 +37,7 @@
 
 - 消耗 20 點耐力的動作只套用倍率 0.85 時會消耗 17 點；此為倍率的隔離算例。
 - 若某動作原恢復延遲為 0.50 秒，單獨加上 −0.15 秒修正後是 0.35 秒。
-- 耐力算例未計其他裝備或天賦；恢復暫停狀態仍可阻止回復。
+- 耐力算例未計其他裝備或天賦；恢復暫停狀態仍可阻止恢復。
 - related_talents 的對應疑點只記錄於技術文件，不當作已確認的玩家端錯誤。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

@@ -1,5 +1,7 @@
 # 行軍之志(March)：原始碼依據
 
+[English](en/adamant_movement_speed_on_block.md)
+
 [返回玩家說明](README.md#adamant_movement_speed_on_block)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_movement_speed_on_block)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 雖talent ID叫on_block，實際on_hit使用on_ranged_hit，proc_stat_buffs.movement_speed=.15，duration3。無cooldown，ProcBuff._can_activate在無cooldown情況回true，可刷新。
+- 雖talent ID叫on_block，實際on_hit使用on_ranged_hit，proc_stat_buffs.movement_speed=.15，duration3。無cooldown，ProcBuff._can_activate在無cooldown情況回true，可重新計時。
 
 ## 原始碼依據
 

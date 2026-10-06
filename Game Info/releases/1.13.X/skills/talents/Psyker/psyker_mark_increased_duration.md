@@ -1,5 +1,7 @@
 # 持久影響(Lingering Influence)：原始碼依據
 
+[English](en/psyker_mark_increased_duration.md)
+
 [返回玩家說明](README.md#psyker_mark_increased_duration)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_mark_increased_duration)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **時間算例**：原有 3 層且之後都沒有刷新，會在約 10、20、30 秒依序減至 2、1、0 層；原本約需 5 × 3 = 15 秒，現在約需 10 × 3 = 30 秒。
+- **時間算例**：原有 3 層且之後都沒有重新計時，會在約 10、20、30 秒依序減至 2、1、0 層；原本約需 5 × 3 = 15 秒，現在約需 10 × 3 = 30 秒。
 - 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.1。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

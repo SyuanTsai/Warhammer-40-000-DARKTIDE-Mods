@@ -1,5 +1,7 @@
 # 熵能轉移(Entropic Transfer)：原始碼依據
 
+[English](en/cryptic_electrocution_toughness.md)
+
 [返回玩家說明](README.md#cryptic_electrocution_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_electrocution_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 ## 原文核對
 
 - 對應 hash：`f4493647`。
-- 中英條件一致；新增與刷新電擊、持續恢復速率為補充。
+- 中英條件一致；新增電擊與重設其持續時間、持續恢復速率為補充。
 
 ## 圖示來源
 

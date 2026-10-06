@@ -1,5 +1,7 @@
 # 自掏腰包(Out of Pocket)：原始碼依據
 
+[English](en/zealot_reload_from_melee.md)
+
 [返回玩家說明](README.md#zealot_reload_from_melee)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_reload_from_melee)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_melee_kill後missing_ammo_in_clips*.1加入ammo_pool，floor後transfer_from_reserve_to_clip，扣掉floor數量而非實際移入數，因此備彈不足時不保留未轉入整數額度。Ammo共用free_ammunition_transfer或infinite_ammo模式是例外，不適用一般有限備彈算例。
+- on_melee_kill後missing_ammo_in_clips*.1加入ammo_pool，floor後transfer_from_reserve_to_clip，扣掉floor數量而非實際移入數，因此備用彈藥不足時不保留未轉入整數額度。Ammo共用free_ammunition_transfer或infinite_ammo模式是例外，不適用一般有限備用彈藥算例。
 - 同hash英文明確from your Reserve，繁中卻寫恢復缺失彈藥儲備，顛倒移入方向，屬明確譯義錯誤。
 
 ## 原始碼依據
@@ -23,13 +25,13 @@
 
 ## 算例條件與待確認事項
 
-- **裝填算例**：彈匣上限 30、目前 10 發，缺少 20 發，擊殺後從備彈移入 20 × 10% = 2 發，變成 12 發。下次缺 18 發，計入 1.8 發，本次移入 1 發，剩下的 0.8 累積到後續擊殺。
+- **裝填算例**：彈匣上限 30、目前 10 發，缺少 20 發，擊殺後從備用彈藥移入 20 × 10% = 2 發，變成 12 發。下次缺 18 發，計入 1.8 發，本次移入 1 發，剩下的 0.8 累積到後續擊殺。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`730a8c75`。
-- 同源英文from your Reserve表明備彈是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備彈移入彈匣。
+- 同源英文from your Reserve表明備用彈藥是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備用彈藥移入彈匣。
 
 ## 圖示來源
 

@@ -1,5 +1,7 @@
 # 穩定握持(Steady Grip)：原始碼依據
 
+[English](en/ogryn_toughness_while_bracing.md)
+
 [返回玩家說明](README.md#ogryn_toughness_while_bracing)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_toughness_while_bracing)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- server每dt Toughness.replenish_percentage(.125×dt)；braced或shooting/end+.5。is_wielded只用HUD的is_active，server回復分支沒有該檢查，短暫切武器狀態殘留待實測。
+- server每dt Toughness.replenish_percentage(.125×dt)；braced或shooting/end+.5。is_wielded只用HUD的is_active，server恢復分支沒有該檢查，短暫切武器狀態殘留待實測。
 
 ## 原始碼依據
 
@@ -21,8 +23,8 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：最大韌性 200 時，每秒基礎恢復 200 × 12.5% = 25 點；持續 2 秒共 50 點。韌性恢復加成可再修正回復量，且不會超過缺少的韌性。
-- 切武器時alternate_fire/shooting狀態清理時序未做遊戲實測，不宣稱切換後必定立即停止回復。
+- **恢復算例**：最大韌性 200 時，每秒基礎恢復 200 × 12.5% = 25 點；持續 2 秒共 50 點。韌性恢復加成可再修正恢復量，且不會超過缺少的韌性。
+- 切武器時alternate_fire/shooting狀態清理時序未做遊戲實測，不宣稱切換後必定立即停止恢復。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

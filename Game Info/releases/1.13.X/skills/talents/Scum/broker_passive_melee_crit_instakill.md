@@ -1,5 +1,7 @@
 # 心狠手辣(Hyper-Critical)：原始碼依據
 
+[English](en/broker_passive_melee_crit_instakill.md)
+
 [返回玩家說明](README.md#broker_passive_melee_crit_instakill)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_melee_crit_instakill)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **生命門檻算例**：敵人原有 190 點生命，這次爆擊造成 100，命中後剩 90；90 < 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
+- **生命門檻算例**：敵人原有 190 點生命，這次暴擊造成 100，命中後剩 90；90 < 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
 - 額外傷害、同幀多次命中及生命縮放可能影響事件讀取值；算例是假設單一命中且傷害一致。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

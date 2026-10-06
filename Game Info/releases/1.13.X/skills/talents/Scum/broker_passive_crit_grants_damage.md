@@ -1,5 +1,7 @@
 # 蓄力殲滅(Channelled Devastation)：原始碼依據
 
+[English](en/broker_passive_crit_grants_damage.md)
+
 [返回玩家說明](README.md#broker_passive_crit_grants_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_crit_grants_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,13 +23,13 @@
 
 ## 算例條件與待確認事項
 
-- **傷害算例**：爆擊機率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
+- **傷害算例**：爆擊率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`ef095720`。
-- 兩語均依當前爆擊機率產生近戰增傷，未見矛盾。
+- 兩語均依目前爆擊率產生近戰增傷，未見矛盾。
 
 ## 圖示來源
 

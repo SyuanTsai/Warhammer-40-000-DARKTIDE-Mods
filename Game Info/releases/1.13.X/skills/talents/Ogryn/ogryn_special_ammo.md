@@ -1,5 +1,7 @@
 # 貼身火力(Point-Blank Barrage)：原始碼依據
 
+[English](en/ogryn_special_ammo.md)
+
 [返回玩家說明](README.md#ogryn_special_ammo)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_special_ammo)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 能力 action 設定 auto_wield_slot=slot_secondary、reload_secondary=true；ActionStanceChange 先查彈匣缺彈量，再從備彈轉移，完成後送出換彈事件。備彈不足時只有持有 ogryn_free_reload_after_ability 才會啟用免費轉移。
+- 能力 action 設定 auto_wield_slot=slot_secondary、reload_secondary=true；ActionStanceChange 先查彈匣缺彈量，再從備用彈藥轉移，完成後送出換彈事件。備用彈藥不足時只有持有 ogryn_free_reload_after_ability 才會啟用免費轉移。
 - 姿態 buff 持續12秒，stat_buffs.ranged_attack_speed=0.25、reload_speed=0.65；射速與換彈速度是速率乘數，因此時間分別除以1.25與1.65。抵肩移動懲罰及近距離傷害由啟動時加入的 no_movement_penalty buff 寫入。
 - on_ammo_consumed 事件累加 params.ammo_usage + (params.saved_ammo or 0)；停止時以 ammo_spent×0.5 計算返還，交給 Ammo.add_to_all_slots_flat。免費射擊的 saved_ammo 因而也進入返還基數。
 - combat ability settings 為 duration=12、cooldown=60、max_charges=1、ammo_return=0.5。
@@ -34,13 +36,13 @@
 ## 算例條件與待確認事項
 
 - 換彈時間例子以單純1.65倍換彈速度計算；動畫、武器裝填流程和其他屬性可能改變實際耗時。
-- 返還量來自事件累計並加到武器彈藥槽；可用備彈上限可能使實際增加量低於計算值。
+- 返還量來自事件累計並加到武器彈藥槽；可用備用彈藥上限可能使實際增加量低於計算值。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`826d5678`。
-- 繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

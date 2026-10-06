@@ -1,5 +1,7 @@
 # 敵人越大...(The Bigger they Are ...)：原始碼依據
 
+[English](en/veteran_combat_ability_ogryn_outlines.md)
+
 [返回玩家說明](README.md#veteran_combat_ability_ogryn_outlines)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -12,7 +14,7 @@
 - special_rule=ogryn_outlines 使 ActionVeteranCombatAbility 選用 stance_master_increased_duration；模板複製原master後 duration=9，輪廓也改用9秒版本。
 - _can_show_outline 接受 breed.tags.ogryn、monster、captain、cultist_captain；建立輪廓候選時，非special要求距離平方 <50²，special豁免。master的擊殺延長只檢查這個敵人類型判定，不要求實際輪廓已顯示或擊殺距離小於50公尺。
 - 模板的同名 damage_vs_ogryn_and_monsters 被動雖有啟動檢查，但 conditional_stat_buffs={}；設定與格式中保留的 .25 不會經這份空表套到角色。因此本技能的執行效果不額外提供25%對歐格林／怪物傷害。
-- 刷新是重回9秒，不是把9秒加到剩餘時間。t=7擊殺→到期t=16。
+- 重新計時是重回9秒，不是把9秒加到剩餘時間。t=7擊殺→到期t=16。
 
 ## 原始碼依據
 

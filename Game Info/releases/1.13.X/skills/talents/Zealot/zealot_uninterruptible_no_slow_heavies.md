@@ -1,5 +1,7 @@
 # 不屈之志(Unfaltering)：原始碼依據
 
+[English](en/zealot_uninterruptible_no_slow_heavies.md)
+
 [返回玩家說明](README.md#zealot_uninterruptible_no_slow_heavies)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_uninterruptible_no_slow_heavies)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前action.kind==windup才通過conditional_stat_buffs_func，conditional_keywords沿用此條件；給uninterruptible、stun_immune，weapon_action_movespeed_reduction_multiplier=0。動作移速公式先取1−movement_mod，再乘reduction_multiplier，所以只清除此動作的減速。
+- 目前action.kind==windup才通過conditional_stat_buffs_func，conditional_keywords沿用此條件；給uninterruptible、stun_immune，weapon_action_movespeed_reduction_multiplier=0。動作移速公式先取1−movement_mod，再乘reduction_multiplier，所以只清除此動作的減速。
 
 ## 原始碼依據
 

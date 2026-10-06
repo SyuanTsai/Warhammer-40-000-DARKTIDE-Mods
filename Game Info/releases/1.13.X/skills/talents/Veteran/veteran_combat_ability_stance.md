@@ -1,5 +1,7 @@
 # 火力齊射(Volley Fire)：原始碼依據
 
+[English](en/veteran_combat_ability_stance.md)
+
 [返回玩家說明](README.md#veteran_combat_ability_stance)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -33,7 +35,7 @@
 ## 百分比與實際傷害增幅
 
 - **程式推導**：ranged_damage=.15 與 ranged_weakspot_damage=.15 作用位置不同；一般傷害先結算，再計算並加回 finesse。不可把兩項合成「整筆弱點傷害+30%」，也不能只用1.15代表能力總增幅。
-- 玩家弱點例只隔離 ranged_weakspot_damage 這一項：保持上游條件與 B=100、F=40 不變、無爆擊或其他 finesse 加成，140→146，相對增幅6/140≈4.29%。它不是施放前後的完整對照；完整對照須重算 ranged_damage 對 B 及 F 的影響，包括 finesse 的 max 與下限分支。
+- 玩家弱點例只隔離 ranged_weakspot_damage 這一項：保持上游條件與 B=100、F=40 不變、無暴擊或其他 finesse 加成，140→146，相對增幅6/140≈4.29%。它不是施放前後的完整對照；完整對照須重算 ranged_damage 對 B 及 F 的影響，包括 finesse 的 max 與下限分支。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 296–323 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L323)
 - [scripts/utilities/attack/damage_calculation.lua，第 60–95 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L60-L95)

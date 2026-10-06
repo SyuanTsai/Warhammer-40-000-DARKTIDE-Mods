@@ -1,5 +1,7 @@
 # 振奮朗誦(Inspiring Recitation)：原始碼依據
 
+[English](en/adamant_drone_buff_talent.md)
+
 [返回玩家說明](README.md#adamant_drone_buff_talent)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_drone_buff_talent)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -31,7 +33,7 @@
 
 - 基準韌性傷害 100×0.7=70，表示減少 30%；未計入其他韌性減傷。
 - 此升級需盟友正受到傳令機區域效果影響；離開半徑後額外增益移除。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

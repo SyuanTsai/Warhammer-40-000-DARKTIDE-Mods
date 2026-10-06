@@ -1,5 +1,7 @@
 # 精準思算機同步(Sureshot Cogitator Sync)：原始碼依據
 
+[English](en/cryptic_weakspot_damage.md)
+
 [返回玩家說明](README.md#cryptic_weakspot_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_weakspot_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - weakspot_damage=0.25僅在hit_weakspot加入finesse multiplier；總值B+F*(1+s+0.25)。相對增幅0.25F/[B+F*(1+s)]。
-- F由傷害模板、護甲別finesse boost、boost curve、爆擊與部位條件決定；不能用頭傷減身體傷直接反推F。
+- F由傷害模板、護甲別finesse boost、boost curve、暴擊與部位條件決定；不能用頭傷減身體傷直接反推F。
 
 ## 原始碼依據
 
@@ -25,7 +27,7 @@
 ## 算例條件與待確認事項
 
 - **傷害算例**：同一攻擊的基礎部分為 100、弱點額外部分為 100 時，原傷害 200 → 100 + 100 × 1.25 = 225，整筆增加 12.5%。若額外部分為 200，則 300 → 100 + 200 × 1.25 = 350，增加約 16.67%。
-- 算例固定未爆擊、後續倍率為1；數值不代表指定武器實測。
+- 算例固定未暴擊、後續倍率為1；數值不代表指定武器實測。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

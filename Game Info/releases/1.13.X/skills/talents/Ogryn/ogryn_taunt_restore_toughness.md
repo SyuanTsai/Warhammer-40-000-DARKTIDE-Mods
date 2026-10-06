@@ -1,5 +1,7 @@
 # 一點都不痛！(No Pain!)：原始碼依據
 
+[English](en/ogryn_taunt_restore_toughness.md)
+
 [返回玩家說明](README.md#ogryn_taunt_restore_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_taunt_restore_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 
 - talent_settings_shared.ogryn_taunt_restore_toughness 設定duration=3.25、instant_toughness=0.1、max_stacks=20、toughness_per_hit=0.005。
 - ActionOgrynShout 執行 shout 後不論 num_hits 是否為0都送出 on_ogryn_shout 事件。被動每次事件先呼叫 replenish_percentage(...,0.1)，再把 min(num_hits,20) 層加入 over_time buff。
-- over_time buff 的 update_func 以 stack_count×0.005×dt 持續回復最大韌性百分比；疊層時 refresh_duration_on_stack=true，最多20層。Repeat taunt 的兩次 pulse 經同一 shout 流程觸發。
+- over_time buff 的 update_func 以 stack_count×0.005×dt 持續恢復最大韌性百分比；疊層時 refresh_duration_on_stack=true，最多20層。Repeat taunt 的兩次 pulse 經同一 shout 流程觸發。
 
 ## 原始碼依據
 
@@ -27,9 +29,9 @@
 ## 算例條件與待確認事項
 
 - **分段算例**：最大韌性 100，三次嘲諷各影響 4 名敵人，立即恢復合計 100 × 10% × 3 = 30 點；持續恢復層數依序為 4、8、12，每秒恢復 2、4、6 點。
-- **總量算例**：忽略更新誤差、期間一直有足夠缺額且沒有其他恢復加成時，前 3 秒回復 2 × 3 = 6 點、接著 3 秒回復 4 × 3 = 12 點、最後 3.25 秒回復 6 × 3.25 = 19.5 點；加上立即恢復共 67.5 點。實際仍受每個時間點的韌性缺額限制。
-- 每次脈衝提供的敵人層數以20層為上限；實際回復不會超過當前韌性缺口。
-- 更新函式連續按時間回復，不是只在整秒瞬間跳一次。
+- **總量算例**：忽略更新誤差、期間一直有足夠缺額且沒有其他恢復加成時，前 3 秒恢復 2 × 3 = 6 點、接著 3 秒恢復 4 × 3 = 12 點、最後 3.25 秒恢復 6 × 3.25 = 19.5 點；加上立即恢復共 67.5 點。實際仍受每個時間點的韌性缺額限制。
+- 每次脈衝提供的敵人層數以20層為上限；實際恢復不會超過目前韌性缺口。
+- 更新函式連續按時間恢復，不是只在整秒瞬間跳一次。
 - format_values.duration寫3，buff實際3.25秒；列為顯示值與實作的差異，版本對應為1.13.1前不當繁中誤譯。分段總量67.5點忽略固定更新邊界與自然恢復。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

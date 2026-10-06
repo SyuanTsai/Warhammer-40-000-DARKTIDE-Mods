@@ -1,0 +1,74 @@
+{
+  "id": "psyker_skills_333_337",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum display mappings only: scripts/settings/ability/archetype_talents/talents/psyker_talents.lua L2269–2275, L2302–2319, L2330–2363, L2653–2666 and L2751–2757.",
+    "Existing verified values and shared formatter behavior reused; no mechanism or event-chain retracing."
+  ],
+  "questions": [
+    "Souldrinker: 'Killing an Enemy with Soulblaze' is ambiguous about the killing blow. Recorded Cannot confirm; the verified death-marker/fallback behavior is retained, without an English erratum."
+  ],
+  "skills": [
+    {
+      "id": "psyker_cleave_from_peril",
+      "name": "Warp Splitting",
+      "name_hash": "ef20acce",
+      "description_hash": "5de5fc01",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_cleave_from_peril.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_cleave_from_peril.md",
+      "commit": "8484460ca"
+    },
+    {
+      "id": "psyker_killing_enemy_with_warpfire_boosts",
+      "name": "Souldrinker",
+      "name_hash": "fce15218",
+      "description_hash": "3db8d226",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_killing_enemy_with_warpfire_boosts.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_killing_enemy_with_warpfire_boosts.md",
+      "commit": "7660dccb3"
+    },
+    {
+      "id": "psyker_melee_weaving",
+      "name": "By Crack of Bone",
+      "name_hash": "09e1a8bc",
+      "description_hash": "9a0cbda1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_melee_weaving.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_melee_weaving.md",
+      "commit": "3e13aa17e"
+    },
+    {
+      "id": "psyker_damage_vs_ogryns_and_monsters",
+      "name": "Vulnerable Minds",
+      "name_hash": "7b6a6e65",
+      "description_hash": "454bae2f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_damage_vs_ogryns_and_monsters.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_damage_vs_ogryns_and_monsters.md",
+      "commit": "5ffbe6cc2"
+    },
+    {
+      "id": "psyker_increased_warp_damage",
+      "name": "Focused Warp",
+      "name_hash": "32fd96aa",
+      "description_hash": "f4703bae",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_warp_damage.md",
+      "commit": "d87f68956"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 208,
+    "from_commit": "16f9a00a3",
+    "to_commit": "d87f68956",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

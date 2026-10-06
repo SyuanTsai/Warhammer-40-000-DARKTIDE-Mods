@@ -1,17 +1,20 @@
-local mod = get_mod("uptime")
+-- File: uptime\scripts\mods\uptime\libs\ui.lua
+local mod = get_mod("uptime"); if not mod then return end
 local UIFonts = mod:original_require("scripts/managers/ui/ui_fonts")
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local TextUtilities = mod:original_require("scripts/utilities/ui/text")
 
 function get_text_height(ui_renderer, text, text_style, optional_text_size)
     local text_options = UIFonts.get_font_options_by_style(text_style)
-    local text_height = UIRenderer.text_height(ui_renderer, text, text_style.font_type, text_style.font_size, optional_text_size or text_style.size, text_options)
+    local text_height = UIRenderer.text_height(ui_renderer, text, text_style.font_type, text_style.font_size,
+        optional_text_size or text_style.size, text_options)
     return text_height
 end
 
 function get_text_width(ui_renderer, text, text_style, optional_text_size)
     local text_options = UIFonts.get_font_options_by_style(text_style)
-    local text_width = UIRenderer.text_width(ui_renderer, text, text_style.font_type, text_style.font_size, optional_text_size or text_style.size, text_options)
+    local text_width = UIRenderer.text_width(ui_renderer, text, text_style.font_type, text_style.font_size,
+        optional_text_size or text_style.size, text_options)
     return text_width
 end
 

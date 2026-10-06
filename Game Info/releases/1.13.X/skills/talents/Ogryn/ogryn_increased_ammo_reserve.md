@@ -1,5 +1,7 @@
 # 彈藥儲存包(Ammo Stash)：原始碼依據
 
+[English](en/ogryn_increased_ammo_reserve.md)
+
 [返回玩家說明](README.md#ogryn_increased_ammo_reserve)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_increased_ammo_reserve)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **容量算例**：原備彈上限 200，變成 200 × (1 + 25%) = 250 發；若原上限 101，則 101 × 1.25 = 126.25，無條件捨去小數後為 126 發。
+- **容量算例**：原備用彈藥上限 200，變成 200 × (1 + 25%) = 250 發；若原上限 101，則 101 × 1.25 = 126.25，無條件捨去小數後為 126 發。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

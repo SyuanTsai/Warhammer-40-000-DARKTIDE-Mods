@@ -1,5 +1,7 @@
 # 強化能量循環(Augmented Power-Cycle)：原始碼依據
 
+[English](en/cryptic_increased_passive_cooldown_regen.md)
+
 [返回玩家說明](README.md#cryptic_increased_passive_cooldown_regen)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_increased_passive_cooldown_regen)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,9 +11,9 @@
 
 ## 原始碼確認與程式推導
 
-- 天賦設定 cooldown_percent_regen_per_second=0.01；模板將其換算為 combat_ability_resource_regen_modifier 的 +0.5：基準冷卻50秒 ÷ (1 / 0.01) = 0.5。此 stat buff 是 additive multiplier，故預設修正1變為1.5，並乘上基礎電容量回復率。
-- 護教軍電能發射器每道成本50、最多3道、基礎回復1資源點/秒；資源池容量由 max_charges × cost_per_charge 得150。加成後以1.5點/秒回復，資源仍以小數累進，但可用完整道數按 floor(資源 / 50) 計算。
-- 這個回復倍率套用於當前戰鬥能力資源。精準姿態設有啟動期間每秒1點的持續成本，所以同時選取本天賦時，僅就此持續成本而言淨回復為每秒0.5點；姿態本身的啟動與射擊耗電仍另計。
+- 天賦設定 cooldown_percent_regen_per_second=0.01；模板將其換算為 combat_ability_resource_regen_modifier 的 +0.5：基準冷卻50秒 ÷ (1 / 0.01) = 0.5。此 stat buff 是 additive multiplier，故預設修正1變為1.5，並乘上基礎電容量恢復率。
+- 護教軍電能發射器每道成本50、最多3道、基礎恢復1資源點/秒；資源池容量由 max_charges × cost_per_charge 得150。加成後以1.5點/秒恢復，資源仍以小數累進，但可用完整道數按 floor(資源 / 50) 計算。
+- 這個恢復倍率套用於目前戰鬥技能資源。精準姿態設有啟動期間每秒1點的持續成本，所以同時選取本天賦時，僅就此持續成本而言淨恢復為每秒0.5點；姿態本身的啟動與射擊耗電仍另計。
 
 ## 原始碼依據
 
@@ -29,9 +31,9 @@
 ## 算例條件與待確認事項
 
 - **時間算例**：沒有其他加成或持續消耗時，一份從空補滿需 100% ÷ 3% ≈ 33.33 秒，三份全空補滿需 300% ÷ 3% = 100 秒。
-- 1%是以單道50點成本換算的額外回復速率，不是每秒補滿整個三道資源池的1%。
-- 例算假設戰鬥能力未啟動、沒有暫停回復或其他回復倍率／持續消耗；實際回復會由能力目前狀態共同決定。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 1%是以單道50點成本換算的額外恢復速率，不是每秒補滿整個三道資源池的1%。
+- 例算假設戰鬥技能未啟動、沒有暫停恢復或其他恢復倍率／持續消耗；實際恢復會由能力目前狀態共同決定。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

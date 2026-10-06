@@ -1,0 +1,157 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; no repeated full implementation analysis.",
+  "id": "veteran_invisibility_on_combat_ability",
+  "class": "Veteran",
+  "name": "Infiltrate",
+  "date": "2026-10-03",
+  "status": "accepted_with_caveats",
+  "name_key": "loc_talent_veteran_invisibility_on_combat_ability",
+  "name_hash": "9776b86d",
+  "description_key": "loc_talent_veteran_invisibility_on_combat_ability_damage_desc",
+  "description_hash": "957cbfa6",
+  "raw_template": "Replenish all Toughness and enter Stealth for {duration:%s}s, gaining {movement_speed:%s} Movement Speed. Leaving Stealth Suppresses nearby Enemies. While in Stealth, and for {damage_duration:%s}s afterwards, you have {damage:%s} Damage. Attacking makes you leave Stealth.\n\nBase Cooldown: {cooldown:%s}s.",
+  "static_reconstruction": "Replenish all Toughness and enter Stealth for 8s, gaining +25% Movement Speed. Leaving Stealth Suppresses nearby Enemies. While in Stealth, and for 8s afterwards, you have +30% Damage. Attacking makes you leave Stealth.\n\nBase Cooldown: 40s.",
+  "comparison_rule_totals": {
+    "Consistent": 6,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name/actual description key records and full two-paragraph template",
+    "Existing accepted Overwatch ability-resource evidence",
+    "veteran_talents.lua:2032-2093 (targeted display parameter confirmation)",
+    "talent_layout_parser.lua:379-426,482-499,613-651 (targeted custom percentage-manipulation ambiguity)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese Infiltrate dossier for Stealth lifecycle, exit guards, radius/stagger/suppression and single-use examples; accepted Overwatch evidence for resource timing. No full Stealth call-chain analysis repeated.",
+  "targeted_display_resolution": "The percentage formatter uses value_manipulation instead of its default ×100 conversion; abs(0.3)×100 is formatted as +30%, without double multiplication.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, two actual key/hash/text pairs and full two-paragraph template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "six defined display parameters including unused talent_name; custom percentage reconstruction",
+      "result": "passed",
+      "duration_seconds": 8,
+      "movement_speed_percent": 25,
+      "damage_duration_seconds": 8,
+      "damage_percent": 30,
+      "base_cooldown_seconds": 40
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 481,
+      "unique_source_ranges": 134,
+      "source_files": 32
+    },
+    {
+      "check": "single-use Toughness/damage/exit-time/cooldown arithmetic with explicit assumptions",
+      "result": "passed",
+      "toughness_recovered_points": 70,
+      "damage_units": 130,
+      "bonus_end_seconds": 11,
+      "remaining_cooldown_seconds": 29
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 713,
+      "local_references": 6533,
+      "remote_references": 9363,
+      "errors": 0
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages, repeated after wording correction",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 9
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 10
+      },
+      "example_table": {
+        "columns": 3,
+        "rows": 4
+      },
+      "parameter_table": {
+        "columns": 3,
+        "rows": 6
+      },
+      "player_icons": "32x32 and 72x72; all loaded",
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "visual inspection of player section, single-use examples and full-template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 5796,
+      "sha256": "8219bb49311a071cf8e59ab55df466e0efc4c1346bf8d5a12b0b8bae151a7a2b",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 11,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, nine accepted skills, INDEX Git paths, privacy and ignored QA artifacts",
+      "result": "passed"
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "one_wording_ambiguity_corrected",
+    "corrections": [
+      "Narrowed the technical DoT sentence to evidenced bleeding/burning events, avoiding a claim about every DoT type."
+    ],
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Exact runtime timing frames.",
+    "Every possible weapon/interaction event combination.",
+    "Overlapping-use damage measured in game."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full implementation call-chain analysis (outside clarified review scope)"
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/infiltrate-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_invisibility_on_combat_ability.md",
+  "commit": "2a70756c5b7a0c4be74c0fed864853d01a043aa5"
+}

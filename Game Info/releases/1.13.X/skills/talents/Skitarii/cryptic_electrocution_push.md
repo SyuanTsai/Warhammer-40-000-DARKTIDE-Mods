@@ -1,5 +1,7 @@
 # 電流爆發(Voltaic Burst)：原始碼依據
 
+[English](en/cryptic_electrocution_push.md)
+
 [返回玩家說明](README.md#cryptic_electrocution_push)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_electrocution_push)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

@@ -1,5 +1,7 @@
 # 資源最佳化聖歌(Resource Optimisation Canticles)：原始碼依據
 
+[English](en/cryptic_redline_extra_max_stacks.md)
+
 [返回玩家說明](README.md#cryptic_redline_extra_max_stacks)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_redline_extra_max_stacks)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 
 ## 算例條件與待確認事項
 
-- **充能算例**：護教軍戰鬥能力基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。
+- **充能算例**：護教軍戰鬥技能基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。
 - **減傷算例**：極限電容達5層時，韌性承傷倍率為0.75；若一次攻擊原本會對韌性造成100點傷害，套用後承受75點。
 - 充能上限只增加於以戰鬥技能充能系統管理的技能；實際數值取決於該技能原本的充能上限。
 - 5層時的減傷按韌性承傷計算，不代表生命傷害也會降低25%。

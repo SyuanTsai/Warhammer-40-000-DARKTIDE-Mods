@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 
 function background_definition(width, height, base_z)
@@ -56,7 +56,7 @@ function background_definition(width, height, base_z)
                 horizontal_alignment = "center",
                 scale_to_material = true,
                 offset = { 0, 0, base_z + 200 }, -- Remove height-based offset
-                size = { nil, 80 }, -- Keep height fixed but width dynamic
+                size = { nil, 80 },              -- Keep height fixed but width dynamic
                 color = Color.gray(255, true),
                 disabled_color = Color.gray(255, true),
                 default_color = Color.gray(255, true),
@@ -71,8 +71,8 @@ function background_definition(width, height, base_z)
                 horizontal_alignment = "center",
                 scale_to_material = true,
                 offset = { 0, -35, base_z + 200 }, -- Adjust offset from bottom
-                size_addition = { 50, 0 }, -- Make width relative with addition
-                size = { nil, 120 }, -- Keep height fixed but width dynamic
+                size_addition = { 50, 0 },         -- Make width relative with addition
+                size = { nil, 120 },               -- Keep height fixed but width dynamic
                 color = Color.gray(255, true),
                 disabled_color = Color.gray(255, true),
                 default_color = Color.gray(255, true),

@@ -1,5 +1,7 @@
 # 主宰(Dominate)：原始碼依據
 
+[English](en/ogryn_rending_on_elite_kills.md)
+
 [返回玩家說明](README.md#ogryn_rending_on_elite_kills)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_rending_on_elite_kills)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 ## 原文核對
 
 - 對應 hash：`4203de9c`。
-- 同一占位符格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
+- 同一預留符號格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
 
 ## 圖示來源
 

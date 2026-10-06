@@ -1,0 +1,65 @@
+{
+  "id": "arbites_passives_151_155",
+  "date": "2026-10-04",
+  "scope": "Arbites",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings. Mechanism, numerical, shared formatting and image evidence reused. Source pointers are in each English document.",
+  "questions": [
+    "Final game UI and runtime behavior were not observed."
+  ],
+  "skills": [
+    {
+      "id": "adamant_heavy_attacks_increase_damage",
+      "name": "Weight of the Lex",
+      "name_hash": "b17cd91c",
+      "description_hash": "573a8877",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_heavy_attacks_increase_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_heavy_attacks_increase_damage.md",
+      "commit": "84347125"
+    },
+    {
+      "id": "adamant_melee_attacks_on_staggered_rend",
+      "name": "Strike Down",
+      "name_hash": "f2249181",
+      "description_hash": "c925f6cc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_melee_attacks_on_staggered_rend.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_melee_attacks_on_staggered_rend.md",
+      "commit": "a9589ca5"
+    },
+    {
+      "id": "adamant_crit_chance_on_kill",
+      "name": "Zealous Dedication",
+      "name_hash": "af841369",
+      "description_hash": "4411328c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_crit_chance_on_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_crit_chance_on_kill.md",
+      "commit": "75618674"
+    },
+    {
+      "id": "adamant_crits_rend",
+      "name": "Prosecution Blow",
+      "name_hash": "e58ef98a",
+      "description_hash": "7ccaaaa3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_crits_rend.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_crits_rend.md",
+      "commit": "e69d2452"
+    },
+    {
+      "id": "adamant_dodge_improvement",
+      "name": "Street Smarts",
+      "name_hash": "ea92cdda",
+      "description_hash": "4de76f4a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dodge_improvement.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dodge_improvement.md",
+      "commit": "d7f8ad66"
+    }
+  ]
+}

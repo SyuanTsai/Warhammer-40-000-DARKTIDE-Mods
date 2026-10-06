@@ -1,5 +1,7 @@
 # 電弧手榴彈(Arc Grenades)：原始碼依據
 
+[English](en/cryptic_grenade_ability_arc_grenade.md)
+
 [返回玩家說明](README.md#cryptic_grenade_ability_arc_grenade)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_grenade_ability_arc_grenade)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -34,7 +36,7 @@
 
 ## 算例條件與待確認事項
 
-- 3次精英／專家擊殺的電弧手榴彈命中事件各恢復0.04份，合計0.12份電容量。若3次手榴彈使用次數已耗盡，這項恢復仍然是戰鬥技能電容量，而非手榴彈次數。
+- 3次精英／專家擊殺的電弧手榴彈命中事件各恢復0.04份，合計0.12份電容量。若3次手雷使用次數已耗盡，這項恢復仍然是戰鬥技能電容量，而非手雷次數。
 - 4是爆炸後可建立的起始電弧目標數上限，不保證每次都有4個目標；沒有合格敵人時不會補足命中。
 - 每條電弧的連鎖最多5次跳躍、每跳一個目標；實際鏈長受敵人位置、存活與電擊鏈目標條件影響。
 - 電容量只由指定傷害來源造成的精英或專家擊殺恢復；一般敵人擊殺不會觸發。

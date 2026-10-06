@@ -1,5 +1,7 @@
 # 生化武器關(Malocator)：原始碼依據
 
+[English](en/adamant_execution_order_cdr.md)
+
 [返回玩家說明](README.md#adamant_execution_order_cdr)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_execution_order_cdr)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -26,7 +28,7 @@
 
 ## 算例條件與待確認事項
 
-- 標記擊殺觸發後，理論恢復量為 8 × 0.5 = 4 秒；只缺 1.2 秒時，最多回復 1.2 秒並充滿。
+- 標記擊殺觸發後，理論恢復量為 8 × 0.5 = 4 秒；只缺 1.2 秒時，最多恢復 1.2 秒並充滿。
 - 恢復按逐秒計時執行，實際次數受效果到期更新順序影響；4 秒是名目上限。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

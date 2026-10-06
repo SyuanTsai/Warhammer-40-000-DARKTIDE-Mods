@@ -1,5 +1,7 @@
 # 責任與榮譽(Duty and Honour)：原始碼依據
 
+[English](en/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md)
+
 [返回玩家說明](README.md#veteran_combat_ability_increase_and_restore_toughness_to_coherency)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,8 +12,8 @@
 ## 上限、當前韌性與到期
 
 - ActionVeteranCombatAbility.start 先對 in_coherence_units 加入 increase_toughness_to_coherency，再對 squad_leader 本人 recover_max_toughness。CoherencySystem 的鏈包含本人，故本人也有75上限加成。
-- buff duration=10、toughness_bonus_flat=75，沒有 max_stacks，因此多次施加建立獨立實例，而不是只刷新同一份。最大韌性公式為 ceil((base+toughness)×toughness_bonus)+toughness_bonus_flat，75在百分比上限修正之後相加。
-- 當前韌性以最大值減 toughness_damage 表示。上限增加時不增 damage，所以目前值同步增加75；本人 recover_max_toughness 又把 damage清零。隊友沒有額外的回滿呼叫。
+- buff duration=10、toughness_bonus_flat=75，沒有 max_stacks，因此多次施加建立獨立實例，而不是只重新計時同一份。最大韌性公式為 ceil((base+toughness)×toughness_bonus)+toughness_bonus_flat，75在百分比上限修正之後相加。
+- 目前韌性以最大值減 toughness_damage 表示。上限增加時不增 damage，所以目前值同步增加75；本人 recover_max_toughness 又把 damage清零。隊友沒有額外的回滿呼叫。
 - 上限降低時 handle_max_toughness_changes_due_to_buffs 把已損失量扣掉上限差值，最低0，因此目前韌性保留到恢復後上限：160/175→100/100；60/175時damage115，上限−75後damage40，結果60/100。
 
 ## 原始碼依據

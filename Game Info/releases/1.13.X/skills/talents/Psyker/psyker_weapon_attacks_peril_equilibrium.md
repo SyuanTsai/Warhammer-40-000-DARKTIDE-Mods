@@ -1,4 +1,6 @@
-# 反噬平衡(Peril Equilibrium)：原始碼依據
+# 危險平衡(Peril Equilibrium)：原始碼依據
+
+[English](en/psyker_weapon_attacks_peril_equilibrium.md)
 
 [返回玩家說明](README.md#psyker_weapon_attacks_peril_equilibrium)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_weapon_attacks_peril_equilibrium)
 

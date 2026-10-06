@@ -1,5 +1,7 @@
 # 戰術意識(Tactical Awareness)：原始碼依據
 
+[English](en/veteran_elite_kills_reduce_cooldown.md)
+
 [返回玩家說明](README.md#veteran_elite_kills_reduce_cooldown)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 實際觸發與逐秒恢復
 
 - 被動綁 on_kill，check_proc_func=CheckProcFunctions.on_special_kill；檢查死亡與 special 標籤，不接受單純 elite。舊 talent_settings_3.passive_1.cooldown_reduction=6 等值只被存入未使用欄位。
-- 實際加入 cooldown_reduction_on_elite_kills_buff：duration=3、max_stacks=1、refresh_duration_on_stack=true。start_func 的 timer=fixed_t+1；update_func 在 t>timer 時令 timer+=1，並 restore_ability_resource('combat_ability',1)。刷新不重跑 start_func，所以保留原有 tick 節奏。
+- 實際加入 cooldown_reduction_on_elite_kills_buff：duration=3、max_stacks=1、refresh_duration_on_stack=true。start_func 的 timer=fixed_t+1；update_func 在 t>timer 時令 timer+=1，並 restore_ability_resource('combat_ability',1)。重新計時不重跑 start_func，所以保留原有 tick 節奏。
 - Buff._update_duration 在 t>start+3 設 finished，但 Buff.update 仍執行本影格其餘 update_funcs；BuffExtensionBase 是整體 update 後才移除完成 buff，因此正常固定影格更新下約第 1、2、3 秒各恢復 1 點。
 - 老兵能力的資源自然恢復率為每秒 1 點；本效果每點因此對應 1 秒基礎冷卻。25 秒剩餘在三秒後：25−3（自然）−3（額外）=19。不是擊殺當下瞬間扣除六秒，也不是多次擊殺把額外恢復速度疊高。
 

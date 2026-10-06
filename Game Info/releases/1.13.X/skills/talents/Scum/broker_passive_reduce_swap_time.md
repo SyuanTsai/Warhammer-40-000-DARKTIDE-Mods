@@ -1,5 +1,7 @@
 # 黏黏手(Sticky Hands)：原始碼依據
 
+[English](en/broker_passive_reduce_swap_time.md)
+
 [返回玩家說明](README.md#broker_passive_reduce_swap_time)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_reduce_swap_time)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 ## 算例條件與待確認事項
 
 - **切換算例**：可加速的切換動作原需 1 秒，變成 1 ÷ 1.4 ≈ 0.71 秒。
-- **散佈算例**：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與回復，實際鏡頭位移還取決於武器曲線。
+- **散佈算例**：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與恢復，實際鏡頭位移還取決於武器曲線。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

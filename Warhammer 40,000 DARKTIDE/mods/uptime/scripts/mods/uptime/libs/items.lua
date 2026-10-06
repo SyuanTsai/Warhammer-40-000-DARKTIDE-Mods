@@ -1,4 +1,5 @@
-local mod = get_mod("uptime")
+-- File: uptime\scripts\mods\uptime\libs\items.lua
+local mod = get_mod("uptime"); if not mod then return end
 local ItemUtils = mod:original_require("scripts/utilities/items")
 local MasterItems = mod:original_require("scripts/backend/master_items")
 
@@ -19,6 +20,7 @@ function get_blessing_name(trait)
         return desc
     end
 end
+
 function get_blessing_description(trait)
     if trait then
         local trait_item = MasterItems.get_item(trait.id)

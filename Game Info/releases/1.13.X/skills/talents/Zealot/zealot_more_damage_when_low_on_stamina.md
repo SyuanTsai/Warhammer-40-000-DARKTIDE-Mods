@@ -1,5 +1,7 @@
 # 背水一戰(Desperation)：原始碼依據
 
+[English](en/zealot_more_damage_when_low_on_stamina.md)
+
 [返回玩家說明](README.md#zealot_more_damage_when_low_on_stamina)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_more_damage_when_low_on_stamina)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 目前talent載入zealot_more_power_when_low_on_stamina，lerp_t=1−current/max，melee_damage0至.2。identifier雖仍叫zealot_melee_damage_on_stamina_depleted，不代表使用另一個5秒proc模板；不能把舊5秒效果加到當前機制。
+- 目前talent載入zealot_more_power_when_low_on_stamina，lerp_t=1−current/max，melee_damage0至.2。identifier雖仍叫zealot_melee_damage_on_stamina_depleted，不代表使用另一個5秒proc模板；不能把舊5秒效果加到目前機制。
 
 ## 原始碼依據
 

@@ -1,5 +1,7 @@
 # 再來(Go Again!)：原始碼依據
 
+[English](en/ogryn_taunt_staggers_reduce_cooldown.md)
+
 [返回玩家說明](README.md#ogryn_taunt_staggers_reduce_cooldown)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_taunt_staggers_reduce_cooldown)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -33,7 +35,7 @@
 ## 原文核對
 
 - 對應 hash：`7bd31d11`。
-- 繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再回復戰鬥能力冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再恢復戰鬥技能冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

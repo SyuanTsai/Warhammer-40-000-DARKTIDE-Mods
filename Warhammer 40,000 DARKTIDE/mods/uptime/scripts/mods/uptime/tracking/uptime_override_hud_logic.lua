@@ -1,4 +1,4 @@
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 --[[
 The HUD only keeps track of a certain number of buffs. Any buff beyond that is simply ignored.
 This includes buff that are not currently shown (e.g. because they have zero stacks). So this limit is reached

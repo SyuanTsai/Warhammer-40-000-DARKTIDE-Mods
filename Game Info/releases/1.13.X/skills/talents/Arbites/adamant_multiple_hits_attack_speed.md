@@ -1,5 +1,7 @@
 # 審判之錘(Hammer of Judgement)：原始碼依據
 
+[English](en/adamant_multiple_hits_attack_speed.md)
+
 [返回玩家說明](README.md#adamant_multiple_hits_attack_speed)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_multiple_hits_attack_speed)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_hit限attack_type=melee且target_number==3，非每第三次揮擊，也不在第四/第五目標再刷新。proc_stat_buffs.melee_attack_speed=.1，持續3秒。
+- on_hit限attack_type=melee且target_number==3，非每第三次揮擊，也不在第四/第五目標再重新計時。proc_stat_buffs.melee_attack_speed=.1，持續3秒。
 
 ## 原始碼依據
 

@@ -1,5 +1,7 @@
 # 電能地雷(Voltaic Shock Mine)：原始碼依據
 
+[English](en/adamant_shock_mine.md)
+
 [返回玩家說明](README.md#adamant_shock_mine)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_shock_mine)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 
 - 部署狀態ProjectileDamageExtension直接return，因此不是由一般fuse15秒控制已部署地雷。ProximityShockMine開始life_time=150+arming1；第一次掃到HEALTH_ALIVE目標便重設start_time及life_time15，即使該目標已電擊也會開始倒數。
 - 每.2秒shuffle半徑3m結果，只有未electrocuted才加shock_mine_interval；模板num_targets_per_trigger3但停止條件為num_added_buffs>3，最多可能處理4個，不把設定3宣稱成硬上限。
-- 單次狀態3秒、隨機.3～.8秒傷害；已電擊者不重加，因此一般流程不會用refresh flag不斷刷新。shock_grenade_stun_interval攻擊8，無甲預設插值ADM.5；正在踉蹌的poxwalker_bomber跳過傷害。
+- 單次狀態3秒、隨機.3～.8秒傷害；已電擊者不重加，因此一般流程不會用refresh flag不斷重新計時。shock_grenade_stun_interval攻擊8，無甲預設插值ADM.5；正在踉蹌的poxwalker_bomber跳過傷害。
 
 ## 原始碼依據
 

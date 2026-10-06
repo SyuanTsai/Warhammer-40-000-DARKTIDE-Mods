@@ -1,5 +1,7 @@
 # 背刺者(Backstabber)：原始碼依據
 
+[English](en/zealot_backstab_damage.md)
+
 [返回玩家說明](README.md#zealot_backstab_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_backstab_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 模板掛 allow_backstabbing、allow_flanking，各加 backstab_damage/flanking_damage=.25。AttackPositioning 分別只接受 melee/ranged；dot>0.5 對應背後正中左右各60度，dot>0對應後半平面，嚴格邊界不包含。
-- 傷害計算先得當前 damage，再加入 damage*(backstab multiplier+profile bonus−1) 或 damage*(flanking multiplier−1)，不是弱點額外部分加成。每次攻擊類型只會符合其中一項，不會同時獲得50%。
+- 傷害計算先得目前 damage，再加入 damage*(backstab multiplier+profile bonus−1) 或 damage*(flanking multiplier−1)，不是弱點額外部分加成。每次攻擊類型只會符合其中一項，不會同時獲得50%。
 
 ## 原始碼依據
 
@@ -23,7 +25,7 @@
 
 ## 算例條件與待確認事項
 
-- **傷害算例**：固定相同武器、護甲及命中部位，沒有其他背刺／側襲加成時，該階段 100 點變成 100 × (1 + 25%) = 125 點。已有 20% 同類加成時，則由 120 點變成 100 × (1 + 20% + 25%) = 145 點，新增收益約 20.83%。
+- **傷害算例**：固定相同武器、護甲及命中部位，沒有其他背刺／側襲加成時，該階段 100 點變成 100 × (1 + 25%) = 125 點。已有 20% 同類加成時，則由 120 點變成 100 × (1 + 20% + 25%) = 145 點，實際增幅約 20.83%。
 - 背刺武器原有 damage_profile.backstab_bonus 需納入既有同類加成；範例固定其他條件，未對具名武器實測。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

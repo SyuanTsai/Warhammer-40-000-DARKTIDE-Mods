@@ -1,4 +1,5 @@
-local mod = get_mod("uptime")
+-- File: uptime\scripts\mods\uptime\libs\_libs.lua
+local mod = get_mod("uptime"); if not mod then return end
 mod.lib = {}
 
 mod:io_dofile("uptime/scripts/mods/uptime/libs/debug")

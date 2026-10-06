@@ -1,5 +1,7 @@
 # 集中藥(Klay)：原始碼依據
 
+[English](en/broker_stimm_concentration_5c.md)
+
 [返回玩家說明](README.md#broker_stimm_concentration_5c)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_stimm_concentration_5c)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 本配方 cost=max_points，因此只購買一次，並非可重複點選的等級數。已選的前置配方仍同時生效；各節點效果依 stat 類型加算或乘算。
-- 掛載proc_buff後監聽on_kill並用CheckProcFunctions.on_ranged_kill。子Buff duration=1、max_stacks=1、refresh_duration_on_stack=true，因此重觸發只刷新。
+- 掛載proc_buff後監聽on_kill並用CheckProcFunctions.on_ranged_kill。子Buff duration=1、max_stacks=1、refresh_duration_on_stack=true，因此重觸發只重新計時。
 - 子Buff combat_ability_resource_regen_modifier基值.75，再乘stat_buff_multiplier()返回的recipe參數.75；Buff._calculate_stat_buffs先相乘才累加，實際加成.5625。
 - format_values.cooldown=.75在中英都顯示75%；這是固定實作與共同文字數值差異，實際數值尚待遊戲內核對，不列繁中誤譯。
 
@@ -30,7 +32,7 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒回復 1 秒冷卻，現在該秒回復 1.8125 秒。
+- **恢復算例**：前置抗焦慮藥I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒恢復 1 秒冷卻，現在該秒恢復 1.8125 秒。
 - 藥效結束會移除觸發器；已經取得的1秒內部Buff依自身時間到期，不保證同時瞬間清除。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

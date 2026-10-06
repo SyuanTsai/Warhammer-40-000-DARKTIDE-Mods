@@ -1,5 +1,7 @@
 # 手雷專家(Grenade Tinkerer)：原始碼依據
 
+[English](en/veteran_improved_grenades.md)
+
 [返回玩家說明](README.md#veteran_improved_grenades)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,11 +31,11 @@
 
 ## 遊戲本體繁中對照
 
-- 文本來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_improved_grenades_desc`；hash：`60708f06`；繁中entry_index：`6258`；英文entry_index：`6258`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「秒煙幕持續時間」；同版英文對照片段：`Duration.`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
-- 判定：**明確繁中描述錯誤**。單位錯誤：繁中在百分比占位符後追加秒，英文未追加時間單位；smoke格式為percentage，實作為smoke_fog_duration_modifier=1。不是單純少寫公式。
-- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- 判定：**明確繁中描述錯誤**。單位錯誤：繁中在百分比預留符號後追加秒，英文未追加時間單位；smoke格式為percentage，實作為smoke_fog_duration_modifier=1。不是單純少寫公式。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 
 - [公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第188–199行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L188-L199)

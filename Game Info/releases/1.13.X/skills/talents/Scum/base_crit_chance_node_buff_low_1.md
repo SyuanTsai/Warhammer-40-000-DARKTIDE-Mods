@@ -1,4 +1,6 @@
-# 爆擊機率增幅(Critical Chance Boost)：原始碼依據
+# 暴擊幾率增幅(Critical Chance Boost)：原始碼依據
+
+[English](en/base_crit_chance_node_buff_low_1.md)
 
 [返回玩家說明](README.md#base_crit_chance_node_buff_low_1)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_crit_chance_node_buff_low_1)
 
@@ -21,13 +23,13 @@
 
 ## 算例條件與待確認事項
 
-- **機率算例**：原本 10% 爆擊機率變成 10% + 5% = 15%；原本 25% 則變成 30%。
+- **機率算例**：原本 10% 爆擊率變成 10% + 5% = 15%；原本 25% 則變成 30%。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`3019333a`。
-- 兩語皆描述增加爆擊機率，未見矛盾。
+- 兩語皆描述增加爆擊率，未見矛盾。
 
 ## 圖示來源
 

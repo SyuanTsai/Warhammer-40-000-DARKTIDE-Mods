@@ -1,5 +1,7 @@
 # 恢復姿態(Regained Posture)：原始碼依據
 
+[English](en/broker_passive_stamina_on_successful_dodge.md)
+
 [返回玩家說明](README.md#broker_passive_stamina_on_successful_dodge)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_stamina_on_successful_dodge)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_successful_dodge呼叫Stamina.add_stamina(percentage=.1)，依當前武器與屬性組成的最大耐力計算。
+- on_successful_dodge呼叫Stamina.add_stamina(percentage=.1)，依目前武器與屬性組成的最大耐力計算。
 
 ## 原始碼依據
 

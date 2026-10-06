@@ -1,5 +1,7 @@
 # 毀滅打擊(Strike Down)：原始碼依據
 
+[English](en/adamant_melee_attacks_on_staggered_rend.md)
+
 [返回玩家說明](README.md#adamant_melee_attacks_on_staggered_rend)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_melee_attacks_on_staggered_rend)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -23,7 +25,7 @@
 
 ## 算例條件與待確認事項
 
-- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他爆擊、弱點與增傷再依各自階段計算。
+- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他暴擊、弱點與增傷再依各自階段計算。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

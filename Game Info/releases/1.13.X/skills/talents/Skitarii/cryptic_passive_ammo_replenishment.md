@@ -1,5 +1,7 @@
 # 彈藥補給艙(Ammunition-Restoration Pod)：原始碼依據
 
+[English](en/cryptic_passive_ammo_replenishment.md)
+
 [返回玩家說明](README.md#cryptic_passive_ammo_replenishment)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_passive_ammo_replenishment)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 原文核對
 
 - 對應 hash：`41aa3ba1`。
-- 雙語一致；補充小數累計及備彈/彈匣區分。
+- 雙語一致；補充小數累計及備用彈藥/彈匣區分。
 
 ## 圖示來源
 

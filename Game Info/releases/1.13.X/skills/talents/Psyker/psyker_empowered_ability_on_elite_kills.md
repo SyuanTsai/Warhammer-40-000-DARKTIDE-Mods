@@ -1,5 +1,7 @@
 # 吞靈強擊(Overpowering Souls)：原始碼依據
 
+[English](en/psyker_empowered_ability_on_elite_kills.md)
+
 [返回玩家說明](README.md#psyker_empowered_ability_on_elite_kills)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_empowered_ability_on_elite_kills)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 - **層數算例**：原有 0 層時擊殺一名精英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
 - 專家敵人與精英是不同 tag 判斷；此 modifier 的保證條件只讀 params.tags.elite。
 - 充能上限另受 Charged Up modifier 影響。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

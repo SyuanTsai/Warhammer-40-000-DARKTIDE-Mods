@@ -1,5 +1,7 @@
 # 天鷹使節(Nuncio-Aquila)：原始碼依據
 
+[English](en/adamant_area_buff_drone_improved.md)
+
 [返回玩家說明](README.md#adamant_area_buff_drone_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_area_buff_drone_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -32,7 +34,7 @@
 - 強化版每秒恢復 7.5%；連續 2 秒為 7.5%×2=15% 最大韌性，受目前缺少韌性限制。
 - 敵方受到傷害倍率 1.15；基準傷害 100×1.15=115，尚未計入其他傷害修正。
 - 韌性逐秒恢復，超過目前缺少量的部分不會形成超額韌性；離開半徑後區域邏輯會移除效果。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

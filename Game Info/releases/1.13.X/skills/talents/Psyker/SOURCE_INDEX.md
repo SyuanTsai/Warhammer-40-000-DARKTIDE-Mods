@@ -1,8 +1,10 @@
 # 靈能者：來源文件與技術索引
 
+[English](en/SOURCE_INDEX.md)
+
 [返回玩家說明](README.md)｜[版本、日期與證據限制](../../../README.md)
 
-[遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於當前技能樹的定義](UNUSED_DEFINITIONS.md)
+[遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於目前技能樹的定義](UNUSED_DEFINITIONS.md)
 
 固定來源 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
@@ -80,8 +82,8 @@
 | [汲魂者](psyker_killing_enemy_with_warpfire_boosts.md) / `psyker_killing_enemy_with_warpfire_boosts` | 技能 |
 | [骨折後遺症](psyker_melee_weaving.md) / `psyker_melee_weaving` | 技能 |
 | [脆弱心智](psyker_damage_vs_ogryns_and_monsters.md) / `psyker_damage_vs_ogryns_and_monsters` | 技能 |
-| [聚焦亞空間](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | 技能 |
-| [反噬平衡](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | 技能 |
+| [聚焦次元](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | 技能 |
+| [危險平衡](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | 技能 |
 | [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | 技能 |
 | [結晶意志](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | 技能 |
 | [靈能引導](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | 技能 |

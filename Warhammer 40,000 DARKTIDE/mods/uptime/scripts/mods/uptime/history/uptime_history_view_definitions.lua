@@ -1,11 +1,11 @@
 --[[
   Uptime History View Definitions
-  
+
   This file defines the UI layout and widget definitions for the uptime history view,
   including scenegraph nodes, widget styles, and input legend.
 --]]
 
-local mod = get_mod("uptime")
+local mod = get_mod("uptime"); if not mod then return end
 
 -- ===== Required Dependencies =====
 local UISoundEvents = mod:original_require("scripts/settings/ui/ui_sound_events")
@@ -26,6 +26,8 @@ local grid_size = _view_settings.grid_size
 local grid_width = grid_size[1]
 local grid_height = grid_size[2]
 local grid_blur_edge_size = _view_settings.grid_blur_edge_size
+local history_entry_height = 210
+local history_panel_x = 45
 
 -- Mask dimensions (for content scrolling)
 local mask_size = {
@@ -45,7 +47,7 @@ local scenegraph_definition = {
         parent = "screen",
         horizontal_alignment = "left",
         size = { grid_width, grid_height },
-        position = { 180, 240, 1 }
+        position = { history_panel_x, 240, 1 }
     },
 
     -- Background icon
@@ -107,7 +109,7 @@ local scenegraph_definition = {
         vertical_alignment = "left",
         parent = "grid_content_pivot",
         horizontal_alignment = "top",
-        size = { 500, 64 },
+        size = { grid_width, history_entry_height },
         position = { 0, 0, 0 }
     },
 
@@ -116,8 +118,8 @@ local scenegraph_definition = {
         vertical_alignment = "top",
         parent = "screen",
         horizontal_alignment = "left",
-        size = { 335, 18 },
-        position = { 180, 145, 1 }
+        size = { grid_width, 18 },
+        position = { history_panel_x, 145, 1 }
     },
 
     -- Title text
@@ -125,7 +127,7 @@ local scenegraph_definition = {
         vertical_alignment = "bottom",
         parent = "title_divider",
         horizontal_alignment = "left",
-        size = { 500, 50 },
+        size = { grid_width, 50 },
         position = { 0, -35, 1 }
     },
 }
@@ -169,7 +171,7 @@ local widget_definitions = {
             value_id = "text",
             style_id = "text",
             pass_type = "text",
-            value = "Uptime History",
+            value = Localize("loc_achievement_mission_scripture_recovery_name"),
             style = table.clone(UIFontSettings.header_1)
         }
     }, "title_text"),
@@ -185,6 +187,7 @@ local widget_definitions = {
             }
         }
     }, "background_icon"),
+
     -- Scrollbar
     scrollbar = UIWidget.create_definition(ScrollbarPassTemplates.default_scrollbar, "scrollbar"),
 
@@ -211,29 +214,56 @@ local widget_definitions = {
 -- ===== Input Legend =====
 -- Defines the buttons shown at the bottom of the screen
 local legend_inputs = {
-    -- Back button
     {
         input_action = "back",
         on_pressed_callback = "cb_on_back_pressed",
         display_name = "loc_settings_menu_close_menu",
         alignment = "left_alignment"
     },
-
-    -- Reload cache button
     {
         input_action = "hotkey_item_sort",
         on_pressed_callback = "cb_reload_cache_pressed",
         display_name = "loc_scan_folder",
         alignment = "left_alignment"
     },
+    {
+        input_action = "hotkey_item_inspect",
+        on_pressed_callback = "cb_edit_note_pressed",
+        display_name = "loc_edit_note",
+        alignment = "right_alignment",
+        requires_selected_entry = true,
+    },
+    {
+        input_action = "hotkey_menu_special_1",
+        on_pressed_callback = "cb_toggle_favourite_pressed",
+        display_name = "loc_inventory_add_favorite",
+        alignment = "right_alignment",
+        visibility_function = function(parent)
+            local entry = parent._selected_history_entry and parent:_selected_history_entry()
+            if not entry then return false end
 
-    -- Delete button
+            local is_fave = entry.meta_data and entry.meta_data.favourite
+            if parent._input_legend_element and parent._input_legend_element._entries then
+                local _, legend_entry = table.find_by_key(parent._input_legend_element._entries, "input_action",
+                    "hotkey_menu_special_1")
+                if legend_entry then
+                    parent._input_legend_element:set_display_name(legend_entry.id,
+                        is_fave and "loc_inventory_remove_favorite" or "loc_inventory_add_favorite")
+                end
+            end
+            return true
+        end,
+    },
     {
         input_action = "hotkey_character_delete",
         on_pressed_callback = "cb_delete_pressed",
-        display_name = "loc_delete_entry",
+        display_name = "loc_inventory_menu_profile_preset_delete",
         alignment = "right_alignment",
         on_hover_sound = UISoundEvents.social_menu_block_player,
+        visibility_function = function(parent)
+            local entry = parent._selected_history_entry and parent:_selected_history_entry()
+            return entry ~= nil and not (entry.meta_data and entry.meta_data.favourite)
+        end,
     },
 }
 

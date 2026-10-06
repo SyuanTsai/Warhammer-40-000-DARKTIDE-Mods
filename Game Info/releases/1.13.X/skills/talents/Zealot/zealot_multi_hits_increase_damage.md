@@ -1,5 +1,7 @@
 # 蔑視(Disdain)：原始碼依據
 
+[English](en/zealot_multi_hits_increase_damage.md)
+
 [返回玩家說明](README.md#zealot_multi_hits_increase_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_multi_hits_increase_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_sweep_finish 直接把 params.num_hit_units 寫入 hits；lerp=clamp(hits/5,0,1)，melee_damage上限.05*5=.25。沒有duration，也沒有每次命中逐步增強當前揮擊的程式；揮擊結束才替換下一擊使用的值。
+- on_sweep_finish 直接把 params.num_hit_units 寫入 hits；lerp=clamp(hits/5,0,1)，melee_damage上限.05*5=.25。沒有duration，也沒有每次命中逐步增強目前揮擊的程式；揮擊結束才替換下一擊使用的值。
 
 ## 原始碼依據
 

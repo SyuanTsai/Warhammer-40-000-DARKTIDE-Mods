@@ -1,4 +1,5 @@
-local mod = get_mod("uptime")
+-- File: uptime/scripts/mods/uptime/history/uptime_history.lua
+local mod = get_mod("uptime"); if not mod then return end
 
 -- Register uptime history view
 mod.register_uptime_history_view = function(self)
@@ -8,7 +9,7 @@ mod.register_uptime_history_view = function(self)
     self:register_view({
         view_name = "uptime_history_view",
         view_settings = {
-            init_view_function = function (ingame_ui_context)
+            init_view_function = function(ingame_ui_context)
                 return true
             end,
             class = "UptimeHistoryView",
@@ -32,8 +33,8 @@ mod.register_uptime_history_view = function(self)
         },
         view_transitions = {},
         view_options = {
-            close_all = true,
-            close_previous = true,
+            close_all = false,
+            close_previous = false,
             close_transition_time = nil,
             transition_time = nil
         }
@@ -46,6 +47,6 @@ mod.show_uptime_history_view = function(self)
     if Managers.ui:view_active("uptime_history_view") and not Managers.ui:is_view_closing("uptime_history_view") then
         Managers.ui:close_view("uptime_history_view", true)
     else
-        Managers.ui:open_view("uptime_history_view", nil, false, false, nil, {}, {use_transition_ui = false})
+        Managers.ui:open_view("uptime_history_view", nil, false, false, nil, {}, { use_transition_ui = false })
     end
 end

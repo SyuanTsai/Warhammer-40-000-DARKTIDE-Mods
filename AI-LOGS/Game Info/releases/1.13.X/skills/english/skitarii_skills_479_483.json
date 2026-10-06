@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_479_483",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L319-L337 (Restoration Protocol), L338-L372 (Writ of Ammunition Enumeration), L222-L240 (Voltaic Arcs), L162-L194 (Voltaic Motivator), L195-L221 (Voltaic Overcharge). Previously read ability-name entries reused. No mechanism retracing."
+  ],
+  "questions": [
+    "No new unresolved question. Restoration Protocol preserves the Chinese-only unit correction; English has no point-unit contradiction. Voltaic Motivator has no two-charge threshold in English; the unused charge=2 display field is not inserted."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_precision_stance_toughness_suppression",
+      "name": "Restoration Protocol",
+      "name_hash": "1befb0f8",
+      "description_hash": "e35e0d88",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_toughness_suppression.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_toughness_suppression.md",
+      "commit": "2d2407ebb"
+    },
+    {
+      "id": "cryptic_precision_stance_fire_rate_increased",
+      "name": "Writ of Ammunition Enumeration",
+      "name_hash": "521de828",
+      "description_hash": "305b77d8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_fire_rate_increased.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_precision_stance_fire_rate_increased.md",
+      "commit": "e312826cf"
+    },
+    {
+      "id": "cryptic_discharge_generates_arcs",
+      "name": "Voltaic Arcs",
+      "name_hash": "c021d976",
+      "description_hash": "b7638357",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_generates_arcs.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_generates_arcs.md",
+      "commit": "baa285ff6"
+    },
+    {
+      "id": "cryptic_discharge_attack_speed_increase",
+      "name": "Voltaic Motivator",
+      "name_hash": "3b37ff32",
+      "description_hash": "204600f6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_attack_speed_increase.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_attack_speed_increase.md",
+      "commit": "258f1bc6c"
+    },
+    {
+      "id": "cryptic_discharge_toughness",
+      "name": "Voltaic Overcharge",
+      "name_hash": "b0495f45",
+      "description_hash": "c12213ad",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_discharge_toughness.md",
+      "commit": "28da6f0d5"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 608,
+    "from_commit": "248b5a665",
+    "to_commit": "28da6f0d5",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

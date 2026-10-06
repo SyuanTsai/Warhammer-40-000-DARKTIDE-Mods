@@ -1,5 +1,7 @@
 # 凋零烈焰(Withering Fire)：原始碼依據
 
+[English](en/adamant_damage_after_reloading.md)
+
 [返回玩家說明](README.md#adamant_damage_after_reloading)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_damage_after_reloading)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_reload啟動5秒proc_stat_buffs.ranged_damage=.15，allow_proc_while_active允許刷新。DamageCalculation將ranged_damage−1加到damage_stat_buffs，不獨立乘最終傷害。
+- on_reload啟動5秒proc_stat_buffs.ranged_damage=.15，allow_proc_while_active允許重新計時。DamageCalculation將ranged_damage−1加到damage_stat_buffs，不獨立乘最終傷害。
 
 ## 原始碼依據
 
@@ -28,7 +30,7 @@
 ## 原文核對
 
 - 對應 hash：`e68c7c57`。
-- 繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上刷新及加算並非勘誤。
+- 繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上重新計時及加算並非勘誤。
 
 ## 圖示來源
 

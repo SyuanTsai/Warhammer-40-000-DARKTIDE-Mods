@@ -1,9 +1,10 @@
 # 狂信徒：遊戲本體繁中描述比對
 
+[English](en/LOCALIZATION_COMPARISON.md)
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 82 項中，81 項精確配對同一 ui 資源鍵與 hash；「神聖事業」的描述鍵未命中。8 項明確繁中誤譯、7 項待遊戲內或顯示代入核對、66 項未見明確矛盾；缺少說明不當成錯誤。
@@ -98,7 +99,7 @@
 
 - 描述鍵：`loc_talent_ability_fire_grenade_desc`；hash：`5b720fa5`。
 - 結論：明確繁中誤譯。Build 25606770 對照字串中，英文為 Burning and Staggering，繁中譯成「燃燒並使敵人暈眩」；Translation.md 將 Stagger/Staggering 對應為「踉蹌」，將 Stun 對應為「眩暈」。這是詞義明確不符，但該 build 文字只供翻譯比較，不作機制依據。
-- 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
+- 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人眩暈, 同時阻擋他們的道路。針對無護甲敵人最為有效。
 - 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
 - [原始碼推導與限制](zealot_flame_grenade.md)。
 
@@ -141,7 +142,7 @@
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)
 
 - 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
-- 結論：待遊戲內核對。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把文字與實作差異判為譯文錯誤。
+- 結論：待遊戲內核對。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把文字與實作差異判為譯文錯誤。
 - [原始碼推導與限制](zealot_bolstering_prayer.md)。
 
 <a id="zealot_attack_speed_post_ability"></a>
@@ -273,7 +274,7 @@
 ## 懲戒者姿態(Retributor's Stance)
 
 - 描述鍵：`loc_talent_zealot_momentum_toughness_replenish_desc`；hash：`11690b77`。
-- 結論：未見明確矛盾。兩種語言都表示 Quickness 層數會帶來韌性回復；逐層每秒 0.5% 與只在 active buff 期間生效是實作細節。
+- 結論：未見明確矛盾。兩種語言都表示 Quickness 層數會帶來韌性恢復；逐層每秒 0.5% 與只在 active buff 期間生效是實作細節。
 - [原始碼推導與限制](zealot_momentum_toughness_replenish.md)。
 
 <a id="zealot_quickness_passive_dodge_stacks"></a>
@@ -303,28 +304,28 @@
 ## 死忠(Stalwart)
 
 - 描述鍵：`loc_talent_zealot_fanatic_rage_toughness_replenish_desc`；hash：`efdfa530`。
-- 結論：未見明確矛盾。翻譯方向及三項效果方向一致；程式對 50% 的刷新條件與25層維持條件是更細的觸發限制。
+- 結論：未見明確矛盾。翻譯方向及三項效果方向一致；程式對 50% 的重新計時條件與25層維持條件是更細的觸發限制。
 - [原始碼推導與限制](zealot_fanatic_rage_toughness_on_max.md)。
 
 <a id="zealot_fanatic_rage_improved"></a>
 ## 正義勇士(Righteous Warrior)
 
 - 描述鍵：`loc_talent_zealot_fanatic_rage_improved_desc`；hash：`cde6c5ff`。
-- 結論：未見明確矛盾。繁中與英文都描述此升級提高熾熱虔誠提供的暴擊率；以百分點與總和表達是為免誤讀。
+- 結論：未見明確矛盾。繁中與英文都描述此升級提高熾熱虔誠提供的爆擊率；以百分點與總和表達是為免誤讀。
 - [原始碼推導與限制](zealot_fanatic_rage_improved.md)。
 
 <a id="zealot_shared_fanatic_rage"></a>
 ## 迅疾狂熱(Infectious Zeal)
 
 - 描述鍵：`loc_talent_zealot_shared_fanatic_rage_new_desc`；hash：`95bbc544`。
-- 結論：跨來源待遊戲內核對。英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。依1.13.1固定程式碼，持續效果時間可能與文案「while active」不一致；實際持續時間仍待遊戲內核對。
+- 結論：跨來源待遊戲內核對。英繁中都寫隊友在個人熾熱虔誠有效時取得爆擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 重新計時不會重跑分發。依1.13.1固定程式碼，持續效果時間可能與文案「while active」不一致；實際持續時間仍待遊戲內核對。
 - [原始碼推導與限制](zealot_shared_fanatic_rage.md)。
 
 <a id="zealot_martyrdom_toughness_modifier"></a>
 ## 治癒詩頌(Restorative Verses)
 
 - 描述鍵：`loc_talent_zealot_martyrdom_toughness_modifier_upd_desc`；hash：`d473a3ea`。
-- 結論：明確繁中誤譯。繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接回復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
+- 結論：明確繁中誤譯。繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接恢復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
 - 繁中原文短引：每疊加一層，{talent_name:%s}會恢復{toughness_modifier:%s}韌性。
 - 同源英文：{talent_name:%s} grants {toughness_modifier:%s} Toughness Replenishment per stack.
 - [原始碼推導與限制](zealot_martyrdom_toughness_modifier.md)。
@@ -643,7 +644,7 @@
 ## 自掏腰包(Out of Pocket)
 
 - 描述鍵：`loc_talent_zealot_reload_from_melee_desc`；hash：`730a8c75`。
-- 結論：明確繁中誤譯。同源英文from your Reserve表明備彈是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備彈移入彈匣。
+- 結論：明確繁中誤譯。同源英文from your Reserve表明備用彈藥是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備用彈藥移入彈匣。
 - 繁中原文短引：近戰擊殺可恢復{ammo:%s}的缺失彈藥儲備。
 - 同源英文：Melee Kills replenish {ammo:%s} of your Missing Ammo from your Reserve.
 - [原始碼推導與限制](zealot_reload_from_melee.md)。

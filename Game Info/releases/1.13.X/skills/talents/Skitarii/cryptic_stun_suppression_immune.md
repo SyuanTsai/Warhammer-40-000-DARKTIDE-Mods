@@ -1,5 +1,7 @@
 # 目標殲滅回饋(Target-Neutralization Feedback)：原始碼依據
 
+[English](en/cryptic_stun_suppression_immune.md)
+
 [返回玩家說明](README.md#cryptic_stun_suppression_immune)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_stun_suppression_immune)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -26,7 +28,7 @@
 ## 原文核對
 
 - 對應 hash：`38272d6c`。
-- 中英「眩暈／Stun」為概括詞；以實際keyword區分一般受擊硬直與強制控制，不列誤譯。
+- 中英「眩暈／Stun」為概括詞；以實際keyword區分一般受擊僵直與強制控制，不列誤譯。
 
 ## 圖示來源
 

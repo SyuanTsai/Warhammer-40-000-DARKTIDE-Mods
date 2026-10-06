@@ -1,5 +1,7 @@
 # 罪不可赦(No Lenience)：原始碼依據
 
+[English](en/adamant_execution_order_rending.md)
+
 [返回玩家說明](README.md#adamant_execution_order_rending)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_execution_order_rending)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -28,7 +30,7 @@
 ## 算例條件與待確認事項
 
 - 標記擊殺後 8 秒內撕裂修正額外取得 0.10；若共用公式已到 1.0 上限，此加成不會使最終值超過 1。
-- 撕裂不等同無條件增加 10% 最終傷害；收益視目標護甲與共用撕裂上限而定。
+- 撕裂不等同無條件增加 10% 最終傷害；增幅視目標護甲與共用撕裂上限而定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -1,5 +1,7 @@
 # 狂熱朝聖者(Zealous Pilgrim)：原始碼依據
 
+[English](en/zealot_resist_death_ability.md)
+
 [返回玩家說明](README.md#zealot_resist_death_ability)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_resist_death_ability)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 
 - 樹節點同時掛載 `zealot_resist_death_ability` 與 `zealot_resist_death_offensive`。前者監聽 `on_combat_ability`，一般技能使用時加上 `zealot_resist_death_temp`；此 timed buff 持續4秒並提供 `unkillable`。後者只在玩家有該關鍵字時套用+10% damage與+10% attack_speed。
 - 隱身與聖物由各自結束流程處理：隱身 buff 的 `stop_func` 在離開隱身時加 temporary buff；channel action 在技能結束、恢復充能後加 buff。共用 handler 對這兩類 action 提前返回，避免過早觸發。
-- `zealot_resist_death_temp` 未設定 max_stacks；BuffExtension 對沒有 max_stacks 的同名 buff 建立獨立實例，因此重複使用技能時可能有重疊的4秒實例，沒有單一共享刷新倒數。
+- `zealot_resist_death_temp` 未設定 max_stacks；BuffExtension 對沒有 max_stacks 的同名 buff 建立獨立實例，因此重複使用技能時可能有重疊的4秒實例，沒有單一共享重設倒數。
 - 此 modifier 與 Holy Revenant 共用 `exclusive_group=resist_death_1`，不可同時選取；可與 Fire and Fury、Risen 並用。
 
 ## 原始碼依據

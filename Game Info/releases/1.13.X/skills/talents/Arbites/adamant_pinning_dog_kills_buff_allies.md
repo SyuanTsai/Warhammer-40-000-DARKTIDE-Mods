@@ -1,5 +1,7 @@
 # 猛犬氣場(Canine Morale)：原始碼依據
 
+[English](en/adamant_pinning_dog_kills_buff_allies.md)
+
 [返回玩家說明](README.md#adamant_pinning_dog_kills_buff_allies)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_pinning_dog_kills_buff_allies)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -35,7 +37,7 @@
 ## 原文核對
 
 - 對應 hash：`6250ddd6`。
-- 繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間刷新屬補充，不判為誤譯。
+- 繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間重新計時屬補充，不判為誤譯。
 
 ## 圖示來源
 

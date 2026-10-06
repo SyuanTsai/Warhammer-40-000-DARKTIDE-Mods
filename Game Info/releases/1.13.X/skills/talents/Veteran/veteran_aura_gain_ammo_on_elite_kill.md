@@ -1,12 +1,14 @@
 # 拾荒者(Scavenger)
 
+[English](en/veteran_aura_gain_ammo_on_elite_kill.md)
+
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 
 ## 運作方式
 
-- 你或受到這個光環影響的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充最大備彈量的 0.25%；光環觸發冷卻為 5 秒。
-- 最大備彈 400 發時，一次補給為 `400 × 0.25% = 1 發`。不足一發的部分會累積到後續補給，不會每次直接捨棄。
-- 補入備用彈藥，不會直接裝填；最多補至備彈上限加上彈匣缺少的彈量。生存專家光環將這項比例提高至 0.5%，不是再額外加上 0.5%。
+- 你或受到這個光環影響的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充最大備用彈藥量的 0.25%；光環觸發冷卻為 5 秒。
+- 最大備用彈藥 400 發時，一次補給為 `400 × 0.25% = 1 發`。不足一發的部分會累積到後續補給，不會每次直接捨棄。
+- 補入備用彈藥，不會直接裝填；最多補至備用彈藥上限加上彈匣缺少的彈量。生存專家光環將這項比例提高至 0.5%，不是再額外加上 0.5%。
 
 ## 原始碼確認與程式推導
 
@@ -16,7 +18,7 @@
 - 基礎 aura identifier=veteran_aura、priority=1；改良版相同identifier、priority=2，選用時取高優先序，並非兩個比例相加。
 - 每個接收光環的單位各有 proc_buff；on_minion_death 的 check_proc 只檢查 elite/special。proc_func 另要求 template_context.unit==params.attacking_unit，才遍歷擊殺者的 in_coherence_units。集合包含本人。
 - ProcBuff 在 check成功後呼叫 proc_func，再無條件更新 _active_start_time；所以即使 proc_func 因「不是本人的擊殺」而早退，也可能令該接收者這份光環進入5秒冷卻。主文的補給條件需連同冷卻理解，並不保證每次本人擊殺都另開一次補給。
-- 每槽 amount=max_reserve×.0025+carryover；floor後餘數保留，新備彈=min(原備彈+整數補給,max_reserve+missing_clip)。殺手自己的1%基礎被動是另一份buff、另計5秒，可同次生效。
+- 每槽 amount=max_reserve×.0025+carryover；floor後餘數保留，新備用彈藥=min(原備用彈藥+整數補給,max_reserve+missing_clip)。殺手自己的1%基礎被動是另一份buff、另計5秒，可同次生效。
 
 
 ## 原始碼依據

@@ -1,0 +1,116 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
+  "static_reconstruction": "Gives +10% Rending to all weapons.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Rending Strikes dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:2433-2456, display field and internal annotation only",
+    "Accepted Chink in their Armour shared armor/finesse example assumptions"
+  ],
+  "reused_evidence": [
+    "Existing installed 0.10 Rending and shared armor/finesse mechanism evidence",
+    "Accepted shared percentage formatter and buff-value lookup evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5648 bytes, SHA256 1bf167044e5b7a4afc1bf39e89640fdf02fb3f522c96a5cf9ee89938c6912247",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "read-only draft checked exact pairs, armor-dependent outcomes and no English erratum from internal 20% annotation; primary retained + display prefix and reviewed final text"
+  },
+  "static_examples": {
+    "prearmor_damage": 100,
+    "target": "super_armor",
+    "original_modifier_0_5_before": 50,
+    "modifier_0_5_after": 60,
+    "relative_gain_percent": 20,
+    "original_modifier_1_before": 100,
+    "modifier_1_after": 102.5,
+    "modifier_1_relative_gain_percent": 2.5
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Weapon/armor profiles, existing Rending, complete critical/weakspot outcomes, caps and final game UI.",
+    "Reason for the internal talent-name annotation saying 20% while the display and installed buff give 10%."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game damage/UI measurements"
+  ],
+  "id": "veteran_rending_bonus",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Rending Strikes",
+  "name_key": "loc_talent_veteran_rending_bonus",
+  "name_hash": "85ef3efb",
+  "description_key": "loc_talent_veteran_rending_bonus_desc",
+  "description_hash": "e703007a",
+  "raw_template": "Gives {rending_multiplier:%s} Rending to all weapons.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 99,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 137,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 282,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 37,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/rending-strikes-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_rending_bonus.md",
+  "commit": "f09b38f5d30aefe394316cf02681a2e77a7b7602"
+}

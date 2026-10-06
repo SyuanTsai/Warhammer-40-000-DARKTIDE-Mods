@@ -1,5 +1,7 @@
 # 歐格林：未被當前技能樹直接使用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[角色基礎效果](BASE_EFFECTS.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 |---|---|---|---|
 | `ogryn_taunt_radius_increase` | 嘲諷範圍增加 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L173-L199) |
 | `ogryn_leadbelcher_trigger_chance_increase` | 舊幸運子彈機率升級 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L431-L450) |
-| `ogryn_heavy_hitter_light_attacks_refresh` | 舊輕擊刷新重拳出擊 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 當前重拳出擊本身已允許一般近戰命中加層與刷新，不代表需要此舊節點。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L566-L581) |
+| `ogryn_heavy_hitter_light_attacks_refresh` | 舊輕擊重新計時重拳出擊 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 目前重拳出擊本身已允許一般近戰命中加層與重新計時，不代表需要此舊節點。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L566-L581) |
 | `ogryn_increased_suppression` | 獨立壓制加成 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 優勝劣汰使用另一個ogryn_suppression_increase，不能因名稱相近視為同一模板。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1055-L1071) |
 | `ogryn_increased_clip_size` | 彈匣容量增加 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1072-L1088) |
 | `ogryn_special_ammo_movement` | 遠程能力移動與近距離傷害 | 天賦入口未列入，但相同特殊規則ogryn_combat_no_movement_penalty已由貼身火力直接提供；移動與近距離增傷仍生效。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1593-L1617) |
@@ -24,8 +26,8 @@
 | `ogryn_suppression_toughness` | 高韌性壓制免疫 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2136-L2150) |
 | `ogryn_taking_damage_improves_handling` | 受傷後武器操控 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2151-L2173) |
 | `ogryn_multiple_staggers_restore_stamina` | 多目標踉蹌恢復耐力 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2197-L2211) |
-| `ogryn_movement_boost_on_ranged_damage` | 舊遠程受擊防護 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 當前遠程受擊減傷另掛ogryn_ranged_damage_immunity，不把此舊效果數值混入。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2222-L2248) |
-| `ogryn_far_damage` | 遠距離增傷 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2318-L2333) |
+| `ogryn_movement_boost_on_ranged_damage` | 舊遠程受擊防護 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 目前遠程受擊減傷另掛ogryn_ranged_damage_immunity，不把此舊效果數值混入。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2222-L2248) |
+| `ogryn_far_damage` | 遠程離增傷 | 目前樹與基礎配置未掛載此天賦；未在這兩組入口找到其直接掛載的同名增益／特殊規則。 | [定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2318-L2333) |
 
 ## 仍使用底層效果的項目
 

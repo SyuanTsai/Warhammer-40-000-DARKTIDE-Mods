@@ -1,5 +1,7 @@
 # 槍林彈雨(Hail of Fire)：原始碼依據
 
+[English](en/ogryn_special_ammo_armor_pen.md)
+
 [返回玩家說明](README.md#ogryn_special_ammo_armor_pen)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_special_ammo_armor_pen)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -42,7 +44,7 @@
 ## 原文核對
 
 - 對應 hash：`5f4e17cf`。
-- 繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文本與程式來源皆為1.13.1；差異待遊戲內核對。
+- 繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文字與程式來源皆為1.13.1；差異待遊戲內核對。
 
 ## 圖示來源
 

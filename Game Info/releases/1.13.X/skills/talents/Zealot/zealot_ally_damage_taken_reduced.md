@@ -1,5 +1,7 @@
 # 輕蔑之盾(Shield of Contempt)：原始碼依據
 
+[English](en/zealot_ally_damage_taken_reduced.md)
+
 [返回玩家說明](README.md#zealot_ally_damage_taken_reduced)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_ally_damage_taken_reduced)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 ## 算例條件與待確認事項
 
 - **減傷算例**：只計這份效果，之後原本 100 點傷害變成 100 × 0.4 = 40 點。第 0 秒觸發時，效果約於第 4 秒結束，約第 8 秒才能再次觸發。
-- 本機中英文都限定協同，但固定執行流程沒有協同檢查；文本與程式來源皆為1.13.1；實際行為待遊戲內核對，不列繁中誤譯。
+- 本機中英文都限定協同，但固定執行流程沒有協同檢查；文字與程式來源皆為1.13.1；實際行為待遊戲內核對，不列繁中誤譯。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

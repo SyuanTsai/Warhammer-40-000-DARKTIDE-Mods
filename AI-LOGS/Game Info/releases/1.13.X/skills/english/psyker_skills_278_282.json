@@ -1,0 +1,73 @@
+{
+  "id": "psyker_skills_278_282",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display mapping only: psyker_talents.lua L869–885 (Seer's Presence), L891–920 (Prescience), L317–339 (Venting Shriek), L37–108 (Scrier's Gaze), L266–311 (Becalming Eruption). Accepted mechanism values and common formatting reused; no buff, event or calculation-chain retrace."
+  ],
+  "questions": [
+    "Becalming Eruption: tier-aware display uses the accepted 0.99 coefficient (1%) or existing 0.98 override (2%); the active client tier/configuration and special duplicate-hit counting remain unconfirmed. Examples retain only the verified 0.99 scenario."
+  ],
+  "skills": [
+    {
+      "id": "psyker_cooldown_aura_improved",
+      "name": "Seer's Presence",
+      "name_hash": "bf9a6ebc",
+      "description_hash": "8daf59be",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_cooldown_aura_improved.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_cooldown_aura_improved.md",
+      "commit": "3e0ece27c"
+    },
+    {
+      "id": "psyker_aura_crit_chance_aura",
+      "name": "Prescience",
+      "name_hash": "23f5f870",
+      "description_hash": "a2000c1d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_crit_chance_aura.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_crit_chance_aura.md",
+      "commit": "2559abc4e"
+    },
+    {
+      "id": "psyker_shout_vent_warp_charge",
+      "name": "Venting Shriek",
+      "name_hash": "90f1bcf1",
+      "description_hash": "7d4501be",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_vent_warp_charge.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shout_vent_warp_charge.md",
+      "commit": "a27304975"
+    },
+    {
+      "id": "psyker_combat_ability_stance",
+      "name": "Scrier's Gaze",
+      "name_hash": "b664d880",
+      "description_hash": "00d42220",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_stance.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_combat_ability_stance.md",
+      "commit": "3dd64cc01"
+    },
+    {
+      "id": "psyker_shout_reduces_warp_charge_generation",
+      "name": "Becalming Eruption",
+      "name_hash": "cc0d1ec0",
+      "description_hash": "57df8e08",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_reduces_warp_charge_generation.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shout_reduces_warp_charge_generation.md",
+      "commit": "833435463"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 605,
+    "from_commit": "b99c231b1",
+    "to_commit": "833435463",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

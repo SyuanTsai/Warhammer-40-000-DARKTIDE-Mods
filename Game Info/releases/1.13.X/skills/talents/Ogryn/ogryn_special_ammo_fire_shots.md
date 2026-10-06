@@ -1,5 +1,7 @@
 # 集火射擊(Light 'em Up)：原始碼依據
 
+[English](en/ogryn_special_ammo_fire_shots.md)
+
 [返回玩家說明](README.md#ogryn_special_ammo_fire_shots)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_special_ammo_fire_shots)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -47,7 +49,7 @@
 ## 原文核對
 
 - 對應 hash：`a391c6e8`。
-- 繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

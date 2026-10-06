@@ -1,5 +1,7 @@
 # 忠誠守護者(Loyal Protector)：原始碼依據
 
+[English](en/ogryn_taunt_shout.md)
+
 [返回玩家說明](README.md#ogryn_taunt_shout)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_taunt_shout)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,8 +12,8 @@
 ## 原始碼確認與程式推導
 
 - ogryn_taunt_shout action radius=12；shout target 對合格敵人施加 taunted 並強制輕度 stagger。敵人 taunted buff duration=15 且 unique_buff_id=taunted。
-- ogryn_repeat_taunt 啟動後在3秒 pulse，6秒 stop_func 再 pulse；同一 unique buff 再加入時 buff_extension_base 會先移除舊實例再加入新實例，故15秒計時刷新。
-- 未使用的ogryn_taunt_radius_increase不算當前配裝的範圍加成；本例使用實際12公尺。敵人排除依shout target表處理。
+- ogryn_repeat_taunt 啟動後在3秒 pulse，6秒 stop_func 再 pulse；同一 unique buff 再加入時 buff_extension_base 會先移除舊實例再加入新實例，故15秒計時重設。
+- 未使用的ogryn_taunt_radius_increase不算目前配裝的範圍加成；本例使用實際12公尺。敵人排除依shout target表處理。
 
 ## 原始碼依據
 
@@ -38,7 +40,7 @@
 ## 原文核對
 
 - 對應 hash：`b6bbba98`。
-- 繁中原文寫「吸引他們的炮火」；英文原文更明確寫成讓其「只攻擊你」，但兩者指向嘲諷敵人、範圍與持續時間相同，沒有相反效果。3秒與6秒重複施放的文字也相符；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文寫「吸引他們的炮火」；英文原文更明確寫成讓其「只攻擊你」，但兩者指向嘲諷敵人、範圍與持續時間相同，沒有相反效果。3秒與6秒重複施放的文字也相符；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

@@ -1,5 +1,7 @@
 # 褻瀆必懲(Punish Impiety)：原始碼依據
 
+[English](en/zealot_push_attacks_attack_speed.md)
+
 [返回玩家說明](README.md#zealot_push_attacks_attack_speed)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_push_attacks_attack_speed)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -23,7 +25,7 @@
 ## 算例條件與待確認事項
 
 - **速度算例**：只計這項加成，原本 1 秒的受影響動作變成 1 ÷ 1.1 ≈ 0.909 秒；已有同階段 20% 攻速時，則為 1 ÷ (1 + 20% + 10%) ≈ 0.769 秒。
-- 算例假設沒有其他時間縮放與速度上限，不保證整套連段、切換或硬直均縮短相同比例。
+- 算例假設沒有其他時間縮放與速度上限，不保證整套連段、切換或僵直均縮短相同比例。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

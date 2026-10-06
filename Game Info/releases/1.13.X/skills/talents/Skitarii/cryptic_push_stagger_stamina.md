@@ -1,5 +1,7 @@
 # 力量分配致動器(Force Distribution Actuators)：原始碼依據
 
+[English](en/cryptic_push_stagger_stamina.md)
+
 [返回玩家說明](README.md#cryptic_push_stagger_stamina)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_push_stagger_stamina)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- current/max>=0.5使push_impact_modifier=0.75有效；按當前耐力動態切換，不是常駐75%武器傷害。
+- current/max>=0.5使push_impact_modifier=0.75有效；按目前耐力動態切換，不是常駐75%武器傷害。
 
 ## 原始碼依據
 

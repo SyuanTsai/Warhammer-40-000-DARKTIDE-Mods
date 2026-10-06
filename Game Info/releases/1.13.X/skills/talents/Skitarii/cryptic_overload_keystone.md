@@ -1,5 +1,7 @@
 # 能量超載(Power Overload)：原始碼依據
 
+[English](en/cryptic_overload_keystone.md)
+
 [返回玩家說明](README.md#cryptic_overload_keystone)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_overload_keystone)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -14,7 +16,7 @@
 - 初始化先加入一個底層 stack，stack_offset=-1，因此 HUD/門檻讀值以0為起點。累積層不設 duration；_add_overload_stack 先取 current_stacks−1 作可見層數，當目前層數加本次增量大於或等於30時觸發一次、移除已追蹤的層並清單，超過門檻的剩餘增量不再處理。
 - 觸發時先清空累積，再依是否選用修改器決定播放一般特效或建立爆炸。隨後對協同集合中的非 companion 單位施加8秒隊伍 buff；該 buff 為單層且 refresh_duration_on_stack=true，效果是 damage=+0.15 與 toughness_damage_taken_multiplier=0.85。
 - 傷害屬性在 buff_settings 為 additive_multiplier；韌性承傷倍率為 multiplicative_multiplier。0.85表示承受韌性傷害乘0.85，即15%減少。
-- 可選修改器會改變觸發內容：爆擊能量過載開啟敵人範圍爆炸／電擊承傷削弱；振奮過載在協同成員身上回復20%韌性與20%耐力；靜電電容消耗每8／16／24次過載依序加永久增益；動力驅動使每消耗一個戰鬥技能充能額外增加5層。
+- 可選修改器會改變觸發內容：爆擊能量過載開啟敵人範圍爆炸／電擊承傷削弱；振奮過載在協同成員身上恢復20%韌性與20%耐力；靜電電容消耗每8／16／24次過載依序加永久增益；動力驅動使每消耗一個戰鬥技能充能額外增加5層。
 - talent_settings_cryptic.lua 定義 num_stacks_per_hit_on_monster_or_captains=1，但固定來源全檔搜尋僅找到該定義，啟用中的 cryptic_overload_keystone 模板沒有讀取它；不把它描述成對怪物或隊長命中會加層的有效效果。
 
 ## 原始碼依據
@@ -39,7 +41,7 @@
 - 靜態推演：29層時發生一次加2層的精英或專家擊殺，因29+2大於30仍只觸發一次；增量不會再逐個累計成額外觸發，剩餘層數丟棄。
 - 核心技能本身沒有堆疊倒數；只有達門檻的過載會清空累積。
 - 未選爆擊能量過載時，核心觸發分支播放效果與音效，不建立敵方傷害爆炸；敵方電擊與承傷削弱屬於該修改器。
-- 每個隊伍增益只對觸發當下協同集合中的非 companion 單位施加；重複觸發會刷新既有8秒增益。
+- 每個隊伍增益只對觸發當下協同集合中的非 companion 單位施加；重複觸發會重設既有8秒增益的持續時間。
 - 靜態推演依固定原始碼完成，未在遊戲內實測。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

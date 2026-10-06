@@ -1,0 +1,35 @@
+{
+  "id": "psyker_skills_348",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Minimum missing display mapping only: psyker_talents.lua L2677–2696; existing values and formatter behavior reused."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "psyker_increased_blitz_damage",
+      "name": "Psykinetic Grip",
+      "name_hash": "4ac15b0d",
+      "description_hash": "9b44cc81",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_increased_blitz_damage.md",
+      "commit": "ba73ce783"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 93,
+    "from_commit": "c622377a2",
+    "to_commit": "ba73ce783",
+    "interruptions": "No handoff, pause or model-capacity failure during item 348; class-support work counted separately."
+  }
+}

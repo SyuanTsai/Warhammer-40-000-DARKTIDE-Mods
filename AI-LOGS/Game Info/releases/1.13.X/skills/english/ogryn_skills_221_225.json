@@ -1,0 +1,72 @@
+{
+  "id": "ogryn_skills_221_225",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings in ogryn_talents.lua L1242–1262, L743–763, L1135–1151, L1030–1054 and L2753–2771 were read. Existing mechanisms, formulas, values, source references and common formatting reused.",
+  "questions": [
+    "Final game UI remains unobserved, including Pacemaker's cross-source behavior."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_staggering_increases_damage",
+      "name": "Hard Knocks",
+      "name_hash": "eb9ac8b6",
+      "description_hash": "45b6dfbf",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_staggering_increases_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_staggering_increases_damage.md",
+      "commit": "a77248310"
+    },
+    {
+      "id": "ogryn_movement_speed_after_ranged_kills",
+      "name": "Unstoppable Momentum",
+      "name_hash": "683f61ec",
+      "description_hash": "b22afedc",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_movement_speed_after_ranged_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_movement_speed_after_ranged_kills.md",
+      "commit": "723430afd"
+    },
+    {
+      "id": "ogryn_increased_ammo_reserve",
+      "name": "Ammo Stash",
+      "name_hash": "4d649644",
+      "description_hash": "1a862478",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_increased_ammo_reserve.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_increased_ammo_reserve.md",
+      "commit": "fd5577ae9"
+    },
+    {
+      "id": "ogryn_multi_hits_grant_reload_speed",
+      "name": "Pacemaker",
+      "name_hash": "3e43fc29",
+      "description_hash": "61042337",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_multi_hits_grant_reload_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_multi_hits_grant_reload_speed.md",
+      "commit": "d8ed8bb37"
+    },
+    {
+      "id": "ogryn_free_reload_after_ability",
+      "name": "Found Some More",
+      "name_hash": "e56eeef1",
+      "description_hash": "41aa3ba1",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_free_reload_after_ability.md",
+      "commit": "3b89c6ee4"
+    }
+  ],
+  "English_erratum": "Pacemaker explicitly says a single attack; accepted 1.13.1 evidence counts distinct targets in a 0.5s window without a same-attack identifier restriction.",
+  "timing": {
+    "commit_interval_seconds": 535,
+    "from_commit": "d7f2c1be4",
+    "to_commit": "3b89c6ee4",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier worktree interruption excluded."
+  }
+}

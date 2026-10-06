@@ -1,0 +1,33 @@
+{
+  "id": "adamant_stance_ranged_kills_transfer_ammo",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Blessed Armament",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_ranged_kills_transfer_ammo.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_ranged_kills_transfer_ammo.md",
+  "name_key": "loc_talent_adamant_stance_ranged_kills_transfer_ammo",
+  "name_hash": "90beeaf5",
+  "description_key": "loc_talent_adamant_stance_ranged_kills_transfer_ammo_no_cd_desc",
+  "description_hash": "263d1e30",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 4,
+      "Not covered by the description": 2,
+      "Cannot confirm": 1
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L320-L342. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Once-per-Attack wording remains unconfirmed against existing timestamp throttling; the 1.5s setting is not asserted as an enforced interval.",
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_ranged_kills_transfer_ammo.md"
+}

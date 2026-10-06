@@ -1,4 +1,6 @@
-# 聚焦亞空間(Focused Warp)：原始碼依據
+# 聚焦次元(Focused Warp)：原始碼依據
+
+[English](en/psyker_increased_warp_damage.md)
 
 [返回玩家說明](README.md#psyker_increased_warp_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_increased_warp_damage)
 

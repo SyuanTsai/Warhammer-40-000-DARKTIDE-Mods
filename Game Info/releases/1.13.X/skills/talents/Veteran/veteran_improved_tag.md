@@ -1,5 +1,7 @@
 # 鎖定目標(Focus Target!)：原始碼依據
 
+[English](en/veteran_improved_tag.md)
+
 [返回玩家說明](README.md#veteran_improved_tag)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,8 +12,8 @@
 ## 儲存層數與目標層數
 
 - template_data.stacks 是自身儲存量，初始 1，每 1.5 秒增 1，基礎上限 4；stacks_applied 是目前目標已套用的層數，兩者不能混用。on_tag_unit 只接受本人發出的 enemy_over_here_veteran 標記。
-- 先設定 remove_t=t+25。同一目標時 stacks_to_apply=stacks-stacks_applied；若差額 <=0，直接返回，所以只刷新標記時間，不降低目標層數，也不重設自身儲存量。若差額 >0，補足新層數並將儲存量重設為 1。更換目標則移除舊外部 buff，對新目標套用當前全部儲存層數，再歸 1。
-- 層數自然增加不會自動更新已標記目標。目標死亡不要求 owner 親自擊殺，但必須 params.dying_unit==outlined_unit；處理獎勵後將儲存量提高至 max(當前值,2)。
+- 先設定 remove_t=t+25。同一目標時 stacks_to_apply=stacks-stacks_applied；若差額 <=0，直接返回，所以只刷新標記時間，不降低目標層數，也不重設自身儲存量。若差額 >0，補足新層數並將儲存量重設為 1。更換目標則移除舊外部 buff，對新目標套用目前全部儲存層數，再歸 1。
+- 層數自然增加不會自動更新已標記目標。目標死亡不要求 owner 親自擊殺，但必須 params.dying_unit==outlined_unit；處理獎勵後將儲存量提高至 max(目前值,2)。
 - 目標 debuff 的 damage_taken_multiplier=1.05，max_stacks=6；Buff 逐層乘算，N 層為 1.05^N。傷害計算在目標承傷階段套用，並不只限標記者的攻擊。4 層=1.21550625 倍。
 - 標記 25 秒到期會移除該標記者維持的目標 debuff 與 outlined_unit；到期後才死亡不會發放此標記的死亡獎勵。
 

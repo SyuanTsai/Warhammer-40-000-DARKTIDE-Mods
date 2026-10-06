@@ -1,5 +1,7 @@
 # 近戰增幅(Melee Damage Boost)：原始碼依據
 
+[English](en/base_melee_damage_node_buff_medium_4.md)
+
 [返回玩家說明](README.md#base_melee_damage_node_buff_medium_4)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_melee_damage_node_buff_medium_4)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前節點cost=max_points=1，使用tier1的melee_damage=.1，不採後續未能分配的tier2/3/4值。medium_4是medium_1模板clone，兩個talent identifier不同，可同階段加算。
+- 目前節點cost=max_points=1，使用tier1的melee_damage=.1，不採後續未能分配的tier2/3/4值。medium_4是medium_1模板clone，兩個talent identifier不同，可同階段加算。
 
 ## 原始碼依據
 

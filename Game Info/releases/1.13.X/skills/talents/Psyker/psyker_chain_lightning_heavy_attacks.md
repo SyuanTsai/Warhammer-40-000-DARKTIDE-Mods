@@ -1,5 +1,7 @@
 # 蓄力打擊(Charged Strike)：原始碼依據
 
+[English](en/psyker_chain_lightning_heavy_attacks.md)
+
 [返回玩家說明](README.md#psyker_chain_lightning_heavy_attacks)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_chain_lightning_heavy_attacks)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 - **搭配衰弱詛咒**：這 2 秒電擊也會使目標受到的傷害增加 10%。只比較該承傷倍率，原本 100 點傷害變成 100 × 1.1 = 110 點。
 - 若同時選取衰弱詛咒，目標會改用強化電擊版本並承受該天賦的全來源增傷；未選取時只有電擊與持續傷害。
 - 目標電擊效果的最大疊層為 1；傷害量仍依目標、攻擊狀態與傷害設定變動，原始碼片段未給可套用所有敵人的固定數值。
-- 文本與程式來源皆為1.13.1；實際表現待遊戲內核對；未做遊戲內測試。
+- 文字與程式來源皆為1.13.1；實際表現待遊戲內核對；未做遊戲內測試。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_484_488",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only necessary display mappings: cryptic_talents.lua L494-L512 (Probing Strikes), L1587-L1609 (Flux Conduit Build-Up), L1610-L1628 (Reactor Coil Recharge), L1652-L1674 (Augmented Power-Cycle). Axial Slash has no placeholders. No mechanism retracing."
+  ],
+  "questions": [
+    "No new unresolved question or explicit English contradiction. Single-charge recovery denominators, refresh behavior and charged-attack exceptions are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_chordclaw_horizontal_swipe",
+      "name": "Axial Slash",
+      "name_hash": "f6fe2e81",
+      "description_hash": "262d64b6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_horizontal_swipe.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_horizontal_swipe.md",
+      "commit": "5d25e0631"
+    },
+    {
+      "id": "cryptic_chordclaw_quick_stab_combo",
+      "name": "Probing Strikes",
+      "name_hash": "65665761",
+      "description_hash": "e0d3d43f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_chordclaw_quick_stab_combo.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_chordclaw_quick_stab_combo.md",
+      "commit": "3d5df57d2"
+    },
+    {
+      "id": "cryptic_crits_grant_power",
+      "name": "Flux Conduit Build-Up",
+      "name_hash": "977e362d",
+      "description_hash": "10f2fa54",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_crits_grant_power.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_crits_grant_power.md",
+      "commit": "f6e0333ae"
+    },
+    {
+      "id": "cryptic_weakspot_kills_grant_power",
+      "name": "Reactor Coil Recharge",
+      "name_hash": "44336d2e",
+      "description_hash": "7e092f5a",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_weakspot_kills_grant_power.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_weakspot_kills_grant_power.md",
+      "commit": "cdb1c15e4"
+    },
+    {
+      "id": "cryptic_increased_passive_cooldown_regen",
+      "name": "Augmented Power-Cycle",
+      "name_hash": "2995a918",
+      "description_hash": "34a7eed6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_increased_passive_cooldown_regen.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_increased_passive_cooldown_regen.md",
+      "commit": "fd088c0eb"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 359,
+    "from_commit": "fda05ff92",
+    "to_commit": "fd088c0eb",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

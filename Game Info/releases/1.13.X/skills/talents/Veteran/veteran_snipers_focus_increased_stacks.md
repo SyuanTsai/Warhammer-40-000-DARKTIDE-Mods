@@ -1,5 +1,7 @@
 # 遠程刺客(Long Range Assassin)：原始碼依據
 
+[English](en/veteran_snipers_focus_increased_stacks.md)
+
 [返回玩家說明](README.md#veteran_snipers_focus_increased_stacks)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 ## 百分比與實際傷害增幅
 
 - **原始碼確認**：increased_stacks複製原stat buff並將max_stacks改為15，每層.075不變。
-- **程式推導**：固定非爆擊弱點命中，B=100、F=40、無其他加成或後續倍率：零層140，十層170，十五層185。十五層相對零層為45/140≈32.14%；相對十層則15/170≈8.82%。112.5%是F的加成，不能當成整次傷害增幅，也不能用零層當分母宣稱是升級本身的收益。
+- **程式推導**：固定非暴擊弱點命中，B=100、F=40、無其他加成或後續倍率：零層140，十層170，十五層185。十五層相對零層為45/140≈32.14%；相對十層則15/170≈8.82%。112.5%是F的加成，不能當成整次傷害增幅，也不能用零層當分母宣稱是升級本身的增幅。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2798–2883 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2798-L2883)
 - [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)

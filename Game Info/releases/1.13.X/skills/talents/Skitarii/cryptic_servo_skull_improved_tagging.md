@@ -1,5 +1,7 @@
 # 心智網指令(Noospheric Command)：原始碼依據
 
+[English](en/cryptic_servo_skull_improved_tagging.md)
+
 [返回玩家說明](README.md#cryptic_servo_skull_improved_tagging)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_servo_skull_improved_tagging)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- 特長加入 cryptic_servo_skull_improved_tagging 規則。有效射擊命令需要頭骨存活、敵人存活，且頭骨處於 following、following_shooting 或 following_shooting_ability 狀態；一般遊戲需至少0.3份 combat_ability 電容量，training_grounds 不受最低門檻限制。開始下令時把頭骨設為 following_shooting_ability，並向頭骨加入 cryptic_servo_skull_tagging_buff；其持續時間2秒，minion_shoot_cooldown_modifier=0.15。射擊動作將冷卻乘以該值，因此冷卻剩15%（縮短85%，頻率約為原本6.67倍）。設定的完整使用成本為0.3份 combat_ability 電容量；已有同一加速效果時，程式依該效果的持續進度計算本次額外扣除值。所有這些電容量皆屬 combat_ability 資源，與噴火／醫療頭骨共用的 grenade_ability 使用次數分開。 minion_shoot_cooldown_modifier 為 multiplicative_multiplier；與永久強化0.5相乘，3秒×0.5×0.15=0.225秒。沒有既有效果時duration_progress回傳0，成本0.3；已有剩餘時長時依1-progress計價，再刷新2秒。
+- 特長加入 cryptic_servo_skull_improved_tagging 規則。有效射擊命令需要頭骨存活、敵人存活，且頭骨處於 following、following_shooting 或 following_shooting_ability 狀態；一般遊戲需至少0.3份 combat_ability 電容量，training_grounds 不受最低門檻限制。開始下令時把頭骨設為 following_shooting_ability，並向頭骨加入 cryptic_servo_skull_tagging_buff；其持續時間2秒，minion_shoot_cooldown_modifier=0.15。射擊動作將冷卻乘以該值，因此冷卻剩15%（縮短85%，頻率約為原本6.67倍）。設定的完整使用成本為0.3份 combat_ability 電容量；已有同一加速效果時，程式依該效果的持續進度計算本次額外扣除值。所有這些電容量皆屬 combat_ability 資源，與噴火／醫療頭骨共用的 grenade_ability 使用次數分開。 minion_shoot_cooldown_modifier 為 multiplicative_multiplier；與永久強化0.5相乘，3秒×0.5×0.15=0.225秒。沒有既有效果時duration_progress回傳0，成本0.3；已有剩餘時長時依1-progress計價，再重設2秒倒數。
 
 ## 原始碼依據
 
@@ -31,7 +33,7 @@
 
 - 射擊冷卻原為3秒，乘0.15後為0.45秒；持續2秒的完整加速消耗0.3份電容量。
 - 有0.25份電容量時，低於0.3份啟動門檻，一般任務不能下令觸發此射擊加速；訓練場則略過門檻。
-- 加速效果只在改良標記特長啟用且伺服頭骨命令有效時觸發；不改變噴火與醫療頭骨共用的手榴彈能力使用次數。
+- 加速效果只在改良標記特長啟用且伺服頭骨命令有效時觸發；不改變噴火與醫療頭骨共用的手雷能力使用次數。
 - 0.15是射擊冷卻乘數，表示冷卻剩15%、減少85%；玩家介面將此值換算成約567%攻擊速度增幅。
 - 施放時會依同一加速效果剩餘時長調整電容量扣除；持續時間上限為2秒。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

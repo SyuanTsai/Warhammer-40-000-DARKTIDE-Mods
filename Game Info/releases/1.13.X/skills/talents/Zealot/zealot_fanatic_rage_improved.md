@@ -1,5 +1,7 @@
 # 正義勇士(Righteous Warrior)：原始碼依據
 
+[English](en/zealot_fanatic_rage_improved.md)
+
 [返回玩家說明](README.md#zealot_fanatic_rage_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_fanatic_rage_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 升級授予 `zealot_preacher_increased_crit_chance` special rule。基礎 Fury buff 給予 `passive_1.crit_chance=0.15`；conditional stat buff 僅在該特殊規則存在時再加 `spec_passive_2.crit_chance=0.10`。
-- 這是10個百分點的額外暴擊率，非將原暴擊率乘以1.1；僅 Fury buff 存在時生效，與升級本身沒有額外層數或獨立冷卻。
+- 這是10個百分點的額外爆擊率，非將原爆擊率乘以1.1；僅 Fury buff 存在時生效，與升級本身沒有額外層數或獨立冷卻。
 
 ## 原始碼依據
 
@@ -31,7 +33,7 @@
 ## 原文核對
 
 - 對應 hash：`cde6c5ff`。
-- 繁中與英文都描述此升級提高熾熱虔誠提供的暴擊率；以百分點與總和表達是為免誤讀。
+- 繁中與英文都描述此升級提高熾熱虔誠提供的爆擊率；以百分點與總和表達是為免誤讀。
 
 ## 圖示來源
 

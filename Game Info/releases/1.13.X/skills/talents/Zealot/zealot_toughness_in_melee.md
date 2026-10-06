@@ -1,5 +1,7 @@
 # 內憂外患(Enemies Within, Enemies Without)：原始碼依據
 
+[English](en/zealot_toughness_in_melee.md)
+
 [返回玩家說明](README.md#zealot_toughness_in_melee)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_toughness_in_melee)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- update先用先前百分比*dt回復，每.1秒重新查半徑5的broadphase。每名敵人先加1，monster/captain/cultist_captain再加monster_count5，因此實際權重6；不是設定名稱所暗示的總數5。
+- update先用先前百分比*dt恢復，每.1秒重新查半徑5的broadphase。每名敵人先加1，monster/captain/cultist_captain再加monster_count5，因此實際權重6；不是設定名稱所暗示的總數5。
 - is_disabled時直接return。恢復以最大韌性為基準，受恢復加成及缺額限制。
 
 ## 原始碼依據

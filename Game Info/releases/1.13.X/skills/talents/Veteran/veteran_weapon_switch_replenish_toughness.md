@@ -1,5 +1,7 @@
 # 時刻警覺(On Your Toes)：原始碼依據
 
+[English](en/veteran_weapon_switch_replenish_toughness.md)
+
 [返回玩家說明](README.md#veteran_weapon_switch_replenish_toughness)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -7,7 +9,7 @@
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1840-L1862)：`keystone_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
-此 modifier 設定 restore_toughness；on_wield_ranged 僅在 ranged_stacks>0 且 t>last_ranged_toughness+3 時回復，on_wield_melee 對 melee_stacks 與 last_melee_toughness 做相同檢查。兩方向使用獨立計時器。呼叫 Toughness.replenish_percentage(unit,.2,false,...)，非每層增加；切換後仍清空相應累積層數。回復受韌性缺口限制。
+此 modifier 設定 restore_toughness；on_wield_ranged 僅在 ranged_stacks>0 且 t>last_ranged_toughness+3 時恢復，on_wield_melee 對 melee_stacks 與 last_melee_toughness 做相同檢查。兩方向使用獨立計時器。呼叫 Toughness.replenish_percentage(unit,.2,false,...)，非每層增加；切換後仍清空相應累積層數。恢復受韌性缺口限制。
 
 - ignore_stat_buffs=false，百分比恢復仍乘受益者 toughness_regen_rate_multiplier；算例按 1 計算。
 

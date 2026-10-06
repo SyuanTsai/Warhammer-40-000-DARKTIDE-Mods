@@ -76,3 +76,96 @@
 | Threat Level | 威脅等級 | Enhanced_descriptions | `<translation-repo>/Main_Modules/PENANCES.lua` | mission-completion difficulty descriptions | Fixed difficulty-scale label is absent from the formal glossary; generic and comparative PENANCES descriptions repeatedly use `威脅等級`, while named tiers follow the locked difficulty entries. | candidate | Added during ED3-PENANCES-RECHECK-003. |
 | Promotion Material | 晉升之材 | Enhanced_descriptions | `<translation-repo>/Main_Modules/PENANCES.lua` | `loc_achievement_group_rank_4_difficulty_3_name`; `loc_achievement_group_rank_5_difficulty_4_name` | Repeated Veteran Penance title is absent from the formal glossary; `晉升之材` preserves the source's sense of someone fit for promotion, unlike the previous unrelated `樹立榜樣`. | candidate | Added during ED3-PENANCES-RECHECK-003. |
 | Master of War | 戰爭大師 | Enhanced_descriptions | `<translation-repo>/Main_Modules/PENANCES.lua` | `loc_achievement_class_meta_name` | Shared class-meta title template is absent from the formal glossary; the source and zh-tw retain the same `{class_name}` placeholder and consistently use `戰爭大師`. | candidate | Added during ED3-PENANCES-RECHECK-004. |
+
+## 1.13 技能名稱文本對照（2026-10-04）
+
+[翻譯表](../Referneces/Translation.md)｜[1.13 技能盤點](../Game%20Info/releases/1.13.X/skills/README.md)｜[官方 1.13.0 公告](https://forums.fatsharkgames.com/t/patch-1-13-0-patch-notes/125866)
+
+依 1.13.1 固定來源 `7e662fcda16219d775b84af50322be2e9cd9d62e` 與 Steam Build 25606770 的英文／zh-tw ui 文本，以相同名稱鍵及 hash 配對。55 項繁中對應全部已從文本補齊，其中 13 項為本版新增，42 項為既有盤點補缺。此節為已寫入翻譯表的對照紀錄；採用文本名稱，不需要使用者逐項確認。[文本配對紀錄](../AI-LOGS/Game%20Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json)。
+
+### 1.13 新增名稱
+
+| 編號 | 職業 | 英文名稱 | 識別依據 | 繁中對應 |
+|---|---|---|---|---|
+| 01 | 靈能者 | Focused Warp | `psyker_increased_warp_damage` | 聚焦次元 |
+| 02 | 靈能者 | Peril Equilibrium | `psyker_weapon_attacks_peril_equilibrium` | 危險平衡 |
+| 03 | 靈能者 | Psykinetic Grip | `psyker_increased_blitz_damage` | 念力之握 |
+| 04 | 狂信徒 | Wait in Line | `zealot_reduced_damage_from_ranged` | 排隊等候 |
+| 05 | 狂信徒 | Holy Tools | `zealot_weapon_special_damage` | 神聖工具 |
+| 06 | 狂信徒 | Got Your Back | `zealot_melee_kills_restore_toughness_to_target` | 為您撐腰 |
+| 07 | 狂信徒 | Purifying Hatred | `zealot_dmg_vs_burning_electrocuted` | 淨化仇恨 |
+| 08 | 狂信徒 | Zealous Pilgrim | `zealot_resist_death_ability` | 狂熱朝聖者 |
+| 09 | 狂信徒 | Risen | `zealot_resist_death_golden_toughness` | 復活 |
+| 10 | 狂信徒 | Fire and Fury | `zealot_resist_death_fire` | 烈焰與怒火 |
+| 11 | 歐格林 | Found Some More | `ogryn_free_reload_after_ability` | 發現更多 |
+| 12 | 老兵 | Guardsman | `veteran_base_ranged_damage` | 衛兵 |
+| 13 | 老兵 | Practiced Efficiency | `veteran_survivalist_passive` | 實踐效率 |
+
+### 既有盤點補缺
+
+含職業基礎效果、小型節點及興奮劑配方；這些項目不宣稱為 1.13 才新增。
+
+| 編號 | 職業 | 英文名稱 | 識別依據 | 繁中對應 |
+|---|---|---|---|---|
+| 14 | 法務官 | Ranged Damage Boost | `base_ranged_damage_node_buff_medium_1` | 遠程傷害增幅 |
+| 15 | 法務官 | Cleave Boost | `base_cleave_node_buff_medium_1` | 順劈加成 |
+| 16 | 法務官 | Impact Boost | `base_impact_node_buff_medium_1` | 衝擊加成 |
+| 17 | 巢都渣滓 | Critical Chance Boost | `base_crit_chance_node_buff_low_1` | 暴擊幾率增幅 |
+| 18 | 巢都渣滓 | Potent Tox | `base_toxin_power_boost_1` | 強效毒藥 |
+| 19 | 巢都渣滓 | Equip Cartel Special | `broker_stimm_activation_talent` | 裝備財閥特殊裝備 |
+| 20 | 巢都渣滓 | Spur I | `broker_stimm_celerity_1` | 激勵I |
+| 21 | 巢都渣滓 | Spur II | `broker_stimm_celerity_2` | 激勵II |
+| 22 | 巢都渣滓 | Spur III | `broker_stimm_celerity_3` | 激勵III |
+| 23 | 巢都渣滓 | Spur IV | `broker_stimm_celerity_4` | 激勵IV |
+| 24 | 巢都渣滓 | Reflex | `broker_stimm_celerity_5b` | 反射 |
+| 25 | 巢都渣滓 | Fervor | `broker_stimm_celerity_5c` | 狂熱 |
+| 26 | 巢都渣滓 | Vultoprene I | `broker_stimm_combat_4c` | 獵鷹蕈劑I |
+| 27 | 巢都渣滓 | Vultoprene II | `broker_stimm_combat_5c` | 獵鷹蕈劑II |
+| 28 | 巢都渣滓 | Kalma I | `broker_stimm_concentration_1` | 抗焦慮藥I |
+| 29 | 巢都渣滓 | Kalma II | `broker_stimm_concentration_2` | 抗焦慮藥II |
+| 30 | 巢都渣滓 | Kalma III | `broker_stimm_concentration_3` | 抗焦慮藥III |
+| 31 | 巢都渣滓 | Kalma IV | `broker_stimm_concentration_4` | 抗焦慮藥IV |
+| 32 | 巢都渣滓 | Kalma V | `broker_stimm_concentration_5a` | 抗焦慮藥V |
+| 33 | 巢都渣滓 | Like the Wind | `broker_passive_improved_sprint_dodge` | 迅如疾風 |
+| 34 | 巢都渣滓 | Cartel Special | `broker_stimm_description_talent` | 財閥專員 |
+| 35 | 巢都渣滓 | Barrage I | `broker_stimm_durability_1` | 彈幕I |
+| 36 | 巢都渣滓 | Barrage II | `broker_stimm_durability_2` | 彈幕II |
+| 37 | 巢都渣滓 | Barrage III | `broker_stimm_durability_3` | 彈幕III |
+| 38 | 巢都渣滓 | Barrage IV | `broker_stimm_durability_4` | 彈幕IV |
+| 39 | 巢都渣滓 | Tank | `broker_stimm_durability_5a` | 坦克 |
+| 40 | 巢都渣滓 | Regain | `broker_stimm_durability_5b` | 恢復 |
+| 41 | 巢都渣滓 | Spur V | `broker_stimm_celerity_5a` | 激勵V |
+| 42 | 巢都渣滓 | Hypex | `broker_stimm_concentration_5b` | 狂熱 |
+| 43 | 巢都渣滓 | Klay | `broker_stimm_concentration_5c` | 集中藥 |
+| 44 | 護教軍 | Motive Engine | `cryptic_passive_cooldown_regen` | 動力引擎 |
+| 45 | 靈能者 | Perils of the Warp | `psyker_peril_passive` | 次元危險 |
+| 46 | 歐格林 | Thick Skin | `ogryn_base_tank_passive` | 厚實表皮 |
+| 47 | 歐格林 | Outta My Way! | `ogryn_dodge_stagger` | 滾吧你！ |
+| 48 | 老兵 | Determined | `veteran_supression_immunity` | 堅定不移 |
+| 49 | 巢都渣滓 | Wildfire I | `broker_stimm_combat_1` | 野火I |
+| 50 | 巢都渣滓 | Wildfire II | `broker_stimm_combat_2` | 野火II |
+| 51 | 巢都渣滓 | Wildfire III | `broker_stimm_combat_3` | 野火III |
+| 52 | 巢都渣滓 | Wildfire IV | `broker_stimm_combat_4a` | 野火IV |
+| 53 | 巢都渣滓 | Wildfire V | `broker_stimm_combat_5a` | 野火V |
+| 54 | 巢都渣滓 | Fury I | `broker_stimm_combat_4b` | 狂怒I |
+| 55 | 巢都渣滓 | Fury II | `broker_stimm_combat_5b` | 狂怒II |
+
+### 已標記過時的具名技能
+
+| 職業 | 英文名稱 | 原有繁中對應 | 1.13 狀態 |
+|---|---|---|---|
+| 靈能者 | Tranquility Through Slaughter | 殺無赦，心祥和 | 可選天賦移除 |
+| 狂信徒 | Punishment | 懲罰 | 可選天賦移除 |
+| 狂信徒 | Impassible | 不可逾越 | 可選天賦移除 |
+| 狂信徒 | Grievous Wounds | 重傷 | 可選天賦移除 |
+| 護教軍 | Readiness Doctrines | 備戰教條 | 獨立子節點移除；效果併入進階戰鬥教範 |
+
+### 小型節點與名稱核對備註
+
+- 翻譯表另有 7 項小型節點名稱在目前七職業技能樹均未使用，已標記過時並保留歷史譯名：Peril Resistance, Movement Speed Boost, Reload Boost, Rending Boost, Stamina Boost, Stamina Regeneration Boost, Suppression Boost。此標記限獨立小型節點，不表示相關屬性或其他技能效果被移除。
+- 鮮血救贖（Blood Redemption）與卓越氣場（Towering Presence）改為職業內建被動，保留既有對應。
+- The Emperor's Will 與 Kinetic Energy Distributors 修正英文拼寫，保留原有繁中對應；後者已沿用既有對應。
+- 老兵基礎效果使用同版正式英文名稱：Guardsman、Practiced Efficiency、Determined、Low Profile。舊盤點的 Increased Ranged Damage、Survivalist Passive、Suppression Immunity、Cover Peeking 是功能標題；Low Profile 的 zh-tw 文本仍標記 `[Not Translated]`，保留原始英文，不重複列入 55 項繁中配對。
+- 正式名稱只按相同名稱鍵配對；不將舊天賦定義、重用圖示或更換程式識別碼直接判成技能移除。
+
+- 本批名稱直接取自同版 zh-tw 文本。例如 Focused Warp／聚焦次元、Peril Equilibrium／危險平衡、Guardsman／衛兵、Practiced Efficiency／實踐效率；保留文本中的實際用字。

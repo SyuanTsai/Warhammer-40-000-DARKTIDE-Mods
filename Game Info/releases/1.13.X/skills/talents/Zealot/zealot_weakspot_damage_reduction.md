@@ -1,5 +1,7 @@
 # 傲慢(Hubris)：原始碼依據
 
+[English](en/zealot_weakspot_damage_reduction.md)
+
 [返回玩家說明](README.md#zealot_weakspot_damage_reduction)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_weakspot_damage_reduction)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **持續與算例**：效果不累積層數，再次觸發會刷新時間。只計本天賦時，100 × 0.85 = 85 點傷害；另有獨立 25% 減傷時為 100 × 0.85 × 0.75 = 63.75 點。
+- **持續與算例**：效果不累積層數，再次觸發會重新計時。只計本天賦時，100 × 0.85 = 85 點傷害；另有獨立 25% 減傷時為 100 × 0.85 × 0.75 = 63.75 點。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

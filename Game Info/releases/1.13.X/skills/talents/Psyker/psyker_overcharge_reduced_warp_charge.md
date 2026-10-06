@@ -1,5 +1,7 @@
 # 現實錨點(Reality Anchor)：原始碼依據
 
+[English](en/psyker_overcharge_reduced_warp_charge.md)
+
 [返回玩家說明](README.md#psyker_overcharge_reduced_warp_charge)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_overcharge_reduced_warp_charge)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -27,7 +29,7 @@
 - 某次亞空間攻擊原本增加10個反噬百分點，注視啟動且沒有其它修正。 10×0.8=8個百分點。 生成量減少2個百分點，即比原值低20%。
 - 平息時間算例忽略反噬減少的離散級距、動作中斷、武器個別修正和其它速度效果；具體實戰時間仍會變動。
 - 兩項條件只在占卜者的注視關鍵狀態啟用，不包含離場後10秒傷害增益。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

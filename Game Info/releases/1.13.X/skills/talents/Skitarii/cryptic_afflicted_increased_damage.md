@@ -1,5 +1,7 @@
 # 弱點分析教義(Weakness Analysis Doctrine)：原始碼依據
 
+[English](en/cryptic_afflicted_increased_damage.md)
+
 [返回玩家說明](README.md#cryptic_afflicted_increased_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_afflicted_increased_damage)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 ## 原文核對
 
 - 對應 hash：`70e7ba50`。
-- 繁中與英文一致；補充加成作用在自己與刷新方式。
+- 繁中與英文一致；補充加成作用在自己與重新計時方式。
 
 ## 圖示來源
 

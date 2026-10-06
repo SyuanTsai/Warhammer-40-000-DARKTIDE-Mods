@@ -1,5 +1,7 @@
 # 懲惡揚善(Commendation from Condemnation)：原始碼依據
 
+[English](en/adamant_charge_toughness.md)
+
 [返回玩家說明](README.md#adamant_charge_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_charge_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -31,7 +33,7 @@
 
 - 3 名不同合格目標：韌性 3×20%=60%；耐力 3×15%=45%。5 名以上仍最多恢復 100% 韌性及 75% 耐力。
 - 一次衝鋒中的重複命中同一目標不會再次計數；超過目前缺少的韌性或耐力部分不會形成超額資源。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；數值與行為按固定來源提交說明。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

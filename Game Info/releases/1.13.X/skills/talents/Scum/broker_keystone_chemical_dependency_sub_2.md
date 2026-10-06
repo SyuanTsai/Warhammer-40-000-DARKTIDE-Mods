@@ -1,5 +1,7 @@
 # 化學增強(Chem Fortified)：原始碼依據
 
+[English](en/broker_keystone_chemical_dependency_sub_2.md)
+
 [返回玩家說明](README.md#broker_keystone_chemical_dependency_sub_2)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_chemical_dependency_sub_2)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -31,7 +33,7 @@
 
 - **韌性回補算例**：最大韌性 100、目前韌性 40，使用興奮劑的理論回補為 100×0.50=50，實際補到滿為 50；若目前韌性 80，實際只補 20。
 - **韌性減傷算例**：原本承受 100 點韌性傷害，3 層時為 100×0.95³=85.74 點；減少約 14.26 點。
-- 回補量受當前韌性缺額與其他韌性回補修正影響；韌性滿時不會超過上限。
+- 回補量受目前韌性缺額與其他韌性回補修正影響；韌性滿時不會超過上限。
 - 0.95³ 是三層此項修正的結果；其他韌性傷害倍率仍會再按遊戲的傷害公式合併，效果只作用於韌性傷害。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

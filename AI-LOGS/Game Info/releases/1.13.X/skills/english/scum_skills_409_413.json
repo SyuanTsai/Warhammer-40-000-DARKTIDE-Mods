@@ -1,0 +1,71 @@
+{
+  "id": "scum_skills_409_413",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display mappings only: broker_talents.lua L1789-L1820, L2285-L2321, L2057-L2081, L2240-L2284 and L1897-L1919. Existing mechanism, glossary and formatter evidence reused."
+  ],
+  "questions": [],
+  "skills": [
+    {
+      "id": "broker_passive_melee_damage_carry_over",
+      "name": "Hyper-Violence",
+      "name_hash": "14cf33e0",
+      "description_hash": "821fa540",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_melee_damage_carry_over.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_melee_damage_carry_over.md",
+      "commit": "7a13ad8fc"
+    },
+    {
+      "id": "broker_passive_toxin_infected_enemies_take_increased_damage",
+      "name": "Virulent Strain",
+      "name_hash": "c1abbd9d",
+      "description_hash": "b7e6d44b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_toxin_infected_enemies_take_increased_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_toxin_infected_enemies_take_increased_damage.md",
+      "commit": "90af76e5a"
+    },
+    {
+      "id": "broker_passive_damage_after_toxined_enemies",
+      "name": "Toxin Mania",
+      "name_hash": "3cc33c95",
+      "description_hash": "f70dc769",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_damage_after_toxined_enemies.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_damage_after_toxined_enemies.md",
+      "commit": "331398b52"
+    },
+    {
+      "id": "broker_passive_toxin_spread_on_kills",
+      "name": "Splash Damage",
+      "name_hash": "7aa99c8a",
+      "description_hash": "a94fd4a3",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_toxin_spread_on_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_toxin_spread_on_kills.md",
+      "commit": "123c3fc4f"
+    },
+    {
+      "id": "broker_passive_increased_blitz_ammo",
+      "name": "Extra Pouches",
+      "name_hash": "a26229aa",
+      "description_hash": "0e811057",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_increased_blitz_ammo.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_passive_increased_blitz_ammo.md",
+      "commit": "92d99ae20"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 260,
+    "from_commit": "670f5f810",
+    "to_commit": "92d99ae20",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

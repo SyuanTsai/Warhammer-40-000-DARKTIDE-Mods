@@ -1,5 +1,7 @@
 # 涅槃(In Fire Reborn)：原始碼依據
 
+[English](en/psyker_warpfire_generate_souls.md)
+
 [返回玩家說明](README.md#psyker_warpfire_generate_souls)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_warpfire_generate_souls)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_minion_death機率.1；check_proc_func先接受死亡時warpfire_burning任意來源標記，否則才查own attacker與damage_types.warpfire。沒有協同或距離判斷。proc adds1；非當前樹的increased_soul_generation特殊規則另可變2，不能列為基礎效果。
+- on_minion_death機率.1；check_proc_func先接受死亡時warpfire_burning任意來源標記，否則才查own attacker與damage_types.warpfire。沒有協同或距離判斷。proc adds1；非目前樹的increased_soul_generation特殊規則另可變2，不能列為基礎效果。
 
 ## 原始碼依據
 

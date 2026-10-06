@@ -1,0 +1,74 @@
+{
+  "id": "psyker_skills_293_297",
+  "date": "2026-10-04",
+  "scope": "Psyker",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Missing display mappings only: psyker_talents.lua L1351–1369, L521–531, L410–444, L1957–2061 and L616–712. Empowered Psionics display-only formatter lookup: talent_layout_parser.lua L438–509 and power_level_settings.lua L9; same-build localized Blitz names. Accepted mechanisms and common formatting reused; no buff/event/calculation-chain retrace."
+  ],
+  "questions": [
+    "Disrupt Destiny: English 'chance' versus accepted selection/update conditions remains ambiguous, pending in-game comparison.",
+    "Empowered Psionics: two Assail base_damage display values remain unresolved after minimal formatter read; raw tokens retained in a marked partial reconstruction. Brain Rupture cast-time and Smite spread-speed contradictions remain unobserved in game."
+  ],
+  "skills": [
+    {
+      "id": "psyker_shield_stun_passive",
+      "name": "Enervating Threshold",
+      "name_hash": "122cfc3a",
+      "description_hash": "900d2430",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shield_stun_passive.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shield_stun_passive.md",
+      "commit": "93b08ddfb"
+    },
+    {
+      "id": "psyker_overcharge_stance_infinite_casting",
+      "name": "Warp Unbound",
+      "name_hash": "e3743a11",
+      "description_hash": "10334171",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_stance_infinite_casting.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_stance_infinite_casting.md",
+      "commit": "0ed19d9bf"
+    },
+    {
+      "id": "psyker_passive_souls_from_elite_kills",
+      "name": "Warp Siphon",
+      "name_hash": "7f1f1d93",
+      "description_hash": "9ea525d4",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_passive_souls_from_elite_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_passive_souls_from_elite_kills.md",
+      "commit": "ec767ea82"
+    },
+    {
+      "id": "psyker_new_mark_passive",
+      "name": "Disrupt Destiny",
+      "name_hash": "6a38907d",
+      "description_hash": "cfa752d8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_new_mark_passive.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_new_mark_passive.md",
+      "commit": "392ade207"
+    },
+    {
+      "id": "psyker_empowered_ability",
+      "name": "Empowered Psionics",
+      "name_hash": "9bac9dab",
+      "description_hash": "8b4a7ea9",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_ability.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_empowered_ability.md",
+      "commit": "518291395"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 770,
+    "from_commit": "3f91df566",
+    "to_commit": "518291395",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

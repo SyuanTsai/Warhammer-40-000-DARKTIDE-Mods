@@ -1,9 +1,11 @@
 # 法務官：遊戲本體繁中描述比對
 
+[English](en/LOCALIZATION_COMPARISON.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋 86／86 組同鍵／hash 描述：6 項繁中勘誤、5 項待遊戲內核對、75 項未見明確矛盾。「畏怯正義」另有攻速數值的跨來源差異，與其翻譯語意勘誤分開說明。
@@ -108,7 +110,7 @@
 ## 法務官手榴彈(Arbites Grenade)
 
 - 描述鍵：`loc_talent_ability_adamant_grenade_improved_description`；hash：`6a2ea9db`。
-- 結論：未見明確矛盾。同源繁中與英文均描述手榴彈及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
+- 結論：未見明確矛盾。同源繁中與英文均描述手雷及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
 - [原始碼推導與限制](adamant_grenade_improved.md)。
 
 <a id="adamant_shock_mine"></a>
@@ -375,7 +377,7 @@
 ## 凋零烈焰(Withering Fire)
 
 - 描述鍵：`loc_talent_adamant_damage_after_reloading_desc`；hash：`e68c7c57`。
-- 結論：未見明確矛盾。繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上刷新及加算並非勘誤。
+- 結論：未見明確矛盾。繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上重新計時及加算並非勘誤。
 - [原始碼推導與限制](adamant_damage_after_reloading.md)。
 
 <a id="adamant_multiple_hits_attack_speed"></a>
@@ -417,7 +419,7 @@
 ## 走一走治百病(Walk It Off)
 
 - 描述鍵：`loc_talent_adamant_stamina_spent_replenish_toughness_desc`；hash：`5bfeac39`。
-- 結論：未見明確矛盾。繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；刷新不疊速是原文未寫的機制。
+- 結論：未見明確矛盾。繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；重新計時不疊速是原文未寫的機制。
 - [原始碼推導與限制](adamant_stamina_spent_replenish_toughness.md)。
 
 <a id="adamant_limit_dmg_taken_from_hits"></a>
@@ -445,7 +447,7 @@
 ## 彈藥腰帶(Ammo Belt)
 
 - 描述鍵：`loc_talent_adamant_ammo_belt_desc`；hash：`76199c1c`。
-- 結論：未見明確矛盾。繁中「彈藥容量」與英文 Ammo Capacity 相符；實作限定備彈是資訊補充，不列錯誤。
+- 結論：未見明確矛盾。繁中「彈藥容量」與英文 Ammo Capacity 相符；實作限定備用彈藥是資訊補充，不列錯誤。
 - [原始碼推導與限制](adamant_ammo_belt.md)。
 
 <a id="adamant_rebreather"></a>
@@ -599,7 +601,7 @@
 ## 制裁重擊(Prosecution Blow)
 
 - 描述鍵：`loc_talent_adamant_crits_rend_alt_desc`；hash：`7ccaaaa3`。
-- 結論：未見明確矛盾。繁中與英文均限定遠程爆擊撕裂；作用條件一致，公式為補充。
+- 結論：未見明確矛盾。繁中與英文均限定遠程暴擊撕裂；作用條件一致，公式為補充。
 - [原始碼推導與限制](adamant_crits_rend.md)。
 
 <a id="adamant_dodge_improvement"></a>
@@ -629,7 +631,7 @@
 ## 篩選目標(Target Selection)
 
 - 描述鍵：`loc_talent_adamant_pinning_dog_elite_damage_description`；hash：`0b95c919`。
-- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間刷新屬補充，不判為誤譯。
+- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間重新計時屬補充，不判為誤譯。
 - [原始碼推導與限制](adamant_pinning_dog_elite_damage.md)。
 
 <a id="adamant_increased_damage_to_high_health"></a>
@@ -643,7 +645,7 @@
 ## 猛犬氣場(Canine Morale)
 
 - 描述鍵：`loc_talent_adamant_pinning_dog_kills_buff_allies_description`；hash：`6250ddd6`。
-- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間刷新屬補充，不判為誤譯。
+- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間重新計時屬補充，不判為誤譯。
 - [原始碼推導與限制](adamant_pinning_dog_kills_buff_allies.md)。
 
 <a id="adamant_sprinting_sliding"></a>
@@ -664,7 +666,7 @@
 ## 秉賦為先(Priority Endowment)
 
 - 描述鍵：`loc_talent_adamant_clip_size_alt_desc`；hash：`5f584f5e`。
-- 結論：未見明確矛盾。繁中「無條件進位」與英文 rounded up一致，動態容量更新也使用ceil；未列當前彈量換算不算錯。
+- 結論：未見明確矛盾。繁中「無條件進位」與英文 rounded up一致，動態容量更新也使用ceil；未列目前彈量換算不算錯。
 - [原始碼推導與限制](adamant_clip_size.md)。
 
 <a id="adamant_damage_vs_suppressed"></a>

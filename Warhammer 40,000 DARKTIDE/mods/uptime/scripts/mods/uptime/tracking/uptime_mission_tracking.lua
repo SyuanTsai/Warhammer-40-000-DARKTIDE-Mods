@@ -1,4 +1,5 @@
-local mod = get_mod("uptime")
+-- File: uptime/scripts/mods/uptime/tracking/uptime_mission_tracking.lua
+local mod = get_mod("uptime"); if not mod then return end
 
 local mission_tracking = {
     start_time = nil,
@@ -32,13 +33,20 @@ function mod:end_mission_tracking()
     return mission_tracking
 end
 
-mod:hook_safe(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage,
-                                                                       attack_result, attack_type, damage_efficiency, ...)
-    if not mod:tracking_in_progress() then
-        return
-    end
-    add_combat(attacking_unit, attacked_unit)
-end)
+mod:hook_safe(CLASS.AttackReportManager, "add_attack_result",
+    function(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position,
+             hit_weakspot, damage,
+             attack_result, attack_type, damage_efficiency, ...)
+        if not mod:tracking_in_progress() then
+            return
+        end
+        add_combat(attacking_unit, attacked_unit)
+
+        -- Route the attack data to our damage tracking script
+        if mod.add_damage_result then
+            mod:add_damage_result(damage_profile, attacked_unit, attacking_unit, damage, attack_result, attack_type)
+        end
+    end)
 
 function add_combat(attacking_unit, attacked_unit)
     if not is_local_player(attacking_unit) and not is_local_player(attacked_unit) then
@@ -72,6 +80,8 @@ function add_combat(attacking_unit, attacked_unit)
 end
 
 function is_local_player(unit)
-    local player = Managers.player:local_player(1)
+    local player = Managers.player:local_player_safe(1)
+    if not player then return false end
+
     return unit == player.player_unit
 end

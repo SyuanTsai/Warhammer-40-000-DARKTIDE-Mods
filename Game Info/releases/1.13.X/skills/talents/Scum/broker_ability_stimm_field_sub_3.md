@@ -1,5 +1,7 @@
 # 熟練部署(Practiced Deployment)：原始碼依據
 
+[English](en/broker_ability_stimm_field_sub_3.md)
+
 [返回玩家說明](README.md#broker_ability_stimm_field_sub_3)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_stimm_field_sub_3)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,8 +12,8 @@
 ## 原始碼確認與程式推導
 
 - 此天賦掛常駐 interval buff broker_ability_stimm_field_sub_3，伺服器端每0.5秒檢查一次。啟動時記錄 pocketable_small 欄位是否已有 syringe 標籤物品，以及 pocketable_ability 剩餘充能數。
-- 之後若普通興奮劑欄位從無到有，或自身 pocketable_ability 剩餘充能增加，呼叫 restore_ability_charge_percentage(combat_ability,1)；該函式回復一個充能成本比例並將資源限制在能力上限。兩個條件各自判斷，可能各呼叫一次；都受同一充能上限限制。
-- combat_ability 是單次充能、60秒自然回充；因此此觸發直接補回一個完整能力充能。檢查為輪詢方式，最多等待約0.5秒；若欄位已有興奮劑，新增本天賦時只記錄當前狀態，不立即回復。
+- 之後若普通興奮劑欄位從無到有，或自身 pocketable_ability 剩餘充能增加，呼叫 restore_ability_charge_percentage(combat_ability,1)；該函式恢復一個充能成本比例並將資源限制在能力上限。兩個條件各自判斷，可能各呼叫一次；都受同一充能上限限制。
+- combat_ability 是單次充能、60秒自然回充；因此此觸發直接補回一個完整能力充能。檢查為輪詢方式，最多等待約0.5秒；若欄位已有興奮劑，新增本天賦時只記錄目前狀態，不立即恢復。
 
 ## 原始碼依據
 
@@ -34,7 +36,7 @@
 ## 原文核對
 
 - 對應 hash：`88b27852`。
-- 繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只回復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
+- 繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只恢復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
 
 ## 圖示來源
 

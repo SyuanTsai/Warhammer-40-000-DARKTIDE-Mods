@@ -1,5 +1,7 @@
 # 惡毒贈禮(Vicious Offering)：原始碼依據
 
+[English](en/zealot_toughness_on_heavy_kills.md)
+
 [返回玩家說明](README.md#zealot_toughness_on_heavy_kills)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_toughness_on_heavy_kills)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- proc事件on_kill後check on_heavy_hit；回復.1最大韌性。沒有cooldown_duration或max_stacks限制，每次合格事件各自恢復。繁中把Heavy Attack Kill譯為重攻擊命中，改變了必要擊殺條件，屬明確譯義錯誤。
+- proc事件on_kill後check on_heavy_hit；恢復.1最大韌性。沒有cooldown_duration或max_stacks限制，每次合格事件各自恢復。繁中把Heavy Attack Kill譯為重攻擊命中，改變了必要擊殺條件，屬明確譯義錯誤。
 
 ## 原始碼依據
 

@@ -1,5 +1,7 @@
 # 優勝劣汰(Coward Culling)：原始碼依據
 
+[English](en/ogryn_damage_vs_suppressed_coherency.md)
+
 [返回玩家說明](README.md#ogryn_damage_vs_suppressed_coherency)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_damage_vs_suppressed_coherency)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -37,7 +39,7 @@
 ## 原文核對
 
 - 對應 hash：`4e68c42c`。
-- 同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 
 ## 圖示來源
 

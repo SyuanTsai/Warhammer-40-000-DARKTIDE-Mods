@@ -1,5 +1,7 @@
 # 屠殺(Massacre)：原始碼依據
 
+[English](en/ogryn_kills_grant_crit_chance.md)
+
 [返回玩家說明](README.md#ogryn_kills_grant_crit_chance)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_kills_grant_crit_chance)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **機率算例**：原本 5% 爆擊機率，滿層變成 5% + 8 × 2% = 21%，不是 5% × 1.16。加成適用爆擊機率，不代表每次攻擊必定爆擊。
+- **機率算例**：原本 5% 爆擊率，滿層變成 5% + 8 × 2% = 21%，不是 5% × 1.16。加成適用爆擊率，不代表每次攻擊必定暴擊。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

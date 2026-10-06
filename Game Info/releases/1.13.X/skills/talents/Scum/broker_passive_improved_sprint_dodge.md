@@ -1,5 +1,7 @@
 # 迅如疾風(Like the Wind)：基礎被動：原始碼依據
 
+[English](en/broker_passive_improved_sprint_dodge.md)
+
 [返回基礎效果](BASE_EFFECTS.md#broker_passive_improved_sprint_dodge)｜[技術索引](SOURCE_INDEX.md)
 
 - 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -11,7 +13,7 @@
 - broker_archetype.lua 將 broker_passive_improved_sprint_dodge 列為預設基礎天賦。天賦同時套用 broker_passive_improved_sprint_dodge 與 broker_passive_increased_dodges 兩個 buff：前者降低 sprint dodge 角度門檻並帶有 sprint_dodge_in_overtime 關鍵字；後者提供 extra_consecutive_dodges=1。
 - 角色基礎衝刺閃避角度常數為 70°；Sprint.is_sprint_dodging 以 70° 減去 stat_buffs.sprint_dodge_reduce_angle_threshold_rad，再與來襲敵人相對於玩家朝向的夾角比較。巢都渣滓減少 15°，故實際門檻為 70°−15°=55°；閃避判定採 look_away_angle 大於該門檻。
 - 衝刺體力耗盡時，衝刺狀態將 sprint_overtime 設為正值；一般不允許此狀態觸發 sprint dodge。基礎被動所帶的 sprint_dodge_in_overtime 關鍵字會讓 Sprint.is_sprint_dodging 通過此檢查。
-- 連續閃避的衰減起始值由武器 dodge_template.diminishing_return_start（缺省 2）加上 extra_consecutive_dodges 計算；此被動增加 1。實際起始計數需看當前武器的模板，且之後仍依該武器衰減規則計算。
+- 連續閃避的衰減起始值由武器 dodge_template.diminishing_return_start（缺省 2）加上 extra_consecutive_dodges 計算；此被動增加 1。實際起始計數需看目前武器的模板，且之後仍依該武器衰減規則計算。
 
 ## 原始碼依據
 

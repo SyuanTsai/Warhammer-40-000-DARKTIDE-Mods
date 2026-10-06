@@ -1,5 +1,7 @@
 # 衰弱詛咒(Enfeeble)：原始碼依據
 
+[English](en/psyker_chain_lightning_improved_target_buff.md)
+
 [返回玩家說明](README.md#psyker_chain_lightning_improved_target_buff)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_chain_lightning_improved_target_buff)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -29,7 +31,7 @@
 - 目標仍處於你施加的電擊效果中，且只計此天賦、不計其他傷害增減。 100 × 1.1 = 110 任一隊友或其他來源原本造成 100 點傷害，會提高為 110 點。
 - 增傷只作用於目前被你電擊的目標；懲戒連鎖離開目標時會移除受控電擊效果，近戰重擊套用的電擊版本則設定為 2 秒。
 - 算例隔離此倍率；其他增傷、護甲、部位與傷害類型仍會影響實際數字。
-- 文本與程式來源皆為1.13.1；實際表現待遊戲內核對；未做遊戲內測試。
+- 文字與程式來源皆為1.13.1；實際表現待遊戲內核對；未做遊戲內測試。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

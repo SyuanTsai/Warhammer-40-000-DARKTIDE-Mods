@@ -1,5 +1,7 @@
 # 臨場發揮(Field Improvisation)：原始碼依據
 
+[English](en/veteran_better_deployables.md)
+
 [返回玩家說明](README.md#veteran_better_deployables)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

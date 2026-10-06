@@ -1,5 +1,7 @@
 # 反射閃避(Empathic Evasion)：原始碼依據
 
+[English](en/psyker_dodge_after_crits.md)
+
 [返回玩家說明](README.md#psyker_dodge_after_crits)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_dodge_after_crits)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為暴擊旗標與 on_hit；共用 proc_buff 決定 active 時間刷新。
+- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為暴擊旗標與 on_hit；共用 proc_buff 決定 active 時間重新計時。
 
 ## 原始碼依據
 

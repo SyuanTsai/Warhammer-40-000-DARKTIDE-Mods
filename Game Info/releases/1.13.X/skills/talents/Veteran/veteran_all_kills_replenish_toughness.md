@@ -1,5 +1,7 @@
 # 嗜血(Out for Blood)：原始碼依據
 
+[English](en/veteran_all_kills_replenish_toughness.md)
+
 [返回玩家說明](README.md#veteran_all_kills_replenish_toughness)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-此節點只有 1 點，talent override tier=1 對應 toughness_3.toughness = 0.05；擊殺事件呼叫 Toughness.replenish_percentage，依最大韌性計算並由共用韌性 extension 封頂至缺失量。100 最大韌性時請求 5，若只缺 2 則實際恢復 2。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1457-L1479) → [tier 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L227-L229) → [擊殺回復](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2198-L2218) → [共用回復上限](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)。
+此節點只有 1 點，talent override tier=1 對應 toughness_3.toughness = 0.05；擊殺事件呼叫 Toughness.replenish_percentage，依最大韌性計算並由共用韌性 extension 封頂至缺失量。100 最大韌性時請求 5，若只缺 2 則實際恢復 2。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1457-L1479) → [tier 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L227-L229) → [擊殺恢復](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2198-L2218) → [共用恢復上限](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)。
 
 ## 原始碼依據
 

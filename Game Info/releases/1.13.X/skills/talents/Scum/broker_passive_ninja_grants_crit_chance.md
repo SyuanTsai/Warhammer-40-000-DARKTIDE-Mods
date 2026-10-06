@@ -1,5 +1,7 @@
 # 翩翩蝶舞(Float Like a Butterfly)：原始碼依據
 
+[English](en/broker_passive_ninja_grants_crit_chance.md)
+
 [返回玩家說明](README.md#broker_passive_ninja_grants_crit_chance)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_ninja_grants_crit_chance)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - proc_chance=1、max_stacks=1、active_duration=3、allow_proc_while_active=true；兩種事件給同一critical_strike_chance=.2。
-- CriticalStrike.chance將職業、武器及屬性機率加算再clamp0..1；範例假設沒有爆擊轉傷害等修正。
+- CriticalStrike.chance將職業、武器及屬性機率加算再clamp0..1；範例假設沒有暴擊轉傷害等修正。
 
 ## 原始碼依據
 
@@ -23,13 +25,13 @@
 
 ## 算例條件與待確認事項
 
-- **機率算例**：原本 10% 爆擊機率變成 10% + 20% = 30%；原本 25% 則變成 45%。
+- **機率算例**：原本 10% 爆擊率變成 10% + 20% = 30%；原本 25% 則變成 45%。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`43d506f8`。
-- 繁中與英文皆為完美格擋或成功閃避提高爆擊機率，未見矛盾。
+- 繁中與英文皆為完美格擋或成功閃避提高爆擊率，未見矛盾。
 
 ## 圖示來源
 

@@ -1,5 +1,7 @@
 # 堅定不移(Precision Strikes)：原始碼依據
 
+[English](en/veteran_increased_weakspot_damage.md)
+
 [返回玩家說明](README.md#veteran_increased_weakspot_damage)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -21,8 +23,8 @@
 ## 百分比與實際傷害增幅
 
 - **程式推導**：令 B 為該次弱點命中在第 95 行相加前的非 finesse 部分，F 為第 708／710 行算出的 base_finesse_damage，s 為此次攻擊適用的既有 finesse 同階段加成。新增本天賦前為 B + F × (1 + s)，之後為 B + F × (1 + s + 0.30)，該階段相對增幅為 0.30 × F ÷ [B + F × (1 + s)]。原傷害大於零才可計算增幅；後續特殊減傷或額外傷害流程須另行追算。
-- 玩家例固定未爆擊、無其他變動，後續倍率為 1：B=100、F=100、s=0，200→230（15%）；F=200 時 300→360（20%）；B=F=100、s=.25 時 225→255（約13.33%）。這些是控制變因的公式算例，未指派給任何具名武器。
-- F 由 damage profile 的護甲別 finesse boost、弱點部位修正、爆擊、boost curve、武器插值及傷害下限共同決定。爆擊且命中弱點時，先合成並限制 boost amount，再套入同一 finesse component；不可把一次非爆擊弱點傷害與一次爆擊傷害直接相加。
+- 玩家例固定未暴擊、無其他變動，後續倍率為 1：B=100、F=100、s=0，200→230（15%）；F=200 時 300→360（20%）；B=F=100、s=.25 時 225→255（約13.33%）。這些是控制變因的公式算例，未指派給任何具名武器。
+- F 由 damage profile 的護甲別 finesse boost、弱點部位修正、暴擊、boost curve、武器插值及傷害下限共同決定。暴擊且命中弱點時，先合成並限制 boost amount，再套入同一 finesse component；不可把一次非暴擊弱點傷害與一次暴擊傷害直接相加。
 - B 也使用此次命中的護甲與攻擊條件；身體與頭部可能有不同護甲、部位倍率，不能用「爆頭傷害減身體傷害」直接反推 F。沒有指定武器型號、蓄力程度、目標及同條件測試，無法證實「盧修斯固定15%、自動槍固定更多」。
 
 - [scripts/utilities/attack/damage_calculation.lua，第 60–109 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L60-L109)

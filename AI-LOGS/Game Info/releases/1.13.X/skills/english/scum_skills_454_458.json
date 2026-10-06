@@ -1,0 +1,73 @@
+{
+  "id": "scum_skills_454_458",
+  "date": "2026-10-04",
+  "scope": "Scum",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Display-only mapping: talent_settings_broker.lua L748-L779 for Kalma IV/V, Hypex and Klay; broker_talents.lua L76-L103 for base Desperado. Reused accepted mechanism and formatting evidence; no mechanism retracing."
+  ],
+  "questions": [
+    "Hypex and Klay explicitly display +75%; fixed implementation gives 0.75 × 0.75 = 56.25%. Shared language text issue; actual value remains unobserved in game."
+  ],
+  "skills": [
+    {
+      "id": "broker_stimm_concentration_4",
+      "name": "Kalma IV",
+      "name_hash": "eab26b4f",
+      "description_hash": "04d3484f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_4.md",
+      "commit": "85c003628"
+    },
+    {
+      "id": "broker_stimm_concentration_5a",
+      "name": "Kalma V",
+      "name_hash": "eab26b4f",
+      "description_hash": "04d3484f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_5a.md",
+      "commit": "30c3c068a"
+    },
+    {
+      "id": "broker_stimm_concentration_5b",
+      "name": "Hypex",
+      "name_hash": "99e5c538",
+      "description_hash": "9c1a429b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_5b.md",
+      "commit": "4200105c1"
+    },
+    {
+      "id": "broker_stimm_concentration_5c",
+      "name": "Klay",
+      "name_hash": "f7a8d514",
+      "description_hash": "676aa37d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_stimm_concentration_5c.md",
+      "commit": "e7fd1e143"
+    },
+    {
+      "id": "broker_ability_focus",
+      "name": "Desperado",
+      "name_hash": "e77f3e99",
+      "description_hash": "a131b118",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/broker_ability_focus.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Scum/en/broker_ability_focus.md",
+      "commit": "2ea42d49b"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 626,
+    "from_commit": "d1f4ae74c",
+    "to_commit": "2ea42d49b",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

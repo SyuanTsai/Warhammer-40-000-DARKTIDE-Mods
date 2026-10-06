@@ -1,5 +1,7 @@
 # 失控攻擊(Uncontrolled Aggression)：原始碼依據
 
+[English](en/broker_keystone_adrenaline_junkie_sub_4.md)
+
 [返回玩家說明](README.md#broker_keystone_adrenaline_junkie_sub_4)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_adrenaline_junkie_sub_4)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -10,7 +12,7 @@
 ## 原始碼確認與程式推導
 
 - 核心 adrenaline_duration=2，升級 sub_4_duration=4。stack buff start_func 檢查 stack_extra_duration special rule，加入 4−2=2 秒，因此模板最終 duration 為 4 秒。
-- stack buff 保留 refresh_duration_on_stack 與 refresh_duration_on_remove_stack：加層時重設計時；到期被移除一層後重設計時，形成無新層時每 4 秒減一層。到達 30 層時 on_reached_max_stack_func 會停用移除層後的計時刷新，條件退出會清掉堆疊 buff 並觸發核心 Frenzy。
+- stack buff 保留 refresh_duration_on_stack 與 refresh_duration_on_remove_stack：加層時重設計時；到期被移除一層後重設計時，形成無新層時每 4 秒減一層。到達 30 層時 on_reached_max_stack_func 會停用移除層後的計時重設，條件退出會清掉堆疊 buff 並觸發核心 Frenzy。
 
 ## 原始碼依據
 

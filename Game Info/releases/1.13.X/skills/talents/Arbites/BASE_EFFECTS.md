@@ -1,8 +1,10 @@
 # 法務官基礎效果
 
+[English](en/BASE_EFFECTS.md)
+
 [返回法務官天賦](README.md)｜[來源索引](SOURCE_INDEX.md)
 
-以下效果由角色基礎配置提供；戰鬥能力、閃擊與光環可依配裝替換。
+以下效果由角色基礎配置提供；戰鬥技能、閃擊與光環可依配裝替換。
 
 <a id="adamant_area_buff_drone"></a>
 ## 天鷹使節(Nuncio-Aquila)

@@ -1,5 +1,7 @@
 # 目標引導增強(Enhanced Target Priority)：原始碼依據
 
+[English](en/veteran_combat_ability_coherency_outlines.md)
+
 [返回玩家說明](README.md#veteran_combat_ability_coherency_outlines)｜[技術索引](SOURCE_INDEX.md)
 
 - 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -12,7 +14,7 @@
 - stance_master.start_func 設 apply_outlines=true；refresh_func 也把它設為 true。update_func 只在這個旗標為真時發放，完成後改 false，所以不是每一影格持續分享。
 - 迴圈取 in_coherence_units，但明確排除 coherency_unit==owner；其他成員取得 outlines_coherency。它複製一般 outlines，duration 改為 coop_1.outline_short_duration=5、max_stacks=1、refresh_duration_on_stack=true。
 - 接收端 _start_outlines 以接收者的位置計算距離，coherency_outline_buff 強制 elite/special 開啟、ranged_roamer/ogryn 關閉。_can_show_outline 先排除未啟用的 ogryn/monster/captain/cultist_captain，再判定 elite/special；非 special 需 distance²/50²<1。
-- 候選輪廓清單在開始／刷新時重建；後來才進入協同範圍的隊友不會在下一次發放前自動取得這次 buff。
+- 候選輪廓清單在開始／重新計時時重建；後來才進入協同範圍的隊友不會在下一次發放前自動取得這次 buff。
 
 ## 原始碼依據
 

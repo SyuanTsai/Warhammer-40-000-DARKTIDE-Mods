@@ -1,5 +1,7 @@
 # 刻不容緩(No Respite)：原始碼依據
 
+[English](en/zealot_melee_crits_restore_stamina.md)
+
 [返回玩家說明](README.md#zealot_melee_crits_restore_stamina)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_melee_crits_restore_stamina)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_hit配on_crit_melee，cooldown1，Stamina.add_stamina_percent(.1)依最大耐力回復再夾上限。
+- on_hit配on_crit_melee，cooldown1，Stamina.add_stamina_percent(.1)依最大耐力恢復再夾上限。
 
 ## 原始碼依據
 
@@ -21,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃爆擊命中多個敵人，仍受 1 秒冷卻限制。
+- **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃暴擊命中多個敵人，仍受 1 秒冷卻限制。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

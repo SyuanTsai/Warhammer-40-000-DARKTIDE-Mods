@@ -1,5 +1,7 @@
 # 專注(Concentrate)：原始碼依據
 
+[English](en/ogryn_drain_stamina_for_handling.md)
+
 [返回玩家說明](README.md#ogryn_drain_stamina_for_handling)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_drain_stamina_for_handling)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- helper要求wielded weapon+alternate_fire+stamina>0；sway .4乘算、spread -.2、recoil -.15加算；不存在的critical_strike_chance設定為nil，不提供額外爆擊。
+- helper要求wielded weapon+alternate_fire+stamina>0；sway .4乘算、spread -.2、recoil -.15加算；不存在的critical_strike_chance設定為nil，不提供額外暴擊。
 - update每dt Stamina.drain(.5×dt)，reload不drain；條件stat helper本身沒有reload判斷，不宣稱換彈必定失去操控stat。
 
 ## 原始碼依據

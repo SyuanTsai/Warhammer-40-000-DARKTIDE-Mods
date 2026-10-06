@@ -1,5 +1,6 @@
 # 狂信徒：來源文件與技術索引
 
+[English](en/SOURCE_INDEX.md)
 [返回玩家說明](README.md)｜[版本、日期與證據限制](../../../README.md)
 
 [角色基礎效果](BASE_EFFECTS.md)｜[未直接使用的定義](UNUSED_DEFINITIONS.md)

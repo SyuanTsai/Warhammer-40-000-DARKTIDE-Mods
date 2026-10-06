@@ -1,4 +1,6 @@
-# 基礎遠程傷害加成(Increased Ranged Damage)
+# 衛兵(Guardsman)
+
+[English](en/veteran_base_ranged_damage.md)
 
 [返回基礎效果](BASE_EFFECTS.md)｜[技能樹索引](SOURCE_INDEX.md)
 

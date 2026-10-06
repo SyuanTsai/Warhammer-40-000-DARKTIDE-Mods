@@ -1,0 +1,65 @@
+{
+  "id": "ogryn_skills_186_190",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display maps were read for Stomping Boots, Pulverise, Go Again, Hail of Fire and Light ’em Up. Existing mechanisms, calculations, formatting and image evidence reused; source pointers remain in the English documents.",
+  "questions": [
+    "Final game UI and target-specific runtime behavior were not observed; no new unresolved English contradiction."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_charge_toughness",
+      "name": "Stomping Boots",
+      "name_hash": "97ff0c1f",
+      "description_hash": "59b32c78",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_toughness.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_charge_toughness.md",
+      "commit": "85479e636"
+    },
+    {
+      "id": "ogryn_charge_applies_bleed",
+      "name": "Pulverise",
+      "name_hash": "335781c4",
+      "description_hash": "5f1e4b89",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_applies_bleed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_charge_applies_bleed.md",
+      "commit": "d157a16ce"
+    },
+    {
+      "id": "ogryn_taunt_staggers_reduce_cooldown",
+      "name": "Go Again!",
+      "name_hash": "ba791594",
+      "description_hash": "7bd31d11",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_staggers_reduce_cooldown.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_taunt_staggers_reduce_cooldown.md",
+      "commit": "903532213"
+    },
+    {
+      "id": "ogryn_special_ammo_armor_pen",
+      "name": "Hail of Fire",
+      "name_hash": "4ab8b42e",
+      "description_hash": "5f4e17cf",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo_armor_pen.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_special_ammo_armor_pen.md",
+      "commit": "8e13ec1c9"
+    },
+    {
+      "id": "ogryn_special_ammo_fire_shots",
+      "name": "Light 'em Up",
+      "name_hash": "482f870d",
+      "description_hash": "a391c6e8",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo_fire_shots.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_special_ammo_fire_shots.md",
+      "commit": "a911410dd"
+    }
+  ]
+}

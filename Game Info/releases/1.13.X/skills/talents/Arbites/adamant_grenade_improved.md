@@ -1,5 +1,7 @@
 # 法務官手榴彈(Arbites Grenade)：原始碼依據
 
+[English](en/adamant_grenade_improved.md)
+
 [返回玩家說明](README.md#adamant_grenade_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_grenade_improved)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -14,7 +16,7 @@
 - adamant_grenade_improved 另掛 adamant_grenade_cluster_kills_tracking_buff。伺服器只接受 close_adamant_grenade 或 adamant_grenade 的擊殺事件；兩次擊殺間隔大於 0.25 秒即重設群體計數，累計到 3 才記錄私人統計事件，並沒有恢復 ability resource 的呼叫。
 - 半徑與傷害強化是獨立節點 adamant_grenade_increased_radius / adamant_grenade_increased_damage；未選它們時不把 +50% 套入本項數值。
 - ProjectileDamageExtension的impact_triggered分支在碰撞後將引信設為impact_fuse_time=0；不能將fuse_time2直接寫成投出2秒就爆炸。未撞擊保險流程先等待max_lifetime=4，再開始2秒引信，約6秒，另受更新與延遲補償影響。
-- 三殺tracking只記錄統計，不給戰鬥增益，故不列玩家主文；它以相鄰擊殺間隔.25秒連續累計，也不保證同一枚手榴彈。
+- 三殺tracking只記錄統計，不給戰鬥增益，故不列玩家主文；它以相鄰擊殺間隔.25秒連續累計，也不保證同一枚手雷。
 - 強化版只有充能3→4，沒有套用settings中damage_increase/radius_increase欄位；不把未消費的50%當成增傷。
 
 ## 原始碼依據
@@ -42,7 +44,7 @@
 ## 原文核對
 
 - 對應 hash：`6a2ea9db`。
-- 同源繁中與英文均描述手榴彈及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
+- 同源繁中與英文均描述手雷及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
 
 ## 圖示來源
 

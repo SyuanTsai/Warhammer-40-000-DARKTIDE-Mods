@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_504_508",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing display mappings: cryptic_talents.lua L1441-L1450 (Advanced Power Management), L1515-L1529 (Capacitory Limit Override), L1465-L1480 (Resource Optimisation Canticles), L1382-L1391 (Powerdrive). Enhanced Capacitance Protocols has a literal template requiring no source read. Existing numeric values and English names reused. No mechanism retracing."
+  ],
+  "questions": [
+    "Powerdrive: the unqualified English for each Charge spent contradicts the accepted exception for later charge spending during one continuous Chordclaw activation. Deferred stance settlement and overflow are supplements. Capacitory Limit Override preserves the Chinese-only placeholder correction; the English positions are correct. No new unresolved question."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_redline_strength",
+      "name": "Advanced Power Management",
+      "name_hash": "ef81a91f",
+      "description_hash": "4e708242",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_strength.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_strength.md",
+      "commit": "106b7913a"
+    },
+    {
+      "id": "cryptic_redline_rending",
+      "name": "Capacitory Limit Override",
+      "name_hash": "906dcd58",
+      "description_hash": "477f3a77",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_rending.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_rending.md",
+      "commit": "652d676e7"
+    },
+    {
+      "id": "cryptic_redline_extra_max_stacks",
+      "name": "Resource Optimisation Canticles",
+      "name_hash": "47a760ec",
+      "description_hash": "b176ca53",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_redline_extra_max_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_redline_extra_max_stacks.md",
+      "commit": "4021d8b9b"
+    },
+    {
+      "id": "cryptic_dissector_ability_stacks",
+      "name": "Enhanced Capacitance Protocols",
+      "name_hash": "0f7aa923",
+      "description_hash": "39219dd5",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_dissector_ability_stacks.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_dissector_ability_stacks.md",
+      "commit": "da6023bf0"
+    },
+    {
+      "id": "cryptic_overload_keystone_abilities",
+      "name": "Powerdrive",
+      "name_hash": "bb01bbb3",
+      "description_hash": "6c9f2d5b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_abilities.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_overload_keystone_abilities.md",
+      "commit": "447f5dd8c"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 414,
+    "from_commit": "85e3441b7",
+    "to_commit": "447f5dd8c",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

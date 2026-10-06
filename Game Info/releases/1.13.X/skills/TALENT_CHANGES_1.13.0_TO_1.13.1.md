@@ -1,6 +1,7 @@
 # 1.13.0 → 1.13.1：天賦差異
 
-[技能分類](README.md)｜[版本資訊](../README.md)｜[文本差異](../source/TEXT_DIFF_1.13.0_TO_1.13.1.md)
+[English](TALENT_CHANGES_1.13.0_TO_1.13.1.en.md)
+[技能分類](README.md)｜[版本資訊](../README.md)｜[文字差異](../source/TEXT_DIFF_1.13.0_TO_1.13.1.md)
 
 ## 天賦效果
 
@@ -12,7 +13,7 @@
 
 ## 實戰與測試條件
 
-- **浩劫敵人強化**：部分敵人強化詞條改為在載入時啟用。它們包含影響遠程承傷與踉蹌的效果；同一武器與天賦，對受強化的敵人可能得到不同傷害或控場結果。比較天賦收益時，須固定浩劫詞條與敵人狀態。[詞條啟用設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/mutator/templates/mutator_havoc_templates.lua#L27-L182)、[載入與啟用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/managers/mutator/mutator_manager.lua#L55-L67)、[遠程承傷效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/havoc_buff_templates.lua#L514-L534)、[踉蹌限制](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/havoc_buff_templates.lua#L2138-L2144)。
+- **浩劫敵人強化**：部分敵人強化詞條改為在載入時啟用。它們包含影響遠程承傷與踉蹌的效果；同一武器與天賦，對受強化的敵人可能得到不同傷害或控場結果。比較天賦增幅時，須固定浩劫詞條與敵人狀態。[詞條啟用設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/mutator/templates/mutator_havoc_templates.lua#L27-L182)、[載入與啟用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/managers/mutator/mutator_manager.lua#L55-L67)、[遠程承傷效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/havoc_buff_templates.lua#L514-L534)、[踉蹌限制](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/havoc_buff_templates.lua#L2138-L2144)。
 - **生存模式補給**：額外補給改為讀取正確的補給池。這會影響任務中的補給來源，不會改變天賦本身的恢復比例或冷卻公式。[補給來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/managers/game_mode/game_modes/game_mode_survival.lua#L1290-L1296)。
 - **訓練場難度**：已儲存的難度值無效時，改用第3級設定。測試傷害時應再次確認訓練場難度，不能只依舊存檔的設定推定。[難度選擇](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/training_grounds_options_view/training_grounds_options_view.lua#L198-L208)。
 

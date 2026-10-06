@@ -1,5 +1,7 @@
 # 完美主義(Perfectionism)：原始碼依據
 
+[English](en/psyker_mark_increased_max_stacks.md)
+
 [返回玩家說明](README.md#psyker_mark_increased_max_stacks)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_mark_increased_max_stacks)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- start_func 優先選 increased_stacks 變體；clone 基礎加成後 max_stacks=25，其餘 damage=.01、critical_strike_damage=.02、weakspot_damage=.025、duration=5 與刷新旗標不變。
+- start_func 優先選 increased_stacks 變體；clone 基礎加成後 max_stacks=25，其餘 damage=.01、critical_strike_damage=.02、weakspot_damage=.025、duration=5 與重新計時旗標不變。
 
 ## 原始碼依據
 
@@ -20,7 +22,7 @@
 
 ## 算例條件與待確認事項
 
-- **傷害算例**：25 層提供 25% 一般傷害、50% 爆擊額外傷害與 62.5% 弱點額外傷害。只計一般傷害，100 × (1 + 25%) = 125 點；弱點與爆擊的額外部分需依武器另外計算。
+- **傷害算例**：25 層提供 25% 一般傷害、50% 暴擊額外傷害與 62.5% 弱點額外傷害。只計一般傷害，100 × (1 + 25%) = 125 點；弱點與暴擊的額外部分需依武器另外計算。
 - 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.1。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

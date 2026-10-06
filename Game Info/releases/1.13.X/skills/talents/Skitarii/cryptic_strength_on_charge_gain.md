@@ -1,5 +1,7 @@
 # 序列充能(Sequenced Charge)：原始碼依據
 
+[English](en/cryptic_strength_on_charge_gain.md)
+
 [返回玩家說明](README.md#cryptic_strength_on_charge_gain)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_strength_on_charge_gain)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -9,7 +11,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_combat_ability_charge_replenished觸發單一ProcBuff，不按params.num_charges_gained乘層；power_level_modifier0.125 active10 allow刷新。
+- on_combat_ability_charge_replenished觸發單一ProcBuff，不按params.num_charges_gained乘層；power_level_modifier0.125 active10 allow重新計時。
 - power_type_curve結果乘PowerLevel.power_level_buff_modifier，各type再進模板輸出。
 
 ## 原始碼依據

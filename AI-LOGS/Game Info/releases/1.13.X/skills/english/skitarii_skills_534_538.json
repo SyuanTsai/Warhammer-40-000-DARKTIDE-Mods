@@ -1,0 +1,73 @@
+{
+  "id": "skitarii_skills_534_538",
+  "date": "2026-10-04",
+  "scope": "Skitarii",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": [
+    "Only missing English display mappings: cryptic_talents.lua L2026-L2053, L2326-L2339, L2390-L2404, L2661-L2674. Electro-Strike Conduit is literal. Verified values reused; no mechanism retracing."
+  ],
+  "questions": [
+    "Kinetic Energy Distributors explicitly claims 10s Cooldown, contradicting accepted cooldown/cooldown_duration field usage; same-build in-game confirmation remains outstanding. Other omitted trigger, timer and calculation details are supplements."
+  ],
+  "skills": [
+    {
+      "id": "cryptic_hybrid_damage",
+      "name": "Hybrid Combat Covenant",
+      "name_hash": "4f8c78fb",
+      "description_hash": "dc9f61eb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_hybrid_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_hybrid_damage.md",
+      "commit": "07e14d1d5"
+    },
+    {
+      "id": "cryptic_toughness_on_damage_taken",
+      "name": "Kinetic Energy Distributors",
+      "name_hash": "8db3fdfa",
+      "description_hash": "655fac7c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_on_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_toughness_on_damage_taken.md",
+      "commit": "91d256b9e"
+    },
+    {
+      "id": "cryptic_melee_attacks_give_melee_attack_speed",
+      "name": "Uncapped Arrestor",
+      "name_hash": "7e00e5eb",
+      "description_hash": "ff4edf3b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_melee_attacks_give_melee_attack_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_melee_attacks_give_melee_attack_speed.md",
+      "commit": "9e35da475"
+    },
+    {
+      "id": "cryptic_melee_crits_electrocute_first",
+      "name": "Electro-Strike Conduit",
+      "name_hash": "0ba02e89",
+      "description_hash": "3fc35e67",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_melee_crits_electrocute_first.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_melee_crits_electrocute_first.md",
+      "commit": "33e9deb92"
+    },
+    {
+      "id": "cryptic_auto_reload",
+      "name": "Gunsmith",
+      "name_hash": "d211baf4",
+      "description_hash": "612ee334",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_auto_reload.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Skitarii/en/cryptic_auto_reload.md",
+      "commit": "704905e7a"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 290,
+    "from_commit": "11218471e",
+    "to_commit": "704905e7a",
+    "interruptions": "No handoff, requested pause or model-capacity failure; routine checkpoint PR sync precedes the first item. No completion estimate made."
+  }
+}

@@ -1,5 +1,7 @@
 # 最堅韌！(Toughest!)：原始碼依據
 
+[English](en/ogryn_carapace_armor_more_toughness.md)
+
 [返回玩家說明](README.md#ogryn_carapace_armor_more_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_carapace_armor_more_toughness)
 
 - 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
@@ -25,7 +27,7 @@
 
 - **算例**：10 層時恢復倍率為 1 + 10 × 5.5% = 1.55；原本恢復 20 點時，理論恢復 31 點，實際不超過缺少的韌性。
 - 機制核對至指定公開來源 SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；本機 Build 25606770 的中英文字串與公開來源版本對應為1.13.1，文字與實作差異待遊戲內核對。
-- 恢復增加只作用於會讀取 toughness_replenish_modifier 的韌性恢復路徑；實際回復不能超過缺少的韌性。
+- 恢復增加只作用於會讀取 toughness_replenish_modifier 的韌性恢復路徑；實際恢復不能超過缺少的韌性。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
