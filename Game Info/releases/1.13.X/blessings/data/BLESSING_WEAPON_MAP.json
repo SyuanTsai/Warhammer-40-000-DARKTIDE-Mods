@@ -2143,6 +2143,24 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
       "effect": "持有來源武器時，造成實際踉蹌的合格命中事件可增加一層通用威力修正；I–IV 每層 +4.25%／+4.5%／+4.75%／+5%，最多五層，每次合格事件刷新共用 2.5 秒期限。"
+    },
+    {
+      "id": "blaze-away-alternative",
+      "name_zh_tw": "連續發射（射擊連段）",
+      "name_en": "Blaze Away",
+      "name_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative",
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "name_hash": "6fc486b9",
+      "description_hash": "1a992ef2",
+      "page": "entries/連續發射（射擊連段）/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "effect": "持用適用武器時，依武器動作連段步數增加一般攻擊威力修正池；每步依實際實作與等級而異，最多計 5 步。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "連續發射",
+        "reason": "RAW 名稱「連續發射」與一般版同名，但使用不同 name key／description key；文件標題加「（射擊連段）」標示此替代鍵的動作連段計數，不改 RAW 名稱。"
+      }
     }
   ],
   "weapons": [
@@ -32788,6 +32806,216 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
       "effect": "克魯克 Mk IIa、戈爾貢努姆 Mk IIIa、阿克利斯 Mk II 的腰射與瞄準射擊都走 hitscan；特殊動作只切換手電筒。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "page": "entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_combo_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_combo_cap": 5,
+        "use_combo": true,
+        "fallback": 0.02,
+        "tier_override_replaces_fallback": true,
+        "stack_offset": -1,
+        "trait_local_ttl": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_gauntlet_p1.lua",
+        "start_line": 10,
+        "end_line": 57
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_gauntlet_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "description_hash": "1a992ef2",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "擲彈兵臂鎧 布拉斯托姆 Mk III（ogryn_gauntlet_p1_m1）：每個有效動作連段步提高一般攻擊威力修正池；I–IV 每步 5%/6%/7%/8%，最多 5 步。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_combo_step": {
+          "I": 0.06,
+          "II": 0.07,
+          "III": 0.08,
+          "IV": 0.09
+        },
+        "effective_combo_cap": 5,
+        "use_combo": true,
+        "fallback": 0.02,
+        "tier_override_replaces_fallback": true,
+        "stack_offset": -1,
+        "trait_local_ttl": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 164,
+        "end_line": 211
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "description_hash": "1a992ef2",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "反衝者 洛倫茲 Mk V（ogryn_thumper_p1_m1）：每個有效動作連段步提高一般攻擊威力修正池；I–IV 每步 6%/7%/8%/9%，最多 5 步。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p2",
+      "page": "entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_combo_step": {
+          "I": 0.06,
+          "II": 0.07,
+          "III": 0.08,
+          "IV": 0.09
+        },
+        "effective_combo_cap": 5,
+        "use_combo": true,
+        "fallback": 0.02,
+        "tier_override_replaces_fallback": true,
+        "stack_offset": -1,
+        "trait_local_ttl": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p2.lua",
+        "start_line": 40,
+        "end_line": 87
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "description_hash": "1a992ef2",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "震盪槍 洛倫茲 Mk VI（ogryn_thumper_p1_m2）：每個有效動作連段步提高一般攻擊威力修正池；I–IV 每步 6%/7%/8%/9%，最多 5 步。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_combo_step": {
+          "I": 0.06,
+          "II": 0.07,
+          "III": 0.08,
+          "IV": 0.09
+        },
+        "effective_combo_cap": 5,
+        "use_combo": true,
+        "fallback": 0.02,
+        "tier_override_replaces_fallback": true,
+        "stack_offset": -1,
+        "trait_local_ttl": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 164,
+        "end_line": 211
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "description_hash": "1a992ef2",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "惡棍槍 洛倫茲 Mk VII（ogryn_thumper_p1_m3）：每個有效動作連段步提高一般攻擊威力修正池；I–IV 每步 6%/7%/8%/9%，最多 5 步。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/連續發射（射擊連段）/weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_combo_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "effective_combo_cap": 5,
+        "use_combo": true,
+        "fallback": 0.02,
+        "tier_override_replaces_fallback": true,
+        "stack_offset": -1,
+        "trait_local_ttl": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 111,
+        "end_line": 154
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_alternative_desc",
+      "description_hash": "1a992ef2",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "電漿槍 M35熔岩核心 Mk II、電漿槍 M35熔岩核心 Mk III（plasmagun_p1_m1, plasmagun_p1_m2）：每個有效動作連段步提高一般攻擊威力修正池；I–IV 每步 5%/6%/7%/8%，最多 5 步。"
     }
   ],
   "bindings": [
@@ -47657,6 +47885,90 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
         "import_line": 15,
         "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_gauntlet_p1",
+      "mark_id": "ogryn_gauntlet_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_gauntlet_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p2",
+      "mark_id": "ogryn_thumper_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_thumper_p2/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_thumper_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "blaze-away-alternative",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
       }
     }
   ]

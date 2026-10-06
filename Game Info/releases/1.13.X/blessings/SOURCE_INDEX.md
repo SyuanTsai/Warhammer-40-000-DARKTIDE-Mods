@@ -164,3 +164,4 @@
 | [持續打擊](entries/持續打擊/README.md) | [來源索引](entries/持續打擊/SOURCE_INDEX.md) |
 | [全孔射擊](entries/全孔射擊/README.md) | [來源索引](entries/全孔射擊/SOURCE_INDEX.md) |
 | [鉗制射擊](entries/鉗制射擊/README.md) | [來源索引](entries/鉗制射擊/SOURCE_INDEX.md) |
+| [連續發射（射擊連段）](entries/連續發射（射擊連段）/README.md) | [來源索引](entries/連續發射（射擊連段）/SOURCE_INDEX.md) |

@@ -523,3 +523,5 @@
 - [全孔射擊](2026-10-03-FULL-BORE_ACCEPTANCE.json)：新增6變體、10型號關聯；共6變體、10關聯。
 
 - [鉗制射擊](2026-10-03-PINNING-FIRE_ACCEPTANCE.json)：新增4變體、7型號關聯；共4變體、7關聯。
+
+- [連續發射（射擊連段）](2026-10-03-BLAZE-AWAY-ALTERNATIVE_ACCEPTANCE.json)：新增5變體、6型號關聯；共5變體、6關聯。

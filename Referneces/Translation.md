@@ -1959,3 +1959,6 @@
 
 - Hit & Run - 遊擊（特殊攻擊命中）
   - 文件譯名；本體1.13.1繁中仍為「遊擊」。名稱鍵 `loc_trait_bespoke_movement_speed_on_activated_hit`，hash `a87d06f4`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Blaze Away - 連續發射（射擊連段）
+  - 文件譯名；本體1.13.1繁中仍為「連續發射」。名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire_alternative`，hash `6fc486b9`；保留同hash中英RAW原文與文件翻譯分層。
