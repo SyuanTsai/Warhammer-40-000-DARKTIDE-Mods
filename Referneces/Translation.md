@@ -347,6 +347,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_stagger`，hash `af38ab6e`；英文／繁中RAW配對確認。
 - Vicious Slice - 凶狠切割
 - Hammerblow - 錘擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_increase_impact_on_hit`，hash `64e377e2`；英文／繁中RAW配對確認。
 - Skullcrusher - 粉碎者
 - Thunderstrike - 雷霆打擊
 - Chained Deathblow - 致命連擊
