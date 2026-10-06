@@ -545,3 +545,5 @@
 - 第45輪三項已Commit後完整掃描通過：between-the-eyes (`6fcee95a4650d7060f77de4e0e9b67ddc52d0984`)、skullcrusher (`cb85f6c621b93b8db5f4f242c037bfc056b32e22`)、thunderstrike (`77ef0b9f07b5dc1d1e3fcd04c2edf6df7cd26700`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-045-full-scan.json`／SHA-256 `4b739285b95047271a6b55e27bf5f396bddc1ac1514741a891c575491fa72e80`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [獵頭者](2026-10-03-HEADHUNTER_ACCEPTANCE.json)：新增5變體、13型號關聯；共5變體、13關聯。
+
+- [堅定打擊](2026-10-03-CONFIDENT-STRIKE_ACCEPTANCE.json)：新增9變體、19型號關聯；共9變體、19關聯。

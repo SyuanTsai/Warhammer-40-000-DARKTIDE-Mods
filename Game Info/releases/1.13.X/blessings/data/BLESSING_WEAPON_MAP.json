@@ -2252,6 +2252,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
       "effect": "來源武器持用中命中弱點後，致命一擊機率按層數直接增加；一般型號每層 +14/+16/+18/+20%，偵察鐳射槍每層 +3.5/+4/+4.5/+5%，最多5層。"
+    },
+    {
+      "id": "confident-strike",
+      "name_zh_tw": "堅定打擊",
+      "name_en": "Confident Strike",
+      "name_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks",
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "name_hash": "a38b21e9",
+      "description_hash": "480a6aae",
+      "page": "entries/堅定打擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "effect": "符合持用、直接命中與連擊條件的掃掠結束事件，在內部計數器超過 1 時直接恢復最大韌性的固定比例；八個實作 I–IV 為 5%、6%、7%、8%，電弧鎚 布蘭克斯 Mk III 為 4%、5%、6%、7%。"
     }
   ],
   "weapons": [
@@ -35140,6 +35153,412 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
       "effect": "重伐木槍 克魯克 Mk IIa：每層 +14/+16/+18/+20%，最多5層。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_club_p1_m1",
+          "ogryn_club_p1_m2",
+          "ogryn_club_p1_m3"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 59,
+        "end_line": 89
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_club_p2_m1",
+          "ogryn_club_p2_m2",
+          "ogryn_club_p2_m3"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 225,
+        "end_line": 255
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 311,
+        "end_line": 341
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 112,
+        "end_line": 112
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_pickaxe_2h_p1_m1",
+          "ogryn_pickaxe_2h_p1_m2",
+          "ogryn_pickaxe_2h_p1_m3"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 122,
+        "end_line": 152
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_powermaul_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_powermaul_p1_m1"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua",
+        "start_line": 9,
+        "end_line": 39
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "ogryn_powermaul_slabshield_p1_m1",
+          "ogryn_powermaul_slabshield_p1_m2"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua",
+        "start_line": 9,
+        "end_line": 39
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "powermaul_p2_m1"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 10,
+        "end_line": 40
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_p3",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.04,
+          "II": 0.05,
+          "III": 0.06,
+          "IV": 0.07
+        },
+        "trait_id": "weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "powermaul_p3_m1"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p3.lua",
+        "start_line": 341,
+        "end_line": 371
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p3_buff_templates.lua",
+        "start_line": 102,
+        "end_line": 102
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +4%、+5%、+6%、+7%；不疊層，非限時加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks",
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_shield_p1",
+      "page": "entries/堅定打擊/weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "toughness_fixed_percentage_by_tier": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "trait_id": "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks",
+        "mark_ids": [
+          "powermaul_shield_p1_m1",
+          "powermaul_shield_p1_m2"
+        ],
+        "trigger_event": "on_sweep_finish",
+        "active_duration_seconds": null,
+        "stacks": false,
+        "held_source_slot_required": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_shield_p1.lua",
+        "start_line": 10,
+        "end_line": 40
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_shield_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_toughness_recovery_on_chained_attacks_desc",
+      "description_hash": "480a6aae",
+      "icon": "https://github.com/user-attachments/assets/7b342f87-845c-4859-b77e-9e8e911146e9",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_092",
+      "effect": "符合連擊掃掠時，每次恢復最大韌性的 +5%、+6%、+7%、+8%；不疊層，非限時加成。"
     }
   ],
   "bindings": [
@@ -51465,6 +51884,272 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
         "import_line": 15,
         "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_powermaul_p1",
+      "mark_id": "ogryn_powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_powermaul_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 2346
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1773
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_p3",
+      "mark_id": "powermaul_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p3_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powermaul_p3/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_powermaul_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
+        "import_line": 16,
+        "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1612
+      }
+    },
+    {
+      "blessing_id": "confident-strike",
+      "weapon_id": "powermaul_shield_p1",
+      "mark_id": "powermaul_shield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_shield_p1_toughness_recovery_on_chained_attacks",
+      "trait_item": "content/items/traits/bespoke_powermaul_shield_p1/toughness_recovery_on_chained_attacks",
+      "trait_category": "bespoke_powermaul_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1830
       }
     }
   ]
