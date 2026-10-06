@@ -539,3 +539,5 @@
 - [正中眉心](2026-10-03-BETWEEN-THE-EYES_ACCEPTANCE.json)：新增6變體、14型號關聯；共6變體、14關聯。
 
 - [碎顱者](2026-10-03-SKULLCRUSHER_ACCEPTANCE.json)：新增9變體、21型號關聯；共9變體、21關聯。
+
+- [雷霆打擊](2026-10-03-THUNDERSTRIKE_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。

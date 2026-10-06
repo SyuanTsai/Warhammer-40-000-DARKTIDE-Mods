@@ -170,3 +170,4 @@
 | [詭異打擊](entries/詭異打擊/README.md) | [來源索引](entries/詭異打擊/SOURCE_INDEX.md) |
 | [正中眉心](entries/正中眉心/README.md) | [來源索引](entries/正中眉心/SOURCE_INDEX.md) |
 | [碎顱者](entries/碎顱者/README.md) | [來源索引](entries/碎顱者/SOURCE_INDEX.md) |
+| [雷霆打擊](entries/雷霆打擊/README.md) | [來源索引](entries/雷霆打擊/SOURCE_INDEX.md) |

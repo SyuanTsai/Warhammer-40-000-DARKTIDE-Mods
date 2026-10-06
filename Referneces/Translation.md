@@ -352,6 +352,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_increase_impact_on_hit`，hash `64e377e2`；英文／繁中RAW配對確認。
 - Skullcrusher - 粉碎者
 - Thunderstrike - 雷霆打擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff`，hash `a6a674f9`；英文／繁中RAW配對確認。
 - Chained Deathblow - 致命連擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_crit_chance_on_weakspot_kill`，hash `5beacc86`；英文／繁中RAW配對確認。
 - Deathblow - 致命一擊
