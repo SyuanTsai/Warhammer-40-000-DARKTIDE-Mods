@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-04",
+  "blessing": "gets-hot",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/燃起來！/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent confirmed this agent was spawned with the gpt-6-luna model, max reasoning effort, and fork_turns none; follow-up messages retained that setting. Runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Focused peer review of the seven Gets Hot formal pages, its one-variant/two-binding map entry, the reverse Plasma Gun README, and the existing evidence relevant to RAW, formatter, tiers, heat steps, damage, shot timing, and image.",
+    "findings": [
+      "The updated probability example states critical_strike_chance_to_damage_convert=0 and excludes other guaranteed or prevented critical hits. Under those assumptions, 20% + 50 percentage points at tier IV/five heat steps + 5 percentage points from ordinary ranged handling = 75% before the game critical check; the text distinguishes this input from one-percent rounding and PRD.",
+      "Tier values, the five-step heat rule and boundaries, wrapper conditional override, and the empty optional stepped table agree with the existing fixed-SHA evidence; no extra one-percent increment or duplicate conditional application is implied.",
+      "Ranged critical damage changes only the critical Finesse extra portion. A critical weakspot hit uses one merged base_finesse_damage, and the three numerical examples correctly demonstrate the one-third share, one-half share, and additive same-stage c=0.25 case.",
+      "The timing explanation places the ordinary and charged single-shot critical check before that shot adds heat, includes ordinary ranged handling's five percentage points, and avoids promising retroactive heat or an unverified same-frame reset. Special, vent, reload, and switching claims remain qualified to the checked source evidence; no FASTER behavior is asserted.",
+      "Exact RAW name/description and hash are kept separate from static formatter reconstruction. The comparison correctly calls out the RAW “up to” wording versus runtime per-step accumulation and its five-step maximum.",
+      "The map's single Gets Hot variant uses weapon_id plasmagun_p1 and binds plasmagun_p1_m1 and plasmagun_p1_m2; both actual inventory marks are linked from the reverse Plasma Gun README. The icon resource path and attachment URL are separate, and the existing image receipt supports the display."
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/README.md": "0abf1c5fedb2c179af719c557d293e6bd96b394f17e677860a6abc7fec4e1dc4",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/TIER_VALUES.md": "c1467c07f219060917038cae1044b3655b7ef8687c8fb7950334a4d4b612f35a",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/WEAPON_COMPATIBILITY.md": "bc27b85d26b410e0cb9a247200591d62dc4a861a4221e678f2d190251cc47706",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/LOCALIZATION_COMPARISON.md": "76f2bc2ca1aab6296d3f9ab21f0bc4657bb1ece179d4b97b00cb0c30844c1d41",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/DAMAGE_PERCENTAGE_REVIEW.md": "9aed3ebb616deb2bf93d70b4dc18f653fc4bca7b3d0eb076ce0206a32a8bb32e",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/SOURCE_INDEX.md": "d884416e089272beaf8acfa2d25e465e08409fcc0a3a9835536dae2584ba738c",
+      "Game Info/releases/1.13.X/blessings/entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md": "21a247593ed7e454f507f9c7086297ef7435bb79338d89f553aa87c0aecc947a",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "da6c93e4746729833387a2eb7ff87374fa2db60a828135c42f29be45fce574c2",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "c6c5687b7cf6b16dd9d45096f38d669d0cc43729707e6cc79f79af97b984c35e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-config.json": "a47af192ce59e5c8754cf2b624ce056171b62a1c9074fe01a97a167b534f082b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-extension-draft.json": "0113cbd8d31bbab4513cfb1db6335356382543707b497fdf62568916cc9d9dfe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-image.json": "fc118c100ab7ce3385e64a4a8836baf4b34bf803b660ab16cdcd38032792c1c7"
+    }
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "gets-hot",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_157",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_157.png",
+      "attachment": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5973623741",
+      "acquired_date": "2026-10-04",
+      "sha256": "e06953b529758b13f73b5d102d493d0c9e091831bcec80296765d732cc1b2fd1",
+      "content_type": "image/png",
+      "size": 3677,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "燃起來！祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol xhigh inspected original128PNG and dark-background QA; circular reticle over three descending bars and side arrows intact; original attachment unchanged."
+    },
+    "reused_accepted_attachment": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 12,
+      "rows": 202,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 44,
+      "source_files": 20,
+      "bindings": 358,
+      "variants": 187,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 455,
+      "remote_references": 267,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 7,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-006-full-scan.json",
+        "sha256": "8505ff10afb71662367b9647383133573da8608b07a168914853cf206a3e0506",
+        "trigger": "round-006"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 117,
+    "not_started_name_groups": 117,
+    "partial_name_groups": 0,
+    "remaining_variants": 418,
+    "remaining_bindings": 827,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dcf975bbc67884f12d8f35cf20fc975c1e5496fbd56e4fa987804ce6f970cf9d"
+  },
+  "previous_local_commit": "c0e42a9a91498d2c369662ae1ac0142bb419a482",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "status": "primary_content_review_passed_pending_formal_peer",
+    "variant_count": 1,
+    "binding_count": 2,
+    "configuration_sha256": "e2a4032f5cb96ab1ceeb39d982b1d26e2312ea47749ef949dc756f35bf71df0b",
+    "research": {
+      "config": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-agent-config.json",
+        "sha256": "85087d502eafde0275ebdb08dc51756ca689b5a511b0254d28cfb548269296e7"
+      },
+      "evidence": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-agent-evidence.json",
+        "sha256": "849895235e81392547813f54526bffd9745e8875bb372834abb56ef4fddd4da6"
+      }
+    },
+    "new_difference_blocks": [
+      {
+        "label": "過熱爆炸前週期自傷",
+        "path": "scripts/extension_systems/weapon/actions/action_overload_explosion.lua",
+        "start": 47,
+        "end": 75,
+        "content_sha256": "2047024e7687d7d89c87cb8aa2a56b95d7f8e8dd57fcd8f7f1695cc57fb8651b",
+        "conclusion": "Bound plasma dot_settings calls Attack.execute without critical flag; default is false, so no blessing critical-damage bonus.",
+        "applicability": "Both actual plasma marks bind the overload explosion dot_settings shown in each action651–679."
+      },
+      {
+        "label": "單發爆擊參數與標準轉換",
+        "path": "scripts/extension_systems/weapon/actions/action_weapon_base.lua",
+        "start": 148,
+        "end": 184,
+        "content_sha256": "b9cfe56208c3d640850c1c459570ba65254ecbc0d52a94e45e6af8a6281de42a",
+        "conclusion": "ActionShoot calls is_melee=false,is_ranged=true; ActionWeaponBase passes skip_damage_conversion=false, applying clamp, conversion then PRD rounding.",
+        "applicability": "Normal and charged plasma single-shot paths; absent guaranteed/prevent-critical overrides in examples."
+      }
+    ],
+    "reviewed_distinctions": [
+      "All own I–IV literal values and stepped wrapper, fallback replacement and effective stack offset resolved; no duplicate optional table.",
+      "0–5heat thresholds and additive generic crit chance; normal/charged bothmarks +5pp handling before PRD, heat added after hit resolution.",
+      "Vent/reload/offslot zero on buff evaluation; same-frame cache order specifically unconfirmed, not assumed.",
+      "Explosion, preexplosion periodic selfdamage and vent selfdamage are noncritical.",
+      "Critical damage coefficient affects shared combined finesse extra; three distinct damage-share/additive examples checked.",
+      "RAW formatter perstep values conflict with up-to runtime5step max, other omitted conditions not mistranslation."
+    ],
+    "image": "Unchanged verified issue14 attachment reused, actual item.icon identity matches bothbindings.",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-extension-draft.json",
+      "sha256": "0113cbd8d31bbab4513cfb1db6335356382543707b497fdf62568916cc9d9dfe"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 2,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-primary-ui-review.json",
+      "sha256": "4df3d06e386716a61a342f4eb4f41a6c8371ae8ee9b65b32ad79b8abd97153e1"
+    },
+    "bindings": [
+      {
+        "weapon_id": "plasmagun_p1",
+        "mark_id": "plasmagun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+        "loc_ids": [
+          "loc_weapon_family_plasmagun_p1_m1",
+          "loc_weapon_pattern_plasmagun_p1_m1",
+          "loc_weapon_mark_plasmagun_p1_m1"
+        ],
+        "name_zh_tw": "電漿槍 M35熔岩核心 Mk II",
+        "name_en": "Plasma Gun M35 Magnacore Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "ukeys_line": 985,
+        "append_line": 987
+      },
+      {
+        "weapon_id": "plasmagun_p1",
+        "mark_id": "plasmagun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+        "loc_ids": [
+          "loc_weapon_family_plasmagun_p1_m2",
+          "loc_weapon_pattern_plasmagun_p1_m2",
+          "loc_weapon_mark_plasmagun_p1_m2"
+        ],
+        "name_zh_tw": "電漿槍 M35熔岩核心 Mk III",
+        "name_en": "Plasma Gun M35 Magnacore Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "ukeys_line": 985,
+        "append_line": 987
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "exact_name_key_inventory_bindings": 2,
+    "bound_trait_ids": [
+      "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat"
+    ],
+    "distinct_variants": 1,
+    "outside_exact_metadata_candidates": [],
+    "exact_unresolved_candidates": [],
+    "status": "inventory、metadata 與綁定交集一致：一個實作 variant，實際掛在 plasmagun_p1 家族兩個 mark；無精確 key 的外部候選。"
+  },
+  "primary_resume_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-primary-resume-review.json",
+    "sha256": "108ba7d868332300ea45f69c91ecae242e801ed7a756217550bbc595c48c729f"
+  },
+  "global_uniqueness_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gets-hot-primary-global-check.json",
+    "sha256": "61a25edef12fc98795a0b006ff521161c2dbaf2220439b9f8a7cdc98b4b790c0"
+  }
+}

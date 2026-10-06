@@ -2562,6 +2562,1547 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-04-SKILL_DOCUMENT_NAME_CORRECTIONS.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-execution",
+      "kind": "plan",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-03-BLESSINGS_EXECUTION.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-inventory",
+      "kind": "inventory",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-inventory-local",
+      "kind": "inventory",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "date": "2026-10-03",
+      "storage": "local"
+    },
+    {
+      "id": "2026-10-03-blessings-handoff-sol",
+      "kind": "handoff",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-03-BLESSINGS_HANDOFF_SOL.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-decimator-acceptance",
+      "kind": "acceptance",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-shred-acceptance",
+      "date": "2026-10-03",
+      "title": "粉碎逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "storage": "git",
+      "kind": "validation"
+    },
+    {
+      "id": "2026-10-03-brutal-momentum-acceptance",
+      "date": "2026-10-03",
+      "title": "野蠻攻勢逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "kind": "validation",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-dumdum-acceptance",
+      "date": "2026-10-03",
+      "title": "達姆彈逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DUMDUM_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "kind": "validation",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-charmed-reload-acceptance",
+      "date": "2026-10-03",
+      "title": "魔力彈藥逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "kind": "validation",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-inspiring-barrage-acceptance",
+      "date": "2026-10-03",
+      "title": "振奮彈幕逐項驗收",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_ACCEPTANCE.json",
+      "scope": "1.13.X/blessings",
+      "kind": "validation",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-batch_acceptance",
+      "date": "2026-10-03",
+      "kind": "acceptance",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BATCH_ACCEPTANCE.md",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-batch_acceptance-json",
+      "date": "2026-10-03",
+      "kind": "validation",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BATCH_ACCEPTANCE.json",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-remaining",
+      "date": "2026-10-03",
+      "kind": "handoff",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-REMAINING.md",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-remaining-local",
+      "date": "2026-10-03",
+      "kind": "inventory",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+      "storage": "local"
+    },
+    {
+      "id": "2026-10-03-blessings-player-wording-review",
+      "date": "2026-10-03",
+      "kind": "revision",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PLAYER_WORDING_REVIEW.md",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-workflow",
+      "date": "2026-10-03",
+      "kind": "revision",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-03-BLESSINGS_WORKFLOW.md",
+      "storage": "git"
+    },
+    {
+      "id": "2026-10-03-blessings-bullet-format-review",
+      "date": "2026-10-03",
+      "kind": "revision",
+      "scope": "1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BULLET_FORMAT_REVIEW.md",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ALL_BLESSINGS_EXECUTION",
+      "kind": "execution",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ALL_BLESSINGS_EXECUTION.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DECIMATOR_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECIMATOR_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SHRED_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRED_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INVENTORY_CATEGORY_CORRECTION",
+      "kind": "inventory",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_CATEGORY_CORRECTION.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-COUNTERATTACK_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COUNTERATTACK_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OVERLOAD_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OVERLOAD_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HEATSINK_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HEATSINK_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ENERGY-TRANSFER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ENERGY-TRANSFER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RUN-N-GUN_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RUN-N-GUN_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EVERLASTING-FLAME_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EVERLASTING-FLAME_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OPPORTUNIST_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OPPORTUNIST_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUPERCHARGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUPERCHARGE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CAN-OPENER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CAN-OPENER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SHATTERING-IMPACT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHATTERING-IMPACT_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PENETRATING-FLAME_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PENETRATING-FLAME_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FLESH-TEARER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FLESH-TEARER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FLECHETTE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FLECHETTE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLOODLETTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLOODLETTER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-LACERATE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-LACERATE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PUNCTURE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PUNCTURE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INFERNUS_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INFERNUS_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-WRATH_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-WRATH_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EXORCIST_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EXORCIST_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EXECUTOR_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EXECUTOR_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SHOWSTOPPER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHOWSTOPPER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MANSTOPPER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MANSTOPPER_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HOTSHOT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HOTSHOT_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SHRAPNEL_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRAPNEL_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE",
+      "kind": "evidence",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EFFICIENCY_WORKFLOW",
+      "kind": "workflow",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EFFICIENCY_WORKFLOW.md",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TRAUMA_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TRAUMA_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEFLECTOR_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEFLECTOR_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-GHOST_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-GHOST_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-POINT-BLANK_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-POINT-BLANK_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SURGICAL_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SURGICAL_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CRUCIAN-ROULETTE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CRUCIAN-ROULETTE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PULVERISE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PULVERISE_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DESPERADO_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DESPERADO_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CONCENTRATED-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CONCENTRATED-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SCATTERSHOT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SCATTERSHOT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL",
+      "kind": "plan",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-04-BLESSINGS_HANDOFF_PAUSED_SOL.md",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RIPOSTE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-04-SHRED_UI_NAME_CORRECTION",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-04-SHRED_UI_NAME_CORRECTION.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BASH_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BASH_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-GETS-HOT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-GETS-HOT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PRECOGNITION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PRECOGNITION_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-AGILE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-AGILE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEADLY-ACCURATE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEADLY-ACCURATE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HIGH-VOLTAGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HIGH-VOLTAGE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EXECUTION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EXECUTION_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SURGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SURGE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLAST-ZONE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLAST-ZONE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OPENING-SALVO_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OPENING-SALVO_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-QUICKFLAME_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-QUICKFLAME_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ADHESIVE-CHARGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ADHESIVE-CHARGE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FAN-THE-FLAMES_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FAN-THE-FLAMES_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-POWER-BLAST_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-POWER-BLAST_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEADLY-FREQUENCIES_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEADLY-FREQUENCIES_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PUNISHING-SALVO_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PUNISHING-SALVO_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EFFICIENCY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EFFICIENCY_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TENDERISER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TENDERISER_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TORMENT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TORMENT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TELESCOPIC-SIGHT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TELESCOPIC-SIGHT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUCKER-PUNCH_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUCKER-PUNCH_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BUG-OUT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BUG-OUT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUSTAINED-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUSTAINED-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SMACKDOWN_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SMACKDOWN_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-WEIGHT-OF-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-WEIGHT-OF-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SLAUGHTER-SPREE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SLAUGHTER-SPREE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-WARP-FLURRY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-WARP-FLURRY_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PUNISHER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PUNISHER_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BORN-IN-BLOOD_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BORN-IN-BLOOD_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-VOLATILE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-VOLATILE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RISING-HEAT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RISING-HEAT_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OPTIMISED-COOLING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OPTIMISED-COOLING_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FOCUSED-COOLING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FOCUSED-COOLING_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OVERPRESSURE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OVERPRESSURE_ACCEPTANCE.json",
+      "date": "2026-10-04",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SYPHON_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SYPHON_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BOTH-BARRELS_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BOTH-BARRELS_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-GAUNTLET-MOMENTUM_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-GAUNTLET-MOMENTUM_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MURDEROUS-TRANQUILITY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MURDEROUS-TRANQUILITY_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-QUICKLOADER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-QUICKLOADER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HEADTAKER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HEADTAKER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MOMENTUM_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MOMENTUM_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RENDING-SHOCKWAVE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RENDING-SHOCKWAVE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MACHINE-SPIRIT-RESURGENT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MACHINE-SPIRIT-RESURGENT_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-REFINED-LETHALITY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-REFINED-LETHALITY_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MARKSMAN-REFLEX_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MARKSMAN-REFLEX_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-MERCY-KILLER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-MERCY-KILLER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-POWER-CYCLER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-POWER-CYCLER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PERFECT-STRIKE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PERFECT-STRIKE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HAYMAKER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HAYMAKER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLOODTHIRSTY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLOODTHIRSTY_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-VICIOUS-SLICE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-VICIOUS-SLICE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEATHBLOW_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEATHBLOW_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUNDER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUNDER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CHAINED-DEATHBLOW_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHAINED-DEATHBLOW_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ENHANCED-VOLTAIC-ARCS_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ENHANCED-VOLTAIC-ARCS_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TERRIFYING-BARRAGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TERRIFYING-BARRAGE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SHOCK-AND-AWE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHOCK-AND-AWE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SPEEDLOAD_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SPEEDLOAD_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEATHSPITTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEATHSPITTER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-THRUST_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-THRUST_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-GLORYHUNTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-GLORYHUNTER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FIRE-FRENZY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FIRE-FRENZY_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SLAUGHTERER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SLAUGHTERER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SAVAGE-SWEEP_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SAVAGE-SWEEP_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RAMPAGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RAMPAGE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-REV-IT-UP_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-REV-IT-UP_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DEVASTATING-STRIKE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEVASTATING-STRIKE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-THUNDEROUS_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-THUNDEROUS_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-WARP-NEXUS_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-WARP-NEXUS_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-STRIPPED-DOWN_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-STRIPPED-DOWN_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ROARING-ADVANCE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ROARING-ADVANCE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FALTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FALTER_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-UNSTOPPABLE-FORCE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-UNSTOPPABLE-FORCE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PIERCE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PIERCE_ACCEPTANCE.json",
+      "date": "2026-10-05",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PINPOINTING-TARGET_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PINPOINTING-TARGET_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-WARP-SLICE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-WARP-SLICE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TRANSFER-PERIL_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TRANSFER-PERIL_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-NO-GUTS-NO-GLORY_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ARMOURBANE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ARMOURBANE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-EXPANSIVE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-EXPANSIVE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-REASSURINGLY-ACCURATE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-REASSURINGLY-ACCURATE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PUNISHING-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PUNISHING-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT-WARPFIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLAZING-SPIRIT-WARPFIRE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FOCUSED-CHANNELLING_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE-THUMPER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-UNSTABLE-POWER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-UNSTABLE-POWER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-LAST-GUARD_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-LAST-GUARD_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-ALL-OR-NOTHING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-ALL-OR-NOTHING_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUPERIORITY-MELEE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OFFENSIVE-DEFENCE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SUPERIORITY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SUPERIORITY_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-06-ALL-OR-NOTHING_COVERAGE_CORRECTION",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-06-ALL-OR-NOTHING_COVERAGE_CORRECTION.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SLOW-AND-STEADY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SLOW-AND-STEADY_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLADED-MOMENTUM_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLADED-MOMENTUM_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HAND-CANNON_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HAND-CANNON_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-NO-RESPITE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-NO-RESPITE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FORCE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FORCE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CEASELESS-BARRAGE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CEASELESS-BARRAGE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TRICKSHOOTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TRICKSHOOTER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-POWDERBURN_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-POWDERBURN_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN-ACTIVATED_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HIT-AND-RUN-ACTIVATED_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-OVERWHELMING-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-TAKE-A-SWING_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-TAKE-A-SWING_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CAVALCADE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CAVALCADE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-LIMBSPLITTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-LIMBSPLITTER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RELENTLESS-STRIKES_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RELENTLESS-STRIKES_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-FULL-BORE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-FULL-BORE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-PINNING-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-PINNING-FIRE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY-ALTERNATIVE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BLAZE-AWAY-ALTERNATIVE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HAMMERBLOW_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HAMMERBLOW_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-DECAPITATOR_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECAPITATOR_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-UNCANNY-STRIKE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-UNCANNY-STRIKE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-BETWEEN-THE-EYES_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BETWEEN-THE-EYES_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-SKULLCRUSHER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SKULLCRUSHER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-THUNDERSTRIKE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-THUNDERSTRIKE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-HEADHUNTER_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-HEADHUNTER_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-CONFIDENT-STRIKE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CONFIDENT-STRIKE_ACCEPTANCE.json",
+      "date": "2026-10-06",
+      "storage": "git"
     }
   ],
   "pending": [

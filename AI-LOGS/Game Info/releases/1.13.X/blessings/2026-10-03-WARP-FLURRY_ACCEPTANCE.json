@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-04",
+  "blessing": "warp-flurry",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks",
+    "weapon_trait_bespoke_forcestaff_p2_faster_charge_on_chained_secondary_attacks",
+    "weapon_trait_bespoke_forcestaff_p3_faster_charge_on_chained_secondary_attacks",
+    "weapon_trait_bespoke_forcestaff_p4_faster_charge_on_chained_secondary_attacks"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 4,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "warp-flurry",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-formal-peer-scope.json",
+      "sha256": "f564d4c52140f65b62057c17860e5001e7b9fd449603daefd9384254841925c1",
+      "files": 33,
+      "review": "Fixed 33-file formal and evidence scope; hashes independently recomputed before receipt."
+    },
+    "reviewed_associations": [
+      "Ten formal blessing pages: the overview, source index, localization comparison, tier table, compatibility, percentage review, and four per-trait pages.",
+      "Shared map entry and four force-staff reverse pages agree with the four exact ranged bindings and action summaries.",
+      "Root config, extension draft, frozen agent trio, image/UI/RAW receipts, charge-wiring receipt, and own-tier/source receipts were cross-checked; all remain at scoped hashes."
+    ],
+    "reviewed_deltas": [
+      "All four own tiers and actual parent-child wrappers match: −0.055/−0.065/−0.075/−0.085 charge_up_time additive multipliers; each actual wrapper replaces the unused/base predicate with its own release-action name. No unused stepped alias was treated as wired.",
+      "The whitelist is action-start based: P1 action_trigger_explosion; P2 action_shoot_charged_flame; P3/P4 action_shoot_charged. No hit requirement; ordinary P2 uncharged flame, ventilation, and the melee special-key actions do not qualify. P3 charged chain lightning is a qualifying secondary release, distinct from its melee special action.",
+      "Parent/child lifecycle is accurately presented: 5-second shared timeout, three effective stacks after the −1 placeholder offset, refresh at cap, held-slot conditional stat, continued expiry while switched away, and child cleanup with parent removal. The first action creates a stack only after the initial charge; later charge reads the updated buff cache.",
+      "Static reconstruction preserves the four RAW sentences and signed formatter values; the zh-tw “縮短−x%” direction conflict is explicitly identified as a static numeric-sign erratum, not a game capture.",
+      "q=0 tier coefficients and duration reductions are correct. P1 interpolation example x=0.40 gives T0=2s; IV gives 1.83s at one stack and 1.49s at three. With q=+0.20, q-only is 2.40s and IV at three stacks is 1.89s, a 21.25% reduction relative to q-only time.",
+      "All four actual charge overload classes reach ActionCharge and the registered ChargeActionModule; the active resolved charge template supplies interpolated T0. Endpoints are not separate attack modes, and the text does not claim retroactive or same-frame rescaling.",
+      "All four UI marks, localized names, trait imports/ukeys/appends, icon ID/path/attachment, and reverse links agree with the primary receipts."
+    ],
+    "configuration_consistency": {
+      "id": "warp-flurry",
+      "kind": "ranged",
+      "variant_count": 4,
+      "binding_count": 4,
+      "variant_ids_are_exact_traits": true,
+      "all_scoped_file_hashes_match": true,
+      "source_commit_matches": true,
+      "faster_status": "not_verified",
+      "open_issues": 0
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-agent-config.json": "d8d3f90c1776f7dd6e57b8aa60ed4af18631c336b219bb47b68295e0f80280dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-agent-draft.md": "885a4c0911272278ebd0b935b1e22f35125b7f8146b1a05d78c9ac71ec0ffde0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-agent-evidence.json": "7d814314ca8aa27ccb4b6a372c9ec5b3b4a5efc695e0cab5743134b981946085",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-config.json": "3fdaf856308839d2012649cdea3337403e3203f5ce47922fc4f83bfc5a4aa586",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-extension-draft.json": "769f0f7b0ab373e3877de7501d3f1cc8043d37d77171e6e77584b35b3b8b0747",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-image.json": "47ed7b432714baadf2f3d19924426ed3cf2da32a79d92cd44aa60e15836f4618",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-charge-wiring-review.json": "eda54b0f5acd51d36f14d54e50fe19a6ad696e1128ae99db52000cf144cef599",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-focused-checks.json": "a24657663bf316eeea977fe7edd18484521b0616d94d03fcfcfb081ef67c32c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-frozen-source-verification.json": "c62cfddfa5b9c45093272deb810e7e2eaaa6146411e65df280cbc69d27f5afc8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-own-tier-diff.json": "9ae2de009ff3f277c9b2c45dd971017ad286446885b0d92a73a712870dbfabc2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-resume-review.json": "e9e8d2da584e3827522e6b2831e0a84b0d8e32ebe2cadd17d3f9c2eeda4623da",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-ui-raw-verification.json": "1fcc42d2103fb629502e3227b142ff2c28ed402618b71420b0ca505275af9561",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/warp-flurry-primary-ui-review.json": "80a7ac96ea5ea64aa691250c10359de3d37e7c647505ab5b26d9b7dc1d698b04",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "5bf816c90364f18154ec9b20c8298d99c2465c3e753e2f8c68b32ee10d75549c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6da089bf12e6261e54483c43ffd427c31fcadcdafef57cc3c4a443fdf2127402",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5a2203f76f2d3eb253fa09c810b8fd926120a120a9cf0572efc86c0275dde858",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/DAMAGE_PERCENTAGE_REVIEW.md": "91a543bb97994cb904c9b93e6256f97ef6cad33800091b1dbd2e6b9e1dfc8388",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/LOCALIZATION_COMPARISON.md": "fe02f7c03bf1165957471a7adca12dc05d28d73fc28d6b5e256d2611698d9595",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/README.md": "0713cf7d3d5d1f2cf6324f0306e16f95fa5bbe9514a470bb46b69f8f57d4cb02",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/SOURCE_INDEX.md": "3cf383004e351ba0f4987ada62b0023ab6b8eb76ac07a7e1a391680663504cd2",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/TIER_VALUES.md": "f9bf63ea27ec2d3e61b3015fd19668ddaa40e913cae5879b4c75773eb0bef99e",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/WEAPON_COMPATIBILITY.md": "a9bb7ebe6c0558484bd5d459acf74d8aa35f4f81d2d2ee488a14bb2c5b849352",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p1_faster_charge_on_chained_secondary_attacks.md": "b72c87b95d65aec315ebb857c4d3d9833a9143777c1e60304598eb0f8fcd5255",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p2_faster_charge_on_chained_secondary_attacks.md": "a9b9b1e523f5f5c2f976e145e20be7616bf2158fbe15a12375f0a7bcdcdc4ac0",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p3_faster_charge_on_chained_secondary_attacks.md": "52a54bc9a29cf3c326d79dd649c164ae767e00b20e6ea8c1837f55a8a0bc4dfd",
+      "Game Info/releases/1.13.X/blessings/entries/亞空間亂舞/weapon_trait_bespoke_forcestaff_p4_faster_charge_on_chained_secondary_attacks.md": "8df119cded67a3eb04d86d3ad9059c4994318492a34641dab1cdade74799acb8",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "62e7cf17d11c81fe365a96aec94ffcc190255d970cfd563ab264c8ac557d69ec",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "6024862271b710a48b6d7ccc811e48bfbf39af541e46fce7ccd931a874c1d062",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "8ce6a1e260cd1c20e3ef6658b56330795437d261d7554fce1efc7670e581863a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "c1acf2a45480e048efd308150f749842123806ea38590e33815afad788b91ff4",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "fe2e24ed2a4bc0648aeb1257ab3ce569c865de6441257eb0b74de1e2bcda98cd",
+      "Referneces/Translation.md": "64450059b5c96b5e33e8c38d11869a515c4f67f418a5638b8c7c06ad35a65dde"
+    },
+    "scope_file_sha256": "f564d4c52140f65b62057c17860e5001e7b9fd449603daefd9384254841925c1"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a24dfe97-3d90-44b2-afb5-99309f88e6f4",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "warp-flurry",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_015",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_015.png",
+      "attachment": "https://github.com/user-attachments/assets/a24dfe97-3d90-44b2-afb5-99309f88e6f4",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5979382406",
+      "acquired_date": "2026-10-04",
+      "sha256": "291cadf67f34169c4b891bf94dd9fc53ed3968beb202af029a7c638e5b284327",
+      "content_type": "image/png",
+      "size": 5636,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "亞空間亂舞祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Root inspected source and public pixels at original128x128; both match. Alpha-only QA confirms central lightning bolt in circular four-arrow motif with outward pointers. Original PNG unchanged; diagnostic not uploaded."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 19,
+      "rows": 318,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 63,
+      "source_files": 33,
+      "bindings": 483,
+      "variants": 251,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 33,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 711,
+      "remote_references": 364,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 15,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-014-full-scan.json",
+        "sha256": "f736c967d9fae24911319338a104bffdc7d6cb027646374bc13b7ae14f300122",
+        "trigger": "round-014"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 92,
+    "not_started_name_groups": 92,
+    "partial_name_groups": 0,
+    "remaining_variants": 354,
+    "remaining_bindings": 702,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6cd67e05afdd27004ec227efeb76abebbeded58f2c8fdeb33a2dda74a9b55f95"
+  },
+  "previous_local_commit": "3ab45d8a5781e7142ef12b4e294ebfd2c15aac4a",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-resume-review.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-own-tier-diff.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-frozen-source-verification.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-charge-wiring-review.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-ui-review.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-ui-raw-verification.json",
+    "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-primary-focused-checks.json"
+  ],
+  "primary_review_method": "Exact own4tiers/wrappers/all4bindings/RAW with actual chargekind→class→module/runtime interpolation; generic ParentProcBuff/cache/timer/offset/held reused with applicability verified.",
+  "canonical_config": {
+    "path": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-config.json",
+    "sha256": "3fdaf856308839d2012649cdea3337403e3203f5ce47922fc4f83bfc5a4aa586"
+  },
+  "frozen_inputs": {
+    "config": "d8d3f90c1776f7dd6e57b8aa60ed4af18631c336b219bb47b68295e0f80280dd",
+    "evidence": "7d814314ca8aa27ccb4b6a372c9ec5b3b4a5efc695e0cab5743134b981946085",
+    "draft": "885a4c0911272278ebd0b935b1e22f35125b7f8146b1a05d78c9ac71ec0ffde0"
+  },
+  "previous_approved_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\warp-flurry-formal-peer-scope.json",
+    "sha256": "f564d4c52140f65b62057c17860e5001e7b9fd449603daefd9384254841925c1",
+    "files": 33
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "date": "2026-10-04",
+  "blessing": "opening-salvo",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+    "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+    "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+    "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot"
+  ],
+  "added_binding_count": 11,
+  "total_variants": 5,
+  "total_bindings": 11,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "opening-salvo-formal-agent-review",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope peer review with gpt-6-luna/max settings.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 30,
+      "formal_markdown_count": 11,
+      "scope_manifest_sha256": "88ab717961078ddc1d8b87ed400569a8733dc477f5bad60067fb74ace9e680b4",
+      "description": "Single item final pages and actual reverse/model data;57 prior blessings/214 variants/408 bindings unchanged; eleven counter rearm thresholds and actual Lasgun runtime alias",
+      "formal_entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot.md",
+        "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot.md"
+      ],
+      "reverse_weapon_pages": [
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md"
+      ]
+    },
+    "reviewed_associations": {
+      "variant_ids": [
+        "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+        "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+        "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot"
+      ],
+      "binding_count": 11,
+      "actual_mark_ids": [
+        "autogun_p3_m1",
+        "autogun_p3_m2",
+        "autogun_p3_m3",
+        "galvanic_rifle_p1_m1",
+        "lasgun_p1_m1",
+        "lasgun_p1_m2",
+        "lasgun_p1_m3",
+        "ogryn_heavystubber_p2_m1",
+        "ogryn_heavystubber_p2_m2",
+        "ogryn_heavystubber_p2_m3",
+        "phosphor_pistol_p1_m1"
+      ],
+      "map_runtime_alias": {
+        "weapon_id": "lasgun_p1",
+        "buff_template_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "buff_source_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "unused_lasgun_clone": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot"
+      },
+      "conclusion": "Five ranged variants and eleven actual marks agree across finalized map, compatibility table, reverse weapon pages, canonical config, and generated extension configuration."
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "11-model shot-counter rearm table correction",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md:23-41"
+        ],
+        "conclusion": "Accepted. The current table explicitly separates standing/crouch-still, crouch-moving, and uncrouched-moving/airborne. All 11 rows match the frozen four-state hip values and aim values in the counter addendum; in particular the three heavy-stubber hip crouch-moving thresholds are 1.5s versus 0.25s uncrouched-moving, and Lasgun Mk IIb is 0.5s versus 1.2s. Ground crouch movement and airborne mapping are represented without conflating the states.",
+        "source_evidence": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+          "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+          "binding_count": 11
+        }
+      },
+      {
+        "topic": "Rearm predicate, current template/state and same-frame cache boundary",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md:39-41",
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/SOURCE_INDEX.md"
+        ],
+        "conclusion": "Strict t > shooting_end_time + current clear-time is retained, with stopped shooting, num_shots > 0, and no dont_clear_num_shots action. A later check reads the current spread template and movement state; airborne maps to moving. Buff cache refresh precedes the weapon phase; the selected zero-count first shot consumes the pre-increment cache, then increments the shared count before _shoot, and later fixed updates recalculate. No universal fixed delay or direct reload/switch reset is claimed."
+      },
+      {
+        "topic": "Own tier values and actual Lasgun runtime alias",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot.md",
+          "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json"
+        ],
+        "conclusion": "Accepted. The Lasgun tier/formatter uses the Autogun P3 runtime Buff ID and source path, while its same-named Lasgun clone is explicitly described as defined but unused. I–IV .14/.16/.18/.20 replace the wrapper .02 fallback; held-slot and num_shots == 0 eligibility remains."
+      },
+      {
+        "topic": "Player wording, RAW, formula and special/secondary branches",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/LOCALIZATION_COMPARISON.md",
+          "Game Info/releases/1.13.X/blessings/entries/開啟齊射/DAMAGE_PERCENTAGE_REVIEW.md"
+        ],
+        "conclusion": "Accepted. Player text preserves Opening Salvo / 開啟齊射, describes a shot-count trigger rather than target-count, avoids ambiguous semi-automatic “single shot” phrasing, and distinguishes miss from empty-magazine dry fire. Normal and aimed direct hits use ranged Power; weapon bashes/flashlight toggles and Phosphor explosion/buff-type burn do not receive this ranged modifier. The S_native formula applies the power bonus after native power-type conversion and before downstream attack, impact, and cleave calculations; examples do not equate Power increase with final damage percentage. RAW name/description keys, locale strings, hashes, and formatter reconstruction remain separated."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config_sha256": "e23089072fc1c07e7b944820c9e991c027af7324082af3ad6d1dc1cabda74ea4",
+      "extension_draft_sha256": "a26ee74cf3114480357fbf43aa6794c38ec01bcaccaf5b04848a9a305b68c169",
+      "map_sha256": "4db9ed6dd59a50624fedad36035e3cbad5605290237372cd5da35a3de927a415",
+      "conclusion": "Canonical config equals the entire extension-draft configuration field. Current fixed-scope map, finalized pages, aliases, tier values, and image fields agree."
+    },
+    "faster_enabled": false,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-config.json": "e23089072fc1c07e7b944820c9e991c027af7324082af3ad6d1dc1cabda74ea4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-extension-draft.json": "a26ee74cf3114480357fbf43aa6794c38ec01bcaccaf5b04848a9a305b68c169",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-image.json": "13dc80513d2cc9b81e498c62f921e276fc4a116e528958087023966b7cc92c0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-buff-alias-review.json": "75955584b5c65a2a468357c497e491c676171d6c6a51fa69d6dc28ff0092f6e9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-own-tier-diff.json": "91755dd57398bd889cdf09940a82768d7864b6931719ca079e863f666bb21b7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-power-consumer-review.json": "2d6fc471659615001684ec8c6e486d3fed412535eeb0b7bce39683620e88cb83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-resume-review.json": "8ef883b2171f2adcfb69999b43ceeadf352497204ecbe41581627994765746d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-ui-review.json": "e722271f6b056a35a435c051f0f1a55bf0ec4b39776aabc160809a243f924d58",
+      "Game Info/releases/1.13.X/blessings/README.md": "e981ae09b8e78296e6b3e2e9cc0631015de96c33a5222e3c7f9573bfff60dd65",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "2ea3e24a87735698efba87e804f35a78029496d7eaf6f6148c49ebd5296a7dc6",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4db9ed6dd59a50624fedad36035e3cbad5605290237372cd5da35a3de927a415",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/DAMAGE_PERCENTAGE_REVIEW.md": "3296db2c34b60a1ed496e87dc626b2c090a2881ebc4903e23992550245ff399c",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/LOCALIZATION_COMPARISON.md": "87c471d7d09ae3f95fa8c544559044a7c0dedf2823299d2fe07de715703beb7b",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/README.md": "dc4e3486fbc3a008e9aa87929e71df7b948bc3cae583b2ac4a993077ec56318c",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/SOURCE_INDEX.md": "535f065ab8a0172528d1f9ffccf4771e44432e53666d7436f5aa796f89d7ab75",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/TIER_VALUES.md": "b192245eb35095eef7323289000b13a9b2e9b6778e1a84cbaab73958eda6231d",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/WEAPON_COMPATIBILITY.md": "5b30790da894c7d665e079c7e6401cec0ec9779f36aadf4df59e9e9ddf542e9a",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot.md": "8c615c98d6c58c168dd13347f98472ef342181b11909398909d26e39ce681776",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot.md": "584d1758331097b1b5ff5a69636a0ca25030d30856d76fff3fd0a6df3790a47a",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot.md": "85ee38fe319686ed73b5de551247224814c6b76bd511aaabdf20e7a3d68fe7fd",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot.md": "9e922eacd2c786fbaccaf57174bd98e1150cb496466481f5abf60a113aaf8a74",
+      "Game Info/releases/1.13.X/blessings/entries/開啟齊射/weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot.md": "659fde9c3d98851d109ea32f5f6365ed157848ec71642028bde126a338db90f0",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "43eafdadcc6ac12e6dbc9998f8ef9e860141742ff1ce19c4002dd2ee960a7360",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "911018e1eb25b4d63137c631dfb9ecb4cbdf063437bda3e3f92301f9f7fe5ca9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "cd5e24f11c7e8926429e44abd286adbe2aa98033da0ac301be7c13fda0b16744",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "41c3ed62af6887f6fe06abbeda715a257efa89fdbf044d52a7c7887c7e3f0e77",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "30c18df7122c67bac438493fed7fed7c6683f3bcda0e1b8efa7a9f77fe0f672b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "c6d197723b7457952f32315c9ed1ec56b396f07c0367611473c06f2b7f1c90d8",
+      "Referneces/Translation.md": "2906ed29a6c692cc1d6c635cce839049b204935b7c491d6851688f50e68552e7"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "opening-salvo",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_116",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_116.png",
+      "attachment": "https://github.com/user-attachments/assets/1bec65ee-05df-46b5-9df6-b4fcf1d4d724",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5975373587",
+      "acquired_date": "2026-10-04",
+      "sha256": "70bf38599f40d92de8d3d44d5ada08d9e73cf2c7e23a9264dd3d9948bd141be9",
+      "content_type": "image/png",
+      "size": 3637,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "開啟齊射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_validation": "Primary viewed original and public download at native128x128: matching light gray centered square panel, angled lower gradient and surrounding blank margins; no difference or clipping."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 20,
+      "tables": 20,
+      "rows": 393,
+      "lists": 98,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 165,
+      "source_files": 57,
+      "bindings": 419,
+      "variants": 219,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 57,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 661,
+      "remote_references": 454,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 9,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-008-full-scan.json",
+        "sha256": "e8818006f58c825fcf644685d1d4e16e9307bfe7435852fa511f597606c195fc",
+        "trigger": "round-008"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 109,
+    "not_started_name_groups": 109,
+    "partial_name_groups": 0,
+    "remaining_variants": 386,
+    "remaining_bindings": 766,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b9b2d887c33c68a8f41cb4c7906083ca53f36f5e6e3c7a47416a6ae537789287"
+  },
+  "previous_local_commit": "4f59d234363b452930ffe497866b7f1f6434e622",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "own_tiers_and_wrappers_reviewed": true,
+    "runtime_alias_confirmed": "lasgun_p1 selects autogun_p3 buff",
+    "power_native_before_modifier": true,
+    "reload_and_switch_no_direct_reset": true,
+    "counter_addendum": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json",
+      "sha256": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "source_ranges": 58,
+      "actual_bindings": 11
+    },
+    "explicit_counter_rearm_thresholds_for_all_eleven_marks": true,
+    "examples_reviewed": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-extension-draft.json",
+      "sha256": "a26ee74cf3114480357fbf43aa6794c38ec01bcaccaf5b04848a9a305b68c169"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 11,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-ui-review.json",
+      "sha256": "e722271f6b056a35a435c051f0f1a55bf0ec4b39776aabc160809a243f924d58"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "name_en": "Vigilant Autogun Columnus Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "name_en": "Vigilant Autogun Graia Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "name_en": "Vigilant Autogun Agripinaa Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "galvanic_rifle_p1",
+        "mark_id": "galvanic_rifle_p1_m1",
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_galvanic_rifle_p1_m1",
+          "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "loc_weapon_mark_galvanic_rifle_p1_m1"
+        ],
+        "name_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+        "name_en": "Galvanic Rifle Branx Mk CV",
+        "template_file": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "name_en": "Infantry Lasgun Kantrael Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 714,
+        "append_line": 716
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 692,
+        "append_line": 694
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "mark_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "name_en": "Infantry Lasgun Kantrael Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 693,
+        "append_line": 695
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m1",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m1",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m1"
+        ],
+        "name_zh_tw": "重伐木槍 克魯克 Mk IIa",
+        "name_en": "Heavy Stubber Krourk Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 794,
+        "append_line": 796
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m2",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m2",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m2"
+        ],
+        "name_zh_tw": "重伐木槍 戈爾貢努姆 Mk IIIa",
+        "name_en": "Heavy Stubber Gorgonum Mk IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m3",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m3",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m3"
+        ],
+        "name_zh_tw": "重伐木槍 阿克利斯 Mk II",
+        "name_en": "Heavy Stubber Achlys Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_power_bonus_on_first_shot",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-resume-review.json",
+      "sha256": "8ef883b2171f2adcfb69999b43ceeadf352497204ecbe41581627994765746d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-own-tier-diff.json",
+      "sha256": "91755dd57398bd889cdf09940a82768d7864b6931719ca079e863f666bb21b7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-buff-alias-review.json",
+      "sha256": "75955584b5c65a2a468357c497e491c676171d6c6a51fa69d6dc28ff0092f6e9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-power-consumer-review.json",
+      "sha256": "2d6fc471659615001684ec8c6e486d3fed412535eeb0b7bce39683620e88cb83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-primary-ui-review.json",
+      "sha256": "e722271f6b056a35a435c051f0f1a55bf0ec4b39776aabc160809a243f924d58"
+    }
+  ],
+  "primary_review_method": "Reuse fixed-SHA common mechanisms with matched applicability; review full own tiers, actual Lasgun runtime alias, all11 mark shoot/special bindings, native Power consumers and Phosphor exclusions, exact RAW formatter, all11 current spread/movement rearm thresholds and strict boundary, ordered cached stat calculation. Final peer scope unchanged.",
+  "previous_objects_unchanged": {
+    "blessings": 57,
+    "variants": 214,
+    "bindings": 408,
+    "all_previous_weapon_records": true
+  }
+}

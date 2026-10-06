@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-03",
+  "blessing": "puncture",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/出血穿透/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_bolter_p1_bleed_on_ranged",
+    "weapon_trait_bespoke_boltpistol_p1_bleed_on_ranged"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "all2variants/4bindings independent research plus primary current config cross-review",
+    "findings": [
+      "bothI–IV1/2/3/4;positive damage+matching item+ranged",
+      "hitscan direct yes, both pistol shell profiles no ranged override, push melee no",
+      "no crit/weakspot/penetration/first target gates",
+      "shared bleed16cap/.5tick/1.5decay waiting;preserves phase"
+    ],
+    "draft_corrections": [
+      "Primary used existing shared-bleed memo with correct buffs/ paths, including both pistol explosion chains",
+      "Optional Chinese phrase連射 replaced by連續射擊"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "puncture",
+        "lightning-reflexes",
+        "infernus"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted current primary prose/examples/math;no necessary corrections",
+      "required_corrections": []
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "puncture",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_227",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_227.png",
+      "attachment": "https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967240469",
+      "acquired_date": "2026-10-03",
+      "sha256": "e34d59bae500235be4c75c93a6d16de099ee88db1601cc932bfb758e1436434a",
+      "content_type": "image/png",
+      "size": 6276,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "出血穿透祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 321,
+      "tables": 268,
+      "rows": 2306,
+      "lists": 433
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 978,
+      "source_files": 319,
+      "bindings": 189,
+      "variants": 100,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1021,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 321,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 138,
+    "not_started_name_groups": 138,
+    "partial_name_groups": 0,
+    "remaining_variants": 488,
+    "remaining_bindings": 979,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "128e7034b44ec80cac32d9f77a556e7531fa6a3f442510cc851c41de4f651a20"
+  },
+  "previous_local_commit": "2c62ad1f9fefe53d397e897ca8cba812209e1a06",
+  "current_blessing_formula_review": {
+    "primary_read": "both full tiers/wrapper context;all4currentUI/metadata/import/append;actualdirect ranged chain,HitScan no triggered_event dedupe;Bolter shared priorreview and both boltpistol shell/profile chains;shared bleed memo",
+    "cases": [
+      "bothI–IV1/2/3/4",
+      "directdamage gate;notexplosion/melee/crit/penetration/firsttarget",
+      "IV0→4→8→12→16→16",
+      "P4=78.125,P8=250,P16=500;nominalT8=5–5.5,T16=9–9.5phase plus updates"
+    ],
+    "result": "accepted"
+  },
+  "ui_name_review": {
+    "binding_count": 4,
+    "current_ui_three_key_names_reconstructed": true,
+    "all_metadata_restrictions_imports_and_append_read": true,
+    "raw_name_hash": "312743c2",
+    "raw_description_hash": "49118e7c",
+    "names": "矛頭爆矢槍 洛克 MkIIb/III;爆彈手槍 戈德溫–布蘭克斯 MkIV/VI"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "bound_bindings": 4,
+    "same_name_candidates": [],
+    "unbound_definition_candidates": [],
+    "unresolved_candidates": [],
+    "status": "bounded inventory and metadata exact key/trait-ID intersection reviewed"
+  }
+}

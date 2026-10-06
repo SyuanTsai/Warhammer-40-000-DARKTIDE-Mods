@@ -232,6 +232,10 @@ Game Info/
 
 [紀錄索引與維護規則](../AI-LOGS/Game%20Info/README.md)｜[共用工具](../scripts/game-info/README.md)
 
+## 武器祝福專屬流程
+
+武器祝福分析、玩家詳細頁、多武器變體與雙向索引，使用[Blessings-Workflow](Blessings-Workflow.md)。祝福的獨立完整說明入口、I–IV玩家用詞、原文比較、圖片Issue附件與逐項Commit規則集中在該提示詞維護；本文件保留天賦及共通知識／紀錄分離原則。
+
 ## 英文版本與獨立文本比較
 
 - 英文化既有技能文件時保留繁中路徑；各職業於 `en/` 完整對應主文、來源索引、分類文件及技術子目錄。技能層級共用文件使用同目錄 `.en.md`。先在 AI-LOGS 保存逐檔對應、中文 snapshot/blob 基準、固定來源 SHA 與驗收狀態；不複製共用原始碼、文本批次或附件。

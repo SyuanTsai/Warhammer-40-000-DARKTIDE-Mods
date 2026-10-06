@@ -1,0 +1,1679 @@
+{
+  "date": "2026-10-03",
+  "blessing": "manstopper",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit",
+    "weapon_trait_bespoke_phosphor_pistol_p1_cleave_on_crit",
+    "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+    "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+    "weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit"
+  ],
+  "added_binding_count": 8,
+  "total_variants": 5,
+  "total_bindings": 8,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "delegation_scope": "one separate blessing group: Man-Stopper; three different blessings in parallel",
+    "peer_review": {
+      "complete": true,
+      "accepted": true,
+      "primary_config_accepted": true,
+      "status": "accepted",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "reviewed_at": "2026-10-03",
+      "config_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/manstopper-config.json",
+      "config_sha256": "48BD6F8BCC08D5A65668DC696FE34BD06860163669BB4669B5D3363C47F10341",
+      "accepted_sections": {
+        "player": true,
+        "examples": true,
+        "mechanism": true,
+        "math": true,
+        "tiers": true,
+        "rules": true,
+        "weapon_mapping": true,
+        "metadata_intersection": true,
+        "localization_hashes": true,
+        "outside_candidates": true,
+        "formal_pages": true
+      },
+      "required_corrections": [],
+      "findings": [
+        "Player text correctly states that each pellet has its own cleave budget and that all pellets in the shot share that shot's critical state. It does not claim that every pellet independently consumes hit mass from every target.",
+        "The technical prose describes per-pellet budget initialization and per-target damage aggregation. This matches the fixed-SHA consumer and does not assert a per-pellet, per-target hit-mass decrement.",
+        "The cache guard suppresses subsequent HitMass.consume_hit_mass calls for a hit unit already indexed during the same shot. The stop-data lookup at lines 552-557 uses unit_damage_data[num_unit_damage_index], where num_unit_damage_index is the current global index, rather than indexing through unit_to_damage_data_index[hit_unit]. The current page does not claim that a target-specific cached stop result is reused, so this source nuance does not require a page correction.",
+        "Tier values, additive same-stage stagger example, special-shell model/mode distinctions, switching behavior, localization hash pairing, exact mapping, and outside-candidate boundaries are consistent with the inspected evidence."
+      ],
+      "pellet_review": {
+        "accepted": true,
+        "player_wording": "每顆彈丸有自己的順劈預算；同一發射擊的彈丸共用該次射擊的暴擊狀態。",
+        "verified_behavior": "ActionShootPellets creates a fresh attack and impact mass budget for each saved pellet. Within one shot, the per-unit index is retained across the pellet loop; a later pellet hitting an already indexed unit skips HitMass.consume_hit_mass. The unit map is reset after that shot's hit processing.",
+        "stop_lookup_caveat": "The later branch consults unit_damage_data[num_unit_damage_index].stopped; num_unit_damage_index is the current global array index, and the code does not use unit_to_damage_data_index[hit_unit] as the lookup index. Avoid describing this as guaranteed reuse of that same target's stored stop result.",
+        "formal_text_assessment": "README.md and technical notes state that budgets are created per pellet but do not say each pellet separately consumes hit mass for every target or that a target-specific cached stop is reused. No correction required.",
+        "refs": [
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 168,
+            "end": 188,
+            "meaning": "Pellets are fired and hit processing starts once the shell's pellets have been collected."
+          },
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 201,
+            "end": 213,
+            "meaning": "Per-shot unit damage and unit-index cache are cleared after hit processing."
+          },
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 407,
+            "end": 421,
+            "meaning": "Each saved-pellet iteration initializes its own attack and impact mass budgets."
+          },
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 495,
+            "end": 503,
+            "meaning": "HitMass.consume_hit_mass runs only when the unit is not already in unit_to_damage_data_index."
+          },
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 516,
+            "end": 520,
+            "meaning": "Damage is scaled by the number of pellets that hit the unit and uses the shot-level critical flag."
+          },
+          {
+            "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+            "start": 543,
+            "end": 557,
+            "meaning": "New unit result and stopped flag are stored; the later indexed-unit branch reads the stopped flag using the current num_unit_damage_index."
+          }
+        ]
+      },
+      "tier_values": {
+        "shared_across_five_variants": true,
+        "ranged_impact_modifier_by_tier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "critical_attack_cleave_budget": "math.huge",
+        "impact_budget_is_not_made_infinite_by_this_keyword": true,
+        "exact_ref": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+          "start": 205,
+          "end": 239
+        },
+        "tier_labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ]
+      },
+      "localization": {
+        "name_key": "loc_trait_bespoke_cleave_on_crit",
+        "name_hash": "69135934",
+        "name_zh_tw": "大口徑彈藥",
+        "description_key": "loc_trait_bespoke_cleave_on_crit_and_stagger_desc",
+        "description_hash": "c4e454ec",
+        "description_en": "Increased Cleave on Critical Hit and gain {stagger:%s} Ranged Attack Stagger.",
+        "description_zh_tw": "暴擊時順劈效果提升，且遠程攻擊硬直{stagger:%s}。",
+        "raw_resource": "content/localization/items",
+        "raw_evidence_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+        "primary_ui_review_sha256": "583F3790DE86C4E33DADE8957C75F56EEAEEE27DCC5CDB114C49094AE27B4F3F",
+        "raw_verification_sha256": "CBC04F8C3DBA3D6EA66FD03A670E18674D9CCE15A5EAE68C1EBE7D9982B022D3"
+      },
+      "metadata_intersection": {
+        "exact_name_key_metadata_items": 5,
+        "bindings": 8,
+        "exact_outside_metadata_items": 0,
+        "exact_unresolved_candidates": 0,
+        "outside_boundary": "The P3/P4 same-suffix source definitions have no matching name-key metadata record. They remain unbound candidates and are not treated as verified Man-Stopper variants or as unused in-game.",
+        "p3_candidate": {
+          "trait_id": "weapon_trait_bespoke_shotgun_p3_cleave_on_crit",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+          "line": 399
+        },
+        "p4_candidate": {
+          "trait_id": "weapon_trait_bespoke_shotgun_p4_cleave_on_crit",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+          "line": 399
+        },
+        "variant_count": 5,
+        "binding_count": 8,
+        "variant_ids": [
+          "weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit",
+          "weapon_trait_bespoke_phosphor_pistol_p1_cleave_on_crit",
+          "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+          "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+          "weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit"
+        ]
+      },
+      "weapon_mappings": [
+        {
+          "weapon_id": "galvanic_rifle_p1",
+          "mark_id": "galvanic_rifle_p1_m1",
+          "display_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+          "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit",
+          "trait_category": "bespoke_galvanic_rifle_p1",
+          "loc_ids": [
+            "loc_weapon_family_galvanic_rifle_p1_m1",
+            "loc_weapon_pattern_galvanic_rifle_p1_m1",
+            "loc_weapon_mark_galvanic_rifle_p1_m1"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+          "import_line": 17,
+          "ukeys_line": 863,
+          "append_line": 865
+        },
+        {
+          "weapon_id": "phosphor_pistol_p1",
+          "mark_id": "phosphor_pistol_p1_m1",
+          "display_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+          "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_cleave_on_crit",
+          "trait_category": "bespoke_phosphor_pistol_p1",
+          "loc_ids": [
+            "loc_weapon_family_phosphor_pistol_p1_m1",
+            "loc_weapon_pattern_phosphor_pistol_p1_m1",
+            "loc_weapon_mark_phosphor_pistol_p1_m1"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+          "import_line": 16,
+          "ukeys_line": 1141,
+          "append_line": 1143
+        },
+        {
+          "weapon_id": "shotgun_p1",
+          "mark_id": "shotgun_p1_m1",
+          "display_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+          "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+          "trait_category": "bespoke_shotgun_p1",
+          "loc_ids": [
+            "loc_weapon_family_shotgun_p1_m1",
+            "loc_weapon_pattern_shotgun_p1_m1",
+            "loc_weapon_mark_shotgun_p1_m1"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+          "import_line": 14,
+          "ukeys_line": 950,
+          "append_line": 952
+        },
+        {
+          "weapon_id": "shotgun_p1",
+          "mark_id": "shotgun_p1_m2",
+          "display_zh_tw": "戰鬥霰彈槍 阿格里皮娜 Mk VII",
+          "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+          "trait_category": "bespoke_shotgun_p1",
+          "loc_ids": [
+            "loc_weapon_family_shotgun_p1_m2",
+            "loc_weapon_pattern_shotgun_p1_m2",
+            "loc_weapon_mark_shotgun_p1_m2"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+          "import_line": 14,
+          "ukeys_line": 962,
+          "append_line": 964
+        },
+        {
+          "weapon_id": "shotgun_p1",
+          "mark_id": "shotgun_p1_m3",
+          "display_zh_tw": "戰鬥霰彈槍 奧克塔蘭 Mk IX",
+          "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+          "trait_category": "bespoke_shotgun_p1",
+          "loc_ids": [
+            "loc_weapon_family_shotgun_p1_m3",
+            "loc_weapon_pattern_shotgun_p1_m3",
+            "loc_weapon_mark_shotgun_p1_m3"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+          "import_line": 14,
+          "ukeys_line": 964,
+          "append_line": 966
+        },
+        {
+          "weapon_id": "shotgun_p2",
+          "mark_id": "shotgun_p2_m1",
+          "display_zh_tw": "雙管霰彈槍 十字星 Mk XI",
+          "trait_id": "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+          "trait_category": "bespoke_shotgun_p2",
+          "loc_ids": [
+            "loc_weapon_family_shotgun_p2_m1",
+            "loc_weapon_pattern_shotgun_p2_m1",
+            "loc_weapon_mark_shotgun_p2_m1"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+          "import_line": 17,
+          "ukeys_line": 1110,
+          "append_line": 1112
+        },
+        {
+          "weapon_id": "shotgun_p2",
+          "mark_id": "shotgun_p2_m3",
+          "display_zh_tw": "雙管霰彈槍 克魯克 Mk IV",
+          "trait_id": "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+          "trait_category": "bespoke_shotgun_p2",
+          "loc_ids": [
+            "loc_weapon_family_shotgun_p2_m3",
+            "loc_weapon_pattern_shotgun_p2_m3",
+            "loc_weapon_mark_shotgun_p2_m3"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+          "import_line": 17,
+          "ukeys_line": 1103,
+          "append_line": 1105
+        },
+        {
+          "weapon_id": "shotpistol_shield_p1",
+          "mark_id": "shotpistol_shield_p1_m1",
+          "display_zh_tw": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+          "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit",
+          "trait_category": "bespoke_shotpistol_shield_p1",
+          "loc_ids": [
+            "loc_weapon_family_shotpistol_shield_p1_m1",
+            "loc_weapon_pattern_shotpistol_shield_p1_m1",
+            "loc_weapon_mark_shotpistol_shield_p1_m1"
+          ],
+          "template": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+          "import_line": 16,
+          "ukeys_line": 1533,
+          "append_line": 1535
+        }
+      ],
+      "formal_documents": [
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/README.md",
+          "sha256": "AE84BC0F5323B4C7DFB9A4A7E7D600F4FA217B11F88081E9263FC82B912049F0"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/SOURCE_INDEX.md",
+          "sha256": "87DAE4CAFC4584BF892E1D34A89070204894C7507F4E25953F37C3F8633E5F7D"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/TIER_VALUES.md",
+          "sha256": "BD876B2384A0F7BBE836BCCA80BA9C2380396F8C6C9517998DD19DF5C5D470C6"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/WEAPON_COMPATIBILITY.md",
+          "sha256": "2FED0AE0977CDF495F46D58D7E496B828CF3F3D8AD106E3D46864E85F635A341"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/LOCALIZATION_COMPARISON.md",
+          "sha256": "E7D7F4478CF5F5851CB15A6914E54EAAB5644E5C0A8427ADC572A9BAE8F8D8CB"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "67CCF7101EF54C4567BDAE843033D9B6A8D705C7BDB5F58ECC29E1A1B8700BDC"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit.md",
+          "sha256": "5A5232E341E1C55A0A0F58F16A7E0E18B3EBC38BC61ADE9290BB528FFE2AFE1A"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/weapon_trait_bespoke_phosphor_pistol_p1_cleave_on_crit.md",
+          "sha256": "35EEFBF44C1D02CD20CC3A2C41C9FF7E35CC9CEACA817CC782D85CDEA658DB44"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/weapon_trait_bespoke_shotgun_p1_cleave_on_crit.md",
+          "sha256": "5D59804AA9D8CB0ECCBF4F6E8F22072DD6F41BFB24F76427D7BCF046CA547358"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/weapon_trait_bespoke_shotgun_p2_cleave_on_crit.md",
+          "sha256": "6FE4B4183077EBD8783FBBD1EE60889DA5E32C4FE4BA56EA1D5C45CCB9913930"
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/大口徑彈藥/weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit.md",
+          "sha256": "DFB61DF29D62187F6A1FA7D6E562C20B88B49B1039BB62618EFC762974AE36D6"
+        }
+      ],
+      "evidence_files": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/manstopper-primary-ui-review.json",
+          "sha256": "583F3790DE86C4E33DADE8957C75F56EEAEEE27DCC5CDB114C49094AE27B4F3F"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/manstopper-primary-ui-raw-verification.json",
+          "sha256": "CBC04F8C3DBA3D6EA66FD03A670E18674D9CCE15A5EAE68C1EBE7D9982B022D3"
+        }
+      ],
+      "rules_review": {
+        "row_count": 6,
+        "labels": [
+          "一致",
+          "一致",
+          "文件未涵蓋",
+          "文件未涵蓋",
+          "文件未涵蓋",
+          "文件未涵蓋"
+        ],
+        "contradictions": 0,
+        "first_rule_description_hash": "c4e454ec",
+        "column_count": 5
+      }
+    },
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/manstopper-agent-peer-review.json",
+    "peer_review_sha256": "63b82ba0b32637dafbb7463c5680f6b2554ed112f0f323a1fce5edd602c88ff0",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "manstopper",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_106",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_106.png",
+      "attachment": "https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968343229",
+      "acquired_date": "2026-10-03",
+      "sha256": "80bc202448b7baed5e011dcb3934058ba9012c905a6bfe8bb661c6aea6907fb9",
+      "content_type": "image/png",
+      "size": 6174,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "大口徑彈藥祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected the public 128x128 attachment and verified authentic source/public hash; no replacement art."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 408,
+      "tables": 330,
+      "rows": 3312,
+      "lists": 574
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1406,
+      "source_files": 383,
+      "bindings": 252,
+      "variants": 132,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1108,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 408,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 130,
+    "not_started_name_groups": 130,
+    "partial_name_groups": 0,
+    "remaining_variants": 456,
+    "remaining_bindings": 916,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "9355cef0e3023d8a9810e08f2b7b96fb2b807c2c3f618de6265d4ce75c6edacd"
+  },
+  "previous_local_commit": "c09be8a8e1e483a15ab89d7d3d865188ce439694",
+  "current_blessing_formula_review": {
+    "primary_reviewer": "Sol",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "all_5_tier_overrides_directly_read": true,
+    "all_5_wrappers_directly_read": true,
+    "actual_8_UI_bindings_verified": true,
+    "source_ranges_directly_read": [
+      [
+        "base_weapon_trait_buff_templates.lua",
+        1780,
+        1793
+      ],
+      [
+        "damage_profile.lua",
+        49,
+        96
+      ],
+      [
+        "hit_mass.lua",
+        12,
+        112
+      ],
+      [
+        "hit_scan.lua",
+        217,
+        226
+      ],
+      [
+        "hit_scan.lua",
+        300,
+        333
+      ],
+      [
+        "stagger_calculation.lua",
+        19,
+        142
+      ],
+      [
+        "stagger_calculation.lua",
+        190,
+        203
+      ],
+      [
+        "action_shoot_pellets.lua",
+        472,
+        564
+      ],
+      [
+        "action_shoot_pellets.lua",
+        904,
+        913
+      ],
+      [
+        "action_sweep.lua",
+        242,
+        357
+      ],
+      [
+        "armor.lua",
+        19,
+        22
+      ],
+      [
+        "armor_settings.lua",
+        27,
+        29
+      ],
+      [
+        "shotpistol_shield_p1_m1.lua",
+        1128,
+        1150
+      ],
+      [
+        "shotpistol_shield_p1_m1.lua",
+        1212,
+        1302
+      ]
+    ],
+    "verified_core": {
+      "defined_tiers": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "ranged_impact_additions": [
+        0.1,
+        0.15,
+        0.2,
+        0.25
+      ],
+      "impact_is_wielded_ranged_stat_not_crit_only": true,
+      "crit_keyword_current_attack_budget": "math.huge attack budget only",
+      "impact_budget_unmodified_by_crit_keyword": true,
+      "super_armor_or_destroy_on_impact_or_world_still_stop": true,
+      "phosphor_backblast_separate_noncritical_explosion": true,
+      "shield_heavy_sweep_crit_can_read_keyword": true,
+      "shield_light_push_no_hitmass_consumer": true,
+      "stagger_stat_enters_power_before_stagger_strength_percentage": true,
+      "raw_description_is_consistent_and_no_errata_needed": true
+    },
+    "formal_generation": "waiting for agent config",
+    "complete": true,
+    "reviewed_tier_values": [
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ],
+    "other_stage_additive_example": {
+      "base_input": 300,
+      "other_addition": 0.2,
+      "tier_IV": 0.25,
+      "output": 435,
+      "relative_to_other_only": 0.20833333333333334
+    },
+    "player_pellet_phrase_uses_independent_budget_not_each_target_recalculation": true
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 8,
+    "bindings": [
+      {
+        "weapon_id": "galvanic_rifle_p1",
+        "mark_id": "galvanic_rifle_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/galvanic_rifle_p1_m1",
+        "trait_id": "weapon_trait_bespoke_galvanic_rifle_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/cleave_on_crit",
+        "trait_category": "bespoke_galvanic_rifle_p1",
+        "loc_ids": [
+          "loc_weapon_family_galvanic_rifle_p1_m1",
+          "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "loc_weapon_mark_galvanic_rifle_p1_m1"
+        ],
+        "name_zh_tw": "電能步槍 布蘭克斯 Mk CV",
+        "name_en": "Galvanic Rifle Branx Mk CV",
+        "template_file": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865,
+        "raw_components": {
+          "loc_weapon_family_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Galvanic Rifle",
+                "hash": "2f33461c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "電能步槍",
+                "hash": "2f33461c",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "90a43f81",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "90a43f81",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_galvanic_rifle_p1_m1": {
+            "0": [
+              {
+                "text": "Mk CV",
+                "hash": "400daeda",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk CV",
+                "hash": "400daeda",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/cleave_on_crit",
+        "trait_category": "bespoke_phosphor_pistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143,
+        "raw_components": {
+          "loc_weapon_family_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Phosphor Blast Pistol",
+                "hash": "82c751cf",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "磷光爆破手槍",
+                "hash": "82c751cf",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "9b6d5431",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "9b6d5431",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Mk XI",
+                "hash": "4a084207",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk XI",
+                "hash": "4a084207",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/shotgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotgun_p1/cleave_on_crit",
+        "trait_category": "bespoke_shotgun_p1",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m1",
+          "loc_weapon_pattern_shotgun_p1_m1",
+          "loc_weapon_mark_shotgun_p1_m1"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+        "name_en": "Combat Shotgun Zarona Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 950,
+        "append_line": 952,
+        "raw_components": {
+          "loc_weapon_family_shotgun_p1_m1": {
+            "0": [
+              {
+                "text": "Combat Shotgun",
+                "hash": "d0bde35c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "戰鬥霰彈槍",
+                "hash": "d0bde35c",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotgun_p1_m1": {
+            "0": [
+              {
+                "text": "Zarona",
+                "hash": "e74c9080",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "紮羅娜",
+                "hash": "e74c9080",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotgun_p1_m1": {
+            "0": [
+              {
+                "text": "Mk VI",
+                "hash": "3645b37c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk VI",
+                "hash": "3645b37c",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m2",
+        "metadata_item": "content/items/weapons/player/ranged/shotgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotgun_p1/cleave_on_crit",
+        "trait_category": "bespoke_shotgun_p1",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m2",
+          "loc_weapon_pattern_shotgun_p1_m2",
+          "loc_weapon_mark_shotgun_p1_m2"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 阿格里皮娜 Mk VII",
+        "name_en": "Combat Shotgun Agripinaa Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "ukeys_line": 962,
+        "append_line": 964,
+        "raw_components": {
+          "loc_weapon_family_shotgun_p1_m2": {
+            "0": [
+              {
+                "text": "Combat Shotgun",
+                "hash": "653c203f",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "戰鬥霰彈槍",
+                "hash": "653c203f",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotgun_p1_m2": {
+            "0": [
+              {
+                "text": "Agripinaa",
+                "hash": "b057bd3f",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "阿格里皮娜",
+                "hash": "b057bd3f",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotgun_p1_m2": {
+            "0": [
+              {
+                "text": "Mk VII",
+                "hash": "d1080472",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk VII",
+                "hash": "d1080472",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m3",
+        "metadata_item": "content/items/weapons/player/ranged/shotgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotgun_p1/cleave_on_crit",
+        "trait_category": "bespoke_shotgun_p1",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m3",
+          "loc_weapon_pattern_shotgun_p1_m3",
+          "loc_weapon_mark_shotgun_p1_m3"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 奧克塔蘭 Mk IX",
+        "name_en": "Combat Shotgun Accatran Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "ukeys_line": 964,
+        "append_line": 966,
+        "raw_components": {
+          "loc_weapon_family_shotgun_p1_m3": {
+            "0": [
+              {
+                "text": "Combat Shotgun",
+                "hash": "5d6766f7",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "戰鬥霰彈槍",
+                "hash": "5d6766f7",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotgun_p1_m3": {
+            "0": [
+              {
+                "text": "Accatran",
+                "hash": "81223b22",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "奧克塔蘭",
+                "hash": "81223b22",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotgun_p1_m3": {
+            "0": [
+              {
+                "text": "Mk IX",
+                "hash": "2312d91c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk IX",
+                "hash": "2312d91c",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m1",
+        "metadata_item": "content/items/weapons/player/ranged/shotgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotgun_p2/cleave_on_crit",
+        "trait_category": "bespoke_shotgun_p2",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m1",
+          "loc_weapon_pattern_shotgun_p2_m1",
+          "loc_weapon_mark_shotgun_p2_m1"
+        ],
+        "name_zh_tw": "雙管霰彈槍 十字星 Mk XI",
+        "name_en": "Double-Barrelled Shotgun Crucis Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1110,
+        "append_line": 1112,
+        "raw_components": {
+          "loc_weapon_family_shotgun_p2_m1": {
+            "0": [
+              {
+                "text": "Double-Barrelled Shotgun",
+                "hash": "3de7e7a7",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "雙管霰彈槍",
+                "hash": "3de7e7a7",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotgun_p2_m1": {
+            "0": [
+              {
+                "text": "Crucis",
+                "hash": "1e6d58f3",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "十字星",
+                "hash": "1e6d58f3",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotgun_p2_m1": {
+            "0": [
+              {
+                "text": "Mk XI",
+                "hash": "b9e73ea5",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk XI",
+                "hash": "b9e73ea5",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m3",
+        "metadata_item": "content/items/weapons/player/ranged/shotgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotgun_p2/cleave_on_crit",
+        "trait_category": "bespoke_shotgun_p2",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m3",
+          "loc_weapon_pattern_shotgun_p2_m3",
+          "loc_weapon_mark_shotgun_p2_m3"
+        ],
+        "name_zh_tw": "雙管霰彈槍 克魯克 Mk IV",
+        "name_en": "Double-Barrelled Shotgun Krourk Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1103,
+        "append_line": 1105,
+        "raw_components": {
+          "loc_weapon_family_shotgun_p2_m3": {
+            "0": [
+              {
+                "text": "Double-Barrelled Shotgun",
+                "hash": "ca916b42",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "雙管霰彈槍",
+                "hash": "ca916b42",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotgun_p2_m3": {
+            "0": [
+              {
+                "text": "Krourk",
+                "hash": "3c289851",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "克魯克",
+                "hash": "3c289851",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotgun_p2_m3": {
+            "0": [
+              {
+                "text": "Mk IV",
+                "hash": "a61cb9d9",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk IV",
+                "hash": "a61cb9d9",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "shotpistol_shield_p1",
+        "mark_id": "shotpistol_shield_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/shotpistol_shield_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit",
+        "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/cleave_on_crit",
+        "trait_category": "bespoke_shotpistol_shield_p1",
+        "loc_ids": [
+          "loc_weapon_family_shotpistol_shield_p1_m1",
+          "loc_weapon_pattern_shotpistol_shield_p1_m1",
+          "loc_weapon_mark_shotpistol_shield_p1_m1"
+        ],
+        "name_zh_tw": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV",
+        "name_en": "Subductor Shotpistol and Riot Shield Judgement Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1533,
+        "append_line": 1535,
+        "raw_components": {
+          "loc_weapon_family_shotpistol_shield_p1_m1": {
+            "0": [
+              {
+                "text": "Subductor Shotpistol and Riot Shield",
+                "hash": "c578536d",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "衝覆者霰彈手槍和防暴盾牌",
+                "hash": "c578536d",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_shotpistol_shield_p1_m1": {
+            "0": [
+              {
+                "text": "Judgement",
+                "hash": "5aaa0504",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "審判",
+                "hash": "5aaa0504",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_shotpistol_shield_p1_m1": {
+            "0": [
+              {
+                "text": "Mk IV",
+                "hash": "3b58351b",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk IV",
+                "hash": "3b58351b",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "refs": [
+      [
+        "電能步槍 布蘭克斯 Mk CV匯入",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        17,
+        17
+      ],
+      [
+        "電能步槍 布蘭克斯 Mk CV接入",
+        "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        863,
+        865
+      ],
+      [
+        "磷光爆破手槍 布蘭克斯 Mk XI匯入",
+        "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "磷光爆破手槍 布蘭克斯 Mk XI接入",
+        "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        1141,
+        1143
+      ],
+      [
+        "戰鬥霰彈槍 紮羅娜 Mk VI匯入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "戰鬥霰彈槍 紮羅娜 Mk VI接入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        950,
+        952
+      ],
+      [
+        "戰鬥霰彈槍 阿格里皮娜 Mk VII匯入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "戰鬥霰彈槍 阿格里皮娜 Mk VII接入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        962,
+        964
+      ],
+      [
+        "戰鬥霰彈槍 奧克塔蘭 Mk IX匯入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        14,
+        14
+      ],
+      [
+        "戰鬥霰彈槍 奧克塔蘭 Mk IX接入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        964,
+        966
+      ],
+      [
+        "雙管霰彈槍 十字星 Mk XI匯入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        17,
+        17
+      ],
+      [
+        "雙管霰彈槍 十字星 Mk XI接入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        1110,
+        1112
+      ],
+      [
+        "雙管霰彈槍 克魯克 Mk IV匯入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        17,
+        17
+      ],
+      [
+        "雙管霰彈槍 克魯克 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        1103,
+        1105
+      ],
+      [
+        "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV匯入",
+        "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        1533,
+        1535
+      ]
+    ],
+    "exact_name_key_metadata_items": 5,
+    "outside_exact_items": [],
+    "raw_name": {
+      "0": [
+        {
+          "text": "Man-Stopper",
+          "hash": "69135934",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "大口徑彈藥",
+          "hash": "69135934",
+          "resource": "content/localization/items"
+        }
+      ]
+    },
+    "raw_verification": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "records": [
+        {
+          "key": "loc_galvanic_rifle_p1_m1",
+          "hash": "b32d2892",
+          "locale": 0,
+          "text": "Echios Galvanic Rifle"
+        },
+        {
+          "key": "loc_galvanic_rifle_p1_m1",
+          "hash": "b32d2892",
+          "locale": 16,
+          "text": "艾喬斯電能步槍"
+        },
+        {
+          "key": "loc_phosphor_pistol_p1_m1",
+          "hash": "6d71f67a",
+          "locale": 0,
+          "text": "Ofoid Phosphor Blast Pistol"
+        },
+        {
+          "key": "loc_phosphor_pistol_p1_m1",
+          "hash": "6d71f67a",
+          "locale": 16,
+          "text": "歐佛伊德磷光爆破手槍"
+        },
+        {
+          "key": "loc_shotgun_p1_m1",
+          "hash": "97051f46",
+          "locale": 0,
+          "text": "Lawbringer Mk VI Combat Shotgun"
+        },
+        {
+          "key": "loc_shotgun_p1_m1",
+          "hash": "97051f46",
+          "locale": 16,
+          "text": "執法者Mk VI戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_shotgun_p1_m2",
+          "hash": "3459187d",
+          "locale": 0,
+          "text": "Agripinaa Mk VII Combat Shotgun"
+        },
+        {
+          "key": "loc_shotgun_p1_m2",
+          "hash": "3459187d",
+          "locale": 16,
+          "text": "阿格里皮娜Mk VII戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_shotgun_p1_m3",
+          "hash": "fd6fa17b",
+          "locale": 0,
+          "text": "Kantrael Mk IX Combat Shotgun"
+        },
+        {
+          "key": "loc_shotgun_p1_m3",
+          "hash": "fd6fa17b",
+          "locale": 16,
+          "text": "卡特雷爾Mk IX戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_shotgun_p2_m1",
+          "hash": "aeab9d2a",
+          "locale": 0,
+          "text": "Ironhelm \"Hacker\" Mk IV Assault Shotgun"
+        },
+        {
+          "key": "loc_shotgun_p2_m1",
+          "hash": "aeab9d2a",
+          "locale": 16,
+          "text": "鐵盔「駭客」Mk IV突擊霰彈槍"
+        },
+        {
+          "key": "loc_shotgun_p2_m3",
+          "hash": "db3a9700",
+          "locale": 0,
+          "text": "Krourk Mk IV Double- Barrelled Shotgun"
+        },
+        {
+          "key": "loc_shotgun_p2_m3",
+          "hash": "db3a9700",
+          "locale": 16,
+          "text": "克魯克Mk IV雙管霰彈槍"
+        },
+        {
+          "key": "loc_shotpistol_shield_p1_m1",
+          "hash": "cffd3355",
+          "locale": 0,
+          "text": "Mk IV Judgement Pattern Subductor Shotpistol and Riot Shield"
+        },
+        {
+          "key": "loc_shotpistol_shield_p1_m1",
+          "hash": "cffd3355",
+          "locale": 16,
+          "text": "Mk IV審判樣式衝覆者霰彈手槍和防暴盾牌"
+        },
+        {
+          "key": "loc_trait_bespoke_cleave_on_crit",
+          "hash": "69135934",
+          "locale": 0,
+          "text": "Man-Stopper"
+        },
+        {
+          "key": "loc_trait_bespoke_cleave_on_crit",
+          "hash": "69135934",
+          "locale": 16,
+          "text": "大口徑彈藥"
+        },
+        {
+          "key": "loc_trait_bespoke_cleave_on_crit_and_stagger_desc",
+          "hash": "c4e454ec",
+          "locale": 0,
+          "text": "Increased Cleave on Critical Hit and gain {stagger:%s} Ranged Attack Stagger."
+        },
+        {
+          "key": "loc_trait_bespoke_cleave_on_crit_and_stagger_desc",
+          "hash": "c4e454ec",
+          "locale": 16,
+          "text": "暴擊時順劈效果提升，且遠程攻擊硬直{stagger:%s}。"
+        },
+        {
+          "key": "loc_weapon_family_galvanic_rifle_p1_m1",
+          "hash": "2f33461c",
+          "locale": 0,
+          "text": "Galvanic Rifle"
+        },
+        {
+          "key": "loc_weapon_family_galvanic_rifle_p1_m1",
+          "hash": "2f33461c",
+          "locale": 16,
+          "text": "電能步槍"
+        },
+        {
+          "key": "loc_weapon_family_phosphor_pistol_p1_m1",
+          "hash": "82c751cf",
+          "locale": 0,
+          "text": "Phosphor Blast Pistol"
+        },
+        {
+          "key": "loc_weapon_family_phosphor_pistol_p1_m1",
+          "hash": "82c751cf",
+          "locale": 16,
+          "text": "磷光爆破手槍"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m1",
+          "hash": "d0bde35c",
+          "locale": 0,
+          "text": "Combat Shotgun"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m1",
+          "hash": "d0bde35c",
+          "locale": 16,
+          "text": "戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m2",
+          "hash": "653c203f",
+          "locale": 0,
+          "text": "Combat Shotgun"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m2",
+          "hash": "653c203f",
+          "locale": 16,
+          "text": "戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m3",
+          "hash": "5d6766f7",
+          "locale": 0,
+          "text": "Combat Shotgun"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p1_m3",
+          "hash": "5d6766f7",
+          "locale": 16,
+          "text": "戰鬥霰彈槍"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p2_m1",
+          "hash": "3de7e7a7",
+          "locale": 0,
+          "text": "Double-Barrelled Shotgun"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p2_m1",
+          "hash": "3de7e7a7",
+          "locale": 16,
+          "text": "雙管霰彈槍"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p2_m3",
+          "hash": "ca916b42",
+          "locale": 0,
+          "text": "Double-Barrelled Shotgun"
+        },
+        {
+          "key": "loc_weapon_family_shotgun_p2_m3",
+          "hash": "ca916b42",
+          "locale": 16,
+          "text": "雙管霰彈槍"
+        },
+        {
+          "key": "loc_weapon_family_shotpistol_shield_p1_m1",
+          "hash": "c578536d",
+          "locale": 0,
+          "text": "Subductor Shotpistol and Riot Shield"
+        },
+        {
+          "key": "loc_weapon_family_shotpistol_shield_p1_m1",
+          "hash": "c578536d",
+          "locale": 16,
+          "text": "衝覆者霰彈手槍和防暴盾牌"
+        },
+        {
+          "key": "loc_weapon_mark_galvanic_rifle_p1_m1",
+          "hash": "400daeda",
+          "locale": 0,
+          "text": "Mk CV"
+        },
+        {
+          "key": "loc_weapon_mark_galvanic_rifle_p1_m1",
+          "hash": "400daeda",
+          "locale": 16,
+          "text": "Mk CV"
+        },
+        {
+          "key": "loc_weapon_mark_phosphor_pistol_p1_m1",
+          "hash": "4a084207",
+          "locale": 0,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_phosphor_pistol_p1_m1",
+          "hash": "4a084207",
+          "locale": 16,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m1",
+          "hash": "3645b37c",
+          "locale": 0,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m1",
+          "hash": "3645b37c",
+          "locale": 16,
+          "text": "Mk VI"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m2",
+          "hash": "d1080472",
+          "locale": 0,
+          "text": "Mk VII"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m2",
+          "hash": "d1080472",
+          "locale": 16,
+          "text": "Mk VII"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m3",
+          "hash": "2312d91c",
+          "locale": 0,
+          "text": "Mk IX"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p1_m3",
+          "hash": "2312d91c",
+          "locale": 16,
+          "text": "Mk IX"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p2_m1",
+          "hash": "b9e73ea5",
+          "locale": 0,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p2_m1",
+          "hash": "b9e73ea5",
+          "locale": 16,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p2_m3",
+          "hash": "a61cb9d9",
+          "locale": 0,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_shotgun_p2_m3",
+          "hash": "a61cb9d9",
+          "locale": 16,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_shotpistol_shield_p1_m1",
+          "hash": "3b58351b",
+          "locale": 0,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_shotpistol_shield_p1_m1",
+          "hash": "3b58351b",
+          "locale": 16,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "hash": "90a43f81",
+          "locale": 0,
+          "text": "Branx"
+        },
+        {
+          "key": "loc_weapon_pattern_galvanic_rifle_p1_m1",
+          "hash": "90a43f81",
+          "locale": 16,
+          "text": "布蘭克斯"
+        },
+        {
+          "key": "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "hash": "9b6d5431",
+          "locale": 0,
+          "text": "Branx"
+        },
+        {
+          "key": "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "hash": "9b6d5431",
+          "locale": 16,
+          "text": "布蘭克斯"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m1",
+          "hash": "e74c9080",
+          "locale": 0,
+          "text": "Zarona"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m1",
+          "hash": "e74c9080",
+          "locale": 16,
+          "text": "紮羅娜"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m2",
+          "hash": "b057bd3f",
+          "locale": 0,
+          "text": "Agripinaa"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m2",
+          "hash": "b057bd3f",
+          "locale": 16,
+          "text": "阿格里皮娜"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m3",
+          "hash": "81223b22",
+          "locale": 0,
+          "text": "Accatran"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p1_m3",
+          "hash": "81223b22",
+          "locale": 16,
+          "text": "奧克塔蘭"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p2_m1",
+          "hash": "1e6d58f3",
+          "locale": 0,
+          "text": "Crucis"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p2_m1",
+          "hash": "1e6d58f3",
+          "locale": 16,
+          "text": "十字星"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p2_m3",
+          "hash": "3c289851",
+          "locale": 0,
+          "text": "Krourk"
+        },
+        {
+          "key": "loc_weapon_pattern_shotgun_p2_m3",
+          "hash": "3c289851",
+          "locale": 16,
+          "text": "克魯克"
+        },
+        {
+          "key": "loc_weapon_pattern_shotpistol_shield_p1_m1",
+          "hash": "5aaa0504",
+          "locale": 0,
+          "text": "Judgement"
+        },
+        {
+          "key": "loc_weapon_pattern_shotpistol_shield_p1_m1",
+          "hash": "5aaa0504",
+          "locale": 16,
+          "text": "審判"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "status": "no exact outside metadata item; source-definition candidates remain unbound candidates only",
+    "exact_bound_metadata_count": 5,
+    "exact_outside_metadata_count": 0,
+    "exact_unresolved_candidate_count": 0,
+    "inventory_boundary": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json的definitions_outside_intersection與unresolved候選範圍；無exact unresolved matching row。候選出現在檔案不等於遊戲未使用。",
+    "source_suffix_candidates_without_name_key_metadata": [
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p3_cleave_on_crit",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "line": 399,
+        "assessment": "出現在inventory.definitions_not_bound；目前沒有相符bound metadata record。只標示候選定義，不據此宣稱未使用。",
+        "same_name_key_association": "未有相符名稱鍵的trait物品中繼資料，不併入已確認變體。"
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_cleave_on_crit",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "line": 399,
+        "assessment": "出現在inventory.definitions_not_bound；目前沒有相符bound metadata record。只標示候選定義，不據此宣稱未使用。",
+        "same_name_key_association": "未有相符名稱鍵的trait物品中繼資料，不併入已確認變體。"
+      }
+    ],
+    "primary_exact_metadata_item_count": 5,
+    "primary_exact_outside_count": 0,
+    "primary_metadata_exact_item_count": 5,
+    "primary_outside_exact_items": [],
+    "primary_P3_P4_source_suffix_only_directly_read": true
+  }
+}

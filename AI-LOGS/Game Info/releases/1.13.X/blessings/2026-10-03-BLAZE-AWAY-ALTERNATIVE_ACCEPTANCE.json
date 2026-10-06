@@ -1,0 +1,1201 @@
+{
+  "date": "2026-10-06",
+  "blessing": "blaze-away-alternative",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire",
+    "weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 5,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "blaze-away-alternative",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-formal-peer-scope.json",
+    "scope_sha256": "3a5b94a631a277dfb72610a6092dcf38bacc4c618ccf054f5ef2a505fe90cb52",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_basis": [
+      "Verified all 214 current file SHA-256 values exactly match the revised fixed scope; five scoped records differ from the superseded scope, with the other 209 unchanged.",
+      "Reused the prior content review for the unchanged own bindings, five complete tier/wrapper implementations, six actual Marks, action-combo/cache/lifetime routing, RAW records, image receipt, and projectile/live-special Power consumers under their verified applicability conditions.",
+      "Verified the revised comparison page now has one reconstruction caveat: the C reconstruction intro ends after “描述。”, while the generated formal page retains only the generator ending “各級使用相同描述句型；依格式參數重建，並非遊戲畫面。” Config and extension-draft reconstruction are synchronized; the RAW templates and I–IV table are unchanged.",
+      "The five-file delta is limited to canonical config, extension draft, final-content delta proof, resume metadata, and LOCALIZATION_COMPARISON.md. The recorded old/new intro matches the rendered formal text; generator source is unchanged.",
+      "Checked the five implementation pages, tier table, damage review, RAW comparison, player examples, six UI bindings, shared map row/reverse association, and image receipt. The tier differences, 5-step cap, distinct Plasma Mk II/Mk III identity, and pool-versus-final-damage explanation match the reviewed source evidence."
+    ],
+    "reviewed_proofs": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-final-content-delta-review.json",
+        "sha256": "6f26b70f9fa04ddebe9cb2c36747119f18442b61ea6527061ad174dee1989c6e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json",
+        "sha256": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json",
+        "sha256": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-gauntlet-melee-explosive-route-delta-review.json",
+        "sha256": "75a55f2302d032fa9c5ce221d07d338fc42d6d3d7ca255204d621f0b18d29061"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-review.json",
+        "sha256": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-raw-verification.json",
+        "sha256": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-focused-checks.json",
+        "sha256": "57b0869e9950f9d2c8f7c5d820bc115ae77d72edfc8417d9c30cebd62130a7fa"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-image.json",
+        "sha256": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8"
+      }
+    ],
+    "reviewed_delta_files": [
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-config.json",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-extension-draft.json",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-final-content-delta-review.json",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-resume-review.json",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/LOCALIZATION_COMPARISON.md"
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-config.json": "2d47a2f4ba26d7a5d856d2fdd0c7e6cca24ded7aecfc1f45da969a3e5240adb7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-draft.md": "e7da15859473b734c7ccf506574d00d3f6be1053f788211c660915c60d2e21ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-evidence.json": "ae1202176158eb19f9d084519aef649b77ae957f11a9351a03f35019cd7ec6fe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-config.json": "b1b78db9699766c0de18f222174f8a067731ec22e28475b02a1b7989e368c824",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-extension-draft.json": "1ab9e1b47c073ebdcd55479c9e89ce3bbaa3dadcf2b52b66a130d6c03c452742",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "4efe2106bc948fb66e1662bef30582beeac5fa4571c5e09e9092b9e2d254bc50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "6ecb3b3ad23c4b73fe5ce5f885f1853d20ab86db4648e92965a973e2a11b61cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/assemble_author_package.py": "e9e9e829a88d2ae6d78bee5263951d785898a41379854da798129e5ff5a5f0fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-association-snapshot-003.json": "412859ab6b84a12346437f69f9c3880809897cd52677cd2b487c47e1d0dbbf28",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-001.json": "23f0c1e750879d4fca3a7825c06abf70a7777b2cffb9503b7e98e6f005fac636",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-002.json": "13cae637f278b87de7db317eb52e2af47651ed2c79a693e47748657ce11ed9e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-003.json": "f89dcd5a1376e62fdb35d15af17a4e700f70bed3e1cf45c1b6fc5343aae7ab63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-config.json": "2d47a2f4ba26d7a5d856d2fdd0c7e6cca24ded7aecfc1f45da969a3e5240adb7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-draft.md": "e7da15859473b734c7ccf506574d00d3f6be1053f788211c660915c60d2e21ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-evidence.json": "ae1202176158eb19f9d084519aef649b77ae957f11a9351a03f35019cd7ec6fe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-association-snapshot.json": "354fdc4d2a105f21455ba1d1d82553be41fb757b482d2952e733085f01ff9c59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-freeze.json": "23f8c8f5a03d1cf38944f6c39ce7c35ef5bcbb8b10d4b30443b5ca3a29440f42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-page.md": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-preview-manifest.json": "3fbb9e9ae509256e870344b03befcd8ce505045bf82c6e63d66a163a7e35c2db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-coverage.json": "59b31adaf0d46a9a6def7a0923ad97e7f62345793dfc3aec7b4c1ed807bf1e86",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-selfcheck.json": "f36a2bdde8d3d56ee04fe70bba32bb522751cb578c7904b460cee5ff72c95bb5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-source-ranges.json": "1a3b02681ff632cc1be74fe6db45829bfbc4b939945d0d8f47e40df52e5d2c73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/DAMAGE_PERCENTAGE_REVIEW.md": "b5e881ffdc5b202fe64dc12bd0b5a8e59505668356112a734b23c6011902b063",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/LOCALIZATION_COMPARISON.md": "b88a508e39c07aab2da445d0046699e65633f06b112aac56e64f810adb7c0b1d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/README.md": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/SOURCE_INDEX.md": "0b5b635985e370cba1d814a193f4633d4612b343fb3ed8f47754c2c20d5ee888",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/TIER_VALUES.md": "daa8d48743a73d1ac733a51a8746fcc8d70b6adf484d6cd03c8a70af72d48ac0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/WEAPON_COMPATIBILITY.md": "8d0c210df26007afdc77bfbcbc0b224b03e71f7358158da97c4ae5cbe0274ef6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md": "b684f463e8eb8540759f8466d9470c63bc5360b6c40785b2125637ef4421d575",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md": "3aff839bb831dcb00f991ea09c5e2df9c4c43877296857a67084112d3e002368",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md": "de95b0f15a914288dc41425bc5a62b4f0e50d1bdd83d9adf42dd2e31a87e18e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md": "826af9729c0a77ff2e521df7fcec78c683ec94bb1bf6e145f22d6a5aafc38a08",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md": "5dfee78fc002d0b7a6c2a944c901c3e377052a9ba2d965a3ad8ce65a7f38f30e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/finalize_blaze_away_alternative.py": "359d1a4583b6ab2e7dced2fd7aa3e0bfde2c48289743c803a8da2f001b185489",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/__pycache__/source_object_cache.cpython-312.pyc": "119e1bd5ee49716b1e2233b31e44eed3e91c9b6dd698f1684a1987e267a87881",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/01-inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/02-item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/03-localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/04-remaining-tasks.json": "a66becd2c914a2a941435ada02d73c72e130bdba12adda679221ff41b83c0516",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/05-baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/06-baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/07-blaze-away-alternative-image.json": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/08-quickloader-image.json": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/09-quickloader-config.json": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/10-f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/binding-inventory.json": "add22bf817a2e153fd334825078dd5bcc8b52504f9a1ce2dd436b02ced3ec955",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-action-combo-route-review.json": "623fd0c83cef0f53137d35eba25e77581efc50b8b7e461d9c5401d8db18bb6ae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-explosion-power-consumer-review.json": "13c5dc5a3bde5ddc1da92c56ce40dd12c90b815f34e3ac943279e3b1ee8b928c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-gauntlet-melee-explosive-route-delta-review.json": "75a55f2302d032fa9c5ce221d07d338fc42d6d3d7ca255204d621f0b18d29061",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-raw-verification.json": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-ui-raw-verification.json": "ac271413e7568673c6f9dbbb67164e499c869f2d852bfddc2b55163adbf0d368",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-ui-review.json": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-normal-raw-verification.json": "40eea720868f92d86bc381ddba11896de918e1506cab2eba6661ce0cfb9a136b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/image-receipt.json": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/localized-keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/player_unit_visual_loadout.fixed-source.lua": "b23698cf6dd3504bbfaf5cbe6c3eeaf00a7553632f8f365e66a8b3a9bb1478ba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/remaining-tasks.json": "050dbaa4e989cc293a617f08a97a3eb9b5bb811fda40f83adb730c1696d5d83d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/06f7c3f72a72072b4af9cc57eba2dee4.json": "88174c2fb596c80bed0ab981381f678faa35ec4ff1298a3cc97958d2d4ae314d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/06f7c3f72a72072b4af9cc57eba2dee4.txt": "8c901476637e567bd05d4de0dbf1f04b17f393165873d5b00ad7234fb0436687",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/166474325c899653feb5292fdfc17986.json": "fa2a6b8d25d84f7839f62a6727e770ffbdf486bdb20dce514bff1c695c22d7b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/166474325c899653feb5292fdfc17986.txt": "ede78ed49f1c73e56fe0a0a5e1e5e58e10d1394c612a0aaf342216a6c1199db2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/191316dbf8752248be2972b4a2d5147f.json": "0b71354556e373fcb1c2d8669c4d44b28eec9eedc7524be668217ee37d85209f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/191316dbf8752248be2972b4a2d5147f.txt": "8ecb2ff88c784e4988f08b5a85bfb9b818b5b1dd92cf64b0a0c869340f033813",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/194bcce4f9f94e85199c71e961ab0bf0.json": "75326ddb2d4d1788d7e6a2290139c0161ef35db759390412a26b82f484a7ef67",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/194bcce4f9f94e85199c71e961ab0bf0.txt": "0619a6fb71e770a72979747fd63f8f0a6919422f9bf8697c30923ede13c0b55d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.json": "c98627315683c935bb74889e1cbcefe7aae2a8c540e9d6010ad52da9feb7e4db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.txt": "b61d7178f8e3fc46954f56f0bc25eee29f48e44aca5c3b2123e250da904642ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1fbc64d8e04429de0811b6b4a40be864.json": "a43d90a454d9561a98da0ddb11de53e71aec034d870fa306e138bb4856c315b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1fbc64d8e04429de0811b6b4a40be864.txt": "34f90a87ab7766afaaa53f7265332458a8062c6cc194332561aca9c0128bb759",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/29b41eb2d32a9c6d7c1e6fc11ba3562a.json": "0c2da900754c338c684bca2e11e616a47700334d04d130804eea35e51cecdb24",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/29b41eb2d32a9c6d7c1e6fc11ba3562a.txt": "029f3de1872b7f927bf1ec39d6763de1e17cee79c3f1ccf881ef1d5b71707579",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/2b2e7a60fa1b72831b0f09f3c95ede22.json": "01262de23388a46d75d82be813ad8c3306b3b4bc1bd0e95324cdfdff7d0890e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/2b2e7a60fa1b72831b0f09f3c95ede22.txt": "bec29316f46f0236eaf260ffd321efc37d16bbc7e1c327686407fe43dfdd9d77",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3484355010c9e03aecfa18f881578c92.json": "00bd0883c3350b35936880f3d25916b9c039e854c33277a8fc765779fc4088e0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3484355010c9e03aecfa18f881578c92.txt": "b356486926200505bd5f879dc6d3dcc46daf99cdcc2bcc3bf354c1430e176ce4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3e5b296935bc8a9437eebd6b7037fec6.json": "37b9ad321310a82e1e505d776c52576c77dd14e1b2085a5d6f6c5435b48b76e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3e5b296935bc8a9437eebd6b7037fec6.txt": "7011b63e8c2f88b0501e5f5065c0406dfb87ac61b025ad3c6e8f6997e864880b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/45f1d6e841f3f5c846e799e81b307b6c.json": "1c4a8400cd7d1719e5b3ff9071737f9c140ee9de1d0770dbd9404f532a5dcc94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/45f1d6e841f3f5c846e799e81b307b6c.txt": "16f6de8e3c0c0c0d7e5705bd2bb2e78d687f55dc78697f3087ac327f1aa367b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/4b41a82c3dac9fcc90ab3475155c56b1.json": "678825c4e39a044283c00bc4fe8a4c3afef80961d3a6cf294f768b1e55729fb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/4b41a82c3dac9fcc90ab3475155c56b1.txt": "8077e62af087dcc465a1d379335c388168f838d1ea97d249c940320f2a1a240c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/582bcaf191d39cf67bb274b0088261cd.json": "7325878b19c0f2127d88e7492d2f8db15588724b71d1dc96e55c43edc95f8ae7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/582bcaf191d39cf67bb274b0088261cd.txt": "7242ee454037ec7f36d2cbb54b504533471e0fc2d6fc6bf2fcc36673894df8dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.json": "162568d8ffc07e0cccc8f83b1da77198ec3ecb4d993b9934c749259a66599648",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.txt": "4dc7db18affe0c96eb0a00bc91bcd11000369547e1bd9bac5683fd2a10d5468b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/62f26c990d8c2e7947a04ce57c961555.json": "9093f76f20cc82d85746aa51de6ba9ad88e05d220276b35f7a2571a60bb3175e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/62f26c990d8c2e7947a04ce57c961555.txt": "be21a2f15ceedd877b397468167d93803dba6908fc1997c35d253803f8f98183",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6cf5bff7ac6b3cdc05d06970dbb409b8.json": "73aadd0d65c8cbcebc2807eabf2b7b12e6f20496bec740beb2ad17cc1fb9b750",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6cf5bff7ac6b3cdc05d06970dbb409b8.txt": "ea63167eaada6557206c3953ea570c2296711a2fa57bb3dd3958a471429cf3b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/798b192ad56e6f78d1490e94cce2a1d4.json": "b1cebb3d64c22584a09e06b82d52daf6b80d253ef0285988248de3461c7da67d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/798b192ad56e6f78d1490e94cce2a1d4.txt": "1f3e351df0b25aa0a87c42b5a035428d28b41bfcf1e7861f6f1a4469b44997bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7bc98a3bb9db46884ad59cc6b4a50b40.json": "a95d3397641b2154c2854a8501cb0cc4e0ce422fa4c05cf9afc5116e7acde06c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7bc98a3bb9db46884ad59cc6b4a50b40.txt": "f2f058e81ab3a54571036018ba850fdc36bfc6987b5c12a592f14d18d1b376b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7f92bf0dbd538fa1161dcdb3020fc52c.json": "0cfa4fa51eccb0f30faec114f74654b3a0d371d4caf95a5cc1aa3bea1c7fc2ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7f92bf0dbd538fa1161dcdb3020fc52c.txt": "e288f06e57662589a3ef0dcb0e7eb29caf3ca4f690a514660061a4bce183fdd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7ff59466cc7ebce27e9860179f2fadaf.json": "64cdee96ea0028a3f03b8409cfb557cd8dea5e946156c0cbf9f18ce554687786",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7ff59466cc7ebce27e9860179f2fadaf.txt": "b23698cf6dd3504bbfaf5cbe6c3eeaf00a7553632f8f365e66a8b3a9bb1478ba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/81d76c89a0c114b005b9a0c515f76302.json": "85aa80e61012b745c78f4d9c2d885ff8250ac554545d339d54f2cc1536741dd0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/81d76c89a0c114b005b9a0c515f76302.txt": "9c6228f38456f515a5e39870379813c82f4686e461d52dc09cc02d349a44a918",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/82806765d92885ccca77bff5d439bc20.json": "3acd5d0b7da2b5f54fc25b7acac0589dcb8546f11e209839dd6202356e709603",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/82806765d92885ccca77bff5d439bc20.txt": "9662b167f39ddc322d57262228275a143a4a21896677fd3a93ee5a8f37524b4c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.json": "56ecc68a40136e9773266bddb9892b82760ff8c322eb14852520e8cb9c75ec35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.txt": "fdee9f67df8de257c0662913d26c2abbc362e5268791ea061ae7717b808b8be7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/8ca1fad05485d90fbd60db6ce93089ac.json": "6197b33bd68172bfbc168cc1dcc9e1ca7c42373f953ec939135f3a5f3d434fb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/8ca1fad05485d90fbd60db6ce93089ac.txt": "34cc4485e869485eb11d169f45525cb2ef03f440963baa7eb15d84308a8d7df2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.json": "364a6f6d2fab2951efc982018f8f65b35f2fb190002c1099aad88c660e11f122",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.txt": "e97b9ca177dae761e3b3a945e65c7c382395f4c2e8c13e83764cde9525de2e07",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/94096665f67684bbc6137092fea1008c.json": "ed703d8c3cd70e675ae5aeebf3d58ac971019db595b465e6a3c914ed53186ad4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/94096665f67684bbc6137092fea1008c.txt": "9f6da5dd43685a1df3f589c0247527d9b6bcafa7034335efd16f44c21a40c8dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.json": "f882eddd52509f7cf6b6c717d43d07e258cdd13fd0bd1b92fbec56e3bd5b9a39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.txt": "f7a3dc357aabce244cbafe8f6f01b8a86a5d90973bab806aeff090b427fd9638",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.json": "b93785ea2c21c1a93f0996d9e5d0b3b355986bd492c742d61a4a755130a9d48c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.txt": "ade0e020760627e72d833ad1dd0c9ff4ff19354f212101e11da9a57779dd2fbf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9df2563ac6939590b1a86ba116e4645b.json": "58e273298dafe1712e8cf056655340c4c6ff38e7149b962eaaae7b560a712686",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9df2563ac6939590b1a86ba116e4645b.txt": "7c4764f2cc137654b4630d1a782fdd1d24b43ab8900d47eab8076da0151d9046",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.json": "d2aed9fc231e8919323d2c100cdbd5d256bfa0585a6e78e18efeaeca1cb178d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.txt": "ce31de4a5603ea16625bb4355cad9a40587f7adb3be65312e8a76d765460ddd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.json": "5ac3f3ec70bdbc05853f05aa34e7bb1485c128506554da2e6493e5ef852c9947",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.txt": "3ae54bf4a6cf3eec50a248ffe105f0731715bd625f48e64320cf1a4c3a2e8ba9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a99a69418abd0fa1364624035d2b4a08.json": "e288118a9f63e9fb72b9dab651aa467499e85cb81b01eba6caa7dfc9c81102df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a99a69418abd0fa1364624035d2b4a08.txt": "da5804fe2199769815469a51a2e9aaa5598bd2f40ee7534dcd0b25ae92a4fb09",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b1cd9767a30dd49478faccdddaf80639.json": "02e31bfe5f407840e708f888132ef711bed567b985fb81481fb471d5ce2c8da7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b1cd9767a30dd49478faccdddaf80639.txt": "fc12bedfdc733ca12b4cc2120b8b7c168f99be6fac759ea67d0cde927020ed06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b7f0dfe4b056b3ed4462d753cf527630.json": "762048d305467653200eeb7218d210d65cdbfdef2d2b5835ef176769eff63c0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b7f0dfe4b056b3ed4462d753cf527630.txt": "b218feaf78ebcecda673671ddb32e831efac907d15d9bd46961a273a5313d2b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b8471c71f6db89864b9ff458242b85f7.json": "f4bff13603f875e50d613adfbd6de7bb67ae620e27bf0d36dd7f9c7fbf1bd7c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b8471c71f6db89864b9ff458242b85f7.txt": "8a167808e125a3d40a4c4e23aae678be8e642126308ea6794e3eb7a4323094e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/bdb203299184113ec1a1f4f461ffa3b1.json": "180856e8193fd2a7781f93c689ffe06ec034f57d7022289e59f86b5a6d891464",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/bdb203299184113ec1a1f4f461ffa3b1.txt": "73abc81d40689abd6941dbc94371e1a7d0ec683ecb92821e97dccb5c15d4a272",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c48fca000acfddd5edec4680259946ce.json": "19aa28c825272f006c724107ce0890851b107760300f9e8742856c966d6ee6f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c48fca000acfddd5edec4680259946ce.txt": "a5f9e344f635ed6c4dcc2e80f3910092dedc5a64e378ee4dcfc405b603ff9139",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c68df7ddd0b3d1dd58a3d7140884557d.json": "c43641cd555eeaa7b1bac7c66c0df8526dd50b2b2f7e99d2f5b42883d8757253",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c68df7ddd0b3d1dd58a3d7140884557d.txt": "2e5762c7d46613bb0523a285bc409cf6cba52401a10a5a11935aa40ef0b5f74b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d304ff59ed96ce068f10d2bae59b5b03.json": "908141ce08e06c11541d6c00a375250a203e1b3748505813393dce1baab4e960",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d304ff59ed96ce068f10d2bae59b5b03.txt": "cde0540808a3e9c85775faffd382388ee4a25b8381fb548cb046dfb53790fb8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d6c5d2bcc37f62ed8a32eb94b3948771.json": "5c59bd21ede19d9cd0a16b0fa0b1cfd63a6947d78ed6d7832f019ef190c58d39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d6c5d2bcc37f62ed8a32eb94b3948771.txt": "27d470652d63678591e428e16723224a3927e250749911a463d5c083c6b2cbf9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dc694f751c3c6cb3a4ecf5fd176ec4f4.json": "7fc15ca3358c96a37933e5b02732722210feafa786c33c0dbee8490cb89d58a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dc694f751c3c6cb3a4ecf5fd176ec4f4.txt": "063b5782a2b1921ca5ef5d43319e18c9aab9c2aa51e952248ef7780f2d32d8c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dcbabcf0bbbb54e748e972039f7814a9.json": "0a8c3d8fffab696640b26e4f032ce46d3cebeff2048e74570b6c91a5ae7700b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dcbabcf0bbbb54e748e972039f7814a9.txt": "b79be7cae9786c4abc986da835519b7ddd6e3b3ba717725c73e9b0f525b75f7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e0c9d5edcceba264f527c4d882b54c33.json": "5874b46312313b6f683e573bf1a5aeb9c3a0db065fe25e2b51801d0a63b89086",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e0c9d5edcceba264f527c4d882b54c33.txt": "85fd2671c0c645e49a9466534a73dc6fda02c1e1dc7b717fb592f6d8e55ad1dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e27ba17174ffdd397dda788ad93a646c.json": "ea217e0b04d14950a22085677a42225acf7795096f59ebd6f074c723b193219e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e27ba17174ffdd397dda788ad93a646c.txt": "3ea449a17e2c30abe1d2ec4ea6df944ba51eae14f6b313e7b649cae455a05121",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e5876d20135fa234a7585147b3aaa980.json": "6a1c0aabf21ecfab0c28b0eedd77c77c7e955dfb15810cc019e231dc0b12824e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e5876d20135fa234a7585147b3aaa980.txt": "493995b719ee0f07a485e4dab94ce138b247d175283b33d43885086640874f0d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/take-a-swing-formal-nonauthor-review.json": "345dc4307d618be3df6f26d83c05e9a48d18e63c1e2a8ac28e33fed0d68419f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-image.json": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-final-content-delta-review.json": "6f26b70f9fa04ddebe9cb2c36747119f18442b61ea6527061ad174dee1989c6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-focused-checks.json": "57b0869e9950f9d2c8f7c5d820bc115ae77d72edfc8417d9c30cebd62130a7fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-frozen-source-verification.json": "c39d93df3afd79e7e8d644d43b1955c456afc6224f259b9387786ead21351dab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-raw-verification.json": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-resume-review.json": "f038af3eab92c829680e6b0a9445379e6c9d8c791d28ee11b3e3c2db5b136800",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-raw-verification.json": "ac271413e7568673c6f9dbbb67164e499c869f2d852bfddc2b55163adbf0d368",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-review.json": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-raw-verification.json": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "6ecb3b3ad23c4b73fe5ce5f885f1853d20ab86db4648e92965a973e2a11b61cf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/DAMAGE_PERCENTAGE_REVIEW.md": "b5e881ffdc5b202fe64dc12bd0b5a8e59505668356112a734b23c6011902b063",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/LOCALIZATION_COMPARISON.md": "b88a508e39c07aab2da445d0046699e65633f06b112aac56e64f810adb7c0b1d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/README.md": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/SOURCE_INDEX.md": "0b5b635985e370cba1d814a193f4633d4612b343fb3ed8f47754c2c20d5ee888",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/TIER_VALUES.md": "daa8d48743a73d1ac733a51a8746fcc8d70b6adf484d6cd03c8a70af72d48ac0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/WEAPON_COMPATIBILITY.md": "8d0c210df26007afdc77bfbcbc0b224b03e71f7358158da97c4ae5cbe0274ef6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md": "b684f463e8eb8540759f8466d9470c63bc5360b6c40785b2125637ef4421d575",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md": "3aff839bb831dcb00f991ea09c5e2df9c4c43877296857a67084112d3e002368",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md": "de95b0f15a914288dc41425bc5a62b4f0e50d1bdd83d9adf42dd2e31a87e18e1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md": "826af9729c0a77ff2e521df7fcec78c683ec94bb1bf6e145f22d6a5aafc38a08",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md": "5dfee78fc002d0b7a6c2a944c901c3e377052a9ba2d965a3ad8ce65a7f38f30e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/ranged/README.md": "5b9d6a7cc1877c74fb25f5d16aa13805cbe14c8767c0d72ee7acf041c823baa9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "293bf1d0cf03bd2e8c4855d9eaa62216f2079c43169d94c7c477797358ac4bb0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1ba7627285395e99a1e12cf3158719274e6a5146dc2a8c130c6e9cb1306a234c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "3d8bc01e5acfaeb2d1c316e22c81259d91ee32ffeb57b8be7ac567951e419914",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "fd3668c541a30002615da8c75151df1ff14f6d684f0c4f81d7ccf417203985fc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "00d486107bbc2742a94b4920565c369dadd8694ebf6061f09cf60d884e226503",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "a06027de9e12fd7f00e5526bfedf86b13ffdd552cfcc7f17d7b2e693091f52bf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "8c5ad134c02cd5d37ef404b4a686de39a369e0c561d1a8db752351a3b4f81150",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/own-association-snapshot.json": "412859ab6b84a12346437f69f9c3880809897cd52677cd2b487c47e1d0dbbf28",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Referneces/Translation.md": "77c67d728806f06a9b69051aa84db219c5ec2bb498ec418881d1f93187efe40c",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e61736b3150c7aa802f050fbf29b278db0f0016519b902778f0503227091d427",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/DAMAGE_PERCENTAGE_REVIEW.md": "b5e881ffdc5b202fe64dc12bd0b5a8e59505668356112a734b23c6011902b063",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/LOCALIZATION_COMPARISON.md": "43e1610a29ad299cf8b1fb4b54c01fedc434d46f83456e4f5ae3344f8463f008",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/README.md": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/SOURCE_INDEX.md": "776343345beb381398d9e752547d020210b85a2088ac005246bb4308edd20d48",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/TIER_VALUES.md": "daa8d48743a73d1ac733a51a8746fcc8d70b6adf484d6cd03c8a70af72d48ac0",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/WEAPON_COMPATIBILITY.md": "8d0c210df26007afdc77bfbcbc0b224b03e71f7358158da97c4ae5cbe0274ef6",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md": "b684f463e8eb8540759f8466d9470c63bc5360b6c40785b2125637ef4421d575",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md": "3aff839bb831dcb00f991ea09c5e2df9c4c43877296857a67084112d3e002368",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md": "de95b0f15a914288dc41425bc5a62b4f0e50d1bdd83d9adf42dd2e31a87e18e1",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md": "826af9729c0a77ff2e521df7fcec78c683ec94bb1bf6e145f22d6a5aafc38a08",
+      "Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md": "5dfee78fc002d0b7a6c2a944c901c3e377052a9ba2d965a3ad8ce65a7f38f30e",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "f289013b79f70088da8d903e57390e301ef88c512b1c540d4e7850ccac978784",
+      "Game Info/releases/1.13.X/blessings/README.md": "4da171149232d984b38de6b3f59f1f7437dea2943366c3af88d396b71b9862b9",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "fa696a3a0eec32fdd5611025e168cf0db35dd593dd882ca213924e0defa07e50",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "3d8bc01e5acfaeb2d1c316e22c81259d91ee32ffeb57b8be7ac567951e419914",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/惡棍槍/README.md": "fd3668c541a30002615da8c75151df1ff14f6d684f0c4f81d7ccf417203985fc",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "00d486107bbc2742a94b4920565c369dadd8694ebf6061f09cf60d884e226503",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "a06027de9e12fd7f00e5526bfedf86b13ffdd552cfcc7f17d7b2e693091f52bf",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "8c5ad134c02cd5d37ef404b4a686de39a369e0c561d1a8db752351a3b4f81150",
+      "Referneces/Translation.md": "902b02514e63de0e69065dadc4fa9757d93baa51a56fdfbcd37a43e9d268e4ab"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "blaze-away-alternative",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_126.png",
+      "attachment": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6007983320",
+      "acquired_date": "2026-10-06",
+      "sha256": "267181c8c751e73ba0a99b0f78b39068b38d3e9d42512dddd3437a37ffbabc91",
+      "content_type": "image/png",
+      "size": 6324,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "連續發射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": {
+        "reviewer": "Root Sol xhigh",
+        "public_original_viewed": true,
+        "result": "Public128x128 original matches acquired source by SHA256; pale gray near-white square, left pale vertical edge and stepped interior shading, shaded diagonal toward lower-right. Source pixels preserved."
+      },
+      "reused_accepted_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-image.json",
+        "sha256": "725d930c9520d0bc046a28a305a0a436a25402a9351fe7441f9dcd33871713f3",
+        "actual_native_item_icons_verified": 6,
+        "original_public_and_visual_acceptance_unchanged": true
+      }
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 20,
+      "tables": 20,
+      "rows": 639,
+      "lists": 94,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 127,
+      "source_files": 47,
+      "bindings": 1068,
+      "variants": 552,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 47,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 1403,
+      "remote_references": 602,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 43,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-042-full-scan.json",
+        "sha256": "4777d804e3214753526e714881fe6b8a8955dbf03168a68f50b7be590400ddcb",
+        "trigger": "round-042"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 8,
+    "not_started_name_groups": 8,
+    "partial_name_groups": 0,
+    "remaining_variants": 53,
+    "remaining_bindings": 117,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "55a70842a6d0104c9bbe0d107397bcb09b26573e6b4ec0395e40f02f71b3960c"
+  },
+  "previous_local_commit": "aa8fda45e148ffcf7f2958168b8e3b428ccde874",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Exact fixed name-key inventory/UI intersection is 5 implementations and 6 bindings; normal Blaze Away has distinct keys and is not merged."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json",
+      "sha256": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-final-content-delta-review.json",
+      "sha256": "6f26b70f9fa04ddebe9cb2c36747119f18442b61ea6527061ad174dee1989c6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-focused-checks.json",
+      "sha256": "57b0869e9950f9d2c8f7c5d820bc115ae77d72edfc8417d9c30cebd62130a7fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-frozen-source-verification.json",
+      "sha256": "c39d93df3afd79e7e8d644d43b1955c456afc6224f259b9387786ead21351dab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json",
+      "sha256": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-raw-verification.json",
+      "sha256": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-resume-review.json",
+      "sha256": "f038af3eab92c829680e6b0a9445379e6c9d8c791d28ee11b3e3c2db5b136800"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-raw-verification.json",
+      "sha256": "ac271413e7568673c6f9dbbb67164e499c869f2d852bfddc2b55163adbf0d368"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-review.json",
+      "sha256": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-config.json",
+    "sha256": "b1b78db9699766c0de18f222174f8a067731ec22e28475b02a1b7989e368c824"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+      "sha256": "4efe2106bc948fb66e1662bef30582beeac5fa4571c5e09e9092b9e2d254bc50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "sha256": "6ecb3b3ad23c4b73fe5ce5f885f1853d20ab86db4648e92965a973e2a11b61cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/assemble_author_package.py",
+      "sha256": "e9e9e829a88d2ae6d78bee5263951d785898a41379854da798129e5ff5a5f0fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-association-snapshot-003.json",
+      "sha256": "412859ab6b84a12346437f69f9c3880809897cd52677cd2b487c47e1d0dbbf28"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-003.json",
+      "sha256": "f89dcd5a1376e62fdb35d15af17a4e700f70bed3e1cf45c1b6fc5343aae7ab63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-config.json",
+      "sha256": "2d47a2f4ba26d7a5d856d2fdd0c7e6cca24ded7aecfc1f45da969a3e5240adb7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-draft.md",
+      "sha256": "e7da15859473b734c7ccf506574d00d3f6be1053f788211c660915c60d2e21ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-association-snapshot.json",
+      "sha256": "354fdc4d2a105f21455ba1d1d82553be41fb757b482d2952e733085f01ff9c59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-freeze.json",
+      "sha256": "23f8c8f5a03d1cf38944f6c39ce7c35ef5bcbb8b10d4b30443b5ca3a29440f42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-page.md",
+      "sha256": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-candidate-preview-manifest.json",
+      "sha256": "3fbb9e9ae509256e870344b03befcd8ce505045bf82c6e63d66a163a7e35c2db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-coverage.json",
+      "sha256": "59b31adaf0d46a9a6def7a0923ad97e7f62345793dfc3aec7b4c1ed807bf1e86"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-selfcheck.json",
+      "sha256": "f36a2bdde8d3d56ee04fe70bba32bb522751cb578c7904b460cee5ff72c95bb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-source-ranges.json",
+      "sha256": "1a3b02681ff632cc1be74fe6db45829bfbc4b939945d0d8f47e40df52e5d2c73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b5e881ffdc5b202fe64dc12bd0b5a8e59505668356112a734b23c6011902b063"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/LOCALIZATION_COMPARISON.md",
+      "sha256": "b88a508e39c07aab2da445d0046699e65633f06b112aac56e64f810adb7c0b1d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/README.md",
+      "sha256": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/SOURCE_INDEX.md",
+      "sha256": "0b5b635985e370cba1d814a193f4633d4612b343fb3ed8f47754c2c20d5ee888"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/TIER_VALUES.md",
+      "sha256": "daa8d48743a73d1ac733a51a8746fcc8d70b6adf484d6cd03c8a70af72d48ac0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/WEAPON_COMPATIBILITY.md",
+      "sha256": "8d0c210df26007afdc77bfbcbc0b224b03e71f7358158da97c4ae5cbe0274ef6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "b684f463e8eb8540759f8466d9470c63bc5360b6c40785b2125637ef4421d575"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "3aff839bb831dcb00f991ea09c5e2df9c4c43877296857a67084112d3e002368"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md",
+      "sha256": "de95b0f15a914288dc41425bc5a62b4f0e50d1bdd83d9adf42dd2e31a87e18e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md",
+      "sha256": "826af9729c0a77ff2e521df7fcec78c683ec94bb1bf6e145f22d6a5aafc38a08"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/candidate-preview-003/Game Info/releases/1.13.X/blessings/entries/連續發射（射擊連段）/weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "5dfee78fc002d0b7a6c2a944c901c3e377052a9ba2d965a3ad8ce65a7f38f30e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/finalize_blaze_away_alternative.py",
+      "sha256": "359d1a4583b6ab2e7dced2fd7aa3e0bfde2c48289743c803a8da2f001b185489"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/__pycache__/source_object_cache.cpython-312.pyc",
+      "sha256": "119e1bd5ee49716b1e2233b31e44eed3e91c9b6dd698f1684a1987e267a87881"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/01-inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/02-item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/03-localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/04-remaining-tasks.json",
+      "sha256": "a66becd2c914a2a941435ada02d73c72e130bdba12adda679221ff41b83c0516"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/05-baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/06-baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/07-blaze-away-alternative-image.json",
+      "sha256": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/08-quickloader-image.json",
+      "sha256": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/09-quickloader-config.json",
+      "sha256": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/actual-preview-003-inputs/10-f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/binding-inventory.json",
+      "sha256": "add22bf817a2e153fd334825078dd5bcc8b52504f9a1ce2dd436b02ced3ec955"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-action-combo-route-review.json",
+      "sha256": "623fd0c83cef0f53137d35eba25e77581efc50b8b7e461d9c5401d8db18bb6ae"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-explosion-power-consumer-review.json",
+      "sha256": "13c5dc5a3bde5ddc1da92c56ce40dd12c90b815f34e3ac943279e3b1ee8b928c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-gauntlet-melee-explosive-route-delta-review.json",
+      "sha256": "75a55f2302d032fa9c5ce221d07d338fc42d6d3d7ca255204d621f0b18d29061"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json",
+      "sha256": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json",
+      "sha256": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-raw-verification.json",
+      "sha256": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-ui-raw-verification.json",
+      "sha256": "ac271413e7568673c6f9dbbb67164e499c869f2d852bfddc2b55163adbf0d368"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-alternative-primary-ui-review.json",
+      "sha256": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/blaze-away-normal-raw-verification.json",
+      "sha256": "40eea720868f92d86bc381ddba11896de918e1506cab2eba6661ce0cfb9a136b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/image-receipt.json",
+      "sha256": "67b5881ff554f181960ec2107cdeb3b39dad2df79a21839ad98f0d78c1584fb8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/localized-keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/player_unit_visual_loadout.fixed-source.lua",
+      "sha256": "b23698cf6dd3504bbfaf5cbe6c3eeaf00a7553632f8f365e66a8b3a9bb1478ba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/remaining-tasks.json",
+      "sha256": "050dbaa4e989cc293a617f08a97a3eb9b5bb811fda40f83adb730c1696d5d83d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/06f7c3f72a72072b4af9cc57eba2dee4.json",
+      "sha256": "88174c2fb596c80bed0ab981381f678faa35ec4ff1298a3cc97958d2d4ae314d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/06f7c3f72a72072b4af9cc57eba2dee4.txt",
+      "sha256": "8c901476637e567bd05d4de0dbf1f04b17f393165873d5b00ad7234fb0436687"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/166474325c899653feb5292fdfc17986.json",
+      "sha256": "fa2a6b8d25d84f7839f62a6727e770ffbdf486bdb20dce514bff1c695c22d7b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/166474325c899653feb5292fdfc17986.txt",
+      "sha256": "ede78ed49f1c73e56fe0a0a5e1e5e58e10d1394c612a0aaf342216a6c1199db2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/191316dbf8752248be2972b4a2d5147f.json",
+      "sha256": "0b71354556e373fcb1c2d8669c4d44b28eec9eedc7524be668217ee37d85209f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/191316dbf8752248be2972b4a2d5147f.txt",
+      "sha256": "8ecb2ff88c784e4988f08b5a85bfb9b818b5b1dd92cf64b0a0c869340f033813"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/194bcce4f9f94e85199c71e961ab0bf0.json",
+      "sha256": "75326ddb2d4d1788d7e6a2290139c0161ef35db759390412a26b82f484a7ef67"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/194bcce4f9f94e85199c71e961ab0bf0.txt",
+      "sha256": "0619a6fb71e770a72979747fd63f8f0a6919422f9bf8697c30923ede13c0b55d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.json",
+      "sha256": "c98627315683c935bb74889e1cbcefe7aae2a8c540e9d6010ad52da9feb7e4db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.txt",
+      "sha256": "b61d7178f8e3fc46954f56f0bc25eee29f48e44aca5c3b2123e250da904642ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1fbc64d8e04429de0811b6b4a40be864.json",
+      "sha256": "a43d90a454d9561a98da0ddb11de53e71aec034d870fa306e138bb4856c315b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/1fbc64d8e04429de0811b6b4a40be864.txt",
+      "sha256": "34f90a87ab7766afaaa53f7265332458a8062c6cc194332561aca9c0128bb759"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/29b41eb2d32a9c6d7c1e6fc11ba3562a.json",
+      "sha256": "0c2da900754c338c684bca2e11e616a47700334d04d130804eea35e51cecdb24"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/29b41eb2d32a9c6d7c1e6fc11ba3562a.txt",
+      "sha256": "029f3de1872b7f927bf1ec39d6763de1e17cee79c3f1ccf881ef1d5b71707579"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/2b2e7a60fa1b72831b0f09f3c95ede22.json",
+      "sha256": "01262de23388a46d75d82be813ad8c3306b3b4bc1bd0e95324cdfdff7d0890e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/2b2e7a60fa1b72831b0f09f3c95ede22.txt",
+      "sha256": "bec29316f46f0236eaf260ffd321efc37d16bbc7e1c327686407fe43dfdd9d77"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3484355010c9e03aecfa18f881578c92.json",
+      "sha256": "00bd0883c3350b35936880f3d25916b9c039e854c33277a8fc765779fc4088e0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3484355010c9e03aecfa18f881578c92.txt",
+      "sha256": "b356486926200505bd5f879dc6d3dcc46daf99cdcc2bcc3bf354c1430e176ce4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3e5b296935bc8a9437eebd6b7037fec6.json",
+      "sha256": "37b9ad321310a82e1e505d776c52576c77dd14e1b2085a5d6f6c5435b48b76e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/3e5b296935bc8a9437eebd6b7037fec6.txt",
+      "sha256": "7011b63e8c2f88b0501e5f5065c0406dfb87ac61b025ad3c6e8f6997e864880b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/45f1d6e841f3f5c846e799e81b307b6c.json",
+      "sha256": "1c4a8400cd7d1719e5b3ff9071737f9c140ee9de1d0770dbd9404f532a5dcc94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/45f1d6e841f3f5c846e799e81b307b6c.txt",
+      "sha256": "16f6de8e3c0c0c0d7e5705bd2bb2e78d687f55dc78697f3087ac327f1aa367b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/4b41a82c3dac9fcc90ab3475155c56b1.json",
+      "sha256": "678825c4e39a044283c00bc4fe8a4c3afef80961d3a6cf294f768b1e55729fb8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/4b41a82c3dac9fcc90ab3475155c56b1.txt",
+      "sha256": "8077e62af087dcc465a1d379335c388168f838d1ea97d249c940320f2a1a240c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/582bcaf191d39cf67bb274b0088261cd.json",
+      "sha256": "7325878b19c0f2127d88e7492d2f8db15588724b71d1dc96e55c43edc95f8ae7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/582bcaf191d39cf67bb274b0088261cd.txt",
+      "sha256": "7242ee454037ec7f36d2cbb54b504533471e0fc2d6fc6bf2fcc36673894df8dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.json",
+      "sha256": "162568d8ffc07e0cccc8f83b1da77198ec3ecb4d993b9934c749259a66599648"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.txt",
+      "sha256": "4dc7db18affe0c96eb0a00bc91bcd11000369547e1bd9bac5683fd2a10d5468b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/62f26c990d8c2e7947a04ce57c961555.json",
+      "sha256": "9093f76f20cc82d85746aa51de6ba9ad88e05d220276b35f7a2571a60bb3175e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/62f26c990d8c2e7947a04ce57c961555.txt",
+      "sha256": "be21a2f15ceedd877b397468167d93803dba6908fc1997c35d253803f8f98183"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6cf5bff7ac6b3cdc05d06970dbb409b8.json",
+      "sha256": "73aadd0d65c8cbcebc2807eabf2b7b12e6f20496bec740beb2ad17cc1fb9b750"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/6cf5bff7ac6b3cdc05d06970dbb409b8.txt",
+      "sha256": "ea63167eaada6557206c3953ea570c2296711a2fa57bb3dd3958a471429cf3b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/798b192ad56e6f78d1490e94cce2a1d4.json",
+      "sha256": "b1cebb3d64c22584a09e06b82d52daf6b80d253ef0285988248de3461c7da67d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/798b192ad56e6f78d1490e94cce2a1d4.txt",
+      "sha256": "1f3e351df0b25aa0a87c42b5a035428d28b41bfcf1e7861f6f1a4469b44997bd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7bc98a3bb9db46884ad59cc6b4a50b40.json",
+      "sha256": "a95d3397641b2154c2854a8501cb0cc4e0ce422fa4c05cf9afc5116e7acde06c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7bc98a3bb9db46884ad59cc6b4a50b40.txt",
+      "sha256": "f2f058e81ab3a54571036018ba850fdc36bfc6987b5c12a592f14d18d1b376b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7f92bf0dbd538fa1161dcdb3020fc52c.json",
+      "sha256": "0cfa4fa51eccb0f30faec114f74654b3a0d371d4caf95a5cc1aa3bea1c7fc2ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7f92bf0dbd538fa1161dcdb3020fc52c.txt",
+      "sha256": "e288f06e57662589a3ef0dcb0e7eb29caf3ca4f690a514660061a4bce183fdd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7ff59466cc7ebce27e9860179f2fadaf.json",
+      "sha256": "64cdee96ea0028a3f03b8409cfb557cd8dea5e946156c0cbf9f18ce554687786"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/7ff59466cc7ebce27e9860179f2fadaf.txt",
+      "sha256": "b23698cf6dd3504bbfaf5cbe6c3eeaf00a7553632f8f365e66a8b3a9bb1478ba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/81d76c89a0c114b005b9a0c515f76302.json",
+      "sha256": "85aa80e61012b745c78f4d9c2d885ff8250ac554545d339d54f2cc1536741dd0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/81d76c89a0c114b005b9a0c515f76302.txt",
+      "sha256": "9c6228f38456f515a5e39870379813c82f4686e461d52dc09cc02d349a44a918"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/82806765d92885ccca77bff5d439bc20.json",
+      "sha256": "3acd5d0b7da2b5f54fc25b7acac0589dcb8546f11e209839dd6202356e709603"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/82806765d92885ccca77bff5d439bc20.txt",
+      "sha256": "9662b167f39ddc322d57262228275a143a4a21896677fd3a93ee5a8f37524b4c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.json",
+      "sha256": "56ecc68a40136e9773266bddb9892b82760ff8c322eb14852520e8cb9c75ec35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.txt",
+      "sha256": "fdee9f67df8de257c0662913d26c2abbc362e5268791ea061ae7717b808b8be7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/8ca1fad05485d90fbd60db6ce93089ac.json",
+      "sha256": "6197b33bd68172bfbc168cc1dcc9e1ca7c42373f953ec939135f3a5f3d434fb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/8ca1fad05485d90fbd60db6ce93089ac.txt",
+      "sha256": "34cc4485e869485eb11d169f45525cb2ef03f440963baa7eb15d84308a8d7df2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.json",
+      "sha256": "364a6f6d2fab2951efc982018f8f65b35f2fb190002c1099aad88c660e11f122"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.txt",
+      "sha256": "e97b9ca177dae761e3b3a945e65c7c382395f4c2e8c13e83764cde9525de2e07"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/94096665f67684bbc6137092fea1008c.json",
+      "sha256": "ed703d8c3cd70e675ae5aeebf3d58ac971019db595b465e6a3c914ed53186ad4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/94096665f67684bbc6137092fea1008c.txt",
+      "sha256": "9f6da5dd43685a1df3f589c0247527d9b6bcafa7034335efd16f44c21a40c8dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.json",
+      "sha256": "f882eddd52509f7cf6b6c717d43d07e258cdd13fd0bd1b92fbec56e3bd5b9a39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.txt",
+      "sha256": "f7a3dc357aabce244cbafe8f6f01b8a86a5d90973bab806aeff090b427fd9638"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.json",
+      "sha256": "b93785ea2c21c1a93f0996d9e5d0b3b355986bd492c742d61a4a755130a9d48c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.txt",
+      "sha256": "ade0e020760627e72d833ad1dd0c9ff4ff19354f212101e11da9a57779dd2fbf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9df2563ac6939590b1a86ba116e4645b.json",
+      "sha256": "58e273298dafe1712e8cf056655340c4c6ff38e7149b962eaaae7b560a712686"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/9df2563ac6939590b1a86ba116e4645b.txt",
+      "sha256": "7c4764f2cc137654b4630d1a782fdd1d24b43ab8900d47eab8076da0151d9046"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.json",
+      "sha256": "d2aed9fc231e8919323d2c100cdbd5d256bfa0585a6e78e18efeaeca1cb178d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.txt",
+      "sha256": "ce31de4a5603ea16625bb4355cad9a40587f7adb3be65312e8a76d765460ddd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.json",
+      "sha256": "5ac3f3ec70bdbc05853f05aa34e7bb1485c128506554da2e6493e5ef852c9947"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.txt",
+      "sha256": "3ae54bf4a6cf3eec50a248ffe105f0731715bd625f48e64320cf1a4c3a2e8ba9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a99a69418abd0fa1364624035d2b4a08.json",
+      "sha256": "e288118a9f63e9fb72b9dab651aa467499e85cb81b01eba6caa7dfc9c81102df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/a99a69418abd0fa1364624035d2b4a08.txt",
+      "sha256": "da5804fe2199769815469a51a2e9aaa5598bd2f40ee7534dcd0b25ae92a4fb09"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b1cd9767a30dd49478faccdddaf80639.json",
+      "sha256": "02e31bfe5f407840e708f888132ef711bed567b985fb81481fb471d5ce2c8da7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b1cd9767a30dd49478faccdddaf80639.txt",
+      "sha256": "fc12bedfdc733ca12b4cc2120b8b7c168f99be6fac759ea67d0cde927020ed06"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b7f0dfe4b056b3ed4462d753cf527630.json",
+      "sha256": "762048d305467653200eeb7218d210d65cdbfdef2d2b5835ef176769eff63c0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b7f0dfe4b056b3ed4462d753cf527630.txt",
+      "sha256": "b218feaf78ebcecda673671ddb32e831efac907d15d9bd46961a273a5313d2b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b8471c71f6db89864b9ff458242b85f7.json",
+      "sha256": "f4bff13603f875e50d613adfbd6de7bb67ae620e27bf0d36dd7f9c7fbf1bd7c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/b8471c71f6db89864b9ff458242b85f7.txt",
+      "sha256": "8a167808e125a3d40a4c4e23aae678be8e642126308ea6794e3eb7a4323094e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/bdb203299184113ec1a1f4f461ffa3b1.json",
+      "sha256": "180856e8193fd2a7781f93c689ffe06ec034f57d7022289e59f86b5a6d891464"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/bdb203299184113ec1a1f4f461ffa3b1.txt",
+      "sha256": "73abc81d40689abd6941dbc94371e1a7d0ec683ecb92821e97dccb5c15d4a272"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c48fca000acfddd5edec4680259946ce.json",
+      "sha256": "19aa28c825272f006c724107ce0890851b107760300f9e8742856c966d6ee6f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c48fca000acfddd5edec4680259946ce.txt",
+      "sha256": "a5f9e344f635ed6c4dcc2e80f3910092dedc5a64e378ee4dcfc405b603ff9139"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c68df7ddd0b3d1dd58a3d7140884557d.json",
+      "sha256": "c43641cd555eeaa7b1bac7c66c0df8526dd50b2b2f7e99d2f5b42883d8757253"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/c68df7ddd0b3d1dd58a3d7140884557d.txt",
+      "sha256": "2e5762c7d46613bb0523a285bc409cf6cba52401a10a5a11935aa40ef0b5f74b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d304ff59ed96ce068f10d2bae59b5b03.json",
+      "sha256": "908141ce08e06c11541d6c00a375250a203e1b3748505813393dce1baab4e960"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d304ff59ed96ce068f10d2bae59b5b03.txt",
+      "sha256": "cde0540808a3e9c85775faffd382388ee4a25b8381fb548cb046dfb53790fb8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d6c5d2bcc37f62ed8a32eb94b3948771.json",
+      "sha256": "5c59bd21ede19d9cd0a16b0fa0b1cfd63a6947d78ed6d7832f019ef190c58d39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/d6c5d2bcc37f62ed8a32eb94b3948771.txt",
+      "sha256": "27d470652d63678591e428e16723224a3927e250749911a463d5c083c6b2cbf9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dc694f751c3c6cb3a4ecf5fd176ec4f4.json",
+      "sha256": "7fc15ca3358c96a37933e5b02732722210feafa786c33c0dbee8490cb89d58a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dc694f751c3c6cb3a4ecf5fd176ec4f4.txt",
+      "sha256": "063b5782a2b1921ca5ef5d43319e18c9aab9c2aa51e952248ef7780f2d32d8c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dcbabcf0bbbb54e748e972039f7814a9.json",
+      "sha256": "0a8c3d8fffab696640b26e4f032ce46d3cebeff2048e74570b6c91a5ae7700b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/dcbabcf0bbbb54e748e972039f7814a9.txt",
+      "sha256": "b79be7cae9786c4abc986da835519b7ddd6e3b3ba717725c73e9b0f525b75f7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e0c9d5edcceba264f527c4d882b54c33.json",
+      "sha256": "5874b46312313b6f683e573bf1a5aeb9c3a0db065fe25e2b51801d0a63b89086"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e0c9d5edcceba264f527c4d882b54c33.txt",
+      "sha256": "85fd2671c0c645e49a9466534a73dc6fda02c1e1dc7b717fb592f6d8e55ad1dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e27ba17174ffdd397dda788ad93a646c.json",
+      "sha256": "ea217e0b04d14950a22085677a42225acf7795096f59ebd6f074c723b193219e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e27ba17174ffdd397dda788ad93a646c.txt",
+      "sha256": "3ea449a17e2c30abe1d2ec4ea6df944ba51eae14f6b313e7b649cae455a05121"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e5876d20135fa234a7585147b3aaa980.json",
+      "sha256": "6a1c0aabf21ecfab0c28b0eedd77c77c7e955dfb15810cc019e231dc0b12824e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/inputs/src-cache/7e662fcda162/e5876d20135fa234a7585147b3aaa980.txt",
+      "sha256": "493995b719ee0f07a485e4dab94ce138b247d175283b33d43885086640874f0d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "293bf1d0cf03bd2e8c4855d9eaa62216f2079c43169d94c7c477797358ac4bb0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "1ba7627285395e99a1e12cf3158719274e6a5146dc2a8c130c6e9cb1306a234c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "6ecb3b3ad23c4b73fe5ce5f885f1853d20ab86db4648e92965a973e2a11b61cf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "b5e881ffdc5b202fe64dc12bd0b5a8e59505668356112a734b23c6011902b063"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\LOCALIZATION_COMPARISON.md",
+      "sha256": "b88a508e39c07aab2da445d0046699e65633f06b112aac56e64f810adb7c0b1d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\README.md",
+      "sha256": "1d41e15ae6562dffaafa307db2edc64fb94be0721d21938b21d0561b78a79f7d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\SOURCE_INDEX.md",
+      "sha256": "0b5b635985e370cba1d814a193f4633d4612b343fb3ed8f47754c2c20d5ee888"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\TIER_VALUES.md",
+      "sha256": "daa8d48743a73d1ac733a51a8746fcc8d70b6adf484d6cd03c8a70af72d48ac0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\WEAPON_COMPATIBILITY.md",
+      "sha256": "8d0c210df26007afdc77bfbcbc0b224b03e71f7358158da97c4ae5cbe0274ef6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\weapon_trait_bespoke_ogryn_gauntlet_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "b684f463e8eb8540759f8466d9470c63bc5360b6c40785b2125637ef4421d575"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "3aff839bb831dcb00f991ea09c5e2df9c4c43877296857a67084112d3e002368"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\weapon_trait_bespoke_ogryn_thumper_p2_power_bonus_on_continuous_fire.md",
+      "sha256": "de95b0f15a914288dc41425bc5a62b4f0e50d1bdd83d9adf42dd2e31a87e18e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\weapon_trait_bespoke_ogryn_thumper_p3_power_bonus_on_continuous_fire.md",
+      "sha256": "826af9729c0a77ff2e521df7fcec78c683ec94bb1bf6e145f22d6a5aafc38a08"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\連續發射（射擊連段）\\weapon_trait_bespoke_plasmagun_p1_power_bonus_on_continuous_fire.md",
+      "sha256": "5dfee78fc002d0b7a6c2a944c901c3e377052a9ba2d965a3ad8ce65a7f38f30e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "5b9d6a7cc1877c74fb25f5d16aa13805cbe14c8767c0d72ee7acf041c823baa9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "3d8bc01e5acfaeb2d1c316e22c81259d91ee32ffeb57b8be7ac567951e419914"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\惡棍槍\\README.md",
+      "sha256": "fd3668c541a30002615da8c75151df1ff14f6d684f0c4f81d7ccf417203985fc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\擲彈兵臂鎧\\README.md",
+      "sha256": "00d486107bbc2742a94b4920565c369dadd8694ebf6061f09cf60d884e226503"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電漿槍\\README.md",
+      "sha256": "a06027de9e12fd7f00e5526bfedf86b13ffdd552cfcc7f17d7b2e693091f52bf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\震盪槍\\README.md",
+      "sha256": "8c5ad134c02cd5d37ef404b4a686de39a369e0c561d1a8db752351a3b4f81150"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "77c67d728806f06a9b69051aa84db219c5ec2bb498ec418881d1f93187efe40c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-raw-verification.json",
+      "sha256": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\blaze-away-alternative-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "412859ab6b84a12346437f69f9c3880809897cd52677cd2b487c47e1d0dbbf28"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-001.json",
+      "sha256": "23f0c1e750879d4fca3a7825c06abf70a7777b2cffb9503b7e98e6f005fac636"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-actual-preview-receipt-002.json",
+      "sha256": "13cae637f278b87de7db317eb52e2af47651ed2c79a693e47748657ce11ed9e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/blaze-away-alternative-agent-evidence.json",
+      "sha256": "ae1202176158eb19f9d084519aef649b77ae957f11a9351a03f35019cd7ec6fe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-group/take-a-swing-formal-nonauthor-review.json",
+      "sha256": "345dc4307d618be3df6f26d83c05e9a48d18e63c1e2a8ac28e33fed0d68419f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-config.json",
+      "sha256": "2d47a2f4ba26d7a5d856d2fdd0c7e6cca24ded7aecfc1f45da969a3e5240adb7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-evidence.json",
+      "sha256": "ae1202176158eb19f9d084519aef649b77ae957f11a9351a03f35019cd7ec6fe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-agent-draft.md",
+      "sha256": "e7da15859473b734c7ccf506574d00d3f6be1053f788211c660915c60d2e21ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-explosion-snapshot-power-consumer-delta-review.json",
+      "sha256": "5c0b8a7c6b55670e3844cc06597f7a318190481f10e12478404b3b630b3869b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-final-content-delta-review.json",
+      "sha256": "6f26b70f9fa04ddebe9cb2c36747119f18442b61ea6527061ad174dee1989c6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-frozen-source-verification.json",
+      "sha256": "c39d93df3afd79e7e8d644d43b1955c456afc6224f259b9387786ead21351dab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-own-tier-wrapper-combo-difference-review.json",
+      "sha256": "961be2c8cfb895ab0045cc27af24749a00ee28035629243bc93bba0d69cd728d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-raw-verification.json",
+      "sha256": "f6fb2e25a82377beb2b3691314af4dacd912ae4df00d200177fc2a86741044c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-raw-verification.json",
+      "sha256": "ac271413e7568673c6f9dbbb67164e499c869f2d852bfddc2b55163adbf0d368"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-primary-ui-review.json",
+      "sha256": "1af2ed8c5541e15cea998504cc222b9a2877e7512b49f0937f1656a5ff8aeae5"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blaze-away-alternative-formal-peer-scope.json",
+    "sha256": "3a5b94a631a277dfb72610a6092dcf38bacc4c618ccf054f5ef2a505fe90cb52",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

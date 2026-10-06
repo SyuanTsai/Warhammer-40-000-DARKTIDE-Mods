@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-03",
+  "blessing": "can-opener",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/開罐器/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_crowbar_p1_targets_receive_rending_debuff_on_weapon_special",
+    "weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_variants",
+    "scope": "Can Opener two variants/four bindings complete source research and unique ignored config draft; read-only cross-review of primary player/examples/math/per-weapon values",
+    "findings": [
+      "Crowbar1/2/3/4 per hit versus ripper10/12/14/16; actual target16cap/5s/2.5%perstack.",
+      "Crowbar mode read at proc processing; non-blunt melee and same item; no held gate.",
+      "Crowbar only manual_toggle clears mode, unwield retains it; queued event can pass if active remains true.",
+      "Ripper actual bayonet action_stab on all three marks; same-item/melee check plus held gate, no weapon_special flag check.",
+      "Two distinct description keys/hash pairs under same Can Opener name; mixed melee/ranged bindings."
+    ],
+    "primary_review": "Directly read all tier/wrapper spans, core consumer/stack/clock/queue chain, three ripper template import chains and actual stab snippets, crowbar special light/heavy and blunt follow-up, toggle/unwield function, all four metadata/UI/RAW names and exact outside candidates.",
+    "draft_corrections": [
+      "Agent corrected one M2 reference filename to actual ogryn_rippergun_p1_m2.lua.",
+      "Primary replaced implementation identifiers in player page with Chinese bullet rules and corrected math to use capped current total stacks, then made per-weapon values explicit."
+    ],
+    "parallel_execution": {
+      "groups": [
+        "shattering-impact",
+        "can-opener",
+        "penetrating-flame"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted",
+      "scope": "primary config player/examples/math/values_by_weapon",
+      "required_corrections": [],
+      "response": "交叉複核通過，未發現必要修正；文字、數值及兩種武器的gate差異一致。"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "can-opener",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_059.png",
+      "attachment": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966423611",
+      "acquired_date": "2026-10-03",
+      "sha256": "2cdf5a6e2a8f9ec200d8fb1bf5f4f9c7bad0c630e7a340b8976742f8051c564c",
+      "content_type": "image/png",
+      "size": 2607,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "開罐器祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 253,
+      "tables": 211,
+      "rows": 1665,
+      "lists": 324
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 779,
+      "source_files": 276,
+      "bindings": 154,
+      "variants": 81,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 953,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 253,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 145,
+    "not_started_name_groups": 145,
+    "partial_name_groups": 0,
+    "remaining_variants": 507,
+    "remaining_bindings": 1014,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "3f7ee52fca772461f4848531ba58f28b2107e4527fd42c0b30bf239dd7944d10"
+  },
+  "previous_local_commit": "39e5307a4dd3451e9070113fcd490f4307caccd3",
+  "current_blessing_formula_review": {
+    "primary_direct_fixed_source_read": true,
+    "same_sha_shared_rending_formula_reused": true,
+    "single_proc_stacks_verified_by_weapon": {
+      "crowbar_p1": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "ogryn_rippergun_p1": [
+        10,
+        12,
+        14,
+        16
+      ]
+    },
+    "target_stack_cap": 16,
+    "rending_per_stack": 0.025,
+    "duration_seconds": 5,
+    "full_stack_brittleness": 0.4,
+    "current_total_stack_formula": "n_new=min(n+q,16); B=.025*n_new",
+    "triggering_damage_not_retroactive": true,
+    "crowbar_gate": "proc-time special_active, item match, melee, damage_type!=blunt; no held gate",
+    "ripper_gate": "proc-time held, item match, melee; no params.weapon_special check",
+    "crowbar_unwield_retains_mode": true,
+    "independent_example_arithmetic_checked": true,
+    "gameplay_test": "not run"
+  },
+  "ui_name_review": {
+    "primary_current_three_key_names_checked": true,
+    "mark_count": 4,
+    "exact_trait_metadata_records": 2,
+    "raw_name_hash": "9011c283",
+    "raw_description_hash_by_weapon": {
+      "crowbar_p1": "2bf30b00",
+      "ogryn_rippergun_p1": "7826a666"
+    },
+    "fixed_registry_lines": [
+      37,
+      64
+    ],
+    "same_name_two_description_keys_preserved": true,
+    "mixed_kind_navigation": "melee and ranged"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "bound_bindings": 4,
+    "same_name_candidates": [],
+    "unresolved_candidates": [],
+    "unbound_definition_candidates": [],
+    "status": "Exact name-key metadata and inventory checked. The two metadata entries map to the two trait variants and all four marks; inventory unresolved and definitions_not_bound have no exact Can Opener candidate."
+  }
+}

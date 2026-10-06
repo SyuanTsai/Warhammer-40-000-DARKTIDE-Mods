@@ -1,0 +1,573 @@
+{
+  "date": "2026-10-06",
+  "blessing": "decapitator",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/斬首者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill",
+    "weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill",
+    "weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill",
+    "weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 4,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "decapitator",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-formal-peer-scope.json",
+    "scope_sha256": "d5b84a136b326812e239a8773a9d7d5d8c2d00fcb6550f8156c716b9e22d7958",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-config.json": "7adaf337abea1b80fde67774650d30745ec091c16a24150c5f02dc5f06e60d4c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-draft.md": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-evidence.json": "ad78566e49be51bd6ced644d49313eb5484ff918df42b70d9f4165106bb19027",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-config.json": "0796d7a693d428b05e5520187fcf01a2bda6f8fd57b5987cc2398b9b6a7b065d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-extension-draft.json": "8b2f2fdf9c72a8757149d70c61a956110476c4ee5287373f379f415ffc64aa64",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-source-blocks.json": "ba651d6a36338db1201095ae4a730396887469207a8c3cd74982dc382ea739a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-source-files.json": "13673faeeaf02ffaeed29bf74914651cdb6160f3625db6056ab944d3fed2b12a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-summary.json": "3753e45675f517e994243a02719b826bcc0ed73c700db12d42510dac6224c23b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/association-snapshot.json": "45100a867f20afd3709ee60fd9947fa516131ef20f32fe9b7e7dffe6294d1674",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/attack-matrix-generated.json": "1766eabae5c4922fe366b060b4e6801e38f4926e16f3877bff807935b3fdc32d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/build_decapitator.py": "bb1a270cb3879156aec4077aeeb4476cadf620925bb871741b9b65973ed31dd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/collect_research.py": "65a1b61b101d7516a35502202cbd5ca0397473f9668c6281e7daceb86fb609c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/coverage.json": "b9ce0dd40f635d2a2b50b5d81566f29ade37a820410ac9a18de3f43746c2848f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-001.json": "2f16f7e67038d0756ee2952dce853689342d9d8b04163f7ec02f4f60dbd178f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-002.json": "536bbd25099fbbeda009acfacff33d77e67ebff6ebec66bd7b0dee63a6b20cea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-003.json": "0458a2407a412513a455c0417f8c6cfc5247e0fe86050e1014577891821054d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-config.json": "7adaf337abea1b80fde67774650d30745ec091c16a24150c5f02dc5f06e60d4c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-draft.md": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-evidence.json": "ad78566e49be51bd6ced644d49313eb5484ff918df42b70d9f4165106bb19027",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-selfcheck.json": "3c13460f23987e6dc5a3d1d30303d07a828f4287adfe412935294951d04acfb7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/draft.md": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/full-bore-formal-nonauthor-review.json": "fad352a27ca6080c0c45b2721d753a78707d1fd0699ac6be2c42e63228c154d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-image.json": "37571e90633cc2579ad39934ca759b81bbe78aaca230430ddf5cd0a1fd8fa41d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-own-tier-literal-finesse-material-review.json": "3af3f00ba576966c460eed7e978fdc124f6c05bec528407c63b1fb907b8e23a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-raw-verification.json": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-ui-raw-verification.json": "34c54ef8aac7e4b6c8b0303bd0b220be0d66cbb4327c549194fa12a9ec01fe83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-ui-review.json": "c58c68aaa848fd97f639e16de3f28a04a4111484003a708de540c82289682e00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/source-blocks.json": "b47ea31d8bb5bb0ad419f109c86708492c7fce7184fc097e9996fb14627e3695",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/source-file-hashes.json": "dbb6bbe83207dd7a80a7c70ead3bd39107adfb8d2c3011c6e17508b84c805452",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-image.json": "37571e90633cc2579ad39934ca759b81bbe78aaca230430ddf5cd0a1fd8fa41d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-final-content-delta-review.json": "d427aaac72b0d869e11b2297fe44005d67008d3a0f74d9a6d8618b77118b1e15",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-focused-checks.json": "8bc99377f8a95862e0fff2138b32c960cdb2171ce1410a3415678d862435695b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-frozen-source-verification.json": "1e30382aae6f6aca9d5af84ad914b90befc85ac56d342e6a00f6db3a2fe977e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-onehit-expiry-finesse-consumer-delta-review.json": "23795aba3a87c759a6b0a34e59211d616de7427bdd8b101238c6640910be575a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-own-tier-literal-finesse-material-review.json": "3af3f00ba576966c460eed7e978fdc124f6c05bec528407c63b1fb907b8e23a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-raw-verification.json": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-resume-review.json": "aac3df8f43f11a91f9d7114ea3c06b283839dd1c43abf9a97502d6b6499c9f7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-raw-verification.json": "34c54ef8aac7e4b6c8b0303bd0b220be0d66cbb4327c549194fa12a9ec01fe83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-review.json": "c58c68aaa848fd97f639e16de3f28a04a4111484003a708de540c82289682e00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-raw-verification.json": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ce2f493645ce64542f3d2988b85d3634e24ecc917c874b4605a1773e49235250",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/DAMAGE_PERCENTAGE_REVIEW.md": "105ade54d6107a23b1c7c09e0e642d8da9d7f114c742c951293f6b63a24480dd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/LOCALIZATION_COMPARISON.md": "d8421f32181f44c058991bafa19b5c0f499dc0d2ab8dd6a9e4170b0a1c3a9e61",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/README.md": "578b04730235b8d16f957d3963e9c624b7ec695129fd800fdeb38493be1652af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/SOURCE_INDEX.md": "4e88e2af0ad48d44a0fc5edc66ecf9b895d603e22880f5870717efcf9d39c9b1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/TIER_VALUES.md": "99d818c70068a7267b242bb62a160517845dc5fced1984010af77e51bac4fdff",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/WEAPON_COMPATIBILITY.md": "7495f7f0c764fad3ffff516256bbfc98703ff40e3e5a2d969fb5f69d4dfa2815",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill.md": "203a5d7a9bfdfb9ccdb7acf6ded2f67f14f9ef9b36e350d8d74b0ae1efa0f34b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill.md": "a39dd9f7cbba1d30f39bb08f4159f90395202213f181a949f8dfab961fbe0ae5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill.md": "3759b8540775d873257070cd061169742526661eea328d11cfe59868c29a9323",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill.md": "eaffea09f5e497a97de7dd10b1601482aa0cb936e9762e7f26be82be3cb873f3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/melee/README.md": "66f4cccbe1c0f32d54eae54792b919eabf9efb32f626ebbe0fd2bd73a4b930c0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "faebb7936094671e094a20ce66ab404f423ad9d7c720dd5a621b2fe9cdf5c4a5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "24683c058b99da527e74d6b2d5a8ea1913a2e230abe19b14c0b1f750767f8627",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/動力彎刀/README.md": "8b7d5f7322bb48b0feabcf0787b4328151e33a62126c2aeb36d8794cdd5db9e0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "03d8fcf99c3641f5725dfd7df35e4fa664f95dc069c04ae360cfb725841248ec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "228f4df3fe5f552bcc524a23d7b6a1df4e63e68f6712054e3797488461f51002",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "c11bee57ca8641d057d1bc5bb9a5db263277af92be808560c7c71c28461f02fb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/own-association-snapshot.json": "9e2d2e126749384278d5f73910a02c89ed1d179730e84acb3037a4b6222e0f40",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/actual-preview-003/Referneces/Translation.md": "8bb88e00afe1c8c654af2520b78c79de8677731c33683c4b8a5f62c6e3121ff4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ce2f493645ce64542f3d2988b85d3634e24ecc917c874b4605a1773e49235250",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/DAMAGE_PERCENTAGE_REVIEW.md": "105ade54d6107a23b1c7c09e0e642d8da9d7f114c742c951293f6b63a24480dd",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/LOCALIZATION_COMPARISON.md": "d8421f32181f44c058991bafa19b5c0f499dc0d2ab8dd6a9e4170b0a1c3a9e61",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/README.md": "7c877340645c0bf1da40e3fe95478b491fe45ad0953cd59e1a1a9ed675e9bfd8",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/SOURCE_INDEX.md": "4e88e2af0ad48d44a0fc5edc66ecf9b895d603e22880f5870717efcf9d39c9b1",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/TIER_VALUES.md": "99d818c70068a7267b242bb62a160517845dc5fced1984010af77e51bac4fdff",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/WEAPON_COMPATIBILITY.md": "7495f7f0c764fad3ffff516256bbfc98703ff40e3e5a2d969fb5f69d4dfa2815",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill.md": "203a5d7a9bfdfb9ccdb7acf6ded2f67f14f9ef9b36e350d8d74b0ae1efa0f34b",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill.md": "a39dd9f7cbba1d30f39bb08f4159f90395202213f181a949f8dfab961fbe0ae5",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill.md": "3759b8540775d873257070cd061169742526661eea328d11cfe59868c29a9323",
+      "Game Info/releases/1.13.X/blessings/entries/斬首者/weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill.md": "eaffea09f5e497a97de7dd10b1601482aa0cb936e9762e7f26be82be3cb873f3",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "66f4cccbe1c0f32d54eae54792b919eabf9efb32f626ebbe0fd2bd73a4b930c0",
+      "Game Info/releases/1.13.X/blessings/README.md": "faebb7936094671e094a20ce66ab404f423ad9d7c720dd5a621b2fe9cdf5c4a5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "24683c058b99da527e74d6b2d5a8ea1913a2e230abe19b14c0b1f750767f8627",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力彎刀/README.md": "8b7d5f7322bb48b0feabcf0787b4328151e33a62126c2aeb36d8794cdd5db9e0",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "03d8fcf99c3641f5725dfd7df35e4fa664f95dc069c04ae360cfb725841248ec",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "228f4df3fe5f552bcc524a23d7b6a1df4e63e68f6712054e3797488461f51002",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "c11bee57ca8641d057d1bc5bb9a5db263277af92be808560c7c71c28461f02fb",
+      "Referneces/Translation.md": "8bb88e00afe1c8c654af2520b78c79de8677731c33683c4b8a5f62c6e3121ff4"
+    },
+    "content_review": {
+      "formal_pages": "Reviewed all ten own formal pages and the fixed related UI, RAW, image, index, and reverse-page data; all 95 scope hashes match.",
+      "updated_switchback": "Accepted: after switching away, the parent/child stack timer continues; switching back can restore the effect while any stacks remain, provided the source weapon is held and the stat cache has updated. The revised wording does not incorrectly impose a five-second-only window.",
+      "expiry_basis": "The fixed WeaponTraitParentProcBuff.update source shows one shared removal timer, stacks_to_remove=1, strict expiry comparison, and catch-up removal capped to preserve the placeholder. This supports restoration while stack count remains nonzero.",
+      "other_prior_review": "Previously checked tier-specific values and formatter, actual bindings and names, kill predicate, source-item/held gate, one-hit-kill operands, one-layer expiry, melee finesse damage scope, image evidence, RAW, and related index entries remain unchanged and valid."
+    },
+    "reviewed_delta_evidence": {
+      "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-onehit-expiry-finesse-consumer-delta-review.json",
+      "sha256": "23795aba3a87c759a6b0a34e59211d616de7427bdd8b101238c6640910be575a",
+      "applicability": "The WeaponTraitParentProcBuff expiry block applies to the actual literal Decapitator parents with child_duration 5 and stacks_to_remove 1; melee_finesse_modifier_bonus applies to melee finesse damage only."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "decapitator",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_189.png",
+      "attachment": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010121557",
+      "acquired_date": "2026-10-06",
+      "sha256": "2ac588afe32f97eaa25d2f4a3ef76e769306710184466038461ae234f19c74e2",
+      "content_type": "image/png",
+      "size": 4380,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "斬首者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_method": "Root viewed actual public PNG through view_image; native pale pixels and download hash/dimensions match, no replacement glyph."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 20,
+      "rows": 692,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 199,
+      "source_files": 33,
+      "bindings": 1092,
+      "variants": 565,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 33,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1385,
+      "remote_references": 648,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 44,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-043-full-scan.json",
+        "sha256": "2d0f95b4cbd5ca6280f5bf1261983c18e4ec200c056cba1afcda392239b2a15f",
+        "trigger": "round-043"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 6,
+    "not_started_name_groups": 6,
+    "partial_name_groups": 0,
+    "remaining_variants": 40,
+    "remaining_bindings": 93,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "4b57a61c03e0317716cd33562dfa83122b3e7f4795affb018d8386d9125c8c4b"
+  },
+  "previous_local_commit": "bfbc9b77af15a903bc197f6124a46379dd470e4a",
+  "outside_intersection_review": {
+    "status": "exact current inventory intersection verified",
+    "name_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills",
+    "variant_count": 4,
+    "binding_count": 7,
+    "outside_exact_items": []
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-final-content-delta-review.json",
+      "sha256": "d427aaac72b0d869e11b2297fe44005d67008d3a0f74d9a6d8618b77118b1e15"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-focused-checks.json",
+      "sha256": "8bc99377f8a95862e0fff2138b32c960cdb2171ce1410a3415678d862435695b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-frozen-source-verification.json",
+      "sha256": "1e30382aae6f6aca9d5af84ad914b90befc85ac56d342e6a00f6db3a2fe977e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-onehit-expiry-finesse-consumer-delta-review.json",
+      "sha256": "23795aba3a87c759a6b0a34e59211d616de7427bdd8b101238c6640910be575a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-own-tier-literal-finesse-material-review.json",
+      "sha256": "3af3f00ba576966c460eed7e978fdc124f6c05bec528407c63b1fb907b8e23a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-raw-verification.json",
+      "sha256": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-resume-review.json",
+      "sha256": "aac3df8f43f11a91f9d7114ea3c06b283839dd1c43abf9a97502d6b6499c9f7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-raw-verification.json",
+      "sha256": "34c54ef8aac7e4b6c8b0303bd0b220be0d66cbb4327c549194fa12a9ec01fe83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-review.json",
+      "sha256": "c58c68aaa848fd97f639e16de3f28a04a4111484003a708de540c82289682e00"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-config.json",
+    "sha256": "0796d7a693d428b05e5520187fcf01a2bda6f8fd57b5987cc2398b9b6a7b065d"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-source-blocks.json",
+      "sha256": "ba651d6a36338db1201095ae4a730396887469207a8c3cd74982dc382ea739a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-source-files.json",
+      "sha256": "13673faeeaf02ffaeed29bf74914651cdb6160f3625db6056ab944d3fed2b12a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/action-summary.json",
+      "sha256": "3753e45675f517e994243a02719b826bcc0ed73c700db12d42510dac6224c23b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/attack-matrix-generated.json",
+      "sha256": "1766eabae5c4922fe366b060b4e6801e38f4926e16f3877bff807935b3fdc32d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/build_decapitator.py",
+      "sha256": "bb1a270cb3879156aec4077aeeb4476cadf620925bb871741b9b65973ed31dd8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/collect_research.py",
+      "sha256": "65a1b61b101d7516a35502202cbd5ca0397473f9668c6281e7daceb86fb609c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/coverage.json",
+      "sha256": "b9ce0dd40f635d2a2b50b5d81566f29ade37a820410ac9a18de3f43746c2848f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/association-snapshot.json",
+      "sha256": "45100a867f20afd3709ee60fd9947fa516131ef20f32fe9b7e7dffe6294d1674"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/source-blocks.json",
+      "sha256": "b47ea31d8bb5bb0ad419f109c86708492c7fce7184fc097e9996fb14627e3695"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/source-file-hashes.json",
+      "sha256": "dbb6bbe83207dd7a80a7c70ead3bd39107adfb8d2c3011c6e17508b84c805452"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/draft.md",
+      "sha256": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-draft.md",
+      "sha256": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-config.json",
+      "sha256": "7adaf337abea1b80fde67774650d30745ec091c16a24150c5f02dc5f06e60d4c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-own-tier-literal-finesse-material-review.json",
+      "sha256": "3af3f00ba576966c460eed7e978fdc124f6c05bec528407c63b1fb907b8e23a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-ui-review.json",
+      "sha256": "c58c68aaa848fd97f639e16de3f28a04a4111484003a708de540c82289682e00"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-raw-verification.json",
+      "sha256": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-primary-ui-raw-verification.json",
+      "sha256": "34c54ef8aac7e4b6c8b0303bd0b220be0d66cbb4327c549194fa12a9ec01fe83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/decapitator-image.json",
+      "sha256": "37571e90633cc2579ad39934ca759b81bbe78aaca230430ddf5cd0a1fd8fa41d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/inputs/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-image.json",
+      "sha256": "37571e90633cc2579ad39934ca759b81bbe78aaca230430ddf5cd0a1fd8fa41d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-003.json",
+      "sha256": "0458a2407a412513a455c0417f8c6cfc5247e0fe86050e1014577891821054d9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "faebb7936094671e094a20ce66ab404f423ad9d7c720dd5a621b2fe9cdf5c4a5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "24683c058b99da527e74d6b2d5a8ea1913a2e230abe19b14c0b1f750767f8627"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "ce2f493645ce64542f3d2988b85d3634e24ecc917c874b4605a1773e49235250"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "105ade54d6107a23b1c7c09e0e642d8da9d7f114c742c951293f6b63a24480dd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\LOCALIZATION_COMPARISON.md",
+      "sha256": "d8421f32181f44c058991bafa19b5c0f499dc0d2ab8dd6a9e4170b0a1c3a9e61"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\README.md",
+      "sha256": "578b04730235b8d16f957d3963e9c624b7ec695129fd800fdeb38493be1652af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\SOURCE_INDEX.md",
+      "sha256": "4e88e2af0ad48d44a0fc5edc66ecf9b895d603e22880f5870717efcf9d39c9b1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\TIER_VALUES.md",
+      "sha256": "99d818c70068a7267b242bb62a160517845dc5fced1984010af77e51bac4fdff"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\WEAPON_COMPATIBILITY.md",
+      "sha256": "7495f7f0c764fad3ffff516256bbfc98703ff40e3e5a2d969fb5f69d4dfa2815"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill.md",
+      "sha256": "203a5d7a9bfdfb9ccdb7acf6ded2f67f14f9ef9b36e350d8d74b0ae1efa0f34b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill.md",
+      "sha256": "a39dd9f7cbba1d30f39bb08f4159f90395202213f181a949f8dfab961fbe0ae5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill.md",
+      "sha256": "3759b8540775d873257070cd061169742526661eea328d11cfe59868c29a9323"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\斬首者\\weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill.md",
+      "sha256": "eaffea09f5e497a97de7dd10b1601482aa0cb936e9762e7f26be82be3cb873f3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "66f4cccbe1c0f32d54eae54792b919eabf9efb32f626ebbe0fd2bd73a4b930c0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\動力彎刀\\README.md",
+      "sha256": "8b7d5f7322bb48b0feabcf0787b4328151e33a62126c2aeb36d8794cdd5db9e0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰鬥斧\\README.md",
+      "sha256": "03d8fcf99c3641f5725dfd7df35e4fa664f95dc069c04ae360cfb725841248ec"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\機械神教動力劍\\README.md",
+      "sha256": "228f4df3fe5f552bcc524a23d7b6a1df4e63e68f6712054e3797488461f51002"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\骨鋸\\README.md",
+      "sha256": "c11bee57ca8641d057d1bc5bb9a5db263277af92be808560c7c71c28461f02fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "8bb88e00afe1c8c654af2520b78c79de8677731c33683c4b8a5f62c6e3121ff4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-raw-verification.json",
+      "sha256": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\decapitator-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "9e2d2e126749384278d5f73910a02c89ed1d179730e84acb3037a4b6222e0f40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-001.json",
+      "sha256": "2f16f7e67038d0756ee2952dce853689342d9d8b04163f7ec02f4f60dbd178f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-actual-preview-receipt-002.json",
+      "sha256": "536bbd25099fbbeda009acfacff33d77e67ebff6ebec66bd7b0dee63a6b20cea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-agent-evidence.json",
+      "sha256": "ad78566e49be51bd6ced644d49313eb5484ff918df42b70d9f4165106bb19027"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/decapitator-selfcheck.json",
+      "sha256": "3c13460f23987e6dc5a3d1d30303d07a828f4287adfe412935294951d04acfb7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-group/full-bore-formal-nonauthor-review.json",
+      "sha256": "fad352a27ca6080c0c45b2721d753a78707d1fd0699ac6be2c42e63228c154d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-config.json",
+      "sha256": "7adaf337abea1b80fde67774650d30745ec091c16a24150c5f02dc5f06e60d4c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-evidence.json",
+      "sha256": "ad78566e49be51bd6ced644d49313eb5484ff918df42b70d9f4165106bb19027"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-agent-draft.md",
+      "sha256": "98d534c761439922aec68adaa6ce488b4cd21b9dcbfbacdd4332ab5950600f5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-final-content-delta-review.json",
+      "sha256": "d427aaac72b0d869e11b2297fe44005d67008d3a0f74d9a6d8618b77118b1e15"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-frozen-source-verification.json",
+      "sha256": "1e30382aae6f6aca9d5af84ad914b90befc85ac56d342e6a00f6db3a2fe977e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-onehit-expiry-finesse-consumer-delta-review.json",
+      "sha256": "23795aba3a87c759a6b0a34e59211d616de7427bdd8b101238c6640910be575a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-own-tier-literal-finesse-material-review.json",
+      "sha256": "3af3f00ba576966c460eed7e978fdc124f6c05bec528407c63b1fb907b8e23a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-raw-verification.json",
+      "sha256": "125c6b62873c1feeb7c7fce3745900b012b4863b806ff7d44d7309d42b928606"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-raw-verification.json",
+      "sha256": "34c54ef8aac7e4b6c8b0303bd0b220be0d66cbb4327c549194fa12a9ec01fe83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-primary-ui-review.json",
+      "sha256": "c58c68aaa848fd97f639e16de3f28a04a4111484003a708de540c82289682e00"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/decapitator-formal-peer-scope.json",
+    "sha256": "d5b84a136b326812e239a8773a9d7d5d8c2d00fcb6550f8156c716b9e22d7958",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

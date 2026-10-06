@@ -1,0 +1,217 @@
+{
+  "date": "2026-10-04",
+  "blessing": "adhesive-charge",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this formal peer review with the existing gpt-6-luna/max settings; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Single blessing formal pages and actual related reverse/catalog/map/Translation rows;59 previous blessings/220variants/420bindings unchanged. Root reviewed new fuse and snapshot/live-keyword differences.",
+    "scope_sha256": "f3c95519c9999d8f649e1da7738921378f3df5c63d40cddc2700ad46a6a9bd1c",
+    "findings": [
+      "The player entry states the trigger, I–IV +6/9/12/15% values, tag-based living Ogryn/Monster stick condition, no stack or blessing TTL, and the actual Rumbler Bash distinction. Its two formula examples define B, q, and p, hold downstream factors fixed, and distinguish the additive damage-stat change from the final-health-damage percentage.",
+      "The final fuse clarification is accurate and source-backed: a successful stick resets projectile life-time; the .5-second minimum-life branch starts the fuse only if it has not already started, and an already-true _fuse_started flag survives the life-time reset. The strict fuse-time plus owner-lag-compensation check, first-impact suppression, and non-exploding impact reset are documented as native projectile lifecycle, not blessing duration.",
+      "Projectile damage-stat values are described as a shallow-copied creation-time snapshot, while stick eligibility checks the still-live owner's current keyword at impact. The text accurately distinguishes switching away while the weapon remains equipped from unequipping and removing the trait keyword.",
+      "RAW English and Traditional Chinese strings and hashes remain verbatim; the formatter reconstruction separately derives the selected tier's damage stat and +6/9/12/15% display. The file-name translation to 黏著炸藥 is identified as glossary-consistent document terminology, not a RAW correction.",
+      "The map, compatibility page, reverse Rumbler page, and UI review agree on exactly one binding: weapon ogryn_thumper_p2 / mark ogryn_thumper_p1_m2, actual trait weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters, displayed as 震盪槍 洛倫茲 Mk VI. Icon path/identifier and attachment URL are distinct and consistent."
+    ],
+    "resolved_findings": [
+      {
+        "detail": "The final fixed scope qualifies the .5-second fuse-start condition: it applies only while the fuse has not started; _fuse_started is preserved across the sticky life-time reset. Formal source index, focused fuse proof, approved config, resume note, and extension draft are aligned on this distinction."
+      }
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-config.json": "ce378bc7fed714a54f2b4884544824c7ea0e8452e5a503a86d12bc3dc0681153",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-extension-draft.json": "664e4d01c04fd5f5ffc096bbda24d4498d5cd4fbf221b60957206e43e28af291",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-image.json": "ca965a4c4188356294ca0b03049d7bb627519f587abc08a4447cf7b1f81d6a88",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-fuse-review.json": "2b83d59cdf2c3d8ae9bf3b445fb94f01bdd8506d08ab1ff739ce56ea801045dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-own-tier-diff.json": "ab655b23cbceeb5caa5a28f80d44bfafd3ca55e9d3e8eda884f326d5433fca25",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-projectile-stat-review.json": "c6162ea3e67939f3ce64f30e87fffcf9ebfd5908982dcb2ea8c63a5882d2b95b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-resume-review.json": "701fe0d99afba5c13823fcfb9ec288021f188b771cc90100067ec6b5cfadf9dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-target-consumer-review.json": "fa81795a781c02f35a54cef6c3814f4e3290d81ce51a6272847a208bfc2c6b75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-ui-review.json": "378329ed39db0398073eb9b5d67fca6b845605100d962547fdf76328a9223eb4",
+      "Game Info/releases/1.13.X/blessings/README.md": "68f3eec66cd9fe38d661d8755ba6f5add56246d63daf604c0b1ca6c146632ead",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5c9b12be84e2c5f2dc822d54cfe708027253d540ee2ed179e0808d667493601a",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7a2ba0e4916dfba0373ef84426f3ce71c50d09c2b62c2569a395e934cb57b2fb",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/DAMAGE_PERCENTAGE_REVIEW.md": "044a2a0b1e822b43ee46ec611ac4b304e2d12644db460520efd926edeea77de2",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/LOCALIZATION_COMPARISON.md": "5c67950dc2099019fce27ce8a40ebc79692155c502b2172852422d7464bd0a82",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/README.md": "7eb9ad2fcc2766378a1a215815d9cbd299ee326cbaa821897e36a16903828639",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/SOURCE_INDEX.md": "e408813a5402172349c61ed1df649663877cf0a9ec3818f5433ccfb87bb17ada",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/TIER_VALUES.md": "9a4279162d545797200e0cc86a5ffe53fa6b4a05bd9d4b6e230ed94a0f81cf20",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/WEAPON_COMPATIBILITY.md": "6dab015d41a24135e3da8a6142d2483bb24b53ba001040e85123b52a11630775",
+      "Game Info/releases/1.13.X/blessings/entries/黏著炸藥/weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters.md": "6da3fe47a36aaf1574e07ae4a182abf751a3d842b801df7b7cf023d2f21ce75c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "49ebb1333e58bf123a2b5f5b11bfcebc273ec4b2d08b6969b1a4dc595f786a6f",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "8753aed48eed877f1fc555b7ecbe6e838d85969b74dd891699f00a0bb6e01fb5",
+      "Referneces/Translation.md": "a60ea72ae60fe997bc953db87dc56d186f1770d03e25e4a610700e363ded8d88"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "adhesive-charge",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_137",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_137.png",
+      "attachment": "https://github.com/user-attachments/assets/dcea9788-55f7-488d-bad7-a473f9dd1816",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976339029",
+      "acquired_date": "2026-10-04",
+      "sha256": "6f7b6fd6389ef95e602b0c883f7cca029475c25b8189695f566938bd81af37d5",
+      "content_type": "image/png",
+      "size": 4379,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "粘性炸藥祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_validation": "Original and public attachment visually inspected at original128x128; matching grenade adhered to plate with impact rays, grayscale+alpha diagnostic confirms identical shapes; originals unchanged."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 10,
+      "rows": 216,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 46,
+      "source_files": 20,
+      "bindings": 421,
+      "variants": 221,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 534,
+      "remote_references": 283,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 10,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-009-full-scan.json",
+        "sha256": "9480b3465b6d2b5f7f942ccda418b160560e8ed6fa746fc8f6a603e666c69f52",
+        "trigger": "round-009"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 107,
+    "not_started_name_groups": 107,
+    "partial_name_groups": 0,
+    "remaining_variants": 384,
+    "remaining_bindings": 764,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "1baba67087a7339f34b08de997da05674537c7dea031e8af866c0a5a14f8376f"
+  },
+  "previous_local_commit": "0b455a4fe12266db8dbebbb41626260a6ffbc234",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_all_tiers_reviewed": true,
+    "own_wrapper_reviewed": true,
+    "values": [
+      0.06,
+      0.09,
+      0.12,
+      0.15
+    ],
+    "raw_formatter": "same-key tier override, percentage x100, prefix+",
+    "damage_consumer": "generic target-tag pool, no ranged-only gate, two tags add once",
+    "projectile": "actual player item_projectile snapshots launch stats; impact keyword resolves live owner",
+    "intrinsic_fuse": "sticky lifetime0,own1.5/.5,already-started flag retained,lagcomp strict >; no blessingTTL/stacks",
+    "pending": [],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-extension-draft.json",
+      "sha256": "664e4d01c04fd5f5ffc096bbda24d4498d5cd4fbf221b60957206e43e28af291"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-ui-review.json",
+      "sha256": "378329ed39db0398073eb9b5d67fca6b845605100d962547fdf76328a9223eb4"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_thumper_p2",
+        "mark_id": "ogryn_thumper_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_grenades_stick_to_monsters",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_ogryn_thumper_p1_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_thumper_p1_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_ogryn_thumper_p1_m2"
+        },
+        "name_zh_tw": "震盪槍 洛倫茲 Mk VI",
+        "name_en": "Rumbler Lorenz Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 855,
+        "append_line": 857
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "name_translation_review": {
+    "status": "document_translation",
+    "raw_zh_tw": "粘性炸藥",
+    "document_zh_tw": "黏著炸藥",
+    "reason": "沿用已確認詞表 Referneces/Translation.md:503「Adhesive Charge - 黏著炸藥」作文件用名；RAW 繁中「粘性炸藥」及原 hash 完整保留。這是文件翻譯用詞一致化，並非修正 RAW。"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/adhesive-charge-primary-resume-review.json",
+      "sha256": "701fe0d99afba5c13823fcfb9ec288021f188b771cc90100067ec6b5cfadf9dc"
+    }
+  ],
+  "primary_review_method": "Primary directly reviewed own tiers/wrapper/RAW/binding and new target/snapshot/live-keyword/fuse differences; reused fixed-SHA common records only after applicability checks; read7formalMD and reviewed examples.",
+  "previous_objects_unchanged": {
+    "blessings": 59,
+    "variants": 220,
+    "bindings": 420
+  }
+}

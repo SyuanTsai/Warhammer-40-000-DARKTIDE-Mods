@@ -1,0 +1,1255 @@
+{
+  "date": "2026-10-06",
+  "blessing": "thunderstrike",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff",
+    "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff",
+    "weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff"
+  ],
+  "added_binding_count": 13,
+  "total_variants": 6,
+  "total_bindings": 13,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "thunderstrike",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-formal-peer-scope.json",
+    "scope_sha256": "87843f9c7df2fe7ddb00c7363fe1fbe9e0b176982bb3cc3037f2127763cdd085",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_basis": [
+      "Verified all 227 current file SHA-256 values exactly match the fixed Thunderstrike scope; no missing or mismatched inputs.",
+      "Read all 12 active formal pages. Each page is byte-identical to the corresponding file in frozen actual-preview-003; the six implementation pages, shared tier/formula/localization pages, and 13-Mark compatibility table are consistent.",
+      "Confirmed the active map row is melee Thunderstrike with six exact trait variants and 13 bindings; the six related weapon reverse pages link back to the matching implementation and names/marks. Actual UI receipt has 13 bound Marks and no outside exact items.",
+      "The six own implementations request I–IV target stack increments of 1/2/3/4. Their wrappers use the same confirmed base event route: held source slot, matching source item, and queued on_stagger_hit check; a living Minion target with buff extension must still be staggered when that event is processed. The trigger need not see the target staggered before the attack, and no additional attack-type or positive-damage gate is claimed.",
+      "The standalone target buff supplies unconditional impact_modifier 0.1 per effective stack for 5 seconds, with 8 effective stat stacks; helper request count is separately limited at 31, where a qualifying zero-add event still refreshes duration. Target impact terms are additive around neutral 1, and this modifier is not damage.",
+      "The two examples name actual Marks and profiles: Crucis Mk II heavy/light gives the controlled 100→140 impact-input example at four effective stacks; Munitorum Mk III shovel heavy/light gives 136→144 when effective stacks move from 7 to 8. Both examples state neutral assumptions and distinguish percentage-point change from relative increase; neither claims a fixed health-damage or guaranteed-stagger result.",
+      "Special-action coverage matches the actual paths: shovel M1 uses axe_stab; M2/M3 may emit item-preserving light/heavy sticky follow-up Attacks that pass gates independently; Devil’s Claw parry is not itself a hit but its counter sweep may be; power-maul/Crusher activation explosions are separate Attacks; Slab Shield special block is not an enemy hit; Thunder Hammer special activation is a no-op and its later player-side disorientation/push emits no second enemy Attack, while the powered sweep remains independently eligible.",
+      "Switching closes the held source gate while already applied target buffs continue their own 5-second expiry; true slot unequip removes the on_equip source buff. RAW name/description keys and hashes match across languages, formatter parameters rebuild all four tiers, image receipt identifies actual icon 175 and its verified attachment."
+    ],
+    "reviewed_proofs": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-final-content-delta-review.json",
+        "sha256": "24550b85a60508ebbc6a042a3001d17a6612f7b92a5ffcdd7b5b2be0bb871e8b"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json",
+        "sha256": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-self-disorientation-class-difference-proof.json",
+        "sha256": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-raw-verification.json",
+        "sha256": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-review.json",
+        "sha256": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-raw-verification.json",
+        "sha256": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-focused-checks.json",
+        "sha256": "43391169d03ec161bd404486f426cf669368326bdb2ec86a48e5bbf7d77f0d49"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-frozen-source-verification.json",
+        "sha256": "7e8b000eeedc7ea9696e4f589b8976c6e2dbc60531c2cbca5063a63853d60c47"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-image.json",
+        "sha256": "a9f13d68bd65e3c92cc3aa96ee39da4697153c1cc8a8a4f3011350711c2ae82e"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-003.json",
+        "sha256": "bd7071e6e45b0465de23ac6b2351b9b617a11d801476e020e14d9ce17e1af747"
+      }
+    ],
+    "reviewed_delta_files": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-config.json": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-draft.md": "b04fe499a0624b56c7323b48f202f9a32ae809f45c7607f8e33bce51d7f210a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-evidence.json": "22771bdeaf6ea4a7f855b4df318c9584cc6ff90546d30aad74c274451aa36163",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-config.json": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-extension-draft.json": "00e4217131e7381bebe9b6b610d4b73ad9793181b15d3b0194c09744cedf1e4d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-association-snapshot.json": "ec5de7cc517ecea7385aefb8243fbdeac37f2607476405022ba31c250bf34e7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/apply_thunderstrike_deltas.py": "484c80b0c3eb34d798d1c6ffd1f286a61bf6ee693083040497795a2af829aa63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/association-snapshot.json": "dceb0aa5febdb17693777df826ca37e5949bdd232c526d1d37b568bb4e742875",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/DAMAGE_PERCENTAGE_REVIEW.md": "2a63fc0ae0be98478a0f9868f936059e4ef2fe40aba36c7ef95c8389be27553c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/LOCALIZATION_COMPARISON.md": "d4440117c8cde5d34d1661bd327207e9759a6e1aca83875fa071c58cddfdb6f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/README.md": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/SOURCE_INDEX.md": "8686c88ba60c53a3a700f56c35ea75154de722fa12269bb683fcf935775aab7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/TIER_VALUES.md": "60f10d77fa7f623cbcf8a7ecfb78c14b3c74b753261595d177aa246a9c916249",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/WEAPON_COMPATIBILITY.md": "bd2b9ec5a4fd407cd97305947c9595eb1b9269a94b508a992ee7f208b5b3963b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff.md": "9898a83cbed68fdde3d03a9915ca72f37f0fba9a3017ecad8ed91d137e1d61cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff.md": "46bd7f173db55ba6cf70bd5064beeed2649cd4aae26267ee782b27f31fe7d60c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff.md": "4d1ece69902cae4b36cc20f947bdf719b16de032037dddd8e5fed42d81d2a877",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff.md": "a01263ede5f909c689b34e028f77355fcfe4d27d1e0547f22f36e05b07491388",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "2293d8816f170fadcb94267a31309225197e03d2bd6b80bf9d7b3f8f75940ba6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "536422979238ad4f7c081591c6c41d8164f4fa0cb71f3d1e9dae6a69e532842a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-page.md": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-preview-manifest.json": "493875fae05105cb8e32bf77e22b37856671e89a261fd24fe6fc8f36cc59ba4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/coverage.json": "2bf542f66e06a059459a07d60d2343c4b34b0499d7d8c003aea324be887e107d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/finalize_thunderstrike.py": "ed031dc3d31c81afec5dd12c6012f9ebda5d4229534523c4f2cfdf44a8a230cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/hammerblow-formal-nonauthor-review.json": "1eef632cb6f5689a883af523786bae0a708dd8bb2a53128457bd0e609452b80a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/__pycache__/source_object_cache.cpython-312.pyc": "20af80abe88789ff9fcaf90c35f7b4067c5f23e56f9eb11b2e512204fc0f140a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/action_profiles.py": "69e90f44d2e2459243f398e83eddd132b5cc63023d6790580b6e70226d346b68",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/COMMON_MECHANISM_CACHE.snapshot.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/global-map-baseline.snapshot.json": "ce2f493645ce64542f3d2988b85d3634e24ecc917c874b4605a1773e49235250",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/inspect_source.py": "e6937fb7f1e7604804aac2f97a56375f5eccff58180a2f4c7ae3a88a8a5a0d59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/inventory.snapshot.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/item_metadata.snapshot.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/list_actions.py": "b4e1dc8ed6ca98964431f8cade70bf947c72bacad46a19bc646cd6117e2448fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/localized_keys.snapshot.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/remaining-tasks.snapshot.json": "4b57a61c03e0317716cd33562dfa83122b3e7f4795affb018d8386d9125c8c4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/skullcrusher-sticky-followup-proof.snapshot.json": "e50809a90b9b9486a795ee2165370f26752774d726fb8eb7da681b01442f0f93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/snippet.py": "b84bb454c337d9bb2bad47625f918a963a5f6abce3ce6e2ab7a59ce6420e8d4f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0378bceb2354b6b64545b8cfdf9d5698.json": "e155a0dec46ad2bfdcd88b13f1794fde83ad306cc0125a9c6f136fe5de3f593b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0378bceb2354b6b64545b8cfdf9d5698.txt": "0fd02be49d7a6518108050055957e4d3a03d8810ff2bf982edb6ff1756730462",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0ddb0a4a896ed09ea8d2e7f574541092.json": "3df27a04bb3e58838aa0f10b7e59da46d912a83674ae24ea895a8a6fdb6a0026",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0ddb0a4a896ed09ea8d2e7f574541092.txt": "82be01da1a30fadc245375bf7ef422824d4a57ad4c0b44c0820f89458e646ee3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1518f71e2b91d4585b02d41140bc4842.json": "ec87a5cb3bae38ad12be004e85f2bc9da41a61b0780f2b5b10543e1f637aacd3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1518f71e2b91d4585b02d41140bc4842.txt": "c54a80e75a9c5b9288b2e0d7c4d199f9ab15067b76a6a7c40287196be7e55fe5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/15345fbf7ba3c0a8427640beffd464cf.json": "d509d78ac6bea92a192f61c43eacdb48285620b55790f0741d0d5f238095d312",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/15345fbf7ba3c0a8427640beffd464cf.txt": "e19b5a34ddcdd6cc0d5eeac8657d7db3c05db44af391faabc4bf3e16d38d41be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/163c5c760bed7bfeb4e19ea17b2bf8ac.json": "55200e8f48170921797e0ba8caa9421d43409d1ed98446c843bc23d20ed7a199",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/163c5c760bed7bfeb4e19ea17b2bf8ac.txt": "110cf0aa0ebfcb5654e8889d5f157cce582faed9e7f486106ce89db78beeaae0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/167c4270ab25bfe4c891d28f79d19734.json": "d697e7e3ba0a327782f47a2e1d9eba0fd8f0a462c9e320710448df52e757a8c1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/167c4270ab25bfe4c891d28f79d19734.txt": "9f2a274259637f86057bdec52c343777539852c1aa7d91704ac9ec5660c4baba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1c3e1903bd5f718b74a3632ef22e812a.json": "20e9a6f2c737eee1cb1271af5543855f62a498c71e02a2ea9e9393b032936678",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1c3e1903bd5f718b74a3632ef22e812a.txt": "a6769664ec150d866236e2374148b919310155033f041a9406afe3fd47b2f65a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.json": "c98627315683c935bb74889e1cbcefe7aae2a8c540e9d6010ad52da9feb7e4db",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.txt": "b61d7178f8e3fc46954f56f0bc25eee29f48e44aca5c3b2123e250da904642ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2b3ede9fd4f141af223c15b0a5b36d60.json": "db79abb7181326d4f1ad84b4ec205eba88031e6fe46463cb22968f0e974ed6f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2b3ede9fd4f141af223c15b0a5b36d60.txt": "39c4821c15df4b4a7d262297e02f807052e92d5a559bc0eb43aac456989421d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2cf4602bea670c8e7280b17fe6609c9e.json": "e70703a2a205760796b7149de3e31346de60863394e59860e870638057fb58a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2cf4602bea670c8e7280b17fe6609c9e.txt": "41070221c1f5499057376cd182bb153d201b80095398a49275b698e8f38d176e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d5794c8576871b5d4eb64d0debfb2c.json": "dd79271b95a4fdf53b39c12d35a77f27ae2be7fe6a2bfceb3c80cb657fb6f363",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d5794c8576871b5d4eb64d0debfb2c.txt": "e28d5ff1d15f01e8e3e31da90c61261515711ebae63b61deafb2add035008f6d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d6fd03c14a59fc2f1c22c8ecc3c2bc.json": "d8e20e93debd6752504181d8bfd0266a32442526de549282bb2d7ad8da06ae97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d6fd03c14a59fc2f1c22c8ecc3c2bc.txt": "3b597c1d9bb2c9ac1aeda089aa0007955d8ea99fd34080f5c515bf022329d6fb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/40669c0e6a206689a94ccd8355d3093d.json": "97e522f35d70ae047acd8fde5aaf086a0a195176e93b2a2103fbd035c10b3acd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/40669c0e6a206689a94ccd8355d3093d.txt": "0875f73ecb2dc5a7feffd6c96aa3974e6b49288badf191a4316185f60f245db4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/424734309381c16213582ac3c91fab11.json": "cc5c3ff49ca281dd8213eabe3e8d1ad03544088c3bba08d68190d7c7602b9d28",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/424734309381c16213582ac3c91fab11.txt": "3afcd9e9b41222a47f6d63d14ba6c54cad3abef531eba83de2d301527c151c7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/46ee7ee0336b9d8af6870aaca42783b1.json": "959a32e58bdba9eeab5fbe76b74d4fbd1f869b405ef9a418d04ccf9403442960",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/46ee7ee0336b9d8af6870aaca42783b1.txt": "04c76448f49f7ee35aab7e2ff1562da2a3be8a984627d4eeb1f944eb6338f74b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/47c908db41637a4abb428e74927150f4.json": "cfdb683c3285b6adf5be0713d95b004636fa47808f14507c85af3394607f9e48",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/47c908db41637a4abb428e74927150f4.txt": "2348c2d0ced4829f86b9cd45c91eaea5187d96631d2db4cdd91d381e76dff635",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4887e19ef60c398011d4911087e9a7b3.json": "23be0c98deaf3e367b0cf691ddc640912f1b8b26487eaa8b10397ed58b4a0370",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4887e19ef60c398011d4911087e9a7b3.txt": "fb47fca2745d3052c77adf144c1c0a1ff46bd672fb68f021c31336b3132801fa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4cbeab4243b53f2cd3a4b00c9d03b080.json": "d5c6cc8722250cecac8e2f028d31980b5799f8e0f90441f41e139994ed17e3f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4cbeab4243b53f2cd3a4b00c9d03b080.txt": "d0e2fe9ee7247ba865d1231a9a9b3ede210e3f8567d2207c4467a75bf74e8f5d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4f04e6b9dcafc2288944657549d1a7ac.json": "41b2fc888c5d143da9ba85d1a7ef61b828dd7608ca255d99de0aa942bbd37558",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4f04e6b9dcafc2288944657549d1a7ac.txt": "a37ffe60d9f2cf712c3d1a7fe3249e6f0f219324f2c458940643e40ce6448691",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.json": "162568d8ffc07e0cccc8f83b1da77198ec3ecb4d993b9934c749259a66599648",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.txt": "4dc7db18affe0c96eb0a00bc91bcd11000369547e1bd9bac5683fd2a10d5468b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6322af1575b313e1ddf14c37e173cd07.json": "ed1642fe00b06e85d6383ab14e2847e2a1fa6ae3b864aba889495588e3fd476d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6322af1575b313e1ddf14c37e173cd07.txt": "5415ec1937bbec164fbe605e1c093fdaaab9dd14427a01835afb6a13ea9563ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6a07b70ce5b52ec2db1c3e463fdbd783.json": "619517514ac9219540b2e9f5ca5985574d7f3dbaaea6facbc3b83d2e43465036",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6a07b70ce5b52ec2db1c3e463fdbd783.txt": "65cc4587e092426d4ff4690918995704db03a495a5183258550fb418a7a7e027",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6beed8eaaba08cdf98fea0c6b0f2419e.json": "c38f019ed820c0d084a33c1cf40fb47849fc212d3e85d95f75dc17e06ce39bb3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6beed8eaaba08cdf98fea0c6b0f2419e.txt": "e909287573f53d55a8ecb53bc27884b6eef4e623659065a5f6249cbe0ddbbcee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6dfca8e5280f9e7e75d2b1c2db162512.json": "6c6ca4c9fa2adaef0a5e86eb14ae3c57065d08c27d02fc30a13274e4598488dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6dfca8e5280f9e7e75d2b1c2db162512.txt": "28fd555e2f925f7e0c40094aaa35833ce62a89464cd3c8364eaf170afae2f97f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/849c79f6cb068e26fe9d2194ffcff615.json": "9782c0a28d59ade25967a34b9f7f62a10a6e98bc17a6ddea21d20366580ffa2e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/849c79f6cb068e26fe9d2194ffcff615.txt": "0a7998719694b924ff1236d713bec9944671ac063b24e7c0653b96d262266708",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/84b0456dcd6accfaf6f9c7ac13d54e84.json": "2df0a0abd3bdb65f5f16f7c8e1e88cdef9d0972908ed8d21fda980f91087c729",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/84b0456dcd6accfaf6f9c7ac13d54e84.txt": "e1c1df190cd073260c23c06fdcc35ca6fd17aa074f4e5671daf7d1b025b4de3f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/85a03e32b3dcba1c964b0ca9d7cb4033.json": "84d97fafb161dc3476fa408fbd900eaffe95ef5d7ef4c6449108193c69b20c2b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/85a03e32b3dcba1c964b0ca9d7cb4033.txt": "d743c725e9e3f27f5424b9dfc28b6a0c3bf85513d2f92af2d10b8974e0db22dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.json": "56ecc68a40136e9773266bddb9892b82760ff8c322eb14852520e8cb9c75ec35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.txt": "fdee9f67df8de257c0662913d26c2abbc362e5268791ea061ae7717b808b8be7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.json": "364a6f6d2fab2951efc982018f8f65b35f2fb190002c1099aad88c660e11f122",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.txt": "e97b9ca177dae761e3b3a945e65c7c382395f4c2e8c13e83764cde9525de2e07",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.json": "f882eddd52509f7cf6b6c717d43d07e258cdd13fd0bd1b92fbec56e3bd5b9a39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.txt": "f7a3dc357aabce244cbafe8f6f01b8a86a5d90973bab806aeff090b427fd9638",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.json": "b93785ea2c21c1a93f0996d9e5d0b3b355986bd492c742d61a4a755130a9d48c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.txt": "ade0e020760627e72d833ad1dd0c9ff4ff19354f212101e11da9a57779dd2fbf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a237434df65e022721faded276153cda.json": "b6bf68ddee29da2b24877e42ec3caad0e73895bd2a9080b3d85dcb5c91447854",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a237434df65e022721faded276153cda.txt": "3ce0ec6e52223189c258dedc1bfefbbe082219547f511c59c41c2ec0afa2993e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a248ea2e45b8e499a81d5a19898fb6c9.json": "1118c4f58751ef02b4640fd4da7b1f3c1e88c3fcd57bc35ff7bed35da1868f93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a248ea2e45b8e499a81d5a19898fb6c9.txt": "d5527f8b74418241ae2f656ab1dc3b5aafd942b5763d15c862e38bba40b6586b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.json": "d2aed9fc231e8919323d2c100cdbd5d256bfa0585a6e78e18efeaeca1cb178d7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.txt": "ce31de4a5603ea16625bb4355cad9a40587f7adb3be65312e8a76d765460ddd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.json": "5ac3f3ec70bdbc05853f05aa34e7bb1485c128506554da2e6493e5ef852c9947",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.txt": "3ae54bf4a6cf3eec50a248ffe105f0731715bd625f48e64320cf1a4c3a2e8ba9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a81b9d553b7247f5c7e2adc933ee8da6.json": "5c8a9baf10e0b8c20627e3ad4f6b0bd83a39331610e9aceef2451e362e40eb49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a81b9d553b7247f5c7e2adc933ee8da6.txt": "30deecb32ccbae875af7a147f4d165ddf2b29841bda183e0d37e9129c8e9d869",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ae5ca51d11d8f780bc5bf26f30daad60.json": "5957047f582dee29a8a02452d633b8cc572bd8cb14314b4695981337dee3f057",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ae5ca51d11d8f780bc5bf26f30daad60.txt": "fa0af6ef5070afeb223ca565d14ddbc2ee488b81aaabf5ff5a43310662a9a6be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/b41cca59f6889bbc2bba0073f216f1c7.json": "c360a78d6176b11aa0505a1bc1bf66d1be3cf7c145d43618306ff9e99d27f410",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/b41cca59f6889bbc2bba0073f216f1c7.txt": "54ac94edfa3da782e4c7903d692ba974f45870c381c8cb77e205fccdae483ec9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/c7c0333cc3b7494ba99bcaf5cda8f85f.json": "ea316f127a01ef5e7b824d43138a92d3325b59a3faaf8131b28cd06264806c45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/c7c0333cc3b7494ba99bcaf5cda8f85f.txt": "2c96143db13f2d490a5334d07f9edae5c84ac5a9cc84c5ab53800cc11b61beeb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/cb6052b3b34ea9d80cb4bc3f7a165368.json": "b788b2ccf115f004d8db8f1e5d18d0905f343969c501ef9f7272dbc098313a2f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/cb6052b3b34ea9d80cb4bc3f7a165368.txt": "d128f2b4ce2b54d25434c262ce863f45acab3893b0630fba17c06b1a21ea2b63",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ce51cf04427b0216b75564b6300781e8.json": "0c8e15ccfc4bcc442f2be8ed8fa0974e0949068656dcd97a1a6a762e90786633",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ce51cf04427b0216b75564b6300781e8.txt": "8e4a4001538a65811ccc62ccb92222676b8566a809aa590a8592fb12b8276867",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d09c90a1fc768a4a59f48408427c9ee4.json": "88d8f142c7706258dc856ae79bbe4b084a96ea58414418c1f6a3127bdc6f7365",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d09c90a1fc768a4a59f48408427c9ee4.txt": "ed708076a260c5173823152dfac3d2ca7caae8fe653d3b4c840c86989c4fc0dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d2b38cff4c9e4253bd769b437fa78f1f.json": "9065b063d559e9d8da2a045629f410ed3c83096db85e4afae1942198334de7cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d2b38cff4c9e4253bd769b437fa78f1f.txt": "5daa443ed24b5dadb0699829fa7aa8cc85a44222a3e9d82f5a7e41a600670953",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d434c28b5beebf708b5cf5d447f4375d.json": "14faa9ae0a786b2d6a85b1fd8c4b35498c0bb494c55068bf8b0db2e19500763a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d434c28b5beebf708b5cf5d447f4375d.txt": "440c1c6035e9e40f4a9fb5951b2810466ee71457e2c32043037020015038cc45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d9ff8120ad5132a28decf35a77f48fe8.json": "7ba323961aaa5e2b79a9ead5dad0afc96eeb7c00e0480c189aa00c6106bb8ea3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d9ff8120ad5132a28decf35a77f48fe8.txt": "5265e9ff16f9b6ba67f96d182a1a445df080184bf8690cf6e2bcbd5d930957f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/dbaf297ea9cb9e4b0eefea7918ad2ddd.json": "4e3a0fda7724cdf05a73165ecf30dcc8043a23c8204cc98df3e16685d5fdd03f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/dbaf297ea9cb9e4b0eefea7918ad2ddd.txt": "408f6d2ab77a04aa2d16ed1f57bbd177ea27411e2c18d276131b10f2b14fc32e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e33a63427e4e0ac2e60edd06ae1f8cc3.json": "0d78b42582c7eed84dffe33ba978c1d41e08c3320180ea1bdc2a4e9e87a62523",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e33a63427e4e0ac2e60edd06ae1f8cc3.txt": "230b4ffd8e5f74591f5d22d76b7af46c8829deaa3b53eb4475bae14e8261f47d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e413da5960091c3b46ca4bce7e93b6ea.json": "d3a34b7344527ffe835d8ca1a220c33b04a326d88420f44d5e10af76c0ff121b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e413da5960091c3b46ca4bce7e93b6ea.txt": "32015a59d729adbfc3128f52a607e7026520533593d5e31fd86232705f0431c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e63305ab73e3572b146872a13a304dda.json": "93511357e1d2279ecf0690670ac00b1c48252c8e20703aa03cbcdf92b2b0b7fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e63305ab73e3572b146872a13a304dda.txt": "cdd107b4850cd5f9db91b34ac68bf7e2badc775689405393bbb389a7f0bc738c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/f8db7287d86308ca8e62885b9c809065.json": "7a7aafad5d327364d9c9bbf6e0b7516fa54c21821c61f78051ddbfd1a7a10c27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/f8db7287d86308ca8e62885b9c809065.txt": "f96dbd724e81350f77f37ec992912e21138c97766dac22850e8848b2a7a8e021",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/feb6059c0dc188e7563689ca71875de3.json": "636eb4654333ed1f046107b6182ede43a4fb59602bb21b5bf8d6dec98107bade",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/feb6059c0dc188e7563689ca71875de3.txt": "e4ca590a35f84c3f7cab9a3b1cc0d603c0a80552c5a2fd1ca3dbe70bb54e037e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source_object_cache.py": "ceed2ed179de564aa2a1966a277facf5111e18db558ef79d087e630b9af69c65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/target-hit-debuff-helper-primary-shared-delta-proof.json": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/target-hit-debuff-standalone-primary-difference-proof.json": "403f2bda5670d1384d0c0bf53027e8407f1eacf10881a9bd68416e0dfb8ef3c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-image.json": "a9f13d68bd65e3c92cc3aa96ee39da4697153c1cc8a8a4f3011350711c2ae82e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-raw-verification.json": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-self-disorientation-class-difference-proof.snapshot.json": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-ui-raw-verification.json": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-ui-review.json": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/selfcheck-results.json": "1b00954b961ca8863b8579c3e72ccb7a9fe66432f4a5d11fdabcf4289121d96e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/selfcheck.py": "90a1b746bdbe8b6ccfa52a1db71021be12e9919f603828157024fe86cc53e780",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/source-ranges.json": "709b7a49db2a384178dc90e2a1c703bc11ae1b350f404b4bddc7b6ca64820acc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-001.json": "41d55564fc65d8c115fd4042d1833c252dce5e310d63a950cf16d5cc4b73b1c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-002.json": "3c7a5742d8589341ae2e48153a4e38064e6fc5710dbf381af0e40f8bf0061017",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-003.json": "bd7071e6e45b0465de23ac6b2351b9b617a11d801476e020e14d9ce17e1af747",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-route-coverage.json": "2bf542f66e06a059459a07d60d2343c4b34b0499d7d8c003aea324be887e107d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-config.json": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-draft.md": "b04fe499a0624b56c7323b48f202f9a32ae809f45c7607f8e33bce51d7f210a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-evidence.json": "22771bdeaf6ea4a7f855b4df318c9584cc6ff90546d30aad74c274451aa36163",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-candidate-freeze.json": "1d163d49ce6ce036a6242c12e8672f805dc6de5f734548e2efcaccd74b49eaa4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-push-route-coverage.json": "97c3267e0261ce68a6ec25d91595adb0152d7ff4dca5920bcf8c8296708a2c0e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-image.json": "a9f13d68bd65e3c92cc3aa96ee39da4697153c1cc8a8a4f3011350711c2ae82e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-final-content-delta-review.json": "24550b85a60508ebbc6a042a3001d17a6612f7b92a5ffcdd7b5b2be0bb871e8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-focused-checks.json": "43391169d03ec161bd404486f426cf669368326bdb2ec86a48e5bbf7d77f0d49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-frozen-source-verification.json": "7e8b000eeedc7ea9696e4f589b8976c6e2dbc60531c2cbca5063a63853d60c47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-raw-verification.json": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-resume-review.json": "aa2b231ecd52c3d9656042f0a12ca2c10b55a17982caf78d9d72b1edf7304796",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-self-disorientation-class-difference-proof.json": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-raw-verification.json": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-review.json": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-raw-verification.json": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b44a1aa61339f7e3b1437f0f37dedde33088aa4171db9385c2369fd4d1a68a99",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/DAMAGE_PERCENTAGE_REVIEW.md": "2a63fc0ae0be98478a0f9868f936059e4ef2fe40aba36c7ef95c8389be27553c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/LOCALIZATION_COMPARISON.md": "d4440117c8cde5d34d1661bd327207e9759a6e1aca83875fa071c58cddfdb6f9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/README.md": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/SOURCE_INDEX.md": "8686c88ba60c53a3a700f56c35ea75154de722fa12269bb683fcf935775aab7b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/TIER_VALUES.md": "60f10d77fa7f623cbcf8a7ecfb78c14b3c74b753261595d177aa246a9c916249",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/WEAPON_COMPATIBILITY.md": "bd2b9ec5a4fd407cd97305947c9595eb1b9269a94b508a992ee7f208b5b3963b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff.md": "9898a83cbed68fdde3d03a9915ca72f37f0fba9a3017ecad8ed91d137e1d61cb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff.md": "46bd7f173db55ba6cf70bd5064beeed2649cd4aae26267ee782b27f31fe7d60c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff.md": "4d1ece69902cae4b36cc20f947bdf719b16de032037dddd8e5fed42d81d2a877",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff.md": "a01263ede5f909c689b34e028f77355fcfe4d27d1e0547f22f36e05b07491388",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "2293d8816f170fadcb94267a31309225197e03d2bd6b80bf9d7b3f8f75940ba6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "536422979238ad4f7c081591c6c41d8164f4fa0cb71f3d1e9dae6a69e532842a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/melee/README.md": "78a1281f496bafe19d0bf0047020c7f2acc24d99b6f69c0eca7a15829971acc1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "634d0e737768cfbc971b1ff999e5586b07af6af311671524c9ed17135e2fe994",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "4e4026de67c2b47495a5a5321409eba70d9ef06b098914fd95777425633d7edb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "57baa1f08acb6dba44ba168edae3cce38c460a6516f5817587a3d430b34a33b6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "233c9025f422d7339d35b410851f0a1510a9bfbf9a7cc2997b5e2210505e25d0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "3a54b1477d80bb0173813485a395410715d0f40c3e2ba3bbee9a98810576fa86",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "ca2ec060549447eeb76704870dace5cb127d572d33f46bf23c5f7c3ef1d1dc99",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "d0ba388f1a98b100865538fd0f54f175262f4ce638635c46988e283b8b6b6a95",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "63ad3c7dd7de322d765105f798e7d596f09f82c6f1e4b16ff3378da05ece4600",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/own-association-snapshot.json": "ec5de7cc517ecea7385aefb8243fbdeac37f2607476405022ba31c250bf34e7f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-preview-003/Referneces/Translation.md": "44bf68fb61a6db6fc5f322fc668adf10da6e5f2fe3d119d34d6f56a4f71aa98f",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b44a1aa61339f7e3b1437f0f37dedde33088aa4171db9385c2369fd4d1a68a99",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/DAMAGE_PERCENTAGE_REVIEW.md": "2a63fc0ae0be98478a0f9868f936059e4ef2fe40aba36c7ef95c8389be27553c",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/LOCALIZATION_COMPARISON.md": "d4440117c8cde5d34d1661bd327207e9759a6e1aca83875fa071c58cddfdb6f9",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/README.md": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/SOURCE_INDEX.md": "8686c88ba60c53a3a700f56c35ea75154de722fa12269bb683fcf935775aab7b",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/TIER_VALUES.md": "60f10d77fa7f623cbcf8a7ecfb78c14b3c74b753261595d177aa246a9c916249",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/WEAPON_COMPATIBILITY.md": "bd2b9ec5a4fd407cd97305947c9595eb1b9269a94b508a992ee7f208b5b3963b",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff.md": "9898a83cbed68fdde3d03a9915ca72f37f0fba9a3017ecad8ed91d137e1d61cb",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff.md": "46bd7f173db55ba6cf70bd5064beeed2649cd4aae26267ee782b27f31fe7d60c",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff.md": "4d1ece69902cae4b36cc20f947bdf719b16de032037dddd8e5fed42d81d2a877",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff.md": "a01263ede5f909c689b34e028f77355fcfe4d27d1e0547f22f36e05b07491388",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "2293d8816f170fadcb94267a31309225197e03d2bd6b80bf9d7b3f8f75940ba6",
+      "Game Info/releases/1.13.X/blessings/entries/雷霆打擊/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff.md": "536422979238ad4f7c081591c6c41d8164f4fa0cb71f3d1e9dae6a69e532842a",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "78a1281f496bafe19d0bf0047020c7f2acc24d99b6f69c0eca7a15829971acc1",
+      "Game Info/releases/1.13.X/blessings/README.md": "634d0e737768cfbc971b1ff999e5586b07af6af311671524c9ed17135e2fe994",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "4e4026de67c2b47495a5a5321409eba70d9ef06b098914fd95777425633d7edb",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "57baa1f08acb6dba44ba168edae3cce38c460a6516f5817587a3d430b34a33b6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "233c9025f422d7339d35b410851f0a1510a9bfbf9a7cc2997b5e2210505e25d0",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "3a54b1477d80bb0173813485a395410715d0f40c3e2ba3bbee9a98810576fa86",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "ca2ec060549447eeb76704870dace5cb127d572d33f46bf23c5f7c3ef1d1dc99",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "d0ba388f1a98b100865538fd0f54f175262f4ce638635c46988e283b8b6b6a95",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "63ad3c7dd7de322d765105f798e7d596f09f82c6f1e4b16ff3378da05ece4600",
+      "Referneces/Translation.md": "44bf68fb61a6db6fc5f322fc668adf10da6e5f2fe3d119d34d6f56a4f71aa98f"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c6dfcb90-96c4-4417-8bf7-711560dd47e2",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "thunderstrike",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_175",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_175.png",
+      "attachment": "https://github.com/user-attachments/assets/c6dfcb90-96c4-4417-8bf7-711560dd47e2",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010440685",
+      "acquired_date": "2026-10-06",
+      "sha256": "91125231366563e0b151fded0065ea1e6c41810b0dc7b0c67c8ed86035870e0c",
+      "content_type": "image/png",
+      "size": 5491,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "雷霆打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "root_display_verified": true,
+      "root_visual_result": "Viewed native public 128x128 PNG with pale square gradient motif, matching exact item.icon receipt."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 22,
+      "tables": 22,
+      "rows": 868,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 317,
+      "source_files": 49,
+      "bindings": 1153,
+      "variants": 591,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 49,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 1532,
+      "remote_references": 826,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 45,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-044-full-scan.json",
+        "sha256": "450f613c0d4d69820d5d12456c02d91e14b2e1b2c6b144aeeb4cee9b2c88e55e",
+        "trigger": "round-044"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 2,
+    "not_started_name_groups": 2,
+    "partial_name_groups": 0,
+    "remaining_variants": 14,
+    "remaining_bindings": 32,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "feaf8a51ad9c9cbe6d441d54637ababd464df90be7cd0d6c15f5bdfa905530f8"
+  },
+  "previous_local_commit": "cb85f6c621b93b8db5f4f242c037bfc056b32e22",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "UI receipt confirms no outside exact items."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-final-content-delta-review.json",
+      "sha256": "24550b85a60508ebbc6a042a3001d17a6612f7b92a5ffcdd7b5b2be0bb871e8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-focused-checks.json",
+      "sha256": "43391169d03ec161bd404486f426cf669368326bdb2ec86a48e5bbf7d77f0d49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-frozen-source-verification.json",
+      "sha256": "7e8b000eeedc7ea9696e4f589b8976c6e2dbc60531c2cbca5063a63853d60c47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json",
+      "sha256": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-raw-verification.json",
+      "sha256": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-resume-review.json",
+      "sha256": "aa2b231ecd52c3d9656042f0a12ca2c10b55a17982caf78d9d72b1edf7304796"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-self-disorientation-class-difference-proof.json",
+      "sha256": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-raw-verification.json",
+      "sha256": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-review.json",
+      "sha256": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-config.json",
+    "sha256": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/actual-association-snapshot.json",
+      "sha256": "ec5de7cc517ecea7385aefb8243fbdeac37f2607476405022ba31c250bf34e7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/apply_thunderstrike_deltas.py",
+      "sha256": "484c80b0c3eb34d798d1c6ffd1f286a61bf6ee693083040497795a2af829aa63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/association-snapshot.json",
+      "sha256": "dceb0aa5febdb17693777df826ca37e5949bdd232c526d1d37b568bb4e742875"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2a63fc0ae0be98478a0f9868f936059e4ef2fe40aba36c7ef95c8389be27553c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/LOCALIZATION_COMPARISON.md",
+      "sha256": "d4440117c8cde5d34d1661bd327207e9759a6e1aca83875fa071c58cddfdb6f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/README.md",
+      "sha256": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/SOURCE_INDEX.md",
+      "sha256": "8686c88ba60c53a3a700f56c35ea75154de722fa12269bb683fcf935775aab7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/TIER_VALUES.md",
+      "sha256": "60f10d77fa7f623cbcf8a7ecfb78c14b3c74b753261595d177aa246a9c916249"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/WEAPON_COMPATIBILITY.md",
+      "sha256": "bd2b9ec5a4fd407cd97305947c9595eb1b9269a94b508a992ee7f208b5b3963b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "9898a83cbed68fdde3d03a9915ca72f37f0fba9a3017ecad8ed91d137e1d61cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "46bd7f173db55ba6cf70bd5064beeed2649cd4aae26267ee782b27f31fe7d60c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "4d1ece69902cae4b36cc20f947bdf719b16de032037dddd8e5fed42d81d2a877"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "a01263ede5f909c689b34e028f77355fcfe4d27d1e0547f22f36e05b07491388"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "2293d8816f170fadcb94267a31309225197e03d2bd6b80bf9d7b3f8f75940ba6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-generated-preview/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "536422979238ad4f7c081591c6c41d8164f4fa0cb71f3d1e9dae6a69e532842a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-page.md",
+      "sha256": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/candidate-preview-manifest.json",
+      "sha256": "493875fae05105cb8e32bf77e22b37856671e89a261fd24fe6fc8f36cc59ba4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/coverage.json",
+      "sha256": "2bf542f66e06a059459a07d60d2343c4b34b0499d7d8c003aea324be887e107d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/finalize_thunderstrike.py",
+      "sha256": "ed031dc3d31c81afec5dd12c6012f9ebda5d4229534523c4f2cfdf44a8a230cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/COMMON_MECHANISM_CACHE.snapshot.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/__pycache__/source_object_cache.cpython-312.pyc",
+      "sha256": "20af80abe88789ff9fcaf90c35f7b4067c5f23e56f9eb11b2e512204fc0f140a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/action_profiles.py",
+      "sha256": "69e90f44d2e2459243f398e83eddd132b5cc63023d6790580b6e70226d346b68"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/global-map-baseline.snapshot.json",
+      "sha256": "ce2f493645ce64542f3d2988b85d3634e24ecc917c874b4605a1773e49235250"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/inspect_source.py",
+      "sha256": "e6937fb7f1e7604804aac2f97a56375f5eccff58180a2f4c7ae3a88a8a5a0d59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/inventory.snapshot.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/item_metadata.snapshot.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/list_actions.py",
+      "sha256": "b4e1dc8ed6ca98964431f8cade70bf947c72bacad46a19bc646cd6117e2448fc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/localized_keys.snapshot.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "4b57a61c03e0317716cd33562dfa83122b3e7f4795affb018d8386d9125c8c4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/skullcrusher-sticky-followup-proof.snapshot.json",
+      "sha256": "e50809a90b9b9486a795ee2165370f26752774d726fb8eb7da681b01442f0f93"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/snippet.py",
+      "sha256": "b84bb454c337d9bb2bad47625f918a963a5f6abce3ce6e2ab7a59ce6420e8d4f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0378bceb2354b6b64545b8cfdf9d5698.json",
+      "sha256": "e155a0dec46ad2bfdcd88b13f1794fde83ad306cc0125a9c6f136fe5de3f593b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0378bceb2354b6b64545b8cfdf9d5698.txt",
+      "sha256": "0fd02be49d7a6518108050055957e4d3a03d8810ff2bf982edb6ff1756730462"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0ddb0a4a896ed09ea8d2e7f574541092.json",
+      "sha256": "3df27a04bb3e58838aa0f10b7e59da46d912a83674ae24ea895a8a6fdb6a0026"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/0ddb0a4a896ed09ea8d2e7f574541092.txt",
+      "sha256": "82be01da1a30fadc245375bf7ef422824d4a57ad4c0b44c0820f89458e646ee3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1518f71e2b91d4585b02d41140bc4842.json",
+      "sha256": "ec87a5cb3bae38ad12be004e85f2bc9da41a61b0780f2b5b10543e1f637aacd3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1518f71e2b91d4585b02d41140bc4842.txt",
+      "sha256": "c54a80e75a9c5b9288b2e0d7c4d199f9ab15067b76a6a7c40287196be7e55fe5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/15345fbf7ba3c0a8427640beffd464cf.json",
+      "sha256": "d509d78ac6bea92a192f61c43eacdb48285620b55790f0741d0d5f238095d312"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/15345fbf7ba3c0a8427640beffd464cf.txt",
+      "sha256": "e19b5a34ddcdd6cc0d5eeac8657d7db3c05db44af391faabc4bf3e16d38d41be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/163c5c760bed7bfeb4e19ea17b2bf8ac.json",
+      "sha256": "55200e8f48170921797e0ba8caa9421d43409d1ed98446c843bc23d20ed7a199"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/163c5c760bed7bfeb4e19ea17b2bf8ac.txt",
+      "sha256": "110cf0aa0ebfcb5654e8889d5f157cce582faed9e7f486106ce89db78beeaae0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/167c4270ab25bfe4c891d28f79d19734.json",
+      "sha256": "d697e7e3ba0a327782f47a2e1d9eba0fd8f0a462c9e320710448df52e757a8c1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/167c4270ab25bfe4c891d28f79d19734.txt",
+      "sha256": "9f2a274259637f86057bdec52c343777539852c1aa7d91704ac9ec5660c4baba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1c3e1903bd5f718b74a3632ef22e812a.json",
+      "sha256": "20e9a6f2c737eee1cb1271af5543855f62a498c71e02a2ea9e9393b032936678"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1c3e1903bd5f718b74a3632ef22e812a.txt",
+      "sha256": "a6769664ec150d866236e2374148b919310155033f041a9406afe3fd47b2f65a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.json",
+      "sha256": "c98627315683c935bb74889e1cbcefe7aae2a8c540e9d6010ad52da9feb7e4db"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/1d6819ca74811d1499f69c12eaaa812e.txt",
+      "sha256": "b61d7178f8e3fc46954f56f0bc25eee29f48e44aca5c3b2123e250da904642ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2b3ede9fd4f141af223c15b0a5b36d60.json",
+      "sha256": "db79abb7181326d4f1ad84b4ec205eba88031e6fe46463cb22968f0e974ed6f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2b3ede9fd4f141af223c15b0a5b36d60.txt",
+      "sha256": "39c4821c15df4b4a7d262297e02f807052e92d5a559bc0eb43aac456989421d4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2cf4602bea670c8e7280b17fe6609c9e.json",
+      "sha256": "e70703a2a205760796b7149de3e31346de60863394e59860e870638057fb58a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/2cf4602bea670c8e7280b17fe6609c9e.txt",
+      "sha256": "41070221c1f5499057376cd182bb153d201b80095398a49275b698e8f38d176e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d5794c8576871b5d4eb64d0debfb2c.json",
+      "sha256": "dd79271b95a4fdf53b39c12d35a77f27ae2be7fe6a2bfceb3c80cb657fb6f363"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d5794c8576871b5d4eb64d0debfb2c.txt",
+      "sha256": "e28d5ff1d15f01e8e3e31da90c61261515711ebae63b61deafb2add035008f6d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d6fd03c14a59fc2f1c22c8ecc3c2bc.json",
+      "sha256": "d8e20e93debd6752504181d8bfd0266a32442526de549282bb2d7ad8da06ae97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/39d6fd03c14a59fc2f1c22c8ecc3c2bc.txt",
+      "sha256": "3b597c1d9bb2c9ac1aeda089aa0007955d8ea99fd34080f5c515bf022329d6fb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/40669c0e6a206689a94ccd8355d3093d.json",
+      "sha256": "97e522f35d70ae047acd8fde5aaf086a0a195176e93b2a2103fbd035c10b3acd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/40669c0e6a206689a94ccd8355d3093d.txt",
+      "sha256": "0875f73ecb2dc5a7feffd6c96aa3974e6b49288badf191a4316185f60f245db4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/424734309381c16213582ac3c91fab11.json",
+      "sha256": "cc5c3ff49ca281dd8213eabe3e8d1ad03544088c3bba08d68190d7c7602b9d28"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/424734309381c16213582ac3c91fab11.txt",
+      "sha256": "3afcd9e9b41222a47f6d63d14ba6c54cad3abef531eba83de2d301527c151c7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/46ee7ee0336b9d8af6870aaca42783b1.json",
+      "sha256": "959a32e58bdba9eeab5fbe76b74d4fbd1f869b405ef9a418d04ccf9403442960"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/46ee7ee0336b9d8af6870aaca42783b1.txt",
+      "sha256": "04c76448f49f7ee35aab7e2ff1562da2a3be8a984627d4eeb1f944eb6338f74b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/47c908db41637a4abb428e74927150f4.json",
+      "sha256": "cfdb683c3285b6adf5be0713d95b004636fa47808f14507c85af3394607f9e48"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/47c908db41637a4abb428e74927150f4.txt",
+      "sha256": "2348c2d0ced4829f86b9cd45c91eaea5187d96631d2db4cdd91d381e76dff635"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4887e19ef60c398011d4911087e9a7b3.json",
+      "sha256": "23be0c98deaf3e367b0cf691ddc640912f1b8b26487eaa8b10397ed58b4a0370"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4887e19ef60c398011d4911087e9a7b3.txt",
+      "sha256": "fb47fca2745d3052c77adf144c1c0a1ff46bd672fb68f021c31336b3132801fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4cbeab4243b53f2cd3a4b00c9d03b080.json",
+      "sha256": "d5c6cc8722250cecac8e2f028d31980b5799f8e0f90441f41e139994ed17e3f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4cbeab4243b53f2cd3a4b00c9d03b080.txt",
+      "sha256": "d0e2fe9ee7247ba865d1231a9a9b3ede210e3f8567d2207c4467a75bf74e8f5d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4f04e6b9dcafc2288944657549d1a7ac.json",
+      "sha256": "41b2fc888c5d143da9ba85d1a7ef61b828dd7608ca255d99de0aa942bbd37558"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/4f04e6b9dcafc2288944657549d1a7ac.txt",
+      "sha256": "a37ffe60d9f2cf712c3d1a7fe3249e6f0f219324f2c458940643e40ce6448691"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.json",
+      "sha256": "162568d8ffc07e0cccc8f83b1da77198ec3ecb4d993b9934c749259a66599648"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6006d7f5fe350e1deeb2c89938e842cd.txt",
+      "sha256": "4dc7db18affe0c96eb0a00bc91bcd11000369547e1bd9bac5683fd2a10d5468b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6322af1575b313e1ddf14c37e173cd07.json",
+      "sha256": "ed1642fe00b06e85d6383ab14e2847e2a1fa6ae3b864aba889495588e3fd476d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6322af1575b313e1ddf14c37e173cd07.txt",
+      "sha256": "5415ec1937bbec164fbe605e1c093fdaaab9dd14427a01835afb6a13ea9563ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6a07b70ce5b52ec2db1c3e463fdbd783.json",
+      "sha256": "619517514ac9219540b2e9f5ca5985574d7f3dbaaea6facbc3b83d2e43465036"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6a07b70ce5b52ec2db1c3e463fdbd783.txt",
+      "sha256": "65cc4587e092426d4ff4690918995704db03a495a5183258550fb418a7a7e027"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6beed8eaaba08cdf98fea0c6b0f2419e.json",
+      "sha256": "c38f019ed820c0d084a33c1cf40fb47849fc212d3e85d95f75dc17e06ce39bb3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6beed8eaaba08cdf98fea0c6b0f2419e.txt",
+      "sha256": "e909287573f53d55a8ecb53bc27884b6eef4e623659065a5f6249cbe0ddbbcee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6dfca8e5280f9e7e75d2b1c2db162512.json",
+      "sha256": "6c6ca4c9fa2adaef0a5e86eb14ae3c57065d08c27d02fc30a13274e4598488dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/6dfca8e5280f9e7e75d2b1c2db162512.txt",
+      "sha256": "28fd555e2f925f7e0c40094aaa35833ce62a89464cd3c8364eaf170afae2f97f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/849c79f6cb068e26fe9d2194ffcff615.json",
+      "sha256": "9782c0a28d59ade25967a34b9f7f62a10a6e98bc17a6ddea21d20366580ffa2e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/849c79f6cb068e26fe9d2194ffcff615.txt",
+      "sha256": "0a7998719694b924ff1236d713bec9944671ac063b24e7c0653b96d262266708"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/84b0456dcd6accfaf6f9c7ac13d54e84.json",
+      "sha256": "2df0a0abd3bdb65f5f16f7c8e1e88cdef9d0972908ed8d21fda980f91087c729"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/84b0456dcd6accfaf6f9c7ac13d54e84.txt",
+      "sha256": "e1c1df190cd073260c23c06fdcc35ca6fd17aa074f4e5671daf7d1b025b4de3f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/85a03e32b3dcba1c964b0ca9d7cb4033.json",
+      "sha256": "84d97fafb161dc3476fa408fbd900eaffe95ef5d7ef4c6449108193c69b20c2b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/85a03e32b3dcba1c964b0ca9d7cb4033.txt",
+      "sha256": "d743c725e9e3f27f5424b9dfc28b6a0c3bf85513d2f92af2d10b8974e0db22dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.json",
+      "sha256": "56ecc68a40136e9773266bddb9892b82760ff8c322eb14852520e8cb9c75ec35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/86ee30a358bb0fa2380aab2736800003.txt",
+      "sha256": "fdee9f67df8de257c0662913d26c2abbc362e5268791ea061ae7717b808b8be7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.json",
+      "sha256": "364a6f6d2fab2951efc982018f8f65b35f2fb190002c1099aad88c660e11f122"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/93e081eec58006caf95b3919a6edda83.txt",
+      "sha256": "e97b9ca177dae761e3b3a945e65c7c382395f4c2e8c13e83764cde9525de2e07"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.json",
+      "sha256": "f882eddd52509f7cf6b6c717d43d07e258cdd13fd0bd1b92fbec56e3bd5b9a39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/95d32e8102f4a789f3afa8ff6de3ecd3.txt",
+      "sha256": "f7a3dc357aabce244cbafe8f6f01b8a86a5d90973bab806aeff090b427fd9638"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.json",
+      "sha256": "b93785ea2c21c1a93f0996d9e5d0b3b355986bd492c742d61a4a755130a9d48c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/9d142c5ccff892c3bac7d09f1a9b98e0.txt",
+      "sha256": "ade0e020760627e72d833ad1dd0c9ff4ff19354f212101e11da9a57779dd2fbf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a237434df65e022721faded276153cda.json",
+      "sha256": "b6bf68ddee29da2b24877e42ec3caad0e73895bd2a9080b3d85dcb5c91447854"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a237434df65e022721faded276153cda.txt",
+      "sha256": "3ce0ec6e52223189c258dedc1bfefbbe082219547f511c59c41c2ec0afa2993e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a248ea2e45b8e499a81d5a19898fb6c9.json",
+      "sha256": "1118c4f58751ef02b4640fd4da7b1f3c1e88c3fcd57bc35ff7bed35da1868f93"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a248ea2e45b8e499a81d5a19898fb6c9.txt",
+      "sha256": "d5527f8b74418241ae2f656ab1dc3b5aafd942b5763d15c862e38bba40b6586b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.json",
+      "sha256": "d2aed9fc231e8919323d2c100cdbd5d256bfa0585a6e78e18efeaeca1cb178d7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a6eb31a7a37fb8fbe1a9bce2dd1687be.txt",
+      "sha256": "ce31de4a5603ea16625bb4355cad9a40587f7adb3be65312e8a76d765460ddd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.json",
+      "sha256": "5ac3f3ec70bdbc05853f05aa34e7bb1485c128506554da2e6493e5ef852c9947"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a707f7373a5e4cb296314ae7b1de2222.txt",
+      "sha256": "3ae54bf4a6cf3eec50a248ffe105f0731715bd625f48e64320cf1a4c3a2e8ba9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a81b9d553b7247f5c7e2adc933ee8da6.json",
+      "sha256": "5c8a9baf10e0b8c20627e3ad4f6b0bd83a39331610e9aceef2451e362e40eb49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/a81b9d553b7247f5c7e2adc933ee8da6.txt",
+      "sha256": "30deecb32ccbae875af7a147f4d165ddf2b29841bda183e0d37e9129c8e9d869"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ae5ca51d11d8f780bc5bf26f30daad60.json",
+      "sha256": "5957047f582dee29a8a02452d633b8cc572bd8cb14314b4695981337dee3f057"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ae5ca51d11d8f780bc5bf26f30daad60.txt",
+      "sha256": "fa0af6ef5070afeb223ca565d14ddbc2ee488b81aaabf5ff5a43310662a9a6be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/b41cca59f6889bbc2bba0073f216f1c7.json",
+      "sha256": "c360a78d6176b11aa0505a1bc1bf66d1be3cf7c145d43618306ff9e99d27f410"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/b41cca59f6889bbc2bba0073f216f1c7.txt",
+      "sha256": "54ac94edfa3da782e4c7903d692ba974f45870c381c8cb77e205fccdae483ec9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/c7c0333cc3b7494ba99bcaf5cda8f85f.json",
+      "sha256": "ea316f127a01ef5e7b824d43138a92d3325b59a3faaf8131b28cd06264806c45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/c7c0333cc3b7494ba99bcaf5cda8f85f.txt",
+      "sha256": "2c96143db13f2d490a5334d07f9edae5c84ac5a9cc84c5ab53800cc11b61beeb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/cb6052b3b34ea9d80cb4bc3f7a165368.json",
+      "sha256": "b788b2ccf115f004d8db8f1e5d18d0905f343969c501ef9f7272dbc098313a2f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/cb6052b3b34ea9d80cb4bc3f7a165368.txt",
+      "sha256": "d128f2b4ce2b54d25434c262ce863f45acab3893b0630fba17c06b1a21ea2b63"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ce51cf04427b0216b75564b6300781e8.json",
+      "sha256": "0c8e15ccfc4bcc442f2be8ed8fa0974e0949068656dcd97a1a6a762e90786633"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/ce51cf04427b0216b75564b6300781e8.txt",
+      "sha256": "8e4a4001538a65811ccc62ccb92222676b8566a809aa590a8592fb12b8276867"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d09c90a1fc768a4a59f48408427c9ee4.json",
+      "sha256": "88d8f142c7706258dc856ae79bbe4b084a96ea58414418c1f6a3127bdc6f7365"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d09c90a1fc768a4a59f48408427c9ee4.txt",
+      "sha256": "ed708076a260c5173823152dfac3d2ca7caae8fe653d3b4c840c86989c4fc0dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d2b38cff4c9e4253bd769b437fa78f1f.json",
+      "sha256": "9065b063d559e9d8da2a045629f410ed3c83096db85e4afae1942198334de7cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d2b38cff4c9e4253bd769b437fa78f1f.txt",
+      "sha256": "5daa443ed24b5dadb0699829fa7aa8cc85a44222a3e9d82f5a7e41a600670953"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d434c28b5beebf708b5cf5d447f4375d.json",
+      "sha256": "14faa9ae0a786b2d6a85b1fd8c4b35498c0bb494c55068bf8b0db2e19500763a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d434c28b5beebf708b5cf5d447f4375d.txt",
+      "sha256": "440c1c6035e9e40f4a9fb5951b2810466ee71457e2c32043037020015038cc45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d9ff8120ad5132a28decf35a77f48fe8.json",
+      "sha256": "7ba323961aaa5e2b79a9ead5dad0afc96eeb7c00e0480c189aa00c6106bb8ea3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/d9ff8120ad5132a28decf35a77f48fe8.txt",
+      "sha256": "5265e9ff16f9b6ba67f96d182a1a445df080184bf8690cf6e2bcbd5d930957f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/dbaf297ea9cb9e4b0eefea7918ad2ddd.json",
+      "sha256": "4e3a0fda7724cdf05a73165ecf30dcc8043a23c8204cc98df3e16685d5fdd03f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/dbaf297ea9cb9e4b0eefea7918ad2ddd.txt",
+      "sha256": "408f6d2ab77a04aa2d16ed1f57bbd177ea27411e2c18d276131b10f2b14fc32e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e33a63427e4e0ac2e60edd06ae1f8cc3.json",
+      "sha256": "0d78b42582c7eed84dffe33ba978c1d41e08c3320180ea1bdc2a4e9e87a62523"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e33a63427e4e0ac2e60edd06ae1f8cc3.txt",
+      "sha256": "230b4ffd8e5f74591f5d22d76b7af46c8829deaa3b53eb4475bae14e8261f47d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e413da5960091c3b46ca4bce7e93b6ea.json",
+      "sha256": "d3a34b7344527ffe835d8ca1a220c33b04a326d88420f44d5e10af76c0ff121b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e413da5960091c3b46ca4bce7e93b6ea.txt",
+      "sha256": "32015a59d729adbfc3128f52a607e7026520533593d5e31fd86232705f0431c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e63305ab73e3572b146872a13a304dda.json",
+      "sha256": "93511357e1d2279ecf0690670ac00b1c48252c8e20703aa03cbcdf92b2b0b7fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/e63305ab73e3572b146872a13a304dda.txt",
+      "sha256": "cdd107b4850cd5f9db91b34ac68bf7e2badc775689405393bbb389a7f0bc738c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/f8db7287d86308ca8e62885b9c809065.json",
+      "sha256": "7a7aafad5d327364d9c9bbf6e0b7516fa54c21821c61f78051ddbfd1a7a10c27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/f8db7287d86308ca8e62885b9c809065.txt",
+      "sha256": "f96dbd724e81350f77f37ec992912e21138c97766dac22850e8848b2a7a8e021"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/feb6059c0dc188e7563689ca71875de3.json",
+      "sha256": "636eb4654333ed1f046107b6182ede43a4fb59602bb21b5bf8d6dec98107bade"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source-cache/7e662fcda162/feb6059c0dc188e7563689ca71875de3.txt",
+      "sha256": "e4ca590a35f84c3f7cab9a3b1cc0d603c0a80552c5a2fd1ca3dbe70bb54e037e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/source_object_cache.py",
+      "sha256": "ceed2ed179de564aa2a1966a277facf5111e18db558ef79d087e630b9af69c65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/target-hit-debuff-helper-primary-shared-delta-proof.json",
+      "sha256": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/target-hit-debuff-standalone-primary-difference-proof.json",
+      "sha256": "403f2bda5670d1384d0c0bf53027e8407f1eacf10881a9bd68416e0dfb8ef3c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-image.json",
+      "sha256": "a9f13d68bd65e3c92cc3aa96ee39da4697153c1cc8a8a4f3011350711c2ae82e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json",
+      "sha256": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-raw-verification.json",
+      "sha256": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-self-disorientation-class-difference-proof.snapshot.json",
+      "sha256": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-ui-raw-verification.json",
+      "sha256": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/thunderstrike-primary-ui-review.json",
+      "sha256": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/inputs/tool-snapshot/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/selfcheck.py",
+      "sha256": "90a1b746bdbe8b6ccfa52a1db71021be12e9919f603828157024fe86cc53e780"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/source-ranges.json",
+      "sha256": "709b7a49db2a384178dc90e2a1c703bc11ae1b350f404b4bddc7b6ca64820acc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-003.json",
+      "sha256": "bd7071e6e45b0465de23ac6b2351b9b617a11d801476e020e14d9ce17e1af747"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-route-coverage.json",
+      "sha256": "2bf542f66e06a059459a07d60d2343c4b34b0499d7d8c003aea324be887e107d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-config.json",
+      "sha256": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-draft.md",
+      "sha256": "b04fe499a0624b56c7323b48f202f9a32ae809f45c7607f8e33bce51d7f210a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-push-route-coverage.json",
+      "sha256": "97c3267e0261ce68a6ec25d91595adb0152d7ff4dca5920bcf8c8296708a2c0e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "634d0e737768cfbc971b1ff999e5586b07af6af311671524c9ed17135e2fe994"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "4e4026de67c2b47495a5a5321409eba70d9ef06b098914fd95777425633d7edb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "b44a1aa61339f7e3b1437f0f37dedde33088aa4171db9385c2369fd4d1a68a99"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2a63fc0ae0be98478a0f9868f936059e4ef2fe40aba36c7ef95c8389be27553c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "d4440117c8cde5d34d1661bd327207e9759a6e1aca83875fa071c58cddfdb6f9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\README.md",
+      "sha256": "2c197a3a2bfcbca6ee66cb12eb979105a65d000527ad2e8ee7e69f02ca41a703"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\SOURCE_INDEX.md",
+      "sha256": "8686c88ba60c53a3a700f56c35ea75154de722fa12269bb683fcf935775aab7b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\TIER_VALUES.md",
+      "sha256": "60f10d77fa7f623cbcf8a7ecfb78c14b3c74b753261595d177aa246a9c916249"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "bd2b9ec5a4fd407cd97305947c9595eb1b9269a94b508a992ee7f208b5b3963b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "9898a83cbed68fdde3d03a9915ca72f37f0fba9a3017ecad8ed91d137e1d61cb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "46bd7f173db55ba6cf70bd5064beeed2649cd4aae26267ee782b27f31fe7d60c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "4d1ece69902cae4b36cc20f947bdf719b16de032037dddd8e5fed42d81d2a877"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "a01263ede5f909c689b34e028f77355fcfe4d27d1e0547f22f36e05b07491388"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "2293d8816f170fadcb94267a31309225197e03d2bd6b80bf9d7b3f8f75940ba6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\雷霆打擊\\weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_stagger_debuff.md",
+      "sha256": "536422979238ad4f7c081591c6c41d8164f4fa0cb71f3d1e9dae6a69e532842a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "78a1281f496bafe19d0bf0047020c7f2acc24d99b6f69c0eca7a15829971acc1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\「惡魔之爪」劍\\README.md",
+      "sha256": "57baa1f08acb6dba44ba168edae3cce38c460a6516f5817587a3d430b34a33b6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\作戰大錘&板盾\\README.md",
+      "sha256": "233c9025f422d7339d35b410851f0a1510a9bfbf9a7cc2997b5e2210505e25d0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\動力錘\\README.md",
+      "sha256": "3a54b1477d80bb0173813485a395410715d0f40c3e2ba3bbee9a98810576fa86"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "ca2ec060549447eeb76704870dace5cb127d572d33f46bf23c5f7c3ef1d1dc99"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碾壓者\\README.md",
+      "sha256": "d0ba388f1a98b100865538fd0f54f175262f4ce638635c46988e283b8b6b6a95"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\雷鎚\\README.md",
+      "sha256": "63ad3c7dd7de322d765105f798e7d596f09f82c6f1e4b16ff3378da05ece4600"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "44bf68fb61a6db6fc5f322fc668adf10da6e5f2fe3d119d34d6f56a4f71aa98f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-raw-verification.json",
+      "sha256": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\thunderstrike-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "ec5de7cc517ecea7385aefb8243fbdeac37f2607476405022ba31c250bf34e7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/hammerblow-formal-nonauthor-review.json",
+      "sha256": "1eef632cb6f5689a883af523786bae0a708dd8bb2a53128457bd0e609452b80a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/selfcheck-results.json",
+      "sha256": "1b00954b961ca8863b8579c3e72ccb7a9fe66432f4a5d11fdabcf4289121d96e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-001.json",
+      "sha256": "41d55564fc65d8c115fd4042d1833c252dce5e310d63a950cf16d5cc4b73b1c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-actual-preview-receipt-002.json",
+      "sha256": "3c7a5742d8589341ae2e48153a4e38064e6fc5710dbf381af0e40f8bf0061017"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-agent-evidence.json",
+      "sha256": "22771bdeaf6ea4a7f855b4df318c9584cc6ff90546d30aad74c274451aa36163"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-group/thunderstrike-candidate-freeze.json",
+      "sha256": "1d163d49ce6ce036a6242c12e8672f805dc6de5f734548e2efcaccd74b49eaa4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-config.json",
+      "sha256": "088a0eb5c6a49cb3d81bd99ab3af913caed18c9e977a281908a99ede10d2a104"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-evidence.json",
+      "sha256": "22771bdeaf6ea4a7f855b4df318c9584cc6ff90546d30aad74c274451aa36163"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-agent-draft.md",
+      "sha256": "b04fe499a0624b56c7323b48f202f9a32ae809f45c7607f8e33bce51d7f210a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-final-content-delta-review.json",
+      "sha256": "24550b85a60508ebbc6a042a3001d17a6612f7b92a5ffcdd7b5b2be0bb871e8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-frozen-source-verification.json",
+      "sha256": "7e8b000eeedc7ea9696e4f589b8976c6e2dbc60531c2cbca5063a63853d60c47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-own-tier-wrapper-target-impact-debuff-material-review.json",
+      "sha256": "16e0f8d390d3d2605e29c65c2d2b3929d17658b3471b81b1736d89b240c668cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-raw-verification.json",
+      "sha256": "5512bd072604a80ac6e2b8c282d31db9ef8e7019c3c4dde99f3ce5a0e2a643dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-self-disorientation-class-difference-proof.json",
+      "sha256": "7d7e90c790bce2684591928d39113750329400be20ada6d9261c282b53271cb5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-raw-verification.json",
+      "sha256": "274c38da39da4977a254202fee6227f116a3b5bc20a84ca2c6b9a2417fe2b1dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-primary-ui-review.json",
+      "sha256": "f3469af1d6717035a588abc9cd04677e321623828487b91867daab6d4ce82f92"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderstrike-formal-peer-scope.json",
+    "sha256": "87843f9c7df2fe7ddb00c7363fe1fbe9e0b176982bb3cc3037f2127763cdd085",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

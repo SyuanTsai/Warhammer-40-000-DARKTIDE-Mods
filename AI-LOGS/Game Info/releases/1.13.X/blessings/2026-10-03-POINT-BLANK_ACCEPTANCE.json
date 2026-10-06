@@ -1,0 +1,760 @@
+{
+  "date": "2026-10-04",
+  "blessing": "point-blank",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/近身平射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+    "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+    "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_scope": "Current nine formal Point Blank markdown pages, point-blank config/extension draft, exact six-binding UI and RAW receipts, icon receipt, BLESSING_WEAPON_MAP, shared blessings README/SOURCE_INDEX/ranged README, and exact remaining-task partition. Reused unchanged fixed-SHA common proc and critical-chance evidence.",
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/README.md": "f1547c580539668357d50782d4a68e35e03b2d945f51327c041f20b089553dff",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/WEAPON_COMPATIBILITY.md": "9005b859b619e0ac0dbd22af92c583fdcb3bbfa70a2b947a88231c00472114db",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/SOURCE_INDEX.md": "99250f2583830760289f71a86c07d8a8939331b8dd2aba54d2a8b1e7d5115973",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/TIER_VALUES.md": "5ec285159379643d97474c484d99884be284034c454b511753d8c7c7473031c7",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/LOCALIZATION_COMPARISON.md": "d55a0cb4d8bc7d67f0c5abc334ba2b19f512026092aeb6dcc6d9b28d37b75149",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/DAMAGE_PERCENTAGE_REVIEW.md": "8893e23710adde12f8fd9b1a8323df8991ce43fcb76d76710e7aafbd80d8830f",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills.md": "33d99963d1a3eec0aa59e0cd0a616d3bde9d70d007b2ed861b3c4fcfbe445c1f",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills.md": "682f65a593be643085d00e0ff428cf38e1c4ecc0d2c95b8485a1ad91105ca438",
+      "Game Info/releases/1.13.X/blessings/entries/近身平射/weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills.md": "42ef1e20359e22d1e1914f3ba7a821ea48b7d4431fa19485469e97ed5e020d51",
+      "Game Info/releases/1.13.X/blessings/README.md": "bae4e87851e94156e1b90e343465d2d8c049b20567cf73046bbda96967ddf785",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "0648f95e201c632ffc284fd6e5f4a5d201e821843c349862957aa262942f907d",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "e11a246576421de7d53202c0f6c529918c5404324d901c2edb4ff26239baa067",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "6d0f061e9a5708920b89722b4e4fa6383ed108d5590325cf2de25e996af8a223",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-config.json": "8257bb707832926077177c0657fc7f64da23f04219ec675c81ad182f0b72c963",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-extension-draft.json": "7acbd7c1b85717467063a5d6814bb98daa3fef4db18c132fd4d2a2980cdcdb7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-extension-raw-verification.json": "eff201f0a1c1c4abdd0c36853bb39f4443cfc2a3420fe22a1f6ac71681364563",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-raw-verification.json": "bb8aa27afad411853542b923d5ce5debe6de846d4f73e9f65e8e3fc2968725ab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-image.json": "afe30a3a72c7631c8c6086a643c5f389cf75186978e4c36f10dcbc994820b712",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-image-upload-journal.json": "a52f287b2decbd12cf5e2f333d8fa27ddbe8821a2c179db349177931ee7e87f4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-core-review.json": "8be340301871d00d552c76420cd5b8f51d5974c683f386d30b7018941ad3cf90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-traits-review.json": "4f63ca71906bcf1f2919c02d2c2fdc089aab0324bbf022c4cd245830bc06c6d2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-modes-review.json": "92d30be610f108f58e07afab9f0af28f659ab430fa18c2a45615d463437c2581",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-review.json": "9127f6963da19bd06792490673100f21f61edd1967fe56f5528b2686b4b3ab3b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-raw-verification.json": "bb8aa27afad411853542b923d5ce5debe6de846d4f73e9f65e8e3fc2968725ab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "651a085774215cf9640774f0113896c5b2c3a7f622c26a196243f2b6dfef0027",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "004e953052ebd21e345ef56281c5ee650f398172938aca98371f888d6d020841"
+    },
+    "verified_summary": {
+      "formal_markdown_count": 9,
+      "variant_count": 3,
+      "binding_count": 6,
+      "tier_rows": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "bonus_percentage_points": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "durations_seconds": {
+        "boltpistol_p1": 3.5,
+        "needlepistol_p1": 3.5,
+        "stubrevolver_p1": 2.5
+      },
+      "trigger": "on_kill event; attack_result=died and attack_type=melee; no distance/trait-weapon/held-slot gate.",
+      "refresh": "No cooldown or stack; another qualified melee kill resets the active start time. Switching does not cancel the timer and ranged shots do not consume it.",
+      "special_actions": "Both bolt-pistol marks use a sweep special attack; both revolver marks use sweep whip/follow-up. Needle toggles are not attacks; needle shots are ranged and chemical/toxin damage is non-melee, so these modes do not independently satisfy the melee-kill gate.",
+      "localization": {
+        "name": "Point Blank / 近身平射",
+        "name_hash": "92eda1aa",
+        "description_hash": "f399a447",
+        "resource": "content/localization/items"
+      },
+      "binding_names": [
+        "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "針彈手槍 布蘭克斯 MkVI",
+        "針彈手槍 布蘭克斯 MKII",
+        "快拔左輪手槍 紮羅娜 Mk IIa",
+        "快拔左輪手槍 阿格里皮娜 Mk XIV"
+      ],
+      "metadata": "Three exact trait items each restrict to its matching weapon family, with no weapon-template restriction; all share weapon_trait_119.",
+      "image": {
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
+        "sha256": "1de29a30a72c8a187a79bdb74cef181ea1585a8df25c310206bb0157eab64266",
+        "attachment": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+        "display_verified": true,
+        "hash_verified": true
+      },
+      "map_and_shared_entry": "Exactly one Point Blank map row; the shared blessings README, ranged README and SOURCE_INDEX link the formal page and show the matching effect summary.",
+      "remaining_partition": {
+        "target_key_in_remaining_groups": 0,
+        "target_key_in_unresolved": 0,
+        "target_key_in_definitions_outside_intersection": 0,
+        "remaining_sha256_matches_extension_draft": true,
+        "remaining_counts": {
+          "name_groups": 126,
+          "not_started_name_groups": 126,
+          "partial_name_groups": 0,
+          "remaining_variants": 448,
+          "remaining_bindings": 884,
+          "unresolved": 58,
+          "definitions_outside_intersection": 88
+        },
+        "similar_but_distinct_remaining_candidate": {
+          "name_key": "loc_trait_bespoke_crit_chance_on_melee_kill",
+          "trait_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills"
+        }
+      }
+    },
+    "reviewed_bindings": [
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 769,
+        "traits_append_line": 771
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 769,
+        "traits_append_line": 771
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_needlepistol_p1_m1",
+          "loc_weapon_pattern_needlepistol_p1_m1",
+          "loc_weapon_mark_needlepistol_p1_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "trait_ukeys_line": 791,
+        "traits_append_line": 793
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_needlepistol_p1_m2",
+          "loc_weapon_pattern_needlepistol_p1_m2",
+          "loc_weapon_mark_needlepistol_p1_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "trait_ukeys_line": 788,
+        "traits_append_line": 790
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_stubrevolver_p1_m1",
+          "loc_weapon_pattern_stubrevolver_p1_m1",
+          "loc_weapon_mark_stubrevolver_p1_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 982,
+        "traits_append_line": 984
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+        "display_name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "family_pattern_mark_keys": [
+          "loc_weapon_family_stubrevolver_p1_m2",
+          "loc_weapon_pattern_stubrevolver_p1_m2",
+          "loc_weapon_mark_stubrevolver_p1_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 885,
+        "traits_append_line": 887
+      }
+    ],
+    "verified_source_refs": [
+      {
+        "claim": "All three trait variants define I–IV values and model-specific durations.",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start": 10,
+        "end": 63
+      },
+      {
+        "claim": "All three trait variants define I–IV values and model-specific durations.",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start": 520,
+        "end": 575
+      },
+      {
+        "claim": "All three trait variants define I–IV values and model-specific durations.",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start": 356,
+        "end": 409
+      },
+      {
+        "claim": "Shared proc listens for kill and checks death plus melee attack type only.",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        "start": 1575,
+        "end": 1586
+      },
+      {
+        "claim": "Shared proc listens for kill and checks death plus melee attack type only.",
+        "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        "start": 226,
+        "end": 237
+      },
+      {
+        "claim": "No cooldown allows reactivation; qualifying event replaces active start time; stat remains active only in its duration.",
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "start": 173,
+        "end": 195
+      },
+      {
+        "claim": "No cooldown allows reactivation; qualifying event replaces active start time; stat remains active only in its duration.",
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "start": 304,
+        "end": 355
+      },
+      {
+        "claim": "No cooldown allows reactivation; qualifying event replaces active start time; stat remains active only in its duration.",
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "start": 78,
+        "end": 104
+      },
+      {
+        "claim": "Proc stat applies while active and does not depend on a separate conditional function.",
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "start": 247,
+        "end": 255
+      },
+      {
+        "claim": "Proc stat applies while active and does not depend on a separate conditional function.",
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "start": 288,
+        "end": 303
+      },
+      {
+        "claim": "Critical chance distinguishes ranged and melee stats, clamps the sum, then applies conversion if not skipped.",
+        "path": "scripts/utilities/attack/critical_strike.lua",
+        "start": 13,
+        "end": 39
+      },
+      {
+        "claim": "Pistol bash and revolver whip use melee ActionSweep attack type.",
+        "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        "start": 1475,
+        "end": 1503
+      },
+      {
+        "claim": "Current UI composes family, pattern, and mark localization keys.",
+        "path": "scripts/utilities/items.lua",
+        "start": 315,
+        "end": 327
+      },
+      {
+        "claim": "Current UI reads the weapon naming keys.",
+        "path": "scripts/utilities/items.lua",
+        "start": 378,
+        "end": 426
+      },
+      {
+        "claim": "爆彈手槍 戈德溫–布蘭克斯 Mk IV imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "claim": "爆彈手槍 戈德溫–布蘭克斯 Mk IV imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "start": 769,
+        "end": 771
+      },
+      {
+        "claim": "爆彈手槍 戈德溫–布蘭克斯 Mk VI imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "claim": "爆彈手槍 戈德溫–布蘭克斯 Mk VI imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "start": 769,
+        "end": 771
+      },
+      {
+        "claim": "針彈手槍 布蘭克斯 MkVI imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "claim": "針彈手槍 布蘭克斯 MkVI imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "start": 791,
+        "end": 793
+      },
+      {
+        "claim": "針彈手槍 布蘭克斯 MKII imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "start": 17,
+        "end": 17
+      },
+      {
+        "claim": "針彈手槍 布蘭克斯 MKII imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "start": 788,
+        "end": 790
+      },
+      {
+        "claim": "快拔左輪手槍 紮羅娜 Mk IIa imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "start": 16,
+        "end": 16
+      },
+      {
+        "claim": "快拔左輪手槍 紮羅娜 Mk IIa imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "start": 982,
+        "end": 984
+      },
+      {
+        "claim": "快拔左輪手槍 阿格里皮娜 Mk XIV imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "start": 15,
+        "end": 15
+      },
+      {
+        "claim": "快拔左輪手槍 阿格里皮娜 Mk XIV imports and appends the matching trait.",
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "start": 885,
+        "end": 887
+      }
+    ],
+    "receipt_refs": {
+      "primary_core": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-core-review.json",
+      "primary_traits": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-traits-review.json",
+      "primary_modes": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-modes-review.json",
+      "primary_ui": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-review.json",
+      "primary_raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-raw-verification.json",
+      "image": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-image.json"
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "point-blank",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_119.png",
+      "attachment": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970603854",
+      "acquired_date": "2026-10-03",
+      "sha256": "1de29a30a72c8a187a79bdb74cef181ea1585a8df25c310206bb0157eab64266",
+      "content_type": "image/png",
+      "size": 6372,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "近身平射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol inspected the actual public transparent icon on a dark inspection background; intact incoming projectile and crossed aiming-circle glyph."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 15,
+      "rows": 168,
+      "lists": 94,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 52,
+      "source_files": 19,
+      "bindings": 301,
+      "variants": 157,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 19,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 439,
+      "remote_references": 274,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 2,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-001-full-scan.json",
+        "sha256": "7ebf2641e5b5d5eb9404c9440b8c3c78d886377b57a44d252d3907f0d541e5eb",
+        "trigger": "round-001"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 126,
+    "not_started_name_groups": 126,
+    "partial_name_groups": 0,
+    "remaining_variants": 448,
+    "remaining_bindings": 884,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "651a085774215cf9640774f0113896c5b2c3a7f622c26a196243f2b6dfef0027"
+  },
+  "previous_local_commit": "85738bb0b0c333783f1f01b0a71573f2b1251d6d",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "3 complete own tier/wrapper definitions; 6 exact metadata/RAW/UI/template bindings; own melee-death predicate and 28 actual action blocks; replacement proc-stat table, independent timer, refresh, no held-slot/item/distance condition; current examples and per-weapon durations",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-traits-review.json",
+        "sha256": "4f63ca71906bcf1f2919c02d2c2fdc089aab0324bbf022c4cd245830bc06c6d2"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-core-review.json",
+        "sha256": "8be340301871d00d552c76420cd5b8f51d5974c683f386d30b7018941ad3cf90"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-modes-review.json",
+        "sha256": "92d30be610f108f58e07afab9f0af28f659ab430fa18c2a45615d463437c2581"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-raw-verification.json",
+        "sha256": "bb8aa27afad411853542b923d5ce5debe6de846d4f73e9f65e8e3fc2968725ab"
+      }
+    ],
+    "agent_research_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-agent-config.json",
+      "sha256": "6251b1c22915d44695de5fdb86192d05f0d3ea30a586321c3b43b31d4a91b487"
+    },
+    "common_cache_reuse": {
+      "timer": "proc-active-timer, proc-cooldown-retrigger, proc-event-refresh; own ProcBuff and absence of cooldown verified",
+      "stats": "proc-stat-override-table and proc-keyword-condition; own table replacement and absence of conditional func verified",
+      "consumer": "critical-chance-consumer; ranged pool and conversion/clamp follow the same CriticalStrike call"
+    },
+    "cache_receipt": {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "004e953052ebd21e345ef56281c5ee650f398172938aca98371f888d6d020841"
+    },
+    "numeric_check": {
+      "tiers_percentage_points": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "base_20_results_percent": [
+        34,
+        36,
+        38,
+        40
+      ],
+      "iv_relative_increase_percent": 100,
+      "iv_base92_clamped_percent": 100,
+      "durations_by_family": {
+        "boltpistol_p1": 3.5,
+        "needlepistol_p1": 3.5,
+        "stubrevolver_p1": 2.5
+      },
+      "retrigger_t0_t2_result_until": 5.5
+    },
+    "previously_accepted_map_prefixes_preserved": true,
+    "peer_scope": "current formal pages/config/draft/map/remaining/primary receipts/images only; reuse unchanged fixed-SHA common blocks",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-extension-draft.json",
+      "sha256": "7acbd7c1b85717467063a5d6814bb98daa3fef4db18c132fd4d2a2980cdcdb7a"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 6,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-primary-ui-review.json",
+      "sha256": "9127f6963da19bd06792490673100f21f61edd1967fe56f5528b2686b4b3ab3b"
+    },
+    "bindings": [
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m1",
+          "loc_weapon_pattern_needlepistol_p1_m1",
+          "loc_weapon_mark_needlepistol_p1_m1"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MkVI",
+        "name_en": "Needle Pistol Branx MkVI",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 791,
+        "append_line": 793
+      },
+      {
+        "weapon_id": "needlepistol_p1",
+        "mark_id": "needlepistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_needlepistol_p1_m2",
+          "loc_weapon_pattern_needlepistol_p1_m2",
+          "loc_weapon_mark_needlepistol_p1_m2"
+        ],
+        "name_zh_tw": "針彈手槍 布蘭克斯 MKII",
+        "name_en": "Needle Pistol Branx MKII",
+        "template_file": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 788,
+        "append_line": 790
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m1",
+          "loc_weapon_pattern_stubrevolver_p1_m1",
+          "loc_weapon_mark_stubrevolver_p1_m1"
+        ],
+        "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "name_en": "Quickdraw Stub Revolver Zarona Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 982,
+        "append_line": 984
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m2",
+          "loc_weapon_pattern_stubrevolver_p1_m2",
+          "loc_weapon_mark_stubrevolver_p1_m2"
+        ],
+        "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "name_en": "Quickdraw Stub Revolver Agripinaa Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 885,
+        "append_line": 887
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "inventory_counts": {
+      "weapon_patterns": 70,
+      "weapon_marks": 134,
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "unresolved": 58
+    },
+    "exact_name_key_bound_bindings": 6,
+    "exact_name_key_variants": 3,
+    "exact_name_key_metadata_items": 3,
+    "exact_outside_metadata_items": 0,
+    "exact_unresolved_candidates": 0,
+    "similar_but_distinct_candidate": {
+      "trait_id": "weapon_trait_bespoke_ogryn_gauntlet_p1_crit_chance_bonus_on_melee_kills",
+      "name_key": "loc_trait_bespoke_crit_chance_on_melee_kill",
+      "metadata_item": "content/items/traits/bespoke_ogryn_gauntlet_p1/crit_chance_bonus_on_melee_kills",
+      "assessment": "名稱鍵為不同的單數形式，屬 Ogryn Gauntlet P1 相似候選，不併入本項。"
+    },
+    "boundary": "只對固定 SHA inventory 的 exact name_key 綁定、item_metadata exact records、definitions_not_bound 與 unresolved 做交集；檔案或相似後綴候選本身不作為未使用結論。"
+  },
+  "execution_batch_started_on": "2026-10-03",
+  "supplemental_reviews": [
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "7ea55d33423a13797ee7a7b05a91d9d6d839dd74",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json",
+        "sha256": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-crit-agent-review.json",
+        "sha256": "33c6f68f88f20ee63d24c63f3d4334b00c424632d09da70f6e70facc7ae07689"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "corrections": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "只複核 Point Blank 爆彈手槍 explosion delta 的三個正式檔案與七個精確固定來源引用；未重審 tiers、RAW、6 UI、圖示或其他變體。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json",
+          "sha256": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604"
+        },
+        "findings": [
+          "README 與爆彈手槍 variant page 清楚區分有效中的遠程爆擊加成可作用於直接射擊，以及另行生成的擊殺／停止與穿透停止爆炸固定非爆擊。",
+          "SOURCE_INDEX 明確說明 M1/M2 配置的 5/3 公尺是基礎起爆距離，還會乘起爆距離倍率；沒有將基礎距離寫成無條件最終距離，亦沒有聲稱配置穿透出口爆炸。",
+          "SOURCE_INDEX 的七個引用逐一對應 primary receipt 的固定來源範圍，涵蓋兩個 hitscan 配置、起爆距離倍率、hitmass 爆炸 gate/非爆擊參數、直接命中旗標、穿透停止爆炸及 Explosion 參數定義。"
+        ],
+        "new_arming_condition_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+          "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b",
+          "cache_id": "explosion-arming-distance-multiplier"
+        },
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/README.md": "0d620944f31a61bdbb278ba1765102a48d9f70eac7470f7f2ddbb56eb74dbf89",
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/SOURCE_INDEX.md": "4b01b16f6b6e9ab125f96f4eba92240d85178af64611aaac35f15ec6ba92e869",
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills.md": "0e3ffd8351aa34080e75719c71d9766f644b3448895ee1f2eacbf4a3cb24977b",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-crit-agent-review.json": "33c6f68f88f20ee63d24c63f3d4334b00c424632d09da70f6e70facc7ae07689"
+        },
+        "receipt_sha256": "e0ddf31176f7c6430764a795954c04eb3b90c6a3611cbe19b726fae6ff85b7f3"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-image.json",
+          "sha256": "afe30a3a72c7631c8c6086a643c5f389cf75186978e4c36f10dcbc994820b712",
+          "attachment": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+          "original_file_sha256": "1de29a30a72c8a187a79bdb74cef181ea1585a8df25c310206bb0157eab64266"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 45,
+          "source_files": 23,
+          "bindings": 326,
+          "variants": 170,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 3,
+          "source_object_cache": {
+            "cache_hits": 23,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 3,
+          "tables": 4,
+          "rows": 42,
+          "lists": 7,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 4,
+          "local_references": 73,
+          "remote_references": 50,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 44,
+        "variants": 170,
+        "bindings": 326
+      },
+      "faster_enabled": false
+    }
+  ]
+}

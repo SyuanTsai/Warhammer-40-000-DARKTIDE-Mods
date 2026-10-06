@@ -1,0 +1,620 @@
+{
+  "date": "2026-10-04",
+  "blessing": "riposte",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/還擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+    "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+    "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+    "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+    "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance"
+  ],
+  "added_binding_count": 13,
+  "total_variants": 6,
+  "total_bindings": 13,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "lifecycle_note": "accept_new_group 驗收通過後，focused manifest 由 28 個既有路徑更新為 29 個，僅新增本項 2026-10-03-RIPOSTE_ACCEPTANCE.json；29 個 manifest 路徑與 29 個 staged 路徑完全一致，包含既有 handoff。其餘 32 個 peer 檔案雜湊維持不變；本註記記錄驗收已暫存但當時尚未 commit。",
+    "scope": "聚焦複核固定 SHA 7e662fc 下的還擊最終條目、六個變體、13 個精確武器綁定、對應共用資料與反向武器頁，並對照已審核的固定 SHA 證據快取。未把尚待修正的 Shred／粉碎條目名稱差異納入本次還擊機制範圍。",
+    "source_repository": "Aussiemon/Darktide-Source-Code",
+    "source_checks": {
+      "citation_link_count": 167,
+      "unique_source_paths": 52,
+      "citations_with_wrong_sha": 0,
+      "invalid_or_missing_source_ranges": 0,
+      "broken_internal_markdown_links": 0,
+      "checked_files": 18,
+      "method": "固定 SHA source URL/range 與本地 Git blob 逐項比對；內部 Markdown 相對連結逐項解析。"
+    },
+    "localization": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "name_key": "loc_trait_bespoke_dodge_grants_crit_chance",
+      "name_hash": "ce5b71c4",
+      "name_english": "Riposte",
+      "name_zh_tw": "還擊",
+      "description_key": "loc_trait_bespoke_dodge_grants_crit_chance_desc",
+      "description_hash": "33383fc4",
+      "english_template": "{crit_chance:%s} Critical Chance for {time:%s}s on successful Dodge.",
+      "zh_tw_template": "成功閃避後{crit_chance:%s}致命一擊機率，持續{time:%s}秒。",
+      "result": "Final comparison page matches the same-resource, same-hash English/zh-TW RAW pair; all 13 family/pattern/mark bindings match the verified RAW components."
+    },
+    "variants": {
+      "defined_variants": 6,
+      "exact_inventory_bindings": 13,
+      "binding_marks": [
+        "combatknife_p1_m1",
+        "combatknife_p1_m2",
+        "combatsword_p3_m1",
+        "combatsword_p3_m2",
+        "combatsword_p3_m3",
+        "dual_shivs_p1_m1",
+        "dual_shivs_p1_m2",
+        "forcesword_2h_p1_m1",
+        "forcesword_2h_p1_m2",
+        "forcesword_p1_m1",
+        "forcesword_p1_m2",
+        "forcesword_p1_m3",
+        "transonic_sword_transonic_knife_p1_m1"
+      ],
+      "common_tiers_percentage_points": [
+        12.5,
+        15,
+        17.5,
+        20
+      ],
+      "common_duration_seconds": 6,
+      "transonic_tiers_percentage_points": [
+        10,
+        12,
+        14,
+        16
+      ],
+      "transonic_duration_seconds": 4,
+      "result": "Variant pages, tier table, config, extension draft, 13 UI bindings, 13 map bindings, compatibility table, and six reverse weapon pages agree on variant IDs, exact marks, displayed models, tier values, and durations."
+    },
+    "calculation": {
+      "result": "C+r is clamped to [0,1], configured chance-to-damage conversion is applied after clamp, and round_with_precision(chance, 2) occurs before the PRD roll. The examples 0.325→0.33 and 0.375→0.38, plus the 40%/36% and 100%/80% comparisons, are arithmetically consistent.",
+      "no_damage_increase_claim": "The player text calls out that the blessing adds probability points, not guaranteed critical hits or a damage multiplier."
+    },
+    "dual_shivs_poison": {
+      "poison_template": "dual_shivs_p1_throwing_knives_poison",
+      "routed_events": [
+        "on_hit",
+        "on_damage_dealt"
+      ],
+      "on_hit_payload": "attack.lua:581-620 supplies damage_profile and is_critical_strike; the exact poison predicate accepts dual_shivs_throwing_knives and rejects shield hit zones.",
+      "on_damage_dealt_payload": "attack.lua:713-748 supplies damage_profile_name but no damage_profile; weapon_buff_templates.lua:1975-1986 reads params.damage_profile.name, so this event fails the exact predicate for the same hit.",
+      "result": "No duplicate poison application from the two listeners for one qualifying thrown hit. Each accepted application adds 4 base stacks +2 for a critical hit +2 for a weakspot; both bonuses can apply. Later interval toxin attacks omit is_critical_strike and use Attack.execute default false.",
+      "limits": "Static review of the fixed source only; no in-game poison tick count, timing, or gameplay session is claimed."
+    },
+    "icon": {
+      "game_icon_identity_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "verified_image_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-image.json",
+      "source_image": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_186.png",
+      "github_attachment": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "result": "The internal icon identity path is distinct from, and correctly paired with, the GitHub attachment URL used by the final and reverse pages; image receipt records verified SHA-256 and dimensions."
+    },
+    "findings": [
+      "玩家條目採用一致的頂層條列；觸發、刷新、切換、攻擊起始判定、推擊／啟動、投刀、風刃、機率意義與算例均與固定 SHA 的專項證據一致。",
+      "六個變體與六個 wrapper 的 tier 覆寫及 6 秒／4 秒期限符合 fixed-SHA full-tier and trigger-duration receipts；一般變體為 +12.5／15／17.5／20 個百分點，穿音速雙刀為 +10／12／14／16 個百分點。",
+      "13 個精確 weapon/mark binding、trait item/category、metadata weapon-type restriction 與實作匯入／接入引用一致；共享 blessing map 與六個反向武器頁正確指回對應變體頁。",
+      "所有固定來源引用 SHA 與行號有效；條目和反向頁的內部 Markdown 連結均可解析。",
+      "原始中英 RAW 名稱、描述鍵、hash、武器 family/pattern/mark 名稱，與最終文件相符。",
+      "短刀毒素事件路由檢核確認 on_hit 可通過精確 predicate，而同一次攻擊的 on_damage_dealt 因缺少 damage_profile 而不會再施加一次；層數增量 4 +2 critical +2 weakspot 正確。",
+      "未執行或宣稱遊戲內測試；結論限於固定 SHA 程式碼、既有證據收據和文件一致性。"
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/還擊/DAMAGE_PERCENTAGE_REVIEW.md": "65f4837ad85c67add3f16ead9387bf49bf5c152013b01d4fa4d110f53b7a629f",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/LOCALIZATION_COMPARISON.md": "0f07970737bedca94e0f7263ccf835ce5f937d16c17a929e024e4818ed34de5b",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/README.md": "728c827cf6a63f7eae82a6497230856ece5cd5d2a714659a649090c83e308e84",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/SOURCE_INDEX.md": "2cc569a45edd7dbcaf66bf1a0bf714df3e96a9b4b695a00fb8b4d0d7ce7a5a6c",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/TIER_VALUES.md": "1a84885f89699fcc4ed6f0c1639c042749d1619297e18f6b0a54d83a6fb95c89",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/WEAPON_COMPATIBILITY.md": "89e8d858819ae9692cf0ef9d37ef3a4f3c729170fd7c1e695a55ca34c99f3775",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance.md": "ba309f098c185431715573c22e6bf57b0e845ee2177d176fad89afebd102d4e9",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance.md": "5fbdcb6e51ad3774d271a71d43eaa5b218b56c7c014314947d334c1707fc674d",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance.md": "ab80e86b40ba7e957376c48f9b0f08d6dc4025877b979ce27765e73343373575",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance.md": "f1d88ad2953601efd5c16716a2ac3446c10c96997334df14cd2fe6205772d502",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance.md": "2057931727197f5476430cf37091334ac7edb3c02704bba8596e2a67ea0493fe",
+      "Game Info/releases/1.13.X/blessings/entries/還擊/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance.md": "f2dfc421e7323c298316e881c7fae4398f60e57842e6a912c183c43dba09d2af",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "da205e878ea7d6e5017fb991818db7bbe60e17b344aee9abc630aa3d1951df12",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "0ce2b4730ca2139888003bacdae625e2ed646396ed09f76263041b76b90cde81",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場劍/README.md": "e317fd385a545793c6e452c3bc7b8f618ef64680ac48c7f463f7dc5c98e96421",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "257c6d1fab156f5f3199e8072653c7fbf79c7e4c112f934e36ba2b13a3aa0bb4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "18ce28d8bbefdafffaa4274bdd3a7a97a8e18bbfa1091762161c3c8658e3d093",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "af24a873f916122f912152a3017e6232497f701d8555888a71fe591ec2b23ed3",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7e20bc7f2a2730b586b0f8ec2389aabe3ac46e89b36029f6e193ba81c1e3b947",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-config.json": "fc06fde5f8d9ce11e35a69f40868e6b21cc5cc957025dece8358dce306815c31",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-extension-draft.json": "eb708459b3453d50444ee5d8f32795c8d393af78c0d376ac1468ed95faf34b26",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-image.json": "c07c19aba5d596d7b2302ab09594a541d4d5a9c2272f24af362e97550485bf61",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-poison-tick-review.json": "b2788ff3fc30cbb8a03bcc07cf8cb29874c65fe1a78a1f369499951207f34021",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-poison-event-routing-review.json": "b0024dad64ed92ff2207a54037b2cf09e30f6c700c8b6c5986e9f3c34450ccca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-focused-manifest.json": "7fc9273f10fa2baa57b0e0b6825a2f71a0a378bdb3420af7e3fdd704db7770f8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-trigger-duration-review.json": "6878def47c80237a8b761c51883da87848c269abe330c783e32d0ecfa82821a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-wind-slash-review.json": "45b44adf3ae8f281bd2745f253d3dae8bcecd7306f53388c4a8924a455b0ebe1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-full-tier-wrapper-review.json": "409f45a27f1d6c6c32a5968e95ce220d04439788e0ff7668fce092c482619f71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-actual-mode-review.json": "ee8dbd518fc1a9c505d26f82cb3dbe854c977423556d2556faf3f6f5ed734b17",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json": "4f82ebf4cf42d6921392b601e607b81e4d74705616350070ce82070780bc8480",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-raw-verification.json": "18c1bf1d07763979e45041831ffce8a2904cc0c08ab02189c2f485a7bbff3515",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-extension-raw-verification.json": "8c2c17d53517523c6ba26013020c673396ab243ddb1483a4389b14f4f486f16a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-raw-verification.json": "cfcd350f5182b4322b83fc9b7f5153074db69004938a71e7f42a1d88ac9215dc"
+    }
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "riposte",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_186.png",
+      "attachment": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5973378909",
+      "acquired_date": "2026-10-04",
+      "sha256": "20e30b26fea887153c362181a2705c3b3675147b34be22954b852f00d32c1254",
+      "content_type": "image/png",
+      "size": 5448,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "還擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "primary_visual_review": "Sol inspected dark-background enlargement of the original attachment: intact opposed bent arrows and circular reticle, no clipping, original file unchanged."
+    },
+    "reused_accepted_attachment": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 26,
+      "tables": 23,
+      "rows": 372,
+      "lists": 108,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 117,
+      "source_files": 52,
+      "bindings": 352,
+      "variants": 184,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 22,
+      "source_object_cache": {
+        "cache_hits": 52,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 26,
+      "local_references": 654,
+      "remote_references": 390,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 6,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-005-full-scan.json",
+        "sha256": "825c144d36a52ac3335e21c7a7b30392856d6036cac6a7566d1c1992c9404cc0",
+        "trigger": "round-005"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 119,
+    "not_started_name_groups": 119,
+    "partial_name_groups": 0,
+    "remaining_variants": 421,
+    "remaining_bindings": 833,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "f9e4d162afd28ffb221ef141a861579acec2c838c9f6a5b4ba2a95e58d9e70fd"
+  },
+  "previous_local_commit": "95d2a1a996d3620865c013cf1a3fca7db1e50ac4",
+  "current_blessing_formula_review": {
+    "date": "2026-10-04",
+    "complete": true,
+    "status": "primary_content_review_passed_pending_formal_peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "own_scope": {
+      "variants": 6,
+      "bindings": 13
+    },
+    "primary_content_review": [
+      "All six exact tier objects normalized and compared; first five identical except family IDs, transonic independently read as10/12/14/16pp4s; wrappers independently resolved.",
+      "Full own base event/conditions/timer fields match common fixed-SHA cache applicability; no additional5pp fallback, no duration or cooldown override.",
+      "13 actual imports/ukeys/appends and metadata trait/restrictions rechecked; exact RAW name/description hash pairing reused; image identity and cached public file hash unchanged.",
+      "Source reviewed differences: ActionWeaponThrow inherits ActionSpawnProjectile, uses attack-start check; wind effect captures critical state at creation and later hits reuse; before creation unwield cancels effect.",
+      "Math corrected to clamp then conversion then PRD rounding; 32.5/37.5 pools round33/38 at roll, raw tier numbers retain12.5/17.5pp.",
+      "Hypothetical timeline/examples checked; no game test claimed.",
+      "New actual Dual Shivs poison bindings and consumer read: original critical flag increases poison application by2; later interval damage defaults noncritical. Shield exclusion and weakspot2 separately stated; no poison total-damage claim."
+    ],
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-full-tier-wrapper-review.json",
+        "sha256": "409f45a27f1d6c6c32a5968e95ce220d04439788e0ff7668fce092c482619f71"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-trigger-duration-review.json",
+        "sha256": "6878def47c80237a8b761c51883da87848c269abe330c783e32d0ecfa82821a0"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json",
+        "sha256": "4f82ebf4cf42d6921392b601e607b81e4d74705616350070ce82070780bc8480"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-raw-verification.json",
+        "sha256": "18c1bf1d07763979e45041831ffce8a2904cc0c08ab02189c2f485a7bbff3515"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-wind-slash-review.json",
+        "sha256": "45b44adf3ae8f281bd2745f253d3dae8bcecd7306f53388c4a8924a455b0ebe1"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-actual-mode-review.json",
+        "sha256": "ee8dbd518fc1a9c505d26f82cb3dbe854c977423556d2556faf3f6f5ed734b17"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-outside-review.json",
+        "sha256": "c24a712a7a99a034133f1fc4d8444f1168ffd722c8f1a80a1da27a878a9095da"
+      }
+    ],
+    "common_cache_reused": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+    "faster_enabled": false,
+    "root_agent_input": {
+      "config": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-agent-config-v2.json",
+        "sha256": "1a216d72bb4e8905ddd21fabf27bc3b15ab7f106c990b01b645a6fd52ef45d58"
+      },
+      "evidence": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-agent-evidence-v2.json",
+        "sha256": "76e760a626c205fadee56a29551446f5192f7eb763ebb72ff3adaab82375f0fb"
+      }
+    },
+    "root_configuration_sha256": "fc06fde5f8d9ce11e35a69f40868e6b21cc5cc957025dece8358dce306815c31",
+    "new_poison_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-poison-tick-review.json",
+      "sha256": "b2788ff3fc30cbb8a03bcc07cf8cb29874c65fe1a78a1f369499951207f34021"
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-extension-draft.json",
+      "sha256": "eb708459b3453d50444ee5d8f32795c8d393af78c0d376ac1468ed95faf34b26"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 13,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-ui-review.json",
+      "sha256": "4f82ebf4cf42d6921392b601e607b81e4d74705616350070ce82070780bc8480"
+    },
+    "bindings": [
+      {
+        "weapon_id": "combatknife_p1",
+        "mark_id": "combatknife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_combatknife_p1_m1",
+          "loc_weapon_pattern_combatknife_p1_m1",
+          "loc_weapon_mark_combatknife_p1_m1"
+        ],
+        "name_zh_tw": "戰刃 卡塔昌 Mk III",
+        "name_en": "Combat Blade Catachan Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1434,
+        "append_line": 1436
+      },
+      {
+        "weapon_id": "combatknife_p1",
+        "mark_id": "combatknife_p1_m2",
+        "trait_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_combatknife_p1_m2",
+          "loc_weapon_pattern_combatknife_p1_m2",
+          "loc_weapon_mark_combatknife_p1_m2"
+        ],
+        "name_zh_tw": "戰刃 卡塔昌 Mk VI",
+        "name_en": "Combat Blade Catachan Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1524,
+        "append_line": 1526
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m1",
+          "loc_weapon_pattern_combatsword_p3_m1",
+          "loc_weapon_mark_combatsword_p3_m1"
+        ],
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk II",
+        "name_en": "Duelling Sword Maccabian Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1688,
+        "append_line": 1690
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m2",
+          "loc_weapon_pattern_combatsword_p3_m2",
+          "loc_weapon_mark_combatsword_p3_m2"
+        ],
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk IV",
+        "name_en": "Duelling Sword Maccabian Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1499,
+        "append_line": 1501
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m3",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m3",
+          "loc_weapon_pattern_combatsword_p3_m3",
+          "loc_weapon_mark_combatsword_p3_m3"
+        ],
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk V",
+        "name_en": "Duelling Sword Maccabian Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "ukeys_line": 1473,
+        "append_line": 1475
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "mark_id": "dual_shivs_p1_m1",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m1",
+          "loc_weapon_pattern_dual_shivs_p1_m1",
+          "loc_weapon_mark_dual_shivs_p1_m1"
+        ],
+        "name_zh_tw": "短刀 臨時拼湊 型號1",
+        "name_en": "Shivs Improvised Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1500,
+        "append_line": 1502
+      },
+      {
+        "weapon_id": "dual_shivs_p1",
+        "mark_id": "dual_shivs_p1_m2",
+        "trait_id": "weapon_trait_bespoke_dual_shivs_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_dual_shivs_p1_m2",
+          "loc_weapon_pattern_dual_shivs_p1_m2",
+          "loc_weapon_mark_dual_shivs_p1_m2"
+        ],
+        "name_zh_tw": "短刀 臨時拼湊 型號3",
+        "name_en": "Shivs Improvised Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "ukeys_line": 1579,
+        "append_line": 1581
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m1",
+          "loc_weapon_pattern_forcesword_2h_p1_m1",
+          "loc_weapon_mark_forcesword_2h_p1_m1"
+        ],
+        "name_zh_tw": "烈焰力場巨劍 誓約 Mk VI",
+        "name_en": "Blaze Force Greatsword Covenant Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 2795,
+        "append_line": 2797
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_2h_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_2h_p1_m2",
+          "loc_weapon_pattern_forcesword_2h_p1_m2",
+          "loc_weapon_mark_forcesword_2h_p1_m2"
+        ],
+        "name_zh_tw": "烈焰力場巨劍 誓約 Mk VIII",
+        "name_en": "Blaze Force Greatsword Covenant Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 2710,
+        "append_line": 2712
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m1",
+          "loc_weapon_pattern_forcesword_p1_m1",
+          "loc_weapon_mark_forcesword_p1_m1"
+        ],
+        "name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+        "name_en": "Blaze Force Sword Obscurus Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1745,
+        "append_line": 1747
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m2",
+          "loc_weapon_pattern_forcesword_p1_m2",
+          "loc_weapon_mark_forcesword_p1_m2"
+        ],
+        "name_zh_tw": "烈焰力場劍 戴莫斯 Mk IV",
+        "name_en": "Blaze Force Sword Deimos Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1671,
+        "append_line": 1673
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m3",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m3",
+          "loc_weapon_pattern_forcesword_p1_m3",
+          "loc_weapon_mark_forcesword_p1_m3"
+        ],
+        "name_zh_tw": "烈焰力場劍 伊利斯 Mk V",
+        "name_en": "Blaze Force Sword Illisi Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1539,
+        "append_line": 1541
+      },
+      {
+        "weapon_id": "transonic_sword_transonic_knife_p1",
+        "mark_id": "transonic_sword_transonic_knife_p1_m1",
+        "trait_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_dodge_grants_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_pattern_transonic_sword_transonic_knife_p1_m1",
+          "loc_weapon_mark_transonic_sword_transonic_knife_p1_m1"
+        ],
+        "name_zh_tw": "穿音速雙刀 布蘭克斯 Mk XI",
+        "name_en": "Paired Transonic Blades Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 3177,
+        "append_line": 3179
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "inventory_counts": {
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "unresolved": 58,
+      "definitions_outside_intersection": 88
+    },
+    "exact_name_key_variants": 6,
+    "exact_name_key_bound_bindings": 13,
+    "exact_trait_metadata_items": [
+      "content/items/traits/bespoke_combatknife_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_combatsword_p3/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_forcesword_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/dodge_grants_crit_chance"
+    ],
+    "metadata_alias_excluded": {
+      "item": "content/items/traits/bespoke_combataxe_p2/dodge_grants_crit_chance",
+      "trait_id": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+      "weapon_type_restriction": [
+        "combatknife_p1"
+      ],
+      "classification": "Exact-key metadata path is anomalous; the metadata trait is still Combatknife P1 and restriction excludes Combataxe P2. Not a seventh variant/binding."
+    },
+    "exact_outside_definitions": [
+      {
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_dodge_grants_critical_strike_chance",
+        "source_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_stubpistols_p1.lua",
+        "source_line": 394,
+        "metadata_name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+        "classification": "Nearby same-suffix candidate, but not exact Riposte key."
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_dodge_grants_critical_strike_chance",
+        "source_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "source_line": 409,
+        "metadata_name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+        "classification": "Nearby same-suffix candidate, but not exact Riposte key."
+      }
+    ],
+    "unresolved_related": [
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/melee/combataxe_p2_m1",
+        "trait": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "classification": "Retain as unresolved; metadata type restriction is Combatknife P1, not Combataxe P2."
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/melee/combataxe_p2_m2",
+        "trait": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "classification": "Retain as unresolved; metadata type restriction is Combatknife P1, not Combataxe P2."
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/melee/combataxe_p2_m3",
+        "trait": "weapon_trait_bespoke_combatknife_p1_dodge_grants_critical_strike_chance",
+        "classification": "Retain as unresolved; metadata type restriction is Combatknife P1, not Combataxe P2."
+      },
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/dual_stubpistols_p1_m1",
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_dodge_grants_critical_strike_chance",
+        "classification": "Different trait ID and Desperado localization key; outside this Riposte group."
+      }
+    ],
+    "boundary": "Scope is the exact Riposte name-key group; same behavior/suffix or metadata aliases are not auto-merged. Outside definitions are candidates, not declared unused.",
+    "counts_source": "inventory.json counts plus remaining-tasks.json definitions_outside_intersection",
+    "exact_name_key_metadata_item_count": 7,
+    "exact_name_key_metadata_items": [
+      "content/items/traits/bespoke_combatknife_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_combatsword_p3/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_dual_shivs_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_forcesword_2h_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_forcesword_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/dodge_grants_crit_chance",
+      "content/items/traits/bespoke_combataxe_p2/dodge_grants_crit_chance"
+    ]
+  },
+  "primary_resume_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-primary-resume-review.json",
+    "sha256": "7f7bd56a9c7b50bdd2f1fc7c8acda821ec1500321001aaf93812007fb5094dcb"
+  },
+  "poison_event_routing_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/riposte-poison-event-routing-review.json",
+    "sha256": "b0024dad64ed92ff2207a54037b2cf09e30f6c700c8b6c5986e9f3c34450ccca",
+    "conclusion": "on_hit carries damage_profile; on_damage_dealt does not, so one qualifying thrown hit does not apply poison twice."
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "date": "2026-10-03",
+  "blessing": "hit-and-run",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/遊擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_count_as_dodge_vs_ranged_on_close_kill",
+    "weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill",
+    "weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p1_count_as_dodge_vs_ranged_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p2_count_as_dodge_vs_ranged_on_close_kill"
+  ],
+  "added_binding_count": 10,
+  "total_variants": 5,
+  "total_bindings": 10,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-agent-peer-review.json",
+    "peer_review_sha256": "8ca036b03f2ebc0591cf533b223fb8b8432d926f3dd17f8bc162ffec2eec6d00",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "accepted": true,
+    "review_scope": "Final peer review of the root's requested copy and extension-summary corrections; the previously verified fixed-SHA mechanism, tier, wrapper, UI, and attack-mode findings remain applicable. No unaccepted mechanical issue found.",
+    "final_file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-agent-config.json": "fda130d9a538205479d153aaebbbc552f56692597624cc4019cbbbd052397902",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-agent-modes-review.json": "54695fda03b9d8f5d566dcd50948657d128d556db5ad497afae459562d3807a7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-config.json": "0161334ee50d6bcfa9c2d5bbf3683a7423e9da5a7441e76122769a1a538f9681",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-extension-draft.json": "4ddb51e0dafd1a217a0b346d11542d245d9d10ae7b2fb751c83e8c49f91d3f43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-extension-raw-verification.json": "ac733176f3ee5af64836c7087644b7fe95205da642a89db52450eb553503bc9a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-image-upload-journal.json": "9e1b528f23a895c9ad8cffd81c557e5508a4bda7b2ae7e2464c238ca4717e15a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-image.json": "c98aeb6891e40778afa3c0372c99a01bae34f08571a86d1bfa70b506774a5856",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-classification-review.json": "dc30699b635969a93064f49d15d08848086a1794f9ce3ee91ce563294801e1af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-mechanism-review.json": "b17fed0fb20e17699ae8a4f2f616d66d77a562f152b67cfa442376462ce83583",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-modes-review.json": "32b14f474428a2900ca12a001838bf1adfa70d2c621d697ef2a5aea5a3d46c37",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-traits-review.json": "84760f26db756d5eef88ee45af62ad99494e1b424873f61bf8c236dc2e5b2a27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-raw-verification.json": "2cba1b81031a3cd181696c0139c10cdedb4e8caeddf5448ca2b031d90b6453eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-review.json": "dd02ecab23b1e731984134468018f3351a6b099b92791eac47676cfc7af4049a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-raw-verification.json": "f2bb55e61df079f7680ec99bb5242204d8d97bed58703607c7aa75fa55780970",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "2f709112089d05fdb6c5c3e20d3d0a044ef9ed5a938b1efff568e4491427f8a7",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json": "8f35c2194f20e2de1cc616c248f7e3781f5238d4720f8bc51bb111c763eb1932",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/DAMAGE_PERCENTAGE_REVIEW.md": "525c78ebcc2b9eef6582c9374ed35884d2629e45d9df9c99cb55e9eb6d767347",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/LOCALIZATION_COMPARISON.md": "26000750853f11af3a5325bd14b333c0c09e24d7eb490c9926dc773f1b51379d",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/README.md": "90ec1a999c7840822c8431a465a7ea775b1a46f1a4fc6424651b382c4441b756",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/SOURCE_INDEX.md": "4289fe215e02de8ed7c65febda4ad85df342ce70089b863c9dfbac24530b7aa1",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/TIER_VALUES.md": "1b96685d73d9da145fccc6bdab0f6d25b05b5b7895c2648ac509f81c4d6044e1",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/WEAPON_COMPATIBILITY.md": "d3cd8f1590a92bbcf1051af06b70ec69ceeee610b2495799e388267cdca2d610",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/weapon_trait_bespoke_autogun_p1_count_as_dodge_vs_ranged_on_close_kill.md": "d9449ee6f053dfc23ef9bec9cf583743b984835241945e97bfa6b537b9d34e89",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill.md": "4ccb1519ff683f1651af001a1e98a2c11de2898e4f3718b51dbdd0fab7a77958",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill.md": "74811d73846539671e2332cc4d1fcdea6641815fc2e0bf240a052fdaa85d26e6",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/weapon_trait_bespoke_shotgun_p1_count_as_dodge_vs_ranged_on_close_kill.md": "b60ee878354bcece53a1c15507018a0a02a2f44a2ea2ec5ebeac68e158eda6a5",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊/weapon_trait_bespoke_shotgun_p2_count_as_dodge_vs_ranged_on_close_kill.md": "23f7c98ac17e4051e1d5e5907b169b62d0d19048cd86c08f1f00ef25c545b0f5"
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "hit-and-run",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_053",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_053.png",
+      "attachment": "https://github.com/user-attachments/assets/e0cc7da1-f63c-4ac4-aa8a-c987737212e5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5969076465",
+      "acquired_date": "2026-10-03",
+      "sha256": "0b90cf7d17abc63a38634c6812058d3e4d26f0534145331cc0a2278d1e94fa05",
+      "content_type": "image/png",
+      "size": 2978,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "遊擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Sol visually inspected the public Issue attachment; original flat icon mask retained"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 22,
+      "tables": 20,
+      "rows": 324,
+      "lists": 99,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 111,
+      "source_files": 36,
+      "bindings": 282,
+      "variants": 147,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 20,
+      "source_object_cache": {
+        "cache_hits": 36,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 23,
+      "local_references": 527,
+      "remote_references": 346,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 1,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-variant-template-change-full-scan.json",
+        "sha256": "83225417b778eb515f04b50a0bc5bbd335898794491c7c3d63c3f7adc1c2fb48",
+        "trigger": "efficiency-variant-template-change"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 130,
+    "not_started_name_groups": 128,
+    "partial_name_groups": 2,
+    "remaining_variants": 458,
+    "remaining_bindings": 903,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c7bb952bf18ddf144df020676824ec319e3b3299b38097890bacf939c7f3e43f"
+  },
+  "previous_local_commit": "4081b7459d0ddba6b04647472d4a166792949e28",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "primary_reviewer": "Sol / xhigh",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "tier_duration_seconds": [
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "tier_override_replaces_base_2_seconds": true,
+    "distance_m": 12.5,
+    "squared_distance_m2": 156.25,
+    "distance_boundary_included": true,
+    "requires_kill_ranged_and_same_item": true,
+    "conditional_proc_func": null,
+    "retrigger_resets_duration": true,
+    "switch_preserves_existing_timer": true,
+    "no_stacking": true,
+    "no_cooldown": true,
+    "ranged_dodge_is_consumer_dependent": true,
+    "undodgeable_hitscan_bypasses_dodge": true,
+    "modes_directly_verified": true,
+    "receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-traits-review.json",
+        "sha256": "84760f26db756d5eef88ee45af62ad99494e1b424873f61bf8c236dc2e5b2a27"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-mechanism-review.json",
+        "sha256": "b17fed0fb20e17699ae8a4f2f616d66d77a562f152b67cfa442376462ce83583"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-classification-review.json",
+        "sha256": "dc30699b635969a93064f49d15d08848086a1794f9ce3ee91ce563294801e1af"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-modes-review.json",
+        "sha256": "32b14f474428a2900ca12a001838bf1adfa70d2c621d697ef2a5aea5a3d46c37"
+      }
+    ],
+    "common_cache_application": {
+      "cache_path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "records": [
+        "proc-active-timer",
+        "proc-cooldown-retrigger",
+        "proc-keyword-condition",
+        "proc-event-refresh",
+        "exact-item-match",
+        "attack-on-hit-payload",
+        "trait-equip-target",
+        "weapon-equip-install",
+        "weapon-unwield-lifecycle",
+        "ranged-dodge-keyword",
+        "hitscan-undodgeable",
+        "ranged-action-dispatch",
+        "pellet-attack-dispatch",
+        "melee-sweep-dispatch"
+      ],
+      "current_template_conditions_confirmed": "base on_hit+item/ranged-close-death predicates; active_duration override; no held conditional, cooldown or duration override branch; every actual action/type/profile path checked",
+      "reused_without_full_reread": true
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-extension-draft.json",
+      "sha256": "4ddb51e0dafd1a217a0b346d11542d245d9d10ae7b2fb751c83e8c49f91d3f43"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 10,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-review.json",
+      "sha256": "dd02ecab23b1e731984134468018f3351a6b099b92791eac47676cfc7af4049a"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p2",
+        "mark_id": "autogun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p2_m1",
+          "loc_weapon_pattern_autogun_p2_m1",
+          "loc_weapon_mark_autogun_p2_m1"
+        ],
+        "name_zh_tw": "槍托自動槍 弗拉克斯 Mk II",
+        "name_en": "Braced Autogun Vraks Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 812,
+        "append_line": 814
+      },
+      {
+        "weapon_id": "autogun_p2",
+        "mark_id": "autogun_p2_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p2_m2",
+          "loc_weapon_pattern_autogun_p2_m2",
+          "loc_weapon_mark_autogun_p2_m2"
+        ],
+        "name_zh_tw": "槍托自動槍 格拉亞 Mk IV",
+        "name_en": "Braced Autogun Graia Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 863,
+        "append_line": 865
+      },
+      {
+        "weapon_id": "autogun_p2",
+        "mark_id": "autogun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p2_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p2_m3",
+          "loc_weapon_pattern_autogun_p2_m3",
+          "loc_weapon_mark_autogun_p2_m3"
+        ],
+        "name_zh_tw": "槍托自動槍 阿格里皮娜 Mk VIII",
+        "name_en": "Braced Autogun Agripinaa Mk VIII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 817,
+        "append_line": 819
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p3_m1",
+          "loc_weapon_pattern_lasgun_p3_m1",
+          "loc_weapon_mark_lasgun_p3_m1"
+        ],
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk VIc",
+        "name_en": "Recon Lasgun Accatran Mk VIc",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 730,
+        "append_line": 732
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p3_m2",
+          "loc_weapon_pattern_lasgun_p3_m2",
+          "loc_weapon_mark_lasgun_p3_m2"
+        ],
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk XII",
+        "name_en": "Recon Lasgun Accatran Mk XII",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 740,
+        "append_line": 742
+      },
+      {
+        "weapon_id": "lasgun_p3",
+        "mark_id": "lasgun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p3_m3",
+          "loc_weapon_pattern_lasgun_p3_m3",
+          "loc_weapon_mark_lasgun_p3_m3"
+        ],
+        "name_zh_tw": "偵察鐳射槍 奧克塔蘭 Mk XIV",
+        "name_en": "Recon Lasgun Accatran Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 726,
+        "append_line": 728
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m1",
+          "loc_weapon_pattern_shotgun_p2_m1",
+          "loc_weapon_mark_shotgun_p2_m1"
+        ],
+        "name_zh_tw": "雙管霰彈槍 十字星 Mk XI",
+        "name_en": "Double-Barrelled Shotgun Crucis Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1110,
+        "append_line": 1112
+      },
+      {
+        "weapon_id": "shotgun_p2",
+        "mark_id": "shotgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_shotgun_p2_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p2_m3",
+          "loc_weapon_pattern_shotgun_p2_m3",
+          "loc_weapon_mark_shotgun_p2_m3"
+        ],
+        "name_zh_tw": "雙管霰彈槍 克魯克 Mk IV",
+        "name_en": "Double-Barrelled Shotgun Krourk Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1103,
+        "append_line": 1105
+      },
+      {
+        "weapon_id": "autogun_p1",
+        "mark_id": "autogun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p1_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p1_m1",
+          "loc_weapon_pattern_autogun_p1_m1",
+          "loc_weapon_mark_autogun_p1_m1"
+        ],
+        "name_zh_tw": "步兵自動槍 阿格里皮娜 Mk I",
+        "name_en": "Infantry Autogun Agripinaa Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 768,
+        "append_line": 770
+      },
+      {
+        "weapon_id": "shotgun_p1",
+        "mark_id": "shotgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_shotgun_p1_count_as_dodge_vs_ranged_on_close_kill",
+        "loc_ids": [
+          "loc_weapon_family_shotgun_p1_m1",
+          "loc_weapon_pattern_shotgun_p1_m1",
+          "loc_weapon_mark_shotgun_p1_m1"
+        ],
+        "name_zh_tw": "戰鬥霰彈槍 紮羅娜 Mk VI",
+        "name_en": "Combat Shotgun Zarona Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 950,
+        "append_line": 952
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "exact_name_metadata_items_total": 6,
+    "in_scope_variants": 5,
+    "in_scope_bindings": 10,
+    "exact_outside_candidates": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/count_as_dodge_vs_ranged_on_close_kill",
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_count_as_dodge_vs_ranged_on_close_kill",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ],
+        "tier_source_range": [
+          475,
+          504
+        ],
+        "wrapper_line": 13,
+        "inventory_status": "unresolved: trait_not_imported"
+      }
+    ],
+    "source_only_candidates": [
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p3_count_as_dodge_vs_ranged_on_close_kill",
+        "tier_source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua:138-167",
+        "wrapper": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua:18",
+        "exact_metadata_item_found": false
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_shotgun_p4_count_as_dodge_vs_ranged_on_close_kill",
+        "tier_source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua:138-167",
+        "wrapper": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua:18",
+        "exact_metadata_item_found": false
+      }
+    ],
+    "inventory_reconciliation": {
+      "initial_primary_ui_receipt_binding_count": 8,
+      "updated_inventory_binding_count": 10,
+      "missing_before_correction": [
+        "autogun_p1_m1",
+        "shotgun_p1_m1"
+      ],
+      "initial_classification": "definitions_not_bound despite exact metadata restriction and fixed-source import/ukeys/append; both tier tables contain all four overrides.",
+      "correction_audit": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json",
+      "status": "root corrected the shared inventory generator; this config remains a local ignored evidence draft and does not edit shared inventory."
+    },
+    "dual_stubpistols_reason": "Exact trait metadata, tier literal, and wrapper exist, but the only dual_stubpistols_p1_m1 weapon template imports/appends the stubrevolver_p1 category; inventory unresolved trait_not_imported is consistent.",
+    "shotgun_p3_p4_reason": "Source tier definitions and wrappers exist, but there are no exact metadata trait items; do not infer player availability."
+  }
+}

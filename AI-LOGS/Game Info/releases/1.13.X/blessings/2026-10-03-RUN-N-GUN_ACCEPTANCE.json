@@ -1,0 +1,437 @@
+{
+  "date": "2026-10-03",
+  "blessing": "run-n-gun",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/連跑帶打/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_boltpistol_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_dual_autopistols_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_forcestaff_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_forcestaff_p2_hipfire_while_sprinting",
+    "weapon_trait_bespoke_forcestaff_p3_hipfire_while_sprinting",
+    "weapon_trait_bespoke_forcestaff_p4_hipfire_while_sprinting",
+    "weapon_trait_bespoke_laspistol_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_needlepistol_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_ogryn_thumper_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_ogryn_thumper_p3_hipfire_while_sprinting",
+    "weapon_trait_bespoke_shotgun_p2_hipfire_while_sprinting",
+    "weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting",
+    "weapon_trait_bespoke_stubrevolver_p1_hipfire_while_sprinting"
+  ],
+  "added_binding_count": 19,
+  "total_variants": 14,
+  "total_bindings": 19,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "Run n Gun single-blessing evidence and final docs; read-only",
+    "findings": [
+      "14 formal variants / 19 model bindings; same name and description RAW hashes 168636d5 / 5ae2e578, common icon051.",
+      "I–IV conditional damage_near .06/.09/.12/.15; spread -.3 except shotgun_p2 -.1.",
+      "Conditional near damage requires held slot and Sprint.is_sprinting, including sprint jumping; constant spread and keyword do not use those gates.",
+      "Buff is on_equip; unwield does not remove it. Constant stat/keyword retained; HUD active/inactive does not gate all stat updates.",
+      "Close12.5 / far30 with sqrt interpolation; near damage and spread additive; primary examples checked.",
+      "Outside definitions4: AutogunP1 and ShotgunP3/P4 no exact trait metadata; DualStubPistols metadata but template imports Stubrevolver category. None classified unused."
+    ],
+    "review_correction": {
+      "initial_issue": "Agent treated _check_input as sole gate, inferred 3 templates without hipfire_inputs cannot start firing during sprint.",
+      "primary_evidence": "Sprinting fixed_update137 updates weapon actions before input peek147; ActionHandler673–687 validates and consumes next input then starts; ActionAvailability39–54/82–96 permits action tag+keyword without hipfire_inputs.",
+      "agent_retraction": true,
+      "document_resolution": "Removed hipfire_inputs as mandatory action-start prerequisite; described action availability and pending-input/state path separately, with fixed source refs."
+    },
+    "final_document_review": {
+      "result": "accepted",
+      "required_corrections": [],
+      "response": "Accepted. The updated source index accurately describes action availability and input-consumption order. No remaining necessary corrections."
+    },
+    "primary_review": "Directly read 14 tier overrides and clone wrappers, 19 template action tags, state/handler/availability order, equip lifecycle, stat/keyword consumers, sqrt-distance and spread formulas; retained actual source boundaries."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "run-n-gun",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_051",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_051.png",
+      "attachment": "https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965859975",
+      "acquired_date": "2026-10-03",
+      "sha256": "4fc0caa8b1a006b54fdfcfc3a11cb71395714466fcbdd141f62ca1c00a6d154e",
+      "content_type": "image/png",
+      "size": 4850,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "連跑帶打祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 201,
+      "tables": 174,
+      "rows": 1327,
+      "lists": 241
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 641,
+      "source_files": 243,
+      "bindings": 127,
+      "variants": 65,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 901,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 201,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 150,
+    "not_started_name_groups": 150,
+    "partial_name_groups": 0,
+    "remaining_variants": 523,
+    "remaining_bindings": 1041,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "9583eea9d49fb4e8e77bdf2ba65fb6790e0428a41a2d752294d9a9169856c565"
+  },
+  "previous_local_commit": "f6e39490b107d95d288db4e9d47e7aaac32ce947",
+  "current_blessing_formula_review": {
+    "primary_review_complete": true,
+    "all_14_trait_overrides_read": true,
+    "damage_near_tiers": [
+      0.06,
+      0.09,
+      0.12,
+      0.15
+    ],
+    "spread_normal": -0.3,
+    "spread_shotgun_p2": -0.1,
+    "conditional_damage_held_and_sprinting": true,
+    "constant_spread_and_keyword_retained_on_unwield": true,
+    "HUD_active_not_stat_gate": true,
+    "close": 12.5,
+    "far": 30,
+    "sqrt_interpolation": true,
+    "spread_and_damage_additive": true,
+    "examples": [
+      {
+        "d": 10,
+        "q": 0.15,
+        "phase_base": 100,
+        "result": 115
+      },
+      {
+        "d": 21.25,
+        "q": 0.15,
+        "phase_base": 100,
+        "result": 104.39339828220177
+      },
+      {
+        "d": 10,
+        "q": 0.15,
+        "other_damage": 0.25,
+        "phase_base": 100,
+        "result": 140
+      },
+      {
+        "spread_base": 2,
+        "spread_reduction": 0.3,
+        "result": 1.4
+      },
+      {
+        "spread_base": 2,
+        "spread_reduction": 0.1,
+        "result": 1.8
+      },
+      {
+        "spread_base": 2,
+        "other_spread": -0.2,
+        "spread_reduction": 0.3,
+        "result": 1.0
+      }
+    ],
+    "sprint_jump_counts": true,
+    "action_start_keyword_exemption_before_input_peek": true,
+    "primary_action_refs": [
+      {
+        "mark": "autopistol_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "hipfire_inputs_lines": [],
+        "action_keyword_lines": [
+          309
+        ]
+      },
+      {
+        "mark": "boltpistol_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          773
+        ],
+        "action_keyword_lines": [
+          282
+        ]
+      },
+      {
+        "mark": "boltpistol_p1_m2",
+        "template": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "hipfire_inputs_lines": [
+          773
+        ],
+        "action_keyword_lines": [
+          282
+        ]
+      },
+      {
+        "mark": "dual_autopistols_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "hipfire_inputs_lines": [],
+        "action_keyword_lines": [
+          287
+        ]
+      },
+      {
+        "mark": "forcestaff_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          1166
+        ],
+        "action_keyword_lines": [
+          309,
+          401
+        ]
+      },
+      {
+        "mark": "forcestaff_p2_m1",
+        "template": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "hipfire_inputs_lines": [
+          1227
+        ],
+        "action_keyword_lines": [
+          366
+        ]
+      },
+      {
+        "mark": "forcestaff_p3_m1",
+        "template": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p3_m1.lua",
+        "hipfire_inputs_lines": [
+          1303
+        ],
+        "action_keyword_lines": [
+          356
+        ]
+      },
+      {
+        "mark": "forcestaff_p4_m1",
+        "template": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p4_m1.lua",
+        "hipfire_inputs_lines": [
+          1155
+        ],
+        "action_keyword_lines": [
+          308
+        ]
+      },
+      {
+        "mark": "laspistol_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          862
+        ],
+        "action_keyword_lines": [
+          278
+        ]
+      },
+      {
+        "mark": "laspistol_p1_m3",
+        "template": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "hipfire_inputs_lines": [
+          866
+        ],
+        "action_keyword_lines": [
+          279
+        ]
+      },
+      {
+        "mark": "needlepistol_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          795
+        ],
+        "action_keyword_lines": [
+          306
+        ]
+      },
+      {
+        "mark": "needlepistol_p1_m2",
+        "template": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "hipfire_inputs_lines": [
+          792
+        ],
+        "action_keyword_lines": [
+          306
+        ]
+      },
+      {
+        "mark": "ogryn_thumper_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          844
+        ],
+        "action_keyword_lines": [
+          265
+        ]
+      },
+      {
+        "mark": "ogryn_thumper_p1_m3",
+        "template": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "hipfire_inputs_lines": [],
+        "action_keyword_lines": [
+          265,
+          392
+        ]
+      },
+      {
+        "mark": "shotgun_p2_m1",
+        "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "hipfire_inputs_lines": [
+          1114
+        ],
+        "action_keyword_lines": [
+          391
+        ]
+      },
+      {
+        "mark": "shotgun_p2_m3",
+        "template": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "hipfire_inputs_lines": [
+          1107
+        ],
+        "action_keyword_lines": [
+          399
+        ]
+      },
+      {
+        "mark": "shotpistol_shield_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          1528
+        ],
+        "action_keyword_lines": [
+          461
+        ]
+      },
+      {
+        "mark": "stubrevolver_p1_m1",
+        "template": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "hipfire_inputs_lines": [
+          977
+        ],
+        "action_keyword_lines": [
+          255
+        ]
+      },
+      {
+        "mark": "stubrevolver_p1_m2",
+        "template": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "hipfire_inputs_lines": [
+          880
+        ],
+        "action_keyword_lines": [
+          255
+        ]
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 15,
+    "bound_variants": 14,
+    "same_name_candidates": [
+      {
+        "trait": "weapon_trait_bespoke_autogun_p1_hipfire_while_sprinting",
+        "reason": "source definition and wrapper present; no exact-name trait item in current metadata intersection",
+        "definition": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+          "line": 64
+        },
+        "exact_trait_metadata_count": 0,
+        "wrapper": {
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+          "line": 15
+        }
+      },
+      {
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_hipfire_while_sprinting",
+        "reason": "metadata present but actual dual stub template imports Stubrevolver traits; inventory trait_not_imported",
+        "definition": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_stubpistols_p1.lua",
+          "line": 331
+        },
+        "exact_trait_metadata_count": 1,
+        "wrapper": {
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_stubpistols_p1_buff_templates.lua",
+          "line": 16
+        }
+      },
+      {
+        "trait": "weapon_trait_bespoke_shotgun_p3_hipfire_while_sprinting",
+        "reason": "source definition and wrapper present; no exact-name trait item in current metadata intersection",
+        "definition": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+          "line": 542
+        },
+        "exact_trait_metadata_count": 0,
+        "wrapper": {
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+          "line": 34
+        }
+      },
+      {
+        "trait": "weapon_trait_bespoke_shotgun_p4_hipfire_while_sprinting",
+        "reason": "source definition and wrapper present; no exact-name trait item in current metadata intersection",
+        "definition": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+          "line": 542
+        },
+        "exact_trait_metadata_count": 0,
+        "wrapper": {
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+          "line": 34
+        }
+      }
+    ],
+    "status": "reviewed candidates; not classified unused"
+  }
+}

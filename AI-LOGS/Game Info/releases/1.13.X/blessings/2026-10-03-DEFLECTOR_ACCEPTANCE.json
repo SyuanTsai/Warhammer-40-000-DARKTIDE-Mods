@@ -1,0 +1,298 @@
+{
+  "date": "2026-10-03",
+  "blessing": "deflector",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/偏轉/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_p1_can_block_ranged"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 2,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "primary_reviewer": "Sol / xhigh",
+    "scope": "Incremental formal peer of one added single-handed variant; unchanged accepted two-handed mechanisms retained.",
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-agent-peer-review.json",
+    "peer_review_sha256": "60770b9f73247aa9e67facd3654a14eedc8b9968f4131bcd7beb9a49744656a3",
+    "final_file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/README.md": "6d78f8942db285970baf3b59ce510ab7dc0cb71ae01beec391a062546fc08c46",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/DAMAGE_PERCENTAGE_REVIEW.md": "84dc8307611ddef469e8ac8d039c52627fbbc4e7bb8acd31e1b87f8d4fb69056",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/LOCALIZATION_COMPARISON.md": "efe5e69d89129f1e9004bf34d0183310be5e2351f55bdfeba3df1b635371ca76",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/SOURCE_INDEX.md": "3b1842bee572cb2b83fd6172d742ed467afa3e98150d8d006ded9d088025bd4b",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/TIER_VALUES.md": "b7ad7e5dfce534c4d64f008735562d63298b176bd61d15647dffc2d7498baea5",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/WEAPON_COMPATIBILITY.md": "5d662935c7157fdc21d57a3be93f062c70903510c44299542e788393bdc3a6ea",
+      "Game Info/releases/1.13.X/blessings/entries/偏轉/weapon_trait_bespoke_forcesword_p1_can_block_ranged.md": "9518d24e4cbe7ded8ef9d68dc44f98d4b07f10c862e74b351c01293523d63ea7",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "1a6dc0443ad37e0f8f440477a5b88f65127d19bae87cde1d662591c90056aaac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-config.json": "8c5f85a59274db8c78f14c90b4a7ff3b34852c36bd3c57015d37a440ca7ac548",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-extension-draft.json": "19e5bdcb1a3df48df29e29fbace52805cb841adb909a6546a742c5471aeb7ef3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-stamina-review.json": "39c319bfee22713675eaf2367e00a983e16ca8a76384b31d165e21688d7149e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-traits-review.json": "d561b336f5bf699990816ec13b82711e256bf5e7332a91ec14f93692f269b3ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-ui-raw-verification.json": "12d140463161bb7fcc80731c0fdb25138ddb1b959c36e115b392f69d357db2ba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-ui-review.json": "fce6483275a550e795111f0c72540442d643825cc168f486d2612e7357617d9b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-image.json": "c2099a6d1e5d903bb43419e69465b734992faa9df2b2d211fa8483cb629d3666",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "caa6cf20726eee788701f361e42a472698b8478c3656da3bc2511449a53add06",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-agent-config.json": "88f8bae273b40188699a36437842b8e79a11a7165e2b9ab745587d885306fc2e"
+    },
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deflector",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_081",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_081.png",
+      "attachment": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967781697",
+      "acquired_date": "2026-10-03",
+      "sha256": "9309886adfa54143fcc2197d632f57543eaffed5b1d90f7b4d2b6c55fc5761b7",
+      "content_type": "image/png",
+      "size": 3947,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "偏轉祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected actual public Issue attachment pixels;128×128 and matching source/public SHA-256."
+    },
+    "verification_scope": "New P1 metadata icon081 matched to the unchanged, previously displayed/hash-verified/public-200 Media-Assets Issue attachment."
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 9,
+      "tables": 9,
+      "rows": 85,
+      "lists": 14,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 61,
+      "source_files": 25,
+      "bindings": 283,
+      "variants": 148,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 8,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 9,
+      "local_references": 100,
+      "remote_references": 90,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 1,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-variant-template-change-full-scan.json",
+        "sha256": "83225417b778eb515f04b50a0bc5bbd335898794491c7c3d63c3f7adc1c2fb48",
+        "trigger": "efficiency-variant-template-change"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 129,
+    "not_started_name_groups": 128,
+    "partial_name_groups": 1,
+    "remaining_variants": 457,
+    "remaining_bindings": 902,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "caa6cf20726eee788701f361e42a472698b8478c3656da3bc2511449a53add06"
+  },
+  "previous_local_commit": "498ee3f6c3e86d22e64a60875eece8a4542fbf82",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "new one-handed variant; accepted two-handed mechanics retained",
+    "resolved_ranged_cost": {
+      "formula": "C(t)=lerp_basic+(lerp_perfect-lerp_basic)*t",
+      "t": 0.5,
+      "raw_inner_cost": 0.5,
+      "after_deflector_by_tier": [
+        0.3875,
+        0.375,
+        0.3625,
+        0.35
+      ],
+      "separate_stamina_cost_multiplier": "Stamina.drain separately multiplies the paid amount by stat_buffs.stamina_cost_multiplier; it is not the lerp t or supplied by Deflector.",
+      "example": "Assume an eligible ranged inner block, all other cost factors=1: raw 0.5; Deflector IV gives 0.5*0.7=0.35. If an independent stamina_cost_multiplier=0.8 is active, final drain=0.28."
+    },
+    "values": {
+      "source_available_tiers_in_inventory": null,
+      "block_cost_multiplier_by_tier": [
+        0.775,
+        0.75,
+        0.725,
+        0.7
+      ],
+      "block_cost_reduction_percent_by_tier": [
+        22.5,
+        25,
+        27.5,
+        30
+      ],
+      "format": "100 - multiplier*100",
+      "values_scope": "Same I–IV values and cloned base buff as the accepted two-handed variant."
+    },
+    "verified_differences": [
+      {
+        "aspect": "Stamina template",
+        "one_handed": "forcesword_p1_m1",
+        "two_handed": "linesman_rangedblock",
+        "shared_result": "Default melee cost fields and stamina_modifier differ, but both use ranged inner endpoints lerp_basic=0.75 and lerp_perfect=0.25; neither defines ranged outer cost."
+      },
+      {
+        "aspect": "Ranged lerp input",
+        "one_handed": "P1 M1 base_stats provides dps, finesse, first_target, weapon_special_warp_charge_cost, and mobility targets; it has no defence/stamina target.",
+        "two_handed": "Its defence stat maps to sprint_cost_per_second, block_cost_default inner/outer, and push_cost only; it has no block_cost_ranged target.",
+        "shared_result": "No ranged current t or DEFAULT_LERP_VALUE is supplied for either actual template; the fallback t=0.5 resolves both ranged inner raw costs to 0.5."
+      },
+      {
+        "aspect": "Special action",
+        "one_handed": "WeaponSpecialWarpChargedAttacks.",
+        "two_handed": "WeaponSpecialKillCountCharges.",
+        "shared_result": "Activating or attacking with the special is not itself a block; the shared is_blocking condition still applies."
+      }
+    ],
+    "actual_endpoint_corrections": [],
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-traits-review.json",
+        "sha256": "d561b336f5bf699990816ec13b82711e256bf5e7332a91ec14f93692f269b3ff"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-mark-extension-primary-stamina-review.json",
+        "sha256": "39c319bfee22713675eaf2367e00a983e16ca8a76384b31d165e21688d7149e5"
+      }
+    ],
+    "new_variant_data": {
+      "values_scope": "新增單手 forcesword_p1_m1；集中等級數值與既有雙手變體相同。",
+      "source_available_tiers_in_inventory": null,
+      "block_cost_multiplier_by_tier": [
+        0.775,
+        0.75,
+        0.725,
+        0.7
+      ],
+      "block_cost_reduction_percent_by_tier": [
+        22.5,
+        25,
+        27.5,
+        30
+      ],
+      "active_condition": "The weapon item slot must be wielded and the player must be blocking.",
+      "default_inner_block_angle_radians": "0.33*pi single-side angle; +/-59.4 degrees, total118.8 degrees",
+      "default_outer_block_angle_radians": "pi",
+      "ranged_outer_cost_behavior": "No outer ranged cost exists; Block.is_blocking rejects a ranged attack when the angle is outside inner because the selected ranged block-cost entry is nil.",
+      "other_stat_buffs": "The block consumer multiplies the generic block-cost multiplier/modifier and, for ranged attacks, the ranged-specific multiplier/modifier. No specific skill or equipment provider is attributed here.",
+      "total_ranged_block_cone_degrees": 118.8,
+      "block_cost_stat_condition": "item slot wielded; tier override applied through base conditional_stat_buffs",
+      "ranged_keyword_condition": "item slot wielded (conditional keyword fallback gate)",
+      "template_lerp_endpoints_are_not_perfect_block_costs": true,
+      "resolved_ranged_inner_cost": 0.5,
+      "ranged_inner_fallback_lerp": 0.5,
+      "resolved_ranged_inner_cost_after_tier": [
+        0.3875,
+        0.375,
+        0.3625,
+        0.35
+      ],
+      "actual_ranged_block_condition": "blocking state and ranged keyword then angle/cost/profile gates",
+      "stamina_template": "forcesword_p1_m1",
+      "stamina_template_endpoints": {
+        "ranged_inner": [
+          0.75,
+          0.25
+        ],
+        "ranged_outer": null,
+        "default_inner": [
+          1.5,
+          0.5
+        ],
+        "default_outer": [
+          2,
+          1
+        ]
+      },
+      "stamina_modifier": 2
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-extension-draft.json",
+      "sha256": "19e5bdcb1a3df48df29e29fbace52805cb841adb909a6546a742c5471aeb7ef3"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-primary-ui-review.json",
+      "sha256": "8034e32159d4378e0d2c35d5cbbb3054c43c318c9f12fe8fc216be01fd4cb66b"
+    },
+    "bindings": [
+      {
+        "weapon_id": "forcesword_p1",
+        "mark_id": "forcesword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_can_block_ranged",
+        "loc_ids": [
+          "loc_weapon_family_forcesword_p1_m1",
+          "loc_weapon_pattern_forcesword_p1_m1",
+          "loc_weapon_mark_forcesword_p1_m1"
+        ],
+        "name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+        "name_en": "Blaze Force Sword Obscurus Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1745,
+        "append_line": 1747
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "promoted_candidate": "weapon_trait_bespoke_forcesword_p1_can_block_ranged",
+    "binding_verified": true,
+    "unresolved_exact_key_candidates": []
+  },
+  "incremental_scope": {
+    "new_variant_count": 1,
+    "new_binding_count": 1,
+    "retained_accepted_variant_ids": [
+      "weapon_trait_bespoke_forcesword_2h_p1_can_block_ranged"
+    ],
+    "previous_acceptance_sha256": "469c855ed1ce899be03c29bb1464cca3fb9bd352371c8e6478ea3cc5dfd31df0",
+    "previous_acceptance_last_commit": "ea8874d8c0fe837310b0c2c940412e6a450fa48a",
+    "previous_total_variants": 1,
+    "previous_total_bindings": 2,
+    "existing_endpoint_corrections": []
+  }
+}

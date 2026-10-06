@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-03",
+  "blessing": "shattering-impact",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/破碎衝擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_bolter_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_ogryn_thumper_p2_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_plasmagun_p1_targets_receive_rending_debuff"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 4,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "four variants/six bindings source research, corrected gauntlet route and primary-config prose/formula cross-review",
+    "findings": [
+      "I–IV1/2/3/4; target .025/16cap/5s shared refresh",
+      "Gauntlet ordinary and special explosion profiles all ranged flags; melee profiles no flag",
+      "Thumper instant blast qualifies; bolter and plasma overheat blasts do not",
+      "Damage then queued proc; wielded condition checked at processing"
+    ],
+    "draft_corrections": [
+      "Primary traced actual Gauntlet explosion templates and rejected original exclusion; agent rechecked and confirmed both blasts qualify",
+      "Primary resolved four missing wrapper path segments",
+      "Primary normalized Gauntlet family to exact current RAW key (agent draft used a different label)"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "penetrating-flame",
+        "shattering-impact",
+        "bloodletter"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted after primary added requested armor coefficient premise",
+      "required_corrections": [
+        "Use armor rending coefficient 1 as example premise; primary corrected config and formal page."
+      ]
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "shattering-impact",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_138",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_138.png",
+      "attachment": "https://github.com/user-attachments/assets/4f6afe3b-84a0-4de9-826a-1bda5e3594b5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966421279",
+      "acquired_date": "2026-10-03",
+      "sha256": "17063a994dfe156a59496420639bc06e92a7a244eeb192ffdf4be6dc7ec975f1",
+      "content_type": "image/png",
+      "size": 4238,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "破碎衝擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 266,
+      "tables": 223,
+      "rows": 1783,
+      "lists": 342
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 829,
+      "source_files": 297,
+      "bindings": 160,
+      "variants": 85,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 966,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 266,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 144,
+    "not_started_name_groups": 144,
+    "partial_name_groups": 0,
+    "remaining_variants": 503,
+    "remaining_bindings": 1008,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "ca73c50262e8dcb2b81b000240f9486b327c30473fdc66dcb048f16c74bc35e9"
+  },
+  "previous_local_commit": "479e21da78b234d71b8290d89b665bfea451389e",
+  "current_blessing_formula_review": {
+    "result": "passed",
+    "scope": "current capped target stacks, IV sequence and piecewise armor-phase examples; independently recomputed by primary",
+    "checks": [
+      {
+        "D": 100,
+        "A": 0.5,
+        "S": 4,
+        "B": 0.1,
+        "F": 0.6,
+        "before": 50,
+        "after": 60,
+        "relative_increase": 0.2
+      },
+      {
+        "D": 100,
+        "A": 0.1,
+        "S": 16,
+        "B": 0.4,
+        "F": 0.5,
+        "before": 10,
+        "after": 50
+      },
+      {
+        "D": 100,
+        "A": 0.9,
+        "S": 16,
+        "B": 0.4,
+        "F": 1.075,
+        "before": 90,
+        "after": 107.5
+      }
+    ],
+    "same_hit_retroactive": false,
+    "same_frame_second_hit_guaranteed": false
+  },
+  "ui_name_review": {
+    "result": "passed",
+    "scope": "all six actual UI family/pattern/mark localization keys, fixed source registration/import/appends and matching metadata icon/restrictions",
+    "thumper_restriction_alias": "ogryn_thumper_p2 maps to thumper_p2"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 4,
+    "bound_variants": 4,
+    "bindings": 6,
+    "same_name_candidates": [],
+    "unresolved_related_but_different_key": [],
+    "status": "Exact localization-key inventory/metadata intersection checked; all four exact metadata items are bound; no exact-key outside candidate.",
+    "available_tiers": null
+  }
+}

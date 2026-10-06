@@ -1,0 +1,452 @@
+{
+  "date": "2026-10-05",
+  "blessing": "fire-frenzy",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill",
+    "weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill"
+  ],
+  "added_binding_count": 17,
+  "total_variants": 7,
+  "total_bindings": 17,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "fire-frenzy",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/riposte",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-formal-peer-scope.json",
+    "scope_sha256": "c1f79c761199873a5be7c3bb1c0716017f007352e62853f005de7d5a3ca8b87b",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-config.json": "38d53c6958d81ec1df278355431a04fe50134e2232fe6421a44f414bdfc356c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-draft.md": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-evidence.json": "84a8c1a38c2223ee05594bf135529640cba330940fe9bcda9361e5d05dbdd22b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-config.json": "ac4f8fec42ac4fed42da2675a85880814dbdd3837f175bf5a89ac11c51a76eff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-extension-draft.json": "64a9050ee72a73bdf77ba0a176a00d0eb51335d490f7601b9337ec426b9a75aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-binding-inventory.json": "bacd0f52aa330416c9f1b26b7bd69f7986fe22bd5c49a76b2ca8535aeea24a75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-candidate-freeze.json": "791c234a6b3e2cb334e59aaa9d3640e1f6775286e075ab67e9d736e9d9be8802",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-config.json": "38d53c6958d81ec1df278355431a04fe50134e2232fe6421a44f414bdfc356c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-coverage.json": "ecf1339134d8d2862753000575fa87529c89aa868f93777b71bc3bd93231ea60",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-draft.md": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-evidence.json": "84a8c1a38c2223ee05594bf135529640cba330940fe9bcda9361e5d05dbdd22b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-page-preview.md": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-selfcheck.json": "bff696dfd1cd94ae6c36e6b43c1b50051ce08e3ef30960ef9e435589b81f3aa4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-source-ranges.json": "a10dc7428eed0c0d2d702f626ffc5a65a921c1b2e5d8462d2723d7924cbe7780",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/README.md": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-image.json": "3fe63c1373382d97bd05c49758724f01efab97d8625a4a779c39d89e5385f252",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-base-applicability-review.json": "b8d62a3514c7e550847a00e468bf1a39d75e7d0b0dbc41c9775fbca0fe5500c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-canonical-before-special-page-delta.json": "a6125c92862c26d5e372efdbefc2ac1c82ece1c9345802a91eb12c41c4f99bea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-focused-checks.json": "0e289addca678b8884bd0595fc6cb286090882869cd043b72133915deb1e50ee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-frozen-source-verification.json": "8a9e08db57b162803370719389a982e450ab68a13f539cb8c7fc764d1dabaef8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-generator-template-type-fix-review.json": "14d3ffcabcaf744f1e9b42c6365dba33c961b0916a8b1f6adc479a5f34ee8827",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-identity-delivery-fix.json": "054dc8f5a102e46583422af4000ccb9e7e5584dde9fdf542ae5a7db7f31eb6c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-label-spelling-review.json": "1b582339079b7d1baf673ce5f6ea01dc4f35ea952ed29904f0c1fb332a672732",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-own-tier-wrapper-diff-review.json": "de5fe56046754b67e04572a431f4a63ebb4d9390757b39727b2ad31a3210e647",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-reconstruction-layout-review.json": "2c859b48ab7b906108391b65b65c4a4a02ae21694576469659ba49ccbc18084e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-resume-before-template-type-fix.json": "719d35cf774548b037345b3c608feac14c5d5e9b9540f60ac22ddaf333069793",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-resume-review.json": "6e9ecfc2a9899b3b26a54daf06b63fca0fd86fb8ba28bdb474e83543685748ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-runtime-formula-review.json": "d0f0a0c86d80042c1ccece2d8076d459d9cde98f42bbee6c0b03320701ed2a8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-same-item-partial-recovery.json": "ca78505f4a6b10f87bbaa3359de3b155049cb0ff17e3cff8bf1286439ece3758",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-special-player-page-delta.json": "8f06c90ce6598a7ddca11f764e962c2ce6c4fe479828bd635cf61fc96bdb85b6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-traits-review.json": "e358e054ed6a885fa5462f9389281688ff8d09e4b764b7c7659aaeb9b80830fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-raw-verification.json": "c005832232329c0acd6c260b91635e22c6d978428de8cafa7a266e0892640f59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-review.json": "c9d43faf77deed0fe84557c1dda76e47b575815d77f3f9b04dbd697f76f3daa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b4adbef5d4a83475ec7b8b63057239711c871ea0391257b83c8d8be25b24cf7c",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/DAMAGE_PERCENTAGE_REVIEW.md": "42875a1ce3602bb567060fa949eb2ce28a1c882e840e5d0ec0cd05bd31dfe0cd",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/LOCALIZATION_COMPARISON.md": "9094cf61b578441517494cff47b8834bfe45345b7920290ea6b91eb8c6d52ff5",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/README.md": "2e2e9223af36a19f6821cc270e23c55cb81eb6a6fcbdb0e38dc2440f27759958",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/SOURCE_INDEX.md": "0626d42a5853c16b80fa208bf7142e9a669112ff9da66ce9f41f61bd7c2af62d",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/TIER_VALUES.md": "336c6821028b9a5a7376744ea266099ecfb4bb852da868ce3d4dd2afa333946c",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/WEAPON_COMPATIBILITY.md": "990e595685d9bbe504eaa052b6fa50aa4e442b13e39a27992e9505d34afa1057",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_autogun_p1_increase_close_damage_on_close_kill.md": "063c4750d71271516e9a4ee27a528d804d9eaa1934c40e95643d5dd28720d343",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_autogun_p2_increase_close_damage_on_close_kill.md": "27a91a3e0e40f17ece40d8887180798350cf6443afd724c687b233f97b88609c",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_bolter_p1_increase_close_damage_on_close_kill.md": "126a206216b2dbf355b07ddf30cafd49b5dfd820431e0d89cdf7eb2fd695390b",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_ogryn_rippergun_p1_increase_close_damage_on_close_kill.md": "73fa9cb1f5431865e761b14548e7599c83ddda70bf56a8f1a68e3ec0255a84ec",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_shotgun_p1_increase_close_damage_on_close_kill.md": "6a16079a308984da8026451ec98ad5fd41b4aa2743de11d79c30f724c2ac0fb3",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_shotgun_p4_increase_close_damage_on_close_kill.md": "cdb2446cd71221b00a983128f87cfde409946a725c2264abfc9858517ca2b688",
+      "Game Info/releases/1.13.X/blessings/entries/烈火熱焰/weapon_trait_bespoke_shotpistol_shield_p1_increase_close_damage_on_close_kill.md": "0da33dce3a05e8e70c897d7d0eb886d7030efdcd424184569c6dc8ed634074c3",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "cd091868fa1f3865fd43decd46de38076099b4c3202acfe3eee7f2a871980714",
+      "Game Info/releases/1.13.X/blessings/README.md": "7206d9de46429ba6543077c328d30f999cd2d9603eb82927c8e372c6fd113176",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bbe75272367ac8a35b9ea26d421773ea4b95562a8e9f1f83612b1f77558f242a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "633d94445416856a1f9bbd6a44800afc040c7902a0bf3217fe106ad71795a1ff",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂槍/README.md": "e41fb761e8cbe2a8b05b4f6e28ef276998748c640ea690f82f074c818f2c5bdd",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "44dcac62025ddffaf0aaad32619bc18a5a3fce00228f4139274c12115e59ad62",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "f118ccbfbb496aabf7c6e6f7711a7d9ef0832931296372742e64b21665476f4c",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "d8bcf4fad17c07803339e396124bf54f11db42ef33b95e270c3ec55e92759f4d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "7d31fa71f7912b4f29e885713c1428d81868e71bb4347ca44a75ba9a3aece4a7",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "434414b1d4b21343f20e6f6c10c2007e121ccf76f8364a9693ba006ba73820ad",
+      "Referneces/Translation.md": "1feb2534c07abe45c79210d845ec8339c1c310a653fc9b5f3d8f899a2a5d8581"
+    },
+    "review_summary": {
+      "scope_files_verified": 63,
+      "formal_pages_verified": 13,
+      "actual_variants": 7,
+      "actual_bindings": 17,
+      "kind": "ranged",
+      "binding_and_reverse_mapping": "The seven trait variants and 17 weapon/mark/trait triplets agree across canonical config, UI receipt, map, and reverse weapon pages; image URL and item.icon path are distinct and match the image receipt.",
+      "own_tiers_and_wrappers": "All seven own variants use damage_near .07/.08/.09/.10 per stack and 3.5 seconds; wrappers resolve to the exact parent/child templates. Base effective cap is five stacks with a shared timer refreshed by qualifying kills, including at cap. Held gates disable proc/stat while unwielded; timer continues; removing the source trait removes its children.",
+      "trigger_and_timing": "A qualifying ranged close kill from the exact held item uses hit_world_position within 12.5m of the owner. Attack damage and died status resolve before the queued on_kill adds a layer, so the triggering hit is not retroactively changed. The hit-position trigger distance is separate from the damage consumer distance.",
+      "benefit_formula": "The damage consumer uses attacker/target positions at Attack.execute time, interpolates damage_near to damage_far and ranged_damage_far with the clamped square-root curve from 12.5m to 30m, then contributes D-1 to the additive damage pool; it is not a universal final-damage multiplier. The documented 3-stack and 20m examples are numerically consistent under their stated neutral-modifier assumptions.",
+      "attack_coverage": "The 17 actual marks’ direct ranged and special-hit routes align with the page. Direct special pellets can qualify; P1 Mk IX burning ticks and P4 Mk III stun ticks do not qualify; the P4 Mk VIII rending application has no periodic damage. Melee specials do not trigger, though their life-damage attack may read the active same-distance stat; the shield light bash is a pure push with no life damage.",
+      "localization_and_ui": "The locale 0/16 names and description share the verified keys/hashes and RAW SHA. The four-tier reconstruction matches formatter output. The Chinese Close Damage wording is separately explained against the distance-based damage_near consumer. Shotgun P1 Mk VI is corrected to the actual UI spelling 紮羅娜.",
+      "correction_delta": "The RAW reconstruction table’s static-rebuild note now sits in its own paragraph after a blank line; tier RAW strings and numbers are unchanged. Refreshed scope includes both corrected formal files and their synchronized canonical/resume proofs.",
+      "verification": "All 63 current bytes match the frozen scope SHA map. Refreshed focused checks report 175 ranges/62 source files, zero new link errors, and GFM parsing of 24 tables/580 rows; no in-game behavior was claimed."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "fire-frenzy",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_016.png",
+      "attachment": "https://github.com/user-attachments/assets/61395be2-3c80-48d8-adde-b7c751f07e2d",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5988621305",
+      "acquired_date": "2026-10-05",
+      "sha256": "1e44a3c48346fa55fc17b84977058220e5d63f3a2489e178bc33359143aecf2b",
+      "content_type": "image/png",
+      "size": 3897,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "烈火熱焰祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary viewed actual publicly downloaded128 native weapon_trait_016 PNG: pale frontal head-like silhouette inside rectangular side/top bars on dark/transparent surround; original outline and margins intact. No image replacement or inferred mechanics; public attachment bytes exactly match actual icon-path source."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 25,
+      "tables": 24,
+      "rows": 580,
+      "lists": 108,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 175,
+      "source_files": 62,
+      "bindings": 738,
+      "variants": 376,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 23,
+      "source_object_cache": {
+        "cache_hits": 62,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 26,
+      "local_references": 1193,
+      "remote_references": 598,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 27,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-026-full-scan.json",
+        "sha256": "6d30b95ea9426272877123a45158eb2317c6aaae898ea7b6fc80831a55881425",
+        "trigger": "round-026"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 57,
+    "not_started_name_groups": 57,
+    "partial_name_groups": 0,
+    "remaining_variants": 229,
+    "remaining_bindings": 447,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "cb8b4ce0c7917aca9deee4d397ba89498d3028a5a8791d329a5a163a407dddf8"
+  },
+  "previous_local_commit": "4c9b0b740ebe9ba22093f4be507240254e1adaf4",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_ogryn_heavystubber_p1/increase_close_damage_on_close_kill",
+        "trait": "weapon_trait_bespoke_heavystubber_p1_increase_close_damage_on_close_kill",
+        "restriction": [
+          "heavystubber_p1"
+        ]
+      }
+    ],
+    "included": false,
+    "scope_decision": "Not connected in fixed 17 actual bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-base-applicability-review.json",
+      "sha256": "b8d62a3514c7e550847a00e468bf1a39d75e7d0b0dbc41c9775fbca0fe5500c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-canonical-before-special-page-delta.json",
+      "sha256": "a6125c92862c26d5e372efdbefc2ac1c82ece1c9345802a91eb12c41c4f99bea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-focused-checks.json",
+      "sha256": "0e289addca678b8884bd0595fc6cb286090882869cd043b72133915deb1e50ee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-frozen-source-verification.json",
+      "sha256": "8a9e08db57b162803370719389a982e450ab68a13f539cb8c7fc764d1dabaef8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-generator-template-type-fix-review.json",
+      "sha256": "14d3ffcabcaf744f1e9b42c6365dba33c961b0916a8b1f6adc479a5f34ee8827"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-identity-delivery-fix.json",
+      "sha256": "054dc8f5a102e46583422af4000ccb9e7e5584dde9fdf542ae5a7db7f31eb6c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-label-spelling-review.json",
+      "sha256": "1b582339079b7d1baf673ce5f6ea01dc4f35ea952ed29904f0c1fb332a672732"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "de5fe56046754b67e04572a431f4a63ebb4d9390757b39727b2ad31a3210e647"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-reconstruction-layout-review.json",
+      "sha256": "2c859b48ab7b906108391b65b65c4a4a02ae21694576469659ba49ccbc18084e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-resume-before-template-type-fix.json",
+      "sha256": "719d35cf774548b037345b3c608feac14c5d5e9b9540f60ac22ddaf333069793"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-resume-review.json",
+      "sha256": "6e9ecfc2a9899b3b26a54daf06b63fca0fd86fb8ba28bdb474e83543685748ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-runtime-formula-review.json",
+      "sha256": "d0f0a0c86d80042c1ccece2d8076d459d9cde98f42bbee6c0b03320701ed2a8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-same-item-partial-recovery.json",
+      "sha256": "ca78505f4a6b10f87bbaa3359de3b155049cb0ff17e3cff8bf1286439ece3758"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-special-player-page-delta.json",
+      "sha256": "8f06c90ce6598a7ddca11f764e962c2ce6c4fe479828bd635cf61fc96bdb85b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-traits-review.json",
+      "sha256": "e358e054ed6a885fa5462f9389281688ff8d09e4b764b7c7659aaeb9b80830fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-raw-verification.json",
+      "sha256": "c005832232329c0acd6c260b91635e22c6d978428de8cafa7a266e0892640f59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-review.json",
+      "sha256": "c9d43faf77deed0fe84557c1dda76e47b575815d77f3f9b04dbd697f76f3daa9"
+    }
+  ],
+  "primary_review_method": "Reuse matched commonevent/parent-stack/sharedexpiry/cache/held/destroy conditions; verify actual7own tiers3writes and17native routes. Expand only distinctnear/far distance consumer, trigger vssettlement position, nativepooleddamage effect andRAW truecontradiction. 131source blocks20inputs allverified. Requiredgenerator fieldtypes checked beforeformal.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-config.json",
+    "sha256": "ac4f8fec42ac4fed42da2675a85880814dbdd3837f175bf5a89ac11c51a76eff"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-traits-review.json",
+      "sha256": "e358e054ed6a885fa5462f9389281688ff8d09e4b764b7c7659aaeb9b80830fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-review.json",
+      "sha256": "c9d43faf77deed0fe84557c1dda76e47b575815d77f3f9b04dbd697f76f3daa9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-ui-raw-verification.json",
+      "sha256": "c005832232329c0acd6c260b91635e22c6d978428de8cafa7a266e0892640f59"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "de5fe56046754b67e04572a431f4a63ebb4d9390757b39727b2ad31a3210e647"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-base-applicability-review.json",
+      "sha256": "b8d62a3514c7e550847a00e468bf1a39d75e7d0b0dbc41c9775fbca0fe5500c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-image.json",
+      "sha256": "3fe63c1373382d97bd05c49758724f01efab97d8625a4a779c39d89e5385f252"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-binding-inventory.json",
+      "sha256": "bacd0f52aa330416c9f1b26b7bd69f7986fe22bd5c49a76b2ca8535aeea24a75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-coverage.json",
+      "sha256": "ecf1339134d8d2862753000575fa87529c89aa868f93777b71bc3bd93231ea60"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-source-ranges.json",
+      "sha256": "a10dc7428eed0c0d2d702f626ffc5a65a921c1b2e5d8462d2723d7924cbe7780"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-config.json",
+      "sha256": "38d53c6958d81ec1df278355431a04fe50134e2232fe6421a44f414bdfc356c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-draft.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-page-preview.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/README.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-selfcheck.json",
+      "sha256": "bff696dfd1cd94ae6c36e6b43c1b50051ce08e3ef30960ef9e435589b81f3aa4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-candidate-freeze.json",
+      "sha256": "791c234a6b3e2cb334e59aaa9d3640e1f6775286e075ab67e9d736e9d9be8802"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-binding-inventory.json",
+      "sha256": "bacd0f52aa330416c9f1b26b7bd69f7986fe22bd5c49a76b2ca8535aeea24a75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-candidate-freeze.json",
+      "sha256": "791c234a6b3e2cb334e59aaa9d3640e1f6775286e075ab67e9d736e9d9be8802"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-config.json",
+      "sha256": "38d53c6958d81ec1df278355431a04fe50134e2232fe6421a44f414bdfc356c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-coverage.json",
+      "sha256": "ecf1339134d8d2862753000575fa87529c89aa868f93777b71bc3bd93231ea60"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-draft.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-evidence.json",
+      "sha256": "84a8c1a38c2223ee05594bf135529640cba330940fe9bcda9361e5d05dbdd22b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-page-preview.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-selfcheck.json",
+      "sha256": "bff696dfd1cd94ae6c36e6b43c1b50051ce08e3ef30960ef9e435589b81f3aa4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-group/fire-frenzy-source-ranges.json",
+      "sha256": "a10dc7428eed0c0d2d702f626ffc5a65a921c1b2e5d8462d2723d7924cbe7780"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-config.json",
+      "sha256": "38d53c6958d81ec1df278355431a04fe50134e2232fe6421a44f414bdfc356c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-evidence.json",
+      "sha256": "84a8c1a38c2223ee05594bf135529640cba330940fe9bcda9361e5d05dbdd22b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-agent-draft.md",
+      "sha256": "26cbdbe1ce2b312bd4a174f0c6ac1efabedf893b9cf1618878762d1964519d45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-identity-delivery-fix.json",
+      "sha256": "054dc8f5a102e46583422af4000ccb9e7e5584dde9fdf542ae5a7db7f31eb6c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-runtime-formula-review.json",
+      "sha256": "d0f0a0c86d80042c1ccece2d8076d459d9cde98f42bbee6c0b03320701ed2a8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-generator-template-type-fix-review.json",
+      "sha256": "14d3ffcabcaf744f1e9b42c6365dba33c961b0916a8b1f6adc479a5f34ee8827"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-special-player-page-delta.json",
+      "sha256": "8f06c90ce6598a7ddca11f764e962c2ce6c4fe479828bd635cf61fc96bdb85b6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-label-spelling-review.json",
+      "sha256": "1b582339079b7d1baf673ce5f6ea01dc4f35ea952ed29904f0c1fb332a672732"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-primary-reconstruction-layout-review.json",
+      "sha256": "2c859b48ab7b906108391b65b65c4a4a02ae21694576469659ba49ccbc18084e"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/fire-frenzy-formal-peer-scope.json",
+    "sha256": "c1f79c761199873a5be7c3bb1c0716017f007352e62853f005de7d5a3ca8b87b",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/riposte",
+    "non_author_peer": true
+  }
+}

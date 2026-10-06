@@ -1,0 +1,689 @@
+{
+  "date": "2026-10-06",
+  "blessing": "between-the-eyes",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/正中眉心/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot",
+    "weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot",
+    "weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot",
+    "weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot",
+    "weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot"
+  ],
+  "added_binding_count": 14,
+  "total_variants": 6,
+  "total_bindings": 14,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "between-the-eyes",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true,
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-formal-peer-scope.json",
+    "scope_sha256": "c4584139fd176b01d18de074c8432cf78aaa4e360719af2d3d729c12f1ca1555",
+    "file_count": 105,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-config.json": "5f9e18af1247c97296f22a17641a008394ec16974b294b57c1f57846ea285a81",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-draft.md": "a5a131baa1b365f9d4e762ec628522ee566e692793494da9be06ad43b675b94c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-evidence.json": "9d2c676619b4ce2531d742b5fa0a0fb36b0a2972a4b6834fdd13e97e0d9975d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-config.json": "e678415929107c3cd410c73e0af36da3eb255938e476dec9326555945c0646d4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-extension-draft.json": "0c284248a1bb6ced6e1fd9d7779ea343f70037951a4a0b9d0be88f2b08f7e1d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-action-coverage.json": "37f95be0206ec8244e3a54550483ae5da7f4c8a9d026329bf9142da079255916",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-001.json": "e7aa6fbf9adb092e39e895ffefbe9040261a0e3ccaaa1c36475be74b7f901566",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-002.json": "12666b83ffb01f1fc6b22d05a510caffa0f04c0f6de4a5d2d15380d66f74dc4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-003.json": "d24211e8227e70a5a18aa1736bc6ed3349a44321262eabdd88379a215cf784ca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-config.json": "5f9e18af1247c97296f22a17641a008394ec16974b294b57c1f57846ea285a81",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-draft.md": "a5a131baa1b365f9d4e762ec628522ee566e692793494da9be06ad43b675b94c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-evidence.json": "9d2c676619b4ce2531d742b5fa0a0fb36b0a2972a4b6834fdd13e97e0d9975d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-source-blocks-001.json": "151401952b7d69946bfbf246078851b2b0b975f27811885dd5612d646975ca8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-source-blocks-002.json": "0837d25e60f3c1067d5b2fac412b40b44456f54e17858687eb3cfb57290bf99b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/decapitator-formal-nonauthor-review.json": "d7ce1efa0f84c78221e6e0373c23c97fe2a660d488a0c49ebd1e1688c99846c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/BLESSING_WEAPON_MAP-snapshot-001.json": "7ed880ba96d662a457bcc711f29bc757975e6b1a81cf7638b86aa2b35c26aa28",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/common-mechanism-cache-001.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/inventory-snapshot-001.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/item-metadata-snapshot-001.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/localized-keys-snapshot-001.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/raw-localization-records-001.json": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/remaining-tasks-snapshot-001.json": "d56649b58c5d5ea631510399f16ab8e44f8fd8906c14d3f9ecc89b5bc365d72e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-image.json": "3d68d8d0fc66b48b7626123dcefb5ee136b94942777dc86bd97dbe443ced794f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-own-tier-wrapper-suppression-material-review.json": "8de2af9aaabbb159e5abdf6712c00ed7aec6aae4d0001cdda6305eee06f616dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-raw-verification.json": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-ui-raw-verification.json": "4f8805a64fcd2f196f12a0451a647f36a6de566aafd534e4e153e65557416fbd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-ui-review.json": "646d3e073273426697180fb828102453647db7b26a48137df255b48f7eba2a1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-image.json": "3d68d8d0fc66b48b7626123dcefb5ee136b94942777dc86bd97dbe443ced794f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-dynamic-progress-snapshot-isolation-review.json": "803007dd1bbb3c89704a73090e8b98e28dd6e8e3e407ed22bcc7f8cc0008407f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-final-content-delta-review.json": "2a4cd68d3c820c564fa3a8eb7986c3946d326cf3c36163deb79ce517ef636d7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-focused-checks.json": "0a0264faf712c21cffd6c04f169797e45436604f6cadca19517892e78d6fa7ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-frozen-source-verification.json": "bbeca6b1edd2704f1261fa19f4d596591a68cfaf95cea2f488575fcd9dde4f2c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-own-tier-wrapper-suppression-material-review.json": "8de2af9aaabbb159e5abdf6712c00ed7aec6aae4d0001cdda6305eee06f616dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-raw-verification.json": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-resume-review.json": "caddb8c3b2a89d4aabf34ffc79743896b48b1f5cbf0f2384f2e834f828bd63a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-raw-verification.json": "4f8805a64fcd2f196f12a0451a647f36a6de566aafd534e4e153e65557416fbd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-review.json": "646d3e073273426697180fb828102453647db7b26a48137df255b48f7eba2a1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-root-capture/Translation-before.md": "8a1a82ee3f93a1c02b719ad7303b1692b2525602f309caa9489f2cee5c59f40c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-image.json": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-raw-verification.json": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/DAMAGE_PERCENTAGE_REVIEW.md": "030ec5e81f868097acddfb22e8c58893a6ad7754bdc29cb2310b4017994978e3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/LOCALIZATION_COMPARISON.md": "c267832b608963f1ead99833e9d1ec115c8188f137ea752ba5217d53fbc2feea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/README.md": "e3b4e9310f6bd11ed69caa87f81dc9a66ce395c6446d6be0a59fd485ce66b69c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/SOURCE_INDEX.md": "6cf13fd754b35a2398e054433623058356117013962ba8520dc7f0bcb141532d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/TIER_VALUES.md": "c81895885bef067ffe4ebf21a511cfbe1193d143d2b2dd31408700bbd2bf6697",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/WEAPON_COMPATIBILITY.md": "f67eba0352eeb55f7dffa3a42c26b8897b17329ecc9e9add23c02e44f50a40bf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot.md": "7a3a161339547d644067ca7f23f067bc32a5a48322f483997adf83feac9bdfc5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot.md": "031a67be05b551436f50644144ad921c8709a3b2ad867f4c712f208c55390110",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot.md": "b9c3bb8046f7064e6a2b0892001a08d42f0371d30f908d8e5a8dab3f8af0c7ed",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot.md": "33c2dd7b311f9fd45ad2616f96ab933ebfe028eaa59fd5ffb86defd417282139",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot.md": "1b6163341e5deba6a2f3ea87e2121193af13556b500170890e1b19566b1582a9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot.md": "7c73fb627238d408855367d927a1b8b6da46f92703112f2407cc4ee4ffe5e0cb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/ranged/README.md": "917bbc2f626591db12739fceea682455afb931ea57a8d0d39dcf6c821c331a9a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "a35226ea3c47cfee4aa8c09897c5aab042b34578d300690a184fe8b77ea1f4c3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8d7e11d064b8ae54d3bd62fc23d4bc90ff49d9e6b47791ddcd4dd7d9c6951c22",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "b9455429a9e45870586851e81643eef009f41f0b5f753d4cd5356d1bd104865d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "0a2499637bef0c4644c01c07c376dd7356ac0d2a958cbab384def09af24bddcc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "f113b2c10236fdeed9340cbed66d1fc8b5e79bf9c9179d2b3820d437a1022105",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "f338a00bc1be3e79284094b678e3196f35b1e12186f395a1c373d75ae9d55d26",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "cb4ed0274ad1449145449b681e94c521fae4324e41e987dc2cb775889f4d2c47",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "6f8e48a8f4f03e04a1f62994d6e5006194583e255bc48e03cca22cce9b914d01",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/own-association-snapshot.json": "d116faea9fbd2255e93f87d6674a18d564ae40d02b9ef4f33e087fe5e60216ba",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/actual-preview-003/Referneces/Translation.md": "e2cb09f7fcb84d03fea72e8333dd813f92513b76fa7692db772dcd3e57c3c645",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/DAMAGE_PERCENTAGE_REVIEW.md": "030ec5e81f868097acddfb22e8c58893a6ad7754bdc29cb2310b4017994978e3",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/LOCALIZATION_COMPARISON.md": "c267832b608963f1ead99833e9d1ec115c8188f137ea752ba5217d53fbc2feea",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/README.md": "4b155a6870a8992a139f7e35ce430ff486a766ce92b6e3eea4b513c60d0f1ab8",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/SOURCE_INDEX.md": "1d0ea2371fcca08677387240562cb4a21c82cd05699456fe133a90634618dc31",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/TIER_VALUES.md": "c81895885bef067ffe4ebf21a511cfbe1193d143d2b2dd31408700bbd2bf6697",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/WEAPON_COMPATIBILITY.md": "f67eba0352eeb55f7dffa3a42c26b8897b17329ecc9e9add23c02e44f50a40bf",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot.md": "7a3a161339547d644067ca7f23f067bc32a5a48322f483997adf83feac9bdfc5",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot.md": "031a67be05b551436f50644144ad921c8709a3b2ad867f4c712f208c55390110",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot.md": "b9c3bb8046f7064e6a2b0892001a08d42f0371d30f908d8e5a8dab3f8af0c7ed",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot.md": "33c2dd7b311f9fd45ad2616f96ab933ebfe028eaa59fd5ffb86defd417282139",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot.md": "1b6163341e5deba6a2f3ea87e2121193af13556b500170890e1b19566b1582a9",
+      "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot.md": "7c73fb627238d408855367d927a1b8b6da46f92703112f2407cc4ee4ffe5e0cb",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "917bbc2f626591db12739fceea682455afb931ea57a8d0d39dcf6c821c331a9a",
+      "Game Info/releases/1.13.X/blessings/README.md": "a35226ea3c47cfee4aa8c09897c5aab042b34578d300690a184fe8b77ea1f4c3",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8d7e11d064b8ae54d3bd62fc23d4bc90ff49d9e6b47791ddcd4dd7d9c6951c22",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "b9455429a9e45870586851e81643eef009f41f0b5f753d4cd5356d1bd104865d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "0a2499637bef0c4644c01c07c376dd7356ac0d2a958cbab384def09af24bddcc",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "f113b2c10236fdeed9340cbed66d1fc8b5e79bf9c9179d2b3820d437a1022105",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重型鐳射手槍/README.md": "f338a00bc1be3e79284094b678e3196f35b1e12186f395a1c373d75ae9d55d26",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/針彈手槍/README.md": "cb4ed0274ad1449145449b681e94c521fae4324e41e987dc2cb775889f4d2c47",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "6f8e48a8f4f03e04a1f62994d6e5006194583e255bc48e03cca22cce9b914d01",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "Referneces/Translation.md": "e2cb09f7fcb84d03fea72e8333dd813f92513b76fa7692db772dcd3e57c3c645"
+    },
+    "formal_peer_accepted": true,
+    "committed": false,
+    "reviewed_content": [
+      "All 12 current formal pages were read and verified against the fixed 105-file scope; all scope hashes matched exactly.",
+      "The main page requires a held, same-item hit classified as a weakspot; a body hit is excluded only when it is not classified as a weakspot. The blessing clears current suppression and grants suppression immunity for a single refreshed I–IV window of 2.4, 2.8, 3.2, or 3.6 seconds.",
+      "The first qualifying event resolves before the subsequent keyword-cache update; refresh resets the one window, switching off disables the held-gated effect after cache update, and switching back before expiry can restore it after cache update.",
+      "Galvanic Rifle Mk CV action_bash is a Sweep and remains a melee attack even though its profile has is_push=true; eligibility still depends on actual weakspot classification and on_hit delivery.",
+      "Heavy Laspistol pure PushAttack uses torso hit-zone input and ordinarily is not a weakspot event; the documented external guaranteed-weakspot override remains an exception.",
+      "Needle Pistol direct hitscan, center-mass AoE with source item, and toxin interval ticks are distinguished. Toxin ticks use attack_type=buff without a hit zone; external guaranteed-weakspot effects can override the weakspot result, while this blessing itself does not grant that keyword.",
+      "Both worked examples use bound UI models and event-processing times: Autogun Mk III tier IV expires at t<13.6; Galvanic Rifle Mk CV tier I refreshes at t=22.0 and then expires at t<24.4.",
+      "Tier table, paired English/Traditional Chinese RAW strings, formatter reconstruction, all 14 bound model names, six trait implementations, and icon weapon_trait_122 image receipt were checked."
+    ],
+    "formal_vs_author_preview": {
+      "author_preview_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-003.json",
+      "author_preview_receipt_sha256": "d24211e8227e70a5a18aa1736bc6ed3349a44321262eabdd88379a215cf784ca",
+      "author_config_sha256": "5f9e18af1247c97296f22a17641a008394ec16974b294b57c1f57846ea285a81",
+      "root_canonical_config_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-config.json",
+      "root_canonical_config_sha256": "e678415929107c3cd410c73e0af36da3eb255938e476dec9326555945c0646d4",
+      "root_content_delta_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-final-content-delta-review.json",
+      "root_content_delta_sha256": "2a4cd68d3c820c564fa3a8eb7986c3946d326cf3c36163deb79ce517ef636d7c",
+      "text_differences_checked": [
+        "README.md: body-hit exclusion is explicitly limited to hits not classified as weakspots; Needle section says this blessing itself does not grant guaranteed weakspot.",
+        "SOURCE_INDEX.md: added the exact Attack/Weakspot evidence row supporting external guaranteed-weakspot classification."
+      ],
+      "other_formal_pages": "No unexplained textual differences from the actual preview were found; remaining byte differences are line-ending normalization."
+    },
+    "formal_pages": [
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/DAMAGE_PERCENTAGE_REVIEW.md",
+        "sha256": "030ec5e81f868097acddfb22e8c58893a6ad7754bdc29cb2310b4017994978e3"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/LOCALIZATION_COMPARISON.md",
+        "sha256": "c267832b608963f1ead99833e9d1ec115c8188f137ea752ba5217d53fbc2feea"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/README.md",
+        "sha256": "4b155a6870a8992a139f7e35ce430ff486a766ce92b6e3eea4b513c60d0f1ab8"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/SOURCE_INDEX.md",
+        "sha256": "1d0ea2371fcca08677387240562cb4a21c82cd05699456fe133a90634618dc31"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/TIER_VALUES.md",
+        "sha256": "c81895885bef067ffe4ebf21a511cfbe1193d143d2b2dd31408700bbd2bf6697"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/WEAPON_COMPATIBILITY.md",
+        "sha256": "f67eba0352eeb55f7dffa3a42c26b8897b17329ecc9e9add23c02e44f50a40bf"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot.md",
+        "sha256": "7a3a161339547d644067ca7f23f067bc32a5a48322f483997adf83feac9bdfc5"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot.md",
+        "sha256": "031a67be05b551436f50644144ad921c8709a3b2ad867f4c712f208c55390110"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot.md",
+        "sha256": "b9c3bb8046f7064e6a2b0892001a08d42f0371d30f908d8e5a8dab3f8af0c7ed"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot.md",
+        "sha256": "33c2dd7b311f9fd45ad2616f96ab933ebfe028eaa59fd5ffb86defd417282139"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot.md",
+        "sha256": "1b6163341e5deba6a2f3ea87e2121193af13556b500170890e1b19566b1582a9"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/正中眉心/weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot.md",
+        "sha256": "7c73fb627238d408855367d927a1b8b6da46f92703112f2407cc4ee4ffe5e0cb"
+      }
+    ],
+    "image_review": {
+      "receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-image.json",
+      "receipt_sha256": "3d68d8d0fc66b48b7626123dcefb5ee136b94942777dc86bd97dbe443ced794f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "attachment": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "png_sha256": "197480bbfe4cc2df55b0c02c05c4356cc44f746f841c82485b069b3f56c7b86f",
+      "dimensions": [
+        128,
+        128
+      ],
+      "public_download_status": 200,
+      "hash_verified": true,
+      "root_display_verified": true
+    },
+    "review_conclusion": "Accepted for the fixed formal peer scope. No unresolved issues."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "between-the-eyes",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_122.png",
+      "attachment": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010498976",
+      "acquired_date": "2026-10-06",
+      "sha256": "197480bbfe4cc2df55b0c02c05c4356cc44f746f841c82485b069b3f56c7b86f",
+      "content_type": "image/png",
+      "size": 7202,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "正中眉心祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "root_display_verified": true,
+      "root_visual_result": "Viewed native public128x128 gray/pale directional icon; matches exact item.icon receipt."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 23,
+      "tables": 22,
+      "rows": 655,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 121,
+      "source_files": 52,
+      "bindings": 1119,
+      "variants": 576,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 52,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 1562,
+      "remote_references": 618,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 45,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-044-full-scan.json",
+        "sha256": "450f613c0d4d69820d5d12456c02d91e14b2e1b2c6b144aeeb4cee9b2c88e55e",
+        "trigger": "round-044"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 4,
+    "not_started_name_groups": 4,
+    "partial_name_groups": 0,
+    "remaining_variants": 29,
+    "remaining_bindings": 66,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0"
+  },
+  "previous_local_commit": "f733c326e074d967628d589a67c9243d69d68563",
+  "outside_intersection_review": {
+    "same_name_candidates": 6,
+    "outside_exact_items": [],
+    "status": "No outside exact-name-key binding; six implementations and 14 actual bindings are the inventory intersection."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-dynamic-progress-snapshot-isolation-review.json",
+      "sha256": "803007dd1bbb3c89704a73090e8b98e28dd6e8e3e407ed22bcc7f8cc0008407f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-final-content-delta-review.json",
+      "sha256": "2a4cd68d3c820c564fa3a8eb7986c3946d326cf3c36163deb79ce517ef636d7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-focused-checks.json",
+      "sha256": "0a0264faf712c21cffd6c04f169797e45436604f6cadca19517892e78d6fa7ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-frozen-source-verification.json",
+      "sha256": "bbeca6b1edd2704f1261fa19f4d596591a68cfaf95cea2f488575fcd9dde4f2c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-own-tier-wrapper-suppression-material-review.json",
+      "sha256": "8de2af9aaabbb159e5abdf6712c00ed7aec6aae4d0001cdda6305eee06f616dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-raw-verification.json",
+      "sha256": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-resume-review.json",
+      "sha256": "caddb8c3b2a89d4aabf34ffc79743896b48b1f5cbf0f2384f2e834f828bd63a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-raw-verification.json",
+      "sha256": "4f8805a64fcd2f196f12a0451a647f36a6de566aafd534e4e153e65557416fbd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-review.json",
+      "sha256": "646d3e073273426697180fb828102453647db7b26a48137df255b48f7eba2a1c"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-config.json",
+    "sha256": "e678415929107c3cd410c73e0af36da3eb255938e476dec9326555945c0646d4"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-action-coverage.json",
+      "sha256": "37f95be0206ec8244e3a54550483ae5da7f4c8a9d026329bf9142da079255916"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-003.json",
+      "sha256": "d24211e8227e70a5a18aa1736bc6ed3349a44321262eabdd88379a215cf784ca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-config.json",
+      "sha256": "5f9e18af1247c97296f22a17641a008394ec16974b294b57c1f57846ea285a81"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-draft.md",
+      "sha256": "a5a131baa1b365f9d4e762ec628522ee566e692793494da9be06ad43b675b94c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-source-blocks-002.json",
+      "sha256": "0837d25e60f3c1067d5b2fac412b40b44456f54e17858687eb3cfb57290bf99b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/BLESSING_WEAPON_MAP-snapshot-001.json",
+      "sha256": "7ed880ba96d662a457bcc711f29bc757975e6b1a81cf7638b86aa2b35c26aa28"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/common-mechanism-cache-001.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/inventory-snapshot-001.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/item-metadata-snapshot-001.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/localized-keys-snapshot-001.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/raw-localization-records-001.json",
+      "sha256": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/remaining-tasks-snapshot-001.json",
+      "sha256": "d56649b58c5d5ea631510399f16ab8e44f8fd8906c14d3f9ecc89b5bc365d72e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-image.json",
+      "sha256": "3d68d8d0fc66b48b7626123dcefb5ee136b94942777dc86bd97dbe443ced794f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-own-tier-wrapper-suppression-material-review.json",
+      "sha256": "8de2af9aaabbb159e5abdf6712c00ed7aec6aae4d0001cdda6305eee06f616dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-raw-verification.json",
+      "sha256": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-ui-raw-verification.json",
+      "sha256": "4f8805a64fcd2f196f12a0451a647f36a6de566aafd534e4e153e65557416fbd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/inputs/root-receipts/between-the-eyes-primary-ui-review.json",
+      "sha256": "646d3e073273426697180fb828102453647db7b26a48137df255b48f7eba2a1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json",
+      "sha256": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-image.json",
+      "sha256": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "a35226ea3c47cfee4aa8c09897c5aab042b34578d300690a184fe8b77ea1f4c3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "8d7e11d064b8ae54d3bd62fc23d4bc90ff49d9e6b47791ddcd4dd7d9c6951c22"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "030ec5e81f868097acddfb22e8c58893a6ad7754bdc29cb2310b4017994978e3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\LOCALIZATION_COMPARISON.md",
+      "sha256": "c267832b608963f1ead99833e9d1ec115c8188f137ea752ba5217d53fbc2feea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\README.md",
+      "sha256": "e3b4e9310f6bd11ed69caa87f81dc9a66ce395c6446d6be0a59fd485ce66b69c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\SOURCE_INDEX.md",
+      "sha256": "6cf13fd754b35a2398e054433623058356117013962ba8520dc7f0bcb141532d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\TIER_VALUES.md",
+      "sha256": "c81895885bef067ffe4ebf21a511cfbe1193d143d2b2dd31408700bbd2bf6697"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\WEAPON_COMPATIBILITY.md",
+      "sha256": "f67eba0352eeb55f7dffa3a42c26b8897b17329ecc9e9add23c02e44f50a40bf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_autogun_p3_suppression_negation_on_weakspot.md",
+      "sha256": "7a3a161339547d644067ca7f23f067bc32a5a48322f483997adf83feac9bdfc5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_galvanic_rifle_p1_suppression_negation_on_weakspot.md",
+      "sha256": "031a67be05b551436f50644144ad921c8709a3b2ad867f4c712f208c55390110"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_lasgun_p1_suppression_negation_on_weakspot.md",
+      "sha256": "b9c3bb8046f7064e6a2b0892001a08d42f0371d30f908d8e5a8dab3f8af0c7ed"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_laspistol_p1_suppression_negation_on_weakspot.md",
+      "sha256": "33c2dd7b311f9fd45ad2616f96ab933ebfe028eaa59fd5ffb86defd417282139"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_needlepistol_p1_suppression_negation_on_weakspot.md",
+      "sha256": "1b6163341e5deba6a2f3ea87e2121193af13556b500170890e1b19566b1582a9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\正中眉心\\weapon_trait_bespoke_ogryn_heavystubber_p2_suppression_negation_on_weakspot.md",
+      "sha256": "7c73fb627238d408855367d927a1b8b6da46f92703112f2407cc4ee4ffe5e0cb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "917bbc2f626591db12739fceea682455afb931ea57a8d0d39dcf6c821c331a9a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\機動自動槍\\README.md",
+      "sha256": "b9455429a9e45870586851e81643eef009f41f0b5f753d4cd5356d1bd104865d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\步兵鐳射槍\\README.md",
+      "sha256": "0a2499637bef0c4644c01c07c376dd7356ac0d2a958cbab384def09af24bddcc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "f113b2c10236fdeed9340cbed66d1fc8b5e79bf9c9179d2b3820d437a1022105"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重型鐳射手槍\\README.md",
+      "sha256": "f338a00bc1be3e79284094b678e3196f35b1e12186f395a1c373d75ae9d55d26"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\針彈手槍\\README.md",
+      "sha256": "cb4ed0274ad1449145449b681e94c521fae4324e41e987dc2cb775889f4d2c47"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電能步槍\\README.md",
+      "sha256": "6f8e48a8f4f03e04a1f62994d6e5006194583e255bc48e03cca22cce9b914d01"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "e2cb09f7fcb84d03fea72e8333dd813f92513b76fa7692db772dcd3e57c3c645"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-raw-verification.json",
+      "sha256": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\between-the-eyes-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "d116faea9fbd2255e93f87d6674a18d564ae40d02b9ef4f33e087fe5e60216ba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-001.json",
+      "sha256": "e7aa6fbf9adb092e39e895ffefbe9040261a0e3ccaaa1c36475be74b7f901566"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-actual-preview-receipt-002.json",
+      "sha256": "12666b83ffb01f1fc6b22d05a510caffa0f04c0f6de4a5d2d15380d66f74dc4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-agent-evidence.json",
+      "sha256": "9d2c676619b4ce2531d742b5fa0a0fb36b0a2972a4b6834fdd13e97e0d9975d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/between-the-eyes-source-blocks-001.json",
+      "sha256": "151401952b7d69946bfbf246078851b2b0b975f27811885dd5612d646975ca8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-group/decapitator-formal-nonauthor-review.json",
+      "sha256": "d7ce1efa0f84c78221e6e0373c23c97fe2a660d488a0c49ebd1e1688c99846c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-config.json",
+      "sha256": "5f9e18af1247c97296f22a17641a008394ec16974b294b57c1f57846ea285a81"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-evidence.json",
+      "sha256": "9d2c676619b4ce2531d742b5fa0a0fb36b0a2972a4b6834fdd13e97e0d9975d9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-agent-draft.md",
+      "sha256": "a5a131baa1b365f9d4e762ec628522ee566e692793494da9be06ad43b675b94c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-final-content-delta-review.json",
+      "sha256": "2a4cd68d3c820c564fa3a8eb7986c3946d326cf3c36163deb79ce517ef636d7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-frozen-source-verification.json",
+      "sha256": "bbeca6b1edd2704f1261fa19f4d596591a68cfaf95cea2f488575fcd9dde4f2c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-own-tier-wrapper-suppression-material-review.json",
+      "sha256": "8de2af9aaabbb159e5abdf6712c00ed7aec6aae4d0001cdda6305eee06f616dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-raw-verification.json",
+      "sha256": "acb8ac31227188e74990e52ffc79f866d65776047f0e46fe37326254db3b26dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-raw-verification.json",
+      "sha256": "4f8805a64fcd2f196f12a0451a647f36a6de566aafd534e4e153e65557416fbd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-ui-review.json",
+      "sha256": "646d3e073273426697180fb828102453647db7b26a48137df255b48f7eba2a1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-root-capture/Translation-before.md",
+      "sha256": "8a1a82ee3f93a1c02b719ad7303b1692b2525602f309caa9489f2cee5c59f40c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-primary-dynamic-progress-snapshot-isolation-review.json",
+      "sha256": "803007dd1bbb3c89704a73090e8b98e28dd6e8e3e407ed22bcc7f8cc0008407f"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/between-the-eyes-formal-peer-scope.json",
+    "sha256": "c4584139fd176b01d18de074c8432cf78aaa4e360719af2d3d729c12f1ca1555",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-05",
+  "blessing": "shock-and-awe",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/震懾/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+    "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 3,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-formal-peer-scope.json",
+    "scope_sha256": "a06e8120d1b690f9e4ef2c2edd5aee59d45840b0205362ba1b3fa11a3b706f41",
+    "scope_file_count": 46,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-246-image.json": "bc5b932ef37eb45c47928ca8fe446d2b181c6fc7b5bab523d063758dfd021878",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-config.json": "cc43ba274246664d0ba944ed6952da0c956042f8c3a8067be5f776169b5c6a3a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-draft.md": "7fe9354b4273a84828febed65738017ac82f93df9188a2369fe39007a34e2722",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-evidence.json": "63c6ecd7b97ea86ea54be582d38012ef0eb49c9a0f02d625818fd0cd0b9c06d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-config.json": "63327cb66c03d39544be5f0bc59035009a301c32dffb2ed65efc5ab31cc620a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-extension-draft.json": "fe4661bc8d7bd150d158477d972f52744cb96184e869b3ed8f1318d958d45de6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/binding-inventory.json": "797ca4a11542910fe5abb3c07085f410c6bdfc6b748bf45c9242b35d35410367",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-config.json": "cc43ba274246664d0ba944ed6952da0c956042f8c3a8067be5f776169b5c6a3a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-draft.md": "7fe9354b4273a84828febed65738017ac82f93df9188a2369fe39007a34e2722",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-evidence.json": "63c6ecd7b97ea86ea54be582d38012ef0eb49c9a0f02d625818fd0cd0b9c06d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-selfcheck.json": "598fa58223c40efa840dacd76a868aea9f52c798fbfbe47df6e3ba8a2ac74f97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-page-preview.md": "521833562ab16a79638485d38a696942b0f3f456112267de424f32ee3b2a4fe7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/source-range-manifest.json": "257e41815e0dd4444dea1f2d43fe88487c6077fc750f8c03cb067d904a27cac2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-image.json": "b183d88c5de4c7bbe4b4cd520c267c8f5e883a58dfd89fd595e5ebb920b7296c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-candidate-link-repair.json": "538309f42049cf37ebe69e995335d7ce2d84dae1a27fae52345a982b14a28898",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-focused-checks.json": "e8e11423717bb9429849f5ad5088e86f3f8cb445c82c96f9eeb32a70ad4a0b9f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-frozen-source-verification.json": "dcc391b412ab04427418ae08a14e5e08154d723cc1dfe934722e550b7b818be9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-held-stat-consumer-review.json": "cf5e5e493bc51c0ce6a6702aad3a5238187396031ed9483c384073af5a42eaa0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-own-tier-diff.json": "f290600fbc6be7f545187b50a18b0d79e9e936efcbe66877aee39215c8e8e37b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-raw-display-space-review.json": "a283dfcda25d7e65fda4c9dae4054334df5aeac2620855efe9e0d65c332d6976",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-resume-review.json": "21e6071553d079e9992d4e071c15af875aaad04fa06792f25e0a6889680c8ee4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-traits-review.json": "2339f8189471f2b4fec9bd58b358ab715638d257322f8f7fb47877299b426b21",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-raw-verification.json": "554700426916debf252c446608943650ddea78f930f7a1b1753f20809b1ee351",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-review.json": "0545faeabae0db4399bfefdffb4200aa95e294d00fe49c0eacb33d3ef23240d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "05c64b87eec2fb7390e5d031504af5db381f112a7bb37447531b0153681c06fb",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/DAMAGE_PERCENTAGE_REVIEW.md": "f03e8bd055aac0c0f52a34b6b5a500c0d38ba9f06b350c9086c6d195ea40580c",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/LOCALIZATION_COMPARISON.md": "7721e36ae817ee1f402bd6cf4acbb4a1d4dfc1aa08e047d97c587db42ce51633",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/README.md": "9f3c8e33cf4610924450d88160a88be17d8652d0a44fdaf1577343c7fbab82c2",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/SOURCE_INDEX.md": "039b7cd1a72ddd648703d10d0d2048e61724813a30ce34a67f5f8c0a3c115041",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/TIER_VALUES.md": "607377c1e4b0f7b40b534a4d825731d6bc71fd02d8eab84c38c09ab2febe2069",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/WEAPON_COMPATIBILITY.md": "fe0d146752a2647bed11da1cf9d7b1ae11c977c37e656996820749296393930f",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill.md": "28ac211acf5a79ab90e4dd511a22001bd5a27401105b0ad64c36d0f101aace37",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill.md": "63561a8aa2db1fc4de9bc3863eaf9b132e7dedf0ef34e8ae1409a3f766ef9d78",
+      "Game Info/releases/1.13.X/blessings/entries/震懾/weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill.md": "126b1bfa55b71f2fec5c2a6e4948d776f3cb0d9cd5a0fe01a322ce29f0add67b",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "ff72b29607d69e2293d45cdeb2d1b26f8ce65e3c831ef40acf0800f952d8791a",
+      "Game Info/releases/1.13.X/blessings/README.md": "3fc0601536e1d82d0ce7552387a1a58dd1fbdc334eb922d1715e968ba0344294",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bcc83db993a98a489289c85e1e4b7a31a6f8e946c61782fb68b7c57ff310a42b",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "25fc2681798c2e96fb2f7692f939f449d25384572469d9322b33e0b5e3c297d4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "f5f43e419160e4428ebbca9341acb08c7be4b2295c5c8dca4faf893875b10092",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/骨鋸/README.md": "1771ff09a107cd364b73989d825f9918b147bba2a485b90a3689f786ad879350",
+      "Referneces/Translation.md": "ee75207f752cf9551efc086fba3ea1515166543d8e4b0dd8c1c345e0eb40fa18"
+    },
+    "reviewed_findings": [
+      "Reused the prior accepted 45-file review for unchanged content. In the current 46-file scope, 40 prior files are byte-identical; five prior files changed and one new whitespace-review receipt was added.",
+      "The only formal-page change is the English RAW display template line in LOCALIZATION_COMPARISON.md: its trailing ASCII space is removed. The current line has no trailing ASCII space or tab. The canonical replacement trims only the displayed template; the original RAW localization bytes and the verified RAW receipt remain unchanged.",
+      "The updated extension draft and canonical configuration carry the same display replacement. The new primary raw-display proof confirms original RAW preservation, exact replacement rendering, and no issues. Updated focused checks report no new link errors and pass GFM; binding, tier, values, formulas, rules, images, and mechanics were unchanged.",
+      "Corrected the held-stat description: ProcBuff._can_add_stat_and_keywords gates stat_buffs through conditional_proc_func. The same held-item predicate therefore gates both proc admission and the active modifier contribution; it is not a conditional_stat_buffs_func field.",
+      "The three actual variants remain bound to four Marks, with the prior verified native action routes, 3-second active window, refresh/no-stack behavior, effect math, bilingual RAW comparison, and verified image receipts unchanged."
+    ],
+    "delta_validation": {
+      "prior_scope_unchanged_files": 40,
+      "prior_scope_changed_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-focused-checks.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-resume-review.json",
+        "Game Info/releases/1.13.X/blessings/entries/震懾/LOCALIZATION_COMPARISON.md"
+      ],
+      "new_scope_files": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-raw-display-space-review.json"
+      ],
+      "all_current_scope_hashes_match": true,
+      "formal_template_line_17_has_no_trailing_ascii_space_or_tab": true,
+      "raw_bytes_preserved": true,
+      "replacement_matches_canonical": true,
+      "actual_stat_gate": "ProcBuff._can_add_stat_and_keywords -> conditional_proc_func",
+      "focused_new_link_errors": 0,
+      "gfm_passed": true
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "shock-and-awe",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_100.png",
+      "attachment": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987278079",
+      "acquired_date": "2026-10-05",
+      "sha256": "7dadb2a3e1521d839e9e964fb889e8941f922e3c2f9834daae4cf6cd187696d2",
+      "content_type": "image/png",
+      "size": 5954,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "震懾祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed actual downloaded128x128 publicPNG; pale gray/white motif and transparent background intact, only identification without mechanical inference."
+    },
+    "additional_variant_images": [
+      {
+        "id": "shock-and-awe-246",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_246",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_246.png",
+        "attachment": "https://github.com/user-attachments/assets/6c1e408b-d8d7-4ce3-9782-198b9e3b0970",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987279100",
+        "acquired_date": "2026-10-05",
+        "sha256": "5d9205fe30047c5da553d1feca915fb7dbf7db5652e4f24212e83908b4b2814b",
+        "content_type": "image/png",
+        "size": 4030,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "震懾祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_verification": "Root viewed actual downloaded128x128 publicPNG; pale gray/white motif and transparent background intact, only identification without mechanical inference.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
+        "attachment": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+        "verified_binding_count": 1
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_246",
+        "attachment": "https://github.com/user-attachments/assets/6c1e408b-d8d7-4ce3-9782-198b9e3b0970",
+        "verified_binding_count": 1
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_hit_mass_consumption_reduction_on_kill",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_100",
+        "attachment": "https://github.com/user-attachments/assets/9277a78a-f4a2-4639-9fcb-cbbfbf82b3c7",
+        "verified_binding_count": 2
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 16,
+      "rows": 356,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 54,
+      "source_files": 27,
+      "bindings": 627,
+      "variants": 325,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 27,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 887,
+      "remote_references": 379,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 25,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-024-full-scan.json",
+        "sha256": "c417cbd6d35555af07a27d085edc56ea44dd137f4419d934018175d01f11a3ba",
+        "trigger": "round-024"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "source_scope_reuse": "Only trailing RAW display space changed; all54fixedsource ranges/27files/formulas/globalmap passed results reused unchanged; final affectedlinks/GFM rerun after displaydelta."
+  },
+  "remaining_counts": {
+    "name_groups": 62,
+    "not_started_name_groups": 62,
+    "partial_name_groups": 0,
+    "remaining_variants": 280,
+    "remaining_bindings": 558,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "704ca8ec2ecf68fe13b4ad512835f5b2824491d482ca5d62338edcff7af0e460"
+  },
+  "previous_local_commit": "90acdaf876e1771661be11186d1eb761bd6aef69",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Exact primaryUI actualmetadata intersection verified"
+  },
+  "partial_stage_repair": "Initial exact21-file stage blocked by displayed RAW trailing whitespace; only canonical renderer replacement/formaldisplay delta reviewed by nonauthor, fixedscope source/mechanism values unchanged. No reset/stash/index-clearing; same21-file scope restaged after finalpeer approval.",
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-candidate-link-repair.json",
+      "sha256": "538309f42049cf37ebe69e995335d7ce2d84dae1a27fae52345a982b14a28898"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-focused-checks.json",
+      "sha256": "e8e11423717bb9429849f5ad5088e86f3f8cb445c82c96f9eeb32a70ad4a0b9f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-frozen-source-verification.json",
+      "sha256": "dcc391b412ab04427418ae08a14e5e08154d723cc1dfe934722e550b7b818be9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-held-stat-consumer-review.json",
+      "sha256": "cf5e5e493bc51c0ce6a6702aad3a5238187396031ed9483c384073af5a42eaa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-own-tier-diff.json",
+      "sha256": "f290600fbc6be7f545187b50a18b0d79e9e936efcbe66877aee39215c8e8e37b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-raw-display-space-review.json",
+      "sha256": "a283dfcda25d7e65fda4c9dae4054334df5aeac2620855efe9e0d65c332d6976"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-resume-review.json",
+      "sha256": "21e6071553d079e9992d4e071c15af875aaad04fa06792f25e0a6889680c8ee4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-traits-review.json",
+      "sha256": "2339f8189471f2b4fec9bd58b358ab715638d257322f8f7fb47877299b426b21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-raw-verification.json",
+      "sha256": "554700426916debf252c446608943650ddea78f930f7a1b1753f20809b1ee351"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-review.json",
+      "sha256": "0545faeabae0db4399bfefdffb4200aa95e294d00fe49c0eacb33d3ef23240d3"
+    }
+  ],
+  "primary_review_method": "Own3fulltier/wrapper/formatter4actualbindings and native mode differences verified by existing frozen rootreceipts, current40agent ranges; matched shared eventcache/held/timer mechanisms reused, new explicit actual statconsumer applicability added. No wholesale reread.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-config.json",
+    "sha256": "63327cb66c03d39544be5f0bc59035009a301c32dffb2ed65efc5ab31cc620a9"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-traits-review.json",
+      "sha256": "2339f8189471f2b4fec9bd58b358ab715638d257322f8f7fb47877299b426b21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-review.json",
+      "sha256": "0545faeabae0db4399bfefdffb4200aa95e294d00fe49c0eacb33d3ef23240d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-ui-raw-verification.json",
+      "sha256": "554700426916debf252c446608943650ddea78f930f7a1b1753f20809b1ee351"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-own-tier-diff.json",
+      "sha256": "f290600fbc6be7f545187b50a18b0d79e9e936efcbe66877aee39215c8e8e37b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-image.json",
+      "sha256": "b183d88c5de4c7bbe4b4cd520c267c8f5e883a58dfd89fd595e5ebb920b7296c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-246-image.json",
+      "sha256": "bc5b932ef37eb45c47928ca8fe446d2b181c6fc7b5bab523d063758dfd021878"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/source-range-manifest.json",
+      "sha256": "257e41815e0dd4444dea1f2d43fe88487c6077fc750f8c03cb067d904a27cac2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/binding-inventory.json",
+      "sha256": "797ca4a11542910fe5abb3c07085f410c6bdfc6b748bf45c9242b35d35410367"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-config.json",
+      "sha256": "cc43ba274246664d0ba944ed6952da0c956042f8c3a8067be5f776169b5c6a3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-draft.md",
+      "sha256": "7fe9354b4273a84828febed65738017ac82f93df9188a2369fe39007a34e2722"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-page-preview.md",
+      "sha256": "521833562ab16a79638485d38a696942b0f3f456112267de424f32ee3b2a4fe7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-selfcheck.json",
+      "sha256": "598fa58223c40efa840dacd76a868aea9f52c798fbfbe47df6e3ba8a2ac74f97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-primary-held-stat-consumer-review.json",
+      "sha256": "cf5e5e493bc51c0ce6a6702aad3a5238187396031ed9483c384073af5a42eaa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-config.json",
+      "sha256": "cc43ba274246664d0ba944ed6952da0c956042f8c3a8067be5f776169b5c6a3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-config.json",
+      "sha256": "cc43ba274246664d0ba944ed6952da0c956042f8c3a8067be5f776169b5c6a3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-evidence.json",
+      "sha256": "63c6ecd7b97ea86ea54be582d38012ef0eb49c9a0f02d625818fd0cd0b9c06d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-evidence.json",
+      "sha256": "63c6ecd7b97ea86ea54be582d38012ef0eb49c9a0f02d625818fd0cd0b9c06d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-group/shock-and-awe-agent-draft.md",
+      "sha256": "7fe9354b4273a84828febed65738017ac82f93df9188a2369fe39007a34e2722"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-agent-draft.md",
+      "sha256": "7fe9354b4273a84828febed65738017ac82f93df9188a2369fe39007a34e2722"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/shock-and-awe-formal-peer-scope.json",
+    "sha256": "a06e8120d1b690f9e4ef2c2edd5aee59d45840b0205362ba1b3fa11a3b706f41",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

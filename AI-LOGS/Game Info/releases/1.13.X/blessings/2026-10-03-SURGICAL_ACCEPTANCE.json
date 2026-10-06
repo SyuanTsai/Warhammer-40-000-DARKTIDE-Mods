@@ -1,0 +1,1357 @@
+{
+  "date": "2026-10-04",
+  "blessing": "surgical",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/精確打擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+    "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time"
+  ],
+  "added_binding_count": 18,
+  "total_variants": 9,
+  "total_bindings": 18,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_scope": "Current 15 formal Surgical markdown files; nine variants and 18 UI bindings; tier and 10Δ tables; five icon attachment mappings; exact RAW comparison; shared blessings entry points; map and exact remaining partition. Reused unchanged fixed-SHA mechanism and the previously accepted root config/delta receipts.",
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/DAMAGE_PERCENTAGE_REVIEW.md": "d7317eb5c0e69fa072fe80881585b825a24e35895802e15ca0e5f0e223161071",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/LOCALIZATION_COMPARISON.md": "a0966210edbc40dfc207cbe86a69f36929d679f78c741405685839ec4660a137",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/README.md": "006acc30da9a1db7fe5d33df11c21a456416a30f70189e42631524600ff75a2b",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/SOURCE_INDEX.md": "bd0ca3375c5585ac018ee22912ed1c5a52890ccc1644717dc65b2d5bc67b7c67",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/TIER_VALUES.md": "9ea6a701bbce4e1da6a7704ec4cdd9fd3b5fe41f383a3c522c5196f3cb66840c",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/WEAPON_COMPATIBILITY.md": "8ea39c8b431de105a3dd82d193227b9f941c50c6e7e835290a6c5c85afce549d",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time.md": "5c1220e366d0f8d86ad292988a2fef0b2d1018d01e12bcd79ebfe0bd70cc59e6",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md": "495ea2da2833528cfd81e049307f1c98a407f2230e11f3c51f9a87954dee0a64",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md": "8d63640b5bb80b67a173d0363563b773fc8a88a5439d2d2325e966a143bc858c",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time.md": "6e31be45c9ea880feeea63390d782449764121ffaf9038818d907c0e1cbb842f",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time.md": "838e05f89ea2a8f9231551f4ab2680ca34226ed6655c7fe3b9cf2212597dc557",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md": "3dd54e4583a1c03694bb5b2d1361d9300fbb9f6fbbc15f8f174cce0b74bbcfb5",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time.md": "27a682c86ff997fb8c64266b48587f35c82568a13f0b646a47f38829d2f48d16",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time.md": "c7cdb372c76169c1c075911fab244dc5b4551c49705b052e04fa6c5923d7274d",
+      "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time.md": "013b21c9c062d941da6c6488055e26c97b7fd7744d9c649afa9bca02bd76cc38",
+      "Game Info/releases/1.13.X/blessings/README.md": "6c3cf08d58ec1bb4dafdce66950ac569c61b2be7ffd6d5cee014ea2360790e47",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3d3272bccefcc2c6b315158b67a31ccde172326a1e4c9c6cfa7c405c9af5ef29",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "7b7bf41367c5efd1d45a1cff2b62987d77fc03acb2ef5ac7049e1f07dc9c5b34",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "1082e71bbdb50571649fe1bb21389d666ac817787f5af414b6e461bcd7cad12e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-config.json": "f3e6355bf37a1a5733f4efd1a815ec000f03f0829421a89b8c94e33091b9378a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-extension-draft.json": "11abf1faef6d7ab108a3456addff6052a48e43cfd30d74b302e01b13b5e885a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-root-delta-review.json": "c1beefd8e413a18ca265fba6882e814ca497caeea8d0ef51ae303dadb7478a10",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-tier-vocabulary-review.json": "8625d0ecea46e316dee44981e1e0b35a39f202dde6a29d8b7dcd4c446e93abf1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-mode-fields-review.json": "35e75d539ff7db85ad9c3af250619349d2e41123c329e7375e1022a9aaaabebe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-traits-review.json": "c8c0e2fb046047835dddce1bb3b4ff5f1aca468c850a33a4fb74aa35df099622",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-core-review.json": "2e30024253af6656075b2684148069369b5a4f20f7f737d8927540944e5cdd74",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-review.json": "241ac201990bdff1c233bdbddca0d381cb48bd69455d07f8fbe63a2ba21b58bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-raw-verification.json": "47024e5dc69d6d16c3141376dbf90172871565af87955d26f47cb0bd6180b692",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-image-plan.json": "3d631000e7d21629c17e226acb549941e78f827ed148f5825e32b29cafb90a93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json": "3a254f5aeed15c3a35f46f0ab6f9f6a3aa71a7650bd2295892b66d05c467c2b4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json": "791e8107f488d5c0209fcb5c87bb62a6911715a0e6090024e1398b0a7674fd36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json": "dcb04e47ae4d7543f27cc5bad3f336a4e86cb9f4b2821a959098883fdab01725",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json": "df81d2f99c506e54a507942ce71b0740f91e3054a4a484835fb6ee92533a84a5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json": "df36cd4fc96d2c182d341add82f3717baf31105658913304bbf4dfe47baabbf5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "47ecc59a2b6a9b3d7c1035de71dac8b674877c58c7f448b491d5ee58a9c1fbaf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "004e953052ebd21e345ef56281c5ee650f398172938aca98371f888d6d020841",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-agent-config.json": "439db827bd9d794a0ff28f7edb48ac0e6d62412003fe03ed6cc4930794057e4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-agent-evidence.json": "08b1d13a72eac792c444f43f3101471ee10704d28c057565ce1e07b95eee1e7a"
+    },
+    "verified_summary": {
+      "formal_markdown_count": 15,
+      "variant_count": 9,
+      "binding_count": 18,
+      "tier_schema": {
+        "tiers": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "all_nine_trait_arrays_have_four_entries": true,
+        "backend_available_tiers_field_null_is_retained_separately": true
+      },
+      "interval_delta_seconds": {
+        "fast: autogun_p3, bolter_p1, ogryn_heavystubber_p2, ogryn_thumper_p1, ogryn_thumper_p3": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "slow: boltpistol_p1, lasgun_p2, stubrevolver_p1": [
+          0.45,
+          0.4,
+          0.35,
+          0.3
+        ],
+        "phosphor_pistol_p1": [
+          0.45,
+          0.4,
+          0.35,
+          0.325
+        ]
+      },
+      "full_ten_delta_seconds": {
+        "fast": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "slow": [
+          4.5,
+          4.0,
+          3.5,
+          3.0
+        ],
+        "phosphor_pistol_p1": [
+          4.5,
+          4.0,
+          3.5,
+          3.25
+        ]
+      },
+      "presentation": "Player README uses the fixed 觸發方式 label, spaced single-point bullets, player-facing 瞄準 and probability-limit wording, grouped examples, and tier-specific names; it avoids ADS, clamp and P1/P2/P3 shorthand. Examples preserve chance-pool vs damage distinction and forced/auto-crit behavior in source notes.",
+      "special_modes": {
+        "ogryn_thumper": "The first bash stops alternate fire; the follow-up right bash does not restart aiming and inherits the already-exited state.",
+        "ogryn_heavystubber": "Flashlight toggle is a toggle_special action, not a shot or a fire_last_t update.",
+        "phosphor_pistol": "IV delta is 0.325 seconds; ten intervals are 3.25 seconds."
+      },
+      "icons": {
+        "weapon_trait_102": {
+          "weapons": [
+            "lasgun_p2"
+          ],
+          "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+          "sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62",
+          "display_verified": true,
+          "hash_verified": true
+        },
+        "weapon_trait_103": {
+          "weapons": [
+            "autogun_p3"
+          ],
+          "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+          "sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549",
+          "display_verified": true,
+          "hash_verified": true
+        },
+        "weapon_trait_104": {
+          "weapons": [
+            "boltpistol_p1",
+            "stubrevolver_p1"
+          ],
+          "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+          "sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9",
+          "display_verified": true,
+          "hash_verified": true
+        },
+        "weapon_trait_140": {
+          "weapons": [
+            "ogryn_heavystubber_p2",
+            "ogryn_thumper_p1",
+            "ogryn_thumper_p3"
+          ],
+          "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+          "sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa",
+          "display_verified": true,
+          "hash_verified": true
+        },
+        "weapon_trait_150": {
+          "weapons": [
+            "bolter_p1",
+            "phosphor_pistol_p1"
+          ],
+          "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+          "sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265",
+          "display_verified": true,
+          "hash_verified": true
+        }
+      },
+      "localization": {
+        "name_key": "loc_trait_bespoke_crit_chance_based_on_aim_time",
+        "name_hash": "6abd0dd5",
+        "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+        "description_hash": "4a242066",
+        "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+        "player_glossary": "爆擊率",
+        "raw_kept_exact": true
+      },
+      "map_and_shared_entry": {
+        "map_blessing_rows": 1,
+        "map_variant_rows": 9,
+        "map_binding_rows": 18,
+        "shared_blessings_readme_link": true,
+        "shared_source_index_link": true,
+        "ranged_readme_link": true
+      },
+      "remaining_partition": {
+        "remaining_name_groups": 125,
+        "remaining_variants": 439,
+        "remaining_bindings": 866,
+        "unresolved": 58,
+        "definitions_outside_intersection": 88,
+        "exact_name_key_occurrences_in_remaining": 0,
+        "shotpistol_source_only_candidate_in_outside_partition": true,
+        "candidate_inventory_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "candidate_inventory_line": 190,
+        "candidate_has_exact_metadata_or_ui_assignment": false
+      },
+      "image_receipt_checks": {
+        "five_distinct_icon_ids": true,
+        "all_hashes_verified": true,
+        "all_display_verified": true,
+        "README_links_match_receipt_attachments": true
+      }
+    },
+    "reviewed_bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "trait_ukeys_line": 1031,
+        "traits_append_line": 1033,
+        "icon_id": "weapon_trait_103"
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "trait_ukeys_line": 1094,
+        "traits_append_line": 1096,
+        "icon_id": "weapon_trait_103"
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "trait_ukeys_line": 1039,
+        "traits_append_line": 1041,
+        "icon_id": "weapon_trait_103"
+      },
+      {
+        "weapon_id": "bolter_p1",
+        "mark_id": "bolter_p1_m1",
+        "trait_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "矛頭爆矢槍 洛克 Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 762,
+        "traits_append_line": 764,
+        "icon_id": "weapon_trait_150"
+      },
+      {
+        "weapon_id": "bolter_p1",
+        "mark_id": "bolter_p1_m2",
+        "trait_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "矛頭爆矢槍 洛克 Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 757,
+        "traits_append_line": 759,
+        "icon_id": "weapon_trait_150"
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 769,
+        "traits_append_line": 771,
+        "icon_id": "weapon_trait_104"
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 769,
+        "traits_append_line": 771,
+        "icon_id": "weapon_trait_104"
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "冥潮鐳射槍 盧修斯 MK IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 1333,
+        "traits_append_line": 1335,
+        "icon_id": "weapon_trait_102"
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "冥潮鐳射槍 盧修斯 MK V",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 1327,
+        "traits_append_line": 1329,
+        "icon_id": "weapon_trait_102"
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "冥潮鐳射槍 盧修斯 Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 1244,
+        "traits_append_line": 1246,
+        "icon_id": "weapon_trait_102"
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "重伐木槍 克魯克 Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 794,
+        "traits_append_line": 796,
+        "icon_id": "weapon_trait_140"
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "重伐木槍 戈爾貢努姆 Mk IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 815,
+        "traits_append_line": 817,
+        "icon_id": "weapon_trait_140"
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "重伐木槍 阿克利斯 Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 815,
+        "traits_append_line": 817,
+        "icon_id": "weapon_trait_140"
+      },
+      {
+        "weapon_id": "ogryn_thumper_p1",
+        "mark_id": "ogryn_thumper_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "反衝者 洛倫茲 Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 840,
+        "traits_append_line": 842,
+        "icon_id": "weapon_trait_140"
+      },
+      {
+        "weapon_id": "ogryn_thumper_p3",
+        "mark_id": "ogryn_thumper_p1_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "惡棍槍 洛倫茲 Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 832,
+        "traits_append_line": 834,
+        "icon_id": "weapon_trait_140"
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 1141,
+        "traits_append_line": 1143,
+        "icon_id": "weapon_trait_150"
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "trait_ukeys_line": 982,
+        "traits_append_line": 984,
+        "icon_id": "weapon_trait_104"
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+        "display_name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "trait_ukeys_line": 885,
+        "traits_append_line": 887,
+        "icon_id": "weapon_trait_104"
+      }
+    ],
+    "verified_source_refs": [
+      {
+        "claim": "All nine definitions have four I–IV array entries; Phosphor IV interval is 0.325 seconds.",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start": 344,
+        "end": 401
+      },
+      {
+        "claim": "Thumper first bash exits aiming and its follow-up does not restart aiming.",
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "start": 437,
+        "end": 658
+      },
+      {
+        "claim": "Heavy Stubber flashlight is a toggle_special action, not a firing action.",
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "start": 554,
+        "end": 589
+      },
+      {
+        "claim": "Chance rounding/PRD and force/forbid branches are addressed separately.",
+        "path": "scripts/utilities/attack/critical_strike.lua",
+        "start": 5,
+        "end": 39
+      },
+      {
+        "claim": "Forced/forbidden critical strike branches.",
+        "path": "scripts/extension_systems/weapon/actions/action_weapon_base.lua",
+        "start": 148,
+        "end": 183
+      }
+    ],
+    "receipt_refs": {
+      "config": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-config.json",
+      "extension_draft": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-extension-draft.json",
+      "root_delta": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-root-delta-review.json",
+      "primary_tier": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-tier-vocabulary-review.json",
+      "primary_traits": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-traits-review.json",
+      "primary_core": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-core-review.json",
+      "primary_modes": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-mode-fields-review.json",
+      "primary_ui": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-review.json",
+      "primary_raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-raw-verification.json",
+      "image_receipts": [
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json"
+      ],
+      "remaining": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json"
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "surgical",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_102",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_102.png",
+      "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970255246",
+      "acquired_date": "2026-10-03",
+      "sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62",
+      "content_type": "image/png",
+      "size": 4105,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "精確打擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol visually inspected the actual public attachment on a dark inspection background without modifying the original asset: intact transparent aiming-ring icon, with rifle/automatic/pistol/heavy-stubber/bolter silhouettes matching the five actual icon paths."
+    },
+    "additional_variant_images": [
+      {
+        "id": "surgical-103",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_103",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_103.png",
+        "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970256022",
+        "acquired_date": "2026-10-03",
+        "sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549",
+        "content_type": "image/png",
+        "size": 4136,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "精確打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "display_review": "Sol visually inspected the actual public attachment on a dark inspection background without modifying the original asset: intact transparent aiming-ring icon, with rifle/automatic/pistol/heavy-stubber/bolter silhouettes matching the five actual icon paths.",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "surgical-104",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_104.png",
+        "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970256662",
+        "acquired_date": "2026-10-03",
+        "sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9",
+        "content_type": "image/png",
+        "size": 5468,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "精確打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "display_review": "Sol visually inspected the actual public attachment on a dark inspection background without modifying the original asset: intact transparent aiming-ring icon, with rifle/automatic/pistol/heavy-stubber/bolter silhouettes matching the five actual icon paths.",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "surgical-140",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_140.png",
+        "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970257402",
+        "acquired_date": "2026-10-03",
+        "sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa",
+        "content_type": "image/png",
+        "size": 5136,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "精確打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "display_review": "Sol visually inspected the actual public attachment on a dark inspection background without modifying the original asset: intact transparent aiming-ring icon, with rifle/automatic/pistol/heavy-stubber/bolter silhouettes matching the five actual icon paths.",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "surgical-150",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_150",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_150.png",
+        "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5970258096",
+        "acquired_date": "2026-10-03",
+        "sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265",
+        "content_type": "image/png",
+        "size": 5283,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "精確打擊祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "display_review": "Sol visually inspected the actual public attachment on a dark inspection background without modifying the original asset: intact transparent aiming-ring icon, with rifle/automatic/pistol/heavy-stubber/bolter silhouettes matching the five actual icon paths.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_103",
+        "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_150",
+        "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
+        "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_102",
+        "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+        "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+        "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+        "verified_binding_count": 1
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+        "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+        "verified_binding_count": 1
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_150",
+        "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+        "verified_binding_count": 1
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
+        "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+        "verified_binding_count": 2
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 29,
+      "tables": 28,
+      "rows": 275,
+      "lists": 106,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 158,
+      "source_files": 51,
+      "bindings": 319,
+      "variants": 166,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 51,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 592,
+      "remote_references": 457,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 3,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-002-full-scan.json",
+        "sha256": "f852197153f38f4b1ac331191607201d611aec881b008d3d23267729975e1a97",
+        "trigger": "round-002"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 125,
+    "not_started_name_groups": 125,
+    "partial_name_groups": 0,
+    "remaining_variants": 439,
+    "remaining_bindings": 866,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "47ecc59a2b6a9b3d7c1035de71dac8b674877c58c7f448b491d5ee58a9c1fbaf"
+  },
+  "previous_local_commit": "cc20da268bd99fc421526ba590039c87ce53e638",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "All 9 full own tier/wrapper definitions, 18 exact RAW/UI/template bindings and 110 own action blocks; stepped stat count/offset, generic full-table replacement, ADS timing/fire_last_t ordering, real modes/specials, clamp/conversion/PRD/burst exceptions and current examples",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-traits-review.json",
+        "sha256": "c8c0e2fb046047835dddce1bb3b4ff5f1aca468c850a33a4fb74aa35df099622"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-core-review.json",
+        "sha256": "2e30024253af6656075b2684148069369b5a4f20f7f737d8927540944e5cdd74"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-mode-fields-review.json",
+        "sha256": "35e75d539ff7db85ad9c3af250619349d2e41123c329e7375e1022a9aaaabebe"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-review.json",
+        "sha256": "241ac201990bdff1c233bdbddca0d381cb48bd69455d07f8fbe63a2ba21b58bd"
+      }
+    ],
+    "agent_research_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-agent-config.json",
+        "sha256": "439db827bd9d794a0ff28f7edb48ac0e6d62412003fe03ed6cc4930794057e4b"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-agent-evidence.json",
+        "sha256": "08b1d13a72eac792c444f43f3101471ee10704d28c057565ce1e07b95eee1e7a"
+      }
+    ],
+    "root_delta_peer_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-root-delta-review.json",
+      "sha256": "c1beefd8e413a18ca265fba6882e814ca497caeea8d0ef51ae303dadb7478a10"
+    },
+    "common_cache_reuse": {
+      "stepped": "stepped-stat-count and buff-stack-offset; own stepped_stat_buff type/offset−1 and conditions checked",
+      "consumer": "critical-chance-consumer and critical-prd-rounding; own generic stat full-table override checked",
+      "fire_order": "shoot-fire-time-report; all exact actual shot kinds and charged special wrappers checked"
+    },
+    "cache_receipt": {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "004e953052ebd21e345ef56281c5ee650f398172938aca98371f888d6d020841"
+    },
+    "numeric_check": {
+      "all_tiers_pp_per_step": 10,
+      "step_cap": 10,
+      "fast_IV_10_steps_seconds": 2,
+      "slow_IV_10_steps_seconds": 3,
+      "phosphor_IV_10_steps_seconds": 3.25,
+      "base5_other15_steps5_pool_percent": 70,
+      "relative_pool_increase_percent": 250,
+      "full_step_with_convert20_percent": 80
+    },
+    "formal_peer_policy": "reuse completed frozen root-config delta review; verify generated formal pages, exact map/remaining/shared入口 and current file hashes",
+    "formal_presentation_postprocess": "Only spacing, ADS/clamp player terms, punctuation, grouping entry, explicit I–IV tier sentence and compact difference cells; frozen reviewed config mechanism unchanged.",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-extension-draft.json",
+      "sha256": "11abf1faef6d7ab108a3456addff6052a48e43cfd30d74b302e01b13b5e885a3"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 18,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-primary-ui-review.json",
+      "sha256": "241ac201990bdff1c233bdbddca0d381cb48bd69455d07f8fbe63a2ba21b58bd"
+    },
+    "bindings": [
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m1",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m1",
+          "loc_weapon_pattern_autogun_p3_m1",
+          "loc_weapon_mark_autogun_p3_m1"
+        ],
+        "name_zh_tw": "機動自動槍 哥倫努 Mk III",
+        "name_en": "Vigilant Autogun Columnus Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1031,
+        "append_line": 1033
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m2",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m2",
+          "loc_weapon_pattern_autogun_p3_m2",
+          "loc_weapon_mark_autogun_p3_m2"
+        ],
+        "name_zh_tw": "機動自動槍 格拉亞 Mk VII",
+        "name_en": "Vigilant Autogun Graia Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1094,
+        "append_line": 1096
+      },
+      {
+        "weapon_id": "autogun_p3",
+        "mark_id": "autogun_p3_m3",
+        "trait_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_autogun_p3_m3",
+          "loc_weapon_pattern_autogun_p3_m3",
+          "loc_weapon_mark_autogun_p3_m3"
+        ],
+        "name_zh_tw": "機動自動槍 阿格里皮娜 Mk IX",
+        "name_en": "Vigilant Autogun Agripinaa Mk IX",
+        "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "ukeys_line": 1039,
+        "append_line": 1041
+      },
+      {
+        "weapon_id": "bolter_p1",
+        "mark_id": "bolter_p1_m1",
+        "trait_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_bolter_p1_m1",
+          "loc_weapon_pattern_bolter_p1_m1",
+          "loc_weapon_mark_bolter_p1_m1"
+        ],
+        "name_zh_tw": "矛頭爆矢槍 洛克 Mk IIb",
+        "name_en": "Spearhead Boltgun Locke Mk IIb",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 762,
+        "append_line": 764
+      },
+      {
+        "weapon_id": "bolter_p1",
+        "mark_id": "bolter_p1_m2",
+        "trait_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_bolter_p1_m2",
+          "loc_weapon_pattern_bolter_p1_m2",
+          "loc_weapon_mark_bolter_p1_m2"
+        ],
+        "name_zh_tw": "矛頭爆矢槍 洛克 Mk III",
+        "name_en": "Spearhead Boltgun Locke Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 757,
+        "append_line": 759
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m1",
+          "loc_weapon_pattern_boltpistol_p1_m1",
+          "loc_weapon_mark_boltpistol_p1_m1"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk IV",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "boltpistol_p1",
+        "mark_id": "boltpistol_p1_m2",
+        "trait_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_boltpistol_p1_m2",
+          "loc_weapon_pattern_boltpistol_p1_m2",
+          "loc_weapon_mark_boltpistol_p1_m2"
+        ],
+        "name_zh_tw": "爆彈手槍 戈德溫–布蘭克斯 Mk VI",
+        "name_en": "Bolt Pistol Godwyn-Branx Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 769,
+        "append_line": 771
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m1",
+          "loc_weapon_pattern_lasgun_p2_m1",
+          "loc_weapon_mark_lasgun_p2_m1"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 MK IIIa",
+        "name_en": "Helbore Lasgun Lucius MK IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1333,
+        "append_line": 1335
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m2",
+          "loc_weapon_pattern_lasgun_p2_m2",
+          "loc_weapon_mark_lasgun_p2_m2"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 MK V",
+        "name_en": "Helbore Lasgun Lucius MK V",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1327,
+        "append_line": 1329
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "mark_id": "lasgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_lasgun_p2_m3",
+          "loc_weapon_pattern_lasgun_p2_m3",
+          "loc_weapon_mark_lasgun_p2_m3"
+        ],
+        "name_zh_tw": "冥潮鐳射槍 盧修斯 Mk IV",
+        "name_en": "Helbore Lasgun Lucius Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1244,
+        "append_line": 1246
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m1",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m1",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m1"
+        ],
+        "name_zh_tw": "重伐木槍 克魯克 Mk IIa",
+        "name_en": "Heavy Stubber Krourk Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 794,
+        "append_line": 796
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m2",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m2",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m2"
+        ],
+        "name_zh_tw": "重伐木槍 戈爾貢努姆 Mk IIIa",
+        "name_en": "Heavy Stubber Gorgonum Mk IIIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "mark_id": "ogryn_heavystubber_p2_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m3",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m3",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m3"
+        ],
+        "name_zh_tw": "重伐木槍 阿克利斯 Mk II",
+        "name_en": "Heavy Stubber Achlys Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 815,
+        "append_line": 817
+      },
+      {
+        "weapon_id": "ogryn_thumper_p1",
+        "mark_id": "ogryn_thumper_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_thumper_p1_m1",
+          "loc_weapon_pattern_ogryn_thumper_p1_m1",
+          "loc_weapon_mark_ogryn_thumper_p1_m1"
+        ],
+        "name_zh_tw": "反衝者 洛倫茲 Mk V",
+        "name_en": "Kickback Lorenz Mk V",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 840,
+        "append_line": 842
+      },
+      {
+        "weapon_id": "ogryn_thumper_p3",
+        "mark_id": "ogryn_thumper_p1_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_thumper_p1_m3",
+          "loc_weapon_pattern_ogryn_thumper_p1_m3",
+          "loc_weapon_mark_ogryn_thumper_p1_m3"
+        ],
+        "name_zh_tw": "惡棍槍 洛倫茲 Mk VII",
+        "name_en": "Thugshot Lorenz Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 832,
+        "append_line": 834
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m1",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m1",
+          "loc_weapon_pattern_stubrevolver_p1_m1",
+          "loc_weapon_mark_stubrevolver_p1_m1"
+        ],
+        "name_zh_tw": "快拔左輪手槍 紮羅娜 Mk IIa",
+        "name_en": "Quickdraw Stub Revolver Zarona Mk IIa",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 982,
+        "append_line": 984
+      },
+      {
+        "weapon_id": "stubrevolver_p1",
+        "mark_id": "stubrevolver_p1_m2",
+        "trait_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+        "loc_ids": [
+          "loc_weapon_family_stubrevolver_p1_m2",
+          "loc_weapon_pattern_stubrevolver_p1_m2",
+          "loc_weapon_mark_stubrevolver_p1_m2"
+        ],
+        "name_zh_tw": "快拔左輪手槍 阿格里皮娜 Mk XIV",
+        "name_en": "Quickdraw Stub Revolver Agripinaa Mk XIV",
+        "template_file": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 885,
+        "append_line": 887
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "scope": "Own 9 variants/18 bindings are exact name-key intersection; additional source-only template is already in original 88 outside definitions",
+    "count": 1,
+    "candidate": {
+      "trait_id": "weapon_trait_bespoke_shotpistol_shield_p1_crit_chance_based_on_aim_time",
+      "trait_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+      "trait_lines": [
+        190,
+        247
+      ],
+      "wrapper_path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+      "wrapper_line": 17,
+      "metadata_matching_trait_item_found": false,
+      "classification": "source-only same-template candidate; no exact metadata/localization or UI assignment inferred from suffix/base",
+      "inventory_outside_definition_present": true,
+      "inventory_record": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "line": 190
+      }
+    },
+    "source_evidence": [
+      {
+        "label": "source-only same-name candidate: shotpistol shield trait",
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "lines": [
+          190,
+          247
+        ],
+        "sha256": "439c7659fbb3bb34edbd461d1b9e82be431808fdff3b5ac653929cd23e1beb58",
+        "git_blob_sha1": "e9cd9d7414523dc5f9577aef3af24726552b7284"
+      },
+      {
+        "label": "source-only same-name candidate: wrapper clone",
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "lines": [
+          17,
+          17
+        ],
+        "sha256": "5355069274188b5f7d2a7eab71235968f1cfb6ce12b3fd8faae561a5fb3e688f",
+        "git_blob_sha1": "10d19c5e6094ddb11b348c831ac1ebc8139aed20"
+      }
+    ]
+  },
+  "execution_batch_started_on": "2026-10-03",
+  "supplemental_reviews": [
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "1435643a67cbd666ef552af0bc2c9f4c60b5e5a0",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json",
+        "sha256": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+        "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "corrections": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "唯讀複核 Surgical 新增爆炸適用限制相對 HEAD 的五檔差異；未重審既有 tiers、RAW、UI、圖示或完整共通機制。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json",
+          "sha256": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35"
+        },
+        "source_evidence_receipts": [
+          {
+            "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+            "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+          },
+          {
+            "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json",
+            "sha256": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179"
+          }
+        ],
+        "findings": [
+          "README 與三個變體頁均清楚區分可爆擊的直接射擊，以及固定以非爆擊參數生成的爆炸。",
+          "矛頭爆矢槍與爆彈手槍限定描述擊殺／停止及穿透停止爆炸；沒有聲稱存在穿透出口爆炸。兩類 M1/M2 起爆距離標為 5/3 公尺，與固定來源的型號設定相符。",
+          "磷光爆破手槍只將背向爆破列為非爆擊；SOURCE_INDEX 對應實際 impact 接線與 Explosion 參數。",
+          "SOURCE_INDEX 新增的固定 SHA 原始碼連結、hitscan 射擊接線連結均與本項適用差異相符；hitmass 條件保留在技術索引，玩家頁未誤寫成所有射擊爆炸一概不會爆擊。"
+        ],
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/README.md": "48fa8fb6d18d57e2fdad2a391c0e32a3a20fc67282fc67ea5a470f1fefcc8e6e",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/SOURCE_INDEX.md": "2885423ebc522415d8977dca2705f598ea1c0637f3a5c9ab6f4d1c3aff425e69",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md": "56e5b6133126f3ae7063e59c0560ec0e14287b1a79d8bb38a86c0c8c79ab22b9",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md": "5923b0965a02f87a5ffa1222670e52097bfe4497c28609638dce6260717f3c88",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time.md": "a39b1897e9e65ad9a3f5363a8329fe3f687ff6ae17e6f9922c1592697fa3a349",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-primary-review.json": "93d73196c326f4d021148867f630b4ee2999f7914c073e621343d6763c05df35",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/crucian-roulette-primary-clip-backblast-review.json": "d354f6b45821521944f2e73453aa91ca6292cd6ea1423a423abcc91059f45179"
+        },
+        "receipt_sha256": "50edd403e8645cf0d43f4b475010ad96126f7ca08f132e85ef4b3f8a445ad5bc"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json",
+          "sha256": "3a254f5aeed15c3a35f46f0ab6f9f6a3aa71a7650bd2295892b66d05c467c2b4",
+          "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+          "original_file_sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json",
+          "sha256": "791e8107f488d5c0209fcb5c87bb62a6911715a0e6090024e1398b0a7674fd36",
+          "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+          "original_file_sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json",
+          "sha256": "dcb04e47ae4d7543f27cc5bad3f336a4e86cb9f4b2821a959098883fdab01725",
+          "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+          "original_file_sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json",
+          "sha256": "df81d2f99c506e54a507942ce71b0740f91e3054a4a484835fb6ee92533a84a5",
+          "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+          "original_file_sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json",
+          "sha256": "df36cd4fc96d2c182d341add82f3717baf31105658913304bbf4dfe47baabbf5",
+          "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+          "original_file_sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 122,
+          "source_files": 57,
+          "bindings": 325,
+          "variants": 169,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 5,
+          "source_object_cache": {
+            "cache_hits": 57,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 5,
+          "tables": 4,
+          "rows": 103,
+          "lists": 12,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 6,
+          "local_references": 94,
+          "remote_references": 146,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 43,
+        "variants": 169,
+        "bindings": 325
+      },
+      "faster_enabled": false
+    },
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "d8a0dd3b5f2e5b6220b6762dbcc653907566f80a",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+        "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-impact-crit-agent-review.json",
+        "sha256": "997c2dc85a7c5f84cf80820b7cc956e959758c54289ed283b63bb3a6ca6a4071"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "只複核起爆距離倍率補充涉及的三頁差異與新增固定來源引用；未重審其他已接受 Surgical 內容。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+          "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+        },
+        "source_block": {
+          "path": "scripts/utilities/action/ranged_action.lua",
+          "start": 31,
+          "end": 43,
+          "sha256": "12ac6cbd55b96179f9605ef6c3b8ec859208d4eaa7d48a858ea3ec57a2930488",
+          "conclusion": "M1/M2的5/3公尺是基礎距離；實際距離乘上 stat_buffs.explosion_arming_distance_multiplier，未設定時預設1。"
+        },
+        "findings": [
+          "SOURCE_INDEX 新增的唯一精確引用指向固定SHA ranged_action.lua 31–43，與倍率計算區塊相符。",
+          "三頁均把 M1 5公尺與 M2 3公尺描述為基礎起爆距離，並明示實際值還會套用其他來源的倍率；未把5/3公尺誤寫成所有情況的固定最終距離。",
+          "既有直接射擊可爆擊、生成爆炸固定非爆擊的說明未改變；此次增量不影響非爆擊結論，也沒有新增穿透出口爆炸主張。"
+        ],
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/SOURCE_INDEX.md": "9d0ffa807ea57b5500f147c22bf09ba84c963d957e92832e07f6397cba739d87",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md": "ade9151d82039f49c3587fd7121aeaf663346098229956620df3465448d68c46",
+          "Game Info/releases/1.13.X/blessings/entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md": "64d15000fe95518670cb7e5e3907e9e0448fc9218386a7b35cb42700ffca388a",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b"
+        },
+        "receipt_sha256": "070f2fa80b4da766a4ab05117f57fec117fc8a53cb431d51bd5985a33f23ffea"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-image.json",
+          "sha256": "3a254f5aeed15c3a35f46f0ab6f9f6a3aa71a7650bd2295892b66d05c467c2b4",
+          "attachment": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+          "original_file_sha256": "ccdb26f7f0d30af0c5dcff8664b5b2dc82eaa8f122e70f2401ad43006cde3b62"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-103-image.json",
+          "sha256": "791e8107f488d5c0209fcb5c87bb62a6911715a0e6090024e1398b0a7674fd36",
+          "attachment": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+          "original_file_sha256": "554d52856bf0aa2f3554eafcc8ea1029c3cdd24377acb0c624954528e4eaf549"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-104-image.json",
+          "sha256": "dcb04e47ae4d7543f27cc5bad3f336a4e86cb9f4b2821a959098883fdab01725",
+          "attachment": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+          "original_file_sha256": "34196c574116ae1f62f5dbe7495140b4048c35dd83e4f76afc264f2d7d799ba9"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-140-image.json",
+          "sha256": "df81d2f99c506e54a507942ce71b0740f91e3054a4a484835fb6ee92533a84a5",
+          "attachment": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+          "original_file_sha256": "90c8a05200d985c03f0cdff29de2ae6bcbb1d2b8e0463e32cf0e4755065f0cfa"
+        },
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-150-image.json",
+          "sha256": "df36cd4fc96d2c182d341add82f3717baf31105658913304bbf4dfe47baabbf5",
+          "attachment": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+          "original_file_sha256": "472f820705bcbd1dacd8be3a81aaf6e41e207e378495d972f0b3faa03a0fc265"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 115,
+          "source_files": 57,
+          "bindings": 326,
+          "variants": 170,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 3,
+          "source_object_cache": {
+            "cache_hits": 57,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 3,
+          "tables": 3,
+          "rows": 95,
+          "lists": 7,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 4,
+          "local_references": 71,
+          "remote_references": 131,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 44,
+        "variants": 170,
+        "bindings": 326
+      },
+      "faster_enabled": false
+    }
+  ]
+}

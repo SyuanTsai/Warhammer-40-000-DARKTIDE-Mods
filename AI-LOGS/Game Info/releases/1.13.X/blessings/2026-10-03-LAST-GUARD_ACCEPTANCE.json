@@ -1,0 +1,495 @@
+{
+  "date": "2026-10-06",
+  "blessing": "last-guard",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/最後防線/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powermaul_shield_p1_block_break_pushes",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_break_pushes"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "last-guard",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-formal-peer-scope.json",
+    "scope_sha256": "85b4d32b80c66b5ca83c34074691bec399845294533a055dc7dd4654559335da",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "reviewed_proofs": {
+      "final_content": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-final-content-review.json",
+        "sha256": "ab0265976fd31f15850d9d1171379140810bb1cd49d8ea0c9c7ad5603d3e8f65"
+      },
+      "added_native_citations": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-added-native-lifecycle-citations-review.json",
+        "sha256": "a0e41354b1ef2a731b40b5c958df34dba2d1a2d6366fbfec7901a764e0980454"
+      },
+      "scheduled_push_lifecycle": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-scheduled-push-lifecycle-delta-review.json",
+        "sha256": "2769008e42f8dc69dcd98a03af0315b0dd340652b007f21d83ff22aead980092"
+      },
+      "true_unequip": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-true-unequip-pending-cancellation-review.json",
+        "sha256": "54d67727fd5d1444dbe56457f32cc0cdb6e30859399d368e0e2a45177c3f96d5"
+      },
+      "image": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-image.json",
+        "sha256": "6e2d2464d8c7e1e8cf4175714d48fcb77994922fa225748bd873f063ec67aa2f",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_230",
+        "attachment": "https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db",
+        "public_download_status": 200,
+        "dimensions": [
+          128,
+          128
+        ],
+        "hash_verified": true,
+        "display_verified": true
+      },
+      "focused_checks": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-focused-checks.json",
+        "sha256": "8d85ed1eb862a21cb309e67d3db06cf415be77b68f725a7ff94b3c8a52b3c899"
+      }
+    },
+    "reviewed_conclusions": [
+      "All 65 fixed-scope file hashes match disk; the scope contains all eight own formal pages and the actual item, UI/RAW, image, map/reverse, and source evidence.",
+      "Both implementations correctly show cooldowns I-IV of 18/15/12/9 seconds and block-cost multipliers .85/.80/.75/.70, formatted as 15/20/25/30% lower cost; the passive stat remains installed without a held gate.",
+      "A new deferred push requires an accepted on_block event with positive cost that actually depletes stamina, held source weapon when the proc event is handled, and an available cooldown. The first event is not delayed by an initial cooldown; successful handling starts its cooldown.",
+      "The example assumes normalized incoming block cost 1.00, neutral other cost modifiers, and stamina .72. Tiers I-III exhaust stamina at .85/.80/.75; IV cost .70 does not. This correctly illustrates that reduced block cost can prevent a break; 1000 is PowerLevel input, not HP damage.",
+      "The queued push flag is consumed on a later Buff update and uses then-current player position/facing. A slot switch stops new held-gated procs but does not remove the installed passive or cancel an already queued push. True unequip deletes this single nonpredicted Buff instance through the verified server removal path, so its pending push no longer runs.",
+      "Ordinary incoming melee/ranged blocks remain subject to each action’s accepted type, angle, and stamina conditions. Slab-shield special block cost is zero and cannot break; Shock Maul Shield special windup/activation retains its documented .4-second incoming-block window. Outgoing push itself is not the incoming trigger.",
+      "The RAW EN/ZH strings and four-tier formatter reconstruction match the fixed resource/hash. The tier table and variant pages separate both actual implementations and four model bindings; the verified icon path and attachment are kept distinct."
+    ],
+    "formal_page_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/DAMAGE_PERCENTAGE_REVIEW.md": "172b57345d82afff53d70d76489969b894b0dab9b8b98adebd5612f7a3fa731e",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/LOCALIZATION_COMPARISON.md": "5c2d7e65942ce891bc065064537b6fb2f41808aecd1fc3f26c4869f02338b08b",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/README.md": "72ed90bf8c36c82c6b884e4f82f86725719fe3f1b54d9edab1216234c418718c",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/SOURCE_INDEX.md": "1ee27e3b0c58d7abac70416e4b8e97aaf7147b2b34416baf71d890c62c4ee505",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/TIER_VALUES.md": "fbcc2c5fa15a10e227a1a96e7ef99e4219e3eb5544c8a01360ae3f0a92828cea",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/WEAPON_COMPATIBILITY.md": "e19d88b7ebf3f299e54f4c116028157faf199325f0ffbf0f5a0af3573e9b3aaf",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_break_pushes.md": "84cbf5f91f7c9bc2623036102598c7d0482a4fd3faf37edd5411eb7c078bf53c",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_powermaul_shield_p1_block_break_pushes.md": "bc8d37ed00a94757be55ebc8dba9c34dc8bbc8eafcc3e337d01f7e97924b9732"
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-config.json": "06b1b86ab3c3c099eabf89967bb8bd2117f5965b7f2cde2ca02c7b6566dd4d82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-draft.md": "f5d32cec4d965377ea32027908189503be22904bb91472ae4f92952f6acea922",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-evidence.json": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-config.json": "f2644f4f1258eb6530b8265e5b3576c2543ea910362d23c6fd8218d109a37543",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-extension-draft.json": "6229137599c491e57f2acaf6d6ccb2b7a5f3c7a8ef169b770873eeeea507d44c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/BLESSING_WEAPON_MAP.snapshot.json": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/last-guard-masterdata-snapshot.json": "86f484a3f2cd404aaaa9636f2d800ddbb29cc047c97e725609e36dfd9f83a78c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/remaining-tasks.snapshot.json": "39f5f876ea76b2b3f4c035161f79f70ec061ce29bac278de4a55724c185cc345",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-001.json": "9b01fcbba220005e666166d7939a5a63e4853d9dd9b66b38ed9b17fb3bf15f6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-002.json": "46114c1ca5c4707b944441bd64bb660fb195211461b78b009695e5250e9b1cb1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-003.json": "827f9b4ac8dc7f8b99bfbac966f1ae45beb5ed2a4e0cbabc11cb2eb9e93741f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-config.json": "06b1b86ab3c3c099eabf89967bb8bd2117f5965b7f2cde2ca02c7b6566dd4d82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-draft.md": "f5d32cec4d965377ea32027908189503be22904bb91472ae4f92952f6acea922",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-evidence.json": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-coverage.json": "1f46db11e3434a1f76f5bfc3056a7715aa07d8be9e7a1d73cb55a5ce72bf3f92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-image.json": "7b96b502752ce5bdefb605c7e92d42949459442dd59df82af962aa48d771134d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-added-native-lifecycle-citations-review.json": "a0e41354b1ef2a731b40b5c958df34dba2d1a2d6366fbfec7901a764e0980454",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-final-content-review.json": "ab0265976fd31f15850d9d1171379140810bb1cd49d8ea0c9c7ad5603d3e8f65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-focused-checks.json": "8d85ed1eb862a21cb309e67d3db06cf415be77b68f725a7ff94b3c8a52b3c899",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-frozen-source-verification.json": "cc9a2a5d4067de7777d3a02141cb3c499092c221d73a9ad560d2163ade5e28bb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-own-tier-wrapper-material-delta-review.json": "7628f26c09dc20421397078dbe4b23bbff5d133379041bdafc52a66839b3d854",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-private-push-settings-material-review.json": "e0eec705d42584a0b4674faa0472f75c34ba6cfa99c067c4e898de2f37def06b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-resume-review.json": "7e31ed24868a285bd976f4af824a439257345ecafeae8ade9d2e8584e7eb8d75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-scheduled-push-lifecycle-delta-review.json": "2769008e42f8dc69dcd98a03af0315b0dd340652b007f21d83ff22aead980092",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-traits-review.json": "6acf13b367bc8a4b5bf2a7f4c6b8b196ec3b0ed4661ab32e1fd301d9297385b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-true-unequip-pending-cancellation-review.json": "54d67727fd5d1444dbe56457f32cc0cdb6e30859399d368e0e2a45177c3f96d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-raw-verification.json": "0ad6b7ac70354e83cfee84609d94d232d5baec6457fb98fced86addb5a9c2369",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-review.json": "87f683578449cc5b481e7b4466448e20c22fd3537b1fe998c7655b95c324be35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-raw-verification.json": "4cad4b3bed31d4fcc8977a43cfc936735c82dccceb0489b6c80c65e140cb9dd2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "785025a032f4ac03c2a57dbd7a5088c19af83da69e79a7a57ac6129a3860693a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/DAMAGE_PERCENTAGE_REVIEW.md": "172b57345d82afff53d70d76489969b894b0dab9b8b98adebd5612f7a3fa731e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/LOCALIZATION_COMPARISON.md": "5c2d7e65942ce891bc065064537b6fb2f41808aecd1fc3f26c4869f02338b08b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/README.md": "72ed90bf8c36c82c6b884e4f82f86725719fe3f1b54d9edab1216234c418718c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/SOURCE_INDEX.md": "a37be798bff064e0334dc9f47a1588db46f4064a87ccfafa5ca47dd904b56cbf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/TIER_VALUES.md": "fbcc2c5fa15a10e227a1a96e7ef99e4219e3eb5544c8a01360ae3f0a92828cea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/WEAPON_COMPATIBILITY.md": "e19d88b7ebf3f299e54f4c116028157faf199325f0ffbf0f5a0af3573e9b3aaf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_break_pushes.md": "84cbf5f91f7c9bc2623036102598c7d0482a4fd3faf37edd5411eb7c078bf53c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_powermaul_shield_p1_block_break_pushes.md": "bc8d37ed00a94757be55ebc8dba9c34dc8bbc8eafcc3e337d01f7e97924b9732",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/melee/README.md": "a6e55c4ec5d7bd28f5e15613a8cf1ba11ce01241ae7e90c2c8e9894f79db0d55",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "db584defbe13e3577471ad4a0294572bbe2118e83c41a81eb9b226e12f239e8c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "16ad2f0fcc30d1d8784d3b5d9ce9ca8d95f816d04d5ec3ebcf9dceb8aa02cf59",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "719fe6991621ef44ad29417fa7f82b352895bdec776aa96bbf16344884f4ea51",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "8a0d968552291d2d4e8dc7d6cba6a845b433e5d0ad019de22fba6edec0839216",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/own-association-snapshot.json": "fa0cc70f3144b3f26dc6c445bc8d07542ff3b69cf01bcf02e23e1c19f996e818",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/actual-preview-003/Referneces/Translation.md": "ddd265b03c580cab71a02ab6900da2dae0f05738f47c0daa4fdaddedb8de07bd",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "785025a032f4ac03c2a57dbd7a5088c19af83da69e79a7a57ac6129a3860693a",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/DAMAGE_PERCENTAGE_REVIEW.md": "172b57345d82afff53d70d76489969b894b0dab9b8b98adebd5612f7a3fa731e",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/LOCALIZATION_COMPARISON.md": "5c2d7e65942ce891bc065064537b6fb2f41808aecd1fc3f26c4869f02338b08b",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/README.md": "72ed90bf8c36c82c6b884e4f82f86725719fe3f1b54d9edab1216234c418718c",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/SOURCE_INDEX.md": "1ee27e3b0c58d7abac70416e4b8e97aaf7147b2b34416baf71d890c62c4ee505",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/TIER_VALUES.md": "fbcc2c5fa15a10e227a1a96e7ef99e4219e3eb5544c8a01360ae3f0a92828cea",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/WEAPON_COMPATIBILITY.md": "e19d88b7ebf3f299e54f4c116028157faf199325f0ffbf0f5a0af3573e9b3aaf",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_break_pushes.md": "84cbf5f91f7c9bc2623036102598c7d0482a4fd3faf37edd5411eb7c078bf53c",
+      "Game Info/releases/1.13.X/blessings/entries/最後防線/weapon_trait_bespoke_powermaul_shield_p1_block_break_pushes.md": "bc8d37ed00a94757be55ebc8dba9c34dc8bbc8eafcc3e337d01f7e97924b9732",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "a6e55c4ec5d7bd28f5e15613a8cf1ba11ce01241ae7e90c2c8e9894f79db0d55",
+      "Game Info/releases/1.13.X/blessings/README.md": "db584defbe13e3577471ad4a0294572bbe2118e83c41a81eb9b226e12f239e8c",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "16ad2f0fcc30d1d8784d3b5d9ce9ca8d95f816d04d5ec3ebcf9dceb8aa02cf59",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "719fe6991621ef44ad29417fa7f82b352895bdec776aa96bbf16344884f4ea51",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚和鎮壓護盾/README.md": "8a0d968552291d2d4e8dc7d6cba6a845b433e5d0ad019de22fba6edec0839216",
+      "Referneces/Translation.md": "ddd265b03c580cab71a02ab6900da2dae0f05738f47c0daa4fdaddedb8de07bd"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "last-guard",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_230",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_230.png",
+      "attachment": "https://github.com/user-attachments/assets/9026239b-4900-48f0-a80f-5e6f932781db",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6001636866",
+      "acquired_date": "2026-10-06",
+      "sha256": "6e2d2464d8c7e1e8cf4175714d48fcb77994922fa225748bd873f063ec67aa2f",
+      "content_type": "image/png",
+      "size": 7015,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "最後防線祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG weapon_trait_230 pale shield motif; actual source/public hash and128 dimensions match."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 436,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 62,
+      "source_files": 25,
+      "bindings": 906,
+      "variants": 465,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1091,
+      "remote_references": 420,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 35,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-034-full-scan.json",
+        "sha256": "e52565ec6a21637469cd9bb47af839d8aa23d9abe7472a9eb2ce40cc2335f2ef",
+        "trigger": "round-034"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 31,
+    "not_started_name_groups": 31,
+    "partial_name_groups": 0,
+    "remaining_variants": 140,
+    "remaining_bindings": 279,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "3f8c1e910f8cac0605cae5b96487fdeacb5156e5b0e0a7a0ea0f9298048d4a72"
+  },
+  "previous_local_commit": "a4a119112129cf1bb068294d24cc815d292ed7fa",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "boundary": "Only exact inventory trait_id and item restrictions are in scope; no same-key external item inferred."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-added-native-lifecycle-citations-review.json",
+      "sha256": "a0e41354b1ef2a731b40b5c958df34dba2d1a2d6366fbfec7901a764e0980454"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-final-content-review.json",
+      "sha256": "ab0265976fd31f15850d9d1171379140810bb1cd49d8ea0c9c7ad5603d3e8f65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-focused-checks.json",
+      "sha256": "8d85ed1eb862a21cb309e67d3db06cf415be77b68f725a7ff94b3c8a52b3c899"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-frozen-source-verification.json",
+      "sha256": "cc9a2a5d4067de7777d3a02141cb3c499092c221d73a9ad560d2163ade5e28bb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "7628f26c09dc20421397078dbe4b23bbff5d133379041bdafc52a66839b3d854"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-private-push-settings-material-review.json",
+      "sha256": "e0eec705d42584a0b4674faa0472f75c34ba6cfa99c067c4e898de2f37def06b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-resume-review.json",
+      "sha256": "7e31ed24868a285bd976f4af824a439257345ecafeae8ade9d2e8584e7eb8d75"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-scheduled-push-lifecycle-delta-review.json",
+      "sha256": "2769008e42f8dc69dcd98a03af0315b0dd340652b007f21d83ff22aead980092"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-traits-review.json",
+      "sha256": "6acf13b367bc8a4b5bf2a7f4c6b8b196ec3b0ed4661ab32e1fd301d9297385b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-true-unequip-pending-cancellation-review.json",
+      "sha256": "54d67727fd5d1444dbe56457f32cc0cdb6e30859399d368e0e2a45177c3f96d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-raw-verification.json",
+      "sha256": "0ad6b7ac70354e83cfee84609d94d232d5baec6457fb98fced86addb5a9c2369"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-review.json",
+      "sha256": "87f683578449cc5b481e7b4466448e20c22fd3537b1fe998c7655b95c324be35"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-config.json",
+    "sha256": "f2644f4f1258eb6530b8265e5b3576c2543ea910362d23c6fd8218d109a37543"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-traits-review.json",
+      "sha256": "6acf13b367bc8a4b5bf2a7f4c6b8b196ec3b0ed4661ab32e1fd301d9297385b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-review.json",
+      "sha256": "87f683578449cc5b481e7b4466448e20c22fd3537b1fe998c7655b95c324be35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-ui-raw-verification.json",
+      "sha256": "0ad6b7ac70354e83cfee84609d94d232d5baec6457fb98fced86addb5a9c2369"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "7628f26c09dc20421397078dbe4b23bbff5d133379041bdafc52a66839b3d854"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-private-push-settings-material-review.json",
+      "sha256": "e0eec705d42584a0b4674faa0472f75c34ba6cfa99c067c4e898de2f37def06b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-image.json",
+      "sha256": "7b96b502752ce5bdefb605c7e92d42949459442dd59df82af962aa48d771134d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/last-guard-masterdata-snapshot.json",
+      "sha256": "86f484a3f2cd404aaaa9636f2d800ddbb29cc047c97e725609e36dfd9f83a78c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/BLESSING_WEAPON_MAP.snapshot.json",
+      "sha256": "c6b4c67661b99902868ef8dd8c907c4f68731c69dbda04015c478f8c4f039ad6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "39f5f876ea76b2b3f4c035161f79f70ec061ce29bac278de4a55724c185cc345"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-config.json",
+      "sha256": "06b1b86ab3c3c099eabf89967bb8bd2117f5965b7f2cde2ca02c7b6566dd4d82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-draft.md",
+      "sha256": "f5d32cec4d965377ea32027908189503be22904bb91472ae4f92952f6acea922"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-coverage.json",
+      "sha256": "1f46db11e3434a1f76f5bfc3056a7715aa07d8be9e7a1d73cb55a5ce72bf3f92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-003.json",
+      "sha256": "827f9b4ac8dc7f8b99bfbac966f1ae45beb5ed2a4e0cbabc11cb2eb9e93741f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "db584defbe13e3577471ad4a0294572bbe2118e83c41a81eb9b226e12f239e8c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "16ad2f0fcc30d1d8784d3b5d9ce9ca8d95f816d04d5ec3ebcf9dceb8aa02cf59"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "785025a032f4ac03c2a57dbd7a5088c19af83da69e79a7a57ac6129a3860693a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "172b57345d82afff53d70d76489969b894b0dab9b8b98adebd5612f7a3fa731e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\LOCALIZATION_COMPARISON.md",
+      "sha256": "5c2d7e65942ce891bc065064537b6fb2f41808aecd1fc3f26c4869f02338b08b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\README.md",
+      "sha256": "72ed90bf8c36c82c6b884e4f82f86725719fe3f1b54d9edab1216234c418718c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\SOURCE_INDEX.md",
+      "sha256": "a37be798bff064e0334dc9f47a1588db46f4064a87ccfafa5ca47dd904b56cbf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\TIER_VALUES.md",
+      "sha256": "fbcc2c5fa15a10e227a1a96e7ef99e4219e3eb5544c8a01360ae3f0a92828cea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\WEAPON_COMPATIBILITY.md",
+      "sha256": "e19d88b7ebf3f299e54f4c116028157faf199325f0ffbf0f5a0af3573e9b3aaf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_block_break_pushes.md",
+      "sha256": "84cbf5f91f7c9bc2623036102598c7d0482a4fd3faf37edd5411eb7c078bf53c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\最後防線\\weapon_trait_bespoke_powermaul_shield_p1_block_break_pushes.md",
+      "sha256": "bc8d37ed00a94757be55ebc8dba9c34dc8bbc8eafcc3e337d01f7e97924b9732"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "a6e55c4ec5d7bd28f5e15613a8cf1ba11ce01241ae7e90c2c8e9894f79db0d55"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\作戰大錘&板盾\\README.md",
+      "sha256": "719fe6991621ef44ad29417fa7f82b352895bdec776aa96bbf16344884f4ea51"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚和鎮壓護盾\\README.md",
+      "sha256": "8a0d968552291d2d4e8dc7d6cba6a845b433e5d0ad019de22fba6edec0839216"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "ddd265b03c580cab71a02ab6900da2dae0f05738f47c0daa4fdaddedb8de07bd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-raw-verification.json",
+      "sha256": "4cad4b3bed31d4fcc8977a43cfc936735c82dccceb0489b6c80c65e140cb9dd2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\last-guard-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "fa0cc70f3144b3f26dc6c445bc8d07542ff3b69cf01bcf02e23e1c19f996e818"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-001.json",
+      "sha256": "9b01fcbba220005e666166d7939a5a63e4853d9dd9b66b38ed9b17fb3bf15f6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-actual-preview-receipt-002.json",
+      "sha256": "46114c1ca5c4707b944441bd64bb660fb195211461b78b009695e5250e9b1cb1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-group/last-guard-agent-evidence.json",
+      "sha256": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-config.json",
+      "sha256": "06b1b86ab3c3c099eabf89967bb8bd2117f5965b7f2cde2ca02c7b6566dd4d82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-evidence.json",
+      "sha256": "5c380d2d17409e879e66aeecf7f9d4ff8dafc0dd5870d240f03a1a943d3bac52"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-agent-draft.md",
+      "sha256": "f5d32cec4d965377ea32027908189503be22904bb91472ae4f92952f6acea922"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-final-content-review.json",
+      "sha256": "ab0265976fd31f15850d9d1171379140810bb1cd49d8ea0c9c7ad5603d3e8f65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-frozen-source-verification.json",
+      "sha256": "cc9a2a5d4067de7777d3a02141cb3c499092c221d73a9ad560d2163ade5e28bb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-scheduled-push-lifecycle-delta-review.json",
+      "sha256": "2769008e42f8dc69dcd98a03af0315b0dd340652b007f21d83ff22aead980092"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-true-unequip-pending-cancellation-review.json",
+      "sha256": "54d67727fd5d1444dbe56457f32cc0cdb6e30859399d368e0e2a45177c3f96d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-primary-added-native-lifecycle-citations-review.json",
+      "sha256": "a0e41354b1ef2a731b40b5c958df34dba2d1a2d6366fbfec7901a764e0980454"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/last-guard-formal-peer-scope.json",
+    "sha256": "85b4d32b80c66b5ca83c34074691bec399845294533a055dc7dd4654559335da",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

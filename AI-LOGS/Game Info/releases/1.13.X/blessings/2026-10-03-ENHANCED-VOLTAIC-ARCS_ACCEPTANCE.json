@@ -1,0 +1,538 @@
+{
+  "date": "2026-10-05",
+  "blessing": "enhanced-voltaic-arcs",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/強化電流弧/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle",
+    "weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 2,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "enhanced-voltaic-arcs",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "faster_status": "unverified",
+    "complete": true,
+    "accepted": true,
+    "status": "accepted_formal_peer_review",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-formal-peer-scope.json",
+    "scope_sha256": "e7f58b715e98bcfff20a89f3bc483e9f1b6e43d8d5390d37793f52a02b2ee6ce",
+    "canonical_config_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-config.json",
+    "canonical_config_sha256": "52b418d7ec04141ec60dd4da1fb9a953c277bea9538ca028e1c19551a36b3bf5",
+    "extension_configuration_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-extension-draft.json",
+    "extension_configuration_sha256": "5004f430e7ad9f029bec0c9163d80e718e883563577c3c2e845207d7e3118af6",
+    "scoped_file_count": 53,
+    "all_scoped_file_hashes_match": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-config.json": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-draft.md": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-evidence.json": "bbfb80477fb8d66842e4cd45274b07e8e19c6e3fe1a7f46f56741cf493a5b4d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-config.json": "52b418d7ec04141ec60dd4da1fb9a953c277bea9538ca028e1c19551a36b3bf5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-extension-draft.json": "5004f430e7ad9f029bec0c9163d80e718e883563577c3c2e845207d7e3118af6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-config.json": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-draft.md": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-evidence.json": "bbfb80477fb8d66842e4cd45274b07e8e19c6e3fe1a7f46f56741cf493a5b4d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-association-snapshot.json": "76b49a30672be5b9b786e5d190ac27344dcc4f45169270098beee3bd2d6be0f8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-candidate-page.md": "f5a3130ed30a0bee61a6faa59216ff47b595c28104ec92f7e236ee0768e600e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-selfcheck.json": "fe6118a310beeeb0541550414fa17707261c65ddb3ed6413c14f1ed9cec89f92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-image.json": "05f5d741953661354aa8829611e41a0716d161d100bbe58c3780b0ab65bc1998",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-focused-checks.json": "2f5ba2adbc4692cb0b50fd95f69da5b25025f7db575603e2e1a0f5cad658c3f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-frozen-source-verification.json": "83b6caf1c8cf288a4d634683dddd6997bcd7e9b97dca2ec1c1b6f7cfbd590975",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-own-tier-diff.json": "05c41e0a82975809cd46ca93dac0c05fe9d2a4d14afc0253396298454d8284b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-resume-review.json": "ee5108a053b4690a83b40eeb2b541ec993e8703e9db77fe6b6ef3839410f75e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-traits-review.json": "a6ecc6a0f1c53061e803aa1d490c73970c4a5f8e2e514b5020c693d9f7bb8eb9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-raw-verification.json": "04aebbf3d4954d4ce1cf6c47b9349969cd9a1c9a136f1f86a5f4136306eea1eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-review.json": "7f8d69bc733fe6e799b57a6ecc859fe2c01f617ae10158f7145d85fe33e87a77",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e2c8e1c0610cb359b3403b614afec4fe7ecbf6afad6dc15edcf7eb6031c3d509",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/DAMAGE_PERCENTAGE_REVIEW.md": "3afa86edf47274ac3c0ba22e7db0ff05100f32ed7fbb3a31b9366c0cad4263f4",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/LOCALIZATION_COMPARISON.md": "9344ab11fb59a86362df7a258c08fcc044933cdd69f8eeb580419d4f49ae3b42",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/README.md": "d91d48b148820050447279d0a20b38f26b5dcf5b2a6530407064043813215ed2",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/SOURCE_INDEX.md": "26792e0418cf8928c6c2a3ba3a4ec71f4cfc68e0a8966d5eea43ddf0abac4688",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/TIER_VALUES.md": "78cb9a27d1d69e3d0e4e00cab6e57e60de3d5e30a4902e5d03a3abe9f3a2f5ff",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/WEAPON_COMPATIBILITY.md": "0bb597862f3a81a3a3f3f53f8397362749f1b258ac5b7de1c6a9a09d065f35b0",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle.md": "06d5d089223c0b0281cd3a8f2e4f1ed0128fe41909364e3eed1565c95180f14b",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle.md": "e512660e3aabe5b15f8a1bd1fd2828df611d501aec512246658e33c9be4b9eb0",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/README.md": "110c0f3a86e004c3e36805537aef8160a0bdab5a1c53aacf3fc1aac1e080d763",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/SOURCE_INDEX.md": "567d8b235cf834206ee62121e50d51ae16b6f20856adaece8f992604678548ad",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/WEAPON_COMPATIBILITY.md": "3cd903b0cf5d4b8897aeb2fa72ee5dc1dc5c307293d80f3ee91de5de4115648c",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/weapon_trait_bespoke_arc_rifle_p1_toughness_on_continuous_fire.md": "a5ba6c341c20e3be0d677a17b001f3e5d9fe83e4c19123e9fc608864d03298df",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/README.md": "28fcd6e27ed9f6cfef056bdf7eb0bbb19579d74a25b405356d5794329c02ce6a",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/SOURCE_INDEX.md": "66f86df1c24f34f32dae7e88a9b0832b9b1984a9242225686d7ed62cb7bb38d5",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/WEAPON_COMPATIBILITY.md": "ad03ab0a44010f93d6aa479e854acb612465b5da428f7283107a1582cd14106f",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage.md": "60e1428f7128860d7a180d7b59e37512c2b2d586732466ab9f3e7fcd7517e7ec",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/README.md": "58cd76c6a4fe22f18041677a455b621863372276f5a1e887dec002fb9f58f115",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/SOURCE_INDEX.md": "f97ee4a44066f7e1ff5b6a342ccdd6df72c34b51f0dc7ca99816057d43456c01",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/WEAPON_COMPATIBILITY.md": "8bd992acfe3ddd0c2c711d8e4aa5453ca22aa358e74eff15646c7d78650db953",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/weapon_trait_bespoke_arc_rifle_p1_ammo_from_reserve_on_crit.md": "a82b01821922b131a49eb1f6a46527be9ff9d0c86b21d4f863f8556942344bde",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "dc5a668d721019dfc5f2f21f881295eabb2658da9c5636866f5243fa471d446f",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "6bfe29edae4e0754b48fa053b9dc4da2f0093a763409a280641001e3b461bff4",
+      "Game Info/releases/1.13.X/blessings/README.md": "e651032333f34cf72ed176f75da8d4302089a34bdf72f7543b505cf8f5920bb5",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "b819f06655601a86c103d63a052d0d2a85f6c991a1f53af42aa8d1461137c8e6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "6cf0088dc404769302e83212ab42f698701aa23f08148fcce9533d98e387d90f",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "8cd6242d0f2f376eaf9f5f2239e402be8473def45a68994a81c8c0ca6d08b7ea",
+      "Game Info/releases/1.13.X/blessings/weapons/README.md": "3e3a0a5e84f95e1151e558ff37353d7e78bfa0fc10ef77a891d6e8936b5d4d4f",
+      "Referneces/Translation.md": "1436db7dc1d77a594fee1ee9b5c9bc6e5ea445dbb6ad4fa307c6f5009b26d2ea"
+    },
+    "formal_page_count": 8,
+    "formal_file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/DAMAGE_PERCENTAGE_REVIEW.md": "3afa86edf47274ac3c0ba22e7db0ff05100f32ed7fbb3a31b9366c0cad4263f4",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/LOCALIZATION_COMPARISON.md": "9344ab11fb59a86362df7a258c08fcc044933cdd69f8eeb580419d4f49ae3b42",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/README.md": "d91d48b148820050447279d0a20b38f26b5dcf5b2a6530407064043813215ed2",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/SOURCE_INDEX.md": "26792e0418cf8928c6c2a3ba3a4ec71f4cfc68e0a8966d5eea43ddf0abac4688",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/TIER_VALUES.md": "78cb9a27d1d69e3d0e4e00cab6e57e60de3d5e30a4902e5d03a3abe9f3a2f5ff",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/WEAPON_COMPATIBILITY.md": "0bb597862f3a81a3a3f3f53f8397362749f1b258ac5b7de1c6a9a09d065f35b0",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/weapon_trait_bespoke_arc_rifle_p1_enhanced_arc_jumps_angle.md": "06d5d089223c0b0281cd3a8f2e4f1ed0128fe41909364e3eed1565c95180f14b",
+      "Game Info/releases/1.13.X/blessings/entries/強化電流弧/weapon_trait_bespoke_powermaul_p3_enhanced_arc_jumps_angle.md": "e512660e3aabe5b15f8a1bd1fd2828df611d501aec512246658e33c9be4b9eb0"
+    },
+    "canonical_input_hashes": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-formal-peer-scope.json",
+        "sha256": "e7f58b715e98bcfff20a89f3bc483e9f1b6e43d8d5390d37793f52a02b2ee6ce",
+        "role": "Frozen non-author scope and exact 53-file manifest."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-config.json",
+        "sha256": "52b418d7ec04141ec60dd4da1fb9a953c277bea9538ca028e1c19551a36b3bf5",
+        "role": "Canonical final config controlling the formal content."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-extension-draft.json",
+        "sha256": "5004f430e7ad9f029bec0c9163d80e718e883563577c3c2e845207d7e3118af6",
+        "role": "Author extension configuration and two actual bindings."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-evidence.json",
+        "sha256": "bbfb80477fb8d66842e4cd45274b07e8e19c6e3fe1a7f46f56741cf493a5b4d1",
+        "role": "Author evidence: exact traits, 54 source ranges, narratives and four-tier data."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-config.json",
+        "sha256": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698",
+        "role": "Author config candidate and complete canonical references."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-draft.md",
+        "sha256": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268",
+        "role": "Author complete prose candidate."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-own-tier-diff.json",
+        "sha256": "05c41e0a82975809cd46ca93dac0c05fe9d2a4d14afc0253396298454d8284b9",
+        "role": "Root-confirmed independent own I–IV and two exact wrappers."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json",
+        "sha256": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5",
+        "role": "Root dead-root fallback and separate chain_settings consumer proof."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json",
+        "sha256": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c",
+        "role": "Root UI Mark name reconstruction delta receipt covering 12 formal pages."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json",
+        "sha256": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115",
+        "role": "Root search lifecycle, sync graph, cache sampling and independent link damage proof."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-focused-checks.json",
+        "sha256": "2f5ba2adbc4692cb0b50fd95f69da5b25025f7db575603e2e1a0f5cad658c3f2",
+        "role": "Root focused source/link/GFM/global map checks."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-frozen-source-verification.json",
+        "sha256": "83b6caf1c8cf288a4d634683dddd6997bcd7e9b97dca2ec1c1b6f7cfbd590975",
+        "role": "Root frozen-source verification of exact author ranges and traits."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-raw-verification.json",
+        "sha256": "04aebbf3d4954d4ce1cf6c47b9349969cd9a1c9a136f1f86a5f4136306eea1eb",
+        "role": "Root locale 0/16 RAW verification."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-review.json",
+        "sha256": "7f8d69bc733fe6e799b57a6ecc859fe2c01f617ae10158f7145d85fe33e87a77",
+        "role": "Root actual weapon/Mark UI binding review."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-traits-review.json",
+        "sha256": "a6ecc6a0f1c53061e803aa1d490c73970c4a5f8e2e514b5020c693d9f7bb8eb9",
+        "role": "Root actual trait identity/variant review."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-image.json",
+        "sha256": "05f5d741953661354aa8829611e41a0716d161d100bbe58c3780b0ab65bc1998",
+        "role": "Verified actual blessing icon receipt."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-checks-output.json",
+        "sha256": "4dd575c2ddc729582fd53e13fe8ebefe020a29710c6265e41aae0a8fbf07b74d",
+        "role": "Focused markdown source/link/GFM validator output."
+      },
+      {
+        "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+        "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+        "role": "Shared mechanism cache; reused only for the exact held-slot/cache behavior proven applicable."
+      }
+    ],
+    "reviewed_claims": [
+      {
+        "topic": "Frozen scope and formal pages",
+        "result": "pass",
+        "detail": "All 53 exact scope file hashes match the frozen scope SHA; the blessing has eight formal pages. Canonical config SHA matches the supplied controlling SHA."
+      },
+      {
+        "topic": "Exact variants, bindings and complete own tiers",
+        "result": "pass",
+        "detail": "Two actual variants and two bindings match the config. Arc Rifle I–IV adds angles +3/+5/+7.5/+10 degrees, radius +0.3/+0.5/+0.75/+1, and one jump at every level. Powermaul I–IV adds +5/+7.5/+10/+12.5 degrees, radius +0.5/+1/+1.5/+2, and +1/+1/+2/+2 jumps. Each exact own tier override replaces wrapper defaults; the held-slot predicate gates its conditional stat values."
+      },
+      {
+        "topic": "RAW name, description and document translation",
+        "result": "pass",
+        "detail": "Locale 0 and 16 use the same English name and description with matching hashes; the Chinese blessing title and proposed Chinese description are clearly labeled as document translations, not game RAW. The rebuilt tier strings retain English RAW and distinguish actual angle precision from floored card display."
+      },
+      {
+        "topic": "Formatter angle precision and formulas",
+        "result": "pass",
+        "detail": "Both exact formatters convert radians to degrees and apply floor for displayed angles: +7.5 degrees displays +7 and +12.5 displays +12. Runtime retains the fractional stat addition. The formula adds angle/radius/jump search parameters to the resolved native profile; interpolated native angle/radius endpoints are not presented as one fixed final value."
+      },
+      {
+        "topic": "Jump limits, legal targets and damage boundary",
+        "result": "pass",
+        "detail": "Rifle hip/braced native maximum jumps 1/2 become 2/3. Powermaul sweep native maximum 2 becomes 3/4 by tier. Pages state these are search limits, not guaranteed extra enemies; existing alive/electrocuted/angle/distance/line-of-sight validation remains. Chain link damage continues to use separate native chain_damage_settings and is not a blessing damage multiplier."
+      },
+      {
+        "topic": "Actual action routing and special cases",
+        "result": "pass",
+        "detail": "The bound Arc Rifle Mk IV hip/braced hitscan routes create chains; the special bash has no chain profile, and no separate charged-shot or projectile chain route is claimed. Powermaul P3 eight light/heavy sweeps and normal push-follow sweep can chain only when special_active was true at action start. Pure push has no chain helper, and the special push-follow weapon_shout path calls Attack directly without ChainLightningAction setup."
+      },
+      {
+        "topic": "Held-slot lifecycle, first effect and current packet behavior",
+        "result": "pass",
+        "detail": "The on_equip wrapper remains while the actual item remains equipped; the is_item_slot_wielded predicate suppresses stat contribution after a later cache rebuild. No same-frame cache timing is promised. Each new chain search reads the current stat cache once and performs its graph search synchronously; an existing chain is not recalculated when wield state changes, and both action classes clear chain state at finish. No independent proc stack, timer, cooldown or refresh is claimed."
+      },
+      {
+        "topic": "Dead-root fallback differential",
+        "result": "pass",
+        "detail": "The new proof shows that when the Arc Rifle direct-hit root is dead and there is no direct surviving root, the pre-chain fallback reads action_settings.chain_settings. The bound hip/braced actions have no action-level chain_settings; the fallback therefore uses the default 4 m radius, with no mapping to this blessing radius stat. The template-level chain_settings found elsewhere is link-damage configuration. Only after selecting an eligible surviving root does ChainLightningAction resolve the native chain profile and read the current stat cache for this blessing’s search additions. The text does not promise the blessing extends the four-metre fallback radius or that selection is nearest-distance sorted."
+      },
+      {
+        "topic": "Actual UI mark-name delta",
+        "result": "pass",
+        "detail": "The UI delta replaces the legacy arc-rifle label with the family/pattern/Mark reconstruction 電弧步槍 布蘭克斯 Mk IV (Arc Rifle Branx Mk IV). All 12 listed fixed pages have the exact after-hash, show the new Mark label and omit 庫巴爾電弧步槍; the delta records only marks.name, marks.name_en and marks.name_keys, with blessing mechanics and numeric evidence preserved."
+      },
+      {
+        "topic": "Image, links, GFM, global associations",
+        "result": "pass",
+        "detail": "The actual icon receipt is verified. Root focused validation reports 258 verified ranges across 100 files, 306 variants and 596 bindings, consistent global shared-map state, zero new link errors and zero GFM issues. Scope-matched formal, index and related association files remain byte-identical to the frozen map."
+      }
+    ],
+    "reused_accepted_proofs": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-own-tier-diff.json",
+        "sha256": "05c41e0a82975809cd46ca93dac0c05fe9d2a4d14afc0253396298454d8284b9",
+        "conclusion": "Both exact own I–IV tables, angle formatters and wrapper tier defaults."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json",
+        "sha256": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5",
+        "conclusion": "Exact dead-root fallback path reads action-level chain_settings; nil uses default radius four without this blessing radius stat mapping."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json",
+        "sha256": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115",
+        "conclusion": "Current stat cache sampled once per synchronous chain graph; native link damage independent; finish cleanup."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json",
+        "sha256": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c",
+        "conclusion": "Twelve exact updated formal-page hashes for the resolved Branx Mk IV UI Mark label only."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-focused-checks.json",
+        "sha256": "2f5ba2adbc4692cb0b50fd95f69da5b25025f7db575603e2e1a0f5cad658c3f2",
+        "conclusion": "Focused 258-range/100-file/306-variant/596-binding, global map, links and GFM checks passed."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-frozen-source-verification.json",
+        "sha256": "83b6caf1c8cf288a4d634683dddd6997bcd7e9b97dca2ec1c1b6f7cfbd590975",
+        "conclusion": "Root verified fixed-source author ranges and both exact tier/wrapper definitions."
+      }
+    ],
+    "source_range_hash_correction_review": "The author evidence contains 54 source ranges and is accepted. Root frozen-source verification accepts the author ranges and both exact own tier/wrapper definitions; focused validation reports 258 exact-source ranges across 100 source files with zero new scope errors. This peer review reused those validated source receipts and did not repeat the common mechanism matrix.",
+    "issues": [],
+    "conclusion": "The scoped content reflects the canonical final configuration, the newly frozen dead-root fallback branch, and the exact 12-page UI-label-only delta. All 53 scope hashes match; accept for root integration.",
+    "dead_root_fallback_diff_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json",
+    "dead_root_fallback_diff_sha256": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5",
+    "ui_delta_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json",
+    "ui_delta_sha256": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c",
+    "changed_scope_files_reviewed": [
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/weapon_trait_bespoke_arc_rifle_p1_ammo_from_reserve_on_crit.md",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/weapon_trait_bespoke_arc_rifle_p1_toughness_on_continuous_fire.md",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/達姆彈/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage.md"
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "enhanced-voltaic-arcs",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_249",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_249.png",
+      "attachment": "https://github.com/user-attachments/assets/c5a09417-3943-4e7d-859d-3cc2935933d7",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987277103",
+      "acquired_date": "2026-10-05",
+      "sha256": "c6cdd59a9a42d243c2f8380e9e29fc8e5f9a6d2a3c8b771c7dfc00eeaeef4fce",
+      "content_type": "image/png",
+      "size": 6623,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "Enhanced Voltaic Arcs祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed actual downloaded128x128 publicPNG; pale gray/white motif and transparent background intact, only identification without mechanical inference."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 28,
+      "tables": 29,
+      "rows": 721,
+      "lists": 116,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 258,
+      "source_files": 100,
+      "bindings": 596,
+      "variants": 306,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 100,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1152,
+      "remote_references": 791,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 24,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-023-full-scan.json",
+        "sha256": "819cc762d72f3537b5e4acea1917240c9ad6056f1c46ec5059c153a9ece44106",
+        "trigger": "round-023"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 64,
+    "not_started_name_groups": 64,
+    "partial_name_groups": 0,
+    "remaining_variants": 299,
+    "remaining_bindings": 589,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "bd78dac1c213bfa0885135b926f2083765ef6abed7c2547d261c1bfe170fd40c"
+  },
+  "previous_local_commit": "8908298068082ccb55a4af6e3d2ecab6c3fc2127",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json",
+      "sha256": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-focused-checks.json",
+      "sha256": "2f5ba2adbc4692cb0b50fd95f69da5b25025f7db575603e2e1a0f5cad658c3f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-frozen-source-verification.json",
+      "sha256": "83b6caf1c8cf288a4d634683dddd6997bcd7e9b97dca2ec1c1b6f7cfbd590975"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-own-tier-diff.json",
+      "sha256": "05c41e0a82975809cd46ca93dac0c05fe9d2a4d14afc0253396298454d8284b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-resume-review.json",
+      "sha256": "ee5108a053b4690a83b40eeb2b541ec993e8703e9db77fe6b6ef3839410f75e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json",
+      "sha256": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-traits-review.json",
+      "sha256": "a6ecc6a0f1c53061e803aa1d490c73970c4a5f8e2e514b5020c693d9f7bb8eb9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json",
+      "sha256": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-raw-verification.json",
+      "sha256": "04aebbf3d4954d4ce1cf6c47b9349969cd9a1c9a136f1f86a5f4136306eea1eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-review.json",
+      "sha256": "7f8d69bc733fe6e799b57a6ecc859fe2c01f617ae10158f7145d85fe33e87a77"
+    }
+  ],
+  "primary_review_method": "Evidence/difference review own2traits/2Marks; reusable held/cache/unequip applicability checked, root separately resolved parameterconsumer/graph lifecycle and newly seen actualdeadroot fallback. No full reread of author research.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-config.json",
+    "sha256": "52b418d7ec04141ec60dd4da1fb9a953c277bea9538ca028e1c19551a36b3bf5"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-config.json",
+      "sha256": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-draft.md",
+      "sha256": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-association-snapshot.json",
+      "sha256": "76b49a30672be5b9b786e5d190ac27344dcc4f45169270098beee3bd2d6be0f8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-candidate-page.md",
+      "sha256": "f5a3130ed30a0bee61a6faa59216ff47b595c28104ec92f7e236ee0768e600e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-selfcheck.json",
+      "sha256": "fe6118a310beeeb0541550414fa17707261c65ddb3ed6413c14f1ed9cec89f92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-image.json",
+      "sha256": "05f5d741953661354aa8829611e41a0716d161d100bbe58c3780b0ab65bc1998"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-own-tier-diff.json",
+      "sha256": "05c41e0a82975809cd46ca93dac0c05fe9d2a4d14afc0253396298454d8284b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-traits-review.json",
+      "sha256": "a6ecc6a0f1c53061e803aa1d490c73970c4a5f8e2e514b5020c693d9f7bb8eb9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-raw-verification.json",
+      "sha256": "04aebbf3d4954d4ce1cf6c47b9349969cd9a1c9a136f1f86a5f4136306eea1eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-review.json",
+      "sha256": "7f8d69bc733fe6e799b57a6ecc859fe2c01f617ae10158f7145d85fe33e87a77"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json",
+      "sha256": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-config.json",
+      "sha256": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-config.json",
+      "sha256": "18c0d6af4513622a13ab595204b682ac0a4b3fc0588fa36729f6a6a6c9616698"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-evidence.json",
+      "sha256": "bbfb80477fb8d66842e4cd45274b07e8e19c6e3fe1a7f46f56741cf493a5b4d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-evidence.json",
+      "sha256": "bbfb80477fb8d66842e4cd45274b07e8e19c6e3fe1a7f46f56741cf493a5b4d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-group/enhanced-voltaic-arcs-agent-draft.md",
+      "sha256": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-agent-draft.md",
+      "sha256": "8bedc22cda35a9c09b9c100173ffb2741407e58e49265ab5c92623ac6a5f7268"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-search-lifecycle-diff-review.json",
+      "sha256": "778038b52c8efb245664b48c69c8cecc8e8ec81bf102bbc18935c0a85c3b6115"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-dead-root-fallback-diff-review.json",
+      "sha256": "94b93e5f853e4d84d943fa85ac9faabb18ca0706ba66a1089dc24f33cf66d7b5"
+    }
+  ],
+  "previous_map_objects_unchanged": false,
+  "previous_weapon_ui_label_delta": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-primary-ui-delta-review.json",
+    "sha256": "cf9c766ea1f69d367dd868a85f574788fdea8853a19a1419b9b1561f32a41f6c",
+    "mechanisms_unchanged": true
+  },
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/enhanced-voltaic-arcs-formal-peer-scope.json",
+    "sha256": "e7f58b715e98bcfff20a89f3bc483e9f1b6e43d8d5390d37793f52a02b2ee6ce",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-03",
+  "blessing": "decimator",
+  "scope": "remaining same-name weapon variants",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/屠戮者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+    "weapon_trait_bespoke_saw_p1_chained_hits_increases_power"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 4,
+  "total_bindings": 10,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings and shared execution-chain applicability.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only",
+    "reviewed_variants": [
+      "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+      "weapon_trait_bespoke_saw_p1_chained_hits_increases_power"
+    ],
+    "findings": [
+      "All four tier overrides match 2/3/4/5% melee power with 10 effective stacks.",
+      "Bone Saw display stack count reads child max_stacks=10; actual parent overrides also 10.",
+      "Standard-issue Shovel special uppercut is a sweep; hit qualifies. Other Shovel specials and Bone Saw coating special are mode toggles, which alone grant no stack.",
+      "Name/description/icon and four exact mark bindings verified; no required checks outstanding."
+    ],
+    "files_modified": false
+  },
+  "image": {
+    "receipt_reused_from": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json",
+    "attachment": "https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80",
+    "icon_consistency_verified": true,
+    "prior_validation": {
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "attachment": "https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_187.png",
+      "sha256": "807d16798452b7667d376b92faa9086cd013d02bb93eef2721c4f73f155ce3c4",
+      "content_type": "image/png",
+      "size": 3580,
+      "dimensions": [
+        128,
+        128
+      ],
+      "unauthenticated_download": {
+        "status": 200,
+        "sha256": "matched",
+        "display": "inspected"
+      },
+      "git_binary": "none",
+      "cli_version": "2.102.0",
+      "official_zip_sha256": "ae64e556ecc240b200f7eba60d550e4bb60d78e860e69dd88c449405b86067f4"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 59,
+      "tables": 50,
+      "rows": 373,
+      "lists": 30
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 175,
+      "source_files": 61,
+      "bindings": 31,
+      "variants": 11,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 759,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 59,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 156,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 5,
+    "remaining_variants": 554,
+    "remaining_bindings": 1098,
+    "unresolved": 58,
+    "definitions_outside_intersection": 128
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c7ea2384e36d2ee8c9bbe6b079cacda7a803e47d19976527eb681d43c7230ef8"
+  },
+  "previous_local_commit": "9ef1398fece7c69f0d29f484613e179bcde8a9d0"
+}

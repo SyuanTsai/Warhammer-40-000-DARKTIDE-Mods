@@ -1,0 +1,581 @@
+{
+  "date": "2026-10-06",
+  "blessing": "bladed-momentum",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "blessing_id": "bladed-momentum",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-formal-peer-scope.json",
+    "scope_sha256": "e4eb606ed876ac3a4be8c8840fc546b09cf4b1ea17bf9fbb6538a814f0e0cf1a",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-config.json": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-draft.md": "47bec4a14438fe19fba182b0bea09608d99527ee8697937386e3c2aa2c8b9e79",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-evidence.json": "35012ffdd7f903653def20664f22e1110dc5df0c1f1b5dec0628d3b96eb06ef9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-config.json": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-extension-draft.json": "35505e2e0a320991eab21c4d0efc29673c7885b6492817853849aac88dd59164",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/focused-manifest.json": "101081e82784031bc562be9422fd6ad12018a06dbf19c1b44f0a68214d9cab7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "d7b066e9724236523dc3ad26545b1adc9817ecdbdfad7c4ec5d65175a96e2c97",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/DAMAGE_PERCENTAGE_REVIEW.md": "43b41c0ba836b69c414afa5c4a9c5c77154d1df4292a0b2fba3e6b240b63ee35",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/LOCALIZATION_COMPARISON.md": "bffa198e09d462a3b4e29bbf071827fb7bd99e4cef27e689fd54771066a27c00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/README.md": "e8f90fa50260c78db7daa062c83d3a2120b95bb2c7333561030bb2f7c31fa3d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/SOURCE_INDEX.md": "f3451db0140ec2fa8395f83890c2956b15da00b92a8c432e4c1a7b9ac023281a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/TIER_VALUES.md": "a6dab0db490d0afc4184add2902ab7027910eaa03b8e4b5f3d13978d8c9bd161",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/WEAPON_COMPATIBILITY.md": "201adf76dcab3d56d5f46e04465d522b5b43747dac4731eb486ce5fa81d30d04",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md": "54129b76104d1702cb037259e602fe5ed3891328e0b87dc3feefef3578c4b031",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md": "e15df9e3347b79e05819640d52b1d17e57ada3e47d7feb750f275dcbd6378ea5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "d5ce4864a3366083996549d2b4e063e9de74f65772cccb622e2977fdd8a7a353",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "6189b25906f01fcdd94a480eab949deb0226074d3a2c10d511e7719dcb25be13",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "30dfaca644cf755152fe062807309d7e709753cf3dbe62a66a29f892112a84d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "15cede1a4ad9ae71dfb57b17fd4b9b8dd61f9808ce170200f8a4b3249c9905c4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "e46221faa707b13d926f2677ee383d953a51f53fe5a39e446a8f38c539e1acf3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/own-association-snapshot.json": "5d81a2a608078722bb901fe980fb6f7c849fe7f2156d71d89f6e4df5f4814ddf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Referneces/Translation.md": "93329de287daa38ebe7cc0146de05fe6766ce4b13d995d1cb116df7c7126d754",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/generator.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/generator.stdout.txt": "eedbe2d007c8cfd764ec9e2ed78e68ba6e3e47263800a17304be8770042c4268",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/gfm.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/gfm.stdout.txt": "a6d2120c517b1c7b09be3585d2fa6ee6df98e9beee347d42ba44e21e0b99fd76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/links.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/links.stdout.txt": "1f9be291082d5f0dc53acb50b6d489bdbb6043f1fdd618b63a60d8715a7c9728",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/source_mapping.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/source_mapping.stdout.txt": "0cbe51c2cdc13df1901ff1ad6b968a06f101cf6c21e3c07e30faca89e0f8ddda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/association-snapshot.json": "3f3e7d491e9e93ca1211e1f4d60c9cc6cee7d030d7103d7c0f099781f18b1531",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/attack-coverage.json": "0224414e9873046b55d93d3059473359a03acdcb3ffd5e69ae6d71bab239397b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/binding-inventory.json": "75bf850381a8f2c109049bb3c65def4c7f4f1248674b8b9c3e0c32fa6a4e5266",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-actual-preview-receipt-004.json": "9d38c2f8a6c11e8c61fb47265f4afe65433e60b9a3d79d0ac9d136586a95d467",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-actual-preview-receipt-005.json": "f2b67e7d25e2888b9a561a3e0288437c6f6ac2311a14abf92a8132ebd307f240",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-config.json": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-draft.md": "47bec4a14438fe19fba182b0bea09608d99527ee8697937386e3c2aa2c8b9e79",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-evidence.json": "35012ffdd7f903653def20664f22e1110dc5df0c1f1b5dec0628d3b96eb06ef9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/slow-and-steady-formal-peer-review.json": "4331f6b4d1123ad17433f773b252d08dce1d134e6d1082ab0dc980045c6a74ae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/source-ranges.json": "5c15d0aa9ac083f7ae12e069561e8b88dbaa76865dfc2a6dd0643cc675c7e74c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-image.json": "22af59cc32ece823de5582996c2204750a4e631552bc122c0e148c7847fa4a31",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-actual-first-target-noncritical-example-difference-review.json": "63b07ab51649c5c8ca8cbd519ff27dd4f2a058c5f9843dd557255a20ce7c2f6a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-final-content-review.json": "d57ee1a3a08a162afb3a6502cca659b605fffe7cad0f224b30f1f38c172b7a0d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-focused-checks.json": "5088c7c3c7e31769e1effcc04efbf1e486bf6228f0861a9ccd0de45e90c4e309",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-frozen-source-verification.json": "9d1e3c3c3535ec344b92227f4752094038e0f7165accc77f83a3f27d633e2201",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-own-tier-wrapper-material-delta-review.json": "5f78a5276fd0b7eec45170d10d7a8576b96e4d55ca9641fccd6e716d3d5fb33f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-resume-review.json": "1408835ad234189191f21193de5973dc06df7ab641a0ecec9c27194c7d876f92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-traits-review.json": "947454bbf592bd873ccf9fbb4fd15dca35f520ac5a71051fde1a9bc25689aa1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-raw-verification.json": "ced18bb91691fa196c1620a853f179be11f12e575a85ba626ba3bf6aa7d4c197",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-review.json": "c5eec7f0a2d89b7707a15af6043db65700981848e9ce3f0e829b0161b9c18f45",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-raw-verification.json": "e06a4b670484fef5c09d030447fb839515af16ae3dc1e9517d7073a6f9792047",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "d7b066e9724236523dc3ad26545b1adc9817ecdbdfad7c4ec5d65175a96e2c97",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/DAMAGE_PERCENTAGE_REVIEW.md": "43b41c0ba836b69c414afa5c4a9c5c77154d1df4292a0b2fba3e6b240b63ee35",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/LOCALIZATION_COMPARISON.md": "bffa198e09d462a3b4e29bbf071827fb7bd99e4cef27e689fd54771066a27c00",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/README.md": "e8f90fa50260c78db7daa062c83d3a2120b95bb2c7333561030bb2f7c31fa3d5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/SOURCE_INDEX.md": "f3451db0140ec2fa8395f83890c2956b15da00b92a8c432e4c1a7b9ac023281a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/TIER_VALUES.md": "a6dab0db490d0afc4184add2902ab7027910eaa03b8e4b5f3d13978d8c9bd161",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/WEAPON_COMPATIBILITY.md": "201adf76dcab3d56d5f46e04465d522b5b43747dac4731eb486ce5fa81d30d04",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md": "54129b76104d1702cb037259e602fe5ed3891328e0b87dc3feefef3578c4b031",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md": "e15df9e3347b79e05819640d52b1d17e57ada3e47d7feb750f275dcbd6378ea5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "d5ce4864a3366083996549d2b4e063e9de74f65772cccb622e2977fdd8a7a353",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "6189b25906f01fcdd94a480eab949deb0226074d3a2c10d511e7719dcb25be13",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "30dfaca644cf755152fe062807309d7e709753cf3dbe62a66a29f892112a84d6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "15cede1a4ad9ae71dfb57b17fd4b9b8dd61f9808ce170200f8a4b3249c9905c4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "e46221faa707b13d926f2677ee383d953a51f53fe5a39e446a8f38c539e1acf3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/own-association-snapshot.json": "5d81a2a608078722bb901fe980fb6f7c849fe7f2156d71d89f6e4df5f4814ddf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Referneces/Translation.md": "93329de287daa38ebe7cc0146de05fe6766ce4b13d995d1cb116df7c7126d754",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "d7b066e9724236523dc3ad26545b1adc9817ecdbdfad7c4ec5d65175a96e2c97",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/DAMAGE_PERCENTAGE_REVIEW.md": "43b41c0ba836b69c414afa5c4a9c5c77154d1df4292a0b2fba3e6b240b63ee35",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/LOCALIZATION_COMPARISON.md": "bffa198e09d462a3b4e29bbf071827fb7bd99e4cef27e689fd54771066a27c00",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/README.md": "e8f90fa50260c78db7daa062c83d3a2120b95bb2c7333561030bb2f7c31fa3d5",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/SOURCE_INDEX.md": "f3451db0140ec2fa8395f83890c2956b15da00b92a8c432e4c1a7b9ac023281a",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/TIER_VALUES.md": "a6dab0db490d0afc4184add2902ab7027910eaa03b8e4b5f3d13978d8c9bd161",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/WEAPON_COMPATIBILITY.md": "201adf76dcab3d56d5f46e04465d522b5b43747dac4731eb486ce5fa81d30d04",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md": "54129b76104d1702cb037259e602fe5ed3891328e0b87dc3feefef3578c4b031",
+      "Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md": "e15df9e3347b79e05819640d52b1d17e57ada3e47d7feb750f275dcbd6378ea5",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "d5ce4864a3366083996549d2b4e063e9de74f65772cccb622e2977fdd8a7a353",
+      "Game Info/releases/1.13.X/blessings/README.md": "6189b25906f01fcdd94a480eab949deb0226074d3a2c10d511e7719dcb25be13",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "30dfaca644cf755152fe062807309d7e709753cf3dbe62a66a29f892112a84d6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "15cede1a4ad9ae71dfb57b17fd4b9b8dd61f9808ce170200f8a4b3249c9905c4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "e46221faa707b13d926f2677ee383d953a51f53fe5a39e446a8f38c539e1acf3",
+      "Referneces/Translation.md": "93329de287daa38ebe7cc0146de05fe6766ce4b13d995d1cb116df7c7126d754"
+    },
+    "review_summary": [
+      "Independently reviewed all 86 frozen scope artifacts; every path was present and every SHA-256 exactly matched the fixed scope. The eight generated own formal pages were read, and the actual-preview-005 receipt reports passed=true and actual_own_formal_pages_checked=8.",
+      "Inventory/UI association is exact: 2 implementations and 4 bindings—Combat Sword P2 Marks I/II/III (Heavy Sword Turtolsky Mk VI/VII/IX) and Paired Transonic Blades P1 Mark I (Branx Mk XI). The similar Power Sword P1 metadata-only definition has no matching inventory binding and is correctly excluded.",
+      "Both complete I–IV tier series and wrappers agree with the formal pages: Combat Sword P2 contributes .05/.06/.07/.08 melee rending per effective layer; Paired Transonic P1 contributes .04/.05/.06/.07; both use 2.5/3/3.5/4 seconds. Own parent-context overrides replace the child fallback, rather than add to it.",
+      "The paired RAW name and description use the same language-resource hash; formatter reconstruction for all grades and both implementations preserves the displayed percent prefix, duration, and four-stack text. The localization comparison correctly classifies target-count, item/held, latch, refresh, expiry, and damage-calculation details as omitted by the RAW rather than mistranslations.",
+      "The event route is consistent across the four bound Marks: the second or later qualifying melee target event in the same Sweep can request one layer only when the source item matches and the weapon is still held. Ordinary, heavy, actual special-sweep, and push-follow Sweep hits can meet those gates; standalone pure push is attack_type=push and does not qualify, special-mode toggles are not hit events, and the scanned action tables contain no projectile/ranged route. No kill or positive-damage gate is claimed.",
+      "The layer lifecycle is internally consistent: at most one child request per Sweep; up to four effective layers; a successful qualifying proc refreshes the shared timer even at cap; expiry removes the active layer set together. Event damage precedes queued proc/cache work, so the triggering hit is not retroactively changed and the pages do not promise same-frame effect on a later target. Held state controls proc/stat contribution after cache update; an existing timer continues while switched away, a still-live effect can return on switching back, and destroying/removing the parent clears its controlled child.",
+      "The controlled Transonic Branx Mk XI light_linesman example correctly selects target_index=1 armored lerp_0_75 (.48/1.02), excludes crit_mod under the stated noncritical premise, and uses t=.5 to derive A=.75. With Tier I R=.04, neutral other modifiers, armored factor 1, and illustrative B=100, the armor stage is 75→79, a 4/75≈5.33% relative increase at that stage; it is not presented as universal final HP damage.",
+      "The icon evidence maps the actual trait icon 179 to the reviewed public image receipt (128×128, HTTP 200, PNG SHA-256 2c41c33cfe663e24503c651428e847a39e352b628cdfe71cb13b254352aa5e3a), and the map, reverse/catalog entries, per-weapon pages, and association snapshot agree on the two variants/four bindings.",
+      "The localization-comparison rules table uses concise source basenames and line ranges; I cross-checked these against the adjacent SOURCE_INDEX full-path pinned links and the fixed source/evidence hashes. This is traceable and did not create a content or citation blocker."
+    ],
+    "differential_reuse": {
+      "reused": "Root accepted own tier/wrapper/material and corrected actual first-target example receipts under the four actual bindings; unchanged common event, stack, lifetime, held/cache, and armor mechanisms were reused only where their documented conditions match.",
+      "material_receipts": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-own-tier-wrapper-material-delta-review.json",
+          "sha256": "5f78a5276fd0b7eec45170d10d7a8576b96e4d55ca9641fccd6e716d3d5fb33f"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-actual-first-target-noncritical-example-difference-review.json",
+          "sha256": "63b07ab51649c5c8ca8cbd519ff27dd4f2a058c5f9843dd557255a20ce7c2f6a"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-final-content-review.json",
+          "sha256": "d57ee1a3a08a162afb3a6502cca659b605fffe7cad0f224b30f1f38c172b7a0d"
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-focused-checks.json",
+          "sha256": "5088c7c3c7e31769e1effcc04efbf1e486bf6228f0861a9ccd0de45e90c4e309"
+        }
+      ]
+    },
+    "actual_preview": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-actual-preview-receipt-005.json",
+      "sha256": "f2b67e7d25e2888b9a561a3e0288437c6f6ac2311a14abf92a8132ebd307f240",
+      "passed": true,
+      "actual_own_formal_pages_checked": 8
+    },
+    "review_method": "Content review of the frozen formal pages, full source index, coverage/action tables, association and reverse/catalog data, paired RAW/formatter reconstructions, root native-difference receipts, and image receipt; fixed-scope SHA verification supplements these checks."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "bladed-momentum",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_179",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_179.png",
+      "attachment": "https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6005612150",
+      "acquired_date": "2026-10-06",
+      "sha256": "2c41c33cfe663e24503c651428e847a39e352b628cdfe71cb13b254352aa5e3a",
+      "content_type": "image/png",
+      "size": 4247,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "利刃攻勢祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Root visual inspection of actual public128x128 original icon; central grey-white angular blade silhouette matches downloaded item.icon source by SHA256"
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 571,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 156,
+      "source_files": 28,
+      "bindings": 946,
+      "variants": 486,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 28,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1185,
+      "remote_references": 551,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 38,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author-preview-cwd-prefix-fix-full-scan.json",
+        "sha256": "07c093e11582a73691bc12a93d5c6fa459d47a82430ff14925dc085bea1a0e02",
+        "trigger": "author-preview-cwd-prefix-fix"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 24,
+    "not_started_name_groups": 24,
+    "partial_name_groups": 0,
+    "remaining_variants": 119,
+    "remaining_bindings": 239,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "575b6dd6f66a6ac831771b6d3acf3c1900ad62bd02189a0cf16ce1e238598338"
+  },
+  "previous_local_commit": "7e371955c479d4f769cd0b98cf2bbd36ac9b5ef8",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "metadata_only_exact_candidates": [
+      {
+        "item": "content/items/traits/bespoke_powersword_p1/stacking_rending_on_cleave",
+        "trait": "weapon_trait_bespoke_powersword_p1_rending_on_multiple_hits",
+        "restriction": [
+          "powersword_p1"
+        ]
+      }
+    ],
+    "exact_bound_items": 4,
+    "status": "Only the four inventory intersections listed here are treated as usable bindings. The Power Sword P1 same-key metadata item is outside this inventory intersection and is not included."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-actual-first-target-noncritical-example-difference-review.json",
+      "sha256": "63b07ab51649c5c8ca8cbd519ff27dd4f2a058c5f9843dd557255a20ce7c2f6a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-final-content-review.json",
+      "sha256": "d57ee1a3a08a162afb3a6502cca659b605fffe7cad0f224b30f1f38c172b7a0d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-focused-checks.json",
+      "sha256": "5088c7c3c7e31769e1effcc04efbf1e486bf6228f0861a9ccd0de45e90c4e309"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-frozen-source-verification.json",
+      "sha256": "9d1e3c3c3535ec344b92227f4752094038e0f7165accc77f83a3f27d633e2201"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "5f78a5276fd0b7eec45170d10d7a8576b96e4d55ca9641fccd6e716d3d5fb33f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-resume-review.json",
+      "sha256": "1408835ad234189191f21193de5973dc06df7ab641a0ecec9c27194c7d876f92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-traits-review.json",
+      "sha256": "947454bbf592bd873ccf9fbb4fd15dca35f520ac5a71051fde1a9bc25689aa1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-raw-verification.json",
+      "sha256": "ced18bb91691fa196c1620a853f179be11f12e575a85ba626ba3bf6aa7d4c197"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-review.json",
+      "sha256": "c5eec7f0a2d89b7707a15af6043db65700981848e9ce3f0e829b0161b9c18f45"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-config.json",
+    "sha256": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md",
+      "sha256": "6189b25906f01fcdd94a480eab949deb0226074d3a2c10d511e7719dcb25be13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+      "sha256": "30dfaca644cf755152fe062807309d7e709753cf3dbe62a66a29f892112a84d6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "sha256": "d7b066e9724236523dc3ad26545b1adc9817ecdbdfad7c4ec5d65175a96e2c97"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "43b41c0ba836b69c414afa5c4a9c5c77154d1df4292a0b2fba3e6b240b63ee35"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/LOCALIZATION_COMPARISON.md",
+      "sha256": "bffa198e09d462a3b4e29bbf071827fb7bd99e4cef27e689fd54771066a27c00"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/README.md",
+      "sha256": "e8f90fa50260c78db7daa062c83d3a2120b95bb2c7333561030bb2f7c31fa3d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/SOURCE_INDEX.md",
+      "sha256": "f3451db0140ec2fa8395f83890c2956b15da00b92a8c432e4c1a7b9ac023281a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/TIER_VALUES.md",
+      "sha256": "a6dab0db490d0afc4184add2902ab7027910eaa03b8e4b5f3d13978d8c9bd161"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/WEAPON_COMPATIBILITY.md",
+      "sha256": "201adf76dcab3d56d5f46e04465d522b5b43747dac4731eb486ce5fa81d30d04"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md",
+      "sha256": "54129b76104d1702cb037259e602fe5ed3891328e0b87dc3feefef3578c4b031"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/利刃攻勢/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md",
+      "sha256": "e15df9e3347b79e05819640d52b1d17e57ada3e47d7feb750f275dcbd6378ea5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md",
+      "sha256": "d5ce4864a3366083996549d2b4e063e9de74f65772cccb622e2977fdd8a7a353"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md",
+      "sha256": "15cede1a4ad9ae71dfb57b17fd4b9b8dd61f9808ce170200f8a4b3249c9905c4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md",
+      "sha256": "e46221faa707b13d926f2677ee383d953a51f53fe5a39e446a8f38c539e1acf3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/Referneces/Translation.md",
+      "sha256": "93329de287daa38ebe7cc0146de05fe6766ce4b13d995d1cb116df7c7126d754"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/focused-manifest.json",
+      "sha256": "101081e82784031bc562be9422fd6ad12018a06dbf19c1b44f0a68214d9cab7f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/own-association-snapshot.json",
+      "sha256": "5d81a2a608078722bb901fe980fb6f7c849fe7f2156d71d89f6e4df5f4814ddf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/generator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/generator.stdout.txt",
+      "sha256": "eedbe2d007c8cfd764ec9e2ed78e68ba6e3e47263800a17304be8770042c4268"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/gfm.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/gfm.stdout.txt",
+      "sha256": "a6d2120c517b1c7b09be3585d2fa6ee6df98e9beee347d42ba44e21e0b99fd76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/links.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/links.stdout.txt",
+      "sha256": "1f9be291082d5f0dc53acb50b6d489bdbb6043f1fdd618b63a60d8715a7c9728"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/source_mapping.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/actual-preview-005/run-logs/source_mapping.stdout.txt",
+      "sha256": "0cbe51c2cdc13df1901ff1ad6b968a06f101cf6c21e3c07e30faca89e0f8ddda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/association-snapshot.json",
+      "sha256": "3f3e7d491e9e93ca1211e1f4d60c9cc6cee7d030d7103d7c0f099781f18b1531"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/attack-coverage.json",
+      "sha256": "0224414e9873046b55d93d3059473359a03acdcb3ffd5e69ae6d71bab239397b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/binding-inventory.json",
+      "sha256": "75bf850381a8f2c109049bb3c65def4c7f4f1248674b8b9c3e0c32fa6a4e5266"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-actual-preview-receipt-005.json",
+      "sha256": "f2b67e7d25e2888b9a561a3e0288437c6f6ac2311a14abf92a8132ebd307f240"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/source-ranges.json",
+      "sha256": "5c15d0aa9ac083f7ae12e069561e8b88dbaa76865dfc2a6dd0643cc675c7e74c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-image.json",
+      "sha256": "22af59cc32ece823de5582996c2204750a4e631552bc122c0e148c7847fa4a31"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-actual-first-target-noncritical-example-difference-review.json",
+      "sha256": "63b07ab51649c5c8ca8cbd519ff27dd4f2a058c5f9843dd557255a20ce7c2f6a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "5f78a5276fd0b7eec45170d10d7a8576b96e4d55ca9641fccd6e716d3d5fb33f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-raw-verification.json",
+      "sha256": "ced18bb91691fa196c1620a853f179be11f12e575a85ba626ba3bf6aa7d4c197"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-ui-review.json",
+      "sha256": "c5eec7f0a2d89b7707a15af6043db65700981848e9ce3f0e829b0161b9c18f45"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "6189b25906f01fcdd94a480eab949deb0226074d3a2c10d511e7719dcb25be13"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "30dfaca644cf755152fe062807309d7e709753cf3dbe62a66a29f892112a84d6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "d7b066e9724236523dc3ad26545b1adc9817ecdbdfad7c4ec5d65175a96e2c97"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "43b41c0ba836b69c414afa5c4a9c5c77154d1df4292a0b2fba3e6b240b63ee35"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\LOCALIZATION_COMPARISON.md",
+      "sha256": "bffa198e09d462a3b4e29bbf071827fb7bd99e4cef27e689fd54771066a27c00"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\README.md",
+      "sha256": "e8f90fa50260c78db7daa062c83d3a2120b95bb2c7333561030bb2f7c31fa3d5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\SOURCE_INDEX.md",
+      "sha256": "f3451db0140ec2fa8395f83890c2956b15da00b92a8c432e4c1a7b9ac023281a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\TIER_VALUES.md",
+      "sha256": "a6dab0db490d0afc4184add2902ab7027910eaa03b8e4b5f3d13978d8c9bd161"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\WEAPON_COMPATIBILITY.md",
+      "sha256": "201adf76dcab3d56d5f46e04465d522b5b43747dac4731eb486ce5fa81d30d04"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md",
+      "sha256": "54129b76104d1702cb037259e602fe5ed3891328e0b87dc3feefef3578c4b031"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\利刃攻勢\\weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md",
+      "sha256": "e15df9e3347b79e05819640d52b1d17e57ada3e47d7feb750f275dcbd6378ea5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "d5ce4864a3366083996549d2b4e063e9de74f65772cccb622e2977fdd8a7a353"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\穿音速雙刀\\README.md",
+      "sha256": "15cede1a4ad9ae71dfb57b17fd4b9b8dd61f9808ce170200f8a4b3249c9905c4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\重劍\\README.md",
+      "sha256": "e46221faa707b13d926f2677ee383d953a51f53fe5a39e446a8f38c539e1acf3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "93329de287daa38ebe7cc0146de05fe6766ce4b13d995d1cb116df7c7126d754"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-raw-verification.json",
+      "sha256": "e06a4b670484fef5c09d030447fb839515af16ae3dc1e9517d7073a6f9792047"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\bladed-momentum-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "5d81a2a608078722bb901fe980fb6f7c849fe7f2156d71d89f6e4df5f4814ddf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-actual-preview-receipt-004.json",
+      "sha256": "9d38c2f8a6c11e8c61fb47265f4afe65433e60b9a3d79d0ac9d136586a95d467"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-config.json",
+      "sha256": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-draft.md",
+      "sha256": "47bec4a14438fe19fba182b0bea09608d99527ee8697937386e3c2aa2c8b9e79"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/bladed-momentum-agent-evidence.json",
+      "sha256": "35012ffdd7f903653def20664f22e1110dc5df0c1f1b5dec0628d3b96eb06ef9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-group/slow-and-steady-formal-peer-review.json",
+      "sha256": "4331f6b4d1123ad17433f773b252d08dce1d134e6d1082ab0dc980045c6a74ae"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-config.json",
+      "sha256": "cd81dd1a1a61de55af9daed626f14942487186d8e56156b2bf5d363d2450fd8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-evidence.json",
+      "sha256": "35012ffdd7f903653def20664f22e1110dc5df0c1f1b5dec0628d3b96eb06ef9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-agent-draft.md",
+      "sha256": "47bec4a14438fe19fba182b0bea09608d99527ee8697937386e3c2aa2c8b9e79"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-final-content-review.json",
+      "sha256": "d57ee1a3a08a162afb3a6502cca659b605fffe7cad0f224b30f1f38c172b7a0d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-frozen-source-verification.json",
+      "sha256": "9d1e3c3c3535ec344b92227f4752094038e0f7165accc77f83a3f27d633e2201"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-primary-traits-review.json",
+      "sha256": "947454bbf592bd873ccf9fbb4fd15dca35f520ac5a71051fde1a9bc25689aa1c"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bladed-momentum-formal-peer-scope.json",
+    "sha256": "e4eb606ed876ac3a4be8c8840fc546b09cf4b1ea17bf9fbb6538a814f0e0cf1a",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  }
+}

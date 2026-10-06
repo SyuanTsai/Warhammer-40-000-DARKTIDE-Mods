@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-04",
+  "blessing": "punisher",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/懲罰者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "punisher",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this fixed-scope formal peer review with gpt-6-luna/max; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope": {
+      "file_count": 30,
+      "formal_pages": 7,
+      "scope_manifest_sha256": "c580d0ff5e8eceb32f5ad827af51102d82875f5c763bf269616bfe4b01fe8dca",
+      "description": "Fixed Punisher single-item formal peer scope; all 30 current file SHA-256 values matched the frozen manifest."
+    },
+    "findings": [
+      "The seven formal pages and connected map/reverse index consistently cover the single Punisher trait implementation on the three actual autogun_p1 marks. The three MasterItem names, exact trait ID and restriction, binding rows, and icon path/attachment agree with the scoped receipts.",
+      "Trigger, stacking, and lifecycle wording matches the implementation: same-item ranged kill with died result and impact point within 12.5 m while held; physical child capacity six includes one sentinel, leaving five effective stacks. Each valid processed event adds at most one effective stack, a cap event can refresh without adding, expiry removes the effective stacks, and switching away suppresses contribution without pausing or deleting them.",
+      "The damage examples correctly use D=B×(1+q+n×p), define B before the additive damage pool, and hold downstream factors constant. The first-effect text correctly states the lethal attack is resolved before on_kill is queued and that later damage depends on the updated Buff cache; it promises neither retroactive damage nor same-update next-pellet behavior.",
+      "The RAW comparison accurately separates the actual formatter map (movement_speed and time) from the RAW damage placeholder. Under the stated manager-ready and RAW-lookup conditions, the fixed localization source replaces the missing key with the quoted damage:undefined string for all tiers; the pages label this as static reconstruction, not a tested game screen, and distinguish the implemented damage percentages as a separate effect explanation.",
+      "The validated 128×128 icon receipt matches the README and reverse-index attachment URL and in-game icon path. The focused source, link, and GFM checks in the scoped receipt report no new errors."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-agent-config.json": "a4ef54032cc777f9665b10967834cc536d5629461185939c9bd2dfdc27e51dae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-agent-draft.md": "526ba5e5dc5b178da4bd6e067a73c2252f364932cf82a1f2ed19415e61918662",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-agent-evidence.json": "991073f5a24f32375c34ab65ade3c352c77d7260911659e6bd2cd17dcc35f60e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-config.json": "181786a8376c73530536d9a008577cd7b90e4d3f35334d5fe6ce338f3f230225",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-extension-draft.json": "5d9d9103ccfa47e5894ad6f20b12a518a9505e17910453c59fe5c8c8d86460ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-image.json": "846c553e63bbbf3e902e7af85cb60f889e2b841c27c36f3541daf739adddee41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-cap-correction-review.json": "b67ec0add120bdc617b0df1d18ff9a067118e32744d4a2ae38dd2b232f51a31b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-first-effect-review.json": "d0b539a76886550dc1c898fb1255d0b2179742194200d83d2dce8656cc325ffc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-focused-checks.json": "2bce67fac049b61e21a5d832cfff74433ce11b23188b73d845c7da4dd7024127",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-frozen-source-verification.json": "1cdb861d19d9df11a24cfcfe9dd9231cd5b99c93639a8847444d38cffddf66e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-own-tier-diff.json": "fbb0a63f8cdb9fc9f37f032fe865c485f52f184a06eefe4abbe6a0a0572e9def",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-placeholder-wiring-review.json": "d54e633f8fd47715c442ee868fbf5e9a25c27893f9fe806ecd1c602043eb98d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-resume-review.json": "235098652fc842bb4066c8d3eb8d3732cf2ee154a9113d6e61208f6967c3c487",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-traits-review.json": "93e4555c01e545e792ede0699d7e8d8ff15d5dc1df1ae81fb2646a488aa72dca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-ui-raw-verification.json": "a475810f89d6d0f54f977458cac87364e50301d5a53e46177f951e60a48ffe71",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-ui-review.json": "5866ed14c6de9fb3720908a8cb097b652ac45adf8ee7b95281f4c138c22c7117",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "1b890e33b109cea76d40359f40cbb636d1439ab4abf85e575d02349690f17cc7",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "e424a84d754f31b848f06c9614692065fe265684455f444102628328a9813c28",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4ac813d5ef868a3a6ea560637f8f2f3ad69adf8b9b159690f0e9ac461e8225ac",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/DAMAGE_PERCENTAGE_REVIEW.md": "5e9ce529c57fc9914bc9cc3b233e2c57efe4b31a71cd300dfaaf8b2ef3feb56b",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/LOCALIZATION_COMPARISON.md": "804533a6ec5d7146580189ec0810bae529ab7995c41690d2708dc16f847c9471",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/README.md": "c3a15457a5e23da4ea3a5df0e594a6d4108ccb21fc73a5129f805b26b38dfcca",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/SOURCE_INDEX.md": "bae0de6d253f7b392f3433c8962b7439765a4c08cdfa3a5c05e7321b4dbe5b96",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/TIER_VALUES.md": "428df360de73abb60dda470a57af0293cafa8c96092fb17d2b0b800a673ba199",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/WEAPON_COMPATIBILITY.md": "b72a1626f474221a67ad612c45ec6001043f257bf808abb8195bb92ad89867bf",
+      "Game Info/releases/1.13.X/blessings/entries/懲罰者/weapon_trait_bespoke_autogun_p1_increase_damage_on_close_kill.md": "7d3bdfe7d044e2c1ddfc6ca0f20ffcb5a1c63f0d329a92cd726f278df77b1553",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "acc65cd450f3808042ae9f0d9aadb08f4fea93a9931504e0a01e36cdec7b64a1",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "a8de1b61629000c7a630244dc3e92f359cb6ba537d2943255ae58b92c7092a8f",
+      "Referneces/Translation.md": "821a9812ab2036d9f2f9673455a47e782215f174a0b5a0a32c020c22bfe167a4"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/329f2103-f30b-4830-aed7-b0abb3a073fc",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "punisher",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_016",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_016.png",
+      "attachment": "https://github.com/user-attachments/assets/329f2103-f30b-4830-aed7-b0abb3a073fc",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5979764779",
+      "acquired_date": "2026-10-04",
+      "sha256": "1e44a3c48346fa55fc17b84977058220e5d63f3a2489e178bc33359143aecf2b",
+      "content_type": "image/png",
+      "size": 3897,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "懲罰者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Source and public originals plus alpha inspection both show centered skull and eight surrounding inward wedges; identical bytes/128x128."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 323,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 78,
+      "source_files": 23,
+      "bindings": 486,
+      "variants": 252,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 23,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 671,
+      "remote_references": 365,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 15,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-014-full-scan.json",
+        "sha256": "f736c967d9fae24911319338a104bffdc7d6cb027646374bc13b7ae14f300122",
+        "trigger": "round-014"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 91,
+    "not_started_name_groups": 91,
+    "partial_name_groups": 0,
+    "remaining_variants": 353,
+    "remaining_bindings": 699,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d4721251af51463726747eda2f8df5ca25fbe6c4826f9382ffabe21abf15a4c5"
+  },
+  "previous_local_commit": "e67cf2e8c2ac34ebb8397b299d62f753dffc7a0a",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-cap-correction-review.json",
+      "sha256": "b67ec0add120bdc617b0df1d18ff9a067118e32744d4a2ae38dd2b232f51a31b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-first-effect-review.json",
+      "sha256": "d0b539a76886550dc1c898fb1255d0b2179742194200d83d2dce8656cc325ffc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-focused-checks.json",
+      "sha256": "2bce67fac049b61e21a5d832cfff74433ce11b23188b73d845c7da4dd7024127"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-frozen-source-verification.json",
+      "sha256": "1cdb861d19d9df11a24cfcfe9dd9231cd5b99c93639a8847444d38cffddf66e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-own-tier-diff.json",
+      "sha256": "fbb0a63f8cdb9fc9f37f032fe865c485f52f184a06eefe4abbe6a0a0572e9def"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-placeholder-wiring-review.json",
+      "sha256": "d54e633f8fd47715c442ee868fbf5e9a25c27893f9fe806ecd1c602043eb98d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-resume-review.json",
+      "sha256": "235098652fc842bb4066c8d3eb8d3732cf2ee154a9113d6e61208f6967c3c487"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-traits-review.json",
+      "sha256": "93e4555c01e545e792ede0699d7e8d8ff15d5dc1df1ae81fb2646a488aa72dca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-ui-raw-verification.json",
+      "sha256": "a475810f89d6d0f54f977458cac87364e50301d5a53e46177f951e60a48ffe71"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-primary-ui-review.json",
+      "sha256": "5866ed14c6de9fb3720908a8cb097b652ac45adf8ee7b95281f4c138c22c7117"
+    }
+  ],
+  "primary_review_method": "Exact own tier/wrapper/all3 bindings and RAW/formatter reviewed; ParentProcBuff/held/offset/override/stat pool reused with conditions; new RAW-key mismatch and actual Localize callback/registry plus attack resolution→queue→cache order directly reviewed.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-config.json",
+    "sha256": "181786a8376c73530536d9a008577cd7b90e4d3f35334d5fe6ce338f3f230225"
+  },
+  "frozen_agent_inputs": {
+    "config": "a4ef54032cc777f9665b10967834cc536d5629461185939c9bd2dfdc27e51dae",
+    "evidence": "991073f5a24f32375c34ab65ade3c352c77d7260911659e6bd2cd17dcc35f60e",
+    "draft": "526ba5e5dc5b178da4bd6e067a73c2252f364932cf82a1f2ed19415e61918662"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/punisher-formal-peer-scope.json",
+    "sha256": "c580d0ff5e8eceb32f5ad827af51102d82875f5c763bf269616bfe4b01fe8dca",
+    "final_content_hashes_unchanged": true
+  }
+}

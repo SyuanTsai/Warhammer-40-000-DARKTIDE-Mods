@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-04",
+  "blessing": "bash",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/猛撞/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_crowbar_p1_crit_chance_on_push",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Focused peer review of Bash (猛撞) consistency only; fixed-SHA source-block research was not repeated.",
+    "findings": [
+      "The exact Bash name key loc_trait_bespoke_crit_chance_on_push resolves to two trait variants and four bindings: crowbar_p1_m1 plus ogryn_combatblade_p1_m1/m2/m3; the central config, extension config, map, and generated indexes agree on the two weapons and tier values.",
+      "Crowbar I–IV is +5/+7.5/+10/+12.5 percentage points; Ogryn combatblade I–IV is +7.5/+10/+12.5/+15 percentage points. Both wrappers use a 3-second duration; tier overrides replace the wrapper fallback value.",
+      "Push qualification is reported as filtered collision targets with a selected push profile and num_hit_units > 0; actual damage or stagger is not required, and weak pushes can qualify. One push action yields one finish event, including when multiple targets qualify.",
+      "The push itself is fixed noncritical and the effect begins after push completion; subsequent ordinary, charged, and push-follow-up melee attacks can benefit. Crowbar special toggles and combatblade uppercut sweeps do not trigger Bash; uppercuts can benefit while active.",
+      "The chance calculation is clamp, then attack-specific chance-to-damage conversion, then PRD rounding. At a 20% starting pool and no conversion, Crowbar IV gives 32.5% before the roll (33% PRD input), a 62.5% unrounded-pool relative increase; combatblade IV gives 35%, a 75% relative increase.",
+      "A 3-second effect triggered at t=0, switched away at t=1, and returned to at t=2 has about 1 second remaining and expires at t=3; the timer continues while unequipped. Repeated valid pushes refresh the timer without adding stacks or cooldown.",
+      "The compact “at least one target” weapon summaries are read alongside the detailed trigger paragraph, which defines the qualifying filter/profile condition. The exact name/description RAW keys and locale hashes match; percentage and duration values are statically reconstructed through the trait formatter. The icon ID/path and GitHub attachment are separate fields, and the image receipt reports verified display/hash.",
+      "Checked 219 local Markdown links across the eight entry pages, two reverse weapon pages, and two generated indexes; no broken local targets were found. GFM tables and internal entry links are structurally consistent.",
+      "RAW 呈現修正：英文模板以 inline code 顯示，將原文尾端的一個空白保留在 code span 內，並明示該空白；只改 Markdown 呈現，RAW 記錄與內容雜湊未變。"
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/DAMAGE_PERCENTAGE_REVIEW.md": "3e0a48283d2cd6cbc7c22aa6f2c4f5a14b08d6f282ce0c3c9ca8f22051082340",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/LOCALIZATION_COMPARISON.md": "076de341a3def5220eaeeed1960619a031f51495e86a5bb65c95b43df2452d27",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/README.md": "48ed2cbd12d38b3496338cfbc205b227474375697c021d2ecd8d0db9488a8d18",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/SOURCE_INDEX.md": "d513529b9166abe31e9159b629602a69a01376c4c40e6caabca83db9ad553b1c",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/TIER_VALUES.md": "9d0d39ceb6b6b2d43a20f81d501d6efc8bdff362c894378b5969262d70e45b20",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/WEAPON_COMPATIBILITY.md": "5ec30e3da24e9e378d6f4be0d01238ea682d57a77a4c69fa02fb4538d7dd8c03",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/weapon_trait_bespoke_crowbar_p1_crit_chance_on_push.md": "ced4eb6de9cccdc8f6a8cc30b351ff5db9b0c2be8749671732e615a31181b5a7",
+      "Game Info/releases/1.13.X/blessings/entries/猛撞/weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push.md": "28fbab813f0b08fe12561bf4965dfd79e9996d03c693536e1ea47130a79bf9f4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/撬棍/README.md": "5b358428980e3933db4f329ad38ebfba532a8eae7b4ee675f72343753bd6f885",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "c7f643af69def15ae68c74d08b301e183bd8fb7bbd8c1281778db07c241a61f5",
+      "Game Info/releases/1.13.X/blessings/README.md": "be79aea0371e5ee7afb3fa3077b3f5df224f2b54257324ddef607b1d2225abcf",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "2090a7951ed00c996cf667e65c533f597c7b606b29678a25751188cb60253fe5",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "51306f9e1ff26dc46d363b4da8ced4f3688610404a4f5e8e4635e88f99763765",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-config.json": "a60d0c3f568d8ec1c6063f9df2a38327d56c146038eb633db59247640547e117",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-extension-draft.json": "e21fdc9ebd6e183029e0d5324f67e040bde5833a90ddd30e3394424ecd90dcc1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-image.json": "7fc64388083be0c176729afcbf8699f83b62009c303b15ef1898f66bc60f984d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-raw-verification.json": "698b76179258bf4c072b4c327d7c4e5f9caacf92b939fbcc990e60019cd23dd8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-extension-raw-verification.json": "cb48305b96bc8b80092984eed3b5708e92e0ae41b82244709ccb9cc698b143d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-primary-ui-raw-verification.json": "cb48305b96bc8b80092984eed3b5708e92e0ae41b82244709ccb9cc698b143d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-primary-ui-review.json": "856be290cf7387375b78cda5bb34c06031ec855855671934748fde0754b73ef9"
+    }
+  },
+  "image": {
+    "new_issue_attachment": false,
+    "attachment": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "bash",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_097",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_097.png",
+      "attachment": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5973463159",
+      "acquired_date": "2026-10-04",
+      "sha256": "ca5d8081a112fbd279b20c2f27ee7d23a37a5354d9dcf70f1fe15d73ffe259c1",
+      "content_type": "image/png",
+      "size": 4273,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "猛撞祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "primary_visual_review": "Sol inspected dark-background enlargement: intact arrow striking skull with fragments, no clipping, original PNG unchanged."
+    },
+    "reused_accepted_attachment": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 14,
+      "rows": 262,
+      "lists": 95,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 43,
+      "source_files": 20,
+      "bindings": 356,
+      "variants": 186,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 14,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 17,
+      "local_references": 531,
+      "remote_references": 270,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 6,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-005-full-scan.json",
+        "sha256": "825c144d36a52ac3335e21c7a7b30392856d6036cac6a7566d1c1992c9404cc0",
+        "trigger": "round-005"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 118,
+    "not_started_name_groups": 118,
+    "partial_name_groups": 0,
+    "remaining_variants": 419,
+    "remaining_bindings": 829,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "24ad213b6497c715de8b66ff23aa1182e42a353d8df92deeb796fc0075e8011d"
+  },
+  "previous_local_commit": "6ec44fbdb35395e00771a2965f81910839ea5369",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "xhigh",
+    "variant_count": 2,
+    "binding_count": 4,
+    "own_values_override_fallback": true,
+    "source_cache_applicability": "Own wrappers use same held-slot proc timer, refresh and override semantics as reviewed common cache.",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-extension-draft.json",
+      "sha256": "e21fdc9ebd6e183029e0d5324f67e040bde5833a90ddd30e3394424ecd90dcc1"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 4,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-primary-ui-review.json",
+      "sha256": "856be290cf7387375b78cda5bb34c06031ec855855671934748fde0754b73ef9"
+    },
+    "bindings": [
+      {
+        "weapon_id": "crowbar_p1",
+        "mark_id": "crowbar_p1_m1",
+        "trait_id": "weapon_trait_bespoke_crowbar_p1_crit_chance_on_push",
+        "loc_ids": [
+          "loc_weapon_family_crowbar_p1_m1",
+          "loc_weapon_pattern_crowbar_p1_m1",
+          "loc_weapon_mark_crowbar_p1_m1"
+        ],
+        "name_zh_tw": "撬棍 科技教士 型號6",
+        "name_en": "Crowbar Enginseer's Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 2187,
+        "append_line": 2189
+      },
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m1",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m1",
+          "loc_weapon_mark_ogryn_combatblade_p1_m1"
+        ],
+        "name_zh_tw": "砍刀 克魯克 Mk VI",
+        "name_en": "Cleaver Krourk Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1331,
+        "append_line": 1333
+      },
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m2",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m2",
+          "loc_weapon_mark_ogryn_combatblade_p1_m2"
+        ],
+        "name_zh_tw": "砍刀 蠻牛屠夫 Mk III",
+        "name_en": "Cleaver Bull Butcher Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 1365,
+        "append_line": 1367
+      },
+      {
+        "weapon_id": "ogryn_combatblade_p1",
+        "mark_id": "ogryn_combatblade_p1_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+        "loc_ids": [
+          "loc_weapon_family_ogryn_combatblade_p1_m3",
+          "loc_weapon_pattern_ogryn_combatblade_p1_m3",
+          "loc_weapon_mark_ogryn_combatblade_p1_m3"
+        ],
+        "name_zh_tw": "砍刀 克魯克 Mk IV",
+        "name_en": "Cleaver Krourk Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "ukeys_line": 1309,
+        "append_line": 1311
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "exact_name_key": "loc_trait_bespoke_crit_chance_on_push",
+    "exact_name_key_bound_variants": 2,
+    "exact_name_key_bound_bindings": 4,
+    "exact_metadata_trait_items": 2,
+    "exact_outside_metadata_items": 0,
+    "exact_unresolved_candidates": 0,
+    "exact_definitions_not_bound": [],
+    "exact_remaining_outside_intersection": [],
+    "boundary": "僅限固定 SHA 的 inventory、item_metadata 與 remaining-tasks exact name-key intersection；不據此推論其他版本或全遊戲用途。"
+  },
+  "primary_resume_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-primary-resume-review.json",
+    "sha256": "f9eec965f4a40e7d4bdb474d9ccda05416d9bfd5921c0972d5ea689cda015b9f"
+  },
+  "global_uniqueness_review": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/bash-primary-global-check.json",
+    "sha256": "6248983a8615b47da17499d00a6c546c6f4925c5d02d5283366cee2c84d48d3e"
+  }
+}

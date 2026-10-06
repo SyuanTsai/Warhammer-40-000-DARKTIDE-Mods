@@ -1,0 +1,446 @@
+{
+  "date": "2026-10-05",
+  "blessing": "savage-sweep",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+    "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+    "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+    "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits"
+  ],
+  "added_binding_count": 14,
+  "total_variants": 6,
+  "total_bindings": 14,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "savage-sweep-formal-nonauthor-review",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-formal-peer-scope.json",
+    "scope_sha256": "468039f586ba06f70e1e2f40bbaa1feec43fe6b11643289a932c9d34a90bb822",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-config.json": "6b4fd8a76573afcc007b0eb92fa2967d199f3f09efb0ab121df7b91f0b6b6386",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-draft.md": "7b0160725d119a1e4fee41d53e4ad55cb177fe47213d900ce0d27fc6ec80b56d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-evidence.json": "4bd8714a5a812722a2a01524c8f78cde4a748de331027a4618962f8db4cb76cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-chainsword-p1-image.json": "4d66e35af22ea5bf93cf533228d7be18a388ff6166cdf76b64fc1061777d9c47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-config.json": "7904fea4abd542029e1fc4def5f3450b96154d1f341001915668eb2135a30902",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-extension-draft.json": "128ea4277e78838171f5e368717079133597053d329918642e4d016cfdf89a2e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-config.json": "6b4fd8a76573afcc007b0eb92fa2967d199f3f09efb0ab121df7b91f0b6b6386",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-coverage.json": "81623ac79d9ddd7c90902e3dd19124c3aeefdc2eb544c8f6a7f219de084893e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-draft.md": "7b0160725d119a1e4fee41d53e4ad55cb177fe47213d900ce0d27fc6ec80b56d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-evidence.json": "4bd8714a5a812722a2a01524c8f78cde4a748de331027a4618962f8db4cb76cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-association-snapshot.json": "5bfa4c92a3c327d0595fc1449df985c9d312b74022a362c185fed275b72dcb3f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-candidate-preview.md": "fc52d14aa73699854a2c2a09760437db8011987cd27aa2448ef83832f636f7f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-map-baseline-1cb1c1bd.json": "fa32e48fddfedb7ede1285c1bf9fd0bfcd8784ab942a2e2db6098323aee1a9a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-preflight.json": "665e2a41cb6248ad6e4d685147d2eaf7849ebfb57be8d245637276f50d9b5bc3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-image.json": "b3322fa485ec5a5db8f6fbe58f989c231ff25bc26260cc4886ac9ca1d66c6b27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-ogryn-combatblade-p1-image.json": "26edcf05f464c27d783c471f3aef4bd12f41bab811257555adb14eb6c4012b7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-focused-checks.json": "ad4264b28b6f0a5c0c39b0e32a8520a5fad87ebd6515c43a99ce5a58556b71c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-native-source-citations-review.json": "7e8b216a0e7c78a26d3a55055aa6daf37540bd1c5016a208ceea3a2103fb4463",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-own-tier-wrapper-diff-review.json": "8db00dbd6032d752090cdb8cff0f8b7e55a98b0f2b673567bf58f2784fe36bda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-player-runtime-delta-review.json": "33ed40b03d5a908f0fcd05ca32c4d07bbf51d312f2c46190eae525ee56d51b08",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-reconstruction-punctuation-review.json": "7c2a8a6818031d7af218fabc340b3bac13274e4aa20e1bea98aaef8c935e335c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-resume-review.json": "321231bd1c8d51c0b5eca860b0aaa49f93f4c16837fbc0a6bbab9faf18a1b0a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-traits-review.json": "8238a9c963af711677d2285dbfeaeff35d8641209129a05961466e34bc00579d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-raw-verification.json": "cf5dc4cafc13eff1ab8591a34e516b05c2480f5d320888d4765af66869159bbb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-review.json": "11ddce40b1f84c16d92718b6a7bd09fead2679c56ca47ccdd1089680b08f7ef8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "f487397958613d992e4a49472d437e7841db17a0ccd6bcbd76875e1b7728297c",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/DAMAGE_PERCENTAGE_REVIEW.md": "1ff23b7889cf23d929878e1f42f4544424bfb42004528c6b88a0501f1318e012",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/LOCALIZATION_COMPARISON.md": "06acf4d0f9087f5cc1850a1077fa4a928c271d11945668740cecf346f29166bc",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/README.md": "113c6c37cd6b43049f30d488e3f0a264b100f08bbadd4f838f6bcd0333db9743",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/SOURCE_INDEX.md": "2c82340b795566a576dc53247f4d8de6403a8d6eaee7b16191b06a48cae9d2c5",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/TIER_VALUES.md": "208f68b4a0389e294353085c5cb957cfc767fafc562e0311c520c4556f60b71a",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/WEAPON_COMPATIBILITY.md": "cc299633fadcc2a01fb70316ec54e6bcc3a8a1d84fe59d3672601f58ccbfeb7a",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits.md": "09a6ab8a7c490c781887d4c13587537271cf6090db39e2cce6abcd2921a1a1fa",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits.md": "12f930b0bd7c16d4e92d3d18e66cfe3be4ccdd45aa570b19fc938172e38bcdf0",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits.md": "1d37ff52247f3c8df7cacadf5572d63881f531c32ef36efa303010a5edff8aea",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits.md": "3246bc75947cf13fa488adc485c3400f3d8bcabe6cb10f30dee93f05f69fb5c7",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits.md": "576e8929e1c82bc263a07d1d3d5ff0efb676747a6bc41b4dac67385b0b477a60",
+      "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits.md": "3c1e8329c45532a6c848b0367efb744e3ef43ec6b36f22adf44c1d72c5a85409",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "b4fd8fdc95693e6cdcf36a11685c8b4e3c3ac986a1301474651c6bdaffe29fee",
+      "Game Info/releases/1.13.X/blessings/README.md": "a6e537a60e5e65eef92a2b8201f64158d703668be4fc6854de2e713eebc0b732",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "f05603b5bb3823f828a269539189fd32507923c70dfa33a4516a68fee9fa814c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "2798cbae2c9ba09af197f8a76c1b1dc4a24340e02cac06d6dd95edf7751b3674",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "c591abe2ab8e80d771f5863fa42b9cab0ac047913b2429f92cffbc49b70bc5ac",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/穿音速雙刀/README.md": "92fd83c6a7592de0fdd43a1a347e5469bd177ee971378903caf2c3d7d8210e34",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "ade80e3e7929fcd2220264c5e1452cf4d200970e6215abfa4edeaa5520b09a69",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "3937056b07069dfed0a345621b05000dd2eef27275bac583f062db8696ba1120",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重型開膛劍/README.md": "ff62eb316f34cc7c666a2bd2be1d0a3541a2d3b898b6362c733b677a64825bf1",
+      "Referneces/Translation.md": "d35619637f84c0420ab380d6f1562b3dc050b5ebab9dbaf594ee61c864d2c9f7"
+    },
+    "verified_scope_file_count": 53,
+    "all_scope_hashes_match": true,
+    "canonical_config_sha256": "7904fea4abd542029e1fc4def5f3450b96154d1f341001915668eb2135a30902",
+    "punctuation_delta": {
+      "proof_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-reconstruction-punctuation-review.json",
+      "proof_sha256": "7c2a8a6818031d7af218fabc340b3bac13274e4aa20e1bea98aaef8c935e335c",
+      "formal_file": "Game Info/releases/1.13.X/blessings/entries/野蠻橫掃/LOCALIZATION_COMPARISON.md",
+      "formal_file_sha256": "06acf4d0f9087f5cc1850a1077fa4a928c271d11945668740cecf346f29166bc",
+      "verified_text": "各級重用相同句型；依格式參數重建，並非遊戲畫面。",
+      "finding": "The stray period before the renderer-appended semicolon is removed. RAW tier text and mechanics are unchanged."
+    },
+    "reviewed_findings": [
+      "Rechecked the complete 53-file frozen scope; every on-disk SHA256 matches the scope map.",
+      "Verified the punctuation-only reconstruction delta: the sentence now ends cleanly with a full stop, while preserving the generator caveat; no RAW text or numeric/mechanical content changed.",
+      "Reused prior review of the six actual variants/fourteen bindings, own tier/wrapper behavior, exact RAW reconstruction, sweep hit-count and special-profile exceptions, cache timing, expiry/refresh/switch behavior, worked mass examples, image receipts, and reverse/shared mapping; none changed in this scope delta."
+    ],
+    "validation_receipts": {
+      "focused_checks_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-focused-checks.json",
+      "focused_checks_sha256": "ad4264b28b6f0a5c0c39b0e32a8520a5fad87ebd6515c43a99ce5a58556b71c8",
+      "focused_source_ranges": 295,
+      "focused_source_files": 46,
+      "links_new_errors": 0,
+      "gfm_passed": true
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "savage-sweep",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_167.png",
+      "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5989913700",
+      "acquired_date": "2026-10-05",
+      "sha256": "daa75e5c193239b26f06a76fcac961db91770a5d27840b968b53cceb6dcc4bba",
+      "content_type": "image/png",
+      "size": 4271,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "野蠻橫掃祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": "Root viewed actual item icon original and public download: 128x128 transparent-background white/pale weapon-trait texture; exact attachment content SHA256 verified without alteration."
+    },
+    "additional_variant_images": [
+      {
+        "id": "savage-sweep-chainsword-p1",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_080",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_080.png",
+        "attachment": "https://github.com/user-attachments/assets/4c9ee18d-a527-4768-b696-e65948c74a0c",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5989917335",
+        "acquired_date": "2026-10-05",
+        "sha256": "26f1a186afdb1aabbbcdaeeed711f7ab71f17e543a5358fb97a268e96a917d02",
+        "content_type": "image/png",
+        "size": 5996,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "野蠻橫掃祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_acceptance": "Root viewed actual item icon original and public download: 128x128 transparent-background white/pale weapon-trait texture; exact attachment content SHA256 verified without alteration.",
+        "display": "public attachment inspected"
+      },
+      {
+        "id": "savage-sweep-ogryn-combatblade-p1",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_090",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_090.png",
+        "attachment": "https://github.com/user-attachments/assets/5a2e3d73-c28c-48f3-badf-55d8903a425a",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5989920165",
+        "acquired_date": "2026-10-05",
+        "sha256": "87b5fc39a6ee3f8959d3e04b3979206ea17761bc1f53244ffa321a1286c760dd",
+        "content_type": "image/png",
+        "size": 3709,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "野蠻橫掃祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_acceptance": "Root viewed actual item icon original and public download: 128x128 transparent-background white/pale weapon-trait texture; exact attachment content SHA256 verified without alteration.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+        "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_p1_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_080",
+        "attachment": "https://github.com/user-attachments/assets/4c9ee18d-a527-4768-b696-e65948c74a0c",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_combatsword_p1_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+        "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_combatsword_p2_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+        "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_090",
+        "attachment": "https://github.com/user-attachments/assets/5a2e3d73-c28c-48f3-badf-55d8903a425a",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_increased_attack_cleave_on_multiple_hits",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_167",
+        "attachment": "https://github.com/user-attachments/assets/d72aa1c7-93e6-466a-a90f-6562bf9b9738",
+        "verified_binding_count": 1
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 22,
+      "tables": 21,
+      "rows": 666,
+      "lists": 99,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 295,
+      "source_files": 46,
+      "bindings": 769,
+      "variants": 389,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 46,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 1101,
+      "remote_references": 694,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 27,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-026-full-scan.json",
+        "sha256": "6d30b95ea9426272877123a45158eb2317c6aaae898ea7b6fc80831a55881425",
+        "trigger": "round-026"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 55,
+    "not_started_name_groups": 55,
+    "partial_name_groups": 0,
+    "remaining_variants": 216,
+    "remaining_bindings": 416,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "102840be20e64367c5908763133ea9b7307080036237c924e85ab462f2d3e970"
+  },
+  "previous_local_commit": "3c9c95a24a326a7aab7119ac2ce43c0b186c710f",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-focused-checks.json",
+      "sha256": "ad4264b28b6f0a5c0c39b0e32a8520a5fad87ebd6515c43a99ce5a58556b71c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-native-source-citations-review.json",
+      "sha256": "7e8b216a0e7c78a26d3a55055aa6daf37540bd1c5016a208ceea3a2103fb4463"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "8db00dbd6032d752090cdb8cff0f8b7e55a98b0f2b673567bf58f2784fe36bda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-player-runtime-delta-review.json",
+      "sha256": "33ed40b03d5a908f0fcd05ca32c4d07bbf51d312f2c46190eae525ee56d51b08"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-reconstruction-punctuation-review.json",
+      "sha256": "7c2a8a6818031d7af218fabc340b3bac13274e4aa20e1bea98aaef8c935e335c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-resume-review.json",
+      "sha256": "321231bd1c8d51c0b5eca860b0aaa49f93f4c16837fbc0a6bbab9faf18a1b0a3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-traits-review.json",
+      "sha256": "8238a9c963af711677d2285dbfeaeff35d8641209129a05961466e34bc00579d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-raw-verification.json",
+      "sha256": "cf5dc4cafc13eff1ab8591a34e516b05c2480f5d320888d4765af66869159bbb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-review.json",
+      "sha256": "11ddce40b1f84c16d92718b6a7bd09fead2679c56ca47ccdd1089680b08f7ef8"
+    }
+  ],
+  "primary_review_method": "Reuse fixed common event/cache/held/ProcBuff timing under matching six exactclones; allnative223 hash/file/blob and ownformatter/fulltiers6 verified. Content review focuses producer num_hit_enemies persistence vs event gate, sweep snapshot-first effect, damageprofile attack/impact consumer, native sticky exclusions and realUIlabels. Originaltrio preserved; nonauthor formalpeer required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-config.json",
+    "sha256": "7904fea4abd542029e1fc4def5f3450b96154d1f341001915668eb2135a30902"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-traits-review.json",
+      "sha256": "8238a9c963af711677d2285dbfeaeff35d8641209129a05961466e34bc00579d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-review.json",
+      "sha256": "11ddce40b1f84c16d92718b6a7bd09fead2679c56ca47ccdd1089680b08f7ef8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-ui-raw-verification.json",
+      "sha256": "cf5dc4cafc13eff1ab8591a34e516b05c2480f5d320888d4765af66869159bbb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-image.json",
+      "sha256": "b3322fa485ec5a5db8f6fbe58f989c231ff25bc26260cc4886ac9ca1d66c6b27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-chainsword-p1-image.json",
+      "sha256": "4d66e35af22ea5bf93cf533228d7be18a388ff6166cdf76b64fc1061777d9c47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-ogryn-combatblade-p1-image.json",
+      "sha256": "26edcf05f464c27d783c471f3aef4bd12f41bab811257555adb14eb6c4012b7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-coverage.json",
+      "sha256": "81623ac79d9ddd7c90902e3dd19124c3aeefdc2eb544c8f6a7f219de084893e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-candidate-preview.md",
+      "sha256": "fc52d14aa73699854a2c2a09760437db8011987cd27aa2448ef83832f636f7f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-association-snapshot.json",
+      "sha256": "5bfa4c92a3c327d0595fc1449df985c9d312b74022a362c185fed275b72dcb3f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-map-baseline-1cb1c1bd.json",
+      "sha256": "fa32e48fddfedb7ede1285c1bf9fd0bfcd8784ab942a2e2db6098323aee1a9a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-draft.md",
+      "sha256": "7b0160725d119a1e4fee41d53e4ad55cb177fe47213d900ce0d27fc6ec80b56d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-config.json",
+      "sha256": "6b4fd8a76573afcc007b0eb92fa2967d199f3f09efb0ab121df7b91f0b6b6386"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-agent-evidence.json",
+      "sha256": "4bd8714a5a812722a2a01524c8f78cde4a748de331027a4618962f8db4cb76cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-group/savage-sweep-preflight.json",
+      "sha256": "665e2a41cb6248ad6e4d685147d2eaf7849ebfb57be8d245637276f50d9b5bc3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-config.json",
+      "sha256": "6b4fd8a76573afcc007b0eb92fa2967d199f3f09efb0ab121df7b91f0b6b6386"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-evidence.json",
+      "sha256": "4bd8714a5a812722a2a01524c8f78cde4a748de331027a4618962f8db4cb76cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-agent-draft.md",
+      "sha256": "7b0160725d119a1e4fee41d53e4ad55cb177fe47213d900ce0d27fc6ec80b56d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-player-runtime-delta-review.json",
+      "sha256": "33ed40b03d5a908f0fcd05ca32c4d07bbf51d312f2c46190eae525ee56d51b08"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-own-tier-wrapper-diff-review.json",
+      "sha256": "8db00dbd6032d752090cdb8cff0f8b7e55a98b0f2b673567bf58f2784fe36bda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-native-source-citations-review.json",
+      "sha256": "7e8b216a0e7c78a26d3a55055aa6daf37540bd1c5016a208ceea3a2103fb4463"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-primary-reconstruction-punctuation-review.json",
+      "sha256": "7c2a8a6818031d7af218fabc340b3bac13274e4aa20e1bea98aaef8c935e335c"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/savage-sweep-formal-peer-scope.json",
+    "sha256": "468039f586ba06f70e1e2f40bbaa1feec43fe6b11643289a932c9d34a90bb822",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "date": "2026-10-06",
+  "blessing": "pinning-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies",
+    "weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies",
+    "weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 4,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing_id": "pinning-fire",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/riposte",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-formal-peer-scope.json",
+    "scope_sha256": "dcd6d45c600439bf384ddc3ad54da6f61fbad0b27d60913d9fb3f844ebd8c332",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused_manifest.py": "9d209225bd70105f6caf54d73a1cd20ef42694ee8edb7f2e3bd9e7d0a1fd903a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-config.json": "bbd13541a1e5d39b8393e3bc9be4a5be7b105406a605d88d76de9a512a465735",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-draft.md": "663665a98cdc6e4d7796dc7ee2fd0bb3754841441fe5e7f01e8acadc9e72e1a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-evidence.json": "4d2f87d86e2f64520d53e3a607c1db5c9b542273e5ce7610ad7324fe35f2431c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-config.json": "c40e8b01b202b6899704b4809628f918fe41f3d4d95454b6edeb1662565df794",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-extension-draft.json": "e37f5a3b54808a6f4715441ed1c2b1aab89079f2d26038cdee399e78ff34a769",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-actual-preview-receipt-002.json": "e35ac24b9ddf7317c5533a95d6314a1338ab6d5b1a4be7ba53f240aefd379843",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-actual-preview-receipt-003.json": "7ab6fb89aeb5977ba4870e25916bc97734ca45b6c7dd476927fe31f5ba21b31e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-config.json": "bbd13541a1e5d39b8393e3bc9be4a5be7b105406a605d88d76de9a512a465735",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-draft.md": "663665a98cdc6e4d7796dc7ee2fd0bb3754841441fe5e7f01e8acadc9e72e1a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-evidence.json": "4d2f87d86e2f64520d53e3a607c1db5c9b542273e5ce7610ad7324fe35f2431c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-binding-inventory.json": "148ecb2dd8d20845a3a4b42cd88fdae9e1c5931150a0481b797ae9c4809fed4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-coverage.json": "4175d56dc0fb9859701243e8fc582206ee1678d7bc8dc3153bce59cffd0acdff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-source-ranges.json": "8a2b95bf4eb39f4970bf3c66c8d1eabf9183eca6846c0b8b448b862aa8e1c15a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/relentless-strikes-formal-nonauthor-review.json": "9cddb44914202b68b1c8303e96b0d869c65a48b8f51377a82da62fb08a732f36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-image.json": "77571827e355e7f6acf52c3454722918d1ebdd2722f367de556914ea6cc2c2d6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-final-content-delta-review.json": "fabb52d42c37fbbef3e62b2ead447a34aa2e187970310ce3d3a9b73687c131df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-focused-checks.json": "b4f36a1c02229b471400f34b98cff290f8e5820a4acfe01dfd0d583e44e899a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-frozen-source-verification.json": "162717fc2c8cc051e68f7f8c9e277f445f34e341d81a1d46b32ac066b2d476a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-own-tier-wrapper-stagger-power-material-review.json": "86fd305cc530afac341cc6b716d491786bc594100e001fb95b502b20d75d6cd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-raw-verification.json": "30061fa0e74e9c74c6c914ab4088b9ede50fd0a9af23233dbd0c380e737e3ce3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-resume-review.json": "5ebcaebd4190d06499f32fd22453b53f1082d043afc6677e4c0f3045eb5aa99f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-raw-verification.json": "a7c641a6be363823071049f8e02a91abd7b0c0a24b1d8b2394e73a1eaf4cb165",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-review.json": "0e779e32f2d6bd7b3de617a82f79caaeb8f6049e579e524f194699786eef25ab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-raw-verification.json": "30061fa0e74e9c74c6c914ab4088b9ede50fd0a9af23233dbd0c380e737e3ce3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "a5be64af519d4f6bc2f727c6f7e89f344d403097dbb56adccabbc58e0ddb0ad7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/DAMAGE_PERCENTAGE_REVIEW.md": "1791a532b9e5dcfe28df2f78d532a85a4fee3ce583583c76a7da1c7339d9eff2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/LOCALIZATION_COMPARISON.md": "8e7a2fde8ba2b844a05dca7ddac142ae5eefa98d818d0cc0ef770f922a8b755e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/README.md": "2c2f99c661df8aefe04b694c1d56003dd77b760e0cc45844f98d9073d962bb0e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/SOURCE_INDEX.md": "77f903a69128c39793ae2fd344475be0816c7a19b2442b0e32e5cde47fb09776",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/TIER_VALUES.md": "6fb7644d1d9ac7d9c2a53e9f628c25f2854a470ee4a37ca259834e3d99dff79e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/WEAPON_COMPATIBILITY.md": "1425e671d875f6e994c9e9904da87df220fe16915ab33b818338b1d0f2cc969f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies.md": "317fa060497ce47694964d4d988d8939266f75f6276e9d53c89252fabdd2f90d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies.md": "79468fbfb8b9bb54be1ab50031cc17bdb7e762f03b34bbe5b1dfa8dfe716bf09",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies.md": "8f7e89479e7e123fd11d33bcb69e600fe00248f3774c9ad2fbfee32dde202ac4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies.md": "54d7420862cd5dda85cc304184f04a4b9a6b38d2b26546083fdf95dc7637d8b5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/ranged/README.md": "4b10c9bd3937f439623502a17462ed4e92add78430a57095caea7cfcfc0b183a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "dc6216ae63994dd9045b4f0353e956af93de39b52f78ed80d867399bcac9a1c3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "7c3221c7688a7c72d27cdb00a853d0b3da4b04d0bdb1ce7fe5a3f9810f5be7be",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "344701e3dfc484ddf78f8fcda18a190e404bab74211766da96a55ff7928832cc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "05e9bec1ff757c27fa661c7476c46ee2a7ab6e7e1bd44a44f17ecc0d0b7e7c87",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "88e6c22bd6c149273ce5a588e42a4cbe0fa43314b405c5910a00cf272930441e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "170b338661b09ae3621e250c9feb262e365e313ef54eed5ae297a000ad5ecfaf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/own-association-snapshot.json": "d07ce4e1fba55551a59334c9db83a086cde9c2a538b16b9333539dd90152c31d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/actual-preview-003/Referneces/Translation.md": "c7b2555adbdecc1c725ed6e369412ade01ccd12fa6bbb5fd59561251f52d6808",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "8d8615169cccc0f724986cc46e6edf2a1c65c3f76d7bed3c12f8e6b4afd1dc1b",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/DAMAGE_PERCENTAGE_REVIEW.md": "1791a532b9e5dcfe28df2f78d532a85a4fee3ce583583c76a7da1c7339d9eff2",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/LOCALIZATION_COMPARISON.md": "8e7a2fde8ba2b844a05dca7ddac142ae5eefa98d818d0cc0ef770f922a8b755e",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/README.md": "bf045c548897f1486d3005c6d1b446d62d5eebe47ba23157496b9154254cb1f8",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/SOURCE_INDEX.md": "d52bc9de6fa90a3a14059779fc197518ec5d483e99b2a237582fbf5d4f190176",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/TIER_VALUES.md": "6fb7644d1d9ac7d9c2a53e9f628c25f2854a470ee4a37ca259834e3d99dff79e",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/WEAPON_COMPATIBILITY.md": "1425e671d875f6e994c9e9904da87df220fe16915ab33b818338b1d0f2cc969f",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies.md": "317fa060497ce47694964d4d988d8939266f75f6276e9d53c89252fabdd2f90d",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies.md": "79468fbfb8b9bb54be1ab50031cc17bdb7e762f03b34bbe5b1dfa8dfe716bf09",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies.md": "8f7e89479e7e123fd11d33bcb69e600fe00248f3774c9ad2fbfee32dde202ac4",
+      "Game Info/releases/1.13.X/blessings/entries/鉗制射擊/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies.md": "54d7420862cd5dda85cc304184f04a4b9a6b38d2b26546083fdf95dc7637d8b5",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "19d2f70b74d7cbca7970d4e7ebc821779fa0812cbd4ac915addb134189226431",
+      "Game Info/releases/1.13.X/blessings/README.md": "4fa4a61394336f249a834b1c353a1e81e7ce47c28eb53eb4f670f6c41be32866",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "5a342cfa5656de6f9a91516cd5b6e7c7b349a191252a30a7a5c2fcd33ba76616",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/撕裂者自動手槍/README.md": "344701e3dfc484ddf78f8fcda18a190e404bab74211766da96a55ff7928832cc",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/矛頭爆矢槍/README.md": "05e9bec1ff757c27fa661c7476c46ee2a7ab6e7e1bd44a44f17ecc0d0b7e7c87",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "88e6c22bd6c149273ce5a588e42a4cbe0fa43314b405c5910a00cf272930441e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙持自動手槍/README.md": "170b338661b09ae3621e250c9feb262e365e313ef54eed5ae297a000ad5ecfaf",
+      "Referneces/Translation.md": "f1caeb8d211fde0cbc9e3633392dea5b0b3fca1d79370ca27b800cf38cf543ae"
+    },
+    "review_conclusions": [
+      "All 78 fixed-scope files were read and their SHA-256 values exactly match the scope. This includes all ten formal blessing pages, the author-approved config/draft and source/UI/image receipts, the generated candidate snapshot, map, shared catalogue, and reverse weapon pages.",
+      "The four actual variants and seven bindings in BLESSING_WEAPON_MAP match the scope: autopistol_p1 (1), bolter_p1 (2), dual_autopistols_p1 (1), and ogryn_heavystubber_p2 (3). All four associated reverse weapon pages link the exact variant IDs; actual UI names and marks in the formal page match the UI receipt. Available tiers remain null.",
+      "The four own I–IV tables show 4.25%, 4.5%, 4.75%, and 5% generic power per effective layer, with five effective layers and a shared 2.5-second refresh window. The own-tier and wrapper receipts support each weapon-specific tier override and clone/child wiring; the common base trigger conditions are applied only where the bound wrapper uses them.",
+      "Player text accurately distinguishes the source-item and currently-wielded gates, actual stagger-result gate, per-event layer gain, expiry/cache timing, and the Adamant melee-weakspot exception. It states that a triggering hit resolves before the newly added layer can affect later attacks.",
+      "The actual action coverage is consistent with the bound templates: ordinary hip/aim hitscan, Bolter conditional stop/kill explosion, Bolter and Dual Autopistols special melee sweeps, flashlight-toggle specials for Autopistol and Heavy Stubber, and pure-push event distinction. The Bolter explosion path retains the source item, uses explosion attack type, and still requires that target to stagger and the source weapon to be held; the generic power modifier is read from the attacker cache for target attacks.",
+      "The controlled example uses the actual Autopistol P1 M1 path and explicitly treats P_curve=100 as a normalized intermediate power input, not fixed damage. Formula and tier totals are described as power-stage changes rather than guaranteed final health-damage percentages.",
+      "The exact English/Traditional Chinese localization keys and hashes, formatter/static I–IV reconstruction, rule classifications, icon identity, and image receipt are consistent. The formal change from the accepted source review is limited to removing an unproved UI-placeholder phrase and adding the live-player sender source reference; gameplay values and mechanics remain unchanged.",
+      "Focused scope review and independent map/reverse-link assertions passed; no unresolved issue found."
+    ],
+    "scope_verification": {
+      "expected_files": 78,
+      "matched_files": 78,
+      "mismatches": 0,
+      "map_variants": 4,
+      "map_bindings": 7,
+      "reverse_weapon_pages_checked": 4
+    },
+    "formal_peer_accepted": true
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "pinning-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_128.png",
+      "attachment": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6009947647",
+      "acquired_date": "2026-10-06",
+      "sha256": "360295010e9e3e78f22381af343eefcbd96d01dfad75cd434e7b9906204a7a91",
+      "content_type": "image/png",
+      "size": 4638,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "鉗制射擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_method": "Root viewed the actual public PNG through view_image; native pale square pixels, dimensions and downloaded hash match. No replacement glyph."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 17,
+      "rows": 579,
+      "lists": 95,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 105,
+      "source_files": 42,
+      "bindings": 1062,
+      "variants": 547,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 42,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1405,
+      "remote_references": 546,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 43,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-042-full-scan.json",
+        "sha256": "4777d804e3214753526e714881fe6b8a8955dbf03168a68f50b7be590400ddcb",
+        "trigger": "round-042"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 9,
+    "not_started_name_groups": 9,
+    "partial_name_groups": 0,
+    "remaining_variants": 58,
+    "remaining_bindings": 123,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "66288239938497890c19fbbfbfd0f895ca36a05b95d3c2313626675c8b77a6f3"
+  },
+  "previous_local_commit": "d583bf164f7701315c8e60619b3e47055e345720",
+  "outside_intersection_review": {
+    "status": "metadata-only same-name definition is not an inventory binding for this name key",
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/stacking_power_bonus_on_staggering_enemies",
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_stacking_power_bonus_on_staggering_enemies",
+        "restriction": [
+          "dual_stubpistols_p1"
+        ]
+      }
+    ]
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-final-content-delta-review.json",
+      "sha256": "fabb52d42c37fbbef3e62b2ead447a34aa2e187970310ce3d3a9b73687c131df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-focused-checks.json",
+      "sha256": "b4f36a1c02229b471400f34b98cff290f8e5820a4acfe01dfd0d583e44e899a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-frozen-source-verification.json",
+      "sha256": "162717fc2c8cc051e68f7f8c9e277f445f34e341d81a1d46b32ac066b2d476a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-own-tier-wrapper-stagger-power-material-review.json",
+      "sha256": "86fd305cc530afac341cc6b716d491786bc594100e001fb95b502b20d75d6cd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-raw-verification.json",
+      "sha256": "30061fa0e74e9c74c6c914ab4088b9ede50fd0a9af23233dbd0c380e737e3ce3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-resume-review.json",
+      "sha256": "5ebcaebd4190d06499f32fd22453b53f1082d043afc6677e4c0f3045eb5aa99f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-raw-verification.json",
+      "sha256": "a7c641a6be363823071049f8e02a91abd7b0c0a24b1d8b2394e73a1eaf4cb165"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-review.json",
+      "sha256": "0e779e32f2d6bd7b3de617a82f79caaeb8f6049e579e524f194699786eef25ab"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-config.json",
+    "sha256": "c40e8b01b202b6899704b4809628f918fe41f3d4d95454b6edeb1662565df794"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "role": "fixed 4-variant/7-binding inventory"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "role": "fixed MasterItems metadata"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "role": "fixed localization keys"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "role": "fixed-SHA source reader"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json",
+      "sha256": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "role": "actual preview and validation recipes"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "role": "unchanged actual document generator"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "role": "generator functions/schema"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "role": "unchanged isolated actual-preview runner"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "role": "focused source/mapping checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "role": "focused link checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "role": "GFM checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "role": "exact RAW comparison verifier"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "role": "actual icon guard"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused_manifest.py",
+      "sha256": "9d209225bd70105f6caf54d73a1cd20ef42694ee8edb7f2e3bd9e7d0a1fd903a",
+      "role": "isolated generated-file manifest"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "role": "fixed common lifecycle/cache evidence"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-own-tier-wrapper-stagger-power-material-review.json",
+      "sha256": "86fd305cc530afac341cc6b716d491786bc594100e001fb95b502b20d75d6cd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-review.json",
+      "sha256": "0e779e32f2d6bd7b3de617a82f79caaeb8f6049e579e524f194699786eef25ab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-ui-raw-verification.json",
+      "sha256": "a7c641a6be363823071049f8e02a91abd7b0c0a24b1d8b2394e73a1eaf4cb165"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-raw-verification.json",
+      "sha256": "30061fa0e74e9c74c6c914ab4088b9ede50fd0a9af23233dbd0c380e737e3ce3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-image.json",
+      "sha256": "77571827e355e7f6acf52c3454722918d1ebdd2722f367de556914ea6cc2c2d6",
+      "role": "Root verified actual icon 128 receipt"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-source-ranges.json",
+      "sha256": "8a2b95bf4eb39f4970bf3c66c8d1eabf9183eca6846c0b8b448b862aa8e1c15a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-binding-inventory.json",
+      "sha256": "148ecb2dd8d20845a3a4b42cd88fdae9e1c5931150a0481b797ae9c4809fed4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-coverage.json",
+      "sha256": "4175d56dc0fb9859701243e8fc582206ee1678d7bc8dc3153bce59cffd0acdff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-actual-preview-receipt-003.json",
+      "sha256": "7ab6fb89aeb5977ba4870e25916bc97734ca45b6c7dd476927fe31f5ba21b31e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "dc6216ae63994dd9045b4f0353e956af93de39b52f78ed80d867399bcac9a1c3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "7c3221c7688a7c72d27cdb00a853d0b3da4b04d0bdb1ce7fe5a3f9810f5be7be"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "a5be64af519d4f6bc2f727c6f7e89f344d403097dbb56adccabbc58e0ddb0ad7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "1791a532b9e5dcfe28df2f78d532a85a4fee3ce583583c76a7da1c7339d9eff2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "8e7a2fde8ba2b844a05dca7ddac142ae5eefa98d818d0cc0ef770f922a8b755e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\README.md",
+      "sha256": "2c2f99c661df8aefe04b694c1d56003dd77b760e0cc45844f98d9073d962bb0e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\SOURCE_INDEX.md",
+      "sha256": "77f903a69128c39793ae2fd344475be0816c7a19b2442b0e32e5cde47fb09776"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\TIER_VALUES.md",
+      "sha256": "6fb7644d1d9ac7d9c2a53e9f628c25f2854a470ee4a37ca259834e3d99dff79e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "1425e671d875f6e994c9e9904da87df220fe16915ab33b818338b1d0f2cc969f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "sha256": "317fa060497ce47694964d4d988d8939266f75f6276e9d53c89252fabdd2f90d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "sha256": "79468fbfb8b9bb54be1ab50031cc17bdb7e762f03b34bbe5b1dfa8dfe716bf09"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "sha256": "8f7e89479e7e123fd11d33bcb69e600fe00248f3774c9ad2fbfee32dde202ac4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\鉗制射擊\\weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies.md",
+      "sha256": "54d7420862cd5dda85cc304184f04a4b9a6b38d2b26546083fdf95dc7637d8b5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "4b10c9bd3937f439623502a17462ed4e92add78430a57095caea7cfcfc0b183a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\撕裂者自動手槍\\README.md",
+      "sha256": "344701e3dfc484ddf78f8fcda18a190e404bab74211766da96a55ff7928832cc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\矛頭爆矢槍\\README.md",
+      "sha256": "05e9bec1ff757c27fa661c7476c46ee2a7ab6e7e1bd44a44f17ecc0d0b7e7c87"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "88e6c22bd6c149273ce5a588e42a4cbe0fa43314b405c5910a00cf272930441e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙持自動手槍\\README.md",
+      "sha256": "170b338661b09ae3621e250c9feb262e365e313ef54eed5ae297a000ad5ecfaf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "c7b2555adbdecc1c725ed6e369412ade01ccd12fa6bbb5fd59561251f52d6808"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-raw-verification.json",
+      "sha256": "30061fa0e74e9c74c6c914ab4088b9ede50fd0a9af23233dbd0c380e737e3ce3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinning-fire-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "d07ce4e1fba55551a59334c9db83a086cde9c2a538b16b9333539dd90152c31d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-actual-preview-receipt-002.json",
+      "sha256": "e35ac24b9ddf7317c5533a95d6314a1338ab6d5b1a4be7ba53f240aefd379843"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-config.json",
+      "sha256": "bbd13541a1e5d39b8393e3bc9be4a5be7b105406a605d88d76de9a512a465735"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-draft.md",
+      "sha256": "663665a98cdc6e4d7796dc7ee2fd0bb3754841441fe5e7f01e8acadc9e72e1a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/pinning-fire-agent-evidence.json",
+      "sha256": "4d2f87d86e2f64520d53e3a607c1db5c9b542273e5ce7610ad7324fe35f2431c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-group/relentless-strikes-formal-nonauthor-review.json",
+      "sha256": "9cddb44914202b68b1c8303e96b0d869c65a48b8f51377a82da62fb08a732f36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-config.json",
+      "sha256": "bbd13541a1e5d39b8393e3bc9be4a5be7b105406a605d88d76de9a512a465735"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-evidence.json",
+      "sha256": "4d2f87d86e2f64520d53e3a607c1db5c9b542273e5ce7610ad7324fe35f2431c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-agent-draft.md",
+      "sha256": "663665a98cdc6e4d7796dc7ee2fd0bb3754841441fe5e7f01e8acadc9e72e1a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-final-content-delta-review.json",
+      "sha256": "fabb52d42c37fbbef3e62b2ead447a34aa2e187970310ce3d3a9b73687c131df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-primary-frozen-source-verification.json",
+      "sha256": "162717fc2c8cc051e68f7f8c9e277f445f34e341d81a1d46b32ac066b2d476a6"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinning-fire-formal-peer-scope.json",
+    "sha256": "dcd6d45c600439bf384ddc3ad54da6f61fbad0b27d60913d9fb3f844ebd8c332",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/riposte",
+    "non_author_peer": true
+  }
+}

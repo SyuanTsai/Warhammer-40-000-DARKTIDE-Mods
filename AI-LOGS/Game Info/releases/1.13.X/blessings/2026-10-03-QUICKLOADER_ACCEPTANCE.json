@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-05",
+  "blessing": "quickloader",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/快速裝填/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "image_exception": {
+      "image_verified": false,
+      "user_note": "目前沒有可核對的圖示。",
+      "attachment_provided": false,
+      "approved_for_this_item_only": true
+    },
+    "accepted": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-formal-peer-scope.json",
+    "complete": true,
+    "reviewed_file_count": 35,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "findings": [
+      "Reviewed all seven Quickloader formal pages and the current 1-trait/3-binding mapping; the player page, three actual autogun marks, shared map, and weapon reverse index agree.",
+      "I–IV are +10%, +12.5%, +15%, and +20% reload speed for 2 seconds. A processed dodge-start event while the applicable slot is wielded is sufficient; no successful dodge, shot, or hit is required. Repeated eligible events refresh the window without stacking or cooldown.",
+      "The tier reload_speed override replaces the ProcBuff 0.5 fallback while active; it is not added to that value or permanently applied. The applicable held gate is enforced on proc-stat contribution.",
+      "Reload action time scale is sampled when a reload starts. The 10-second example yields 8.33 seconds at IV and a 16.67% duration reduction under its stated unclamped, no-other-bonus assumptions; it does not claim a fixed mark reload duration.",
+      "The RAW keys and paired resource hash match. All four EN/ZH static reconstructions use the formatter values and 2-second duration; the text correctly treats event-start versus successful-dodge wording as unspecified by RAW.",
+      "The Quickloader image exception is accurately limited to this item: original icon, icon_small, and mastery_icon are empty in the identified public metadata snapshot; the formal catalogs say no verifiable icon, with no substitute attachment or image-verification claim."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-agent-config.json": "2d217b0a88f4edd6be36d39d179980e3538a7ff72df44627fb79109fc6ecefc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-agent-draft.md": "77cb953329027cb1d08d41b78cfd74ddfce8e6f7d442bd27b7269099acef4ed8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-agent-evidence.json": "b7ecf7b1fd4653c986163ef4775a898c5cc89006b489318b15a86c87f57886a3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-extension-draft.json": "87ce35290d742d414d544886c9b01668c70cf2da51069f12dba0e6c2ed8f4f9f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-image.json": "b64dfa4f7686738c4f0d5584591796615bfb226cd5a7c34f2e1a1ecb71a29fe4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-focused-checks.json": "75afb8cb950e13c509f89659bf0bfebb650bba29f1d00e1d66cb563c04daaec2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-frozen-source-verification.json": "1ce1400a4ed0d08a7ffa8719384b7c4408429b0005d9da9e77bdb45d00f3afa3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-icon-gap.json": "0cb82c53f2c3a2ac66f9168e16d5716c2e4143c04ccbd60a5e4fce6ca1253f95",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-image-exception-approval.json": "a017574550f460597444429c23c3a64cda4364e163f561929b3fadf42eb5e0c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-image-exception-tool-repair.json": "6f04798cd0f79595da8870fc910e8eb9ac8c6c9bdcdf16d4eeaddc67dfbd7f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-own-tier-diff.json": "be141c71b68147bb9711e7b7b2128edaed793962c1a6ed5a7a9386fd67d62dce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-resume-review.json": "2cde33b1a4f5897b34d458cff31e8a876ec5a43fbb10f947434625cc2af2779a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-traits-review.json": "b85fd7d2c47ec7ca8d95a8a13736a97f3395ddaad5156d69e8b21d525494e98c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-ui-raw-verification.json": "bd7fc65befeddb706735aeaf2013ca4269e4b0134603c939ab342f15418e7260",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-ui-review.json": "c68e549cf4283ecfdfd3bde3b51b23a424ad4fac65472df298576288020f5051",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "cfd531dcf19b8fee77ea75a4ae0d4f68c6e30ba132e34afe3b2ae87b44581373",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/DAMAGE_PERCENTAGE_REVIEW.md": "ad866e325de46a26df0b3ad4696bd77b06b35e5fa9ad1bce6875f58a138adadb",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/LOCALIZATION_COMPARISON.md": "756d24a7c686b020f45b7c5a9f41738f0a906cb523aeb1c136783c7b4062ab5c",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/README.md": "fcf39b30d36cbb625f155f27498e689ab191f3946ccd23997589766a6a877a79",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/SOURCE_INDEX.md": "0ea3fc365aeda0967f0c69d1df3bdd0b494afe031a2d8de777bd610a2f1ad2b5",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/TIER_VALUES.md": "55dd3e0e9d10b3220512138d921ffe09b89920bb7775484edad22a1d7667fc1d",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/WEAPON_COMPATIBILITY.md": "c755a01bc7161b02d34a1ac0fcacb939eaf04694d9b0ef9b74465c8f0056077a",
+      "Game Info/releases/1.13.X/blessings/entries/快速裝填/weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge.md": "bb762c3bd8105f468f173689640a195998ac26e9a7c3c32343798cb1a79a474c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "f113057c86cfe99e18b7aa36bf68c1379dbf53fcc14f23f3321e04d446b78107",
+      "Game Info/releases/1.13.X/blessings/README.md": "11ef93b05f28dc1a2cd1de078533c8f1af1a23a1dc7714378b47891a1413e57a",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a03bc301f1979de3d69109e40f6e50c04dd8c2cd4650e919b186def5578d8d43",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵自動槍/README.md": "19cce044331ee2f675039fd85de6fd33b3e24098002775e37992c776e39310c7",
+      "Referneces/Translation.md": "ffaffeff0133314bebcf20d48ceac20114b45618780f0407113d205d9874d7cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "c5e01e771eb8b5805d0d651de056e1bb85384953bbee8b02b9a90dc2e3629323",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/accept_new_group.py": "9f448d16eae44d208356eb224fad8ffbc84b7ab13ad644f99bc03af69b7d8464",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    "scope_sha256": "63251365e27130af1789c48857138e5b54f5261b45e18a6b53a39e8d15cab755"
+  },
+  "image": {
+    "status": "unavailable_user_approved",
+    "new_issue_attachment": false,
+    "attachment": null,
+    "actual_icon": "",
+    "image_verified": false,
+    "user_authorization": {
+      "authorized": true,
+      "blessing": "quickloader",
+      "name_key": "loc_trait_bespoke_reload_speed_on_dodge",
+      "date": "2026-10-05",
+      "only_this_blessing": true,
+      "user_reply": "允許快速裝填採無圖示說明，保留缺口證據",
+      "confirmation_origin": "Direct human reply to request_user_input_async in this task",
+      "player_note": "目前沒有可核對的圖示。",
+      "metadata_version": 138291,
+      "metadata_body_sha256": "915b89ed057d0f2cedfc9d933b27db417c5abff7f4c5dc80904a611e46f72719",
+      "original_item_key": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+      "original_item_fields": {
+        "icon": "",
+        "icon_small": "",
+        "mastery_icon": ""
+      },
+      "steam_build_association": "unverified",
+      "gap_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-icon-gap.json",
+        "sha256": "0cb82c53f2c3a2ac66f9168e16d5716c2e4143c04ccbd60a5e4fce6ca1253f95"
+      }
+    },
+    "gap_evidence": {
+      "complete": true,
+      "image_ready": false,
+      "blessing": "quickloader",
+      "metadata_version": 138291,
+      "metadata_body_sha256": "915b89ed057d0f2cedfc9d933b27db417c5abff7f4c5dc80904a611e46f72719",
+      "cache_created_at_utc": "2026-10-01 10:18:14",
+      "metadata_local_path": "C:\\Users\\carsu\\AppData\\Roaming\\Fatshark\\Darktide\\http_cache.db",
+      "read_only": true,
+      "scope": "Only commonpublicMasterItems matchingexactknownbodydigest; noaccount/inventory data",
+      "item_key": "content/items/traits/bespoke_autogun_p1/reload_speed_on_dodge",
+      "actual_item_fields": {
+        "description": "loc_trait_bespoke_reload_speed_on_dodge_desc",
+        "display_name": "loc_trait_bespoke_reload_speed_on_dodge",
+        "feature_flags": [
+          "FEATURE_item_retained"
+        ],
+        "icon": "",
+        "icon_small": "",
+        "item_type": "TRAIT",
+        "trait": "weapon_trait_bespoke_autogun_p1_reload_speed_on_dodge",
+        "weapon_type_restriction": [
+          "autogun_p1"
+        ],
+        "workflow_state": "RELEASABLE"
+      },
+      "gap": "Actual public item.icon and icon_small empty; no precise source textureidentifier. Do not substitute guessed assets or count image acceptance.",
+      "steam_build_association": "unverified"
+    },
+    "exception_receipt": {
+      "id": "quickloader",
+      "mode": "unavailable_user_approved",
+      "icon_path": "",
+      "attachment": "",
+      "source": "",
+      "issue": null,
+      "display_verified": false,
+      "hash_verified": false,
+      "public_download_status": null,
+      "approval": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-image-exception-approval.json",
+        "sha256": "a017574550f460597444429c23c3a64cda4364e163f561929b3fadf42eb5e0c5"
+      },
+      "gap_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-icon-gap.json",
+        "sha256": "0cb82c53f2c3a2ac66f9168e16d5716c2e4143c04ccbd60a5e4fce6ca1253f95"
+      },
+      "alt": "快速裝填：目前沒有可核對的圖示"
+    },
+    "no_substitute_asset": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 303,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 48,
+      "source_files": 16,
+      "bindings": 511,
+      "variants": 265,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 16,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 760,
+      "remote_references": 332,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 19,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/2026-10-05-worktree-recovery-full-scan.json",
+        "sha256": "efa9dc5adf4e526547272614123097dcb5303845c24ebb0a5d9fa6e633e1cbe5",
+        "trigger": "2026-10-05-worktree-recovery"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 80,
+    "not_started_name_groups": 80,
+    "partial_name_groups": 0,
+    "remaining_variants": 340,
+    "remaining_bindings": 674,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a80e7e76c9f416c568c43aecae8d30ddf80d5c8d5421d87e98f7e7c1cd2fc2f8"
+  },
+  "previous_local_commit": "31b6c01b607959de092c94fc560128ab6054441b",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-focused-checks.json",
+      "sha256": "75afb8cb950e13c509f89659bf0bfebb650bba29f1d00e1d66cb563c04daaec2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-frozen-source-verification.json",
+      "sha256": "1ce1400a4ed0d08a7ffa8719384b7c4408429b0005d9da9e77bdb45d00f3afa3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-icon-gap.json",
+      "sha256": "0cb82c53f2c3a2ac66f9168e16d5716c2e4143c04ccbd60a5e4fce6ca1253f95"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-image-exception-approval.json",
+      "sha256": "a017574550f460597444429c23c3a64cda4364e163f561929b3fadf42eb5e0c5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-image-exception-tool-repair.json",
+      "sha256": "6f04798cd0f79595da8870fc910e8eb9ac8c6c9bdcdf16d4eeaddc67dfbd7f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-own-tier-diff.json",
+      "sha256": "be141c71b68147bb9711e7b7b2128edaed793962c1a6ed5a7a9386fd67d62dce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-resume-review.json",
+      "sha256": "2cde33b1a4f5897b34d458cff31e8a876ec5a43fbb10f947434625cc2af2779a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-traits-review.json",
+      "sha256": "b85fd7d2c47ec7ca8d95a8a13736a97f3395ddaad5156d69e8b21d525494e98c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-ui-raw-verification.json",
+      "sha256": "bd7fc65befeddb706735aeaf2013ca4269e4b0134603c939ab342f15418e7260"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-primary-ui-review.json",
+      "sha256": "c68e549cf4283ecfdfd3bde3b51b23a424ad4fac65472df298576288020f5051"
+    }
+  ],
+  "primary_review_method": "Reuse44fixed-source research and own4tier/ProcBuff proc-stat override, held/dodge-start and2-sec lifecycle, exact3Mark reload timing/UI/RAW applicability. Same-key tier replaces.5fallback only while active; reload stat sampled at start and capped consumer. Full original public MasterItems icon fields empty proved; direct user approved only Quickloader unavailable-image exception; bounded5ignored helper repairs immediately fullscanned with newerrors0. No fake image acceptance.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-config.json",
+    "sha256": "8ca859ead5502b4661e7a36b3c26101b8b1c12d0eb18879b4ef4dc454dcde6ad"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "2d217b0a88f4edd6be36d39d179980e3538a7ff72df44627fb79109fc6ecefc4",
+    "draft.md": "77cb953329027cb1d08d41b78cfd74ddfce8e6f7d442bd27b7269099acef4ed8",
+    "evidence.json": "b7ecf7b1fd4653c986163ef4775a898c5cc89006b489318b15a86c87f57886a3"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/quickloader-formal-peer-scope.json",
+    "sha256": "63251365e27130af1789c48857138e5b54f5261b45e18a6b53a39e8d15cab755",
+    "final_content_hashes_unchanged": true
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-03",
+  "blessing": "lacerate",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/撕碎/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit",
+    "weapon_trait_bespoke_dual_shivs_p1_bleed_on_non_weakspot_hit"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "all2variants/4bindings independent research and primary current config cross-review",
+    "findings": [
+      "bothI–IV1/2/3/4",
+      "matchingitem+damage>0+nonweakspot+melee;notcrit/kill/firsttarget",
+      "wrappers no false special override;Combatknifejab accepted;DualShivthrow ranged",
+      "shared bleed16cap/.5tick/1.5before decay;retainedphase"
+    ],
+    "draft_corrections": [
+      "Primary replaced technical terms in player prose and used currentUI短刀",
+      "Primary clarified no kill requirement with alive target prerequisite",
+      "Primary listed nominal decay phase ranges and kept Saw as related suffix candidate without assumed exact-key match"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "lacerate",
+        "puncture",
+        "lightning-reflexes"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted current primary player/examples/math/special classification;no necessary correction",
+      "required_corrections": []
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "lacerate",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_193",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_193.png",
+      "attachment": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967180105",
+      "acquired_date": "2026-10-03",
+      "sha256": "1c30151c6fcdc882c08964f1da9d1382cf8b665bed3ed15e8f2339a903243d46",
+      "content_type": "image/png",
+      "size": 2244,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "撕碎祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 313,
+      "tables": 262,
+      "rows": 2225,
+      "lists": 419
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 961,
+      "source_files": 317,
+      "bindings": 185,
+      "variants": 98,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1013,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 313,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 139,
+    "not_started_name_groups": 139,
+    "partial_name_groups": 0,
+    "remaining_variants": 490,
+    "remaining_bindings": 983,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "91c83e865310e1de96efe72bc12addba2f61a00a94c7e0c37211fd32b8e237e5"
+  },
+  "previous_local_commit": "8b5f4dd32542bda05b64b25a27b0a86765090c2e",
+  "current_blessing_formula_review": {
+    "primary_read": "both tier literals and full clone/override context;melee/nonweakspot/item/damage gates;four actual bindings,currentUI and metadata;Combatknifejab/Flesh-reviewed actualsweep;projectile ranged consumer;shared bleed fixed-SHA memo",
+    "cases": [
+      "bothI–IV1/2/3/4",
+      "ordinary+critical qualifying nonweakspot damage;specialjab accepted,throw fails melee",
+      "IV0→4→8→12→16→16",
+      "P4=78.125,P8=250,P16=500",
+      "nominalT8=5–5.5,T16=9–9.5sec with phase plus update delay"
+    ],
+    "result": "accepted"
+  },
+  "ui_name_review": {
+    "binding_count": 4,
+    "current_ui_three_key_names_reconstructed": true,
+    "all_metadata_restrictions_imports_and_append_read": true,
+    "raw_name_hash": "d83d803a",
+    "raw_description_hash": "4d1dd2bd",
+    "dual_shivs_current_mark_labels": "型號1/型號3"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "bindings": 4,
+    "unresolved_exact_key_candidates": [],
+    "status": "Two exact-key metadata items are bound to four models; the Saw definition is source-only and unbound, not a confirmed player item.",
+    "available_tiers": null,
+    "related_unbound_definitions": [
+      {
+        "trait_id": "weapon_trait_bespoke_saw_p1_bleed_on_non_weakspot_hit",
+        "source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua#L344-L382",
+        "inventory_status": "definitions_not_bound source candidate",
+        "matching_item_metadata_record": false,
+        "binding_found": false,
+        "note": "Same effect suffix; no matching item metadata, hence no established exact name-key match or UI eligibility; not declared unused."
+      }
+    ],
+    "same_name_candidates": []
+  }
+}

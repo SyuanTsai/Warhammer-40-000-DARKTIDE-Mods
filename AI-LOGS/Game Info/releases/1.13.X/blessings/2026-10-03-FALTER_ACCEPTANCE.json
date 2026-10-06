@@ -1,0 +1,502 @@
+{
+  "date": "2026-10-05",
+  "blessing": "falter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/踉蹌/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot",
+    "weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot",
+    "weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot",
+    "weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot"
+  ],
+  "added_binding_count": 9,
+  "total_variants": 4,
+  "total_bindings": 9,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "falter",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-formal-peer-scope.json",
+    "scope_sha256": "5b2e78417b6ba70ed169eec68fbccb91d4f3e6ac45f7e201a4ddb68d52501bd9",
+    "scope_file_count": 80,
+    "scope_hashes_verified": 80,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-config.json": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-draft.md": "3b66a030d52d7aa3c403eb68c3d304bf2757b0f7ddb214b1150b13c3d751169f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-evidence.json": "859e43aa0be722c7933a86f85caaf87df7c8aae69add9b67d77e33a355d15c46",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-config.json": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-extension-draft.json": "f441bcb8fa05e2f2b530a5d735fe624cf51cec724bfb843facaa09a1cf4f1a86",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/build_falter.py": "d4af7d8e7b3328d99ca3dab839c9e7ad3a50cf681426e4ddccdf240e19ba76e9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-001.json": "796c0eba61fde4e1eaf419cc35620a78b0fddd21f6c6ffeb18da36b5e6e68e5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-002.json": "8bbafb1049be550f9bf213c2b513db4a45c91ef28bd0b8b0496c5896df86dd5c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-003.json": "811ed0d098706615356ae4e6e964ff4ace5686897b3f4ac5af5c1378e2bfe325",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-004.json": "d6aaa98270e959b49d56060b3aea6a3cdd6405ea85e30ba0faef13f9034b7f5f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-005.json": "f042bf720f82df885c6854704804221ba7bea6e17adb391badc41e1b47f7da6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-006.json": "8bc1440b21fc31796e523d3b6cf57eb42628be31149ed7a84c887b9c24026c00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-007.json": "47460c6756f05fed9b1446f481f0ba55a28d8a80bb6c16fbee3178432c4dcd85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-008.json": "8840a5d7fd55bd3b3a3bb28183e6142fb8de2bc9b0c01a8e5b5603bfcc3ee476",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-config.json": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-draft.md": "3b66a030d52d7aa3c403eb68c3d304bf2757b0f7ddb214b1150b13c3d751169f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-evidence.json": "859e43aa0be722c7933a86f85caaf87df7c8aae69add9b67d77e33a355d15c46",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-image.json": "5beadff0253363fe994fd4426f45f8038b3312e3ed56906835d15fdd0b5c2723",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-focused-checks.json": "2973da9b868489053014f866102fa18ad34c09ea93fa17e106aaaa49cbf0a3ca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-frozen-source-verification.json": "51365081701d1f304067974caa7d43136714324c0154a5a48008e5ae88ec4ce5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-math-RAW-profile-lifecycle-content-review.json": "50ccc8fc7bf784f0814de7dac1bd564ae2ce5a5e03847d0fbf5e6b6503f5a20c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-own-tier-wrapper-content-review.json": "a5fe9ed85fabe0739d092d6ed8fd4f1980d0f590ed290cd08fde6d7fc11210d5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-resume-review.json": "6fca263414558de22c64b9ba10a17c722c20091dda4f90f2e373ebcabd32f36b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-traits-review.json": "d8bba81b52db5c8fb1c8fb8ab4bcfd0b867910d3a0b43e36c5092452e2a32447",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-raw-verification.json": "28cf8205c44c8122e691ae9c57f7e08a17601007009a296adb6d035fafc89c61",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-review.json": "82cc2ad64602bffe61f74f8df28f7001622ef4085687d5ca81923abd5ae54541",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-raw-verification.json": "903e7b07664fa40b426f7c2c45e524d0496b251ff55bf2fa05a8ca8bff0ccae8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ea15c7a8802bfce0e815596ad4dc3f76c48b5093161391e53991bf878e4c6c51",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/DAMAGE_PERCENTAGE_REVIEW.md": "597a6d95ccd0134a97eea2f563ceec31b26d2e6550a1a6662e72d29c9d6aeb3f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/LOCALIZATION_COMPARISON.md": "119f8853b725e2a8d887d1f6d94ce2dc2349ae2b9e2b3ab00e67f8788d9d1103",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/README.md": "e1038229bd5a9af4995edcceb10acf5e0a7004d5357f3af5c5f736e6a1f9279c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/SOURCE_INDEX.md": "2fa6d4d177d21774944e95acd7efbad5471c68dba288861691ee30f7c6e41e56",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/TIER_VALUES.md": "0de8783146dbc6a38aaac72b7b36242340057dadd20e461b389d856a3492baa8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/WEAPON_COMPATIBILITY.md": "f794a4e44b873891ea12eb535916d1263e534b2b19028779b844e68dc2a2d47d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot.md": "4585ff8464fbfcf68114d389ccfc0a05cef49f5538dc9045c6fa59c7ea1a1810",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot.md": "108e70db2f4dc4dd99b898bae5f091365308fc8f1b40d50dfd43eec52fd58e31",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot.md": "977f7b5046dc971f5c38ea867453d69d5257ce704ea27ec5f0c35fae7c46a3b4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md": "97ca1a83672189cf4522ce038c0ac3d5b2b2077061ae6a5f706289a0fef68585",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/melee/README.md": "597f3b19f2636e02f7066143ddbcba4df0dbe615262225f100e9d576044c35a2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/ranged/README.md": "2074d01402fb45cebbe11c916fda8dea0a7a368a0a533073c43a8220a5f815fa",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/README.md": "fc233b36fc1480b00983510cc6f3fc221da57130c74d10ae5c19e1e4e3d6589a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "96f4dbe44dbf0f1baa8dab6b7ab7909126465e92d9e58cd098afa9aa3f69b57f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "c0591c0474a9880708600739d29ef281a9a4f8c2d609a93b770e1a6ebd8f6e6f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "949546f5b134d9a98ab839f0acff8413cfb45eb05f170e70a09eb23c3e6e7a95",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "507bce0a2c8e238f1a8882d6023a54fb2134c41fcd8126595f896d7dbf32eaec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "4ee7eabc853d91cf4023a5622b49c8d54b406dff636c9b238757f878775934a3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/own-association-snapshot.json": "1d8bcf94f93496c3fef7b71d717d4a29b9305b60dfdba9ef1dabe924492508f7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/actual-preview-008/Referneces/Translation.md": "95fc990872a9305a84bf1e3be9a81270fa1ab02d9b61959c205e8af2db457f52",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ea15c7a8802bfce0e815596ad4dc3f76c48b5093161391e53991bf878e4c6c51",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/DAMAGE_PERCENTAGE_REVIEW.md": "597a6d95ccd0134a97eea2f563ceec31b26d2e6550a1a6662e72d29c9d6aeb3f",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/LOCALIZATION_COMPARISON.md": "119f8853b725e2a8d887d1f6d94ce2dc2349ae2b9e2b3ab00e67f8788d9d1103",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/README.md": "e1038229bd5a9af4995edcceb10acf5e0a7004d5357f3af5c5f736e6a1f9279c",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/SOURCE_INDEX.md": "2fa6d4d177d21774944e95acd7efbad5471c68dba288861691ee30f7c6e41e56",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/TIER_VALUES.md": "0de8783146dbc6a38aaac72b7b36242340057dadd20e461b389d856a3492baa8",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/WEAPON_COMPATIBILITY.md": "f794a4e44b873891ea12eb535916d1263e534b2b19028779b844e68dc2a2d47d",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot.md": "4585ff8464fbfcf68114d389ccfc0a05cef49f5538dc9045c6fa59c7ea1a1810",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot.md": "108e70db2f4dc4dd99b898bae5f091365308fc8f1b40d50dfd43eec52fd58e31",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot.md": "977f7b5046dc971f5c38ea867453d69d5257ce704ea27ec5f0c35fae7c46a3b4",
+      "Game Info/releases/1.13.X/blessings/entries/踉蹌/weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md": "97ca1a83672189cf4522ce038c0ac3d5b2b2077061ae6a5f706289a0fef68585",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "597f3b19f2636e02f7066143ddbcba4df0dbe615262225f100e9d576044c35a2",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "2074d01402fb45cebbe11c916fda8dea0a7a368a0a533073c43a8220a5f815fa",
+      "Game Info/releases/1.13.X/blessings/README.md": "fc233b36fc1480b00983510cc6f3fc221da57130c74d10ae5c19e1e4e3d6589a",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "96f4dbe44dbf0f1baa8dab6b7ab7909126465e92d9e58cd098afa9aa3f69b57f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "c0591c0474a9880708600739d29ef281a9a4f8c2d609a93b770e1a6ebd8f6e6f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "949546f5b134d9a98ab839f0acff8413cfb45eb05f170e70a09eb23c3e6e7a95",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "507bce0a2c8e238f1a8882d6023a54fb2134c41fcd8126595f896d7dbf32eaec",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "4ee7eabc853d91cf4023a5622b49c8d54b406dff636c9b238757f878775934a3",
+      "Referneces/Translation.md": "95fc990872a9305a84bf1e3be9a81270fa1ab02d9b61959c205e8af2db457f52"
+    },
+    "reviewed_findings": [
+      "README, tier, formula, RAW, compatibility, source-index, and all four variant pages are internally consistent. The group has mixed melee/ranged kind, four real variants, and nine actual mark bindings.",
+      "All four tiers replace the weakspot stagger-reduction multiplier with 0.4/0.3/0.2/0.1 after the mandatory finesse 0.5 reduction, corresponding to 60/70/80/90 percent less reduction relative to that weakspot baseline. The example treats R=50 as a raw input, not 50 percent: 50*0.5=25, then 10/7.5/5/2.5. Its stated no-extra-reduction (including burning), non-ignore profile, and no target weakspot override premises are explicit; it does not claim a final stagger or health-damage percentage.",
+      "All four wrappers retain conditional ranged_impact_modifier +0.3, but only actual ranged attack_type consumers read that input. The formal text limits this to held Autogun P3 and Infantry Lasgun ranged attacks and says the input continues through power, armor, target, and stagger-count curves; the neutral-baseline 1.00+0.30=1.30 example is correctly scoped.",
+      "The action coverage distinguishes pure push (push type and torso hit zone), push follow-up attacks, Powermaul direct/special profiles and interval ticks, Autogun bayonet/stock profiles, and the non-damaging Lasgun flashlight toggle. It preserves the native ignore-stagger-reduction and target weakspot-override branches.",
+      "The blessing is described as a held conditional stat, with no proc stacks, cooldown, or timer. Equip installation, cache-delayed deactivation/reactivation on slot changes, and removal only on actual unequip are stated without promising same-frame cache updates.",
+      "The exact bilingual RAW strings and paired SHA are preserved. Static formatter outputs are +60/+70/+80/+90 for weakspot and +30 ranged; the comparison correctly distinguishes visible formatted values from the runtime weakspot-reduction and ranged-impact inputs, classifying omitted runtime conditions as not covered.",
+      "The UI receipt confirms the nine current labels and trait bindings: Shock Maul Agni Mk Ia and Munitorum Mk III; Arbites Shock Maul Branx Mk III; Vigilant Autogun Columnus Mk III, Graia Mk VII, Agripinaa Mk IX; Infantry Lasgun Kantrael Mk VII, Mk IIb, Mk IX. The Lasgun P2 metadata-only candidate is listed outside the actual binding set and is not included in the formal pages or map.",
+      "The map has mixed kind, four matching variants and nine matching bindings; all four reverse weapon pages link back to the correct variant. Icon path weapon_trait_020 and the README attachment match the accepted image receipt.",
+      "The latest preview 008 and current focused receipts are complete; focused source checks report 77 ranges/35 files, global map consistency, zero new link errors, and GFM checks passed. The fixed scope itself and all 80 listed files were hash-verified with Windows long-path handling."
+    ],
+    "verification": {
+      "missing_files": 0,
+      "hash_mismatches": 0
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "falter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_020",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_020.png",
+      "attachment": "https://github.com/user-attachments/assets/9a227f1b-06ae-4521-995a-22719d62e917",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5993868492",
+      "acquired_date": "2026-10-05",
+      "sha256": "dd53207d0d1d594f3406165acb43ebffbdd32ba6b251eb8a7a81af7f11d173fe",
+      "content_type": "image/png",
+      "size": 4514,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "踉蹌祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed the publicly downloaded original 128x128 PNG: grayscale icon with irregular block contour; accepted as the exact actual item.icon asset for identification."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 19,
+      "tables": 18,
+      "rows": 509,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 77,
+      "source_files": 35,
+      "bindings": 855,
+      "variants": 429,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 18,
+      "source_object_cache": {
+        "cache_hits": 35,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 21,
+      "local_references": 1206,
+      "remote_references": 511,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 30,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-029-full-scan.json",
+        "sha256": "1d9e05d901fdfec4f358022f9f3a877219925a33117956521b708c54f9d2cc2b",
+        "trigger": "round-029"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 47,
+    "not_started_name_groups": 47,
+    "partial_name_groups": 0,
+    "remaining_variants": 176,
+    "remaining_bindings": 330,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7719d46aa19ddc4b8546c8f7354e8e2a4bcead48423ba84167d63d4579058104"
+  },
+  "previous_local_commit": "8fe8fa68383bfee39d6827aabff289409453cf7d",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "trait": "weapon_trait_bespoke_lasgun_p2_negate_stagger_reduction_on_weakspot",
+        "item": "content/items/traits/bespoke_lasgun_p2/negate_stagger_reduction_on_weakspot",
+        "restriction": [
+          "lasgun_p1"
+        ],
+        "inventory_state": "definitions_not_bound; outside the 9 actual bindings"
+      }
+    ],
+    "status": "Recorded outside actual binding intersection; not included as a Falter variant."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-focused-checks.json",
+      "sha256": "2973da9b868489053014f866102fa18ad34c09ea93fa17e106aaaa49cbf0a3ca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-frozen-source-verification.json",
+      "sha256": "51365081701d1f304067974caa7d43136714324c0154a5a48008e5ae88ec4ce5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-math-RAW-profile-lifecycle-content-review.json",
+      "sha256": "50ccc8fc7bf784f0814de7dac1bd564ae2ce5a5e03847d0fbf5e6b6503f5a20c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-own-tier-wrapper-content-review.json",
+      "sha256": "a5fe9ed85fabe0739d092d6ed8fd4f1980d0f590ed290cd08fde6d7fc11210d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-resume-review.json",
+      "sha256": "6fca263414558de22c64b9ba10a17c722c20091dda4f90f2e373ebcabd32f36b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-traits-review.json",
+      "sha256": "d8bba81b52db5c8fb1c8fb8ab4bcfd0b867910d3a0b43e36c5092452e2a32447"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-raw-verification.json",
+      "sha256": "28cf8205c44c8122e691ae9c57f7e08a17601007009a296adb6d035fafc89c61"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-review.json",
+      "sha256": "82cc2ad64602bffe61f74f8df28f7001622ef4085687d5ca81923abd5ae54541"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-config.json",
+    "sha256": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/build_falter.py",
+      "sha256": "d4af7d8e7b3328d99ca3dab839c9e7ad3a50cf681426e4ddccdf240e19ba76e9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-008.json",
+      "sha256": "8840a5d7fd55bd3b3a3bb28183e6142fb8de2bc9b0c01a8e5b5603bfcc3ee476"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-config.json",
+      "sha256": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-draft.md",
+      "sha256": "3b66a030d52d7aa3c403eb68c3d304bf2757b0f7ddb214b1150b13c3d751169f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-image.json",
+      "sha256": "5beadff0253363fe994fd4426f45f8038b3312e3ed56906835d15fdd0b5c2723"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-math-RAW-profile-lifecycle-content-review.json",
+      "sha256": "50ccc8fc7bf784f0814de7dac1bd564ae2ce5a5e03847d0fbf5e6b6503f5a20c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-own-tier-wrapper-content-review.json",
+      "sha256": "a5fe9ed85fabe0739d092d6ed8fd4f1980d0f590ed290cd08fde6d7fc11210d5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-traits-review.json",
+      "sha256": "d8bba81b52db5c8fb1c8fb8ab4bcfd0b867910d3a0b43e36c5092452e2a32447"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-raw-verification.json",
+      "sha256": "28cf8205c44c8122e691ae9c57f7e08a17601007009a296adb6d035fafc89c61"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-ui-review.json",
+      "sha256": "82cc2ad64602bffe61f74f8df28f7001622ef4085687d5ca81923abd5ae54541"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "fc233b36fc1480b00983510cc6f3fc221da57130c74d10ae5c19e1e4e3d6589a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "96f4dbe44dbf0f1baa8dab6b7ab7909126465e92d9e58cd098afa9aa3f69b57f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "ea15c7a8802bfce0e815596ad4dc3f76c48b5093161391e53991bf878e4c6c51"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "597a6d95ccd0134a97eea2f563ceec31b26d2e6550a1a6662e72d29c9d6aeb3f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\LOCALIZATION_COMPARISON.md",
+      "sha256": "119f8853b725e2a8d887d1f6d94ce2dc2349ae2b9e2b3ab00e67f8788d9d1103"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\README.md",
+      "sha256": "e1038229bd5a9af4995edcceb10acf5e0a7004d5357f3af5c5f736e6a1f9279c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\SOURCE_INDEX.md",
+      "sha256": "2fa6d4d177d21774944e95acd7efbad5471c68dba288861691ee30f7c6e41e56"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\TIER_VALUES.md",
+      "sha256": "0de8783146dbc6a38aaac72b7b36242340057dadd20e461b389d856a3492baa8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\WEAPON_COMPATIBILITY.md",
+      "sha256": "f794a4e44b873891ea12eb535916d1263e534b2b19028779b844e68dc2a2d47d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\weapon_trait_bespoke_autogun_p3_negate_stagger_reduction_on_weakspot.md",
+      "sha256": "4585ff8464fbfcf68114d389ccfc0a05cef49f5538dc9045c6fa59c7ea1a1810"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\weapon_trait_bespoke_lasgun_p1_negate_stagger_reduction_on_weakspot.md",
+      "sha256": "108e70db2f4dc4dd99b898bae5f091365308fc8f1b40d50dfd43eec52fd58e31"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\weapon_trait_bespoke_powermaul_p1_negate_stagger_reduction_on_weakspot.md",
+      "sha256": "977f7b5046dc971f5c38ea867453d69d5257ce704ea27ec5f0c35fae7c46a3b4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\entries\\踉蹌\\weapon_trait_bespoke_powermaul_p2_negate_stagger_reduction_on_weakspot.md",
+      "sha256": "97ca1a83672189cf4522ce038c0ac3d5b2b2077061ae6a5f706289a0fef68585"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "597f3b19f2636e02f7066143ddbcba4df0dbe615262225f100e9d576044c35a2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "2074d01402fb45cebbe11c916fda8dea0a7a368a0a533073c43a8220a5f815fa"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\法務官電擊鎚\\README.md",
+      "sha256": "c0591c0474a9880708600739d29ef281a9a4f8c2d609a93b770e1a6ebd8f6e6f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電擊錘\\README.md",
+      "sha256": "949546f5b134d9a98ab839f0acff8413cfb45eb05f170e70a09eb23c3e6e7a95"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\機動自動槍\\README.md",
+      "sha256": "507bce0a2c8e238f1a8882d6023a54fb2134c41fcd8126595f896d7dbf32eaec"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\步兵鐳射槍\\README.md",
+      "sha256": "4ee7eabc853d91cf4023a5622b49c8d54b406dff636c9b238757f878775934a3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\Referneces\\Translation.md",
+      "sha256": "95fc990872a9305a84bf1e3be9a81270fa1ab02d9b61959c205e8af2db457f52"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-raw-verification.json",
+      "sha256": "903e7b07664fa40b426f7c2c45e524d0496b251ff55bf2fa05a8ca8bff0ccae8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\falter-group\\actual-preview-008\\own-association-snapshot.json",
+      "sha256": "1d8bcf94f93496c3fef7b71d717d4a29b9305b60dfdba9ef1dabe924492508f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-001.json",
+      "sha256": "796c0eba61fde4e1eaf419cc35620a78b0fddd21f6c6ffeb18da36b5e6e68e5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-002.json",
+      "sha256": "8bbafb1049be550f9bf213c2b513db4a45c91ef28bd0b8b0496c5896df86dd5c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-003.json",
+      "sha256": "811ed0d098706615356ae4e6e964ff4ace5686897b3f4ac5af5c1378e2bfe325"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-004.json",
+      "sha256": "d6aaa98270e959b49d56060b3aea6a3cdd6405ea85e30ba0faef13f9034b7f5f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-005.json",
+      "sha256": "f042bf720f82df885c6854704804221ba7bea6e17adb391badc41e1b47f7da6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-006.json",
+      "sha256": "8bc1440b21fc31796e523d3b6cf57eb42628be31149ed7a84c887b9c24026c00"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-actual-preview-receipt-007.json",
+      "sha256": "47460c6756f05fed9b1446f481f0ba55a28d8a80bb6c16fbee3178432c4dcd85"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-group/falter-agent-evidence.json",
+      "sha256": "859e43aa0be722c7933a86f85caaf87df7c8aae69add9b67d77e33a355d15c46"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-config.json",
+      "sha256": "d585701d32b7b5807a9ccadc51b36d33a6142ed325e1684736bf771d690836b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-evidence.json",
+      "sha256": "859e43aa0be722c7933a86f85caaf87df7c8aae69add9b67d77e33a355d15c46"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-agent-draft.md",
+      "sha256": "3b66a030d52d7aa3c403eb68c3d304bf2757b0f7ddb214b1150b13c3d751169f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-primary-frozen-source-verification.json",
+      "sha256": "51365081701d1f304067974caa7d43136714324c0154a5a48008e5ae88ec4ce5"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/falter-formal-peer-scope.json",
+    "sha256": "5b2e78417b6ba70ed169eec68fbccb91d4f3e6ac45f7e201a4ddb68d52501bd9",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

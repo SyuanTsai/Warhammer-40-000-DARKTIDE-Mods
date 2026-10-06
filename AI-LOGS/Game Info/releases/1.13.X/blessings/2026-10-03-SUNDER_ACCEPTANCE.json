@@ -1,0 +1,491 @@
+{
+  "date": "2026-10-05",
+  "blessing": "sunder",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/破甲/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_p1_pass_past_armor_on_weapon_special",
+    "weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 2,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "sunder",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "complete": true,
+    "accepted": true,
+    "status": "accepted_formal_peer_review",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-formal-peer-scope.json",
+    "scope_sha256": "db9a569a0498a310f48f999fe89a949dcba605dc41311dca8e6526d312075e41",
+    "canonical_config_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-config.json",
+    "canonical_config_sha256": "a546ef8bfb8087431f884975a43cc716c53f946f2a8c0e029976b6cc474f2ddc",
+    "extension_configuration_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-extension-draft.json",
+    "extension_configuration_sha256": "efc423bf5ff6173707d32a2c7a118bc0017b5a6cadadfd5858abf58db3a45b87",
+    "authority_note": "Reviewed final formal content against canonical sunder-config.json and sunder-extension-draft.json. Historical sunder-agent-config.json was treated only as scoped historical evidence, not as the controlling final configuration.",
+    "scoped_file_count": 50,
+    "all_scoped_file_hashes_match": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-special-profile-addendum.json": "c9578d751b2d224002edac8725fb4e03d7b24402d2bf0fcfcb354f9d22888baa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-inactive-callback-review.json": "4ff53e8d67074b1173013797f1bb23aebb84a6b097ddb6232cf93c1451a01af8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-native-charge-review.json": "2a2c0e7beaf19f732ffb32c86eb33ac37b11f61c4122fad156ac177a887582c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-action-routing-review.json": "67c3505795baa4c955322c160e8858d6d79409488943c6ef77868372f3961299",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-counter-boundary-review.json": "b694d4166f7789fb443007ce1367380a065d9c14ee7e1d67370c921d54838fe7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-config.json": "93dfb273784f94bc579b7acb9a34b44042077170b754d71dc084a4213e16655b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-coverage.json": "70c1d9116274b5a822eca62ea42c0b51d2d0f46f6a8c1e824ba608eb976138d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-draft.md": "d4ef83e1b395df9dede534484cfdf6f85ad831d5a65b426c9d68d2ba4bc9b68f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-evidence.json": "2531677b93acb22bf2cd1d296b6b019005fa80e070d180fc05f2b5a2707cda1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-config.json": "a546ef8bfb8087431f884975a43cc716c53f946f2a8c0e029976b6cc474f2ddc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-extension-draft.json": "efc423bf5ff6173707d32a2c7a118bc0017b5a6cadadfd5858abf58db3a45b87",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/association-snapshot.json": "86f53b5365cbc3939bfe231a630d9f5f25a2662be802e84a6b6abf2d9e3730b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/DAMAGE_PERCENTAGE_REVIEW.md": "7d0f35c75950b5075102eb3a528a7fdd429a56b74a9667e57174a0c5a00f0290",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/LOCALIZATION_COMPARISON.md": "302662ab1643ed01cd48e116e193aa8fb920c706e9f4ebd518c156c79f29c593",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/README.md": "f65bd764201808ef66ad94b3490b2298b26c72c16ac54bcc23201858170a626f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/SOURCE_INDEX.md": "ee83105558724c562885826f4648e1d4237c649dff9a34e3b6b889bbd08f1db0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/TIER_VALUES.md": "33542922a14a93a674ba915e8b63de44b37596ad4d425d6683b995513c924769",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/WEAPON_COMPATIBILITY.md": "88d822f0964768865e3d90b742de7ade7bbdfa54f4d7989f7c184f6697cce808",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/weapon_trait_bespoke_powersword_p1_pass_past_armor_on_weapon_special.md": "d720c0195e23c8495cac000724d9291eb6f5b6023c8658e6a7563978a070a49d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special.md": "71452cfda52977434ecb4a63d9cf4a34d8fd5ee27f40045ef52e0950b5502506",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-formal-preview.md": "a71daca5505075e99f46632692f87153a03913294949c55f64a006a18635f1c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/preflight-report.json": "7ef6b5a4f201b8eac795f444927653ced91e892ce0565307ca198f0a51113ec2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-image.json": "be2be8a17fc248439bf97dc6e5379f3eeb8a75d2fde4511b7c7943b5ac1270a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-damage-assembly-diff-review.json": "9545bbadc613d3c1ed7c8757821f17d150d148dfdc2af2269d1f09eac496b77c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-focused-checks.json": "f2cdeabcca2dee35d48dbf77ebcae82bddacb5929fd549d26332bd318c390901",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-frozen-source-verification.json": "c46eb046da86a8a837315ed35f15b863094938d82bbe67e5ac84062fa213d6b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-heavy-mass-consumer-diff-review.json": "1cf205e08e93d922eea63e18ad3fb2e242e5d1a82dc90a27c93c3231658c95a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-own-tier-diff.json": "1c817418fef3826fb9240d6c4e7515fb3cfcdf453e4527c8717106d487eed019",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-p1-strength-diff-review.json": "6486132c7cea815a8a73e7b37e43a71d72964b2b9eb9cd77732bc749e176a899",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-resume-review.json": "3a498d78738a948b7d7d84b6c2050a7d0cc7a70b0b13da8d8887f7242262c7dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-traits-review.json": "ffe956983b2a395a619a4a5b9e0c5e239403767c02723180c8a607c60d4ee9ad",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-raw-verification.json": "4f57b343ae76f61cb93310d23546874309050509197b698752a67f2a81cc67b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-review.json": "01d524ea14fe0960dd39af9293e5408cb9fe11f3842a4e5b0a21c97bbed4d2dc",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "827f239eecd57e65d9004780e75002d87f2ebf5d77daa661d53e3d7cf9caf657",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/DAMAGE_PERCENTAGE_REVIEW.md": "77af79238813de1c2fb7383af3c63d84550d4215d2274987719c1c5c1208e6be",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/LOCALIZATION_COMPARISON.md": "b01a9b38b8fb5119d8eb93b4ed525a43685c9fb7c0e8d4ccd63e00a717f6a311",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/README.md": "535fa5ef9186c079229b965b768fcb57184c60ce462a1a2bf3b8afd58e3b1e61",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/SOURCE_INDEX.md": "0871c2a74662c91c60805d56d37f413768b687194c944ae223c8ff358b2a2fb7",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/TIER_VALUES.md": "0db4e6e610918c9febcecaca10b2fe77a3344fd5c11b3bdc6548aaa05bc09ca8",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/WEAPON_COMPATIBILITY.md": "67d6eafc542c682b63b6969664812fbe74a8d969cbe2f1844b2157ce75e8d787",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/weapon_trait_bespoke_powersword_p1_pass_past_armor_on_weapon_special.md": "d1c18b1f8b498d1c9bb5a4d018e8ce87be5c4da2bf722abc98d2bc665adbfe3e",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special.md": "95ac7a1c4bcb2d379d52f6c15862b7829c65f01ea016024a89527cf609cd1510",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "3c4612f1a81d20ab84a25db3627c096b0ef0b361a4a23f7395e9ec0e9a08963e",
+      "Game Info/releases/1.13.X/blessings/README.md": "5f94922b76ec855d7a8d22808f42ac8aef6e03a9fde7eaaaefcff929b42d5420",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "ec6528752f316e55d70bd20398b8d9d195ebca9ddd2c057a6649cab74c76386a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力劍/README.md": "bf7963b4874fe1ae3a50c9b3175f95883cd82670b902cd1ad8c6f285638f88c5",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "bde0ccbc5f3d75e2317ba334b9540749cc02abfb32983a42af8973b8fd8323f9",
+      "Referneces/Translation.md": "b9d7fe8f2c41f7ff76928e03b06c7ac2efd14492398afbacca846c5f213c7acf"
+    },
+    "formal_file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/破甲/DAMAGE_PERCENTAGE_REVIEW.md": "77af79238813de1c2fb7383af3c63d84550d4215d2274987719c1c5c1208e6be",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/LOCALIZATION_COMPARISON.md": "b01a9b38b8fb5119d8eb93b4ed525a43685c9fb7c0e8d4ccd63e00a717f6a311",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/README.md": "535fa5ef9186c079229b965b768fcb57184c60ce462a1a2bf3b8afd58e3b1e61",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/SOURCE_INDEX.md": "0871c2a74662c91c60805d56d37f413768b687194c944ae223c8ff358b2a2fb7",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/TIER_VALUES.md": "0db4e6e610918c9febcecaca10b2fe77a3344fd5c11b3bdc6548aaa05bc09ca8",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/WEAPON_COMPATIBILITY.md": "67d6eafc542c682b63b6969664812fbe74a8d969cbe2f1844b2157ce75e8d787",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/weapon_trait_bespoke_powersword_p1_pass_past_armor_on_weapon_special.md": "d1c18b1f8b498d1c9bb5a4d018e8ce87be5c4da2bf722abc98d2bc665adbfe3e",
+      "Game Info/releases/1.13.X/blessings/entries/破甲/weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special.md": "95ac7a1c4bcb2d379d52f6c15862b7829c65f01ea016024a89527cf609cd1510"
+    },
+    "canonical_input_hashes": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-formal-peer-scope.json",
+        "sha256": "db9a569a0498a310f48f999fe89a949dcba605dc41311dca8e6526d312075e41",
+        "role": "Frozen non-author peer-review scope and exact 50-file SHA manifest."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-config.json",
+        "sha256": "a546ef8bfb8087431f884975a43cc716c53f946f2a8c0e029976b6cc474f2ddc",
+        "role": "Canonical config controlling final content."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-extension-draft.json",
+        "sha256": "efc423bf5ff6173707d32a2c7a118bc0017b5a6cadadfd5858abf58db3a45b87",
+        "role": "Actual extension configuration and binding snapshot."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/preflight-report.json",
+        "sha256": "7ef6b5a4f201b8eac795f444927653ced91e892ce0565307ca198f0a51113ec2",
+        "role": "Eight-page candidate, links, GFM and isolated-scope preflight."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-p1-strength-diff-review.json",
+        "sha256": "6486132c7cea815a8a73e7b37e43a71d72964b2b9eb9cd77732bc749e176a899",
+        "role": "P1 exact active profile strengths and full override-parent paths; both push-follow profiles light."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-heavy-mass-consumer-diff-review.json",
+        "sha256": "1cf205e08e93d922eea63e18ad3fb2e242e5d1a82dc90a27c93c3231658c95a2",
+        "role": "Reduced-mass branch eligibility and independent armor, max-mass, and breed abort behavior."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-damage-assembly-diff-review.json",
+        "sha256": "9545bbadc613d3c1ed7c8757821f17d150d148dfdc2af2269d1f09eac496b77c",
+        "role": "Damage-stat-pool assembly and P1/P3 IV isolated example."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-resume-review.json",
+        "sha256": "3a498d78738a948b7d7d84b6c2050a7d0cc7a70b0b13da8d8887f7242262c7dd",
+        "role": "Frozen evidence carry, accepted native-state behavior, and exact config authority."
+      }
+    ],
+    "formal_page_count": 8,
+    "reviewed_claims": [
+      {
+        "topic": "Exact variants, bindings, and tier differences",
+        "result": "pass",
+        "detail": "Canonical config and extension evidence agree: P1 powersword trait covers Mk III and Mk VI at 5/10/15/20%; P3 covers Branx Mk VI at 4/6/8/10%. All three bindings and both actual trait IDs are reflected in the eight formal pages."
+      },
+      {
+        "topic": "Held and special-active conditions",
+        "result": "pass",
+        "detail": "The base class-buff wrapper gates conditional keywords and heavy-damage stat on both the applicable item being wielded and that item slot special_active. Formal prose also separates cache update from native special state."
+      },
+      {
+        "topic": "Actual HitMass target branch and remaining stops",
+        "result": "pass",
+        "detail": "The quarter-mass effect applies only to the eligible living enemy breed-character branch, excluding players, props, and living props. Armor-abort is bypassed while independent max-hit-mass and breed-abort limits remain; target armor still participates in damage calculation."
+      },
+      {
+        "topic": "Heavy-damage consumer and active profiles",
+        "result": "pass",
+        "detail": "melee_heavy_damage enters the damage-stat pool only for melee attacks whose actual damage profile strength is heavy. P1 and P3 own tiers replace the base .05 fallback. P1 push-follow profiles on both marks and the P3 push-follow are light strength, so they do not receive the heavy-damage increment."
+      },
+      {
+        "topic": "Native special timing, first effect, and switching",
+        "result": "pass",
+        "detail": "P1 has a three-second single-attack window that can be reactivated while active and is closed by switching away. P3 has four seconds and up to six charges; unused charge can remain after switching while held/special-active eligibility is off. Blessing adds no independent trigger stack, cooldown, or timer."
+      },
+      {
+        "topic": "Formula and isolated examples",
+        "result": "pass",
+        "detail": "P1 IV 100×(1+.20)=120 and P3 IV 100×(1+.10)=110 under explicitly neutral other damage modifiers and downstream multipliers; formal prose keeps these stat-pool deltas distinct from guaranteed final health damage."
+      },
+      {
+        "topic": "RAW comparison and errata scope",
+        "result": "pass",
+        "detail": "The comparison records English Increased Cleave and the ambiguous Traditional Chinese “提高順劈攻擊傷害”. It classifies the missing mechanics as document not covered and does not claim a definite contradiction that all light attacks gain direct damage."
+      },
+      {
+        "topic": "Eight-page links, icon, and global associations",
+        "result": "pass",
+        "detail": "All eight formal entry documents, all other scoped association/index/glossary files, and the preflight inventory match the frozen scope hashes. The candidate preflight reports eight pages, valid local paths, and no issues; the exact weapon icon is consistently referenced."
+      }
+    ],
+    "reused_accepted_proofs": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-p1-strength-diff-review.json",
+        "sha256": "6486132c7cea815a8a73e7b37e43a71d72964b2b9eb9cd77732bc749e176a899",
+        "conclusion": "P1 exact active profile strengths and full override-parent paths; both push-follow profiles light."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-heavy-mass-consumer-diff-review.json",
+        "sha256": "1cf205e08e93d922eea63e18ad3fb2e242e5d1a82dc90a27c93c3231658c95a2",
+        "conclusion": "Reduced-mass branch eligibility and independent armor, max-mass, and breed abort behavior."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-damage-assembly-diff-review.json",
+        "sha256": "9545bbadc613d3c1ed7c8757821f17d150d148dfdc2af2269d1f09eac496b77c",
+        "conclusion": "Damage-stat-pool assembly and P1/P3 IV isolated example."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-resume-review.json",
+        "sha256": "3a498d78738a948b7d7d84b6c2050a7d0cc7a70b0b13da8d8887f7242262c7dd",
+        "conclusion": "Frozen evidence carry, accepted native-state behavior, and exact config authority."
+      }
+    ],
+    "source_commit_and_frozen_evidence_match": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "faster_status": "unverified"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/08663e44-f8da-4e08-a202-96dec24ee060",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "sunder",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_203",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_203.png",
+      "attachment": "https://github.com/user-attachments/assets/08663e44-f8da-4e08-a202-96dec24ee060",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987028007",
+      "acquired_date": "2026-10-05",
+      "sha256": "50d219899030548491532eca23f277c017331ad70edf7cb18cb4fb4649e1cc3a",
+      "content_type": "image/png",
+      "size": 3982,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "破甲祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Root viewed public downloaded unchanged128x128 original: pale white/gray central shape, transparent border; no fine icon interpretation used."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 13,
+      "rows": 353,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 71,
+      "source_files": 20,
+      "bindings": 590,
+      "variants": 302,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 20,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 840,
+      "remote_references": 376,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 24,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-023-full-scan.json",
+        "sha256": "819cc762d72f3537b5e4acea1917240c9ad6056f1c46ec5059c153a9ece44106",
+        "trigger": "round-023"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 66,
+    "not_started_name_groups": 66,
+    "partial_name_groups": 0,
+    "remaining_variants": 303,
+    "remaining_bindings": 595,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7471430621b65571afbb98524e3ba78aa14f92d7572e48189859dc28ad27a665"
+  },
+  "previous_local_commit": "726be759ffbb34154cb24acbd1d0ea057206eb92",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-damage-assembly-diff-review.json",
+      "sha256": "9545bbadc613d3c1ed7c8757821f17d150d148dfdc2af2269d1f09eac496b77c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-focused-checks.json",
+      "sha256": "f2cdeabcca2dee35d48dbf77ebcae82bddacb5929fd549d26332bd318c390901"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-frozen-source-verification.json",
+      "sha256": "c46eb046da86a8a837315ed35f15b863094938d82bbe67e5ac84062fa213d6b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-heavy-mass-consumer-diff-review.json",
+      "sha256": "1cf205e08e93d922eea63e18ad3fb2e242e5d1a82dc90a27c93c3231658c95a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-own-tier-diff.json",
+      "sha256": "1c817418fef3826fb9240d6c4e7515fb3cfcdf453e4527c8717106d487eed019"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-p1-strength-diff-review.json",
+      "sha256": "6486132c7cea815a8a73e7b37e43a71d72964b2b9eb9cd77732bc749e176a899"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-resume-review.json",
+      "sha256": "3a498d78738a948b7d7d84b6c2050a7d0cc7a70b0b13da8d8887f7242262c7dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-traits-review.json",
+      "sha256": "ffe956983b2a395a619a4a5b9e0c5e239403767c02723180c8a607c60d4ee9ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-raw-verification.json",
+      "sha256": "4f57b343ae76f61cb93310d23546874309050509197b698752a67f2a81cc67b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-review.json",
+      "sha256": "01d524ea14fe0960dd39af9293e5408cb9fe11f3842a4e5b0a21c97bbed4d2dc"
+    }
+  ],
+  "primary_review_method": "Evidence/difference review of own2traits/3Marks; reuse unchanged nativePowerCycler/MachineSpirit and genericheld/cache/removal only own applicableconditions; newP1 profile strength verified via actualfields/overrides, not names.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-config.json",
+    "sha256": "a546ef8bfb8087431f884975a43cc716c53f946f2a8c0e029976b6cc474f2ddc"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-agent-special-profile-addendum.json",
+      "sha256": "c9578d751b2d224002edac8725fb4e03d7b24402d2bf0fcfcb354f9d22888baa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-inactive-callback-review.json",
+      "sha256": "4ff53e8d67074b1173013797f1bb23aebb84a6b097ddb6232cf93c1451a01af8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/machine-spirit-resurgent-primary-native-charge-review.json",
+      "sha256": "2a2c0e7beaf19f732ffb32c86eb33ac37b11f61c4122fad156ac177a887582c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-action-routing-review.json",
+      "sha256": "67c3505795baa4c955322c160e8858d6d79409488943c6ef77868372f3961299"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json",
+      "sha256": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-counter-boundary-review.json",
+      "sha256": "b694d4166f7789fb443007ce1367380a065d9c14ee7e1d67370c921d54838fe7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-image.json",
+      "sha256": "be2be8a17fc248439bf97dc6e5379f3eeb8a75d2fde4511b7c7943b5ac1270a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-heavy-mass-consumer-diff-review.json",
+      "sha256": "1cf205e08e93d922eea63e18ad3fb2e242e5d1a82dc90a27c93c3231658c95a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-own-tier-diff.json",
+      "sha256": "1c817418fef3826fb9240d6c4e7515fb3cfcdf453e4527c8717106d487eed019"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-traits-review.json",
+      "sha256": "ffe956983b2a395a619a4a5b9e0c5e239403767c02723180c8a607c60d4ee9ad"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-raw-verification.json",
+      "sha256": "4f57b343ae76f61cb93310d23546874309050509197b698752a67f2a81cc67b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-ui-review.json",
+      "sha256": "01d524ea14fe0960dd39af9293e5408cb9fe11f3842a4e5b0a21c97bbed4d2dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-config.json",
+      "sha256": "93dfb273784f94bc579b7acb9a34b44042077170b754d71dc084a4213e16655b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-coverage.json",
+      "sha256": "70c1d9116274b5a822eca62ea42c0b51d2d0f46f6a8c1e824ba608eb976138d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-draft.md",
+      "sha256": "d4ef83e1b395df9dede534484cfdf6f85ad831d5a65b426c9d68d2ba4bc9b68f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/association-snapshot.json",
+      "sha256": "86f53b5365cbc3939bfe231a630d9f5f25a2662be802e84a6b6abf2d9e3730b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "7d0f35c75950b5075102eb3a528a7fdd429a56b74a9667e57174a0c5a00f0290"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/LOCALIZATION_COMPARISON.md",
+      "sha256": "302662ab1643ed01cd48e116e193aa8fb920c706e9f4ebd518c156c79f29c593"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/README.md",
+      "sha256": "f65bd764201808ef66ad94b3490b2298b26c72c16ac54bcc23201858170a626f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/SOURCE_INDEX.md",
+      "sha256": "ee83105558724c562885826f4648e1d4237c649dff9a34e3b6b889bbd08f1db0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/TIER_VALUES.md",
+      "sha256": "33542922a14a93a674ba915e8b63de44b37596ad4d425d6683b995513c924769"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/WEAPON_COMPATIBILITY.md",
+      "sha256": "88d822f0964768865e3d90b742de7ade7bbdfa54f4d7989f7c184f6697cce808"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/weapon_trait_bespoke_powersword_p1_pass_past_armor_on_weapon_special.md",
+      "sha256": "d720c0195e23c8495cac000724d9291eb6f5b6023c8658e6a7563978a070a49d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-files/weapon_trait_bespoke_powersword_p3_pass_past_armor_on_weapon_special.md",
+      "sha256": "71452cfda52977434ecb4a63d9cf4a34d8fd5ee27f40045ef52e0950b5502506"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/candidate-formal-preview.md",
+      "sha256": "a71daca5505075e99f46632692f87153a03913294949c55f64a006a18635f1c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-group/preflight-report.json",
+      "sha256": "7ef6b5a4f201b8eac795f444927653ced91e892ce0565307ca198f0a51113ec2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-config.json",
+      "sha256": "93dfb273784f94bc579b7acb9a34b44042077170b754d71dc084a4213e16655b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-evidence.json",
+      "sha256": "2531677b93acb22bf2cd1d296b6b019005fa80e070d180fc05f2b5a2707cda1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-draft.md",
+      "sha256": "d4ef83e1b395df9dede534484cfdf6f85ad831d5a65b426c9d68d2ba4bc9b68f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-agent-coverage.json",
+      "sha256": "70c1d9116274b5a822eca62ea42c0b51d2d0f46f6a8c1e824ba608eb976138d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-damage-assembly-diff-review.json",
+      "sha256": "9545bbadc613d3c1ed7c8757821f17d150d148dfdc2af2269d1f09eac496b77c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-primary-p1-strength-diff-review.json",
+      "sha256": "6486132c7cea815a8a73e7b37e43a71d72964b2b9eb9cd77732bc749e176a899"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/sunder-formal-peer-scope.json",
+    "sha256": "db9a569a0498a310f48f999fe89a949dcba605dc41311dca8e6526d312075e41",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

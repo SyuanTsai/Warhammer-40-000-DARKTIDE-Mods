@@ -1,0 +1,253 @@
+{
+  "date": "2026-10-05",
+  "blessing": "gauntlet-momentum",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/交叉動量/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "gauntlet-momentum",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-formal-peer-scope.json",
+    "scope_sha256": "574c48ff04a65cba83a1d545f5ca72ff6bb174265306fbe8ba5255a24c49c727",
+    "scope_file_count": 30,
+    "review_summary": [
+      "All 30 fixed-scope files match their declared SHA-256 values; the prior formal review findings remain unchanged.",
+      "The formal tier comparison, effective five-percent melee power per stack, ten effective stacks, shared idle decay and refresh-at-cap behavior remain consistent with the verified own tier, wrapper, child and stat-key evidence.",
+      "The actual M1 routing remains correctly separated: melee sweeps and the direct special punch can qualify; the grenade direct projectile and the grenade or special blast paths use non-melee attack types, while this Mark has no independent push or push-follow action.",
+      "The 500-to-575 and same-stage 600-to-675 examples correctly describe the melee power input after the power curve, with a 12.5-percent relative increase over the q=0.20 baseline rather than a fixed final-damage increase.",
+      "The exact ordinary-grenade fuse source gap is now closed in config, extension draft, SOURCE_INDEX and LOCALIZATION_COMPARISON. Both source ranges match the immutable source commit, and the added references support the existing excluded-explosion conclusion without changing formal behavior claims.",
+      "The full RAW reconstruction, tier-key mismatch and shared-decay errata, icon identity, weapon reverse entry and shared index relationships are internally consistent."
+    ],
+    "reviewed_deltas": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-config.json",
+        "result": "The ordinary grenade fuse and impact explosion template source ranges are present in refs; the melee-trigger scope is unchanged."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-extension-draft.json",
+        "result": "Matches the approved config on the added fuse-routing evidence."
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/交叉動量/SOURCE_INDEX.md",
+        "result": "Both exact fixed-source ranges are linked and their conclusion is limited to the ordinary grenade fuse/explosion attack type."
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/交叉動量/LOCALIZATION_COMPARISON.md",
+        "result": "The same fuse path is documented as an excluded explosion route; no unsupported trigger promise was introduced."
+      }
+    ],
+    "fuse_routing_delta_review": {
+      "records": [
+        {
+          "path": "scripts/settings/projectile/player_projectile_templates.lua",
+          "start_line": 27,
+          "end_line": 42,
+          "sha256": "b0d1c9e61a3f96248d1595044dd20ccbcd3ad7a4ab1152b8ab888a3621227316",
+          "conclusion": "The ordinary ogryn grenade config assigns default_gauntlet_grenade as both fuse and impact explosion template.",
+          "applicability": "The Gauntlet Momentum M1 ordinary grenade projectile; this confirms an explosion path but does not satisfy its attack_type=melee trigger."
+        },
+        {
+          "path": "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+          "start_line": 340,
+          "end_line": 361,
+          "sha256": "64c4c0d5c3de08cb3b78e5229aa7f06adbd9b2e7678a00380f1878fc74366c2e",
+          "conclusion": "The fuse explosion is dispatched with AttackSettings.attack_types.explosion.",
+          "applicability": "The fuse-explosion branch for the ordinary ogryn grenade; it confirms the excluded attack classification without changing the blessing trigger conclusion."
+        }
+      ],
+      "result": "PASS; reference completeness fixed, no change to previously reviewed behavior or trigger conclusion."
+    },
+    "frozen_agent_trio_preserved": true,
+    "scope_hashes_verified": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-agent-config.json": "48371a717ee719a7a23ca32469752cfd85fd1b88163385aa4f2fac66c1989024",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-agent-draft.md": "2685f3ec397320e18adf7749d99ea86ebf196b59c2524e1e755d79c564a462b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-agent-evidence.json": "8514659141d4a3ea572936bb43d71f36530ed9d1beddb1b70e4607fc32cc1e60",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-config.json": "60fd9d93536076648bb04fe28f29547203d9726680d47c6af26fb0956fc5e290",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-extension-draft.json": "8e7b2acee487767ac44145819cdaf4066e1c60d45525b356af9741759e151c5b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-image.json": "a512395ca990dcc2073e3dc66d1218df1da466fba00ea425ce24c4319003ebbc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-focused-checks.json": "336173fa3a9bc5cbe663f145ac30850dfe45fe6789fcb1538518f17c49d05e7e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-frozen-source-verification.json": "e9910be318d2ca170f8ddb53763b2e02886ec4c0d3699c768b0abde2d49f675a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-fuse-routing-addendum.json": "7ae43f15be31993071ead4790079e25ade059cac7def88829ef15a3f1d20a138",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-parent-child-diff.json": "222c397777873f93307ad5483ba6a75b56831a9b872ae3c53c13360a354b8848",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-resume-review.json": "cb1077c31e28b982d6c38571efd414d684e43066ddeba24f6a2f0085ebdbf880",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-stack-routing-math-review.json": "4b946f3feaa383684ecfe19ff656078b458c379ca17af886cc5b18841de95c15",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-traits-review.json": "5a7801c3be8e0e9fe00739c3260259cecc5a794a8f10b28d6744a276f0f9fd0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-ui-raw-verification.json": "977651c3df0aee1d8444b796796ca568497a5e483b9074061387209f747eacb7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-ui-review.json": "1695931e6c812bd05f54e4d941ff71c0af566203e0839603e9a65b9d51352977",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/opening-salvo-agent-counter-addendum.json": "3d4548cf3d2f310f2c3b431b2ca60e5590253ddd458a1237d4c45b56061f60b9",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "13b6e1fae6e2fe120bb265c205c814a3590fe818d584e8e6b1eb069d2cedbddc",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/DAMAGE_PERCENTAGE_REVIEW.md": "562d82dbb8adc31c3f5e23103265ea2506c43f40e2de4412cf327f27729302d8",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/LOCALIZATION_COMPARISON.md": "c2f1dc9c2f25cea3249cb64c2b16cee248ec86bdeaf4b4ad09993036ca0ee16f",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/README.md": "d2d9799a790dc0adb3cd4ba79c7e97128f8e9d389000f3d792e404ce95a7c0bd",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/SOURCE_INDEX.md": "143bc6ff871a375eb1617933787637523960bd3639956a63e1edc700977df003",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/TIER_VALUES.md": "5b53ece09cd95882c5271debf6397e9acfb1ea68f864e512a0c1b0b04ae10323",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/WEAPON_COMPATIBILITY.md": "8a6a18125679434ed482988af027c89a88ed98c77521f5d92a26ff7ee8ad8491",
+      "Game Info/releases/1.13.X/blessings/entries/交叉動量/weapon_trait_bespoke_ogryn_gauntlet_p1_chained_melee_hits_increases_power.md": "4ca07bf32f0520a758c32f96662eb20a61306b00995b318b7194d732b7dd3afa",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "7c8304685743b6a04b1f0d6c49c1c6f0a5bf566079809ec4c9e2b34f3aa05fc1",
+      "Game Info/releases/1.13.X/blessings/README.md": "330cd8ec9d0e0e46e5d22f788e4af2438b6711ae433e88cbf5bf13c926cf04d8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "9342c3601d5262983a9910999cc13bceecc265652fcaaee0c609e0e298bd020a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "bc9b370fd109fce2b7e14fe17063c6caee8680fb6b36b8af4218fd9d462329f9",
+      "Referneces/Translation.md": "8cf611df30cd91641d167049c4dc14fb072dbc1309e1dec81a6c809346b0e06f"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/388f4d79-d16b-41b8-8280-51ee892743ca",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "gauntlet-momentum",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_145",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_145.png",
+      "attachment": "https://github.com/user-attachments/assets/388f4d79-d16b-41b8-8280-51ee892743ca",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5982254096",
+      "acquired_date": "2026-10-05",
+      "sha256": "d0dcb5b9e11ca8864cc12c776e8c1159ee74e23c65a91457aa57f2ec3bc543c1",
+      "content_type": "image/png",
+      "size": 5637,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "交叉動量祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "主控目視原圖及公開下載檔一致；白色橫向投射物/箭頭與環繞彎曲軌跡。TEMP alpha診斷僅供目視，未修改或上傳原附件。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 293,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 22,
+      "bindings": 506,
+      "variants": 263,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 717,
+      "remote_references": 326,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 18,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-017-full-scan.json",
+        "sha256": "7148f9b0ed9552ef6bdd029dfe4ba2a99f8e75c0803187373a5205e323d8c1b5",
+        "trigger": "round-017"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 82,
+    "not_started_name_groups": 82,
+    "partial_name_groups": 0,
+    "remaining_variants": 342,
+    "remaining_bindings": 679,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "aa98356b8a0dfe10218e839d15000c4e67cffd369337548397d646c8fcde273e"
+  },
+  "previous_local_commit": "e00d9abba95a64d860f909c37b6f3fc70df8a2bf",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-focused-checks.json",
+      "sha256": "336173fa3a9bc5cbe663f145ac30850dfe45fe6789fcb1538518f17c49d05e7e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-frozen-source-verification.json",
+      "sha256": "e9910be318d2ca170f8ddb53763b2e02886ec4c0d3699c768b0abde2d49f675a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-fuse-routing-addendum.json",
+      "sha256": "7ae43f15be31993071ead4790079e25ade059cac7def88829ef15a3f1d20a138"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-parent-child-diff.json",
+      "sha256": "222c397777873f93307ad5483ba6a75b56831a9b872ae3c53c13360a354b8848"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-resume-review.json",
+      "sha256": "cb1077c31e28b982d6c38571efd414d684e43066ddeba24f6a2f0085ebdbf880"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-stack-routing-math-review.json",
+      "sha256": "4b946f3feaa383684ecfe19ff656078b458c379ca17af886cc5b18841de95c15"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-traits-review.json",
+      "sha256": "5a7801c3be8e0e9fe00739c3260259cecc5a794a8f10b28d6744a276f0f9fd0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-ui-raw-verification.json",
+      "sha256": "977651c3df0aee1d8444b796796ca568497a5e483b9074061387209f747eacb7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-primary-ui-review.json",
+      "sha256": "1695931e6c812bd05f54e4d941ff71c0af566203e0839603e9a65b9d51352977"
+    }
+  ],
+  "primary_review_method": "Own full4tiers/parentwrapper/childclone/no lateroverwrite/actualrangedclassification/UI/icon145 verified. Main differences independently closed: parentcapacity11→10effective, parenttierkey mismatch leaveschild.05alltiers, commoninactivitydecay/atcaprefresh, heldstat/switchtimer. Actual melee_explosive directSweep vsseparateblast/type consumed reviewed; frozen36ranges/common45 cache applied under exactownconditions, no fullresearchredo or hash-only contentreview.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-config.json",
+    "sha256": "60fd9d93536076648bb04fe28f29547203d9726680d47c6af26fb0956fc5e290"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "48371a717ee719a7a23ca32469752cfd85fd1b88163385aa4f2fac66c1989024",
+    "evidence.json": "8514659141d4a3ea572936bb43d71f36530ed9d1beddb1b70e4607fc32cc1e60",
+    "draft.md": "2685f3ec397320e18adf7749d99ea86ebf196b59c2524e1e755d79c564a462b8"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/gauntlet-momentum-formal-peer-scope.json",
+    "sha256": "574c48ff04a65cba83a1d545f5ca72ff6bb174265306fbe8ba5255a24c49c727",
+    "final_content_hashes_unchanged": true
+  }
+}

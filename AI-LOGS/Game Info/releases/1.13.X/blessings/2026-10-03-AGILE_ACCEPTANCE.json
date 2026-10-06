@@ -1,0 +1,366 @@
+{
+  "date": "2026-10-04",
+  "blessing": "agile",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/敏捷/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+    "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 2,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent successfully spawned this agent via collaboration tool with gpt-6-luna/max; runtime self-inspection unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": {
+      "entry_pages": [
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count.md",
+        "Game Info/releases/1.13.X/blessings/entries/敏捷/weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count.md"
+      ],
+      "reverse_weapon_pages": [
+        "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md",
+        "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md"
+      ],
+      "related_artifacts": [
+        "Game Info/releases/1.13.X/blessings/README.md",
+        "Game Info/releases/1.13.X/blessings/melee/README.md",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-config.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-extension-draft.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-image.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-active-dodge-speed-delta.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-own-tier-diff.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-stat-consumer-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-ui-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-resume-review.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-extension-raw-verification.json",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-raw-verification.json"
+      ],
+      "counts": {
+        "formal_entry_pages": 8,
+        "variants": 2,
+        "weapon_bindings": 6,
+        "reverse_weapon_pages": 2,
+        "source_range_records_in_addendum": 7
+      }
+    },
+    "findings": [
+      "Player bullets and examples distinguish the on-hit counter reset from the held passive melee weakspot bonus; the damage equations apply the tier value only to one shared base_finesse_damage component, not the whole hit. The examples state assumptions and compare low/high Finesse shares and an existing additive same-stage bonus.",
+      "The RAW name and description keys, English/Traditional Chinese strings and hashes are reconstructed separately from formatter output; the per-tier formatter reads the variant override and yields +2.5/+5/+7.5/+10%. The static reconstruction caveat is retained.",
+      "The two exact variants and six actual marks agree across config, extension draft, finalized map and UI receipt. The Tactical Axe and Duelling Sword reverse READMEs point to the correct shared entry and variants.",
+      "The base proc only resets consecutive_dodges. The new source addendum verifies that an ongoing dodge does not get a new distance budget, while a subsequent speed update can reread the reset counter and change the desired speed; it does not claim same-frame ordering or clear cooldowns.",
+      "Image identity is kept distinct from the attachment URL: resource path content/ui/textures/icons/traits/weapon_trait_184, identity weapon_trait_184, attachment https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d. The image receipt records matching verified 128x128 PNG hashes and display review.",
+      "The earlier config/draft reconstruction-copy mismatch was synchronized by the parent; final config and extension-draft configuration now agree field-for-field, including the UI review with all six binding records. Focused local links and source-range hashes pass.",
+      "Gameplay testing was not run and FASTER remains unverified; no formal text claims either."
+    ],
+    "resolved_findings": [
+      {
+        "detail": "The extension-draft configuration and UI review were synchronized to the finalized config/formal wording and six-binding evidence before this final review; no mismatch remains."
+      }
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/DAMAGE_PERCENTAGE_REVIEW.md": "aec033bfdf53dcf18a51af738a3069c00cafe598b1f1ffee109a798b6faf43b4",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/LOCALIZATION_COMPARISON.md": "14717645be2b4f5052998428fd00a918dd747727430fc6477aeea81467ffa94d",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/README.md": "921ceebfff920777a09ce7098d3a35d612db8efe6b78a9d31ba94e20e648ffa4",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/SOURCE_INDEX.md": "cfeb400c283efa4bd10ccd21a26e32b62c5c0a95997012850b66abdcf79a569d",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/TIER_VALUES.md": "1c3b2ce964f2c0494a19fc5c14a54c83f648dc834a2542efe381e2c5d81fa028",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/WEAPON_COMPATIBILITY.md": "c182848d5a397fd29bd591aee8f02fa9522d11c27a4fff766c765baf9493098b",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count.md": "aae94853abac2ad8be4fe9826fe5d3ffe6fa47fec54cba61dc15c391a0f94aeb",
+      "Game Info/releases/1.13.X/blessings/entries/敏捷/weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count.md": "098eee5854b8fe5f6bac85e70fc8778548839255159a23fec7cadc7a5b77d483",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰術斧/README.md": "9d2d605c917b5c1fa82708c39b4e490c4c585487275a477d0a420ec903ac30e2",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "4165eba3f476e6650a203a116e24b365064cde0e014849dcd60890b6d8faa0be",
+      "Game Info/releases/1.13.X/blessings/README.md": "71d95dd8cfc93c289a5b291145694ed740b9e9947c244ac3b5189819c4e12455",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "194f4debac64f8a60cbf3afc66a8d0042bf21a753272780eb05c0b8c19fbdb03",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "62ad3c866a3331ba839a54b6b5621533698683e6ee2b04c2eaec60ede2152655",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-config.json": "4c929d736856031b254603a99692575ae5cc0cbcd653da81911922742fd8e8fe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-extension-draft.json": "38f1b5aeacb51db057bb4934e86d3f988d9d15431dc82e21686eaac01b7fd5a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-image.json": "bc0d7084e9b1b331f34ae9cc5c5e681c665c351c8bfc1dc02d933c0ec999df75",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-active-dodge-speed-delta.json": "fcc697e74da6491d7b03f40a84dccc42ae76cd8bc70df60a496cc512b702723a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-own-tier-diff.json": "4347cc5154b2ff96e84d7a17a58f5ec82bae7f9e0b6df9d94bc35368d9c6286a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-stat-consumer-review.json": "c8364b1ca637b39075c93d3f100bcc455394e56da5eb3dce09fa2470c2329563",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-ui-review.json": "a84aebfe9e06ff197cce320d93fe0b349ecba740c411a7a8b539b2c6325ad019",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-resume-review.json": "ab76b4e8aba0a8a3e488a07305314591de0155333824fadf8c9f8f5be2fedae3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-extension-raw-verification.json": "dbf8495900a1d7432ea31e77817f574d8199cefca10c2be96a8ac9ef7303d047",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-raw-verification.json": "4635e2b69026470bdbeaf182a5a7df133baa8df6413d3d5a4de50640a63cf53c"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "agile",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_184",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_184.png",
+      "attachment": "https://github.com/user-attachments/assets/5e8c5a82-2a11-4d70-9418-d14acb4c4f6d",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5974603925",
+      "acquired_date": "2026-10-04",
+      "sha256": "a4e30b5c5ba35fe616f504ccd08e9b781c145dbe9801269f10089f83fef35d46",
+      "content_type": "image/png",
+      "size": 3575,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "敏捷祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Primary visually inspected original and public PNG side by side: matching tall nearly-rectangular white/gray gradient form on transparent background; no edit or substitution."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 14,
+      "rows": 298,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 69,
+      "source_files": 25,
+      "bindings": 377,
+      "variants": 195,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 14,
+      "source_object_cache": {
+        "cache_hits": 25,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 17,
+      "local_references": 578,
+      "remote_references": 305,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 7,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-006-full-scan.json",
+        "sha256": "8505ff10afb71662367b9647383133573da8608b07a168914853cf206a3e0506",
+        "trigger": "round-006"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 115,
+    "not_started_name_groups": 115,
+    "partial_name_groups": 0,
+    "remaining_variants": 410,
+    "remaining_bindings": 808,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0d2a6c13f81c86bb881a2cde9bd33afe7258a23466b8d0103eabb060f6c6cf14"
+  },
+  "previous_local_commit": "b9d83d871e8165726b45349b99554b13de9bb328",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 2,
+    "bindings": 6,
+    "passive_not_proc": true,
+    "extra_not_whole_damage": true,
+    "counter_speed_distance_budget_distinguished": true,
+    "numerical_examples_verified": true,
+    "primary_receipt": "agile-primary-resume-review.json",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-extension-draft.json",
+      "sha256": "38f1b5aeacb51db057bb4934e86d3f988d9d15431dc82e21686eaac01b7fd5a1"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 6,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-ui-review.json",
+      "sha256": "a84aebfe9e06ff197cce320d93fe0b349ecba740c411a7a8b539b2c6325ad019"
+    },
+    "bindings": [
+      {
+        "weapon_id": "combataxe_p2",
+        "mark_id": "combataxe_p2_m1",
+        "trait_id": "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "戰術斧 埃托克斯 Mk II",
+        "name_en": "Tactical Axe Atrox Mk II",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p2_m1",
+          "loc_weapon_pattern_combataxe_p2_m1",
+          "loc_weapon_mark_combataxe_p2_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1450,
+        "append_line": 1452
+      },
+      {
+        "weapon_id": "combataxe_p2",
+        "mark_id": "combataxe_p2_m2",
+        "trait_id": "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "戰術斧 埃托克斯 Mk IV",
+        "name_en": "Tactical Axe Atrox Mk IV",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p2_m2",
+          "loc_weapon_pattern_combataxe_p2_m2",
+          "loc_weapon_mark_combataxe_p2_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "ukeys_line": 1491,
+        "append_line": 1493
+      },
+      {
+        "weapon_id": "combataxe_p2",
+        "mark_id": "combataxe_p2_m3",
+        "trait_id": "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "戰術斧 埃托克斯 Mk VII",
+        "name_en": "Tactical Axe Atrox Mk VII",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p2_m3",
+          "loc_weapon_pattern_combataxe_p2_m3",
+          "loc_weapon_mark_combataxe_p2_m3"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "ukeys_line": 1358,
+        "append_line": 1360
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk II",
+        "name_en": "Duelling Sword Maccabian Mk II",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m1",
+          "loc_weapon_pattern_combatsword_p3_m1",
+          "loc_weapon_mark_combatsword_p3_m1"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1688,
+        "append_line": 1690
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk IV",
+        "name_en": "Duelling Sword Maccabian Mk IV",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m2",
+          "loc_weapon_pattern_combatsword_p3_m2",
+          "loc_weapon_mark_combatsword_p3_m2"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1499,
+        "append_line": 1501
+      },
+      {
+        "weapon_id": "combatsword_p3",
+        "mark_id": "combatsword_p3_m3",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count",
+        "name_zh_tw": "決鬥劍 馬卡比安 Mk V",
+        "name_en": "Duelling Sword Maccabian Mk V",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p3_m3",
+          "loc_weapon_pattern_combatsword_p3_m3",
+          "loc_weapon_mark_combatsword_p3_m3"
+        ],
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "ukeys_line": 1473,
+        "append_line": 1475
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "exact_name_key_metadata_items": [
+      {
+        "item_id": "content/items/traits/bespoke_combataxe_p2/dodge_count_reset_on_weakspot_hit",
+        "trait_id": "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+        "weapon_type_restriction": [
+          "combataxe_p2"
+        ]
+      },
+      {
+        "item_id": "content/items/traits/bespoke_combatsword_p3/dodge_count_reset_on_weakspot_hit",
+        "trait_id": "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count",
+        "weapon_type_restriction": [
+          "combatsword_p3"
+        ]
+      }
+    ],
+    "same_name_key_metadata_count": 2,
+    "bound_trait_ids": [
+      "weapon_trait_bespoke_combataxe_p2_weakspot_hit_resets_dodge_count",
+      "weapon_trait_bespoke_combatsword_p3_weakspot_hit_resets_dodge_count"
+    ],
+    "binding_count": 6,
+    "unresolved_same_key_count": 0,
+    "unbound_same_key_count": 0,
+    "conclusion": "Exactly two metadata variants and six bound marks; no same-key unresolved/unbound candidate."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-own-tier-diff.json",
+      "sha256": "4347cc5154b2ff96e84d7a17a58f5ec82bae7f9e0b6df9d94bc35368d9c6286a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-stat-consumer-review.json",
+      "sha256": "c8364b1ca637b39075c93d3f100bcc455394e56da5eb3dce09fa2470c2329563"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-ui-review.json",
+      "sha256": "a84aebfe9e06ff197cce320d93fe0b349ecba740c411a7a8b539b2c6325ad019"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-primary-resume-review.json",
+      "sha256": "ab76b4e8aba0a8a3e488a07305314591de0155333824fadf8c9f8f5be2fedae3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/agile-active-dodge-speed-delta.json",
+      "sha256": "fcc697e74da6491d7b03f40a84dccc42ae76cd8bc70df60a496cc512b702723a"
+    }
+  ],
+  "primary_review_method": "Review own full tiers/wrappers and actual six model bindings/RAW; reuse unchanged common mechanisms only with matching applicability; independently resolve active-dodge speed, unchanged distance budget and separate cooldown conditions; normalized examples verified.",
+  "prior_reviewed_map_objects_unchanged": {
+    "blessings": 51,
+    "variants": 193,
+    "bindings": 371,
+    "verified": true
+  }
+}

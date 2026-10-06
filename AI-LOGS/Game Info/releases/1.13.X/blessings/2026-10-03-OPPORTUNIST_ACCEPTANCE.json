@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-03",
+  "blessing": "opportunist",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/機會主義者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_chainsword_2h_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_crowbar_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_ogryn_club_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_powermaul_2h_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_powermaul_p1_rending_vs_staggered",
+    "weapon_trait_bespoke_powermaul_shield_p1_rending_vs_staggered"
+  ],
+  "added_binding_count": 17,
+  "total_variants": 9,
+  "total_bindings": 17,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "Opportunist single-blessing common mechanic and armor formula; read-only",
+    "findings": [
+      "Held conditional melee_rending_vs_staggered additive buff, max1, no proc clock/cooldown/stacks.",
+      "Reads existing num_triggered_staggers>0 or count_as_staggered keyword; current attack new stagger cannot retroactively modify its damage.",
+      "Strict attack_type melee; other attack enums excluded.",
+      "Total rending/brittleness additive cap1 before armor type factor; four types k1/o.25, other types k0.",
+      "Armor modifier piecewise formula, not flat universal damage percentage."
+    ],
+    "collaborators": [
+      {
+        "agent": "/root/blessing_bindings",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "scope": "same blessing metadata/RAW/UI/import and exact candidates; read-only",
+        "findings": [
+          "9 exact metadata records, common icon201 and corresponding weapon_type restriction, empty template restriction.",
+          "Name Opportunist/機會主義者 hash738f6c19; description exact key loc_trait_bespoke_melee_rending_vs_staggered_desc hasha93676c3.",
+          "17 UI weapon items have exact template/category match and current 3-key names.",
+          "9/9 modules registered; 17/17 templates require and append correct module.",
+          "No extra exact-name-key/trait IDs in indexed outside/unresolved candidates."
+        ],
+        "notes": "Ogryn slabshield metadata category bespoke_ogryn_slabshield_p1 differs from actual module label but precise template/item check matched.",
+        "registry_source": {
+          "path": "scripts/settings/equipment/weapon_traits/weapon_trait_templates.lua",
+          "lines": [
+            27,
+            28,
+            37,
+            54,
+            62,
+            63,
+            70,
+            71,
+            74
+          ],
+          "primary_fixed_source_read": true
+        },
+        "primary_path_resolution": "Agent abbreviated the registry path; primary located the actual weapon_traits/weapon_trait_templates.lua, distinguished the other same-name tweak-template file, and read all nine fixed lines."
+      },
+      {
+        "agent": "/root/blessing_variants",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "scope": "same blessing nine tier definitions and actual Buff clone wrappers; read-only",
+        "findings": [
+          "All nine trait literals I–IV .10/.15/.20/.25, format percentage prefix+, exact conditional stat trait_override.",
+          "All nine actual Buff files clone BaseWeaponTraitBuffTemplates.rending_vs_staggered once; no further same-prefix assignments or gates."
+        ],
+        "review_correction": "Initial report covered trait literal only; primary requested the actual Buff wrapper file check, agent completed all nine clone lines."
+      }
+    ],
+    "primary_review": "Read nine tier override snippets and complete clone spans, seventeen template import/ukeys/append lines, held gate, additive type/base1, pre-hit stagger read and post-damage HitReaction order, actual rending cap/type scaling and piecewise armor formula. Checked current player examples independently.",
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted",
+      "required_corrections": [],
+      "response": "Accepted。README 的攻擊類型說明與公式算例都正確，數值限於裝甲結算階段，沒有冒充最終傷害。"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "opportunist",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_201",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_201.png",
+      "attachment": "https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966273447",
+      "acquired_date": "2026-10-03",
+      "sha256": "7181e89d2ef22d837a0c542d2e8117911e13c08b5c43748d2e0220ab1c0eb693",
+      "content_type": "image/png",
+      "size": 3302,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "機會主義者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 235,
+      "tables": 199,
+      "rows": 1530,
+      "lists": 293
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 721,
+      "source_files": 266,
+      "bindings": 146,
+      "variants": 76,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 935,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 235,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 147,
+    "not_started_name_groups": 147,
+    "partial_name_groups": 0,
+    "remaining_variants": 512,
+    "remaining_bindings": 1022,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "05ce60553040425470cc10ca03fb03878b1be9b859711a2ac7c4a98049fda007"
+  },
+  "previous_local_commit": "3f1a195c0768f12d21da9d80f98f4f48d38d6654",
+  "current_blessing_formula_review": {
+    "primary_direct_source_review": true,
+    "all_nine_tiers": [
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ],
+    "all_nine_buff_wrappers_clone_base_without_extra_overrides": true,
+    "all_seventeen_template_imports_append_directly_read": true,
+    "stagger_before_damage_no_retroactive_new_stagger": true,
+    "strict_melee_type": true,
+    "count_as_staggered_alternative": true,
+    "formula": "R=min(other_rending+qualified_trait,1); x=armor_k*R; A>=1:F=A+x*o; A<1 and x>1-A:F=1+(x-(1-A))*o; else:F=A+x",
+    "phase_only_examples": {
+      "D": 100,
+      "r": 0.25,
+      "k": 1,
+      "o": 0.25,
+      "A0.1_result": 35,
+      "A0.9_result": 103.75,
+      "A1_result": 106.25,
+      "other0.2_A0.1_result": 55,
+      "other0.9_capped_A0.1_result": 102.5,
+      "unarmored_k": 0
+    },
+    "gameplay_test": "not run"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 9,
+    "bound_variants": 9,
+    "same_name_candidates": [],
+    "status": "primary exact inventory/metadata checked; binding agent confirms no exact-key unresolved/outside candidates"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-03",
+  "blessing": "heatsink",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/散熱器/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powersword_2h_p1_reduce_fixed_overheat_amount_parent",
+    "weapon_trait_bespoke_powersword_p2_reduce_fixed_overheat_amount_parent"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only single blessing review",
+    "blessing": "heatsink",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_variants": 2,
+    "reviewed_bindings": 4,
+    "findings": [
+      "Both variants have0.04/0.06/0.08/0.10 heat-reduction parameter and duration3.",
+      "First target weakspot OR critical kill while wielding activates a single refreshed three-second cooling window.",
+      "Per effective second tick, lockout uses r/3 and other states r/12; no immediate full reduction.",
+      "Current explicit three-tick examples50-to-47.5 and75-to-65 are correct; zero clamp changes lockout to idle.",
+      "Existing child tick clock is not restarted by added stack or refresh. Unwield keeps cooling original slot.",
+      "Child is initially appended before parent and can tick first at expiry boundary before parent clears the effective layer. Do not promise a fixed tick count."
+    ],
+    "corrections_resolved": [
+      "Primary changed player endpoint wording to explain second cadence and expiry update order in plain language; source page records constructor and update ordering. Three-tick examples retain explicit assumptions."
+    ],
+    "final_result": "Core player mechanics and current examples accepted after endpoint wording correction."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "heatsink",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_237",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_237.png",
+      "attachment": "https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965599944",
+      "acquired_date": "2026-10-03",
+      "sha256": "ed3a3a393567c4fb8728b70e767b8cd353069f59857bb39d97bb08f9e9f5c3b7",
+      "content_type": "image/png",
+      "size": 3595,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "散熱器祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 153,
+      "tables": 137,
+      "rows": 1043,
+      "lists": 175
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 532,
+      "source_files": 205,
+      "bindings": 100,
+      "variants": 46,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 853,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 153,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 153,
+    "not_started_name_groups": 153,
+    "partial_name_groups": 0,
+    "remaining_variants": 542,
+    "remaining_bindings": 1068,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "739f74c24718d6e62411459e1a0fb99ac9b13c9674b99936fdbfa1a2696a023e"
+  },
+  "previous_local_commit": "a67b24989c789adcd243a605b76329bb48b75989",
+  "current_blessing_formula_review": {
+    "lockout_per_tick": [
+      0.013333333333333334,
+      0.02,
+      0.02666666666666667,
+      0.03333333333333333
+    ],
+    "non_lockout_per_tick": [
+      0.0033333333333333335,
+      0.005,
+      0.006666666666666667,
+      0.008333333333333333
+    ],
+    "three_tick_assumption": true,
+    "IV_non_lockout_heat": [
+      0.5,
+      0.475
+    ],
+    "IV_lockout_heat": [
+      0.75,
+      0.65
+    ],
+    "zero_clamp_then_idle": true,
+    "refresh_extends_deadline_without_restarting_tick_clock": true,
+    "unwield_active_cooling_continues": true
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "status": "all exact name-key items included"
+  }
+}

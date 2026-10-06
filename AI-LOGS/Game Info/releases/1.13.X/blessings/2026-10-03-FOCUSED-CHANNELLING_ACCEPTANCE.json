@@ -1,0 +1,652 @@
+{
+  "date": "2026-10-06",
+  "blessing": "focused-channelling",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/專注引導/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging",
+    "weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging",
+    "weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging",
+    "weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 4,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "focused-channelling",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-formal-peer-scope.json",
+    "scope_sha256": "c6be364c7951bd33f8126c6ce5fa36b08aeebdb3e9399329853a6715d69651ad",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "formal_acceptance": true,
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-config.json": "c789fae96ecf0b6100321d7fec0253f7976c7b6787c0c018b6bd752e8894bb90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-draft.md": "06d4ab930891bfa08f913068db51e3c4917f8282dc7f4848df9f709a788ef147",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-evidence.json": "743d08ec555d0966fcad7e4ad43099bf92a41b0d27624fcbf4faf00d3c8f4236",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-config.json": "96cff00eb358dbf43d3c9c091eb141fb7cdcd142db8a1ad2d5d224aab9c16441",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-extension-draft.json": "d3b357538551925108a5be89f96431161fa3cf82cecaedb05a55499813b9d044",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-raw-verification.json": "9088de3c1771d4758acd2dd85de55d55acde4aec8a610fc464efc39ac7df0e5b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/DAMAGE_PERCENTAGE_REVIEW.md": "ec4177fed8fa74e675391badcc96d635c020a6ae949dc39d27345009f8064514",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/LOCALIZATION_COMPARISON.md": "ce886fe5da92451e02217b56816bd9de324bbe5f70fd1b414dd5b179f6d65f33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/README.md": "430672c247fc9daedd5ebe45d86b2c0b4184aa8cb03be2376d7f0286e8ac5f90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/SOURCE_INDEX.md": "fd0a73f71aa1d8870fa52fca16cd25b56e59b7f48f465aa3c94804f77786c0b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/TIER_VALUES.md": "bff878c173286bc56bc5976c0ca5665bb33c38fae9e68689dea60a0f79abb5a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/WEAPON_COMPATIBILITY.md": "2598c65615f55cab00c4d3665187fa9357ca0394c0642bd2c0d52431c5893f8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging.md": "16f384a64a675dd96d32c532bb2a98d3fa1bb4199a03ed97a2c8349a4d6a3157",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging.md": "62cd361a89fe33dc7c3850f222da7232839af21faed0f6c48c3ff381d6856d98",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging.md": "e71db896a3b472e1916afdb978e8b3a133e1ecb82f6404a16a5a50588075c912",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging.md": "9ed498a789841c1b1b8e18312c851b9c96fc3a01dca29475f2694fad1f3b06f4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/ranged/README.md": "b2fb5e2b72412f27e26af45c06c40b2ec072b957b3633ecbf43f73fade2f8086",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/README.md": "d8c933c3a74d95539b923c7cb35e01bad228016446ec29e55da1b168c0cb07dd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "507345ece9b42cecc662c366fb173f2caed201509789ff852df058ac49a3f442",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "e85963997f062f1ff45233fdae7eaa2dc25bf57d793f78419ac1a29d752c88b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "485d423aeb70b1fcb316fad25c9701c57eb2792176cd4923806ebcbe42146714",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "6a9706a09c50fe116a59dbe3f71e34bb3dedf6499c0043a16a28ce8dc8f0ff4e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "02b514cbb14ab7db7d1cd49e30d2399e190f1e2c2b978ed6c9c855a44cf4a6f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/own-association-snapshot.json": "2438490e67dcd97b849ae972e709796ed8109ac459a9bcf38f683de630e6e00a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Referneces/Translation.md": "f94974f807583b0bf57fa69178e383af4ab3bed2ee047fe2ff23166040e6c4f4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/build_package.py": "a582a749e784a8bd55684886d01d722363b8c5922a56ba376f63dfce27a280ed",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-002.json": "be8244b3ab8f78526a94fa0aab4270ae8ce300d9ecb2c7fa1ed3c9851bd00a40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-003.json": "57cddef84e95921058f2ec9161edd003e1a6deb68b16379c984da512151e5599",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-004.json": "c2f5531f3abd6635028bd1556aecbbd9c183c83792d93cecf282e7697072bbd5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-005.json": "0d6dca065ea8c9db49f3a6b26c4f5936901b6e698f09e58cf16084db6c6c28ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-006.json": "cecb5bb24c8cceddf4070b06083997403c8bd7c393cd9b0c62e8df60f8a46316",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-007.json": "54118c04fd60883c5f9e15abab14262a4a0b75df19f70761f1e7a4938c81df41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-008.json": "136b64ea93a5f5ffefd019f213a07e4d96ed43e6c05fa431963f16ec4be9fff0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-009.json": "ba98726d2ab96b56b60f61459048647136e2e1d5a4c9d7d2f29c947573648052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-config.json": "c789fae96ecf0b6100321d7fec0253f7976c7b6787c0c018b6bd752e8894bb90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-draft.md": "06d4ab930891bfa08f913068db51e3c4917f8282dc7f4848df9f709a788ef147",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-evidence.json": "743d08ec555d0966fcad7e4ad43099bf92a41b0d27624fcbf4faf00d3c8f4236",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-selfcheck.json": "a61a6510c9327a94cf206469912b8236836d90089e1e066ece7d9ed797c7a70e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-attack-coverage.json": "7c9f9d4fa0332a5d6e766b94ab77dcae79e56a2d0d6603cb340b71a0f6d8804c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-image.json": "9991164a348253678eeef283aebd2ce067813ec8280f61988df506c0387cd853",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-final-content-review.json": "35894329b8335f5ca3701ec68058010603db7712d92ff392006cc3a6444bc6da",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-focused-checks.json": "134337d4a8170e20bbd4cfc8f9d42c1514771cbd425f4d4ec61fe5ae571200c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-frozen-source-verification.json": "b529158f52c5b63baa3edf178af27dfef269f72ab6a8b9bf33b2e9c464f392f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-keyword-conditions-delta-review.json": "cc551cd8b8831edf63c97ae1dd7511fe5aafa3e0890441a643629a64d635ca7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-movement-penalty-consumer-delta-review.json": "022229a1da96c464aeb6349f91bc7a38bec411bee2f0d428a53bed8d0ace2528",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-conditional-table-selection-delta-review.json": "8a3879624b518b0833ce1287bbe3548ae1fb47a99748e9e5325ffdf3eed0b111",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-tier-wrapper-material-delta-review.json": "49a4ef72f6fac7b25be20120b69cee4500527ac60acb6afb94493f7c02eb8334",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-resume-review.json": "b11c8cb97074792da18e78190e9d2a87364712a6e8722b9a09bcd164c7f273b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-traits-review.json": "31cb3f59ab89fbdc60cf2c1fc47e5e3b8a9a97244ea1698e5e5de4d783dc1e03",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-raw-verification.json": "4d5ed282833a2e872afff7cbb0cd8ce198e9593da10abbc09dbb4e117545db73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-review.json": "4862e94aa0074e4b6cf06d8e2633b2da92a80380be7748a95e2d85e4231ebb43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-raw-verification.json": "9088de3c1771d4758acd2dd85de55d55acde4aec8a610fc464efc39ac7df0e5b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/DAMAGE_PERCENTAGE_REVIEW.md": "ec4177fed8fa74e675391badcc96d635c020a6ae949dc39d27345009f8064514",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/LOCALIZATION_COMPARISON.md": "ce886fe5da92451e02217b56816bd9de324bbe5f70fd1b414dd5b179f6d65f33",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/README.md": "430672c247fc9daedd5ebe45d86b2c0b4184aa8cb03be2376d7f0286e8ac5f90",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/SOURCE_INDEX.md": "fd0a73f71aa1d8870fa52fca16cd25b56e59b7f48f465aa3c94804f77786c0b2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/TIER_VALUES.md": "bff878c173286bc56bc5976c0ca5665bb33c38fae9e68689dea60a0f79abb5a4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/WEAPON_COMPATIBILITY.md": "2598c65615f55cab00c4d3665187fa9357ca0394c0642bd2c0d52431c5893f8d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging.md": "16f384a64a675dd96d32c532bb2a98d3fa1bb4199a03ed97a2c8349a4d6a3157",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging.md": "62cd361a89fe33dc7c3850f222da7232839af21faed0f6c48c3ff381d6856d98",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging.md": "e71db896a3b472e1916afdb978e8b3a133e1ecb82f6404a16a5a50588075c912",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging.md": "9ed498a789841c1b1b8e18312c851b9c96fc3a01dca29475f2694fad1f3b06f4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/ranged/README.md": "b2fb5e2b72412f27e26af45c06c40b2ec072b957b3633ecbf43f73fade2f8086",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/README.md": "d8c933c3a74d95539b923c7cb35e01bad228016446ec29e55da1b168c0cb07dd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "507345ece9b42cecc662c366fb173f2caed201509789ff852df058ac49a3f442",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "e85963997f062f1ff45233fdae7eaa2dc25bf57d793f78419ac1a29d752c88b3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "485d423aeb70b1fcb316fad25c9701c57eb2792176cd4923806ebcbe42146714",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "6a9706a09c50fe116a59dbe3f71e34bb3dedf6499c0043a16a28ce8dc8f0ff4e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "02b514cbb14ab7db7d1cd49e30d2399e190f1e2c2b978ed6c9c855a44cf4a6f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/own-association-snapshot.json": "2438490e67dcd97b849ae972e709796ed8109ac459a9bcf38f683de630e6e00a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Referneces/Translation.md": "f94974f807583b0bf57fa69178e383af4ab3bed2ee047fe2ff23166040e6c4f4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/DAMAGE_PERCENTAGE_REVIEW.md": "ec4177fed8fa74e675391badcc96d635c020a6ae949dc39d27345009f8064514",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/LOCALIZATION_COMPARISON.md": "ce886fe5da92451e02217b56816bd9de324bbe5f70fd1b414dd5b179f6d65f33",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/README.md": "430672c247fc9daedd5ebe45d86b2c0b4184aa8cb03be2376d7f0286e8ac5f90",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/SOURCE_INDEX.md": "7716c6bd3b40b72e56fbf4eeafd7bb48f2b5f8e46b35f0b03e22aa59acfe1a39",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/TIER_VALUES.md": "bff878c173286bc56bc5976c0ca5665bb33c38fae9e68689dea60a0f79abb5a4",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/WEAPON_COMPATIBILITY.md": "2598c65615f55cab00c4d3665187fa9357ca0394c0642bd2c0d52431c5893f8d",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging.md": "16f384a64a675dd96d32c532bb2a98d3fa1bb4199a03ed97a2c8349a4d6a3157",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging.md": "62cd361a89fe33dc7c3850f222da7232839af21faed0f6c48c3ff381d6856d98",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging.md": "e71db896a3b472e1916afdb978e8b3a133e1ecb82f6404a16a5a50588075c912",
+      "Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging.md": "9ed498a789841c1b1b8e18312c851b9c96fc3a01dca29475f2694fad1f3b06f4",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "b2fb5e2b72412f27e26af45c06c40b2ec072b957b3633ecbf43f73fade2f8086",
+      "Game Info/releases/1.13.X/blessings/README.md": "d8c933c3a74d95539b923c7cb35e01bad228016446ec29e55da1b168c0cb07dd",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "507345ece9b42cecc662c366fb173f2caed201509789ff852df058ac49a3f442",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md": "e85963997f062f1ff45233fdae7eaa2dc25bf57d793f78419ac1a29d752c88b3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md": "485d423aeb70b1fcb316fad25c9701c57eb2792176cd4923806ebcbe42146714",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md": "6a9706a09c50fe116a59dbe3f71e34bb3dedf6499c0043a16a28ce8dc8f0ff4e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md": "02b514cbb14ab7db7d1cd49e30d2399e190f1e2c2b978ed6c9c855a44cf4a6f2",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "Referneces/Translation.md": "f94974f807583b0bf57fa69178e383af4ab3bed2ee047fe2ff23166040e6c4f4"
+    },
+    "reused_root_review": {
+      "sha256": "35894329b8335f5ca3701ec68058010603db7712d92ff392006cc3a6444bc6da",
+      "applies_to": "The root full content review and its source receipts cover the actual tier/wrapper and newly researched movement, conditional table, keyword, UI/RAW, and lifecycle differences. This peer independently checked all current own formal pages and actual binding/image association; unchanged common proofs were reused only under the applicable conditions."
+    },
+    "reviewed_conclusions": [
+      "All 108 fixed scope file hashes match; the ten own formal pages, four actual implementations and four mark bindings agree with the fixed inventory and association/UI receipts.",
+      "The four own conditional values .8/.7/.6/.5 replace the .9 fallback by whole-table selection; they are not a same-key stat_buffs override. Formatter output correctly reads as 20/30/40/50% reduction.",
+      "The movement formula applies only while the own item is wielded, the wrapper action-name condition is met, and action kind is native CHARGE_ACTIONS. At m_action=.50 and c=.50, m_charge=.75; this reduces the original penalty from 50% to 25%, not a direct 50% movement-speed bonus. Other speed factors remain independent; P4 action_shoot_charged is keyword-eligible but not a CHARGE_ACTIONS movement consumer.",
+      "The page separates conditional uninterruptible/stun_immune keywords from damage or all-control immunity, and distinguishes blessing gates from native action flags, caller/template immunity bypasses, ordinary attacks, melee/push specials and vent actions.",
+      "Equip installs the blessing; switching slots closes the held/action gate while retaining the source buff, and true unequip removes the installed buff. No hit proc, stack, timer or cooldown is claimed.",
+      "RAW name/description hashes, English/Traditional Chinese strings, I–IV formatter reconstruction and rules table match the receipts; omitted gates are classified as not covered rather than contradictory.",
+      "The 50%-original-penalty example is correctly evaluated: IV changes the movement multiplier .50→.75, a 25-point neutral-base change or 50% reduction of the original penalty, before independent modifiers.",
+      "Actual image 063 attachment and all four UI names/bindings match the scoped receipts and reverse associations."
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/3778f955-df91-47c2-997d-02817524ac32",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "focused-channelling",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_063",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_063.png",
+      "attachment": "https://github.com/user-attachments/assets/3778f955-df91-47c2-997d-02817524ac32",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6000143679",
+      "acquired_date": "2026-10-06",
+      "sha256": "136e51777c7baa6e7129f27775ef56e20465e9bbe89db13f6b8bf7d8a5d4ecd9",
+      "content_type": "image/png",
+      "size": 11108,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "專注引導祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed public PNG actual pale identified icon motif and transparency; matches verified source content hash."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 17,
+      "rows": 454,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 24,
+      "bindings": 895,
+      "variants": 459,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 24,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1179,
+      "remote_references": 447,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 34,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-033-full-scan.json",
+        "sha256": "38de1dc151104dc4c536bdc6be3c359d7bfeb63b4d5a3b2f5948741a89448bf3",
+        "trigger": "round-033"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 34,
+    "not_started_name_groups": 34,
+    "partial_name_groups": 0,
+    "remaining_variants": 146,
+    "remaining_bindings": 290,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7f7e0c0026808b99c0847e50190790e6a871b3be69576db1225b4d5b18c5a9a8"
+  },
+  "previous_local_commit": "5f2deb20f6a1ea87c02f0fa1e633f654941450e4",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Inventory exact-key scan; no outside bindings in this fixed name_key."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-final-content-review.json",
+      "sha256": "35894329b8335f5ca3701ec68058010603db7712d92ff392006cc3a6444bc6da"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-focused-checks.json",
+      "sha256": "134337d4a8170e20bbd4cfc8f9d42c1514771cbd425f4d4ec61fe5ae571200c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-frozen-source-verification.json",
+      "sha256": "b529158f52c5b63baa3edf178af27dfef269f72ab6a8b9bf33b2e9c464f392f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-keyword-conditions-delta-review.json",
+      "sha256": "cc551cd8b8831edf63c97ae1dd7511fe5aafa3e0890441a643629a64d635ca7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-movement-penalty-consumer-delta-review.json",
+      "sha256": "022229a1da96c464aeb6349f91bc7a38bec411bee2f0d428a53bed8d0ace2528"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-conditional-table-selection-delta-review.json",
+      "sha256": "8a3879624b518b0833ce1287bbe3548ae1fb47a99748e9e5325ffdf3eed0b111"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "49a4ef72f6fac7b25be20120b69cee4500527ac60acb6afb94493f7c02eb8334"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-resume-review.json",
+      "sha256": "b11c8cb97074792da18e78190e9d2a87364712a6e8722b9a09bcd164c7f273b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-traits-review.json",
+      "sha256": "31cb3f59ab89fbdc60cf2c1fc47e5e3b8a9a97244ea1698e5e5de4d783dc1e03"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-raw-verification.json",
+      "sha256": "4d5ed282833a2e872afff7cbb0cd8ce198e9593da10abbc09dbb4e117545db73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-review.json",
+      "sha256": "4862e94aa0074e4b6cf06d8e2633b2da92a80380be7748a95e2d85e4231ebb43"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-config.json",
+    "sha256": "96cff00eb358dbf43d3c9c091eb141fb7cdcd142db8a1ad2d5d224aab9c16441"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-raw-verification.json",
+      "sha256": "9088de3c1771d4758acd2dd85de55d55acde4aec8a610fc464efc39ac7df0e5b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/README.md",
+      "sha256": "d8c933c3a74d95539b923c7cb35e01bad228016446ec29e55da1b168c0cb07dd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md",
+      "sha256": "507345ece9b42cecc662c366fb173f2caed201509789ff852df058ac49a3f442"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json",
+      "sha256": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "ec4177fed8fa74e675391badcc96d635c020a6ae949dc39d27345009f8064514"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/LOCALIZATION_COMPARISON.md",
+      "sha256": "ce886fe5da92451e02217b56816bd9de324bbe5f70fd1b414dd5b179f6d65f33"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/README.md",
+      "sha256": "430672c247fc9daedd5ebe45d86b2c0b4184aa8cb03be2376d7f0286e8ac5f90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/SOURCE_INDEX.md",
+      "sha256": "fd0a73f71aa1d8870fa52fca16cd25b56e59b7f48f465aa3c94804f77786c0b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/TIER_VALUES.md",
+      "sha256": "bff878c173286bc56bc5976c0ca5665bb33c38fae9e68689dea60a0f79abb5a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/WEAPON_COMPATIBILITY.md",
+      "sha256": "2598c65615f55cab00c4d3665187fa9357ca0394c0642bd2c0d52431c5893f8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging.md",
+      "sha256": "16f384a64a675dd96d32c532bb2a98d3fa1bb4199a03ed97a2c8349a4d6a3157"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging.md",
+      "sha256": "62cd361a89fe33dc7c3850f222da7232839af21faed0f6c48c3ff381d6856d98"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging.md",
+      "sha256": "e71db896a3b472e1916afdb978e8b3a133e1ecb82f6404a16a5a50588075c912"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/entries/專注引導/weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging.md",
+      "sha256": "9ed498a789841c1b1b8e18312c851b9c96fc3a01dca29475f2694fad1f3b06f4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/ranged/README.md",
+      "sha256": "b2fb5e2b72412f27e26af45c06c40b2ec072b957b3633ecbf43f73fade2f8086"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/烈焰力場法杖/README.md",
+      "sha256": "e85963997f062f1ff45233fdae7eaa2dc25bf57d793f78419ac1a29d752c88b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空打擊力場法杖/README.md",
+      "sha256": "485d423aeb70b1fcb316fad25c9701c57eb2792176cd4923806ebcbe42146714"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/虛空爆破力場法杖/README.md",
+      "sha256": "6a9706a09c50fe116a59dbe3f71e34bb3dedf6499c0043a16a28ce8dc8f0ff4e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Game Info/releases/1.13.X/blessings/weapons/ranged/電流力場法杖/README.md",
+      "sha256": "02b514cbb14ab7db7d1cd49e30d2399e190f1e2c2b978ed6c9c855a44cf4a6f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/Referneces/Translation.md",
+      "sha256": "f94974f807583b0bf57fa69178e383af4ab3bed2ee047fe2ff23166040e6c4f4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/actual-preview-009/own-association-snapshot.json",
+      "sha256": "2438490e67dcd97b849ae972e709796ed8109ac459a9bcf38f683de630e6e00a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/build_package.py",
+      "sha256": "a582a749e784a8bd55684886d01d722363b8c5922a56ba376f63dfce27a280ed"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-009.json",
+      "sha256": "ba98726d2ab96b56b60f61459048647136e2e1d5a4c9d7d2f29c947573648052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-config.json",
+      "sha256": "c789fae96ecf0b6100321d7fec0253f7976c7b6787c0c018b6bd752e8894bb90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-draft.md",
+      "sha256": "06d4ab930891bfa08f913068db51e3c4917f8282dc7f4848df9f709a788ef147"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-selfcheck.json",
+      "sha256": "a61a6510c9327a94cf206469912b8236836d90089e1e066ece7d9ed797c7a70e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-attack-coverage.json",
+      "sha256": "7c9f9d4fa0332a5d6e766b94ab77dcae79e56a2d0d6603cb340b71a0f6d8804c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-image.json",
+      "sha256": "9991164a348253678eeef283aebd2ce067813ec8280f61988df506c0387cd853"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-keyword-conditions-delta-review.json",
+      "sha256": "cc551cd8b8831edf63c97ae1dd7511fe5aafa3e0890441a643629a64d635ca7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-native-movement-penalty-consumer-delta-review.json",
+      "sha256": "022229a1da96c464aeb6349f91bc7a38bec411bee2f0d428a53bed8d0ace2528"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "49a4ef72f6fac7b25be20120b69cee4500527ac60acb6afb94493f7c02eb8334"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-traits-review.json",
+      "sha256": "31cb3f59ab89fbdc60cf2c1fc47e5e3b8a9a97244ea1698e5e5de4d783dc1e03"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-raw-verification.json",
+      "sha256": "4d5ed282833a2e872afff7cbb0cd8ce198e9593da10abbc09dbb4e117545db73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-ui-review.json",
+      "sha256": "4862e94aa0074e4b6cf06d8e2633b2da92a80380be7748a95e2d85e4231ebb43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction_summary.json",
+      "sha256": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "d8c933c3a74d95539b923c7cb35e01bad228016446ec29e55da1b168c0cb07dd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "507345ece9b42cecc662c366fb173f2caed201509789ff852df058ac49a3f442"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "9888cbac38548bbc3379b49f3753be0db35522f52e9528a2bcd54c9bace6da0a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "ec4177fed8fa74e675391badcc96d635c020a6ae949dc39d27345009f8064514"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\LOCALIZATION_COMPARISON.md",
+      "sha256": "ce886fe5da92451e02217b56816bd9de324bbe5f70fd1b414dd5b179f6d65f33"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\README.md",
+      "sha256": "430672c247fc9daedd5ebe45d86b2c0b4184aa8cb03be2376d7f0286e8ac5f90"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\SOURCE_INDEX.md",
+      "sha256": "fd0a73f71aa1d8870fa52fca16cd25b56e59b7f48f465aa3c94804f77786c0b2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\TIER_VALUES.md",
+      "sha256": "bff878c173286bc56bc5976c0ca5665bb33c38fae9e68689dea60a0f79abb5a4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\WEAPON_COMPATIBILITY.md",
+      "sha256": "2598c65615f55cab00c4d3665187fa9357ca0394c0642bd2c0d52431c5893f8d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\weapon_trait_bespoke_forcestaff_p1_uninterruptable_while_charging.md",
+      "sha256": "16f384a64a675dd96d32c532bb2a98d3fa1bb4199a03ed97a2c8349a4d6a3157"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\weapon_trait_bespoke_forcestaff_p2_uninterruptable_while_charging.md",
+      "sha256": "62cd361a89fe33dc7c3850f222da7232839af21faed0f6c48c3ff381d6856d98"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\weapon_trait_bespoke_forcestaff_p3_uninterruptable_while_charging.md",
+      "sha256": "e71db896a3b472e1916afdb978e8b3a133e1ecb82f6404a16a5a50588075c912"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\entries\\專注引導\\weapon_trait_bespoke_forcestaff_p4_uninterruptable_while_charging.md",
+      "sha256": "9ed498a789841c1b1b8e18312c851b9c96fc3a01dca29475f2694fad1f3b06f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "b2fb5e2b72412f27e26af45c06c40b2ec072b957b3633ecbf43f73fade2f8086"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\烈焰力場法杖\\README.md",
+      "sha256": "e85963997f062f1ff45233fdae7eaa2dc25bf57d793f78419ac1a29d752c88b3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空打擊力場法杖\\README.md",
+      "sha256": "485d423aeb70b1fcb316fad25c9701c57eb2792176cd4923806ebcbe42146714"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\虛空爆破力場法杖\\README.md",
+      "sha256": "6a9706a09c50fe116a59dbe3f71e34bb3dedf6499c0043a16a28ce8dc8f0ff4e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電流力場法杖\\README.md",
+      "sha256": "02b514cbb14ab7db7d1cd49e30d2399e190f1e2c2b978ed6c9c855a44cf4a6f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\Referneces\\Translation.md",
+      "sha256": "f94974f807583b0bf57fa69178e383af4ab3bed2ee047fe2ff23166040e6c4f4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-raw-verification.json",
+      "sha256": "9088de3c1771d4758acd2dd85de55d55acde4aec8a610fc464efc39ac7df0e5b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\focused-channelling-group\\actual-preview-009\\own-association-snapshot.json",
+      "sha256": "2438490e67dcd97b849ae972e709796ed8109ac459a9bcf38f683de630e6e00a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-002.json",
+      "sha256": "be8244b3ab8f78526a94fa0aab4270ae8ce300d9ecb2c7fa1ed3c9851bd00a40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-003.json",
+      "sha256": "57cddef84e95921058f2ec9161edd003e1a6deb68b16379c984da512151e5599"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-004.json",
+      "sha256": "c2f5531f3abd6635028bd1556aecbbd9c183c83792d93cecf282e7697072bbd5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-005.json",
+      "sha256": "0d6dca065ea8c9db49f3a6b26c4f5936901b6e698f09e58cf16084db6c6c28ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-006.json",
+      "sha256": "cecb5bb24c8cceddf4070b06083997403c8bd7c393cd9b0c62e8df60f8a46316"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-007.json",
+      "sha256": "54118c04fd60883c5f9e15abab14262a4a0b75df19f70761f1e7a4938c81df41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-actual-preview-receipt-008.json",
+      "sha256": "136b64ea93a5f5ffefd019f213a07e4d96ed43e6c05fa431963f16ec4be9fff0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-group/focused-channelling-agent-evidence.json",
+      "sha256": "743d08ec555d0966fcad7e4ad43099bf92a41b0d27624fcbf4faf00d3c8f4236"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-config.json",
+      "sha256": "c789fae96ecf0b6100321d7fec0253f7976c7b6787c0c018b6bd752e8894bb90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-evidence.json",
+      "sha256": "743d08ec555d0966fcad7e4ad43099bf92a41b0d27624fcbf4faf00d3c8f4236"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-agent-draft.md",
+      "sha256": "06d4ab930891bfa08f913068db51e3c4917f8282dc7f4848df9f709a788ef147"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-final-content-review.json",
+      "sha256": "35894329b8335f5ca3701ec68058010603db7712d92ff392006cc3a6444bc6da"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-frozen-source-verification.json",
+      "sha256": "b529158f52c5b63baa3edf178af27dfef269f72ab6a8b9bf33b2e9c464f392f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-primary-own-conditional-table-selection-delta-review.json",
+      "sha256": "8a3879624b518b0833ce1287bbe3548ae1fb47a99748e9e5325ffdf3eed0b111"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-channelling-formal-peer-scope.json",
+    "sha256": "c6be364c7951bd33f8126c6ce5fa36b08aeebdb3e9399329853a6715d69651ad",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

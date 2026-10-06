@@ -1,0 +1,432 @@
+{
+  "date": "2026-10-05",
+  "blessing": "chained-deathblow",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/致命連擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill",
+    "weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "chained-deathblow",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/shock_awe",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "faster_enabled": false,
+    "faster_status": "unverified",
+    "complete": true,
+    "accepted": true,
+    "status": "accepted_formal_peer_review",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-formal-peer-scope.json",
+    "scope_sha256": "f4b3de7e286f10cb0aed253de6c917dc15195c2d7e6dc4aea183b3c8b41f18fa",
+    "canonical_config_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-config.json",
+    "canonical_config_sha256": "87d0e521402d5f78434f7389653f5ddd58b35afa9b3c28eb03241b29bf5e37cd",
+    "extension_configuration_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-extension-draft.json",
+    "extension_configuration_sha256": "941196e13547bc4a70d21fc075edac4af1462ab208b11b895a0125c9b90a78d9",
+    "scoped_file_count": 39,
+    "all_scoped_file_hashes_match": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-config.json": "aef55cdb523bd51f11ce5538dae59fb2a2ceb604b227994579604845b12d7404",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-draft.md": "6c9340dc61774d4ce23da2c6c4f75425754867801858d2f53b9231fcc2f12190",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-evidence.json": "1d9b01bbe565699cbd4b04d062965030245c4d7de9cd0f2d2142b92a3938a119",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-config.json": "87d0e521402d5f78434f7389653f5ddd58b35afa9b3c28eb03241b29bf5e37cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-extension-draft.json": "941196e13547bc4a70d21fc075edac4af1462ab208b11b895a0125c9b90a78d9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/candidate-player-page-preview.md": "6172d3fe05b621f1c743309a2d787b165c65781bbf105fd5400ea7a33cd451f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-config.json": "aef55cdb523bd51f11ce5538dae59fb2a2ceb604b227994579604845b12d7404",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-draft.md": "6c9340dc61774d4ce23da2c6c4f75425754867801858d2f53b9231fcc2f12190",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-evidence.json": "1d9b01bbe565699cbd4b04d062965030245c4d7de9cd0f2d2142b92a3938a119",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/format-math-selfcheck.json": "7fde5710fd910ecdaf891ad98a920cd8ebb9dbbc90bb62cd0372bfd04f79de6f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/single-item-association-snapshot.json": "208b0bfbea00f9e261d52761e92e80698e021e4c3e1f5507358151b4a341249a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-image.json": "52d18d073543addc8ba342971f159754faaa544e718bd331001c2624e5b52972",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-focused-checks.json": "0f022a767275c179e62bdc07870039e8bedcd91f5c4178548d34256ef288cea3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-frozen-source-verification.json": "59c65d8f8f49347357cd160446b0fa94560bfe735958b988fed6e0ffbc6f4c43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-held-stat-consumer-review.json": "8da428f3c65c29834041aa228ea390f6c515ebae2eb7d3883ff407714dde1fa0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-own-tier-diff.json": "f8c053e25d7db0e0959aff16250de8dbee92e276c5b768226c91f5fd2055c701",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-resume-review.json": "2affe48a6a91bd6b6cf7e40a3c52d4de8bea0dba50ba20318fda63967ac0821b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-traits-review.json": "501baa0890e3453ba28a18b5b37a9d8408444b8081e530e0c18be3dbfcf64780",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-raw-verification.json": "9f1f8fb4e1c87b4d045844b25ec551e0eb1c517234f6387af55b861bcfcdd6b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-review.json": "b0f772be1337f842475f20a227453a31257c1fe9b2042d7ef889f06bd6b75360",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3ac42ceda1dfd6008e12e492c771ee4829860b69e9d34c7ebc314358e32385b6",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/DAMAGE_PERCENTAGE_REVIEW.md": "f8faf3e71b574097ae7eaf78f8f458333214a6c348df2548638fb0a55eaf35ca",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/LOCALIZATION_COMPARISON.md": "a1fb54441304c1db5d1c81544759e94f267253af75f4591e64897c86bc09736c",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/README.md": "2d5f60bd42a2fcaa83471b0d7ad0da6bc765b8934dd3a3a168735dc036b5daed",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/SOURCE_INDEX.md": "c9716622dbcf0df1e66fd8bb7d304d42d1e0307b73f6f394d7e24221eaf71eed",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/TIER_VALUES.md": "e57ae79f59a7c4ea696ce069271a1887f489cd411cc5aa3cce3183d741811840",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/WEAPON_COMPATIBILITY.md": "181bb950a509bddeadac7be8478a99595b2e952a16fc18e7930fc997943e9643",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill.md": "05958c37918609987a4463394b1349c77b359fbb2aa81bde6ae65d7f74f31226",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill.md": "d3bcd554681ab63e23ccb752d3db0bd6548518666c095178802084f00f8b8dc8",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "57df743a20a50a2db1aaf6638b91efa2398ffe18d9e06c6aa425bbae3770c6f0",
+      "Game Info/releases/1.13.X/blessings/README.md": "69f2417186ddb9c528c5f993ef60102b58ce3bed2cc81ec7d38e977b15e168d1",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "84e6cdbae838884e37d5d4befe26611547033ad157f3a8f8d49c5f8403cc831a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/機械神教動力劍/README.md": "a73df8aa21680c91274a7454646fd5a0d042ef2dde25fb7939d6a49f6f651606",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "85841bfa96334618e63fc9404e7566fdcd2d14278c0d22b14513e15d2e573de3",
+      "Referneces/Translation.md": "c228f0cc4884e6e938883c2e87ea837fa8052e3569483315074234824637ce38"
+    },
+    "formal_page_count": 8,
+    "formal_file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/DAMAGE_PERCENTAGE_REVIEW.md": "f8faf3e71b574097ae7eaf78f8f458333214a6c348df2548638fb0a55eaf35ca",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/LOCALIZATION_COMPARISON.md": "a1fb54441304c1db5d1c81544759e94f267253af75f4591e64897c86bc09736c",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/README.md": "2d5f60bd42a2fcaa83471b0d7ad0da6bc765b8934dd3a3a168735dc036b5daed",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/SOURCE_INDEX.md": "c9716622dbcf0df1e66fd8bb7d304d42d1e0307b73f6f394d7e24221eaf71eed",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/TIER_VALUES.md": "e57ae79f59a7c4ea696ce069271a1887f489cd411cc5aa3cce3183d741811840",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/WEAPON_COMPATIBILITY.md": "181bb950a509bddeadac7be8478a99595b2e952a16fc18e7930fc997943e9643",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/weapon_trait_bespoke_combatsword_p2_increased_crit_chance_on_weakspot_kill.md": "05958c37918609987a4463394b1349c77b359fbb2aa81bde6ae65d7f74f31226",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/weapon_trait_bespoke_powersword_p3_increased_crit_chance_on_weakspot_kill.md": "d3bcd554681ab63e23ccb752d3db0bd6548518666c095178802084f00f8b8dc8"
+    },
+    "canonical_input_hashes": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-formal-peer-scope.json",
+        "sha256": "f4b3de7e286f10cb0aed253de6c917dc15195c2d7e6dc4aea183b3c8b41f18fa",
+        "role": "Updated frozen exact scope and 39-file hash map."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-config.json",
+        "sha256": "87d0e521402d5f78434f7389653f5ddd58b35afa9b3c28eb03241b29bf5e37cd",
+        "role": "Updated canonical final blessing configuration."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-extension-draft.json",
+        "sha256": "941196e13547bc4a70d21fc075edac4af1462ab208b11b895a0125c9b90a78d9",
+        "role": "Updated extension configuration and binding evidence."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-peer-rule-delta.json",
+        "sha256": "e673fbcf9d1644f61ecd7bcd0db1ddd45349fa3da702a524d7062446eddf6080",
+        "role": "Narrow peer-rule delta receipt; records exactly four changed files."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-resume-review.json",
+        "sha256": "2affe48a6a91bd6b6cf7e40a3c52d4de8bea0dba50ba20318fda63967ac0821b",
+        "role": "Updated author review response and preserved content boundaries."
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/致命連擊/LOCALIZATION_COMPARISON.md",
+        "sha256": "a1fb54441304c1db5d1c81544759e94f267253af75f4591e64897c86bc09736c",
+        "role": "Updated RAW comparison status and explanation."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/format-math-selfcheck.json",
+        "sha256": "7fde5710fd910ecdaf891ad98a920cd8ebb9dbbc90bb62cd0372bfd04f79de6f",
+        "role": "Author format/math self-check, all checks passed."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-own-tier-diff.json",
+        "sha256": "f8c053e25d7db0e0959aff16250de8dbee92e276c5b768226c91f5fd2055c701",
+        "role": "Both exact own I–IV trait tables and each separate custom ProcBuff wrapper."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-held-stat-consumer-review.json",
+        "sha256": "8da428f3c65c29834041aa228ea390f6c515ebae2eb7d3883ff407714dde1fa0",
+        "role": "Same held-slot predicate gates current proc-stat contribution; timer keeps running while holstered."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-resume-review.json",
+        "sha256": "2affe48a6a91bd6b6cf7e40a3c52d4de8bea0dba50ba20318fda63967ac0821b",
+        "role": "Updated author resume evidence, including the rule-label correction."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-raw-verification.json",
+        "sha256": "9f1f8fb4e1c87b4d045844b25ec551e0eb1c517234f6387af55b861bcfcdd6b2",
+        "role": "Exact locale 0/16 RAW and hash verification."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-review.json",
+        "sha256": "b0f772be1337f842475f20a227453a31257c1fe9b2042d7ef889f06bd6b75360",
+        "role": "Actual UI names/marks and trait association."
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-image.json",
+        "sha256": "52d18d073543addc8ba342971f159754faaa544e718bd331001c2624e5b52972",
+        "role": "Verified icon receipt."
+      },
+      {
+        "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+        "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+        "role": "Only shared mechanism rows where exact behavior matches the own evidence."
+      }
+    ],
+    "reviewed_claims": [
+      {
+        "topic": "Exact traits, bindings and tiers",
+        "result": "pass",
+        "detail": "Two exact trait variants and four bindings; both independently sourced own I–IV tables are +5/+10/+15/+20 percentage points."
+      },
+      {
+        "topic": "Proc conditions and effect lifecycle",
+        "result": "pass",
+        "detail": "Both exact wrappers use on_kill, same-item match, weakspot-kill check and held-slot conditional; one 3-second ProcBuff refreshes while active without stacking or cooldown. Held-slot also gates stat contribution. Holstering does not pause the timer; returning before expiry can restore the remaining contribution after cache update. Expiry and actual buff removal stop the bonus."
+      },
+      {
+        "topic": "Attack-result timing",
+        "result": "pass",
+        "detail": "The killing attack completes damage and critical resolution before its on_kill event is queued/processed; the same attack cannot retroactively use the new stat. Later attacks may use it after event and stat-cache update."
+      },
+      {
+        "topic": "Four Marks and pure-push exception",
+        "result": "pass",
+        "detail": "All three combat-sword marks and the P3 power-sword mark use pure-push profiles with attack power zero and torso hit-zone input; impact provides stagger, not health damage for an ordinary weakspot kill. A push-follow sweep is separate and may independently meet the weakspot-kill predicate."
+      },
+      {
+        "topic": "Crit formula and controlled examples",
+        "result": "pass",
+        "detail": "The pages clamp b+t to [0,1], then apply (1-r), then rounding/PRD. Examples correctly show 20%→40% for r=0 and 15%→30% for r=.25; probability points are not damage percent or a per-hit guarantee."
+      },
+      {
+        "topic": "RAW reconstruction and omitted mechanics",
+        "result": "pass",
+        "detail": "Four levels of both locale strings and the same 3-second duration are reconstructed from matched RAW hashes. Generic Critical Chance scope and omitted same-item/current-held gates are now explicitly classified document not covered, without inventing a contradiction."
+      },
+      {
+        "topic": "Four-file peer delta",
+        "result": "pass",
+        "detail": "Verified the delta receipt’s exact before/after SHA values. The only changed scope paths are canonical config, extension draft, primary resume review, and LOCALIZATION_COMPARISON.md; runtime, values, examples and the other 35 scope files are unchanged."
+      },
+      {
+        "topic": "Formal pages, icon, indices and association",
+        "result": "pass",
+        "detail": "All eight formal pages and all 39 scope hashes match the new frozen scope. Image, variant associations, indexes and source links remain unchanged from the accepted prior review."
+      }
+    ],
+    "source_range_hash_correction_review": "Accepted author self-check reports 35/35 ranges valid and verifies the four corrected full-file hashes via source_object_cache; this narrow peer delta does not modify those ranges.",
+    "issues": [],
+    "conclusion": "The specific RAW comparison classification issue is corrected. All 39 scoped files match the updated scope; accept for root integration.",
+    "peer_rule_delta_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-peer-rule-delta.json",
+    "peer_rule_delta_sha256": "e673fbcf9d1644f61ecd7bcd0db1ddd45349fa3da702a524d7062446eddf6080",
+    "changed_scope_files_reviewed": [
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-config.json",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-extension-draft.json",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-resume-review.json",
+      "Game Info/releases/1.13.X/blessings/entries/致命連擊/LOCALIZATION_COMPARISON.md"
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "chained-deathblow",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_180",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_180.png",
+      "attachment": "https://github.com/user-attachments/assets/d941be9f-1923-42e9-99b4-356cc86720f4",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987241740",
+      "acquired_date": "2026-10-05",
+      "sha256": "c459dd5c2118bb9f69801b35f090fbf30af6ab465b583e4f64ada58175b7750f",
+      "content_type": "image/png",
+      "size": 4388,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "致命連擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root viewed actual public downloaded128x128 PNG; pale gray/white central motif with transparent surrounding background, intact and legible at icon scale. Only identification, no mechanical inference."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 336,
+      "lists": 89,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 51,
+      "source_files": 26,
+      "bindings": 594,
+      "variants": 304,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 857,
+      "remote_references": 358,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 24,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-023-full-scan.json",
+        "sha256": "819cc762d72f3537b5e4acea1917240c9ad6056f1c46ec5059c153a9ece44106",
+        "trigger": "round-023"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 65,
+    "not_started_name_groups": 65,
+    "partial_name_groups": 0,
+    "remaining_variants": 301,
+    "remaining_bindings": 591,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "72e30153cb932a441ab5207cee707b45682b9f4d2c3f93ffd9666af7696e3c1f"
+  },
+  "previous_local_commit": "eb39d3ac943946af975692f79664273d4bf640c8",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none in exact primaryUI metadata scan"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-focused-checks.json",
+      "sha256": "0f022a767275c179e62bdc07870039e8bedcd91f5c4178548d34256ef288cea3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-frozen-source-verification.json",
+      "sha256": "59c65d8f8f49347357cd160446b0fa94560bfe735958b988fed6e0ffbc6f4c43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-held-stat-consumer-review.json",
+      "sha256": "8da428f3c65c29834041aa228ea390f6c515ebae2eb7d3883ff407714dde1fa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-own-tier-diff.json",
+      "sha256": "f8c053e25d7db0e0959aff16250de8dbee92e276c5b768226c91f5fd2055c701"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-resume-review.json",
+      "sha256": "2affe48a6a91bd6b6cf7e40a3c52d4de8bea0dba50ba20318fda63967ac0821b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-traits-review.json",
+      "sha256": "501baa0890e3453ba28a18b5b37a9d8408444b8081e530e0c18be3dbfcf64780"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-raw-verification.json",
+      "sha256": "9f1f8fb4e1c87b4d045844b25ec551e0eb1c517234f6387af55b861bcfcdd6b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-review.json",
+      "sha256": "b0f772be1337f842475f20a227453a31257c1fe9b2042d7ef889f06bd6b75360"
+    }
+  ],
+  "primary_review_method": "Evidence/difference review of own2traits/4Marks; reuses unchanged generic ProcBuff event/cache/lifetime and critical calculations under own customwrapper conditions; current ownheldstat consumer and actualzero-push profiles specifically closed.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-config.json",
+    "sha256": "87d0e521402d5f78434f7389653f5ddd58b35afa9b3c28eb03241b29bf5e37cd"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-traits-review.json",
+      "sha256": "501baa0890e3453ba28a18b5b37a9d8408444b8081e530e0c18be3dbfcf64780"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-own-tier-diff.json",
+      "sha256": "f8c053e25d7db0e0959aff16250de8dbee92e276c5b768226c91f5fd2055c701"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-review.json",
+      "sha256": "b0f772be1337f842475f20a227453a31257c1fe9b2042d7ef889f06bd6b75360"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-ui-raw-verification.json",
+      "sha256": "9f1f8fb4e1c87b4d045844b25ec551e0eb1c517234f6387af55b861bcfcdd6b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-image.json",
+      "sha256": "52d18d073543addc8ba342971f159754faaa544e718bd331001c2624e5b52972"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-primary-held-stat-consumer-review.json",
+      "sha256": "8da428f3c65c29834041aa228ea390f6c515ebae2eb7d3883ff407714dde1fa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/candidate-player-page-preview.md",
+      "sha256": "6172d3fe05b621f1c743309a2d787b165c65781bbf105fd5400ea7a33cd451f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/single-item-association-snapshot.json",
+      "sha256": "208b0bfbea00f9e261d52761e92e80698e021e4c3e1f5507358151b4a341249a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-config.json",
+      "sha256": "aef55cdb523bd51f11ce5538dae59fb2a2ceb604b227994579604845b12d7404"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-config.json",
+      "sha256": "aef55cdb523bd51f11ce5538dae59fb2a2ceb604b227994579604845b12d7404"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-evidence.json",
+      "sha256": "1d9b01bbe565699cbd4b04d062965030245c4d7de9cd0f2d2142b92a3938a119"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-evidence.json",
+      "sha256": "1d9b01bbe565699cbd4b04d062965030245c4d7de9cd0f2d2142b92a3938a119"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/chained-deathblow-agent-draft.md",
+      "sha256": "6c9340dc61774d4ce23da2c6c4f75425754867801858d2f53b9231fcc2f12190"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-agent-draft.md",
+      "sha256": "6c9340dc61774d4ce23da2c6c4f75425754867801858d2f53b9231fcc2f12190"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-group/format-math-selfcheck.json",
+      "sha256": "7fde5710fd910ecdaf891ad98a920cd8ebb9dbbc90bb62cd0372bfd04f79de6f"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/chained-deathblow-formal-peer-scope.json",
+    "sha256": "f4b3de7e286f10cb0aed253de6c917dc15195c2d7e6dc4aea183b3c8b41f18fa",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

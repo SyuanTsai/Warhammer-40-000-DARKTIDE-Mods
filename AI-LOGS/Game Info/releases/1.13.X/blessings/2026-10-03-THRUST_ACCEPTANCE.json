@@ -1,0 +1,419 @@
+{
+  "date": "2026-10-05",
+  "blessing": "thrust",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/推進/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_windup_increases_power",
+    "weapon_trait_bespoke_combataxe_p1_windup_increases_power",
+    "weapon_trait_bespoke_combataxe_p3_windup_increases_power",
+    "weapon_trait_bespoke_combatsword_p2_windup_increases_power",
+    "weapon_trait_bespoke_combatsword_p3_windup_increases_power",
+    "weapon_trait_bespoke_ogryn_club_p1_windup_increases_power",
+    "weapon_trait_bespoke_ogryn_club_p2_windup_increases_power",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power",
+    "weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power",
+    "weapon_trait_bespoke_powermaul_p1_windup_increases_power",
+    "weapon_trait_bespoke_powersword_p1_windup_increases_power"
+  ],
+  "added_binding_count": 32,
+  "total_variants": 12,
+  "total_bindings": 32,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-formal-peer-scope.json",
+    "scope_sha256": "82a8dc0728fd1f9fc92b1c1e2d65aff1743f30e040668ce6b7b7fac273c81e0b",
+    "scope_file_count": 68,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-config.json": "caeda9b077dcce2c19a694c55e7f57137228377614820a22c09da77ccb84651b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-draft.md": "df6dae45731f1daf2008306d56a2b4e3b4f004f04bd2764beb7c6de0df25a022",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-evidence.json": "ca9ff7998bbac99149f728f8b6ccc53d5ff12c24143cd45fcd20a3566bc1c9a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-config.json": "e1312d782d3c570cc3cd5dfbb6f8a592c0afadc3af5ad0372a684a231e6d3f0e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-extension-draft.json": "e481e7a93f86aa7efc9d5aac0b8349c28070cdc7c27beb34d3dbadab12400676",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-association-snapshot.json": "7d7c25de56e3bc8d3b38463c4017834dbe7b064f3fbe4fc3ef312721411792be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-candidate-preview.md": "88f2bf9876414ea6b58cb8e58b226bac64ded6d44d7809971fc3e5cd3d1759cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-config.json": "caeda9b077dcce2c19a694c55e7f57137228377614820a22c09da77ccb84651b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-coverage.json": "96a3905c567ce68aa108266b00f41fd9aba20d2fb99123d7f8e1e00ccb900484",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-draft.md": "df6dae45731f1daf2008306d56a2b4e3b4f004f04bd2764beb7c6de0df25a022",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-evidence.json": "ca9ff7998bbac99149f728f8b6ccc53d5ff12c24143cd45fcd20a3566bc1c9a1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-light-chain-review.json": "a27d70fffe196eeaae275ba11f234e5e993f1b1ff71ebb2eac87ba7638643ce5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-preflight.json": "fb2fd1785851e7ef4a0698c7e4bc1c7f6f4fd6372cf66f7268851564bdf111ee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-image.json": "e847182cfa5caf2186be11485a502b40d09eef23df7bd38b6c9ae0477e3dcde2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-focused-checks.json": "f32cc4456299d236e98da671d8a8d5d78aebcfc06dc7cb6cff136bed192ab865",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-format-delta-review.json": "ae3bfdfbdae253b84e525a25569c13b945e5b71a7c1dca6d237bd89a4e9d5334",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-frozen-source-verification.json": "eaca3a722c63838612d4d7ddae4ef8c58f085d5f23d1d9e93e501529f814fb02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-outside-intersection-review.json": "17d9bf572eb78c26f7257d6a62503207cd887714a332e817713a1315ed3307a6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-own-tier-diff.json": "ba5e5e907b63d8f3831f2067b9b4c9bd71a0b5a2e16f32f810434d3e8d1c1440",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-parent-child-binding-diff-review.json": "05c42551daa863e01f0073274ee982c93314fa5295e2e94cab3eff005a5bff1c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-agent-evidence.json": "38a1fece45db203d4a6c86c65039152a0beb9b7aca3421fd511c24252f9ba554",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-format-peer-review.json": "df8292de8f6462f9c55eb2210108659c710bc030eb5b1229687ecb0f779234c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-format-peer-scope.json": "f50788d09cb896983c18fa8f515886e2980757eff78d13d418cd3d7460320926",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-resume-review.json": "7c8da4e37f79fbeab87035f32f84cc5704ce3bdf902b57a2751fc1a30afa79c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-runtime-formula-review.json": "e8671d6107a6ad7c94075a7c081e351c4fa00826fdbac2a627632102586c6bc0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-traits-review.json": "0028c0128d5864491f7bf1110e7cbf32dc3a040bcb5f476d99a5b6facf0f49f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-raw-verification.json": "7f8fa5f1d1408e6025ad6594ad035b1b0929de68fd5060a05423b6196c054988",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-review.json": "74755ab55a2330101692845710eea8d9e347ca6a4bd0bdafea1a6d9e7a9df202",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "dfa4e4334d8b8709b3a787ff36f40ab3eae26cbab0951c9b4794780b1fe739cf",
+      "Game Info/releases/1.13.X/blessings/entries/推進/DAMAGE_PERCENTAGE_REVIEW.md": "88f96a1e7803500b43bd48a5b01122d1757f4d3d2e0f275d0e32f24859e040b9",
+      "Game Info/releases/1.13.X/blessings/entries/推進/LOCALIZATION_COMPARISON.md": "0cd5a31efaa0aceb159cc6fd4f849624a1e82b3d8cb92522be232515c1a7b158",
+      "Game Info/releases/1.13.X/blessings/entries/推進/README.md": "65982f594995dd682e8264200e64ce818662859daf9173d793fa67fb12efd569",
+      "Game Info/releases/1.13.X/blessings/entries/推進/SOURCE_INDEX.md": "c1802296200d0716b8dc2b74f0719eb8afb855602a27489b50f05ab039c4b364",
+      "Game Info/releases/1.13.X/blessings/entries/推進/TIER_VALUES.md": "dc0807045f61160d765d8e358c65bd98bf5af28c2c0725b4856e5ba07ce355f7",
+      "Game Info/releases/1.13.X/blessings/entries/推進/WEAPON_COMPATIBILITY.md": "004b1af66756fc94143abc05a77fd9bf2fe0d5300fbd53c4db189fb600d13eae",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_chainaxe_p1_windup_increases_power.md": "91a40743fe97e044b1f7cfbcd6f58048e42e7a3028d4ee3a373ac7a034da1e5c",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_combataxe_p1_windup_increases_power.md": "1fcf9b2df803b8a56515f8c0eee0384e81a97980b983d709ae792458db54a62b",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_combataxe_p3_windup_increases_power.md": "a7093550175d1af63f3b4700314548e793fa9f25a70dfcdfa2d1cc4fda64f200",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_combatsword_p2_windup_increases_power.md": "3ec1bf342d56293dfc515b339abc3f6fa1396e55e21d7ff803396d41a8fb3c4d",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_combatsword_p3_windup_increases_power.md": "6d404752404020fef27300cf8e7fe04997c020a58fc34cdaca86a6fd2afa49ce",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_ogryn_club_p1_windup_increases_power.md": "0e4af91b7bad6e94ffa6ee67083dd86b24c7fb2fbb573d66e43af86a7ad0a3ad",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_ogryn_club_p2_windup_increases_power.md": "eb4ecd4f38ab54fbc2e4b8ac96488e2c31752c4f5b40f7b93819a31b947c9408",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_ogryn_combatblade_p1_windup_increases_power.md": "b4631670f2459795d975c99d91bd0605aba6e0cd1c68f64e0f1bae84cacb2239",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_windup_increases_power.md": "d645b9e48f56b6866668ff78812f0b0cfd2b4f08c681237755c4f14dd10045a5",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_powermaul_2h_p1_windup_increases_power.md": "8d5f763fab10a90a5e9cd8f946d367a519dc6bafefc6f28fd17a2a51d819def8",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_powermaul_p1_windup_increases_power.md": "e089feb98e2dfa1fda132461516d088df233524b274afb76f71ec4bb2afc7400",
+      "Game Info/releases/1.13.X/blessings/entries/推進/weapon_trait_bespoke_powersword_p1_windup_increases_power.md": "18feac8da2f6f186586eca72d9e22c6a3631e4297aef4b2c7f05e5a5f9563870",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "b3e666e8cada47ee444899e1d9080502ff42ae9f5ce9a15de89364df70aa4620",
+      "Game Info/releases/1.13.X/blessings/README.md": "a15ec2fffa2c226e1d3327fef888169c0b84560a93a8a78807b4b0a9214af01f",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "57fc78ad61b642a3b1c43499132527d501da36f4d9e4803e9a0ad6934be84548",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力劍/README.md": "2a63c79e0658e9764100aaca382d4a19398e1a9efe30df23f979dd4dd2c7ad60",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "27576720d190be4afaa8d8a69e368d2a47afbb971c6a7d809fd8f46058e1f001",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "6c1f15fccc1b95878d7c7c0f1c57d6a50e6d2cf448891416501a0aceb8356e20",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "153a1fc5f86d3acf8ef988b9acc4ce3192a0b24fb52882a1eb31c8174348d77e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "312505e6ed3062c9d476e283c6f732e040b5a149a8962f329f88195125d08dd6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "c236e0247fefe78d4e8db6dd9a506a671159f14b0a0577d1e524d52ed251ebaa",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/決鬥劍/README.md": "fbc1c7d95a8ad78b2e11fc885d4c3ea92de359b08df08107c3c2ba6fe0e03c72",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "35777b02738ac6a87fc9fc98fa5efccea79cd941f594f19a9192477a7c28d7fd",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "b39227cdfdd3aa86b64946525493713af659e786478ef2e2679149c0556b86dc",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "93ce727d740d6fccef21682f1f1725818113ec97d82014194425e7edcdc2f834",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重劍/README.md": "0055b024fec25240cda506bb120c0773c6fdc876193a9c1bfe83cc447611756a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "f69ba65daa1c65d58438c03b02cd1ab0fcd2fea4ea94b4566140f54e8d1cbf64",
+      "Referneces/Translation.md": "14229a76f27247602467fc816f6e1030329d334268f5ec97b5ba3636c06e3cd5"
+    },
+    "reviewed_findings": [
+      "All 65 fixed-scope file hashes match the supplied scope. The reviewed set contains the 18 Thrust formal pages, current canonical/configuration and frozen author research, image/UI/RAW receipts, map/reverse indexes, and the accepted common-mechanism cache.",
+      "The player page correctly states the actual windup-event trigger, three effective stacks, action-time cadence with at most one event per fixed update, delayed stat-cache visibility, action/wield/sweep clearing and sweep retention. It distinguishes pure push from melee power input and presents the special toggle separately from model-specific special windups.",
+      "The Mk VI dedicated push-combo heavy route, Mk III right-light push-combo route (.45 action-time entry, .5 event threshold, optional early light interruption and later cache-visible retained stack), and Mk IV lack of those dedicated routes are described distinctly. This avoids generalizing one model path to the others.",
+      "The two controlled power-input examples recalculate correctly: 500×(1+0+3×.20)=800; and 500×(1+.20)=600 versus 500×(1+.20+2×.10)=700, a 16.67% relative increase to that input only. The pages do not present these as equal final-health-damage increases.",
+      "The same-hash English and Traditional Chinese RAW templates are preserved and rebuilt at I–IV from the formatter; the comparison calls omitted action, held, clear, and input-math details “未涵蓋” rather than fabricating a RAW contradiction. Own-tier receipts confirm all 12 actual variants use .05/.10/.15/.20 per effective stack with a three-stack cap.",
+      "The actual shared map has one Thrust blessing, 12 variants, and 32 bindings, all binding references resolve to those variants. The metadata-only Thunderhammer candidate is excluded and is not presented as usable. Actual UI/model names, reverse weapon pages, and image path versus attachment are consistent with their fixed receipts; image receipt reports verified public bytes and display review.",
+      "Formatting-only follow-up: all 11 affected formal variant pages match the delta receipt after removing exactly one doubled CR before LF; each currently has zero CRCRLF sequences and no visible-text changes are reported by the complete delta proof.",
+      "Canonical and extension draft variant_notes are identical and use LF line breaks. The 68-file fixed scope hashes all match; the three added records preserve the earlier accepted scope/peer and document this exact normalization. No mechanics, RAW text, tier values, bindings, formulas, or image data changed."
+    ],
+    "delta_validation": {
+      "all_current_scope_hashes_match": true,
+      "scope_file_count": 68,
+      "previous_accepted_scope_file_count": 65,
+      "previous_accepted_review_preserved": true,
+      "affected_formal_variant_pages": 11,
+      "affected_pages_after_sha_match_scope": true,
+      "affected_pages_have_no_crcrlf": true,
+      "canonical_and_extension_variant_notes_match": true,
+      "canonical_variant_notes_have_no_carriage_returns": true,
+      "visible_content_unchanged_per_delta_receipt": true,
+      "source_raw_bindings_formula_image_unchanged_per_delta_receipt": true
+    },
+    "supersedes_scope_sha256": "f50788d09cb896983c18fa8f515886e2980757eff78d13d418cd3d7460320926",
+    "supersedes_peer_sha256": "df8292de8f6462f9c55eb2210108659c710bc030eb5b1229687ecb0f779234c7",
+    "delta_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-format-delta-review.json",
+    "delta_review_sha256": "ae3bfdfbdae253b84e525a25569c13b945e5b71a7c1dca6d237bd89a4e9d5334"
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "thrust",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_177",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_177.png",
+      "attachment": "https://github.com/user-attachments/assets/82bed9ff-831f-4905-bcc5-3101a43fa29c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5987826317",
+      "acquired_date": "2026-10-05",
+      "sha256": "fd089fff6afa6845898be2c8e5c1571a467fb008b49cbf9c47792b013ed71a8f",
+      "content_type": "image/png",
+      "size": 5041,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "推進祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual public PNG: transparent surrounding area with a white/light-gray frontal geometric icon;128x128 and original/public content hash match. Image is an identifier only, not gameplay proof."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 36,
+      "tables": 33,
+      "rows": 596,
+      "lists": 111,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 176,
+      "source_files": 73,
+      "bindings": 703,
+      "variants": 358,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 33,
+      "source_object_cache": {
+        "cache_hits": 73,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 36,
+      "local_references": 1254,
+      "remote_references": 632,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 26,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-025-full-scan.json",
+        "sha256": "cfbc8a780a445f772a203a79188335cb0760e20400812520e8b78e3fb166d262",
+        "trigger": "round-025"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "source_scope_reuse": "Only11 embedded CR normalization changed; same176 fixed-source ranges/73files and all703 bindings/358variants/global consistency reused unchanged. Final links/GFM rerun after format delta."
+  },
+  "remaining_counts": {
+    "name_groups": 59,
+    "not_started_name_groups": 59,
+    "partial_name_groups": 0,
+    "remaining_variants": 247,
+    "remaining_bindings": 482,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0195b98a6d75bdef2213ed0d555e6c30a860014de520f412d30f58e3dd7e9a85"
+  },
+  "previous_local_commit": "9880b9e825928ea14d56e0341d70bea6dff0d184",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_thunderhammer_2h_p1/power_bonus_based_on_charge_time",
+        "trait": "weapon_trait_bespoke_thunderhammer_2h_p1_windup_increases_power",
+        "restriction": [
+          "thunderhammer_p1"
+        ]
+      }
+    ],
+    "status": "ActualThunderhammer metadata-only same-name candidate hasno actualfixedinventorybinding; excluded, notpresentedasusable. Exact12variant32binding scope preserved."
+  },
+  "partial_stage_repair": "Initial exact39-file stage blocked by doubled CR line endings in11 variant files. Only canonical embedded note separators and formal doubled CR normalization changed; nonauthor68-file final delta peer passed. All visible text/source/mechanisms/formulas unchanged. No reset or index clearing; same39-file scope restaged after finalpeer approval.",
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-focused-checks.json",
+      "sha256": "f32cc4456299d236e98da671d8a8d5d78aebcfc06dc7cb6cff136bed192ab865"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-format-delta-review.json",
+      "sha256": "ae3bfdfbdae253b84e525a25569c13b945e5b71a7c1dca6d237bd89a4e9d5334"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-frozen-source-verification.json",
+      "sha256": "eaca3a722c63838612d4d7ddae4ef8c58f085d5f23d1d9e93e501529f814fb02"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-outside-intersection-review.json",
+      "sha256": "17d9bf572eb78c26f7257d6a62503207cd887714a332e817713a1315ed3307a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-own-tier-diff.json",
+      "sha256": "ba5e5e907b63d8f3831f2067b9b4c9bd71a0b5a2e16f32f810434d3e8d1c1440"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-parent-child-binding-diff-review.json",
+      "sha256": "05c42551daa863e01f0073274ee982c93314fa5295e2e94cab3eff005a5bff1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-agent-evidence.json",
+      "sha256": "38a1fece45db203d4a6c86c65039152a0beb9b7aca3421fd511c24252f9ba554"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-format-peer-review.json",
+      "sha256": "df8292de8f6462f9c55eb2210108659c710bc030eb5b1229687ecb0f779234c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-prior-format-peer-scope.json",
+      "sha256": "f50788d09cb896983c18fa8f515886e2980757eff78d13d418cd3d7460320926"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-resume-review.json",
+      "sha256": "7c8da4e37f79fbeab87035f32f84cc5704ce3bdf902b57a2751fc1a30afa79c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-runtime-formula-review.json",
+      "sha256": "e8671d6107a6ad7c94075a7c081e351c4fa00826fdbac2a627632102586c6bc0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-traits-review.json",
+      "sha256": "0028c0128d5864491f7bf1110e7cbf32dc3a040bcb5f476d99a5b6facf0f49f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-raw-verification.json",
+      "sha256": "7f8fa5f1d1408e6025ad6594ad035b1b0929de68fd5060a05423b6196c054988"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-review.json",
+      "sha256": "74755ab55a2330101692845710eea8d9e347ca6a4bd0bdafea1a6d9e7a9df202"
+    }
+  ],
+  "primary_review_method": "Existing12ownfulltier/wrapper/binding rootreceipts reused with81currentverifiedsourceblocks andcanonicalinputs; genericmechanism conditions actualmatch. NewMkIIIlightreachable chain/cache/retention, actualMkVIheavycombo distinction, precisePowerLevel curve-order anddestroycascade inspected. Actualgenerator fieldtypes checkedbeforeformal.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-config.json",
+    "sha256": "e1312d782d3c570cc3cd5dfbb6f8a592c0afadc3af5ad0372a684a231e6d3f0e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-traits-review.json",
+      "sha256": "0028c0128d5864491f7bf1110e7cbf32dc3a040bcb5f476d99a5b6facf0f49f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-own-tier-diff.json",
+      "sha256": "ba5e5e907b63d8f3831f2067b9b4c9bd71a0b5a2e16f32f810434d3e8d1c1440"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-parent-child-binding-diff-review.json",
+      "sha256": "05c42551daa863e01f0073274ee982c93314fa5295e2e94cab3eff005a5bff1c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-review.json",
+      "sha256": "74755ab55a2330101692845710eea8d9e347ca6a4bd0bdafea1a6d9e7a9df202"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-ui-raw-verification.json",
+      "sha256": "7f8fa5f1d1408e6025ad6594ad035b1b0929de68fd5060a05423b6196c054988"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-image.json",
+      "sha256": "e847182cfa5caf2186be11485a502b40d09eef23df7bd38b6c9ae0477e3dcde2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json",
+      "sha256": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-coverage.json",
+      "sha256": "96a3905c567ce68aa108266b00f41fd9aba20d2fb99123d7f8e1e00ccb900484"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-draft.md",
+      "sha256": "df6dae45731f1daf2008306d56a2b4e3b4f004f04bd2764beb7c6de0df25a022"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-light-chain-review.json",
+      "sha256": "a27d70fffe196eeaae275ba11f234e5e993f1b1ff71ebb2eac87ba7638643ce5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-association-snapshot.json",
+      "sha256": "7d7c25de56e3bc8d3b38463c4017834dbe7b064f3fbe4fc3ef312721411792be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-candidate-preview.md",
+      "sha256": "88f2bf9876414ea6b58cb8e58b226bac64ded6d44d7809971fc3e5cd3d1759cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-config.json",
+      "sha256": "caeda9b077dcce2c19a694c55e7f57137228377614820a22c09da77ccb84651b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-coverage.json",
+      "sha256": "96a3905c567ce68aa108266b00f41fd9aba20d2fb99123d7f8e1e00ccb900484"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-draft.md",
+      "sha256": "df6dae45731f1daf2008306d56a2b4e3b4f004f04bd2764beb7c6de0df25a022"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-evidence.json",
+      "sha256": "ca9ff7998bbac99149f728f8b6ccc53d5ff12c24143cd45fcd20a3566bc1c9a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-light-chain-review.json",
+      "sha256": "a27d70fffe196eeaae275ba11f234e5e993f1b1ff71ebb2eac87ba7638643ce5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-group/thrust-agent-preflight.json",
+      "sha256": "fb2fd1785851e7ef4a0698c7e4bc1c7f6f4fd6372cf66f7268851564bdf111ee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-config.json",
+      "sha256": "caeda9b077dcce2c19a694c55e7f57137228377614820a22c09da77ccb84651b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-evidence.json",
+      "sha256": "ca9ff7998bbac99149f728f8b6ccc53d5ff12c24143cd45fcd20a3566bc1c9a1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-agent-draft.md",
+      "sha256": "df6dae45731f1daf2008306d56a2b4e3b4f004f04bd2764beb7c6de0df25a022"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-outside-intersection-review.json",
+      "sha256": "17d9bf572eb78c26f7257d6a62503207cd887714a332e817713a1315ed3307a6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-primary-runtime-formula-review.json",
+      "sha256": "e8671d6107a6ad7c94075a7c081e351c4fa00826fdbac2a627632102586c6bc0"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thrust-formal-peer-scope.json",
+    "sha256": "82a8dc0728fd1f9fc92b1c1e2d65aff1743f30e040668ce6b7b7fac273c81e0b",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "date": "2026-10-05",
+  "blessing": "thunderous",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/雷鳴/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff"
+  ],
+  "added_binding_count": 20,
+  "total_variants": 9,
+  "total_bindings": 20,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "thunderous-formal-nonauthor-review",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-formal-peer-scope.json",
+    "scope_sha256": "71fcf370f31ccca0408eed2bcddd8541d3783fadabcedde51d1d25ab4f7fe103",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-config.json": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-config.json": "53d1fca5adfb818b7ec3ddcc61543f452f77a25aafcd1483add9b352b06d58a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-draft.md": "b56a5685206100438b956ca09f938d9919a35d842c27c3895c460a297d9a0787",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-evidence.json": "dee9f6eb617aa8846501ec4e9aad5da9e81bd5512de87cad2349c11d30693037",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-config.json": "63b429dbb550ae1da6fd289c4dadbad5ef4bb541b52c3e9ef08e89f9e34be0cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-extension-draft.json": "b94dd779c34a934ef4c28be088749fc84d8a1e683a9b3a43976ea3a577b5f90b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-actual-route-coverage.json": "2190db9d088105fc84072b78ef1864ea0420a38944cac736041fc254c6cfea9b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-config.json": "53d1fca5adfb818b7ec3ddcc61543f452f77a25aafcd1483add9b352b06d58a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-draft.md": "b56a5685206100438b956ca09f938d9919a35d842c27c3895c460a297d9a0787",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-evidence.json": "dee9f6eb617aa8846501ec4e9aad5da9e81bd5512de87cad2349c11d30693037",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-selfcheck.json": "2948ce1681859f0a719b4c7869787a69c6e26273cf879ee74eac561dc90974cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-association-snapshot.json": "90108f7f7e5382ed3db2909d1edaaa3eeb09143de87afe99c8b3eaf75cbfab4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-candidate-formal-preview.md": "7683c1637377d94ec2d1ed17ca040221478161cb6d2044fae0499ae755e37801",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-p2-wrapper-correction.json": "4f0df9e0c8e84965b39d2345bc6fe891fdadd03a63e0f6e0a1acdd419e0f6a26",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-push-route-coverage.json": "6129163bec16172a9fa2cd901a06d4ea02b69c1a8dd9d5ef8e1967f3c2a1eada",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-image.json": "e28617fc7835b54035ef77555a66b0ed11c16905ed6562ae9ae3f91f5e64347b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-focused-checks.json": "d05b011d7a135f31e8d5134e9655036dddd04986ed749a50602ad6fe29638b27",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-frozen-source-verification.json": "6f08ceb3071e47e5c5aa6243cc0eba76f894d3aefd892d5af40016640b6a72c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-own-tier-wrapper-content-review.json": "1b10f993f5108fe7d307a21618271a2e880e062951d407e091efec5d4d270982",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-resume-review.json": "302cd4efba761ecb457e7fad3b05bc8b68faabcac041e427106ac7ba01ee128e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-consumer-content-review.json": "2137f1946dfc096e3749b51ee38c9a74b04f07e546c8e7b5a25711289d335ce8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-proc-delta-review.json": "a7515db1bb763a3f748186d6673a388ea923ea8046d557f3f09a93283b5b34b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-prefix-mismatch-history.json": "7324ccfe36fb51e7a6c53ec61b165bb6b4b6fc2914293add2f17ba1d794da01a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-review.json": "a1cf7fabdf50714c680f27b636959f3019d56ea3406458c620dd4efa9b02c975",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-raw-verification.json": "195e9de5d497ed3e66d4b0985ec6b080d405a386cca8d7cec0b5473034da82e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-review.json": "943445af5242838a41030d17ca820a8ede38aeb8d4def962916619dc0618fdc2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-wrapper-extractor-repair.json": "b48b06de9c1614eaffc48cd835d30bf9eb0d6d98e192b1a5d375ad3970c40ba8",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "0aea960d9cf05493bdab1e5ac2787bee8aad602135474b026f0deb2b2a3864ee",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/DAMAGE_PERCENTAGE_REVIEW.md": "6916ced0b795114266d835aef9f37fb6ffd3ca9828d3c69dc1f94a10ec353a68",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/LOCALIZATION_COMPARISON.md": "db1eed0beed8bf7783af8534c658e76b8db24e99206a4f2a4f9e5b72d29fc75d",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/README.md": "c5bf98b7830c8f1ebb5796dc34ec973c14e41d932bf666387fd8ad68b4d15f7c",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/SOURCE_INDEX.md": "f12aa327e63cbc419e6ff1f599ab37f8e51b33eef0b7bb5ab3000f1b8bd6ec2b",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/TIER_VALUES.md": "7ec782c93fc50323e8c7c453071af7a3471a3557fb3b1fde6d9921f61fc5fc6b",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/WEAPON_COMPATIBILITY.md": "b57c04a959fa0c64a87e4e2a8369a29fae1c6b222c210f3db76ece53d5844218",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_chainaxe_p1_targets_receive_rending_debuff.md": "d3c3eb429318a3b2f6f4f1c845e25726abb5fa221e9e0ac4a5909a49b3a64037",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_combataxe_p1_targets_receive_rending_debuff.md": "1fc7439bb84d7bb19f62d93e5642535f0fe57e2641dc62e74a4432b82b8c4a6d",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_ogryn_club_p1_targets_receive_rending_debuff.md": "a8d18627925a20e7af2223e1ac75c9a2e711f29abc0aeb464a626e0341e5407d",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_ogryn_club_p2_targets_receive_rending_debuff.md": "916fbde90f0a6e6313a81651e6b010c258c4c39d1be8777a19775f8a869ed787",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_targets_receive_rending_debuff.md": "cc15817fc705856a3a7019f6ba40efb9659615d886ef100abf911eb5ad6f7bb5",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_powermaul_2h_p1_targets_receive_rending_debuff.md": "dd1db010b7cca32a4250d6d91ce842cd27b11e2581299444cec92a47bbcfaf2e",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_powermaul_p2_targets_receive_rending_debuff.md": "82106310e6526a8811862ce8dcfa8933a4ec6c7a0fa7315ede64f6597809e223",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_powermaul_p3_targets_receive_rending_debuff.md": "f9adc83523c6915af4cf9346629974890989544a586f0ca1651f08ef2f37c792",
+      "Game Info/releases/1.13.X/blessings/entries/雷鳴/weapon_trait_bespoke_thunderhammer_2h_p1_targets_receive_rending_debuff.md": "f12572cf7d8d2db927e84b33cce3fbe95ac90b2a7859a34d1ff7ce4d53703f9c",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "2e2433210db3f68d9209a77c9f21bdd6aaa814c7d5ed25ddb090d917019fc1e9",
+      "Game Info/releases/1.13.X/blessings/README.md": "e4ccb3196b204450c1bd98e0e48edd0b1a539c6606ad237e349e38930e9fed7a",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "47c61dd3d4407da7761a858554ee1b2aa284b65735506df25571c7675e77fec8",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "b34aaac93327f082122e74536a7785a30328d01b3f9cc3baf769a2ff6c57e0a9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "3b1c707d280eab1fea0c0cc1b9b008d685f55417296dc650e22eaf52c00c132a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰鬥斧/README.md": "f28186f2aa566f0b5fa68cdfaabac4a4390cf931520cf7b9115c16a479f2b18e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "553674ca8af0ce8e1f1c09dc5df4305930e9f1676967084af8869721c8ff96b6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/法務官電擊鎚/README.md": "3f0e9421e55e9731c330c7e78cc44f5e41be4e17abb0dc49ad464d258b00d7d6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "7cdf2f4956fda2f6314cdb6f7a3eccb7d4b2d3154232493eeab68b6590fda6da",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "d8d8063c365b1921258f8608e43fdeb7e85d69d6b779ebf2cc00a2215f5e5ae4",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "747822251f364c42f8e1beef01c1c2172320ea06f016c2cd9acd3b4f0ec7b01c",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電弧鎚/README.md": "1527570858427db433a8c4bda122e9f754bed38ad9411495cec8832d265c0296",
+      "Referneces/Translation.md": "07965b721d43204809510e6ed9216c564636e23e37b46c53629bde798ed8b2cd"
+    },
+    "reviewed_findings": [
+      "Reviewed all 9 Thunderous variant pages and the 20 actual bindings; the canonical map contains exactly 9 variants and 20 bindings, with 9 corresponding reverse weapon pages. The current UI names, trait IDs, template imports/appends, restrictions, and shared icon URL/path agree with the frozen receipts and formal tables.",
+      "All nine own tier records resolve to the bound ordinary on_hit wrapper, including the actual powermaul_p2 wrapper at line 106. I–IV request 1/2/3/4 target stacks; RAW English and Traditional Chinese share the verified description key/hash. The five plus-prefix families and four no-prefix families are reconstructed distinctly, preserving the literal English I-tier “1 stacks”.",
+      "The player and comparison pages accurately constrain triggering to a held same-item hit on a Minion, processed after damage while the target remains HEALTH_ALIVE; there is no additional melee, special, or positive-damage predicate. Per-profile skip_on_hit_proc and global no-proc rules remain applicable.",
+      "The route descriptions match the frozen actual-route evidence: ordinary/heavy/push-follow/special routes are distinguished; the crusher powered explosion and P3 arc retain the bound weapon item for their own Attack checks; the nine chainaxe sticky additional profiles skip on-hit. The powermaul_p2 entry is correctly described as the bound ordinary wrapper rather than an unbound special wrapper.",
+      "The target debuff uses a shared named rending_debuff stack pool, +0.025 target rending input per effective stack, cap 16 and duration 5 seconds. A valid full-cap hit refreshes duration without exceeding cap; the parent 31-stack processing budget is not described as the target cap. The math limits its claims to target rending input and correctly avoids a fixed final-damage percentage.",
+      "First-effect timing is accurately bounded: the triggering hit damage is already resolved before on-hit processing; later damage can read the debuff after target state/cache update, without promising same-frame subsequent hits. Switching items gates future procs while already applied target debuffs persist for their own duration.",
+      "The approved image receipt separates the actual game icon path from its GitHub attachment URL and confirms public bytes/hash/display. Focused source, link, GFM, and shared-map checks in the fixed evidence are passing."
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "thunderous",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_084",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_084.png",
+      "attachment": "https://github.com/user-attachments/assets/bdf43380-ae08-4838-9db7-bef2a972e2cb",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991457841",
+      "acquired_date": "2026-10-05",
+      "sha256": "80cfcebed7b6d3d364f2c5af8707a893932b4b3180ef3f5af59805163490e1a1",
+      "content_type": "image/png",
+      "size": 3756,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "雷鳴祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": "Root viewed native/public128x128 PNG: pale gray-white broad polygon with beveled sides, a gray upper central rectangle and gray lower central rectangle on transparent background. Native source and public attachment bytes match exactly."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 29,
+      "tables": 27,
+      "rows": 915,
+      "lists": 105,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 455,
+      "source_files": 59,
+      "bindings": 824,
+      "variants": 414,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 59,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1235,
+      "remote_references": 936,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 29,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-028-full-scan.json",
+        "sha256": "e5b5b527340200a372160679bc723ccacd34b98076383e6688bc36f9ef75d206",
+        "trigger": "round-028"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 51,
+    "not_started_name_groups": 51,
+    "partial_name_groups": 0,
+    "remaining_variants": 191,
+    "remaining_bindings": 361,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b2b866ff9469a7735dcddfd3b53812b342d01a24d040340251eb074a728f5a87"
+  },
+  "previous_local_commit": "451bffe1ef553ea9ff45fef6e468a49b6035b049",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "Root UI receipt found zero exact-name metadata items outside the 9 bound variants; exact inventory intersection is 9 variants / 20 bindings."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-focused-checks.json",
+      "sha256": "d05b011d7a135f31e8d5134e9655036dddd04986ed749a50602ad6fe29638b27"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-frozen-source-verification.json",
+      "sha256": "6f08ceb3071e47e5c5aa6243cc0eba76f894d3aefd892d5af40016640b6a72c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-own-tier-wrapper-content-review.json",
+      "sha256": "1b10f993f5108fe7d307a21618271a2e880e062951d407e091efec5d4d270982"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-resume-review.json",
+      "sha256": "302cd4efba761ecb457e7fad3b05bc8b68faabcac041e427106ac7ba01ee128e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-consumer-content-review.json",
+      "sha256": "2137f1946dfc096e3749b51ee38c9a74b04f07e546c8e7b5a25711289d335ce8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-proc-delta-review.json",
+      "sha256": "a7515db1bb763a3f748186d6673a388ea923ea8046d557f3f09a93283b5b34b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-prefix-mismatch-history.json",
+      "sha256": "7324ccfe36fb51e7a6c53ec61b165bb6b4b6fc2914293add2f17ba1d794da01a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-review.json",
+      "sha256": "a1cf7fabdf50714c680f27b636959f3019d56ea3406458c620dd4efa9b02c975"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-raw-verification.json",
+      "sha256": "195e9de5d497ed3e66d4b0985ec6b080d405a386cca8d7cec0b5473034da82e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-review.json",
+      "sha256": "943445af5242838a41030d17ca820a8ede38aeb8d4def962916619dc0618fdc2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-wrapper-extractor-repair.json",
+      "sha256": "b48b06de9c1614eaffc48cd835d30bf9eb0d6d98e192b1a5d375ad3970c40ba8"
+    }
+  ],
+  "primary_review_method": "Content review centered on actual own full tiers/wrapper/formatter/native producer+consumer and difference applicability; common held/event/cache/lifetime mechanisms unchanged and reused. Original frozen author trio remains separate. Single approved canonical generates formal pages and shared indexes; formal nonauthor peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-config.json",
+    "sha256": "63b429dbb550ae1da6fd289c4dadbad5ef4bb541b52c3e9ef08e89f9e34be0cc"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/deathspitter-agent-config.json",
+      "sha256": "7c5596c3ac8fea2f3f5d72d09b50af716bc8449f96d3e89139dde12330c743be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-actual-route-coverage.json",
+      "sha256": "2190db9d088105fc84072b78ef1864ea0420a38944cac736041fc254c6cfea9b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-p2-wrapper-correction.json",
+      "sha256": "4f0df9e0c8e84965b39d2345bc6fe891fdadd03a63e0f6e0a1acdd419e0f6a26"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-push-route-coverage.json",
+      "sha256": "6129163bec16172a9fa2cd901a06d4ea02b69c1a8dd9d5ef8e1967f3c2a1eada"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-image.json",
+      "sha256": "e28617fc7835b54035ef77555a66b0ed11c16905ed6562ae9ae3f91f5e64347b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-own-tier-wrapper-content-review.json",
+      "sha256": "1b10f993f5108fe7d307a21618271a2e880e062951d407e091efec5d4d270982"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-proc-delta-review.json",
+      "sha256": "a7515db1bb763a3f748186d6673a388ea923ea8046d557f3f09a93283b5b34b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-review.json",
+      "sha256": "a1cf7fabdf50714c680f27b636959f3019d56ea3406458c620dd4efa9b02c975"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-raw-verification.json",
+      "sha256": "195e9de5d497ed3e66d4b0985ec6b080d405a386cca8d7cec0b5473034da82e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-ui-review.json",
+      "sha256": "943445af5242838a41030d17ca820a8ede38aeb8d4def962916619dc0618fdc2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-config.json",
+      "sha256": "53d1fca5adfb818b7ec3ddcc61543f452f77a25aafcd1483add9b352b06d58a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-draft.md",
+      "sha256": "b56a5685206100438b956ca09f938d9919a35d842c27c3895c460a297d9a0787"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-evidence.json",
+      "sha256": "dee9f6eb617aa8846501ec4e9aad5da9e81bd5512de87cad2349c11d30693037"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-agent-selfcheck.json",
+      "sha256": "2948ce1681859f0a719b4c7869787a69c6e26273cf879ee74eac561dc90974cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-association-snapshot.json",
+      "sha256": "90108f7f7e5382ed3db2909d1edaaa3eeb09143de87afe99c8b3eaf75cbfab4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-group/thunderous-candidate-formal-preview.md",
+      "sha256": "7683c1637377d94ec2d1ed17ca040221478161cb6d2044fae0499ae755e37801"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-config.json",
+      "sha256": "53d1fca5adfb818b7ec3ddcc61543f452f77a25aafcd1483add9b352b06d58a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-evidence.json",
+      "sha256": "dee9f6eb617aa8846501ec4e9aad5da9e81bd5512de87cad2349c11d30693037"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-agent-draft.md",
+      "sha256": "b56a5685206100438b956ca09f938d9919a35d842c27c3895c460a297d9a0787"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-frozen-source-verification.json",
+      "sha256": "6f08ceb3071e47e5c5aa6243cc0eba76f894d3aefd892d5af40016640b6a72c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-target-consumer-content-review.json",
+      "sha256": "2137f1946dfc096e3749b51ee38c9a74b04f07e546c8e7b5a25711289d335ce8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-traits-prefix-mismatch-history.json",
+      "sha256": "7324ccfe36fb51e7a6c53ec61b165bb6b4b6fc2914293add2f17ba1d794da01a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-primary-wrapper-extractor-repair.json",
+      "sha256": "b48b06de9c1614eaffc48cd835d30bf9eb0d6d98e192b1a5d375ad3970c40ba8"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-formal-peer-scope.json",
+    "sha256": "71fcf370f31ccca0408eed2bcddd8541d3783fadabcedde51d1d25ab4f7fe103",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-04",
+  "blessing": "power-blast",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/聚能爆發/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "power-blast",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-config.json": "3da4ab880e0e5c42b092d690f2726a7462d31a836335d979e09a92344c3b9c66",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-extension-draft.json": "e14870673112c43d4c3a31b43caf5f3b75d560c3773b3c67e76a50626e1b2fee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-image.json": "e47b75b825fe5faf3d296fcee7bff9ad1d9dce63c8227b4bb5340d166ade6316",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-mode-difference-review.json": "91096c1f937fb3c4f81092470e37f9b90f577cc0798a226e0966e2da836b01cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-own-tier-diff.json": "281b55565c18cbb26cc30b2469996eefd3038a7b05905b4631ebb70f2cd7df42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-resume-review.json": "55284e5c9e114646753010ca2df8708ec8e5882da8f7ccbd8c0eb4cb372bc668",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-ui-review.json": "36898e048f0a391b4f53f0275f72885c57398ad9ba47fd146583b1f38ad6868c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-zero-shot-review.json": "7551b6aec8e380f8034823724510299448d62c10fafe5e07d633186e31ae8c2c",
+      "Game Info/releases/1.13.X/blessings/README.md": "8e09dda3afbaf2b899ba7740d56e304a3b685278083e1b294b1c02f18c03bd78",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c562d31fe9e7f191ea1f81328068af2d5b6d9c510901b8932863c438746631e7",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3062370559777f526c446472c78aed8cca612a1a536e87b48226a420fc097920",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/DAMAGE_PERCENTAGE_REVIEW.md": "920022c325eabb7eaf77ab87cb31fbc4e73a4e73e7c91eb5cda57a94749a3a1a",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/LOCALIZATION_COMPARISON.md": "3e3f4e45634fc5bcec81c61080018da64aa977145d00fcc9998537aeda47b296",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/README.md": "2d48f3d934a4b43b9fe15b7f1b37a1faa8aa29ce16559c6a08342f5656aecd69",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/SOURCE_INDEX.md": "deb1ebadc21364f43acd6b05ae15adc054bbb76e1bf517925f586b46234d5b41",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/TIER_VALUES.md": "ff5308b060b814716f1acf7595cd0865f449d7f14055a512bd031ba6e475da40",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/WEAPON_COMPATIBILITY.md": "9f41bd0473ee29244b9e219da136723d7921843eca8de722fa89b67523cbf567",
+      "Game Info/releases/1.13.X/blessings/entries/聚能爆發/weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance.md": "75e4b2c637a97f28988bbfb814655709d122d1c6e5017668ddfe0ab0d7c2bdf4",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "8651c5a89c80a2f57a80e612f7c324aeea59ea8f544d381b9d4cff8c58e8e758",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "3e6d0065801459c0de91b8bd6894ddcdcb97da0c9dcf03a8bd61eecd1e40dc13",
+      "Referneces/Translation.md": "94bb12f33864d3571e52e108feba4647e34843a29404ea9d7849f70a3ac73ba5"
+    },
+    "scope": {
+      "file_count": 21,
+      "formal_markdown_count": 7,
+      "scope_manifest_sha256": "0071f4b9b31d366d4f70f4d8d3c8e57dd88e1a151cea7ffd306327adcc8a42c7"
+    },
+    "reviewed_associations": {
+      "variant_ids": [
+        "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance"
+      ],
+      "bindings": [
+        {
+          "weapon_id": "plasmagun_p1",
+          "mark_id": "plasmagun_p1_m1",
+          "trait_item": "content/items/traits/bespoke_plasmagun_p1/crit_chance_bonus_based_on_charge_time",
+          "description_key": "loc_trait_bespoke_increased_crit_chance_bonus_based_on_charge_time_desc"
+        }
+      ],
+      "map_and_reverse_indexes": "Verified exactly one Power Blast binding on the M35 Magnacore Mk II; the Mk III row contains no Power Blast association."
+    },
+    "reviewed_deltas": [
+      {
+        "topic": "機率單位與算例",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/DAMAGE_PERCENTAGE_REVIEW.md"
+        ],
+        "conclusion": "通過：n×t is the probability-unit addition and 100×n×t is percentage points; all four examples state refreshed-cache, base chance, +5pp handling, no other/forced/prevented crit, conversion=0 and explain theoretical PRD input versus player meaning."
+      },
+      {
+        "topic": "充能、開火順序與排除動作",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/README.md",
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/SOURCE_INDEX.md"
+        ],
+        "conclusion": "通過：legal uncharged ordinary shot has 0 steps; direct full charge caps at .525/2 steps; alternate full charge reaches 1.0/5 steps; interruptions use sampled effective cache; shot critical is checked before later charge capture/reset; following cache update and held-slot switching are described; reload/vent do not roll and overload explosion is noncritical."
+      },
+      {
+        "topic": "RAW 重建與最低值勘誤",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/LOCALIZATION_COMPARISON.md",
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/README.md"
+        ],
+        "conclusion": "通過：name/description strings and hashes are exact; formatter reconstruction lists I–IV min/max without plus prefix and retains static reconstruction caveat; runtime 0-step first shot is separate and justifies the explicit minimum-value contradiction, also present in English RAW."
+      },
+      {
+        "topic": "唯一 UI 綁定、圖示與索引",
+        "formal_locations": [
+          "Game Info/releases/1.13.X/blessings/entries/聚能爆發/WEAPON_COMPATIBILITY.md",
+          "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md",
+          "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json"
+        ],
+        "conclusion": "通過：plasmagun_p1/plasmagun_p1_m1 and actual trait ID match UI import/list append and restriction; reverse page associates this blessing only with Mk II; icon identifier/path weapon_trait_158 and Issue attachment URL are distinct and consistent."
+      }
+    ],
+    "configuration_consistency": {
+      "canonical_config_sha256": "3da4ab880e0e5c42b092d690f2726a7462d31a836335d979e09a92344c3b9c66",
+      "extension_draft_sha256": "e14870673112c43d4c3a31b43caf5f3b75d560c3773b3c67e76a50626e1b2fee",
+      "image_receipt_sha256": "e47b75b825fe5faf3d296fcee7bff9ad1d9dce63c8227b4bb5340d166ade6316",
+      "resume_receipt_sha256": "55284e5c9e114646753010ca2df8708ec8e5882da8f7ccbd8c0eb4cb372bc668",
+      "conclusion": "Canonical config, extension draft, formal pages and map/reverse-index summaries agree for the fixed scope; all 21 scoped file hashes match."
+    },
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "power-blast",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_158",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_158.png",
+      "attachment": "https://github.com/user-attachments/assets/4a53a4b2-051a-4e71-8098-1e15c55f0db8",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5976913558",
+      "acquired_date": "2026-10-04",
+      "sha256": "9d913fd438dea07f1eebf2602b483bf4fa7e8e514bcb47ea1cb62b7f070ea321",
+      "content_type": "image/png",
+      "size": 8881,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "聚能爆發祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Original and publicly downloaded128x128PNG visually match; circular reticle with radial pointed marks, alpha diagnostic inspected without altering attachment."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 13,
+      "tables": 10,
+      "rows": 224,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 49,
+      "source_files": 23,
+      "bindings": 423,
+      "variants": 223,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 23,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 549,
+      "remote_references": 288,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 11,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-010-full-scan.json",
+        "sha256": "de5d8373fa4cade0e0cdc498eede92f70774d095a9a5aa7dfd4e42d57b4f991f",
+        "trigger": "round-010"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 105,
+    "not_started_name_groups": 105,
+    "partial_name_groups": 0,
+    "remaining_variants": 382,
+    "remaining_bindings": 762,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "0ba1646394edbd5748a283407db49477a4303eebd603bcf4c661e25de2ae884d"
+  },
+  "previous_local_commit": "2a72f9338638f7357bdebcee53dcaa1762db56d1",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "status": "primary_content_review_passed_pending_formal_peer",
+    "variant_count": 1,
+    "binding_count": 1,
+    "configuration_sha256": "3da4ab880e0e5c42b092d690f2726a7462d31a836335d979e09a92344c3b9c66",
+    "research": {
+      "power-blast-agent-config.json": "976c0d3feb405231c8c3f52905064bf1ad09863d4c34c9466cfd26cd53a2ab16",
+      "power-blast-agent-evidence.json": "72b926afd68c18bf69e1d2eab4ee9db328598685f60d107ef8c601e49453f6d8",
+      "power-blast-agent-draft.md": "3b5e8d431324b9a1b566c6d24fdf35d6014695af95d44535f6334728592f769d"
+    },
+    "reviewed_distinctions": [
+      "Own I–IV conditional chance, wrapper/base and formatter independently reviewed.",
+      "Actual uncharged first shot has0 effective steps; RAW minimum contradicts a real fired shot.",
+      "Direct cap.525 vs alternate1.0 verified through max_charge consumer; stunned transition and next-cache boundaries retained.",
+      "Player wording now defines effective steps, reset after shot, held-slot update condition and PRD meaning; examples explicitly assume refreshed cache.",
+      "Only MkII actual binding/UI/restriction and158 original/public image accepted.",
+      "Formula distinguishes n*t probability-unit increment from100*n*t percentage points; four examples include practical meaning. RAW exact four-tier reconstruction retained without duplicate placeholder template."
+    ],
+    "common_cache_reused": {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "reused_record_ids": [
+        "stepped-stat-count",
+        "critical-chance-consumer",
+        "critical-prd-rounding"
+      ],
+      "applicability": "Reused only after confirming the Power Blast wrapper clones the referenced charge-stepped base, the actual Mk II actions use the ranged critical caller, and charge/shot timing is checked for this binding. The cache supplies generic math; it does not imply a nonzero first-shot step or full charge on interrupted shots."
+    },
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-extension-draft.json",
+      "sha256": "e14870673112c43d4c3a31b43caf5f3b75d560c3773b3c67e76a50626e1b2fee"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-ui-review.json",
+      "sha256": "36898e048f0a391b4f53f0275f72885c57398ad9ba47fd146583b1f38ad6868c"
+    },
+    "bindings": [
+      {
+        "weapon_id": "plasmagun_p1",
+        "mark_id": "plasmagun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_plasmagun_p1_charge_level_increases_critical_strike_chance",
+        "loc_ids": [
+          "loc_weapon_family_plasmagun_p1_m1",
+          "loc_weapon_pattern_plasmagun_p1_m1",
+          "loc_weapon_mark_plasmagun_p1_m1"
+        ],
+        "name_zh_tw": "電漿槍 M35熔岩核心 Mk II",
+        "name_en": "Plasma Gun M35 Magnacore Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "ukeys_line": 985,
+        "append_line": 987
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-resume-review.json",
+      "sha256": "55284e5c9e114646753010ca2df8708ec8e5882da8f7ccbd8c0eb4cb372bc668"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-own-tier-diff.json",
+      "sha256": "281b55565c18cbb26cc30b2469996eefd3038a7b05905b4631ebb70f2cd7df42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-zero-shot-review.json",
+      "sha256": "7551b6aec8e380f8034823724510299448d62c10fafe5e07d633186e31ae8c2c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-mode-difference-review.json",
+      "sha256": "91096c1f937fb3c4f81092470e37f9b90f577cc0798a226e0966e2da836b01cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-blast-primary-ui-review.json",
+      "sha256": "36898e048f0a391b4f53f0275f72885c57398ad9ba47fd146583b1f38ad6868c"
+    }
+  ],
+  "primary_review_method": "Direct own tier/wrapper/formatter, actual unique UI/item binding and source differences; reuse verified stepped/critical/cache facts only under actual applicability. Real ordinary0-step shot, direct2/braced5, percentage-point unit and next-cache reset reviewed. Frozen single-item formal peer matched final files.",
+  "previous_objects_unchanged": {
+    "blessings": 61,
+    "variants": 222,
+    "bindings": 422
+  }
+}

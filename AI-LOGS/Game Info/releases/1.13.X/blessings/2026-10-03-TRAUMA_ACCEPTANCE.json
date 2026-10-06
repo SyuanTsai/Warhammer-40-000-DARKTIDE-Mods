@@ -1,0 +1,3647 @@
+{
+  "date": "2026-10-03",
+  "blessing": "trauma",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/創傷/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+    "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+    "weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger",
+    "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger"
+  ],
+  "added_binding_count": 11,
+  "total_variants": 5,
+  "total_bindings": 11,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "delegation_scope": "one separate blessing group: Trauma; three different blessings in parallel",
+    "peer_review": {
+      "id": "trauma-final-peer-review",
+      "task": "創傷 Trauma 最終正式頁同儕複核",
+      "reviewer_model": "gpt-6-luna",
+      "reasoning_effort": "max",
+      "complete": true,
+      "accepted": true,
+      "corrections": [],
+      "required_corrections": [],
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "formal_entry_directory": "Game Info/releases/1.13.X/blessings/entries/創傷",
+      "formal_entry_files": [
+        "Game Info/releases/1.13.X/blessings/entries/創傷/DAMAGE_PERCENTAGE_REVIEW.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/LOCALIZATION_COMPARISON.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/README.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/SOURCE_INDEX.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/TIER_VALUES.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/WEAPON_COMPATIBILITY.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger.md",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md"
+      ],
+      "review_scope": [
+        "檢查 trauma-config.json、trauma-extension-draft.json 與 primary traits/UI/mechanism/RAW/mode/image receipts。",
+        "逐頁複核創傷正式資料夾內 11 份 Markdown：玩家 README、tier 表、傷害百分比說明、原文比較、相容性表、來源索引與五個變體頁。",
+        "核對五個 trait 變體之 I–IV 覆寫、wrapper/parent-child 接線、五級上限、2 秒 timeout、初始第三次有效命中與 timeout reset 後第二次命中的計數。",
+        "核對 target_number 首目標 gate、多目標一次攻擊、滿層刷新、item/held 條件、切換武器時效果與期限。",
+        "核對一般 stagger duration 的 1.1^s 分支與 opt-in duration multiplier 例外，以及 impact 不被說成傷害。",
+        "核對 11 個 UI 型號、localized family/pattern/mark、trait imports/ukeys/append、RAW 中英 hash 與精確同名候選範圍。",
+        "複核工兵鏟、惡魔之爪、撬棍、碾壓者、雷鎚特殊模式與實際命中事件差異，包括碾壓者兩套獨立爆炸類別/四個爆炸 profile。",
+        "將正式頁所有固定 SHA Lua 行號引用與 config 的 94 個來源範圍逐一對照固定 source blob 的行數。"
+      ],
+      "findings": {
+        "tiers_and_variants": "五個實際變體 I–IV 均為每有效層近戰 Impact +14%/+16%/+18%/+20%；有效上限 5 層。頁面沒有把模板層數誤作可取得等級，available_tiers 不作未證實宣稱。",
+        "stacking_and_timeout": "一般冷啟動前兩次有效第一目標命中只建立/增加計數，第三次命中給第一層，之後每次合格命中加層；有層後最後合格命中起 2 秒期限，逾期移除層數並將計數歸零，reset 後第二次有效命中給第一層。target_number>1 不計數；一擊多目標只讓第一個目標更新。達五層時仍刷新期限。",
+        "stat_effects": "Trait 的 melee_impact_modifier 是每層加算於 Impact 修正池，效果影響踉蹌強度，不是傷害。每層 stagger_duration_multiplier=1.1，正常分支五層為 1.1^5=1.61051；opt_in_stagger_duration_multiplier profile 走獨立倍率，不保證套用一般 duration 倍率。示例明列基礎值、其他乘數、額外時間修正等前提，未將中間計算冒充最終結果。",
+        "held_and_modes": "裝備 trait 在 on_equip 安裝，切出時只移除 on_wield 組；is_item_slot_wielded 條件使效果在切出時停止作用，計數與 2 秒期限仍存在。各特殊動作描述區分啟動/防禦與實際命中；Crusher Mk IVe/Mk VII 爆炸均以 item 傳遞，四個爆炸 profile 無 skip_on_hit_proc，且 blunt_thunder 不在 damage_types_no_proc 排除表，故其爆炸有效第一目標可以計數。",
+        "localization_and_ui": "名稱 RAW EN Trauma / zh-tw 創傷，name hash af38ab6e；description hash 0d030801，RAW SHA-256 c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026。5 個 metadata items 對應 11 個 UI 型號，未混淆 family/pattern/mark；精確名稱鍵交集外及未解精確 key 候選皆為 0。Icon weapon_trait_172 的公開檔雜湊及目視收據均通過。",
+        "document_scope": "本地規則表將明確矛盾與文件未涵蓋分開；沒有把繁中描述未逐字寫出程式細節當錯誤。"
+      },
+      "validation": {
+        "strict_json_inputs": true,
+        "formal_markdown_file_count": 11,
+        "config_fixed_source_ref_count": 94,
+        "formal_inline_fixed_source_citation_count": 183,
+        "unique_fixed_source_files_checked": 43,
+        "invalid_fixed_source_ranges": 0,
+        "image_sha256_verified": "38f9b71eebd00d197fd960ab04b7a0c029c956390f110978d51307dc7d83e66f",
+        "image_display_verified": true,
+        "all_reviewed_files_sha256_recorded": true
+      },
+      "source_refs": [
+        {
+          "description": "I–IV覆寫及format_values：工兵鏟",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+          "start_line": 64,
+          "end_line": 123
+        },
+        {
+          "description": "I–IV覆寫及format_values：惡魔之爪劍",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+          "start_line": 512,
+          "end_line": 573
+        },
+        {
+          "description": "I–IV覆寫及format_values：撬棍",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+          "start_line": 64,
+          "end_line": 123
+        },
+        {
+          "description": "I–IV覆寫及format_values：碾壓者",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+          "start_line": 74,
+          "end_line": 133
+        },
+        {
+          "description": "I–IV覆寫及format_values：雷鎚",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+          "start_line": 549,
+          "end_line": 610
+        },
+        {
+          "description": "父子Buff clone及child引用：工兵鏟",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+          "start_line": 17,
+          "end_line": 19
+        },
+        {
+          "description": "父子Buff clone及child引用：惡魔之爪劍",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+          "start_line": 76,
+          "end_line": 78
+        },
+        {
+          "description": "父子Buff clone及child引用：撬棍",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+          "start_line": 17,
+          "end_line": 19
+        },
+        {
+          "description": "父子Buff clone及child引用：碾壓者",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+          "start_line": 11,
+          "end_line": 13
+        },
+        {
+          "description": "父子Buff clone及child引用：雷鎚",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+          "start_line": 43,
+          "end_line": 45
+        },
+        {
+          "description": "Base parent/child預設條件、持續時間及stat",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+          "start_line": 809,
+          "end_line": 834
+        },
+        {
+          "description": "BuffUtils hit counter與target_number gate",
+          "path": "scripts/settings/buff/buff_utils.lua",
+          "start_line": 35,
+          "end_line": 114
+        },
+        {
+          "description": "Target-number parent timeout/reset/stack update",
+          "path": "scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua",
+          "start_line": 7,
+          "end_line": 88
+        },
+        {
+          "description": "Parent proc buff child creation, removal and timer refresh",
+          "path": "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+          "start_line": 10,
+          "end_line": 182
+        },
+        {
+          "description": "Buff有效層stack_offset",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "start_line": 397,
+          "end_line": 429
+        },
+        {
+          "description": "Trait override applied to conditional stat and per-stack calc",
+          "path": "scripts/extension_systems/buff/buffs/buff.lua",
+          "start_line": 689,
+          "end_line": 747
+        },
+        {
+          "description": "ProcBuff conditional event gate",
+          "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+          "start_line": 247,
+          "end_line": 253
+        },
+        {
+          "description": "Exact item-match gate",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start_line": 721,
+          "end_line": 726
+        },
+        {
+          "description": "Wielded-slot conditional",
+          "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+          "start_line": 43,
+          "end_line": 59
+        },
+        {
+          "description": "Trait buff target on_equip",
+          "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+          "start_line": 168,
+          "end_line": 210
+        },
+        {
+          "description": "on_equip buff installed at equip",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "start_line": 633,
+          "end_line": 642
+        },
+        {
+          "description": "Unwield removes on_wield target only",
+          "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+          "start_line": 743,
+          "end_line": 785
+        },
+        {
+          "description": "ActionSweep resets per-action hit count",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 247,
+          "end_line": 254
+        },
+        {
+          "description": "ActionSweep increments target_number and sends attack",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 1330,
+          "end_line": 1404
+        },
+        {
+          "description": "ActionSweep target progression",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 1416,
+          "end_line": 1425
+        },
+        {
+          "description": "ActionSweep passes charge/special/item/target_number",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 1486,
+          "end_line": 1503
+        },
+        {
+          "description": "ActionSweep sticky repeated attack events",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 769,
+          "end_line": 787
+        },
+        {
+          "description": "Attack on_hit event params/gates",
+          "path": "scripts/utilities/attack/attack.lua",
+          "start_line": 577,
+          "end_line": 623
+        },
+        {
+          "description": "Stagger strength uses impact multiplier",
+          "path": "scripts/utilities/attack/stagger_calculation.lua",
+          "start_line": 67,
+          "end_line": 92
+        },
+        {
+          "description": "Melee impact modifier in stagger calculation",
+          "path": "scripts/utilities/attack/stagger_calculation.lua",
+          "start_line": 190,
+          "end_line": 204
+        },
+        {
+          "description": "Impact and stagger-duration stat types",
+          "path": "scripts/settings/buff/buff_settings.lua",
+          "start_line": 876,
+          "end_line": 981
+        },
+        {
+          "description": "Stagger duration general and opt-in branch",
+          "path": "scripts/utilities/attack/stagger.lua",
+          "start_line": 376,
+          "end_line": 408
+        },
+        {
+          "description": "UI display name composition",
+          "path": "scripts/utilities/items.lua",
+          "start_line": 315,
+          "end_line": 327
+        },
+        {
+          "description": "UI family/pattern/mark loc IDs",
+          "path": "scripts/utilities/items.lua",
+          "start_line": 378,
+          "end_line": 426
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk I template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+          "start_line": 15,
+          "end_line": 15
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk I template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+          "start_line": 1183,
+          "end_line": 1185
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk III template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "start_line": 15,
+          "end_line": 15
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk III template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "start_line": 1685,
+          "end_line": 1687
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk VII template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "start_line": 15,
+          "end_line": 15
+        },
+        {
+          "description": "工兵鏟 軍務部 Mk VII template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "start_line": 1689,
+          "end_line": 1691
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk I template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+          "start_line": 14,
+          "end_line": 14
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk I template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+          "start_line": 1504,
+          "end_line": 1506
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk IV template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+          "start_line": 14,
+          "end_line": 14
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk IV template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+          "start_line": 1437,
+          "end_line": 1439
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk VII template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+          "start_line": 15,
+          "end_line": 15
+        },
+        {
+          "description": "「惡魔之爪」劍 卡塔昌 Mk VII template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+          "start_line": 1346,
+          "end_line": 1348
+        },
+        {
+          "description": "撬棍 科技教士 型號6 template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 14,
+          "end_line": 14
+        },
+        {
+          "description": "撬棍 科技教士 型號6 template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 2187,
+          "end_line": 2189
+        },
+        {
+          "description": "碾壓者 憤怒 Mk IVe template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+          "start_line": 17,
+          "end_line": 17
+        },
+        {
+          "description": "碾壓者 憤怒 Mk IVe template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+          "start_line": 1659,
+          "end_line": 1661
+        },
+        {
+          "description": "碾壓者 克魯克 Mk VII template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+          "start_line": 17,
+          "end_line": 17
+        },
+        {
+          "description": "碾壓者 克魯克 Mk VII template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+          "start_line": 1917,
+          "end_line": 1919
+        },
+        {
+          "description": "雷鎚 十字星 Mk II template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+          "start_line": 16,
+          "end_line": 16
+        },
+        {
+          "description": "雷鎚 十字星 Mk II template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+          "start_line": 1778,
+          "end_line": 1780
+        },
+        {
+          "description": "雷鎚 鐵盔 Mk IV template imports weapon trait category",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+          "start_line": 17,
+          "end_line": 17
+        },
+        {
+          "description": "雷鎚 鐵盔 Mk IV template links trait to ukeys and appends",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+          "start_line": 1809,
+          "end_line": 1811
+        },
+        {
+          "description": "工兵鏟 Mk I 普通／重擊是 sweep，profile 設定",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+          "start_line": 157,
+          "end_line": 306
+        },
+        {
+          "description": "工兵鏟 Mk I 特殊上勾為 sweep，使用 axe_stab profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+          "start_line": 866,
+          "end_line": 924
+        },
+        {
+          "description": "工兵鏟 Mk III 普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "start_line": 446,
+          "end_line": 651
+        },
+        {
+          "description": "工兵鏟 Mk III 折疊特殊輕／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "start_line": 245,
+          "end_line": 427
+        },
+        {
+          "description": "工兵鏟 Mk III special_action 是 toggle_special",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "start_line": 1361,
+          "end_line": 1389
+        },
+        {
+          "description": "工兵鏟 Mk VII 普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "start_line": 446,
+          "end_line": 653
+        },
+        {
+          "description": "工兵鏟 Mk VII 折疊特殊輕／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "start_line": 245,
+          "end_line": 427
+        },
+        {
+          "description": "工兵鏟 Mk VII special_action 是 toggle_special",
+          "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "start_line": 1365,
+          "end_line": 1393
+        },
+        {
+          "description": "惡魔之爪 Mk I 普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+          "start_line": 91,
+          "end_line": 306
+        },
+        {
+          "description": "惡魔之爪 Mk I 招架block與後續反擊 sweep/profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+          "start_line": 946,
+          "end_line": 1054
+        },
+        {
+          "description": "惡魔之爪 Mk IV 普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+          "start_line": 91,
+          "end_line": 303
+        },
+        {
+          "description": "惡魔之爪 Mk IV 招架block與後續反擊 sweep/profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+          "start_line": 996,
+          "end_line": 1100
+        },
+        {
+          "description": "惡魔之爪 Mk VII 普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+          "start_line": 92,
+          "end_line": 304
+        },
+        {
+          "description": "惡魔之爪 Mk VII 招架block與後續反擊 sweep/profile",
+          "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+          "start_line": 740,
+          "end_line": 844
+        },
+        {
+          "description": "撬棍普通／重擊 sweep profile",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 184,
+          "end_line": 587
+        },
+        {
+          "description": "撬棍黏附只配置1個額外damage instance，yank_out為停止動畫",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 95,
+          "end_line": 110
+        },
+        {
+          "description": "撬棍黏附模式輕／重攻擊為sweep，設定sticky profile",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 644,
+          "end_line": 818
+        },
+        {
+          "description": "撬棍特殊鍵切換黏附模式",
+          "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+          "start_line": 1420,
+          "end_line": 1456
+        },
+        {
+          "description": "撬棍sticky後續傷害由ActionSweep另呼Attack.execute，item與target_number=1",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 769,
+          "end_line": 787
+        },
+        {
+          "description": "碾壓者 Mk IVe 普通／重擊sweep及special-active profile",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+          "start_line": 157,
+          "end_line": 358
+        },
+        {
+          "description": "碾壓者 Mk IVe special_action只啟動模式",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+          "start_line": 1147,
+          "end_line": 1193
+        },
+        {
+          "description": "碾壓者 Mk IVe爆炸特殊類別與template",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+          "start_line": 1239,
+          "end_line": 1248
+        },
+        {
+          "description": "碾壓者 Mk VII普通／重擊sweep及special-active profile",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+          "start_line": 261,
+          "end_line": 438
+        },
+        {
+          "description": "碾壓者 Mk VII special_action只啟動模式",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+          "start_line": 1384,
+          "end_line": 1443
+        },
+        {
+          "description": "碾壓者 Mk VII爆炸特殊類別與template",
+          "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+          "start_line": 1490,
+          "end_line": 1503
+        },
+        {
+          "description": "碾壓者通電首擊爆炸沿用weapon.item",
+          "path": "scripts/extension_systems/weapon/special_classes/weapon_special_explode_on_impact.lua",
+          "start_line": 53,
+          "end_line": 86
+        },
+        {
+          "description": "碾壓者M1/M2爆炸模板使用close/outer damage profiles",
+          "path": "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+          "start_line": 221,
+          "end_line": 340
+        },
+        {
+          "description": "爆炸依序以item、target_number呼Attack.execute",
+          "path": "scripts/extension_systems/weapon/weapon_system.lua",
+          "start_line": 219,
+          "end_line": 312
+        },
+        {
+          "description": "雷鎚 Mk II普通／重擊及special-active sweep profiles",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+          "start_line": 156,
+          "end_line": 345
+        },
+        {
+          "description": "雷鎚 Mk II special_action為activate_special，不含命中掃擊",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+          "start_line": 1335,
+          "end_line": 1401
+        },
+        {
+          "description": "雷鎚 Mk IV普通／重擊及special-active sweep profiles",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+          "start_line": 157,
+          "end_line": 345
+        },
+        {
+          "description": "雷鎚 Mk IV special_action為activate_special，不含命中掃擊",
+          "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+          "start_line": 1350,
+          "end_line": 1420
+        },
+        {
+          "description": "ActionSweep從普通／special_active action profile選傷害profile",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start_line": 1730,
+          "end_line": 1738
+        },
+        {
+          "description": "Mk VII獨立爆炸特殊類別傳weapon.item",
+          "path": "scripts/extension_systems/weapon/special_classes/weapon_special_explode_on_impact_cooldown.lua",
+          "start_line": 69,
+          "end_line": 104
+        },
+        {
+          "description": "Mk IVe爆炸profile及proc旗標",
+          "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/settings_templates/ogryn_power_maul_damage_profile_templates.lua",
+          "start_line": 2142,
+          "end_line": 2249
+        },
+        {
+          "description": "Mk VII爆炸profile及proc旗標",
+          "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/settings_templates/ogryn_power_maul_damage_profile_templates.lua",
+          "start_line": 2358,
+          "end_line": 2465
+        },
+        {
+          "description": "Attack排除傷害類型",
+          "path": "scripts/utilities/attack/attack.lua",
+          "start_line": 86,
+          "end_line": 88
+        },
+        {
+          "description": "ProcBuff實際事件條件及觸發順序",
+          "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+          "start_line": 304,
+          "end_line": 342
+        }
+      ],
+      "file_sha256": {
+        "AI Prompt/Blessings-Workflow.md": "cf3cc93fc21f1510683a1730b7a98f3949a432f79032749c3aa8c3c1c9451b6e",
+        "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "2ff968232284c26fd191abbf4a1899c73b7b5979ea36a3ccc2ba9df2d2689839",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "f7b446698d46e6e776d005169d000cbf34fad00326702fe7833ffe6121c5701d",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-config.json": "55bb5227f54e7ddb5704f2829d53558ed0e07aa0d74a5da3471beb8da556a273",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-agent-config.json": "d8c4a84e431dba97d6721ae54d8242545f0b71aa876dbb935576afed30e053c3",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-extension-draft.json": "178777d7ee7cf03f227973351e1b37249ef10fb65c8cd1425c4c3b797c837010",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-traits-review.json": "46ab6eea5f0cc729892e04bbb740bd06f730c73e8c6c8378bd2855fc84c0f9ee",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-ui-review.json": "243188f6e06e9c596bbc18b4c4c34dd5f688a41aa12991e43ab656b269e8e872",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-mechanism-review.json": "a5b82dae6ee978ccd86371f0f8f5e85764113c01263e991825688b422fab95f3",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-ui-raw-verification.json": "938ae6b12d6ff509c5ce2cfb79db4568340ab2e547e6a03f26caf8f410e88469",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-modes-part1.json": "e683c2889352d7e61e611a9ad21ba5b225ef1af3376fa569c6ad89c1a5e5103f",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-modes-part2.json": "c4142ae381e269efdbe6f9c0784492b541f2f8ee8ee6966768cfbe6cb156c175",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-raw-verification.json": "b1f372db9763c252edae6c38b54a3a667a01f644e8f90b1bb22e122c6929ae72",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-extension-raw-verification.json": "938ae6b12d6ff509c5ce2cfb79db4568340ab2e547e6a03f26caf8f410e88469",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-image.json": "136fb138afc8450a1800b02fab7d55073daedf444b1304d6a93428f5b7eb5202",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-image-upload-journal.json": "feefb00a36818863285417ead62bb8caa7939caae3d54f077900bd9b0fefb21a",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/DAMAGE_PERCENTAGE_REVIEW.md": "b2a87c5621a1fd1207ae0af126b69c75bd9eafcaf0aa4f4cf26b70501d0dca52",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/LOCALIZATION_COMPARISON.md": "2ce84620a7a8fb65517db7cc65d4cba55a46d489ea98ab06f905dff6ded191c5",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/README.md": "dac900629e648ce68abf4b3ccda62ed11e91ed7662d202675388afc13f66256d",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/SOURCE_INDEX.md": "ba3d8bd8cd0762304798191554b1c9f6aee22860a7d41821e542f1cc9c0c05ae",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/TIER_VALUES.md": "f29284eb81195bcccee320529d566d277e8730a84bdfd37e3280ffbfbc10c72a",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/WEAPON_COMPATIBILITY.md": "1f0d98c356fda90b8920077606de395acb86c6f2498d5d3386b87c9a0353e0af",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger.md": "5f08f782eb7f056d433d651d765ec48a4354e15d0ad30614afc5aa1b56546992",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger.md": "1a11d5f88af1c262b8c92022f85d513a11a4669ff8be1a4923675ad3b4252dcb",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger.md": "34b831f5650397eb09c823de7d51d3ac64c44650dfc2c96261f32d83b026b078",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger.md": "adc5f9a9187de94584d23f540c751953e4c5a99f1ff6eb099dd6a9e76259b02b",
+        "Game Info/releases/1.13.X/blessings/entries/創傷/weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger.md": "c3d5d8575ee45021530c7c9c6eb3a0c1732bcdd0e5d8a3403e05e64dd28f71c7"
+      }
+    },
+    "peer_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-agent-peer-review.json",
+    "peer_review_sha256": "11b00c3ed2e2a6403c2812b0387de31c5e6cf2a470ccac2993534977691d3f36",
+    "primary_reviewer": "Sol / xhigh",
+    "required_corrections": [],
+    "faster_enabled": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "trauma",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_172",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_172.png",
+      "attachment": "https://github.com/user-attachments/assets/3a924413-234e-4bef-a8eb-1effc40b59ee",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968897958",
+      "acquired_date": "2026-10-03",
+      "sha256": "38f9b71eebd00d197fd960ab04b7a0c029c956390f110978d51307dc7d83e66f",
+      "content_type": "image/png",
+      "size": 2914,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "創傷祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Sol directly inspected the public 128×128 icon attachment; source/public SHA-256 and metadata icon mapping match."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 20,
+      "rows": 342,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 100,
+      "source_files": 43,
+      "bindings": 272,
+      "variants": 142,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 20,
+      "source_object_cache": {
+        "cache_hits": 43,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 23,
+      "local_references": 514,
+      "remote_references": 371,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 1,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/efficiency-validator-change-full-scan.json",
+        "sha256": "c9ccd183be4eaef6d88aa5774ff35f1f4f69237278203629548bb184cc6ce6b7",
+        "trigger": "efficiency-validator-change"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 131,
+    "not_started_name_groups": 129,
+    "partial_name_groups": 2,
+    "remaining_variants": 463,
+    "remaining_bindings": 913,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "f7b446698d46e6e776d005169d000cbf34fad00326702fe7833ffe6121c5701d"
+  },
+  "previous_local_commit": "5e8d0a50eb24fa008f70923abd6c5b5ae3adb140",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "primary_reviewer": "Sol / xhigh",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "core_mechanism_receipt": {
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "core_direct_source_ranges": [
+        [
+          "共用父子buff",
+          "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+          809,
+          834
+        ],
+        [
+          "連續首目標命中計數",
+          "scripts/settings/buff/buff_utils.lua",
+          92,
+          114
+        ],
+        [
+          "default每層命中數",
+          "scripts/settings/buff/buff_utils.lua",
+          35,
+          35
+        ],
+        [
+          "按目標層數父class全定義",
+          "scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua",
+          1,
+          88
+        ],
+        [
+          "父class基底子buff與層數增減",
+          "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+          10,
+          182
+        ],
+        [
+          "有效層数offset與clamp",
+          "scripts/extension_systems/buff/buffs/buff.lua",
+          397,
+          410
+        ],
+        [
+          "stat逐層相乘或相加",
+          "scripts/extension_systems/buff/buffs/buff.lua",
+          689,
+          747
+        ],
+        [
+          "踉蹌時間真正consumer與opt-in替代",
+          "scripts/utilities/attack/stagger.lua",
+          376,
+          408
+        ]
+      ],
+      "tier_melee_impact_per_effective_stack": [
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "effective_max_stacks": 5,
+      "initial_proc_count_to_first_effective_stack": 3,
+      "after_expiry_counter_zero_to_first_effective_stack": 2,
+      "expire_only_when_active_child_count_above_base": true,
+      "expiry_check": "last_hit_time + child_duration < current_time; child_duration=2",
+      "initial_zero_stack_hits_do_not_have_active_expiry_guard": true,
+      "duration_multiplier_per_stack": 1.1,
+      "max_duration_multiplier": 1.6105100000000006,
+      "duration_formula_normal_branch": "breed_base_duration * 1.1^s + damage_profile_duration_modifier",
+      "duration_opt_in_branch_does_not_read_this_generic_multiplier": true,
+      "read_only_source": true
+    },
+    "actual_mode_field_receipts": [
+      {
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "records": [
+          {
+            "mark_id": "combataxe_p3_m1",
+            "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 63,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 96,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 158,
+                "action": "left_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 227,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel,"
+              },
+              {
+                "line": 228,
+                "action": "left_down_light",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 246,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 306,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_tank,"
+              },
+              {
+                "line": 307,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 320,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 382,
+                "action": "right_diagonal_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 450,
+                "action": "right_diagonal_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel,"
+              },
+              {
+                "line": 451,
+                "action": "right_diagonal_light",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 469,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 531,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_tank,"
+              },
+              {
+                "line": 532,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 545,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 609,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 677,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel,"
+              },
+              {
+                "line": 678,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 688,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 745,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 809,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_smack,"
+              },
+              {
+                "line": 810,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 820,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 876,
+                "action": "special_uppercut",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 923,
+                "action": "special_uppercut",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.axe_stab,"
+              },
+              {
+                "line": 924,
+                "action": "special_uppercut",
+                "source": "\t\tdamage_type = damage_types.axe_light,"
+              }
+            ]
+          },
+          {
+            "mark_id": "combataxe_p3_m2",
+            "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 151,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 157,
+                "action": "wield",
+                "source": "\t\t\tlocal special_active = inventory_slot_component.special_active"
+              },
+              {
+                "line": 195,
+                "action": "melee_start_left_special",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 262,
+                "action": "left_down_light_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 338,
+                "action": "left_down_light_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_shovel_special,"
+              },
+              {
+                "line": 339,
+                "action": "left_down_light_special",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 341,
+                "action": "left_down_light_special",
+                "source": "\t\thit_stickyness_settings = special_light_hit_stickyness_settings,"
+              },
+              {
+                "line": 364,
+                "action": "left_heavy_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 427,
+                "action": "left_heavy_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_special,"
+              },
+              {
+                "line": 428,
+                "action": "left_heavy_special",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 430,
+                "action": "left_heavy_special",
+                "source": "\t\thit_stickyness_settings = special_heavy_hit_stickyness_settings,"
+              },
+              {
+                "line": 446,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 508,
+                "action": "left_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 576,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 577,
+                "action": "left_down_light",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 595,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 651,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_tank,"
+              },
+              {
+                "line": 652,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 666,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 729,
+                "action": "right_diagonal_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 797,
+                "action": "right_diagonal_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 798,
+                "action": "right_diagonal_light",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 816,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 874,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_smite,"
+              },
+              {
+                "line": 875,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 888,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 951,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1019,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 1020,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 1032,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1094,
+                "action": "right_diagonal_light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1162,
+                "action": "right_diagonal_light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_shovel_marks_single_target,"
+              },
+              {
+                "line": 1163,
+                "action": "right_diagonal_light_2",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 1173,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1231,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1292,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 1293,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 1303,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1367,
+                "action": "special_activate",
+                "source": "\t\tkind = \"toggle_special\","
+              },
+              {
+                "line": 1417,
+                "action": "special_activate",
+                "source": "\t\t\tinventory_slot_component.special_active = false"
+              },
+              {
+                "line": 1431,
+                "action": "special_activate",
+                "source": "\t\tlocal special_active = inventory_slot_component and inventory_slot_component.special_active"
+              }
+            ]
+          },
+          {
+            "mark_id": "combataxe_p3_m3",
+            "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 151,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 157,
+                "action": "wield",
+                "source": "\t\t\tlocal special_active = inventory_slot_component.special_active"
+              },
+              {
+                "line": 195,
+                "action": "melee_start_left_special",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 262,
+                "action": "left_down_light_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 338,
+                "action": "left_down_light_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_shovel_special,"
+              },
+              {
+                "line": 339,
+                "action": "left_down_light_special",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 341,
+                "action": "left_down_light_special",
+                "source": "\t\thit_stickyness_settings = special_light_hit_stickyness_settings,"
+              },
+              {
+                "line": 364,
+                "action": "left_heavy_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 427,
+                "action": "left_heavy_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_special,"
+              },
+              {
+                "line": 428,
+                "action": "left_heavy_special",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 430,
+                "action": "left_heavy_special",
+                "source": "\t\thit_stickyness_settings = special_heavy_hit_stickyness_settings,"
+              },
+              {
+                "line": 446,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 509,
+                "action": "light_1",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 577,
+                "action": "light_1",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 578,
+                "action": "light_1",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 597,
+                "action": "heavy_1",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 653,
+                "action": "heavy_1",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_tank,"
+              },
+              {
+                "line": 654,
+                "action": "heavy_1",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 668,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 731,
+                "action": "light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 799,
+                "action": "light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_tank,"
+              },
+              {
+                "line": 800,
+                "action": "light_2",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 818,
+                "action": "heavy_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 876,
+                "action": "heavy_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_shovel_tank,"
+              },
+              {
+                "line": 877,
+                "action": "heavy_2",
+                "source": "\t\tdamage_type = damage_types.shovel_smack,"
+              },
+              {
+                "line": 890,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 955,
+                "action": "light_3",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1023,
+                "action": "light_3",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_shovel_marks_single_target,"
+              },
+              {
+                "line": 1024,
+                "action": "light_3",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 1036,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1099,
+                "action": "light_4",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1167,
+                "action": "light_4",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_shovel_marks_single_target,"
+              },
+              {
+                "line": 1168,
+                "action": "light_4",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 1178,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1235,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1296,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.default_light_shovel_smack,"
+              },
+              {
+                "line": 1297,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.shovel_light,"
+              },
+              {
+                "line": 1307,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1371,
+                "action": "special_activate",
+                "source": "\t\tkind = \"toggle_special\","
+              },
+              {
+                "line": 1421,
+                "action": "special_activate",
+                "source": "\t\t\tinventory_slot_component.special_active = false"
+              },
+              {
+                "line": 1435,
+                "action": "special_activate",
+                "source": "\t\tlocal special_active = inventory_slot_component and inventory_slot_component.special_active"
+              }
+            ]
+          },
+          {
+            "mark_id": "combatsword_p1_m1",
+            "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 69,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 91,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 156,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 232,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 233,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 249,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 306,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword,"
+              },
+              {
+                "line": 307,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 320,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 385,
+                "action": "right_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 457,
+                "action": "right_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 458,
+                "action": "right_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 474,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 533,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword,"
+              },
+              {
+                "line": 534,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_medium,"
+              },
+              {
+                "line": 548,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 615,
+                "action": "left_light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 688,
+                "action": "left_light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_smiter,"
+              },
+              {
+                "line": 689,
+                "action": "left_light_2",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 702,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 768,
+                "action": "right_heavy_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 826,
+                "action": "right_heavy_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword_smiter,"
+              },
+              {
+                "line": 827,
+                "action": "right_heavy_2",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 840,
+                "action": "melee_start_push_combo",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 900,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 951,
+                "action": "parry_special",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1003,
+                "action": "attack_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1053,
+                "action": "attack_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.combatsword_parry_special,"
+              },
+              {
+                "line": 1054,
+                "action": "attack_special",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 1069,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1114,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 1115,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 1125,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              }
+            ]
+          },
+          {
+            "mark_id": "combatsword_p1_m2",
+            "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 69,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 91,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 156,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 230,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 231,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 248,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 303,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword_smiter,"
+              },
+              {
+                "line": 304,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 317,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 382,
+                "action": "right_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 452,
+                "action": "right_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 453,
+                "action": "right_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 469,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 526,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword,"
+              },
+              {
+                "line": 527,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 541,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 608,
+                "action": "left_light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 678,
+                "action": "left_light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 679,
+                "action": "left_light_2",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 692,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 757,
+                "action": "right_light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 828,
+                "action": "right_light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 829,
+                "action": "right_light_2",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 839,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 893,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 935,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_smiter,"
+              },
+              {
+                "line": 936,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 946,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1001,
+                "action": "parry_special",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1053,
+                "action": "attack_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1100,
+                "action": "attack_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.combatsword_parry_special,"
+              },
+              {
+                "line": 1101,
+                "action": "attack_special",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              }
+            ]
+          },
+          {
+            "mark_id": "combatsword_p1_m3",
+            "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 70,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 92,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 156,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 230,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 231,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 247,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 304,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword,"
+              },
+              {
+                "line": 305,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 318,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 383,
+                "action": "right_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 453,
+                "action": "right_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_linesman,"
+              },
+              {
+                "line": 454,
+                "action": "right_light",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 471,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 528,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.heavy_combatsword_smiter,"
+              },
+              {
+                "line": 529,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 543,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 610,
+                "action": "left_light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 683,
+                "action": "left_light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_smiter,"
+              },
+              {
+                "line": 684,
+                "action": "left_light_2",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 694,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 745,
+                "action": "parry_special",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 797,
+                "action": "attack_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 844,
+                "action": "attack_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.combatsword_parry_special,"
+              },
+              {
+                "line": 845,
+                "action": "attack_special",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 858,
+                "action": "melee_start_special_combo",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 923,
+                "action": "right_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 971,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_combatsword_smiter_stab,"
+              },
+              {
+                "line": 972,
+                "action": "right_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.metal_slashing_light,"
+              },
+              {
+                "line": 982,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "records": [
+          {
+            "mark_id": "crowbar_p1_m1",
+            "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 1081,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 1087,
+                "action": "wield",
+                "source": "\t\t\tlocal special_active = inventory_slot_component.special_active"
+              },
+              {
+                "line": 1134,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1198,
+                "action": "light_3",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1264,
+                "action": "light_3",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_crowbar_tank,"
+              },
+              {
+                "line": 1265,
+                "action": "light_3",
+                "source": "\t\tdamage_type = damage_types.blunt_light,"
+              },
+              {
+                "line": 1277,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1340,
+                "action": "light_4",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1406,
+                "action": "light_4",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_crowbar_tank,"
+              },
+              {
+                "line": 1407,
+                "action": "light_4",
+                "source": "\t\tdamage_type = damage_types.blunt_light,"
+              },
+              {
+                "line": 1420,
+                "action": "special_activate_1",
+                "source": "\t\tkind = \"toggle_special\","
+              },
+              {
+                "line": 1454,
+                "action": "special_activate_2",
+                "source": "\t\tkind = \"toggle_special\","
+              },
+              {
+                "line": 1539,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1589,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1661,
+                "action": "pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1721,
+                "action": "pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_crowbar_tank,"
+              },
+              {
+                "line": 1722,
+                "action": "pushfollow",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1737,
+                "action": "pushfollow_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1799,
+                "action": "pushfollow_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.light_crowbar_tank,"
+              },
+              {
+                "line": 1800,
+                "action": "pushfollow_special",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1836,
+                "action": "pushfollow_special",
+                "source": "\t\t\tinventory_slot_component.special_active = false"
+              },
+              {
+                "line": 1850,
+                "action": "pushfollow_special",
+                "source": "\t\tlocal special_active = inventory_slot_component and inventory_slot_component.special_active"
+              }
+            ]
+          },
+          {
+            "mark_id": "powermaul_2h_p1_m1",
+            "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 75,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 98,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 167,
+                "action": "left_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 243,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 244,
+                "action": "left_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 245,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active,"
+              },
+              {
+                "line": 265,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 345,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_heavy_smiter,"
+              },
+              {
+                "line": 346,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 347,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_heavy_smiter_active,"
+              },
+              {
+                "line": 363,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 434,
+                "action": "right_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 509,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_smiter,"
+              },
+              {
+                "line": 510,
+                "action": "right_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 511,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_smiter_active,"
+              },
+              {
+                "line": 531,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 614,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_heavy_tank,"
+              },
+              {
+                "line": 615,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 616,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_heavy_tank_active,"
+              },
+              {
+                "line": 636,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 706,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 782,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 783,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 784,
+                "action": "left_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active,"
+              },
+              {
+                "line": 797,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 867,
+                "action": "right_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 947,
+                "action": "right_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 948,
+                "action": "right_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 949,
+                "action": "right_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active,"
+              },
+              {
+                "line": 962,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1020,
+                "action": "left_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1083,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_pushfollow,"
+              },
+              {
+                "line": 1084,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1085,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_pushfollow_active,"
+              },
+              {
+                "line": 1097,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1151,
+                "action": "weapon_special",
+                "source": "\t\tkind = \"activate_special\","
+              }
+            ]
+          },
+          {
+            "mark_id": "powermaul_2h_p1_m2",
+            "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 100,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 123,
+                "action": "melee_start_1",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 189,
+                "action": "melee_start_slide",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 261,
+                "action": "light_1",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 335,
+                "action": "light_1",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_smiter,"
+              },
+              {
+                "line": 336,
+                "action": "light_1",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 337,
+                "action": "light_1",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_smiter_active_m2,"
+              },
+              {
+                "line": 356,
+                "action": "heavy_1",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 436,
+                "action": "heavy_1",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_heavy_tank,"
+              },
+              {
+                "line": 437,
+                "action": "heavy_1",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 438,
+                "action": "heavy_1",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_heavy_tank_active_m2,"
+              },
+              {
+                "line": 451,
+                "action": "melee_start_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 522,
+                "action": "light_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 595,
+                "action": "light_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 596,
+                "action": "light_2",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 597,
+                "action": "light_2",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active_m2,"
+              },
+              {
+                "line": 616,
+                "action": "heavy_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 699,
+                "action": "heavy_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_heavy_smiter,"
+              },
+              {
+                "line": 700,
+                "action": "heavy_2",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 701,
+                "action": "heavy_2",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_heavy_smiter_active_m2,"
+              },
+              {
+                "line": 717,
+                "action": "melee_start_3",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 782,
+                "action": "melee_start_3_alt",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 850,
+                "action": "light_3",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 925,
+                "action": "light_3",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 926,
+                "action": "light_3",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 927,
+                "action": "light_3",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active_m2,"
+              },
+              {
+                "line": 946,
+                "action": "heavy_3",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1026,
+                "action": "heavy_3",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_heavy_smiter,"
+              },
+              {
+                "line": 1027,
+                "action": "heavy_3",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1028,
+                "action": "heavy_3",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_heavy_smiter_active_m2,"
+              },
+              {
+                "line": 1041,
+                "action": "melee_start_4",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1111,
+                "action": "light_4",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1186,
+                "action": "light_4",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_tank,"
+              },
+              {
+                "line": 1187,
+                "action": "light_4",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1188,
+                "action": "light_4",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active_m2,"
+              },
+              {
+                "line": 1200,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1251,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1311,
+                "action": "pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1373,
+                "action": "pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.powermaul_2h_light_pushfollow,"
+              },
+              {
+                "line": 1374,
+                "action": "pushfollow",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1375,
+                "action": "pushfollow",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.powermaul_2h_light_tank_active_m2,"
+              },
+              {
+                "line": 1388,
+                "action": "weapon_special",
+                "source": "\t\tkind = \"activate_special\","
+              }
+            ]
+          },
+          {
+            "mark_id": "thunderhammer_2h_p1_m1",
+            "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 63,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 84,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 156,
+                "action": "left_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 230,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light,"
+              },
+              {
+                "line": 231,
+                "action": "left_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 232,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_active,"
+              },
+              {
+                "line": 260,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 339,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 340,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 341,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep_m1,"
+              },
+              {
+                "line": 364,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 429,
+                "action": "melee_start_right_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 502,
+                "action": "right_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 577,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light,"
+              },
+              {
+                "line": 578,
+                "action": "right_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 579,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_active,"
+              },
+              {
+                "line": 607,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 688,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 689,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 690,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep_m1,"
+              },
+              {
+                "line": 713,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 784,
+                "action": "left_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 858,
+                "action": "left_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light_plus,"
+              },
+              {
+                "line": 859,
+                "action": "left_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 860,
+                "action": "left_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_active,"
+              },
+              {
+                "line": 888,
+                "action": "left_heavy_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 943,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 944,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 945,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep_m1,"
+              },
+              {
+                "line": 966,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 1023,
+                "action": "left_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1080,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_pushfollow,"
+              },
+              {
+                "line": 1081,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1082,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_pushfollow_active,"
+              },
+              {
+                "line": 1105,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 1163,
+                "action": "melee_start_special",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1235,
+                "action": "heavy_special",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1315,
+                "action": "heavy_special",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 1316,
+                "action": "heavy_special",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1317,
+                "action": "heavy_special",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep_m1,"
+              },
+              {
+                "line": 1342,
+                "action": "activate_special_left",
+                "source": "\t\tkind = \"activate_special\","
+              },
+              {
+                "line": 1365,
+                "action": "activate_special_right",
+                "source": "\t\tkind = \"activate_special\","
+              },
+              {
+                "line": 1387,
+                "action": "activate_special_left_2",
+                "source": "\t\tkind = \"activate_special\","
+              }
+            ]
+          },
+          {
+            "mark_id": "thunderhammer_2h_p1_m2",
+            "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+            "fixed_source_action_fields": [
+              {
+                "line": 65,
+                "action": "wield",
+                "source": "\t\tkind = \"wield\","
+              },
+              {
+                "line": 86,
+                "action": "melee_start_left",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 157,
+                "action": "left_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 235,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light_linesman,"
+              },
+              {
+                "line": 236,
+                "action": "left_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 237,
+                "action": "left_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_linesman_active_sweep,"
+              },
+              {
+                "line": 266,
+                "action": "left_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 345,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 346,
+                "action": "left_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 347,
+                "action": "left_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep,"
+              },
+              {
+                "line": 370,
+                "action": "melee_start_right",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 443,
+                "action": "right_down_light",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 517,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light,"
+              },
+              {
+                "line": 518,
+                "action": "right_down_light",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 519,
+                "action": "right_down_light",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light,"
+              },
+              {
+                "line": 548,
+                "action": "right_heavy",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 629,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy,"
+              },
+              {
+                "line": 630,
+                "action": "right_heavy",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 631,
+                "action": "right_heavy",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep,"
+              },
+              {
+                "line": 655,
+                "action": "melee_start_left_2",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 726,
+                "action": "left_heavy_2",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 781,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_heavy_smiter,"
+              },
+              {
+                "line": 782,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 783,
+                "action": "left_heavy_2",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_heavy_active_sweep,"
+              },
+              {
+                "line": 804,
+                "action": "block",
+                "source": "\t\tkind = \"block\","
+              },
+              {
+                "line": 855,
+                "action": "push",
+                "source": "\t\tkind = \"push\","
+              },
+              {
+                "line": 919,
+                "action": "left_light_pushfollow",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 980,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light_linesman,"
+              },
+              {
+                "line": 981,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 982,
+                "action": "left_light_pushfollow",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_linesman_active_sweep,"
+              },
+              {
+                "line": 1005,
+                "action": "melee_start_pushfollow_combo",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1077,
+                "action": "light_pushfollow_combo",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1156,
+                "action": "light_pushfollow_combo",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light_linesman,"
+              },
+              {
+                "line": 1157,
+                "action": "light_pushfollow_combo",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1158,
+                "action": "light_pushfollow_combo",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light_linesman_active_sweep,"
+              },
+              {
+                "line": 1182,
+                "action": "melee_start_left_3",
+                "source": "\t\tkind = \"windup\","
+              },
+              {
+                "line": 1255,
+                "action": "right_down_light_push_combo",
+                "source": "\t\tkind = \"sweep\","
+              },
+              {
+                "line": 1329,
+                "action": "right_down_light_push_combo",
+                "source": "\t\tdamage_profile = DamageProfileTemplates.thunderhammer_light_plus,"
+              },
+              {
+                "line": 1330,
+                "action": "right_down_light_push_combo",
+                "source": "\t\tdamage_type = damage_types.blunt,"
+              },
+              {
+                "line": 1331,
+                "action": "right_down_light_push_combo",
+                "source": "\t\tdamage_profile_special_active = DamageProfileTemplates.thunderhammer_light,"
+              },
+              {
+                "line": 1357,
+                "action": "activate_special_left",
+                "source": "\t\tkind = \"activate_special\","
+              },
+              {
+                "line": 1382,
+                "action": "activate_special_right",
+                "source": "\t\tkind = \"activate_special\","
+              },
+              {
+                "line": 1406,
+                "action": "activate_special_left_2",
+                "source": "\t\tkind = \"activate_special\","
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "initial_first_stack_event": 3,
+    "first_stack_after_expiry_event": 2,
+    "tier_overrides_replace_default": true,
+    "same_target_not_required": true,
+    "first_target_only_per_independent_attack": true,
+    "crushers_separate_explosion_first_target_can_progress": true,
+    "cooldown_special_class_independently_verified": true,
+    "no_skip_on_hit_proc_in_four_explosion_profiles": true,
+    "hidden_duration_multiplier_pow_1_1_per_stack": true,
+    "opt_in_duration_branch_bypasses_generic": true,
+    "verified_examples": "- **疊層前提**：每次攻擊各有一個有效命中事件，沒有目標序號大於1的事件插入；每次間隔均短於2秒。\n\n- **首次疊層**：第1次命中將計數設為0，第2次使計數為1但仍無有效層，第3次命中首次給1層；第7次命中達5層。\n\n- **逾期後重疊**：5層時最後一次有效更新在`t=10.0秒`，之後直到`t>12.0秒`都沒有有效命中；更新檢查清除層數和計數。清除後第1次有效命中不給層，第2次有效命中給1層。\n\n- **IV級衝擊階段**：假設基礎衝擊值為100、已達5層、其他衝擊修正均為1，並忽略蓄力與目標端修正。近戰衝擊修正為`1 + 5×0.20 = 2.0`，此結算階段的衝擊值為`100×2.0 = 200`；實際踉蹌強度仍由目標與攻擊設定決定。\n\n- **IV級踉蹌時間**：假設同一踉蹌類型的基礎時間為0.5秒、已達5層、使用一般踉蹌時間設定，其他一般踉蹌時間修正為1，且攻擊設定的額外時間修正為0。計算為`0.5×1.1^5 = 0.805255秒`；使用獨立踉蹌時間設定的攻擊不採用此通用倍率。",
+    "fixed_source_references_directly_reviewed": [
+      [
+        "I–IV覆寫及format_values：工兵鏟",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        64,
+        123
+      ],
+      [
+        "I–IV覆寫及format_values：惡魔之爪劍",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        512,
+        573
+      ],
+      [
+        "I–IV覆寫及format_values：撬棍",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        64,
+        123
+      ],
+      [
+        "I–IV覆寫及format_values：碾壓者",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        74,
+        133
+      ],
+      [
+        "I–IV覆寫及format_values：雷鎚",
+        "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        549,
+        610
+      ],
+      [
+        "父子Buff clone及child引用：工兵鏟",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        17,
+        19
+      ],
+      [
+        "父子Buff clone及child引用：惡魔之爪劍",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        76,
+        78
+      ],
+      [
+        "父子Buff clone及child引用：撬棍",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        17,
+        19
+      ],
+      [
+        "父子Buff clone及child引用：碾壓者",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        11,
+        13
+      ],
+      [
+        "父子Buff clone及child引用：雷鎚",
+        "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        43,
+        45
+      ],
+      [
+        "Base parent/child預設條件、持續時間及stat",
+        "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        809,
+        834
+      ],
+      [
+        "BuffUtils hit counter與target_number gate",
+        "scripts/settings/buff/buff_utils.lua",
+        35,
+        114
+      ],
+      [
+        "Target-number parent timeout/reset/stack update",
+        "scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua",
+        7,
+        88
+      ],
+      [
+        "Parent proc buff child creation, removal and timer refresh",
+        "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+        10,
+        182
+      ],
+      [
+        "Buff有效層stack_offset",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        397,
+        429
+      ],
+      [
+        "Trait override applied to conditional stat and per-stack calc",
+        "scripts/extension_systems/buff/buffs/buff.lua",
+        689,
+        747
+      ],
+      [
+        "ProcBuff conditional event gate",
+        "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        247,
+        253
+      ],
+      [
+        "Exact item-match gate",
+        "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+        721,
+        726
+      ],
+      [
+        "Wielded-slot conditional",
+        "scripts/settings/buff/helper_functions/conditional_functions.lua",
+        43,
+        59
+      ],
+      [
+        "Trait buff target on_equip",
+        "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+        168,
+        210
+      ],
+      [
+        "on_equip buff installed at equip",
+        "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+        633,
+        642
+      ],
+      [
+        "Unwield removes on_wield target only",
+        "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+        743,
+        785
+      ],
+      [
+        "ActionSweep resets per-action hit count",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        247,
+        254
+      ],
+      [
+        "ActionSweep increments target_number and sends attack",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        1330,
+        1404
+      ],
+      [
+        "ActionSweep target progression",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        1416,
+        1425
+      ],
+      [
+        "ActionSweep passes charge/special/item/target_number",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        1486,
+        1503
+      ],
+      [
+        "ActionSweep sticky repeated attack events",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        769,
+        787
+      ],
+      [
+        "Attack on_hit event params/gates",
+        "scripts/utilities/attack/attack.lua",
+        577,
+        623
+      ],
+      [
+        "Stagger strength uses impact multiplier",
+        "scripts/utilities/attack/stagger_calculation.lua",
+        67,
+        92
+      ],
+      [
+        "Melee impact modifier in stagger calculation",
+        "scripts/utilities/attack/stagger_calculation.lua",
+        190,
+        204
+      ],
+      [
+        "Impact and stagger-duration stat types",
+        "scripts/settings/buff/buff_settings.lua",
+        876,
+        981
+      ],
+      [
+        "Stagger duration general and opt-in branch",
+        "scripts/utilities/attack/stagger.lua",
+        376,
+        408
+      ],
+      [
+        "UI display name composition",
+        "scripts/utilities/items.lua",
+        315,
+        327
+      ],
+      [
+        "UI family/pattern/mark loc IDs",
+        "scripts/utilities/items.lua",
+        378,
+        426
+      ],
+      [
+        "工兵鏟 軍務部 Mk I template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        15,
+        15
+      ],
+      [
+        "工兵鏟 軍務部 Mk I template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        1183,
+        1185
+      ],
+      [
+        "工兵鏟 軍務部 Mk III template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        15,
+        15
+      ],
+      [
+        "工兵鏟 軍務部 Mk III template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        1685,
+        1687
+      ],
+      [
+        "工兵鏟 軍務部 Mk VII template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        15,
+        15
+      ],
+      [
+        "工兵鏟 軍務部 Mk VII template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        1689,
+        1691
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk I template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk I template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        1504,
+        1506
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk IV template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        14,
+        14
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk IV template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        1437,
+        1439
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk VII template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        15,
+        15
+      ],
+      [
+        "「惡魔之爪」劍 卡塔昌 Mk VII template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        1346,
+        1348
+      ],
+      [
+        "撬棍 科技教士 型號6 template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        14,
+        14
+      ],
+      [
+        "撬棍 科技教士 型號6 template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        2187,
+        2189
+      ],
+      [
+        "碾壓者 憤怒 Mk IVe template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        17,
+        17
+      ],
+      [
+        "碾壓者 憤怒 Mk IVe template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        1659,
+        1661
+      ],
+      [
+        "碾壓者 克魯克 Mk VII template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        17,
+        17
+      ],
+      [
+        "碾壓者 克魯克 Mk VII template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        1917,
+        1919
+      ],
+      [
+        "雷鎚 十字星 Mk II template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        16,
+        16
+      ],
+      [
+        "雷鎚 十字星 Mk II template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        1778,
+        1780
+      ],
+      [
+        "雷鎚 鐵盔 Mk IV template imports weapon trait category",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        17,
+        17
+      ],
+      [
+        "雷鎚 鐵盔 Mk IV template links trait to ukeys and appends",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        1809,
+        1811
+      ],
+      [
+        "工兵鏟 Mk I 普通／重擊是 sweep，profile 設定",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        157,
+        306
+      ],
+      [
+        "工兵鏟 Mk I 特殊上勾為 sweep，使用 axe_stab profile",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        866,
+        924
+      ],
+      [
+        "工兵鏟 Mk III 普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        446,
+        651
+      ],
+      [
+        "工兵鏟 Mk III 折疊特殊輕／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        245,
+        427
+      ],
+      [
+        "工兵鏟 Mk III special_action 是 toggle_special",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        1361,
+        1389
+      ],
+      [
+        "工兵鏟 Mk VII 普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        446,
+        653
+      ],
+      [
+        "工兵鏟 Mk VII 折疊特殊輕／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        245,
+        427
+      ],
+      [
+        "工兵鏟 Mk VII special_action 是 toggle_special",
+        "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        1365,
+        1393
+      ],
+      [
+        "惡魔之爪 Mk I 普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        91,
+        306
+      ],
+      [
+        "惡魔之爪 Mk I 招架block與後續反擊 sweep/profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        946,
+        1054
+      ],
+      [
+        "惡魔之爪 Mk IV 普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        91,
+        303
+      ],
+      [
+        "惡魔之爪 Mk IV 招架block與後續反擊 sweep/profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        996,
+        1100
+      ],
+      [
+        "惡魔之爪 Mk VII 普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        92,
+        304
+      ],
+      [
+        "惡魔之爪 Mk VII 招架block與後續反擊 sweep/profile",
+        "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        740,
+        844
+      ],
+      [
+        "撬棍普通／重擊 sweep profile",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        184,
+        587
+      ],
+      [
+        "撬棍黏附只配置1個額外damage instance，yank_out為停止動畫",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        95,
+        110
+      ],
+      [
+        "撬棍黏附模式輕／重攻擊為sweep，設定sticky profile",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        644,
+        818
+      ],
+      [
+        "撬棍特殊鍵切換黏附模式",
+        "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        1420,
+        1456
+      ],
+      [
+        "撬棍sticky後續傷害由ActionSweep另呼Attack.execute，item與target_number=1",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        769,
+        787
+      ],
+      [
+        "碾壓者 Mk IVe 普通／重擊sweep及special-active profile",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        157,
+        358
+      ],
+      [
+        "碾壓者 Mk IVe special_action只啟動模式",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        1147,
+        1193
+      ],
+      [
+        "碾壓者 Mk IVe爆炸特殊類別與template",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        1239,
+        1248
+      ],
+      [
+        "碾壓者 Mk VII普通／重擊sweep及special-active profile",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        261,
+        438
+      ],
+      [
+        "碾壓者 Mk VII special_action只啟動模式",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        1384,
+        1443
+      ],
+      [
+        "碾壓者 Mk VII爆炸特殊類別與template",
+        "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        1490,
+        1503
+      ],
+      [
+        "碾壓者通電首擊爆炸沿用weapon.item",
+        "scripts/extension_systems/weapon/special_classes/weapon_special_explode_on_impact.lua",
+        53,
+        86
+      ],
+      [
+        "碾壓者M1/M2爆炸模板使用close/outer damage profiles",
+        "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+        221,
+        340
+      ],
+      [
+        "爆炸依序以item、target_number呼Attack.execute",
+        "scripts/extension_systems/weapon/weapon_system.lua",
+        219,
+        312
+      ],
+      [
+        "雷鎚 Mk II普通／重擊及special-active sweep profiles",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        156,
+        345
+      ],
+      [
+        "雷鎚 Mk II special_action為activate_special，不含命中掃擊",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        1335,
+        1401
+      ],
+      [
+        "雷鎚 Mk IV普通／重擊及special-active sweep profiles",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        157,
+        345
+      ],
+      [
+        "雷鎚 Mk IV special_action為activate_special，不含命中掃擊",
+        "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        1350,
+        1420
+      ],
+      [
+        "ActionSweep從普通／special_active action profile選傷害profile",
+        "scripts/extension_systems/weapon/actions/action_sweep.lua",
+        1730,
+        1738
+      ],
+      [
+        "Mk VII獨立爆炸特殊類別傳weapon.item",
+        "scripts/extension_systems/weapon/special_classes/weapon_special_explode_on_impact_cooldown.lua",
+        69,
+        104
+      ],
+      [
+        "Mk IVe爆炸profile及proc旗標",
+        "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/settings_templates/ogryn_power_maul_damage_profile_templates.lua",
+        2142,
+        2249
+      ],
+      [
+        "Mk VII爆炸profile及proc旗標",
+        "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/settings_templates/ogryn_power_maul_damage_profile_templates.lua",
+        2358,
+        2465
+      ],
+      [
+        "Attack排除傷害類型",
+        "scripts/utilities/attack/attack.lua",
+        86,
+        88
+      ],
+      [
+        "ProcBuff實際事件條件及觸發順序",
+        "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        304,
+        342
+      ]
+    ],
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-extension-draft.json",
+      "sha256": "178777d7ee7cf03f227973351e1b37249ef10fb65c8cd1425c4c3b797c837010"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 11,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-ui-review.json",
+      "sha256": "243188f6e06e9c596bbc18b4c4c34dd5f688a41aa12991e43ab656b269e8e872"
+    },
+    "bindings": [
+      {
+        "weapon_id": "combataxe_p3",
+        "mark_id": "combataxe_p3_m1",
+        "trait_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p3_m1",
+          "loc_weapon_pattern_combataxe_p3_m1",
+          "loc_weapon_mark_combataxe_p3_m1"
+        ],
+        "name_zh_tw": "工兵鏟 軍務部 Mk I",
+        "name_en": "Sapper Shovel Munitorum Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "ukeys_line": 1183,
+        "append_line": 1185
+      },
+      {
+        "weapon_id": "combataxe_p3",
+        "mark_id": "combataxe_p3_m2",
+        "trait_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p3_m2",
+          "loc_weapon_pattern_combataxe_p3_m2",
+          "loc_weapon_mark_combataxe_p3_m2"
+        ],
+        "name_zh_tw": "工兵鏟 軍務部 Mk III",
+        "name_en": "Sapper Shovel Munitorum Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "ukeys_line": 1685,
+        "append_line": 1687
+      },
+      {
+        "weapon_id": "combataxe_p3",
+        "mark_id": "combataxe_p3_m3",
+        "trait_id": "weapon_trait_bespoke_combataxe_p3_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combataxe_p3_m3",
+          "loc_weapon_pattern_combataxe_p3_m3",
+          "loc_weapon_mark_combataxe_p3_m3"
+        ],
+        "name_zh_tw": "工兵鏟 軍務部 Mk VII",
+        "name_en": "Sapper Shovel Munitorum Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1689,
+        "append_line": 1691
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "mark_id": "combatsword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p1_m1",
+          "loc_weapon_pattern_combatsword_p1_m1",
+          "loc_weapon_mark_combatsword_p1_m1"
+        ],
+        "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk I",
+        "name_en": "\"Devil's Claw\" Sword Catachan Mk I",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 1504,
+        "append_line": 1506
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "mark_id": "combatsword_p1_m2",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p1_m2",
+          "loc_weapon_pattern_combatsword_p1_m2",
+          "loc_weapon_mark_combatsword_p1_m2"
+        ],
+        "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk IV",
+        "name_en": "\"Devil's Claw\" Sword Catachan Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "ukeys_line": 1437,
+        "append_line": 1439
+      },
+      {
+        "weapon_id": "combatsword_p1",
+        "mark_id": "combatsword_p1_m3",
+        "trait_id": "weapon_trait_bespoke_combatsword_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_combatsword_p1_m3",
+          "loc_weapon_pattern_combatsword_p1_m3",
+          "loc_weapon_mark_combatsword_p1_m3"
+        ],
+        "name_zh_tw": "「惡魔之爪」劍 卡塔昌 Mk VII",
+        "name_en": "\"Devil's Claw\" Sword Catachan Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "ukeys_line": 1346,
+        "append_line": 1348
+      },
+      {
+        "weapon_id": "crowbar_p1",
+        "mark_id": "crowbar_p1_m1",
+        "trait_id": "weapon_trait_bespoke_crowbar_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_crowbar_p1_m1",
+          "loc_weapon_pattern_crowbar_p1_m1",
+          "loc_weapon_mark_crowbar_p1_m1"
+        ],
+        "name_zh_tw": "撬棍 科技教士 型號6",
+        "name_en": "Crowbar Enginseer's Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 2187,
+        "append_line": 2189
+      },
+      {
+        "weapon_id": "powermaul_2h_p1",
+        "mark_id": "powermaul_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_2h_p1_m1",
+          "loc_weapon_pattern_powermaul_2h_p1_m1",
+          "loc_weapon_mark_powermaul_2h_p1_m1"
+        ],
+        "name_zh_tw": "碾壓者 憤怒 Mk IVe",
+        "name_en": "Crusher Indignatus Mk IVe",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "ukeys_line": 1659,
+        "append_line": 1661
+      },
+      {
+        "weapon_id": "powermaul_2h_p1",
+        "mark_id": "powermaul_2h_p1_m2",
+        "trait_id": "weapon_trait_bespoke_powermaul_2h_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_powermaul_2h_p1_m2",
+          "loc_weapon_pattern_powermaul_2h_p1_m2",
+          "loc_weapon_mark_powermaul_2h_p1_m2"
+        ],
+        "name_zh_tw": "碾壓者 克魯克 Mk VII",
+        "name_en": "Crusher Krourk Mk VII",
+        "template_file": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1917,
+        "append_line": 1919
+      },
+      {
+        "weapon_id": "thunderhammer_2h_p1",
+        "mark_id": "thunderhammer_2h_p1_m1",
+        "trait_id": "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_thunderhammer_2h_p1_m1",
+          "loc_weapon_pattern_thunderhammer_2h_p1_m1",
+          "loc_weapon_mark_thunderhammer_2h_p1_m1"
+        ],
+        "name_zh_tw": "雷鎚 十字星 Mk II",
+        "name_en": "Thunder Hammer Crucis Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1778,
+        "append_line": 1780
+      },
+      {
+        "weapon_id": "thunderhammer_2h_p1",
+        "mark_id": "thunderhammer_2h_p1_m2",
+        "trait_id": "weapon_trait_bespoke_thunderhammer_2h_p1_consecutive_hits_increases_stagger",
+        "loc_ids": [
+          "loc_weapon_family_thunderhammer_2h_p1_m2",
+          "loc_weapon_pattern_thunderhammer_2h_p1_m2",
+          "loc_weapon_mark_thunderhammer_2h_p1_m2"
+        ],
+        "name_zh_tw": "雷鎚 鐵盔 Mk IV",
+        "name_en": "Thunder Hammer Ironhelm Mk IV",
+        "template_file": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "ukeys_line": 1809,
+        "append_line": 1811
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 5,
+    "bound_variants": 5,
+    "bindings": 11,
+    "same_name_candidates": [],
+    "exact_key_unresolved_candidates": [],
+    "source_definition_candidates_outside_metadata_intersection": [],
+    "status": "5個相同精確名稱鍵的trait metadata items均綁定到所列11個UI型號；inventory definitions_not_bound與metadata外交集沒有本名稱鍵候選。這只界定本次精確名稱鍵交集，不推定相似suffix或其他名稱鍵定義未使用。",
+    "inventory_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+    "metadata_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+    "ui_review_source": "AI-LOGS/Game Info/local/blessings/2026-10-03/trauma-primary-ui-review.json"
+  }
+}

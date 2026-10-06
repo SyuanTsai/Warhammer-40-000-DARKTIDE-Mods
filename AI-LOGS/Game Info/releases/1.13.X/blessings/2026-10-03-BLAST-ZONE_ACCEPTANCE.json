@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-04",
+  "blessing": "blast-zone",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "model_setting_evidence": "Parent assigned this formal peer review with the existing gpt-6-luna/max settings; runtime self-inspection is unavailable.",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Fixed Blast Zone single-item peer: seven formal entry pages, reverse Rumbler README, map and indexes, translation glossary, approved config/draft, image and focused evidence.",
+    "findings": [
+      "The aimed-shot exception found during initial review is now accurately reflected: a manual idle hipfire start resets the combo, while the aimed projectile action has keep_combo_on_start=true and preserves the prior count before its projectile action increments it; from a reset count this is 0 to 1. The updated README, source index, RAW comparison rule, and variant page agree with fixed-source lines 319-331 and ActionHandler combo logic.",
+      "Own I-IV radius values, wrapper fallback, use_combo capture, and held-slot condition agree with the prior tier/wrapper review; the tier stat override supplies the regular conditional radius value without adding the fallback a second time.",
+      "The player text and formula use the owner stat cache, distinguish the last effective cached combo step from an immediate combo write, and apply the additive radius modifier after native radius interpolation and charge. The q=0.20 plus tier IV/five-step example correctly changes 10 m to 12 m, then 15 m (+25% relative), and never treats radius as damage.",
+      "Rumbler action coverage distinguishes hipfire and aimed projectile shots, running wield/unzoom/reload chains, Bash reset/special attack, and idle starts. The actual weapon automatic conditional inputs map to reload rather than firing, so the manual-start wording does not omit an automatic shot branch.",
+      "The formal map contains one ranged variant and one actual binding: weapon ogryn_thumper_p2, mark ogryn_thumper_p1_m2. UI name, tier, compatibility/reverse index, and icon path weapon_trait_235 are consistent; the attachment URL is kept separate. RAW strings/hash remain separate from static formatter reconstruction, and the q example and source links are consistent."
+    ],
+    "resolved_findings": [
+      {
+        "detail": "Initial review found that action_shoot_zoomed sets keep_combo_on_start=true, so an unqualified idle-shot reset statement was too broad. The parent narrowed the claim and updated the affected formal pages and fixed peer scope; the current wording is accurate."
+      }
+    ],
+    "file_sha256": {
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/DAMAGE_PERCENTAGE_REVIEW.md": "a28f4315a68c3e199ac84bdd62fa3838ccd3d1d3b400d3c0ac01d525d7be5e9d",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/LOCALIZATION_COMPARISON.md": "3c6f1a6fba6d74cc3be4f40439199a296b599a8031acf2b462ba14bc6f0cc024",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/README.md": "4156361ddec5db5846929472377059b18dc9427a5912e136b86beb0d3955730c",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/SOURCE_INDEX.md": "eb5bb7904804fabdf58a79a71e9e2cb89d9b6fd3b90f47510a3cad490350a850",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/TIER_VALUES.md": "5df298fec4de7aa712aa02158b6cf9dbccf04e1f5f085e9cd56e67fb4cb85149",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/WEAPON_COMPATIBILITY.md": "80c555c1c39b8dc7e05c890a4533b346d6f7ab7f31d3a43c9bcdd0f1eae93aa3",
+      "Game Info/releases/1.13.X/blessings/entries/狂轟猛炸/weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire.md": "8606339fd0497bc69a9fe40182291c3ecd371be529a66f1e263820fd6d056bf3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/震盪槍/README.md": "4c5098e3a1f8efdf8177aeb8314ca92e4beb0b7fe185fbe90140a77552bad337",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "02471ee63e00cfe655d484717817be09453f813042b80794598c7b7e4b764aee",
+      "Game Info/releases/1.13.X/blessings/README.md": "f51ca604192e355c5c1cae1c1c42132ff270d3ce4639a4123f4e1929cc5c2f5c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "81e881db25f39fc46a3e507d715fe876cc48e96254f9eaf31f0189703560f643",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "0b38da219a292e368f091d28667a9d7c28a32fafeb684698624b2dc7d201f0fb",
+      "Referneces/Translation.md": "99f27c41d8c42f352fc79873fb3fe3b518950c35fa03929b30cd08b9a939a580",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-config.json": "f2dc4b257d3ef1cf515a9d147997a09b2e3bca241e5cd27f5401483bebd921e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-extension-draft.json": "c14a4bc02cd7b975a19db2a90d39371bb1b3e8faf767591cfa57eebab0d43ee0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-image.json": "429f380d6225f50f6d7a84f4a7ef3f33de603cfc2a87933a190416f7289646c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-resume-review.json": "dc4c5b594d334b51c16a9f969a200466c8efe2456490053f9ff2e8e9e71ad51e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-own-tier-diff.json": "ae241a3b0736370e655b1558bcb022a8d35e4bd3ef4dac4216623592f26947aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-ui-review.json": "d106d7ff02391bf60240338cb29ed49b8bc93fabcbeac1c26138b2b2b1eaff11",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-combo-step-review.json": "df1b05793da1821f136aa43453b3fe2573855dd59ca13214a52eddc404e4b777"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "blast-zone",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_235",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_235.png",
+      "attachment": "https://github.com/user-attachments/assets/f58d086d-bc5a-46d6-bf09-4f10bcf2355c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5975884519",
+      "acquired_date": "2026-10-04",
+      "sha256": "ef3b79e69d6a69b0a28b476e1b8f20b386913e076d3bf2d0d0212a84c29de327",
+      "content_type": "image/png",
+      "size": 4123,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "狂轟猛炸祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_note": "Primary inspected original and public PNG; white luminance on transparent background initially appears white on viewer. Read-only alpha-channel visualizations confirm identical three projectiles with radiating shapes, matching silhouette and no crop at 128x128. Uploaded original LA PNG and downloaded bytes are unchanged.",
+      "alpha_inspection": {
+        "mode": "LA",
+        "luminance_extrema": [
+          255,
+          255
+        ],
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "nontransparent_bounds": [
+          20,
+          4,
+          108,
+          120
+        ],
+        "original_and_public_inspected": true,
+        "original_assets_modified": false
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 205,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 40,
+      "source_files": 22,
+      "bindings": 408,
+      "variants": 214,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 508,
+      "remote_references": 271,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 9,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-008-full-scan.json",
+        "sha256": "e8818006f58c825fcf644685d1d4e16e9307bfe7435852fa511f597606c195fc",
+        "trigger": "round-008"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 110,
+    "not_started_name_groups": 110,
+    "partial_name_groups": 0,
+    "remaining_variants": 391,
+    "remaining_bindings": 777,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "89376d9a31d9b582afb5048add585d04ed8e4418e6f584c60e2076aa42965804"
+  },
+  "previous_local_commit": "b73f1d6286d0254778d52321d847677abc628ad8",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "own_variants": 1,
+    "binding_count": 1,
+    "primary_receipt": "blast-zone-primary-resume-review.json",
+    "additional_receipt": "blast-zone-primary-combo-step-review.json",
+    "own_stat_override_into_conditional_key": true,
+    "logical_steps_not_independent_buffs": true,
+    "idle_and_running_chain_distinction": true,
+    "owner_cache_at_detonation_not_launch_snapshot": true,
+    "radius_not_damage": true,
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-extension-draft.json",
+      "sha256": "c14a4bc02cd7b975a19db2a90d39371bb1b3e8faf767591cfa57eebab0d43ee0"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-ui-review.json",
+      "sha256": "d106d7ff02391bf60240338cb29ed49b8bc93fabcbeac1c26138b2b2b1eaff11"
+    },
+    "bindings": [
+      {
+        "weapon_id": "ogryn_thumper_p2",
+        "mark_id": "ogryn_thumper_p1_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_thumper_p2_explosion_radius_bonus_on_continuous_fire",
+        "loc_ids": {
+          "weapon_family_display_name": "loc_weapon_family_ogryn_thumper_p1_m2",
+          "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_thumper_p1_m2",
+          "weapon_mark_display_name": "loc_weapon_mark_ogryn_thumper_p1_m2"
+        },
+        "name_zh_tw": "震盪槍 洛倫茲 Mk VI",
+        "name_en": "Rumbler Lorenz Mk VI",
+        "template_file": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m2.lua",
+        "import_line": 16,
+        "ukeys_line": 855,
+        "append_line": 857
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-resume-review.json",
+      "sha256": "dc4c5b594d334b51c16a9f969a200466c8efe2456490053f9ff2e8e9e71ad51e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-own-tier-diff.json",
+      "sha256": "ae241a3b0736370e655b1558bcb022a8d35e4bd3ef4dac4216623592f26947aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-combo-step-review.json",
+      "sha256": "df1b05793da1821f136aa43453b3fe2573855dd59ca13214a52eddc404e4b777"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/blast-zone-primary-ui-review.json",
+      "sha256": "d106d7ff02391bf60240338cb29ed49b8bc93fabcbeac1c26138b2b2b1eaff11"
+    }
+  ],
+  "primary_review_method": "Reuse applicable fixed-SHA common mechanisms; directly review own tier override into conditional Buff, logical combo steps, aimed keep-combo exception, grenade live radius consumer, UI/RAW and examples. Current fixed peer scope unchanged.",
+  "previous_objects_unchanged": {
+    "blessings": 56,
+    "variants": 213,
+    "bindings": 407,
+    "all_previous_weapon_records": true
+  }
+}

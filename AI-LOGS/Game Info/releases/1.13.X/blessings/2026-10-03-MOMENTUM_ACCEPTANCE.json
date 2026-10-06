@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-05",
+  "blessing": "momentum",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/勢頭/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits",
+    "weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits",
+    "weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits",
+    "weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits"
+  ],
+  "added_binding_count": 12,
+  "total_variants": 5,
+  "total_bindings": 12,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "momentum-extension-agent-review",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-formal-peer-scope.json",
+    "scope_sha256": "9aa98710a78b040627bc150a962dbc7bafebf5f41d04cf640823665ca0956655",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-config.json": "130608df0a559bbeb682f84b860580748f2a704d4e8eb7c7d156b1fb9bfbf07d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-coverage.json": "bfb78ae58846c665ca230c2e298684dd0ff9770fb7d3f660c9564df02ba2ff6d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-draft.md": "f6326bc8973a2170b5bcc81ba4394f352f994ffb99204049b97a1b30be050473",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-evidence.json": "dad6dd38db2cdda96688130ddc69b0374686dfaba113e6208ebdeddd357e896a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-force-assist-addendum.json": "6ec7e3c8d2f6ab8ee9623927731ccd8db83cb3cf3228ec56441acc31fd48a3c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-config.json": "8db8a248a3b55795e76597b962c724862cc8c70c62155d08412524e9e97de741",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-extension-draft.json": "9207320c1e8b2da4e6c73d91c0bf349650d1a18ed7ee4bc68a4ffdc142adb09b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-image.json": "096e4bb86903f4fcde5826fe6b0d0f3d29e58cbff0b500ea38421245286f6803",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-first-proc-local-review.json": "757bfc22cf5d70c0900fc41fb3875a74fe6855ede9e4f3f8194ee96d847539b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-focused-checks.json": "16e83cbef7b3c76b6ca08ec3bb727749bc60a754dab9778a348ae63f15bde30a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-force-assist-delta-review.json": "434e339607e5ae7d99eb4b2ac9e59df0f11b1e98889169da18060b4d146691c3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-frozen-source-verification.json": "c633babadfdf9894f48df376cfe5a5f1ea089ef2accbe9a9fbf63821ca783de9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-own-tier-diff.json": "32cb261e4de75b1f2895446b52f97034a1c6641fd9a833f8ee4886bb1e51c4a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-recovery-cooldown-diff.json": "f9b9470388c7d346e81fafa14971475449f22feda321bdbb63fb1dfd2831ec8f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-resume-review.json": "62804a9ad5a729a972197b13e85099ac1b4c4c872ef412542cbd594101c8de73",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-traits-review.json": "d0ec8238b74aea4b2ceb0563bd42f7b19329ec42215a7c1d3cf2181dbf07a8a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-ui-raw-verification.json": "5c0ea5b844b2ffa1ff5f7c932aaef3453b0d24148db0cd68b9b2938a03320b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-ui-review.json": "8f12244e45aabafe56e6bb00795a19ec7c4475772ae3087c62e34c7a8531e0b4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "8e32bda818f491619af24e2a2f924e14fc57374d8018da89a74c140b50e6297b",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/DAMAGE_PERCENTAGE_REVIEW.md": "a77b0b55e2404763fe8b1253457febf5e4862dcdc592bca85bd577ef4637ab06",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/LOCALIZATION_COMPARISON.md": "a81b8588e3c94ec28b29a306d249c89d5aa22a789346f56e172e96d1c4e0d1ad",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/README.md": "1cf177e6693ac53dd8b6253c733cd9b59999b837e12d0f10b4cef566d6491c48",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/SOURCE_INDEX.md": "7aaed0cae3677dc690ca559594797d35a0b63cf2bba768df94b626f8d32fc18b",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/TIER_VALUES.md": "70b0de73e4c6f475910ef6e3f4facd7564d4274f663b8c557629a44b9db1fbb8",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/WEAPON_COMPATIBILITY.md": "96f6d6effa15c1df82974ae1c1e7783a2d2f3cae241158ab79de80205aa7c790",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits.md": "36148bd8bcdc329673101b7520a598a6de6306aac03207ce4289d98d602a8448",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits.md": "47b452ba0692e9941432c9a15ef27f2bae54986dca46a769446d036dab9fa948",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits.md": "77b764767888d65da5edf18db8f1e53b98025b1921ff05b198b1bee42e7b629c",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits.md": "df6ed8915f275a43764d1e2a19847de0a6d27db8cf22bb6b6730c8becdeac867",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits.md": "7b575a28b3c39f2d99992ac96d72597338e3bb3da0e0ad23ced5db15840f6d68",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "8af2b37c5604865c0f0fc1adb784e46c0b261321e255fdc94b25ba754a04b4cf",
+      "Game Info/releases/1.13.X/blessings/README.md": "42778a3f86491733c2b1774f03e5b47c83e13935f3b09c8ee2101a56231c3889",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "49df8cb3236e813bc8389bb48ebee7fcb4ea447eaf5c565d9f1b92104d95742a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "24851c4a082ea33210ac7160da3e7625e91a6c2e61cc65d283095b78c386c92d",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/烈焰力場巨劍/README.md": "dd52084c6cd8e72061bd348985e47d670cd78e99af7339ae4d1529ed13f0c21e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/砍刀/README.md": "e42a6f222c10b7ca1d5fc616e30ae5b495edfd2df069c0b96be0c79d68ca010a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重型開膛劍/README.md": "2af408fec41135603540e1240dae7f954dabd3a11989ef831ea77b7d70971a3e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "abe2b48cdc2c630dd285196e7e42e638afac4fd92214150925b355a57d04a595",
+      "Referneces/Translation.md": "6ca66fa4f1daf6cb1dcdefe6011f15e9b305d9240694f3662c4e71c291a2669e"
+    },
+    "scope_integrity": {
+      "expected_files": 40,
+      "missing_files": [],
+      "hash_mismatches": [],
+      "all_exact_hashes_match": true
+    },
+    "reviewed_formal_pages": [
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/DAMAGE_PERCENTAGE_REVIEW.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/README.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/SOURCE_INDEX.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/TIER_VALUES.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/WEAPON_COMPATIBILITY.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_chainsword_2h_p1_toughness_recovery_on_multiple_hits.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_forcesword_2h_p1_toughness_recovery_on_multiple_hits.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_ogryn_club_p2_toughness_recovery_on_multiple_hits.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_ogryn_combatblade_p1_toughness_recovery_on_multiple_hits.md",
+      "Game Info/releases/1.13.X/blessings/entries/勢頭/weapon_trait_bespoke_thunderhammer_2h_p1_toughness_recovery_on_multiple_hits.md"
+    ],
+    "content_review": [
+      {
+        "topic": "Own tiers and wrappers",
+        "result": "All five actual trait IDs have four own tiers .12/.13/.14/.15 and required_num_hits=3. Each actual buff clone replaces the base .5 fallback; canonical config and extension draft configuration are JSON-equivalent. Values and tier-table prose match."
+      },
+      {
+        "topic": "Bindings and item identity",
+        "result": "Five actual inventory trait IDs cover 12 listed Marks exactly once. UI receipt resolves metadata family/pattern/mark names and exact trait append. Shared map kind is melee and its effect exactly matches canonical config; five reverse weapon pages enumerate the related Marks and trait links."
+      },
+      {
+        "topic": "Predicate and event ordinal",
+        "result": "Documented condition is held slot + exact item match + melee Attack + current target_number >= 3, with Attack dispatch/profile/type gates. It is a current per-sweep ordinal, not three accumulated successful on_hit events; prior two targets need not emit events or cause positive damage. No per-sweep latch is claimed."
+      },
+      {
+        "topic": "Attack-mode coverage",
+        "result": "Ordinary/heavy/direct push-follow sweeps are covered; ordinary push body is push and excluded. Direct special profiles remain eligible only when their actual event is melee, dispatched and reaches ordinal >= 3. Force Sword Wind Slash and fling are ranged with no usable target_number. Chainsword sticky profiles skip on_hit and their continuation call uses ordinal 1. The five-family coverage table does not promise that a special attack reaches the third target."
+      },
+      {
+        "topic": "First event, switch, removal, cooldown",
+        "result": "First eligible event is immediately available; each later proc event rechecks the .12-second cooldown. A zero actual recovery still consumes it. Held-slot gate prevents activation while switched away; return uses the existing cooldown. Removing the source buff leaves no callback to process events; no unsupported cooldown-reset guarantee is made."
+      },
+      {
+        "topic": "Recovery and mathematics",
+        "result": "Requested amount is maximum Toughness × tier fraction × toughness_replenish_modifier × toughness_replenish_multiplier (default 1); actual gain is capped at missing Toughness and subject to consumer gates. Example arithmetic is correct: 200 × .15 × 1.2 × 1.25 = 45; 3 percentage points between I/IV and 25% relative request increase; the shortfall-cap example restores only the missing 10."
+      },
+      {
+        "topic": "force_assist correction",
+        "result": "Formal player/source prose says the downed gate reads assisted_state_input.force_assist. True bypasses that gate only; death/prevent-replenish and optional_reason gates remain distinct. Prior agent inference is explicitly superseded by its hashed addendum and the primary delta review; it is not treated as an active claim."
+      },
+      {
+        "topic": "RAW and formatter",
+        "result": "Both localization keys and hashes match the recorded RAW resource. EN/ZH name and description are preserved; each I–IV reconstruction substitutes required_num_hits=3 and +12/+13/+14/+15% using the verified formatters and is labeled static reconstruction, not gameplay capture. RAW omissions are described as documentation scope, not contradictions."
+      },
+      {
+        "topic": "Icon, links, and format",
+        "result": "Icon 088 path/attachment identity matches the display-verified public image receipt. Parent focused checks report 71 source ranges/33 files and no new link errors; GFM and global partition receipts are present and consistent."
+      }
+    ],
+    "superseded_history_note": {
+      "file": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-coverage.json",
+      "field": "force_assist_correction",
+      "resolution": "The stale agent conclusion is explicitly superseded by momentum-agent-force-assist-addendum.json and momentum-primary-force-assist-delta-review.json; canonical and formal pages state the current component-bool condition."
+    },
+    "validation": {
+      "scope_hashes_match": true,
+      "canonical_config_matches_extension_draft": true,
+      "variant_count": 5,
+      "binding_count": 12,
+      "formal_page_count": 11,
+      "tier_values_match": true,
+      "map_effect_matches_config": true,
+      "force_assist_delta_and_addendum_verified": true,
+      "raw_and_image_receipts_verified": true,
+      "focused_links_no_new_errors": true
+    },
+    "parent_primary_acceptance": false,
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "momentum",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_088",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_088.png",
+      "attachment": "https://github.com/user-attachments/assets/9a96eb9f-a967-4b3c-8132-8b31575217d0",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5982802580",
+      "acquired_date": "2026-10-05",
+      "sha256": "0174f45aeb9eb095682e6bc12ea32318f24eb2691fdd530f5077dd805a0d4a7c",
+      "content_type": "image/png",
+      "size": 3956,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "勢頭祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "主控已逐一目視原圖、公開下載副本與白底透明度檢視：中央直條與骷髏、左右朝外箭頭及上下尖點一致；原圖與公開附件位元組雜湊相同。"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 19,
+      "rows": 355,
+      "lists": 97,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 71,
+      "source_files": 33,
+      "bindings": 539,
+      "variants": 276,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 33,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 838,
+      "remote_references": 396,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 20,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-019-full-scan.json",
+        "sha256": "bc0dad144cdfb6fdefa851c7c927ee3cc726e7f83e18c9eb3335797fe62cc4d6",
+        "trigger": "round-019"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 78,
+    "not_started_name_groups": 78,
+    "partial_name_groups": 0,
+    "remaining_variants": 329,
+    "remaining_bindings": 646,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "8327227afef1f684c7d8a4d4948c432ba632b67c87f66d5980c5f3120c27d6f8"
+  },
+  "previous_local_commit": "0ecc02958cfec060a6a501b02c102f8bf2740564",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-first-proc-local-review.json",
+      "sha256": "757bfc22cf5d70c0900fc41fb3875a74fe6855ede9e4f3f8194ee96d847539b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-focused-checks.json",
+      "sha256": "16e83cbef7b3c76b6ca08ec3bb727749bc60a754dab9778a348ae63f15bde30a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-force-assist-delta-review.json",
+      "sha256": "434e339607e5ae7d99eb4b2ac9e59df0f11b1e98889169da18060b4d146691c3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-frozen-source-verification.json",
+      "sha256": "c633babadfdf9894f48df376cfe5a5f1ea089ef2accbe9a9fbf63821ca783de9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-own-tier-diff.json",
+      "sha256": "32cb261e4de75b1f2895446b52f97034a1c6641fd9a833f8ee4886bb1e51c4a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-recovery-cooldown-diff.json",
+      "sha256": "f9b9470388c7d346e81fafa14971475449f22feda321bdbb63fb1dfd2831ec8f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-resume-review.json",
+      "sha256": "62804a9ad5a729a972197b13e85099ac1b4c4c872ef412542cbd594101c8de73"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-traits-review.json",
+      "sha256": "d0ec8238b74aea4b2ceb0563bd42f7b19329ec42215a7c1d3cf2181dbf07a8a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-ui-raw-verification.json",
+      "sha256": "5c0ea5b844b2ffa1ff5f7c932aaef3453b0d24148db0cd68b9b2938a03320b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-primary-ui-review.json",
+      "sha256": "8f12244e45aabafe56e6bb00795a19ec7c4475772ae3087c62e34c7a8531e0b4"
+    }
+  ],
+  "primary_review_method": "Reuse exact fixed-SHA evidence under matching own-wrapper/item/attack applicability, review current full tiers/binding/RAW and new ordinal/special/first-proc/cooldown/recovery-state differences; no full duplicate agent research",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-config.json",
+    "sha256": "8db8a248a3b55795e76597b962c724862cc8c70c62155d08412524e9e97de741"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-config.json",
+      "sha256": "130608df0a559bbeb682f84b860580748f2a704d4e8eb7c7d156b1fb9bfbf07d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-evidence.json",
+      "sha256": "dad6dd38db2cdda96688130ddc69b0374686dfaba113e6208ebdeddd357e896a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-draft.md",
+      "sha256": "f6326bc8973a2170b5bcc81ba4394f352f994ffb99204049b97a1b30be050473"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-agent-coverage.json",
+      "sha256": "bfb78ae58846c665ca230c2e298684dd0ff9770fb7d3f660c9564df02ba2ff6d"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/momentum-formal-peer-scope.json",
+    "sha256": "9aa98710a78b040627bc150a962dbc7bafebf5f41d04cf640823665ca0956655",
+    "final_content_hashes_unchanged": true
+  }
+}

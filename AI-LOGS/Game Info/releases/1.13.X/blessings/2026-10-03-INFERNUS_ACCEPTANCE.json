@@ -1,0 +1,834 @@
+{
+  "date": "2026-10-03",
+  "blessing": "infernus",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/煉獄/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_lasgun_p1_burninating_on_crit",
+    "weapon_trait_bespoke_lasgun_p2_burninating_on_crit",
+    "weapon_trait_bespoke_laspistol_p1_burninating_on_crit",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_burninating_on_crit",
+    "weapon_trait_bespoke_phosphor_pistol_p1_burninating_on_crit"
+  ],
+  "added_binding_count": 12,
+  "total_variants": 5,
+  "total_bindings": 12,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "all5boundvariants/12bindings independent research and primary config/source consumer cross-review",
+    "final_document_review": {
+      "task": "Infernus",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "verified": [
+        "The icon note now correctly assigns 049 to Lasgun P1/P2 and the unresolved Lasgun P3 candidate, and 049 to the bound Ogryn Heavy Stubber P2; it assigns 121 to Laspistol P1 and Phosphor P1.",
+        "Player text correctly names 冥潮鐳射槍 and distinguishes the actual UI family, pattern, and mark components.",
+        "The 4-second duration is stated as a base value; the expiry example excludes burning-duration bonuses; the formula uses D = 4 × burning_duration.",
+        "When shared flamer_assault stacks equal the trait tier cap, the proc refreshes duration; when existing stacks exceed the tier cap, stacks_to_add is zero, current_stacks <= max_stacks is false, and the zero-add loop neither adds nor refreshes.",
+        "General-weapon tiers and Phosphor tiers, trait tier caps, and the 31-stack flamer_assault template cap are kept distinct.",
+        "The 12/15-stack power_level examples match the smoothstep formula and are described as damage inputs, not fixed HP damage.",
+        "With burning_duration at its baseline, 12 and 15 stacks nominally clear in 9.5-10 and 11-11.5 seconds respectively, subject to the interval phase and update step.",
+        "Phosphor direct-hit versus backblast behavior and its separate phosphor_burn effect are correctly distinguished from flamer_assault.",
+        "The localization hashes, variants, bindings, source references, and null available-tier status are consistent."
+      ],
+      "source_refs": [
+        "scripts/settings/buff/buff_utils.lua#L48-L90",
+        "scripts/extension_systems/buff/buff_extension_base.lua#L412-L416",
+        "scripts/settings/buff/weapon_buff_templates.lua#L50-L76",
+        "scripts/extension_systems/buff/buffs/interval_buff.lua#L65-L118",
+        "scripts/extension_systems/buff/buffs/interval_buff.lua#L17-L64",
+        "scripts/extension_systems/buff/buff_extension_base.lua#L592-L597"
+      ]
+    },
+    "parallel_execution": {
+      "groups": [
+        "infernus",
+        "deflector",
+        "wrath"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "draft_corrections": [
+      "Primary corrected actualUI Helbore family to 冥潮鐳射槍",
+      "Primary replaced general/Phosphor variant values and icons separately",
+      "Primary traced shared-stack > owncap zero-add without refresh",
+      "Primary read burning duration stat consumer and marked4sec base with no-bonus example",
+      "Peer identified ambiguous P3icon note; primary corrected and peer accepted"
+    ]
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "infernus",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_049",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_049.png",
+      "attachment": "https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967647410",
+      "acquired_date": "2026-10-03",
+      "sha256": "5d03b68daa8e416b609e3f4ded5e5847e86d60ce8266421f22412611058f3830",
+      "content_type": "image/png",
+      "size": 4653,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "煉獄祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected public Issue attachment pixels at 128×128; actual exported icon and public attachment SHA-256 match."
+    },
+    "additional_variant_images": [
+      {
+        "id": "infernus-pistol",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_121",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_121.png",
+        "attachment": "https://github.com/user-attachments/assets/35d32d65-5cd0-478f-ad49-38860d19a111",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967654770",
+        "acquired_date": "2026-10-03",
+        "sha256": "1fe9d53a540f9643381257300862259be777d9f6e72f0e50b70cd301d60c2585",
+        "content_type": "image/png",
+        "size": 5524,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "煉獄祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "display_review": "Primary inspected public Issue attachment pixels at 128×128; actual exported icon and public attachment SHA-256 match.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_lasgun_p1_burninating_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_049",
+        "attachment": "https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_lasgun_p2_burninating_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_049",
+        "attachment": "https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_laspistol_p1_burninating_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_121",
+        "attachment": "https://github.com/user-attachments/assets/35d32d65-5cd0-478f-ad49-38860d19a111",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_burninating_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_049",
+        "attachment": "https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd",
+        "verified_binding_count": 3
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_burninating_on_crit",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_121",
+        "attachment": "https://github.com/user-attachments/assets/35d32d65-5cd0-478f-ad49-38860d19a111",
+        "verified_binding_count": 1
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 346,
+      "tables": 288,
+      "rows": 2549,
+      "lists": 472
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1055,
+      "source_files": 338,
+      "bindings": 207,
+      "variants": 109,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1046,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 346,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 136,
+    "not_started_name_groups": 136,
+    "partial_name_groups": 0,
+    "remaining_variants": 479,
+    "remaining_bindings": 961,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "69946260933c72b49bf95385098b31d9c25fad7dc1c079d56b3b5cef85e97909"
+  },
+  "previous_local_commit": "513f708c8c0072f24f14a4896982ed8df990c0af",
+  "current_blessing_formula_review": {
+    "reviewed_by": "Sol/xhigh",
+    "method": "direct fixed-SHA objects read; all five tiers/wrappers, queued event, all12 shoot_hit_scan bindings, shared status consumer",
+    "actual_values_verified": true,
+    "burning_duration": "base4 * owner burning_duration on enemy burning target; initialized multiplier",
+    "shared_template_cap": 31,
+    "refresh_edge": "at own tier cap refresh; greater than own cap zero-add loop does not refresh",
+    "power_input": {
+      "n12": 166.76177369,
+      "n15": 237.907421705
+    },
+    "clear_time_without_duration_bonus": {
+      "n12": "9.5–10 sec plus update step",
+      "n15": "11–11.5 sec plus update step"
+    },
+    "gameplay_test": "not run"
+  },
+  "ui_name_review": {
+    "method": "Primary independently read actual metadata family/pattern/mark loc_id, same-hash RAW all36 keys, template import/ukeys/append and main shoot_hit_scan",
+    "bindings": [
+      {
+        "weapon_id": "lasgun_p1",
+        "model_id": "lasgun_p1_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p1_m1",
+          "loc_weapon_pattern_lasgun_p1_m1",
+          "loc_weapon_mark_lasgun_p1_m1"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p1_m1",
+            "en": "Infantry Lasgun",
+            "zh_tw": "步兵鐳射槍",
+            "hash": "f93eef0d"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p1_m1",
+            "en": "Kantrael",
+            "zh_tw": "卡特雷爾",
+            "hash": "79a3a51d"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p1_m1",
+            "en": "Mk VII",
+            "zh_tw": "Mk VII",
+            "hash": "c99e2fa8"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Infantry Lasgun Kantrael Mk VII",
+        "ui_name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk VII",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "weapon_template_import_line": 17,
+        "weapon_template_ukeys_line": 714,
+        "weapon_template_trait_append_line": 716,
+        "primary_shoot_hit_scan_lines": [
+          211,
+          284
+        ],
+        "metadata_restriction_key": "lasgun_p1",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "model_id": "lasgun_p1_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p1_m2",
+          "loc_weapon_pattern_lasgun_p1_m2",
+          "loc_weapon_mark_lasgun_p1_m2"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p1_m2",
+            "en": "Infantry Lasgun",
+            "zh_tw": "步兵鐳射槍",
+            "hash": "d9ec8b10"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p1_m2",
+            "en": "Kantrael",
+            "zh_tw": "卡特雷爾",
+            "hash": "83d91af8"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p1_m2",
+            "en": "Mk IIb",
+            "zh_tw": "Mk IIb",
+            "hash": "64b0aed4"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Infantry Lasgun Kantrael Mk IIb",
+        "ui_name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IIb",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 692,
+        "weapon_template_trait_append_line": 694,
+        "primary_shoot_hit_scan_lines": [
+          208,
+          281
+        ],
+        "metadata_restriction_key": "lasgun_p1",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "lasgun_p1",
+        "model_id": "lasgun_p1_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p1_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p1_m3",
+          "loc_weapon_pattern_lasgun_p1_m3",
+          "loc_weapon_mark_lasgun_p1_m3"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p1_m3",
+            "en": "Infantry Lasgun",
+            "zh_tw": "步兵鐳射槍",
+            "hash": "6413e59a"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p1_m3",
+            "en": "Kantrael",
+            "zh_tw": "卡特雷爾",
+            "hash": "8aeab8f0"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p1_m3",
+            "en": "Mk IX",
+            "zh_tw": "Mk IX",
+            "hash": "bbe462de"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Infantry Lasgun Kantrael Mk IX",
+        "ui_name_zh_tw": "步兵鐳射槍 卡特雷爾 Mk IX",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 693,
+        "weapon_template_trait_append_line": 695,
+        "primary_shoot_hit_scan_lines": [
+          208,
+          282
+        ],
+        "metadata_restriction_key": "lasgun_p1",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "model_id": "lasgun_p2_m1",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p2_m1",
+          "loc_weapon_pattern_lasgun_p2_m1",
+          "loc_weapon_mark_lasgun_p2_m1"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p2_m1",
+            "en": "Helbore Lasgun",
+            "zh_tw": "冥潮鐳射槍",
+            "hash": "95217161"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p2_m1",
+            "en": "Lucius",
+            "zh_tw": "盧修斯",
+            "hash": "db677a3a"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p2_m1",
+            "en": "MK IIIa",
+            "zh_tw": "MK IIIa",
+            "hash": "e181430f"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Helbore Lasgun Lucius MK IIIa",
+        "ui_name_zh_tw": "冥潮鐳射槍 盧修斯 MK IIIa",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 1333,
+        "weapon_template_trait_append_line": 1335,
+        "primary_shoot_hit_scan_lines": [
+          413,
+          608
+        ],
+        "metadata_restriction_key": "lasgun_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "model_id": "lasgun_p2_m2",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p2_m2",
+          "loc_weapon_pattern_lasgun_p2_m2",
+          "loc_weapon_mark_lasgun_p2_m2"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p2_m2",
+            "en": "Helbore Lasgun",
+            "zh_tw": "冥潮鐳射槍",
+            "hash": "d40f9e77"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p2_m2",
+            "en": "Lucius",
+            "zh_tw": "盧修斯",
+            "hash": "812a07cc"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p2_m2",
+            "en": "MK V",
+            "zh_tw": "MK V",
+            "hash": "d1ef33c6"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Helbore Lasgun Lucius MK V",
+        "ui_name_zh_tw": "冥潮鐳射槍 盧修斯 MK V",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 1327,
+        "weapon_template_trait_append_line": 1329,
+        "primary_shoot_hit_scan_lines": [
+          413,
+          608
+        ],
+        "metadata_restriction_key": "lasgun_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "lasgun_p2",
+        "model_id": "lasgun_p2_m3",
+        "trait_id": "weapon_trait_bespoke_lasgun_p2_burninating_on_crit",
+        "trait_category": "bespoke_lasgun_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_lasgun_p2_m3",
+          "loc_weapon_pattern_lasgun_p2_m3",
+          "loc_weapon_mark_lasgun_p2_m3"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_lasgun_p2_m3",
+            "en": "Helbore Lasgun",
+            "zh_tw": "冥潮鐳射槍",
+            "hash": "b6a39d2f"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_lasgun_p2_m3",
+            "en": "Lucius",
+            "zh_tw": "盧修斯",
+            "hash": "b0aa987d"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_lasgun_p2_m3",
+            "en": "Mk IV",
+            "zh_tw": "Mk IV",
+            "hash": "08be7ed5"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Helbore Lasgun Lucius Mk IV",
+        "ui_name_zh_tw": "冥潮鐳射槍 盧修斯 Mk IV",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 1244,
+        "weapon_template_trait_append_line": 1246,
+        "primary_shoot_hit_scan_lines": [
+          423,
+          617
+        ],
+        "metadata_restriction_key": "lasgun_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "laspistol_p1",
+        "model_id": "laspistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_burninating_on_crit",
+        "trait_category": "bespoke_laspistol_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_laspistol_p1_m1",
+          "loc_weapon_pattern_laspistol_p1_m1",
+          "loc_weapon_mark_laspistol_p1_m1"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_laspistol_p1_m1",
+            "en": "Heavy Laspistol",
+            "zh_tw": "重型鐳射手槍",
+            "hash": "9e02540d"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_laspistol_p1_m1",
+            "en": "Accatran MG",
+            "zh_tw": "奧克塔蘭MG",
+            "hash": "425dcea2"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_laspistol_p1_m1",
+            "en": "Mk II",
+            "zh_tw": "Mk II",
+            "hash": "5d67453c"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Heavy Laspistol Accatran MG Mk II",
+        "ui_name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "weapon_template_import_line": 16,
+        "weapon_template_ukeys_line": 858,
+        "weapon_template_trait_append_line": 860,
+        "primary_shoot_hit_scan_lines": [
+          208,
+          290
+        ],
+        "metadata_restriction_key": "laspistol_p1",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "laspistol_p1",
+        "model_id": "laspistol_p1_m3",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_burninating_on_crit",
+        "trait_category": "bespoke_laspistol_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_laspistol_p1_m3",
+          "loc_weapon_pattern_laspistol_p1_m3",
+          "loc_weapon_mark_laspistol_p1_m3"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_laspistol_p1_m3",
+            "en": "Heavy Laspistol",
+            "zh_tw": "重型鐳射手槍",
+            "hash": "1cba3f36"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_laspistol_p1_m3",
+            "en": "Kantrael",
+            "zh_tw": "卡特雷爾",
+            "hash": "56cf1c35"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_laspistol_p1_m3",
+            "en": "Mk X",
+            "zh_tw": "Mk X",
+            "hash": "52660ec2"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Heavy Laspistol Kantrael Mk X",
+        "ui_name_zh_tw": "重型鐳射手槍 卡特雷爾 Mk X",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "weapon_template_import_line": 16,
+        "weapon_template_ukeys_line": 862,
+        "weapon_template_trait_append_line": 864,
+        "primary_shoot_hit_scan_lines": [
+          207,
+          291
+        ],
+        "metadata_restriction_key": "laspistol_p1",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "model_id": "ogryn_heavystubber_p2_m1",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_burninating_on_crit",
+        "trait_category": "bespoke_ogryn_heavystubber_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m1",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m1",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m1"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_ogryn_heavystubber_p2_m1",
+            "en": "Heavy Stubber",
+            "zh_tw": "重伐木槍",
+            "hash": "f4aa7cf1"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_ogryn_heavystubber_p2_m1",
+            "en": "Krourk",
+            "zh_tw": "克魯克",
+            "hash": "467d3f25"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_ogryn_heavystubber_p2_m1",
+            "en": "Mk IIa",
+            "zh_tw": "Mk IIa",
+            "hash": "56248dab"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Heavy Stubber Krourk Mk IIa",
+        "ui_name_zh_tw": "重伐木槍 克魯克 Mk IIa",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 794,
+        "weapon_template_trait_append_line": 796,
+        "primary_shoot_hit_scan_lines": [
+          247,
+          326
+        ],
+        "metadata_restriction_key": "ogryn_heavystubber_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "model_id": "ogryn_heavystubber_p2_m2",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_burninating_on_crit",
+        "trait_category": "bespoke_ogryn_heavystubber_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m2",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m2",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m2"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_ogryn_heavystubber_p2_m2",
+            "en": "Heavy Stubber",
+            "zh_tw": "重伐木槍",
+            "hash": "282e4135"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_ogryn_heavystubber_p2_m2",
+            "en": "Gorgonum",
+            "zh_tw": "戈爾貢努姆",
+            "hash": "718f7355"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_ogryn_heavystubber_p2_m2",
+            "en": "Mk IIIa",
+            "zh_tw": "Mk IIIa",
+            "hash": "48d957d9"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Heavy Stubber Gorgonum Mk IIIa",
+        "ui_name_zh_tw": "重伐木槍 戈爾貢努姆 Mk IIIa",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 815,
+        "weapon_template_trait_append_line": 817,
+        "primary_shoot_hit_scan_lines": [
+          249,
+          328
+        ],
+        "metadata_restriction_key": "ogryn_heavystubber_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "ogryn_heavystubber_p2",
+        "model_id": "ogryn_heavystubber_p2_m3",
+        "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_burninating_on_crit",
+        "trait_category": "bespoke_ogryn_heavystubber_p2",
+        "ui_name_keys": [
+          "loc_weapon_family_ogryn_heavystubber_p2_m3",
+          "loc_weapon_pattern_ogryn_heavystubber_p2_m3",
+          "loc_weapon_mark_ogryn_heavystubber_p2_m3"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_ogryn_heavystubber_p2_m3",
+            "en": "Heavy Stubber",
+            "zh_tw": "重伐木槍",
+            "hash": "78b9803e"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_ogryn_heavystubber_p2_m3",
+            "en": "Achlys",
+            "zh_tw": "阿克利斯",
+            "hash": "f9446785"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_ogryn_heavystubber_p2_m3",
+            "en": "Mk II",
+            "zh_tw": "Mk II",
+            "hash": "d6dae936"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Heavy Stubber Achlys Mk II",
+        "ui_name_zh_tw": "重伐木槍 阿克利斯 Mk II",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "weapon_template_import_line": 15,
+        "weapon_template_ukeys_line": 815,
+        "weapon_template_trait_append_line": 817,
+        "primary_shoot_hit_scan_lines": [
+          249,
+          328
+        ],
+        "metadata_restriction_key": "ogryn_heavystubber_p2",
+        "metadata_weapon_template_restriction": []
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "model_id": "phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_burninating_on_crit",
+        "trait_category": "bespoke_phosphor_pistol_p1",
+        "ui_name_keys": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "ui_name_components": [
+          {
+            "slot": "family",
+            "key": "loc_weapon_family_phosphor_pistol_p1_m1",
+            "en": "Phosphor Blast Pistol",
+            "zh_tw": "磷光爆破手槍",
+            "hash": "82c751cf"
+          },
+          {
+            "slot": "pattern",
+            "key": "loc_weapon_pattern_phosphor_pistol_p1_m1",
+            "en": "Branx",
+            "zh_tw": "布蘭克斯",
+            "hash": "9b6d5431"
+          },
+          {
+            "slot": "mark",
+            "key": "loc_weapon_mark_phosphor_pistol_p1_m1",
+            "en": "Mk XI",
+            "zh_tw": "Mk XI",
+            "hash": "4a084207"
+          }
+        ],
+        "ui_name_format": "Items.display_name formats family, pattern, mark as '%s %s %s'.",
+        "ui_name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "ui_name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "source_inventory_available_tiers": null,
+        "weapon_template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "weapon_template_import_line": 16,
+        "weapon_template_ukeys_line": 1141,
+        "weapon_template_trait_append_line": 1143,
+        "primary_shoot_hit_scan_lines": [
+          193,
+          264
+        ],
+        "metadata_restriction_key": "phosphor_pistol_p1",
+        "metadata_weapon_template_restriction": []
+      }
+    ],
+    "no_guessed_mark_ids": true
+  },
+  "outside_intersection_review": {
+    "matching_exact_key_metadata_items": 6,
+    "bound_variants": 5,
+    "bindings": 12,
+    "unresolved_exact_key_candidates": [],
+    "candidates": [
+      {
+        "trait_id": "weapon_trait_bespoke_lasgun_p3_burninating_on_crit",
+        "metadata_item": "content/items/traits/bespoke_lasgun_p3/burninating_on_crit",
+        "display_name_key": "loc_trait_bespoke_burninating_on_crit",
+        "description_key": "loc_trait_bespoke_burninating_on_crit_desc",
+        "icon": "content/ui/textures/icons/traits/weapon_trait_049",
+        "weapon_type_restriction": [
+          "lasgun_p2"
+        ],
+        "weapon_template_restriction": [],
+        "source_trait": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua#L382-L435",
+        "source_wrapper": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua#L24",
+        "p3_registration": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua#L15-L16,#L730-L732",
+        "binding_found": false,
+        "status": "unresolved exact-key restriction/category mismatch",
+        "note": "P3 definition/category exists, but metadata restricts it to lasgun_p2 and inventory has no binding; exclude from confirmed player scope and do not label unused."
+      },
+      {
+        "trait_id": "weapon_trait_bespoke_forcestaff_p1_warp_burninating_on_crits",
+        "source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p1.lua#L196",
+        "name_key": "loc_trait_bespoke_warpfire_burn_on_crit",
+        "binding_found": false,
+        "status": "similar substring only, not exact Infernus key",
+        "note": "Separate warpfire item; exclude."
+      }
+    ],
+    "status": "5 bound variants / 12 models. Lasgun P3 is a separate exact-key metadata/source candidate with unresolved restriction/category mismatch."
+  }
+}

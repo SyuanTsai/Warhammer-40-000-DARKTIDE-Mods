@@ -1,0 +1,607 @@
+{
+  "date": "2026-10-06",
+  "blessing": "armourbane",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/護甲之禍/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "armourbane",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-formal-peer-scope.json",
+    "scope_sha256": "73cc3c0f7d15edc2731c206fc9ec433d591b0f20a0c000daca2a82ad0c770e09",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-config.json": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-draft.md": "6797ebde623fdfd5480026532218750770d09c43213d1084f53e7f2436eee606",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-evidence.json": "dd7b7e5a05a53e09a415afea25deb317917bfedf5e48764a7b81beb090a6b03b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-config.json": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-extension-draft.json": "19e50b9fa70251bd07a1858c3d25928bca52c1ccf4be697a8901409bce60020b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-association-snapshot.json": "9e62afc6f794c10b05f44cea06574a8f97e101bab8fdef93f54dc6df97f7b163",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/DAMAGE_PERCENTAGE_REVIEW.md": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/LOCALIZATION_COMPARISON.md": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/README.md": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/SOURCE_INDEX.md": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/TIER_VALUES.md": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/WEAPON_COMPATIBILITY.md": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-001.json": "98a8c91624f10f97ba8e14a3452bb0b8f4d1e68fe95f40ffd0f8a73d1a85a8cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-002.json": "a64fe7262a7ecbd1ca7246ae5433e83ef1465c03ff7b4b22d5f318f298510e36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-003.json": "f8d53fa401a15f7a07db74b6eec3dc91a85b607d9bdb24d2a1929430765f5da7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-config.json": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-draft.md": "6797ebde623fdfd5480026532218750770d09c43213d1084f53e7f2436eee606",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-evidence.json": "dd7b7e5a05a53e09a415afea25deb317917bfedf5e48764a7b81beb090a6b03b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-candidate-freeze.json": "6b2bb36095db992ffede8bae567ade4cde8c8a1e80d80e08ce0a08f6ad540454",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/association-snapshot.json": "685771579b2921b82ef112e8bf83c61db31ff4084d65e41c91dd8804a8d41fc5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/DAMAGE_PERCENTAGE_REVIEW.md": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/LOCALIZATION_COMPARISON.md": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/README.md": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/SOURCE_INDEX.md": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/TIER_VALUES.md": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/WEAPON_COMPATIBILITY.md": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-page.md": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-preview-manifest.json": "63427997d6cde89792e10ace1df09ce81b44bfdd3e6021b32b300daf77a6c626",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/coverage.json": "45a34e52cdbf489a30c0d9d12a0daf26607892fc3ed1126849b34a990298d288",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/finalize_armourbane.py": "40263211eee7191753ea50b70b591e26cb64b54245362c0ede489bf7e9cca85f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/actual-localization-raw.json": "13280b4e0b8aa8e3127e580b19f8c41795da402135d1c552ddca6a0d8af80921",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/baseline-map-head.json": "9b1fee3ebe3dd1349e012b88cdc15340268356751f6a99bb3c7dd2b0943b60ca",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/baseline-map-metadata.json": "55406ce6849f7affdca20f50af3acc99cc2a022e50b75956881653d65ac4ec42",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/binding-inventory.json": "2a6556d25a476df56743689b0469d2614b2b514930160a2e34b4aa6cde1b1d70",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/common-mechanism-applicability.json": "0798b795720989f04a8a2ffba01a87c57e4c74961c336f80c0de811426556191",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/item-metadata-snapshot.json": "7987680fed296c3868d5c1a426fe29c0a798cf7ae983c73c8cb78ca1c4bd5c01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/localization-snapshot.json": "88d404418cc0e40f8cac123a2a1b26b20541f6fa2e7bc9163db721a4e539cc0b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/remaining-tasks-snapshot.json": "f48eae1f6a83b0060205bb2f09300c813eca7331c682c7d92e325a2d2d4d416d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-image.json": "c3ec8ab85776f57809f8a3b1b266e9ba50a0bc5fad28a7920739aec4323d4499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-melee-default-charge-consumer-delta-review.json": "902ae35d0fb27b9ec5409597d2db359b7c2b333b4c9ba5e88aa0762fd8d774cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-own-tier-wrapper-charge-delta-review.json": "f91ca0804bae044890a21386b520ede88f4e2165727415a0ae05a3f56b75cf4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-traits-review.json": "4a80350cfd989a6199e89b57055ca8032de3de97e76ca8c0ce5053d5fe8f4a92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-ui-raw-verification.json": "cdb608055cddbeac979cc1dd28754f4e06722743a0135133086e7838625762b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-ui-review.json": "ad61fa2517d8647aeb768cabe06803b3cfc050417767ce3382529db2c52ff2c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/rending-shockwave-primary-armor-consumer-review.json": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/prepare_armourbane.py": "454244e98280df7c88fccc690ad80073e1a9a3f94619f4822dd787b722a753ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/selfcheck-results.json": "65acc88eb1c753cca8bac919d1ae6cb331138a38bafe891ca8efaba9f223b840",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/selfcheck.py": "fe2953fb1eb85a687f312656ebcbad782a82f83f356db57f47dd9088d45022ba",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/source-ranges.json": "cfd9049596239ddb433b74f8a597884e4a426465c0be1989807f001d4cccef17",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-image.json": "c3ec8ab85776f57809f8a3b1b266e9ba50a0bc5fad28a7920739aec4323d4499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-final-content-review.json": "8e76c0fe9f2813c00aed79ae0a9bc4b7b24e7f2ae6a4e9a3f1465b454a87a955",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-focused-checks.json": "4ee5e6ee9d1dc70a1d2a63e96ab82445be104e008295ba5d776c3b30a58f8eab",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-frozen-source-verification.json": "85355eea716e3061004b49923893fef8bdf05300502f4724f7af690b55dabedd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-melee-default-charge-consumer-delta-review.json": "902ae35d0fb27b9ec5409597d2db359b7c2b333b4c9ba5e88aa0762fd8d774cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-own-tier-wrapper-charge-delta-review.json": "f91ca0804bae044890a21386b520ede88f4e2165727415a0ae05a3f56b75cf4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-resume-review.json": "eb77cf7a5a910ea38c8b1ef373a58d5a6b392329f42359fe16498172918cd96d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-traits-review.json": "4a80350cfd989a6199e89b57055ca8032de3de97e76ca8c0ce5053d5fe8f4a92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-raw-verification.json": "cdb608055cddbeac979cc1dd28754f4e06722743a0135133086e7838625762b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-review.json": "ad61fa2517d8647aeb768cabe06803b3cfc050417767ce3382529db2c52ff2c5",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-raw-verification.json": "bdeae935f1c6478ab2cce0b47b8cb95d1e1598e721d1304efe0e49566dc9940f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "7f8c6b4e442bfd9d3fc70bdf929a9a0f7c49f591cf0d8839685a55893740945b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/DAMAGE_PERCENTAGE_REVIEW.md": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/LOCALIZATION_COMPARISON.md": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/README.md": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/SOURCE_INDEX.md": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/TIER_VALUES.md": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/WEAPON_COMPATIBILITY.md": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/ranged/README.md": "8390a111b7f5639327f494606ea67c8b2fde9d07e3e777e5ea77b174533d8317",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/README.md": "343ddc7970740dc2e79ec798aa544e3d3ebba6d733b14c490ffe98764ca64796",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "02c34a71882aacdff3b7d10857e68f1956e7ee512283e081f0dd3fa6af4ec2be",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "80077d03fe73b824b107edefa94cd76a8ca167c46e624907a6f1a4998596d59b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/own-association-snapshot.json": "9e62afc6f794c10b05f44cea06574a8f97e101bab8fdef93f54dc6df97f7b163",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Referneces/Translation.md": "7ef1b63beef3c5ee79ce9e5216783893165428813e81cdc8d2ede550dba41c3b",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "96909dd68461dd69d84f96d5470edc87bb0616a1dd563ae8a1caa0133906c612",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/DAMAGE_PERCENTAGE_REVIEW.md": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/LOCALIZATION_COMPARISON.md": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/README.md": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/SOURCE_INDEX.md": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/TIER_VALUES.md": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/WEAPON_COMPATIBILITY.md": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252",
+      "Game Info/releases/1.13.X/blessings/entries/護甲之禍/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "19d7e0d97b52d187ffd373bc5582c4a3d2950b390d28c82cb1ecbb0f0a76654c",
+      "Game Info/releases/1.13.X/blessings/README.md": "47fb4127d3e36cfa9da24013ea648a4bf2bf2c572cadac06e9aa2438d9f821f3",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "261abdb3039eb04da410f77eab0526516594c6c826f6f6ce00708af4832b5802",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "80077d03fe73b824b107edefa94cd76a8ca167c46e624907a6f1a4998596d59b",
+      "Referneces/Translation.md": "85a6484ba8e42453950842d2d32f2830b44f09b1c6c3ae16effffd9ae2b935da"
+    },
+    "review_summary": "All 101 fixed-scope file hashes match. Reviewed the seven formal pages, the one implementation and three actual bindings, shared map, reverse weapon index, RAW and formatter comparison, and image receipt. The I–IV thresholds and charge interpolation match runtime. All three Lasgun P2 marks use the same charged-shot implementation, and the listed special sweeps default to charge level 1. Proc eligibility is held slot, same item, minion, and non-nil charge, with no ranged-only or positive-charge gate. Damage resolves before the proc applies rending, so the triggering hit does not receive the new stacks. The target debuff caps at 16 stacks, adds 2.5 percentage points per stack, lasts five seconds, and refreshes at cap; the helper stack setting is not the target cap. Holstering blocks new procs while existing target debuff time continues; true unequip removes the on-equip blessing Buff. The constrained armor example correctly distinguishes armor-specific damage from a final-damage multiplier, and the actual model names, bindings, RAW text, and icon 108 receipt are consistent. No issues found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "armourbane",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_108",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_108.png",
+      "attachment": "https://github.com/user-attachments/assets/1c159e8c-afb0-4bd8-a18a-2e5843383a94",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5997772068",
+      "acquired_date": "2026-10-05",
+      "sha256": "ad6f3229a555907b7d7dabe43e94051dcec510fbb902d401d05a2dc38100e928",
+      "content_type": "image/png",
+      "size": 6117,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "護甲之禍祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed actual public downloaded128x128 PNG; central pale armor target silhouette with surrounding gray background matches item.icon weapon_trait_108 receipt."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 12,
+      "rows": 418,
+      "lists": 85,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 55,
+      "source_files": 28,
+      "bindings": 878,
+      "variants": 445,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 28,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 1027,
+      "remote_references": 403,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 32,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-031-full-scan.json",
+        "sha256": "4506605986b6aef05339158f61067a77d1a009648974c5ca64e19fffdb129a15",
+        "trigger": "round-031"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 40,
+    "not_started_name_groups": 40,
+    "partial_name_groups": 0,
+    "remaining_variants": 160,
+    "remaining_bindings": 307,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "fc7fcec917ed6f600c1bd22d28e388968a0bde29cd2aecba6f5a8b62537bade4"
+  },
+  "previous_local_commit": "2def0da3d1d4e678179eb67148a495b63f06f984",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "No exact-name-key items outside actual three-binding UI/inventory intersection."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-final-content-review.json",
+      "sha256": "8e76c0fe9f2813c00aed79ae0a9bc4b7b24e7f2ae6a4e9a3f1465b454a87a955"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-focused-checks.json",
+      "sha256": "4ee5e6ee9d1dc70a1d2a63e96ab82445be104e008295ba5d776c3b30a58f8eab"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-frozen-source-verification.json",
+      "sha256": "85355eea716e3061004b49923893fef8bdf05300502f4724f7af690b55dabedd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-melee-default-charge-consumer-delta-review.json",
+      "sha256": "902ae35d0fb27b9ec5409597d2db359b7c2b333b4c9ba5e88aa0762fd8d774cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-own-tier-wrapper-charge-delta-review.json",
+      "sha256": "f91ca0804bae044890a21386b520ede88f4e2165727415a0ae05a3f56b75cf4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-resume-review.json",
+      "sha256": "eb77cf7a5a910ea38c8b1ef373a58d5a6b392329f42359fe16498172918cd96d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-traits-review.json",
+      "sha256": "4a80350cfd989a6199e89b57055ca8032de3de97e76ca8c0ce5053d5fe8f4a92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-raw-verification.json",
+      "sha256": "cdb608055cddbeac979cc1dd28754f4e06722743a0135133086e7838625762b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-review.json",
+      "sha256": "ad61fa2517d8647aeb768cabe06803b3cfc050417767ce3382529db2c52ff2c5"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-config.json",
+    "sha256": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-association-snapshot.json",
+      "sha256": "9e62afc6f794c10b05f44cea06574a8f97e101bab8fdef93f54dc6df97f7b163"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/LOCALIZATION_COMPARISON.md",
+      "sha256": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/README.md",
+      "sha256": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/SOURCE_INDEX.md",
+      "sha256": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/TIER_VALUES.md",
+      "sha256": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/WEAPON_COMPATIBILITY.md",
+      "sha256": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/actual-preview-003/Game Info/releases/1.13.X/blessings/entries/護甲之禍/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md",
+      "sha256": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-003.json",
+      "sha256": "f8d53fa401a15f7a07db74b6eec3dc91a85b607d9bdb24d2a1929430765f5da7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-config.json",
+      "sha256": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-draft.md",
+      "sha256": "6797ebde623fdfd5480026532218750770d09c43213d1084f53e7f2436eee606"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-candidate-freeze.json",
+      "sha256": "6b2bb36095db992ffede8bae567ade4cde8c8a1e80d80e08ce0a08f6ad540454"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/association-snapshot.json",
+      "sha256": "685771579b2921b82ef112e8bf83c61db31ff4084d65e41c91dd8804a8d41fc5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/LOCALIZATION_COMPARISON.md",
+      "sha256": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/README.md",
+      "sha256": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/SOURCE_INDEX.md",
+      "sha256": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/TIER_VALUES.md",
+      "sha256": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/WEAPON_COMPATIBILITY.md",
+      "sha256": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-generated-preview/weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md",
+      "sha256": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-page.md",
+      "sha256": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/candidate-preview-manifest.json",
+      "sha256": "63427997d6cde89792e10ace1df09ce81b44bfdd3e6021b32b300daf77a6c626"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/coverage.json",
+      "sha256": "45a34e52cdbf489a30c0d9d12a0daf26607892fc3ed1126849b34a990298d288"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/finalize_armourbane.py",
+      "sha256": "40263211eee7191753ea50b70b591e26cb64b54245362c0ede489bf7e9cca85f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/actual-localization-raw.json",
+      "sha256": "13280b4e0b8aa8e3127e580b19f8c41795da402135d1c552ddca6a0d8af80921"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/baseline-map-head.json",
+      "sha256": "9b1fee3ebe3dd1349e012b88cdc15340268356751f6a99bb3c7dd2b0943b60ca"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/baseline-map-metadata.json",
+      "sha256": "55406ce6849f7affdca20f50af3acc99cc2a022e50b75956881653d65ac4ec42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/binding-inventory.json",
+      "sha256": "2a6556d25a476df56743689b0469d2614b2b514930160a2e34b4aa6cde1b1d70"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/common-mechanism-applicability.json",
+      "sha256": "0798b795720989f04a8a2ffba01a87c57e4c74961c336f80c0de811426556191"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/item-metadata-snapshot.json",
+      "sha256": "7987680fed296c3868d5c1a426fe29c0a798cf7ae983c73c8cb78ca1c4bd5c01"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/localization-snapshot.json",
+      "sha256": "88d404418cc0e40f8cac123a2a1b26b20541f6fa2e7bc9163db721a4e539cc0b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/remaining-tasks-snapshot.json",
+      "sha256": "f48eae1f6a83b0060205bb2f09300c813eca7331c682c7d92e325a2d2d4d416d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-image.json",
+      "sha256": "c3ec8ab85776f57809f8a3b1b266e9ba50a0bc5fad28a7920739aec4323d4499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-melee-default-charge-consumer-delta-review.json",
+      "sha256": "902ae35d0fb27b9ec5409597d2db359b7c2b333b4c9ba5e88aa0762fd8d774cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-own-tier-wrapper-charge-delta-review.json",
+      "sha256": "f91ca0804bae044890a21386b520ede88f4e2165727415a0ae05a3f56b75cf4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-traits-review.json",
+      "sha256": "4a80350cfd989a6199e89b57055ca8032de3de97e76ca8c0ce5053d5fe8f4a92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-ui-raw-verification.json",
+      "sha256": "cdb608055cddbeac979cc1dd28754f4e06722743a0135133086e7838625762b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/armourbane-primary-ui-review.json",
+      "sha256": "ad61fa2517d8647aeb768cabe06803b3cfc050417767ce3382529db2c52ff2c5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/root-receipts/rending-shockwave-primary-armor-consumer-review.json",
+      "sha256": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/inputs/tool-snapshot/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/prepare_armourbane.py",
+      "sha256": "454244e98280df7c88fccc690ad80073e1a9a3f94619f4822dd787b722a753ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/selfcheck.py",
+      "sha256": "fe2953fb1eb85a687f312656ebcbad782a82f83f356db57f47dd9088d45022ba"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/source-ranges.json",
+      "sha256": "cfd9049596239ddb433b74f8a597884e4a426465c0be1989807f001d4cccef17"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "343ddc7970740dc2e79ec798aa544e3d3ebba6d733b14c490ffe98764ca64796"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "02c34a71882aacdff3b7d10857e68f1956e7ee512283e081f0dd3fa6af4ec2be"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "7f8c6b4e442bfd9d3fc70bdf929a9a0f7c49f591cf0d8839685a55893740945b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "d9f38447bb7b52b39d37b514e719d26d2682365e3b7efe055a0c07391903fb65"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\LOCALIZATION_COMPARISON.md",
+      "sha256": "c16cf7ce69ed982817bca5771d860558d6a36aa9e3f0e2cee8f4d0387c550308"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\README.md",
+      "sha256": "1b2719ab5ec6ad239ac4f09a88e390757abe064bdda034a514ea96de88cc6bcd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\SOURCE_INDEX.md",
+      "sha256": "7ca903a8fcbea4dadf3237906a0fe8f92ef0045862f970e827c245e141771eb6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\TIER_VALUES.md",
+      "sha256": "b484c3c99d9b5a1fb649acbf40a5815d79dfe0f085f75fdd8131df90f1831576"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\WEAPON_COMPATIBILITY.md",
+      "sha256": "ce7e0de2deb77eab8d6645cfbcfb58562ab26f394fbb9dd0368bdc6c52ebd252"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\entries\\護甲之禍\\weapon_trait_bespoke_lasgun_p2_targets_receive_rending_debuff_on_charged_shots.md",
+      "sha256": "931a063f512e3290b8dccff837f94eaf46e77d64b34245aba725f99ce3cbea7a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "8390a111b7f5639327f494606ea67c8b2fde9d07e3e777e5ea77b174533d8317"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\冥潮鐳射槍\\README.md",
+      "sha256": "80077d03fe73b824b107edefa94cd76a8ca167c46e624907a6f1a4998596d59b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\Referneces\\Translation.md",
+      "sha256": "7ef1b63beef3c5ee79ce9e5216783893165428813e81cdc8d2ede550dba41c3b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-raw-verification.json",
+      "sha256": "bdeae935f1c6478ab2cce0b47b8cb95d1e1598e721d1304efe0e49566dc9940f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\armourbane-group\\actual-preview-003\\own-association-snapshot.json",
+      "sha256": "9e62afc6f794c10b05f44cea06574a8f97e101bab8fdef93f54dc6df97f7b163"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-001.json",
+      "sha256": "98a8c91624f10f97ba8e14a3452bb0b8f4d1e68fe95f40ffd0f8a73d1a85a8cd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-actual-preview-receipt-002.json",
+      "sha256": "a64fe7262a7ecbd1ca7246ae5433e83ef1465c03ff7b4b22d5f318f298510e36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/armourbane-agent-evidence.json",
+      "sha256": "dd7b7e5a05a53e09a415afea25deb317917bfedf5e48764a7b81beb090a6b03b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-group/selfcheck-results.json",
+      "sha256": "65acc88eb1c753cca8bac919d1ae6cb331138a38bafe891ca8efaba9f223b840"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-config.json",
+      "sha256": "9c8f248f79bbbe69598867e94b898789355985881a35f3037be6bf4744d0c619"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-evidence.json",
+      "sha256": "dd7b7e5a05a53e09a415afea25deb317917bfedf5e48764a7b81beb090a6b03b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-agent-draft.md",
+      "sha256": "6797ebde623fdfd5480026532218750770d09c43213d1084f53e7f2436eee606"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-final-content-review.json",
+      "sha256": "8e76c0fe9f2813c00aed79ae0a9bc4b7b24e7f2ae6a4e9a3f1465b454a87a955"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-frozen-source-verification.json",
+      "sha256": "85355eea716e3061004b49923893fef8bdf05300502f4724f7af690b55dabedd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-melee-default-charge-consumer-delta-review.json",
+      "sha256": "902ae35d0fb27b9ec5409597d2db359b7c2b333b4c9ba5e88aa0762fd8d774cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-own-tier-wrapper-charge-delta-review.json",
+      "sha256": "f91ca0804bae044890a21386b520ede88f4e2165727415a0ae05a3f56b75cf4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-traits-review.json",
+      "sha256": "4a80350cfd989a6199e89b57055ca8032de3de97e76ca8c0ce5053d5fe8f4a92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-raw-verification.json",
+      "sha256": "cdb608055cddbeac979cc1dd28754f4e06722743a0135133086e7838625762b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-primary-ui-review.json",
+      "sha256": "ad61fa2517d8647aeb768cabe06803b3cfc050417767ce3382529db2c52ff2c5"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/armourbane-formal-peer-scope.json",
+    "sha256": "73cc3c0f7d15edc2731c206fc9ec433d591b0f20a0c000daca2a82ad0c770e09",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

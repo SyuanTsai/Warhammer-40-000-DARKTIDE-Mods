@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-03",
+  "blessing": "shred",
+  "scope": "remaining same-name weapon variants",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/粉碎/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance",
+    "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance"
+  ],
+  "added_binding_count": 17,
+  "total_variants": 10,
+  "total_bindings": 23,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings and shared execution-chain applicability.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only",
+    "reviewed_variants": [
+      "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_combatsword_p3_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance",
+      "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_chained_hits_increases_crit_chance"
+    ],
+    "findings": [
+      "Eight bound variants clone the same Shred parent/child templates, same all tier overrides and no event/stack overrides.",
+      "Sticky melee damage ticks reuse existing crit state and do not emit Shred event; sticky stop emits a single sweep-finish event.",
+      "Force Sword and Force Greatsword action_fling_target uses damage_target and emits a distinct event, so alone grants no Shred stack.",
+      "Force Sword P1 icon is 087; other seven reviewed variants use 169."
+    ],
+    "no_required_checks_outstanding": true,
+    "files_modified": false
+  },
+  "image": {
+    "receipt_reused_from": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-SHRED_ACCEPTANCE.json",
+    "attachment": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+    "icon_consistency_verified": true,
+    "prior_validation": {
+      "id": "shred",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_169.png",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_169",
+      "sha256": "f5c199b1d5a37a8f8e10eaab12e46887d4aab471ae356cc7878ea83df0f9b59f",
+      "size": 3951,
+      "content_type": "image/png",
+      "width": 128,
+      "height": 128,
+      "attachment": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display": "original and public attachment inspected"
+    },
+    "additional_variant_images": [
+      {
+        "id": "shred-forcesword",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_087.png",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_087",
+        "sha256": "8f7c67ff6f15c89bc284aaaa7f06d28ab9f862aedd01dd348c1cd83aa60f61e7",
+        "size": 3376,
+        "content_type": "image/png",
+        "width": 128,
+        "height": 128,
+        "attachment": "https://github.com/user-attachments/assets/7e29e9f4-bfe0-4550-8c11-71cc30d70b99",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display": "public attachment inspected"
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 75,
+      "tables": 66,
+      "rows": 495,
+      "lists": 52
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 237,
+      "source_files": 96,
+      "bindings": 48,
+      "variants": 19,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 775,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 75,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 155,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 4,
+    "remaining_variants": 546,
+    "remaining_bindings": 1081,
+    "unresolved": 58,
+    "definitions_outside_intersection": 128
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "07e59f76257cc3eebb5662e766fa14f5f93548614e60fa38dac552c5224f3545"
+  },
+  "previous_local_commit": "bc0cf84f079705786a00df359983241b1319c7d0",
+  "outside_intersection_review": [
+    {
+      "trait_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_crit_chance",
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 615,
+        "end_line": 664
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 188,
+        "end_line": 190
+      },
+      "status": "source implementation analyzed; missing matching trait item in metadata138291; preserved as candidate, not excluded"
+    }
+  ]
+}

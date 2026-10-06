@@ -1,0 +1,461 @@
+{
+  "date": "2026-10-05",
+  "blessing": "roaring-advance",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/咆哮突進/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire",
+    "weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire",
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 3,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "roaring-advance",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-formal-peer-scope.json",
+    "scope_sha256": "8572c12add8e61dfaf00676f43cad56ea5a92fce2380987d92da120cb9fa31a4",
+    "scope_file_count": 70,
+    "scope_hashes_verified": 70,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-config.json": "0565ecbdd3b5fac86e7f7ba1b844cb65f448116aad2e94c78072c11d7828f655",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-draft.md": "e2259e62c84c4f015fd05841b1b91e4b4f6a2de062342f08a0a1a0e5ed5b497f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-evidence.json": "5ee518ce442f26388765fcc9cab3d18eec3476f38a53304c110ef82a4b82bdec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-config.json": "7aa1c18a265bebcea029cd9285c4e740301c069cfc46f91dcd7ded140a4ff34c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-extension-draft.json": "e54610d0984d2713fc2889f476a6ba38ec5c9a103d4192848dc9a2d806ed3d93",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-001.json": "a87dcaa52d9a4c7cd1ba5d34754c253a4db3d61fc3890b741b45902538c16182",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-002.json": "a5f8690da2408805d5acaa62d5ca1d1e841c9d906bf8d5c6eabdfb40191ccc81",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-003.json": "9812948edcc929ee5294f21e537735918d86aea7fefde54393f15256cc1b6013",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-004.json": "dbab374bcc6a12c1de9b13192f4617e2a82ff220a1576801950968911fcdfc51",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-005.json": "86fc4a25c9b129079ce4067f639e145cc131d265a02539272d4997fb6860266d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-006.json": "624aafbd1bb098bae4b2f18a0f1ba110843d24e092d846f0fb16ef45a0bad0b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-association-snapshot.json": "20fba5c51b0701cb06a5a97677d8aa9d2eb12b47e80b5af51ac03835c1c981a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-config.json": "0565ecbdd3b5fac86e7f7ba1b844cb65f448116aad2e94c78072c11d7828f655",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-coverage.json": "5a5fedf90c8af690a7452700f6637f1d4d5a1cc63be9ea26f121e38080d09833",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-draft.md": "e2259e62c84c4f015fd05841b1b91e4b4f6a2de062342f08a0a1a0e5ed5b497f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-evidence.json": "5ee518ce442f26388765fcc9cab3d18eec3476f38a53304c110ef82a4b82bdec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-image.json": "281afd11d9053466b73cd1db4f9545f7e208290146c9150dfe433f4c2415bfe1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-focused-checks.json": "073b7df515a09f9a91ac85905754a04399bc7d700226e128ddc508e8ba3660b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-frozen-source-verification.json": "dacf287fc1fd800942dab687ffbe07622be3a1740ef0a90ca87e0e9390cfaeb0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-movement-consumer-delta-review.json": "0c26668430fb290fb2e0ac68dac88e31d4148615a39f64ac44ae4725b4837e56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-own-tier-wrapper-content-review.json": "d53cfad6df7369a45370a31ad1999289d16ce02d96da7eb090541b48c37c9dfb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-player-RAW-timer-counter-content-review.json": "599da6906f484f8ac872903a080c3419590c0e806feb1ae1a2f7f5c5d6fc777c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-resume-review.json": "32c7c9791405855f96bda61198b98709f893c99679959559c61740e67503c429",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-traits-review.json": "08d56dfdb576e016d39bd4ddfed4b8818e22129582e7196f1e04efa4017717c0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-raw-verification.json": "4258721586c9d1d9608f3376a156258db929dfbea04a3e559f8e67908ccd5309",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-review.json": "e2f4bdb7aa63fe7eb52e08d1236be561176a764d7f2f7c4f04ff5b4a126124cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-raw-verification.json": "94cf6c303c059a2aa4c9f537a10632063dce3f460d43d4a248cb108cc4626fba",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "342258ae73ee9104bb1a1f13c6b77bfc4164ada98e395e5f16326191c821b752",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/DAMAGE_PERCENTAGE_REVIEW.md": "1c6e23be66baa9cfa5c21ad6183bb1ecaefd7fdb5e176fe7c10614279f044c50",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/LOCALIZATION_COMPARISON.md": "953c35d13717e4cc18c021a1bd90a62210799d4c3ca24b67458a151d10f07cbd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/README.md": "e694416395c566970bbd8f78b2754d9f00085b16b6c3383696f9b891790a3d70",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/SOURCE_INDEX.md": "5f39ab5dc966c8c1c2f3997f2e13c057f6b2e93a261ea52a61ae17821306dfa2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/TIER_VALUES.md": "46f3b4ef361e72d8759acfaec02bd0e23b265fee828a66ffb55047ef608df616",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/WEAPON_COMPATIBILITY.md": "d74c7eb05787e119a91b375f9793f36ebc3c993c67a1dcabedae94a065aa3564",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire.md": "c81588d641b8493a993f1078a1e0c4d725c7f9871b55a36424d6d5a30eb63fe5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire.md": "af824009a9d7e1904ed68437698e1ecc3852ba28b5531695ef4b5a482a89356b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire.md": "461607266c2d648d3287ed8282ada907805deba056edecfa9a515598a546430e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/ranged/README.md": "303db876daff2cbd8c8c6de7ed5ea66c79768961087cb1fef0db5aff6d5526e0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/README.md": "370f213a9ba8f32e38cded5231ff1b9fb273de2454f9d4b68517e6a8636a7b54",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c2dc43e62c3d36678db2b3ce876a6583115d503adfebd760d03e0c634fd81b4a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "e39749c4dad58c2a1736608bdded979119e1545e18ab8f200cb6a53b53990fb5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "74178f07667e4781cb727925fb886fb3f21fac183161c20abb2b764b0f8a9939",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "f74e075857d12979150f300e1e940a4b337a6b76aa31c3ee42c3b34ce9697a04",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/own-association-snapshot.json": "8f7fb0090b7e6b8de005816411d7aa74b07372279321592c020462f3ba68206f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/actual-preview-006/Referneces/Translation.md": "0e58e94dddcf3bf4ddfe3a3f096393f98e0dd3ea4dc2f45f105c93a325d83b27",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "342258ae73ee9104bb1a1f13c6b77bfc4164ada98e395e5f16326191c821b752",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/DAMAGE_PERCENTAGE_REVIEW.md": "1c6e23be66baa9cfa5c21ad6183bb1ecaefd7fdb5e176fe7c10614279f044c50",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/LOCALIZATION_COMPARISON.md": "953c35d13717e4cc18c021a1bd90a62210799d4c3ca24b67458a151d10f07cbd",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/README.md": "e694416395c566970bbd8f78b2754d9f00085b16b6c3383696f9b891790a3d70",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/SOURCE_INDEX.md": "7721ed2a2d890c88733e1e4c22779a029b0b6450eb96f25e5ef8b660f2cb86b7",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/TIER_VALUES.md": "46f3b4ef361e72d8759acfaec02bd0e23b265fee828a66ffb55047ef608df616",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/WEAPON_COMPATIBILITY.md": "d74c7eb05787e119a91b375f9793f36ebc3c993c67a1dcabedae94a065aa3564",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire.md": "c81588d641b8493a993f1078a1e0c4d725c7f9871b55a36424d6d5a30eb63fe5",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire.md": "af824009a9d7e1904ed68437698e1ecc3852ba28b5531695ef4b5a482a89356b",
+      "Game Info/releases/1.13.X/blessings/entries/咆哮突進/weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire.md": "461607266c2d648d3287ed8282ada907805deba056edecfa9a515598a546430e",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "303db876daff2cbd8c8c6de7ed5ea66c79768961087cb1fef0db5aff6d5526e0",
+      "Game Info/releases/1.13.X/blessings/README.md": "370f213a9ba8f32e38cded5231ff1b9fb273de2454f9d4b68517e6a8636a7b54",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c2dc43e62c3d36678db2b3ce876a6583115d503adfebd760d03e0c634fd81b4a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "e39749c4dad58c2a1736608bdded979119e1545e18ab8f200cb6a53b53990fb5",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "74178f07667e4781cb727925fb886fb3f21fac183161c20abb2b764b0f8a9939",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "f74e075857d12979150f300e1e940a4b337a6b76aa31c3ee42c3b34ce9697a04",
+      "Referneces/Translation.md": "0e58e94dddcf3bf4ddfe3a3f096393f98e0dd3ea4dc2f45f105c93a325d83b27"
+    },
+    "reviewed_findings": [
+      "Player-facing README states the magazine-based step S=max(1,floor(M*0.05)), five-stack cap, shot-count timing before hit processing, miss/multitarget behavior, current-slot gate, reload zero step, and strict current-spread timeout consistently with the pinned source receipts.",
+      "The two movement stats reduce their respective existing slow amplitudes by multiplicative residuals r^n; they do not grant global movement speed. Tier residuals match: Arc Rifle and Braced Autogun I-IV 0.90/0.85/0.80/0.75; Heavy Stubber 0.93/0.92/0.91/0.90.",
+      "Shared shooting_status, cross-weapon shots while the count survives, no reset on slot switch, current-template timeout, and the Autogun P2 Mk I ADS selection of the P3 ADS spread template are described accurately; reload step is zero and buff cache timing is not promised retroactively.",
+      "Both controlled examples recompute correctly under their stated neutral-other-modifier premises: 0.40*0.85^4=0.2088025 (20.88% remaining slow) and 0.40*0.90^5=0.236196 (23.62% remaining slow); the text distinguishes percentage-point and relative reductions.",
+      "All three variant pages, the compatibility table, and map entries agree on the seven actual bindings and model labels: Arc Rifle Branx Mk IV; Braced Autogun Vraks Mk II, Graia Mk IV, Agripinaa Mk VIII; Twin-Linked Heavy Stubber Krourk Mk V, Gorgonum Mk IV, Achlys Mk VII. The three reverse weapon indexes link to the matching variants.",
+      "The bilingual RAW pair and SHA are exact. The formatter reconstruction preserves the actual minus prefix, fixed 5% ammo/5-stack values, and tier-dependent outputs; the formal comparison correctly separates formatter text from runtime slow-residual behavior and treats omitted boundaries as not covered rather than a contradiction.",
+      "Map association has 3 variants and 7 bindings with the ranged kind, exact trait IDs, item paths, and common icon 113. README attachment URL matches the accepted image receipt; the image identification path and attachment URL are not conflated.",
+      "The pinned scope itself and all 70 listed files were hash-verified with Windows long-path handling; the fixed focused-check receipt reports new link errors 0 and GFM checks passed."
+    ],
+    "verification": {
+      "missing_files": 0,
+      "hash_mismatches": 0
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "roaring-advance",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_113",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_113.png",
+      "attachment": "https://github.com/user-attachments/assets/a2c35e00-cdf2-43c6-a566-f132883bed9e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5993419505",
+      "acquired_date": "2026-10-05",
+      "sha256": "aab332db52ab14f8122b4472d66a5204421dc597bdf7db025eb771f09f3c5230",
+      "content_type": "image/png",
+      "size": 6142,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "咆哮突進祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_verification": "Root viewed actual public128x128 PNG: grayscale square with irregular darker central contour and light surrounding pixels; original pixels preserved."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 16,
+      "rows": 441,
+      "lists": 93,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 84,
+      "source_files": 32,
+      "bindings": 846,
+      "variants": 425,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 32,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1046,
+      "remote_references": 443,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 30,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-029-full-scan.json",
+        "sha256": "1d9e05d901fdfec4f358022f9f3a877219925a33117956521b708c54f9d2cc2b",
+        "trigger": "round-029"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 48,
+    "not_started_name_groups": 48,
+    "partial_name_groups": 0,
+    "remaining_variants": 180,
+    "remaining_bindings": 339,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c321a034c17620fb8a2282a85c429b0f1659182f1bffe1ce5c7f520a042c8591"
+  },
+  "previous_local_commit": "aaadf6e8bfbd12169fe951f12e781db255bbe2b4",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-focused-checks.json",
+      "sha256": "073b7df515a09f9a91ac85905754a04399bc7d700226e128ddc508e8ba3660b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-frozen-source-verification.json",
+      "sha256": "dacf287fc1fd800942dab687ffbe07622be3a1740ef0a90ca87e0e9390cfaeb0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-movement-consumer-delta-review.json",
+      "sha256": "0c26668430fb290fb2e0ac68dac88e31d4148615a39f64ac44ae4725b4837e56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-own-tier-wrapper-content-review.json",
+      "sha256": "d53cfad6df7369a45370a31ad1999289d16ce02d96da7eb090541b48c37c9dfb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-player-RAW-timer-counter-content-review.json",
+      "sha256": "599da6906f484f8ac872903a080c3419590c0e806feb1ae1a2f7f5c5d6fc777c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-resume-review.json",
+      "sha256": "32c7c9791405855f96bda61198b98709f893c99679959559c61740e67503c429"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-traits-review.json",
+      "sha256": "08d56dfdb576e016d39bd4ddfed4b8818e22129582e7196f1e04efa4017717c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-raw-verification.json",
+      "sha256": "4258721586c9d1d9608f3376a156258db929dfbea04a3e559f8e67908ccd5309"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-review.json",
+      "sha256": "e2f4bdb7aa63fe7eb52e08d1236be561176a764d7f2f7c4f04ff5b4a126124cf"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-config.json",
+    "sha256": "7aa1c18a265bebcea029cd9285c4e740301c069cfc46f91dcd7ded140a4ff34c"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-association-snapshot.json",
+      "sha256": "20fba5c51b0701cb06a5a97677d8aa9d2eb12b47e80b5af51ac03835c1c981a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-config.json",
+      "sha256": "0565ecbdd3b5fac86e7f7ba1b844cb65f448116aad2e94c78072c11d7828f655"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-coverage.json",
+      "sha256": "5a5fedf90c8af690a7452700f6637f1d4d5a1cc63be9ea26f121e38080d09833"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-draft.md",
+      "sha256": "e2259e62c84c4f015fd05841b1b91e4b4f6a2de062342f08a0a1a0e5ed5b497f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-image.json",
+      "sha256": "281afd11d9053466b73cd1db4f9545f7e208290146c9150dfe433f4c2415bfe1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-traits-review.json",
+      "sha256": "08d56dfdb576e016d39bd4ddfed4b8818e22129582e7196f1e04efa4017717c0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-raw-verification.json",
+      "sha256": "4258721586c9d1d9608f3376a156258db929dfbea04a3e559f8e67908ccd5309"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-ui-review.json",
+      "sha256": "e2f4bdb7aa63fe7eb52e08d1236be561176a764d7f2f7c4f04ff5b4a126124cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-movement-consumer-delta-review.json",
+      "sha256": "0c26668430fb290fb2e0ac68dac88e31d4148615a39f64ac44ae4725b4837e56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-006.json",
+      "sha256": "624aafbd1bb098bae4b2f18a0f1ba110843d24e092d846f0fb16ef45a0bad0b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-player-RAW-timer-counter-content-review.json",
+      "sha256": "599da6906f484f8ac872903a080c3419590c0e806feb1ae1a2f7f5c5d6fc777c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "370f213a9ba8f32e38cded5231ff1b9fb273de2454f9d4b68517e6a8636a7b54"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "c2dc43e62c3d36678db2b3ce876a6583115d503adfebd760d03e0c634fd81b4a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "342258ae73ee9104bb1a1f13c6b77bfc4164ada98e395e5f16326191c821b752"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "1c6e23be66baa9cfa5c21ad6183bb1ecaefd7fdb5e176fe7c10614279f044c50"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\LOCALIZATION_COMPARISON.md",
+      "sha256": "953c35d13717e4cc18c021a1bd90a62210799d4c3ca24b67458a151d10f07cbd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\README.md",
+      "sha256": "e694416395c566970bbd8f78b2754d9f00085b16b6c3383696f9b891790a3d70"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\SOURCE_INDEX.md",
+      "sha256": "5f39ab5dc966c8c1c2f3997f2e13c057f6b2e93a261ea52a61ae17821306dfa2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\TIER_VALUES.md",
+      "sha256": "46f3b4ef361e72d8759acfaec02bd0e23b265fee828a66ffb55047ef608df616"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\WEAPON_COMPATIBILITY.md",
+      "sha256": "d74c7eb05787e119a91b375f9793f36ebc3c993c67a1dcabedae94a065aa3564"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\weapon_trait_bespoke_arc_rifle_p1_movement_speed_on_continous_fire.md",
+      "sha256": "c81588d641b8493a993f1078a1e0c4d725c7f9871b55a36424d6d5a30eb63fe5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\weapon_trait_bespoke_autogun_p2_movement_speed_on_continous_fire.md",
+      "sha256": "af824009a9d7e1904ed68437698e1ecc3852ba28b5531695ef4b5a482a89356b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\咆哮突進\\weapon_trait_bespoke_ogryn_heavystubber_p1_movement_speed_on_continous_fire.md",
+      "sha256": "461607266c2d648d3287ed8282ada907805deba056edecfa9a515598a546430e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "303db876daff2cbd8c8c6de7ed5ea66c79768961087cb1fef0db5aff6d5526e0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\槍托自動槍\\README.md",
+      "sha256": "e39749c4dad58c2a1736608bdded979119e1545e18ab8f200cb6a53b53990fb5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙鏈重型機槍\\README.md",
+      "sha256": "74178f07667e4781cb727925fb886fb3f21fac183161c20abb2b764b0f8a9939"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電弧步槍\\README.md",
+      "sha256": "f74e075857d12979150f300e1e940a4b337a6b76aa31c3ee42c3b34ce9697a04"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\Referneces\\Translation.md",
+      "sha256": "0e58e94dddcf3bf4ddfe3a3f096393f98e0dd3ea4dc2f45f105c93a325d83b27"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-raw-verification.json",
+      "sha256": "94cf6c303c059a2aa4c9f537a10632063dce3f460d43d4a248cb108cc4626fba"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\roaring-advance-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "8f7fb0090b7e6b8de005816411d7aa74b07372279321592c020462f3ba68206f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-001.json",
+      "sha256": "a87dcaa52d9a4c7cd1ba5d34754c253a4db3d61fc3890b741b45902538c16182"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-002.json",
+      "sha256": "a5f8690da2408805d5acaa62d5ca1d1e841c9d906bf8d5c6eabdfb40191ccc81"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-003.json",
+      "sha256": "9812948edcc929ee5294f21e537735918d86aea7fefde54393f15256cc1b6013"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-004.json",
+      "sha256": "dbab374bcc6a12c1de9b13192f4617e2a82ff220a1576801950968911fcdfc51"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-actual-preview-receipt-005.json",
+      "sha256": "86fc4a25c9b129079ce4067f639e145cc131d265a02539272d4997fb6860266d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-group/roaring-advance-agent-evidence.json",
+      "sha256": "5ee518ce442f26388765fcc9cab3d18eec3476f38a53304c110ef82a4b82bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-config.json",
+      "sha256": "0565ecbdd3b5fac86e7f7ba1b844cb65f448116aad2e94c78072c11d7828f655"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-evidence.json",
+      "sha256": "5ee518ce442f26388765fcc9cab3d18eec3476f38a53304c110ef82a4b82bdec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-agent-draft.md",
+      "sha256": "e2259e62c84c4f015fd05841b1b91e4b4f6a2de062342f08a0a1a0e5ed5b497f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-frozen-source-verification.json",
+      "sha256": "dacf287fc1fd800942dab687ffbe07622be3a1740ef0a90ca87e0e9390cfaeb0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-primary-own-tier-wrapper-content-review.json",
+      "sha256": "d53cfad6df7369a45370a31ad1999289d16ce02d96da7eb090541b48c37c9dfb"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/roaring-advance-formal-peer-scope.json",
+    "sha256": "8572c12add8e61dfaf00676f43cad56ea5a92fce2380987d92da120cb9fa31a4",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

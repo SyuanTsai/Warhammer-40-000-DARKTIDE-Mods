@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-04",
+  "blessing": "focused-cooling",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/專注冷卻/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-formal-peer-scope.json",
+    "scope_file_sha256": "e741d1be1ce80bd506ade3d6086fc1bd8775a1ca416166bb139542d84cf06c9d",
+    "scope": "Fixed formal peer review of Focused Cooling, exactly the 28 files enumerated by focused-cooling-formal-peer-scope.json; no formal or shared writes.",
+    "findings": [
+      "The actual inventory identity is one plasmagun_p1 trait variant bound to plasmagun_p1_m1 (M35 Magnacore Mk II) and plasmagun_p1_m2 (Mk III). The map, canonical config, extension draft, compatibility/reverse pages, icon identity/path, and verified attachment receipt agree. Both marks share I–IV tier values.",
+      "The own conditional tier map supplies overheat_immediate_amount_critical_strike = 0.7/0.6/0.5/0.4 and replaces, rather than stacks with, the wrapper same-key 0.5 fallback. The ordinary held-slot Buff has no proc listener, stacks, or TTL; the effect is available once the held-slot stat cache is active and becomes inactive/reactivated as the weapon is switched away/back.",
+      "Both marks route ordinary and charged releases through ActionShootHitScan, which inherits ActionShoot and calls super.start. The actual immediate-single-shot paths evaluate critical state at shot start; _shoot precedes _add_heat, and the heat call receives the stored critical flag without a hit-result argument. An actual fired critical shot therefore uses the multiplier even if it misses; no kill condition is present.",
+      "Overheat.increase_immediate applies the critical-only tier multiplier to the newly added immediate heat, then the shared add path adds that amount to existing heat and clamps. The trait does not subtract existing heat. Continuous charge heat, natural dissipation, vent removal, and charge duration use separate stats/paths and remain independent.",
+      "The B=0.10, H=0.40 example yields 0.47/0.46/0.45/0.44 for I–IV against the 0.50 baseline. At IV the 0.06 heat-bar gap is 6 percentage points, while the 0.06/0.10 reduction is 60% of the new heat increment; the review keeps those units distinct.",
+      "The exact name/description keys and bilingual hashes match. The formatter reconstructs all four complete EN/ZH sentences at -30/-40/-50/-60%; the original English RAW final ASCII space is explicitly annotated outside Markdown line-end whitespace. The comparison labels details omitted by RAW as “文件未涵蓋” rather than inventing an erratum.",
+      "Focused checks report 37 verified source ranges, 0 new link errors across 499 local references, and passing GFM for 12 files; all 28 scoped current hashes match and the previous map objects are unchanged."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-agent-config.json": "1e2901b382a1036b2234e4375cc6d4099abbdce417eef4951670581495ec7fd9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-agent-draft.md": "215e21ee2c87575375a7ff59b5868bca963ce15bf04489cd8f0912ba45abaacc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-agent-evidence.json": "3ce3aa25999b9e858585ee2b7643d844b4a9c9fd557480f51c2f39e01bbed435",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-config.json": "fa1000161b8fa77919235b686d1c16cc0f8d24d5580975d1bdc77699a9f9d3c5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-extension-draft.json": "90c9152dd1db56c22273d8411e013ba918485215b13a1b8157672690bf47aadd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-image.json": "f7095da82f7432846cc8aa9047b46913da8218f8cfdc418dc79b3e222b179912",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-critical-heat-delta-review.json": "908851f7d7143aaba9dc785a7310f0d71384f31f70bc7d35ce229792700c5cb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-focused-checks.json": "f5c56155a67f574af0b6c2e1fe5d8a83f782bf2a6821ad5e94fcd7782c40856e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-frozen-source-verification.json": "56cd47ca0d6747d947535a7450b336e5c164849f08227635e0437320b10426d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-own-tier-diff.json": "3dac394edafe3f769349059984b5fcbbed69a8e767ff23f43da66c42b62bc8a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-resume-review.json": "2760e8593183c05d9c43535d772e8f29427c617e4903c038cbbfe6b0ccccdc0c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-traits-review.json": "9bc7d2a90ec91398523a04225ebc61fd4cb10b6d0d71566c30e818ef8ae7ded3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-ui-raw-verification.json": "07854d82c0488df1b3bd6aef0f5811299510d7eb607007914832e887370086a0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-ui-review.json": "5ba1cc82df563f76849781fb6dca97d22e8351c80ea22f989326c6da585178b2",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5509651a8dbbc69ecf58c9ae94e6a8c0a5fa96da3e46df2e252a314110c410c0",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/DAMAGE_PERCENTAGE_REVIEW.md": "358b8f8d7be1f53fa9c9973653c08b565791ddcd6a9e0b17edad2b15381485f9",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/LOCALIZATION_COMPARISON.md": "8da480018667698e34141136b1d58a9e6d8be9107f89993ccd0c5204ff60562c",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/README.md": "93d701428ce86d5b7c377972e57738ba544e69c4a4044b2ee2e48038188d9806",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/SOURCE_INDEX.md": "9addb96272d416c7aeee66dcaa298aa3cbd71004747ed0c34dab88acebd27214",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/TIER_VALUES.md": "7e288e5c7501fdef3a5297a9130c4c57d667b69b6ce0d7a4fd7e9797214b5a3b",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/WEAPON_COMPATIBILITY.md": "a434387d7fc489487e69263cb8327ccc26b64494873713522f1bbca2417779c4",
+      "Game Info/releases/1.13.X/blessings/entries/專注冷卻/weapon_trait_bespoke_plasmagun_p1_reduced_overheat_on_critical_strike.md": "a7c17c026d6c7d9020d8f266d584491e99e148ae8da1bcc14358f6a08dc1a3b7",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "cc0eedcadb884bbab87152dd771b706a6b32dc34a5fd8186d2712b899b786c7f",
+      "Game Info/releases/1.13.X/blessings/README.md": "8fa1ccf434f4a7c3cdd93be41ae2af4acdb4ceb14ece69eabb0acdad65642105",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "a6be2dd966beb76debc6259a7350459be53ba04e8b6af3f2e208b2621b494865",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電漿槍/README.md": "819893efc9bdb339e2fba745a9132d07d635df65db90e5007734887edd0840b8",
+      "Referneces/Translation.md": "8794ae13dbd5e5702f232dc2a5d76a601180c9b21c7f947b05f6a330f8213e9f"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "focused-cooling",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_156",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_156.png",
+      "attachment": "https://github.com/user-attachments/assets/0020f814-9db1-4f7a-8ab7-2724ce98b3bc",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5980828438",
+      "acquired_date": "2026-10-04",
+      "sha256": "92348c521deb7201b7801c99e9f79ca18706d53fedf18eb1716025989bbc9c08",
+      "content_type": "image/png",
+      "size": 4217,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "專注冷卻祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Original source and public attachment inspected; alpha diagnostic of both shows three descending bars in circle with four inward direction wedges.",
+      "visual_review": {
+        "source_and_public_originals_viewed": true,
+        "alpha_diagnostics_viewed": true,
+        "same_icon": true,
+        "original_bytes_preserved": true
+      }
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 272,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 37,
+      "source_files": 17,
+      "bindings": 500,
+      "variants": 259,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 17,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 706,
+      "remote_references": 314,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 17,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-016-full-scan.json",
+        "sha256": "36a72bd54712e0f338b714ba41cda20dd9720b53141245f45c3f9611c5824dda",
+        "trigger": "round-016"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 86,
+    "not_started_name_groups": 86,
+    "partial_name_groups": 0,
+    "remaining_variants": 346,
+    "remaining_bindings": 685,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "91832123395c9221941c9d3f159ef7ddb35af7c0312fe57b5e4eb39e5fd3f3ff"
+  },
+  "previous_local_commit": "12160e363b9b1d0ac53fd95b1747776d52935751",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-critical-heat-delta-review.json",
+      "sha256": "908851f7d7143aaba9dc785a7310f0d71384f31f70bc7d35ce229792700c5cb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-focused-checks.json",
+      "sha256": "f5c56155a67f574af0b6c2e1fe5d8a83f782bf2a6821ad5e94fcd7782c40856e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-frozen-source-verification.json",
+      "sha256": "56cd47ca0d6747d947535a7450b336e5c164849f08227635e0437320b10426d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-own-tier-diff.json",
+      "sha256": "3dac394edafe3f769349059984b5fcbbed69a8e767ff23f43da66c42b62bc8a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-resume-review.json",
+      "sha256": "2760e8593183c05d9c43535d772e8f29427c617e4903c038cbbfe6b0ccccdc0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-traits-review.json",
+      "sha256": "9bc7d2a90ec91398523a04225ebc61fd4cb10b6d0d71566c30e818ef8ae7ded3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-ui-raw-verification.json",
+      "sha256": "07854d82c0488df1b3bd6aef0f5811299510d7eb607007914832e887370086a0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-primary-ui-review.json",
+      "sha256": "5ba1cc82df563f76849781fb6dca97d22e8351c80ea22f989326c6da585178b2"
+    }
+  ],
+  "primary_review_method": "Frozen25source/inputhashes and ownfulltier/UI/RAW/image156 stable; reusedheld/cache underactualconditional map. Actualhitscan inheritance/start/crit heat consumer delta directly reviewed, exactnormalizedexample checked.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-config.json",
+    "sha256": "fa1000161b8fa77919235b686d1c16cc0f8d24d5580975d1bdc77699a9f9d3c5"
+  },
+  "frozen_agent_inputs": {
+    "config.json": "1e2901b382a1036b2234e4375cc6d4099abbdce417eef4951670581495ec7fd9",
+    "evidence.json": "3ce3aa25999b9e858585ee2b7643d844b4a9c9fd557480f51c2f39e01bbed435",
+    "draft.md": "215e21ee2c87575375a7ff59b5868bca963ce15bf04489cd8f0912ba45abaacc"
+  },
+  "previous_map_objects_unchanged": true,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused-cooling-formal-peer-scope.json",
+    "sha256": "e741d1be1ce80bd506ade3d6086fc1bd8775a1ca416166bb139542d84cf06c9d",
+    "final_content_hashes_unchanged": true
+  }
+}

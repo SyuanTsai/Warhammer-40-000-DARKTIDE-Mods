@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-03",
+  "blessing": "brutal-momentum",
+  "scope": "remaining same-name weapon variants",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/野蠻攻勢/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill",
+    "weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill"
+  ],
+  "added_binding_count": 8,
+  "total_variants": 6,
+  "total_bindings": 14,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings and shared execution-chain applicability.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only",
+    "reviewed_variants": [
+      "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+      "weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill",
+      "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill",
+      "weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill"
+    ],
+    "findings": [
+      "Four new variants share 7.5/10/12.5/15% melee weakspot-extra modifiers and the same base keyword/held condition.",
+      "Qualifying first three total kills skip target_index update, so fourth target keeps first rank; later rank then advances.",
+      "Shield push is not sweep, pushfollow sweep qualifies; Power Maul explosion is an independent explosion attack.",
+      "Actual name key separates Brutal Momentum from Heavy Sword Deathblow; all four icons use178.",
+      "Default50% is replaced by tier stat override via buff.lua695–712 and735–747, not added."
+    ],
+    "review_correction": "Luna initially raised a default50% stacking concern; primary read the override executor and Luna independently confirmed replacement, resolving it before commit.",
+    "files_modified": false
+  },
+  "image": {
+    "receipt_reused_from": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_ACCEPTANCE.json",
+    "attachment": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+    "icon_consistency_verified": true,
+    "prior_validation": {
+      "id": "brutal-momentum",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_178.png",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178",
+      "sha256": "f01de7f9de30fa628e842da57ca28b8cac6ad688af5360e039b4344332c48354",
+      "size": 5727,
+      "content_type": "image/png",
+      "width": 128,
+      "height": 128,
+      "attachment": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display": "original and public attachment inspected"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 83,
+      "tables": 76,
+      "rows": 555,
+      "lists": 63
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 275,
+      "source_files": 113,
+      "bindings": 56,
+      "variants": 23,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 783,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 83,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 154,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 3,
+    "remaining_variants": 542,
+    "remaining_bindings": 1073,
+    "unresolved": 58,
+    "definitions_outside_intersection": 128
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "e0c39158daa729da9544508e1fb05a2f4539252143d97938a8f1858769172307"
+  },
+  "previous_local_commit": "3c8a75c98e1efce70cee8d8314d48c83a85ca85a"
+}

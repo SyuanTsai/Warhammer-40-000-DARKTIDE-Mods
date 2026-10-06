@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-04",
+  "blessing": "weight-of-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/猛攻/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-formal-peer-scope.json",
+    "scope_sha256": "8211397ceca077cf56deb1c048b0d1c792595aa5db04c725134d62ceb475a38d",
+    "review_summary": [
+      "The 30 fixed-scope files all match their declared SHA-256 values.",
+      "The interpolated runtime charge_duration wording now consistently treats basic/perfect as per-Mark interpolation endpoints, not firing modes; examples and q=0 table assumptions match the formula.",
+      "Tier values, wrapper action whitelist and 0–5 combo cap, combo/reset/switch/idle lifecycle, cached charge consumer, signed RAW reconstruction and separated numeric/terminology errata are internally consistent.",
+      "The three actual lasgun_p2 Mark bindings, reverse index, shared map, UI names and weapon_trait_101 attachment agree."
+    ],
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-config.json": "b0d1f38c2520076802b4ebad8d8d6ce8972efbd539c85dbd80e28795df51a387",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-draft.md": "83cec275f3afeceed62508c7ffecfa34025f7cd9bc85d49c3b8dadfc914886b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-evidence.json": "6b55b3bd84171ec09d9e5eaeb30cd3127686432550749f1598bb3a70df561e50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-config.json": "0d1d2f37aa1e9bd7ab6f09504803cdd8f0243a2b27b49019f0307d9eeeffb15e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-extension-draft.json": "6a84ce408d5ebbbad164067981e8175a3fa7927b90cd8caa6bd6ac4435608785",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-image.json": "42b4749763464263ba1f51ef29afaae60c54dead50bf3adc883daff0a8ba5c0e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-charge-consumer-review.json": "6f83573d0d6f57f9b6220871fd4bfae4f8034a9dbc5e7f1cd1413a021f8e6570",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-focused-checks.json": "42c575df64ebd3f5e5ec03b64cd5e9b97ec567557646f12c409450ea1655c500",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-frozen-source-verification.json": "de24a86a781c83e8864d782a102ead472362af5d3fe5ce86542812b661f9901f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-map-before.json": "65d8b685ed89de7d073d45b274fbb8f8906aef368071343f2b7971517beed42a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-mark-base-time-review.json": "c7f9e16406e5aa1348db1a2cdfac47a67fc53a8cb1328856450c187ccac7faff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-own-tier-diff.json": "076a85c8d4d06e61124466485fce0e71978971407cca47a37f778194fe5c7610",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-resume-review.json": "3c66e51c187fce7a2d1845ab11e017dbbce590e5e360b45be7b1e5742f9974ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-traits-review.json": "f47bd2d573799683bdac875c150b34993e5ffac91a807e0fa7cba8193adbdcfc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-ui-raw-verification.json": "f340f5602991ddc9104f4f71cfc4df90978821f842c3df34f99578fe7c9697af",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-ui-review.json": "3afbbe7d00839808c4f9ea6c3ee52c578fd87f991207b7dd1cb40187eeb80c13",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/README.md": "1d83b75285b46142329962f3bb1937d4a4668933c4927f71c88c31c24f278ce3",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6208aa2c7d49b4c7bb70e821c222628fe49955a07ec64cf29fc1188364fc2d11",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "e0f009fc8d7cb781a62c5cdaff6564ccd212942fa7bb4fe9582f4a1bcdfadd04",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/DAMAGE_PERCENTAGE_REVIEW.md": "fac9d988b14f16aad72a429083e5ee6d9d18e5ae6dea4f81df0f5f621cecd708",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/LOCALIZATION_COMPARISON.md": "9824bd30f4cc85123009e8f3cdc0475bd4145b76a4de2db5b899c0e9ff3b24a3",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/README.md": "6d3493224424f1654986a23e5e6264e97f83aed556f2fa154262a7441cb00023",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/SOURCE_INDEX.md": "c5c0502f5e94904fe22715186fc9b64f95194959c3b8e7b3dbf1000c7dd00eda",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/TIER_VALUES.md": "5042fb5fee12a5a9430d0c54b5cd9387fb56871b6cd869582b7a2378e9b8b950",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/WEAPON_COMPATIBILITY.md": "93a022d3e55c6bc4eba2fcd9f00add971d365a305c548a43d4c6b3ca776c7586",
+      "Game Info/releases/1.13.X/blessings/entries/猛攻/weapon_trait_bespoke_lasgun_p2_faster_charge_on_chained_secondary_attacks.md": "e5e2ce7fa03822d3c8fb0e225afd0ba6da50bf81e5aa9443ca16469b31da805d",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "f1c8474a189fa7e155314d98440039e4c3dce536b696591e040ed0350415a4f9",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "8c605435c5e756c6831336964069e0134eda5fcfbcb261e644b668ad0b64945f",
+      "Referneces/Translation.md": "4df2ee625493207eaaae473cde7462e10f16cb47cab605a563d7219c3e3f4f40"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "weight-of-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_101",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_101.png",
+      "attachment": "https://github.com/user-attachments/assets/0d16364d-b0de-4a1d-9348-9225824ed97b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5979099038",
+      "acquired_date": "2026-10-04",
+      "sha256": "8063765b27c06aa3f7fcf725dc246eff0c16e04c1dbef5a8c4f06a94fcd56b86",
+      "content_type": "image/png",
+      "size": 4681,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "猛攻祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_match": "Two horizontal elongated projectile shapes surrounded by radiating diamond/chevron bands; source and public exact match, 128x128 and alpha diagnostic inspected."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 13,
+      "rows": 281,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 52,
+      "source_files": 22,
+      "bindings": 476,
+      "variants": 246,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 643,
+      "remote_references": 319,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 14,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-013-full-scan.json",
+        "sha256": "54ee05026345515fb4de84abbece3cf7b430fbddf1d7d90f3f7085d6aeba1661",
+        "trigger": "round-013"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 94,
+    "not_started_name_groups": 94,
+    "partial_name_groups": 0,
+    "remaining_variants": 359,
+    "remaining_bindings": 709,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "d57a6bd9fe16d60f62b95b60c405287aa5434159398198e1b1a60b0339c1a7c8"
+  },
+  "previous_local_commit": "fd9f824637cb5127f9246347c5f3b219d996d2f1",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-own-tier-diff.json",
+      "sha256": "076a85c8d4d06e61124466485fce0e71978971407cca47a37f778194fe5c7610"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-ui-review.json",
+      "sha256": "3afbbe7d00839808c4f9ea6c3ee52c578fd87f991207b7dd1cb40187eeb80c13"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-ui-raw-verification.json",
+      "sha256": "f340f5602991ddc9104f4f71cfc4df90978821f842c3df34f99578fe7c9697af"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-traits-review.json",
+      "sha256": "f47bd2d573799683bdac875c150b34993e5ffac91a807e0fa7cba8193adbdcfc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-frozen-source-verification.json",
+      "sha256": "de24a86a781c83e8864d782a102ead472362af5d3fe5ce86542812b661f9901f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-charge-consumer-review.json",
+      "sha256": "6f83573d0d6f57f9b6220871fd4bfae4f8034a9dbc5e7f1cd1413a021f8e6570"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-primary-mark-base-time-review.json",
+      "sha256": "c7f9e16406e5aa1348db1a2cdfac47a67fc53a8cb1328856450c187ccac7faff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-image.json",
+      "sha256": "42b4749763464263ba1f51ef29afaae60c54dead50bf3adc883daff0a8ba5c0e"
+    }
+  ],
+  "primary_review_method": "Reviewed complete frozen draft/43exact rawGit ranges. Direct own complete tier/directwrapper/SteppedStatBuff/held/same-key override applicability checked, no extra stepped map; actual3item/UI/RAW/model bindings and hip/ADS/start/charged/special/reload/switch/idle counter coverage reviewed. Reused same-SHA cache/stat/order mechanisms after own gates verified. Exact negative formatter selection/caller/helper/consumer verified for numeric-sign erratum; Chaining mistranslation independently separated. Expanded Mark charge endpoint→weapon item interpolation→runtime getter chain, controlled x=.5/T0=.75 fractional arithmetic, n1/n5/qminus.1n3 results checked.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-config.json",
+    "sha256": "0d1d2f37aa1e9bd7ab6f09504803cdd8f0243a2b27b49019f0307d9eeeffb15e"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-config.json",
+      "sha256": "b0d1f38c2520076802b4ebad8d8d6ce8972efbd539c85dbd80e28795df51a387"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-evidence.json",
+      "sha256": "6b55b3bd84171ec09d9e5eaeb30cd3127686432550749f1598bb3a70df561e50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-agent-draft.md",
+      "sha256": "83cec275f3afeceed62508c7ffecfa34025f7cd9bc85d49c3b8dadfc914886b9"
+    }
+  ],
+  "previous_objects_unchanged": {
+    "blessings": 72,
+    "variants": 245,
+    "bindings": 473
+  },
+  "previous_weapons_unchanged": 67,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/weight-of-fire-formal-peer-scope.json",
+    "sha256": "8211397ceca077cf56deb1c048b0d1c792595aa5db04c725134d62ceb475a38d",
+    "scope": "Single7formal player pages and own1trait/3bindings/related sharedreverse/glossary. Unchanged unrelated accepted entries excluded.",
+    "fixed_file_count": 30,
+    "receipt_sha256": "abf5ac1839a1d671bd46c2704088eb97e170db2d6f7c40849712aceb4898dcbd"
+  },
+  "peer_followup": {
+    "resolved_issue": "T0 runtime item interpolation wording in both formula pages",
+    "canonical_draft_formal_synced": true,
+    "unchanged_scope_files": 25,
+    "only_declared_five_files_changed": true,
+    "final_peer_accepted": true
+  }
+}

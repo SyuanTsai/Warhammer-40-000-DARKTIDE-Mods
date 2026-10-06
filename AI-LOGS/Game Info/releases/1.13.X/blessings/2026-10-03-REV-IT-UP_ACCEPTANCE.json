@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-05",
+  "blessing": "rev-it-up",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/提速/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation",
+    "weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation",
+    "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 3,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "id": "rev-it-up-formal-nonauthor-review",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-formal-peer-scope.json",
+    "scope_sha256": "285dee9c425e4a7b826f67e8fde830b400d19136cc29bb0b3f2c241463d22891",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-config.json": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-draft.md": "12f6e1c5a3bdb343a4eaa74c6801847d3930d7962e670a63e3235fedf360c2d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-evidence.json": "e3cbcb516fa7805435b98b4343ea281cc1ab8c1438aaef513f29328f65c1176f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-config.json": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-extension-draft.json": "864b4b66efcd045e8d65c62fc873b24d637e71eda567326067fc046efe927602",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/candidate-page.md": "8d95d00f0efcedfc640511e42c3f68018bdc3b4846a98c96e98841eed21acb39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-chainsword-p1-image.json": "4ed3277cfa743c6cfe71c839a803a8edad63b90c55125a9e14c515977c199fef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-image.json": "8c710ab8fabbe9ba3d195de4095ddc24adf8871c81d1c644e1293f50b269316c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-own-tier-wrapper-content-review.json": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-traits-review.json": "d2084d7177be3800ac591e873387a3c23656243cc6790c5965f55f881b76da83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-ui-raw-verification.json": "21f8921efb22b8a9432a2faafc750da8b5231ced0fb27c89d79304f9fc6ffe21",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-ui-review.json": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-action-coverage.json": "c82824aba4dd1201a2d3d8104426a46a393ace06dab13b6752b3faf74f9ca1dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-config.json": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-draft.md": "12f6e1c5a3bdb343a4eaa74c6801847d3930d7962e670a63e3235fedf360c2d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-evidence.json": "e3cbcb516fa7805435b98b4343ea281cc1ab8c1438aaef513f29328f65c1176f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-association-snapshot.json": "1639dcdf0e153159a52636ccd8371306245bdf846f80ee5115a680bb74f96a85",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-build.py": "4de88624b971d58182e6e462694e2289905b03a74832024233b75fee951401bd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-freeze.json": "af0f0b71893355a00331e5424dff4c0d62e6d25f79ce94c3624906d6245dbebf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-page-preview.md": "8d95d00f0efcedfc640511e42c3f68018bdc3b4846a98c96e98841eed21acb39",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-selfcheck-results.json": "cb5d47604f5889c891771dd2450190e15b68a5e52d13a724e0da292f0e32b3f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-selfcheck.py": "ed69bfe16d70b416c851fc5b6f13523e20f28293b60ef16169aa079095c7cd43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-source-ranges.json": "09f2d188a3fbba2d6341f13e40b47cec0cb12b2143c4563f53f43db830cb22ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-image.json": "8c710ab8fabbe9ba3d195de4095ddc24adf8871c81d1c644e1293f50b269316c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-focused-checks.json": "5c3274e7d109d5166b507d7d9ef862d533ca0c3a4fed161b2f3c04e0d2af9b41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-frozen-source-verification.json": "081209f68e6407914a2a35d84d1551b7b076ed15dad601d4567b8c905d4a6238",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-own-tier-wrapper-content-review.json": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-resume-review.json": "df252703a947c5891e32de190e4dfa7828e7f09ce8c8e15ea644b9c811de68e5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-traits-review.json": "d2084d7177be3800ac591e873387a3c23656243cc6790c5965f55f881b76da83",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-raw-verification.json": "21f8921efb22b8a9432a2faafc750da8b5231ced0fb27c89d79304f9fc6ffe21",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-review.json": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3e51a5b73d610bd1f4d4dd0664e4c5acc648dc3666b521d14197b75470ec98ed",
+      "Game Info/releases/1.13.X/blessings/entries/提速/DAMAGE_PERCENTAGE_REVIEW.md": "7ccaba652a15117b3429001e83295d1865bf92f74e431c6572451bf3f311a12b",
+      "Game Info/releases/1.13.X/blessings/entries/提速/LOCALIZATION_COMPARISON.md": "066b0a28d8e5fd930e6a70cb1818febfe033170c06a689b989090d3862791b31",
+      "Game Info/releases/1.13.X/blessings/entries/提速/README.md": "ab40cee5a2e209ffc6f07d4de8daafd1a2b9ed89deab59af4df448143d373f12",
+      "Game Info/releases/1.13.X/blessings/entries/提速/SOURCE_INDEX.md": "f0c4fc9fcfd5918d73cc6f5a392618037649987b2592f6077d8fb2f6b651d9fd",
+      "Game Info/releases/1.13.X/blessings/entries/提速/TIER_VALUES.md": "f8e6912fdbbb09034ffa413c4e9dddffac9045d1fcfb1456d06db329e3833604",
+      "Game Info/releases/1.13.X/blessings/entries/提速/WEAPON_COMPATIBILITY.md": "387d341301c3c54bd0cd38afd4ba902a0ca02ee9113d9be1c69f8afb0cbcd563",
+      "Game Info/releases/1.13.X/blessings/entries/提速/weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation.md": "1a77c86eae9c7062d177d1a032c5feb67f7dd97fda9ec9ec8e37cb56a551b94c",
+      "Game Info/releases/1.13.X/blessings/entries/提速/weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation.md": "83ddb84dcd3cfae24974e784dfa21403bf7fa29191d56dcfb68f66bcc9a0cf42",
+      "Game Info/releases/1.13.X/blessings/entries/提速/weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation.md": "9962590171434c059630ea30d2892f90a6c48754931b99b2a9abc25d782259fe",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "3201d4fa79681e12000b5c1e200d7ae2d3b32806cf0700aafd8593508d5f8e81",
+      "Game Info/releases/1.13.X/blessings/README.md": "1bb374309b2ea146e72010634d724a965e9c6796a7b4c6ec4848370d0e10d5a8",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "58087012e61dbd4fce460fece60106b3b9401a8469e801ff47e021cbe0cdddfc",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈斧/README.md": "3b40c7893c09a4d015d1573401d054fa3fb11c4389383b737ba331869745b98f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "7595231fd83ad86d99682d3d522f8f92ed19a93e90e39ba37e5be746c402abb3",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/重型開膛劍/README.md": "547f0498a3793e3078c1c0f28af5960cbc3f1ff284d798c5b1c587961823fdf7",
+      "Referneces/Translation.md": "9d983678d76905d0a880a80a9cf245101b26603a2ce30bc143fa021da7408c26"
+    },
+    "verified_scope_file_count": 53,
+    "all_scope_hashes_match": true,
+    "canonical_config_sha256": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6",
+    "reviewed_findings": [
+      "The final main page and three implementation pages match the three actual trait IDs and six bound marks. Weapon labels and reverse index entries match the canonical associations; UI verification reports six bindings and no outside exact items.",
+      "The own-tier proof supports I–IV movement_speed values .17/.18/.19/.20, +17% through +20% formatting, and a 2-second duration for each of the three implementations. Each wrapper has one direct clone of the shared activation buff, with no additional wrapper assignment found.",
+      "The trigger description matches the weapon-special activation event. The six actual model action tables do not allow reactivation while special state remains active; the event guard also requires the 0.5-second interval. Ordinary attacks, special attack hits, and subsequent chainsaw hits are not the activation event.",
+      "First-effect wording correctly places ProcBuff event handling before stat-cache rebuild. A later qualifying activation refreshes the same 2-second timer without stacking; switching away suppresses the held-slot contribution while time continues, and unequipping removes the trait effect.",
+      "The movement-speed calculation distinguishes additive value h from other additive value q and fixed multiplier m. The worked example is arithmetically correct: (1+0.25+0.20)/(1+0.25)-1 = 16%; sprint has a separate multiplier, so the trait does not promise a fixed final-speed increase.",
+      "The RAW keys and paired English/Traditional Chinese source hash match the RAW receipt. All four tier reconstructions use the exact formatter prefix and duration; omitted runtime conditions are labeled as not covered rather than translation contradictions.",
+      "The generic weapon_trait_200 icon and chainsword weapon_trait_079 icon are represented by separate verified attachment receipts and correspond to the formal image links and reverse weapon pages."
+    ],
+    "validation_receipts": {
+      "focused_checks_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-focused-checks.json",
+      "focused_checks_sha256": "5c3274e7d109d5166b507d7d9ef862d533ca0c3a4fed161b2f3c04e0d2af9b41",
+      "verified_source_ranges": 73,
+      "verified_source_files": 34,
+      "actual_binding_count": 6,
+      "new_link_errors": 0,
+      "gfm_passed": true,
+      "own_tier_proof_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-own-tier-wrapper-content-review.json",
+      "own_tier_proof_sha256": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d",
+      "ui_review_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-review.json",
+      "ui_review_sha256": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "generic_icon_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-image.json",
+      "generic_icon_receipt_sha256": "8c710ab8fabbe9ba3d195de4095ddc24adf8871c81d1c644e1293f50b269316c",
+      "chainsword_icon_receipt_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-chainsword-p1-image.json",
+      "chainsword_icon_receipt_sha256": "4ed3277cfa743c6cfe71c839a803a8edad63b90c55125a9e14c515977c199fef"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "rev-it-up",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_200",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_200.png",
+      "attachment": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991173774",
+      "acquired_date": "2026-10-05",
+      "sha256": "32bede42f547de26819065981d3b1bdda2cc8fc8ecd6b25f10eb10062efadd7d",
+      "content_type": "image/png",
+      "size": 3936,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "提速祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_acceptance": "Root viewed the native/public 128x128 PNG: pale gray-white rectangular panel with upper side cutouts and thin vertical side bars on transparent background. Original bytes and public attachment are identical."
+    },
+    "additional_variant_images": [
+      {
+        "id": "rev-it-up-chainsword-p1",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_079",
+        "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_079.png",
+        "attachment": "https://github.com/user-attachments/assets/3d06a9eb-af04-4e0c-aa02-f56d047dea16",
+        "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+        "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5991182862",
+        "acquired_date": "2026-10-05",
+        "sha256": "aab90ef928f1394b1c87d718c71cc0e68d25d1495a15f547308ea2e423d8f7ef",
+        "content_type": "image/png",
+        "size": 5234,
+        "dimensions": [
+          128,
+          128
+        ],
+        "alt": "提速祝福圖示",
+        "public_download_status": 200,
+        "hash_verified": true,
+        "display_verified": true,
+        "visual_acceptance": "Root viewed the native/public 128x128 PNG: pale white-gray angled central shape with horizontal stepped streaks on its left, pointed side projections and two vertical side bars on transparent background. Original bytes and public attachment are identical.",
+        "display": "public attachment inspected"
+      }
+    ],
+    "variant_icon_mapping": [
+      {
+        "variant_id": "weapon_trait_bespoke_chainaxe_p1_movement_speed_on_activation",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_200",
+        "attachment": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_movement_speed_on_activation",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_200",
+        "attachment": "https://github.com/user-attachments/assets/8a6ba0a3-cdaf-403f-a87b-3743b3fcfe97",
+        "verified_binding_count": 2
+      },
+      {
+        "variant_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activation",
+        "icon_path": "content/ui/textures/icons/traits/weapon_trait_079",
+        "attachment": "https://github.com/user-attachments/assets/3d06a9eb-af04-4e0c-aa02-f56d047dea16",
+        "verified_binding_count": 2
+      }
+    ]
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 16,
+      "tables": 16,
+      "rows": 431,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 73,
+      "source_files": 34,
+      "bindings": 793,
+      "variants": 400,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 34,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1012,
+      "remote_references": 487,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 28,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/thunderous-exact-wrapper-generator-boundary-full-scan.json",
+        "sha256": "4ee8ea1265f8127ec7368ca643e8b18aadfe867706b9dacf6ca3d9081357b446",
+        "trigger": "thunderous-exact-wrapper-generator-boundary"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 53,
+    "not_started_name_groups": 53,
+    "partial_name_groups": 0,
+    "remaining_variants": 205,
+    "remaining_bindings": 392,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "c0170fde48a05cbc23a0e51dca60b396e8961659dcc7815e26c41dc0de84a605"
+  },
+  "previous_local_commit": "602b7665a2ea027369bd86aee465f980ba0875f7",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-focused-checks.json",
+      "sha256": "5c3274e7d109d5166b507d7d9ef862d533ca0c3a4fed161b2f3c04e0d2af9b41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-frozen-source-verification.json",
+      "sha256": "081209f68e6407914a2a35d84d1551b7b076ed15dad601d4567b8c905d4a6238"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-own-tier-wrapper-content-review.json",
+      "sha256": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-resume-review.json",
+      "sha256": "df252703a947c5891e32de190e4dfa7828e7f09ce8c8e15ea644b9c811de68e5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-traits-review.json",
+      "sha256": "d2084d7177be3800ac591e873387a3c23656243cc6790c5965f55f881b76da83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-raw-verification.json",
+      "sha256": "21f8921efb22b8a9432a2faafc750da8b5231ced0fb27c89d79304f9fc6ffe21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-review.json",
+      "sha256": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233"
+    }
+  ],
+  "primary_review_method": "Content review centered on actual own full tiers/wrapper/formatter/native producer+consumer and difference applicability; common held/event/cache/lifetime mechanisms unchanged and reused. Original frozen author trio remains separate. Single approved canonical generates formal pages and shared indexes; formal nonauthor peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-config.json",
+    "sha256": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-traits-review.json",
+      "sha256": "d2084d7177be3800ac591e873387a3c23656243cc6790c5965f55f881b76da83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-ui-review.json",
+      "sha256": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-ui-raw-verification.json",
+      "sha256": "21f8921efb22b8a9432a2faafc750da8b5231ced0fb27c89d79304f9fc6ffe21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-image.json",
+      "sha256": "8c710ab8fabbe9ba3d195de4095ddc24adf8871c81d1c644e1293f50b269316c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-chainsword-p1-image.json",
+      "sha256": "4ed3277cfa743c6cfe71c839a803a8edad63b90c55125a9e14c515977c199fef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/inputs/rev-it-up-primary-own-tier-wrapper-content-review.json",
+      "sha256": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-source-ranges.json",
+      "sha256": "09f2d188a3fbba2d6341f13e40b47cec0cb12b2143c4563f53f43db830cb22ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-action-coverage.json",
+      "sha256": "c82824aba4dd1201a2d3d8104426a46a393ace06dab13b6752b3faf74f9ca1dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-association-snapshot.json",
+      "sha256": "1639dcdf0e153159a52636ccd8371306245bdf846f80ee5115a680bb74f96a85"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-config.json",
+      "sha256": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-draft.md",
+      "sha256": "12f6e1c5a3bdb343a4eaa74c6801847d3930d7962e670a63e3235fedf360c2d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-page-preview.md",
+      "sha256": "8d95d00f0efcedfc640511e42c3f68018bdc3b4846a98c96e98841eed21acb39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/candidate-page.md",
+      "sha256": "8d95d00f0efcedfc640511e42c3f68018bdc3b4846a98c96e98841eed21acb39"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-build.py",
+      "sha256": "4de88624b971d58182e6e462694e2289905b03a74832024233b75fee951401bd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-selfcheck.py",
+      "sha256": "ed69bfe16d70b416c851fc5b6f13523e20f28293b60ef16169aa079095c7cd43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-selfcheck-results.json",
+      "sha256": "cb5d47604f5889c891771dd2450190e15b68a5e52d13a724e0da292f0e32b3f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-agent-evidence.json",
+      "sha256": "e3cbcb516fa7805435b98b4343ea281cc1ab8c1438aaef513f29328f65c1176f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-group/rev-it-up-freeze.json",
+      "sha256": "af0f0b71893355a00331e5424dff4c0d62e6d25f79ce94c3624906d6245dbebf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-config.json",
+      "sha256": "c5b6d864099e83d738fc192581e650adc1f58f5081b33b607e07d8b8023665e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-evidence.json",
+      "sha256": "e3cbcb516fa7805435b98b4343ea281cc1ab8c1438aaef513f29328f65c1176f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-agent-draft.md",
+      "sha256": "12f6e1c5a3bdb343a4eaa74c6801847d3930d7962e670a63e3235fedf360c2d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-frozen-source-verification.json",
+      "sha256": "081209f68e6407914a2a35d84d1551b7b076ed15dad601d4567b8c905d4a6238"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-own-tier-wrapper-content-review.json",
+      "sha256": "f5755d610707333eaca660a24a92de0592fd1090ea86c954455039b4141a0b7d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-traits-review.json",
+      "sha256": "d2084d7177be3800ac591e873387a3c23656243cc6790c5965f55f881b76da83"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-raw-verification.json",
+      "sha256": "21f8921efb22b8a9432a2faafc750da8b5231ced0fb27c89d79304f9fc6ffe21"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-primary-ui-review.json",
+      "sha256": "bff4c0eabc4536ae7a2bcd718ec3b27f11ee8c50fecb0bc0407eeae2ab6ac233"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/rev-it-up-formal-peer-scope.json",
+    "sha256": "285dee9c425e4a7b826f67e8fde830b400d19136cc29bb0b3f2c241463d22891",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

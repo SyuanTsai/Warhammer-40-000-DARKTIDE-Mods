@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-06",
+  "blessing": "pinpointing-target",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/精確定位/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming",
+    "weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power",
+    "weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming",
+    "weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 4,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "pinpointing-target",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "non_author_peer": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-formal-peer-scope.json",
+    "scope_sha256": "e5d85ce0428ad7e7de7cc8889561d1f3dda3abf7982050811f26bb0e96147450",
+    "file_sha256": {
+      "AI Prompt/Blessings-Workflow.md": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-config.json": "128a95ef98a94ee0417c284ba82c25fadda300240c12e0108d32617ea952e8a5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-draft.md": "029f76cbd3be4db6dde51d5949af415eac1233d360bc0ee27b4b8561625e6ec5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-evidence.json": "63da3b0a744397ce5ed911338eeee4ecccb4fb17e9aca79a5266a6d5b3fba7c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-config.json": "958b236a986d56b1246a1d302d257cc5787e6257525a3588b7a1b7ff6bcb2d33",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-extension-draft.json": "44626d14083c5b34dcfcc688121e9f15060310d57ffdd3aa47c6d06f10399ded",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-raw-verification.json": "d68c8ced40e19aebf263025df09f454257e785ee101e5d6921fe8e3734730ff7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/own-association-snapshot.json": "cc99da6262e103bb392e5b945b7be6c7bf112bb97ba28aa50557caadc1d69885",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/build_pinpointing_target.py": "c9e4c5069ae6180dccfb924f87bb775bff256ad512712f50d5cdc62f1fa3e7ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-001.json": "9b7b82e963320d6fa88eda90ac8dee1f03130458af0c79e896c0f3d7874bbca1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-002.json": "ebd4dfc6543cb4f80a381a9142219d2ff617656c29d1f57675dc3aac3605da50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-003.json": "bc80d44095ee06ac6810949a386b1abbc3ed42982ecd0eacccafd717632fbaa9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-004.json": "21dd60ba53e445a64b9f296cff5044cc53f150c4ef546b34fa97d47737fb42fd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-005.json": "b0d78654d29b9bc80ff730e49ab7be949fc4dfb8f288efd90b224f8d6c28cf03",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-006.json": "44b9d1032ed29972a373f1047e0d9faef09a83f7469633ab0a8886597b1cfd7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-config.json": "128a95ef98a94ee0417c284ba82c25fadda300240c12e0108d32617ea952e8a5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-draft.md": "029f76cbd3be4db6dde51d5949af415eac1233d360bc0ee27b4b8561625e6ec5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-evidence.json": "63da3b0a744397ce5ed911338eeee4ecccb4fb17e9aca79a5266a6d5b3fba7c9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-image.json": "ee0756a05a2976361c5ae3c717d67b7846e3d549599da51ee028b71641334a04",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-final-content-math-raw-mode-review.json": "5d840294e403af955aac2379ae68a303c15c050578ece2f619a8794b97ae0ff9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-focused-checks.json": "6434725bf09e6b48fa336e67c757d42e5567c6c61578371c98b12663cfb83479",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-formal-rule-column-delta-review.json": "96444ac40cce077c83f1e437ad296f921b1afeb2135daebd594feed3b1486576",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-frozen-source-verification.json": "7ba5576969045404119c6f54b4b0159ffda2a4edb0948a8f6390a852d5fc25b9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-own-tier-wrapper-step-delta-review.json": "7651c7988109c7905ce2ad30217609205784f4e881d6038290bd237890d7e183",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-projectile-snapshot-power-consumer-delta-review.json": "cc355bcddc554d758092aa295701b4e95dc802c5455dce90c8bad1ab9fd9f9ef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-resume-review.json": "87b14a3a84f765a2a2be66f53999de7db16e7cf73853ba20f6bf59add39ccee3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-traits-review.json": "4560bdce2950fd1ce4a2011d3d446697391d94f042a4d3ef77c177e5bdc92be0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-raw-verification.json": "110c3a679a267262cf189ce57834d2bd2bfc01d62f361d2dda9fe8107f783c6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-review.json": "9f77c1631ee868f5b815ef4717f949881dc1950b471aaf168fdaf869a95c71f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-raw-verification.json": "d68c8ced40e19aebf263025df09f454257e785ee101e5d6921fe8e3734730ff7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b64a58ede471b0e1676db89307bb4bc9cb8b347b4d912730712cf1771e3ab099",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/DAMAGE_PERCENTAGE_REVIEW.md": "c844b97281853699007e6633b8438e02eb8b96b75e04b3656b6dc37c6f234bd7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/LOCALIZATION_COMPARISON.md": "1fcb125c353dab3a507ef73ad02e9592a9493255c41503a2cdb1622e17fca7fb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/README.md": "5d688dc6190033b719d429d6012f4703046906d6652ed22a13230fdad0c83b36",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/SOURCE_INDEX.md": "2d81802a0d193d0e8284a6c4a680d96ee25d625c5a231df87485c347ffdbeff0",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/TIER_VALUES.md": "f1fd683a82c8d2c0720c27945de7e6cdfdbc9394272d9fcf05b2d9457620a690",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/WEAPON_COMPATIBILITY.md": "d4dd6b72006a99a09de98a3959ca22911feb5559ba8924e526d5f3285641ba9d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming.md": "f637bf7d74d387549f9dbae9bcd066b3c926b65516ab21f87d42b2b42fdbde97",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power.md": "021012c97c9f38484be7fb268d06a76d5b787cb5fccbf739de56d41f8a1cbe71",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming.md": "f7f9d8d64b5769c0631ffe5f51095dfcce3cccc172029c588972160920cbaa81",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power.md": "b928308e426a784a52974cebad1fc289dd3af1d85efcd0ef7493363c8710d425",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/own-association-snapshot.json": "cc99da6262e103bb392e5b945b7be6c7bf112bb97ba28aa50557caadc1d69885",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "b64a58ede471b0e1676db89307bb4bc9cb8b347b4d912730712cf1771e3ab099",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/DAMAGE_PERCENTAGE_REVIEW.md": "c844b97281853699007e6633b8438e02eb8b96b75e04b3656b6dc37c6f234bd7",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/LOCALIZATION_COMPARISON.md": "1fcb125c353dab3a507ef73ad02e9592a9493255c41503a2cdb1622e17fca7fb",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/README.md": "5d688dc6190033b719d429d6012f4703046906d6652ed22a13230fdad0c83b36",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/SOURCE_INDEX.md": "e25d9d002848a9b87d91b8d51e2dea8e3b38572209eafc9472ea6918fee02e3e",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/TIER_VALUES.md": "f1fd683a82c8d2c0720c27945de7e6cdfdbc9394272d9fcf05b2d9457620a690",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/WEAPON_COMPATIBILITY.md": "d4dd6b72006a99a09de98a3959ca22911feb5559ba8924e526d5f3285641ba9d",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming.md": "f637bf7d74d387549f9dbae9bcd066b3c926b65516ab21f87d42b2b42fdbde97",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power.md": "021012c97c9f38484be7fb268d06a76d5b787cb5fccbf739de56d41f8a1cbe71",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming.md": "f7f9d8d64b5769c0631ffe5f51095dfcce3cccc172029c588972160920cbaa81",
+      "Game Info/releases/1.13.X/blessings/entries/精確定位/weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power.md": "b928308e426a784a52974cebad1fc289dd3af1d85efcd0ef7493363c8710d425",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "24b8e3e7302fcea8aa246bc97dada0cff1f2a868e3002adf4ab411b5dd827bb0",
+      "Game Info/releases/1.13.X/blessings/README.md": "3fc5fc7e38dfb477035d7aa62ef9539eeb0156cd49c5b73102fe13a574f619f0",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "4e1a31fc18f0dce95635e9581388d0a645c8b0401fa662a66846115f4ab42300",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/擲彈兵臂鎧/README.md": "3dbf3bf893eb42967ddc2fa1063bfb5d6617b3328f822f256f5ab07d87d65c21",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/磷光爆破手槍/README.md": "11678d9ab10e1b875ac34c64481a0f73fa6552a3a69c9bedb85547f3cb3e9c26",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "96a54bdb6727043cfa198bbbf36b07ec6f51b10e1168ed9a46f3b0fda15e0e31",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "3870fd002820468ce75d085d9580b1c9c4b292d090b74968cd8cbcdca2cb4f67",
+      "Referneces/Translation.md": "2d3691bf459cd324df7c061f8585cab5f0a7edc227fe7e5e945e874fa08e2a3e"
+    },
+    "review_summary": "All 73 scope hashes match. The corrected localization row now distinguishes the RAW-matching 0.4-second interval and five-step cap from Gauntlet anchor, retention, and held conditions that RAW does not state. Reuse the prior content review for the unchanged nine-page set, four variants and bindings, RAW/tier reconstruction, examples, image 149, and reverse associations; no further issue found."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "pinpointing-target",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_149",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_149.png",
+      "attachment": "https://github.com/user-attachments/assets/87b6548a-cbe0-4d68-a8bc-f0e457c17276",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5996222983",
+      "acquired_date": "2026-10-05",
+      "sha256": "2603c8edef16fe2d69dd590f2c96640e667059940b4f0887ec1a377760072422",
+      "content_type": "image/png",
+      "size": 6956,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "精確定位祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "主控目視公開下載的實際 item.icon 149 原始128×128 PNG，未裁切、重繪或調色。"
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 18,
+      "tables": 17,
+      "rows": 452,
+      "lists": 91,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 81,
+      "source_files": 35,
+      "bindings": 867,
+      "variants": 439,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 17,
+      "source_object_cache": {
+        "cache_hits": 35,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 20,
+      "local_references": 1087,
+      "remote_references": 456,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 31,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-030-full-scan.json",
+        "sha256": "25943f52efd67fd459cb760bd70a006dd9ee356340a0ccea9620905b622cf9ec",
+        "trigger": "round-030"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 44,
+    "not_started_name_groups": 44,
+    "partial_name_groups": 0,
+    "remaining_variants": 166,
+    "remaining_bindings": 318,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "41519ed24dedb2064c716f3c3586ebe2b9b876a6d23701819b01724fb7ba6521"
+  },
+  "previous_local_commit": "68936d2b5a32b8364c3973ccf01f974ea9a8f4a7",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "主控 primary UI exact-name metadata scan 已核對 4 實際 bindings，無額外候選。"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-final-content-math-raw-mode-review.json",
+      "sha256": "5d840294e403af955aac2379ae68a303c15c050578ece2f619a8794b97ae0ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-focused-checks.json",
+      "sha256": "6434725bf09e6b48fa336e67c757d42e5567c6c61578371c98b12663cfb83479"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-formal-rule-column-delta-review.json",
+      "sha256": "96444ac40cce077c83f1e437ad296f921b1afeb2135daebd594feed3b1486576"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-frozen-source-verification.json",
+      "sha256": "7ba5576969045404119c6f54b4b0159ffda2a4edb0948a8f6390a852d5fc25b9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-own-tier-wrapper-step-delta-review.json",
+      "sha256": "7651c7988109c7905ce2ad30217609205784f4e881d6038290bd237890d7e183"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-projectile-snapshot-power-consumer-delta-review.json",
+      "sha256": "cc355bcddc554d758092aa295701b4e95dc802c5455dce90c8bad1ab9fd9f9ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-resume-review.json",
+      "sha256": "87b14a3a84f765a2a2be66f53999de7db16e7cf73853ba20f6bf59add39ccee3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-traits-review.json",
+      "sha256": "4560bdce2950fd1ce4a2011d3d446697391d94f042a4d3ef77c177e5bdc92be0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-raw-verification.json",
+      "sha256": "110c3a679a267262cf189ce57834d2bd2bfc01d62f361d2dda9fe8107f783c6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-review.json",
+      "sha256": "9f77c1631ee868f5b815ef4717f949881dc1950b471aaf168fdaf869a95c71f1"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-config.json",
+    "sha256": "958b236a986d56b1246a1d302d257cc5787e6257525a3588b7a1b7ff6bcb2d33"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI Prompt/Blessings-Workflow.md",
+      "sha256": "7b96a018cdddc2e57d99ccbde09a91a125d3f616e938ac6cc5a38d2ee466ebef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "808a07f24b37e5a3b7998a17c9e7a9a73626ea785bed3b87187aa39db90d8f47"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "c8eff755b3d7b7ceaf6079552ae0c2de8a36da059d58399153f4a902588687bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-traits-review.json",
+      "sha256": "4560bdce2950fd1ce4a2011d3d446697391d94f042a4d3ef77c177e5bdc92be0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-own-tier-wrapper-step-delta-review.json",
+      "sha256": "7651c7988109c7905ce2ad30217609205784f4e881d6038290bd237890d7e183"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-review.json",
+      "sha256": "9f77c1631ee868f5b815ef4717f949881dc1950b471aaf168fdaf869a95c71f1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-ui-raw-verification.json",
+      "sha256": "110c3a679a267262cf189ce57834d2bd2bfc01d62f361d2dda9fe8107f783c6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-image.json",
+      "sha256": "ee0756a05a2976361c5ae3c717d67b7846e3d549599da51ee028b71641334a04"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/power-cycler-primary-cache-order-review.json",
+      "sha256": "135d1ddecfc38edfd79968960ba0ee3cfaae58e0c940eeb4be5623bfb4b807ac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/build_pinpointing_target.py",
+      "sha256": "c9e4c5069ae6180dccfb924f87bb775bff256ad512712f50d5cdc62f1fa3e7ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-projectile-snapshot-power-consumer-delta-review.json",
+      "sha256": "cc355bcddc554d758092aa295701b4e95dc802c5455dce90c8bad1ab9fd9f9ef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-006.json",
+      "sha256": "44b9d1032ed29972a373f1047e0d9faef09a83f7469633ab0a8886597b1cfd7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/own-association-snapshot.json",
+      "sha256": "cc99da6262e103bb392e5b945b7be6c7bf112bb97ba28aa50557caadc1d69885"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-raw-verification.json",
+      "sha256": "d68c8ced40e19aebf263025df09f454257e785ee101e5d6921fe8e3734730ff7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "b64a58ede471b0e1676db89307bb4bc9cb8b347b4d912730712cf1771e3ab099"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "c844b97281853699007e6633b8438e02eb8b96b75e04b3656b6dc37c6f234bd7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\LOCALIZATION_COMPARISON.md",
+      "sha256": "1fcb125c353dab3a507ef73ad02e9592a9493255c41503a2cdb1622e17fca7fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\README.md",
+      "sha256": "5d688dc6190033b719d429d6012f4703046906d6652ed22a13230fdad0c83b36"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\SOURCE_INDEX.md",
+      "sha256": "2d81802a0d193d0e8284a6c4a680d96ee25d625c5a231df87485c347ffdbeff0"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\TIER_VALUES.md",
+      "sha256": "f1fd683a82c8d2c0720c27945de7e6cdfdbc9394272d9fcf05b2d9457620a690"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\WEAPON_COMPATIBILITY.md",
+      "sha256": "d4dd6b72006a99a09de98a3959ca22911feb5559ba8924e526d5f3285641ba9d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\weapon_trait_bespoke_galvanic_rifle_p1_increases_power_while_aiming.md",
+      "sha256": "f637bf7d74d387549f9dbae9bcd066b3c926b65516ab21f87d42b2b42fdbde97"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\weapon_trait_bespoke_ogryn_gauntlet_p1_windup_increases_power.md",
+      "sha256": "021012c97c9f38484be7fb268d06a76d5b787cb5fccbf739de56d41f8a1cbe71"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\weapon_trait_bespoke_phosphor_pistol_p1_increases_power_while_aiming.md",
+      "sha256": "f7f9d8d64b5769c0631ffe5f51095dfcce3cccc172029c588972160920cbaa81"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\精確定位\\weapon_trait_bespoke_shotpistol_shield_p1_windup_increases_power.md",
+      "sha256": "b928308e426a784a52974cebad1fc289dd3af1d85efcd0ef7493363c8710d425"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-raw-verification.json",
+      "sha256": "d68c8ced40e19aebf263025df09f454257e785ee101e5d6921fe8e3734730ff7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\pinpointing-target-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "cc99da6262e103bb392e5b945b7be6c7bf112bb97ba28aa50557caadc1d69885"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-001.json",
+      "sha256": "9b7b82e963320d6fa88eda90ac8dee1f03130458af0c79e896c0f3d7874bbca1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-002.json",
+      "sha256": "ebd4dfc6543cb4f80a381a9142219d2ff617656c29d1f57675dc3aac3605da50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-003.json",
+      "sha256": "bc80d44095ee06ac6810949a386b1abbc3ed42982ecd0eacccafd717632fbaa9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-004.json",
+      "sha256": "21dd60ba53e445a64b9f296cff5044cc53f150c4ef546b34fa97d47737fb42fd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-actual-preview-receipt-005.json",
+      "sha256": "b0d78654d29b9bc80ff730e49ab7be949fc4dfb8f288efd90b224f8d6c28cf03"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-config.json",
+      "sha256": "128a95ef98a94ee0417c284ba82c25fadda300240c12e0108d32617ea952e8a5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-draft.md",
+      "sha256": "029f76cbd3be4db6dde51d5949af415eac1233d360bc0ee27b4b8561625e6ec5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-group/pinpointing-target-agent-evidence.json",
+      "sha256": "63da3b0a744397ce5ed911338eeee4ecccb4fb17e9aca79a5266a6d5b3fba7c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-config.json",
+      "sha256": "128a95ef98a94ee0417c284ba82c25fadda300240c12e0108d32617ea952e8a5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-evidence.json",
+      "sha256": "63da3b0a744397ce5ed911338eeee4ecccb4fb17e9aca79a5266a6d5b3fba7c9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-agent-draft.md",
+      "sha256": "029f76cbd3be4db6dde51d5949af415eac1233d360bc0ee27b4b8561625e6ec5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-final-content-math-raw-mode-review.json",
+      "sha256": "5d840294e403af955aac2379ae68a303c15c050578ece2f619a8794b97ae0ff9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-formal-rule-column-delta-review.json",
+      "sha256": "96444ac40cce077c83f1e437ad296f921b1afeb2135daebd594feed3b1486576"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-primary-frozen-source-verification.json",
+      "sha256": "7ba5576969045404119c6f54b4b0159ffda2a4edb0948a8f6390a852d5fc25b9"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/pinpointing-target-formal-peer-scope.json",
+    "sha256": "e5d85ce0428ad7e7de7cc8889561d1f3dda3abf7982050811f26bb0e96147450",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
