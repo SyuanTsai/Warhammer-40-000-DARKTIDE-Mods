@@ -1094,10 +1094,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
     觀察天賦的運作狀況
-- MOD 網站最後更新日期：Last updated 30 December 2025, 10:00PM
+- MOD 網站最後更新日期：Last updated 01 October 2026, 8:49PM（Nexus 頁面原文；UTC：2026-10-01T20:49:05Z；Asia/Taipei：2026-10-02 04:49:05）
 - MOD 版本：2.15
-- MOD 檔案名稱：uptime-573-1-3-6-1767103234
-- 手動維護最後下載日期：2026-01-01
+- MOD 檔案名稱：Uptime (5) 898 2.15 2026-10-01T20-49Z l24cL2qWj.zip
+- 手動維護最後下載日期：2026-10-06
+- Nexus MOD ID: `898`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/898`
+- Nexus page version: `2.15`
+- Nexus last updated: `2026-10-01T20:49:05Z`
+- Main file ID: `8681`
+- Main file version: `2.15`
+- Main file uploaded at UTC: `2026-10-01T20:49:05Z`
+- Archive filename: `Uptime (5) 898 2.15 2026-10-01T20-49Z l24cL2qWj.zip`
+- Archive size bytes: `93419`
+- Archive SHA-256: `5b84783654b5a6d53854e87771a1ce8a4b9f7ff31560ddccfeed9923162e0f82`
+- Acquisition method: `manual-queue`
 
 # 移除的MOD
 
