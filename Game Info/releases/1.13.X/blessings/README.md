@@ -157,5 +157,6 @@
 | <img src="https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e" width="32" height="32" alt="持續阻擊祝福圖示"> [持續阻擊](entries/持續阻擊/README.md)<br>- Ceaseless Barrage<br>[完整說明](entries/持續阻擊/README.md) | <ul><li>持續射擊期間，依射擊步進提高壓制，並提高對已受壓制目標的傷害；最多5層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769" width="32" height="32" alt="狡猾射手祝福圖示"> [狡猾射手](entries/狡猾射手/README.md)<br>- Trickshooter<br>[完整說明](entries/狡猾射手/README.md) | <ul><li>每次手持時的弱點 hitscan 射擊增加一層遠程威力修正；每層依等級增加 4.5%／5%／5.5%／6%，最多5層，合格射擊刷新共同3.5秒期限。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129" width="32" height="32" alt="火藥灼傷祝福圖示"> [火藥灼傷](entries/火藥灼傷/README.md)<br>- Powderburn<br>[完整說明](entries/火藥灼傷/README.md) | <ul><li>持用此武器時，遠程攻擊或其傷害設定標記為遠程的攻擊，在 12.5 公尺內擊殺可啟動 2 秒效果：後坐力修正 −28% 至 −40%、壓制輸出 +28% 至 +40%，以及對已被壓制目標的傷害加算 +14% 至 +20%（I–IV）。這些是不同的來源屬性值，不是最終生命值傷害百分比。</li></ul> | 遠程 |
+| 無可核對圖示 [遊擊（特殊攻擊命中）](entries/遊擊（特殊攻擊命中）/README.md)<br>- Hit & Run<br>[完整說明](entries/遊擊（特殊攻擊命中）/README.md) | <ul><li>持用突擊鏈鋸劍，以特殊攻擊直接命中後，移動速度提高 I–IV +12.5%／+15%／+17.5%／+20%，持續 4 秒；再次合格命中刷新時間，不疊加。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

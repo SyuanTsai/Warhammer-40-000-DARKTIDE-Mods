@@ -1948,3 +1948,6 @@
 
 - Superiority - 優勢（通用力量）
   - 文件譯名；本體1.13.1繁中仍為「優勢」。名稱鍵 `loc_trait_bespoke_elite_kills_grants_stackable_power`，hash `d2dd2363`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Hit & Run - 遊擊（特殊攻擊命中）
+  - 文件譯名；本體1.13.1繁中仍為「遊擊」。名稱鍵 `loc_trait_bespoke_movement_speed_on_activated_hit`，hash `a87d06f4`；保留同hash中英RAW原文與文件翻譯分層。

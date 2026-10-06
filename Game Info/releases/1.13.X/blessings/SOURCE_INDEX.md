@@ -155,3 +155,4 @@
 | [持續阻擊](entries/持續阻擊/README.md) | [來源索引](entries/持續阻擊/SOURCE_INDEX.md) |
 | [狡猾射手](entries/狡猾射手/README.md) | [來源索引](entries/狡猾射手/SOURCE_INDEX.md) |
 | [火藥灼傷](entries/火藥灼傷/README.md) | [來源索引](entries/火藥灼傷/SOURCE_INDEX.md) |
+| [遊擊（特殊攻擊命中）](entries/遊擊（特殊攻擊命中）/README.md) | [來源索引](entries/遊擊（特殊攻擊命中）/SOURCE_INDEX.md) |

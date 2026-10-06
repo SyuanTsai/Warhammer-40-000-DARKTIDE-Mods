@@ -2020,6 +2020,25 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
       "effect": "持用此武器時，遠程攻擊或其傷害設定標記為遠程的攻擊，在 12.5 公尺內擊殺可啟動 2 秒效果：後坐力修正 −28% 至 −40%、壓制輸出 +28% 至 +40%，以及對已被壓制目標的傷害加算 +14% 至 +20%（I–IV）。這些是不同的來源屬性值，不是最終生命值傷害百分比。"
+    },
+    {
+      "id": "hit-and-run-activated",
+      "name_zh_tw": "遊擊（特殊攻擊命中）",
+      "name_en": "Hit & Run",
+      "name_key": "loc_trait_bespoke_movement_speed_on_activated_hit",
+      "description_key": "loc_trait_bespoke_movement_speed_on_activated_hit_desc",
+      "name_hash": "a87d06f4",
+      "description_hash": "bbfc7a31",
+      "page": "entries/遊擊（特殊攻擊命中）/README.md",
+      "kind": "melee",
+      "icon": "",
+      "effect": "持用突擊鏈鋸劍，以特殊攻擊直接命中後，移動速度提高 I–IV +12.5%／+15%／+17.5%／+20%，持續 4 秒；再次合格命中刷新時間，不疊加。",
+      "name_translation": {
+        "status": "document_translation",
+        "raw_zh_tw": "遊擊",
+        "reason": "文件標題加上「特殊攻擊命中」以區分已提交、同樣顯示 Hit & Run／遊擊但使用不同 name_key 的遠程祝福；保留本體 name_key、description_key、hash 與原始名稱，不修改遊戲內容。"
+      },
+      "icon_status": "unavailable_user_approved"
     }
   ],
   "weapons": [
@@ -30823,6 +30842,44 @@
       "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
       "effect": "持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+      "blessing_id": "hit-and-run-activated",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/遊擊（特殊攻擊命中）/weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "movement_speed": [
+          0.125,
+          0.15,
+          0.175,
+          0.2
+        ],
+        "active_duration_seconds": 4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 422,
+        "end_line": 473
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 43
+      },
+      "description_key": "loc_trait_bespoke_movement_speed_on_activated_hit_desc",
+      "description_hash": "bbfc7a31",
+      "icon": "",
+      "icon_path": "",
+      "effect": "持用突擊鏈鋸劍，以特殊攻擊直接命中後，移動速度提高 I–IV +12.5%／+15%／+17.5%／+20%，持續 4 秒；再次合格命中刷新時間，不疊加。",
+      "icon_status": "unavailable_user_approved"
     }
   ],
   "bindings": [
@@ -44600,6 +44657,34 @@
         "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
         "import_line": 15,
         "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "hit-and-run-activated",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "hit-and-run-activated",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
       }
     }
   ]

@@ -499,3 +499,5 @@
 - [狡猾射手](2026-10-03-TRICKSHOOTER_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
 
 - [火藥灼傷](2026-10-03-POWDERBURN_ACCEPTANCE.json)：新增4變體、5型號關聯；共4變體、5關聯。
+
+- [遊擊（特殊攻擊命中）](2026-10-03-HIT-AND-RUN-ACTIVATED_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。

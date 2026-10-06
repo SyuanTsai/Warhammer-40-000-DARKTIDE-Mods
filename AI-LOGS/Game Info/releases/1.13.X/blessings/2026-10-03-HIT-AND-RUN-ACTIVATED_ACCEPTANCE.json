@@ -1,0 +1,578 @@
+{
+  "date": "2026-10-06",
+  "blessing": "hit-and-run-activated",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "hit-and-run-activated",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-formal-peer-scope.json",
+    "scope_sha256": "02ec172bcb56e67146a1b493b042cff5ad81acdb753838317c05a1a949c3ed6b",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-config.json": "9fa06048551dd0dbdff0cf1081050e7f9412bdaf7d4ab8abfe4d2451ffe71a18",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-draft.md": "f46a4f00db31ea2415a355b222e4df8c740a08bd9f5e7aa46ffb72b2122d2a1a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-evidence.json": "026c8745f40c0a4b6b1f747db86d33d44e5d0870876360df71eb5b228914ef49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-config.json": "d2afbb445c187070bfb72c1cf4e5d347a417c32dfbffd2dddcc0b89bbee97996",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-extension-draft.json": "ecc6f2103d77e17c645cb707f9b1668f1cc6e4810f985871b2f459c760a6ae5f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-001.json": "02f36d4dfebfd0cacd7e73d49dead65e794bd170ab4ad9216f2e134e9eb23f9b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-002.json": "ff20fb125938c2f56da3df7730c471fd48336719bcdba3808b9e1005ecae9362",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-003.json": "e06f4889957f6f511e39633c060a16085d978e6a4465643a4f59019ade7c064b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-004.json": "d99377668678951c8c223dcf51a452bd446d3b7d7af812bf279e555d92192405",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-config.json": "9fa06048551dd0dbdff0cf1081050e7f9412bdaf7d4ab8abfe4d2451ffe71a18",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-draft.md": "f46a4f00db31ea2415a355b222e4df8c740a08bd9f5e7aa46ffb72b2122d2a1a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-evidence.json": "026c8745f40c0a4b6b1f747db86d33d44e5d0870876360df71eb5b228914ef49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-identity-disambiguation.json": "1fbeac9603fe22da62674a31cd774fe25374f80224983087375a0766c5a41a29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-image.json": "051e51ffb9814a4c41c1f15dce25ff0c74e5457fcf2c875d3a671dbb16aa7556",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-delivery-support-validation.json": "1ba3d6ea1ed3d074ac9ba517219eaa3d32dbd92dbe1752c3d7199963a714155c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-final-content-delta-review.json": "8e41cadf99b0ef7598cfd62437fc72214ef1c1c5141913b005d1c648017f5fe4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-focused-checks.json": "fa5c10b5f1c5f47be4df1ea7ad2741e9d8424ed4d934c15376a0034e63251d56",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-frozen-source-verification.json": "4dbd30253665c39c3241a158a4f377aa15ab51523733c74790bd3793fa550083",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-legacy-evidence-reuse.json": "ac5372d6fc7623618dd59ae9456e1c38df49a1d0c7afb1c4c6fadda3e32301ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-minimal-delivery-support-change.json": "a4790a48a0c5a9e264e8444f07227dde44a137001cc698711135d7bdd329ed4b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-resume-review.json": "8a46abf92a77fa61ce550abaa53f98c2965331c1d6523057d667d701f23f48be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-sticky-formal-source-traceability-delta-review.json": "6119d4f85a64ef97a04a3e25c56469b97f8a47cb7853972fc5c2f4217fe916b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-traits-review.json": "6948a707e1a6d9d22109dd8d703c17a75696b832bb9ab70097600a73ca6f3d6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-ui-review.json": "c113c9493222b02d0bf68306991fce28f609b934588b7ca213229888cad4220e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-candidate-preview.md": "9c4d16fedbae036382ea0c467d0cc174abae93155119dbfd37e14b73e989adfd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-config.json": "54f6cea4a960658f7c4d3413981645adaf50f11aab8147b1cb8cc7133898ea0c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-draft.md": "f531154def99f36c28bd0798d3daabb0f1fe676feea2e45bf7406ee39866f98a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-evidence.json": "7919386d933ed73e1fc46ecde4bf2333aa4b450c630e46b9ff18c423e01e7d36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-sticky-routing-addendum.json": "7d0f311ebd40a5b603389bcb8e8f627ab4451d09422c2a80acafd64376b163d1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-name-collision-review.json": "4c5bbd894880205ab6d72c2e67e1b88f408019839575d0b19626012c3908dc16",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-icon-gap.json": "8125eb2d688769e41ba7e14c14bd915949f1e8e950293de8d11ae4f3e6a606b3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-image-exception-approval.json": "65d073d6a98f6b8fb50f2c942fad9525b4735e28ba138ea8350c47d637e90716",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-tier-runtime-review.json": "70c2f85190fa6060c876510e3e7ccc5cbdb13968edeb9e0f6692648a58732dc7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-traits-review.json": "6948a707e1a6d9d22109dd8d703c17a75696b832bb9ab70097600a73ca6f3d6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-raw-verification.json": "7fe5c4e3ab904f02ffcf303e5f496f8fb1ddb8fb442a78891bc1fcf1aad4242b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-review.json": "c113c9493222b02d0bf68306991fce28f609b934588b7ca213229888cad4220e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-raw-verification.json": "577e5cab66552d670ff47aeb9a9b4d6cbf2f96ee1b3cf2c900e0e739fd300f4e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4be6dd1822555f4b1ebb1d98270e5565b38042c30ab20e82d90d0639bdfcba0f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/DAMAGE_PERCENTAGE_REVIEW.md": "62e4bdbf73781349c38e5377ae99e427c955dc784f0b19b7613ee29317a761c7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/LOCALIZATION_COMPARISON.md": "3d73768a7b65360c0c94e2c78c22cbd39fc91065979bcc4bc93d2375fd8a69f5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/README.md": "31a175a48ebb44a70fcc5a3ed6c7bb9ecbc11456b161062b0d59fa879719b3f1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/SOURCE_INDEX.md": "5c8272a333fe8a235dbc2b8449da7f00f1afe01ccc6ca9d43540da78c65000f1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/TIER_VALUES.md": "fb79d6b54e502a365bbdd25e1b1d4dfd997716274ef32870d831c6c7b702003b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/WEAPON_COMPATIBILITY.md": "b6c42add6593145dbd26c27e571a94c2ae3f4bed2f912a092a3d5dd02f401d53",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit.md": "ac91f72e1988d84f4d61fa3b6ac8a59f5a21dcd7303b6670cfd25efb64bc1e69",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/melee/README.md": "282151648e4a071004bfc6d43fb059e6b9e74217c898eab5440f4ca4fc345abc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "f582d0284b0d30867b7c8f08ba70e51747bc7dfd1d84bdcf32621a2fd2c0b031",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6154599bd4f6249064beb9e6fcf4e2819d670a7cd1340c1e58738030cee27d3a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "ed7742ba9fc1393d6ec326c84bae7c1b430897c824ffd54f54e9a7b4fa609795",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/own-association-snapshot.json": "2caa6716f73400d844db2a52d06b9f191c8a105795802dee7ceba5e4c6604da7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/actual-preview-004/Referneces/Translation.md": "702704e5e770aabec8d0b98a7142a768f941713651e9cfd1335f6042990c1905",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "4be6dd1822555f4b1ebb1d98270e5565b38042c30ab20e82d90d0639bdfcba0f",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/DAMAGE_PERCENTAGE_REVIEW.md": "62e4bdbf73781349c38e5377ae99e427c955dc784f0b19b7613ee29317a761c7",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/LOCALIZATION_COMPARISON.md": "3d73768a7b65360c0c94e2c78c22cbd39fc91065979bcc4bc93d2375fd8a69f5",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/README.md": "31a175a48ebb44a70fcc5a3ed6c7bb9ecbc11456b161062b0d59fa879719b3f1",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/SOURCE_INDEX.md": "efee8fb70897f12953238503cbd3c8454cb3b460963930abce74747810d76a33",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/TIER_VALUES.md": "fb79d6b54e502a365bbdd25e1b1d4dfd997716274ef32870d831c6c7b702003b",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/WEAPON_COMPATIBILITY.md": "b6c42add6593145dbd26c27e571a94c2ae3f4bed2f912a092a3d5dd02f401d53",
+      "Game Info/releases/1.13.X/blessings/entries/遊擊（特殊攻擊命中）/weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit.md": "ac91f72e1988d84f4d61fa3b6ac8a59f5a21dcd7303b6670cfd25efb64bc1e69",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "282151648e4a071004bfc6d43fb059e6b9e74217c898eab5440f4ca4fc345abc",
+      "Game Info/releases/1.13.X/blessings/README.md": "f582d0284b0d30867b7c8f08ba70e51747bc7dfd1d84bdcf32621a2fd2c0b031",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "6154599bd4f6249064beb9e6fcf4e2819d670a7cd1340c1e58738030cee27d3a",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/突擊鏈鋸劍/README.md": "ed7742ba9fc1393d6ec326c84bae7c1b430897c824ffd54f54e9a7b4fa609795",
+      "Referneces/Translation.md": "702704e5e770aabec8d0b98a7142a768f941713651e9cfd1335f6042990c1905"
+    },
+    "content_review": {
+      "fixed_scope": "All 70 files match the refreshed exact scope hashes. The only changed formal content relative to the earlier 69-file scope is the source-index traceability addition; all previously reviewed gameplay, player wording, binding, and icon-exception conclusions remain unchanged.",
+      "source_traceability": "The source index now links the actual Mk IV and Mk XIIIg sticky schedules, all selected sticky and final light/heavy profiles, ActionSweep per-instance Attack.execute routing, Attack ordinary on_hit skip gate, and the distinct special-hit event. The new links match the frozen sticky-routing addendum and its exact ranges.",
+      "implementation": "The single chainsword_p1 implementation binds the actual Mk IV and Mk XIIIg. Own tiers .125/.15/.175/.20 override the wrapper .5 fallback; eligible held, same-item melee-special on_hit refreshes a nonstacking 4-second effect. Direct special-active light/heavy profiles may dispatch on_hit; ordinary push does not. The two Marks use their documented special push-follow profiles. Sticky profiles carry skip_on_hit_proc=true despite weapon_special=true, so attached/final ticks do not start or refresh this proc; their separate special-hit event is not the subscribed on_hit event.",
+      "timing_and_math": "Proc processing and the subsequent player buff-stat-cache update occur before later movement calculations can read the effect; the triggering hit and previously computed movement are not retroactively changed. A qualifying hit refreshes the 4-second window without stacking. Switching away disables the held stat but does not pause expiry; switching back before expiry restores only the remaining window, while true unequip removes the source. The controlled Mk IV IV example uses V0=4.0 m/s, q=0, A=1 to obtain 4.8 m/s after cache update; a t=13 hit inside t<14 refreshes to t<17 at +20%, not +40%.",
+      "raw_and_identity": "The paired EN/ZH RAW name/description keys and hashes are preserved, and I–IV reconstruction matches the formatter values and 4-second wrapper duration. The qualified document identity distinguishes this melee entry from the already-existing ranged Hit & Run without changing the raw name, key, or binding.",
+      "icon_exception": "The empty native icon is handled under the fixed, explicitly approved exception for this exact activated chainsword blessing. The formal page does not invent an icon or claim an unverified association."
+    },
+    "formal_peer_acceptance_pending": false
+  },
+  "image": {
+    "status": "unavailable_user_approved",
+    "new_issue_attachment": false,
+    "attachment": null,
+    "actual_icon": "",
+    "image_verified": false,
+    "user_authorization": {
+      "authorized": true,
+      "blessing": "hit-and-run",
+      "name_key": "loc_trait_bespoke_movement_speed_on_activated_hit",
+      "date": "2026-10-06",
+      "only_this_blessing": true,
+      "user_reply": "允許遊擊採無圖示說明，保留缺口證據",
+      "confirmation_origin": "Direct human reply to request_user_input_async in this task",
+      "player_note": "目前沒有可核對的圖示。",
+      "metadata_version": 138291,
+      "metadata_body_sha256": "915b89ed057d0f2cedfc9d933b27db417c5abff7f4c5dc80904a611e46f72719",
+      "original_item_key": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit",
+      "original_item_fields": {
+        "icon": "",
+        "icon_small": "",
+        "mastery_icon": ""
+      },
+      "steam_build_association": "unverified",
+      "gap_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-icon-gap.json",
+        "sha256": "8125eb2d688769e41ba7e14c14bd915949f1e8e950293de8d11ae4f3e6a606b3"
+      },
+      "reviewable_player_preview": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-player-preview.md",
+        "sha256": "9c4d16fedbae036382ea0c467d0cc174abae93155119dbfd37e14b73e989adfd"
+      },
+      "prior_question": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-missing-icon-exception-question.json",
+        "sha256": "8c141789674a53138da2a344317a380f02f6ac602da3683a78b7c17043f12815"
+      },
+      "approval_recorded_at_utc": "2026-10-06T03:00:32.610342+00:00",
+      "official_accepted": false,
+      "committed": false
+    },
+    "gap_evidence": {
+      "complete": true,
+      "image_ready": false,
+      "blessing": "hit-and-run",
+      "metadata_version": 138291,
+      "metadata_body_sha256": "915b89ed057d0f2cedfc9d933b27db417c5abff7f4c5dc80904a611e46f72719",
+      "cache_created_at_utc": "2026-10-01 10:18:14",
+      "metadata_local_path": "C:\\Users\\carsu\\AppData\\Roaming\\Fatshark\\Darktide\\http_cache.db",
+      "read_only": true,
+      "scope": "Only common public MasterItems matching exact known body digest; no account or inventory data",
+      "item_key": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit",
+      "actual_item_fields": {
+        "description": "loc_trait_bespoke_movement_speed_on_activated_hit_desc",
+        "dev_description": "Hitting an enemy with Weapon special increases your movement speed by {movement_speed:%s} for {time:%s} seconds. ",
+        "dev_name": "<weapon special hit> grants movement speed",
+        "display_name": "loc_trait_bespoke_movement_speed_on_activated_hit",
+        "feature_flags": [
+          "FEATURE_item_retained"
+        ],
+        "icon": "",
+        "icon_small": "",
+        "is_description_ref": false,
+        "is_display_name_ref": false,
+        "is_fallback_item": false,
+        "item_type": "TRAIT",
+        "mastery_icon": "",
+        "tags": {},
+        "trait": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+        "weapon_template_restriction": [],
+        "weapon_type_restriction": [
+          "chainsword_p1"
+        ],
+        "workflow_checklist": [],
+        "workflow_state": "RELEASABLE"
+      },
+      "icon_fields": {
+        "icon": {
+          "present": true,
+          "value": ""
+        },
+        "icon_small": {
+          "present": true,
+          "value": ""
+        },
+        "mastery_icon": {
+          "present": true,
+          "value": ""
+        }
+      },
+      "actual_binding_count": 2,
+      "actual_bindings": [
+        {
+          "weapon_id": "chainsword_p1",
+          "mark_id": "chainsword_p1_m1",
+          "trait_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+          "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit"
+        },
+        {
+          "weapon_id": "chainsword_p1",
+          "mark_id": "chainsword_p1_m2",
+          "trait_id": "weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit",
+          "trait_item": "content/items/traits/bespoke_chainsword_p1/movement_speed_on_activated_hit"
+        }
+      ],
+      "metadata_extract_sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "gap": "Actual public item.icon, icon_small and mastery_icon are empty or absent. No precise source texture identifier; do not substitute guessed assets. Quickloader-only exception does not apply. Full player preview and explicit user exception pending.",
+      "steam_build_association": "unverified",
+      "user_exception_approved": false
+    },
+    "exception_receipt": {
+      "id": "hit-and-run-activated",
+      "mode": "unavailable_user_approved",
+      "icon_path": "",
+      "attachment": "",
+      "source": "",
+      "issue": null,
+      "display_verified": false,
+      "hash_verified": false,
+      "public_download_status": null,
+      "approval": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-image-exception-approval.json",
+        "sha256": "65d073d6a98f6b8fb50f2c942fad9525b4735e28ba138ea8350c47d637e90716"
+      },
+      "gap_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-icon-gap.json",
+        "sha256": "8125eb2d688769e41ba7e14c14bd915949f1e8e950293de8d11ae4f3e6a606b3"
+      },
+      "alt": "遊擊（特殊攻擊命中）：目前沒有可核對的圖示"
+    },
+    "no_substitute_asset": true,
+    "exception_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 12,
+      "tables": 11,
+      "rows": 472,
+      "lists": 85,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 74,
+      "source_files": 22,
+      "bindings": 986,
+      "variants": 507,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 22,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 14,
+      "local_references": 1184,
+      "remote_references": 438,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 40,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-delivery-support-full-scan.json",
+        "sha256": "749bb23cff25b90e5f3f0885fec4740532c9b18b99473a51b932fd99c5977be4",
+        "trigger": "hit-and-run-activated-delivery-support"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 17,
+    "not_started_name_groups": 17,
+    "partial_name_groups": 0,
+    "remaining_variants": 98,
+    "remaining_bindings": 199,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "59e3e2d4767aa9e181079d0926322293ed23a253128d7f12f445c81403c9b03a"
+  },
+  "previous_local_commit": "98a75cb3cabc2b045a859c7000e5a043aa98a873",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "UI review found no outside exact items for this name_key; only inventory intersections are presented."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-delivery-support-validation.json",
+      "sha256": "1ba3d6ea1ed3d074ac9ba517219eaa3d32dbd92dbe1752c3d7199963a714155c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-final-content-delta-review.json",
+      "sha256": "8e41cadf99b0ef7598cfd62437fc72214ef1c1c5141913b005d1c648017f5fe4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-focused-checks.json",
+      "sha256": "fa5c10b5f1c5f47be4df1ea7ad2741e9d8424ed4d934c15376a0034e63251d56"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-frozen-source-verification.json",
+      "sha256": "4dbd30253665c39c3241a158a4f377aa15ab51523733c74790bd3793fa550083"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-legacy-evidence-reuse.json",
+      "sha256": "ac5372d6fc7623618dd59ae9456e1c38df49a1d0c7afb1c4c6fadda3e32301ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-minimal-delivery-support-change.json",
+      "sha256": "a4790a48a0c5a9e264e8444f07227dde44a137001cc698711135d7bdd329ed4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-resume-review.json",
+      "sha256": "8a46abf92a77fa61ce550abaa53f98c2965331c1d6523057d667d701f23f48be"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-sticky-formal-source-traceability-delta-review.json",
+      "sha256": "6119d4f85a64ef97a04a3e25c56469b97f8a47cb7853972fc5c2f4217fe916b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-traits-review.json",
+      "sha256": "6948a707e1a6d9d22109dd8d703c17a75696b832bb9ab70097600a73ca6f3d6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-ui-review.json",
+      "sha256": "c113c9493222b02d0bf68306991fce28f609b934588b7ca213229888cad4220e"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-config.json",
+    "sha256": "d2afbb445c187070bfb72c1cf4e5d347a417c32dfbffd2dddcc0b89bbee97996"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-traits-review.json",
+      "sha256": "6948a707e1a6d9d22109dd8d703c17a75696b832bb9ab70097600a73ca6f3d6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-tier-runtime-review.json",
+      "sha256": "70c2f85190fa6060c876510e3e7ccc5cbdb13968edeb9e0f6692648a58732dc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-review.json",
+      "sha256": "c113c9493222b02d0bf68306991fce28f609b934588b7ca213229888cad4220e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-ui-raw-verification.json",
+      "sha256": "7fe5c4e3ab904f02ffcf303e5f496f8fb1ddb8fb442a78891bc1fcf1aad4242b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-icon-gap.json",
+      "sha256": "8125eb2d688769e41ba7e14c14bd915949f1e8e950293de8d11ae4f3e6a606b3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-config.json",
+      "sha256": "54f6cea4a960658f7c4d3413981645adaf50f11aab8147b1cb8cc7133898ea0c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-evidence.json",
+      "sha256": "7919386d933ed73e1fc46ecde4bf2333aa4b450c630e46b9ff18c423e01e7d36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-draft.md",
+      "sha256": "f531154def99f36c28bd0798d3daabb0f1fe676feea2e45bf7406ee39866f98a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-candidate-preview.md",
+      "sha256": "9c4d16fedbae036382ea0c467d0cc174abae93155119dbfd37e14b73e989adfd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-agent-sticky-routing-addendum.json",
+      "sha256": "7d0f311ebd40a5b603389bcb8e8f627ab4451d09422c2a80acafd64376b163d1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-group/hit-and-run-name-collision-review.json",
+      "sha256": "4c5bbd894880205ab6d72c2e67e1b88f408019839575d0b19626012c3908dc16"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-traits-review.json",
+      "sha256": "6948a707e1a6d9d22109dd8d703c17a75696b832bb9ab70097600a73ca6f3d6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-ui-review.json",
+      "sha256": "c113c9493222b02d0bf68306991fce28f609b934588b7ca213229888cad4220e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-legacy-evidence-reuse.json",
+      "sha256": "ac5372d6fc7623618dd59ae9456e1c38df49a1d0c7afb1c4c6fadda3e32301ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-image.json",
+      "sha256": "051e51ffb9814a4c41c1f15dce25ff0c74e5457fcf2c875d3a671dbb16aa7556"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-primary-image-exception-approval.json",
+      "sha256": "65d073d6a98f6b8fb50f2c942fad9525b4735e28ba138ea8350c47d637e90716"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-identity-disambiguation.json",
+      "sha256": "1fbeac9603fe22da62674a31cd774fe25374f80224983087375a0766c5a41a29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-004.json",
+      "sha256": "d99377668678951c8c223dcf51a452bd446d3b7d7af812bf279e555d92192405"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "f582d0284b0d30867b7c8f08ba70e51747bc7dfd1d84bdcf32621a2fd2c0b031"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "6154599bd4f6249064beb9e6fcf4e2819d670a7cd1340c1e58738030cee27d3a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "4be6dd1822555f4b1ebb1d98270e5565b38042c30ab20e82d90d0639bdfcba0f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "62e4bdbf73781349c38e5377ae99e427c955dc784f0b19b7613ee29317a761c7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\LOCALIZATION_COMPARISON.md",
+      "sha256": "3d73768a7b65360c0c94e2c78c22cbd39fc91065979bcc4bc93d2375fd8a69f5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\README.md",
+      "sha256": "31a175a48ebb44a70fcc5a3ed6c7bb9ecbc11456b161062b0d59fa879719b3f1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\SOURCE_INDEX.md",
+      "sha256": "5c8272a333fe8a235dbc2b8449da7f00f1afe01ccc6ca9d43540da78c65000f1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\TIER_VALUES.md",
+      "sha256": "fb79d6b54e502a365bbdd25e1b1d4dfd997716274ef32870d831c6c7b702003b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\WEAPON_COMPATIBILITY.md",
+      "sha256": "b6c42add6593145dbd26c27e571a94c2ae3f4bed2f912a092a3d5dd02f401d53"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\遊擊（特殊攻擊命中）\\weapon_trait_bespoke_chainsword_p1_movement_speed_on_activated_hit.md",
+      "sha256": "ac91f72e1988d84f4d61fa3b6ac8a59f5a21dcd7303b6670cfd25efb64bc1e69"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "282151648e4a071004bfc6d43fb059e6b9e74217c898eab5440f4ca4fc345abc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\突擊鏈鋸劍\\README.md",
+      "sha256": "ed7742ba9fc1393d6ec326c84bae7c1b430897c824ffd54f54e9a7b4fa609795"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "702704e5e770aabec8d0b98a7142a768f941713651e9cfd1335f6042990c1905"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-raw-verification.json",
+      "sha256": "577e5cab66552d670ff47aeb9a9b4d6cbf2f96ee1b3cf2c900e0e739fd300f4e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\hit-and-run-activated-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "2caa6716f73400d844db2a52d06b9f191c8a105795802dee7ceba5e4c6604da7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-001.json",
+      "sha256": "02f36d4dfebfd0cacd7e73d49dead65e794bd170ab4ad9216f2e134e9eb23f9b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-002.json",
+      "sha256": "ff20fb125938c2f56da3df7730c471fd48336719bcdba3808b9e1005ecae9362"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-actual-preview-receipt-003.json",
+      "sha256": "e06f4889957f6f511e39633c060a16085d978e6a4465643a4f59019ade7c064b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-config.json",
+      "sha256": "9fa06048551dd0dbdff0cf1081050e7f9412bdaf7d4ab8abfe4d2451ffe71a18"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-draft.md",
+      "sha256": "f46a4f00db31ea2415a355b222e4df8c740a08bd9f5e7aa46ffb72b2122d2a1a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-group/hit-and-run-activated-agent-evidence.json",
+      "sha256": "026c8745f40c0a4b6b1f747db86d33d44e5d0870876360df71eb5b228914ef49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-config.json",
+      "sha256": "9fa06048551dd0dbdff0cf1081050e7f9412bdaf7d4ab8abfe4d2451ffe71a18"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-evidence.json",
+      "sha256": "026c8745f40c0a4b6b1f747db86d33d44e5d0870876360df71eb5b228914ef49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-agent-draft.md",
+      "sha256": "f46a4f00db31ea2415a355b222e4df8c740a08bd9f5e7aa46ffb72b2122d2a1a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-delivery-support-validation.json",
+      "sha256": "1ba3d6ea1ed3d074ac9ba517219eaa3d32dbd92dbe1752c3d7199963a714155c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-final-content-delta-review.json",
+      "sha256": "8e41cadf99b0ef7598cfd62437fc72214ef1c1c5141913b005d1c648017f5fe4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-frozen-source-verification.json",
+      "sha256": "4dbd30253665c39c3241a158a4f377aa15ab51523733c74790bd3793fa550083"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-minimal-delivery-support-change.json",
+      "sha256": "a4790a48a0c5a9e264e8444f07227dde44a137001cc698711135d7bdd329ed4b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-primary-sticky-formal-source-traceability-delta-review.json",
+      "sha256": "6119d4f85a64ef97a04a3e25c56469b97f8a47cb7853972fc5c2f4217fe916b0"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/hit-and-run-activated-formal-peer-scope.json",
+    "sha256": "02ec172bcb56e67146a1b493b042cff5ad81acdb753838317c05a1a949c3ed6b",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}
