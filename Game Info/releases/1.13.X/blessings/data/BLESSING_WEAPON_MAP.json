@@ -2104,6 +2104,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
       "effect": "持用實際綁定武器且統計快取處於可用狀態時，近戰攻擊取得對應家族的威力加成；第一次適用的快取更新即可使用。符合來源物品、近戰攻擊類型與持用檢查的命中事件在傷害結算後重新開始等待：六個家族 I／II／III／IV 為 +60%、等待 5／4.5／4／3.5 秒；碎骨者 克魯克 Mk IIa 為 +17.5%／+20%／+22.5%／+25%、各級等待 2 秒。"
+    },
+    {
+      "id": "relentless-strikes",
+      "name_zh_tw": "持續打擊",
+      "name_en": "Relentless Strikes",
+      "name_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks",
+      "description_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc",
+      "name_hash": "adffdaf9",
+      "description_hash": "e3d226ab",
+      "page": "entries/持續打擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "effect": "手持符合綁定的武器時，對同一目標的後續合格命中逐次建立近戰威力層；每層依 I–IV 級增加 4%／6%／8%／10%，最多五層、共用 2 秒期限。"
     }
   ],
   "weapons": [
@@ -32181,6 +32194,162 @@
       "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
       "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combataxe_p2",
+      "page": "entries/持續打擊/weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_melee_power_level_modifier_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p2.lua",
+        "start_line": 363,
+        "end_line": 426
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc",
+      "description_hash": "e3d226ab",
+      "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
+      "effect": "埃托克斯 Mk II／IV／VII 的實際近戰掃掠依同目標命中追蹤逐層增加近戰威力；各 Mark profile 與特殊掃掠差異見完整說明。",
+      "buff_template_id": "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power",
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/持續打擊/weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_melee_power_level_modifier_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 349,
+        "end_line": 412
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc",
+      "description_hash": "e3d226ab",
+      "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
+      "effect": "馬卡比安 Mk II／IV／V 的普通、重擊、推後連擊及格擋反擊掃掠可依同目標命中追蹤增加近戰威力；各 Mark profile 見完整說明。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "powermaul_p2",
+      "page": "entries/持續打擊/weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_melee_power_level_modifier_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p2.lua",
+        "start_line": 350,
+        "end_line": 413
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p2_buff_templates.lua",
+        "start_line": 103,
+        "end_line": 105
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc",
+      "description_hash": "e3d226ab",
+      "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
+      "effect": "布蘭克斯 Mk III 的普通、重擊、推後連擊與 powered 特殊近戰掃掠可依同目標命中追蹤增加近戰威力；特殊命中另有 stun 效果，沒有本項爆炸路徑。",
+      "buff_template_id": "weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power",
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "saw_p1",
+      "page": "entries/持續打擊/weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_melee_power_level_modifier_by_tier": {
+          "I": 0.04,
+          "II": 0.06,
+          "III": 0.08,
+          "IV": 0.1
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 241,
+        "end_line": 304
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 46,
+        "end_line": 48
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc",
+      "description_hash": "e3d226ab",
+      "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
+      "effect": "外科醫師型號4的普通及重擊掃掠可依同目標命中追蹤增加近戰威力；延遲黏附撕裂仍用當前近戰威力，但不觸發或刷新本祝福。",
+      "buff_template_id": "weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power_parent"
     }
   ],
   "bindings": [
@@ -46694,6 +46863,118 @@
       "mark_id": "saw_p1_m1",
       "variant_id": "weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack",
       "trait_item": "content/items/traits/bespoke_saw_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1452
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "append_line": 1493
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "append_line": 1360
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "powermaul_p2",
+      "mark_id": "powermaul_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p2_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_powermaul_p2/power_bonus_on_same_enemy_attacks",
+      "trait_category": "bespoke_powermaul_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 2127
+      }
+    },
+    {
+      "blessing_id": "relentless-strikes",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power",
+      "trait_item": "content/items/traits/bespoke_saw_p1/power_bonus_on_same_enemy_attacks",
       "trait_category": "bespoke_saw_p1",
       "available_tiers": null,
       "source": {

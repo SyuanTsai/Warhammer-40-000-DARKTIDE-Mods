@@ -163,5 +163,6 @@
 | <img src="https://github.com/user-attachments/assets/f65d27d9-85f5-45c6-a5e1-253f85ba8ea9" width="32" height="32" alt="揮拳出擊祝福圖示"> [揮拳出擊](entries/揮拳出擊/README.md)<br>- Take a Swing<br>[完整說明](entries/揮拳出擊/README.md) | <ul><li>完成有效推擊後短時間提高弱點傷害；工兵鏟／撬棍持續3秒，碎骨者持續6秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c" width="32" height="32" alt="接連不斷祝福圖示"> [接連不斷](entries/接連不斷/README.md)<br>- Cavalcade<br>[完整說明](entries/接連不斷/README.md) | <ul><li>持用並射擊時，依彈匣比例累積爆擊率，最多五步。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109" width="32" height="32" alt="斷肢者祝福圖示"> [斷肢者](entries/斷肢者/README.md)<br>- Limbsplitter<br>[完整說明](entries/斷肢者/README.md) | <ul><li>持用實際綁定武器且統計快取處於可用狀態時，近戰攻擊取得對應家族的威力加成；第一次適用的快取更新即可使用。符合來源物品、近戰攻擊類型與持用檢查的命中事件在傷害結算後重新開始等待：六個家族 I／II／III／IV 為 +60%、等待 5／4.5／4／3.5 秒；碎骨者 克魯克 Mk IIa 為 +17.5%／+20%／+22.5%／+25%、各級等待 2 秒。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3" width="32" height="32" alt="持續打擊祝福圖示"> [持續打擊](entries/持續打擊/README.md)<br>- Relentless Strikes<br>[完整說明](entries/持續打擊/README.md) | <ul><li>手持符合綁定的武器時，對同一目標的後續合格命中逐次建立近戰威力層；每層依 I–IV 級增加 4%／6%／8%／10%，最多五層、共用 2 秒期限。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

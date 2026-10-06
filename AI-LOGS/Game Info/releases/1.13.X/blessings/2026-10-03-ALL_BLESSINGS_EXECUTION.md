@@ -515,3 +515,5 @@
 - [接連不斷](2026-10-03-CAVALCADE_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。
 
 - [斷肢者](2026-10-03-LIMBSPLITTER_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。
+
+- [持續打擊](2026-10-03-RELENTLESS-STRIKES_ACCEPTANCE.json)：新增4變體、8型號關聯；共4變體、8關聯。
