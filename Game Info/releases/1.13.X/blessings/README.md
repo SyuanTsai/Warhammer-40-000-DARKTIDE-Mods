@@ -159,5 +159,6 @@
 | <img src="https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129" width="32" height="32" alt="火藥灼傷祝福圖示"> [火藥灼傷](entries/火藥灼傷/README.md)<br>- Powderburn<br>[完整說明](entries/火藥灼傷/README.md) | <ul><li>持用此武器時，遠程攻擊或其傷害設定標記為遠程的攻擊，在 12.5 公尺內擊殺可啟動 2 秒效果：後坐力修正 −28% 至 −40%、壓制輸出 +28% 至 +40%，以及對已被壓制目標的傷害加算 +14% 至 +20%（I–IV）。這些是不同的來源屬性值，不是最終生命值傷害百分比。</li></ul> | 遠程 |
 | 無可核對圖示 [遊擊（特殊攻擊命中）](entries/遊擊（特殊攻擊命中）/README.md)<br>- Hit & Run<br>[完整說明](entries/遊擊（特殊攻擊命中）/README.md) | <ul><li>持用突擊鏈鋸劍，以特殊攻擊直接命中後，移動速度提高 I–IV +12.5%／+15%／+17.5%／+20%，持續 4 秒；再次合格命中刷新時間，不疊加。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/a26f3d44-3271-4160-95ef-0bbf8f80b5dd" width="32" height="32" alt="壓倒性火力祝福圖示"> [壓倒性火力](entries/壓倒性火力/README.md)<br>- Overwhelming Fire<br>[完整說明](entries/壓倒性火力/README.md) | <ul><li>依實際武器家族，每累積 1 或 4 次同一目標的後續合格命中增加一層遠程威力；最多 5 層。只有同一目標的後續合格命中會刷新共用 2 秒計時；新目標的第一個合格命中會清除既有有效層、重設追蹤，但不刷新計時。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4" width="32" height="32" alt="連續發射祝福圖示"> [連續發射](entries/連續發射/README.md)<br>- Blaze Away<br>[完整說明](entries/連續發射/README.md) | <ul><li>持用時依玩家共用射擊計數增加一般攻擊力量修正；最多五個有效步，實際傷害仍受攻擊 profile 等原生計算影響。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

@@ -2052,6 +2052,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a26f3d44-3271-4160-95ef-0bbf8f80b5dd",
       "effect": "依實際武器家族，每累積 1 或 4 次同一目標的後續合格命中增加一層遠程威力；最多 5 層。只有同一目標的後續合格命中會刷新共用 2 秒計時；新目標的第一個合格命中會清除既有有效層、重設追蹤，但不刷新計時。"
+    },
+    {
+      "id": "blaze-away",
+      "name_zh_tw": "連續發射",
+      "name_en": "Blaze Away",
+      "name_key": "loc_trait_bespoke_power_bonus_on_continuous_fire",
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "name_hash": "f52898c5",
+      "description_hash": "1f9e3640",
+      "page": "entries/連續發射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "effect": "持用時依玩家共用射擊計數增加一般攻擊力量修正；最多五個有效步，實際傷害仍受攻擊 profile 等原生計算影響。"
     }
   ],
   "weapons": [
@@ -31013,6 +31026,334 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_141",
       "effect": "重伐木槍：每 1 次同一目標的後續合格命中增加一層；I–IV 每層 +7%、+8%、+9%、+10%，最多 5 層。只有同目標後續合格命中刷新共用 2 秒計時；新目標首事件清除既有有效層且不刷新。",
       "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_consecutive_hits_increases_ranged_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_arc_rifle_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "arc_rifle_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_arc_rifle_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.01,
+          "II": 0.015,
+          "III": 0.02,
+          "IV": 0.03
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua",
+        "start_line": 60,
+        "end_line": 107
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "電弧步槍 布蘭克斯 Mk IV：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：1%、1.5%、2%、3%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_autopistol_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 97,
+        "end_line": 144
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "撕裂者自動手槍 尤斯 Mk IV：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_dual_autopistols_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 97,
+        "end_line": 144
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "雙持自動手槍 布蘭克斯 MkIII：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_flamer_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "flamer_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_flamer_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_flamer_p1.lua",
+        "start_line": 50,
+        "end_line": 97
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "淨化噴火器 奧特米亞 Mk III：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcestaff_p2_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "forcestaff_p2",
+      "page": "entries/連續發射/weapon_trait_bespoke_forcestaff_p2_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+        "start_line": 382,
+        "end_line": 431
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+        "start_line": 53,
+        "end_line": 60
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "烈焰力場法杖 裂隙避難所 Mk II：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；該武器無彈藥且容量為 0，但最低一步規則仍將步距設為 1，詳見原文勘誤。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_ogryn_heavystubber_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 48,
+        "end_line": 95
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "雙鏈重型機槍 克魯克 Mk V、雙鏈重型機槍 戈爾貢努姆 Mk IV、雙鏈重型機槍 阿克利斯 Mk VII：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/連續發射/weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.1,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 811,
+        "end_line": 858
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "重伐木槍 克魯克 Mk IIa、重伐木槍 戈爾貢努姆 Mk IIIa、重伐木槍 阿克利斯 Mk II：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；彈匣門檻 10%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_rippergun_p1_power_bonus_on_continuous_fire",
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_rippergun_p1",
+      "page": "entries/連續發射/weapon_trait_bespoke_ogryn_rippergun_p1_power_bonus_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_effective_step": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "ammo_fraction_per_step": 0.08,
+        "effective_step_cap": 5,
+        "buff_template_max_stacks": 1,
+        "fallback_power_level_modifier": 0.02,
+        "tier_override_replaces_fallback": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_rippergun_p1.lua",
+        "start_line": 313,
+        "end_line": 360
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_rippergun_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 34
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_continuous_fire_desc",
+      "description_hash": "1f9e3640",
+      "icon": "https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_126",
+      "effect": "撕裂槍 碎敵 Mk II、撕裂槍 碎敵 Mk V、撕裂槍 碎敵 Mk VI：持用時依玩家共用射擊計數增加攻擊力量修正；每步 I–IV：5%、6%、7%、8%；使用專屬的 8% 步距計算；容量 12–24 發時最低門檻為 1 發。"
     }
   ],
   "bindings": [
@@ -44916,6 +45257,202 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
         "import_line": 15,
         "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "arc_rifle_p1",
+      "mark_id": "arc_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_arc_rifle_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_arc_rifle_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_arc_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+        "import_line": 20,
+        "append_line": 1061
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "flamer_p1",
+      "mark_id": "flamer_p1_m1",
+      "variant_id": "weapon_trait_bespoke_flamer_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_flamer_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_flamer_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 747
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "forcestaff_p2",
+      "mark_id": "forcestaff_p2_m1",
+      "variant_id": "weapon_trait_bespoke_forcestaff_p2_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_forcestaff_p2/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_forcestaff_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1225
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 913
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 908
+      }
+    },
+    {
+      "blessing_id": "blaze-away",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_power_bonus_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/power_bonus_on_continuous_fire",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 891
       }
     }
   ]

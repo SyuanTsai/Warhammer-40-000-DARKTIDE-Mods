@@ -463,6 +463,7 @@
 - Headhunter - 獵頭者
 - Between the Eyes - 正中眉心
 - Blaze Away - 連續發射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire`，hash `f52898c5`；英文／繁中RAW配對確認。
 - Powderburn - 火藥灼傷
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills`，hash `f5213560`；英文／繁中RAW配對確認。
 - Cavalcade - 接連不斷

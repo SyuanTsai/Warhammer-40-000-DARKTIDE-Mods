@@ -505,3 +505,5 @@
 - 第40輪三項已Commit後完整掃描通過：trickshooter (`33f292c4aa4673ce1e5a934aa69b7a6cebb06f05`)、powderburn (`98a75cb3cabc2b045a859c7000e5a043aa98a873`)、hit-and-run-activated (`1051df9c3ad60313e4e68cf2e51812b30c87cefc`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-040-full-scan.json`／SHA-256 `3811f8f8fa53b557012261acc066c31e97df8bd80428d89ee03696baeba7fbe9`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [壓倒性火力](2026-10-03-OVERWHELMING-FIRE_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。
+
+- [連續發射](2026-10-03-BLAZE-AWAY_ACCEPTANCE.json)：新增8變體、14型號關聯；共8變體、14關聯。

@@ -157,3 +157,4 @@
 | [火藥灼傷](entries/火藥灼傷/README.md) | [來源索引](entries/火藥灼傷/SOURCE_INDEX.md) |
 | [遊擊（特殊攻擊命中）](entries/遊擊（特殊攻擊命中）/README.md) | [來源索引](entries/遊擊（特殊攻擊命中）/SOURCE_INDEX.md) |
 | [壓倒性火力](entries/壓倒性火力/README.md) | [來源索引](entries/壓倒性火力/SOURCE_INDEX.md) |
+| [連續發射](entries/連續發射/README.md) | [來源索引](entries/連續發射/SOURCE_INDEX.md) |
