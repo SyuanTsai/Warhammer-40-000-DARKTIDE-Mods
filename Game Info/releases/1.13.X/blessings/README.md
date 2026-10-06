@@ -152,5 +152,6 @@
 | <img src="https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c" width="32" height="32" alt="無情背刺祝福圖示"> [無情背刺](entries/無情背刺/README.md)<br>- Ruthless Backstab<br>[完整說明](entries/無情背刺/README.md) | <ul><li>有效近戰背刺命中時，依 I–IV 級加入 +70%／+80%／+90%／+100% 撕裂加算；撕裂先作用於護甲傷害階段，並非固定比例的最終傷害。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e" width="32" height="32" alt="利刃攻勢祝福圖示"> [利刃攻勢](entries/利刃攻勢/README.md)<br>- Bladed Momentum<br>[完整說明](entries/利刃攻勢/README.md) | <ul><li>同一次近戰揮掃在第2個或之後的目標命中事件通過 item／持用檢查時，每次觸發增加1層近戰撕裂倍率；最多4層，持續時間依等級。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20" width="32" height="32" alt="手銃祝福圖示"> [手銃](entries/手銃/README.md)<br>- Hand-Cannon<br>[完整說明](entries/手銃/README.md) | <ul><li>暴擊攻擊時提高撕裂倍率；實際幅度依手槍系別與祝福等級。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e" width="32" height="32" alt="刻不容緩祝福圖示"> [刻不容緩](entries/刻不容緩/README.md)<br>- No Respite<br>[完整說明](entries/刻不容緩/README.md) | <ul><li>命中目標時，依本次傷害計算前目標的原生踉蹌計數，將每個計數的 I–IV 加算值加入傷害加算池；最多讀取七個計數。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

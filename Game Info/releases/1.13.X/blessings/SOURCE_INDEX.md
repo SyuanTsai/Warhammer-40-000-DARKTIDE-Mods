@@ -150,3 +150,4 @@
 | [無情背刺](entries/無情背刺/README.md) | [來源索引](entries/無情背刺/SOURCE_INDEX.md) |
 | [利刃攻勢](entries/利刃攻勢/README.md) | [來源索引](entries/利刃攻勢/SOURCE_INDEX.md) |
 | [手銃](entries/手銃/README.md) | [來源索引](entries/手銃/SOURCE_INDEX.md) |
+| [刻不容緩](entries/刻不容緩/README.md) | [來源索引](entries/刻不容緩/SOURCE_INDEX.md) |

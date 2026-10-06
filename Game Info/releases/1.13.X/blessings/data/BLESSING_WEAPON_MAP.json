@@ -1951,6 +1951,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20",
       "effect": "暴擊攻擊時提高撕裂倍率；實際幅度依手槍系別與祝福等級。"
+    },
+    {
+      "id": "no-respite",
+      "name_zh_tw": "刻不容緩",
+      "name_en": "No Respite",
+      "name_key": "loc_trait_bespoke_stagger_count_bonus_damage",
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "name_hash": "0d7da51d",
+      "description_hash": "1ac5c173",
+      "page": "entries/刻不容緩/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "effect": "命中目標時，依本次傷害計算前目標的原生踉蹌計數，將每個計數的 I–IV 加算值加入傷害加算池；最多讀取七個計數。"
     }
   ],
   "weapons": [
@@ -29892,6 +29905,310 @@
       "icon": "https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_118",
       "effect": "暴擊時增加撕裂倍率，I–IV 為 30%、40%、50%、60%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "arc_rifle_p1",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "電弧步槍布蘭克斯 Mk IV：hip／braced hitscan 射擊、電弧鏈均為傷害 Attack；特殊 bash 為有傷害槍托 Sweep。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua",
+        "start_line": 190,
+        "end_line": 229
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "包含 hip／braced 射擊、電弧鏈與有傷害的槍托特殊 bash。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "autogun_p3",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "機動自動槍三型號：hip／zoomed hitscan；Mk III／Mk IX 連射、Mk VII 單發；三者另有槍托輕／重近戰 Sweep。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 220,
+        "end_line": 259
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "三 Mark 都有 hip／zoomed 射擊及槍托輕／重 Sweep；Mk III／Mk IX 為連射型、Mk VII 為單發型。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "步兵鐳射槍三型號：hip／zoomed hitscan；特殊鍵是照明切換，沒有特殊近戰命中。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 266,
+        "end_line": 305
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 47,
+        "end_line": 47
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "三 Mark 都有 hip／zoomed 射擊；特殊鍵照明切換沒有額外近戰傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p2",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "冥潮鐳射槍三型號：charge-ammo 後蓄力雷射；Mk IIIa／Mk V 特殊刺刀輕重 Sweep，Mk IV 特殊斬擊 Sweep。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua",
+        "start_line": 218,
+        "end_line": 257
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "三 Mark 都有蓄力射擊；Mk IIIa／Mk V 是特殊刺刀 Sweep，Mk IV 是特殊斬擊 Sweep。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "重伐木槍三型號：hip／zoomed hitscan；特殊鍵照明切換，沒有特殊近戰命中。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 677,
+        "end_line": 716
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 63,
+        "end_line": 63
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "三 Mark 都有 hip／zoomed 射擊；特殊鍵照明切換沒有額外近戰傷害。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "戰鬥霰彈槍三型號：pellet 依目標／命中區聚合；特殊裝填彈依 Mark 不同，Mk IX 另施加燃燒狀態並有後續 tick。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 359,
+        "end_line": 398
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "三 Mark 的霰彈按目標與命中區聚合；Mk VI、Mk VII、Mk IX 的特殊彈分別為切割彈、slug、燃燒彈。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "獵人霰彈槍奧克塔蘭 Mk III：普通 pellet 射擊；實際射擊表沒有特殊霰彈，特殊鍵為照明／瞄準控制。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 359,
+        "end_line": 398
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "只有一般 pellet 射擊；本 Mark 的實際射擊表未接特殊霰彈。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage",
+      "blessing_id": "no-respite",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/刻不容緩/weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "p_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "formula": "p×clamp(target_stagger_count,0,7)",
+        "weapon_action_difference": "衝覆者霰彈手槍和防暴盾牌審判 Mk IV：一般及格擋中 pellet 射擊；特殊槍托重擊有傷害，純盾推擊沒有生命值傷害。"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 877,
+        "end_line": 916
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 41,
+        "end_line": 41
+      },
+      "description_key": "loc_trait_bespoke_stagger_count_bonus_damage_desc",
+      "description_hash": "1ac5c173",
+      "icon": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "effect": "一般與格擋中 pellet 射擊、特殊槍托重擊有傷害；純盾推擊不產生生命值傷害。"
     }
   ],
   "bindings": [
@@ -43179,6 +43496,258 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "arc_rifle_p1",
+      "mark_id": "arc_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_arc_rifle_p1/stagger_count_bonus_damage",
+      "trait_category": "bespoke_arc_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+        "import_line": 20,
+        "append_line": 1061
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1335
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1329
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1246
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stagger_count_bonus_damage",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "no-respite",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/damage_bonus_on_stagger_count",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]

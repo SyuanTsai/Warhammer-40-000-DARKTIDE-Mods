@@ -1,0 +1,651 @@
+{
+  "date": "2026-10-06",
+  "blessing": "no-respite",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage",
+    "weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage"
+  ],
+  "added_binding_count": 18,
+  "total_variants": 8,
+  "total_bindings": 18,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "no-respite",
+    "review_kind": "non-author formal peer review",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-formal-peer-scope.json",
+    "scope_sha256": "b42ddbebf0b332d7de123747df7322f1e8a8d86f79501e9389f2b312a0bb0150",
+    "fixed_scope_file_count": 99,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-config.json": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-draft.md": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-evidence.json": "3ae20d0ec9ad922e27cd8a8122abd128daad94bf4e4a2f81414e74f0a3584c19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-config.json": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-extension-draft.json": "3bc85000dfbb15cf859a3761b9647cd73928e0ed12b8de935b5b14ec64a79926",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/association-snapshot.json": "ffd34aa904d737ad0538333e2f538c2901584191e9581b33acf1d2da596c0138",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/attack-coverage.json": "adf2c8de45908edf84b098f4a2ce7bb6deb45e2e2672ea4b6bea039729fa27ee",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/candidate-page-preview.md": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/candidate-preview-manifest.json": "ab83bb780d0e25e69533bf3af2ad854c0b2b88c5a38e98f8a3187358fcc408cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/draft.md": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/BLESSING_WEAPON_MAP.json": "cdcb722f8c45b2132705d8621defab846ce7b6229f539a1215d141f40871be8d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/image.json": "51169f414c7712d0e22cd917597f16492d0bebadd13407893703afc88b27870d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/input-snapshot-manifest.json": "6715f429ed1f7ba7a58b7d2ce502d02fdb117866eb2c06031a128ed59f3badf1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-own-tier-wrapper-stagger-consumer-material-review.json": "cb36bc8da71594936cd61f8f611cd471046b573e244d22349d6128a82b5b5756",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-traits-review.json": "03b5c03f7294b9f5fcbfb4c49a8e5f315e2207da424494f0c74f4dbbf45f1e8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-ui-raw-verification.json": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-ui-review.json": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/remaining-tasks.json": "90b6df2122a8ac83e30f06c06131405d93f47677b1b3b3916245563165688619",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-001.json": "c05103ca1e5e06fb6f540052b7c52b2192e3785e7a54405dfb903de779b50aac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-002.json": "a7a94fca546bc815940bd9de0b33d6cebdf9b9780e483f4e129bab54bfe543ea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-003.json": "c1f2ecc303f8100e8cfe70c6d327041e589a8425008ccb8e23fe85b55d25ca8a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-004.json": "41400d9dc3de53a0455afaabb3d4ba8cbc3f42b9449256aba1fba4501b9e8a40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-005.json": "121a9f5ec547c304eae6bfaf7c92048f0d5b9f7d882f1413e30f20d301028035",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-config.json": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-draft.md": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-evidence.json": "3ae20d0ec9ad922e27cd8a8122abd128daad94bf4e4a2f81414e74f0a3584c19",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-selfcheck.json": "180f852e2ccdb6d267b6be429192aa555ee1fbc0c1efecf6a36e4d13a052cb29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/preview-association-snapshot.json": "5d7f22ccd36cbc0ec69b4dce8dcdc6d3df249c7d228f413e32d64d97484aa3ec",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/ruthless-backstab-formal-nonauthor-review.json": "3bdeb7d403607d55db386499e9078c5a2d07a44a71f05afd910bbacb15b078f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-image.json": "51169f414c7712d0e22cd917597f16492d0bebadd13407893703afc88b27870d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-final-content-review.json": "956e215039dca16da69ce83b7a916e08dd00a530249b403aa6676e8a768bb3c8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-focused-checks.json": "12a5be8413d0a720d77a72964a5190021e1a76677992ea6e9b1323c3dc447bac",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-frozen-source-verification.json": "44a1b7f832befa25920f24ae75bb6a8728fa8feb7a6d74df915f47b5b6939ec5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-own-tier-wrapper-stagger-consumer-material-review.json": "a596df9cbcd9456ff86d4ad11d07b3c93dbce2be8430c82c80dc25d55365074c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-resume-review.json": "82b75c10865771b8171e215a0516805c0784a8b99771cb8c14bac2d58c007717",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-traits-review.json": "03b5c03f7294b9f5fcbfb4c49a8e5f315e2207da424494f0c74f4dbbf45f1e8c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-raw-verification.json": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-review.json": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-raw-verification.json": "9cae0f392c3c88a1707039572d3c6791f3873a220350b0d3c28ed344e60ac09a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "72693f2237a2c2149f8b63b28d5ee9de2b46810f03a91eed4646554c4dcb9d78",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/DAMAGE_PERCENTAGE_REVIEW.md": "2f4497c71a6bb4b848084bc6e8d10a03b118a859173c59330d8fb7d25049b858",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/LOCALIZATION_COMPARISON.md": "6428b433d6f072279c65495ebc16bfee7360ab858583cc496897b3f8893522ff",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/README.md": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/SOURCE_INDEX.md": "88ca1c7e820d4a621f2cabe5b3caa22920a8fcb54edabfa6ac95767244a242be",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/TIER_VALUES.md": "22d131dc4812d4a1e8ced8489d436df6cdaa59700b83984753ccecf06f3ff58c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/WEAPON_COMPATIBILITY.md": "404971d2ec81520b7b6b5166f2260b88adffe5f22651d901133e455fb75e563d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage.md": "8c7f13e49cdd04c35db007e15d264f28f83eb7afdecd4d95ac9cceb41a73104d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage.md": "ef40ad6dfa038984802d17c7e30a2c2ef2503313f3bfc261c4d002bc5a51ead9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage.md": "e1c1516a314d6bdae3854f3947d3142e06d952df0c95e358b23f8c7627589abf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage.md": "5d3d1a2394e2052e1b7181fbba25916c6ed08c573084b7cb9e0fbb656cc0825f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage.md": "50f6d72bbf4f6bff947a58ea39144f84bd04d345d6a549082f29bc11b26605df",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage.md": "e1d8d8fa47b9272b86bcb08f98790140eb1c14b66b33d501320619d622514bf6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage.md": "4a418a61b06ff8c2fe5680aa47dc1af51a350dc7078f7ee6c331ec9056125943",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage.md": "4c523b46815dab0e276cb83d7c1a8bec439f6b8c246a1f033ba46c35f786dee4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "51092ec253a866736305914dc059ee44e07b74b91fbff1735cdc665214a787df",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "2066b6e084b5fc3f6f21c068f216fc344ee106043ecb41556557124233e5bf67",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "49d395ed42ade338ff9079e217d07f067f4d251cbb38479e55eae73d9de021e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "2e8d264c5bd7059ba9c3d38f4528efb917c5da33370dccb681b7b8ce74c50118",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "e566fcc7c6bc76e74fd0125fb2c3b01e5106a6e7df5cba4c5046727dfd0d2363",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "284441827e4fcc560050e1899674388b83c3dd4d46261f2597027c97c116fcfb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "b59cb81571e9b25e23080caf37de65bd350b7a57637141618427806b8585b023",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "32dd3ce4df788f89dc1d4f86770c2a671ed3882a1d85f64800ac9a7ce0af6380",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "413eb6800e9e35cc1e731e4fb3f53a064f17e1c130c7fbb0e6cc1e56c9d089e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "e6c49f429d9157164f7eb01744c16f97ab624f0010af93b94b92eeb30b15f6cc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "f37e3b06a32e3c692b897f6918600b5463d19892bae3bed88e9f4e0ecd847e9a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/own-association-snapshot.json": "5d7f22ccd36cbc0ec69b4dce8dcdc6d3df249c7d228f413e32d64d97484aa3ec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/actual-preview-005/Referneces/Translation.md": "913e686dc97e9028775a3b70980b11d72456852034dde0508d1372e7bf4d5d8f",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "72693f2237a2c2149f8b63b28d5ee9de2b46810f03a91eed4646554c4dcb9d78",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/DAMAGE_PERCENTAGE_REVIEW.md": "2f4497c71a6bb4b848084bc6e8d10a03b118a859173c59330d8fb7d25049b858",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/LOCALIZATION_COMPARISON.md": "6428b433d6f072279c65495ebc16bfee7360ab858583cc496897b3f8893522ff",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/README.md": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/SOURCE_INDEX.md": "88ca1c7e820d4a621f2cabe5b3caa22920a8fcb54edabfa6ac95767244a242be",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/TIER_VALUES.md": "22d131dc4812d4a1e8ced8489d436df6cdaa59700b83984753ccecf06f3ff58c",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/WEAPON_COMPATIBILITY.md": "404971d2ec81520b7b6b5166f2260b88adffe5f22651d901133e455fb75e563d",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage.md": "8c7f13e49cdd04c35db007e15d264f28f83eb7afdecd4d95ac9cceb41a73104d",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage.md": "ef40ad6dfa038984802d17c7e30a2c2ef2503313f3bfc261c4d002bc5a51ead9",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage.md": "e1c1516a314d6bdae3854f3947d3142e06d952df0c95e358b23f8c7627589abf",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage.md": "5d3d1a2394e2052e1b7181fbba25916c6ed08c573084b7cb9e0fbb656cc0825f",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage.md": "50f6d72bbf4f6bff947a58ea39144f84bd04d345d6a549082f29bc11b26605df",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage.md": "e1d8d8fa47b9272b86bcb08f98790140eb1c14b66b33d501320619d622514bf6",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage.md": "4a418a61b06ff8c2fe5680aa47dc1af51a350dc7078f7ee6c331ec9056125943",
+      "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage.md": "4c523b46815dab0e276cb83d7c1a8bec439f6b8c246a1f033ba46c35f786dee4",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "51092ec253a866736305914dc059ee44e07b74b91fbff1735cdc665214a787df",
+      "Game Info/releases/1.13.X/blessings/README.md": "2066b6e084b5fc3f6f21c068f216fc344ee106043ecb41556557124233e5bf67",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "49d395ed42ade338ff9079e217d07f067f4d251cbb38479e55eae73d9de021e7",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/冥潮鐳射槍/README.md": "2e8d264c5bd7059ba9c3d38f4528efb917c5da33370dccb681b7b8ce74c50118",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "e566fcc7c6bc76e74fd0125fb2c3b01e5106a6e7df5cba4c5046727dfd0d2363",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "284441827e4fcc560050e1899674388b83c3dd4d46261f2597027c97c116fcfb",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "b59cb81571e9b25e23080caf37de65bd350b7a57637141618427806b8585b023",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "32dd3ce4df788f89dc1d4f86770c2a671ed3882a1d85f64800ac9a7ce0af6380",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "413eb6800e9e35cc1e731e4fb3f53a064f17e1c130c7fbb0e6cc1e56c9d089e7",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "e6c49f429d9157164f7eb01744c16f97ab624f0010af93b94b92eeb30b15f6cc",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "f37e3b06a32e3c692b897f6918600b5463d19892bae3bed88e9f4e0ecd847e9a",
+      "Referneces/Translation.md": "913e686dc97e9028775a3b70980b11d72456852034dde0508d1372e7bf4d5d8f"
+    },
+    "reviewed_formal_pages": [
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/DAMAGE_PERCENTAGE_REVIEW.md",
+        "sha256": "2f4497c71a6bb4b848084bc6e8d10a03b118a859173c59330d8fb7d25049b858"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/LOCALIZATION_COMPARISON.md",
+        "sha256": "6428b433d6f072279c65495ebc16bfee7360ab858583cc496897b3f8893522ff"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/README.md",
+        "sha256": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/SOURCE_INDEX.md",
+        "sha256": "88ca1c7e820d4a621f2cabe5b3caa22920a8fcb54edabfa6ac95767244a242be"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/TIER_VALUES.md",
+        "sha256": "22d131dc4812d4a1e8ced8489d436df6cdaa59700b83984753ccecf06f3ff58c"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/WEAPON_COMPATIBILITY.md",
+        "sha256": "404971d2ec81520b7b6b5166f2260b88adffe5f22651d901133e455fb75e563d"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage.md",
+        "sha256": "8c7f13e49cdd04c35db007e15d264f28f83eb7afdecd4d95ac9cceb41a73104d"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage.md",
+        "sha256": "ef40ad6dfa038984802d17c7e30a2c2ef2503313f3bfc261c4d002bc5a51ead9"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage.md",
+        "sha256": "e1c1516a314d6bdae3854f3947d3142e06d952df0c95e358b23f8c7627589abf"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage.md",
+        "sha256": "5d3d1a2394e2052e1b7181fbba25916c6ed08c573084b7cb9e0fbb656cc0825f"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage.md",
+        "sha256": "50f6d72bbf4f6bff947a58ea39144f84bd04d345d6a549082f29bc11b26605df"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage.md",
+        "sha256": "e1d8d8fa47b9272b86bcb08f98790140eb1c14b66b33d501320619d622514bf6"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage.md",
+        "sha256": "4a418a61b06ff8c2fe5680aa47dc1af51a350dc7078f7ee6c331ec9056125943"
+      },
+      {
+        "path": "Game Info/releases/1.13.X/blessings/entries/刻不容緩/weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage.md",
+        "sha256": "4c523b46815dab0e276cb83d7c1a8bec439f6b8c246a1f033ba46c35f786dee4"
+      }
+    ],
+    "actual_preview": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-005.json",
+      "sha256": "121a9f5ec547c304eae6bfaf7c92048f0d5b9f7d882f1413e30f20d301028035",
+      "passed": true
+    },
+    "association": {
+      "preview_snapshot_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/preview-association-snapshot.json",
+      "preview_snapshot_sha256": "5d7f22ccd36cbc0ec69b4dce8dcdc6d3df249c7d228f413e32d64d97484aa3ec",
+      "matches_current_global_map": true,
+      "variant_count": 8,
+      "binding_count": 18
+    },
+    "review_conclusions": [
+      "The formal pages accurately state the held-slot passive reads the target native stagger.count at each applicable generic damage calculation, without a kill, positive-HP-damage, or newly-caused-stagger gate. The attack reads the pre-damage count; stagger added later in that attack cannot retroactively change the same calculation.",
+      "All eight actual implementations share own I–IV per-count values .14/.16/.18/.20, replacing the base same-key fallback .5. With the additive-multiplier stat neutral at 1, the damage consumer contributes p×clamp(count,0,7) to the additive damage-stat pool. The tier page and examples correctly keep this coefficient-stage amount separate from final HP damage.",
+      "The controlled examples state their assumptions and arithmetic: IV, count 4, B=100 gives coefficient 1→1.8 and intermediate output 100→180; with q=.30 the comparison is 130→210 (80 points, about 61.54% relative); count 7 gives +140 percentage points at IV. These are not final health-damage percentages.",
+      "The English RAW explicitly says “Up to” the formatted tier percentage, while the fixed-source consumer at IV/count 7 adds 1.40 to the damage-stat pool; the formal erratum correctly identifies that cap contradiction. The Traditional Chinese RAW omits the per-count formula and cap, so it is correctly classified as not covered rather than contradictory.",
+      "The player page and all variant pages distinguish the actual 18 Marks and their routed hitscan, pellet, charged, arc, Sweep and special attack paths. Pellet groups are not treated as one event per pellet; the actual burning tick is a separate damage call. The shield push has zero base health damage and does not create damage from this additive pool.",
+      "The candidate preview snapshot and current shared blessing map are exactly equal for all eight trait variants and 18 bindings. The image receipt uses icon 115, separate icon path and attachment URL, and records verified public bytes and display."
+    ],
+    "reused_evidence": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-final-content-review.json",
+        "sha256": "956e215039dca16da69ce83b7a916e08dd00a530249b403aa6676e8a768bb3c8"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-own-tier-wrapper-stagger-consumer-material-review.json",
+        "sha256": "a596df9cbcd9456ff86d4ad11d07b3c93dbce2be8430c82c80dc25d55365074c"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-review.json",
+        "sha256": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-raw-verification.json",
+        "sha256": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-image.json",
+        "sha256": "51169f414c7712d0e22cd917597f16492d0bebadd13407893703afc88b27870d"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-focused-checks.json",
+        "sha256": "12a5be8413d0a720d77a72964a5190021e1a76677992ea6e9b1323c3dc447bac"
+      }
+    ],
+    "review_method": "Verified all 99 fixed-scope hashes; read the 14 own formal pages and compared the 8 variants/18 bindings from the passing actual preview snapshot to the current global map; checked the tier table, RAW comparison, calculations, own tier/consumer proof, root final-content proof, image receipt and related weapon entries. Reused unchanged fixed-source mechanisms only under the actual bindings and conditions in the frozen evidence."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "no-respite",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_115",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_115.png",
+      "attachment": "https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6006318988",
+      "acquired_date": "2026-10-06",
+      "sha256": "30b1a06de6735241a82453e22ceecb52185860042f8c181a392de957f0eeeea7",
+      "content_type": "image/png",
+      "size": 4212,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "刻不容緩祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display": "Root visual inspection of actual public128x128 original icon: closed white-grey fist silhouette; public bytes equal item.icon source SHA256."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 27,
+      "tables": 26,
+      "rows": 607,
+      "lists": 102,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 107,
+      "source_files": 49,
+      "bindings": 967,
+      "variants": 496,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 25,
+      "source_object_cache": {
+        "cache_hits": 49,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 28,
+      "local_references": 1467,
+      "remote_references": 593,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 39,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-038-full-scan.json",
+        "sha256": "f1e1e03d8d402ed6b574f3020fac1a0aefc4f3672ff224738fa61149e327c98b",
+        "trigger": "round-038"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 22,
+    "not_started_name_groups": 22,
+    "partial_name_groups": 0,
+    "remaining_variants": 109,
+    "remaining_bindings": 218,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "efe1c802b5310578c9f3bb3b7c17449e2356c32ac37a6b20b41f799f5319edb9"
+  },
+  "previous_local_commit": "e40f30a8903c2fd8527f9faaaffd4415f4910859",
+  "outside_intersection_review": {
+    "status": "no outside exact-name inventory items",
+    "outside_exact_items": []
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-final-content-review.json",
+      "sha256": "956e215039dca16da69ce83b7a916e08dd00a530249b403aa6676e8a768bb3c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-focused-checks.json",
+      "sha256": "12a5be8413d0a720d77a72964a5190021e1a76677992ea6e9b1323c3dc447bac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-frozen-source-verification.json",
+      "sha256": "44a1b7f832befa25920f24ae75bb6a8728fa8feb7a6d74df915f47b5b6939ec5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-own-tier-wrapper-stagger-consumer-material-review.json",
+      "sha256": "a596df9cbcd9456ff86d4ad11d07b3c93dbce2be8430c82c80dc25d55365074c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-resume-review.json",
+      "sha256": "82b75c10865771b8171e215a0516805c0784a8b99771cb8c14bac2d58c007717"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-traits-review.json",
+      "sha256": "03b5c03f7294b9f5fcbfb4c49a8e5f315e2207da424494f0c74f4dbbf45f1e8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-raw-verification.json",
+      "sha256": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-review.json",
+      "sha256": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-config.json",
+    "sha256": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/remaining-tasks.json",
+      "sha256": "90b6df2122a8ac83e30f06c06131405d93f47677b1b3b3916245563165688619"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/BLESSING_WEAPON_MAP.json",
+      "sha256": "cdcb722f8c45b2132705d8621defab846ce7b6229f539a1215d141f40871be8d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-own-tier-wrapper-stagger-consumer-material-review.json",
+      "sha256": "cb36bc8da71594936cd61f8f611cd471046b573e244d22349d6128a82b5b5756"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-traits-review.json",
+      "sha256": "03b5c03f7294b9f5fcbfb4c49a8e5f315e2207da424494f0c74f4dbbf45f1e8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-ui-review.json",
+      "sha256": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/primary-ui-raw-verification.json",
+      "sha256": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/image.json",
+      "sha256": "51169f414c7712d0e22cd917597f16492d0bebadd13407893703afc88b27870d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/inputs/input-snapshot-manifest.json",
+      "sha256": "6715f429ed1f7ba7a58b7d2ce502d02fdb117866eb2c06031a128ed59f3badf1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/association-snapshot.json",
+      "sha256": "ffd34aa904d737ad0538333e2f538c2901584191e9581b33acf1d2da596c0138"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/attack-coverage.json",
+      "sha256": "adf2c8de45908edf84b098f4a2ce7bb6deb45e2e2672ea4b6bea039729fa27ee"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-005.json",
+      "sha256": "121a9f5ec547c304eae6bfaf7c92048f0d5b9f7d882f1413e30f20d301028035"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "2066b6e084b5fc3f6f21c068f216fc344ee106043ecb41556557124233e5bf67"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "49d395ed42ade338ff9079e217d07f067f4d251cbb38479e55eae73d9de021e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "72693f2237a2c2149f8b63b28d5ee9de2b46810f03a91eed4646554c4dcb9d78"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "2f4497c71a6bb4b848084bc6e8d10a03b118a859173c59330d8fb7d25049b858"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\LOCALIZATION_COMPARISON.md",
+      "sha256": "6428b433d6f072279c65495ebc16bfee7360ab858583cc496897b3f8893522ff"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\README.md",
+      "sha256": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\SOURCE_INDEX.md",
+      "sha256": "88ca1c7e820d4a621f2cabe5b3caa22920a8fcb54edabfa6ac95767244a242be"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\TIER_VALUES.md",
+      "sha256": "22d131dc4812d4a1e8ced8489d436df6cdaa59700b83984753ccecf06f3ff58c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\WEAPON_COMPATIBILITY.md",
+      "sha256": "404971d2ec81520b7b6b5166f2260b88adffe5f22651d901133e455fb75e563d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_arc_rifle_p1_stagger_count_bonus_damage.md",
+      "sha256": "8c7f13e49cdd04c35db007e15d264f28f83eb7afdecd4d95ac9cceb41a73104d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_autogun_p3_stagger_count_bonus_damage.md",
+      "sha256": "ef40ad6dfa038984802d17c7e30a2c2ef2503313f3bfc261c4d002bc5a51ead9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_lasgun_p1_stagger_count_bonus_damage.md",
+      "sha256": "e1c1516a314d6bdae3854f3947d3142e06d952df0c95e358b23f8c7627589abf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_lasgun_p2_stagger_count_bonus_damage.md",
+      "sha256": "5d3d1a2394e2052e1b7181fbba25916c6ed08c573084b7cb9e0fbb656cc0825f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_ogryn_heavystubber_p2_stagger_count_bonus_damage.md",
+      "sha256": "50f6d72bbf4f6bff947a58ea39144f84bd04d345d6a549082f29bc11b26605df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_shotgun_p1_stagger_count_bonus_damage.md",
+      "sha256": "e1d8d8fa47b9272b86bcb08f98790140eb1c14b66b33d501320619d622514bf6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_shotgun_p3_stagger_count_bonus_damage.md",
+      "sha256": "4a418a61b06ff8c2fe5680aa47dc1af51a350dc7078f7ee6c331ec9056125943"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\刻不容緩\\weapon_trait_bespoke_shotpistol_shield_p1_stagger_count_bonus_damage.md",
+      "sha256": "4c523b46815dab0e276cb83d7c1a8bec439f6b8c246a1f033ba46c35f786dee4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "51092ec253a866736305914dc059ee44e07b74b91fbff1735cdc665214a787df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\冥潮鐳射槍\\README.md",
+      "sha256": "2e8d264c5bd7059ba9c3d38f4528efb917c5da33370dccb681b7b8ce74c50118"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\戰鬥霰彈槍\\README.md",
+      "sha256": "e566fcc7c6bc76e74fd0125fb2c3b01e5106a6e7df5cba4c5046727dfd0d2363"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\機動自動槍\\README.md",
+      "sha256": "284441827e4fcc560050e1899674388b83c3dd4d46261f2597027c97c116fcfb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\步兵鐳射槍\\README.md",
+      "sha256": "b59cb81571e9b25e23080caf37de65bd350b7a57637141618427806b8585b023"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\獵人霰彈槍\\README.md",
+      "sha256": "32dd3ce4df788f89dc1d4f86770c2a671ed3882a1d85f64800ac9a7ce0af6380"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\衝覆者霰彈手槍和防暴盾牌\\README.md",
+      "sha256": "413eb6800e9e35cc1e731e4fb3f53a064f17e1c130c7fbb0e6cc1e56c9d089e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "e6c49f429d9157164f7eb01744c16f97ab624f0010af93b94b92eeb30b15f6cc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電弧步槍\\README.md",
+      "sha256": "f37e3b06a32e3c692b897f6918600b5463d19892bae3bed88e9f4e0ecd847e9a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "913e686dc97e9028775a3b70980b11d72456852034dde0508d1372e7bf4d5d8f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-raw-verification.json",
+      "sha256": "9cae0f392c3c88a1707039572d3c6791f3873a220350b0d3c28ed344e60ac09a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\no-respite-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "5d7f22ccd36cbc0ec69b4dce8dcdc6d3df249c7d228f413e32d64d97484aa3ec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/candidate-page-preview.md",
+      "sha256": "0e607c873c5f33873c74d7f6de9ced67081167bcd835517b90afe43924a7b5e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/candidate-preview-manifest.json",
+      "sha256": "ab83bb780d0e25e69533bf3af2ad854c0b2b88c5a38e98f8a3187358fcc408cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/draft.md",
+      "sha256": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-001.json",
+      "sha256": "c05103ca1e5e06fb6f540052b7c52b2192e3785e7a54405dfb903de779b50aac"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-002.json",
+      "sha256": "a7a94fca546bc815940bd9de0b33d6cebdf9b9780e483f4e129bab54bfe543ea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-003.json",
+      "sha256": "c1f2ecc303f8100e8cfe70c6d327041e589a8425008ccb8e23fe85b55d25ca8a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-actual-preview-receipt-004.json",
+      "sha256": "41400d9dc3de53a0455afaabb3d4ba8cbc3f42b9449256aba1fba4501b9e8a40"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-config.json",
+      "sha256": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-draft.md",
+      "sha256": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-agent-evidence.json",
+      "sha256": "3ae20d0ec9ad922e27cd8a8122abd128daad94bf4e4a2f81414e74f0a3584c19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/no-respite-selfcheck.json",
+      "sha256": "180f852e2ccdb6d267b6be429192aa555ee1fbc0c1efecf6a36e4d13a052cb29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/preview-association-snapshot.json",
+      "sha256": "5d7f22ccd36cbc0ec69b4dce8dcdc6d3df249c7d228f413e32d64d97484aa3ec"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-group/ruthless-backstab-formal-nonauthor-review.json",
+      "sha256": "3bdeb7d403607d55db386499e9078c5a2d07a44a71f05afd910bbacb15b078f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-config.json",
+      "sha256": "6de025e725a17923ba0448ff077850fd53a0fbf80eaf1cd612e51a9d4ff25a36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-evidence.json",
+      "sha256": "3ae20d0ec9ad922e27cd8a8122abd128daad94bf4e4a2f81414e74f0a3584c19"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-agent-draft.md",
+      "sha256": "da2b8242e637ce0fe05c19a4f4ae1288abe68bfb96047157cfa4eb493e2a98e2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-final-content-review.json",
+      "sha256": "956e215039dca16da69ce83b7a916e08dd00a530249b403aa6676e8a768bb3c8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-frozen-source-verification.json",
+      "sha256": "44a1b7f832befa25920f24ae75bb6a8728fa8feb7a6d74df915f47b5b6939ec5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-own-tier-wrapper-stagger-consumer-material-review.json",
+      "sha256": "a596df9cbcd9456ff86d4ad11d07b3c93dbce2be8430c82c80dc25d55365074c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-traits-review.json",
+      "sha256": "03b5c03f7294b9f5fcbfb4c49a8e5f315e2207da424494f0c74f4dbbf45f1e8c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-raw-verification.json",
+      "sha256": "128e74a5198e89ec165093ba39273b0568cfc2c1ff295e6b65601ddbd9fd6d8b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-primary-ui-review.json",
+      "sha256": "e2d424e445a8722eeae317d2360df106a97e50b46621fd342d85cacfff20f828"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/no-respite-formal-peer-scope.json",
+    "sha256": "b42ddbebf0b332d7de123747df7322f1e8a8d86f79501e9389f2b312a0bb0150",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
