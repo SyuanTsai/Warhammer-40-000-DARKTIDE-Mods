@@ -2174,6 +2174,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/309e0a2e-5b01-4af4-bde2-cddcbd580233",
       "effect": "合格命中增加近戰衝擊層數，最多五層，每層依等級提高 melee_impact_modifier。"
+    },
+    {
+      "id": "decapitator",
+      "name_zh_tw": "斬首者",
+      "name_en": "Decapitator",
+      "name_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills",
+      "description_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills_desc",
+      "name_hash": "fc38d118",
+      "description_hash": "685eb9c3",
+      "page": "entries/斬首者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "effect": "符合條件的一擊擊殺會依武器實作增加近戰靈巧威力；最多五層；合格擊殺會刷新共用五秒倒數。實際修改 finesse stat，不是護甲 Rending。"
     }
   ],
   "weapons": [
@@ -33568,6 +33581,190 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_171",
       "effect": "符合來源物品／持用與 profile 事件條件的命中可增加一個有效層；實際純推擊也可送 on_hit，但 push 本身不使用 melee_impact_modifier。",
       "buff_template_id": "weapon_trait_bespoke_thunderhammer_2h_p1_stacking_increase_impact_on_hit_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill",
+      "blessing_id": "decapitator",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/斬首者/weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_finesse_modifier_bonus_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "effective_max_stacks": 5,
+        "raw_child_max_stacks": 5,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 5,
+        "trigger_event": "on_kill",
+        "checker": "on_one_hit_kill",
+        "same_source_item": true,
+        "held_slot_required": true,
+        "cooldown_duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 274,
+        "end_line": 337
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 41
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills_desc",
+      "description_hash": "685eb9c3",
+      "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
+      "effect": "拉沙德、安塔克斯與阿克利斯的實際近戰命中若造成合格一擊擊殺，依戰鬥斧自己的 tier 值增加靈巧威力；三個 Mark 的特殊掃掠 profile 各異。",
+      "buff_template_id": "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill",
+      "blessing_id": "decapitator",
+      "weapon_id": "powersword_p2",
+      "page": "entries/斬首者/weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_finesse_modifier_bonus_by_tier": {
+          "I": 0.1,
+          "II": 0.12,
+          "III": 0.14,
+          "IV": 0.16
+        },
+        "effective_max_stacks": 5,
+        "raw_child_max_stacks": 5,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 5,
+        "trigger_event": "on_kill",
+        "checker": "on_one_hit_kill",
+        "same_source_item": true,
+        "held_slot_required": true,
+        "cooldown_duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 551,
+        "end_line": 614
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 309,
+        "end_line": 323
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills_desc",
+      "description_hash": "685eb9c3",
+      "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
+      "effect": "阿里丁與執法者的普通／啟動型近戰 profile 皆按同一擊殺條件觸發，依動力彎刀自己的 tier 覆寫增加靈巧威力。",
+      "buff_template_id": "weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill",
+      "blessing_id": "decapitator",
+      "weapon_id": "powersword_p3",
+      "page": "entries/斬首者/weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_finesse_modifier_bonus_by_tier": {
+          "I": 0.1,
+          "II": 0.12,
+          "III": 0.14,
+          "IV": 0.16
+        },
+        "effective_max_stacks": 5,
+        "raw_child_max_stacks": 5,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 5,
+        "trigger_event": "on_kill",
+        "checker": "on_one_hit_kill",
+        "same_source_item": true,
+        "held_slot_required": true,
+        "cooldown_duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 323,
+        "end_line": 386
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 63,
+        "end_line": 77
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills_desc",
+      "description_hash": "685eb9c3",
+      "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
+      "effect": "布蘭克斯 Mk VI 的實際近戰命中依動力劍 P3 tier 值增加靈巧威力；這個實作不是 P2 的 tier 覆寫。",
+      "buff_template_id": "weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill",
+      "blessing_id": "decapitator",
+      "weapon_id": "saw_p1",
+      "page": "entries/斬首者/weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_finesse_modifier_bonus_by_tier": {
+          "I": 0.14,
+          "II": 0.16,
+          "III": 0.18,
+          "IV": 0.2
+        },
+        "effective_max_stacks": 5,
+        "raw_child_max_stacks": 5,
+        "child_stack_offset": -1,
+        "child_duration_seconds": 5,
+        "trigger_event": "on_kill",
+        "checker": "on_one_hit_kill",
+        "same_source_item": true,
+        "held_slot_required": true,
+        "cooldown_duration": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 114,
+        "end_line": 177
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 33
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_on_one_hit_kills_desc",
+      "description_hash": "685eb9c3",
+      "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
+      "effect": "外科醫師 Mk IV 的一般命中及黏附初擊可按一擊擊殺條件觸發；延遲撕裂僅在本身另造成合格旗標擊殺時才走獨立 on_kill 路徑.",
+      "buff_template_id": "weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill_parent"
     }
   ],
   "bindings": [
@@ -48759,6 +48956,104 @@
         "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
         "import_line": 17,
         "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_stacking_rending_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "import_line": 11,
+        "append_line": 1743
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_stacking_finesse_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "import_line": 11,
+        "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_stacking_finesse_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "decapitator",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill",
+      "trait_item": "content/items/traits/bespoke_saw_p1/stacking_rending_on_one_hit_kills",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
       }
     }
   ]

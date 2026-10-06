@@ -529,3 +529,5 @@
 - 第43輪三項已Commit後完整掃描通過：full-bore (`d583bf164f7701315c8e60619b3e47055e345720`)、pinning-fire (`aa8fda45e148ffcf7f2958168b8e3b428ccde874`)、blaze-away-alternative (`5e34e7d7dd3ba3dd8524a2f850fad3dd8f0fa124`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-043-full-scan.json`／SHA-256 `2d0f95b4cbd5ca6280f5bf1261983c18e4ec200c056cba1afcda392239b2a15f`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [錘擊](2026-10-03-HAMMERBLOW_ACCEPTANCE.json)：新增9變體、17型號關聯；共9變體、17關聯。
+
+- [斬首者](2026-10-03-DECAPITATOR_ACCEPTANCE.json)：新增4變體、7型號關聯；共4變體、7關聯。

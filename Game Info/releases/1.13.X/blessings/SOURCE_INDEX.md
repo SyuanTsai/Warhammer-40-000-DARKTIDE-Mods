@@ -166,3 +166,4 @@
 | [鉗制射擊](entries/鉗制射擊/README.md) | [來源索引](entries/鉗制射擊/SOURCE_INDEX.md) |
 | [連續發射（射擊連段）](entries/連續發射（射擊連段）/README.md) | [來源索引](entries/連續發射（射擊連段）/SOURCE_INDEX.md) |
 | [錘擊](entries/錘擊/README.md) | [來源索引](entries/錘擊/SOURCE_INDEX.md) |
+| [斬首者](entries/斬首者/README.md) | [來源索引](entries/斬首者/SOURCE_INDEX.md) |
