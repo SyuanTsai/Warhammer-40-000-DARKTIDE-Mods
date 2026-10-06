@@ -468,6 +468,7 @@
 - Powderburn - 火藥灼傷
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills`，hash `f5213560`；英文／繁中RAW配對確認。
 - Cavalcade - 接連不斷
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_crit_bonus_on_continuous_fire`，hash `0915b223`；英文／繁中RAW配對確認。
 - Pinning Fire - 鉗制射擊
 - Run 'n' Gun - Run and Gun - 連跑帶打
 - Puncture - 出血穿透

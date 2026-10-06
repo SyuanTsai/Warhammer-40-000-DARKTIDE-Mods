@@ -509,3 +509,7 @@
 - [連續發射](2026-10-03-BLAZE-AWAY_ACCEPTANCE.json)：新增8變體、14型號關聯；共8變體、14關聯。
 
 - [揮拳出擊](2026-10-03-TAKE-A-SWING_ACCEPTANCE.json)：新增3變體、5型號關聯；共3變體、5關聯。
+
+- 第41輪三項已Commit後完整掃描通過：overwhelming-fire (`aaa5cf9fb93b47d21fd2b99f1a4f594cb26851b9`)、blaze-away (`1bee1b2b57ac423430c577c3582214a275978ad3`)、take-a-swing (`496070020fee68f418e7ea273e05f229aa9222b4`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-041-full-scan.json`／SHA-256 `698b670fe1fde7129b1b64d244d8dfa0ab2977174c29ae717f53db3652ba0633`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [接連不斷](2026-10-03-CAVALCADE_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。

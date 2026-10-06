@@ -161,5 +161,6 @@
 | <img src="https://github.com/user-attachments/assets/a26f3d44-3271-4160-95ef-0bbf8f80b5dd" width="32" height="32" alt="壓倒性火力祝福圖示"> [壓倒性火力](entries/壓倒性火力/README.md)<br>- Overwhelming Fire<br>[完整說明](entries/壓倒性火力/README.md) | <ul><li>依實際武器家族，每累積 1 或 4 次同一目標的後續合格命中增加一層遠程威力；最多 5 層。只有同一目標的後續合格命中會刷新共用 2 秒計時；新目標的第一個合格命中會清除既有有效層、重設追蹤，但不刷新計時。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4" width="32" height="32" alt="連續發射祝福圖示"> [連續發射](entries/連續發射/README.md)<br>- Blaze Away<br>[完整說明](entries/連續發射/README.md) | <ul><li>持用時依玩家共用射擊計數增加一般攻擊力量修正；最多五個有效步，實際傷害仍受攻擊 profile 等原生計算影響。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/f65d27d9-85f5-45c6-a5e1-253f85ba8ea9" width="32" height="32" alt="揮拳出擊祝福圖示"> [揮拳出擊](entries/揮拳出擊/README.md)<br>- Take a Swing<br>[完整說明](entries/揮拳出擊/README.md) | <ul><li>完成有效推擊後短時間提高弱點傷害；工兵鏟／撬棍持續3秒，碎骨者持續6秒。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c" width="32" height="32" alt="接連不斷祝福圖示"> [接連不斷](entries/接連不斷/README.md)<br>- Cavalcade<br>[完整說明](entries/接連不斷/README.md) | <ul><li>持用並射擊時，依彈匣比例累積爆擊率，最多五步。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

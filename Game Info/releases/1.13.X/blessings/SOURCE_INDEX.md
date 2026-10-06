@@ -159,3 +159,4 @@
 | [壓倒性火力](entries/壓倒性火力/README.md) | [來源索引](entries/壓倒性火力/SOURCE_INDEX.md) |
 | [連續發射](entries/連續發射/README.md) | [來源索引](entries/連續發射/SOURCE_INDEX.md) |
 | [揮拳出擊](entries/揮拳出擊/README.md) | [來源索引](entries/揮拳出擊/SOURCE_INDEX.md) |
+| [接連不斷](entries/接連不斷/README.md) | [來源索引](entries/接連不斷/SOURCE_INDEX.md) |
