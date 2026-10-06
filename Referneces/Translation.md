@@ -558,6 +558,7 @@
 - Charmed Reload - 魔力彈藥
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_ammo_refill_from_reserve_on_crit`，hash `0c513155`；英文／繁中RAW配對確認。
 - Overwhelming Fire - 壓倒性火力
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_hits_on_single_target`，hash `8e60a921`；英文／繁中RAW配對確認。
 - Can opener - 開罐器
 - Born in blood - 浴血而生
 - Pierce - 穿透

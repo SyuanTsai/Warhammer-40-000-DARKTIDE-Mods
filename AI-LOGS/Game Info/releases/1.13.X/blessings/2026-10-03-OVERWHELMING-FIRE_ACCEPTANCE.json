@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-06",
+  "blessing": "overwhelming-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_ranged_power",
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_consecutive_hits_increases_ranged_power",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_consecutive_hits_increases_ranged_power"
+  ],
+  "added_binding_count": 7,
+  "total_variants": 3,
+  "total_bindings": 7,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing": "overwhelming-fire",
+    "review_type": "non_author_formal_peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-formal-peer-scope.json",
+    "scope_sha256": "2abd1a95c9c4533eaf4acb374bb4dcb00d0b62772030dcda177b27b013224a35",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-config.json": "1bdab1d3964d8f649cc3a8657ff58bc00bc9aa930f3856412314e6f9b6295e1e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-draft.md": "477149d76d8e773583db6e071883fabfe3b30309f778aa20eb846f5ea2cb0bda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-evidence.json": "44922f82afba3d6247a62fdd33fe5642e4234cf112d6e523867647170533f248",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-config.json": "5dd1318018a2230ef01b39168525523d8a3b0547a1a229c68377b252cd0066f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-extension-draft.json": "8c83c4e85e9f60f1f5f0b1773e8f8154e721eb166e1f7738018fc56a7b45da59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/BLESSING_WEAPON_MAP.snapshot.json": "ff52f2f5f4f5834d53c113ee659f0742f0e61832c81ba3456b7073d5e7205499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-image.json": "9e5127f6c88243fb5ed13241d213e4ee4d172c0fffef105ae68ece86ff9d61df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-on-hit-type-gate-difference-review.json": "68f3e07db8adf7dec18f89dd49951e94d5f3bc55bd0beb806286ffdde90df7e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-own-tier-wrapper-counter-timeout-material-review.json": "c34bc38c958d47b2d75505046b9b486982f52c3dd9799b0c0e46eb1db7e21499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-traits-review.json": "3b7790ea5ccc0c78a563cc5d3ef2a9c1b2d070945a9ee5c51817d0130a217fa0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-ui-raw-verification.json": "080ada312b172b7de7e6506dd4f935aa5b94318c10dd85787f7b740ee0e16b7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-ui-review.json": "a1c6a72a9d588eb40b47709019f7c3f4fab84db85452f67399edfb79663891d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/remaining-tasks.snapshot.json": "09e7b5fe78af67d675320b2b63a8a4ce512e970a752784a9839d51be21297edd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-001.json": "75cfa93b9e9726eddefb1077a5f3935f5579feeae25838e707efa1663b918975",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-002.json": "1cfc260b408086db1bd4bef4645e9b570a626f884453423e2ba06d0faf73aa4f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-003.json": "35d476e978ecec5ba421d647ae551cb75509d9d2d18113a46e9701cabd706f32",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-004.json": "012a53a24d5f52ba25b64a598d746a3d0515fc34a779c2695147c6fea58ce9be",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-config.json": "1bdab1d3964d8f649cc3a8657ff58bc00bc9aa930f3856412314e6f9b6295e1e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-draft.md": "477149d76d8e773583db6e071883fabfe3b30309f778aa20eb846f5ea2cb0bda",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-evidence.json": "44922f82afba3d6247a62fdd33fe5642e4234cf112d6e523867647170533f248",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-selfcheck.json": "fe57e183732e0cece723da88ec5e6b6d4db2feeaa5761346f02c1fdec433dd91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-attack-coverage.json": "f92fa03344cc0c3d73e6d6c9980c92ba47b72441911eacf9895823587789dd96",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-author-package-freeze-002.json": "11278d40c36cc2f894be5528048ac1750ce99ae0e2c116372aeea472bf521b0a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-author-package-freeze-004.json": "ce7f3d19f1e5b7b51ffc0211014cda5610b586c5fc537acdabfe9bc2c7acd9aa",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-source-blocks.json": "1c665f4ef60703facc41427e3187ccf380a8c2d6f240c0073f0c39e3abe654e8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-image.json": "9e5127f6c88243fb5ed13241d213e4ee4d172c0fffef105ae68ece86ff9d61df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-final-content-delta-review.json": "73881501e54edd5ac84d5d156d6bf478310fb121f997991d95ae00cc074c3221",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-focused-checks.json": "8c22cff83bddaf9a3f179160861fdcc57de93ed98f868243a828f0230dc1fc8e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-frozen-source-verification.json": "523e92ccf074e888d305ebfdb9a3b87068cf5523396126cb3f0cfa596859d253",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-on-hit-type-gate-difference-review.json": "68f3e07db8adf7dec18f89dd49951e94d5f3bc55bd0beb806286ffdde90df7e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-own-tier-wrapper-counter-timeout-material-review.json": "c34bc38c958d47b2d75505046b9b486982f52c3dd9799b0c0e46eb1db7e21499",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-preview-to-formal-lifecycle-delta-transfer.json": "e807ed321e90c874ddd1ab83849b1f0735847176988c4fb1746b4b19f9074ce4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-resume-review.json": "d849bc3abe7268159d26c0146e2ef1e1b7b18786672ac886648fb18bb8c36f3b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-traits-review.json": "3b7790ea5ccc0c78a563cc5d3ef2a9c1b2d070945a9ee5c51817d0130a217fa0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-raw-verification.json": "080ada312b172b7de7e6506dd4f935aa5b94318c10dd85787f7b740ee0e16b7a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-review.json": "a1c6a72a9d588eb40b47709019f7c3f4fab84db85452f67399edfb79663891d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-raw-verification.json": "9791c0a511fdce554189a96f691039babfa1f9a9fdf000064da6397d452cb52e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "32896f0819278e447ea227d6f7aca222451a0089efd5d4cbfed9bd9a701304cc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/DAMAGE_PERCENTAGE_REVIEW.md": "f06dd4f47ba93da89679bf9fd5045127e168879c4d42a0ac4674886b93808dc9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/LOCALIZATION_COMPARISON.md": "0a250604c459f7937d323b83b535dadb05029212a425456320a5176472961dc9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/README.md": "3d31f1f686ba4877042fb3c57c19751735cd5494a21086759e7e36793d9138ea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/SOURCE_INDEX.md": "7acfb6bf070d5266912bc9a70a590e018054257b7288f2f9ab094ee214d1ae58",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/TIER_VALUES.md": "fe4f69d864dc40d21efd818765f9aa0e3c6a214c3fc5a673413897e64a45b67b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/WEAPON_COMPATIBILITY.md": "a97d233d43c38ad0c5f674e13a21fd83db0dc1114477de1fbf30dc93dc04ea84",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_ranged_power.md": "507b565fefe4d6f14b9a258f2ae3074a71bc379603a6f9571439cecbdfc2f804",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_ogryn_heavystubber_p1_consecutive_hits_increases_ranged_power.md": "a7b75f73845df584df2e2831468fa69fbe141a11bcbc5ccd017097959a2f9eae",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_ogryn_heavystubber_p2_consecutive_hits_increases_ranged_power.md": "1d7e5fca2370341dc4a068659ea2343a1fa2e22413658b7652eceaa28813f40c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "194335caebce347c08f1aaf63ace3094d4573a0946ea234c91b05c7944a6c273",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "40b09bd73dca00e0cd5eb4243f87deb3c1643c9b73226439b5afbda37f3f8933",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "2cf56c3d6b50bd8b7ec0cbaf671411aecb17ec35365466848397a4f556302bf3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "a69fd9376329966ba77c3610518c85573cc1c94c01f1fd96f2198c190333a1f8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "25cac17e7d1a35670f1298f0ac1b8c9dfe1f9a2fd7479c3f0333b3c55387a98e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/own-association-snapshot.json": "6c2fcd0792cfc24f7af8f98b11aa614467ba134e4ad06ed4ba9cd8d66595d882",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "32896f0819278e447ea227d6f7aca222451a0089efd5d4cbfed9bd9a701304cc",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/DAMAGE_PERCENTAGE_REVIEW.md": "f06dd4f47ba93da89679bf9fd5045127e168879c4d42a0ac4674886b93808dc9",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/LOCALIZATION_COMPARISON.md": "0a250604c459f7937d323b83b535dadb05029212a425456320a5176472961dc9",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/README.md": "3d31f1f686ba4877042fb3c57c19751735cd5494a21086759e7e36793d9138ea",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/SOURCE_INDEX.md": "7acfb6bf070d5266912bc9a70a590e018054257b7288f2f9ab094ee214d1ae58",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/TIER_VALUES.md": "fe4f69d864dc40d21efd818765f9aa0e3c6a214c3fc5a673413897e64a45b67b",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/WEAPON_COMPATIBILITY.md": "a97d233d43c38ad0c5f674e13a21fd83db0dc1114477de1fbf30dc93dc04ea84",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_ranged_power.md": "507b565fefe4d6f14b9a258f2ae3074a71bc379603a6f9571439cecbdfc2f804",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_ogryn_heavystubber_p1_consecutive_hits_increases_ranged_power.md": "a7b75f73845df584df2e2831468fa69fbe141a11bcbc5ccd017097959a2f9eae",
+      "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/weapon_trait_bespoke_ogryn_heavystubber_p2_consecutive_hits_increases_ranged_power.md": "1d7e5fca2370341dc4a068659ea2343a1fa2e22413658b7652eceaa28813f40c",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "194335caebce347c08f1aaf63ace3094d4573a0946ea234c91b05c7944a6c273",
+      "Game Info/releases/1.13.X/blessings/README.md": "40b09bd73dca00e0cd5eb4243f87deb3c1643c9b73226439b5afbda37f3f8933",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "1da613a857ab47a6f51e65e703a4dc28c08e67add4b17b3b65b3a4a9566de8f5",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "2cf56c3d6b50bd8b7ec0cbaf671411aecb17ec35365466848397a4f556302bf3",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "a69fd9376329966ba77c3610518c85573cc1c94c01f1fd96f2198c190333a1f8",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電弧步槍/README.md": "25cac17e7d1a35670f1298f0ac1b8c9dfe1f9a2fd7479c3f0333b3c55387a98e",
+      "Referneces/Translation.md": "1689f0e5614b3355402a3d7ce393b979c22b911c725ad71fe18901e4ee48fc43"
+    },
+    "scope_hash_verification": {
+      "file_count": 85,
+      "matched": 85,
+      "mismatched": 0
+    },
+    "reused_prior_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/limbsplitter-group/overwhelming-fire-formal-nonauthor-review-revision-001.json",
+      "sha256": "978b57c584a9e18f51c3597938c893feb7c14175fda05a602fc641ff8322a5b1",
+      "accepted_content_reused_except_narrow_target_lifecycle_delta": true
+    },
+    "narrow_lifecycle_delta_review": {
+      "previous_rejected_scope_sha256": "053e4f72a5ba41df33cf3cf075d81e8d91c554cc6f87699bb93a5b48825ad919",
+      "root_content_delta_review": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-final-content-delta-review.json",
+        "sha256": "73881501e54edd5ac84d5d156d6bf478310fb121f997991d95ae00cc074c3221"
+      },
+      "current_formal_readme": {
+        "path": "Game Info/releases/1.13.X/blessings/entries/壓倒性火力/README.md",
+        "sha256": "3d31f1f686ba4877042fb3c57c19751735cd5494a21086759e7e36793d9138ea",
+        "matches_actual_preview_004": true,
+        "actual_preview_path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/壓倒性火力/README.md",
+        "actual_preview_sha256": "3d31f1f686ba4877042fb3c57c19751735cd5494a21086759e7e36793d9138ea"
+      },
+      "canonical_and_extension_player_text_match": true,
+      "corrected_behavior": [
+        "The first qualifying event on a new target records that target and resets hit progress/target stacks to zero; it does not update last_hit_time.",
+        "After the event batch, the parent reconciles desired child count and removes existing effective layers for the now-zero target stack count.",
+        "A later event on the same tracked target increments progress, recomputes clamped stacks, and updates last_hit_time; only this same-target branch refreshes the shared two-second timer."
+      ],
+      "source_ranges": [
+        {
+          "path": "scripts/settings/buff/buff_utils.lua",
+          "start_line": 116,
+          "end_line": 134,
+          "sha256": "722412d0176ff1584a949be66896a8aea04b03d385abdda1e5865a259459613d",
+          "conclusion": "A target change assigns the new target and clears hit count/effective target stacks; this branch leaves last_hit_time unchanged.",
+          "applicability": "The trait tracked-target proc callback at the fixed source commit.",
+          "hash_method": "SHA-256 of UTF-8 LF-normalized inclusive get_lines range with one final LF"
+        },
+        {
+          "path": "scripts/extension_systems/buff/buffs/weapon_trait_target_number_parent_proc_buff.lua",
+          "start_line": 52,
+          "end_line": 86,
+          "sha256": "16d209b8045f0eb489fe90e27f74e0043942e72716beb712610b6db2dffffede",
+          "conclusion": "After the proc-event batch, desired child count is reconciled as placeholder plus target stacks; a target change removes active effective layers. Same-target events update the timestamp and timer.",
+          "applicability": "The actual parent buff for Overwhelming Fire, after its event batch.",
+          "hash_method": "SHA-256 of UTF-8 LF-normalized inclusive get_lines range with one final LF"
+        }
+      ]
+    },
+    "reviewed_conclusions": [
+      "All 85 file hashes in the fixed scope match exactly; all nine formal entry pages correspond to the frozen author preview as recorded by the scope and root equality proof.",
+      "The new-target and same-target lifecycle distinction is explicit and consistent between canonical player text, extension draft, and formal README.",
+      "The prior review conclusions remain applicable to unchanged own tiers/wrappers, three weapon families/seven bindings, RAW/formatter, ranged-power consumer, examples, image and reverse associations; this pass was deliberately limited to the target-lifecycle correction.",
+      "The exact source ranges independently reproduce the cited hashes and support the corrected wording without claiming a timestamp refresh on a target switch."
+    ],
+    "review_conclusion": "Accepted: the narrow lifecycle correction is accurate, synchronized across canonical/draft/formal output, and the rest of the fixed scope is unchanged from the prior content review."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/a26f3d44-3271-4160-95ef-0bbf8f80b5dd",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "overwhelming-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_141",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_141.png",
+      "attachment": "https://github.com/user-attachments/assets/a26f3d44-3271-4160-95ef-0bbf8f80b5dd",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6007703561",
+      "acquired_date": "2026-10-06",
+      "sha256": "058908e9d8b36333f0fd14f4888e4264673c7666d93b1c385d4a63a0d12e8e70",
+      "content_type": "image/png",
+      "size": 5977,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "壓倒性火力祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual128x128 publicdownload PNG: pale gray square originaltile with visible upperleft/loweredge diagonal shading, completebounds; samepublic/sourcehash and dimensions verified. No generated or edited replacement."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 17,
+      "tables": 15,
+      "rows": 521,
+      "lists": 92,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 77,
+      "source_files": 38,
+      "bindings": 993,
+      "variants": 510,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 15,
+      "source_object_cache": {
+        "cache_hits": 38,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 18,
+      "local_references": 1284,
+      "remote_references": 484,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 41,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-040-full-scan.json",
+        "sha256": "3811f8f8fa53b557012261acc066c31e97df8bd80428d89ee03696baeba7fbe9",
+        "trigger": "round-040"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 16,
+    "not_started_name_groups": 16,
+    "partial_name_groups": 0,
+    "remaining_variants": 95,
+    "remaining_bindings": 192,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "eae91db3f50b34c6dacbe9b9916a436bb763aa16f632c5d816c41c6e96d6667f"
+  },
+  "previous_local_commit": "1051df9c3ad60313e4e68cf2e51812b30c87cefc",
+  "outside_intersection_review": {
+    "same_name_candidates": [
+      {
+        "item": "content/items/traits/bespoke_bolter_p1/power_bonus_on_chained_hits_on_single_target",
+        "trait": "weapon_trait_bespoke_bolter_p1_power_bonus_on_chained_hits_on_single_target",
+        "restriction": [
+          "bolter_p1"
+        ]
+      }
+    ],
+    "status": "Bolter P1 的同名 trait item 不在本次精確 name_key × trait intersection，未列入完成 binding。"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-final-content-delta-review.json",
+      "sha256": "73881501e54edd5ac84d5d156d6bf478310fb121f997991d95ae00cc074c3221"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-focused-checks.json",
+      "sha256": "8c22cff83bddaf9a3f179160861fdcc57de93ed98f868243a828f0230dc1fc8e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-frozen-source-verification.json",
+      "sha256": "523e92ccf074e888d305ebfdb9a3b87068cf5523396126cb3f0cfa596859d253"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-on-hit-type-gate-difference-review.json",
+      "sha256": "68f3e07db8adf7dec18f89dd49951e94d5f3bc55bd0beb806286ffdde90df7e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-own-tier-wrapper-counter-timeout-material-review.json",
+      "sha256": "c34bc38c958d47b2d75505046b9b486982f52c3dd9799b0c0e46eb1db7e21499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-preview-to-formal-lifecycle-delta-transfer.json",
+      "sha256": "e807ed321e90c874ddd1ab83849b1f0735847176988c4fb1746b4b19f9074ce4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-resume-review.json",
+      "sha256": "d849bc3abe7268159d26c0146e2ef1e1b7b18786672ac886648fb18bb8c36f3b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-traits-review.json",
+      "sha256": "3b7790ea5ccc0c78a563cc5d3ef2a9c1b2d070945a9ee5c51817d0130a217fa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-raw-verification.json",
+      "sha256": "080ada312b172b7de7e6506dd4f935aa5b94318c10dd85787f7b740ee0e16b7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-review.json",
+      "sha256": "a1c6a72a9d588eb40b47709019f7c3f4fab84db85452f67399edfb79663891d8"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-config.json",
+    "sha256": "5dd1318018a2230ef01b39168525523d8a3b0547a1a229c68377b252cd0066f6"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/BLESSING_WEAPON_MAP.snapshot.json",
+      "sha256": "ff52f2f5f4f5834d53c113ee659f0742f0e61832c81ba3456b7073d5e7205499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "09e7b5fe78af67d675320b2b63a8a4ce512e970a752784a9839d51be21297edd"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-image.json",
+      "sha256": "9e5127f6c88243fb5ed13241d213e4ee4d172c0fffef105ae68ece86ff9d61df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-own-tier-wrapper-counter-timeout-material-review.json",
+      "sha256": "c34bc38c958d47b2d75505046b9b486982f52c3dd9799b0c0e46eb1db7e21499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-traits-review.json",
+      "sha256": "3b7790ea5ccc0c78a563cc5d3ef2a9c1b2d070945a9ee5c51817d0130a217fa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-ui-review.json",
+      "sha256": "a1c6a72a9d588eb40b47709019f7c3f4fab84db85452f67399edfb79663891d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-ui-raw-verification.json",
+      "sha256": "080ada312b172b7de7e6506dd4f935aa5b94318c10dd85787f7b740ee0e16b7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/inputs/overwhelming-fire-primary-on-hit-type-gate-difference-review.json",
+      "sha256": "68f3e07db8adf7dec18f89dd49951e94d5f3bc55bd0beb806286ffdde90df7e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-source-blocks.json",
+      "sha256": "1c665f4ef60703facc41427e3187ccf380a8c2d6f240c0073f0c39e3abe654e8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-attack-coverage.json",
+      "sha256": "f92fa03344cc0c3d73e6d6c9980c92ba47b72441911eacf9895823587789dd96"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-config.json",
+      "sha256": "1bdab1d3964d8f649cc3a8657ff58bc00bc9aa930f3856412314e6f9b6295e1e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-draft.md",
+      "sha256": "477149d76d8e773583db6e071883fabfe3b30309f778aa20eb846f5ea2cb0bda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-004.json",
+      "sha256": "012a53a24d5f52ba25b64a598d746a3d0515fc34a779c2695147c6fea58ce9be"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "40b09bd73dca00e0cd5eb4243f87deb3c1643c9b73226439b5afbda37f3f8933"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "32896f0819278e447ea227d6f7aca222451a0089efd5d4cbfed9bd9a701304cc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "f06dd4f47ba93da89679bf9fd5045127e168879c4d42a0ac4674886b93808dc9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\LOCALIZATION_COMPARISON.md",
+      "sha256": "0a250604c459f7937d323b83b535dadb05029212a425456320a5176472961dc9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\README.md",
+      "sha256": "3d31f1f686ba4877042fb3c57c19751735cd5494a21086759e7e36793d9138ea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\SOURCE_INDEX.md",
+      "sha256": "7acfb6bf070d5266912bc9a70a590e018054257b7288f2f9ab094ee214d1ae58"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\TIER_VALUES.md",
+      "sha256": "fe4f69d864dc40d21efd818765f9aa0e3c6a214c3fc5a673413897e64a45b67b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\WEAPON_COMPATIBILITY.md",
+      "sha256": "a97d233d43c38ad0c5f674e13a21fd83db0dc1114477de1fbf30dc93dc04ea84"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_ranged_power.md",
+      "sha256": "507b565fefe4d6f14b9a258f2ae3074a71bc379603a6f9571439cecbdfc2f804"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\weapon_trait_bespoke_ogryn_heavystubber_p1_consecutive_hits_increases_ranged_power.md",
+      "sha256": "a7b75f73845df584df2e2831468fa69fbe141a11bcbc5ccd017097959a2f9eae"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\壓倒性火力\\weapon_trait_bespoke_ogryn_heavystubber_p2_consecutive_hits_increases_ranged_power.md",
+      "sha256": "1d7e5fca2370341dc4a068659ea2343a1fa2e22413658b7652eceaa28813f40c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "194335caebce347c08f1aaf63ace3094d4573a0946ea234c91b05c7944a6c273"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "2cf56c3d6b50bd8b7ec0cbaf671411aecb17ec35365466848397a4f556302bf3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙鏈重型機槍\\README.md",
+      "sha256": "a69fd9376329966ba77c3610518c85573cc1c94c01f1fd96f2198c190333a1f8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電弧步槍\\README.md",
+      "sha256": "25cac17e7d1a35670f1298f0ac1b8c9dfe1f9a2fd7479c3f0333b3c55387a98e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-raw-verification.json",
+      "sha256": "9791c0a511fdce554189a96f691039babfa1f9a9fdf000064da6397d452cb52e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\overwhelming-fire-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "6c2fcd0792cfc24f7af8f98b11aa614467ba134e4ad06ed4ba9cd8d66595d882"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-001.json",
+      "sha256": "75cfa93b9e9726eddefb1077a5f3935f5579feeae25838e707efa1663b918975"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-002.json",
+      "sha256": "1cfc260b408086db1bd4bef4645e9b570a626f884453423e2ba06d0faf73aa4f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-actual-preview-receipt-003.json",
+      "sha256": "35d476e978ecec5ba421d647ae551cb75509d9d2d18113a46e9701cabd706f32"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-evidence.json",
+      "sha256": "44922f82afba3d6247a62fdd33fe5642e4234cf112d6e523867647170533f248"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-agent-selfcheck.json",
+      "sha256": "fe57e183732e0cece723da88ec5e6b6d4db2feeaa5761346f02c1fdec433dd91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-author-package-freeze-002.json",
+      "sha256": "11278d40c36cc2f894be5528048ac1750ce99ae0e2c116372aeea472bf521b0a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-group/overwhelming-fire-author-package-freeze-004.json",
+      "sha256": "ce7f3d19f1e5b7b51ffc0211014cda5610b586c5fc537acdabfe9bc2c7acd9aa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-config.json",
+      "sha256": "1bdab1d3964d8f649cc3a8657ff58bc00bc9aa930f3856412314e6f9b6295e1e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-evidence.json",
+      "sha256": "44922f82afba3d6247a62fdd33fe5642e4234cf112d6e523867647170533f248"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-agent-draft.md",
+      "sha256": "477149d76d8e773583db6e071883fabfe3b30309f778aa20eb846f5ea2cb0bda"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-final-content-delta-review.json",
+      "sha256": "73881501e54edd5ac84d5d156d6bf478310fb121f997991d95ae00cc074c3221"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-frozen-source-verification.json",
+      "sha256": "523e92ccf074e888d305ebfdb9a3b87068cf5523396126cb3f0cfa596859d253"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-on-hit-type-gate-difference-review.json",
+      "sha256": "68f3e07db8adf7dec18f89dd49951e94d5f3bc55bd0beb806286ffdde90df7e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-own-tier-wrapper-counter-timeout-material-review.json",
+      "sha256": "c34bc38c958d47b2d75505046b9b486982f52c3dd9799b0c0e46eb1db7e21499"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-traits-review.json",
+      "sha256": "3b7790ea5ccc0c78a563cc5d3ef2a9c1b2d070945a9ee5c51817d0130a217fa0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-raw-verification.json",
+      "sha256": "080ada312b172b7de7e6506dd4f935aa5b94318c10dd85787f7b740ee0e16b7a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-ui-review.json",
+      "sha256": "a1c6a72a9d588eb40b47709019f7c3f4fab84db85452f67399edfb79663891d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-primary-preview-to-formal-lifecycle-delta-transfer.json",
+      "sha256": "e807ed321e90c874ddd1ab83849b1f0735847176988c4fb1746b4b19f9074ce4"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-fire-formal-peer-scope.json",
+    "sha256": "2abd1a95c9c4533eaf4acb374bb4dcb00d0b62772030dcda177b27b013224a35",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
