@@ -2239,6 +2239,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/c6dfcb90-96c4-4417-8bf7-711560dd47e2",
       "effect": "目標處於踉蹌狀態時，合格命中依等級請求加入 1–4 個目標端衝擊層；每個有效層增加 10% 衝擊修正，最多計入 8 個有效層。目標效果持續 5 秒；helper 原始請求到 31 後，通過目標條件但新增量為 0 的事件仍會刷新這 5 秒。"
+    },
+    {
+      "id": "headhunter",
+      "name_zh_tw": "獵頭者",
+      "name_en": "Headhunter",
+      "name_key": "loc_trait_bespoke_weakspot_stacking_crit_chance",
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "name_hash": "ddb302e2",
+      "description_hash": "a8474234",
+      "page": "entries/獵頭者/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "effect": "來源武器持用中命中弱點後，致命一擊機率按層數直接增加；一般型號每層 +14/+16/+18/+20%，偵察鐳射槍每層 +3.5/+4/+4.5/+5%，最多5層。"
     }
   ],
   "weapons": [
@@ -34902,6 +34915,231 @@
       "icon": "https://github.com/user-attachments/assets/c6dfcb90-96c4-4417-8bf7-711560dd47e2",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_175",
       "effect": "雷鎚 十字星 Mk II、雷鎚 鐵盔 Mk IV：每次符合條件的命中依 I–IV 請求加入 1–4 個目標端衝擊層；各有效層 +10%，最多計入 8 層。目標效果持續 5 秒；helper 原始請求到 31 後，符合條件但新增量為 0 的事件仍會刷新這 5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot",
+      "blessing_id": "headhunter",
+      "weapon_id": "autogun_p3",
+      "page": "entries/獵頭者/weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_strike_chance_per_stack_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "effective_max_stacks": 5,
+        "cap_percentage_points_by_tier": [
+          70.0,
+          80.0,
+          90.0,
+          100.0
+        ],
+        "formatter": "percentage with plus prefix; stack count is number"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 50,
+        "end_line": 103
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "description_hash": "a8474234",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "effect": "機動自動槍 哥倫努 Mk III：每層 +14/+16/+18/+20%，最多5層。",
+      "buff_template_id": "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot",
+      "blessing_id": "headhunter",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/獵頭者/weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_strike_chance_per_stack_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "effective_max_stacks": 5,
+        "cap_percentage_points_by_tier": [
+          70.0,
+          80.0,
+          90.0,
+          100.0
+        ],
+        "formatter": "percentage with plus prefix; stack count is number"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 109,
+        "end_line": 162
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "description_hash": "a8474234",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "effect": "電能步槍 布蘭克斯 Mk CV：每層 +14/+16/+18/+20%，最多5層。",
+      "buff_template_id": "weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot",
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p1",
+      "page": "entries/獵頭者/weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_strike_chance_per_stack_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "effective_max_stacks": 5,
+        "cap_percentage_points_by_tier": [
+          70.0,
+          80.0,
+          90.0,
+          100.0
+        ],
+        "formatter": "percentage with plus prefix; stack count is number"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p1.lua",
+        "start_line": 126,
+        "end_line": 179
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p1_buff_templates.lua",
+        "start_line": 42,
+        "end_line": 43
+      },
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "description_hash": "a8474234",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "effect": "步兵鐳射槍 卡特雷爾 Mk VII：每層 +14/+16/+18/+20%，最多5層。",
+      "buff_template_id": "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot",
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/獵頭者/weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_strike_chance_per_stack_by_tier": [
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "effective_max_stacks": 5,
+        "cap_percentage_points_by_tier": [
+          17.5,
+          20.0,
+          22.5,
+          25.0
+        ],
+        "formatter": "percentage with plus prefix; stack count is number"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 328,
+        "end_line": 381
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 22
+      },
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "description_hash": "a8474234",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "effect": "偵察鐳射槍 奧克塔蘭 Mk VIc：每層 +3.5/+4/+4.5/+5%，最多5層。",
+      "buff_template_id": "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot",
+      "blessing_id": "headhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/獵頭者/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "critical_strike_chance_per_stack_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "effective_max_stacks": 5,
+        "cap_percentage_points_by_tier": [
+          70.0,
+          80.0,
+          90.0,
+          100.0
+        ],
+        "formatter": "percentage with plus prefix; stack count is number"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 623,
+        "end_line": 676
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 68,
+        "end_line": 69
+      },
+      "description_key": "loc_trait_bespoke_weakspot_stacking_crit_chance_desc",
+      "description_hash": "a8474234",
+      "icon": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "effect": "重伐木槍 克魯克 Mk IIa：每層 +14/+16/+18/+20%，最多5層。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot_parent"
     }
   ],
   "bindings": [
@@ -51045,6 +51283,188 @@
         "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
         "import_line": 17,
         "append_line": 1811
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 716
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 694
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p1",
+      "mark_id": "lasgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p1/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 695
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "headhunter",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_crit_chance_on_weakspot",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
       }
     }
   ]

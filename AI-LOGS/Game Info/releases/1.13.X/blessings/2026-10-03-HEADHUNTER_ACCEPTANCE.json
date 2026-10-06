@@ -1,0 +1,527 @@
+{
+  "date": "2026-10-06",
+  "blessing": "headhunter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/獵頭者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot",
+    "weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot",
+    "weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot",
+    "weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot",
+    "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot"
+  ],
+  "added_binding_count": 13,
+  "total_variants": 5,
+  "total_bindings": 13,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_sha256": "e18331c79c9eb602dbe777f0ef8328add591d7d2baf7ddd44b0fe37f2f26bd49",
+    "scope_file_count": 84,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-config.json": "29392f575c618f1b642c0b23a425d4728ba441fc4708751bd92e7e26d46e35a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-draft.md": "019682a0dc67985fba19f4ecaaab1bf0f96f41414bbfc0d81efda9fefd3b6c51",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-evidence.json": "9709d0b7d7cad9a62e15c245edb453f4c7ad9b73ca44e9480bdcba1be4cd92f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-config.json": "4919c29a3f6299b7a7f88b27c793e9eb5c4fb5849ce416d74d6bcf3caef4c0fc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-extension-draft.json": "b6ba2613fd2d8bdf7d54b55c469be6ea679f4f065dbd3f4a210e68de0092ab00",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-002.json": "ada8adbae959e9430651360bef9d76386ff676a6ee312a243a06c625900e6882",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-003.json": "8e7859ea9f0fa444ffd80f5b32c6d4af25d6c63e42d0b10b395c3297b4c1f477",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-004.json": "9a4bbb2cebf32d1eaa3a3f983bd10eab550b18e6d9a8b42a6b5b6a7f76339420",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-config.json": "29392f575c618f1b642c0b23a425d4728ba441fc4708751bd92e7e26d46e35a9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-draft.md": "019682a0dc67985fba19f4ecaaab1bf0f96f41414bbfc0d81efda9fefd3b6c51",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-evidence.json": "9709d0b7d7cad9a62e15c245edb453f4c7ad9b73ca44e9480bdcba1be4cd92f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-attack-coverage.json": "39ec92b05db5be6e98b9fd49af2af0cb115b9a101edd9e6ddc12d6f2af33d193",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-input-snapshot-manifest.json": "f2e8ab9edb048c1949b9998ac4a161fd2c6f2b3a69eb8f12386796b79cd93d44",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-source-blocks.json": "2f7e65d196c1bac11281c31c6b445723e2f5ad7c6380c5da78d1087d4b082913",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/BLESSING_WEAPON_MAP.snapshot.json": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-actual-preview-receipt-004.snapshot.json": "9a4bbb2cebf32d1eaa3a3f983bd10eab550b18e6d9a8b42a6b5b6a7f76339420",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-image.json": "fba3e97942b84befe41339f08605df5f81ac00068820b383cf5956a232825cb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-batch-add-clear-effective-stack-difference-proof.json": "5350526c4a5edfdcc88f65d880f62d186e74850f8d65bd33eb97f84abce4c457",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-critical-roll-producer-consumer-difference-proof.json": "86e8910560f40c41e439917624a67f922b49d297de4bd84f58117eb10d7e12b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-own-tier-wrapper-critical-event-material-review.json": "6df1a35ef8dabe262adc0a1478ceefdfb5a37b687a66167ee86a63c6a03cf49a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-raw-verification.json": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-ui-raw-verification.json": "d44fc400d51bc6cd172d552ef552c00ddd3979abbb699bf8592b9eb20da738d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-ui-review.json": "80d25e8f551bc23e6a5b273494f641b9f3614239baa706f09bc39ba8c11e8a23",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/remaining-tasks.snapshot.json": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-image.json": "fba3e97942b84befe41339f08605df5f81ac00068820b383cf5956a232825cb8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-batch-add-clear-effective-stack-difference-proof.json": "5350526c4a5edfdcc88f65d880f62d186e74850f8d65bd33eb97f84abce4c457",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-critical-roll-producer-consumer-difference-proof.json": "86e8910560f40c41e439917624a67f922b49d297de4bd84f58117eb10d7e12b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-final-content-delta-review.json": "1dcac49a77d68b217d7b52feb29f3dad0b50b9a19f6953ce4748ffba0c4f6cc7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-focused-checks.json": "9f860d63676c04405c9356ac3aeaad702a43950334072cb560126691f74d041b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-frozen-source-verification.json": "d623ed2ec8adcb6321cc3b0d7aa4ada8fc8bc4a04b06ca7b704e9e94e134ef36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-own-tier-wrapper-critical-event-material-review.json": "6df1a35ef8dabe262adc0a1478ceefdfb5a37b687a66167ee86a63c6a03cf49a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-raw-verification.json": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-resume-review.json": "15aa28df796bf65fb8ccc960bd6f78173f48b1461c2b3e124eb416c1fd35079a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-raw-verification.json": "d44fc400d51bc6cd172d552ef552c00ddd3979abbb699bf8592b9eb20da738d8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-review.json": "80d25e8f551bc23e6a5b273494f641b9f3614239baa706f09bc39ba8c11e8a23",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-raw-verification.json": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "24388c49d18a317bf26393a9bfc7255b07bf29d82a44fd7d6f14e94fc0790393",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/DAMAGE_PERCENTAGE_REVIEW.md": "12b619cc47621139910bdf80e417db844fe8bf9417e5547fdc63bf3aef4f91c6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/LOCALIZATION_COMPARISON.md": "0af4b3f5a0218c4b18ee2367712581cf528f4226f23746abf5eea69f573030f6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/README.md": "8b52460bbe917f8a404e6cb81bff050b82ba7683665c64225b4dd1815a372837",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/SOURCE_INDEX.md": "0e8b9922d99b8d5af0a8b27319553a4f3e866918906cd92f9cf532c079d86432",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/TIER_VALUES.md": "3923cec2bc69f1bc4b46288e515bdb6a8b3813e3849193e95b4a33dc4d6e2667",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/WEAPON_COMPATIBILITY.md": "08b25a58a49bf3f0ce86f08fa301be5f0391bd0a34a5e9d206adf70f70a84985",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot.md": "55f6ee4e8fe39659964f677ae9fde66be1774c80785556d3bd040be2716a169f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot.md": "8e154421a2e9e171524afff51e44806d17520de269b03a0425a4aefd8297238e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot.md": "ee00687285360f2ce14a1bbc787b26c91911880331b91f786405cc57efbed265",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot.md": "25ab6d66572b34545d8136aa530f322f5ef2108447237fb8d03fb41f5488f7ca",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot.md": "41d1eefb1238474358c5c64e25afe32e18873a0cb147db9736878eb5bd05df09",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "ea6c39351a9d66730c7acce5ede73a2e9404e1b41cdfc4d41ecfe7ff771fd382",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "0b0026826bce992b1c9515c3f12246df1bd8780cc4700b83e5e7f0bc204de8c8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "bf5ea386c385c059edf3775f914c3260e8c8a1cf9acdbdd326c6de52dd4acc4c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "169d594163cf8835ce94d0f56fb71d9413fcc0f1d6758c27a11ee87d0ac4a704",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "0cf650ec2a7885c4b18a997dbe5f9b3436381f0cd4e088883f597b8dae36e32a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "c78188b0d02149de22c137c64873a9a7064b6ccf7a04454c03810f68f0abbcbd",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "46444d29c70d36d2922be1f0a3ae0e84fd36532b7b183fbc814e2882547b51ee",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "129e298d40b1bd224ccd06b0d36bd5ebbd30d6f99b60d6efd1354e99f0398598",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/own-association-snapshot.json": "629f52c68ad5af63e5c7dbaede206060038e09875e06b9724d80a80306d0ef12",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/actual-preview-004/Referneces/Translation.md": "c8692a7ac291ce283c2694cc6751c9e4f3b979d156240413401accb0238f432a",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "579df3c102a13a3f5a6ece4f68b104c19e06685fef93da255324e006dfe0234f",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/DAMAGE_PERCENTAGE_REVIEW.md": "12b619cc47621139910bdf80e417db844fe8bf9417e5547fdc63bf3aef4f91c6",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/LOCALIZATION_COMPARISON.md": "0af4b3f5a0218c4b18ee2367712581cf528f4226f23746abf5eea69f573030f6",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/README.md": "8b52460bbe917f8a404e6cb81bff050b82ba7683665c64225b4dd1815a372837",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/SOURCE_INDEX.md": "d7c356374e1fadc06647cfc9a71a196612a342c1cb47d702f632b7d989461e21",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/TIER_VALUES.md": "3923cec2bc69f1bc4b46288e515bdb6a8b3813e3849193e95b4a33dc4d6e2667",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/WEAPON_COMPATIBILITY.md": "08b25a58a49bf3f0ce86f08fa301be5f0391bd0a34a5e9d206adf70f70a84985",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot.md": "55f6ee4e8fe39659964f677ae9fde66be1774c80785556d3bd040be2716a169f",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot.md": "8e154421a2e9e171524afff51e44806d17520de269b03a0425a4aefd8297238e",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot.md": "ee00687285360f2ce14a1bbc787b26c91911880331b91f786405cc57efbed265",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot.md": "25ab6d66572b34545d8136aa530f322f5ef2108447237fb8d03fb41f5488f7ca",
+      "Game Info/releases/1.13.X/blessings/entries/獵頭者/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot.md": "41d1eefb1238474358c5c64e25afe32e18873a0cb147db9736878eb5bd05df09",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "ea6c39351a9d66730c7acce5ede73a2e9404e1b41cdfc4d41ecfe7ff771fd382",
+      "Game Info/releases/1.13.X/blessings/README.md": "a77f8cbfacc8062674240ef54df95401171bb9d0552e642b05e4ed5c47a88972",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "17052c831031fa2dbd7ab75a7f8aa5b41ae04a95b3f72b1f99d51d685780df2e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/偵察鐳射槍/README.md": "169d594163cf8835ce94d0f56fb71d9413fcc0f1d6758c27a11ee87d0ac4a704",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/機動自動槍/README.md": "0cf650ec2a7885c4b18a997dbe5f9b3436381f0cd4e088883f597b8dae36e32a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/步兵鐳射槍/README.md": "c78188b0d02149de22c137c64873a9a7064b6ccf7a04454c03810f68f0abbcbd",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/重伐木槍/README.md": "46444d29c70d36d2922be1f0a3ae0e84fd36532b7b183fbc814e2882547b51ee",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "129e298d40b1bd224ccd06b0d36bd5ebbd30d6f99b60d6efd1354e99f0398598",
+      "Referneces/Translation.md": "87550bbfa0ec7c555f4213030d4287b2b783e79ce260b561b8fc3c5b93822373"
+    },
+    "review_summary": {
+      "formal_pages_vs_pv004": "All 11 own formal pages were compared against actual-preview-004. Ten pages are byte-identical. SOURCE_INDEX.md alone differs: 20 cited source rows added, none removed, matching the fixed scope delta.",
+      "canonical_delta": "Root canonical config differs from frozen author config only in precise refs; player text, examples, formula, and tier values are unchanged.",
+      "actual_bindings": {
+        "variants": 5,
+        "bindings": 13,
+        "weapon_ids": [
+          "autogun_p3",
+          "galvanic_rifle_p1",
+          "lasgun_p1",
+          "lasgun_p3",
+          "ogryn_heavystubber_p2"
+        ],
+        "mark_counts": {
+          "autogun_p3": 3,
+          "galvanic_rifle_p1": 1,
+          "lasgun_p1": 3,
+          "lasgun_p3": 3,
+          "ogryn_heavystubber_p2": 3
+        },
+        "identity_and_ui": "BLESSING_WEAPON_MAP entries, trait IDs, mark IDs, UI metadata/localization composition, icon mapping, and five weapon-family reverse README rows agree; no out-of-scope binding was found."
+      },
+      "mechanics": "Five own parent/child wrappers use item-source, held-slot, and actual hit_weakspot gates. Four families add 14/16/18/20 percentage points per layer; Recon Lasgun P3 adds 3.5/4/4.5/5 points; cap is five layers. The successful critical-roll event clears without requiring a target hit. In a single processed event batch, the parent adds eligible hit layers before applying the critical clear. Newly added stacks are effective only after the queued event and stat-cache update. There is no independent stack TTL; switching deactivates the held-slot-gated bonus but retains uncleared stacks, while actual unequip removes the source blessing buff.",
+      "action_coverage": "All 13 bound marks have ordinary and aimed hit-scan routes. Autogun P3 and Galvanic Rifle P1 special actions are melee stock sweeps and can qualify only if the same-item/held/weakspot event conditions are met. Infantry and Recon Lasgun and Heavy Stubber specials toggle flashlights and do not emit an attack hit. No bound charge or thrown attack route was identified. Full-auto critical cadence follows action state and max_critical_shots rather than an independent roll per projectile.",
+      "calculations": "I-tier Infantry Lasgun Kantrael Mk VII (lasgun_p1_m1), action_shoot_hip: with a stated 20% pre-blessing combined roll input, no other modifiers/conversions, five qualifying weakspot hits without a critical, and cache updates between attacks, the fifth attack rolls with four layers and the next with five: clamp(20% + 5×14%, 0%, 100%) = 90%, +70 percentage points / +350% relative to the assumed input. IV-tier Recon Lasgun Accatran Mk XIV (lasgun_p3_m3), action_shoot_hip/full_auto with max_critical_shots=2 and five layers already cached: clamp(20% + 5×5%, 0%, 100%) = 45%, +25 percentage points / +125% relative. These are conditional roll-input examples, not measured weapon baselines or final damage.",
+      "raw_and_formatter": "The paired RAW description key/hash loc_trait_bespoke_weakspot_stacking_crit_chance_desc/a8474234 and name key/hash loc_trait_bespoke_weakspot_stacking_crit_chance/ddb302e2 are preserved. Static I–IV reconstruction agrees with all five own formatters and five-layer cap; omitted timing, item gates, and special routes are correctly classified as documentation scope rather than an erratum.",
+      "references_and_reverse_links": "The 20 formal SOURCE_INDEX additions match the own-tier/wrapper, proc-gate, event-order, critical-roll, and actual action-route evidence at the pinned source SHA. The main and ranged blessing indexes and all five weapon-family reverse pages link the Headhunter entry and correct family-specific model/effect rows.",
+      "image": "The shared icon uses actual item path content/ui/textures/icons/traits/weapon_trait_022; receipt headhunter-image.json verifies the Issue 14 attachment, public 200 response, matching PNG SHA-256 157e5374f1f1a742ed407a2887758c1d228b3ac70e840bd1c9ace2ea1df4ae8f, 128×128 dimensions, and visual match.",
+      "verification": "All 84 files in the immutable formal scope match their declared SHA-256. Root-focused source, links, GFM, and global association checks passed as recorded in the fixed scope."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "headhunter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_022",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_022.png",
+      "attachment": "https://github.com/user-attachments/assets/413ac562-7f2a-4358-9bee-bff1c8d5313e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010627158",
+      "acquired_date": "2026-10-06",
+      "sha256": "157e5374f1f1a742ed407a2887758c1d228b3ac70e840bd1c9ace2ea1df4ae8f",
+      "content_type": "image/png",
+      "size": 5495,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "獵頭者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "root_display_verified": true,
+      "root_visual_result": "Viewed native public128x128 PNG with pale framed geometric motif; matches exact item.icon."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 21,
+      "tables": 19,
+      "rows": 637,
+      "lists": 96,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 121,
+      "source_files": 44,
+      "bindings": 1166,
+      "variants": 596,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 19,
+      "source_object_cache": {
+        "cache_hits": 44,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 22,
+      "local_references": 1555,
+      "remote_references": 599,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 46,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-045-full-scan.json",
+        "sha256": "4b739285b95047271a6b55e27bf5f396bddc1ac1514741a891c575491fa72e80",
+        "trigger": "round-045"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 1,
+    "not_started_name_groups": 1,
+    "partial_name_groups": 0,
+    "remaining_variants": 9,
+    "remaining_bindings": 19,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "dc617e995431818c59cb0e82744dba7b62358fcd7193af7503bb9e5d0843fb8c"
+  },
+  "previous_local_commit": "77ef0b9f07b5dc1d1e3fcd04c2edf6df7cd26700",
+  "outside_intersection_review": {
+    "status": "no outside exact-name item in pinned inventory",
+    "same_name_candidates": []
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-batch-add-clear-effective-stack-difference-proof.json",
+      "sha256": "5350526c4a5edfdcc88f65d880f62d186e74850f8d65bd33eb97f84abce4c457"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-critical-roll-producer-consumer-difference-proof.json",
+      "sha256": "86e8910560f40c41e439917624a67f922b49d297de4bd84f58117eb10d7e12b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-final-content-delta-review.json",
+      "sha256": "1dcac49a77d68b217d7b52feb29f3dad0b50b9a19f6953ce4748ffba0c4f6cc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-focused-checks.json",
+      "sha256": "9f860d63676c04405c9356ac3aeaad702a43950334072cb560126691f74d041b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-frozen-source-verification.json",
+      "sha256": "d623ed2ec8adcb6321cc3b0d7aa4ada8fc8bc4a04b06ca7b704e9e94e134ef36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-own-tier-wrapper-critical-event-material-review.json",
+      "sha256": "6df1a35ef8dabe262adc0a1478ceefdfb5a37b687a66167ee86a63c6a03cf49a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-raw-verification.json",
+      "sha256": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-resume-review.json",
+      "sha256": "15aa28df796bf65fb8ccc960bd6f78173f48b1461c2b3e124eb416c1fd35079a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-raw-verification.json",
+      "sha256": "d44fc400d51bc6cd172d552ef552c00ddd3979abbb699bf8592b9eb20da738d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-review.json",
+      "sha256": "80d25e8f551bc23e6a5b273494f641b9f3614239baa706f09bc39ba8c11e8a23"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-config.json",
+    "sha256": "4919c29a3f6299b7a7f88b27c793e9eb5c4fb5849ce416d74d6bcf3caef4c0fc"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/BLESSING_WEAPON_MAP.snapshot.json",
+      "sha256": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-own-tier-wrapper-critical-event-material-review.json",
+      "sha256": "6df1a35ef8dabe262adc0a1478ceefdfb5a37b687a66167ee86a63c6a03cf49a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-critical-roll-producer-consumer-difference-proof.json",
+      "sha256": "86e8910560f40c41e439917624a67f922b49d297de4bd84f58117eb10d7e12b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-ui-review.json",
+      "sha256": "80d25e8f551bc23e6a5b273494f641b9f3614239baa706f09bc39ba8c11e8a23"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-ui-raw-verification.json",
+      "sha256": "d44fc400d51bc6cd172d552ef552c00ddd3979abbb699bf8592b9eb20da738d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-raw-verification.json",
+      "sha256": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-image.json",
+      "sha256": "fba3e97942b84befe41339f08605df5f81ac00068820b383cf5956a232825cb8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-attack-coverage.json",
+      "sha256": "39ec92b05db5be6e98b9fd49af2af0cb115b9a101edd9e6ddc12d6f2af33d193"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-primary-batch-add-clear-effective-stack-difference-proof.json",
+      "sha256": "5350526c4a5edfdcc88f65d880f62d186e74850f8d65bd33eb97f84abce4c457"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-source-blocks.json",
+      "sha256": "2f7e65d196c1bac11281c31c6b445723e2f5ad7c6380c5da78d1087d4b082913"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/inputs/headhunter-actual-preview-receipt-004.snapshot.json",
+      "sha256": "9a4bbb2cebf32d1eaa3a3f983bd10eab550b18e6d9a8b42a6b5b6a7f76339420"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-input-snapshot-manifest.json",
+      "sha256": "f2e8ab9edb048c1949b9998ac4a161fd2c6f2b3a69eb8f12386796b79cd93d44"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "0b0026826bce992b1c9515c3f12246df1bd8780cc4700b83e5e7f0bc204de8c8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "bf5ea386c385c059edf3775f914c3260e8c8a1cf9acdbdd326c6de52dd4acc4c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "24388c49d18a317bf26393a9bfc7255b07bf29d82a44fd7d6f14e94fc0790393"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "12b619cc47621139910bdf80e417db844fe8bf9417e5547fdc63bf3aef4f91c6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\LOCALIZATION_COMPARISON.md",
+      "sha256": "0af4b3f5a0218c4b18ee2367712581cf528f4226f23746abf5eea69f573030f6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\README.md",
+      "sha256": "8b52460bbe917f8a404e6cb81bff050b82ba7683665c64225b4dd1815a372837"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\SOURCE_INDEX.md",
+      "sha256": "0e8b9922d99b8d5af0a8b27319553a4f3e866918906cd92f9cf532c079d86432"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\TIER_VALUES.md",
+      "sha256": "3923cec2bc69f1bc4b46288e515bdb6a8b3813e3849193e95b4a33dc4d6e2667"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\WEAPON_COMPATIBILITY.md",
+      "sha256": "08b25a58a49bf3f0ce86f08fa301be5f0391bd0a34a5e9d206adf70f70a84985"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\weapon_trait_bespoke_autogun_p3_stacking_crit_chance_on_weakspot.md",
+      "sha256": "55f6ee4e8fe39659964f677ae9fde66be1774c80785556d3bd040be2716a169f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\weapon_trait_bespoke_galvanic_rifle_p1_stacking_crit_chance_on_weakspot.md",
+      "sha256": "8e154421a2e9e171524afff51e44806d17520de269b03a0425a4aefd8297238e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\weapon_trait_bespoke_lasgun_p1_stacking_crit_chance_on_weakspot.md",
+      "sha256": "ee00687285360f2ce14a1bbc787b26c91911880331b91f786405cc57efbed265"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\weapon_trait_bespoke_lasgun_p3_stacking_crit_chance_on_weakspot.md",
+      "sha256": "25ab6d66572b34545d8136aa530f322f5ef2108447237fb8d03fb41f5488f7ca"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\獵頭者\\weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_crit_chance_on_weakspot.md",
+      "sha256": "41d1eefb1238474358c5c64e25afe32e18873a0cb147db9736878eb5bd05df09"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "ea6c39351a9d66730c7acce5ede73a2e9404e1b41cdfc4d41ecfe7ff771fd382"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\偵察鐳射槍\\README.md",
+      "sha256": "169d594163cf8835ce94d0f56fb71d9413fcc0f1d6758c27a11ee87d0ac4a704"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\機動自動槍\\README.md",
+      "sha256": "0cf650ec2a7885c4b18a997dbe5f9b3436381f0cd4e088883f597b8dae36e32a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\步兵鐳射槍\\README.md",
+      "sha256": "c78188b0d02149de22c137c64873a9a7064b6ccf7a04454c03810f68f0abbcbd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\重伐木槍\\README.md",
+      "sha256": "46444d29c70d36d2922be1f0a3ae0e84fd36532b7b183fbc814e2882547b51ee"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電能步槍\\README.md",
+      "sha256": "129e298d40b1bd224ccd06b0d36bd5ebbd30d6f99b60d6efd1354e99f0398598"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "c8692a7ac291ce283c2694cc6751c9e4f3b979d156240413401accb0238f432a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-raw-verification.json",
+      "sha256": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\headhunter-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "629f52c68ad5af63e5c7dbaede206060038e09875e06b9724d80a80306d0ef12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-002.json",
+      "sha256": "ada8adbae959e9430651360bef9d76386ff676a6ee312a243a06c625900e6882"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-003.json",
+      "sha256": "8e7859ea9f0fa444ffd80f5b32c6d4af25d6c63e42d0b10b395c3297b4c1f477"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-actual-preview-receipt-004.json",
+      "sha256": "9a4bbb2cebf32d1eaa3a3f983bd10eab550b18e6d9a8b42a6b5b6a7f76339420"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-config.json",
+      "sha256": "29392f575c618f1b642c0b23a425d4728ba441fc4708751bd92e7e26d46e35a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-draft.md",
+      "sha256": "019682a0dc67985fba19f4ecaaab1bf0f96f41414bbfc0d81efda9fefd3b6c51"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-group/headhunter-agent-evidence.json",
+      "sha256": "9709d0b7d7cad9a62e15c245edb453f4c7ad9b73ca44e9480bdcba1be4cd92f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-config.json",
+      "sha256": "29392f575c618f1b642c0b23a425d4728ba441fc4708751bd92e7e26d46e35a9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-evidence.json",
+      "sha256": "9709d0b7d7cad9a62e15c245edb453f4c7ad9b73ca44e9480bdcba1be4cd92f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-agent-draft.md",
+      "sha256": "019682a0dc67985fba19f4ecaaab1bf0f96f41414bbfc0d81efda9fefd3b6c51"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-batch-add-clear-effective-stack-difference-proof.json",
+      "sha256": "5350526c4a5edfdcc88f65d880f62d186e74850f8d65bd33eb97f84abce4c457"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-critical-roll-producer-consumer-difference-proof.json",
+      "sha256": "86e8910560f40c41e439917624a67f922b49d297de4bd84f58117eb10d7e12b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-final-content-delta-review.json",
+      "sha256": "1dcac49a77d68b217d7b52feb29f3dad0b50b9a19f6953ce4748ffba0c4f6cc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-frozen-source-verification.json",
+      "sha256": "d623ed2ec8adcb6321cc3b0d7aa4ada8fc8bc4a04b06ca7b704e9e94e134ef36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-own-tier-wrapper-critical-event-material-review.json",
+      "sha256": "6df1a35ef8dabe262adc0a1478ceefdfb5a37b687a66167ee86a63c6a03cf49a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-raw-verification.json",
+      "sha256": "91cf16fd481f25a578d5e8e6e2e599002a146616f35ca810ea4d4da5963dec29"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-raw-verification.json",
+      "sha256": "d44fc400d51bc6cd172d552ef552c00ddd3979abbb699bf8592b9eb20da738d8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-primary-ui-review.json",
+      "sha256": "80d25e8f551bc23e6a5b273494f641b9f3614239baa706f09bc39ba8c11e8a23"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/headhunter-formal-peer-scope.json",
+    "sha256": "e18331c79c9eb602dbe777f0ef8328add591d7d2baf7ddd44b0fe37f2f26bd49",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}
