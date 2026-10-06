@@ -290,20 +290,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 29 September 2026, 11:08PM
-- MOD 版本：26.09.29.1
-- MOD 檔案名稱：NumericUI 14 26.09.29.1 2026-09-29T15-08Z 8bwV4bczU.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 05 October 2026, 6:36PM（Nexus 頁面原文；UTC：2026-10-05T18:36:13Z；Asia/Taipei：2026-10-06 02:36:13）
+- MOD 版本：26.10.05
+- MOD 檔案名稱：NumericUI 14 26.10.05 2026-10-05T18-36Z ndQ1mdFpc.zip
+- 手動維護最後下載日期：2026-10-06
 - Nexus MOD ID: `14`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/14`
 - Nexus page version: `26.02.08-1`
-- Nexus last updated: `2026-09-29T15:08Z`
-- Main file ID: `8538`
-- Main file version: `26.09.29.1`
-- Main file uploaded at UTC: `2026-09-29T15:08Z`
-- Archive filename: `NumericUI 14 26.09.29.1 2026-09-29T15-08Z 8bwV4bczU.zip`
-- Archive size bytes: `44691`
-- Archive SHA-256: `a14b58c0b7c717326061f7d2d6ada03b379029ad5f0a0f99855f1b0b485cfc08`
+- Nexus last updated: `2026-10-05T18:36:13Z`
+- Main file ID: `8819`
+- Main file version: `26.10.05`
+- Main file uploaded at UTC: `2026-10-05T18:36:13Z`
+- Archive filename: `NumericUI 14 26.10.05 2026-10-05T18-36Z ndQ1mdFpc.zip`
+- Archive size bytes: `47475`
+- Archive SHA-256: `7cce33c441d97eb6a1c49f75b1a6db96190e196f2edc76caa4a2463fb8bcb48a`
 - Acquisition method: `manual-queue`
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
