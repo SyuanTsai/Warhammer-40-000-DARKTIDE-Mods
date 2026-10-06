@@ -169,5 +169,6 @@
 | <img src="https://github.com/user-attachments/assets/a8cc8dc4-8ad6-4da4-9949-7061743f05f4" width="32" height="32" alt="連續發射（射擊連段）祝福圖示"> [連續發射（射擊連段）](entries/連續發射（射擊連段）/README.md)<br>- Blaze Away<br>[完整說明](entries/連續發射（射擊連段）/README.md) | <ul><li>持用適用武器時，依武器動作連段步數增加一般攻擊威力修正池；每步依實際實作與等級而異，最多計 5 步。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/309e0a2e-5b01-4af4-bde2-cddcbd580233" width="32" height="32" alt="錘擊祝福圖示"> [錘擊](entries/錘擊/README.md)<br>- Hammerblow<br>[完整說明](entries/錘擊/README.md) | <ul><li>合格命中增加近戰衝擊層數，最多五層，每層依等級提高 melee_impact_modifier。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41" width="32" height="32" alt="斬首者祝福圖示"> [斬首者](entries/斬首者/README.md)<br>- Decapitator<br>[完整說明](entries/斬首者/README.md) | <ul><li>符合條件的一擊擊殺會依武器實作增加近戰靈巧威力；最多五層；合格擊殺會刷新共用五秒倒數。實際修改 finesse stat，不是護甲 Rending。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966" width="32" height="32" alt="詭異打擊祝福圖示"> [詭異打擊](entries/詭異打擊/README.md)<br>- Uncanny Strike<br>[完整說明](entries/詭異打擊/README.md) | <ul><li>每次符合持用來源物品、Minion目標與弱點事件條件的命中，替目標增加脆弱層；各系層數不同。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

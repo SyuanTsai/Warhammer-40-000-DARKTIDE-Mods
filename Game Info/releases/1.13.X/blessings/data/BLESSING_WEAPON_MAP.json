@@ -2187,6 +2187,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/335d4f02-77cb-4cfe-81f5-15862470ee41",
       "effect": "符合條件的一擊擊殺會依武器實作增加近戰靈巧威力；最多五層；合格擊殺會刷新共用五秒倒數。實際修改 finesse stat，不是護甲 Rending。"
+    },
+    {
+      "id": "uncanny-strike",
+      "name_zh_tw": "詭異打擊",
+      "name_en": "Uncanny Strike",
+      "name_key": "loc_trait_bespoke_stacking_rending_on_weakspot",
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "name_hash": "64521001",
+      "description_hash": "fe38e2ee",
+      "page": "entries/詭異打擊/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "effect": "每次符合持用來源物品、Minion目標與弱點事件條件的命中，替目標增加脆弱層；各系層數不同。"
     }
   ],
   "weapons": [
@@ -33765,6 +33778,239 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_189",
       "effect": "外科醫師 Mk IV 的一般命中及黏附初擊可按一擊擊殺條件觸發；延遲撕裂僅在本身另造成合格旗標擊殺時才走獨立 on_kill 路徑.",
       "buff_template_id": "weapon_trait_bespoke_saw_p1_stacking_finesse_on_one_hit_kill_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/詭異打擊/weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_stacks_per_proc_by_tier": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "rending_per_stack": 0.025,
+        "target_cap": 16,
+        "duration_seconds": 5,
+        "refreshes_on_add": true,
+        "models": [
+          "軍務部 Mk I",
+          "軍務部 Mk III",
+          "軍務部 Mk VII"
+        ],
+        "restriction": "combataxe_p3"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 344,
+        "end_line": 413
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "description_hash": "fe38e2ee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "effect": "此系每次合格弱點命中增加 2／4／6／8 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
+      "buff_template_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/詭異打擊/weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_stacks_per_proc_by_tier": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "rending_per_stack": 0.025,
+        "target_cap": 16,
+        "duration_seconds": 5,
+        "refreshes_on_add": true,
+        "models": [
+          "卡塔昌 Mk III",
+          "卡塔昌 Mk VI"
+        ],
+        "restriction": "combatknife_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 10,
+        "end_line": 79
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "description_hash": "fe38e2ee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "effect": "此系每次合格弱點命中增加 2／4／6／8 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
+      "buff_template_id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatsword_p3",
+      "page": "entries/詭異打擊/weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_stacks_per_proc_by_tier": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "rending_per_stack": 0.025,
+        "target_cap": 16,
+        "duration_seconds": 5,
+        "refreshes_on_add": true,
+        "models": [
+          "馬卡比安 Mk II",
+          "馬卡比安 Mk IV",
+          "馬卡比安 Mk V"
+        ],
+        "restriction": "combatsword_p3"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p3.lua",
+        "start_line": 60,
+        "end_line": 129
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p3_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 9
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "description_hash": "fe38e2ee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "effect": "此系每次合格弱點命中增加 2／4／6／8 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/詭異打擊/weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_stacks_per_proc_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "rending_per_stack": 0.025,
+        "target_cap": 16,
+        "duration_seconds": 5,
+        "refreshes_on_add": true,
+        "models": [
+          "臨時拼湊 型號1",
+          "臨時拼湊 型號3"
+        ],
+        "restriction": "dual_shivs_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 10,
+        "end_line": 79
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 8
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "description_hash": "fe38e2ee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "effect": "此系每次合格弱點命中增加 1／2／3／4 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
+      "buff_template_id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/詭異打擊/weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_stacks_per_proc_by_tier": {
+          "I": 2,
+          "II": 4,
+          "III": 6,
+          "IV": 8
+        },
+        "rending_per_stack": 0.025,
+        "target_cap": 16,
+        "duration_seconds": 5,
+        "refreshes_on_add": true,
+        "models": [
+          "朦朧 Mk II",
+          "戴莫斯 Mk IV",
+          "伊利斯 Mk V"
+        ],
+        "restriction": "forcesword_p1"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 139,
+        "end_line": 208
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc",
+      "description_hash": "fe38e2ee",
+      "icon": "https://github.com/user-attachments/assets/8b38db40-8dbe-4da9-9a0a-618e356a1966",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_044",
+      "effect": "此系每次合格弱點命中增加 2／4／6／8 層目標脆弱；每層 2.5 個百分點，最多 16 層，持續 5 秒。",
+      "buff_template_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot_parent"
     }
   ],
   "bindings": [
@@ -49054,6 +49300,188 @@
         "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
         "import_line": 14,
         "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1690
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1501
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "combatsword_p3",
+      "mark_id": "combatsword_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p3_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_combatsword_p3/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_combatsword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p3_m3.lua",
+        "import_line": 14,
+        "append_line": 1475
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "uncanny-strike",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_stacking_rending_on_weakspot",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/stacking_rending_on_weakspot",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
       }
     }
   ]

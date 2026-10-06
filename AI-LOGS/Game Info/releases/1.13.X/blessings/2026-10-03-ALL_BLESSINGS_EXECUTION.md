@@ -531,3 +531,5 @@
 - [錘擊](2026-10-03-HAMMERBLOW_ACCEPTANCE.json)：新增9變體、17型號關聯；共9變體、17關聯。
 
 - [斬首者](2026-10-03-DECAPITATOR_ACCEPTANCE.json)：新增4變體、7型號關聯；共4變體、7關聯。
+
+- [詭異打擊](2026-10-03-UNCANNY-STRIKE_ACCEPTANCE.json)：新增5變體、13型號關聯；共5變體、13關聯。
