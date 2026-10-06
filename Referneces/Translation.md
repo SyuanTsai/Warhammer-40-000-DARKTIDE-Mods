@@ -472,6 +472,7 @@
 - Cavalcade - 接連不斷
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_crit_bonus_on_continuous_fire`，hash `0915b223`；英文／繁中RAW配對確認。
 - Pinning Fire - 鉗制射擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies`，hash `3ce9bdc4`；英文／繁中RAW配對確認。
 - Run 'n' Gun - Run and Gun - 連跑帶打
 - Puncture - 出血穿透
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_ranged`，hash `312743c2`；英文／繁中RAW配對確認。

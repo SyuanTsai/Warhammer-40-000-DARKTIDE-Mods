@@ -2130,6 +2130,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
       "effect": "同一發射擊的所有彈丸命中同一目標，且事件檢查目標為Minion 分類的敵人後，來源持用武器獲得5秒通用威力修正；五個家族I–IV為14／16／18／20%，反衝者洛倫茲Mk V為18／22／26／30%。多目標穿透時兩項目標檢查分開進行。"
+    },
+    {
+      "id": "pinning-fire",
+      "name_zh_tw": "鉗制射擊",
+      "name_en": "Pinning Fire",
+      "name_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies",
+      "description_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies_desc",
+      "name_hash": "3ce9bdc4",
+      "description_hash": "b5a354c9",
+      "page": "entries/鉗制射擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "effect": "持有來源武器時，造成實際踉蹌的合格命中事件可增加一層通用威力修正；I–IV 每層 +4.25%／+4.5%／+4.75%／+5%，最多五層，每次合格事件刷新共用 2.5 秒期限。"
     }
   ],
   "weapons": [
@@ -32591,6 +32604,190 @@
       "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
       "effect": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies",
+      "blessing_id": "pinning-fire",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/鉗制射擊/weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_layer_by_tier": {
+          "I": 0.0425,
+          "II": 0.045,
+          "III": 0.0475,
+          "IV": 0.05
+        },
+        "displayed_per_layer_by_tier": {
+          "I": "+4.25%",
+          "II": "+4.5%",
+          "III": "+4.75%",
+          "IV": "+5%"
+        },
+        "child_duration_seconds": 2.5,
+        "max_effective_stacks": 5,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 412,
+        "end_line": 465
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 35,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies_desc",
+      "description_hash": "b5a354c9",
+      "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
+      "effect": "尤斯 Mk IV 的腰射與瞄準射擊都走 hitscan；一般特殊動作只切換手電筒。",
+      "buff_template_id": "weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies",
+      "blessing_id": "pinning-fire",
+      "weapon_id": "bolter_p1",
+      "page": "entries/鉗制射擊/weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_layer_by_tier": {
+          "I": 0.0425,
+          "II": 0.045,
+          "III": 0.0475,
+          "IV": 0.05
+        },
+        "displayed_per_layer_by_tier": {
+          "I": "+4.25%",
+          "II": "+4.5%",
+          "III": "+4.75%",
+          "IV": "+5%"
+        },
+        "child_duration_seconds": 2.5,
+        "max_effective_stacks": 5,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 80,
+        "end_line": 133
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies_desc",
+      "description_hash": "b5a354c9",
+      "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
+      "effect": "洛克 Mk IIb／Mk III 的腰射與瞄準射擊皆為 hitscan，且分別有 5／3 基礎引爆距離的條件式爆炸；特殊動作雖名為 action_push，實際是近戰 sweep。",
+      "buff_template_id": "weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies",
+      "blessing_id": "pinning-fire",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/鉗制射擊/weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_layer_by_tier": {
+          "I": 0.0425,
+          "II": 0.045,
+          "III": 0.0475,
+          "IV": 0.05
+        },
+        "displayed_per_layer_by_tier": {
+          "I": "+4.25%",
+          "II": "+4.5%",
+          "III": "+4.75%",
+          "IV": "+5%"
+        },
+        "child_duration_seconds": 2.5,
+        "max_effective_stacks": 5,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 412,
+        "end_line": 465
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 35,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies_desc",
+      "description_hash": "b5a354c9",
+      "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
+      "effect": "布蘭克斯 MkIII 的腰射與瞄準射擊都走 hitscan；特殊動作是使用 default_pistol_whip 的近戰 sweep。",
+      "buff_template_id": "weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies",
+      "blessing_id": "pinning-fire",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/鉗制射擊/weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_layer_by_tier": {
+          "I": 0.0425,
+          "II": 0.045,
+          "III": 0.0475,
+          "IV": 0.05
+        },
+        "displayed_per_layer_by_tier": {
+          "I": "+4.25%",
+          "II": "+4.5%",
+          "III": "+4.75%",
+          "IV": "+5%"
+        },
+        "child_duration_seconds": 2.5,
+        "max_effective_stacks": 5,
+        "stack_offset": -1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 859,
+        "end_line": 912
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 71,
+        "end_line": 72
+      },
+      "description_key": "loc_trait_bespoke_stacking_power_bonus_on_staggering_enemies_desc",
+      "description_hash": "b5a354c9",
+      "icon": "https://github.com/user-attachments/assets/dd48f273-eab9-465a-9179-dbd6dd092e92",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_128",
+      "effect": "克魯克 Mk IIa、戈爾貢努姆 Mk IIIa、阿克利斯 Mk II 的腰射與瞄準射擊都走 hitscan；特殊動作只切換手電筒。",
+      "buff_template_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies_parent"
     }
   ],
   "bindings": [
@@ -47362,6 +47559,104 @@
         "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
         "import_line": 16,
         "append_line": 1535
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "pinning-fire",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_stacking_power_bonus_on_staggering_enemies",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/stacking_power_bonus_on_staggering_enemies",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
       }
     }
   ]
