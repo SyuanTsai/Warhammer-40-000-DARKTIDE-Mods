@@ -10,11 +10,12 @@
 | <img src="https://github.com/user-attachments/assets/d18d3791-7468-4d27-ba66-d93c39162ab5" width="32" height="32" alt="持續射擊祝福圖示"> [持續射擊](../../../entries/持續射擊/README.md)<br>- Sustained Fire<br>[完整說明](../../../entries/持續射擊/README.md) | <ul><li>持用此遠程武器連續射擊並符合計數條件時，該次遠程傷害提高；I–IV級係數為14%／16%／18%／20%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63976959-4253-4979-8013-1ab18966b7ea" width="32" height="32" alt="恐怖阻擊祝福圖示"> [恐怖阻擊](../../../entries/恐怖阻擊/README.md)<br>- Terrifying Barrage<br>[完整說明](../../../entries/恐怖阻擊/README.md) | <ul><li>hip／zoom 為 hitscan 遠程攻擊；手電筒切換不造成攻擊。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/ed5c7d7f-02a2-4bea-9463-c4380478a244" width="32" height="32" alt="快速裝彈祝福圖示"> [快速裝彈](../../../entries/快速裝彈/README.md)<br>- Speedload<br>[完整說明](../../../entries/快速裝彈/README.md) | <ul><li>近距離遠程擊殺通過實際事件條件後，每個有效層加 7/8/9/10% 裝填速度；最多5層，每次合格事件後2秒到期。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129" width="32" height="32" alt="火藥灼傷祝福圖示"> [火藥灼傷](../../../entries/火藥灼傷/README.md)<br>- Powderburn<br>[完整說明](../../../entries/火藥灼傷/README.md) | <ul><li>持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 撕裂者自動手槍 尤斯 Mk IV | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autopistol_p1_toughness_on_continuous_fire.md)、[掃射](../../../entries/掃射/weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking.md)、[連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_autopistol_p1_followup_shots_ranged_damage.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide.md) | I–IV |
+| 撕裂者自動手槍 尤斯 Mk IV | [振奮彈幕](../../../entries/振奮彈幕/weapon_trait_bespoke_autopistol_p1_toughness_on_continuous_fire.md)、[掃射](../../../entries/掃射/weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking.md)、[連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_autopistol_p1_hipfire_while_sprinting.md)、[持續射擊](../../../entries/持續射擊/weapon_trait_bespoke_autopistol_p1_followup_shots_ranged_damage.md)、[恐怖阻擊](../../../entries/恐怖阻擊/weapon_trait_bespoke_autopistol_p1_suppression_on_close_kill.md)、[快速裝彈](../../../entries/快速裝彈/weapon_trait_bespoke_autopistol_p1_reload_speed_on_slide.md)、[火藥灼傷](../../../entries/火藥灼傷/weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

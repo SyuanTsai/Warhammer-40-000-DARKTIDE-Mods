@@ -156,5 +156,6 @@
 | <img src="https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f" width="32" height="32" alt="壓倒性的武力祝福圖示"> [壓倒性的武力](entries/壓倒性的武力/README.md)<br>- Overwhelming Force<br>[完整說明](entries/壓倒性的武力/README.md) | <ul><li>合格踉蹌命中有機率使目標眩暈；電弧鎚另要求目標為精英或專家。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e" width="32" height="32" alt="持續阻擊祝福圖示"> [持續阻擊](entries/持續阻擊/README.md)<br>- Ceaseless Barrage<br>[完整說明](entries/持續阻擊/README.md) | <ul><li>持續射擊期間，依射擊步進提高壓制，並提高對已受壓制目標的傷害；最多5層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769" width="32" height="32" alt="狡猾射手祝福圖示"> [狡猾射手](entries/狡猾射手/README.md)<br>- Trickshooter<br>[完整說明](entries/狡猾射手/README.md) | <ul><li>每次手持時的弱點 hitscan 射擊增加一層遠程威力修正；每層依等級增加 4.5%／5%／5.5%／6%，最多5層，合格射擊刷新共同3.5秒期限。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129" width="32" height="32" alt="火藥灼傷祝福圖示"> [火藥灼傷](entries/火藥灼傷/README.md)<br>- Powderburn<br>[完整說明](entries/火藥灼傷/README.md) | <ul><li>持用此武器時，遠程攻擊或其傷害設定標記為遠程的攻擊，在 12.5 公尺內擊殺可啟動 2 秒效果：後坐力修正 −28% 至 −40%、壓制輸出 +28% 至 +40%，以及對已被壓制目標的傷害加算 +14% 至 +20%（I–IV）。這些是不同的來源屬性值，不是最終生命值傷害百分比。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

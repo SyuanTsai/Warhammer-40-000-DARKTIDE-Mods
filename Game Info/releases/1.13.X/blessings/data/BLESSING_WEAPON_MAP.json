@@ -2007,6 +2007,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
       "effect": "每次手持時的弱點 hitscan 射擊增加一層遠程威力修正；每層依等級增加 4.5%／5%／5.5%／6%，最多5層，合格射擊刷新共同3.5秒期限。"
+    },
+    {
+      "id": "powderburn",
+      "name_zh_tw": "火藥灼傷",
+      "name_en": "Powderburn",
+      "name_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills",
+      "description_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills_desc",
+      "name_hash": "f5213560",
+      "description_hash": "1f3f3ad2",
+      "page": "entries/火藥灼傷/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "effect": "持用此武器時，遠程攻擊或其傷害設定標記為遠程的攻擊，在 12.5 公尺內擊殺可啟動 2 秒效果：後坐力修正 −28% 至 −40%、壓制輸出 +28% 至 +40%，以及對已被壓制目標的傷害加算 +14% 至 +20%（I–IV）。這些是不同的來源屬性值，不是最終生命值傷害百分比。"
     }
   ],
   "weapons": [
@@ -30498,6 +30511,318 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_109",
       "effect": "腰射或瞄準 hitscan 射擊至少有一個目標被判為弱點且仍手持時加一層遠程威力；每層 I–IV +4.5%／+5%／+5.5%／+6%，最多5層，合格弱點射擊刷新3.5秒期限。",
       "buff_template_id": "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "blessing_id": "powderburn",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/火藥灼傷/weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "I": {
+            "recoil_modifier": -0.28,
+            "suppression_dealt": 0.28,
+            "damage_vs_suppressed": 0.14
+          },
+          "II": {
+            "recoil_modifier": -0.32,
+            "suppression_dealt": 0.32,
+            "damage_vs_suppressed": 0.16
+          },
+          "III": {
+            "recoil_modifier": -0.36,
+            "suppression_dealt": 0.36,
+            "damage_vs_suppressed": 0.18
+          },
+          "IV": {
+            "recoil_modifier": -0.4,
+            "suppression_dealt": 0.4,
+            "damage_vs_suppressed": 0.2
+          }
+        },
+        "fields": {
+          "recoil_modifier": {
+            "I": -0.28,
+            "II": -0.32,
+            "III": -0.36,
+            "IV": -0.4
+          },
+          "suppression_dealt": {
+            "I": 0.28,
+            "II": 0.32,
+            "III": 0.36,
+            "IV": 0.4
+          },
+          "damage_vs_suppressed": {
+            "I": 0.14,
+            "II": 0.16,
+            "III": 0.18,
+            "IV": 0.2
+          }
+        },
+        "duration_seconds": 2,
+        "stacking": "refresh-one-window-no-stacks",
+        "range_meters": 12.5,
+        "range_inclusive": true,
+        "attack_gate": "ranged OR count_as_ranged_attack",
+        "fallback_is_additional": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 341,
+        "end_line": 411
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 34,
+        "end_line": 34
+      },
+      "description_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills_desc",
+      "description_hash": "1f3f3ad2",
+      "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+      "effect": "持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "blessing_id": "powderburn",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/火藥灼傷/weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "I": {
+            "recoil_modifier": -0.28,
+            "suppression_dealt": 0.28,
+            "damage_vs_suppressed": 0.14
+          },
+          "II": {
+            "recoil_modifier": -0.32,
+            "suppression_dealt": 0.32,
+            "damage_vs_suppressed": 0.16
+          },
+          "III": {
+            "recoil_modifier": -0.36,
+            "suppression_dealt": 0.36,
+            "damage_vs_suppressed": 0.18
+          },
+          "IV": {
+            "recoil_modifier": -0.4,
+            "suppression_dealt": 0.4,
+            "damage_vs_suppressed": 0.2
+          }
+        },
+        "fields": {
+          "recoil_modifier": {
+            "I": -0.28,
+            "II": -0.32,
+            "III": -0.36,
+            "IV": -0.4
+          },
+          "suppression_dealt": {
+            "I": 0.28,
+            "II": 0.32,
+            "III": 0.36,
+            "IV": 0.4
+          },
+          "damage_vs_suppressed": {
+            "I": 0.14,
+            "II": 0.16,
+            "III": 0.18,
+            "IV": 0.2
+          }
+        },
+        "duration_seconds": 2,
+        "stacking": "refresh-one-window-no-stacks",
+        "range_meters": 12.5,
+        "range_inclusive": true,
+        "attack_gate": "ranged OR count_as_ranged_attack",
+        "fallback_is_additional": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 341,
+        "end_line": 411
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 34,
+        "end_line": 34
+      },
+      "description_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills_desc",
+      "description_hash": "1f3f3ad2",
+      "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+      "effect": "持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "blessing_id": "powderburn",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/火藥灼傷/weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "I": {
+            "recoil_modifier": -0.28,
+            "suppression_dealt": 0.28,
+            "damage_vs_suppressed": 0.14
+          },
+          "II": {
+            "recoil_modifier": -0.32,
+            "suppression_dealt": 0.32,
+            "damage_vs_suppressed": 0.16
+          },
+          "III": {
+            "recoil_modifier": -0.36,
+            "suppression_dealt": 0.36,
+            "damage_vs_suppressed": 0.18
+          },
+          "IV": {
+            "recoil_modifier": -0.4,
+            "suppression_dealt": 0.4,
+            "damage_vs_suppressed": 0.2
+          }
+        },
+        "fields": {
+          "recoil_modifier": {
+            "I": -0.28,
+            "II": -0.32,
+            "III": -0.36,
+            "IV": -0.4
+          },
+          "suppression_dealt": {
+            "I": 0.28,
+            "II": 0.32,
+            "III": 0.36,
+            "IV": 0.4
+          },
+          "damage_vs_suppressed": {
+            "I": 0.14,
+            "II": 0.16,
+            "III": 0.18,
+            "IV": 0.2
+          }
+        },
+        "duration_seconds": 2,
+        "stacking": "refresh-one-window-no-stacks",
+        "range_meters": 12.5,
+        "range_inclusive": true,
+        "attack_gate": "ranged OR count_as_ranged_attack",
+        "fallback_is_additional": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 402,
+        "end_line": 472
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills_desc",
+      "description_hash": "1f3f3ad2",
+      "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+      "effect": "持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills",
+      "blessing_id": "powderburn",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/火藥灼傷/weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "I": {
+            "recoil_modifier": -0.28,
+            "suppression_dealt": 0.28,
+            "damage_vs_suppressed": 0.14
+          },
+          "II": {
+            "recoil_modifier": -0.32,
+            "suppression_dealt": 0.32,
+            "damage_vs_suppressed": 0.16
+          },
+          "III": {
+            "recoil_modifier": -0.36,
+            "suppression_dealt": 0.36,
+            "damage_vs_suppressed": 0.18
+          },
+          "IV": {
+            "recoil_modifier": -0.4,
+            "suppression_dealt": 0.4,
+            "damage_vs_suppressed": 0.2
+          }
+        },
+        "fields": {
+          "recoil_modifier": {
+            "I": -0.28,
+            "II": -0.32,
+            "III": -0.36,
+            "IV": -0.4
+          },
+          "suppression_dealt": {
+            "I": 0.28,
+            "II": 0.32,
+            "III": 0.36,
+            "IV": 0.4
+          },
+          "damage_vs_suppressed": {
+            "I": 0.14,
+            "II": 0.16,
+            "III": 0.18,
+            "IV": 0.2
+          }
+        },
+        "duration_seconds": 2,
+        "stacking": "refresh-one-window-no-stacks",
+        "range_meters": 12.5,
+        "range_inclusive": true,
+        "attack_gate": "ranged OR count_as_ranged_attack",
+        "fallback_is_additional": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 717,
+        "end_line": 787
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 46,
+        "end_line": 46
+      },
+      "description_key": "loc_trait_bespoke_recoil_reduction_and_suppression_increase_on_close_kills_desc",
+      "description_hash": "1f3f3ad2",
+      "icon": "https://github.com/user-attachments/assets/14fa8657-5caa-4aaa-8bff-b3cf8df9d129",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_129",
+      "effect": "持用時，12.5公尺內合格遠程擊殺啟動2秒效果；I–IV後坐力修正 −28/−32/−36/−40%，壓制輸出 +28/+32/+36/+40%，已壓制目標傷害加算 +14/+16/+18/+20%。"
     }
   ],
   "bindings": [
@@ -44205,6 +44530,76 @@
         "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
         "import_line": 15,
         "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "powderburn",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "powderburn",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "powderburn",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
+      }
+    },
+    {
+      "blessing_id": "powderburn",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "powderburn",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/recoil_reduction_and_suppression_increase_on_close_kills",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
       }
     }
   ]

@@ -154,3 +154,4 @@
 | [壓倒性的武力](entries/壓倒性的武力/README.md) | [來源索引](entries/壓倒性的武力/SOURCE_INDEX.md) |
 | [持續阻擊](entries/持續阻擊/README.md) | [來源索引](entries/持續阻擊/SOURCE_INDEX.md) |
 | [狡猾射手](entries/狡猾射手/README.md) | [來源索引](entries/狡猾射手/SOURCE_INDEX.md) |
+| [火藥灼傷](entries/火藥灼傷/README.md) | [來源索引](entries/火藥灼傷/SOURCE_INDEX.md) |
