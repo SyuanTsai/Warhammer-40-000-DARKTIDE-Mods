@@ -8,11 +8,12 @@
 | <img src="https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004" width="32" height="32" alt="機會主義者祝福圖示"> [機會主義者](../../../entries/機會主義者/README.md)<br>- Opportunist<br>[完整說明](../../../entries/機會主義者/README.md) | <ul><li>對傷害結算前已踉蹌或被視為踉蹌的敵人，I–IV提供10%／15%／20%／25%近戰撕裂；本擊才造成踉蹌不回溯加成。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1" width="32" height="32" alt="超級充能祝福圖示"> [超級充能](../../../entries/超級充能/README.md)<br>- Supercharge<br>[完整說明](../../../entries/超級充能/README.md) | <ul><li>充能近戰命中後施加10／12／14／16層脆弱，每層2.5%，最高16層，刷新5秒。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/823e905c-f740-41dd-abbc-b3b11a5ecad9" width="32" height="32" alt="完美一擊祝福圖示"> [完美一擊](../../../entries/完美一擊/README.md)<br>- Perfect Strike<br>[完整說明](../../../entries/完美一擊/README.md) | <ul><li>持用裝有本祝福的近戰武器且快取讀到爆擊元件啟用時，近戰爆擊可用分級近戰爆擊傷害加成；合資格掃掠命中另以 0.25 倍目標基礎 Hit Mass 計算，仍受其他質量修正、累積預算與品種中止規則約束。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195" width="32" height="32" alt="碎顱者祝福圖示"> [碎顱者](../../../entries/碎顱者/README.md)<br>- Skullcrusher<br>[完整說明](../../../entries/碎顱者/README.md) | <ul><li>來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 動力錘 阿克利斯 Mk I | [野蠻攻勢](../../../entries/野蠻攻勢/weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill.md)、[機會主義者](../../../entries/機會主義者/weapon_trait_bespoke_ogryn_powermaul_p1_rending_vs_staggered.md)、[超級充能](../../../entries/超級充能/weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks.md)、[完美一擊](../../../entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit.md) | I–IV |
+| 動力錘 阿克利斯 Mk I | [野蠻攻勢](../../../entries/野蠻攻勢/weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill.md)、[機會主義者](../../../entries/機會主義者/weapon_trait_bespoke_ogryn_powermaul_p1_rending_vs_staggered.md)、[超級充能](../../../entries/超級充能/weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks.md)、[完美一擊](../../../entries/完美一擊/weapon_trait_bespoke_ogryn_powermaul_p1_pass_past_armor_on_crit.md)、[碎顱者](../../../entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

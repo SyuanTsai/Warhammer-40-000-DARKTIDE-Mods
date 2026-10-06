@@ -1966,3 +1966,6 @@
 
 - Blaze Away - 連續發射（射擊連段）
   - 文件譯名；本體1.13.1繁中仍為「連續發射」。名稱鍵 `loc_trait_bespoke_power_bonus_on_continuous_fire_alternative`，hash `6fc486b9`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Skullcrusher - 碎顱者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff`，hash `5fdffabc`；英文／繁中RAW配對確認。

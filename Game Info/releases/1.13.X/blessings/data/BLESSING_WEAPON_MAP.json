@@ -2213,6 +2213,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
       "effect": "弱點命中後清除目前壓制並獲得壓制免疫；免疫持續時間依等級為 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "skullcrusher",
+      "name_zh_tw": "碎顱者",
+      "name_en": "Skullcrusher",
+      "name_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff",
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "name_hash": "5fdffabc",
+      "description_hash": "4da83b10",
+      "page": "entries/碎顱者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
     }
   ],
   "weapons": [
@@ -34252,6 +34265,384 @@
       "icon": "https://github.com/user-attachments/assets/8c0a5c18-354f-4503-aa10-004d7e6ef333",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_122",
       "effect": "同一武器命中實際弱點後清除持用者壓制並刷新單一壓制免疫計時窗；I–IV 持續 2.4／2.8／3.2／3.6 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/碎顱者/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 414,
+        "end_line": 474
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 411,
+        "end_line": 471
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 201,
+        "end_line": 261
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p2",
+      "page": "entries/碎顱者/weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p2.lua",
+        "start_line": 256,
+        "end_line": 316
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_powermaul_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua",
+        "start_line": 40,
+        "end_line": 100
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 9
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua",
+        "start_line": 40,
+        "end_line": 100
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_2h_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_2h_p1.lua",
+        "start_line": 134,
+        "end_line": 194
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_2h_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 14
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powermaul_p1.lua",
+        "start_line": 135,
+        "end_line": 195
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powermaul_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
+    },
+    {
+      "id": "weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "blessing_id": "skullcrusher",
+      "weapon_id": "thunderhammer_2h_p1",
+      "page": "entries/碎顱者/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "requested_stacks_by_tier": {
+          "I": 1,
+          "II": 2,
+          "III": 3,
+          "IV": 4
+        },
+        "target_damage_vs_staggered_per_effective_layer": 0.1,
+        "target_effective_stat_stack_cap": 8,
+        "target_duration_seconds": 5,
+        "target_refresh_duration_on_stack": true,
+        "helper_request_max_stacks": 31,
+        "stat_type": "damage_vs_staggered additive_multiplier"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_thunderhammer_2h_p1.lua",
+        "start_line": 192,
+        "end_line": 252
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_thunderhammer_2h_p1_buff_templates.lua",
+        "start_line": 31,
+        "end_line": 31
+      },
+      "description_key": "loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff_desc",
+      "description_hash": "4da83b10",
+      "icon": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "effect": "來源武器命中仍存活且符合 Minion 判定、事件處理時正踉蹌的目標，並通過來源物品與持用條件時，Tier I–IV 分別請求 1／2／3／4 層。每個有效層使目標踉蹌傷害池中的 damage_vs_staggered 加 10%，目標 stat 最多按 8 層計算。效果持續 5 秒；每次符合條件的命中都刷新期限，即使 helper 的 31 層原始累積上限令本次新增 0 層也會刷新。"
     }
   ],
   "bindings": [
@@ -49919,6 +50310,300 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
         "import_line": 15,
         "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1382
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1603
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_club_p2",
+      "mark_id": "ogryn_club_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p2/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_club_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1697
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_powermaul_p1",
+      "mark_id": "ogryn_powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_powermaul_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 2346
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1773
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1661
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_2h_p1",
+      "mark_id": "powermaul_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_2h_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_powermaul_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls_2h/powermaul_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1919
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1522
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "powermaul_p1",
+      "mark_id": "powermaul_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_powermaul_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1609
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1780
+      }
+    },
+    {
+      "blessing_id": "skullcrusher",
+      "weapon_id": "thunderhammer_2h_p1",
+      "mark_id": "thunderhammer_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff",
+      "trait_item": "content/items/traits/bespoke_thunderhammer_2h_p1/staggered_targets_receive_increased_damage_debuff",
+      "trait_category": "bespoke_thunderhammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thunder_hammers_2h/thunderhammer_2h_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1811
       }
     }
   ]

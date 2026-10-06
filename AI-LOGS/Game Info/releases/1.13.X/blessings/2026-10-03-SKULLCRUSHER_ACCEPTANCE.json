@@ -1,0 +1,656 @@
+{
+  "date": "2026-10-06",
+  "blessing": "skullcrusher",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/碎顱者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff",
+    "weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff"
+  ],
+  "added_binding_count": 21,
+  "total_variants": 9,
+  "total_bindings": 21,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "blessing": "skullcrusher",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true,
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-formal-peer-scope.json",
+    "scope_sha256": "35698686298e4bc5861dd90277e7915d966867ce081f6777bd9ef497e0f5e0af",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/focused_manifest.py": "9d209225bd70105f6caf54d73a1cd20ef42694ee8edb7f2e3bd9e7d0a1fd903a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-config.json": "6f837718179207847997f6bbe8eedbeb93bb820dfa4ad13e49859a6ac00234eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-draft.md": "5cf45199c20ae3d3ad59393f79a3c3f3c00721856fd2792e56a35a8ae700a6c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-evidence.json": "378fcf8250683ec81a95269cdafec978d0fb3571119e47724589d989d86ee382",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-config.json": "ac8a79ece89eb80a10987b94563d2ac6c9289b71c1619307eda2acef55acd992",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-extension-draft.json": "f11a44798c7c6d2dddde91d2d734d600a42509d51a40afc3ed5e41aefdf1200b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/blaze-away-alternative-formal-nonauthor-review.json": "3f4287cef0a672587752627c1aff4878b559fee573cb7d91fc5d1a026c08cfc9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/BLESSING_WEAPON_MAP-before-preview.json": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/remaining-tasks.json": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/Translation.md": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-001.json": "2bb0e55ea44b1fa6b0a10bbba2c097e996c6d964344fa8d5f0245e8fcff0f971",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-002.json": "d64f130812d72b92c84532ce1162635dc9c8ba80b09501a044b36aab6ef42436",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-003.json": "674e14ae95733246a6c9217f8ded5502d26dc0ca37634032b4ad9d6c0f7c7f7c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-004.json": "ecbf6844b81fb12a171092ae4c6eb1adb6824dcf977704b00070e5ec69addc1a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-005.json": "0679c4653869003f4b9e1d5ebfb051b632f67731bd806dd87d7c537793040290",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-006.json": "5299c5fa4629afe8ac9a696b56bb2b6c81c3e22801e5c9d1c487efe5fed34cc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-config.json": "6f837718179207847997f6bbe8eedbeb93bb820dfa4ad13e49859a6ac00234eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-draft.md": "5cf45199c20ae3d3ad59393f79a3c3f3c00721856fd2792e56a35a8ae700a6c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-evidence.json": "378fcf8250683ec81a95269cdafec978d0fb3571119e47724589d989d86ee382",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-binding-inventory.json": "de5e61414a8494602e2c5f89fc49ac4f20cf1e03e89b95bbfff8f38fed2ac0bc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-source-ranges.json": "5c43c90f1b109e59ae23ab02af067a5ea894013ce4a83cd49f1970a63874f28e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-image.json": "def767dc51e50505582d724ba0f2666a927fd7c87e86b76c1db7c1c0e44f1b02",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-content-review-before-raw-metadata-correction.json": "3efdc283028ae6528853d24c209a6924372823474fd5e032f12a73c63a32b7bf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-final-content-delta-review.json": "34cc6582911dcd522e2cf918ad3e796719c891cb6325c2605016753c5c898b43",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-focused-checks.json": "836ddce928b0d97222baab2f6bc1e09561f3925d7e7265e9cb1f14a94525c654",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-frozen-source-verification.json": "02acf4723a2cb39e97e0aca2f5fd29733358916d44165541dedf3aecd98cbf82",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-own-tier-wrapper-target-debuff-material-review.json": "225893c0d28b6482214cce4b55cea4ac79254ccf1933ad224be31270db3212a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-raw-verification.json": "a6050d4fbc597eb75b69616b98e2b110157c02ed54aa5ec017c59ba3f657b215",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-resume-review.json": "0704b2563a1c1b8baeebc445abc9bfe0d272fc0e7bf30343f1a3f3fa978de887",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-raw-verification.json": "0277917c31916bc28df8683e49c1ddcab6b998d0dc46ea793862bf624946f774",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-review.json": "87d78fcb2a89419e785264d618205d9b072d468fd97846e468baf45e86f84407",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/target-hit-debuff-helper-primary-shared-delta-proof.json": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/target-hit-debuff-standalone-primary-difference-proof.json": "403f2bda5670d1384d0c0bf53027e8407f1eacf10881a9bd68416e0dfb8ef3c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-raw-verification.json": "a6050d4fbc597eb75b69616b98e2b110157c02ed54aa5ec017c59ba3f657b215",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "051853e26396a35490d69e2127cee88109be237a6b2bf166f5941bfb5f910f3a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/DAMAGE_PERCENTAGE_REVIEW.md": "1e71828f558f2b2c1c1cc09ec68f3a1ba482856a67c2002bedd57a4ef53f6993",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/LOCALIZATION_COMPARISON.md": "e5660582b36f8c401cacbf082d81c53b9744d44218a3040c888c6f0f1e986646",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/README.md": "19b25dc7d55eaa8ba095e510b558ac0c33d8a686d575b090003503fe51b2458a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/SOURCE_INDEX.md": "77d7d85af1da9f1a8ae3661531407cc5fbc24b26a60033dc84bd2c04b9ad86e8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/TIER_VALUES.md": "e2a29abde0975336b4caf698ee490083e51f975eb7649d8c0a060736aba6f925",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/WEAPON_COMPATIBILITY.md": "595d49305af9407110c1c84d9b83fd41fb02a347b0b3cb49376fe2e2295dc80d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff.md": "61dbd3825f092a5a4539527d038810f9d274a31be9b4cf2529b450b55b5c0134",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff.md": "485358162d43c0dbce26a18db2b1789ff4b4d1366e1ca239c98eeab4a5b1b689",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff.md": "0e43c7ead1ab4f3bfa191ed145b7758a028996c8a3cb6d16c0d30b95578530e4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff.md": "b6f52588a588d385d7cf646943fe3e6345a0b65b4aca9540dd3266c63f0ba13e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md": "0c1c3494e16d0317af1f01fe97e778279b0d8bdcd395b3c7c04867465d233aca",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff.md": "75ebb673ec8072422cd796d92e76a86989d73078e872c0aa585e54cba9dc7a9e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff.md": "925a67d72f7c2a507275e6c50b52233ad34b2cbd3cfcc68a2c981b09736e56b5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md": "b48c869c624967a8104d764f3bdb0a834c1ccbd4301667df479a9d15179d11e7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff.md": "f0268ec12cf40b53fb1a2e0eee298033fc5f7d90faad7075f64f01360bdb77fb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/melee/README.md": "f4b53022717f81a61c084c79b624a863fa1540e5cc2d6fc1df23dd7633963121",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/README.md": "c0eb40d2fc682a47213652be4095dcf49cb6aeaf1ad1f38695096b8b658a2e4e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c3860d69691fe8b5596acd2cf456e5e4d553f6e6698ec7bcccac2002b710a3c2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "a473462e14e8190163870cd2f988449358c794c604da7597fbead93636cc2ad9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "711c05e2a4ecf5b2d2613dea3621f4d943ef63e175365469055d7ea23907b2e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "a66da9e7aeac88f6632f0ba9f11a0cefa8e5c7883b275197767b14bf008542e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "3b27d6bdccd024e64ab4f29db0b151ca72208f3edf3f43b5c5f3fd32acd665ed",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "b806ea2bf1904559cf21f9acb965f878621e8ad08871db344ea4d805e6d31cfb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "58db5c2313aba2ef1af8a053063eca11e59c050cb74a9221898464125f60a0c3",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "980eea7f6953e6eca8765bff378444e9fe0a0fdcdcfb7116ee52f0b9de10fb8f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "336d082368e35a618f27ffe761478e07e66ac5eefe7d9088b40794501c0f3de9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "3b69469d6d5eee9968b39d05c0233a0de3b9dcb0342a480b8ab257ad9edb2979",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/own-association-snapshot.json": "191fbc00f6678b86d5e0205b869021ee75b3dc1adb850b41cf3bd0f75b932bc7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/actual-preview-006/Referneces/Translation.md": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "051853e26396a35490d69e2127cee88109be237a6b2bf166f5941bfb5f910f3a",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/DAMAGE_PERCENTAGE_REVIEW.md": "1e71828f558f2b2c1c1cc09ec68f3a1ba482856a67c2002bedd57a4ef53f6993",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/LOCALIZATION_COMPARISON.md": "e5660582b36f8c401cacbf082d81c53b9744d44218a3040c888c6f0f1e986646",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/README.md": "19b25dc7d55eaa8ba095e510b558ac0c33d8a686d575b090003503fe51b2458a",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/SOURCE_INDEX.md": "de29a4225cafa253ff5f6472dec8e8b3afa7a2d22d112a7b803e27c1573e49e5",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/TIER_VALUES.md": "e2a29abde0975336b4caf698ee490083e51f975eb7649d8c0a060736aba6f925",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/WEAPON_COMPATIBILITY.md": "595d49305af9407110c1c84d9b83fd41fb02a347b0b3cb49376fe2e2295dc80d",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff.md": "61dbd3825f092a5a4539527d038810f9d274a31be9b4cf2529b450b55b5c0134",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff.md": "485358162d43c0dbce26a18db2b1789ff4b4d1366e1ca239c98eeab4a5b1b689",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff.md": "0e43c7ead1ab4f3bfa191ed145b7758a028996c8a3cb6d16c0d30b95578530e4",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff.md": "b6f52588a588d385d7cf646943fe3e6345a0b65b4aca9540dd3266c63f0ba13e",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md": "0c1c3494e16d0317af1f01fe97e778279b0d8bdcd395b3c7c04867465d233aca",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff.md": "75ebb673ec8072422cd796d92e76a86989d73078e872c0aa585e54cba9dc7a9e",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff.md": "925a67d72f7c2a507275e6c50b52233ad34b2cbd3cfcc68a2c981b09736e56b5",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md": "b48c869c624967a8104d764f3bdb0a834c1ccbd4301667df479a9d15179d11e7",
+      "Game Info/releases/1.13.X/blessings/entries/碎顱者/weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff.md": "f0268ec12cf40b53fb1a2e0eee298033fc5f7d90faad7075f64f01360bdb77fb",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "f4b53022717f81a61c084c79b624a863fa1540e5cc2d6fc1df23dd7633963121",
+      "Game Info/releases/1.13.X/blessings/README.md": "c0eb40d2fc682a47213652be4095dcf49cb6aeaf1ad1f38695096b8b658a2e4e",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c3860d69691fe8b5596acd2cf456e5e4d553f6e6698ec7bcccac2002b710a3c2",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/「惡魔之爪」劍/README.md": "a473462e14e8190163870cd2f988449358c794c604da7597fbead93636cc2ad9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/作戰大錘&板盾/README.md": "711c05e2a4ecf5b2d2613dea3621f4d943ef63e175365469055d7ea23907b2e6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/動力錘/README.md": "a66da9e7aeac88f6632f0ba9f11a0cefa8e5c7883b275197767b14bf008542e6",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/工兵鏟/README.md": "3b27d6bdccd024e64ab4f29db0b151ca72208f3edf3f43b5c5f3fd32acd665ed",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/廁所鏟/README.md": "b806ea2bf1904559cf21f9acb965f878621e8ad08871db344ea4d805e6d31cfb",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/惡霸棍棒/README.md": "58db5c2313aba2ef1af8a053063eca11e59c050cb74a9221898464125f60a0c3",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碾壓者/README.md": "980eea7f6953e6eca8765bff378444e9fe0a0fdcdcfb7116ee52f0b9de10fb8f",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/雷鎚/README.md": "336d082368e35a618f27ffe761478e07e66ac5eefe7d9088b40794501c0f3de9",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/電擊錘/README.md": "3b69469d6d5eee9968b39d05c0233a0de3b9dcb0342a480b8ab257ad9edb2979",
+      "Referneces/Translation.md": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17"
+    },
+    "content_review": {
+      "scope_integrity": "All 107 fixed scope file hashes were recomputed from the current worktree and match exactly.",
+      "formal_preview_reconciliation": "All 15 own entry pages were compared byte-for-byte with actual preview 006. Fourteen match; the only difference is the formal SOURCE_INDEX, which contains the 286 additional precise references and is the intended root integration delta.",
+      "canonical_delta": "Canonical root config differs from the frozen author config only in refs: 41 author refs versus 327 canonical refs, adding 286 precise source entries. Gameplay and player-facing values are unchanged.",
+      "actual_preview": "Preview 006 passed with 15 own pages checked and 29 generated files; source/range, association partition, links, GFM, and whitespace checks are included in the pinned passed receipt.",
+      "trigger_and_consumer": "Confirmed the source event requires the applicable live Minion target to be staggered when the event is handled, plus the matching source item and held-source gate. Separately, DamageCalculation consumes the target conditional damage_vs_staggered cache only when this hit triggers stagger or count_as_staggered applies. Damage resolves before on_hit, so stacks added by a hit cannot change that same hit; they require a later updated cache.",
+      "tier_and_lifetime": "All nine own variants and their actual wrappers were reviewed: Tier I–IV request 1/2/3/4 target layers. Each effective layer contributes +10% to the damage_vs_staggered pool for five seconds. The consumer stat is effectively capped at eight layers; the helper raw admission cap of 31 is separate. At the helper cap, a qualifying zero-add event still refreshes the target effect deadline.",
+      "switch_and_weapon_routes": "The actual 21 Mark bindings and special routes match the formal pages: shovel sticky cases, Devil Claw counter, folded shovel/slap, OgrynMaul and Crusher impact explosions, Powermaul sticky skip_on_hit, Slab special block, Thunderhammer activation versus charged hit, and actual push Attack routes are distinguished. A weapon switch prevents new applications from the unequipped source but does not remove an existing target effect before expiry; later consumption remains subject to stagger/cache conditions.",
+      "examples": "Both named examples were checked against their selected action/profile and normalized damage-pool stages: Thunderhammer Mk II action_left_heavy / thunderhammer_heavy at N=4 to N=8 gives 140 to 180 from D0=100; Ogryn shovel Mk XIX action_light_1 / ogryn_shovel_light_linesman at N=2 to N=4 gives 120 to 140. These are conditional damage-stage calculations, not final HP predictions.",
+      "raw_and_translation": "The paired English and Traditional Chinese RAW templates, tier formatter reconstruction I–IV, and five-column rule comparisons were reviewed. The formal comparison preserves exact source wording, identifies omitted runtime conditions as not covered by the text, and limits explicit discrepancy claims to supported conflicts.",
+      "related_data_and_image": "The exact 9-variant/21-binding UI and reverse associations, catalog links, and scope-pinned native icon 174 receipt were reviewed. Formal and candidate binding partitions agree."
+    },
+    "reviewed_evidence": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-final-content-delta-review.json",
+        "sha256": "34cc6582911dcd522e2cf918ad3e796719c891cb6325c2605016753c5c898b43"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-own-tier-wrapper-target-debuff-material-review.json",
+        "sha256": "225893c0d28b6482214cce4b55cea4ac79254ccf1933ad224be31270db3212a8"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-resume-review.json",
+        "sha256": "0704b2563a1c1b8baeebc445abc9bfe0d272fc0e7bf30343f1a3f3fa978de887"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-review.json",
+        "sha256": "87d78fcb2a89419e785264d618205d9b072d468fd97846e468baf45e86f84407"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-image.json",
+        "sha256": "def767dc51e50505582d724ba0f2666a927fd7c87e86b76c1db7c1c0e44f1b02"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-006.json",
+        "sha256": "5299c5fa4629afe8ac9a696b56bb2b6c81c3e22801e5c9d1c487efe5fed34cc4"
+      }
+    ],
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "skullcrusher",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_174",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_174.png",
+      "attachment": "https://github.com/user-attachments/assets/d1d3d38b-e78c-45b5-ae2e-cb3d99140195",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6010392710",
+      "acquired_date": "2026-10-06",
+      "sha256": "96fbe89c6dc91acf96edc0e52b4178e63ead8a85086aada6a1d55815f6bd0a93",
+      "content_type": "image/png",
+      "size": 6105,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "碎顱者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "root_display_verified": true,
+      "root_visual_result": "Viewed actual public 128x128 PNG; native pale geometric icon matches fixed item.icon receipt.",
+      "display_verified": true
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 28,
+      "tables": 27,
+      "rows": 937,
+      "lists": 110,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 336,
+      "source_files": 68,
+      "bindings": 1140,
+      "variants": 585,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 27,
+      "source_object_cache": {
+        "cache_hits": 68,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 30,
+      "local_references": 1647,
+      "remote_references": 907,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 1,
+      "current_round": 45,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-044-full-scan.json",
+        "sha256": "450f613c0d4d69820d5d12456c02d91e14b2e1b2c6b144aeeb4cee9b2c88e55e",
+        "trigger": "round-044"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 3,
+    "not_started_name_groups": 3,
+    "partial_name_groups": 0,
+    "remaining_variants": 20,
+    "remaining_bindings": 45,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "f0a9b5178bbebb2d2bc1cb297b8985e5f790c76ae1574d48d786dacc8c02291e"
+  },
+  "previous_local_commit": "6fcee95a4650d7060f77de4e0e9b67ddc52d0984",
+  "outside_intersection_review": {
+    "status": "complete",
+    "same_name_candidates": [],
+    "conclusion": "本次 fixed inventory 交集為 9 variants／21 bindings；outside exact-item list is empty."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-content-review-before-raw-metadata-correction.json",
+      "sha256": "3efdc283028ae6528853d24c209a6924372823474fd5e032f12a73c63a32b7bf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-final-content-delta-review.json",
+      "sha256": "34cc6582911dcd522e2cf918ad3e796719c891cb6325c2605016753c5c898b43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-focused-checks.json",
+      "sha256": "836ddce928b0d97222baab2f6bc1e09561f3925d7e7265e9cb1f14a94525c654"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-frozen-source-verification.json",
+      "sha256": "02acf4723a2cb39e97e0aca2f5fd29733358916d44165541dedf3aecd98cbf82"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-own-tier-wrapper-target-debuff-material-review.json",
+      "sha256": "225893c0d28b6482214cce4b55cea4ac79254ccf1933ad224be31270db3212a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-raw-verification.json",
+      "sha256": "a6050d4fbc597eb75b69616b98e2b110157c02ed54aa5ec017c59ba3f657b215"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-resume-review.json",
+      "sha256": "0704b2563a1c1b8baeebc445abc9bfe0d272fc0e7bf30343f1a3f3fa978de887"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-raw-verification.json",
+      "sha256": "0277917c31916bc28df8683e49c1ddcab6b998d0dc46ea793862bf624946f774"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-review.json",
+      "sha256": "87d78fcb2a89419e785264d618205d9b072d468fd97846e468baf45e86f84407"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-config.json",
+    "sha256": "ac8a79ece89eb80a10987b94563d2ac6c9289b71c1619307eda2acef55acd992"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "role": "exact fixed 9 variant / 21 binding inventory"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "role": "fixed MasterItems item restrictions and icon path"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "role": "paired current RAW localization hashes and strings"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "role": "fixed-SHA source reader"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ROOT_EXEC_RECIPES.json",
+      "sha256": "577df78ac21cfa027dcdafba19bad9717d1e1168eedd16a9d47466b8107406e3",
+      "role": "actual preview and validation recipes"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "role": "unchanged document generator"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "role": "unchanged variant and map generator"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "role": "isolated actual preview runner"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "role": "focused source and map checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "role": "focused markdown link checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "role": "GFM checker"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "role": "paired raw localization verifier"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "role": "actual image guard"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/focused_manifest.py",
+      "sha256": "9d209225bd70105f6caf54d73a1cd20ef42694ee8edb7f2e3bd9e7d0a1fd903a",
+      "role": "isolated preview manifest helper"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "role": "fixed common lifecycle/cache source evidence"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-own-tier-wrapper-target-debuff-material-review.json",
+      "sha256": "225893c0d28b6482214cce4b55cea4ac79254ccf1933ad224be31270db3212a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-review.json",
+      "sha256": "87d78fcb2a89419e785264d618205d9b072d468fd97846e468baf45e86f84407"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-ui-raw-verification.json",
+      "sha256": "0277917c31916bc28df8683e49c1ddcab6b998d0dc46ea793862bf624946f774"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-raw-verification.json",
+      "sha256": "a6050d4fbc597eb75b69616b98e2b110157c02ed54aa5ec017c59ba3f657b215"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-image.json",
+      "sha256": "def767dc51e50505582d724ba0f2666a927fd7c87e86b76c1db7c1c0e44f1b02",
+      "role": "verified actual item icon attachment"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/target-hit-debuff-helper-primary-shared-delta-proof.json",
+      "sha256": "0b50d467074970f65c619869991819a6c305183c3e4a3cf4eb063af8d7014142",
+      "role": "shared helper request/add/refresh conditions; applicability limited to this target helper"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/target-hit-debuff-standalone-primary-difference-proof.json",
+      "sha256": "403f2bda5670d1384d0c0bf53027e8407f1eacf10881a9bd68416e0dfb8ef3c7",
+      "role": "standalone target conditional damage stat differs from other on-hit target debuffs"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-source-ranges.json",
+      "sha256": "5c43c90f1b109e59ae23ab02af067a5ea894013ce4a83cd49f1970a63874f28e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-binding-inventory.json",
+      "sha256": "de5e61414a8494602e2c5f89fc49ac4f20cf1e03e89b95bbfff8f38fed2ac0bc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/remaining-tasks.json",
+      "sha256": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0",
+      "original_path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\remaining-tasks.json",
+      "original_sha256": "24eb7ab369874f6ead8bf203db2693d80d4e912bf00551359f3a7ddf36085ab0",
+      "role": "immutable remaining partition bytes captured before preview generation"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/Translation.md",
+      "sha256": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17",
+      "original_path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Referneces\\Translation.md",
+      "original_sha256": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17",
+      "role": "immutable translation reference bytes used by actual preview"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/frozen-inputs/BLESSING_WEAPON_MAP-before-preview.json",
+      "sha256": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "original_path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "original_sha256": "7c0f3ba6a3c1541d9d51afdc223a213648faddb0fe2a330233878e190762d1b8",
+      "role": "immutable shared map capture used as preview baseline"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-006.json",
+      "sha256": "5299c5fa4629afe8ac9a696b56bb2b6c81c3e22801e5c9d1c487efe5fed34cc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "c0eb40d2fc682a47213652be4095dcf49cb6aeaf1ad1f38695096b8b658a2e4e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "c3860d69691fe8b5596acd2cf456e5e4d553f6e6698ec7bcccac2002b710a3c2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "051853e26396a35490d69e2127cee88109be237a6b2bf166f5941bfb5f910f3a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "1e71828f558f2b2c1c1cc09ec68f3a1ba482856a67c2002bedd57a4ef53f6993"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\LOCALIZATION_COMPARISON.md",
+      "sha256": "e5660582b36f8c401cacbf082d81c53b9744d44218a3040c888c6f0f1e986646"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\README.md",
+      "sha256": "19b25dc7d55eaa8ba095e510b558ac0c33d8a686d575b090003503fe51b2458a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\SOURCE_INDEX.md",
+      "sha256": "77d7d85af1da9f1a8ae3661531407cc5fbc24b26a60033dc84bd2c04b9ad86e8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\TIER_VALUES.md",
+      "sha256": "e2a29abde0975336b4caf698ee490083e51f975eb7649d8c0a060736aba6f925"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\WEAPON_COMPATIBILITY.md",
+      "sha256": "595d49305af9407110c1c84d9b83fd41fb02a347b0b3cb49376fe2e2295dc80d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_combataxe_p3_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "61dbd3825f092a5a4539527d038810f9d274a31be9b4cf2529b450b55b5c0134"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_combatsword_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "485358162d43c0dbce26a18db2b1789ff4b4d1366e1ca239c98eeab4a5b1b689"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_ogryn_club_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "0e43c7ead1ab4f3bfa191ed145b7758a028996c8a3cb6d16c0d30b95578530e4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_ogryn_club_p2_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "b6f52588a588d385d7cf646943fe3e6345a0b65b4aca9540dd3266c63f0ba13e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_ogryn_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "0c1c3494e16d0317af1f01fe97e778279b0d8bdcd395b3c7c04867465d233aca"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "75ebb673ec8072422cd796d92e76a86989d73078e872c0aa585e54cba9dc7a9e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_powermaul_2h_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "925a67d72f7c2a507275e6c50b52233ad34b2cbd3cfcc68a2c981b09736e56b5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_powermaul_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "b48c869c624967a8104d764f3bdb0a834c1ccbd4301667df479a9d15179d11e7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\碎顱者\\weapon_trait_bespoke_thunderhammer_2h_p1_staggered_targets_receive_increased_damage_debuff.md",
+      "sha256": "f0268ec12cf40b53fb1a2e0eee298033fc5f7d90faad7075f64f01360bdb77fb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "f4b53022717f81a61c084c79b624a863fa1540e5cc2d6fc1df23dd7633963121"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\「惡魔之爪」劍\\README.md",
+      "sha256": "a473462e14e8190163870cd2f988449358c794c604da7597fbead93636cc2ad9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\作戰大錘&板盾\\README.md",
+      "sha256": "711c05e2a4ecf5b2d2613dea3621f4d943ef63e175365469055d7ea23907b2e6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\動力錘\\README.md",
+      "sha256": "a66da9e7aeac88f6632f0ba9f11a0cefa8e5c7883b275197767b14bf008542e6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\工兵鏟\\README.md",
+      "sha256": "3b27d6bdccd024e64ab4f29db0b151ca72208f3edf3f43b5c5f3fd32acd665ed"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\廁所鏟\\README.md",
+      "sha256": "b806ea2bf1904559cf21f9acb965f878621e8ad08871db344ea4d805e6d31cfb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\惡霸棍棒\\README.md",
+      "sha256": "58db5c2313aba2ef1af8a053063eca11e59c050cb74a9221898464125f60a0c3"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碾壓者\\README.md",
+      "sha256": "980eea7f6953e6eca8765bff378444e9fe0a0fdcdcfb7116ee52f0b9de10fb8f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\雷鎚\\README.md",
+      "sha256": "336d082368e35a618f27ffe761478e07e66ac5eefe7d9088b40794501c0f3de9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\電擊錘\\README.md",
+      "sha256": "3b69469d6d5eee9968b39d05c0233a0de3b9dcb0342a480b8ab257ad9edb2979"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\Referneces\\Translation.md",
+      "sha256": "f9b5e0f98387cef23c37838fff59831fa405899bdf6e03ad4892612dbc728a17"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-raw-verification.json",
+      "sha256": "a6050d4fbc597eb75b69616b98e2b110157c02ed54aa5ec017c59ba3f657b215"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\skullcrusher-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "191fbc00f6678b86d5e0205b869021ee75b3dc1adb850b41cf3bd0f75b932bc7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/blaze-away-alternative-formal-nonauthor-review.json",
+      "sha256": "3f4287cef0a672587752627c1aff4878b559fee573cb7d91fc5d1a026c08cfc9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-001.json",
+      "sha256": "2bb0e55ea44b1fa6b0a10bbba2c097e996c6d964344fa8d5f0245e8fcff0f971"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-002.json",
+      "sha256": "d64f130812d72b92c84532ce1162635dc9c8ba80b09501a044b36aab6ef42436"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-003.json",
+      "sha256": "674e14ae95733246a6c9217f8ded5502d26dc0ca37634032b4ad9d6c0f7c7f7c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-004.json",
+      "sha256": "ecbf6844b81fb12a171092ae4c6eb1adb6824dcf977704b00070e5ec69addc1a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-actual-preview-receipt-005.json",
+      "sha256": "0679c4653869003f4b9e1d5ebfb051b632f67731bd806dd87d7c537793040290"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-config.json",
+      "sha256": "6f837718179207847997f6bbe8eedbeb93bb820dfa4ad13e49859a6ac00234eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-draft.md",
+      "sha256": "5cf45199c20ae3d3ad59393f79a3c3f3c00721856fd2792e56a35a8ae700a6c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-group/skullcrusher-agent-evidence.json",
+      "sha256": "378fcf8250683ec81a95269cdafec978d0fb3571119e47724589d989d86ee382"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-config.json",
+      "sha256": "6f837718179207847997f6bbe8eedbeb93bb820dfa4ad13e49859a6ac00234eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-evidence.json",
+      "sha256": "378fcf8250683ec81a95269cdafec978d0fb3571119e47724589d989d86ee382"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-agent-draft.md",
+      "sha256": "5cf45199c20ae3d3ad59393f79a3c3f3c00721856fd2792e56a35a8ae700a6c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-content-review-before-raw-metadata-correction.json",
+      "sha256": "3efdc283028ae6528853d24c209a6924372823474fd5e032f12a73c63a32b7bf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-final-content-delta-review.json",
+      "sha256": "34cc6582911dcd522e2cf918ad3e796719c891cb6325c2605016753c5c898b43"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-primary-frozen-source-verification.json",
+      "sha256": "02acf4723a2cb39e97e0aca2f5fd29733358916d44165541dedf3aecd98cbf82"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/skullcrusher-formal-peer-scope.json",
+    "sha256": "35698686298e4bc5861dd90277e7915d966867ce081f6777bd9ef497e0f5e0af",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/gets_hot",
+    "reviewer_agent": "/root/bash",
+    "non_author_peer": true
+  }
+}

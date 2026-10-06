@@ -537,3 +537,5 @@
 - 第44輪三項已Commit後完整掃描通過：hammerblow (`bfbc9b77af15a903bc197f6124a46379dd470e4a`)、decapitator (`1bbd730ef5ac47d6bbf97e060a633b07a7cdfffc`)、uncanny-strike (`f733c326e074d967628d589a67c9243d69d68563`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-044-full-scan.json`／SHA-256 `450f613c0d4d69820d5d12456c02d91e14b2e1b2c6b144aeeb4cee9b2c88e55e`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [正中眉心](2026-10-03-BETWEEN-THE-EYES_ACCEPTANCE.json)：新增6變體、14型號關聯；共6變體、14關聯。
+
+- [碎顱者](2026-10-03-SKULLCRUSHER_ACCEPTANCE.json)：新增9變體、21型號關聯；共9變體、21關聯。
