@@ -513,6 +513,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill`，hash `5ea2e09a`；英文／繁中RAW配對確認。
 - Trickshooter - 狡猾射手
 - Hand-Cannon - 手銃
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rending_on_crit`，hash `1391c6e5`；英文／繁中RAW配對確認。
 - Shattering Impact - 破碎衝擊
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_projectile_hit`，hash `36f31112`；英文／繁中RAW配對確認。
 - Everlasting Flame - 永燃烈焰

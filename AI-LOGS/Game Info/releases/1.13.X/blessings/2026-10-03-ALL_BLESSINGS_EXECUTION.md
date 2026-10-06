@@ -483,3 +483,5 @@
 - [無情背刺](2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
 
 - [利刃攻勢](2026-10-03-BLADED-MOMENTUM_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- [手銃](2026-10-03-HAND-CANNON_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。

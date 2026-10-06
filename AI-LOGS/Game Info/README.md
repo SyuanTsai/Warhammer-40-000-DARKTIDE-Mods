@@ -362,3 +362,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [無情背刺全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json)
 
 - [利刃攻勢全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BLADED-MOMENTUM_ACCEPTANCE.json)
+
+- [手銃全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-HAND-CANNON_ACCEPTANCE.json)
