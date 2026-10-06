@@ -1925,6 +1925,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
       "effect": "有效近戰背刺命中時，依 I–IV 級加入 +70%／+80%／+90%／+100% 撕裂加算；撕裂先作用於護甲傷害階段，並非固定比例的最終傷害。"
+    },
+    {
+      "id": "bladed-momentum",
+      "name_zh_tw": "利刃攻勢",
+      "name_en": "Bladed Momentum",
+      "name_key": "loc_trait_bespoke_stacking_rending_on_cleave",
+      "description_key": "loc_trait_bespoke_stacking_melee_rending_on_cleave_desc",
+      "name_hash": "2112d795",
+      "description_hash": "d4f876b6",
+      "page": "entries/利刃攻勢/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e",
+      "effect": "同一次近戰揮掃在第2個或之後的目標命中事件通過 item／持用檢查時，每次觸發增加1層近戰撕裂倍率；最多4層，持續時間依等級。"
     }
   ],
   "weapons": [
@@ -29692,6 +29705,96 @@
       "icon": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_197",
       "effect": "短刀 臨時拼湊 型號1／型號3：只有符合近戰有效背刺幾何條件且持用此武器時，套用 I–IV 級 +70%／+80%／+90%／+100% 背刺撕裂加算。純推擊不符合；特殊投擲是遠程攻擊，不符合近戰背刺條件。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits",
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/利刃攻勢/weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_rending_multiplier_per_effective_layer": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "child_duration_seconds_by_tier": {
+          "I": 2.5,
+          "II": 3,
+          "III": 3.5,
+          "IV": 4
+        },
+        "required_target_number": 2,
+        "effective_max_layers": 4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 326,
+        "end_line": 401
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_stacking_melee_rending_on_cleave_desc",
+      "description_hash": "d4f876b6",
+      "icon": "https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_179",
+      "effect": "重劍 圖妥斯基 Mk VI（Heavy Sword Turtolsky Mk VI）、重劍 圖妥斯基 Mk VII（Heavy Sword Turtolsky Mk VII）、重劍 圖妥斯基 Mk IX（Heavy Sword Turtolsky Mk IX）：每層近戰撕裂倍率 I–IV 為 +5%／+6%／+7%／+8%；第2個或之後的近戰揮掃命中每次加1層，最多4層。",
+      "buff_template_id": "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits",
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "page": "entries/利刃攻勢/weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "melee_rending_multiplier_per_effective_layer": {
+          "I": 0.04,
+          "II": 0.05,
+          "III": 0.06,
+          "IV": 0.07
+        },
+        "child_duration_seconds_by_tier": {
+          "I": 2.5,
+          "II": 3,
+          "III": 3.5,
+          "IV": 4
+        },
+        "required_target_number": 2,
+        "effective_max_layers": 4
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_transonic_sword_transonic_knife_p1.lua",
+        "start_line": 388,
+        "end_line": 463
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_transonic_sword_transonic_knife_p1_buff_templates.lua",
+        "start_line": 51,
+        "end_line": 52
+      },
+      "description_key": "loc_trait_bespoke_stacking_melee_rending_on_cleave_desc",
+      "description_hash": "d4f876b6",
+      "icon": "https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_179",
+      "effect": "穿音速雙刀 布蘭克斯 Mk XI（Paired Transonic Blades Branx Mk XI）：每層近戰撕裂倍率 I–IV 為 +4%／+5%／+6%／+7%；第2個或之後的近戰揮掃命中每次加1層，最多4層。",
+      "buff_template_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits_parent"
     }
   ],
   "bindings": [
@@ -42881,6 +42984,62 @@
         "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
         "import_line": 14,
         "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/stacking_rending_on_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/stacking_rending_on_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_rending_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/stacking_rending_on_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "bladed-momentum",
+      "weapon_id": "transonic_sword_transonic_knife_p1",
+      "mark_id": "transonic_sword_transonic_knife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_transonic_sword_transonic_knife_p1_rending_on_multiple_hits",
+      "trait_item": "content/items/traits/bespoke_transonic_sword_transonic_knife_p1/stacking_rending_on_cleave",
+      "trait_category": "bespoke_transonic_sword_transonic_knife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 3179
       }
     }
   ]

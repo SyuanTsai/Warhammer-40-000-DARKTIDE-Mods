@@ -481,3 +481,5 @@
 - 第37輪三項已Commit後完整掃描通過：superiority (`174edeca7b0fe892ded8a53f8cdecd57a875c019`)、all-or-nothing (`a3b0a8396367701f3c3c3c22c2e533b40e517cc3`)、slow-and-steady (`28200588f4084f9fe9f041bd67b772a1df907082`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-037-full-scan.json`／SHA-256 `d21dedeee72d1b2b4eadecf4c50fef9a8390ce5ddc7691f6eb82bf617a92712c`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [無情背刺](2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- [利刃攻勢](2026-10-03-BLADED-MOMENTUM_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

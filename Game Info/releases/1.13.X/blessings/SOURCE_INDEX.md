@@ -148,3 +148,4 @@
 | [優勢（通用力量）](entries/優勢（通用力量）/README.md) | [來源索引](entries/優勢（通用力量）/SOURCE_INDEX.md) |
 | [緩慢而確實](entries/緩慢而確實/README.md) | [來源索引](entries/緩慢而確實/SOURCE_INDEX.md) |
 | [無情背刺](entries/無情背刺/README.md) | [來源索引](entries/無情背刺/SOURCE_INDEX.md) |
+| [利刃攻勢](entries/利刃攻勢/README.md) | [來源索引](entries/利刃攻勢/SOURCE_INDEX.md) |

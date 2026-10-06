@@ -150,5 +150,6 @@
 | <img src="https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9" width="32" height="32" alt="優勢（通用力量）祝福圖示"> [優勢（通用力量）](entries/優勢（通用力量）/README.md)<br>- Superiority<br>[完整說明](entries/優勢（通用力量）/README.md) | <ul><li>精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c" width="32" height="32" alt="緩慢而確實祝福圖示"> [緩慢而確實](entries/緩慢而確實/README.md)<br>- Slow and Steady<br>[完整說明](entries/緩慢而確實/README.md) | <ul><li>蓄能門檻累積後，同物品的合格命中依階級與最多三次已處理的蓄能事件，要求回復最大韌性比例；實際回復封頂於缺失韌性。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c" width="32" height="32" alt="無情背刺祝福圖示"> [無情背刺](entries/無情背刺/README.md)<br>- Ruthless Backstab<br>[完整說明](entries/無情背刺/README.md) | <ul><li>有效近戰背刺命中時，依 I–IV 級加入 +70%／+80%／+90%／+100% 撕裂加算；撕裂先作用於護甲傷害階段，並非固定比例的最終傷害。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/8ccd5628-1554-41a6-9e87-be2b49037a3e" width="32" height="32" alt="利刃攻勢祝福圖示"> [利刃攻勢](entries/利刃攻勢/README.md)<br>- Bladed Momentum<br>[完整說明](entries/利刃攻勢/README.md) | <ul><li>同一次近戰揮掃在第2個或之後的目標命中事件通過 item／持用檢查時，每次觸發增加1層近戰撕裂倍率；最多4層，持續時間依等級。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
