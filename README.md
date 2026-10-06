@@ -1092,6 +1092,12 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
 - 手動維護最後下載日期：2026-10-05
 
+### [Uptime 2 - Buff Data and Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/898)
+    觀察天賦的運作狀況
+- MOD 網站最後更新日期：Last updated 30 December 2025, 10:00PM
+- MOD 版本：2.15
+- MOD 檔案名稱：uptime-573-1-3-6-1767103234
+- 手動維護最後下載日期：2026-01-01
 
 # 移除的MOD
 
