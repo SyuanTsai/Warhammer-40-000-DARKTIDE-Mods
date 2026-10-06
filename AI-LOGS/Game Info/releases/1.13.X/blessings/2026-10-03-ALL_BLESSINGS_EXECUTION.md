@@ -517,3 +517,7 @@
 - [斷肢者](2026-10-03-LIMBSPLITTER_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。
 
 - [持續打擊](2026-10-03-RELENTLESS-STRIKES_ACCEPTANCE.json)：新增4變體、8型號關聯；共4變體、8關聯。
+
+- 第42輪三項已Commit後完整掃描通過：cavalcade (`701dbd33af6c222a9d57d5db6e7b741edf3ce736`)、limbsplitter (`c00baa8bc12b2a5491980bb4bbecf75c17b8dd6e`)、relentless-strikes (`a7e06d0e047e799947a18f9fe18b8ea9b773ea0a`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-042-full-scan.json`／SHA-256 `4777d804e3214753526e714881fe6b8a8955dbf03168a68f50b7be590400ddcb`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [全孔射擊](2026-10-03-FULL-BORE_ACCEPTANCE.json)：新增6變體、10型號關聯；共6變體、10關聯。

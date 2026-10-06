@@ -2117,6 +2117,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/b7eea9d3-8f5f-4ead-bc52-651a5a42f7e3",
       "effect": "手持符合綁定的武器時，對同一目標的後續合格命中逐次建立近戰威力層；每層依 I–IV 級增加 4%／6%／8%／10%，最多五層、共用 2 秒期限。"
+    },
+    {
+      "id": "full-bore",
+      "name_zh_tw": "全孔射擊",
+      "name_en": "Full Bore",
+      "name_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all",
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "name_hash": "adf6c70b",
+      "description_hash": "d88ada0f",
+      "page": "entries/全孔射擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "effect": "同一發射擊的所有彈丸命中同一目標，且事件檢查目標為Minion 分類的敵人後，來源持用武器獲得5秒通用威力修正；五個家族I–IV為14／16／18／20%，反衝者洛倫茲Mk V為18／22／26／30%。多目標穿透時兩項目標檢查分開進行。"
     }
   ],
   "weapons": [
@@ -32350,6 +32363,234 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_183",
       "effect": "外科醫師型號4的普通及重擊掃掠可依同目標命中追蹤增加近戰威力；延遲黏附撕裂仍用當前近戰威力，但不觸發或刷新本祝福。",
       "buff_template_id": "weapon_trait_bespoke_saw_p1_consecutive_melee_hits_same_target_increases_melee_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.18,
+          0.22,
+          0.26,
+          0.3
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 335,
+        "end_line": 384
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 43,
+        "end_line": 43
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "反衝者 洛倫茲 Mk V：I–IV 通用威力修正為 18%／22%／26%／30%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p1",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p1.lua",
+        "start_line": 220,
+        "end_line": 269
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "戰鬥霰彈槍 紮羅娜 Mk VI、阿格里皮娜 Mk VII、奧克塔蘭 Mk IX：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p2",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p2.lua",
+        "start_line": 298,
+        "end_line": 347
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p2_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 24
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "雙管霰彈槍 十字星 Mk XI、克魯克 Mk IV：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p3",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p3.lua",
+        "start_line": 220,
+        "end_line": 269
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p3_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "獵人霰彈槍 奧克塔蘭 Mk III：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p4",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotgun_p4.lua",
+        "start_line": 220,
+        "end_line": 269
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotgun_p4_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "滅絕者霰彈槍 鐵腕 Mk III、Mk VIII：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "blessing_id": "full-bore",
+      "weapon_id": "shotpistol_shield_p1",
+      "page": "entries/全孔射擊/weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_by_tier": [
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "active_duration_seconds": 5,
+        "max_active_stack": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_shotpistol_shield_p1.lua",
+        "start_line": 738,
+        "end_line": 787
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_shotpistol_shield_p1_buff_templates.lua",
+        "start_line": 36,
+        "end_line": 36
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all_desc",
+      "description_hash": "d88ada0f",
+      "icon": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "effect": "衝覆者霰彈手槍和防暴盾牌 審判 Mk IV：I–IV 通用威力修正為 14%／16%／18%／20%，持續5秒。"
     }
   ],
   "bindings": [
@@ -46981,6 +47222,146 @@
         "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
         "import_line": 14,
         "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 952
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 964
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p1",
+      "mark_id": "shotgun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p1/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p1_m3.lua",
+        "import_line": 14,
+        "append_line": 966
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m1.lua",
+        "import_line": 17,
+        "append_line": 1112
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p2",
+      "mark_id": "shotgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p2/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p2_m3.lua",
+        "import_line": 17,
+        "append_line": 1105
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p3",
+      "mark_id": "shotgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p3/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p3_m1.lua",
+        "import_line": 14,
+        "append_line": 988
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m1",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m1.lua",
+        "import_line": 15,
+        "append_line": 1078
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotgun_p4",
+      "mark_id": "shotgun_p4_m2",
+      "variant_id": "weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotgun_p4/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotgun_p4",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotguns/shotgun_p4_m2.lua",
+        "import_line": 15,
+        "append_line": 1066
+      }
+    },
+    {
+      "blessing_id": "full-bore",
+      "weapon_id": "shotpistol_shield_p1",
+      "mark_id": "shotpistol_shield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all",
+      "trait_item": "content/items/traits/bespoke_shotpistol_shield_p1/power_bonus_on_hitting_single_enemy_with_all",
+      "trait_category": "bespoke_shotpistol_shield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/shotpistol_shield/shotpistol_shield_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1535
       }
     }
   ]

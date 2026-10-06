@@ -518,6 +518,7 @@
 - Scattershot - 散彈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_hitting_multiple_with_one_shot`，hash `83faa1f6`；英文／繁中RAW配對確認。
 - Full Bore - 全孔射擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_hitting_single_enemy_with_all`，hash `adf6c70b`；英文／繁中RAW配對確認。
 - Both Barrels - 雙管齊發
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill`，hash `5ea2e09a`；英文／繁中RAW配對確認。
 - Trickshooter - 狡猾射手

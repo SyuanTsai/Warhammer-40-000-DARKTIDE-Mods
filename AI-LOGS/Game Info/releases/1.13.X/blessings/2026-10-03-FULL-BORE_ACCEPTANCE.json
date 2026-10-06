@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-06",
+  "blessing": "full-bore",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/全孔射擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all",
+    "weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all",
+    "weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all",
+    "weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all",
+    "weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all",
+    "weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all"
+  ],
+  "added_binding_count": 10,
+  "total_variants": 6,
+  "total_bindings": 10,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "full-bore",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true,
+    "scope_sha256": "8869da0d950acff4589705b027f626e28b44c3466633c1f59c27129b5df4c1d7",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-config.json": "99b4777ca66a4832cc39e4084c99d27a281b5ad3f634e90a72f77f411061e637",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-draft.md": "2b7c0e827753966abfaa9b43b6d7d94f9b0aacbb7053d572118ca8c5af30d28f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-evidence.json": "7f4bbf60d3d6be8c44581d6c2aefb65ee670ee7b7892fb5dc42232ccbb770d76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-config.json": "3400a191bac90a855c742580d68093e8b54d98315acbd28cc33b9f21b4209f14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-extension-draft.json": "c8a7f84ba1b58e9bd4498a81373cf9c56300af0ec3150cc52f08f2d4bf50dac8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/build_sources.py": "9cd474a17d72aeea06ab583e34796bcd8dd7f23d185d91f4162db1569b2bd361",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-001.json": "15c4ae22759852811e45a59ac609945cbc6ea0f023e62b28d2d9cc30d0a4b35d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-003.json": "d3974ce868c127536c61277b52e70f638a7e5d952f6cf81bcbdfe91e92b6dbd2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-004.json": "d8c1ce8aba5a2eae00ee457be2b782dff8d550aa0d249312f4fce15103afa896",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-005.json": "9d6df2a0f272f8b7364d5095aa60a06db2d82ec9c34eac2af73911b11675d937",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-config.json": "99b4777ca66a4832cc39e4084c99d27a281b5ad3f634e90a72f77f411061e637",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-draft.md": "2b7c0e827753966abfaa9b43b6d7d94f9b0aacbb7053d572118ca8c5af30d28f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-evidence.json": "7f4bbf60d3d6be8c44581d6c2aefb65ee670ee7b7892fb5dc42232ccbb770d76",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-attack-coverage.json": "3646ca08a50f64b9161a87b9b440787a78a39599ebb6be579402d363e422e48e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-burning-dot-delta-review.json": "4f56ff61a6fe2ce267e283342c1a20962d936a60289971c8761a6de09a998e41",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-input-snapshot.json": "432aaf1ca601e54d34f8bdaa445724f96d3b10151b176e229eafd8c1c56039f0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-source-blocks.json": "d88e1fa86f89dfc15169a52f6c171fab0a96e46e6312df4ef8b5f3e4936e40cc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/BLESSING_WEAPON_MAP.snapshot.json": "273b19c7240e756c55c9bd32754d3ec36fdf4168c04f6e2fd7029035471fdd5e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/image.json": "954fd4540a42760a31598c123fef8df9476381e27bde3818db2b506d139258e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-own-tier-wrapper-all-pellets-payload-material-review.json": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-push-impact-proc-held-gate-content-delta-review.json": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-raw-verification.json": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-ui-raw-verification.json": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-ui-review.json": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/remaining-tasks.snapshot.json": "050dbaa4e989cc293a617f08a97a3eb9b5bb811fda40f83adb730c1696d5d83d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-image.json": "954fd4540a42760a31598c123fef8df9476381e27bde3818db2b506d139258e4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-final-content-delta-review.json": "853e0f4b5185cfe55d4a87463441922890f424f21765d33bb9f46814516d5ed6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-focused-checks.json": "699209b23e89886cfb6784b49a06a1fb2663ceb5772fff62ff9c487edd9dbdd6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-frozen-source-verification.json": "3ad1024f286c2bedec5f99d2ca75ded66046176ee7979fc7f6e722889eceeff4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-own-tier-wrapper-all-pellets-payload-material-review.json": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-push-impact-proc-held-gate-content-delta-review.json": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-raw-verification.json": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-resume-review.json": "0a82e47ca8bb4555130bd4262f1a07fcf6f08ea125cd2a632c1521df000f0a55",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-raw-verification.json": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-review.json": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-raw-verification.json": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3a01fe4b1111fda5bc98924a28ce3f3bc63e89cd1e112076db32814e5ace9fb4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/DAMAGE_PERCENTAGE_REVIEW.md": "0dd22b114b38108ca694936294ad179ef5b6d4aca607a7f8f09d16e8aba7f81c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/LOCALIZATION_COMPARISON.md": "09e5321980584b071567a494ea875aed9f5441020b4e2981488f33dbe9708ecc",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/README.md": "d28b367f83f885b4c4ed13e249c07cd6d401eb55b8cb24937d32197a166f32cb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/SOURCE_INDEX.md": "3db05f95f1505f997c3de48e97d5c80dfe9f007f327eebd1d16df50a3a927bf4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/TIER_VALUES.md": "5e50a54661230d5e2f4493a9f0b856b70919e2069a0606eb201d44748ee62a92",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/WEAPON_COMPATIBILITY.md": "30b2467bc6b817eb5207d55cafaa827b62e0e41883861ebc5ceb4385bc871165",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all.md": "1c83216610b9b6f5d9cfc2360246a7f2de8431e0cbe13bd1618898e06474df77",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all.md": "b60f04d877e1154064b29778db2b897d520cddc4b83255989aa52b4d93453989",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all.md": "05be13c0a67aaed4f0876e43622e270db75e90d6eb8d01b8beaf817ddc2613ee",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all.md": "a3ece590d559a8eac401287c38c8c10911797a0fd9e196ebaa1b0f32aa928242",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all.md": "15cedcf84e3cf72063cdfcea5bc1501721cd72d853a6db1dd743408a0bc26bad",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all.md": "301411e0670e444c737a21687a7cce58d1109ad1505ff53270e1e547474e4ea9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/ranged/README.md": "2f52bef6589c30c0ba7ac7600053c64f081d75d15f2b7558ce9bd7cc5944acc8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "8350142b3079ff7c54d065af7af12951d11c921ff160123eeb76166ef581ddb2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3f2124e502c01f6d2609bd770972f54517e42d4b45dc59c224b4e277fb23e27b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "c73bae67daa9bc2f1d6acff6748aef6a87d92204d76c00fa78069bdeb2c862bf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "26c6bb485fc99d515e53050ab25d73ea913d5d103ddb8ed676503f6cdd090e1e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "a3feefcb4df4c5eb4ceb70088994afe308cd2f8e5df207606201bfc2a4a46cf1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "822fd8150a87eff001313bf2a69f0bfebafd1cfc323338762042879cc72380d1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "cc049c3db6dfd45e0e8a93b9db451480ead05ff3acf610e76db45c802606acec",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "23cff66ae4f241c9ac4dd2f969f4335e04d8cd3ec035f3be86edce0edbc9410e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/own-association-snapshot.json": "77d99a85ca0c2c4aa6b6fb60b17456cb3703b530b617bb5392aace35b3300a42",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/actual-preview-005/Referneces/Translation.md": "4ebe947705c381898ac212d0a7ff65cdf7332b5b48469dfffd86f38749bb8811",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "3a01fe4b1111fda5bc98924a28ce3f3bc63e89cd1e112076db32814e5ace9fb4",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/DAMAGE_PERCENTAGE_REVIEW.md": "0dd22b114b38108ca694936294ad179ef5b6d4aca607a7f8f09d16e8aba7f81c",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/LOCALIZATION_COMPARISON.md": "09e5321980584b071567a494ea875aed9f5441020b4e2981488f33dbe9708ecc",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/README.md": "1400ac16709bbd729a2510be20b035d91d4510f7288276a6c4e6971a9a3db894",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/SOURCE_INDEX.md": "3db05f95f1505f997c3de48e97d5c80dfe9f007f327eebd1d16df50a3a927bf4",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/TIER_VALUES.md": "5e50a54661230d5e2f4493a9f0b856b70919e2069a0606eb201d44748ee62a92",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/WEAPON_COMPATIBILITY.md": "30b2467bc6b817eb5207d55cafaa827b62e0e41883861ebc5ceb4385bc871165",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all.md": "1c83216610b9b6f5d9cfc2360246a7f2de8431e0cbe13bd1618898e06474df77",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all.md": "b60f04d877e1154064b29778db2b897d520cddc4b83255989aa52b4d93453989",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all.md": "05be13c0a67aaed4f0876e43622e270db75e90d6eb8d01b8beaf817ddc2613ee",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all.md": "a3ece590d559a8eac401287c38c8c10911797a0fd9e196ebaa1b0f32aa928242",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all.md": "15cedcf84e3cf72063cdfcea5bc1501721cd72d853a6db1dd743408a0bc26bad",
+      "Game Info/releases/1.13.X/blessings/entries/全孔射擊/weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all.md": "301411e0670e444c737a21687a7cce58d1109ad1505ff53270e1e547474e4ea9",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "2f52bef6589c30c0ba7ac7600053c64f081d75d15f2b7558ce9bd7cc5944acc8",
+      "Game Info/releases/1.13.X/blessings/README.md": "8350142b3079ff7c54d065af7af12951d11c921ff160123eeb76166ef581ddb2",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "3f2124e502c01f6d2609bd770972f54517e42d4b45dc59c224b4e277fb23e27b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/反衝者/README.md": "c73bae67daa9bc2f1d6acff6748aef6a87d92204d76c00fa78069bdeb2c862bf",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/戰鬥霰彈槍/README.md": "26c6bb485fc99d515e53050ab25d73ea913d5d103ddb8ed676503f6cdd090e1e",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/滅絕者霰彈槍/README.md": "a3feefcb4df4c5eb4ceb70088994afe308cd2f8e5df207606201bfc2a4a46cf1",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/獵人霰彈槍/README.md": "822fd8150a87eff001313bf2a69f0bfebafd1cfc323338762042879cc72380d1",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/衝覆者霰彈手槍和防暴盾牌/README.md": "cc049c3db6dfd45e0e8a93b9db451480ead05ff3acf610e76db45c802606acec",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙管霰彈槍/README.md": "23cff66ae4f241c9ac4dd2f969f4335e04d8cd3ec035f3be86edce0edbc9410e",
+      "Referneces/Translation.md": "4ebe947705c381898ac212d0a7ff65cdf7332b5b48469dfffd86f38749bb8811"
+    },
+    "scope_verification": {
+      "files": 97,
+      "hash_matches": 97,
+      "missing": 0,
+      "mismatches": 0,
+      "windows_extended_path_used_for_long_files": true
+    },
+    "reviewed_artifacts": {
+      "author_config_sha256": "99b4777ca66a4832cc39e4084c99d27a281b5ad3f634e90a72f77f411061e637",
+      "author_draft_sha256": "2b7c0e827753966abfaa9b43b6d7d94f9b0aacbb7053d572118ca8c5af30d28f",
+      "author_evidence_sha256": "7f4bbf60d3d6be8c44581d6c2aefb65ee670ee7b7892fb5dc42232ccbb770d76",
+      "author_preview_005_sha256": "9d6df2a0f272f8b7364d5095aa60a06db2d82ec9c34eac2af73911b11675d937",
+      "canonical_formal_config_sha256": "3400a191bac90a855c742580d68093e8b54d98315acbd28cc33b9f21b4209f14",
+      "primary_final_content_delta_sha256": "853e0f4b5185cfe55d4a87463441922890f424f21765d33bb9f46814516d5ed6",
+      "own_tier_wrapper_proof_sha256": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6",
+      "push_impact_proc_gate_proof_sha256": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492",
+      "burning_dot_proof_sha256": "4f56ff61a6fe2ce267e283342c1a20962d936a60289971c8761a6de09a998e41",
+      "ui_review_sha256": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5",
+      "ui_raw_sha256": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442",
+      "raw_sha256": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94",
+      "image_sha256": "954fd4540a42760a31598c123fef8df9476381e27bde3818db2b506d139258e4"
+    },
+    "content_review": {
+      "variants": 6,
+      "actual_bindings": 10,
+      "own_formal_pages_checked": 12,
+      "findings": [
+        "Six actual trait variants and ten bound marks agree across the frozen UI review, author config, candidate association, and formal compatibility pages. RAW name and description are paired by matching keys, locale 0/16, hashes, and unchanged English source text; tier descriptions agree with each wrapper formatter.",
+        "The wrappers use the actual six own tier rows and a one-stack, five-second ProcBuff. The trigger is one completed selected pellet shot, not per pellet; the aggregate all-pellets Boolean and the separately supplied attacked_unit/minion check can diverge for multi-target penetration. Single-target examples state their alignment premise.",
+        "Both double-shot P2 modes fire a 32-pellet shell through one shoot_pellets action and one aggregate event after the selected shot, not one event per barrel. Load/toggle/flashlight actions do not themselves count as a completed shot; actual follow-up shots use the verified route.",
+        "The direct pellet damage resolves before the on_shoot proc is queued, so the triggering shot does not retroactively receive the new bonus. The held condition controls the contribution after cache update; the five-second timer continues through weapon switching and true source-item removal ends the blessing.",
+        "For bound shotgun_p1_m3 only, the burning special applies flamer_assault after pellet hits; later 0.5-second ticks use the owner/source weapon and live tick-time stats. This is conditional on Full Bore already being processed, the attribute cache updated, and the source weapon still held; it is not a firing-time power snapshot.",
+        "For shotpistol_shield_p1_m1, pure shield push is not the shoot_pellets trigger. Its generic power can feed impact/stagger calculation while the push profile has zero health damage; the fixed 20 only applies to the documented shield reaction branch and is not claimed as every final stagger result.",
+        "The original icon is actual item.icon weapon_trait_132 and matches the attached/publicly verified 128px receipt; no image substitution is present."
+      ],
+      "formal_vs_preview": {
+        "preview_passed": true,
+        "preview_actual_own_formal_pages_checked": 12,
+        "generator_exit_code": 0,
+        "source_ranges_verified": 142,
+        "source_files": 51,
+        "focused_links_new_errors": 0,
+        "gfm_files": 22,
+        "gfm_tables": 22,
+        "gfm_rows": 646,
+        "gfm_lists": 96,
+        "partition_exact": true,
+        "candidate_formal_markdown_pairs_checked": true,
+        "only_intentional_delta": {
+          "path": "Game Info/releases/1.13.X/blessings/entries/全孔射擊/README.md",
+          "field": "player",
+          "removed": "；不把未逐一確認的爆炸都預設為同一結算次序",
+          "reason": "This was an internal research-process caveat, not player guidance; removing it leaves the qualified bound P1 M3 burning-tick explanation and all attack/mode coverage intact."
+        },
+        "all_other_scoped_markdown_pairs_byte_identical": true
+      }
+    },
+    "formal_peer_pending_commit": true,
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "full-bore",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_132",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_132.png",
+      "attachment": "https://github.com/user-attachments/assets/d22204c8-4185-4932-b40f-f4986ea47531",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6009183937",
+      "acquired_date": "2026-10-06",
+      "sha256": "40c2c8f36dd76c36869962724ca80388e10c44cf372b413eb54f31d087485d79",
+      "content_type": "image/png",
+      "size": 6377,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "全孔射擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed exact publicly downloaded item.icon132 original128PNG; original pale tile preserved; no replacement or invented pictogram."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 23,
+      "tables": 22,
+      "rows": 646,
+      "lists": 98,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 142,
+      "source_files": 51,
+      "bindings": 1055,
+      "variants": 543,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 21,
+      "source_object_cache": {
+        "cache_hits": 51,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 24,
+      "local_references": 1479,
+      "remote_references": 618,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 43,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-042-full-scan.json",
+        "sha256": "4777d804e3214753526e714881fe6b8a8955dbf03168a68f50b7be590400ddcb",
+        "trigger": "round-042"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 10,
+    "not_started_name_groups": 10,
+    "partial_name_groups": 0,
+    "remaining_variants": 62,
+    "remaining_bindings": 130,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "a66becd2c914a2a941435ada02d73c72e130bdba12adda679221ff41b83c0516"
+  },
+  "previous_local_commit": "a7e06d0e047e799947a18f9fe18b8ea9b773ea0a",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "boundary": "Only the exact 6 variants and 10 inventory bindings are in scope; no unbound item or same-name item inferred."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-final-content-delta-review.json",
+      "sha256": "853e0f4b5185cfe55d4a87463441922890f424f21765d33bb9f46814516d5ed6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-focused-checks.json",
+      "sha256": "699209b23e89886cfb6784b49a06a1fb2663ceb5772fff62ff9c487edd9dbdd6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-frozen-source-verification.json",
+      "sha256": "3ad1024f286c2bedec5f99d2ca75ded66046176ee7979fc7f6e722889eceeff4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-own-tier-wrapper-all-pellets-payload-material-review.json",
+      "sha256": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-push-impact-proc-held-gate-content-delta-review.json",
+      "sha256": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-raw-verification.json",
+      "sha256": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-resume-review.json",
+      "sha256": "0a82e47ca8bb4555130bd4262f1a07fcf6f08ea125cd2a632c1521df000f0a55"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-raw-verification.json",
+      "sha256": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-review.json",
+      "sha256": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-config.json",
+    "sha256": "3400a191bac90a855c742580d68093e8b54d98315acbd28cc33b9f21b4209f14"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/remaining-tasks.snapshot.json",
+      "sha256": "050dbaa4e989cc293a617f08a97a3eb9b5bb811fda40f83adb730c1696d5d83d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/BLESSING_WEAPON_MAP.snapshot.json",
+      "sha256": "273b19c7240e756c55c9bd32754d3ec36fdf4168c04f6e2fd7029035471fdd5e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-own-tier-wrapper-all-pellets-payload-material-review.json",
+      "sha256": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-ui-review.json",
+      "sha256": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-ui-raw-verification.json",
+      "sha256": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-raw-verification.json",
+      "sha256": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/image.json",
+      "sha256": "954fd4540a42760a31598c123fef8df9476381e27bde3818db2b506d139258e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-input-snapshot.json",
+      "sha256": "432aaf1ca601e54d34f8bdaa445724f96d3b10151b176e229eafd8c1c56039f0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-source-blocks.json",
+      "sha256": "d88e1fa86f89dfc15169a52f6c171fab0a96e46e6312df4ef8b5f3e4936e40cc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-attack-coverage.json",
+      "sha256": "3646ca08a50f64b9161a87b9b440787a78a39599ebb6be579402d363e422e48e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/build_sources.py",
+      "sha256": "9cd474a17d72aeea06ab583e34796bcd8dd7f23d185d91f4162db1569b2bd361"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "d0a7c6c5ef175cad7d7c491de172e47f6b369afcb64fe27d9fe0c29196a3b5cb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "adf2a830159ae65c0eab918e07ea92131a9e8434ff69d51a98004afe8b8afff8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "861d4e186056f9e9bb72acca6554c3abc84fb468704893fa4ae35a26bce05e92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "1dd1cc209e5bddd899b54f2b4ef28fbf0522a47bd57ebb28e117888b95518052"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-own-tier-wrapper-all-pellets-payload-material-review.json",
+      "sha256": "7f2b6e0054aecbd95905be4aaa4f71fe74d3bd4ef994b7ead1b23f67da24b6f6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-review.json",
+      "sha256": "9153fc1ca7b7fde0dc8f3f6ac34acded9cd96437c642c595240a2931799ba3b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-ui-raw-verification.json",
+      "sha256": "af47e6fd741d11a65d15a577ecb32ceee93e48482a5f33cef462b0a0e653d442"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-raw-verification.json",
+      "sha256": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-image.json",
+      "sha256": "954fd4540a42760a31598c123fef8df9476381e27bde3818db2b506d139258e4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-config.json",
+      "sha256": "99b4777ca66a4832cc39e4084c99d27a281b5ad3f634e90a72f77f411061e637"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-draft.md",
+      "sha256": "2b7c0e827753966abfaa9b43b6d7d94f9b0aacbb7053d572118ca8c5af30d28f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/inputs/primary-push-impact-proc-held-gate-content-delta-review.json",
+      "sha256": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-burning-dot-delta-review.json",
+      "sha256": "4f56ff61a6fe2ce267e283342c1a20962d936a60289971c8761a6de09a998e41"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-005.json",
+      "sha256": "9d6df2a0f272f8b7364d5095aa60a06db2d82ec9c34eac2af73911b11675d937"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "8350142b3079ff7c54d065af7af12951d11c921ff160123eeb76166ef581ddb2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "3f2124e502c01f6d2609bd770972f54517e42d4b45dc59c224b4e277fb23e27b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "3a01fe4b1111fda5bc98924a28ce3f3bc63e89cd1e112076db32814e5ace9fb4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "0dd22b114b38108ca694936294ad179ef5b6d4aca607a7f8f09d16e8aba7f81c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "09e5321980584b071567a494ea875aed9f5441020b4e2981488f33dbe9708ecc"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\README.md",
+      "sha256": "d28b367f83f885b4c4ed13e249c07cd6d401eb55b8cb24937d32197a166f32cb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\SOURCE_INDEX.md",
+      "sha256": "3db05f95f1505f997c3de48e97d5c80dfe9f007f327eebd1d16df50a3a927bf4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\TIER_VALUES.md",
+      "sha256": "5e50a54661230d5e2f4493a9f0b856b70919e2069a0606eb201d44748ee62a92"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "30b2467bc6b817eb5207d55cafaa827b62e0e41883861ebc5ceb4385bc871165"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_ogryn_thumper_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "1c83216610b9b6f5d9cfc2360246a7f2de8431e0cbe13bd1618898e06474df77"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_shotgun_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "b60f04d877e1154064b29778db2b897d520cddc4b83255989aa52b4d93453989"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_shotgun_p2_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "05be13c0a67aaed4f0876e43622e270db75e90d6eb8d01b8beaf817ddc2613ee"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_shotgun_p3_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "a3ece590d559a8eac401287c38c8c10911797a0fd9e196ebaa1b0f32aa928242"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_shotgun_p4_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "15cedcf84e3cf72063cdfcea5bc1501721cd72d853a6db1dd743408a0bc26bad"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\全孔射擊\\weapon_trait_bespoke_shotpistol_shield_p1_power_bonus_on_hitting_single_enemy_with_all.md",
+      "sha256": "301411e0670e444c737a21687a7cce58d1109ad1505ff53270e1e547474e4ea9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "2f52bef6589c30c0ba7ac7600053c64f081d75d15f2b7558ce9bd7cc5944acc8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\反衝者\\README.md",
+      "sha256": "c73bae67daa9bc2f1d6acff6748aef6a87d92204d76c00fa78069bdeb2c862bf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\戰鬥霰彈槍\\README.md",
+      "sha256": "26c6bb485fc99d515e53050ab25d73ea913d5d103ddb8ed676503f6cdd090e1e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\滅絕者霰彈槍\\README.md",
+      "sha256": "a3feefcb4df4c5eb4ceb70088994afe308cd2f8e5df207606201bfc2a4a46cf1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\獵人霰彈槍\\README.md",
+      "sha256": "822fd8150a87eff001313bf2a69f0bfebafd1cfc323338762042879cc72380d1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\衝覆者霰彈手槍和防暴盾牌\\README.md",
+      "sha256": "cc049c3db6dfd45e0e8a93b9db451480ead05ff3acf610e76db45c802606acec"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙管霰彈槍\\README.md",
+      "sha256": "23cff66ae4f241c9ac4dd2f969f4335e04d8cd3ec035f3be86edce0edbc9410e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "4ebe947705c381898ac212d0a7ff65cdf7332b5b48469dfffd86f38749bb8811"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-raw-verification.json",
+      "sha256": "28b72805389ac42baa2c0cd153ab417e17876a4f73c91d81774408fa48355f94"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\full-bore-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "77d99a85ca0c2c4aa6b6fb60b17456cb3703b530b617bb5392aace35b3300a42"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-001.json",
+      "sha256": "15c4ae22759852811e45a59ac609945cbc6ea0f023e62b28d2d9cc30d0a4b35d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-003.json",
+      "sha256": "d3974ce868c127536c61277b52e70f638a7e5d952f6cf81bcbdfe91e92b6dbd2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-actual-preview-receipt-004.json",
+      "sha256": "d8c1ce8aba5a2eae00ee457be2b782dff8d550aa0d249312f4fce15103afa896"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-group/full-bore-agent-evidence.json",
+      "sha256": "7f4bbf60d3d6be8c44581d6c2aefb65ee670ee7b7892fb5dc42232ccbb770d76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-config.json",
+      "sha256": "99b4777ca66a4832cc39e4084c99d27a281b5ad3f634e90a72f77f411061e637"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-evidence.json",
+      "sha256": "7f4bbf60d3d6be8c44581d6c2aefb65ee670ee7b7892fb5dc42232ccbb770d76"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-agent-draft.md",
+      "sha256": "2b7c0e827753966abfaa9b43b6d7d94f9b0aacbb7053d572118ca8c5af30d28f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-final-content-delta-review.json",
+      "sha256": "853e0f4b5185cfe55d4a87463441922890f424f21765d33bb9f46814516d5ed6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-frozen-source-verification.json",
+      "sha256": "3ad1024f286c2bedec5f99d2ca75ded66046176ee7979fc7f6e722889eceeff4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-primary-push-impact-proc-held-gate-content-delta-review.json",
+      "sha256": "be28d9c282b15f836da727d9ab7c96a470d7053dbc51c0f9b9865a30d02e1492"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/full-bore-formal-peer-scope.json",
+    "sha256": "8869da0d950acff4589705b027f626e28b44c3466633c1f59c27129b5df4c1d7",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/voltaic_arcs",
+    "non_author_peer": true
+  }
+}
