@@ -507,3 +507,5 @@
 - [壓倒性火力](2026-10-03-OVERWHELMING-FIRE_ACCEPTANCE.json)：新增3變體、7型號關聯；共3變體、7關聯。
 
 - [連續發射](2026-10-03-BLAZE-AWAY_ACCEPTANCE.json)：新增8變體、14型號關聯；共8變體、14關聯。
+
+- [揮拳出擊](2026-10-03-TAKE-A-SWING_ACCEPTANCE.json)：新增3變體、5型號關聯；共3變體、5關聯。

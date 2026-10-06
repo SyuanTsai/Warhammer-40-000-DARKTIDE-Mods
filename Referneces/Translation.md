@@ -393,6 +393,7 @@
   - 本體1.13.1名稱鍵 `loc_slower_heat_buildup_on_perfect_block`，hash `c5793ef5`；英文／繁中RAW配對確認。
 - Shock & Awe / Shock and Awe - 震懾
 - Take a Swing - 揮拳出擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_weakspot_damage_bonus_on_pushed_enemies`，hash `78bd4e86`；英文／繁中RAW配對確認。
 - Supercharge - 超級充能
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rend_on_activated_attacks`，hash `ede57171`；英文／繁中RAW配對確認。
 - Power Cycler - 能量循環
