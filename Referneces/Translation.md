@@ -339,6 +339,7 @@
 - Mercy Killer - 仁慈殺手
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increased_weakspot_damage_on_bleeding`，hash `5214e0db`；英文／繁中RAW配對確認。
 - Ruthless Backstab - 無情背刺
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_rending_on_backstabs`，hash `3c7c59e5`；英文／繁中RAW配對確認。
 - Uncanny Strike - 詭異打擊
 - Trauma - 創傷
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_stagger`，hash `af38ab6e`；英文／繁中RAW配對確認。

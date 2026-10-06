@@ -1,0 +1,604 @@
+{
+  "date": "2026-10-06",
+  "blessing": "ruthless-backstab",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/無情背刺/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_rending_on_backstab",
+    "weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "ruthless-backstab",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/riposte",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-formal-peer-scope.json",
+    "scope_sha256": "39d3566911e5d0e4d1b2ade63e9ebf03dc4d39c487302a8ddea2ba4daae5d133",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-config.json": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-draft.md": "cb80de987465e33af13cd24004f3a43267db7bfc9f3e7075f0e3d86e5dd5ab50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-evidence.json": "b3d6463c278f29e0c1d0a778d2d479a2d5318e6aef73f4514f6a8d1eba989b49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-config.json": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-extension-draft.json": "1eb44a9d5f2331d2afb698d24e1470e7b7c0304f924054c3c64a683e33d37d6d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/assemble_author_package.py": "851f001fcf661148645c87bbee149fb6589206faad1c4cdd75b06c06df096169",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/association-snapshot.json": "ea879ce7c8db79dee76a7e4b9e785dbc59739a328cbaa2c76c93ea816327f22c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/attack-coverage.json": "4f4b4d3164d70bc99545632f94dd239704a2584c98084d461f56c9c25e4a7d4e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/binding-inventory.json": "93769d8dfb32d0ff9854054ab9e15b7383427613f88e09f07b27799be63253ce",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-freeze.json": "a218572f8ad9a3a715b464901f3c9b6d29e0d8c3fb959c6aed8a5d3086cbc44b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/DAMAGE_PERCENTAGE_REVIEW.md": "dc68b0c9f958681997396c93c60b7b1e340161af45dc6b84fcd5a964a2af9854",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/LOCALIZATION_COMPARISON.md": "c172471214c614f01b85f0344d61cb5dfe477445697d0e524d30f4147645a9b1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/README.md": "fdb8f05f541dcf9201b8e541ff9a2c0c7eaefa25714d34423cec3a51603fb374",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/SOURCE_INDEX.md": "f06e91f3bb631ffeb3ba992df953cc5f2bb5ffb9df5ef5dae59ac2bc13b4dd38",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/TIER_VALUES.md": "f3c9c99406abd71eb8c076307b462e536c94b285dcd19ee784d04d24f578f2ff",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/WEAPON_COMPATIBILITY.md": "683334451b07c8da8371849b08ae4b8d34e5f600fb79685568bdeabec35cdbf2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md": "9e64f20970d9a517abf38158ef2c04d5015ba7193d102a0ea09898de5b27e683",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md": "4216e2f8f4ad8734dcb242d45a06896445146b3c3daf509668321159c99fbc6d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages-manifest.json": "51a0afe757ba29ac4428b305a6fcdf0c153ef57f3f3be471cb97e390cac94fe1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/capture_source_ranges.py": "1d22df72963bc8983aa000a20d38a777c0db58ec6de2bfe3ff9e2160dfe1d984",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/common-mechanism-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/localization-target-and-collision.json": "a98c6cd301167c02e94e4e31146888da5c769fcb9bb7f46b3d91ecdf38ddaf6e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/map-before.json": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/remaining-tasks-snapshot.json": "c5222551f6f2f282604f2a934d95040947f84451e82ccbc7bfd9e2ab3a1e87dc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/rending-shockwave-primary-armor-consumer-review.json": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-image.json": "44dc0d19aa8ffb892bd26cf1e7db190105b0d83006d770cc9a9f8534cb4c6bb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-own-tier-wrapper-material-delta-review.json": "feb80693a68f1f70f9b38b5adc2f8ec4c2d7e045e1de43c297bd7165ae738040",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-traits-review.json": "9445b4c131195b1948125519a1b7a703e680563ec62f2639e2f53cd14a9950eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-ui-raw-verification.json": "762251b1cb39949685266d9bd87ea21034bba5ba5d16600bfde7ea5f96a8c798",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-ui-review.json": "d0110dcc3e75390a3d609876accf974fbaa1c3241282e9faee0bf7427c91b95f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/narrative-draft.json": "997b545b9131342f17b48a55dbfe806876e12cad7bf3a85f2e5aea5b114bd0f7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-001.json": "f6e8961c4a629b1d0fb3fae3636585328a54f0cae9627b109db1964c4ecd688b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-002.json": "18308046bc873981510ad252ec7f7bb663ae49463b5ede95738ebe16f802b137",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-003.json": "68a3c7af46eb0a08c80fd6ffa59d39d0a79ad5b4a450b830cbe24ea4322fce90",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-004.json": "4bb58f8f933c91c53857915cd3c5c16168197aee8e7fcc66b1ea01d729c592f5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-005.json": "da1f78079232ecd2476ed232de3b0b063d7df13df1e804794e6e7f74c26a74f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-config.json": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-draft.md": "cb80de987465e33af13cd24004f3a43267db7bfc9f3e7075f0e3d86e5dd5ab50",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-evidence.json": "b3d6463c278f29e0c1d0a778d2d479a2d5318e6aef73f4514f6a8d1eba989b49",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/selfcheck.json": "a31ac9b0cd96da4530dcdc44d6e6939bea50724f2babeb17b20ab6c1d632edde",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/source-ranges.json": "d378d3371c4a193367e7ab759533d7247bc10d088a72396520eb412b33a773cd",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/superiority-formal-peer-review.json": "72ed6e2badfcd85fd24d9340c00d6ffb29fcb07cf4fe97668aca715906810389",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-image.json": "44dc0d19aa8ffb892bd26cf1e7db190105b0d83006d770cc9a9f8534cb4c6bb6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-actual-special-punch-and-armor-example-delta-review.json": "3b3b87fee1d7d9a105b482fbd00a2bda8bb4b7147e2724193aff2ec69513d400",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-final-content-review.json": "b0bed363f952606dff89861b7284fb44aab8d74f0f814631e21fb3ddbec5df3a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-focused-checks.json": "787730f3597143e27b7d2751bc767132ba53cbbabd0d8b493448e82e2817bba4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-frozen-source-verification.json": "1194f85287becc615928a4549f5b78f8ee5542425406b8d9e34ba61c0652ba94",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-own-tier-wrapper-material-delta-review.json": "feb80693a68f1f70f9b38b5adc2f8ec4c2d7e045e1de43c297bd7165ae738040",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-resume-review.json": "8c3a4b9f03c050888a9f911f9924cf0a71298a2a8bf4ec455296eaa3fbeef99f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-traits-review.json": "9445b4c131195b1948125519a1b7a703e680563ec62f2639e2f53cd14a9950eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-raw-verification.json": "762251b1cb39949685266d9bd87ea21034bba5ba5d16600bfde7ea5f96a8c798",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-review.json": "d0110dcc3e75390a3d609876accf974fbaa1c3241282e9faee0bf7427c91b95f",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-raw-verification.json": "f82ec31192d7d547aff7e7aee0fa3888a65b8d68378cf373df2f9ae11e893034",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "cdcb722f8c45b2132705d8621defab846ce7b6229f539a1215d141f40871be8d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/DAMAGE_PERCENTAGE_REVIEW.md": "dc68b0c9f958681997396c93c60b7b1e340161af45dc6b84fcd5a964a2af9854",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/LOCALIZATION_COMPARISON.md": "c172471214c614f01b85f0344d61cb5dfe477445697d0e524d30f4147645a9b1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/README.md": "fdb8f05f541dcf9201b8e541ff9a2c0c7eaefa25714d34423cec3a51603fb374",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/SOURCE_INDEX.md": "f06e91f3bb631ffeb3ba992df953cc5f2bb5ffb9df5ef5dae59ac2bc13b4dd38",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/TIER_VALUES.md": "f3c9c99406abd71eb8c076307b462e536c94b285dcd19ee784d04d24f578f2ff",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/WEAPON_COMPATIBILITY.md": "683334451b07c8da8371849b08ae4b8d34e5f600fb79685568bdeabec35cdbf2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md": "9e64f20970d9a517abf38158ef2c04d5015ba7193d102a0ea09898de5b27e683",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md": "4216e2f8f4ad8734dcb242d45a06896445146b3c3daf509668321159c99fbc6d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/melee/README.md": "2c833fed8cba7505699b2d5f65f330dd04567bc03351d4f57c4a12be8f496e24",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/README.md": "6ac8689fbeddcec888ce11e52e2e46284392cf981255bdb974b1b2d7c0d9c141",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c63b9ce677aa2f67242e881c7a8ae28a1ba48f5cfb2a59fe61213b23d0802c73",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "9b99c4828ed0bcab33c96acfaf7895d5dc2250d05efef17246200fe3fc336af2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "147a9fd31725f6d1141bce67ff6d03bcac1212ec95c1f6fe998f8707869bdb45",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/own-association-snapshot.json": "5637a8c0810eab5dc3bdf3c7e78c671c17b3d4341b7a2c3debaede7dbaf5a7e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/actual-preview-005/Referneces/Translation.md": "a53a9ed9083b4f4fc636b9ae286c30a38345c47ecbfdac8a63073c63695db856",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "cdcb722f8c45b2132705d8621defab846ce7b6229f539a1215d141f40871be8d",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/DAMAGE_PERCENTAGE_REVIEW.md": "dc68b0c9f958681997396c93c60b7b1e340161af45dc6b84fcd5a964a2af9854",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/LOCALIZATION_COMPARISON.md": "c172471214c614f01b85f0344d61cb5dfe477445697d0e524d30f4147645a9b1",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/README.md": "fdb8f05f541dcf9201b8e541ff9a2c0c7eaefa25714d34423cec3a51603fb374",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/SOURCE_INDEX.md": "f06e91f3bb631ffeb3ba992df953cc5f2bb5ffb9df5ef5dae59ac2bc13b4dd38",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/TIER_VALUES.md": "f3c9c99406abd71eb8c076307b462e536c94b285dcd19ee784d04d24f578f2ff",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/WEAPON_COMPATIBILITY.md": "683334451b07c8da8371849b08ae4b8d34e5f600fb79685568bdeabec35cdbf2",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md": "9e64f20970d9a517abf38158ef2c04d5015ba7193d102a0ea09898de5b27e683",
+      "Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md": "4216e2f8f4ad8734dcb242d45a06896445146b3c3daf509668321159c99fbc6d",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "2c833fed8cba7505699b2d5f65f330dd04567bc03351d4f57c4a12be8f496e24",
+      "Game Info/releases/1.13.X/blessings/README.md": "6ac8689fbeddcec888ce11e52e2e46284392cf981255bdb974b1b2d7c0d9c141",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "c63b9ce677aa2f67242e881c7a8ae28a1ba48f5cfb2a59fe61213b23d0802c73",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戰刃/README.md": "9b99c4828ed0bcab33c96acfaf7895d5dc2250d05efef17246200fe3fc336af2",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/短刀/README.md": "147a9fd31725f6d1141bce67ff6d03bcac1212ec95c1f6fe998f8707869bdb45",
+      "Referneces/Translation.md": "a53a9ed9083b4f4fc636b9ae286c30a38345c47ecbfdac8a63073c63695db856"
+    },
+    "hash_check": {
+      "expected_files": 98,
+      "verified_files": 98,
+      "mismatches": 0
+    },
+    "content_review": [
+      "Reviewed the final player README, source index, tier, compatibility, damage-stage and localization pages, both per-variant pages, map entry, and both reverse weapon directories in the fixed scope. Candidate and formal per-variant pages have identical content after normalizing CRLF/LF line endings.",
+      "Confirmed exact 2 trait variants / 4 marks and UI names: Combat Blade Catachan Mk III/Mk VI, and Dual Shivs improvised Model 1/Model 3. The map row, compatibility listing, reverse entries, and binding associations agree; no unrelated data changed in this scope.",
+      "Confirmed each own tier is I–IV .70/.80/.90/1.00 with percentage + formatter; both exact wrappers clone the passive base. The always-on allow_backstabbing keyword is distinct from the held-slot conditional rending stat, so switching keeps permission but pauses this blessing’s rending contribution until the stat cache updates; actual unequip removes the on-equip buff.",
+      "Confirmed an effective backstab is melee-only, requires valid target data and planar dot strictly greater than .5, and needs profile backstab_bonus or the blessing keyword. Pure push and Dual Shivs ranged throw are excluded; push-follow-up sweeps can qualify. Combat Blade special punch and follow-up blade are separate melee sweeps with their own profiles and armor inputs.",
+      "Confirmed the damage-stage model uses the 17-term rending pool capped at 1 and the armor-specific overdamage branches; it does not promise a flat final-HP multiplier. The two examples’ profile endpoints, t=.5 assumptions, and results are consistent: 200→217.5 (+8.75%) for Tier I, and 100→125 (+25%) for Tier IV at the armor stage.",
+      "Confirmed the paired English/Traditional Chinese RAW, hashes, and static I–IV reconstruction. The localization table distinguishes the formatter-value match from implementation conditions the RAW does not specify; no unresolved translation contradiction was found.",
+      "Confirmed image receipt and attachment identity in scope and the icon reference used by the page/map. Focused links/GFM checks reported in the scoped evidence have no unresolved issues."
+    ],
+    "review_summary": "Fixed-scope non-author content and association review passed. Existing common-mechanism proofs were reused only for the verified held-slot, equip lifecycle, and damage-stage conditions above.",
+    "formal_peer_pending": false,
+    "committed": false
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "ruthless-backstab",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_197",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_197.png",
+      "attachment": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6004249132",
+      "acquired_date": "2026-10-06",
+      "sha256": "1408bc7c5e374b0af3c41952da7d0b42bf692eb1c080c7e79b183fcaabec5277",
+      "content_type": "image/png",
+      "size": 2269,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "無情背刺祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual public PNG: native white-grey horizontal silhouette on black,128px, source/public exact same content hash; no generated or edited replacement."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 14,
+      "rows": 471,
+      "lists": 95,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 67,
+      "source_files": 29,
+      "bindings": 942,
+      "variants": 484,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 29,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1173,
+      "remote_references": 445,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 38,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-037-full-scan.json",
+        "sha256": "d21dedeee72d1b2b4eadecf4c50fef9a8390ce5ddc7691f6eb82bf617a92712c",
+        "trigger": "round-037"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 25,
+    "not_started_name_groups": 25,
+    "partial_name_groups": 0,
+    "remaining_variants": 121,
+    "remaining_bindings": 243,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "90b6df2122a8ac83e30f06c06131405d93f47677b1b3b3916245563165688619"
+  },
+  "previous_local_commit": "28200588f4084f9fe9f041bd67b772a1df907082",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "exact_bound_items": 4,
+    "unbound_exact_items": [],
+    "status": "Exact name-key intersection is the four listed Marks; no additional exact binding or distinct same-name candidate was found."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-actual-special-punch-and-armor-example-delta-review.json",
+      "sha256": "3b3b87fee1d7d9a105b482fbd00a2bda8bb4b7147e2724193aff2ec69513d400"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-final-content-review.json",
+      "sha256": "b0bed363f952606dff89861b7284fb44aab8d74f0f814631e21fb3ddbec5df3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-focused-checks.json",
+      "sha256": "787730f3597143e27b7d2751bc767132ba53cbbabd0d8b493448e82e2817bba4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-frozen-source-verification.json",
+      "sha256": "1194f85287becc615928a4549f5b78f8ee5542425406b8d9e34ba61c0652ba94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "feb80693a68f1f70f9b38b5adc2f8ec4c2d7e045e1de43c297bd7165ae738040"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-resume-review.json",
+      "sha256": "8c3a4b9f03c050888a9f911f9924cf0a71298a2a8bf4ec455296eaa3fbeef99f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-traits-review.json",
+      "sha256": "9445b4c131195b1948125519a1b7a703e680563ec62f2639e2f53cd14a9950eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-raw-verification.json",
+      "sha256": "762251b1cb39949685266d9bd87ea21034bba5ba5d16600bfde7ea5f96a8c798"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-review.json",
+      "sha256": "d0110dcc3e75390a3d609876accf974fbaa1c3241282e9faee0bf7427c91b95f"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-config.json",
+    "sha256": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/assemble_author_package.py",
+      "sha256": "851f001fcf661148645c87bbee149fb6589206faad1c4cdd75b06c06df096169"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/association-snapshot.json",
+      "sha256": "ea879ce7c8db79dee76a7e4b9e785dbc59739a328cbaa2c76c93ea816327f22c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/attack-coverage.json",
+      "sha256": "4f4b4d3164d70bc99545632f94dd239704a2584c98084d461f56c9c25e4a7d4e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/binding-inventory.json",
+      "sha256": "93769d8dfb32d0ff9854054ab9e15b7383427613f88e09f07b27799be63253ce"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages-manifest.json",
+      "sha256": "51a0afe757ba29ac4428b305a6fcdf0c153ef57f3f3be471cb97e390cac94fe1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "dc68b0c9f958681997396c93c60b7b1e340161af45dc6b84fcd5a964a2af9854"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/LOCALIZATION_COMPARISON.md",
+      "sha256": "c172471214c614f01b85f0344d61cb5dfe477445697d0e524d30f4147645a9b1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/README.md",
+      "sha256": "fdb8f05f541dcf9201b8e541ff9a2c0c7eaefa25714d34423cec3a51603fb374"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/SOURCE_INDEX.md",
+      "sha256": "f06e91f3bb631ffeb3ba992df953cc5f2bb5ffb9df5ef5dae59ac2bc13b4dd38"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/TIER_VALUES.md",
+      "sha256": "f3c9c99406abd71eb8c076307b462e536c94b285dcd19ee784d04d24f578f2ff"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/WEAPON_COMPATIBILITY.md",
+      "sha256": "683334451b07c8da8371849b08ae4b8d34e5f600fb79685568bdeabec35cdbf2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md",
+      "sha256": "9e64f20970d9a517abf38158ef2c04d5015ba7193d102a0ea09898de5b27e683"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-pages/Game Info/releases/1.13.X/blessings/entries/無情背刺/weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md",
+      "sha256": "4216e2f8f4ad8734dcb242d45a06896445146b3c3daf509668321159c99fbc6d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/capture_source_ranges.py",
+      "sha256": "1d22df72963bc8983aa000a20d38a777c0db58ec6de2bfe3ff9e2160dfe1d984"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/common-mechanism-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/localization-target-and-collision.json",
+      "sha256": "a98c6cd301167c02e94e4e31146888da5c769fcb9bb7f46b3d91ecdf38ddaf6e"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/map-before.json",
+      "sha256": "5dacdd29d1d3ac611338143d006247964933d7d8565486459180184389645338"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/local-snapshots/remaining-tasks-snapshot.json",
+      "sha256": "c5222551f6f2f282604f2a934d95040947f84451e82ccbc7bfd9e2ab3a1e87dc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/rending-shockwave-primary-armor-consumer-review.json",
+      "sha256": "91651e2248fdde3c9e1174f60150aa8f95dac1f89bcd36ea2bad8ad49bd81ceb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-image.json",
+      "sha256": "44dc0d19aa8ffb892bd26cf1e7db190105b0d83006d770cc9a9f8534cb4c6bb6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "feb80693a68f1f70f9b38b5adc2f8ec4c2d7e045e1de43c297bd7165ae738040"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-traits-review.json",
+      "sha256": "9445b4c131195b1948125519a1b7a703e680563ec62f2639e2f53cd14a9950eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-ui-raw-verification.json",
+      "sha256": "762251b1cb39949685266d9bd87ea21034bba5ba5d16600bfde7ea5f96a8c798"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/root-receipts/ruthless-backstab-primary-ui-review.json",
+      "sha256": "d0110dcc3e75390a3d609876accf974fbaa1c3241282e9faee0bf7427c91b95f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/inputs/tool-snapshots/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/narrative-draft.json",
+      "sha256": "997b545b9131342f17b48a55dbfe806876e12cad7bf3a85f2e5aea5b114bd0f7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-005.json",
+      "sha256": "da1f78079232ecd2476ed232de3b0b063d7df13df1e804794e6e7f74c26a74f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-config.json",
+      "sha256": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-draft.md",
+      "sha256": "cb80de987465e33af13cd24004f3a43267db7bfc9f3e7075f0e3d86e5dd5ab50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/selfcheck.json",
+      "sha256": "a31ac9b0cd96da4530dcdc44d6e6939bea50724f2babeb17b20ab6c1d632edde"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/source-ranges.json",
+      "sha256": "d378d3371c4a193367e7ab759533d7247bc10d088a72396520eb412b33a773cd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "6ac8689fbeddcec888ce11e52e2e46284392cf981255bdb974b1b2d7c0d9c141"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "c63b9ce677aa2f67242e881c7a8ae28a1ba48f5cfb2a59fe61213b23d0802c73"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "cdcb722f8c45b2132705d8621defab846ce7b6229f539a1215d141f40871be8d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "dc68b0c9f958681997396c93c60b7b1e340161af45dc6b84fcd5a964a2af9854"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\LOCALIZATION_COMPARISON.md",
+      "sha256": "c172471214c614f01b85f0344d61cb5dfe477445697d0e524d30f4147645a9b1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\README.md",
+      "sha256": "fdb8f05f541dcf9201b8e541ff9a2c0c7eaefa25714d34423cec3a51603fb374"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\SOURCE_INDEX.md",
+      "sha256": "f06e91f3bb631ffeb3ba992df953cc5f2bb5ffb9df5ef5dae59ac2bc13b4dd38"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\TIER_VALUES.md",
+      "sha256": "f3c9c99406abd71eb8c076307b462e536c94b285dcd19ee784d04d24f578f2ff"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\WEAPON_COMPATIBILITY.md",
+      "sha256": "683334451b07c8da8371849b08ae4b8d34e5f600fb79685568bdeabec35cdbf2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md",
+      "sha256": "9e64f20970d9a517abf38158ef2c04d5015ba7193d102a0ea09898de5b27e683"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\entries\\無情背刺\\weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md",
+      "sha256": "4216e2f8f4ad8734dcb242d45a06896445146b3c3daf509668321159c99fbc6d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "2c833fed8cba7505699b2d5f65f330dd04567bc03351d4f57c4a12be8f496e24"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戰刃\\README.md",
+      "sha256": "9b99c4828ed0bcab33c96acfaf7895d5dc2250d05efef17246200fe3fc336af2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\短刀\\README.md",
+      "sha256": "147a9fd31725f6d1141bce67ff6d03bcac1212ec95c1f6fe998f8707869bdb45"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\Referneces\\Translation.md",
+      "sha256": "a53a9ed9083b4f4fc636b9ae286c30a38345c47ecbfdac8a63073c63695db856"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-raw-verification.json",
+      "sha256": "f82ec31192d7d547aff7e7aee0fa3888a65b8d68378cf373df2f9ae11e893034"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ruthless-backstab-group\\actual-preview-005\\own-association-snapshot.json",
+      "sha256": "5637a8c0810eab5dc3bdf3c7e78c671c17b3d4341b7a2c3debaede7dbaf5a7e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/candidate-freeze.json",
+      "sha256": "a218572f8ad9a3a715b464901f3c9b6d29e0d8c3fb959c6aed8a5d3086cbc44b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-001.json",
+      "sha256": "f6e8961c4a629b1d0fb3fae3636585328a54f0cae9627b109db1964c4ecd688b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-002.json",
+      "sha256": "18308046bc873981510ad252ec7f7bb663ae49463b5ede95738ebe16f802b137"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-003.json",
+      "sha256": "68a3c7af46eb0a08c80fd6ffa59d39d0a79ad5b4a450b830cbe24ea4322fce90"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-actual-preview-receipt-004.json",
+      "sha256": "4bb58f8f933c91c53857915cd3c5c16168197aee8e7fcc66b1ea01d729c592f5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/ruthless-backstab-agent-evidence.json",
+      "sha256": "b3d6463c278f29e0c1d0a778d2d479a2d5318e6aef73f4514f6a8d1eba989b49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-group/superiority-formal-peer-review.json",
+      "sha256": "72ed6e2badfcd85fd24d9340c00d6ffb29fcb07cf4fe97668aca715906810389"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-config.json",
+      "sha256": "1e2e8450785cda847de70e92abc5cc41d1bb96402667ff4122fa7b32613103f1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-evidence.json",
+      "sha256": "b3d6463c278f29e0c1d0a778d2d479a2d5318e6aef73f4514f6a8d1eba989b49"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-agent-draft.md",
+      "sha256": "cb80de987465e33af13cd24004f3a43267db7bfc9f3e7075f0e3d86e5dd5ab50"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-actual-special-punch-and-armor-example-delta-review.json",
+      "sha256": "3b3b87fee1d7d9a105b482fbd00a2bda8bb4b7147e2724193aff2ec69513d400"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-final-content-review.json",
+      "sha256": "b0bed363f952606dff89861b7284fb44aab8d74f0f814631e21fb3ddbec5df3a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-frozen-source-verification.json",
+      "sha256": "1194f85287becc615928a4549f5b78f8ee5542425406b8d9e34ba61c0652ba94"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "feb80693a68f1f70f9b38b5adc2f8ec4c2d7e045e1de43c297bd7165ae738040"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-traits-review.json",
+      "sha256": "9445b4c131195b1948125519a1b7a703e680563ec62f2639e2f53cd14a9950eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-raw-verification.json",
+      "sha256": "762251b1cb39949685266d9bd87ea21034bba5ba5d16600bfde7ea5f96a8c798"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-primary-ui-review.json",
+      "sha256": "d0110dcc3e75390a3d609876accf974fbaa1c3241282e9faee0bf7427c91b95f"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ruthless-backstab-formal-peer-scope.json",
+    "sha256": "39d3566911e5d0e4d1b2ade63e9ebf03dc4d39c487302a8ddea2ba4daae5d133",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/shock_awe",
+    "reviewer_agent": "/root/riposte",
+    "non_author_peer": true
+  }
+}

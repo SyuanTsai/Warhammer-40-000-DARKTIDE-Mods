@@ -1912,6 +1912,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
       "effect": "蓄能門檻累積後，同物品的合格命中依階級與最多三次已處理的蓄能事件，要求回復最大韌性比例；實際回復封頂於缺失韌性。"
+    },
+    {
+      "id": "ruthless-backstab",
+      "name_zh_tw": "無情背刺",
+      "name_en": "Ruthless Backstab",
+      "name_key": "loc_trait_bespoke_rending_on_backstabs",
+      "description_key": "loc_trait_bespoke_rending_on_backstabs_desc",
+      "name_hash": "3c7c59e5",
+      "description_hash": "ea32467a",
+      "page": "entries/無情背刺/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
+      "effect": "有效近戰背刺命中時，依 I–IV 級加入 +70%／+80%／+90%／+100% 撕裂加算；撕裂先作用於護甲傷害階段，並非固定比例的最終傷害。"
     }
   ],
   "weapons": [
@@ -29589,6 +29602,96 @@
       "icon": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_215",
       "effect": "碎骨者克魯克 Mk IIa：普通連段及兩種特殊攻擊均先經蓄能，再進入攻擊掃掠；使用預設 0.25 秒後續蓄能間隔。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_rending_on_backstab",
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/無情背刺/weapon_trait_bespoke_combatknife_p1_rending_on_backstab.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "backstab_rending_addition": {
+          "I": 0.7,
+          "II": 0.8,
+          "III": 0.9,
+          "IV": 1.0
+        },
+        "effective_backstab_rending_cap": 1.0,
+        "neutral_rending_terms": 17,
+        "overdamage_coefficient_for_armored_categories": 0.25,
+        "requires_melee_attack_type": true,
+        "activation_cooldown_stacks": null,
+        "bound_marks": [
+          "combatknife_p1_m1",
+          "combatknife_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 372,
+        "end_line": 411
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_rending_on_backstabs_desc",
+      "description_hash": "ea32467a",
+      "icon": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_197",
+      "effect": "戰刃 卡塔昌 Mk III／Mk VI：只有符合近戰有效背刺幾何條件且持用此武器時，套用 I–IV 級 +70%／+80%／+90%／+100% 背刺撕裂加算。特殊鍵首拳是 punch-damage sweep；後續 heavy jab 是另一個 knife-profile sweep，兩段各自可判定。純推擊不符合。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab",
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/無情背刺/weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "backstab_rending_addition": {
+          "I": 0.7,
+          "II": 0.8,
+          "III": 0.9,
+          "IV": 1.0
+        },
+        "effective_backstab_rending_cap": 1.0,
+        "neutral_rending_terms": 17,
+        "overdamage_coefficient_for_armored_categories": 0.25,
+        "requires_melee_attack_type": true,
+        "activation_cooldown_stacks": null,
+        "bound_marks": [
+          "dual_shivs_p1_m1",
+          "dual_shivs_p1_m2"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 372,
+        "end_line": 411
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_rending_on_backstabs_desc",
+      "description_hash": "ea32467a",
+      "icon": "https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_197",
+      "effect": "短刀 臨時拼湊 型號1／型號3：只有符合近戰有效背刺幾何條件且持用此武器時，套用 I–IV 級 +70%／+80%／+90%／+100% 背刺撕裂加算。純推擊不符合；特殊投擲是遠程攻擊，不符合近戰背刺條件。"
     }
   ],
   "bindings": [
@@ -42722,6 +42825,62 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
         "import_line": 15,
         "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_rending_on_backstab",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/rending_on_backstabs",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_rending_on_backstab",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/rending_on_backstabs",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/rending_on_backstabs",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "ruthless-backstab",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_rending_on_backstab",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/rending_on_backstabs",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
       }
     }
   ]

@@ -358,3 +358,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [孤注一擲動作覆蓋修正驗收](releases/1.13.X/blessings/2026-10-06-ALL-OR-NOTHING_COVERAGE_CORRECTION.json)
 
 - [緩慢而確實全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SLOW-AND-STEADY_ACCEPTANCE.json)
+
+- [無情背刺全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RUTHLESS-BACKSTAB_ACCEPTANCE.json)

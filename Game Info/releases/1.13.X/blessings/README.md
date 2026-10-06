@@ -149,5 +149,6 @@
 | <img src="https://github.com/user-attachments/assets/fade3668-fc4f-47f8-8a9d-8bc9748930f7" width="32" height="32" alt="反守為攻祝福圖示"> [反守為攻](entries/反守為攻/README.md)<br>- Offensive Defence<br>[完整說明](entries/反守為攻/README.md) | <ul><li>持用來源盾錘格擋來襲攻擊時累積格擋消耗，I–IV每層提高+4／+6／+8／+10%近戰威力修正，最多五層；掃掠完成時消耗一層，格擋或掃掠完成會刷新3.5秒共用期限。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/ad66f531-3350-4401-84f3-5c5d7b4cd4c9" width="32" height="32" alt="優勢（通用力量）祝福圖示"> [優勢（通用力量）](entries/優勢（通用力量）/README.md)<br>- Superiority<br>[完整說明](entries/優勢（通用力量）/README.md) | <ul><li>精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c" width="32" height="32" alt="緩慢而確實祝福圖示"> [緩慢而確實](entries/緩慢而確實/README.md)<br>- Slow and Steady<br>[完整說明](entries/緩慢而確實/README.md) | <ul><li>蓄能門檻累積後，同物品的合格命中依階級與最多三次已處理的蓄能事件，要求回復最大韌性比例；實際回復封頂於缺失韌性。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/fa42d7e1-e0d1-4701-bcc5-04caada37d5c" width="32" height="32" alt="無情背刺祝福圖示"> [無情背刺](entries/無情背刺/README.md)<br>- Ruthless Backstab<br>[完整說明](entries/無情背刺/README.md) | <ul><li>有效近戰背刺命中時，依 I–IV 級加入 +70%／+80%／+90%／+100% 撕裂加算；撕裂先作用於護甲傷害階段，並非固定比例的最終傷害。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
