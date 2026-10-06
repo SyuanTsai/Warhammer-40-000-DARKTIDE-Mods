@@ -1,0 +1,683 @@
+{
+  "date": "2026-10-06",
+  "blessing": "trickshooter",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/狡猾射手/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power",
+    "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 2,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "review_type": "non_author_formal_peer",
+    "blessing_id": "trickshooter",
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-formal-peer-scope.json",
+    "scope_sha256": "15b94e27f9b42f026b1d8ff381a75262a683b3d2d8102682f4a1202d77a8ec52",
+    "scope_file_count": 110,
+    "hash_verification": {
+      "all_scope_files_match": true,
+      "verified_count": 110,
+      "mismatch_count": 0
+    },
+    "reviewed_content": [
+      "The final eight-page set is consistent with actual preview 004: seven pages are byte-identical; SOURCE_INDEX alone adds the documented 39 precise references. No gameplay or page-content deviation from the reviewed candidate was found.",
+      "The formal binding map and weapon reverse indexes resolve exactly two implementations and three actual marks: Galvanic Rifle Branx Mk CV, Quickdraw Stub Revolver Zarona Mk IIa, and Quickdraw Stub Revolver Agripinaa Mk XIV.",
+      "Tier/wrapper values agree: each qualifying shot adds one effective ranged-power layer at I–IV .045/.05/.055/.06, maximum five effective layers; child offset accounts for the raw placeholder. The same-key child override replaces the fallback rather than adding an extra bonus.",
+      "Only the actual hip/aim hitscan shot emits the aggregate weakspot on_shoot condition; one shot is at most one layer regardless of targets. Melee sweeps, push, reload/aim/flashlight controls and weapon switching do not trigger or consume ranged power. Damage resolves before the queued proc and later cache rebuild, so the triggering shot does not retroactively use its layer.",
+      "The 3.5-second shared timer refreshes on a qualifying weakspot event even at cap; non-weakspot or miss events neither clear nor refresh it. Holstering continues the timer while the held-slot gate removes the stat from use; true unequip/removal destroys the parent and children.",
+      "The controlled example 4→5 layers gives 124→130 for normalized curve-output input 100 at tier IV: +6 percentage points, +6 normalized units, and about 4.84% relative to 124; it is explicitly not a final-HP percentage. The separate cap-refresh example is consistent with the shared timer behavior.",
+      "RAW English/Traditional Chinese name and description keys/hash are paired. Formatter reconstruction yields +4.5/+5/+5.5/+6% and Stacks 5 times; trailing RAW spaces are preserved in code spans. Unsupported behavior is classified as not covered by the text, without an invented erratum.",
+      "Icon path weapon_trait_109 is distinct from the attachment URL; the image receipt confirms public download/hash/dimensions/display verification. Actual metadata/UI names and all three binding records match the linked weapon pages.",
+      "The 23 source-label replacements retain complete labels, and the 39 added source references cover the actual mechanics and action routes without changing frozen source evidence."
+    ],
+    "candidate_review_reused": {
+      "path": "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-candidate-nonauthor-precheck.json",
+      "sha256": "88160d1262cc1ab3cad3568c7537c5e2af5049caf271955427c221afb5eefaba",
+      "applicability": "Candidate mechanism review is reused for unchanged content; the formal pages and added source-reference bytes were reviewed in this fixed scope."
+    },
+    "formal_delta_reviewed": {
+      "scope_delta": [
+        "Root own tier/wrapper/UI/formatter and material native producer/consumer content receipts apply to these actual bindings.",
+        "39 exact cited source ranges added to formal canonical; gameplay math unchanged.",
+        "23 supplemental source labels retain complete frozen-evidence conclusions rather than truncating to90 characters; formal generator/tool schema unchanged.",
+        "Root source-proof frozen hash updated to actual untruncated-label revision; prior source-proof/resume copies remain preserved; all author evidence and source contents unchanged."
+      ],
+      "source_index_page_byte_diff": "The only candidate-versus-formal Markdown difference is SOURCE_INDEX.md: 39 exact references are added. The other seven formal Markdown pages match actual preview 004 byte-for-byte."
+    },
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-config.json": "ab3a77703d22f8712bb0187e09bf297f4a52a808bf3587555c846bdd69d84685",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-draft.md": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-evidence.json": "d998860ce93de9d235031d870162bb03c7c116762719ed783235ac43536151f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-config.json": "a0c3beee9b6bd6a9fa02d861164795167ea33059b7a5366b633455a52bbc9ace",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-extension-draft.json": "29aca27c005dd4806362a8493e67286137bf949eb8b4c05ef638c05dd7cdf38e",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/association-snapshot.json": "c11f19cca77847d6ce000d949a818ecb3fa5c251fd4014d44f0df42fb9089380",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/attack-coverage.json": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/binding-inventory.json": "f50389417ccd02bf0f8ec3b1a458a800fb0cb8f73950c3f76364c6b65761ccef",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/candidate-page-preview-004.md": "e0fecb4b232375170ee69225a083fc45c1570c8d84d78ae221d9e4741d015161",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/candidate-preview-manifest-004.json": "8b032676ce2de92a9d8ae2f83358f9d21b77553c74abc40150178df7dbe37f0d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/draft.md": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/examples.md": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/math.md": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/mechanism.md": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/player.md": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/reconstruction.md": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/review.md": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/selfcheck.json": "9508b8b7a25cf70b613b269d988eb8b0c9607be356d15301c7e7197d76f7dfb0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/source_blocks.json": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/source_file_hashes.json": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/tiers.md": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-001.json": "fd64d385a5f1fd39d87d148915d0759e4fafaf5c33787525c71332689690fee5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-002.json": "92ec5ddd32613c8fe412c35c1c905bdde773ce1dfbd0d103f3c152b7975476e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-004.json": "570c536e18cd5e8d028f0dd9f38555ccf270e2e3aef97ac445cb4a676d390fde",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-config.json": "ab3a77703d22f8712bb0187e09bf297f4a52a808bf3587555c846bdd69d84685",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-draft.md": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-evidence.json": "d998860ce93de9d235031d870162bb03c7c116762719ed783235ac43536151f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-image.json": "64364e31a3e765677b6e288bd9dcd7858d481f8373d93e0e8a39d522d3313184",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-complete-source-label-review.json": "473a16c702c64da30a7f7d84bd3a7fdefc0ab803c5df86a9d089523d62f74de3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-final-content-delta-review.json": "32a8df3ff6045baf2349b5ffac0ee0d395453844bdca489c4012262af0cdd690",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-focused-checks.json": "3966e46336b3f62d4175904355c1248d1b591306fed81e15b568c228b2087771",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-frozen-source-verification.json": "28677b331c1203e158f4efbbe302f6e8e0a77407df3a29d869dff8ec7a4a0e36",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-own-tier-wrapper-weakspot-latch-material-review.json": "0f7e17a664959ee8a6a434e8ad7ca6c35a9845a08e97fca409669bd6659b49cf",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ranged-power-consumer-difference-review.json": "f0b47d70f206e3b7767b7bca4fce13a1b57ab54e3b16f69651a3538e14478de4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-resume-review.json": "22a0d55466cb117c01eab8850e3bc03ec7d5dcc9b5b925a5de68f3bc3d4a5ff2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-traits-review.json": "e192b5de58bf6f6984dd985446dcd31c7f4d592443e9cedc28537c5a4dcd8727",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-raw-verification.json": "538a397e135a766c75747690f4b60e1decee2e2fa1ecabba501ce2bbc4f326bb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-review.json": "0df7fb47ef687c17cde4cac6986b884558464572a85394719493aada48c8d9fa",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-raw-verification.json": "49f33d91db9331c35cf0d1c9e023a9b7837d35a27a3f4b37e296b046ba8528f7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/DAMAGE_PERCENTAGE_REVIEW.md": "bd1f14a160e1b5f4f14b431f5b46f42c433053f7ee7fd1fae2c25cef67a91a3a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/LOCALIZATION_COMPARISON.md": "51b753ab7aa09f61c2c17e031522c186e1f546a70383313d319c564db5f061bf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/README.md": "e0fecb4b232375170ee69225a083fc45c1570c8d84d78ae221d9e4741d015161",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/SOURCE_INDEX.md": "ef92867c5fdf1c1cfffd953647bf278c4f0c18a8425367e5b1b5f9e719447c9d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/TIER_VALUES.md": "ab7d193a02a5b7b7c89a45d8b9b5f15af8c7038aedb614f73dd938508c3a53f8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/WEAPON_COMPATIBILITY.md": "24c43779543a341112d370e3d5c6c7794f134a3f9a7c1f02d8f7d1426ffaa7b6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power.md": "4a8c77abedea077ab11549b3597b2041733250bc631e124752e0d4b793cc8511",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/entries/狡猾射手/weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power.md": "0719a860ab97275f22a45fbba9c67f5f96fc235851e8e5effdd18ed04449face",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/ranged/README.md": "eb252ce7c749b610803e663224cc76337762a270eee12c0c5e9a0adb25f2d797",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/README.md": "7faf40c71061e79fd440f66d011715ef771f779ea3cc9457cde55b5804224718",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "597891fa5a93a05a93efac087da57f0ae9f60302b15926c7668790aa7596c92a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "1510f47480072542f2e297226cb339a6b94f7b215498ba8e6d1bb1031c86d1b1",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "3d66d6b4c1952f0bc8d8c187eecf0b973664492e1ee3180f1d13fc22d4d6f5b5",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/own-association-snapshot.json": "1e32c61d3f7797e322a16d9be29543f50868362bd4353a28ed5a1c6fbab60ab4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/actual-preview-004/Referneces/Translation.md": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/association-snapshot.json": "c11f19cca77847d6ce000d949a818ecb3fa5c251fd4014d44f0df42fb9089380",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/binding-inventory.json": "f50389417ccd02bf0f8ec3b1a458a800fb0cb8f73950c3f76364c6b65761ccef",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/attack-coverage.json": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/collect_research.py": "820b50b65acc9fa49d6de95a983c1ae88dd9f63d8012f2d452b9720b4b36a363",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/examples.md": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-attack-coverage.json": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-collect_research.py": "820b50b65acc9fa49d6de95a983c1ae88dd9f63d8012f2d452b9720b4b36a363",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-examples.md": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-math.md": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-mechanism.md": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-player.md": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-reconstruction.md": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-review.md": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-scan_actions.py": "44c05ef0b0066e53cb0ac478ca98b51265616c067844318401bb44ae32f9c34b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-source_blocks.json": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-source_file_hashes.json": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/final-tiers.md": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/math.md": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/mechanism.md": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/player.md": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/reconstruction.md": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/review.md": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/scan_actions.py": "44c05ef0b0066e53cb0ac478ca98b51265616c067844318401bb44ae32f9c34b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/source_blocks.json": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/source_file_hashes.json": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/tiers.md": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-candidate-nonauthor-precheck.json": "88160d1262cc1ab3cad3568c7537c5e2af5049caf271955427c221afb5eefaba",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-image.json": "64364e31a3e765677b6e288bd9dcd7858d481f8373d93e0e8a39d522d3313184",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-final-content-delta-review.json": "32a8df3ff6045baf2349b5ffac0ee0d395453844bdca489c4012262af0cdd690",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-own-tier-wrapper-weakspot-latch-material-review.json": "0f7e17a664959ee8a6a434e8ad7ca6c35a9845a08e97fca409669bd6659b49cf",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-ranged-power-consumer-difference-review.json": "f0b47d70f206e3b7767b7bca4fce13a1b57ab54e3b16f69651a3538e14478de4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-traits-review.json": "e192b5de58bf6f6984dd985446dcd31c7f4d592443e9cedc28537c5a4dcd8727",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-ui-raw-verification.json": "538a397e135a766c75747690f4b60e1decee2e2fa1ecabba501ce2bbc4f326bb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/inputs/trickshooter-primary-ui-review.json": "0df7fb47ef687c17cde4cac6986b884558464572a85394719493aada48c8d9fa",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-004.json": "570c536e18cd5e8d028f0dd9f38555ccf270e2e3aef97ac445cb4a676d390fde",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/DAMAGE_PERCENTAGE_REVIEW.md": "bd1f14a160e1b5f4f14b431f5b46f42c433053f7ee7fd1fae2c25cef67a91a3a",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/LOCALIZATION_COMPARISON.md": "51b753ab7aa09f61c2c17e031522c186e1f546a70383313d319c564db5f061bf",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/README.md": "e0fecb4b232375170ee69225a083fc45c1570c8d84d78ae221d9e4741d015161",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/SOURCE_INDEX.md": "b5aa8c3aa059a78261931c406201a079a233ebb610af47fdb6bd53194df69df6",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/TIER_VALUES.md": "ab7d193a02a5b7b7c89a45d8b9b5f15af8c7038aedb614f73dd938508c3a53f8",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/WEAPON_COMPATIBILITY.md": "24c43779543a341112d370e3d5c6c7794f134a3f9a7c1f02d8f7d1426ffaa7b6",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power.md": "4a8c77abedea077ab11549b3597b2041733250bc631e124752e0d4b793cc8511",
+      "Game Info/releases/1.13.X/blessings/entries/狡猾射手/weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power.md": "0719a860ab97275f22a45fbba9c67f5f96fc235851e8e5effdd18ed04449face",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "eb252ce7c749b610803e663224cc76337762a270eee12c0c5e9a0adb25f2d797",
+      "Game Info/releases/1.13.X/blessings/README.md": "7faf40c71061e79fd440f66d011715ef771f779ea3cc9457cde55b5804224718",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "597891fa5a93a05a93efac087da57f0ae9f60302b15926c7668790aa7596c92a",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/快拔左輪手槍/README.md": "1510f47480072542f2e297226cb339a6b94f7b215498ba8e6d1bb1031c86d1b1",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/電能步槍/README.md": "3d66d6b4c1952f0bc8d8c187eecf0b973664492e1ee3180f1d13fc22d4d6f5b5",
+      "Referneces/Translation.md": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "trickshooter",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_109",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_109.png",
+      "attachment": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6007440154",
+      "acquired_date": "2026-10-06",
+      "sha256": "5fb704918413c5ebd59f104fa764ccd8c300f6d124fb56c3bb31508b429b78ad",
+      "content_type": "image/png",
+      "size": 4104,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "狡猾射手祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_verification": "Root inspected actual publicly downloaded128x128 original: pale gray paired angular outlines surrounding a central light gap; no error-page text or unrelated screenshot. Native original retained."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 15,
+      "tables": 16,
+      "rows": 508,
+      "lists": 90,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 83,
+      "source_files": 32,
+      "bindings": 979,
+      "variants": 502,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 32,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1220,
+      "remote_references": 471,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 40,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-039-full-scan.json",
+        "sha256": "18cb5727b7203513db5ac5bcc20329e9deaf208f3aefbf4652ac2bb7c517e601",
+        "trigger": "round-039"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 19,
+    "not_started_name_groups": 19,
+    "partial_name_groups": 0,
+    "remaining_variants": 103,
+    "remaining_bindings": 206,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "cdaa949edae04b4e46d09b98ada549fddf8ca7d7313401dcdc1e13b56d83f232"
+  },
+  "previous_local_commit": "f23cd4d42937b8d17e52e4bc9ddb122db8e67743",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "metadata_only_exact_candidates": [],
+    "exact_bound_items": 3,
+    "status": "Root UI review found exactly the three inventory intersections; outside_exact_items is empty. No additional same-name definition is treated as a binding."
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-complete-source-label-review.json",
+      "sha256": "473a16c702c64da30a7f7d84bd3a7fdefc0ab803c5df86a9d089523d62f74de3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-final-content-delta-review.json",
+      "sha256": "32a8df3ff6045baf2349b5ffac0ee0d395453844bdca489c4012262af0cdd690"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-focused-checks.json",
+      "sha256": "3966e46336b3f62d4175904355c1248d1b591306fed81e15b568c228b2087771"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-frozen-source-verification.json",
+      "sha256": "28677b331c1203e158f4efbbe302f6e8e0a77407df3a29d869dff8ec7a4a0e36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-own-tier-wrapper-weakspot-latch-material-review.json",
+      "sha256": "0f7e17a664959ee8a6a434e8ad7ca6c35a9845a08e97fca409669bd6659b49cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ranged-power-consumer-difference-review.json",
+      "sha256": "f0b47d70f206e3b7767b7bca4fce13a1b57ab54e3b16f69651a3538e14478de4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-resume-review.json",
+      "sha256": "22a0d55466cb117c01eab8850e3bc03ec7d5dcc9b5b925a5de68f3bc3d4a5ff2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-traits-review.json",
+      "sha256": "e192b5de58bf6f6984dd985446dcd31c7f4d592443e9cedc28537c5a4dcd8727"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-raw-verification.json",
+      "sha256": "538a397e135a766c75747690f4b60e1decee2e2fa1ecabba501ce2bbc4f326bb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-review.json",
+      "sha256": "0df7fb47ef687c17cde4cac6986b884558464572a85394719493aada48c8d9fa"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-config.json",
+    "sha256": "a0c3beee9b6bd6a9fa02d861164795167ea33059b7a5366b633455a52bbc9ace"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\association-snapshot.json",
+      "sha256": "c11f19cca77847d6ce000d949a818ecb3fa5c251fd4014d44f0df42fb9089380"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\binding-inventory.json",
+      "sha256": "f50389417ccd02bf0f8ec3b1a458a800fb0cb8f73950c3f76364c6b65761ccef"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\attack-coverage.json",
+      "sha256": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\collect_research.py",
+      "sha256": "820b50b65acc9fa49d6de95a983c1ae88dd9f63d8012f2d452b9720b4b36a363"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\examples.md",
+      "sha256": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-attack-coverage.json",
+      "sha256": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-collect_research.py",
+      "sha256": "820b50b65acc9fa49d6de95a983c1ae88dd9f63d8012f2d452b9720b4b36a363"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-examples.md",
+      "sha256": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-math.md",
+      "sha256": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-mechanism.md",
+      "sha256": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-player.md",
+      "sha256": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-reconstruction.md",
+      "sha256": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-review.md",
+      "sha256": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-scan_actions.py",
+      "sha256": "44c05ef0b0066e53cb0ac478ca98b51265616c067844318401bb44ae32f9c34b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-source_blocks.json",
+      "sha256": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-source_file_hashes.json",
+      "sha256": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\final-tiers.md",
+      "sha256": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\math.md",
+      "sha256": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\mechanism.md",
+      "sha256": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\player.md",
+      "sha256": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\reconstruction.md",
+      "sha256": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\review.md",
+      "sha256": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\scan_actions.py",
+      "sha256": "44c05ef0b0066e53cb0ac478ca98b51265616c067844318401bb44ae32f9c34b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\source_blocks.json",
+      "sha256": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\source_file_hashes.json",
+      "sha256": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\tiers.md",
+      "sha256": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-image.json",
+      "sha256": "64364e31a3e765677b6e288bd9dcd7858d481f8373d93e0e8a39d522d3313184"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-own-tier-wrapper-weakspot-latch-material-review.json",
+      "sha256": "0f7e17a664959ee8a6a434e8ad7ca6c35a9845a08e97fca409669bd6659b49cf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-ranged-power-consumer-difference-review.json",
+      "sha256": "f0b47d70f206e3b7767b7bca4fce13a1b57ab54e3b16f69651a3538e14478de4"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-traits-review.json",
+      "sha256": "e192b5de58bf6f6984dd985446dcd31c7f4d592443e9cedc28537c5a4dcd8727"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-ui-raw-verification.json",
+      "sha256": "538a397e135a766c75747690f4b60e1decee2e2fa1ecabba501ce2bbc4f326bb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-ui-review.json",
+      "sha256": "0df7fb47ef687c17cde4cac6986b884558464572a85394719493aada48c8d9fa"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\trickshooter-actual-preview-receipt-004.json",
+      "sha256": "570c536e18cd5e8d028f0dd9f38555ccf270e2e3aef97ac445cb4a676d390fde"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-candidate-nonauthor-precheck.json",
+      "sha256": "88160d1262cc1ab3cad3568c7537c5e2af5049caf271955427c221afb5eefaba"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\inputs\\trickshooter-primary-final-content-delta-review.json",
+      "sha256": "32a8df3ff6045baf2349b5ffac0ee0d395453844bdca489c4012262af0cdd690"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "7faf40c71061e79fd440f66d011715ef771f779ea3cc9457cde55b5804224718"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "597891fa5a93a05a93efac087da57f0ae9f60302b15926c7668790aa7596c92a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "81baf81d55dd9f47eff2c8ee3800659dd9746e4f5dacb80b3070d03c0258490c"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "bd1f14a160e1b5f4f14b431f5b46f42c433053f7ee7fd1fae2c25cef67a91a3a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\LOCALIZATION_COMPARISON.md",
+      "sha256": "51b753ab7aa09f61c2c17e031522c186e1f546a70383313d319c564db5f061bf"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\README.md",
+      "sha256": "e0fecb4b232375170ee69225a083fc45c1570c8d84d78ae221d9e4741d015161"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\SOURCE_INDEX.md",
+      "sha256": "ef92867c5fdf1c1cfffd953647bf278c4f0c18a8425367e5b1b5f9e719447c9d"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\TIER_VALUES.md",
+      "sha256": "ab7d193a02a5b7b7c89a45d8b9b5f15af8c7038aedb614f73dd938508c3a53f8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\WEAPON_COMPATIBILITY.md",
+      "sha256": "24c43779543a341112d370e3d5c6c7794f134a3f9a7c1f02d8f7d1426ffaa7b6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power.md",
+      "sha256": "4a8c77abedea077ab11549b3597b2041733250bc631e124752e0d4b793cc8511"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\entries\\狡猾射手\\weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power.md",
+      "sha256": "0719a860ab97275f22a45fbba9c67f5f96fc235851e8e5effdd18ed04449face"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "eb252ce7c749b610803e663224cc76337762a270eee12c0c5e9a0adb25f2d797"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\快拔左輪手槍\\README.md",
+      "sha256": "1510f47480072542f2e297226cb339a6b94f7b215498ba8e6d1bb1031c86d1b1"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\電能步槍\\README.md",
+      "sha256": "3d66d6b4c1952f0bc8d8c187eecf0b973664492e1ee3180f1d13fc22d4d6f5b5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\Referneces\\Translation.md",
+      "sha256": "3f1f5564bdb1523355154f2ac2d1a8ffd15740b2c9013a409e233ffc7595e2b8"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-raw-verification.json",
+      "sha256": "49f33d91db9331c35cf0d1c9e023a9b7837d35a27a3f4b37e296b046ba8528f7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\trickshooter-group\\actual-preview-004\\own-association-snapshot.json",
+      "sha256": "1e32c61d3f7797e322a16d9be29543f50868362bd4353a28ed5a1c6fbab60ab4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/association-snapshot.json",
+      "sha256": "c11f19cca77847d6ce000d949a818ecb3fa5c251fd4014d44f0df42fb9089380"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/attack-coverage.json",
+      "sha256": "23866427853eb5ddf48e9e9a5410a1b6be0be8e4b7ef2a4fc34087a3be44f1df"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/binding-inventory.json",
+      "sha256": "f50389417ccd02bf0f8ec3b1a458a800fb0cb8f73950c3f76364c6b65761ccef"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/candidate-page-preview-004.md",
+      "sha256": "e0fecb4b232375170ee69225a083fc45c1570c8d84d78ae221d9e4741d015161"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/candidate-preview-manifest-004.json",
+      "sha256": "8b032676ce2de92a9d8ae2f83358f9d21b77553c74abc40150178df7dbe37f0d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/draft.md",
+      "sha256": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/examples.md",
+      "sha256": "666518e0d70dd46a9c7c407bd83bba14ec9b17097d32be583f1bbd8ef85a8119"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/math.md",
+      "sha256": "26ca53f126c2b38670e2ed1f2c756575099251466b730316e7c292e9ebae21e6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/mechanism.md",
+      "sha256": "e780953ec3100581b76d42b45c43a62c4767579e212d8326f7f029a59de1765d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/player.md",
+      "sha256": "7f116519a35c81349f15f90587319cae0224f6be0e90c518cf390469334200a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/reconstruction.md",
+      "sha256": "4e4ac0d8bd080a207b1e99dd76eba7580bfa3744e15a5a30ae1ae6457cb0881c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/review.md",
+      "sha256": "7df403385707eb05a1a8730b90d7f3b0115b797ceaa46b42033968fd3230e52f"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/selfcheck.json",
+      "sha256": "9508b8b7a25cf70b613b269d988eb8b0c9607be356d15301c7e7197d76f7dfb0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/source_blocks.json",
+      "sha256": "672ee564a6033830d7c08d83f40646c6c074932b4bc853cf36727ac39f736327"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/source_file_hashes.json",
+      "sha256": "92682b7d8d1133e045bfbc0cedb55876dbacbb39d245ec1e133998b3fe91c007"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/tiers.md",
+      "sha256": "5b2468b53dfdef855f6c20a6431954f2ee4ff2c0d627b50f1e454bb319fd44f2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-001.json",
+      "sha256": "fd64d385a5f1fd39d87d148915d0759e4fafaf5c33787525c71332689690fee5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-002.json",
+      "sha256": "92ec5ddd32613c8fe412c35c1c905bdde773ce1dfbd0d103f3c152b7975476e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-actual-preview-receipt-004.json",
+      "sha256": "570c536e18cd5e8d028f0dd9f38555ccf270e2e3aef97ac445cb4a676d390fde"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-config.json",
+      "sha256": "ab3a77703d22f8712bb0187e09bf297f4a52a808bf3587555c846bdd69d84685"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-draft.md",
+      "sha256": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-group/trickshooter-agent-evidence.json",
+      "sha256": "d998860ce93de9d235031d870162bb03c7c116762719ed783235ac43536151f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-config.json",
+      "sha256": "ab3a77703d22f8712bb0187e09bf297f4a52a808bf3587555c846bdd69d84685"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-evidence.json",
+      "sha256": "d998860ce93de9d235031d870162bb03c7c116762719ed783235ac43536151f3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-agent-draft.md",
+      "sha256": "9634c5a3dc90d989cca6d2fe6fd84efcc4218de2be905444a64d9f11eca020c6"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-final-content-delta-review.json",
+      "sha256": "32a8df3ff6045baf2349b5ffac0ee0d395453844bdca489c4012262af0cdd690"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-frozen-source-verification.json",
+      "sha256": "28677b331c1203e158f4efbbe302f6e8e0a77407df3a29d869dff8ec7a4a0e36"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-own-tier-wrapper-weakspot-latch-material-review.json",
+      "sha256": "0f7e17a664959ee8a6a434e8ad7ca6c35a9845a08e97fca409669bd6659b49cf"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ranged-power-consumer-difference-review.json",
+      "sha256": "f0b47d70f206e3b7767b7bca4fce13a1b57ab54e3b16f69651a3538e14478de4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-traits-review.json",
+      "sha256": "e192b5de58bf6f6984dd985446dcd31c7f4d592443e9cedc28537c5a4dcd8727"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-raw-verification.json",
+      "sha256": "538a397e135a766c75747690f4b60e1decee2e2fa1ecabba501ce2bbc4f326bb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-ui-review.json",
+      "sha256": "0df7fb47ef687c17cde4cac6986b884558464572a85394719493aada48c8d9fa"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-primary-complete-source-label-review.json",
+      "sha256": "473a16c702c64da30a7f7d84bd3a7fdefc0ab803c5df86a9d089523d62f74de3"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/trickshooter-formal-peer-scope.json",
+    "sha256": "15b94e27f9b42f026b1d8ff381a75262a683b3d2d8102682f4a1202d77a8ec52",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/voltaic_arcs",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}

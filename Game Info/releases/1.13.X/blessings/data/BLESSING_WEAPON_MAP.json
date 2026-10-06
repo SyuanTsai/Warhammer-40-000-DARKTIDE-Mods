@@ -1994,6 +1994,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
       "effect": "持續射擊期間，依射擊步進提高壓制，並提高對已受壓制目標的傷害；最多5層。"
+    },
+    {
+      "id": "trickshooter",
+      "name_zh_tw": "狡猾射手",
+      "name_en": "Trickshooter",
+      "name_key": "loc_trait_bespoke_power_bonus_on_chained_weakspot_hits",
+      "description_key": "loc_trait_bespoke_power_bonus_on_chained_weakspot_hits_desc",
+      "name_hash": "91af0d57",
+      "description_hash": "3cc56256",
+      "page": "entries/狡猾射手/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
+      "effect": "每次手持時的弱點 hitscan 射擊增加一層遠程威力修正；每層依等級增加 4.5%／5%／5.5%／6%，最多5層，合格射擊刷新共同3.5秒期限。"
     }
   ],
   "weapons": [
@@ -30407,6 +30420,84 @@
       "icon": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_111",
       "effect": "持續射擊每達成一個射擊步進，壓制強度提高12.5／15／17.5／20%，對已被壓制目標的傷害提高4／5／6／7%；最多5層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power",
+      "blessing_id": "trickshooter",
+      "weapon_id": "galvanic_rifle_p1",
+      "page": "entries/狡猾射手/weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_ranged_power_level_modifier_by_tier": {
+          "I": 0.045,
+          "II": 0.05,
+          "III": 0.055,
+          "IV": 0.06
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_galvanic_rifle_p1.lua",
+        "start_line": 374,
+        "end_line": 441
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_galvanic_rifle_p1_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_chained_weakspot_hits_desc",
+      "description_hash": "3cc56256",
+      "icon": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_109",
+      "effect": "腰射或瞄準 hitscan 射擊至少有一個目標被判為弱點且仍手持時加一層遠程威力；每層 I–IV +4.5%／+5%／+5.5%／+6%，最多5層，合格弱點射擊刷新3.5秒期限。",
+      "buff_template_id": "weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power",
+      "blessing_id": "trickshooter",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/狡猾射手/weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_layer_ranged_power_level_modifier_by_tier": {
+          "I": 0.045,
+          "II": 0.05,
+          "III": 0.055,
+          "IV": 0.06
+        },
+        "effective_max_layers": 5,
+        "child_duration_seconds": 3.5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 288,
+        "end_line": 355
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_chained_weakspot_hits_desc",
+      "description_hash": "3cc56256",
+      "icon": "https://github.com/user-attachments/assets/bbee15ca-61b8-4524-8f80-ffa161f4e769",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_109",
+      "effect": "腰射或瞄準 hitscan 射擊至少有一個目標被判為弱點且仍手持時加一層遠程威力；每層 I–IV +4.5%／+5%／+5.5%／+6%，最多5層，合格弱點射擊刷新3.5秒期限。",
+      "buff_template_id": "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power_parent"
     }
   ],
   "bindings": [
@@ -44072,6 +44163,48 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
         "import_line": 16,
         "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "trickshooter",
+      "weapon_id": "galvanic_rifle_p1",
+      "mark_id": "galvanic_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_galvanic_rifle_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_galvanic_rifle_p1/power_bonus_on_chained_weakspot_hits",
+      "trait_category": "bespoke_galvanic_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/galvanic_rifle/galvanic_rifle_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "trickshooter",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/power_bonus_on_chained_weakspot_hits",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "trickshooter",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/power_bonus_on_chained_weakspot_hits",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
       }
     }
   ]

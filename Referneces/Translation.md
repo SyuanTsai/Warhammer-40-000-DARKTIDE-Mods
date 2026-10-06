@@ -515,6 +515,7 @@
 - Both Barrels - 雙管齊發
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_reload_speed_on_ranged_weapon_special_kill`，hash `5ea2e09a`；英文／繁中RAW配對確認。
 - Trickshooter - 狡猾射手
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_chained_weakspot_hits`，hash `91af0d57`；英文／繁中RAW配對確認。
 - Hand-Cannon - 手銃
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_rending_on_crit`，hash `1391c6e5`；英文／繁中RAW配對確認。
 - Shattering Impact - 破碎衝擊
