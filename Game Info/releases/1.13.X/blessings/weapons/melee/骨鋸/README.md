@@ -9,11 +9,12 @@
 | <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](../../../entries/憤怒/README.md)<br>- Wrath<br>[完整說明](../../../entries/憤怒/README.md) | <ul><li>近戰揮擊命中後每層順劈+10%／15%／20%／25%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/b2155c24-1abc-4d51-a55a-53e295c0bdee" width="32" height="32" alt="精煉殺意祝福圖示"> [精煉殺意](../../../entries/精煉殺意/README.md)<br>- Refined Lethality<br>[完整說明](../../../entries/精煉殺意/README.md) | <ul><li>持用骨鋸對帶毒素狀態的目標造成近戰弱點命中時，I–IV 向弱點／精準額外傷害乘區加入 52.5%／55%／57.5%／60%；最終傷害增幅依其他傷害部分與加成而變。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/6c1e408b-d8d7-4ce3-9782-198b9e3b0970" width="32" height="32" alt="震懾祝福圖示"> [震懾](../../../entries/震懾/README.md)<br>- Shock & Awe<br>[完整說明](../../../entries/震懾/README.md) | <ul><li>同級質量修正與3秒效果；初次重擊可觸發，普通及穿甲的延遲撕扯擊殺不觸發；本型號使用圖示246。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109" width="32" height="32" alt="斷肢者祝福圖示"> [斷肢者](../../../entries/斷肢者/README.md)<br>- Limbsplitter<br>[完整說明](../../../entries/斷肢者/README.md) | <ul><li>持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 骨鋸 外科醫師 型號4 | [屠戮者](../../../entries/屠戮者/weapon_trait_bespoke_saw_p1_chained_hits_increases_power.md)、[粉碎](../../../entries/粉碎/weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance.md)、[憤怒](../../../entries/憤怒/weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave.md)、[精煉殺意](../../../entries/精煉殺意/weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status.md)、[震懾](../../../entries/震懾/weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill.md) | I–IV |
+| 骨鋸 外科醫師 型號4 | [屠戮者](../../../entries/屠戮者/weapon_trait_bespoke_saw_p1_chained_hits_increases_power.md)、[粉碎](../../../entries/粉碎/weapon_trait_bespoke_saw_p1_chained_hits_increases_crit_chance.md)、[憤怒](../../../entries/憤怒/weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave.md)、[精煉殺意](../../../entries/精煉殺意/weapon_trait_bespoke_saw_p1_increased_weakspot_damage_against_toxin_status.md)、[震懾](../../../entries/震懾/weapon_trait_bespoke_saw_p1_hit_mass_consumption_reduction_on_kill.md)、[斷肢者](../../../entries/斷肢者/weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

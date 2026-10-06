@@ -513,3 +513,5 @@
 - 第41輪三項已Commit後完整掃描通過：overwhelming-fire (`aaa5cf9fb93b47d21fd2b99f1a4f594cb26851b9`)、blaze-away (`1bee1b2b57ac423430c577c3582214a275978ad3`)、take-a-swing (`496070020fee68f418e7ea273e05f229aa9222b4`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-041-full-scan.json`／SHA-256 `698b670fe1fde7129b1b64d244d8dfa0ab2977174c29ae717f53db3652ba0633`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
 
 - [接連不斷](2026-10-03-CAVALCADE_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。
+
+- [斷肢者](2026-10-03-LIMBSPLITTER_ACCEPTANCE.json)：新增7變體、15型號關聯；共7變體、15關聯。

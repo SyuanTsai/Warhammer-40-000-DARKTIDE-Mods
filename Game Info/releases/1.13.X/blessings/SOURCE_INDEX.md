@@ -160,3 +160,4 @@
 | [連續發射](entries/連續發射/README.md) | [來源索引](entries/連續發射/SOURCE_INDEX.md) |
 | [揮拳出擊](entries/揮拳出擊/README.md) | [來源索引](entries/揮拳出擊/SOURCE_INDEX.md) |
 | [接連不斷](entries/接連不斷/README.md) | [來源索引](entries/接連不斷/SOURCE_INDEX.md) |
+| [斷肢者](entries/斷肢者/README.md) | [來源索引](entries/斷肢者/SOURCE_INDEX.md) |

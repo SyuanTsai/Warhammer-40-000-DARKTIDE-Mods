@@ -2091,6 +2091,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c",
       "effect": "持用並射擊時，依彈匣比例累積爆擊率，最多五步。"
+    },
+    {
+      "id": "limbsplitter",
+      "name_zh_tw": "斷肢者",
+      "name_en": "Limbsplitter",
+      "name_key": "loc_trait_bespoke_power_bonus_on_first_attack",
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "name_hash": "0bc02d91",
+      "description_hash": "b8511cfd",
+      "page": "entries/斷肢者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "effect": "持用實際綁定武器且統計快取處於可用狀態時，近戰攻擊取得對應家族的威力加成；第一次適用的快取更新即可使用。符合來源物品、近戰攻擊類型與持用檢查的命中事件在傷害結算後重新開始等待：六個家族 I／II／III／IV 為 +60%、等待 5／4.5／4／3.5 秒；碎骨者 克魯克 Mk IIa 為 +17.5%／+20%／+22.5%／+25%、各級等待 2 秒。"
     }
   ],
   "weapons": [
@@ -31776,6 +31789,398 @@
       "icon": "https://github.com/user-attachments/assets/7656fac7-2c30-4d51-9551-48872fc96a1c",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_125",
       "effect": "每達目前最大彈匣容量8%步距，I–IV每步增加3.5／4／4.5／5個百分點，最多五步。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p1",
+      "page": "entries/斷肢者/weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p1.lua",
+        "start_line": 338,
+        "end_line": 400
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p1_buff_templates.lua",
+        "start_line": 53,
+        "end_line": 53
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p2",
+      "page": "entries/斷肢者/weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p2.lua",
+        "start_line": 214,
+        "end_line": 276
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/斷肢者/weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 174,
+        "end_line": 236
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/斷肢者/weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 124,
+        "end_line": 186
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/斷肢者/weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.175,
+            "no_power_duration": 2.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.2,
+            "no_power_duration": 2.0
+          },
+          "3": {
+            "melee_power_level_modifier": 0.225,
+            "no_power_duration": 2.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.25,
+            "no_power_duration": 2.0
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 156,
+        "end_line": 218
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 28,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，碎骨者 克魯克 Mk IIa（Cruncher Krourk Mk IIa）的近戰攻擊取得 +17.5%／+20%／+22.5%／+25% 近戰威力；合格近戰命中在傷害結算後重新開始等待，各級均為 2 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/斷肢者/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 59,
+        "end_line": 121
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack",
+      "blessing_id": "limbsplitter",
+      "weapon_id": "saw_p1",
+      "page": "entries/斷肢者/weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_values": {
+          "1": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 5.0
+          },
+          "2": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.5
+          },
+          "3": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 4.0
+          },
+          "4": {
+            "melee_power_level_modifier": 0.6,
+            "no_power_duration": 3.5
+          }
+        },
+        "fields": {
+          "melee_power_level_modifier": "additive melee power multiplier input",
+          "no_power_duration": "seconds until next qualifying first attack"
+        },
+        "trigger": "on_hit; held source item; matching source item; attack_type=melee",
+        "stacks": 0,
+        "cooldown_stacks": "No generic cooldown; an absolute no-power deadline is restarted on each qualifying hit.",
+        "power_stage": "After the weapon power-type curve; not final health damage."
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 178,
+        "end_line": 240
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 45,
+        "end_line": 45
+      },
+      "description_key": "loc_trait_bespoke_power_bonus_on_first_attack_desc",
+      "description_hash": "b8511cfd",
+      "icon": "https://github.com/user-attachments/assets/fde18f48-0180-49ae-9b9f-cc40a0ebf109",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_188",
+      "effect": "持用且統計快取處於可用狀態時，近戰攻擊取得 +60% 近戰威力；合格近戰命中在傷害結算後重新開始等待，I／II／III／IV 等待 5／4.5／4／3.5 秒。"
     }
   ],
   "bindings": [
@@ -46085,6 +46490,216 @@
         "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
         "import_line": 15,
         "append_line": 891
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1272
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1227
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p1",
+      "mark_id": "combataxe_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1532
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m1.lua",
+        "import_line": 13,
+        "append_line": 1452
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m2.lua",
+        "import_line": 13,
+        "append_line": 1493
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p2",
+      "mark_id": "combataxe_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p2_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p2/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
+        "import_line": 13,
+        "append_line": 1360
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/power_bonus_on_first_attack",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "limbsplitter",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_power_bonus_on_first_attack",
+      "trait_item": "content/items/traits/bespoke_saw_p1/power_bonus_on_first_attack",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
       }
     }
   ]

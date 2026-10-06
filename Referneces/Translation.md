@@ -314,6 +314,7 @@
 - Brutal Momentum - 野蠻攻勢
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_infinite_cleave_on_weakspot_kill`，hash `4ae27066`；英文／繁中RAW配對確認。
 - Limbsplitter - 斷肢者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_on_first_attack`，hash `0bc02d91`；英文／繁中RAW配對確認。
 - All or Nothing - 孤注一擲
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_power_bonus_scaled_on_stamina`，hash `c92a8c2a`；英文／繁中RAW配對確認。
 - Decapitator - 斬首者
