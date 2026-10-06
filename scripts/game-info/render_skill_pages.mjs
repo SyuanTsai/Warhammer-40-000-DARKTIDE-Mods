@@ -2,7 +2,7 @@
 /** Export fixed Git Markdown to individually readable static Darktide pages. */
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 
@@ -10,7 +10,7 @@ const options = {};
 for (let i = 2; i < process.argv.length; i += 2) {
   const key = process.argv[i];
   if (!key.startsWith('--') || !process.argv[i + 1]) {
-    throw new Error('Use --mods-root ROOT --pages-root ROOT --knowledge-sha SHA --source-sha SHA --markdown-module MARKED_ESM');
+    throw new Error('Use --mods-root ROOT --pages-root ROOT --knowledge-sha SHA --source-sha SHA --markdown-module MARKED_ESM [--python COMMAND] [--classes NAMES]');
   }
   options[key.slice(2)] = process.argv[i + 1];
 }
@@ -19,6 +19,10 @@ for (const key of ['mods-root', 'pages-root', 'knowledge-sha', 'source-sha', 'ma
 }
 const modsRoot = path.resolve(options['mods-root']);
 const pagesRoot = path.resolve(options['pages-root']);
+const postprocessor = path.join(pagesRoot, 'scripts', 'apply_darktide_reader.py');
+if (!fs.existsSync(postprocessor)) {
+  throw new Error('The Pages root must include scripts/apply_darktide_reader.py for final navigation and HTML formatting.');
+}
 const knowledgeSha = options['knowledge-sha'];
 const sourceSha = options['source-sha'];
 for (const sha of [knowledgeSha, sourceSha]) {
@@ -288,7 +292,16 @@ function readerFrame(html, url) {
     html = html.replace('<li aria-current="page">', `<!-- reader:crumb --><li><a href="${root}#category-${categories.indexOf(skill.category)}">${escape(skill.category)}</a></li>${parent}<!-- /reader:crumb -->\n            <li aria-current="page">`);
   }
   html = html.replace('<div class="skill-shell">', `<div class="skill-shell">\n<!-- reader:start -->\n      <div class="dt-layout">\n${directory(url)}\n        <div class="dt-reading">\n<!-- reader:body -->`);
-  return html.replace('    </div>\n  </body>', '<!-- reader:end -->\n        </div>\n      </div>\n<!-- /reader:end -->\n    </div>\n  </body>');
+  const shellClose = /<\/div>(?=\s*(?:<script\b[^>]*>[\s\S]*?<\/script\s*>\s*)*<\/body\s*>)/i.exec(html);
+  if (!shellClose) throw new Error('Unable to locate the skill shell closing element.');
+  const newline = html.includes('\r\n') ? '\r\n' : '\n';
+  const readerEnd = [
+    '<!-- reader:end -->',
+    '        </div>',
+    '      </div>',
+    '<!-- /reader:end -->',
+  ].join(newline) + newline;
+  return html.slice(0, shellClose.index) + readerEnd + html.slice(shellClose.index);
 }
 
 function shell({ title, english = '', category, url, classZh = '', classSlug = '', icon = '', body, sidebar = [], footer = '' }) {
@@ -427,4 +440,17 @@ function rowsCount(group) { return group.skills.filter(skill => skill.kind !== '
 if (!options.classes) {
   const content = '<ul class="skill-catalog-list">' + groups.map(group => `<li><a class="skill-catalog-link" href="/darktide/skills/${group.classSlug}/"><span><strong>${group.classZh}</strong><small lang="en">${group.className}</small></span><span class="skill-catalog-count">${rowsCount(group)} 主文入口 · ${group.skills.filter(skill => skill.kind === 'base-effect').length} 基礎效果</span></a></li>`).join('\n') + '</ul>';
   write('/darktide/skills/', shell({ title: '技能與天賦', category: '七職業 · Release 1.13.1', url: '/darktide/skills/', body: section('classes', '職業', content) + '\n' + section('version', '版本與證據限制', `<p>Release 1.13.1 · 1.13.X。當前天賦、興奮劑配方、零點裝備說明與基礎效果分開列示；未使用定義只在技術補充查閱。</p><p>繁中正文與英文技能名稱沿用既有 Git 文件；未進行遊戲內實測。每技能可往返玩家頁與完整機制依據頁。</p><p class="skill-source-sha">知識 Commit：${knowledgeSha}<br>Source SHA：${sourceSha}</p>`), sidebar: [['#classes', '七職業'], ['#version', '版本與限制']], footer: '<a href="/darktide/">← 返回 Darktide</a>' }));
+}
+
+const python = options.python || 'python';
+const result = spawnSync(python, [postprocessor, '--site', pagesRoot], {
+  cwd: pagesRoot,
+  stdio: 'inherit'
+});
+if (result.error) {
+  throw new Error(`Could not run the Pages postprocessor with ${python}: ${result.error.message}`);
+}
+if (result.status !== 0) {
+  const exit = result.status === null ? result.signal : `exit code ${result.status}`;
+  throw new Error(`The Pages postprocessor failed with ${exit}.`);
 }

@@ -76,7 +76,7 @@ assets/css/
 
 完整網站沿用「左側可展開階層目錄、右側目前頁內容」。目錄依技能與天賦 → 職業 → 分類 → 技能展開，保留目前位置與選中項目；只輸出目前分類的鄰近技能，其他分類及大型分支連到自己的完整目錄，不在每頁重複646個技能或所有正文。桌面側欄250px，手機預設收合為「瀏覽目錄」，390px與320px不得整頁橫向溢出。使用原生details/summary與連結，停用JavaScript仍可閱讀、展開及往返。
 
-共用閱讀外框由 `render_skill_pages.mjs` 再產生；炸藥儲備特殊正文也經同一外框，重複執行不得累加目錄或刪除算例。Pages 的 `darktide-reader.css` 只共用導覽與左右版型，技能與對話的正文來源、產生器及樣式維持分離。本頁段落目錄留在右側正文之前，完整長表格與識別碼保留獨立捲動／換行。
+技能頁面與炸藥儲備特殊正文完成輸出後，由網站的 `scripts/apply_darktide_reader.py` 統一套用共用導覽 metadata 與標籤格式；匯出器完整執行或使用 `--classes` 局部執行時都會在最後呼叫此工具。重複執行不得累加目錄或 loader，也不得刪除算例。Pages 的 `darktide-reader.css` 只共用導覽與左右版型，技能與對話的正文來源、產生器及樣式維持分離。本頁段落目錄留在右側正文之前，完整長表格與識別碼保留獨立捲動／換行。
 
 整合首頁與對話前先核對已交付容量工作的精確SHA、變更範圍、25筆分頁網址、語系配對、原文空白、錨點及sitemap；不從舊快照覆寫已驗收成果。未交付英文技能不自行翻譯或發布，暫緩的全面HTML精簡不因版型整合恢復。
 
@@ -91,7 +91,7 @@ assets/css/
 
 ## 機制頁與可再產生來源
 
-- `scripts/game-info/render_skill_pages.mjs` 從固定 Git 物件讀取原 Markdown，產生獨立靜態 HTML；正文仍只維護 Git Markdown，不手動編輯第二份機制結論。執行參數與 Markdown 模組版本見 [工具說明](../scripts/game-info/README.md)。
+- `scripts/game-info/render_skill_pages.mjs` 從固定 Git 物件讀取原 Markdown，產生獨立靜態 HTML；所有請求的頁面與 TSV 寫完後，再呼叫 Pages 工作樹的 `scripts/apply_darktide_reader.py --site <Pages 工作樹>`。正文仍只維護 Git Markdown，不手動編輯第二份機制結論。技能匯出器可用 `--python` 指定其後處理 Python 執行檔，預設為 `python`；執行參數與 Markdown 模組版本見 [工具說明](../scripts/game-info/README.md)。
 - 機制頁完整保留來源版本、確認／推導狀態、作用對象、計時、結算、上限、例外、顯示差異、算例、待確認事項與引用。來源文字比對以完整正文為準，不能用同一份摘要替換各技能。
 - 每頁提供返回玩家頁、固定 Git 原文件、固定 Source Code 入口；保留來源行號引用。站內 Markdown 與 README 技能錨點轉到對應網頁；尚未轉換的文件先確認固定 Commit 中存在，再使用固定 Git 連結。
 - 職業補充文件各自一頁；未使用定義明記非當前可選技能。七職業 TSV 保存識別碼、分類、原文件、來源雜湊與兩個 URL，沒有集中載入全部正文的 HTML／JSON。
@@ -123,6 +123,6 @@ assets/css/
 
 ## 七、共用階層導覽整合
 
-技能外框與首頁／對話外框共用 `assets/css/darktide-reader.css`，技能正文仍由本流程與固定 Markdown 維護。匯出器從網站首頁既有對話分類讀取可收合導覽；網站 `scripts/apply_darktide_reader.py` 從技能根入口讀取七職業。先接入已交付容量分類，再匯出技能與套用對話外框，避免用舊快照覆蓋分頁或用途分類。
+技能外框與首頁／對話外框共用 `assets/css/darktide-reader.css`，技能正文仍由本流程與固定 Markdown 維護。匯出器從網站首頁既有對話分類讀取可收合導覽；網站 `scripts/apply_darktide_reader.py` 從技能根入口讀取七職業。再生順序固定為分類來源、用途／證據網站頁面、技能匯出，最後由網站工具套用共用 metadata 導覽與標籤格式，避免用舊快照覆蓋分頁或用途分類。網站 PR [#55](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/55) 已合併；Pages PR [#57](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/57) 與 Mods PR [#195](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/195) 有生成工具依賴，網站工具先更新至兼容版本後再驗收 Mods 匯出。
 
 目前技能分類只輸出有限鄰近技能；對話分支只輸出有限鄰近入口，大清單連回獨立分類或分頁。手機目錄預設收合，桌面左側250px，保持原生連結、details、目前位置與獨立正文頁。共用導覽不含技能／字幕正文、未交付英文翻譯或整個全集JSON。每次重生核對全文與錨點，炸藥儲備特殊範本須保持可重複產生。

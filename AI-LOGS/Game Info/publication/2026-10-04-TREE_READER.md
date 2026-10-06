@@ -59,3 +59,9 @@ GPT-6 Luna／max代理以停用JS的19頁 × 3種寬度（1280、390、320）完
 容量減少71,209,521 bytes，技能與對話導覽增加109,706,345 bytes；最後相對基準淨增38,496,824 bytes、淨減27,814檔。技能HTML共21,104,797 bytes；用途待確認39,368,282 bytes、新用途分類987,391 bytes。沒有混用ZIP、Git與實際部署產物大小。
 
 公開diff沒有私人路徑、聯絡資訊、runtime instructions或臨時QA；自己的author／committer均為指定Git metadata身分，公開祖先排除本機remediation。正式交付保持Draft，未由本任務合併、標記Ready或發布。本次版型沒有未解驗收問題；官方30筆中文缺漏、音訊未取得及技能英文未交付仍按既有來源限制呈現。維護紀錄與歷史INDEX保留原位置。
+
+## 2026-10-06 後續狀態
+
+本節補記 2026-10-04 快照後的交付狀態，不改寫上方各階段當時記錄。網站[階層導覽整合 PR #55](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/55)後續已合併。
+
+目前 Pages [共用導覽與格式 PR #57](https://github.com/SyuanTsai/SyuanTsai.github.io/pull/57)提供技能與對話頁共同使用的 metadata 導覽及 HTML 最後處理工具。Mods [技能匯出 PR #195](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/195)依賴 Pages 工作樹中的 `scripts/apply_darktide_reader.py`；匯出器須在寫完全部指定技能頁與 TSV 後呼叫該工具，再生完整匯出或單職業匯出都遵守相同順序。#195 的最終再生與驗收須使用包含相容網站工具的 Pages 版本；先整合 #57，再完成 #195 的最終驗收。
