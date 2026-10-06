@@ -445,6 +445,7 @@
 - Roaring Advance - 咆哮突進
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_movement_speed_on_continuous_fire`，hash `3b53eda2`；英文／繁中RAW配對確認。
 - Ceaseless Barrage - 持續阻擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_suppression_on_continuous_fire`，hash `99f3b21e`；英文／繁中RAW配對確認。
 - Inspiring Barrage - 振奮彈幕
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_continuous_fire`，hash `ee616ba9`；英文／繁中RAW配對確認。
 - Ghost - 幽靈

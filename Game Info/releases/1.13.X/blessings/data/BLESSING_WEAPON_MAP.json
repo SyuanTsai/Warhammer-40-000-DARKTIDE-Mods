@@ -1981,6 +1981,19 @@
         "loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc",
         "loc_trait_bespoke_staggering_hits_has_chance_to_stun_elites_specials_desc"
       ]
+    },
+    {
+      "id": "ceaseless-barrage",
+      "name_zh_tw": "持續阻擊",
+      "name_en": "Ceaseless Barrage",
+      "name_key": "loc_trait_bespoke_suppression_on_continuous_fire",
+      "description_key": "loc_trait_bespoke_suppression_on_continuous_fire_desc",
+      "name_hash": "99f3b21e",
+      "description_hash": "ecbe5a89",
+      "page": "entries/持續阻擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
+      "effect": "持續射擊期間，依射擊步進提高壓制，並提高對已受壓制目標的傷害；最多5層。"
     }
   ],
   "weapons": [
@@ -30310,6 +30323,90 @@
       "icon": "https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_224",
       "effect": "布蘭克斯 Mk III：full 且 stagger 的 on_hit 依相同機率套用眩暈，另須目標標籤為 elite 或 special。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire",
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "autogun_p2",
+      "page": "entries/持續阻擊/weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_dealt": {
+          "I": 0.125,
+          "II": 0.15,
+          "III": 0.175,
+          "IV": 0.2
+        },
+        "damage_vs_suppressed": {
+          "I": 0.04,
+          "II": 0.05,
+          "III": 0.06,
+          "IV": 0.07
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p2.lua",
+        "start_line": 314,
+        "end_line": 377
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p2_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_continuous_fire_desc",
+      "description_hash": "ecbe5a89",
+      "icon": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_111",
+      "effect": "持續射擊每達成一個射擊步進，壓制強度提高12.5／15／17.5／20%，對已被壓制目標的傷害提高4／5／6／7%；最多5層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire",
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/持續阻擊/weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "suppression_dealt": {
+          "I": 0.125,
+          "II": 0.15,
+          "III": 0.175,
+          "IV": 0.2
+        },
+        "damage_vs_suppressed": {
+          "I": 0.04,
+          "II": 0.05,
+          "III": 0.06,
+          "IV": 0.07
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 96,
+        "end_line": 159
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 30
+      },
+      "description_key": "loc_trait_bespoke_suppression_on_continuous_fire_desc",
+      "description_hash": "ecbe5a89",
+      "icon": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_111",
+      "effect": "持續射擊每達成一個射擊步進，壓制強度提高12.5／15／17.5／20%，對已被壓制目標的傷害提高4／5／6／7%；最多5層。"
     }
   ],
   "bindings": [
@@ -43891,6 +43988,90 @@
         "path": "scripts/settings/equipment/weapon_templates/power_mauls/powermaul_p3_m1.lua",
         "import_line": 16,
         "append_line": 2631
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 814
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m2.lua",
+        "import_line": 17,
+        "append_line": 865
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "autogun_p2",
+      "mark_id": "autogun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_autogun_p2/suppression_on_continuous_fire",
+      "trait_category": "bespoke_autogun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 819
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/suppression_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/suppression_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "ceaseless-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/suppression_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
       }
     }
   ]

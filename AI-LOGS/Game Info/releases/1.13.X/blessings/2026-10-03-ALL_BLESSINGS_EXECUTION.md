@@ -491,3 +491,5 @@
 - [刻不容緩](2026-10-03-NO-RESPITE_ACCEPTANCE.json)：新增8變體、18型號關聯；共8變體、18關聯。
 
 - [壓倒性的武力](2026-10-03-OVERWHELMING-FORCE_ACCEPTANCE.json)：新增2變體、3型號關聯；共2變體、3關聯。
+
+- [持續阻擊](2026-10-03-CEASELESS-BARRAGE_ACCEPTANCE.json)：新增2變體、6型號關聯；共2變體、6關聯。

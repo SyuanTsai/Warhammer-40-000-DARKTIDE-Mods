@@ -1,0 +1,585 @@
+{
+  "date": "2026-10-06",
+  "blessing": "ceaseless-barrage",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/持續阻擊/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire",
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire"
+  ],
+  "added_binding_count": 6,
+  "total_variants": 2,
+  "total_bindings": 6,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "schema_version": 1,
+    "blessing_id": "ceaseless-barrage",
+    "review_type": "formal non-author peer",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-formal-peer-scope.json",
+    "scope_sha256": "e28ee16df83dfe3347d10e0d4b9d4a34d2719ffeb31918bd1d832a5efe66eff5",
+    "complete": true,
+    "accepted": true,
+    "candidate_content_accepted": true,
+    "issues": [],
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true,
+    "formal_scope_pending_correction": false,
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-config.json": "162e5a8e6509bfa16f36589f7696565f536a00ef12b0c2a4b2b56b9c5782d226",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-draft.md": "8a315077a5905e3aa903d03c3ed28d5da62a2d63a6574e6e5a12ea5d33c18939",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-evidence.json": "87e8f9de98243acdf33306fbad4a2d9fc0881dbedff25eaffc355a6ff5f0aedc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-config.json": "2cbe46c0dc15dc2bf46f27bb32487881285fe4b139e536f0d297b68645832cc3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-extension-draft.json": "e399c5b765781fc24283b6c55df4a9fbe68098489b64ff196fe038f4a38a1260",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-001.json": "e05835bc07ca18d18f7d672257abcc51932f70046af24ebba58fe291438f20f9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-002.json": "47632a8e5f319b4dd6af4f6de01857e5c4b2345165ae6e5e01dab61498773771",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-003.json": "868d9c0909fd7df9994b18e2f126cd69e1a52c3a43237beaf68fd22da9edca91",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-004.json": "0e299e5080e49055e2318778a15cf8b4f2d373e2783e0cc02818be32e828c4b5",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-005.json": "15924e9d0a3c5fba0729c0a8d88e27fa576e4697ee01e3183e731bb9d8356477",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-006.json": "a75208057762590ad89f9c4154471cba7cfe7fe6b9cb3711a2953e5d85234bbe",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-association.json": "8b036ff77a3199da18237c0ac3aaccc93eb80798ecd02569927d8c921f671df9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-candidate-manifest.json": "afd1e8553ef34936290cc94f64970e98e20ef23b3e32343ad9c9f6be2e111633",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-config.json": "162e5a8e6509bfa16f36589f7696565f536a00ef12b0c2a4b2b56b9c5782d226",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-coverage.json": "7787e19ebd987311eaa625c36a6bb94ab8c406d81c77e356580998eda4623d92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-draft.md": "8a315077a5905e3aa903d03c3ed28d5da62a2d63a6574e6e5a12ea5d33c18939",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-evidence.json": "87e8f9de98243acdf33306fbad4a2d9fc0881dbedff25eaffc355a6ff5f0aedc",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-preflight.json": "6b1ea40c8639c7b91a46c0ad856e948437afa3b599ca2debbe71b4b1ff66d713",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-candidate-formal-preview.md": "404419d656e0c6d28281b4e87af93338ba07a981b6358791afc03bacfbe3bd24",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/inputs/BLESSING_WEAPON_MAP-snapshot-005.json": "72693f2237a2c2149f8b63b28d5ee9de2b46810f03a91eed4646554c4dcb9d78",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/inputs/remaining-tasks-snapshot-005.json": "efe1c802b5310578c9f3bb3b7c17449e2356c32ac37a6b20b41f799f5319edb9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-image.json": "e14dcbf822a6b3c1a3614991e7450f1b80e456be3ba5daa1936a8261e99bfa20",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-final-content-and-actual-ammo-example-review.json": "25b41b2c1adc771b45fa4eb967df594eba29af986471a4b0f6763dcfbd3f9888",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-focused-checks.json": "35a23e35899d60925c7dd37cd12ca69765c6dbbaa710969a50a151dbdc357903",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-frozen-source-verification.json": "607df083093694f0a0b95a9ba965be8d18a9a57ff66622416f786743b46481c2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-own-tier-wrapper-material-delta-review.json": "c23b4cd87c3088e924370524a0d7bdafc38e7d95f9b8e4f40f1f554525a5ffe2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-resume-review.json": "81a6b37a5a80f1a37675820e8810ab606595eec09c63b88a10451c146e4692c7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-source-citation-delta-review.json": "ba8b23a5fd614249117bfb2db25e0c0b9b210d4b7f1d4d8ad7d28fc2a71750e3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-traits-review.json": "71f4aa7ef7061ce89a8fb967098d918b486a23523c734e647020fa46034fa93b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-raw-verification.json": "009ec63c74c9c27c1d790149c9121149e98aee83e44025096b59efe7ab97a888",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-review.json": "01f2548dc0e8b72b9793e4ccfdcd7931d5accab08b1178a70bb69616fe24c275",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-raw-verification.json": "99f0109fbdb57b5424dbffaef2184bd1edab119ff30036f9ea4e62d76929510f",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "23058a5c3025a22c66b9178fed78bfbc1901d5b3d8c4dcee28703cf49c498cea",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/DAMAGE_PERCENTAGE_REVIEW.md": "7f0775fb291e721fff8b87d7e3cbae1494f607538c0008aab59e778524e25be2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/LOCALIZATION_COMPARISON.md": "273e9fca9ade825b625bdc853817ad19f126c4b14996855b151d40dedb530a32",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/README.md": "8e21ef2203dfe10754d754eb2f9e781ea90541d5939f8cffce03c993365a2de9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/SOURCE_INDEX.md": "c1ed32d5ae76a5f8b5b3d3e6243722e13c2eccbe22387362e47cb0b7f0cea57b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/TIER_VALUES.md": "0cfda5b177bf45b4b2fa210aa942e1c5b04925022087ad61787e9cb9a3782a7a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/WEAPON_COMPATIBILITY.md": "e34ed4b9674d52ab7734ac563a654a6a9f3ac2b5720641bf75ac32bd6ece328b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire.md": "2d93c238aa26babcad6676cafa44f99e981ed406e3a50d1b4dc5a5570b93e0f7",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/entries/持續阻擊/weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire.md": "1ceb5a636ca983755316dbe3a3280f027f428c06c6e46c369ef82f1cd2ecd303",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/ranged/README.md": "a8f09c476e0063646d8e0ee162329b5cbec6460b63f9dec006e18a340364f5e9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/README.md": "6bae9115c49d7f19918adf86cf7b589c9bf792e91f923496c227e3a814cf2dc2",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "56e2951c12d4320010711cad29c78241abc11a4c5a3911048780e3fcc0798825",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "d213a85e28ec1ef1a1ff4cede1118431518ccbb1b142b367c214506ffa98326b",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "57949e09d5505f70fd1805ff769951a9bf181b3a6110ccc304da39b4f5f87df6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/own-association-snapshot.json": "8b036ff77a3199da18237c0ac3aaccc93eb80798ecd02569927d8c921f671df9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/actual-preview-006/Referneces/Translation.md": "a6b93e00250a2fe8a15c4d7126b2efe151c5599cf751326ab02757a5074167bd",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "ff52f2f5f4f5834d53c113ee659f0742f0e61832c81ba3456b7073d5e7205499",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/DAMAGE_PERCENTAGE_REVIEW.md": "7f0775fb291e721fff8b87d7e3cbae1494f607538c0008aab59e778524e25be2",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/LOCALIZATION_COMPARISON.md": "273e9fca9ade825b625bdc853817ad19f126c4b14996855b151d40dedb530a32",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/README.md": "8e21ef2203dfe10754d754eb2f9e781ea90541d5939f8cffce03c993365a2de9",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/SOURCE_INDEX.md": "39a51e97b0b618e8800ea91d842e7cd2f295b19965436b38952dbaebeb3011ac",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/TIER_VALUES.md": "0cfda5b177bf45b4b2fa210aa942e1c5b04925022087ad61787e9cb9a3782a7a",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/WEAPON_COMPATIBILITY.md": "e34ed4b9674d52ab7734ac563a654a6a9f3ac2b5720641bf75ac32bd6ece328b",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire.md": "2d93c238aa26babcad6676cafa44f99e981ed406e3a50d1b4dc5a5570b93e0f7",
+      "Game Info/releases/1.13.X/blessings/entries/持續阻擊/weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire.md": "1ceb5a636ca983755316dbe3a3280f027f428c06c6e46c369ef82f1cd2ecd303",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "a8f09c476e0063646d8e0ee162329b5cbec6460b63f9dec006e18a340364f5e9",
+      "Game Info/releases/1.13.X/blessings/README.md": "51679323a537c08701155885a256624fddda305a006aaea3b8b7d1985b639796",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "680dbe78b36ac1ea2ca989da5f9328ab1cc5b7128b0daa6bf7c72779cb50cf2d",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/槍托自動槍/README.md": "d213a85e28ec1ef1a1ff4cede1118431518ccbb1b142b367c214506ffa98326b",
+      "Game Info/releases/1.13.X/blessings/weapons/ranged/雙鏈重型機槍/README.md": "57949e09d5505f70fd1805ff769951a9bf181b3a6110ccc304da39b4f5f87df6",
+      "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "Referneces/Translation.md": "ae58f7d08857d3b9db0114b23f2427bcfc859678917c302d1c8d9dff21ff6c3e"
+    },
+    "audit": {
+      "scope_file_count": 80,
+      "scope_files_hash_verified": 80,
+      "scope_files_missing": 0,
+      "scope_hash_mismatches": 0,
+      "previous_scope_files_unchanged_or_delta_verified": true,
+      "candidate_pages_compared": 8,
+      "candidate_pages_byte_identical_except_source_index_delta": true,
+      "source_index_added_rows_reviewed": 6,
+      "source_index_rows_correct": 6,
+      "source_index_rows_needing_correction": [],
+      "source_index_corrected_rows": [
+        {
+          "line": 76,
+          "citation": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L716-L735",
+          "verified_assignment_line": 725,
+          "source_range_sha256": "ac37c2249e6017334a57dfe62771fee27fc42f5dd37ff7809817be6c0a542ba6",
+          "conclusion": "on_slot_wielded assigns the weapon template spread_template_name to weapon_tweak_templates_component."
+        },
+        {
+          "line": 79,
+          "citation": "scripts/utilities/attack/hit_scan.lua#L222-L260",
+          "source_range_sha256": "26c8dd537d14bff92531c089b92281a62ff273169bfc5dce5382c8349e14decb",
+          "conclusion": "Completed Traditional Chinese summary says HitScan resolves damage then applies suppression to an eligible, still-alive target not already suppressed by that shot."
+        }
+      ],
+      "reviewed_delta_receipts": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-source-citation-delta-review.json",
+          "sha256": "ba8b23a5fd614249117bfb2db25e0c0b9b210d4b7f1d4d8ad7d28fc2a71750e3",
+          "complete": true,
+          "accepted": true
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-frozen-source-verification.json",
+          "sha256": "607df083093694f0a0b95a9ba965be8d18a9a57ff66622416f786743b46481c2",
+          "source_ranges_verified": 70
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-resume-review.json",
+          "sha256": "81a6b37a5a80f1a37675820e8810ab606595eec09c63b88a10451c146e4692c7",
+          "canonical_config_sha256": "2cbe46c0dc15dc2bf46f27bb32487881285fe4b139e536f0d297b68645832cc3"
+        }
+      ],
+      "changed_scope_files_reviewed": {
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-config.json": "2cbe46c0dc15dc2bf46f27bb32487881285fe4b139e536f0d297b68645832cc3",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-extension-draft.json": "e399c5b765781fc24283b6c55df4a9fbe68098489b64ff196fe038f4a38a1260",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-frozen-source-verification.json": "607df083093694f0a0b95a9ba965be8d18a9a57ff66622416f786743b46481c2",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-resume-review.json": "81a6b37a5a80f1a37675820e8810ab606595eec09c63b88a10451c146e4692c7",
+        "Game Info/releases/1.13.X/blessings/entries/持續阻擊/SOURCE_INDEX.md": "39a51e97b0b618e8800ea91d842e7cd2f295b19965436b38952dbaebeb3011ac",
+        "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-source-citation-delta-review.json": "ba8b23a5fd614249117bfb2db25e0c0b9b210d4b7f1d4d8ad7d28fc2a71750e3"
+      },
+      "map_counts": {
+        "blessings": 147,
+        "variants": 500,
+        "bindings": 976,
+        "duplicate_blessing_ids": false,
+        "duplicate_variant_ids": false
+      },
+      "ceaseless_association": {
+        "blessings": 1,
+        "variants": 2,
+        "bindings": 6,
+        "inventory_binding_set_exact": true
+      },
+      "weapon_reverse_pages_link_to_correct_ceaseless_variants": true,
+      "raw_resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "raw_name_and_description_en_zh_hash_pairs_match": true,
+      "image_icon_path": "content/ui/textures/icons/traits/weapon_trait_111",
+      "image_attachment_matches_map_icon": true,
+      "image_receipt_sha256": "3c01c7d318e24f950e7c176e1428776935501b369720a498f28de6581e7f6d47",
+      "global_scope_includes_root_concurrent_overwhelming_force_commit": true
+    },
+    "candidate_peer_review": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/overwhelming-force-group/ceaseless-barrage-candidate-peer-review.json",
+      "sha256": "2fd014fbba1082a30baa8d855747ee1f157660e4df40d487c42118119a3a456d"
+    },
+    "review_method": "Verified all 80 fixed-scope SHA-256 entries. Reused the prior 79-file audit where unchanged; reviewed the corrected formal SOURCE_INDEX against the pinned source and root citation-delta proof, confirmed the spread-template assignment at line 725 within on_slot_wielded and the completed HitScan summary, and verified the regenerated source index matches the corrected refs. Rechecked the changed canonical config, extension draft, resume review, frozen-source verification and citation proof hashes; prior checks for the other seven formal pages, exact 2-variant/6-binding inventory intersection, reverse links, RAW pairing, image receipt, and global counts remain valid because their scoped files are unchanged."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "ceaseless-barrage",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_111",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_111.png",
+      "attachment": "https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6004403136",
+      "acquired_date": "2026-10-06",
+      "sha256": "3c01c7d318e24f950e7c176e1428776935501b369720a498f28de6581e7f6d47",
+      "content_type": "image/png",
+      "size": 8355,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "持續阻擊祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected public nativePNG: grey/white horizontal projectile silhouettes with pale impact rays, complete128px image, source/public exactSHA; no generated or edited replacement."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 14,
+      "rows": 505,
+      "lists": 87,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 86,
+      "source_files": 34,
+      "bindings": 976,
+      "variants": 500,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 34,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1219,
+      "remote_references": 476,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 39,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/round-038-full-scan.json",
+        "sha256": "f1e1e03d8d402ed6b574f3020fac1a0aefc4f3672ff224738fa61149e327c98b",
+        "trigger": "round-038"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 20,
+    "not_started_name_groups": 20,
+    "partial_name_groups": 0,
+    "remaining_variants": 105,
+    "remaining_bindings": 209,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "09e7b5fe78af67d675320b2b63a8a4ce512e970a752784a9839d51be21297edd"
+  },
+  "previous_local_commit": "ef13073e1d4dc924d504518545332f78bb3566f4",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "none found in inventory"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-final-content-and-actual-ammo-example-review.json",
+      "sha256": "25b41b2c1adc771b45fa4eb967df594eba29af986471a4b0f6763dcfbd3f9888"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-focused-checks.json",
+      "sha256": "35a23e35899d60925c7dd37cd12ca69765c6dbbaa710969a50a151dbdc357903"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-frozen-source-verification.json",
+      "sha256": "607df083093694f0a0b95a9ba965be8d18a9a57ff66622416f786743b46481c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "c23b4cd87c3088e924370524a0d7bdafc38e7d95f9b8e4f40f1f554525a5ffe2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-resume-review.json",
+      "sha256": "81a6b37a5a80f1a37675820e8810ab606595eec09c63b88a10451c146e4692c7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-source-citation-delta-review.json",
+      "sha256": "ba8b23a5fd614249117bfb2db25e0c0b9b210d4b7f1d4d8ad7d28fc2a71750e3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-traits-review.json",
+      "sha256": "71f4aa7ef7061ce89a8fb967098d918b486a23523c734e647020fa46034fa93b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-raw-verification.json",
+      "sha256": "009ec63c74c9c27c1d790149c9121149e98aee83e44025096b59efe7ab97a888"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-review.json",
+      "sha256": "01f2548dc0e8b72b9793e4ccfdcd7931d5accab08b1178a70bb69616fe24c275"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-config.json",
+    "sha256": "2cbe46c0dc15dc2bf46f27bb32487881285fe4b139e536f0d297b68645832cc3"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "250c2d48e8152e2f1dd4a5df5c5e5a89c1c2a8b3797f5f423bbe29de09e4a15a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-006.json",
+      "sha256": "a75208057762590ad89f9c4154471cba7cfe7fe6b9cb3711a2953e5d85234bbe"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-association.json",
+      "sha256": "8b036ff77a3199da18237c0ac3aaccc93eb80798ecd02569927d8c921f671df9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-candidate-manifest.json",
+      "sha256": "afd1e8553ef34936290cc94f64970e98e20ef23b3e32343ad9c9f6be2e111633"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-config.json",
+      "sha256": "162e5a8e6509bfa16f36589f7696565f536a00ef12b0c2a4b2b56b9c5782d226"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-coverage.json",
+      "sha256": "7787e19ebd987311eaa625c36a6bb94ab8c406d81c77e356580998eda4623d92"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-draft.md",
+      "sha256": "8a315077a5905e3aa903d03c3ed28d5da62a2d63a6574e6e5a12ea5d33c18939"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-preflight.json",
+      "sha256": "6b1ea40c8639c7b91a46c0ad856e948437afa3b599ca2debbe71b4b1ff66d713"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-candidate-formal-preview.md",
+      "sha256": "404419d656e0c6d28281b4e87af93338ba07a981b6358791afc03bacfbe3bd24"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/inputs/BLESSING_WEAPON_MAP-snapshot-005.json",
+      "sha256": "72693f2237a2c2149f8b63b28d5ee9de2b46810f03a91eed4646554c4dcb9d78"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/inputs/remaining-tasks-snapshot-005.json",
+      "sha256": "efe1c802b5310578c9f3bb3b7c17449e2356c32ac37a6b20b41f799f5319edb9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-image.json",
+      "sha256": "e14dcbf822a6b3c1a3614991e7450f1b80e456be3ba5daa1936a8261e99bfa20"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "c23b4cd87c3088e924370524a0d7bdafc38e7d95f9b8e4f40f1f554525a5ffe2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-traits-review.json",
+      "sha256": "71f4aa7ef7061ce89a8fb967098d918b486a23523c734e647020fa46034fa93b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-raw-verification.json",
+      "sha256": "009ec63c74c9c27c1d790149c9121149e98aee83e44025096b59efe7ab97a888"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-ui-review.json",
+      "sha256": "01f2548dc0e8b72b9793e4ccfdcd7931d5accab08b1178a70bb69616fe24c275"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/raw/f1e50e33afca75ad.strings",
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "6bae9115c49d7f19918adf86cf7b589c9bf792e91f923496c227e3a814cf2dc2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "56e2951c12d4320010711cad29c78241abc11a4c5a3911048780e3fcc0798825"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "23058a5c3025a22c66b9178fed78bfbc1901d5b3d8c4dcee28703cf49c498cea"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "7f0775fb291e721fff8b87d7e3cbae1494f607538c0008aab59e778524e25be2"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\LOCALIZATION_COMPARISON.md",
+      "sha256": "273e9fca9ade825b625bdc853817ad19f126c4b14996855b151d40dedb530a32"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\README.md",
+      "sha256": "8e21ef2203dfe10754d754eb2f9e781ea90541d5939f8cffce03c993365a2de9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\SOURCE_INDEX.md",
+      "sha256": "c1ed32d5ae76a5f8b5b3d3e6243722e13c2eccbe22387362e47cb0b7f0cea57b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\TIER_VALUES.md",
+      "sha256": "0cfda5b177bf45b4b2fa210aa942e1c5b04925022087ad61787e9cb9a3782a7a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\WEAPON_COMPATIBILITY.md",
+      "sha256": "e34ed4b9674d52ab7734ac563a654a6a9f3ac2b5720641bf75ac32bd6ece328b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\weapon_trait_bespoke_autogun_p2_increased_suppression_on_continuous_fire.md",
+      "sha256": "2d93c238aa26babcad6676cafa44f99e981ed406e3a50d1b4dc5a5570b93e0f7"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\entries\\持續阻擊\\weapon_trait_bespoke_ogryn_heavystubber_p1_increased_suppression_on_continuous_fire.md",
+      "sha256": "1ceb5a636ca983755316dbe3a3280f027f428c06c6e46c369ef82f1cd2ecd303"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\ranged\\README.md",
+      "sha256": "a8f09c476e0063646d8e0ee162329b5cbec6460b63f9dec006e18a340364f5e9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\槍托自動槍\\README.md",
+      "sha256": "d213a85e28ec1ef1a1ff4cede1118431518ccbb1b142b367c214506ffa98326b"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Game Info\\releases\\1.13.X\\blessings\\weapons\\ranged\\雙鏈重型機槍\\README.md",
+      "sha256": "57949e09d5505f70fd1805ff769951a9bf181b3a6110ccc304da39b4f5f87df6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\Referneces\\Translation.md",
+      "sha256": "a6b93e00250a2fe8a15c4d7126b2efe151c5599cf751326ab02757a5074167bd"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-raw-verification.json",
+      "sha256": "99f0109fbdb57b5424dbffaef2184bd1edab119ff30036f9ea4e62d76929510f"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\ceaseless-barrage-group\\actual-preview-006\\own-association-snapshot.json",
+      "sha256": "8b036ff77a3199da18237c0ac3aaccc93eb80798ecd02569927d8c921f671df9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-001.json",
+      "sha256": "e05835bc07ca18d18f7d672257abcc51932f70046af24ebba58fe291438f20f9"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-002.json",
+      "sha256": "47632a8e5f319b4dd6af4f6de01857e5c4b2345165ae6e5e01dab61498773771"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-003.json",
+      "sha256": "868d9c0909fd7df9994b18e2f126cd69e1a52c3a43237beaf68fd22da9edca91"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-004.json",
+      "sha256": "0e299e5080e49055e2318778a15cf8b4f2d373e2783e0cc02818be32e828c4b5"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-actual-preview-receipt-005.json",
+      "sha256": "15924e9d0a3c5fba0729c0a8d88e27fa576e4697ee01e3183e731bb9d8356477"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-group/ceaseless-barrage-agent-evidence.json",
+      "sha256": "87e8f9de98243acdf33306fbad4a2d9fc0881dbedff25eaffc355a6ff5f0aedc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-config.json",
+      "sha256": "162e5a8e6509bfa16f36589f7696565f536a00ef12b0c2a4b2b56b9c5782d226"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-evidence.json",
+      "sha256": "87e8f9de98243acdf33306fbad4a2d9fc0881dbedff25eaffc355a6ff5f0aedc"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-agent-draft.md",
+      "sha256": "8a315077a5905e3aa903d03c3ed28d5da62a2d63a6574e6e5a12ea5d33c18939"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-final-content-and-actual-ammo-example-review.json",
+      "sha256": "25b41b2c1adc771b45fa4eb967df594eba29af986471a4b0f6763dcfbd3f9888"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-frozen-source-verification.json",
+      "sha256": "607df083093694f0a0b95a9ba965be8d18a9a57ff66622416f786743b46481c2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-primary-source-citation-delta-review.json",
+      "sha256": "ba8b23a5fd614249117bfb2db25e0c0b9b210d4b7f1d4d8ad7d28fc2a71750e3"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/ceaseless-barrage-formal-peer-scope.json",
+    "sha256": "e28ee16df83dfe3347d10e0d4b9d4a34d2719ffeb31918bd1d832a5efe66eff5",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/bash",
+    "reviewer_agent": "/root/shock_awe",
+    "non_author_peer": true
+  }
+}

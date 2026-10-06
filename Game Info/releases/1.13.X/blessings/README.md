@@ -154,5 +154,6 @@
 | <img src="https://github.com/user-attachments/assets/ef8ee5ad-6fcc-4309-9000-f0533a247c20" width="32" height="32" alt="手銃祝福圖示"> [手銃](entries/手銃/README.md)<br>- Hand-Cannon<br>[完整說明](entries/手銃/README.md) | <ul><li>暴擊攻擊時提高撕裂倍率；實際幅度依手槍系別與祝福等級。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/15f476f5-b2d8-4b3f-93d8-213a7c49cd0e" width="32" height="32" alt="刻不容緩祝福圖示"> [刻不容緩](entries/刻不容緩/README.md)<br>- No Respite<br>[完整說明](entries/刻不容緩/README.md) | <ul><li>命中目標時，依本次傷害計算前目標的原生踉蹌計數，將每個計數的 I–IV 加算值加入傷害加算池；最多讀取七個計數。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/3c0b7dca-c490-4cd0-8c2f-d175f3a6f75f" width="32" height="32" alt="壓倒性的武力祝福圖示"> [壓倒性的武力](entries/壓倒性的武力/README.md)<br>- Overwhelming Force<br>[完整說明](entries/壓倒性的武力/README.md) | <ul><li>合格踉蹌命中有機率使目標眩暈；電弧鎚另要求目標為精英或專家。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/05a4b36e-fa00-4748-a557-c6b81575a32e" width="32" height="32" alt="持續阻擊祝福圖示"> [持續阻擊](entries/持續阻擊/README.md)<br>- Ceaseless Barrage<br>[完整說明](entries/持續阻擊/README.md) | <ul><li>持續射擊期間，依射擊步進提高壓制，並提高對已受壓制目標的傷害；最多5層。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
