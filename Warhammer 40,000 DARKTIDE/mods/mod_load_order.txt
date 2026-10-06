@@ -83,7 +83,6 @@ Reconnect
 valkyrie
 BornReady
 MissionBrief
-uptime
 EmpowerUntilLimit
 StimmCountdown
 i_wanna_see

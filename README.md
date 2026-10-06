@@ -662,14 +662,6 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - Archive size bytes: 8049
 - Archive SHA-256: f0f404f76f949c94840817256a220fd9d9596a28a9792f72058eee93acf15627
 - Acquisition method: manual-queue
-
-### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/573)
-    觀察天賦的運作狀況
-- MOD 網站最後更新日期：Last updated 30 December 2025, 10:00PM
-- MOD 版本：1.3.6
-- MOD 檔案名稱：uptime-573-1-3-6-1767103234
-- 手動維護最後下載日期：2026-01-01
-
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
 - MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
@@ -1255,3 +1247,11 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：Servo Friend-504-3-1746235485
 - 手動維護最後下載日期：2025-10-03
 - 移除原因：原本用於黑暗關燈地圖，現在已經被Machine God's BeaconUI取代
+
+### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/573)
+    觀察天賦的運作狀況
+- MOD 網站最後更新日期：Last updated 30 December 2025, 10:00PM
+- MOD 版本：1.3.6
+- MOD 檔案名稱：uptime-573-1-3-6-1767103234
+- 手動維護最後下載日期：2026-01-01
+- 移除原因：作者表示無法在維護已經有人接手
