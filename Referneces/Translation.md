@@ -410,6 +410,7 @@
 - Torment - 凌遲
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_increase_power_on_weapon_special_hit`，hash `6c7642c3`；英文／繁中RAW配對確認。
 - Slow and Steady - 緩慢而確實
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_toughness_on_hit_based_on_charge_time`，hash `5fafa09d`；英文／繁中RAW配對確認。
 - Power Surge - 能量湧動
 - Last Guard - 最後防線
   - 本體1.13.1名稱鍵 `loc_trait_block_break_pushes`，hash `9825f3c4`；英文／繁中RAW配對確認。

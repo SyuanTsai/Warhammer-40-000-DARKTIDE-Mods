@@ -146,3 +146,4 @@
 | [優勢（近戰力量）](entries/優勢（近戰力量）/README.md) | [來源索引](entries/優勢（近戰力量）/SOURCE_INDEX.md) |
 | [反守為攻](entries/反守為攻/README.md) | [來源索引](entries/反守為攻/SOURCE_INDEX.md) |
 | [優勢（通用力量）](entries/優勢（通用力量）/README.md) | [來源索引](entries/優勢（通用力量）/SOURCE_INDEX.md) |
+| [緩慢而確實](entries/緩慢而確實/README.md) | [來源索引](entries/緩慢而確實/SOURCE_INDEX.md) |

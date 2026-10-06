@@ -1899,6 +1899,19 @@
         "raw_zh_tw": "優勢",
         "reason": "本體同 hash 名稱仍是「優勢」；文件加「通用力量」區分使用另一名稱鍵、另一武器範圍的近戰力量同名祝福，未改 RAW 名稱或 key。"
       }
+    },
+    {
+      "id": "slow-and-steady",
+      "name_zh_tw": "緩慢而確實",
+      "name_en": "Slow and Steady",
+      "name_key": "loc_trait_bespoke_toughness_on_hit_based_on_charge_time",
+      "description_key": "loc_trait_bespoke_toughness_on_hit_based_on_charge_time_desc",
+      "name_hash": "5fafa09d",
+      "description_hash": "b386c76e",
+      "page": "entries/緩慢而確實/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
+      "effect": "蓄能門檻累積後，同物品的合格命中依階級與最多三次已處理的蓄能事件，要求回復最大韌性比例；實際回復封頂於缺失韌性。"
     }
   ],
   "weapons": [
@@ -29482,6 +29495,100 @@
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_011",
       "effect": "精英或專家被擊殺且祝福武器槽正持用時，力量修正每層增加 5／7.5／10／12.5 個百分點，最多三層，之後每七秒逐層衰退。",
       "buff_template_id": "weapon_trait_bespoke_forcesword_p1_elite_kills_grants_stackable_power_parent"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time",
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/緩慢而確實/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_percentage_by_level": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "display_percent_by_level": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "windup_interval_seconds": 0.2,
+        "actual_mark_ids": [
+          "ogryn_pickaxe_2h_p1_m1",
+          "ogryn_pickaxe_2h_p1_m2",
+          "ogryn_pickaxe_2h_p1_m3"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 487,
+        "end_line": 517
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 34,
+        "end_line": 82
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_hit_based_on_charge_time_desc",
+      "description_hash": "b386c76e",
+      "icon": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_215",
+      "effect": "戴維爾戰鎬布蘭克斯 Mk Ia、博羅維安 Mk III、卡索拉斯 Mk II：普通連段的蓄能起始段不同；三個武器特殊招式直接攻擊，不先累積該招式自己的蓄能事件。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time",
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "page": "entries/緩慢而確實/weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "tier_percentage_by_level": {
+          "I": 0.05,
+          "II": 0.06,
+          "III": 0.07,
+          "IV": 0.08
+        },
+        "display_percent_by_level": {
+          "I": 5,
+          "II": 6,
+          "III": 7,
+          "IV": 8
+        },
+        "windup_interval_seconds": 0.25,
+        "actual_mark_ids": [
+          "ogryn_hammer_2h_p1_m1"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_hammer_2h_p1.lua",
+        "start_line": 219,
+        "end_line": 249
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_hammer_2h_p1_buff_templates.lua",
+        "start_line": 29,
+        "end_line": 77
+      },
+      "description_key": "loc_trait_bespoke_toughness_on_hit_based_on_charge_time_desc",
+      "description_hash": "b386c76e",
+      "icon": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_215",
+      "effect": "碎骨者克魯克 Mk IIa：普通連段及兩種特殊攻擊均先經蓄能，再進入攻擊掃掠；使用預設 0.25 秒後續蓄能間隔。"
     }
   ],
   "bindings": [
@@ -42559,6 +42666,62 @@
         "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
         "import_line": 15,
         "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_on_hit_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_on_hit_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/toughness_on_hit_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "slow-and-steady",
+      "weapon_id": "ogryn_hammer_2h_p1",
+      "mark_id": "ogryn_hammer_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_hammer_2h_p1/toughness_on_hit_based_on_charge_time",
+      "trait_category": "bespoke_ogryn_hammer_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_hammers_2h/ogryn_hammer_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1975
       }
     }
   ]

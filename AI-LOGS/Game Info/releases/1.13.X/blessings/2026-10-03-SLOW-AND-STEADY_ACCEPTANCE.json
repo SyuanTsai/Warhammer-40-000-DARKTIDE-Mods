@@ -1,0 +1,549 @@
+{
+  "date": "2026-10-06",
+  "blessing": "slow-and-steady",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time",
+    "weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "blessing_id": "slow-and-steady",
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "scope_path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-formal-peer-scope.json",
+    "scope_sha256": "1317cfe408ba9e3c1c4fb396cf5fd0c3bc9ee2d0be9f89d8d5c9f4340071d3de",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-config.json": "79a9d258ac39b7e1d09aa4fcef4c57395ea059ea83eb1bc6f49001bbd74cebea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-draft.md": "b7790452943575243acdf852feda2d44feb3969036055f619995465d17d089b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-evidence.json": "c38f177ee1086a7da1ac839cc38dce53733cffc8b05be6402efcc7008a18b111",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-config.json": "745c871ab5830e5c11763952cb615adf338e8101262ac345471b8cd02eecf94a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-extension-draft.json": "0f820a8aad668ad4ffb96a8c1b4d8b509a733dda5a7de028ac9fd93ba7a2cb92",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/binding-snapshot.json": "186d00cc4f320585153d6cb89cbed39a0336d223b12ce4f768b14ec975fa9671",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/common-cache.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/baseline-ai-logs.json": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/baseline-game-info.json": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/remaining-tasks.json": "b7a8f704ec3c0331a44e5f020169ebb0a072baadf2f609278eb074f148777311",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/raw-snapshot.json": "91fe23e1e4d928cdca36f3487945b951846dfbeea17734fecf8b4b88d73a9289",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-image.json": "c88d58889e9ddfce7aa95594616841132f4ca857737c53f5e891fe0d42378383",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-actual-pure-push-on-hit-difference-review.json": "63dac3bc0cc15a59d904c806fc9e1abb4442b82ca35fa64eb94a242197cba343",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-own-tier-wrapper-material-delta-review.json": "fdf810b9dacc6f9c9336c47b99cffbb9a3dd30c835527c9509cc25e2079e9083",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-toughness-recovery-consumer-difference-review.json": "a2f13110bc44c7597bf35ac34ed874c295f5f886d733f522c74d827d92179c6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-traits-review.json": "366265c9abfd37841bd830e093b03ae5c4cc765b4f5cee10e4f9b4a308dbdcf1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-ui-raw-verification.json": "6a5885db121d5e5e4e1f99b413443247afa767b7e100f9b2da3c4b51eb0c3504",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-ui-review.json": "1fc540e87261ccb3f1e3e2253e3366247192d760c09a9ac4df8f56a4beae47c1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-003.json": "158f581c7979e75c6c37cb80fe3fd9c4c5f722e364bcf1f3912b0906b97465a2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-004.json": "23c6ddee79468f8c465037f5c1cf3b1b2c30df04e790dfc8e979f86ce1261317",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-005.json": "f10cb12be8cf238b12c9c863ff619daad3002c1e666d8aaedd176f9ec7b7af86",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-006.json": "393e24afbecbb764ef10007daf214ec8663a7a18b6da1b59b2405cec4cd01fd0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-007.json": "09f4b035a15206d74b667f5199d93d1cfe6df62df6e63c1501501f1e34010226",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-config.json": "79a9d258ac39b7e1d09aa4fcef4c57395ea059ea83eb1bc6f49001bbd74cebea",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-draft.md": "b7790452943575243acdf852feda2d44feb3969036055f619995465d17d089b0",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-evidence.json": "c38f177ee1086a7da1ac839cc38dce53733cffc8b05be6402efcc7008a18b111",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-selfcheck.json": "0ca2cc1b7405e439537c1450a312af2a52cbb3b76a3cce482c27986cad5bf757",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-coverage.json": "c3b0a6df14d7afd55df54e7fe71405ee40922ae5a38087002c23c842e534b51d",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-source-blocks.json": "d0fd6c0c5c09647285632ea47d8b07da949977e2b1a37a7454248c75b79818ae",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-image.json": "c88d58889e9ddfce7aa95594616841132f4ca857737c53f5e891fe0d42378383",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-actual-pure-push-on-hit-difference-review.json": "63dac3bc0cc15a59d904c806fc9e1abb4442b82ca35fa64eb94a242197cba343",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-final-content-review.json": "c5b0234202cde2f935a37af678c0240cc44641c33c200a7a414e26667c8cc397",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-focused-checks.json": "b8444c5e967c87969b8ac9259f84367f587442210a88ee6ad15cf861a5c35483",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-frozen-source-verification.json": "c6648db59a5cc988cc64b91e9b5cdc953c8325aaa811602bbe6f286b25438e7b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-own-tier-wrapper-material-delta-review.json": "fdf810b9dacc6f9c9336c47b99cffbb9a3dd30c835527c9509cc25e2079e9083",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-resume-review.json": "b8c1e5f0f74a9c72ac35cba07c95b74123fec3c90e2daa87ae2ed8299115b1a8",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-toughness-recovery-consumer-difference-review.json": "a2f13110bc44c7597bf35ac34ed874c295f5f886d733f522c74d827d92179c6b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-traits-review.json": "366265c9abfd37841bd830e093b03ae5c4cc765b4f5cee10e4f9b4a308dbdcf1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-raw-verification.json": "6a5885db121d5e5e4e1f99b413443247afa767b7e100f9b2da3c4b51eb0c3504",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-review.json": "1fc540e87261ccb3f1e3e2253e3366247192d760c09a9ac4df8f56a4beae47c1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-raw-verification.json": "75a59853b737b37988182479216846eeb3eb90f799ec3a08aa4a77ac98a5f3af",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "783994505caabbc7ea4042bb73070eff1461c2526351f6d59719022f75a94bcb",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/DAMAGE_PERCENTAGE_REVIEW.md": "cb8b2c79b3efd84c383e461b96f687c9d13cd0c90bdb79ef04eafb656852bbad",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/LOCALIZATION_COMPARISON.md": "06ed4fe91ac8aaa0fbabe7d93ed2bdce6e4b1f9ef25201186c543fdc0f9f7e91",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/README.md": "75c51017048a91ff68c26c25eef584347616bd08d41fb869c433549c2e680cb9",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/SOURCE_INDEX.md": "b82e29de8dc3aa9b3a6a02c8ce834503403d2cab21a1c0470661023f8afaacad",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/TIER_VALUES.md": "372e78188460054f9d7eb10b027a30cde6d936565e3ed5f35eebe9745896550a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/WEAPON_COMPATIBILITY.md": "f9f1b95e8811b003ee2cd1eece446c5efcad1712c8dc5c3a2ef9502f76ef7ea6",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time.md": "b4ccc709149289ec144975318d82cb7ae40334b6bcc06ec424ad8d3e7d7abe0a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/entries/緩慢而確實/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time.md": "6cdc34e0905a7610e5a85e9095d47dd0a5e4928a530263b47e3699847e7ac24a",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/melee/README.md": "cc5ff04451ffdc66c5ef276ff2402866aae2fa9dba62cf38194a7cebabf71e55",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/README.md": "2f50f5158f359e33e7bcb5d5b6758f8f84b8c677c23be81c97b8983a5ba31051",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8e392e8ffc3569036b7492d0e7ba62e6ce3150213fdbdec09caa0c17deb6b55e",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "b2a005faa8c447f62ba22eb1fc7c8c24b85343e1d7b0711754e7b36a6cbc4b55",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "ae65258eeb0a15968e9c2bbdab04098a0e444f15331623fade02438c2eb7c984",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/own-association-snapshot.json": "7988f916d278181585410b1af4b9a3e9e152a39e8e50657fefc1be6c261e1a09",
+      "C:/Users/carsu/.codex/worktrees/blessings-translation/Warhammer-40-000-DARKTIDE-Mods/AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/actual-preview-007/Referneces/Translation.md": "0ddf1c6f24d05808b01719a55bb30eb46c0b8059f4bc0b776c4212af4d57d0e5",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "783994505caabbc7ea4042bb73070eff1461c2526351f6d59719022f75a94bcb",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/DAMAGE_PERCENTAGE_REVIEW.md": "cb8b2c79b3efd84c383e461b96f687c9d13cd0c90bdb79ef04eafb656852bbad",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/LOCALIZATION_COMPARISON.md": "06ed4fe91ac8aaa0fbabe7d93ed2bdce6e4b1f9ef25201186c543fdc0f9f7e91",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/README.md": "75c51017048a91ff68c26c25eef584347616bd08d41fb869c433549c2e680cb9",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/SOURCE_INDEX.md": "21f3484b81a9fdef613475a65b4e59c70d0c30422e969941398f1b5850a9194f",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/TIER_VALUES.md": "372e78188460054f9d7eb10b027a30cde6d936565e3ed5f35eebe9745896550a",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/WEAPON_COMPATIBILITY.md": "f9f1b95e8811b003ee2cd1eece446c5efcad1712c8dc5c3a2ef9502f76ef7ea6",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time.md": "b4ccc709149289ec144975318d82cb7ae40334b6bcc06ec424ad8d3e7d7abe0a",
+      "Game Info/releases/1.13.X/blessings/entries/緩慢而確實/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time.md": "6cdc34e0905a7610e5a85e9095d47dd0a5e4928a530263b47e3699847e7ac24a",
+      "Game Info/releases/1.13.X/blessings/melee/README.md": "cc5ff04451ffdc66c5ef276ff2402866aae2fa9dba62cf38194a7cebabf71e55",
+      "Game Info/releases/1.13.X/blessings/README.md": "2f50f5158f359e33e7bcb5d5b6758f8f84b8c677c23be81c97b8983a5ba31051",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "8e392e8ffc3569036b7492d0e7ba62e6ce3150213fdbdec09caa0c17deb6b55e",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/戴維爾戰鎬/README.md": "b2a005faa8c447f62ba22eb1fc7c8c24b85343e1d7b0711754e7b36a6cbc4b55",
+      "Game Info/releases/1.13.X/blessings/weapons/melee/碎骨者/README.md": "ae65258eeb0a15968e9c2bbdab04098a0e444f15331623fade02438c2eb7c984",
+      "Referneces/Translation.md": "0ddf1c6f24d05808b01719a55bb30eb46c0b8059f4bc0b776c4212af4d57d0e5",
+      "scripts/game-info/decode_strings.py": "fcc7fbac2b2e4cf51440388b496eafa85ac10cbea549c0af6dce03d90a18c230",
+      "scripts/game-info/validate_game_info.py": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    },
+    "review_summary": [
+      "Reviewed all eight fixed formal files and the related binding, map/reverse, RAW, source, and image records; all 88 scope hashes match exactly.",
+      "The actual bindings are three Delver's Pickaxe Marks (Branx Mk Ia, Borovian Mk III, Karsolas Mk II) and Cruncher Krourk Mk IIa. Their .05/.06/.07/.08 tiers and +5/+6/+7/+8% RAW formatter display match.",
+      "The controlled example is correct: with maximum toughness 100, current 85, tier IV, and three processed windup events, wanted recovery is 100×.08×min(3,3)=24 and actual recovery is capped at the missing 15, reaching 100 if native recovery gates allow it.",
+      "The documented discrete windup thresholds, Mark-specific ordinary/special routes, same-item on_hit consumption (including qualifying pure-push hit events), first-effect/reset/switch distinctions, toughness cap, and native recovery restrictions are consistent with the pinned-source/root receipts.",
+      "The RAW comparison accurately identifies the explicit heavy-attack restriction as contradicted by the implemented callback; unlisted interval, counter cap/reset, and lifecycle details are classified as not covered by the text. Image 215 receipt and attachment/path separation match the fixed scope."
+    ],
+    "differential_reuse": {
+      "reused": "Root primary content, tier/wrapper, UI/RAW, pure-push routing and toughness consumer receipts under their stated actual-binding conditions; unchanged pinned common event/cache mechanisms were reused only where those conditions apply.",
+      "current_formal_delta": "The fixed scope records 66 exact cited source ranges added to the formal canonical; the reviewed gameplay math remains unchanged."
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "slow-and-steady",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_215",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_215.png",
+      "attachment": "https://github.com/user-attachments/assets/5279832c-d7d6-4681-8397-a840feb26d4c",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-6004314695",
+      "acquired_date": "2026-10-06",
+      "sha256": "1699779473271086ed18890837aac6815fd3fc17cc4acb9681fea8c4e368f0bc",
+      "content_type": "image/png",
+      "size": 10750,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "緩慢而確實祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root inspected actual public128PNG: native shield outline with two upward chevrons, grey/black palette, complete edges; source/public exacthash; no image transformation."
+    },
+    "attachment_verified_receipt_reused": true
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 492,
+      "lists": 88,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 93,
+      "source_files": 26,
+      "bindings": 938,
+      "variants": 482,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 13,
+      "source_object_cache": {
+        "cache_hits": 26,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 16,
+      "local_references": 1152,
+      "remote_references": 473,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 2,
+      "current_round": 37,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/all-or-nothing-coverage-correction-001-full-scan.json",
+        "sha256": "ce715bada0bdfb972fadaadf4fc4da7b2a53b8fabd759fcb3f9e0109a9817ed1",
+        "trigger": "all-or-nothing-coverage-correction-001"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 26,
+    "not_started_name_groups": 26,
+    "partial_name_groups": 0,
+    "remaining_variants": 123,
+    "remaining_bindings": 247,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7633b787e4ad6ee763c2c1180a516b7d52a500bfa29a3988305a6c81ea4c01aa"
+  },
+  "previous_local_commit": "a3b0a8396367701f3c3c3c22c2e533b40e517cc3",
+  "outside_intersection_review": {
+    "same_name_candidates": [],
+    "status": "固定 name_key 精確盤點；兩種 family、四個實際 Mark 均已核對，無外部綁定。"
+  },
+  "primary_detailed_reviews": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-actual-pure-push-on-hit-difference-review.json",
+      "sha256": "63dac3bc0cc15a59d904c806fc9e1abb4442b82ca35fa64eb94a242197cba343"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-final-content-review.json",
+      "sha256": "c5b0234202cde2f935a37af678c0240cc44641c33c200a7a414e26667c8cc397"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-focused-checks.json",
+      "sha256": "b8444c5e967c87969b8ac9259f84367f587442210a88ee6ad15cf861a5c35483"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-frozen-source-verification.json",
+      "sha256": "c6648db59a5cc988cc64b91e9b5cdc953c8325aaa811602bbe6f286b25438e7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "fdf810b9dacc6f9c9336c47b99cffbb9a3dd30c835527c9509cc25e2079e9083"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-resume-review.json",
+      "sha256": "b8c1e5f0f74a9c72ac35cba07c95b74123fec3c90e2daa87ae2ed8299115b1a8"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-toughness-recovery-consumer-difference-review.json",
+      "sha256": "a2f13110bc44c7597bf35ac34ed874c295f5f886d733f522c74d827d92179c6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-traits-review.json",
+      "sha256": "366265c9abfd37841bd830e093b03ae5c4cc765b4f5cee10e4f9b4a308dbdcf1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-raw-verification.json",
+      "sha256": "6a5885db121d5e5e4e1f99b413443247afa767b7e100f9b2da3c4b51eb0c3504"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-review.json",
+      "sha256": "1fc540e87261ccb3f1e3e2253e3366247192d760c09a9ac4df8f56a4beae47c1"
+    }
+  ],
+  "primary_review_method": "Content differences independently checked by Root with unchanged pinned common mechanisms reused under matched conditions; actual author generator preview all own pages passed; formal peer still required.",
+  "canonical_config": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-config.json",
+    "sha256": "745c871ab5830e5c11763952cb615adf338e8101262ac345471b8cd02eecf94a"
+  },
+  "frozen_agent_inputs": [
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/approved_image_exception.py",
+      "sha256": "19388a6048ffd6b7d5ccc17366be23b831383a7bbdc62960af938e571dab1b14"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/author_actual_preview.py",
+      "sha256": "25dc845e360f1907beb9c532323ce3a71d95d8c05f8927fc013ed8c5a2f613e7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/build_decimator.py",
+      "sha256": "5bf25d12b4125986b6df40662febd3fc44977a70b6fd417d6cdacc9a561dcc12"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_blessings.py",
+      "sha256": "53d7cecc9ab8536881f893d40c7f9405d76cf65b4b7d1d46e0d0ff0842f36569"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_focused_links.py",
+      "sha256": "17c259ba8a2c029a261303d9b3769b2e8b61a19ed326579250a8ca60bab3a47c"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/check_markdown.cjs",
+      "sha256": "f67f95c4a70258c375ee1ac272f180e8f56a484d5d0c9e54ac3545c9a00120d3"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/extend_group.py",
+      "sha256": "292356c60e88ae786e388698941f1baa60ce128155a99ffc73aca6473c3d08eb"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/new_group.py",
+      "sha256": "8be36969ec1f71d45dc796cac11cb8cd19f07659bd756ba090964d34acedd9b2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/binding-snapshot.json",
+      "sha256": "186d00cc4f320585153d6cb89cbed39a0336d223b12ce4f768b14ec975fa9671"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/common-cache.json",
+      "sha256": "82bdd0a47fc7e55a56f6df3e1beb6a5167ac733ffcda72581461c33ac9fbadc4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/baseline-ai-logs.json",
+      "sha256": "03efe2d8abb2edb58f198edb9f14d40d2c699465de6fb17f4a3e10d11feff715"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/baseline-game-info.json",
+      "sha256": "2319fb6d17b34a454591de4393025f72e19202455f8fd3133c597ff82c6c7d4a"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/inventory.json",
+      "sha256": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/item_metadata.json",
+      "sha256": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/localized_keys.json",
+      "sha256": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/local-snapshots/remaining-tasks.json",
+      "sha256": "b7a8f704ec3c0331a44e5f020169ebb0a072baadf2f609278eb074f148777311"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/raw-snapshot.json",
+      "sha256": "91fe23e1e4d928cdca36f3487945b951846dfbeea17734fecf8b4b88d73a9289"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-image.json",
+      "sha256": "c88d58889e9ddfce7aa95594616841132f4ca857737c53f5e891fe0d42378383"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-actual-pure-push-on-hit-difference-review.json",
+      "sha256": "63dac3bc0cc15a59d904c806fc9e1abb4442b82ca35fa64eb94a242197cba343"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "fdf810b9dacc6f9c9336c47b99cffbb9a3dd30c835527c9509cc25e2079e9083"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-toughness-recovery-consumer-difference-review.json",
+      "sha256": "a2f13110bc44c7597bf35ac34ed874c295f5f886d733f522c74d827d92179c6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-traits-review.json",
+      "sha256": "366265c9abfd37841bd830e093b03ae5c4cc765b4f5cee10e4f9b4a308dbdcf1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-ui-raw-verification.json",
+      "sha256": "6a5885db121d5e5e4e1f99b413443247afa767b7e100f9b2da3c4b51eb0c3504"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/inputs/root-receipts/slow-and-steady-primary-ui-review.json",
+      "sha256": "1fc540e87261ccb3f1e3e2253e3366247192d760c09a9ac4df8f56a4beae47c1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-007.json",
+      "sha256": "09f4b035a15206d74b667f5199d93d1cfe6df62df6e63c1501501f1e34010226"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-coverage.json",
+      "sha256": "c3b0a6df14d7afd55df54e7fe71405ee40922ae5a38087002c23c842e534b51d"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-source-blocks.json",
+      "sha256": "d0fd6c0c5c09647285632ea47d8b07da949977e2b1a37a7454248c75b79818ae"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/source_object_cache.py",
+      "sha256": "c4f217e37be6f54c10e392ccba9550e6161275fc69926043c030e9c4889106e1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/verify_raw_keys.py",
+      "sha256": "c7068831501503838e6527d38f1487b9ea4fac0144e9f88cab4a5fc546161269"
+    },
+    {
+      "path": "scripts/game-info/decode_strings.py",
+      "sha256": "fcc7fbac2b2e4cf51440388b496eafa85ac10cbea549c0af6dce03d90a18c230"
+    },
+    {
+      "path": "scripts/game-info/validate_game_info.py",
+      "sha256": "6266559b65a1e749268d2a30d0a0b41507b867b12aba34c1d625d96fcdf130ee"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\README.md",
+      "sha256": "2f50f5158f359e33e7bcb5d5b6758f8f84b8c677c23be81c97b8983a5ba31051"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\SOURCE_INDEX.md",
+      "sha256": "8e392e8ffc3569036b7492d0e7ba62e6ce3150213fdbdec09caa0c17deb6b55e"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\data\\BLESSING_WEAPON_MAP.json",
+      "sha256": "783994505caabbc7ea4042bb73070eff1461c2526351f6d59719022f75a94bcb"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\DAMAGE_PERCENTAGE_REVIEW.md",
+      "sha256": "cb8b2c79b3efd84c383e461b96f687c9d13cd0c90bdb79ef04eafb656852bbad"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\LOCALIZATION_COMPARISON.md",
+      "sha256": "06ed4fe91ac8aaa0fbabe7d93ed2bdce6e4b1f9ef25201186c543fdc0f9f7e91"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\README.md",
+      "sha256": "75c51017048a91ff68c26c25eef584347616bd08d41fb869c433549c2e680cb9"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\SOURCE_INDEX.md",
+      "sha256": "b82e29de8dc3aa9b3a6a02c8ce834503403d2cab21a1c0470661023f8afaacad"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\TIER_VALUES.md",
+      "sha256": "372e78188460054f9d7eb10b027a30cde6d936565e3ed5f35eebe9745896550a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\WEAPON_COMPATIBILITY.md",
+      "sha256": "f9f1b95e8811b003ee2cd1eece446c5efcad1712c8dc5c3a2ef9502f76ef7ea6"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\weapon_trait_bespoke_ogryn_hammer_2h_p1_toughness_on_hit_based_on_charge_time.md",
+      "sha256": "b4ccc709149289ec144975318d82cb7ae40334b6bcc06ec424ad8d3e7d7abe0a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\entries\\緩慢而確實\\weapon_trait_bespoke_ogryn_pickaxe_2h_p1_toughness_on_hit_based_on_charge_time.md",
+      "sha256": "6cdc34e0905a7610e5a85e9095d47dd0a5e4928a530263b47e3699847e7ac24a"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\melee\\README.md",
+      "sha256": "cc5ff04451ffdc66c5ef276ff2402866aae2fa9dba62cf38194a7cebabf71e55"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\戴維爾戰鎬\\README.md",
+      "sha256": "b2a005faa8c447f62ba22eb1fc7c8c24b85343e1d7b0711754e7b36a6cbc4b55"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Game Info\\releases\\1.13.X\\blessings\\weapons\\melee\\碎骨者\\README.md",
+      "sha256": "ae65258eeb0a15968e9c2bbdab04098a0e444f15331623fade02438c2eb7c984"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\Referneces\\Translation.md",
+      "sha256": "0ddf1c6f24d05808b01719a55bb30eb46c0b8059f4bc0b776c4212af4d57d0e5"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-raw-verification.json",
+      "sha256": "75a59853b737b37988182479216846eeb3eb90f799ec3a08aa4a77ac98a5f3af"
+    },
+    {
+      "path": "C:\\Users\\carsu\\.codex\\worktrees\\blessings-translation\\Warhammer-40-000-DARKTIDE-Mods\\AI-LOGS\\Game Info\\local\\blessings\\2026-10-03\\slow-and-steady-group\\actual-preview-007\\own-association-snapshot.json",
+      "sha256": "7988f916d278181585410b1af4b9a3e9e152a39e8e50657fefc1be6c261e1a09"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-003.json",
+      "sha256": "158f581c7979e75c6c37cb80fe3fd9c4c5f722e364bcf1f3912b0906b97465a2"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-004.json",
+      "sha256": "23c6ddee79468f8c465037f5c1cf3b1b2c30df04e790dfc8e979f86ce1261317"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-005.json",
+      "sha256": "f10cb12be8cf238b12c9c863ff619daad3002c1e666d8aaedd176f9ec7b7af86"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-actual-preview-receipt-006.json",
+      "sha256": "393e24afbecbb764ef10007daf214ec8663a7a18b6da1b59b2405cec4cd01fd0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-config.json",
+      "sha256": "79a9d258ac39b7e1d09aa4fcef4c57395ea059ea83eb1bc6f49001bbd74cebea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-draft.md",
+      "sha256": "b7790452943575243acdf852feda2d44feb3969036055f619995465d17d089b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-evidence.json",
+      "sha256": "c38f177ee1086a7da1ac839cc38dce53733cffc8b05be6402efcc7008a18b111"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-group/slow-and-steady-agent-selfcheck.json",
+      "sha256": "0ca2cc1b7405e439537c1450a312af2a52cbb3b76a3cce482c27986cad5bf757"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-config.json",
+      "sha256": "79a9d258ac39b7e1d09aa4fcef4c57395ea059ea83eb1bc6f49001bbd74cebea"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-evidence.json",
+      "sha256": "c38f177ee1086a7da1ac839cc38dce53733cffc8b05be6402efcc7008a18b111"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-agent-draft.md",
+      "sha256": "b7790452943575243acdf852feda2d44feb3969036055f619995465d17d089b0"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-actual-pure-push-on-hit-difference-review.json",
+      "sha256": "63dac3bc0cc15a59d904c806fc9e1abb4442b82ca35fa64eb94a242197cba343"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-final-content-review.json",
+      "sha256": "c5b0234202cde2f935a37af678c0240cc44641c33c200a7a414e26667c8cc397"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-frozen-source-verification.json",
+      "sha256": "c6648db59a5cc988cc64b91e9b5cdc953c8325aaa811602bbe6f286b25438e7b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-own-tier-wrapper-material-delta-review.json",
+      "sha256": "fdf810b9dacc6f9c9336c47b99cffbb9a3dd30c835527c9509cc25e2079e9083"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-toughness-recovery-consumer-difference-review.json",
+      "sha256": "a2f13110bc44c7597bf35ac34ed874c295f5f886d733f522c74d827d92179c6b"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-traits-review.json",
+      "sha256": "366265c9abfd37841bd830e093b03ae5c4cc765b4f5cee10e4f9b4a308dbdcf1"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-raw-verification.json",
+      "sha256": "6a5885db121d5e5e4e1f99b413443247afa767b7e100f9b2da3c4b51eb0c3504"
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-primary-ui-review.json",
+      "sha256": "1fc540e87261ccb3f1e3e2253e3366247192d760c09a9ac4df8f56a4beae47c1"
+    }
+  ],
+  "previous_map_objects_unchanged": true,
+  "previous_weapon_ui_label_delta": null,
+  "peer_scope": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/slow-and-steady-formal-peer-scope.json",
+    "sha256": "1317cfe408ba9e3c1c4fb396cf5fd0c3bc9ee2d0be9f89d8d5c9f4340071d3de",
+    "final_content_hashes_unchanged": true,
+    "author_agent": "/root/riposte",
+    "reviewer_agent": "/root/gets_hot",
+    "non_author_peer": true
+  }
+}
