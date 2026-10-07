@@ -2,7 +2,7 @@
 
 [English](en/DAMAGE_PERCENTAGE_REVIEW.md)
 
-[返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Game-Info-Workflow.md)
+[返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Skill-Info-Workflow.md)
 
 - 固定來源 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`，沿用 Release 1.13.1 文件範圍。
 - 範圍：逐項閱讀77個目前節點的玩家效果、目錄與算例，檢查百分比作用對象、比較分母、加算／乘算、武器差異、速度／時間及恢復基準。另重讀下列10項相關的共用結算與增益實作。
@@ -108,4 +108,4 @@
 ## 驗證與限制
 
 - 算例是固定參數的靜態推導；具名武器與敵人的最終傷害、傷害顯示取整及遊戲內行為仍未實測。
-- 傷害推導與格式驗收結果記錄於 [POC](../../../docs/POC.md)；可重用的預防規則已納入 [PROMPT](../../../../../../AI Prompt/Game-Info-Workflow.md)。
+- 傷害推導與格式驗收結果記錄於 [POC](../../../docs/POC.md)；可重用的預防規則已納入 [PROMPT](../../../../../../AI Prompt/Skill-Info-Workflow.md)。

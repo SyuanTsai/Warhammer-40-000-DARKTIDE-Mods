@@ -1,10 +1,38 @@
 # Game Info維護紀錄
 
-[維護提示詞](../../AI%20Prompt/Game-Info-Workflow.md)｜[共用工具](../../scripts/game-info/README.md)｜[機器索引](INDEX.json)
+[流程入口](../../AI%20Prompt/Game-Info-Workflow.md)｜[技能流程](../../AI%20Prompt/Skill-Info-Workflow.md)｜[對話流程](../../AI%20Prompt/Dialogue-Text-Workflow.md)｜[共用工具](../../scripts/game-info/README.md)｜[機器索引](INDEX.json)
 
 Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀錄描述當時狀態，不代表目前結論；目前技能效果請查閱Game Info。舊紀錄中的指令是歷史證據，實際維護以共用工具說明為準。
 
 ## 分類
+
+- [階層導覽與七職業版型](publication/2026-10-04-TREE_READER.md)
+
+- [13筆本機來源引用的狀態更正](publication/2026-10-04-LOCAL_SOURCE_REFERENCE_CLARIFICATION.md)
+
+- [七職業全部技能 Pages 轉移與交付](publication/2026-10-04-ALL_SKILLS_PAGES.md)
+
+- [技能 Pages 範本與獨立展示流程](publication/2026-10-04-SKILL_PAGE_TEMPLATE.md)
+
+- [全量對話 Pages 最終建置與交付](publication/2026-10-04-ALL_DIALOGUES_PAGES.md)
+
+- [全部官方對話與字幕目錄整理](dialogues/2026-10-04-ALL_DIALOGUES.md)
+
+- [固定角色位置與三人群組對話](dialogues/2026-10-04-GROUP_DIALOGUE_LAYOUT.md)
+
+- [雙角色任務通訊整理與驗證](dialogues/2026-10-03-MULTI_SPEAKER_MISSION_VOX.md)
+
+- [技能與對話流程分離](changes/2026-10-03-WORKFLOW_SPLIT.md)
+
+- [Pages 逐事件分檔架構](publication/2026-10-03-PER_EVENT_PAGES.md)
+
+- [對話事件類型導覽](publication/2026-10-03-EVENT_TYPE_NAVIGATION.md)
+
+- [Darktide Pages 預覽頁實作與驗收](publication/2026-10-03-DARKTIDE_PREVIEW.md)
+
+- [Darktide 分類與 Pages 可行性評估](publication/2026-10-03-DARKTIDE_PAGES_FEASIBILITY.md)
+
+- [10 組中英字幕深色聊天版型](dialogues/2026-10-03-CHAT_LAYOUT.md)
 
 - [屠戮者文件與圖片驗收](releases/1.13.X/blessings/2026-10-03-DECIMATOR_ACCEPTANCE.json)
 

@@ -1,0 +1,174 @@
+# 任務通訊 · combat pause limited adamant a 01 a · 對話來源
+
+[英文](../en/events/combat_pause_limited_adamant_a_01_a--1805-1.html)｜[繁中](../zh-tw/events/combat_pause_limited_adamant_a_01_a--1805-1.html)
+
+- Release 1.13.1／Steam Build 25606770。
+- Source Code：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
+- 整理群組：`root:dialogues/generated/adamant_a.lua#L4:combat_pause_limited_adamant_a_01_a`。
+- 閱讀標題由來源 database、concept、response ID 整理，並非官方 UI 事件名稱。
+- 編號採依賴偏序及來源行號；多根、同層、分支與循環不代表每次播放的時間線。
+- sound_events 是候選池，保留所有 key、profile、slot 與語系記錄；不按文字去重或接成必然連續播放的台詞。
+- 玩家用官方職業圖示＋性格名稱；圖示不是固定人物肖像。未提供官方名稱或肖像的資料不補造。
+
+## 結構
+
+- 回應節點：3056；根節點：451；關係：4811。
+- Cyclic：False；cross_database：True；unresolved inbound：29。
+
+
+## `combat_pause_limited_veteran_a_17_b`
+
+[官方 rule](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a.lua#L3226-L3275)
+
+| context | field | operator | value / args |
+|---|---|---|---|
+| query_context | concept | OP.EQ | `{"4": "heard_speak"}` |
+| query_context | dialogue_name | OP.SET_INCLUDES | `{}` |
+| user_context | voice_template | OP.SET_INCLUDES | `{}` |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_broker_female_b.lua#L37-L47)
+- 聲線：`broker_female_b`；角色：巢都敗類 · 賞金獵人 · 女性聲線 / Hive Scum · The Bounty Hunter · Female voice；排版側邊：left。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_broker_female_b__combat_pause_limited_veteran_a_17_b_01` | `5245a8df` | 46979 | 46972 | 2.553594 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_broker_female_c.lua#L37-L47)
+- 聲線：`broker_female_c`；角色：巢都敗類 · 無政府主義者 · 女性聲線 / Hive Scum · The Anarchist · Female voice；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_broker_female_c__combat_pause_limited_veteran_a_17_b_01` | `2cc39cf2` | 25476 | 25474 | 3.799708 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_broker_male_b.lua#L37-L47)
+- 聲線：`broker_male_b`；角色：巢都敗類 · 賞金獵人 · 男性聲線 / Hive Scum · The Bounty Hunter · Male voice；排版側邊：left。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_broker_male_b__combat_pause_limited_veteran_a_17_b_01` | `585b2dd2` | 50541 | 50533 | 3.248896 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_broker_male_c.lua#L37-L47)
+- 聲線：`broker_male_c`；角色：巢都敗類 · 無政府主義者 · 男性聲線 / Hive Scum · The Anarchist · Male voice；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_broker_male_c__combat_pause_limited_veteran_a_17_b_01` | `413754ae` | 37218 | 37214 | 2.931979 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_ogryn_d.lua#L59-L69)
+- 聲線：`ogryn_d`；角色：歐格林 · 沉重 / Ogryn · The Heavy；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_ogryn_d__combat_pause_limited_veteran_a_17_b_01` | `a37e7907` | 93699 | 93678 | 3.661021 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_veteran_female_a.lua#L320-L330)
+- 聲線：`veteran_female_a`；角色：老兵 · 專業人士 · 女性聲線 / Veteran · The Professional · Female voice；排版側邊：left。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_veteran_female_a__combat_pause_limited_veteran_a_17_b_01` | `e9f579f9` | 134435 | 134407 | 2.979938 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_veteran_male_a.lua#L318-L328)
+- 聲線：`veteran_male_a`；角色：老兵 · 專業人士 · 男性聲線 / Veteran · The Professional · Male voice；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_veteran_male_a__combat_pause_limited_veteran_a_17_b_01` | `430a2900` | 38249 | 38245 | 3.086 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_zealot_female_b.lua#L59-L69)
+- 聲線：`zealot_female_b`；角色：狂信徒 · 狂熱者 · 女性聲線 / Zealot · The Fanatic · Female voice；排版側邊：left。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_zealot_female_b__combat_pause_limited_veteran_a_17_b_01` | `46b6f7f2` | 40291 | 40286 | 4.210333 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_zealot_female_c.lua#L70-L80)
+- 聲線：`zealot_female_c`；角色：狂信徒 · 法官 · 女性聲線 / Zealot · The Judge · Female voice；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_zealot_female_c__combat_pause_limited_veteran_a_17_b_01` | `f285f5ce` | 139201 | 139172 | 3.20001 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_zealot_male_b.lua#L59-L69)
+- 聲線：`zealot_male_b`；角色：狂信徒 · 狂熱者 · 男性聲線 / Zealot · The Fanatic · Male voice；排版側邊：left。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_zealot_male_b__combat_pause_limited_veteran_a_17_b_01` | `c2568f13` | 111630 | 111606 | 6.722167 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/veteran_a_zealot_male_c.lua#L70-L80)
+- 聲線：`zealot_male_c`；角色：狂信徒 · 法官 · 男性聲線 / Zealot · The Judge · Male voice；排版側邊：right。
+- 正式 runtime database：`veteran_a`；原始暫存切分：`veteran_a`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`matches_explicit_speaker_predicates_only`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：1；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_zealot_male_c__combat_pause_limited_veteran_a_17_b_01` | `b03f7918` | 101106 | 101085 | 3.633146 |
+
+## heard_speak 回應關係
+
+| 前句 response | 回應 response | 欄位／operator | 原始 key | 狀態 |
+|---|---|---|---|---|
+| `combat_pause_limited_veteran_a_17_b` | `bonding_conversation_raucous_a` | sound_event / OP.SET_INCLUDES | `loc_zealot_female_b__combat_pause_limited_veteran_a_17_b_01` | resolved |
+| `combat_pause_limited_veteran_a_17_a` | `combat_pause_limited_veteran_a_17_b` | dialogue_name / OP.SET_INCLUDES | `combat_pause_limited_veteran_a_17_a` | resolved |
+| `combat_pause_limited_veteran_a_17_b` | `oval_bonding_conversation_hole_a` | sound_event / OP.SET_INCLUDES | `loc_ogryn_d__combat_pause_limited_veteran_a_17_b_01` | resolved |
+| `combat_pause_limited_veteran_a_17_b` | `bonding_conversation_metropolitan_commissar_a` | sound_event / OP.SET_INCLUDES | `loc_veteran_male_a__combat_pause_limited_veteran_a_17_b_01` | resolved |
+| `combat_pause_limited_veteran_a_17_b` | `bonding_conversations_victoria_discipline_a` | sound_event / OP.SET_INCLUDES | `loc_zealot_female_b__combat_pause_limited_veteran_a_17_b_01` | resolved |
+| `combat_pause_limited_veteran_a_17_b` | `bonding_conversations_victoria_indiscipline_a` | sound_event / OP.SET_INCLUDES | `loc_zealot_female_b__combat_pause_limited_veteran_a_17_b_01` | resolved |
+
+## 證據限制
+
+頁面是固定來源的文本整理，不保證觸發、角色組成或每次播放相同。字幕缺失、未解析關係、孤立候選及缺 payload 原樣保留。沒有依 key 前綴猜人名、补寫字幕或補出跨事件時間線。尚未逐場遊戲內播放確認。
