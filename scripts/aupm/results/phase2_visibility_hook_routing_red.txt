@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys; sys.path.insert(0, sys.argv[1]); from lupa.luajit21 import LuaRuntime; LuaRuntime().execute('dofile(...)', sys.argv[2])
+                                                                                       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "lupa/luajit21.pyx", line 441, in lupa.luajit21.LuaRuntime.execute
+  File "lupa/luajit21.pyx", line 1872, in lupa.luajit21.run_lua
+  File "lupa/luajit21.pyx", line 1886, in lupa.luajit21.call_lua
+  File "lupa/luajit21.pyx", line 1913, in lupa.luajit21.execute_lua_call
+  File "lupa/luajit21.pyx", line 1794, in lupa.luajit21.raise_lua_error
+lupa.luajit21.LuaError: ...er-40-000-DARKTIDE-Mods\scripts\aupm\tests\test_aupm.lua:7: expected 0, got 1
+stack traceback:
+	[C]: in function 'assert'
+	...er-40-000-DARKTIDE-Mods\scripts\aupm\tests\test_aupm.lua:7: in function 'assert_equal'
+	...er-40-000-DARKTIDE-Mods\scripts\aupm\tests\test_aupm.lua:1002: in main chunk
+	[C]: in function 'dofile'
+	[string "<python>"]:1: in main chunk
+PASS UnitT00_LocalPlayerUsesNewCooldownAPI
+PASS UnitT10_TeammateUsesNewCooldownAPI
+PASS UnitT20_CurrentCooldownAPITakesPrecedence
+PASS UnitT30_LegacyCooldownAPIStillWorks
+PASS UnitT40_ChargeConsumptionAndRateRemainCorrect
+PASS UnitT50_AbilityChangesAndDisabledUpdatesDoNotCount
+PASS UnitT60_UnavailableGameplayTimeDisplaysNA
+PASS UnitT70_PlayerPanelsDisplayAndClearStatistics
+PASS UnitT80_NewGameplaySessionClearsStatistics
+PASS UnitT90_VisibilityUpdatesOffsetsInPlace
+PASS UnitT91_SettingsReloadAndHudRebuildRefreshImmediately
+PASS UnitT92_SettingsResetRefreshesCachedOffsets
+PASS UnitT93_ReadyOwnerLookupAvoidsPlayerScan
+PASS UnitT94_OwnerLookupFallbackAndAttachedUnit
+PASS UnitT95_RespawnReplacementAndLeaveResolveFreshOwner
+PASS UnitT96_HudFormattingIsAtMostTenHzAtCommonRates
+PASS UnitT97_HiddenNilAndBackwardTimeRefreshSafely
+PASS UnitT98_UnchangedTextDoesNotRewriteOrDirty
+PASS UnitT99_PanelHookPreservesChainedCallAndResults
+19 phase 1 AUPM tests completed
+PASS UnitT00_LocalExtensionUsesMatchingPlayerReference
+PASS UnitT10_HuskExtensionUsesMatchingPlayerReference
+PASS UnitT20_MissingExtensionPlayerUsesOwnerFallback
+PASS UnitT30_MismatchedExtensionPlayerUsesCurrentOwner
+PASS UnitT40_AttachedUnitIsNotCreditedToExtensionPlayer
+PASS UnitT50_OwnerExceptionFallsBackToPlayerRoster
+PASS UnitT60_UnreadyOwnerManagerFallsBackToPlayerRoster
+PASS UnitT70_NilRosterDoesNotAttributeUnknownUnit
+PASS UnitT80_LeavingPlayerWithClearedUnitIsIgnored
+PASS UnitT90_RetainedPanelShowRefreshesOnFirstManagerUpdate
+PASS UnitT95_SetVisibleHookPreservesChainArgumentsAndReturns
+FAIL UnitT96_VisibilityHooksRegisterBeforePanelClassesLoad
+...er-40-000-DARKTIDE-Mods\scripts\aupm\tests\test_aupm.lua:11: expected true
+12 phase 2 AUPM tests completed
