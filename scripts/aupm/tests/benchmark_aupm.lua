@@ -1,4 +1,4 @@
-local BASELINE_COMMIT = "4a05e1971a449b1a8db2a9bd2181e9e7c58e0a06"
+local BASELINE_COMMIT = "0c565dc4b0ac4b91e99a641e4af855b5530cd5f0"
 local CANDIDATE_PATH = "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM.lua"
 local PERSONAL_PATH = "scripts/ui/hud/elements/personal_player_panel/hud_element_personal_player_panel_definitions"
 local TEAM_PATH = "scripts/ui/hud/elements/team_player_panel/hud_element_team_player_panel_definitions"
@@ -26,7 +26,7 @@ assert(baseline_pipe, "could not read the committed baseline source: " .. tostri
 local baseline_source = baseline_pipe:read("*a")
 local baseline_ok = baseline_pipe:close()
 assert(baseline_ok and #baseline_source > 0, "git show did not return the baseline AUPM source")
-assert(string.find(baseline_source, "style.offset = {", 1, true), "baseline source does not contain the original offset replacement")
+assert(string.find(baseline_source, "local HUD_REFRESH_INTERVAL = 0.1", 1, true), "baseline source does not contain the HUD refresh interval contract")
 
 local function create_widget_styles(definition)
 	local styles = {}
@@ -161,6 +161,7 @@ local function build_fixture(source_kind, workload)
 		uuids[index] = uuid
 		local ability_name, charges = workload_state(workload, 0, index)
 		local extension = {
+			_player = player,
 			_equipped_abilities = { combat_ability = { name = ability_name } },
 			_ability_components = { combat_ability = { num_charges = charges } },
 			ability_enabled = function() return true end,
@@ -221,6 +222,10 @@ local function build_fixture(source_kind, workload)
 						active_metrics.offset_replacements = active_metrics.offset_replacements + 1
 					end
 				end
+				if panel.widget.dirty == true and active_metrics then
+					active_metrics.dirty_draws = active_metrics.dirty_draws + 1
+				end
+				panel.widget.dirty = nil
 			end
 		end
 	end
@@ -243,6 +248,7 @@ end
 local function new_metrics()
 	return {
 		formatted_values = 0,
+		dirty_draws = 0,
 		player_scans = 0,
 		owner_lookups = 0,
 		offset_replacements = 0,
@@ -273,9 +279,9 @@ local function measure(source_kind, workload, hz)
 	collectgarbage("stop")
 	local metrics = new_metrics()
 	fixture.set_metrics(metrics)
-	local cpu_start = os.clock()
+	local clock_start = os.clock()
 	fixture.run_frames(MEASURE_SECONDS * hz, hz)
-	local cpu_seconds = os.clock() - cpu_start
+	local clock_seconds = os.clock() - clock_start
 	fixture.clear_metrics()
 	local memory_after_kb = collectgarbage("count")
 	collectgarbage("restart")
@@ -286,11 +292,12 @@ local function measure(source_kind, workload, hz)
 		source = source_kind,
 		workload = workload,
 		hz = hz,
-		cpu_ms = cpu_seconds * 1000,
+		clock_ms = clock_seconds * 1000,
 		memory_delta_kb = memory_after_kb - memory_before_kb,
 		memory_after_gc_kb = memory_after_gc_kb,
 		initial_offset_vectors = fixture.initial_offset_vectors,
 		formatted_values = metrics.formatted_values,
+		dirty_draws = metrics.dirty_draws,
 		player_scans = metrics.player_scans,
 		owner_lookups = metrics.owner_lookups,
 		offset_replacements = metrics.offset_replacements,
@@ -300,17 +307,18 @@ local function measure(source_kind, workload, hz)
 end
 
 local function write_csv(rows)
-	local output = assert(io.open("scripts/aupm/results/benchmark.csv", "w"))
-	output:write("source,workload,hz,sample,cpu_ms,formatted_values,player_scans,owner_lookups,offset_replacements,initial_offset_vectors,cooldown_samples,final_state_equal,memory_delta_kb,memory_after_gc_kb,final_state\n")
+	local output = assert(io.open("scripts/aupm/results/phase2_benchmark.csv", "w"))
+	output:write("source,workload,hz,sample,clock_ms,formatted_values,dirty_draws,player_scans,owner_lookups,offset_replacements,initial_offset_vectors,cooldown_samples,final_state_equal,memory_delta_kb,memory_after_gc_kb,final_state\n")
 	for _, row in ipairs(rows) do
 		output:write(native_format(
-			"%s,%s,%d,%d,%.6f,%d,%d,%d,%d,%d,%d,%s,%.3f,%.3f,%s\n",
+			"%s,%s,%d,%d,%.6f,%d,%d,%d,%d,%d,%d,%d,%s,%.3f,%.3f,%s\n",
 			row.source,
 			row.workload,
 			row.hz,
 			row.sample,
-			row.cpu_ms,
+			row.clock_ms,
 			row.formatted_values,
+			row.dirty_draws,
 			row.player_scans,
 			row.owner_lookups,
 			row.offset_replacements,
@@ -328,10 +336,11 @@ end
 local function summarize(rows, source_kind, workload, hz)
 	local summary = {
 		count = 0,
-		cpu_sum = 0,
-		cpu_min = math.huge,
-		cpu_max = 0,
+		clock_sum = 0,
+		clock_min = math.huge,
+		clock_max = 0,
 		formats = 0,
+		dirty_draws = 0,
 		player_scans = 0,
 		owner_lookups = 0,
 		offset_replacements = 0,
@@ -343,10 +352,11 @@ local function summarize(rows, source_kind, workload, hz)
 	for _, row in ipairs(rows) do
 		if row.source == source_kind and row.workload == workload and row.hz == hz then
 			summary.count = summary.count + 1
-			summary.cpu_sum = summary.cpu_sum + row.cpu_ms
-			summary.cpu_min = math.min(summary.cpu_min, row.cpu_ms)
-			summary.cpu_max = math.max(summary.cpu_max, row.cpu_ms)
+			summary.clock_sum = summary.clock_sum + row.clock_ms
+			summary.clock_min = math.min(summary.clock_min, row.clock_ms)
+			summary.clock_max = math.max(summary.clock_max, row.clock_ms)
 			summary.formats = summary.formats + row.formatted_values
+			summary.dirty_draws = summary.dirty_draws + row.dirty_draws
 			summary.player_scans = summary.player_scans + row.player_scans
 			summary.owner_lookups = summary.owner_lookups + row.owner_lookups
 			summary.offset_replacements = summary.offset_replacements + row.offset_replacements
@@ -358,8 +368,9 @@ local function summarize(rows, source_kind, workload, hz)
 	end
 	assert(summary.count == REPEATS, "expected " .. REPEATS .. " samples per source/workload/rate")
 	local count = summary.count
-	summary.cpu_avg = summary.cpu_sum / count
+	summary.clock_avg = summary.clock_sum / count
 	summary.formats = summary.formats / count
+	summary.dirty_draws = summary.dirty_draws / count
 	summary.player_scans = summary.player_scans / count
 	summary.owner_lookups = summary.owner_lookups / count
 	summary.offset_replacements = summary.offset_replacements / count
@@ -371,32 +382,33 @@ local function summarize(rows, source_kind, workload, hz)
 end
 
 local function write_report(rows)
-	local report = assert(io.open("scripts/aupm/results/benchmark.md", "w"))
+	local report = assert(io.open("scripts/aupm/results/phase2_benchmark.md", "w"))
 	report:write("# AUPM benchmark report\n\n")
 	report:write("Baseline source: commit " .. BASELINE_COMMIT .. " read with git show; candidate source: current worktree.\n\n")
 	report:write(native_format(
-		"Each sample uses four players (one personal panel and three team panels), runs for %d simulated seconds after a %d second warm-up, and executes at 30, 60, or 144 Hz. There are %d repetitions for each source, rate, and workload.\n\n",
+		"Each sample uses four players (one personal panel and three team panels), runs for %d simulated seconds after a %d second warm-up, and executes at 30, 60, or 144 Hz. There are %d repetitions for each source, rate, and workload, alternating baseline/candidate order. The run produces 60 source rows and 30 pairs.\n\n",
 		MEASURE_SECONDS,
 		WARMUP_SECONDS,
 		REPEATS
 	))
-	report:write("The idle workload keeps charges and ability names fixed while gameplay time advances, so the per-minute denominator changes without ability events. The charge_sequence workload uses deterministic eight-second cycles staggered across the four players: ability A starts with three charges, drops by one and then two, recovers, switches to ability B, drops by one and then one, recovers, and later switches back to A. Both workloads sample each player's ability extension every simulated frame. Baseline and candidate receive identical inputs; each paired sample asserts equal final used/previous/name/cooldown state and equal cooldown sample counts.\n\n")
-	report:write(tostring(jit_module.version) .. " runs with JIT compilation enabled and receives a four-second warm-up for each sample. A full GC runs before timing; GC is stopped during the measured interval, and the retained heap delta is captured before GC restarts and a full collection records post-GC used heap. Heap delta covers this entire mock Lua workload, including the harness and instrumentation; it does not represent in-game allocation. The mock reuses one no-op original callback and one renderer table for every panel call. Offset allocation counts are steady-state table identity replacements observed around visibility callbacks; the eight initial offset vectors are listed separately. CPU time comes from os.clock and is reported in milliseconds.\n\n")
-	report:write("| Workload | Source | Hz | CPU avg / min / max (ms) | formatted values / sample | player scans / sample | owner lookups / sample | offset table replacements / sample | initial offsets / sample | cooldown samples / sample | heap delta avg (KiB) | post-GC used heap avg (KiB) |\n")
-	report:write("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n")
+	report:write("The idle workload keeps charges and ability names fixed while gameplay time advances, so the per-minute denominator changes without ability events. The charge_sequence workload uses deterministic eight-second cycles staggered across the four players: ability A starts with three charges, drops by one and then two, recovers, switches to ability B, drops by one and then one, recovers, and later switches back to A. Both workloads sample each player's ability extension every simulated frame. Baseline and candidate receive identical inputs; each paired sample asserts equal final used/previous/name/cooldown state, format and dirty-draw counts, and cooldown sample counts.\n\n")
+	report:write(tostring(jit_module.version) .. " runs with JIT compilation enabled and receives a four-second warm-up for each sample. A full GC runs before timing; GC is stopped during the measured interval, and the retained heap delta is captured before GC restarts and a full collection records post-GC used heap. Heap delta covers this entire mock Lua workload, including the harness and instrumentation; it does not represent in-game allocation. The mock reuses one no-op original callback and one renderer table for every panel call. Offset allocation counts are steady-state table identity replacements observed around visibility callbacks; the eight initial offset vectors are listed separately. Timing uses mock os.clock elapsed milliseconds on Windows; this clock includes waits and is not process CPU time.\n\n")
+	report:write("| Workload | Source | Hz | clock elapsed avg / min / max (ms) | formats / sample | dirty draws / sample | player scans / sample | owner lookups / sample | offset table replacements / sample | initial offsets / sample | cooldown samples / sample | heap delta avg (KiB) | post-GC used heap avg (KiB) |\n")
+	report:write("|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n")
 	for _, workload in ipairs(WORKLOADS) do
 		for _, hz in ipairs(FPS_VALUES) do
 			for _, source_kind in ipairs({ "baseline", "candidate" }) do
 				local summary = summarize(rows, source_kind, workload, hz)
 				report:write(native_format(
-					"| %s | %s | %d | %.3f / %.3f / %.3f | %.1f | %.1f | %.1f | %.1f | %.1f | %.1f | %.3f | %.3f |\n",
+					"| %s | %s | %d | %.3f / %.3f / %.3f | %.1f | %.1f | %.1f | %.1f | %.1f | %.1f | %.1f | %.3f | %.3f |\n",
 					workload,
 					source_kind,
 					hz,
-					summary.cpu_avg,
-					summary.cpu_min,
-					summary.cpu_max,
+					summary.clock_avg,
+					summary.clock_min,
+					summary.clock_max,
 					summary.formats,
+					summary.dirty_draws,
 					summary.player_scans,
 					summary.owner_lookups,
 					summary.offset_replacements,
@@ -408,7 +420,7 @@ local function write_report(rows)
 			end
 		end
 	end
-	report:write("\nThe measured CPU results vary by workload and frame rate. The benchmark does not establish an overall CPU speedup; it confirms lower formatting and player-scan counts, zero steady-state offset replacements, and unchanged per-frame cooldown sample counts. Raw samples are in benchmark.csv. CPU milliseconds describe this synthetic LuaJIT workload and do not predict game FPS. These measurements exclude engine rendering, networking, and other game runtime behavior.\n")
+	report:write("\nElapsed clock values vary by workload and frame rate; this report draws no overall CPU or FPS conclusion. Counts report formats, dirty mock draws, player scans, owner lookups, offset replacements, and cooldown samples. Dirty draws count at most one dirty widget per panel per simulated frame through a mock draw proxy; the harness clears dirty after that check and does not run the engine renderer. Raw samples are in phase2_benchmark.csv. Clock milliseconds describe this synthetic LuaJIT workload and do not predict game CPU use or FPS. These measurements exclude engine rendering, networking, and other game runtime behavior.\n")
 	assert(report:close())
 end
 
@@ -422,18 +434,26 @@ for _, workload in ipairs(WORKLOADS) do
 			for _, source_kind in ipairs(order) do
 				local row = measure(source_kind, workload, hz)
 				row.sample = sample
+				local expected_owner_lookups = source_kind == "baseline" and 4 * hz * MEASURE_SECONDS or 0
+				assert(row.owner_lookups == expected_owner_lookups, "unexpected owner lookup count for " .. source_kind .. " " .. pair_key)
+				assert(row.player_scans == 0, "unexpected roster scan count for " .. source_kind .. " " .. pair_key)
+				assert(row.offset_replacements == 0, "unexpected offset replacement count for " .. source_kind .. " " .. pair_key)
 				local expected = verified_pairs[pair_key]
 				if not expected then
 					verified_pairs[pair_key] = {
 						source = source_kind,
 						final_state = row.final_state,
 						cooldown_samples = row.cooldown_samples,
+						formatted_values = row.formatted_values,
+						dirty_draws = row.dirty_draws,
 					}
 					row.final_state_equal = "pending"
 				else
 					assert(expected.source ~= source_kind, "duplicate source in paired benchmark sample")
 					assert(expected.final_state == row.final_state, "baseline and candidate final ability state differ for " .. pair_key)
 					assert(expected.cooldown_samples == row.cooldown_samples, "baseline and candidate ability sample counts differ for " .. pair_key)
+					assert(expected.formatted_values == row.formatted_values, "baseline and candidate format counts differ for " .. pair_key)
+					assert(expected.dirty_draws == row.dirty_draws, "baseline and candidate dirty-draw counts differ for " .. pair_key)
 					row.final_state_equal = "true"
 					for _, previous_row in ipairs(rows) do
 						if previous_row.workload == workload and previous_row.hz == hz and previous_row.sample == sample then
@@ -443,14 +463,15 @@ for _, workload in ipairs(WORKLOADS) do
 				end
 				rows[#rows + 1] = row
 				print(native_format(
-					"%s %s %d Hz sample %d/%d: %.3f ms, formats=%d, scans=%d, offsets=%d, cooldown samples=%d",
+					"%s %s %d Hz sample %d/%d: clock=%.3f ms, formats=%d, dirty draws=%d, scans=%d, offsets=%d, cooldown samples=%d",
 					source_kind,
 					workload,
 					hz,
 					sample,
 					REPEATS,
-					row.cpu_ms,
+					row.clock_ms,
 					row.formatted_values,
+					row.dirty_draws,
 					row.player_scans,
 					row.offset_replacements,
 					row.cooldown_samples

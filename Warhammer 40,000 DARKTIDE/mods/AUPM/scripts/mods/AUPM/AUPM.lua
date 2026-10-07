@@ -183,7 +183,10 @@ local ability_hook_function = function (self, unit, dt, t)
 		return
 	end
 
-	local player = player_from_unit(unit)
+	local player = self._player
+	if not unit or not player or player.player_unit ~= unit then
+		player = player_from_unit(unit)
+	end
 	if not player then
 		return
 	end
@@ -477,5 +480,20 @@ local function update_aupm_player_features(func, self, dt, t, player, ui_rendere
 	)
 end
 
+local function invalidate_aupm_panel_visibility(func, self, visible, ...)
+	if not visible then
+		local widget = self._widgets_by_name and self._widgets_by_name.aupm_text
+		local state = widget and widget_states[widget]
+		if state then
+			state.was_visible = false
+			state.elapsed = 0
+		end
+	end
+
+	return func(self, visible, ...)
+end
+
+mod:hook("HudElementPersonalPlayerPanel", "set_visible", invalidate_aupm_panel_visibility)
+mod:hook("HudElementTeamPlayerPanel", "set_visible", invalidate_aupm_panel_visibility)
 mod:hook("HudElementTeamPlayerPanel", "_update_player_features", update_aupm_player_features)
 mod:hook("HudElementPersonalPlayerPanel", "_update_player_features", update_aupm_player_features)

@@ -52,7 +52,11 @@ local function fixture(options)
 	function mod:hook_safe(target, method, callback)
 		hooks[target .. "." .. method] = callback
 	end
-	mod.hook = mod.hook_safe
+	function mod:hook(target, method, callback)
+		if type(target) == "string" then
+			hooks[target .. "." .. method] = callback
+		end
+	end
 	function mod:hook_require(path, callback)
 		hooks[path] = callback
 		local instance = { widget_definitions = {} }
@@ -63,7 +67,13 @@ local function fixture(options)
 	_G.CLASS = {
 		PlayerUnitAbilityExtension = "PlayerUnitAbilityExtension",
 		PlayerHuskAbilityExtension = "PlayerHuskAbilityExtension",
+		HudElementPersonalPlayerPanel = "HudElementPersonalPlayerPanel",
+		HudElementTeamPlayerPanel = "HudElementTeamPlayerPanel",
 	}
+	if options.panel_classes_ready == false then
+		_G.CLASS.HudElementPersonalPlayerPanel = nil
+		_G.CLASS.HudElementTeamPlayerPanel = nil
+	end
 	package.loaded["scripts/managers/ui/ui_widget"] = {
 		create_definition = function(passes, scenegraph_id)
 			return { passes = passes, scenegraph_id = scenegraph_id }
@@ -103,6 +113,7 @@ local function fixture(options)
 	}
 	dofile(mod_path)
 	local extension = {
+		_player = player,
 		_equipped_abilities = { combat_ability = { name = "shout" } },
 		_ability_components = { combat_ability = { num_charges = 1 } },
 		ability_enabled = function() return true end,
@@ -433,11 +444,12 @@ local tests = {
 		end,
 	},
 	{
-		-- Scenario: the game manager resolves a current player unit owner.
-		-- Purpose: the hot path uses the O(1) owner lookup without scanning players.
+		-- Scenario: the extension has no player reference and the spawn manager resolves its unit.
+		-- Purpose: the owner fallback remains available without scanning the player roster.
 		"UnitT93_ReadyOwnerLookupAvoidsPlayerScan",
 		function()
 			local context = fixture()
+			context.extension._player = nil
 			sample(context)
 			assert_equal(context.state.owner_lookup_count, 1)
 			assert_equal(context.state.player_scan_count, 0)
@@ -450,6 +462,7 @@ local tests = {
 		"UnitT94_OwnerLookupFallbackAndAttachedUnit",
 		function()
 			local context = fixture({ spawn_manager_ready = false })
+			context.extension._player = nil
 			sample(context)
 			assert_equal(context.state.player_scan_count, 1)
 			assert_equal(context.mod.record_ability_previous["player-id"], 1)
@@ -700,14 +713,291 @@ local tests = {
 	},
 }
 
+local phase2_tests = {
+	{
+		-- Scenario: a local extension runs with ready managers and again before its owner manager is ready.
+		-- Purpose: the local hot path uses its authoritative player reference without either fallback lookup.
+		"UnitT00_LocalExtensionUsesMatchingPlayerReference",
+		function()
+			local context = fixture()
+			sample(context, context.unit, "PlayerUnitAbilityExtension")
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.state.owner_lookup_count, 0)
+			assert_equal(context.state.player_scan_count, 0)
+
+			local early_context = fixture({ spawn_manager_ready = false })
+			early_context.state.players = nil
+			early_context.state.owners[early_context.unit] = nil
+			sample(early_context, early_context.unit, "PlayerUnitAbilityExtension")
+			assert_equal(early_context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(early_context.state.owner_lookup_count, 0)
+			assert_equal(early_context.state.player_scan_count, 0)
+		end,
+	},
+	{
+		-- Scenario: a husk extension runs with ready managers and again before its owner manager is ready.
+		-- Purpose: synchronized teammate extensions use the same direct ownership contract as local extensions.
+		"UnitT10_HuskExtensionUsesMatchingPlayerReference",
+		function()
+			local context = fixture()
+			sample(context, context.unit, "PlayerHuskAbilityExtension")
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.state.owner_lookup_count, 0)
+			assert_equal(context.state.player_scan_count, 0)
+
+			local early_context = fixture({ spawn_manager_ready = false })
+			early_context.state.players = nil
+			early_context.state.owners[early_context.unit] = nil
+			sample(early_context, early_context.unit, "PlayerHuskAbilityExtension")
+			assert_equal(early_context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(early_context.state.owner_lookup_count, 0)
+			assert_equal(early_context.state.player_scan_count, 0)
+		end,
+	},
+	{
+		-- Scenario: an extension has no _player but its unit has a spawn-manager owner.
+		-- Purpose: the existing owner lookup remains the first fallback for incomplete extensions.
+		"UnitT20_MissingExtensionPlayerUsesOwnerFallback",
+		function()
+			local context = fixture()
+			context.extension._player = nil
+			context.state.players = nil
+			sample(context)
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.state.owner_lookup_count, 1)
+			assert_equal(context.state.player_scan_count, 0)
+		end,
+	},
+	{
+		-- Scenario: an extension's _player points at a different unit than the update unit.
+		-- Purpose: a stale extension identity is rejected and the actual owner receives the sample.
+		"UnitT30_MismatchedExtensionPlayerUsesCurrentOwner",
+		function()
+			local context = fixture()
+			local stale_player = {
+				player_unit = {},
+				account_id = function() return "stale-player-id" end,
+			}
+			context.extension._player = stale_player
+			context.state.players = nil
+			sample(context)
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.mod.record_ability_previous["stale-player-id"], nil)
+			assert_equal(context.state.owner_lookup_count, 1)
+		end,
+	},
+	{
+		-- Scenario: an extension's _player is valid, but the update unit is an attached auxiliary unit.
+		-- Purpose: unit mismatch prevents attribution to the extension's player even if owner() returns them.
+		"UnitT40_AttachedUnitIsNotCreditedToExtensionPlayer",
+		function()
+			local context = fixture()
+			local attached_unit = {}
+			context.state.owners[attached_unit] = context.player
+			sample(context, attached_unit)
+			assert_equal(context.mod.record_ability_previous["player-id"], nil)
+			assert_equal(context.state.owner_lookup_count, 1)
+			assert_equal(context.state.player_scan_count, 1)
+		end,
+	},
+	{
+		-- Scenario: the owner method throws while the extension has no _player.
+		-- Purpose: a failed owner lookup falls back to the current player roster safely.
+		"UnitT50_OwnerExceptionFallsBackToPlayerRoster",
+		function()
+			local context = fixture()
+			context.extension._player = nil
+			context.spawn_manager.owner = function()
+				context.state.owner_lookup_count = context.state.owner_lookup_count + 1
+				error("owner lookup unavailable")
+			end
+			sample(context)
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.state.owner_lookup_count, 1)
+			assert_equal(context.state.player_scan_count, 1)
+		end,
+	},
+	{
+		-- Scenario: the spawn manager is not ready, but the player roster contains the unit owner.
+		-- Purpose: manager initialization timing does not prevent a safe roster fallback.
+		"UnitT60_UnreadyOwnerManagerFallsBackToPlayerRoster",
+		function()
+			local context = fixture({ spawn_manager_ready = false })
+			context.extension._player = nil
+			sample(context)
+			assert_equal(context.mod.record_ability_previous["player-id"], 1)
+			assert_equal(context.state.owner_lookup_count, 0)
+			assert_equal(context.state.player_scan_count, 1)
+		end,
+	},
+	{
+		-- Scenario: both _player and owner are unavailable and players() returns nil.
+		-- Purpose: the fallback path treats a nil roster as an empty roster without attribution or error.
+		"UnitT70_NilRosterDoesNotAttributeUnknownUnit",
+		function()
+			local context = fixture()
+			context.extension._player = nil
+			context.state.players = nil
+			context.state.owners[context.unit] = nil
+			sample(context)
+			assert_equal(context.mod.record_ability_previous["player-id"], nil)
+			assert_equal(context.state.owner_lookup_count, 1)
+			assert_equal(context.state.player_scan_count, 1)
+		end,
+	},
+	{
+		-- Scenario: a departing player has cleared player_unit while its old extension still receives an update.
+		-- Purpose: stale _player identity and stale owner data cannot credit an absent player.
+		"UnitT80_LeavingPlayerWithClearedUnitIsIgnored",
+		function()
+			local context = fixture()
+			local old_unit = context.player.player_unit
+			context.extension.max_regen_time_for_ability_charge = function() return 30 end
+			sample(context, old_unit)
+			local previous_before = context.mod.record_ability_previous["player-id"]
+			local name_before = context.mod.record_ability_name["player-id"]
+			local cooldown_before = context.mod.record_ability_cd["player-id"]
+			local used_before = context.mod.record_ability_used["player-id"]
+			context.player.player_unit = nil
+			context.state.players = {}
+			context.state.owners[old_unit] = nil
+			context.extension._ability_components.combat_ability.num_charges = 0
+			sample(context, old_unit)
+			assert_equal(context.mod.record_ability_previous["player-id"], previous_before)
+			assert_equal(context.mod.record_ability_name["player-id"], name_before)
+			assert_equal(context.mod.record_ability_cd["player-id"], cooldown_before)
+			assert_equal(context.mod.record_ability_used["player-id"], used_before)
+		end,
+	},
+	{
+		-- Scenario: a visible AUPM panel is hidden and shown through retained visibility group changes.
+		-- Purpose: the first manager update after visibility returns refreshes immediately, before the 100 ms interval.
+		"UnitT90_RetainedPanelShowRefreshesOnFirstManagerUpdate",
+		function()
+			for _, panel in ipairs({ "Personal", "Team" }) do
+				local context = fixture()
+				local widget = widget_for(context)
+				local format_calls = 0
+				local original_get_value = context.mod.get_aupm_value
+				context.mod.get_aupm_value = function(uuid)
+					format_calls = format_calls + 1
+					return original_get_value(uuid)
+				end
+				context.mod.record_ability_used["player-id"] = 1
+				context.mod.record_ability_cd["player-id"] = 30
+				local panel_visible = true
+				local manager_updates = 0
+				local function manager_update(t)
+					if panel_visible then
+						manager_updates = manager_updates + 1
+						update_panel(context, widget, context.player, 0.016, t, panel)
+					end
+				end
+				local function set_visible(visible)
+					local hook = context.hooks["HudElement" .. panel .. "PlayerPanel.set_visible"]
+					local self = { _widgets_by_name = { aupm_text = widget } }
+					local renderer = {}
+					local original_calls = 0
+					local function original(actual_self, actual_visible, actual_renderer, retained)
+						assert_equal(actual_self, self)
+						assert_equal(actual_visible, visible)
+						assert_equal(actual_renderer, renderer)
+						assert_equal(retained, true)
+						original_calls = original_calls + 1
+						return "visibility-result", nil, 29
+					end
+					local first, second, third
+					if hook then
+						first, second, third = hook(original, self, visible, renderer, true)
+					else
+						first, second, third = original(self, visible, renderer, true)
+					end
+					assert_equal(original_calls, 1)
+					assert_equal(first, "visibility-result")
+					assert_equal(second, nil)
+					assert_equal(third, 29)
+				end
+
+				manager_update(10)
+				assert_equal(format_calls, 1)
+				assert_true(string.find(widget.content.value, "1 [30.0s CD]", 1, true) ~= nil)
+				panel_visible = false
+				set_visible(false)
+				manager_update(10.016)
+				assert_equal(manager_updates, 1, "the HUD manager must skip a hidden child panel")
+				context.mod.record_ability_used["player-id"] = 2
+				panel_visible = true
+				set_visible(true)
+				manager_update(10.032)
+				assert_equal(manager_updates, 2)
+				assert_equal(format_calls, 2, "the first visible manager update must refresh immediately")
+				assert_true(string.find(widget.content.value, "2 [30.0s CD]", 1, true) ~= nil)
+			end
+		end,
+	},
+	{
+		-- Scenario: another hook wraps each child panel's inherited set_visible method with extra arguments.
+		-- Purpose: the AUPM visibility hook calls the next hook once and preserves nil-bearing arguments and returns.
+		"UnitT95_SetVisibleHookPreservesChainArgumentsAndReturns",
+		function()
+			for _, panel in ipairs({ "Personal", "Team" }) do
+				local context = fixture()
+				local hook = context.hooks["HudElement" .. panel .. "PlayerPanel.set_visible"]
+				assert_true(type(hook) == "function", "AUPM must hook each player panel's inherited visibility method")
+				local widget = widget_for(context)
+				local self = { _widgets_by_name = { aupm_text = widget } }
+				local renderer = {}
+				local token = {}
+				local calls = 0
+				local original = function(actual_self, visible, actual_renderer, retained, ...)
+					calls = calls + 1
+					assert_equal(actual_self, self)
+					assert_equal(visible, false)
+					assert_equal(actual_renderer, renderer)
+					assert_equal(retained, true)
+					assert_equal(select("#", ...), 3)
+					local first_extra, middle_extra, last_extra = ...
+					assert_equal(first_extra, token)
+					assert_equal(middle_extra, nil)
+					assert_equal(last_extra, "tail")
+					return "chained", nil, 31
+				end
+				local first, second, third = hook(original, self, false, renderer, true, token, nil, "tail")
+				assert_equal(calls, 1)
+				assert_equal(first, "chained")
+				assert_equal(second, nil)
+				assert_equal(third, 31)
+			end
+		end,
+	},
+	{
+		-- Scenario: AUPM loads before the game has required either child panel class.
+		-- Purpose: delayed string hooks register visibility callbacks while preserving the existing update hooks.
+		"UnitT96_VisibilityHooksRegisterBeforePanelClassesLoad",
+		function()
+			local context = fixture({ panel_classes_ready = false })
+			assert_true(type(context.hooks["HudElementPersonalPlayerPanel._update_player_features"]) == "function")
+			assert_true(type(context.hooks["HudElementTeamPlayerPanel._update_player_features"]) == "function")
+			assert_true(type(context.hooks["HudElementPersonalPlayerPanel.set_visible"]) == "function")
+			assert_true(type(context.hooks["HudElementTeamPlayerPanel.set_visible"]) == "function")
+		end,
+	},
+}
+
 local failures = 0
-for _, test in ipairs(tests) do
-	local success, message = pcall(test[2])
-	print((success and "PASS " or "FAIL ") .. test[1])
-	if not success then
-		failures = failures + 1
-		print(message)
+local function run_tests(test_group, label)
+	for _, test in ipairs(test_group) do
+		local success, message = pcall(test[2])
+		print((success and "PASS " or "FAIL ") .. test[1])
+		if not success then
+			failures = failures + 1
+			print(message)
+		end
 	end
+	print(string.format("%d %s AUPM tests completed", #test_group, label))
 end
+
+run_tests(tests, "phase 1")
+run_tests(phase2_tests, "phase 2")
 assert_equal(failures, 0)
-print(string.format("%d AUPM tests passed", #tests))
+print(string.format("%d AUPM tests passed", #tests + #phase2_tests))
