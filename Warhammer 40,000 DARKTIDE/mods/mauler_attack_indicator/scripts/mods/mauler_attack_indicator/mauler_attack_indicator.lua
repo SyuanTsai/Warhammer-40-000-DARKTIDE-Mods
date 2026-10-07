@@ -16,6 +16,7 @@ table.unpack = table.unpack or unpack
 local persistent_yellow_rings = {}
 local known_maulers = {}
 local pending_cleave_indicators = {}
+local pending_persistent_rings = {}
 
 local mauler_attack_states = {}
 local attack_timers = {}
@@ -86,7 +87,7 @@ local function get_attack_color()
 end
 
 local function is_enabled()
-    return get_setting("enabled")
+	return (not mod.is_enabled or mod:is_enabled()) and get_setting("enabled")
 end
 
 local function show_persistent_yellow()
@@ -108,8 +109,66 @@ local function is_mauler_unit(unit)
     return breed and breed.name == "renegade_executor"
 end
 
+local function is_world_valid(world)
+	if not world or not Managers or not Managers.world or not Managers.world.world_name or not Managers.world.has_world then
+		return false
+	end
+
+	local world_name = Managers.world:world_name(world)
+	return world_name ~= nil and Managers.world:has_world(world_name)
+end
+
+local function destroy_owned_decal(decal_table, unit)
+	local decal = decal_table[unit]
+	if not decal then
+		return
+	end
+
+	if decal.unit and Unit.alive(decal.unit) and is_world_valid(decal.world) then
+		World.unlink_unit(decal.world, decal.unit, true)
+		World.destroy_unit(decal.world, decal.unit)
+	end
+
+	decal_table[unit] = nil
+end
+
+local function destroy_cleave_indicator(unit)
+	pending_cleave_indicators[unit] = nil
+	destroy_owned_decal(decals, unit)
+end
+
+local function destroy_persistent_ring(unit)
+	pending_persistent_rings[unit] = nil
+	destroy_owned_decal(persistent_yellow_rings, unit)
+end
+
+local function cleanup_unit(unit)
+	attack_timers[unit] = nil
+	pending_cleave_indicators[unit] = nil
+	pending_persistent_rings[unit] = nil
+	known_maulers[unit] = nil
+	mauler_attack_states[unit] = nil
+	destroy_cleave_indicator(unit)
+	destroy_persistent_ring(unit)
+end
+
+local function cleanup_all()
+	local units = {}
+	for unit in pairs(decals) do units[unit] = true end
+	for unit in pairs(persistent_yellow_rings) do units[unit] = true end
+	for unit in pairs(known_maulers) do units[unit] = true end
+	for unit in pairs(attack_timers) do units[unit] = true end
+	for unit in pairs(pending_cleave_indicators) do units[unit] = true end
+	for unit in pairs(pending_persistent_rings) do units[unit] = true end
+	for unit in pairs(mauler_attack_states) do units[unit] = true end
+
+	for unit in pairs(units) do
+		cleanup_unit(unit)
+	end
+end
+
 local function create_cleave_indicator(unit, world, color_type)
-    if not Managers or not Managers.package then
+	if not is_enabled() or not Managers or not Managers.package or not Unit.alive(unit) or not is_world_valid(world) then
         return nil
     end
     
@@ -158,19 +217,26 @@ local function create_cleave_indicator(unit, world, color_type)
 end
 
 local function attempt_create_cleave_indicator(unit, world, color_type)
+	if not is_enabled() or not Managers or not Managers.package or not Unit.alive(unit) or not is_world_valid(world) then
+		pending_cleave_indicators[unit] = nil
+		return nil
+	end
+
     if not Managers.package:has_loaded(package_path) then
-        pending_cleave_indicators[unit] = {
+		local pending = {
             unit = unit,
             world = world,
             color_type = color_type,
             attempt_time = get_gameplay_time()
         }
+		pending_cleave_indicators[unit] = pending
         
         Managers.package:load(package_path, "mauler_attack_indicator", function()
-            local pending = pending_cleave_indicators[unit]
-            if pending then
-                create_cleave_indicator(pending.unit, pending.world, pending.color_type)
-                pending_cleave_indicators[unit] = nil
+			if pending_cleave_indicators[unit] == pending then
+				pending_cleave_indicators[unit] = nil
+				if is_enabled() and Unit.alive(pending.unit) and is_world_valid(pending.world) and get_gameplay_time() - pending.attempt_time <= 5.0 then
+					create_cleave_indicator(pending.unit, pending.world, pending.color_type)
+				end
             end
         end)
         return nil
@@ -179,29 +245,15 @@ local function attempt_create_cleave_indicator(unit, world, color_type)
     end
 end
 
-local function destroy_cleave_indicator(unit)
-    local decal = decals[unit]
-    if decal then
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-        decals[unit] = nil
-    end
-    pending_cleave_indicators[unit] = nil
-end
-
 local function get_persistent_ring(unit, world)
-    if not Managers or not Managers.package then
+	if not is_enabled() or not show_persistent_yellow() or not Managers or not Managers.package or not Unit.alive(unit) or not is_world_valid(world) then
         return nil
     end
     
     local decal = persistent_yellow_rings[unit]
     
-    if decal and (not Unit.alive(decal.unit) or not Unit.alive(unit)) then
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-        persistent_yellow_rings[unit] = nil
+	if decal and (not Unit.alive(decal.unit) or not Unit.alive(unit) or not is_world_valid(decal.world)) then
+		destroy_persistent_ring(unit)
         decal = nil
     end
     
@@ -209,8 +261,19 @@ local function get_persistent_ring(unit, world)
     
     if should_show and decal == nil then
         if not Managers.package:has_loaded(package_path) then
+			if pending_persistent_rings[unit] then
+				return nil
+			end
+
+			local pending = { unit = unit, world = world }
+			pending_persistent_rings[unit] = pending
             Managers.package:load(package_path, "mauler_attack_indicator", function()
-                get_persistent_ring(unit, world)
+				if pending_persistent_rings[unit] == pending then
+					pending_persistent_rings[unit] = nil
+					if is_enabled() and show_persistent_yellow() and Unit.alive(unit) and is_world_valid(world) then
+						get_persistent_ring(unit, world)
+					end
+				end
             end)
             return nil
         end
@@ -220,6 +283,7 @@ local function get_persistent_ring(unit, world)
             return nil
         end
 
+		pending_persistent_rings[unit] = nil
         decal = {
             unit = World.spawn_unit_ex(world, decal_path, nil, unit_position),
             parent_unit = unit,
@@ -232,7 +296,11 @@ local function get_persistent_ring(unit, world)
             world = world
         }
 
-        World.link_unit(world, decal.unit, 1, unit, 1)
+		if not Unit.alive(decal.unit) then
+			return nil
+		end
+
+		World.link_unit(world, decal.unit, 1, unit, 1)
         persistent_yellow_rings[unit] = decal
         
         local red, green, blue, alpha = get_warning_color()
@@ -256,7 +324,7 @@ local function get_persistent_ring(unit, world)
 end
 
 local function show_persistent_ring(unit, world)
-    if not show_persistent_yellow() then
+	if not is_enabled() or not show_persistent_yellow() or not Unit.alive(unit) or not is_world_valid(world) then
         return
     end
     
@@ -309,6 +377,7 @@ function mod:on_mauler_sound(sound_name, unit_or_position)
     local world = Unit.world(unit)
     
     if sound_name:match("special_attack_vce") then
+        pending_persistent_rings[unit] = nil
         if show_persistent_yellow() then
             hide_persistent_ring(unit)
         end
@@ -344,7 +413,7 @@ function mod:on_mauler_sound(sound_name, unit_or_position)
 end
 
 function mod.find_nearby_maulers()
-    if not Managers.state or not Managers.state.side then
+	if not is_enabled() or not Managers or not Managers.state or not Managers.state.side then
         return
     end
     
@@ -371,15 +440,15 @@ function mod.find_nearby_maulers()
 end
 
 function mod.update(dt)
-    if not Managers or not Managers.time then
+	if not is_enabled() or not Managers or not Managers.time then
         return
     end
     
     local current_time = get_gameplay_time()
     
     for unit, timer in pairs(attack_timers) do
-        if not Unit.alive(unit) then
-            attack_timers[unit] = nil
+		if not Unit.alive(unit) or not is_world_valid(Unit.world(unit)) then
+			cleanup_unit(unit)
         else
             local decal = decals[unit]
             
@@ -402,13 +471,17 @@ function mod.update(dt)
     end
     
     for unit, pending in pairs(pending_cleave_indicators) do
-        if current_time - pending.attempt_time > 5.0 or not Unit.alive(unit) then
+		if not Unit.alive(unit) or not is_world_valid(pending.world) then
+			cleanup_unit(unit)
+		elseif current_time - pending.attempt_time > 5.0 then
             pending_cleave_indicators[unit] = nil
         end
     end
     
     for unit, decal in pairs(decals) do
-        if decal and decal.is_cleave and Unit.alive(decal.unit) then
+		if decal and (not Unit.alive(unit) or not Unit.alive(decal.unit) or not is_world_valid(decal.world)) then
+			cleanup_unit(unit)
+		elseif decal and decal.is_cleave then
             local max_duration = ATTACK_TIMING.warning_duration + ATTACK_TIMING.attack_duration + 1.0
             if current_time - decal.spawn_time > max_duration then
                 destroy_cleave_indicator(unit)
@@ -419,16 +492,8 @@ function mod.update(dt)
     end
     
     for unit, last_seen in pairs(known_maulers) do
-        if current_time - last_seen > 15.0 or not Unit.alive(unit) then
-            known_maulers[unit] = nil
-            mauler_attack_states[unit] = nil
-            attack_timers[unit] = nil
-            destroy_cleave_indicator(unit)
-            local decal = persistent_yellow_rings[unit]
-            if decal and Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
-            persistent_yellow_rings[unit] = nil
+		if current_time - last_seen > 15.0 or not Unit.alive(unit) or not is_world_valid(Unit.world(unit)) then
+			cleanup_unit(unit)
         end
     end
     
@@ -477,28 +542,21 @@ mod.on_setting_changed = function(setting_id)
     settings_cache[setting_id] = new_val
     
     if setting_id == "persistent_yellow" and not new_val then
-        for unit, decal in pairs(persistent_yellow_rings) do
-            if Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
+        for unit in pairs(persistent_yellow_rings) do
+            destroy_persistent_ring(unit)
         end
-        table.clear(persistent_yellow_rings)
+        table.clear(pending_persistent_rings)
     elseif setting_id == "persistent_yellow" and new_val then
-        for unit, _ in pairs(known_maulers) do
-            if Unit.alive(unit) and not decals[unit] and mauler_attack_states[unit] == "idle" then
-                local world = Unit.world(unit)
-                show_persistent_ring(unit, world)
+        if is_enabled() then
+            for unit, _ in pairs(known_maulers) do
+                if Unit.alive(unit) and not decals[unit] and mauler_attack_states[unit] == "idle" then
+                    local world = Unit.world(unit)
+                    show_persistent_ring(unit, world)
+                end
             end
         end
     elseif setting_id == "enabled" and not new_val then
-        for unit, decal in pairs(decals) do
-            if Unit.alive(decal.unit) then
-                World.destroy_unit(decal.world, decal.unit)
-            end
-        end
-        table.clear(decals)
-        table.clear(pending_cleave_indicators)
-        table.clear(mauler_attack_states)
+        cleanup_all()
     end
 end
 
@@ -507,66 +565,35 @@ mod.on_enabled = function(_)
 end
 
 mod.on_disabled = function(_)
-    for unit, decal in pairs(decals) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    for unit, decal in pairs(persistent_yellow_rings) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    table.clear(decals)
-    table.clear(persistent_yellow_rings)
-    table.clear(pending_cleave_indicators)
-    table.clear(mauler_attack_states)
-    table.clear(known_maulers)
+    cleanup_all()
+    clear_settings_cache()
 end
 
 mod:hook_safe("HealthExtension", "kill", function(self)
-    local unit = self._unit
-    destroy_cleave_indicator(unit)
-    known_maulers[unit] = nil
-    mauler_attack_states[unit] = nil
-    local decal = persistent_yellow_rings[unit]
-    if decal and Unit.alive(decal.unit) then
-        World.destroy_unit(decal.world, decal.unit)
-    end
-    persistent_yellow_rings[unit] = nil
+	cleanup_unit(self._unit)
 end)
 
 mod:hook_safe("MinionDeathManager", "set_dead", function(_, unit)
-    destroy_cleave_indicator(unit)
-    known_maulers[unit] = nil
-    mauler_attack_states[unit] = nil
-    local decal = persistent_yellow_rings[unit]
-    if decal and Unit.alive(decal.unit) then
-        World.destroy_unit(decal.world, decal.unit)
-    end
-    persistent_yellow_rings[unit] = nil
+	cleanup_unit(unit)
 end)
 
 mod:hook_safe("UIManager", "cb_on_game_state_change", function()
-    for unit, decal in pairs(decals) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    for unit, decal in pairs(persistent_yellow_rings) do
-        if Unit.alive(decal.unit) then
-            World.destroy_unit(decal.world, decal.unit)
-        end
-    end
-    table.clear(decals)
-    table.clear(persistent_yellow_rings)
-    table.clear(pending_cleave_indicators)
-    table.clear(mauler_attack_states)
-    table.clear(known_maulers)
+	cleanup_all()
+end)
+
+mod:hook("UnitSpawnerManager", "_world_delete_units", function(previous_hook, self, units_list, num_units)
+	for index = 1, num_units do
+		local unit = units_list[index]
+		if unit then
+			cleanup_unit(unit)
+		end
+	end
+
+	return previous_hook(self, units_list, num_units)
 end)
 
 mod:hook_safe("HealthExtension", "init", function(_, extension_init_context, unit)
-    if is_mauler_unit(unit) then
+	if is_enabled() and is_mauler_unit(unit) then
         known_maulers[unit] = get_gameplay_time()
         
         if show_persistent_yellow() then
