@@ -1053,24 +1053,6 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - Archive SHA-256: 403e47f41ee7b68227c08c57195d3afdd130505749c6ba74186b62901687e20e
 - Acquisition method: manual-queue
 
-### [SMOG Cleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/847)
-    記憶體管理
-- MOD 網站最後更新日期：Last updated 01 July 2026, 4:29PM
-- MOD 版本：1.1
-- MOD 檔案名稱：SMOG 847 1.1 cwrBAw1N3
-- 手動維護最後下載日期：2026-07-06
-- Nexus MOD ID: `847`
-- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/847`
-- Nexus page version: `3.2`
-- Nexus last updated: `2026-08-27T00:46:28.0000000+00:00`
-- Main file ID: `7801`
-- Main file version: `3.2`
-- Main file uploaded at UTC: `2026-08-27T00:46:28.0000000+00:00`
-- Archive filename: `SMOG 847 3.2 2026-08-27T00-46Z X0p3C0jlp.zip`
-- Archive size bytes: `31721`
-- Archive SHA-256: `2ae47c29743266c5e04fe17e18c4eea1af6609eed6aafe4b703239ffdd414539`
-- Acquisition method: `manual-queue`
-
 ### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)
     錯誤追蹤
 - MOD 網站最後更新日期：Last updated 13 April 2026, 2:22AM
@@ -1291,3 +1273,11 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 檔案名稱：uptime-573-1-3-6-1767103234
 - 手動維護最後下載日期：2026-01-01
 - 移除原因：作者表示無法在維護已經有人接手
+
+### [SMOG Cleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/847)
+    記憶體管理
+- MOD 網站最後更新日期：Last updated 01 July 2026, 4:29PM
+- MOD 版本：1.1
+- MOD 檔案名稱：SMOG 847 1.1 cwrBAw1N3
+- 手動維護最後下載日期：2026-07-06
+- 移除原因：原作者已經被Nexus Mods所BAN
