@@ -6,6 +6,7 @@ return {
             name = {
                 en = "Ranged Lesser Enemies",
                 ["zh-cn"] = "远程普通敌人",
+                ["zh-tw"] = "遠程一般敵人",
             },
             breeds = { "cultist_assault", "renegade_assault", "renegade_rifleman" },
         },
@@ -15,6 +16,7 @@ return {
             name = {
                 en = "Melee Lesser Enemies",
                 ["zh-cn"] = "近战普通敌人",
+                ["zh-tw"] = "近戰一般敵人",
             },
             breeds = {
                 "chaos_newly_infected",
@@ -36,6 +38,7 @@ return {
             name = {
                 en = "Pox Hounds",
                 ["zh-cn"] = "瘟疫猎犬",
+                ["zh-tw"] = "瘟疫獵犬",
             },
             breeds = { "chaos_hound", "chaos_hound_mutator", "chaos_armored_hound" },
         },
@@ -45,6 +48,7 @@ return {
             name = {
                 en = "Mutants",
                 ["zh-cn"] = "变种人",
+                ["zh-tw"] = "變種人",
             },
             breeds = { "cultist_mutant", "cultist_mutant_mutator" },
         },
@@ -54,6 +58,7 @@ return {
             name = {
                 en = "Trappers",
                 ["zh-cn"] = "陷阱手",
+                ["zh-tw"] = "陷阱兵",
             },
             breeds = { "renegade_netgunner" },
         },
@@ -63,6 +68,7 @@ return {
             name = {
                 en = "Poxbursters",
                 ["zh-cn"] = "瘟疫爆破者",
+                ["zh-tw"] = "瘟疫爆者",
             },
             breeds = { "chaos_poxwalker_bomber" },
         },
@@ -72,6 +78,7 @@ return {
             name = {
                 en = "Bombers",
                 ["zh-cn"] = "自爆者",
+                ["zh-tw"] = "轟炸者",
             },
             breeds = { "renegade_grenadier", "cultist_grenadier" },
         },
@@ -81,6 +88,7 @@ return {
             name = {
                 en = "Snipers",
                 ["zh-cn"] = "狙击手",
+                ["zh-tw"] = "狙擊手",
             },
             breeds = { "renegade_sniper" },
         },
@@ -90,6 +98,7 @@ return {
             name = {
                 en = "Flamers",
                 ["zh-cn"] = "火焰兵",
+                ["zh-tw"] = "火焰兵",
             },
             breeds = { "renegade_flamer", "renegade_flamer_mutator", "cultist_flamer" },
         },
@@ -101,6 +110,7 @@ return {
             name = {
                 en = "Ragers",
                 ["zh-cn"] = "狂战士",
+                ["zh-tw"] = "狂怒者",
             },
             breeds = { "cultist_berzerker", "renegade_berzerker" },
         },
@@ -110,6 +120,7 @@ return {
             name = {
                 en = "Maulers",
                 ["zh-cn"] = "重锤兵",
+                ["zh-tw"] = "重錘兵",
             },
             breeds = { "renegade_executor" },
         },
@@ -119,6 +130,7 @@ return {
             name = {
                 en = "Bulwarks",
                 ["zh-cn"] = "盾卫",
+                ["zh-tw"] = "壁壘",
             },
             breeds = { "chaos_ogryn_bulwark" },
         },
@@ -128,6 +140,7 @@ return {
             name = {
                 en = "Crushers",
                 ["zh-cn"] = "粉碎者",
+                ["zh-tw"] = "碾壓者",
             },
             breeds = { "chaos_ogryn_executor" },
         },
@@ -137,6 +150,7 @@ return {
             name = {
                 en = "Gunners",
                 ["zh-cn"] = "枪手",
+                ["zh-tw"] = "砲手",
             },
             breeds = { "cultist_gunner", "renegade_gunner" },
         },
@@ -146,6 +160,7 @@ return {
             name = {
                 en = "Shotgunners",
                 ["zh-cn"] = "霰弹兵",
+                ["zh-tw"] = "霰彈槍手",
             },
             breeds = { "cultist_shocktrooper", "renegade_shocktrooper" },
         },
@@ -155,6 +170,7 @@ return {
             name = {
                 en = "Reapers",
                 ["zh-cn"] = "收割者",
+                ["zh-tw"] = "收割者",
             },
             breeds = { "chaos_ogryn_gunner" },
         },
@@ -164,6 +180,7 @@ return {
             name = {
                 en = "Plasma Gunners",
                 ["zh-cn"] = "等离子枪手",
+                ["zh-tw"] = "電漿槍手",
             },
             breeds = { "renegade_plasma_gunner" },
         },
