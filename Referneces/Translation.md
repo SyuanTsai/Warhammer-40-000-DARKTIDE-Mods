@@ -1634,6 +1634,9 @@
 - Critical Chance Boost - 暴擊幾率增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_crit_chance_node_buff_low_1`；名稱 hash `3ec7f5ef`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md)）
 - Potent Tox - 強效毒藥（1.13.1 遊戲繁中名稱；盤點補缺；`base_toxin_power_boost_1`；名稱 hash `d8d25992`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md)）
 - Equip Cartel Special - 裝備財閥特殊裝備（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_activation_talent`；名稱 hash `6158914f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md)）
+
+##### 藥劑效果
+
 - Spur I - 激勵I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_1`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md)）
 - Spur II - 激勵II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_2`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md)）
 - Spur III - 激勵III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_3`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md)）
