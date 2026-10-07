@@ -761,10 +761,25 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
-- MOD 網站最後更新日期：Last updated 10 April 2026, 10:48AM
-- MOD 版本：1.2.1
-- MOD 檔案名稱：TalentUI-683-1-2-1-1775789334
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 10 April 2026, 2:48AM（Nexus 頁面原文；UTC：2026-04-10T02:48:54Z；Asia/Taipei：2026-04-10 10:48:54；僅為上游正式版頁面資訊）
+- MOD 版本：2026-10-07 Community Correction（社群修正識別；上游正式版：1.2.1）
+- MOD 檔案名稱：TalentUI_fixes_plus.zip
+- 手動維護最後下載日期：2026-10-07
+- Nexus MOD ID: `683`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/683`
+- Nexus page version: `1.2.1`
+- Nexus last updated: `2026-04-10T02:48:54Z`
+- Main file ID: `not-applicable`
+- Community package label / hash version: `2026-10-07 Community Correction`
+- Main file uploaded at UTC: `not-applicable`
+- Archive filename: `TalentUI_fixes_plus.zip`
+- Archive size bytes: `88360`
+- Archive SHA-256: `ecb429f7b28998eaded9d733deb61f8e9832876331325bfe5750457c55227de0`
+- Acquisition method: `manual-queue`
+- 來源類型：LucLeto 社群修正；ZIP 未提供作者發行版號，上述修正識別沿用本分支既有提交標記。
+- 社群來源：[Nexus TalentUI 社群修正貼文](https://www.nexusmods.com/warhammer40kdarktide/mods/683?tab=posts)
+- 社群程式來源：[LucLeto/rrmllnv-darktide-mods](https://github.com/LucLeto/rrmllnv-darktide-mods/tree/ec5a33ce5b4c8909feaf6523515b4b2ed178c661/TalentUI)；分支 `maintenance/talent-ui-fixes`；固定提交 `ec5a33ce5b4c8909feaf6523515b4b2ed178c661`。
+- 來源欄位說明：Nexus 欄位僅記錄上游正式版參考；本次 ZIP 來自社群 GitHub fork，Main file ID 與 Main file uploaded at UTC 均不適用，因此記為 `not-applicable`。
 
 ### [Machine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
     地圖燈效控制
