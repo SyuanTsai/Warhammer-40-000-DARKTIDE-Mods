@@ -651,6 +651,8 @@
 
 1.13 新增及盤點補缺名稱已按 Steam Build 25606770 的英文／繁中相同名稱鍵與 hash 配對，直接採用遊戲繁中名稱。標記「過時」的詞條保留歷史譯名。[完整名稱對照清單](../Darktide%20Translation%20Workspace/Term%20Candidates.md)｜[文本配對紀錄](../AI-LOGS/Game%20Info/releases/1.13.X/skills/2026-10-04-TRANSLATION_TABLE_ZH_TW_PAIRING.json)。
 
+本次新增及盤點補缺共 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
+
 ### Psyker - 靈能者
 
 #### 靈能者專有名詞
@@ -757,6 +759,10 @@
 - Warp Ghost - 亞空間幽魂
 - Tranquility Through Slaughter - 殺無赦，心祥和（過時：1.13 已移除可選天賦；保留歷史譯名）
 - Surety of Arms - 武器在手，信心我有。
+- Focused Warp - 聚焦次元（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_warp_damage`；名稱 hash `32fd96aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md)）
+- Peril Equilibrium - 危險平衡（1.13.1 遊戲繁中名稱；1.13新增；`psyker_weapon_attacks_peril_equilibrium`；名稱 hash `63ed565b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md)）
+- Psykinetic Grip - 念力之握（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_blitz_damage`；名稱 hash `4ac15b0d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md)）
+- Perils of the Warp - 次元危險（1.13.1 遊戲繁中名稱；盤點補缺；`psyker_peril_passive`；名稱 hash `dafbc14a`；[來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606)）
 
 ### Ogryn - 歐格林
 
@@ -866,6 +872,9 @@
 - Won't Give In - 絕不屈服
 - Spray and Slay - 射盡殺戮
 - Lucky Streak - 好運連連
+- Found Some More - 發現更多（1.13.1 遊戲繁中名稱；1.13新增；`ogryn_free_reload_after_ability`；名稱 hash `e56eeef1`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md)）
+- Thick Skin - 厚實表皮（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_base_tank_passive`；名稱 hash `277672aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md)）
+- Outta My Way! - 滾吧你！（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_dodge_stagger`；名稱 hash `7abf1c42`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md)）
 
 ### Zealot - 狂信徒
 
@@ -921,6 +930,9 @@
 - Inebriate's Poise - 飄忽身形
 - Eternal - 永恆
 - Pious Cut-Throat - 虔誠刺客
+- Zealous Pilgrim - 狂熱朝聖者（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_ability`；名稱 hash `a196609b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md)）
+- Risen - 復活（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_golden_toughness`；名稱 hash `95780e03`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md)）
+- Fire and Fury - 烈焰與怒火（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_fire`；名稱 hash `af670dea`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md)）
 
 ##### 一般天賦
 
@@ -968,6 +980,10 @@
 - Behind the Lines - 敵後行動
 - Relentless Fervor - 狂熱不懈
 - Riposte - 靈活還擊
+- Wait in Line - 排隊等候（1.13.1 遊戲繁中名稱；1.13新增；`zealot_reduced_damage_from_ranged`；名稱 hash `f8ea87eb`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_from_ranged.md)）
+- Holy Tools - 神聖工具（1.13.1 遊戲繁中名稱；1.13新增；`zealot_weapon_special_damage`；名稱 hash `af1ee73d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md)）
+- Got Your Back - 為您撐腰（1.13.1 遊戲繁中名稱；1.13新增；`zealot_melee_kills_restore_toughness_to_target`；名稱 hash `28db6608`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md)）
+- Purifying Hatred - 淨化仇恨（1.13.1 遊戲繁中名稱；1.13新增；`zealot_dmg_vs_burning_electrocuted`；名稱 hash `9b5165a8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md)）
 
 ### Veteran - 老兵
 
@@ -1397,6 +1413,9 @@
 - Bring it Down! - 幹掉它！
 - Onslaught - 猛攻
 - Exploit Weakness - 趁火打劫
+- Guardsman - 衛兵（1.13.1 遊戲繁中名稱；1.13新增；`veteran_base_ranged_damage`；名稱 hash `0c3fe87c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md)）
+- Practiced Efficiency - 實踐效率（1.13.1 遊戲繁中名稱；1.13新增；`veteran_survivalist_passive`；名稱 hash `55ea75f0`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md)）
+- Determined - 堅定不移（1.13.1 遊戲繁中名稱；盤點補缺；`veteran_supression_immunity`；名稱 hash `829e5480`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md)）
 
 ### Arbites - 法務官
 
@@ -1502,6 +1521,9 @@
 - Monstrosity Hunter - 巨獸獵人
 - Strike Down - 毀滅打擊
 - True Grit - 堅忍不拔
+- Ranged Damage Boost - 遠程傷害增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_ranged_damage_node_buff_medium_1`；名稱 hash `4530d417`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md)）
+- Cleave Boost - 順劈加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_cleave_node_buff_medium_1`；名稱 hash `5583cb92`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md)）
+- Impact Boost - 衝擊加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_impact_node_buff_medium_1`；名稱 hash `007795f8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_impact_node_buff_medium_1.md)）
 
 ### Hive Scum - 巢都渣滓
 
@@ -1609,6 +1631,40 @@
 - Channelled Devastation - 蓄力殲滅
 - Virulent Strain - 劇毒菌株
 - Targeted Toxin - 精準投毒
+- Critical Chance Boost - 暴擊幾率增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_crit_chance_node_buff_low_1`；名稱 hash `3ec7f5ef`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md)）
+- Potent Tox - 強效毒藥（1.13.1 遊戲繁中名稱；盤點補缺；`base_toxin_power_boost_1`；名稱 hash `d8d25992`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md)）
+- Equip Cartel Special - 裝備財閥特殊裝備（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_activation_talent`；名稱 hash `6158914f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md)）
+- Spur I - 激勵I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_1`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md)）
+- Spur II - 激勵II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_2`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md)）
+- Spur III - 激勵III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_3`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md)）
+- Spur IV - 激勵IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_4`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md)）
+- Reflex - 反射（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5b`；名稱 hash `d33a89f3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5b.md)）
+- Fervor - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5c`；名稱 hash `9b5b6688`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5c.md)）
+- Vultoprene I - 獵鷹蕈劑I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md)）
+- Vultoprene II - 獵鷹蕈劑II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md)）
+- Kalma I - 抗焦慮藥I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_1`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_1.md)）
+- Kalma II - 抗焦慮藥II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_2`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md)）
+- Kalma III - 抗焦慮藥III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_3`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md)）
+- Kalma IV - 抗焦慮藥IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_4`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md)）
+- Kalma V - 抗焦慮藥V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5a`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md)）
+- Like the Wind - 迅如疾風（1.13.1 遊戲繁中名稱；盤點補缺；`broker_passive_improved_sprint_dodge`；名稱 hash `9ac70c19`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md)）
+- Cartel Special - 財閥專員（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_description_talent`；名稱 hash `7a34c61a`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_description_talent.md)）
+- Barrage I - 彈幕I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_1`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md)）
+- Barrage II - 彈幕II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_2`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md)）
+- Barrage III - 彈幕III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_3`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md)）
+- Barrage IV - 彈幕IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_4`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md)）
+- Tank - 坦克（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5a`；名稱 hash `e3530c66`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5a.md)）
+- Regain - 恢復（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5b`；名稱 hash `3e34e34e`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md)）
+- Spur V - 激勵V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5a`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md)）
+- Hypex - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5b`；名稱 hash `99e5c538`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md)）
+- Klay - 集中藥（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5c`；名稱 hash `f7a8d514`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md)）
+- Wildfire I - 野火I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_1`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md)）
+- Wildfire II - 野火II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_2`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md)）
+- Wildfire III - 野火III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_3`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md)）
+- Wildfire IV - 野火IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md)）
+- Wildfire V - 野火V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md)）
+- Fury I - 狂怒I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md)）
+- Fury II - 狂怒II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md)）
 
 ### Skitarius - 護教軍
 
@@ -1736,6 +1792,7 @@
 - Slaughter Protocol - 屠殺協議
 - Adaptive Combat Engram - 適應性戰鬥記憶體
 - Hydraulic Impact - 液壓衝擊
+- Motive Engine - 動力引擎（1.13.1 遊戲繁中名稱；盤點補缺；`cryptic_passive_cooldown_regen`；名稱 hash `f57f4b1c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md)）
 
 ##### 敵人 / 單位
 
@@ -1804,86 +1861,7 @@
 - Melee Specialist - 近戰專家
 - Ranged Specialist - 遠程專家
 
-### 1.13 技能名稱文本對照
-
-以下 55 項直接採用 1.13.1／Steam Build 25606770 的 zh-tw 名稱，包含 13 項本版新增與 42 項既有盤點補缺。興奮劑配方依同版格式參數代入羅馬數字等級；名稱鍵、hash 與原始模板見文本配對紀錄。
-
-#### 靈能者（遊戲繁中名稱）
-
-- Focused Warp - 聚焦次元（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_warp_damage`；名稱 hash `32fd96aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_warp_damage.md)）
-- Peril Equilibrium - 危險平衡（1.13.1 遊戲繁中名稱；1.13新增；`psyker_weapon_attacks_peril_equilibrium`；名稱 hash `63ed565b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md)）
-- Psykinetic Grip - 念力之握（1.13.1 遊戲繁中名稱；1.13新增；`psyker_increased_blitz_damage`；名稱 hash `4ac15b0d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_blitz_damage.md)）
-- Perils of the Warp - 次元危險（1.13.1 遊戲繁中名稱；盤點補缺；`psyker_peril_passive`；名稱 hash `dafbc14a`；[來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606)）
-
-#### 歐格林（遊戲繁中名稱）
-
-- Found Some More - 發現更多（1.13.1 遊戲繁中名稱；1.13新增；`ogryn_free_reload_after_ability`；名稱 hash `e56eeef1`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_free_reload_after_ability.md)）
-- Thick Skin - 厚實表皮（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_base_tank_passive`；名稱 hash `277672aa`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md)）
-- Outta My Way! - 滾吧你！（1.13.1 遊戲繁中名稱；盤點補缺；`ogryn_dodge_stagger`；名稱 hash `7abf1c42`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md)）
-
-#### 狂信徒（遊戲繁中名稱）
-
-- Wait in Line - 排隊等候（1.13.1 遊戲繁中名稱；1.13新增；`zealot_reduced_damage_from_ranged`；名稱 hash `f8ea87eb`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_from_ranged.md)）
-- Holy Tools - 神聖工具（1.13.1 遊戲繁中名稱；1.13新增；`zealot_weapon_special_damage`；名稱 hash `af1ee73d`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_weapon_special_damage.md)）
-- Got Your Back - 為您撐腰（1.13.1 遊戲繁中名稱；1.13新增；`zealot_melee_kills_restore_toughness_to_target`；名稱 hash `28db6608`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_melee_kills_restore_toughness_to_target.md)）
-- Purifying Hatred - 淨化仇恨（1.13.1 遊戲繁中名稱；1.13新增；`zealot_dmg_vs_burning_electrocuted`；名稱 hash `9b5165a8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_dmg_vs_burning_electrocuted.md)）
-- Zealous Pilgrim - 狂熱朝聖者（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_ability`；名稱 hash `a196609b`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_ability.md)）
-- Risen - 復活（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_golden_toughness`；名稱 hash `95780e03`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_golden_toughness.md)）
-- Fire and Fury - 烈焰與怒火（1.13.1 遊戲繁中名稱；1.13新增；`zealot_resist_death_fire`；名稱 hash `af670dea`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Zealot/zealot_resist_death_fire.md)）
-
-#### 老兵（遊戲繁中名稱）
-
-- Guardsman - 衛兵（1.13.1 遊戲繁中名稱；1.13新增；`veteran_base_ranged_damage`；名稱 hash `0c3fe87c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_base_ranged_damage.md)）
-- Practiced Efficiency - 實踐效率（1.13.1 遊戲繁中名稱；1.13新增；`veteran_survivalist_passive`；名稱 hash `55ea75f0`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_survivalist_passive.md)）
-- Determined - 堅定不移（1.13.1 遊戲繁中名稱；盤點補缺；`veteran_supression_immunity`；名稱 hash `829e5480`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md)）
-
-#### 法務官（遊戲繁中名稱）
-
-- Ranged Damage Boost - 遠程傷害增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_ranged_damage_node_buff_medium_1`；名稱 hash `4530d417`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md)）
-- Cleave Boost - 順劈加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_cleave_node_buff_medium_1`；名稱 hash `5583cb92`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md)）
-- Impact Boost - 衝擊加成（1.13.1 遊戲繁中名稱；盤點補缺；`base_impact_node_buff_medium_1`；名稱 hash `007795f8`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Arbites/base_impact_node_buff_medium_1.md)）
-
-#### 巢都渣滓（遊戲繁中名稱）
-
-- Critical Chance Boost - 暴擊幾率增幅（1.13.1 遊戲繁中名稱；盤點補缺；`base_crit_chance_node_buff_low_1`；名稱 hash `3ec7f5ef`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_crit_chance_node_buff_low_1.md)）
-- Potent Tox - 強效毒藥（1.13.1 遊戲繁中名稱；盤點補缺；`base_toxin_power_boost_1`；名稱 hash `d8d25992`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/base_toxin_power_boost_1.md)）
-- Equip Cartel Special - 裝備財閥特殊裝備（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_activation_talent`；名稱 hash `6158914f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_activation_talent.md)）
-- Spur I - 激勵I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_1`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_1.md)）
-- Spur II - 激勵II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_2`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_2.md)）
-- Spur III - 激勵III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_3`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_3.md)）
-- Spur IV - 激勵IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_4`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_4.md)）
-- Reflex - 反射（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5b`；名稱 hash `d33a89f3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5b.md)）
-- Fervor - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5c`；名稱 hash `9b5b6688`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5c.md)）
-- Vultoprene I - 獵鷹蕈劑I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4c.md)）
-- Vultoprene II - 獵鷹蕈劑II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5c`；名稱 hash `0f81fa53`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5c.md)）
-- Kalma I - 抗焦慮藥I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_1`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_1.md)）
-- Kalma II - 抗焦慮藥II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_2`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_2.md)）
-- Kalma III - 抗焦慮藥III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_3`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_3.md)）
-- Kalma IV - 抗焦慮藥IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_4`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_4.md)）
-- Kalma V - 抗焦慮藥V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5a`；名稱 hash `eab26b4f`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5a.md)）
-- Like the Wind - 迅如疾風（1.13.1 遊戲繁中名稱；盤點補缺；`broker_passive_improved_sprint_dodge`；名稱 hash `9ac70c19`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_sprint_dodge.md)）
-- Cartel Special - 財閥專員（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_description_talent`；名稱 hash `7a34c61a`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_description_talent.md)）
-- Barrage I - 彈幕I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_1`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_1.md)）
-- Barrage II - 彈幕II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_2`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_2.md)）
-- Barrage III - 彈幕III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_3`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_3.md)）
-- Barrage IV - 彈幕IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_4`；名稱 hash `6f8e5c73`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_4.md)）
-- Tank - 坦克（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5a`；名稱 hash `e3530c66`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5a.md)）
-- Regain - 恢復（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_durability_5b`；名稱 hash `3e34e34e`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_durability_5b.md)）
-- Spur V - 激勵V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_celerity_5a`；名稱 hash `33b4b842`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_celerity_5a.md)）
-- Hypex - 狂熱（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5b`；名稱 hash `99e5c538`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md)）
-- Klay - 集中藥（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_concentration_5c`；名稱 hash `f7a8d514`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md)）
-- Wildfire I - 野火I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_1`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_1.md)）
-- Wildfire II - 野火II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_2`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_2.md)）
-- Wildfire III - 野火III（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_3`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_3.md)）
-- Wildfire IV - 野火IV（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4a.md)）
-- Wildfire V - 野火V（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5a`；名稱 hash `fe5e6f12`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5a.md)）
-- Fury I - 狂怒I（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_4b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_4b.md)）
-- Fury II - 狂怒II（1.13.1 遊戲繁中名稱；盤點補缺；`broker_stimm_combat_5b`；名稱 hash `ea57fba3`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Scum/broker_stimm_combat_5b.md)）
-
-#### 護教軍（遊戲繁中名稱）
-
-- Motive Engine - 動力引擎（1.13.1 遊戲繁中名稱；盤點補缺；`cryptic_passive_cooldown_regen`；名稱 hash `f57f4b1c`；[來源](../Game%20Info/releases/1.13.X/skills/talents/Skitarii/cryptic_passive_cooldown_regen.md)）
-
+## 武器祝福補充
 
 - Run 'n' Gun - 連跑帶打
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_allow_hipfire_while_sprinting`，hash `168636d5`；英文／繁中RAW配對確認。
