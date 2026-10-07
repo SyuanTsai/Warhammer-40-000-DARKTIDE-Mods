@@ -41,6 +41,80 @@ function StimmCountdownCore.get_buff_remaining_time(buff_extension, buff_templat
 	return timer
 end
 
+local flat_regen_stat_buffs = {}
+local regen_modifier_stat_buffs = {}
+
+function StimmCountdownCore.get_remaining_ability_cooldown(ability_extension, buff_extension, ability_type)
+	if not ability_extension or not ability_type then
+		return nil
+	end
+
+	-- Backward compatibility if old method exists
+	if ability_extension.remaining_ability_cooldown then
+		local raw = ability_extension:remaining_ability_cooldown(ability_type)
+		if raw and is_finite_cooldown_seconds_for_ui(raw) then
+			return raw
+		end
+		return nil
+	end
+
+	-- Modern Darktide resource system (1.13+)
+	if ability_extension.missing_ability_resource_until_next_charge then
+		if ability_extension.is_ability_resource_regen_paused and ability_extension:is_ability_resource_regen_paused(ability_type) then
+			return nil
+		end
+
+		local missing_resource = ability_extension:missing_ability_resource_until_next_charge(ability_type)
+		if not missing_resource or missing_resource <= 0 then
+			return nil
+		end
+
+		if ability_extension.ability_is_equipped then
+			local ability = ability_extension:ability_is_equipped(ability_type)
+			if ability then
+				local max_resource = ability_extension.max_ability_resource and ability_extension:max_ability_resource(ability_type) or 1
+				local regen_per_second = (ability.resource_regen_per_second or 0)
+					+ max_resource * (ability.resource_regen_percent_per_second or 0)
+
+				local stat_buffs = buff_extension and buff_extension.stat_buffs and buff_extension:stat_buffs()
+				if stat_buffs then
+					local flat_stat = flat_regen_stat_buffs[ability_type]
+					if not flat_stat then
+						flat_stat = ability_type .. "_resource_flat_regen"
+						flat_regen_stat_buffs[ability_type] = flat_stat
+						regen_modifier_stat_buffs[ability_type] = ability_type .. "_resource_regen_modifier"
+					end
+
+					regen_per_second = (regen_per_second + (stat_buffs[flat_stat] or 0))
+						* (stat_buffs[regen_modifier_stat_buffs[ability_type]] or 1)
+				end
+
+				if ability_extension.get_ability_resource_cost_per_second then
+					regen_per_second = regen_per_second - (ability_extension:get_ability_resource_cost_per_second(ability_type) or 0)
+				end
+
+				if regen_per_second > 0 then
+					local cd = missing_resource / regen_per_second
+					return is_finite_cooldown_seconds_for_ui(cd) and cd or nil
+				end
+			end
+		end
+
+		if ability_extension.get_ability_resource_regen_progress and ability_extension.max_regen_time_for_ability_charge then
+			local progress = ability_extension:get_ability_resource_regen_progress(ability_type) or 0
+			local max_time = ability_extension:max_regen_time_for_ability_charge(ability_type) or 0
+			if max_time > 0 then
+				local cd = (1 - math.min(math.max(progress, 0), 1)) * max_time
+				return is_finite_cooldown_seconds_for_ui(cd) and cd or nil
+			end
+		end
+
+		return is_finite_cooldown_seconds_for_ui(missing_resource) and missing_resource or nil
+	end
+
+	return nil
+end
+
 local function empty_timer_result()
 	return {
 		visible = false,
@@ -115,8 +189,7 @@ function StimmCountdownCore.compute_pocketable_stimm_timer_state(player_unit, se
 	result.profile_id = matched_profile.id or matched_profile.ability_group
 
 	local ability_type = type(matched_profile.ability_type) == "string" and matched_profile.ability_type or "pocketable_ability"
-	local raw_remaining_cooldown = ability_extension:remaining_ability_cooldown(ability_type)
-	local remaining_cooldown = is_finite_cooldown_seconds_for_ui(raw_remaining_cooldown) and raw_remaining_cooldown or nil
+	local remaining_cooldown = StimmCountdownCore.get_remaining_ability_cooldown(ability_extension, buff_extension, ability_type)
 	local has_cooldown = remaining_cooldown ~= nil
 
 	result.has_cooldown = has_cooldown
@@ -193,8 +266,7 @@ function StimmCountdownCore.compute_timer_display_for_consuming_mods(player_unit
 	end
 
 	if player_archetype == "broker" and show_cooldown then
-		local raw_cd = ability_extension:remaining_ability_cooldown("pocketable_ability")
-		local remaining_cooldown = is_finite_cooldown_seconds_for_ui(raw_cd) and raw_cd or nil
+		local remaining_cooldown = StimmCountdownCore.get_remaining_ability_cooldown(ability_extension, buff_extension, "pocketable_ability")
 
 		if remaining_cooldown then
 			local r = empty_timer_result()
