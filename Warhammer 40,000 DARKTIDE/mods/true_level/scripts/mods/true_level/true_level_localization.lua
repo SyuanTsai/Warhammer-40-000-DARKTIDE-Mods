@@ -252,24 +252,31 @@ local loc = {
     },
     enable_havoc_assignment = {
         en = "Show Havoc Assignment",
+        ["zh-tw"] = "顯示浩劫任務",
     },
     havoc_assignment_icon = {
         en = "Havoc Assignment Icon",
+        ["zh-tw"] = "浩劫任務圖示",
     },
     havoc_assignment_color = {
         en = "Havoc Assignment Color",
+        ["zh-tw"] = "浩劫任務顏色",
     },
     enable_havoc_assignment_charges = {
         en = "Show Havoc Assignment Charges",
+        ["zh-tw"] = "顯示浩劫任務挑戰次數",
     },
     havoc_assignment_charges_desc = {
         en = "Show the remaining charges of the assignment. Other players' charges are only available if they also run True Level with \"Share Havoc Assignment\" enabled.",
+        ["zh-tw"] = "顯示任務的剩餘挑戰次數。只有其他玩家也使用 True Level 並啟用「分享浩劫任務」時，才能顯示他們的剩餘挑戰次數。",
     },
     share_havoc_assignment = {
         en = "Share Havoc Assignment",
+        ["zh-tw"] = "分享浩劫任務",
     },
     share_havoc_assignment_desc = {
         en = "Publishes your current Havoc assignment and its remaining charges to other players who also run True Level, so they can see your charges. Turn this off to publish nothing; you will still see the assignments of players who share theirs.",
+        ["zh-tw"] = "向同樣使用 True Level 的其他玩家分享你目前的浩劫任務與剩餘挑戰次數，讓他們查看你的剩餘挑戰次數。關閉此選項後，將不再分享任何資訊；你仍可查看其他玩家分享的任務。",
     },
     level_up = {
         en = "Level Up!",
