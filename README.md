@@ -122,6 +122,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.11.0（LucLeto 社群公開測試版；Nexus 正式版：1.10.3）
 - MOD 檔案名稱：true_level.zip
 - 手動維護最後下載日期：2026-10-07
+- 載入順序提醒：Teammate Tracker 必須載入在 True Level 之後，因為它會把介面附加在 True Level 的顯示內容後。
 - Nexus MOD ID: 156
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/156
 - Nexus page version: 1.10.3
@@ -171,6 +172,7 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：1.7.1
 - MOD 檔案名稱：Psych Ward-89-1-7-1-1776147547
 - 手動維護最後下載日期：2026-05-17
+- 載入順序提醒：Improved Character Menu 必須載入在 Psych Ward 之後；若也安裝 Custom UI Colors，Improved Character Menu 也必須載入在它之後。
 
 ### [Decode Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/252)
     解碼助手 - 在解碼時顯示即將出現的目標符號。

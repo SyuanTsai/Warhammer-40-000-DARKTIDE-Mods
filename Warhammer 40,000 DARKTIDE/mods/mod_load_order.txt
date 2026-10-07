@@ -50,6 +50,7 @@ NoBrainer
 -- 只會設定一次的MOD
 modular_menu_buttons
 auto_rations
+-- Teammate Tracker 會將介面接在 True Level 顯示內容後；若安裝，請將 Teammate Tracker 排在 true_level 之後。
 true_level
 who_are_you
 MultiBind
@@ -101,6 +102,7 @@ ServerPing
 HavocPeek
 
 -- 基本上不需設定
+-- Improved Character Menu 必須排在 psych_ward 之後；若也安裝 Custom UI Colors，也須排在 Custom UI Colors 之後。
 psych_ward
 InspectFromSocial
 TalentRefundBelow
